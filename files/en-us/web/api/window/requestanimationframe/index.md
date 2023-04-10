@@ -1,5 +1,6 @@
 ---
-title: Window.requestAnimationFrame()
+title: "Window: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
@@ -9,7 +10,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
+specified function to update an animation right before the next repaint. The method takes a
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
@@ -69,14 +70,14 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 (`0.1 * 2000`) to the right of its initial position.
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
-let done = false
+let done = false;
 
 function step(timestamp) {
   if (start === undefined) {
     start = timestamp;
-    }
+  }
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {
@@ -86,7 +87,8 @@ function step(timestamp) {
     if (count === 200) done = true;
   }
 
-  if (elapsed < 2000) { // Stop the animation after 2 seconds
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
     previousTimeStamp = timestamp;
     if (!done) {
       window.requestAnimationFrame(step);

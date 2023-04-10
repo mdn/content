@@ -1,5 +1,6 @@
 ---
-title: FileReader()
+title: "FileReader: FileReader() constructor"
+short-title: FileReader()
 slug: Web/API/FileReader/FileReader
 page-type: web-api-constructor
 browser-compat: api.FileReader.FileReader

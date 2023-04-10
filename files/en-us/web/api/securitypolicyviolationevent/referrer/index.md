@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.referrer
+title: "SecurityPolicyViolationEvent: referrer property"
+short-title: referrer
 slug: Web/API/SecurityPolicyViolationEvent/referrer
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.referrer

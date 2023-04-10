@@ -1,15 +1,11 @@
 ---
 title: Global attributes
 slug: Web/MathML/Global_attributes
-tags:
-  - Attribute
-  - MathML
-  - Reference
-  - Web
+page-type: landing-page
 browser-compat: mathml.global_attributes
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}
+{{MathMLRef}}
 
 **Global attributes** are attributes common to all MathML elements; they can be used on all elements, though they may have no effect on some elements.
 

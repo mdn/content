@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.ideographicBaseline
+title: "TextMetrics: ideographicBaseline property"
+short-title: ideographicBaseline
 slug: Web/API/TextMetrics/ideographicBaseline
 page-type: web-api-instance-property
 status:
@@ -14,9 +15,9 @@ The read-only `ideographicBaseline` property of the {{domxref("TextMetrics")}} i
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.ideographicBaseline; // -1.201171875;
 ```

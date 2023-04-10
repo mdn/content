@@ -1,10 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Content-Location
 ---
 

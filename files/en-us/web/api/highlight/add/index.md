@@ -1,5 +1,6 @@
 ---
-title: Highlight.add()
+title: "Highlight: add() method"
+short-title: add()
 slug: Web/API/Highlight/add
 page-type: web-api-instance-method
 status:

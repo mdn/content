@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.readBuffer()
+title: "WebGL2RenderingContext: readBuffer() method"
+short-title: readBuffer()
 slug: Web/API/WebGL2RenderingContext/readBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.readBuffer

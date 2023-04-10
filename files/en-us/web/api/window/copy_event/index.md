@@ -1,5 +1,6 @@
 ---
-title: 'Window: copy event'
+title: "Window: copy event"
+short-title: copy
 slug: Web/API/Window/copy_event
 page-type: web-api-event
 browser-compat: api.Element.copy_event
@@ -16,9 +17,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## Event type
@@ -30,8 +31,8 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 ## Examples
 
 ```js
-window.addEventListener('copy', (event) => {
-    console.log('copy action initiated')
+window.addEventListener("copy", (event) => {
+  console.log("copy action initiated");
 });
 ```
 

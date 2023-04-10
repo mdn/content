@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.suffix
+title: "CSSCounterStyleRule: suffix property"
+short-title: suffix
 slug: Web/API/CSSCounterStyleRule/suffix
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.suffix

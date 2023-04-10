@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.moveTo()
+title: "FileSystemEntry: moveTo() method"
+short-title: moveTo()
 slug: Web/API/FileSystemEntry/moveTo
 page-type: web-api-instance-method
 status:
@@ -72,15 +73,25 @@ This example shows how a temporary log file might be moved into a more permanent
 directory when it exceeds a megabyte in size.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
-  fileEntry.getMetadata((metadata) => {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, (dirEntry) => {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        workingDirectory.getDirectory(
+          "log",
+          {},
+          (dirEntry) => {
+            fileEntry.moveTo(dirEntry);
+          },
+          handleError
+        );
+      }
+    });
+  },
+  handleError
+);
 ```
 
 ## Browser compatibility

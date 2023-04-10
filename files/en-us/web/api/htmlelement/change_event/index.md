@@ -1,5 +1,6 @@
 ---
-title: 'HTMLElement: change event'
+title: "HTMLElement: change event"
+short-title: change
 slug: Web/API/HTMLElement/change_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.change_event
@@ -23,9 +24,9 @@ The HTML specification lists [the `<input>` types that should fire the `change` 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', (event) => {});
+addEventListener("change", (event) => {});
 
-onchange = (event) => { };
+onchange = (event) => {};
 ```
 
 ## Event type
@@ -70,10 +71,10 @@ select {
 #### JavaScript
 
 ```js
-const selectElement = document.querySelector('.ice-cream');
+const selectElement = document.querySelector(".ice-cream");
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
+selectElement.addEventListener("change", (event) => {
+  const result = document.querySelector(".result");
   result.textContent = `You like ${event.target.value}`;
 });
 ```
@@ -96,10 +97,10 @@ For some elements, including `<input type="text">`, the `change` event doesn't f
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
@@ -118,4 +119,4 @@ function updateValue(e) {
 
 {{Compat}}
 
-Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.
+Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see [Firefox bug 126379](https://bugzil.la/126379)). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.

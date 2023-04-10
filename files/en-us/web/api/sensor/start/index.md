@@ -1,5 +1,6 @@
 ---
-title: Sensor.start()
+title: "Sensor: start() method"
+short-title: start()
 slug: Web/API/Sensor/start
 page-type: web-api-instance-method
 browser-compat: api.Sensor.start

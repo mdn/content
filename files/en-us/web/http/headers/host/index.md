@@ -1,10 +1,6 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - HTTP
-  - Reference
-  - header
 browser-compat: http.headers.Host
 ---
 

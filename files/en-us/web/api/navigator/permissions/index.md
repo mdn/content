@@ -1,5 +1,6 @@
 ---
-title: Navigator.permissions
+title: "Navigator: permissions property"
+short-title: permissions
 slug: Web/API/Navigator/permissions
 page-type: web-api-instance-property
 browser-compat: api.Navigator.permissions
@@ -18,10 +19,10 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
+  if (result.state === "granted") {
     showMap();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableMap();
   }
   // Don't do anything if the permission was denied.

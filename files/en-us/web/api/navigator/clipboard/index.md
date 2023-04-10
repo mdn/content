@@ -1,5 +1,6 @@
 ---
-title: Navigator.clipboard
+title: "Navigator: clipboard property"
+short-title: clipboard
 slug: Web/API/Navigator/clipboard
 page-type: web-api-instance-property
 browser-compat: api.Navigator.clipboard
@@ -30,8 +31,11 @@ The following code uses `navigator.clipboard` to access the system clipboard
 in order to read the contents of the clipboard.
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.querySelector(".cliptext").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText)
+  );
 ```
 
 This snippet replaces the contents of the element whose class is

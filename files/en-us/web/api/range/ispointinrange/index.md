@@ -1,5 +1,6 @@
 ---
-title: Range.isPointInRange()
+title: "Range: isPointInRange() method"
+short-title: isPointInRange()
 slug: Web/API/Range/isPointInRange
 page-type: web-api-instance-method
 browser-compat: api.Range.isPointInRange
@@ -35,7 +36,7 @@ A boolean.
 ```js
 range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-bool = range.isPointInRange(document.getElementsByTagName("p").item(0),1);
+bool = range.isPointInRange(document.getElementsByTagName("p").item(0), 1);
 ```
 
 ## Specifications

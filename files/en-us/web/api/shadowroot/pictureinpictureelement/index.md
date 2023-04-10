@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.pictureInPictureElement
+title: "ShadowRoot: pictureInPictureElement property"
+short-title: pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.pictureInPictureElement
@@ -21,7 +22,7 @@ shadow tree, the returned value is `null`.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pipElem = shadow.pictureInPictureElement;
 ```

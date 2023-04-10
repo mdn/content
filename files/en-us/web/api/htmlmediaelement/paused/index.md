@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.paused
+title: "HTMLMediaElement: paused property"
+short-title: paused
 slug: Web/API/HTMLMediaElement/paused
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.paused
@@ -18,7 +19,7 @@ paused.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 
@@ -32,4 +33,4 @@ console.log(obj.paused); // true
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.paused` property

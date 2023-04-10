@@ -1,5 +1,6 @@
 ---
-title: MediaSource.duration
+title: "MediaSource: duration property"
+short-title: duration
 slug: Web/API/MediaSource/duration
 page-type: web-api-instance-property
 browser-compat: api.MediaSource.duration
@@ -39,7 +40,7 @@ function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       mediaSource.duration = 120;
       video.play();
@@ -47,7 +48,7 @@ function sourceOpen() {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

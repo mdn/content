@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.isScript()
+title: "TrustedTypePolicyFactory: isScript() method"
+short-title: isScript()
 slug: Web/API/TrustedTypePolicyFactory/isScript
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isScript
@@ -32,7 +33,7 @@ In the below example the constant `url` was created by a policy, and therefore `
 
 ```js
 const myScript = policy.createScript("eval('2 + 2')");
-console.log(trustedTypes.isScript(myScript)) // true;
+console.log(trustedTypes.isScript(myScript)); // true;
 
 const fake = Object.create(TrustedScript.prototype);
 console.log(trustedTypes.isScript(fake)); // false

@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.port
+title: "HTMLAreaElement: port property"
+short-title: port
 slug: Web/API/HTMLAreaElement/port
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.port

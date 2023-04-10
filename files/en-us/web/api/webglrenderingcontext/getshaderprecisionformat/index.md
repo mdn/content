@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getShaderPrecisionFormat()
+title: "WebGLRenderingContext: getShaderPrecisionFormat() method"
+short-title: getShaderPrecisionFormat()
 slug: Web/API/WebGLRenderingContext/getShaderPrecisionFormat
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getShaderPrecisionFormat
@@ -44,8 +45,8 @@ The following code gets the precision format of a `gl.VERTEX_SHADER` with a
 `gl.MEDIUM_FLOAT` precision type.
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }

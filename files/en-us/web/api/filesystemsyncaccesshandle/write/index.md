@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.write()
+title: "FileSystemSyncAccessHandle: write() method"
+short-title: write()
 slug: Web/API/FileSystemSyncAccessHandle/write
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.write
@@ -8,7 +9,7 @@ browser-compat: api.FileSystemSyncAccessHandle.write
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`write()`** method of the
-{{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
+{{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset. Note that you cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create one of the typed array objects like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 
 Writes performed using {{domxref('FileSystemSyncAccessHandle.write()')}} are in-place, meaning that changes are written to the actual underlying file at the same time as they are written to the writer. This is not the case with other writing mechanisms available in the {{domxref("File System Access API", "File System Access API", "", "nocode")}} (e.g. {{domxref('FileSystemFileHandle.createWritable()')}}), where changes are not committed to disk until the writing stream is closed.
 
@@ -53,7 +54,7 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
@@ -73,7 +74,7 @@ onmessage = async (e) => {
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
 
 > **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.

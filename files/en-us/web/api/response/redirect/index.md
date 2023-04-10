@@ -1,11 +1,12 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() static method"
+short-title: redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
 browser-compat: api.Response.redirect
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 
@@ -41,7 +42,7 @@ A {{domxref("Response")}} object.
 ## Examples
 
 ```js
-Response.redirect('https://www.example.com', 302);
+Response.redirect("https://www.example.com", 302);
 ```
 
 ## Specifications

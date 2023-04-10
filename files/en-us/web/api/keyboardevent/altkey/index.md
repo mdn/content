@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.altKey
+title: "KeyboardEvent: altKey property"
+short-title: altKey
 slug: Web/API/KeyboardEvent/altKey
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.altKey

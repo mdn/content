@@ -1,5 +1,6 @@
 ---
-title: GravitySensor()
+title: "GravitySensor: GravitySensor() constructor"
+short-title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
 page-type: web-api-constructor
 browser-compat: api.GravitySensor.GravitySensor

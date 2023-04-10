@@ -1,16 +1,6 @@
 ---
 title: Introduction to events
 slug: Learn/JavaScript/Building_blocks/Events
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Event Handler
-  - Guide
-  - JavaScript
-  - Learn
-  - events
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
@@ -661,7 +651,7 @@ An alternative form of event propagation is _event capture_. This is like event 
 
 Event capture is disabled by default. To enable it you have to pass the `capture` option in `addEventListener()`.
 
-This example is just like the [bubbling example](#Bubbling_example) we saw earlier, except that we have used the `capture` option:
+This example is just like the [bubbling example](#bubbling_example) we saw earlier, except that we have used the `capture` option:
 
 ```html
 <body>

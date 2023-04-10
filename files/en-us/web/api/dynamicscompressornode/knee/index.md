@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.knee
+title: "DynamicsCompressorNode: knee property"
+short-title: knee
 slug: Web/API/DynamicsCompressorNode/knee
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.knee
@@ -27,7 +28,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.knee.value = 40;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

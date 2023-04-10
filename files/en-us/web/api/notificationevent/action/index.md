@@ -1,5 +1,6 @@
 ---
-title: NotificationEvent.action
+title: "NotificationEvent: action property"
+short-title: action
 slug: Web/API/NotificationEvent/action
 page-type: web-api-instance-property
 browser-compat: api.NotificationEvent.action
@@ -17,17 +18,21 @@ A string.
 
 ```js
 self.registration.showNotification("New articles available", {
-  actions: [{action: "get", title: "Get now."}]
+  actions: [{ action: "get", title: "Get now." }],
 });
 
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  if (event.action === 'get') {
-    synchronizeReader();
-  } else {
-    clients.openWindow("/reader");
-  }
-}, false);
+self.addEventListener(
+  "notificationclick",
+  (event) => {
+    event.notification.close();
+    if (event.action === "get") {
+      synchronizeReader();
+    } else {
+      clients.openWindow("/reader");
+    }
+  },
+  false
+);
 ```
 
 ## Specifications

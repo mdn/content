@@ -1,11 +1,7 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
 

@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.Collator.Collator
 
 {{JSRef}}
 
-The **`Intl.Collator()`** constructor creates
-{{jsxref("Intl/Collator", "Intl.Collator")}} objects that enable language-sensitive string
-comparison.
+The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -33,7 +29,7 @@ Intl.Collator(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
 

@@ -1,5 +1,6 @@
 ---
-title: VRDisplayEvent.reason
+title: "VRDisplayEvent: reason property"
+short-title: reason
 slug: Web/API/VRDisplayEvent/reason
 page-type: web-api-instance-property
 status:
@@ -26,9 +27,11 @@ A string representing the reason why the event was fired. The available reasons 
 ## Examples
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-  })
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`
+  );
+});
 ```
 
 ## Specifications

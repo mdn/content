@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.bindAttribLocation()
+title: "WebGLRenderingContext: bindAttribLocation() method"
+short-title: bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindAttribLocation
@@ -35,7 +36,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## Specifications

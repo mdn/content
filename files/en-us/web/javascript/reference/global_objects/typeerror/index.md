@@ -21,7 +21,7 @@ A `TypeError` may be thrown when:
 
 ## Constructor
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError/TypeError", "TypeError()")}}
   - : Creates a new `TypeError` object.
 
 ## Instance properties

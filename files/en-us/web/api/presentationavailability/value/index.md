@@ -1,7 +1,10 @@
 ---
-title: PresentationAvailability.value
+title: "PresentationAvailability: value property"
+short-title: value
 slug: Web/API/PresentationAvailability/value
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PresentationAvailability.value
 ---
 

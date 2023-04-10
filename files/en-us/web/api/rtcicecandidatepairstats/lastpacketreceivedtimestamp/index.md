@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.lastPacketReceivedTimestamp
+title: "RTCIceCandidatePairStats: lastPacketReceivedTimestamp property"
+short-title: lastPacketReceivedTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.lastPacketReceivedTimestamp

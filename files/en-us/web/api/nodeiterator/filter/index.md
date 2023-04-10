@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.filter
+title: "NodeIterator: filter property"
+short-title: filter
 slug: Web/API/NodeIterator/filter
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.filter
@@ -26,9 +27,13 @@ A {{domxref("NodeFilter")}} object.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 nodeFilter = nodeIterator.filter;
 ```

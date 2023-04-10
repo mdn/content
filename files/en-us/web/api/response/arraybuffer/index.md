@@ -1,11 +1,12 @@
 ---
-title: Response.arrayBuffer()
+title: "Response: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.Response.arrayBuffer
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
 takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
@@ -55,7 +56,7 @@ when it is already playing (this would cause an error.)
 function getData() {
   const audioCtx = new AudioContext();
 
-  return fetch('viper.ogg')
+  return fetch("viper.ogg")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error, status = ${response.status}`);
@@ -69,16 +70,16 @@ function getData() {
       source.connect(audioCtx.destination);
       return source;
     });
-};
+}
 
 // wire up buttons to stop and play audio
 
 play.onclick = () => {
   getData().then((source) => {
     source.start(0);
-    play.setAttribute('disabled', 'disabled');
+    play.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ### Reading files

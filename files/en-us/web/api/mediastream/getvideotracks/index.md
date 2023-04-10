@@ -1,5 +1,6 @@
 ---
-title: MediaStream.getVideoTracks()
+title: "MediaStream: getVideoTracks() method"
+short-title: getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.getVideoTracks
@@ -41,15 +42,14 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
 ```js
 let imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then((mediaStream) => {
-  document.querySelector('video').srcObject = mediaStream;
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+  document.querySelector("video").srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
   imageCapture = new ImageCapture(track);
 
   return imageCapture.getPhotoCapabilities();
-})
+});
 ```
 
 ## Specifications

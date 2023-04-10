@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncManager.unregister()
+title: "PeriodicSyncManager: unregister() method"
+short-title: unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 page-type: web-api-instance-method
 status:
@@ -40,7 +41,7 @@ background.
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 

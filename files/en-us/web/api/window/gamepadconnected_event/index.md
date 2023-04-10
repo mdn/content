@@ -1,5 +1,6 @@
 ---
-title: 'Window: gamepadconnected event'
+title: "Window: gamepadconnected event"
+short-title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 page-type: web-api-event
 browser-compat: api.Window.gamepadconnected_event
@@ -18,9 +19,9 @@ This event is not cancelable and does not bubble.
 To be informed when a gamepad is connected, you can add a handler to the window using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-window.addEventListener('gamepadconnected', (event) => {
-    // All buttons and axes values can be accessed through
-    const gamepad = event.gamepad;
+window.addEventListener("gamepadconnected", (event) => {
+  // All buttons and axes values can be accessed through
+  const gamepad = event.gamepad;
 });
 ```
 
@@ -28,8 +29,8 @@ Alternatively, you can use the `window.ongamepadconnected` event handler propert
 
 ```js
 window.ongamepadconnected = (event) => {
-    // All buttons and axes values can be accessed through
-    const gamepad = event.gamepad;
+  // All buttons and axes values can be accessed through
+  const gamepad = event.gamepad;
 };
 ```
 

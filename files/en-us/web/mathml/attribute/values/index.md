@@ -1,16 +1,11 @@
 ---
 title: MathML Attribute Values
 slug: Web/MathML/Attribute/Values
-tags:
-  - Guide
-  - MathML
-  - MathML Reference
+page-type: guide
 browser-compat: mathml.attribute_values
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 ## MathML-specific types
 

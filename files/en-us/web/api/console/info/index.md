@@ -1,5 +1,6 @@
 ---
-title: console.info()
+title: "console: info() method"
+short-title: info()
 slug: Web/API/console/info
 page-type: web-api-instance-method
 browser-compat: api.console.info

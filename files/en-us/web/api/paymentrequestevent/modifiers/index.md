@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.modifiers
+title: "PaymentRequestEvent: modifiers property"
+short-title: modifiers
 slug: Web/API/PaymentRequestEvent/modifiers
 page-type: web-api-instance-property
 status:
@@ -34,7 +35,7 @@ An array of `PaymentDetailsModifier` objects containing modifiers for payment de
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.modifiers);
 });
 ```

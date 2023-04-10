@@ -1,13 +1,12 @@
 ---
-title: CSSScale.z
+title: "CSSScale: z property"
+short-title: z
 slug: Web/API/CSSScale/z
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSScale.z
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`z`** property of the
 {{domxref("CSSScale")}} interface representing the z-component of the translating

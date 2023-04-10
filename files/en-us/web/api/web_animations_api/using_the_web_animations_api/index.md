@@ -58,9 +58,9 @@ The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web
 
 ```js
 const aliceTumbling = [
-  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-  { color: '#431236', offset: 0.3 },
-  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+  { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+  { color: "#431236", offset: 0.3 },
+  { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
 ];
 ```
 
@@ -79,8 +79,8 @@ We'll also need to create an object of timing properties corresponding to the va
 ```js
 const aliceTiming = {
   duration: 3000,
-  iterations: Infinity
-}
+  iterations: Infinity,
+};
 ```
 
 You'll notice a few differences here from how equivalent values are represented in CSS:
@@ -95,10 +95,7 @@ You'll notice a few differences here from how equivalent values are represented 
 Now it's time to bring them both together with the {{domxref("Element.animate()")}} method:
 
 ```js
-document.getElementById("alice").animate(
-  aliceTumbling,
-  aliceTiming
-)
+document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
 And boom: the animation starts playing (see the finished [version on Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
@@ -108,12 +105,13 @@ The `animate()` method can be called on any DOM element that could be animated w
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3 },
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], {
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.3 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  {
     duration: 3000,
-    iterations: Infinity
+    iterations: Infinity,
   }
 );
 ```
@@ -123,10 +121,12 @@ What's more, if we only wanted to specify the duration of the animation and not 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3 },
-    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-  ], 3000);
+    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { color: "#431236", offset: 0.3 },
+    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  ],
+  3000
+);
 ```
 
 ## Controlling playback with play(), pause(), reverse(), and updatePlaybackRate()
@@ -142,15 +142,16 @@ In this game, Alice has an animation that causes her to go from small to big whi
 We'll talk more about Alice's animation later, but for now, let's look closer at the cupcake's animation:
 
 ```js
-const nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.getComputedTiming().duration / 2
-});
+const nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.getComputedTiming().duration / 2,
+    }
+  );
 ```
 
 The {{domxref("Element.animate()")}} method will immediately run after it is called. To prevent the cake from eating itself up before the user has had the chance to click on it, we call {{domxref("Animation.pause()")}} on it immediately after it is defined, like so:
@@ -169,14 +170,12 @@ Specifically, we want to link it to Alice's animation, so she gets bigger as the
 
 ```js
 const growAlice = () => {
-
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 ```
 
 When a user holds their mouse down or presses their finger on the cake on a touch screen, we can now call `growAlice` to make all the animations play:
@@ -200,7 +199,7 @@ Let's take a look at `playbackRate` first — a negative playbackRate will cause
 const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
-}
+};
 
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
@@ -215,8 +214,8 @@ Because small children tire out easily, unlike automaton chess pieces, Alice is 
 ```js
 setInterval(() => {
   // Make sure the playback rate never falls below .4
-  if (redQueen_alice.playbackRate > .4) {
-    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * .9);
+  if (redQueen_alice.playbackRate > 0.4) {
+    redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 0.9);
   }
 }, 3000);
 ```
@@ -226,7 +225,7 @@ But urging them on by clicking or tapping causes them to speed up by multiplying
 ```js
 const goFaster = () => {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
-}
+};
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
@@ -249,26 +248,27 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-document.getElementById('eat-me_sprite').animate(
-  [],
-  {
-    duration: aliceChange.effect.timing.duration / 2
-  }
-);
+document.getElementById("eat-me_sprite").animate([], {
+  duration: aliceChange.effect.timing.duration / 2,
+});
 ```
 
 To understand what's happening here, let's take a look at Alice's animation:
 
 ```js
-const aliceChange = document.getElementById('alice').animate(
-  [
-    { transform: 'translate(-50%, -50%) scale(.5)' },
-    { transform: 'translate(-50%, -50%) scale(2)' }
-  ], {
-    duration: 8000,
-    easing: 'ease-in-out',
-    fill: 'both'
-  });
+const aliceChange = document
+  .getElementById("alice")
+  .animate(
+    [
+      { transform: "translate(-50%, -50%) scale(.5)" },
+      { transform: "translate(-50%, -50%) scale(2)" },
+    ],
+    {
+      duration: 8000,
+      easing: "ease-in-out",
+      fill: "both",
+    }
+  );
 ```
 
 Alice's animation has her going from half her size to twice her size over 8 seconds. Then we pause her:
@@ -294,14 +294,12 @@ aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
 And we can do the same thing when setting the cake and bottle durations:
 
 ```js
-const drinking = document.getElementById('liquid').animate(
-[
-  { height: '100%' },
-  { height: '0' }
-], {
-  fill: 'forwards',
-  duration: aliceChange.effect.getComputedTiming().duration / 2
-});
+const drinking = document
+  .getElementById("liquid")
+  .animate([{ height: "100%" }, { height: "0" }], {
+    fill: "forwards",
+    duration: aliceChange.effect.getComputedTiming().duration / 2,
+  });
 drinking.pause();
 ```
 
@@ -311,7 +309,6 @@ We can also use the Web Animations API to figure out the animation's current tim
 
 ```js
 const endGame = () => {
-
   // get Alice's timeline's playhead location
   const alicePlayhead = aliceChange.currentTime;
   const aliceTimeline = aliceChange.effect.getComputedTiming().activeDuration;
@@ -322,20 +319,17 @@ const endGame = () => {
   // depending on which third it falls into
   const aliceHeight = alicePlayhead / aliceTimeline;
 
-  if (aliceHeight <= .333){
+  if (aliceHeight <= 0.333) {
     // Alice got smaller!
     // …
-
-  } else if (aliceHeight >= .666) {
+  } else if (aliceHeight >= 0.666) {
     // Alice got bigger!
     // …
-
   } else {
     // Alice didn't change significantly
     // …
-
   }
-}
+};
 ```
 
 > **Note:** `getAnimations()` and `effect` are not shipping in all browsers as of this writing, but the polyfill does support them today.

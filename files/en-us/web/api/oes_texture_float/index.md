@@ -1,5 +1,6 @@
 ---
-title: OES_texture_float
+title: OES_texture_float extension
+short-title: OES_texture_float
 slug: Web/API/OES_texture_float
 page-type: webgl-extension
 browser-compat: api.OES_texture_float
@@ -33,7 +34,7 @@ This extension implicitly enables the {{domxref("WEBGL_color_buffer_float")}} ex
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_texture_float');
+const ext = gl.getExtension("OES_texture_float");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);

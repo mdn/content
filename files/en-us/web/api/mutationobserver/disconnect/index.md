@@ -1,5 +1,6 @@
 ---
-title: MutationObserver.disconnect()
+title: "MutationObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/MutationObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.MutationObserver.disconnect
@@ -49,8 +50,8 @@ possible reuse.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

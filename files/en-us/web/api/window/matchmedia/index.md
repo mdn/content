@@ -1,5 +1,6 @@
 ---
-title: Window.matchMedia()
+title: "Window: matchMedia() method"
+short-title: matchMedia()
 slug: Web/API/Window/matchMedia
 page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia
@@ -55,7 +56,7 @@ than or equal to 600 pixels wide, and will say "false" if the window is wider th
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```

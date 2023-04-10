@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.suppressLocalAudioPlayback
+title: "MediaTrackConstraints: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
 status:
@@ -31,7 +32,9 @@ result in an error.
 ## Examples
 
 ```js
-let isLocalAudioSuppressed = displayStream.getVideoTracks()[0].getSettings().suppressLocalAudioPlayback;
+let isLocalAudioSuppressed = displayStream
+  .getVideoTracks()[0]
+  .getSettings().suppressLocalAudioPlayback;
 ```
 
 The [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example shows how to use media track constraints.

@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.incomingHighWaterMark
+title: "WebTransportDatagramDuplexStream: incomingHighWaterMark property"
+short-title: incomingHighWaterMark
 slug: Web/API/WebTransportDatagramDuplexStream/incomingHighWaterMark
 page-type: web-api-instance-property
 status:
@@ -20,7 +21,7 @@ A number.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection

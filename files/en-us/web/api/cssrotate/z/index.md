@@ -1,13 +1,12 @@
 ---
-title: CSSRotate.z
+title: "CSSRotate: z property"
+short-title: z
 slug: Web/API/CSSRotate/z
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSRotate.z
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`z`** property of the
 {{domxref("CSSRotate")}} interface representing the z-component of the translating

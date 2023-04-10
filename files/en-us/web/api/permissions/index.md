@@ -23,10 +23,10 @@ The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissio
 ## Example
 
 ```js
-navigator.permissions.query({ name:' geolocation' }).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: " geolocation" }).then((result) => {
+  if (result.state === "granted") {
     showLocalNewsWithGeolocation();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableLocalNews();
   }
   // Don't do anything if the permission was denied.

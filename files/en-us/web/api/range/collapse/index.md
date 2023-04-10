@@ -1,5 +1,6 @@
 ---
-title: Range.collapse()
+title: "Range: collapse() method"
+short-title: collapse()
 slug: Web/API/Range/collapse
 page-type: web-api-instance-method
 browser-compat: api.Range.collapse

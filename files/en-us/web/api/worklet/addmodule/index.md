@@ -1,5 +1,6 @@
 ---
-title: Worklet.addModule()
+title: "Worklet: addModule() method"
+short-title: addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
 browser-compat: api.Worklet.addModule
@@ -56,15 +57,17 @@ following errors to the rejection handler.
 ```js
 const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-audioWorklet.addModule('modules/bypassFilter.js', {
-  credentials: 'omit',
+audioWorklet.addModule("modules/bypassFilter.js", {
+  credentials: "omit",
 });
 ```
 
 ### PaintWorklet example
 
 ```js
-CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+);
 ```
 
 Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref("image/paint", "paint()")}} function

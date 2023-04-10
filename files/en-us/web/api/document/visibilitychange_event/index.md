@@ -1,5 +1,6 @@
 ---
 title: "Document: visibilitychange event"
+short-title: visibilitychange
 slug: Web/API/Document/visibilitychange_event
 page-type: web-api-event
 browser-compat: api.Document.visibilitychange_event

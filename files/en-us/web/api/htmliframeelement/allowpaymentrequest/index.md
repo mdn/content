@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.allowPaymentRequest
+title: "HTMLIFrameElement: allowPaymentRequest property"
+short-title: allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
 page-type: web-api-instance-property
 status:

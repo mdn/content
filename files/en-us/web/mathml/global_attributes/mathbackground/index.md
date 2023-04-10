@@ -1,15 +1,13 @@
 ---
 title: mathbackground
 slug: Web/MathML/Global_attributes/mathbackground
-tags:
-  - Global attributes
-  - MathML
-  - Reference
-  - Deprecated
+page-type: mathml-attribute
+status:
+  - deprecated
 browser-compat: mathml.global_attributes.mathbackground
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Global_attributes")}}{{Deprecated_Header}}
+{{MathMLRef}}{{Deprecated_Header}}
 
 The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [background-color](/en-US/docs/Web/CSS/background-color) of a MathML element.
 

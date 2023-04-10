@@ -1,5 +1,6 @@
 ---
 title: "SVGAnimationElement: beginEvent event"
+short-title: beginEvent
 slug: Web/API/SVGAnimationElement/beginEvent_event
 page-type: web-api-event
 browser-compat: api.SVGAnimationElement.beginEvent_event
@@ -18,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beginEvent', (event) => { });
+addEventListener("beginEvent", (event) => {});
 
-onbegin = (event) => { };
+onbegin = (event) => {};
 ```
 
 ## Event type
@@ -63,25 +64,25 @@ ul {
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
   if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '270')}}
@@ -92,8 +93,8 @@ Note that you can also create an event listener for the `begin` event using the 
 
 ```js
 animateElem.onbegin = () => {
-  console.log('beginEvent fired');
-}
+  console.log("beginEvent fired");
+};
 ```
 
 ## Specifications

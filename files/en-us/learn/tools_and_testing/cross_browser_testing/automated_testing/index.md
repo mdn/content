@@ -1,17 +1,6 @@
 ---
 title: Introduction to automated testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
-tags:
-  - Article
-  - Automation
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Sauce Labs
-  - Testing
-  - Tools
-  - Web Stack
-  - cross browser
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -704,7 +693,7 @@ Let's get started with a TestingBot Trial.
 
 #### The basics: Manual tests
 
-The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the _Live Web Testing_ tab.
+The [TestingBot dashboard](https://testingbot.com/members) lists the various options you can choose from. For now, make sure you are on the _Live Web Testing_ tab.
 
 1. Enter the URL of the page you want to test.
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.

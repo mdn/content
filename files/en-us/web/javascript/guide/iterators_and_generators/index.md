@@ -1,6 +1,6 @@
 ---
 title: Iterators and generators
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 page-type: guide
 ---
 
@@ -66,7 +66,7 @@ while (!result.done) {
   result = it.next();
 }
 
-console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
+console.log("Iterated over sequence of size:", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
 > **Note:** It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).

@@ -1,5 +1,6 @@
 ---
-title: VRDisplayEvent()
+title: "VRDisplayEvent: VRDisplayEvent() constructor"
+short-title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 page-type: web-api-constructor
 status:
@@ -40,9 +41,9 @@ A new {{domxref("VRDisplayEvent")}} object.
 ## Examples
 
 ```js
-const myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent("custom", {
   display: vrDisplay,
-  reason: 'Custom reason'
+  reason: "Custom reason",
 });
 ```
 

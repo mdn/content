@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.total
+title: "PaymentRequestEvent: total property"
+short-title: total
 slug: Web/API/PaymentRequestEvent/total
 page-type: web-api-instance-property
 status:
@@ -24,7 +25,7 @@ A `PaymentCurrencyAmount` object. This object contains the following properties:
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.total);
 });
 ```

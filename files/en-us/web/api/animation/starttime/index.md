@@ -1,5 +1,6 @@
 ---
-title: Animation.startTime
+title: "Animation: startTime property"
+short-title: startTime
 slug: Web/API/Animation/startTime
 page-type: web-api-instance-property
 browser-compat: api.Animation.startTime
@@ -49,7 +50,7 @@ function animateNewCatWithWAAPI() {
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `animation.startTime` might get rounded depending on browser settings.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.startTime` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2 ms.
 
 ```js

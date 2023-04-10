@@ -2,11 +2,6 @@
 title: <header>
 slug: Web/HTML/Element/header
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
 browser-compat: html.elements.header
 ---
 
@@ -43,6 +38,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </header>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Page Header')}}
+
 ### Article Header
 
 ```html
@@ -61,6 +60,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </article>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Article Header')}}
+
 ## Accessibility
 
 The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
@@ -71,15 +74,15 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -87,7 +90,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no <code>&#x3C;header></code> or
         {{HTMLElement("footer")}} descendant.
@@ -101,7 +104,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that a <code>&#x3C;header></code> element must not be a
         descendant of an {{HTMLElement("address")}},
@@ -176,4 +179,4 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.

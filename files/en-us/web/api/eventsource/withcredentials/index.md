@@ -1,5 +1,6 @@
 ---
-title: EventSource.withCredentials
+title: "EventSource: withCredentials property"
+short-title: withCredentials
 slug: Web/API/EventSource/withCredentials
 page-type: web-api-instance-property
 browser-compat: api.EventSource.withCredentials
@@ -20,7 +21,7 @@ the default).
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.withCredentials);
 ```
 

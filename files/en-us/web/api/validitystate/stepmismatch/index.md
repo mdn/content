@@ -1,5 +1,6 @@
 ---
-title: ValidityState.stepMismatch
+title: "ValidityState: stepMismatch property"
+short-title: stepMismatch
 slug: Web/API/ValidityState/stepMismatch
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.stepMismatch
@@ -31,6 +32,6 @@ If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)

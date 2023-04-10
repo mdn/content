@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.tcpType
+title: "RTCIceCandidate: tcpType property"
+short-title: tcpType
 slug: Web/API/RTCIceCandidate/tcpType
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.tcpType
@@ -32,7 +33,7 @@ and `tcpType` are used to adjust the user interface for simultaneous-open TCP ca
 
 ```js
 if (candidate.protocol === "tcp" && candidate.tcpType === "so") {
-    adjustForSimultaneousOpen(candidate);
+  adjustForSimultaneousOpen(candidate);
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.usernameFragment
+title: "RTCIceCandidate: usernameFragment property"
+short-title: usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.usernameFragment
@@ -80,9 +81,8 @@ const ssNewCandidate = (signalMsg) => {
     }
   });
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

@@ -1,5 +1,6 @@
 ---
-title: EXT_texture_norm16
+title: EXT_texture_norm16 extension
+short-title: EXT_texture_norm16
 slug: Web/API/EXT_texture_norm16
 page-type: webgl-extension
 browser-compat: api.EXT_texture_norm16
@@ -42,14 +43,14 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ### Enabling the extension
 
 ```js
-let ext = gl.getExtension('EXT_texture_norm16');
+let ext = gl.getExtension("EXT_texture_norm16");
 ```
 
 ### Texture formats
 
 The {{domxref("WebGLRenderingContext.texImage2D()")}} method accepts new formats when `EXT_texture_norm16` is enabled. Example calls:
 
-```js
+```js-nolint
 // imageData = Uint16Array
 gl.texImage2D(gl.TEXTURE_2D, 0, ext.R16_EXT, 1, 1, 0, gl.RED, gl.UNSIGNED_SHORT, imageData);
 gl.texImage2D(gl.TEXTURE_2D, 0, ext.RG16_EXT, 1, 1, 0, gl.RG, gl.UNSIGNED_SHORT, imageData);

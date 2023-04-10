@@ -1,5 +1,6 @@
 ---
-title: Element.ariaCurrent
+title: "Element: ariaCurrent property"
+short-title: ariaCurrent
 slug: Web/API/Element/ariaCurrent
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaCurrent
@@ -43,9 +44,9 @@ In this example a set of links are used for site navigation. The `aria-current` 
 ```
 
 ```js
-let el = document.getElementById('link-home');
+let el = document.getElementById("link-home");
 console.log(el.ariaCurrent); // "page"
-el.ariaCurrent = "tab"
+el.ariaCurrent = "tab";
 console.log(el.ariaCurrent); // "tab"
 ```
 

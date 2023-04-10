@@ -1,5 +1,6 @@
 ---
-title: USBDevice.clearHalt()
+title: "USBDevice: clearHalt() method"
+short-title: clearHalt()
 slug: Web/API/USBDevice/clearHalt
 page-type: web-api-instance-method
 status:
@@ -52,9 +53,9 @@ while (true) {
     console.log(`Channel 5: ${result.data.getUint16(4)}`);
   }
 
-  if (result.status === 'stall') {
-    console.warn('Endpoint stalled. Clearing.');
-    await device.clearHalt('in', 1);
+  if (result.status === "stall") {
+    console.warn("Endpoint stalled. Clearing.");
+    await device.clearHalt("in", 1);
   }
 }
 ```

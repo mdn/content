@@ -2,9 +2,6 @@
 title: dy
 slug: Web/SVG/Attribute/dy
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy

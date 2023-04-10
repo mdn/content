@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.setConfiguration()
+title: "RTCPeerConnection: setConfiguration() method"
+short-title: setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setConfiguration
@@ -62,16 +63,19 @@ In this example, it has already been determined that ICE restart is needed, and 
 
 ```js
 const restartConfig = {
-  iceServers: [{
-    urls: "turn:asia.myturnserver.net",
-    username: "allie@oopcode.com",
-    credential: "topsecretpassword"
-  }]
+  iceServers: [
+    {
+      urls: "turn:asia.myturnserver.net",
+      username: "allie@oopcode.com",
+      credential: "topsecretpassword",
+    },
+  ],
 };
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({ "iceRestart": true })
+myPeerConnection
+  .createOffer({ iceRestart: true })
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     // send the offer to the other peer using the signaling server

@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.resultIndex
+title: "SpeechRecognitionEvent: resultIndex property"
+short-title: resultIndex
 slug: Web/API/SpeechRecognitionEvent/resultIndex
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionEvent.resultIndex
@@ -26,7 +27,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.resultIndex); // returns 0 if there is only one result
-}
+};
 ```
 
 ## Specifications

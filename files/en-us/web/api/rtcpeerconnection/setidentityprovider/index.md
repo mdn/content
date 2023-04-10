@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.setIdentityProvider()
+title: "RTCPeerConnection: setIdentityProvider() method"
+short-title: setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setIdentityProvider

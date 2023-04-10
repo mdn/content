@@ -1,5 +1,6 @@
 ---
-title: PushMessageData.text()
+title: "PushMessageData: text() method"
+short-title: text()
 slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
 browser-compat: api.PushMessageData.text
@@ -26,7 +27,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   const textObj = event.data.text();
 
   // do something with your text

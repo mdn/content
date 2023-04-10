@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.item()
+title: "CSSStyleDeclaration: item() method"
+short-title: item()
 slug: Web/API/CSSStyleDeclaration/item
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleDeclaration.item

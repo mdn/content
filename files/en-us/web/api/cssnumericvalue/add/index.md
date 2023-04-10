@@ -1,13 +1,12 @@
 ---
-title: CSSNumericValue.add()
+title: "CSSNumericValue: add() method"
+short-title: add()
 slug: Web/API/CSSNumericValue/add
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.add
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`add()`** method of the
 {{domxref("CSSNumericValue")}} interface adds a supplied number to the

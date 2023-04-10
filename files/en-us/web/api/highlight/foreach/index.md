@@ -1,5 +1,6 @@
 ---
-title: Highlight.forEach()
+title: "Highlight: forEach() method"
+short-title: forEach()
 slug: Web/API/Highlight/forEach
 page-type: web-api-instance-method
 status:
@@ -60,7 +61,7 @@ The code snippet below shows how create a new highlight with two ranges, and the
 
 ```js
 function logRanges(range, key, highlight) {
-    console.log(`Highlight object ${highlight} contains range ${range}`);
+  console.log(`Highlight object ${highlight} contains range ${range}`);
 }
 
 const text = new Text("Time is an illusion. Lunchtime doubly so.");

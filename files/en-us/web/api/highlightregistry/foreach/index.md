@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.forEach()
+title: "HighlightRegistry: forEach() method"
+short-title: forEach()
 slug: Web/API/HighlightRegistry/forEach
 page-type: web-api-instance-method
 status:

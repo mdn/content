@@ -1,5 +1,6 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() method"
+short-title: prepend()
 slug: Web/API/Element/prepend
 page-type: web-api-instance-method
 browser-compat: api.Element.prepend
@@ -76,7 +77,7 @@ See {{jsxref("Symbol.unscopables")}} for more information.
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

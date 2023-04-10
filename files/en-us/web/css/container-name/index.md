@@ -2,12 +2,6 @@
 title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
-tags:
-  - container queries
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container-name
 ---
 
@@ -26,12 +20,15 @@ container-name: <container-name>;
 ### Values
 
 - `<container-name>`
+
   - : A case-sensitive string that is used to identify the container.
+
     The following conditions apply:
-  - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
-  - The name value must not be in quotes.
-  - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
-  - A list of multiple names separated by a space is allowed.
+
+    - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+    - The name value must not be in quotes.
+    - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
+    - A list of multiple names separated by a space is allowed.
 
 ## Examples
 
@@ -109,7 +106,7 @@ This is useful if you want to target the same container with multiple container 
   }
 }
 
-@container nav (max-height: 200px) {
+@container card (max-height: 200px) {
   h2 {
     font-size: 1.5em;
   }

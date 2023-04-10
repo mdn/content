@@ -11,6 +11,11 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisEvent.SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}
+  - : Creates a new `SpeechSynthesisEvent`.
+
 ## Instance properties
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
@@ -35,12 +40,16 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 ```js
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+  );
+};
 
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+  );
+};
 ```
 
 ## Specifications

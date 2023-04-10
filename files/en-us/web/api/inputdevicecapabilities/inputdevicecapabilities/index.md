@@ -1,7 +1,10 @@
 ---
-title: InputDeviceCapabilities()
+title: "InputDeviceCapabilities: InputDeviceCapabilities() constructor"
+short-title: InputDeviceCapabilities()
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
 

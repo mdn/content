@@ -1,5 +1,6 @@
 ---
-title: Document.getElementsByTagName()
+title: "Document: getElementsByTagName() method"
+short-title: getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 page-type: web-api-instance-method
 browser-compat: api.Document.getElementsByTagName
@@ -34,7 +35,7 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 
 > **Note:** [The latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
 > `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
-> WebKit browsers. See {{bug(14869)}} for details.
+> WebKit browsers. See [Firefox bug 14869](https://bugzil.la/14869) for details.
 
 ## Examples
 
@@ -119,7 +120,7 @@ When called on an HTML document, `getElementsByTagName()` lower-cases its
 argument before proceeding. This is undesirable when trying to match camelCase SVG
 elements in a subtree in an HTML document.
 {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also
-{{Bug(499656)}}.
+[Webkit bug 499656](https://bugzil.la/499656).
 
 `document.getElementsByTagName()` is similar to
 {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the

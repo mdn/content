@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRecord.request
+title: "BackgroundFetchRecord: request property"
+short-title: request
 slug: Web/API/BackgroundFetchRecord/request
 page-type: web-api-instance-property
 status:

@@ -1,10 +1,6 @@
 ---
 title: str:split()
 slug: Web/EXSLT/str/split
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

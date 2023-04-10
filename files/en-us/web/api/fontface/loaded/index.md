@@ -1,5 +1,6 @@
 ---
-title: FontFace.loaded
+title: "FontFace: loaded property"
+short-title: loaded
 slug: Web/API/FontFace/loaded
 page-type: web-api-instance-property
 browser-compat: api.FontFace.loaded

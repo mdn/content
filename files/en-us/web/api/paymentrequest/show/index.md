@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.show()
+title: "PaymentRequest: show() method"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.show
@@ -136,8 +137,10 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) =>
+      ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) =>
+      ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -200,10 +203,13 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) =>
+    ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) =>
+    ev.updateWith(checkShipping(payRequest));
 
-  payRequest.show()
+  payRequest
+    .show()
     .then((response) => validateResponse(response))
     .catch((err) => handleError(err));
 }
@@ -263,7 +269,7 @@ button.onclick = async function handlePurchase() {
   } catch (err) {
     console.error("Uh oh, something bad happened", err.message);
   }
-}
+};
 ```
 
 The following example shows how to update the payment sheet as it's being presented to
@@ -280,7 +286,7 @@ async function requestPayment() {
   };
   const request = new PaymentRequest(methods, initialDetails, options);
   // Check if the user supports the `methods`
-  if (!await request.canMakePayment()) {
+  if (!(await request.canMakePayment())) {
     return; // no, so use a web form instead.
   }
   // Let's update the total as the sheet is shown

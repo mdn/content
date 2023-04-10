@@ -1,5 +1,6 @@
 ---
-title: Highlight.size
+title: "Highlight: size property"
+short-title: size
 slug: Web/API/Highlight/size
 page-type: web-api-instance-property
 status:

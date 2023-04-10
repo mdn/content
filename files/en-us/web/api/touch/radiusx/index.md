@@ -1,5 +1,6 @@
 ---
-title: Touch.radiusX
+title: "Touch: radiusX property"
+short-title: radiusX
 slug: Web/API/Touch/radiusX
 page-type: web-api-instance-property
 browser-compat: api.Touch.radiusX
@@ -28,9 +29,9 @@ The following simple code snippet, registers a single handler for the {{domxref(
 ```js
 const src = document.getElementById("src");
 
-src.addEventListener('touchstart', rotate);
-src.addEventListener('touchmove', rotate);
-src.addEventListener('touchend', rotate);
+src.addEventListener("touchstart", rotate);
+src.addEventListener("touchmove", rotate);
+src.addEventListener("touchend", rotate);
 
 function rotate(e) {
   const touch = e.changedTouches.item(0);
@@ -42,7 +43,7 @@ function rotate(e) {
   src.style.width = `${touch.radiusX * 2}px`;
   src.style.height = `${touch.radiusY * 2}px`;
   src.style.transform = `rotate(${touch.rotationAngle}deg)`;
-};
+}
 ```
 
 ## Specifications

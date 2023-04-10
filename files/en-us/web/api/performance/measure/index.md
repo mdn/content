@@ -1,5 +1,6 @@
 ---
-title: performance.measure()
+title: "Performance: measure() method"
+short-title: measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
 browser-compat: api.Performance.measure
@@ -50,6 +51,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
     - `duration` {{optional_inline}}
       - : Duration between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
     - `end` {{optional_inline}}
+
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string that names a {{domxref("PerformanceMark")}} to use for the end time.
 
         If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `endMark`.

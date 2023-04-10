@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-palette-values.base-palette
 
 {{CSSRef}}
 
-The **`base-palette`** CSS [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
+The **`base-palette`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
 
 ## Syntax
 
@@ -17,7 +17,7 @@ The **`base-palette`** CSS [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>)
 }
 ```
 
-The `base-palette` [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) is specified using a zero-based index of the font-maker created palettes.
+The `base-palette` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is specified using a zero-based index of the font-maker created palettes.
 
 ### Values
 
@@ -95,3 +95,4 @@ h2 {
 - {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
 - {{cssxref("font-palette/", "font-palette")}} property
+- {{domxref("CSSFontPaletteValuesRule.basePalette")}}

@@ -61,8 +61,6 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : An {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
@@ -187,7 +185,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
 - {{DOMxRef("Element.closest()")}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}
   - : Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.
@@ -292,7 +290,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
-- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
@@ -302,8 +300,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
-- {{domxref("Element/show_event", "show")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 

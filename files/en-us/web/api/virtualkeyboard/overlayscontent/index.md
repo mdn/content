@@ -1,5 +1,6 @@
 ---
-title: VirtualKeyboard.overlaysContent
+title: "VirtualKeyboard: overlaysContent property"
+short-title: overlaysContent
 slug: Web/API/VirtualKeyboard/overlaysContent
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.createBuffer()
+title: "WebGLRenderingContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createBuffer
@@ -29,8 +30,8 @@ A {{domxref("WebGLBuffer")}} storing data such as vertices or colors.
 ### Creating a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: EventSource.readyState
+title: "EventSource: readyState property"
+short-title: readyState
 slug: Web/API/EventSource/readyState
 page-type: web-api-instance-property
 browser-compat: api.EventSource.readyState
@@ -22,7 +23,7 @@ A number representing the state of the connection. Possible values are:
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.readyState);
 ```
 

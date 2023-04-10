@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.attack
+title: "DynamicsCompressorNode: attack property"
+short-title: attack
 slug: Web/API/DynamicsCompressorNode/attack
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.attack
@@ -25,7 +26,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.attack.value = 0;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

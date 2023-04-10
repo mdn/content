@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.key
+title: "NavigationDestination: key property"
+short-title: key
 slug: Web/API/NavigationDestination/key
 page-type: web-api-instance-property
 status:
@@ -21,7 +22,7 @@ A string representing the `key` of the destination {{domxref("NavigationHistoryE
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.key);
 });
 ```

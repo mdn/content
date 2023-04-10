@@ -1,5 +1,6 @@
 ---
-title: Navigation.canGoBack
+title: "Navigation: canGoBack property"
+short-title: canGoBack
 slug: Web/API/Navigation/canGoBack
 page-type: web-api-instance-property
 status:
@@ -29,7 +30,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -39,7 +40,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```

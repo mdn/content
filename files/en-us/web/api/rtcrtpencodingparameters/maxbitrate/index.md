@@ -1,5 +1,6 @@
 ---
-title: RTCRtpEncodingParameters.maxBitrate
+title: "RTCRtpEncodingParameters: maxBitrate property"
+short-title: maxBitrate
 slug: Web/API/RTCRtpEncodingParameters/maxBitrate
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpEncodingParameters.maxBitrate

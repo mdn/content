@@ -1,5 +1,6 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclose event'
+title: "ServiceWorkerGlobalScope: notificationclose event"
+short-title: notificationclose
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
@@ -26,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('notificationclose', (event) => { });
+addEventListener("notificationclose", (event) => {});
 
-onnotificationclose = (event) => { };
+onnotificationclose = (event) => {};
 ```
 
 ## Event type
@@ -51,7 +52,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 ```js
 //Inside a service worker.
 self.onnotificationclose = (event) => {
-  console.log('On notification close: ', event.notification.tag);
+  console.log("On notification close: ", event.notification.tag);
 };
 ```
 

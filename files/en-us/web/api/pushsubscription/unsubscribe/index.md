@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.unsubscribe()
+title: "PushSubscription: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.unsubscribe
@@ -31,12 +32,15 @@ subscription is successfully unsubscribed.
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    subscription.unsubscribe().then((successful) => {
-      // You've successfully unsubscribed
-    }).catch((e) => {
-      // Unsubscribing failed
-    })
-  })
+    subscription
+      .unsubscribe()
+      .then((successful) => {
+        // You've successfully unsubscribed
+      })
+      .catch((e) => {
+        // Unsubscribing failed
+      });
+  });
 });
 ```
 

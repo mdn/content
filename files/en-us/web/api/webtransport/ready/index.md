@@ -1,5 +1,6 @@
 ---
-title: WebTransport.ready
+title: "WebTransport: ready property"
+short-title: ready
 slug: Web/API/WebTransport/ready
 page-type: web-api-instance-property
 status:
@@ -20,7 +21,7 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -35,11 +36,11 @@ async function initTransport(url) {
 // ...
 
 async function closeTransport(transport) {
-    // Respond to connection closing
+  // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
+  } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }

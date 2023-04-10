@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.fullscreenElement
+title: "ShadowRoot: fullscreenElement property"
+short-title: fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.fullscreenElement
@@ -18,7 +19,7 @@ or `null` if there is no full screen element.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let fullscreenElem = shadow.fullscreenElement;
 ```

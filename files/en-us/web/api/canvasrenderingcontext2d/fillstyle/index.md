@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.fillStyle
+title: "CanvasRenderingContext2D: fillStyle property"
+short-title: fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.fillStyle

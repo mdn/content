@@ -1,5 +1,6 @@
 ---
-title: PermissionStatus.name
+title: "PermissionStatus: name property"
+short-title: name
 slug: Web/API/PermissionStatus/name
 page-type: web-api-instance-property
 browser-compat: api.PermissionStatus.name
@@ -20,13 +21,17 @@ function stateChangeListener() {
   console.log(`${this.name} permission status changed to ${this.state}`);
 }
 function queryAndTrackPermission(permissionName) {
-  navigator.permissions.query({ name: permissionName }).then((permissionStatus) => {
-    console.log(`${permissionName} permission state is ${permissionStatus.state}`);
-    permissionStatus.onchange = stateChangeListener;
-  });
-};
-queryAndTrackPermission('geolocation');
-queryAndTrackPermission('midi');
+  navigator.permissions
+    .query({ name: permissionName })
+    .then((permissionStatus) => {
+      console.log(
+        `${permissionName} permission state is ${permissionStatus.state}`
+      );
+      permissionStatus.onchange = stateChangeListener;
+    });
+}
+queryAndTrackPermission("geolocation");
+queryAndTrackPermission("midi");
 ```
 
 ## Specifications

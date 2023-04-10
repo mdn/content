@@ -1,5 +1,6 @@
 ---
-title: StereoPannerNode.pan
+title: "StereoPannerNode: pan property"
+short-title: pan
 slug: Web/API/StereoPannerNode/pan
 page-type: web-api-instance-property
 browser-compat: api.StereoPannerNode.pan
@@ -17,7 +18,7 @@ An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} con
 
 ## Examples
 
-See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#examples) for example code.
 
 ## Specifications
 

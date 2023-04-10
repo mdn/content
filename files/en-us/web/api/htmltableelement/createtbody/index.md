@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.createTBody()
+title: "HTMLTableElement: createTBody() method"
+short-title: createTBody()
 slug: Web/API/HTMLTableElement/createTBody
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.createTBody

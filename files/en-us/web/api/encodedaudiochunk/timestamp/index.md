@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.timestamp
+title: "EncodedAudioChunk: timestamp property"
+short-title: timestamp
 slug: Web/API/EncodedAudioChunk/timestamp
 page-type: web-api-instance-property
 status:
@@ -21,10 +22,10 @@ In the following example the `timestamp` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 

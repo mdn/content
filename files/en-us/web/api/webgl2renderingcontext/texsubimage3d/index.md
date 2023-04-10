@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.texSubImage3D()
+title: "WebGL2RenderingContext: texSubImage3D() method"
+short-title: texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texSubImage3D
@@ -137,7 +138,19 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.texSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, image.width, image.height, 1, gl.RGBA, gl.UNSIGNED_BYTE, image);
+gl.texSubImage3D(
+  gl.TEXTURE_3D,
+  0,
+  0,
+  0,
+  0,
+  image.width,
+  image.height,
+  1,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  image
+);
 ```
 
 ## Specifications

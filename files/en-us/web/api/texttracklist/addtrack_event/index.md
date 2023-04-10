@@ -1,5 +1,6 @@
 ---
-title: 'TextTrackList: addtrack event'
+title: "TextTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/TextTrackList/addtrack_event
 page-type: web-api-event
 browser-compat: api.TextTrackList.addtrack_event
@@ -14,9 +15,9 @@ The **`addtrack`** event is fired when a track is added to a [`TextTrackList`](/
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('addtrack', (event) => { })
+addEventListener("addtrack", (event) => {});
 
-onaddtrack = (event) => { }
+onaddtrack = (event) => {};
 ```
 
 ## Event type
@@ -37,9 +38,9 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-const mediaElement = document.querySelector('video, audio');
+const mediaElement = document.querySelector("video, audio");
 
-mediaElement.textTracks.addEventListener('addtrack', (event) => {
+mediaElement.textTracks.addEventListener("addtrack", (event) => {
   console.log(`Text track: ${event.track.label} added`);
 });
 ```
@@ -47,7 +48,7 @@ mediaElement.textTracks.addEventListener('addtrack', (event) => {
 Using the `onaddtrack` event handler property:
 
 ```js
-const mediaElement = document.querySelector('video, audio');
+const mediaElement = document.querySelector("video, audio");
 
 mediaElement.textTracks.onaddtrack = (event) => {
   console.log(`Text track: ${event.track.label} added`);

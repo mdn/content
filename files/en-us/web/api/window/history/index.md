@@ -1,5 +1,6 @@
 ---
-title: Window.history
+title: "Window: history property"
+short-title: history
 slug: Web/API/Window/history
 page-type: web-api-instance-property
 browser-compat: api.Window.history
@@ -18,8 +19,8 @@ A reference to the {{domxref("History")}} object.
 ## Examples
 
 ```js
-history.back();     // equivalent to clicking back button
-history.go(-1);     // equivalent to history.back();
+history.back(); // equivalent to clicking back button
+history.go(-1); // equivalent to history.back();
 ```
 
 ## Notes

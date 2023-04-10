@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.paymentRequestOrigin
+title: "PaymentRequestEvent: paymentRequestOrigin property"
+short-title: paymentRequestOrigin
 slug: Web/API/PaymentRequestEvent/paymentRequestOrigin
 page-type: web-api-instance-property
 status:
@@ -20,7 +21,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.paymentRequestOrigin);
 });
 ```

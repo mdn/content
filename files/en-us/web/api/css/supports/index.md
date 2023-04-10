@@ -1,5 +1,6 @@
 ---
-title: CSS.supports()
+title: "CSS: supports() static method"
+short-title: supports()
 slug: Web/API/CSS/supports
 page-type: web-api-static-method
 browser-compat: api.CSS.supports

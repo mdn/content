@@ -53,7 +53,6 @@ Not part of any standard.
 ## See also
 
 - {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

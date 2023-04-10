@@ -1,13 +1,12 @@
 ---
-title: CSSNumericValue.to()
+title: "CSSNumericValue: to() method"
+short-title: to()
 slug: Web/API/CSSNumericValue/to
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.to
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`to()`** method of the
 {{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to

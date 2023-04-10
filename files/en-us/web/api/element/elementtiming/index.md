@@ -1,7 +1,10 @@
 ---
-title: Element.elementTiming
+title: "Element: elementTiming property"
+short-title: elementTiming
 slug: Web/API/Element/elementTiming
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Element.elementTiming
 ---
 

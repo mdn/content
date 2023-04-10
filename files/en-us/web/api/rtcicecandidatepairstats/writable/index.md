@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.writable
+title: "RTCIceCandidatePairStats: writable property"
+short-title: writable
 slug: Web/API/RTCIceCandidatePairStats/writable
 page-type: web-api-instance-property
 status:
@@ -26,8 +27,10 @@ request _and_ that {{Glossary("STUN")}} consent hasn't expired.
 > {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp", "consentExpiredTimestamp")}} has not passed:
 >
 > ```js
-> if (icpStats.responsesReceived > 0
->     && icpStats.consentExpiredTimestamp < performance.now()) {
+> if (
+>   icpStats.responsesReceived > 0 &&
+>   icpStats.consentExpiredTimestamp < performance.now()
+> ) {
 >   /* at least one ICE response has been received */
 > }
 > ```

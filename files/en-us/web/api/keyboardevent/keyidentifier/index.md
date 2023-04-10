@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.keyIdentifier
+title: "KeyboardEvent: keyIdentifier property"
+short-title: keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
 page-type: web-api-instance-property
 status:

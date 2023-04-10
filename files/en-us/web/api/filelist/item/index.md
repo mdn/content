@@ -1,5 +1,6 @@
 ---
-title: FileList.item()
+title: "FileList: item() method"
+short-title: item()
 slug: Web/API/FileList/item
 page-type: web-api-instance-method
 browser-compat: api.FileList.item
@@ -41,7 +42,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

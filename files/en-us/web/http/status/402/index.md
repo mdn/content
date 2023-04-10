@@ -1,11 +1,6 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
 ---
 

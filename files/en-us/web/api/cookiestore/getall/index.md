@@ -1,5 +1,6 @@
 ---
-title: CookieStore.getAll()
+title: "CookieStore: getAll() method"
+short-title: getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
 status:
@@ -64,7 +65,7 @@ Each object contains the following properties:
 
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values (see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) for more information):
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.

@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.pointerBeforeReferenceNode
+title: "NodeIterator: pointerBeforeReferenceNode property"
+short-title: pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.pointerBeforeReferenceNode
@@ -21,9 +22,13 @@ A boolean.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 flag = nodeIterator.pointerBeforeReferenceNode;
 ```

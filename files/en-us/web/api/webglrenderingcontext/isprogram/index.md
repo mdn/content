@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.isProgram()
+title: "WebGLRenderingContext: isProgram() method"
+short-title: isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isProgram
@@ -30,8 +31,8 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the prog
 ### Checking a program
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const program = gl.createProgram();
 
 // …

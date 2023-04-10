@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.paymentRequestId
+title: "PaymentRequestEvent: paymentRequestId property"
+short-title: paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 page-type: web-api-instance-property
 status:
@@ -20,7 +21,7 @@ A string containing the ID.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.paymentRequestId);
 });
 ```

@@ -336,7 +336,7 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 #### `only-if-cached`
 
-The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it's reused.
+The client indicates that an already-cached response should be returned. If a cache has a stored response, even a stale one, it will be returned. If no cached response is available, a [504 Gateway Timeout](/en-US/docs/Web/HTTP/Status/504) response will be returned.
 
 ## Use Cases
 

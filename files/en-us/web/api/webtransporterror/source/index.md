@@ -1,5 +1,6 @@
 ---
-title: WebTransportError.source
+title: "WebTransportError: source property"
+short-title: source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
 status:
@@ -23,7 +24,6 @@ An enumerated value; can be either `stream` or `session`.
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -32,11 +32,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

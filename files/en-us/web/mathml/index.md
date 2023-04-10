@@ -1,12 +1,7 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
+page-type: landing-page
 browser-compat: mathml.elements.math
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaMultiLine
+title: "ElementInternals: ariaMultiLine property"
+short-title: ariaMultiLine
 slug: Web/API/ElementInternals/ariaMultiLine
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaMultiLine

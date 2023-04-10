@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.deleteCaption()
+title: "HTMLTableElement: deleteCaption() method"
+short-title: deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteCaption
@@ -51,7 +52,7 @@ This example uses JavaScript to delete a table's caption.
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteCaption();
 ```
 

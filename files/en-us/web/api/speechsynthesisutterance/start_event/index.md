@@ -1,5 +1,6 @@
 ---
-title: 'SpeechSynthesisUtterance: start event'
+title: "SpeechSynthesisUtterance: start event"
+short-title: start
 slug: Web/API/SpeechSynthesisUtterance/start_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.start_event
@@ -14,9 +15,9 @@ The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('start', (event) => { })
+addEventListener("start", (event) => {});
 
-onstart = (event) => { }
+onstart = (event) => {};
 ```
 
 ## Event type
@@ -43,7 +44,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-utterThis.addEventListener('start', (event) => {
+utterThis.addEventListener("start", (event) => {
   console.log(`We have started uttering this speech: ${event.utterance.text}`);
 });
 ```
@@ -53,7 +54,7 @@ Or use the `onstart` event handler property:
 ```js
 utterThis.onstart = (event) => {
   console.log(`We have started uttering this speech: ${event.utterance.text}`);
-}
+};
 ```
 
 ## Specifications

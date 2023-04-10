@@ -51,10 +51,10 @@ Register an event handler for each touch event type.
 
 ```js
 // Register touch event handlers
-someElement.addEventListener('touchstart', process_touchstart, false);
-someElement.addEventListener('touchmove', process_touchmove, false);
-someElement.addEventListener('touchcancel', process_touchcancel, false);
-someElement.addEventListener('touchend', process_touchend, false);
+someElement.addEventListener("touchstart", process_touchstart, false);
+someElement.addEventListener("touchmove", process_touchmove, false);
+someElement.addEventListener("touchcancel", process_touchcancel, false);
+someElement.addEventListener("touchend", process_touchend, false);
 ```
 
 Process an event in an event handler, implementing the application's gesture semantics.
@@ -64,10 +64,18 @@ Process an event in an event handler, implementing the application's gesture sem
 function process_touchstart(ev) {
   // Use the event's data to call out to the appropriate gesture handlers
   switch (ev.touches.length) {
-    case 1: handle_one_touch(ev); break;
-    case 2: handle_two_touches(ev); break;
-    case 3: handle_three_touches(ev); break;
-    default: gesture_not_supported(ev); break;
+    case 1:
+      handle_one_touch(ev);
+      break;
+    case 2:
+      handle_two_touches(ev);
+      break;
+    case 3:
+      handle_three_touches(ev);
+      break;
+    default:
+      gesture_not_supported(ev);
+      break;
   }
 }
 ```
@@ -76,13 +84,17 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener('touchstart', (ev) => {
-  // Iterate through the touch points that were activated
-  // for this element and process each event 'target'
-  for (let i = 0; i < ev.targetTouches.length; i++) {
-    process_target(ev.targetTouches[i].target);
-  }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  (ev) => {
+    // Iterate through the touch points that were activated
+    // for this element and process each event 'target'
+    for (let i = 0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  },
+  false
+);
 ```
 
 Prevent the browser from processing _emulated mouse events_.

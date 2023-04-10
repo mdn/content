@@ -2,15 +2,6 @@
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
 browser-compat: webextensions.api.storage
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Navigator.registerProtocolHandler()
+title: "Navigator: registerProtocolHandler() method"
+short-title: registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 page-type: web-api-instance-method
 browser-compat: api.Navigator.registerProtocolHandler
@@ -108,9 +109,11 @@ Otherwise, the scheme must be one of the following:
 If your site is `burgers.example.com`, you can register a protocol handler for it to handle `web+burger:` links, like so:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler"); // last title arg included for compatibility
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler"
+); // last title arg included for compatibility
 ```
 
 This creates a handler that lets `web+burger:` links send the user to your site, inserting the accessed burger URL into the `%s` placeholder.

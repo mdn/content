@@ -1,5 +1,6 @@
 ---
-title: FormData.delete()
+title: "FormData: delete() method"
+short-title: delete()
 slug: Web/API/FormData/delete
 page-type: web-api-instance-method
 browser-compat: api.FormData.delete
@@ -31,7 +32,7 @@ None ({{jsxref("undefined")}}).
 You can delete a key and its values using `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## Specifications

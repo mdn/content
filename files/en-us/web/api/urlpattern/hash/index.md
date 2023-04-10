@@ -1,5 +1,6 @@
 ---
-title: URLPattern.hash
+title: "URLPattern: hash property"
+short-title: hash
 slug: Web/API/URLPattern/hash
 page-type: web-api-instance-property
 status:
@@ -27,7 +28,7 @@ for the `hash` part. This pattern matches any fragment that starts with `books/`
 and ends with an arbitrary string identifier.
 
 ```js
-const pattern = new URLPattern('https://example.org#books/:id');
+const pattern = new URLPattern("https://example.org#books/:id");
 console.log(pattern.hash); // 'books/:id'
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.font
+title: "CanvasRenderingContext2D: font property"
+short-title: font
 slug: Web/API/CanvasRenderingContext2D/font
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.font
@@ -74,7 +75,7 @@ f.load().then(() => {
   {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`),
   getting the font value used to fail to return the expected font (it returns nothing).
   This is fixed in Firefox's [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) parallel CSS engine,
-  released in Firefox 57 ({{bug(1374885)}}).
+  released in Firefox 57 ([Firefox bug 1374885](https://bugzil.la/1374885)).
 
 ## See also
 

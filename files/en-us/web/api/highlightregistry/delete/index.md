@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.delete()
+title: "HighlightRegistry: delete() method"
+short-title: delete()
 slug: Web/API/HighlightRegistry/delete
 page-type: web-api-instance-method
 status:
@@ -36,10 +37,10 @@ The following code sample registers a highlight in the registry, and then delete
 ```js
 const myHighlight = new Highlight(range1, range2);
 
-CSS.highlights.set('my-highlight', myHighlight);
+CSS.highlights.set("my-highlight", myHighlight);
 
-CSS.highlights.delete('foo'); // false
-CSS.highlights.delete('my-highlight'); // true
+CSS.highlights.delete("foo"); // false
+CSS.highlights.delete("my-highlight"); // true
 ```
 
 ## Specifications

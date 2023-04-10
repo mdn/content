@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.totalFrameDelay
+title: "VideoPlaybackQuality: totalFrameDelay property"
+short-title: totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
 page-type: web-api-instance-property
 status:
@@ -23,7 +24,7 @@ A number.
 ## Examples
 
 ```js
-const videoElt = document.getElementById('my_vid');
+const videoElt = document.getElementById("my_vid");
 const quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);

@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.tiltY
+title: "PointerEvent: tiltY property"
+short-title: tiltY
 slug: Web/API/PointerEvent/tiltY
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.tiltY
@@ -24,9 +25,13 @@ This example illustrates simple accessing of the
 {{domxref("PointerEvent.tiltX","tiltX")}} and `tiltY` properties.
 
 ```js
-someElement.addEventListener("pointerdown", (event) => {
-  process_tilt(event.tiltX, event.tiltY);
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    process_tilt(event.tiltX, event.tiltY);
+  },
+  false
+);
 ```
 
 ## Specifications

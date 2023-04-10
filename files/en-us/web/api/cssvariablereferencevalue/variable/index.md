@@ -1,13 +1,12 @@
 ---
-title: CSSVariableReferenceValue.variable
+title: "CSSVariableReferenceValue: variable property"
+short-title: variable
 slug: Web/API/CSSVariableReferenceValue/variable
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`variable`** property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the

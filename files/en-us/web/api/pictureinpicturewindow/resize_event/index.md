@@ -1,5 +1,6 @@
 ---
-title: 'PictureInPictureWindow: resize event'
+title: "PictureInPictureWindow: resize event"
+short-title: resize
 slug: Web/API/PictureInPictureWindow/resize_event
 page-type: web-api-event
 browser-compat: api.PictureInPictureWindow.resize_event
@@ -16,16 +17,16 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', (event) => { });
+addEventListener("resize", (event) => {});
 
-onresize = (event) => { };
+onresize = (event) => {};
 ```
 
 ## Event type
 
-A {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("PictureInPictureWindow")}}
+{{InheritanceDiagram("PictureInPictureEvent")}}
 
 ## Event properties
 
@@ -46,21 +47,20 @@ _In addition to the properties listed below, properties from the parent interfac
 ```
 
 ```js
-const video = document.querySelector('#video');
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const video = document.querySelector("#video");
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function resize(evt) {
-  heightOutput.textContent = evt.target.width;
+  heightOutput.textContent = evt.target.height;
   widthOutput.textContent = evt.target.width;
 }
 
-video.requestPictureInPicture()
-  .then((pictureInPictureWindow) => {
-    pictureInPictureWindow.onresize = resize;
-    // or
-    pictureInPictureWindow.addEventListener('resize', resize);
-  });
+video.requestPictureInPicture().then((pictureInPictureWindow) => {
+  pictureInPictureWindow.onresize = resize;
+  // or
+  pictureInPictureWindow.addEventListener("resize", resize);
+});
 ```
 
 ## Specifications

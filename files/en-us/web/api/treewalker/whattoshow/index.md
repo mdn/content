@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.whatToShow
+title: "TreeWalker: whatToShow property"
+short-title: whatToShow
 slug: Web/API/TreeWalker/whatToShow
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.whatToShow
@@ -118,10 +119,13 @@ const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
   { acceptNode: (node) => NodeFilter.FILTER_ACCEPT },
-  false,
+  false
 );
-if ((treeWalker.whatToShow === NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2)) >= NodeFilter.SHOW_COMMENT) {
+if (
+  treeWalker.whatToShow === NodeFilter.SHOW_ALL ||
+  treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT * 2) >=
+    NodeFilter.SHOW_COMMENT
+) {
   // treeWalker will show comments
 }
 ```

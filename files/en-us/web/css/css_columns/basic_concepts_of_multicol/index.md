@@ -2,11 +2,6 @@
 title: Basic concepts of multi-column layout
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 page-type: guide
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
 ---
 
 {{CSSRef}}

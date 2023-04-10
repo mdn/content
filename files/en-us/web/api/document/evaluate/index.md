@@ -1,5 +1,6 @@
 ---
-title: Document.evaluate()
+title: "Document: evaluate() method"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
 page-type: web-api-instance-method
 browser-compat: api.Document.evaluate

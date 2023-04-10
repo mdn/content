@@ -1,5 +1,6 @@
 ---
-title: PannerNode.refDistance
+title: "PannerNode: refDistance property"
+short-title: refDistance
 slug: Web/API/PannerNode/refDistance
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.refDistance
@@ -44,8 +45,7 @@ const scheduleTestTone = (refDistance, startTime) => {
   panner.positionZ.setValueAtTime(0, startTime);
   panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
 
-  osc.connect(panner)
-     .connect(context.destination);
+  osc.connect(panner).connect(context.destination);
 
   osc.start(startTime);
   osc.stop(startTime + NOTE_LENGTH);

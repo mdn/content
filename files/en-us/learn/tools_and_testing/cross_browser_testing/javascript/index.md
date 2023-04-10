@@ -1,18 +1,6 @@
 ---
 title: Handling common JavaScript problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Libraries
-  - Testing
-  - cross browser
-  - feature detection
-  - linting
-  - polyfills
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -251,7 +239,7 @@ For example:
   For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
   Arrow functions are supported across all modern browsers, except for IE.
 - Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
-  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
+  It is arguably a good idea to use strict mode, as it makes for better, more efficient code. Strict mode is supported in all modern browsers.
 - [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
   These are available in IE10 and above, and all modern browsers.
 
@@ -448,7 +436,7 @@ Many developers implemented bad browser sniffing code and didn't maintain it, an
 
 The lesson to be learned here is to never use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 
-If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
+If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like [Firefox bug 1308462](https://bugzil.la/1308462).
 
 ### Handling JavaScript prefixes
 

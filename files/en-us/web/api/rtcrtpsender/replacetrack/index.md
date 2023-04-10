@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.replaceTrack()
+title: "RTCRtpSender: replaceTrack() method"
+short-title: replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.replaceTrack
@@ -91,15 +92,17 @@ navigator.mediaDevices
   .getUserMedia({
     video: {
       deviceId: {
-        exact: window.selectedCamera
-      }
-    }
+        exact: window.selectedCamera,
+      },
+    },
   })
   .then((stream) => {
     const [videoTrack] = stream.getVideoTracks();
     PCs.forEach((pc) => {
-      const sender = pc.getSenders().find((s) => s.track.kind === videoTrack.kind);
-      console.log('Found sender:', sender);
+      const sender = pc
+        .getSenders()
+        .find((s) => s.track.kind === videoTrack.kind);
+      console.log("Found sender:", sender);
       sender.replaceTrack(videoTrack);
     });
   })

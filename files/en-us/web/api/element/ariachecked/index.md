@@ -1,5 +1,6 @@
 ---
-title: Element.ariaChecked
+title: "Element: ariaChecked property"
+short-title: ariaChecked
 slug: Web/API/Element/ariaChecked
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaChecked
@@ -40,9 +41,9 @@ In this example the `aria-checked` attribute on the element with an ID of `check
 ```
 
 ```js
-let el = document.getElementById('checkBoxInput');
+let el = document.getElementById("checkBoxInput");
 console.log(el.ariaChecked); // "false"
-el.ariaChecked = "true"
+el.ariaChecked = "true";
 console.log(el.ariaChecked); // "true"
 ```
 

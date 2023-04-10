@@ -1,5 +1,6 @@
 ---
-title: window.cancelIdleCallback()
+title: "Window: cancelIdleCallback() method"
+short-title: cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 page-type: web-api-instance-method
 browser-compat: api.Window.cancelIdleCallback

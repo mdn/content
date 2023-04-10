@@ -1,5 +1,6 @@
 ---
-title: SVGAElement.target
+title: "SVGAElement: target property"
+short-title: target
 slug: Web/API/SVGAElement/target
 page-type: web-api-instance-property
 browser-compat: api.SVGAElement.target
@@ -25,8 +26,8 @@ The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGA
 
 ```js
 // ...
-const linkRef = document.querySelector('a');
-linkRef.target ='_blank';
+const linkRef = document.querySelector("a");
+linkRef.target = "_blank";
 // ...
 ```
 

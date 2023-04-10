@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.currentTime
+title: "BaseAudioContext: currentTime property"
+short-title: currentTime
 slug: Web/API/BaseAudioContext/currentTime
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.currentTime
@@ -28,7 +29,7 @@ console.log(audioCtx.currentTime);
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `audioCtx.currentTime` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.

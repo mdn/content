@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.createIndex()
+title: "IDBObjectStore: createIndex() method"
+short-title: createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.createIndex
@@ -79,7 +80,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     belongs to is not active (e.g. has been deleted or removed.) In Firefox
     previous to version 41, an `InvalidStateError` was raised in
     this case as well, which was misleading; this has now been fixed (see
-    {{Bug("1176165")}}.)
+    [Webkit bug 1176165](https://bugzil.la/1176165).)
 
 ## Examples
 
@@ -97,11 +98,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below.
@@ -120,11 +121,13 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

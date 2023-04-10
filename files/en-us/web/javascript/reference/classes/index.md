@@ -9,7 +9,7 @@ browser-compat: javascript.classes
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
-For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes) guide.
+For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide.
 
 ## Description
 
@@ -43,7 +43,7 @@ const Rectangle = class Rectangle2 {
 };
 ```
 
-Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting).
+Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting).
 
 ### Class body
 
@@ -135,7 +135,7 @@ console.log([...square.getSides()]); // [10, 10, 10, 10]
 
 #### Static methods and fields
 
-The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data that don't need to be replicated across instances.
 
 ```js
 class Point {
@@ -319,11 +319,8 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- {{jsxref("Functions", "Functions", "", "true")}}
-- {{jsxref("Statements/class", "class declaration", "", "true")}}
-- {{jsxref("Operators/class", "class expression", "", "true")}}
-- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}
-- {{jsxref("Operators/super", "super")}}
-- [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
-- [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [ES6 In Depth: Classes](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/) on hacks.mozilla.org (July 22, 2015)

@@ -63,10 +63,11 @@ console.log(header);
 function encodeRFC5987ValueChars(str) {
   return (
     encodeURIComponent(str)
-      // Note that although RFC3986 reserves "!", RFC5987 does not,
-      // so we do not need to escape it
-      .replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`) // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
-      // which necessitates calling toUpperCase() to properly encode)
+      // The following creates the sequences %27 %28 %29 %2A (Note that
+      // the valid encoding of "*" is %2A, which necessitates calling
+      // toUpperCase() to properly encode). Although RFC3986 reserves "!",
+      // RFC5987 does not, so we do not need to escape it.
+      .replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`)
       // The following are not required for percent-encoding per RFC5987,
       // so we can allow for a little better readability over the wire: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
@@ -89,6 +90,23 @@ function encodeRFC3986URIComponent(str) {
     );
 }
 ```
+
+### Encoding a lone high surrogate throws
+
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+
+```js
+// High-low pair OK
+encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
+
+// Lone high surrogate throws "URIError: malformed URI sequence"
+encodeURIComponent("\uD800");
+
+// Lone low surrogate throws "URIError: malformed URI sequence"
+encodeURIComponent("\uDFFF");
+```
+
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURIComponent()`.
 
 ## Specifications
 

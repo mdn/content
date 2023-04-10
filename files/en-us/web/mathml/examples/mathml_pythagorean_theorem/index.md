@@ -1,17 +1,10 @@
 ---
 title: Proving the Pythagorean theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - HTML Math
-  - Math education
-  - MathML
-  - NeedsBeginnerUpdate
+page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-us/docs/Web/MathML/Examples")}}
+{{MathMLRef}}
 
 We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem):
 

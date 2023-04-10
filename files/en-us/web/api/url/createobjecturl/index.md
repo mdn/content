@@ -1,5 +1,6 @@
 ---
-title: URL.createObjectURL()
+title: "URL: createObjectURL() static method"
+short-title: createObjectURL()
 slug: Web/API/URL/createObjectURL
 page-type: web-api-static-method
 browser-compat: api.URL.createObjectURL

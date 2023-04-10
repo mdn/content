@@ -1,11 +1,12 @@
 ---
-title: Response.status
+title: "Response: status property"
+short-title: status
 slug: Web/API/Response/status
 page-type: web-api-instance-property
 browser-compat: api.Response.status
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Status) of the response.
 
@@ -25,9 +26,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.status); // returns 200

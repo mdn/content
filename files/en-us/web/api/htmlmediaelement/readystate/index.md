@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.readyState
+title: "HTMLMediaElement: readyState property"
+short-title: readyState
 slug: Web/API/HTMLMediaElement/readyState
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.readyState
@@ -77,14 +78,12 @@ audio will play.
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', () => {
-
+obj.addEventListener("loadeddata", () => {
   if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 
@@ -98,4 +97,4 @@ obj.addEventListener('loadeddata', () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.readyState` property

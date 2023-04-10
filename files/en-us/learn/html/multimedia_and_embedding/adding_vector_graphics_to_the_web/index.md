@@ -1,18 +1,6 @@
 ---
 title: Adding vector graphics to the web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Beginner
-  - Graphics
-  - Guide
-  - HTML
-  - Images
-  - Learn
-  - Raster
-  - SVG
-  - Vector
-  - iframe
-  - img
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -128,7 +116,7 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ### Troubleshooting and cross-browser support
 
-For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a {{htmlattrxref("srcset", "img")}} attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
+For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
 <img

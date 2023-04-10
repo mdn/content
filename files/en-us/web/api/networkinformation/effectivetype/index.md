@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.effectiveType
+title: "NetworkInformation: effectiveType property"
+short-title: effectiveType
 slug: Web/API/NetworkInformation/effectiveType
 page-type: web-api-instance-property
 status:

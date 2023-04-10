@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.screenX
+title: "MouseEvent: screenX property"
+short-title: screenX
 slug: Web/API/MouseEvent/screenX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenX
@@ -31,8 +32,8 @@ This example displays your mouse's coordinates whenever you trigger the {{domxre
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

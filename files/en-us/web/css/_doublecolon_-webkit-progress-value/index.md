@@ -69,4 +69,3 @@ Not part of any standard.
   - {{ cssxref("::-webkit-progress-inner-element") }}
 
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}

@@ -34,7 +34,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Gets or sets the playback rate of the animation.
 - {{domxref("Animation.ready")}} {{ReadOnlyInline}}
   - : Returns the current ready Promise for this animation.
-- {{domxref("animation.replaceState")}} {{ReadOnlyInline}}
+- {{domxref("Animation.replaceState")}} {{ReadOnlyInline}}
   - : Returns the replace state of the animation. This will be `active` if the animation has been replaced, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 - {{domxref("Animation.startTime")}}
   - : Gets or sets the scheduled time when an animation's playback should begin.
@@ -45,7 +45,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 
 - {{domxref("Animation.cancel()")}}
   - : Clears all {{domxref("KeyframeEffect", "keyframeEffects")}} caused by this animation and aborts its playback.
-- {{domxref("animation.commitStyles()")}}
+- {{domxref("Animation.commitStyles()")}}
   - : Commits the end styling state of an animation to the element being animated, even after that animation has been removed. It will cause the end styling state to be written to the element being animated, in the form of properties inside a `style` attribute.
 - {{domxref("Animation.finish()")}}
   - : Seeks either end of an animation, depending on whether the animation is playing or reversing.

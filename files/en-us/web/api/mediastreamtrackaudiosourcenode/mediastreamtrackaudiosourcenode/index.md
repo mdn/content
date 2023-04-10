@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackAudioSourceNode()
+title: "MediaStreamTrackAudioSourceNode: MediaStreamTrackAudioSourceNode() constructor"
+short-title: MediaStreamTrackAudioSourceNode()
 slug: Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode
 page-type: web-api-constructor
 browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode
@@ -47,22 +48,24 @@ This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to 
 const audioCtx = new AudioContext();
 
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia (
-    {
+  navigator.mediaDevices
+    .getUserMedia({
       audio: true,
-      video: false
-    }).then((stream) => {
+      video: false,
+    })
+    .then((stream) => {
       const options = {
-        mediaStreamTrack: stream.getAudioTracks()[0]
-      }
+        mediaStreamTrack: stream.getAudioTracks()[0],
+      };
 
       const source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
       source.connect(audioCtx.destination);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.error(`The following gUM error occurred: ${err}`);
     });
 } else {
-  console.log('new getUserMedia not supported on your browser!');
+  console.log("new getUserMedia not supported on your browser!");
 }
 ```
 

@@ -1,10 +1,6 @@
 ---
 title: A hybrid approach
 slug: Web/Guide/Mobile/A_hybrid_approach
-tags:
-  - Mobile
-  - Responsive Design
-  - Web Development
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}

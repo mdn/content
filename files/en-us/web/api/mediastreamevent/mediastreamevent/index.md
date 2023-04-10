@@ -1,5 +1,6 @@
 ---
-title: MediaStreamEvent()
+title: "MediaStreamEvent: MediaStreamEvent() constructor"
+short-title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
 page-type: web-api-constructor
 status:
@@ -35,7 +36,7 @@ A new {{domxref("MediaStreamEvent")}} object.
 
 ```js
 // s is a MediaStream
-const event = new MediaStreamEvent("addstream", {"stream": s});
+const event = new MediaStreamEvent("addstream", { stream: s });
 ```
 
 ## Specifications

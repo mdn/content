@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePair.remote
+title: "RTCIceCandidatePair: remote property"
+short-title: remote
 slug: Web/API/RTCIceCandidatePair/remote
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePair.remote
@@ -25,7 +26,9 @@ This one-line example obtains the current candidate pair and then from that gets
 remote candidate.
 
 ```js
-const candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
+const candidatePair = pc
+  .getSenders()[0]
+  .transport.transport.getSelectedCandidatePair();
 const remoteCandidate = candidatePair.remote;
 ```
 

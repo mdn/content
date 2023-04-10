@@ -1,5 +1,6 @@
 ---
-title: NotificationEvent()
+title: "NotificationEvent: NotificationEvent() constructor"
+short-title: NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 page-type: web-api-constructor
 browser-compat: api.NotificationEvent.NotificationEvent
@@ -34,7 +35,7 @@ A new {{domxref("NotificationEvent()")}} object.
 ## Examples
 
 ```js
-const n = new Notification('Hello');
+const n = new Notification("Hello");
 const myNotificationEvent = new NotificationEvent(type, { notification: n });
 ```
 

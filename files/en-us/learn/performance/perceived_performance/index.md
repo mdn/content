@@ -1,9 +1,6 @@
 ---
 title: Perceived performance
 slug: Learn/Performance/Perceived_performance
-tags:
-  - Perceived Performance
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
@@ -36,7 +33,7 @@ This article provides a brief introduction to the factors that affect perceived 
 
 ## Overview
 
-The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important that the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
+The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important than the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
 
 A good general rule for improving perceived performance is that it is usually better to provide a quick response and regular status updates than make the user wait until an operation fully completes (before providing any information). For example, when loading a page it is better to display the text when it arrives rather than wait for all the images and other resources. Even though the content has not fully downloaded the user can see something is happening and they can start interacting with the content.
 
@@ -52,7 +49,7 @@ There is no single metric or test that can be run on a site to evaluate how a us
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
 - [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)
   - : The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
-- [First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint) (FMP)
+- [First Meaningful Paint](/en-US/docs/Glossary/First_meaningful_paint) (FMP)
   - : The time at which useful content is rendered to the screen.
 - [Largest Contentful Paint](https://wicg.github.io/largest-contentful-paint/) (LCP)
   - : The render time of the largest content element visible in the viewport.

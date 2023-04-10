@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryEntry.removeRecursively()
+title: "FileSystemDirectoryEntry: removeRecursively() method"
+short-title: removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
 page-type: web-api-instance-method
 status:
@@ -72,11 +73,14 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 ## Examples
 
 ```js
-directory.removeRecursively(() => {
-  /* The directory was removed successfully */
-}, () => {
-  /* an error occurred while removing the directory */
-});
+directory.removeRecursively(
+  () => {
+    /* The directory was removed successfully */
+  },
+  () => {
+    /* an error occurred while removing the directory */
+  }
+);
 ```
 
 ## Browser compatibility

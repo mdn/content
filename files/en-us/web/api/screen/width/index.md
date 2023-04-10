@@ -1,5 +1,6 @@
 ---
-title: Screen.width
+title: "Screen: width property"
+short-title: width
 slug: Web/API/Screen/width
 page-type: web-api-instance-property
 browser-compat: api.Screen.width
@@ -29,9 +30,6 @@ Note that not all of the width given by this property may be available to the wi
 itself. When other widgets occupy space that cannot be used by the `window`
 object, there is a difference in `window.screen.width` and
 `window.screen.availWidth`. See also {{DOMxRef("screen.height")}}.
-
-Internet Explorer will take into account the zoom setting when reporting the screen
-width. It will only return the real width of the screen if the zoom is set to 100%.
 
 ## Specifications
 

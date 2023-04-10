@@ -1,5 +1,6 @@
 ---
-title: 'Window: unhandledrejection event'
+title: "Window: unhandledrejection event"
+short-title: unhandledrejection
 slug: Web/API/Window/unhandledrejection_event
 page-type: web-api-event
 browser-compat: api.Window.unhandledrejection_event
@@ -16,8 +17,8 @@ This is useful for debugging and for providing fallback error handling for unexp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('unhandledrejection', (event) => { });
-onunhandledrejection = (event) => { };
+addEventListener("unhandledrejection", (event) => {});
+onunhandledrejection = (event) => {};
 ```
 
 ## Event type
@@ -72,7 +73,7 @@ window.onunhandledrejection = (event) => {
 Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for `unhandledrejection` events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because `unhandledrejection` is cancelable.
 
 ```js
-window.addEventListener('unhandledrejection', (event) => {
+window.addEventListener("unhandledrejection", (event) => {
   // code for handling the unhandled rejection
   // …
 

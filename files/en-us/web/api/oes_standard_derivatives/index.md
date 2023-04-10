@@ -1,5 +1,6 @@
 ---
-title: OES_standard_derivatives
+title: OES_standard_derivatives extension
+short-title: OES_standard_derivatives
 slug: Web/API/OES_standard_derivatives
 page-type: webgl-extension
 browser-compat: api.OES_standard_derivatives
@@ -35,8 +36,8 @@ genType fwidth(genType)
 Enabling the extensions:
 
 ```js
-gl.getExtension('OES_standard_derivatives');
-gl.getExtension('EXT_shader_texture_lod');
+gl.getExtension("OES_standard_derivatives");
+gl.getExtension("EXT_shader_texture_lod");
 ```
 
 Shader code that avoids artifacts when wrapping texture coordinates:

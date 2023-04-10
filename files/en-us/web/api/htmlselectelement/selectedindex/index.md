@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.selectedIndex
+title: "HTMLSelectElement: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.selectedIndex
@@ -35,15 +36,15 @@ A number.
 ### JavaScript
 
 ```js
-const selectElem = document.getElementById('select')
-const pElem = document.getElementById('p')
+const selectElem = document.getElementById("select");
+const pElem = document.getElementById("p");
 
 // When a new <option> is selected
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   const index = selectElem.selectedIndex;
   // Add that data to the <p>
   pElem.textContent = `selectedIndex: ${index}`;
-})
+});
 ```
 
 {{EmbedLiveSample("Examples", "200px", "120px")}}

@@ -1,5 +1,6 @@
 ---
-title: Request.signal
+title: "Request: signal property"
+short-title: signal
 slug: Web/API/Request/signal
 page-type: web-api-instance-property
 browser-compat: api.Request.signal
@@ -23,7 +24,7 @@ const controller = new AbortController();
 const req = new Request('/', { signal: controller.signal });
 
 // Add an event handler logging a message in case of abort
-req.signal.addEventListener("signal", () => {
+req.signal.addEventListener("abort", () => {
   console.log("abort");
 });
 

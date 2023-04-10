@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.charLength
+title: "SpeechSynthesisEvent: charLength property"
+short-title: charLength
 slug: Web/API/SpeechSynthesisEvent/charLength
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.charLength

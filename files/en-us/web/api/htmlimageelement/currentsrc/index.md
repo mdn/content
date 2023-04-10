@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.currentSrc
+title: "HTMLImageElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.currentSrc
@@ -23,7 +24,7 @@ determine which image from the set of provided images was selected by the browse
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock. One is 200px
-wide and the other is 400px wide. The {{htmlattrxref("sizes", "img")}} attribute is
+wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is
 provided to indicate that the image should be drawn at 50% of the document width if the
 viewport is under 400px wide; otherwise, the image is drawn at 90% width of the
 document.

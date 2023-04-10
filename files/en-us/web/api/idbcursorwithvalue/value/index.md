@@ -1,5 +1,6 @@
 ---
-title: IDBCursorWithValue.value
+title: "IDBCursorWithValue: value property"
+short-title: value
 slug: Web/API/IDBCursorWithValue/value
 page-type: web-api-instance-property
 browser-compat: api.IDBCursorWithValue.value
@@ -31,23 +32,23 @@ For a complete working example, see our [IDBCursor example](https://github.com/m
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       console.log(cursor.value);
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

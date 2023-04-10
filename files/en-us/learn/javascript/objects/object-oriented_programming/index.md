@@ -1,9 +1,6 @@
 ---
 title: Object-oriented programming
 slug: Learn/JavaScript/Objects/Object-oriented_programming
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
@@ -187,7 +184,7 @@ class Student : extends Person
     properties
        year
     constructor
-        Student(name, year)
+       Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year > 1 }

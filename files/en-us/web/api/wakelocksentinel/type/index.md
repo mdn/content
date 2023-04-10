@@ -1,13 +1,12 @@
 ---
-title: WakeLockSentinel.type
+title: "WakeLockSentinel: type property"
+short-title: type
 slug: Web/API/WakeLockSentinel/type
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WakeLockSentinel.type
 ---
 
-{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The read-only **`type`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a string
@@ -25,7 +24,7 @@ This example shows an asynchronous function that acquires a
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // logs 'screen'
 };
 

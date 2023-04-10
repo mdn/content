@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.remove()
+title: "FileSystemHandle: remove() method"
+short-title: remove()
 slug: Web/API/FileSystemHandle/remove
 page-type: web-api-instance-method
 status:
@@ -61,11 +62,11 @@ When the "Delete" button is pressed, the `deleteFile()` function is run, which l
 
 ```js
 async function deleteFile(e) {
-  for(const handle of savedFileRefs) {
-    if(handle.name === e.target.id + '.txt') {
+  for (const handle of savedFileRefs) {
+    if (handle.name === e.target.id + ".txt") {
       await handle.remove();
       savedFileRefs = savedFileRefs.filter(
-        handle => handle.name !== e.target.id + '.txt'
+        (handle) => handle.name !== e.target.id + ".txt"
       );
       e.target.parentElement.parentElement.removeChild(e.target.parentElement);
     }

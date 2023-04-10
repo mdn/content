@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.getRegistration()
+title: "ServiceWorkerContainer: getRegistration() method"
+short-title: getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.getRegistration
@@ -33,9 +34,10 @@ object or `undefined`.
 ## Examples
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then((registration) => {
+navigator.serviceWorker.getRegistration("/app").then((registration) => {
   if (registration) {
-    document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
+    document.querySelector("#status").textContent =
+      "ServiceWorkerRegistration found.";
   }
 });
 ```

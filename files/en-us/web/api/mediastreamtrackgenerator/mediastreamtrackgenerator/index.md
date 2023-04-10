@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackGenerator()
+title: "MediaStreamTrackGenerator: MediaStreamTrackGenerator() constructor"
+short-title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
 page-type: web-api-constructor
 status:
@@ -37,7 +38,7 @@ new MediaStreamTrackGenerator(options)
 In the following example a new video `MediaStreamTrackGenerator` is created.
 
 ```js
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 ```
 
 ## Specifications

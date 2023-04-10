@@ -1,5 +1,6 @@
 ---
-title: 'Element: gestureend event'
+title: "Element: gestureend event"
+short-title: gestureend
 slug: Web/API/Element/gestureend_event
 page-type: web-api-event
 status:
@@ -18,9 +19,9 @@ It is a proprietary event specific to WebKit.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gestureend', (event) => {});
+addEventListener("gestureend", (event) => {});
 
-ongestureend = (event) => { };
+ongestureend = (event) => {};
 ```
 
 ## Event type
@@ -47,16 +48,5 @@ Not part of any specification.
 {{Compat}}
 
 ## See also
-
-- Related events:
-
-  - [`MSGestureStart`](/en-US/docs/Web/API/Element/MSGestureStart_event)
-  - [`MSGestureEnd`](/en-US/docs/Web/API/Element/MSGestureEnd_event)
-  - [`MSGestureTap`](/en-US/docs/Web/API/Element/MSGestureTap_event)
-  - [`MSGestureChange`](/en-US/docs/Web/API/Element/MSGestureChange_event)
-  - [`MSGestureHold`](/en-US/docs/Web/API/Element/MSGestureHold_event)
-  - [`MSInertiaStart`](/en-US/docs/Web/API/Element/MSInertiaStart_event)
-  - [`gesturestart`](/en-US/docs/Web/API/Element/gesturestart_event)
-  - [`gesturechange`](/en-US/docs/Web/API/Element/gesturechange_event)
 
 - [GestureEventClassReference at the Safari Developer Library](https://developer.apple.com/documentation/webkitjs/gestureevent)

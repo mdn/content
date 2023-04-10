@@ -1,5 +1,6 @@
 ---
-title: Document.exitFullscreen()
+title: "Document: exitFullscreen() method"
+short-title: exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 page-type: web-api-instance-method
 browser-compat: api.Document.exitFullscreen
@@ -65,5 +66,5 @@ document.onclick = (event) => {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute

@@ -1,5 +1,6 @@
 ---
-title: Element.ariaColSpan
+title: "Element: ariaColSpan property"
+short-title: ariaColSpan
 slug: Web/API/Element/ariaColSpan
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaColSpan
@@ -32,7 +33,7 @@ In this example the `aria-colspan` attribute on the element with an ID of `spann
 ```
 
 ```js
-let el = document.getElementById('spanning-column');
+let el = document.getElementById("spanning-column");
 console.log(el.ariaColSpan);
 el.ariaColSpan = "3";
 console.log(el.ariaColSpan);

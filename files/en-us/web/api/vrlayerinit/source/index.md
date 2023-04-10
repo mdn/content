@@ -1,5 +1,6 @@
 ---
-title: VRLayerInit.source
+title: "VRLayerInit: source property"
+short-title: source
 slug: Web/API/VRLayerInit/source
 page-type: web-api-instance-property
 status:

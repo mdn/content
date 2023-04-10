@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: "CustomElementRegistry: whenDefined() method"
+short-title: whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.whenDefined

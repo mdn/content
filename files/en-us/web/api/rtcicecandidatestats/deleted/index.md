@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidateStats.deleted
+title: "RTCIceCandidateStats: deleted property"
+short-title: deleted
 slug: Web/API/RTCIceCandidateStats/deleted
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.deleted
@@ -40,19 +41,27 @@ candidates. Only candidates which have not been deleted are included in the outp
 
 ```js
 setInterval(() => {
-
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 
     stats.forEach((report) => {
-      if ((stats.type === "local-candidate" || stats.type === "remote.candidate") && !stats.deleted) {
-        statsOutput += `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
-                       `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
+      if (
+        (stats.type === "local-candidate" ||
+          stats.type === "remote.candidate") &&
+        !stats.deleted
+      ) {
+        statsOutput +=
+          `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
+          `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
         // Now the statistics for this report; we intentionally drop the ones we
         // sorted to the top above
         Object.keys(report).forEach((statName) => {
-          if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
+          if (
+            statName !== "id" &&
+            statName !== "timestamp" &&
+            statName !== "type"
+          ) {
             statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
           }
         });

@@ -1,5 +1,6 @@
 ---
-title: Node.parentElement
+title: "Node: parentElement property"
+short-title: parentElement
 slug: Web/API/Node/parentElement
 page-type: web-api-instance-property
 browser-compat: api.Node.parentElement
@@ -20,7 +21,7 @@ or `null` if there isn't one.
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

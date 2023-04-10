@@ -2,16 +2,6 @@
 title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MutedInfoReason
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
 browser-compat: webextensions.api.tabs.MutedInfoReason
 ---
 

@@ -2,10 +2,6 @@
 title: MDN Web Docs Localization
 slug: MDN/Community/Contributing/Translated_content
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
@@ -16,7 +12,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ## Active locales
 
-> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> **Note:** If you want to contribute to one of the existing active locales get in touch with one of the active members listed below, or [contact us for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Brazilian Portuguese (pt-BR)
 
@@ -40,8 +36,8 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ### Korea (ko)
 
-- Discussions: [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11)
+- Discussions: [Discord (#korean channel)](https://discord.gg/apa6Rn7uEj), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42)
 
 ### Russian (ru)
 

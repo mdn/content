@@ -1,5 +1,6 @@
 ---
-title: Element.querySelectorAll()
+title: "Element: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 page-type: web-api-instance-method
 browser-compat: api.Element.querySelectorAll

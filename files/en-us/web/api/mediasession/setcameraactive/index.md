@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setCameraActive()
+title: "MediaSession: setCameraActive() method"
+short-title: setCameraActive()
 slug: Web/API/MediaSession/setCameraActive
 page-type: web-api-instance-method
 status:
@@ -41,7 +42,7 @@ let cameraActive = false;
 
 navigator.mediaSession.setCameraActive(cameraActive);
 
-navigator.mediaSession.setActionHandler('togglecamera', () => {
+navigator.mediaSession.setActionHandler("togglecamera", () => {
   cameraActive = !cameraActive;
   navigator.mediaSession.setCameraActive(cameraActive);
 });

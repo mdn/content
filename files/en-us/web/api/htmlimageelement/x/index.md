@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x property"
+short-title: x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.x
@@ -78,11 +79,11 @@ The JavaScript code that fetches the image from the table and looks up its
 
 ```js
 let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo")
+let tbl = document.getElementById("userinfo");
 
 let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
-}
+};
 
 let cell = tbl.rows[1].cells[2];
 let image = cell.querySelector("img");
