@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: speaker-selection"
 slug: Web/HTTP/Headers/Permissions-Policy/speaker-selection
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.speaker-selection

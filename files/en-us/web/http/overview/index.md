@@ -1,6 +1,7 @@
 ---
 title: An overview of HTTP
 slug: Web/HTTP/Overview
+page-type: guide
 ---
 
 {{HTTPSidebar}}

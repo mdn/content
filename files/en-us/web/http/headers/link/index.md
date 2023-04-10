@@ -1,6 +1,7 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
+page-type: http-header
 browser-compat: http.headers.Link
 ---
 

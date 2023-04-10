@@ -1,6 +1,7 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
+page-type: http-status-code
 browser-compat: http.status.401
 ---
 

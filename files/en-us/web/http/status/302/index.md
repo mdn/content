@@ -1,6 +1,7 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
+page-type: http-status-code
 browser-compat: http.status.302
 ---
 

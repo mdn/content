@@ -1,6 +1,7 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
+page-type: http-header
 browser-compat: http.headers.Accept-Language
 ---
 

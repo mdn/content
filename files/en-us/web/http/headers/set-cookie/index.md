@@ -1,6 +1,7 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
+page-type: http-header
 browser-compat: http.headers.Set-Cookie
 ---
 
