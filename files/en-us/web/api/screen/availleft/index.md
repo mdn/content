@@ -1,14 +1,10 @@
 ---
-title: Screen.availLeft
+title: "Screen: availLeft property"
+short-title: availLeft
 slug: Web/API/Screen/availLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - API:WebKit Extensions
-  - DOM
-  - Non-standard
-  - Property
+status:
+  - non-standard
 browser-compat: api.Screen.availLeft
 ---
 

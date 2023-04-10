@@ -1,13 +1,8 @@
 ---
-title: ProgressEvent.total
+title: "ProgressEvent: total property"
+short-title: total
 slug: Web/API/ProgressEvent/total
 page-type: web-api-instance-property
-tags:
-  - API
-  - Progress Event
-  - ProgressEvent
-  - Property
-  - Reference
 browser-compat: api.ProgressEvent.total
 ---
 

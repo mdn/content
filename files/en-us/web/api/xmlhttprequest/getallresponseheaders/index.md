@@ -1,19 +1,8 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch Headers
-  - Get Headers
-  - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 

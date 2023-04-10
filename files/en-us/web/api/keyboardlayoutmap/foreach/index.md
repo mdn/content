@@ -1,17 +1,10 @@
 ---
-title: KeyboardLayoutMap.forEach()
+title: "KeyboardLayoutMap: forEach() method"
+short-title: forEach()
 slug: Web/API/KeyboardLayoutMap/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Method
-  - Reference
-  - forEach()
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.forEach
 ---
 

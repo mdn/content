@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.delete()
+title: "IDBCursor: delete() method"
+short-title: delete()
 slug: Web/API/IDBCursor/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - delete
 browser-compat: api.IDBCursor.delete
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: Credential.type
+title: "Credential: type property"
+short-title: type
 slug: Web/API/Credential/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential
-  - Credential Management API
-  - Property
-  - Reference
-  - credential management
 browser-compat: api.Credential.type
 ---
 

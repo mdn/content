@@ -1,13 +1,8 @@
 ---
-title: SharedWorker()
+title: "SharedWorker: SharedWorker() constructor"
+short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - SharedWorker
-  - Web Workers
 browser-compat: api.SharedWorker.SharedWorker
 ---
 
@@ -74,24 +69,24 @@ The following code snippet shows creation of a {{domxref("SharedWorker")}} objec
 the `SharedWorker()` constructor and subsequent usage of the object:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 
 myWorker.port.start();
 
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)

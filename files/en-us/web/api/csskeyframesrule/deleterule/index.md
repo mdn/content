@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframesRule.deleteRule()
+title: "CSSKeyframesRule: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.deleteRule
 ---
 

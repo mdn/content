@@ -1,13 +1,8 @@
 ---
-title: Element.setAttributeNode()
+title: "Element: setAttributeNode() method"
+short-title: setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.setAttributeNode
 ---
 
@@ -44,9 +39,9 @@ This example copies the `align` attribute from one element to another.
 ### JavaScript
 
 ```js
-let d1 = document.getElementById('one');
-let d2 = document.getElementById('two');
-let a = d1.getAttributeNode('align');
+let d1 = document.getElementById("one");
+let d2 = document.getElementById("two");
+let a = d1.getAttributeNode("align");
 
 d2.setAttributeNode(a.cloneNode(true));
 

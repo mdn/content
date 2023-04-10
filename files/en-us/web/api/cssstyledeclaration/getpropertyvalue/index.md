@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.getPropertyValue()
+title: "CSSStyleDeclaration: getPropertyValue() method"
+short-title: getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyValue
 ---
 

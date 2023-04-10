@@ -2,15 +2,6 @@
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 page-type: javascript-instance-method
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 ---
 
@@ -22,8 +13,6 @@ formatting options computed during initialization of this {{jsxref("Intl.DateTim
 object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

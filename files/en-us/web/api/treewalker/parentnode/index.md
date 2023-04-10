@@ -1,13 +1,8 @@
 ---
-title: TreeWalker.parentNode()
+title: "TreeWalker: parentNode() method"
+short-title: parentNode()
 slug: Web/API/TreeWalker/parentNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.parentNode
 ---
 
@@ -37,10 +32,14 @@ A {{domxref("Node")}} object or `null`.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false
 );
 const node = treeWalker.parentNode(); // returns null as there is no parent
 ```

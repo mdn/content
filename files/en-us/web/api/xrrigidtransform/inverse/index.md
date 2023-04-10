@@ -1,24 +1,8 @@
 ---
-title: XRRigidTransform.inverse
+title: "XRRigidTransform: inverse property"
+short-title: inverse
 slug: Web/API/XRRigidTransform/inverse
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - inverse
-  - transform
 browser-compat: api.XRRigidTransform.inverse
 ---
 

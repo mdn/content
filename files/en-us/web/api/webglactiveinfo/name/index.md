@@ -1,12 +1,8 @@
 ---
-title: WebGLActiveInfo.name
+title: "WebGLActiveInfo: name property"
+short-title: name
 slug: Web/API/WebGLActiveInfo/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLActiveInfo.name
 ---
 

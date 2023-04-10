@@ -2,18 +2,16 @@
 title: LaunchParams
 slug: Web/API/LaunchParams
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - LaunchParams
-  - Reference
+status:
+  - experimental
 browser-compat: api.LaunchParams
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
-The **`LaunchParams`** interface is used when implementing custom launch navigation handling in a PWA. When {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is invoked to set up the launch navigation handling functionality, the callback function inside `setConsumer()` is passed a `LaunchParams` object instance.
+The **`LaunchParams`** interface of the {{domxref("Launch Handler API", "Launch Handler API", "", "nocode")}} is used when implementing custom launch navigation handling in a PWA. When {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is invoked to set up the launch navigation handling functionality, the callback function inside `setConsumer()` is passed a `LaunchParams` object instance.
+
+Such custom navigation handling is initiated via {{domxref("Window.launchQueue")}} when a PWA has been launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`.
 
 {{InheritanceDiagram}}
 
@@ -27,13 +25,13 @@ The **`LaunchParams`** interface is used when implementing custom launch navigat
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
         title.textContent = new URL(track).pathname.substr(1);

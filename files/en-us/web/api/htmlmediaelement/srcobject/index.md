@@ -1,16 +1,8 @@
 ---
-title: HTMLMediaElement.srcObject
+title: "HTMLMediaElement: srcObject property"
+short-title: srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - srcObject
 browser-compat: api.HTMLMediaElement.srcObject
 ---
 
@@ -46,8 +38,8 @@ In this example, a {{domxref("MediaStream")}} from a camera is assigned to a
 newly-created {{HTMLElement("video")}} element.
 
 ```js
-const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
-const video = document.createElement('video');
+const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+const video = document.createElement("video");
 video.srcObject = mediaStream;
 ```
 
@@ -56,7 +48,7 @@ In this example, a new {{domxref('MediaSource')}} is assigned to a newly-created
 
 ```js
 const mediaSource = new MediaSource();
-const video = document.createElement('video');
+const video = document.createElement("video");
 video.srcObject = mediaSource;
 ```
 
@@ -69,9 +61,9 @@ First, a {{domxref("MediaStream")}} from a camera is assigned to a newly-created
 {{HTMLElement("video")}} element, with fallback for older browsers.
 
 ```js
-const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
-const video = document.createElement('video');
-if ('srcObject' in video) {
+const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+const video = document.createElement("video");
+if ("srcObject" in video) {
   video.srcObject = mediaStream;
 } else {
   // Avoid using this in new browsers, as it is going away.
@@ -85,9 +77,9 @@ don't yet support assignment of {{domxref('MediaSource')}} directly.
 
 ```js
 const mediaSource = new MediaSource();
-const video = document.createElement('video');
+const video = document.createElement("video");
 // Older browsers may not have srcObject
-if ('srcObject' in video) {
+if ("srcObject" in video) {
   try {
     video.srcObject = mediaSource;
   } catch (err) {
@@ -111,24 +103,24 @@ The {{domxref("MediaSource.handle")}} property can be accessed inside a dedicate
 let mediaSource = new MediaSource();
 let handle = mediaSource.handle;
 // Transfer the handle to the context that created the worker
-postMessage({arg: handle}, [handle]);
+postMessage({ arg: handle }, [handle]);
 
-mediaSource.addEventListener('sourceopen', () => {
+mediaSource.addEventListener("sourceopen", () => {
   // Await sourceopen on MediaSource before creating SourceBuffers
   // and populating them with fetched media — MediaSource won't
   // accept creation of SourceBuffers until it is attached to the
   // HTMLMediaElement and its readyState is "open"
-})
+});
 ```
 
 Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
-worker.addEventListener('message', (msg) => {
+worker.addEventListener("message", (msg) => {
   let mediaSourceHandle = msg.data.arg;
   video.srcObject = mediaSourceHandle;
   video.play();
-})
+});
 ```
 
 > **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.

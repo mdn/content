@@ -1,41 +1,14 @@
 ---
-title: performance.now()
+title: "Performance: now() method"
+short-title: now()
 slug: Web/API/Performance/now
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance
-  - Reference
-  - Web Performance API
 browser-compat: api.Performance.now
 ---
 
 {{APIRef("Performance API")}}
 
-The **`performance.now()`** method
-returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.
-
-{{AvailableInWorkers}}
-
-The returned value represents the time elapsed since the [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
-
-Bear in mind the following points:
-
-- In dedicated workers created from a {{domxref("Window")}} context, the value in the
-  worker will be lower than `performance.now()` in the window who spawned
-  that worker. It used to be the same as `t0` of the main context, but this
-  was changed.
-- In shared or service workers, the value in the worker might be higher than that of
-  the main context because that window can be created after those workers.
-
-It's important to keep in mind that to mitigate potential security threats such as [Spectre](https://spectreattack.com/), browsers typically round the returned
-value by some amount in order to be less predictable. This inherently introduces a
-degree of inaccuracy by limiting the resolution or precision of the timer. For example,
-Firefox rounds the returned time to 1 millisecond increments.
-
-The precision of the returned value is subject to change if/when the security concerns
-are alleviated through other means.
+The **`performance.now()`** method returns a high resolution timestamp in milliseconds. It represents the time elapsed since {{domxref("Performance.timeOrigin")}} (the time when navigation has started in window contexts, or the time when the worker is run in {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts).
 
 ## Syntax
 
@@ -51,7 +24,49 @@ None.
 
 Returns a {{domxref("DOMHighResTimeStamp")}} measured in milliseconds.
 
+## Description
+
+### `Performance.now` vs. `Date.now`
+
+Unlike [`Date.now`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now), the timestamps returned by `performance.now()` are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.
+
+Also, `Date.now()` may have been impacted by system and user clock adjustments, clock skew, etc. as it is relative to the Unix epoch (1970-01-01T00:00:00Z) and dependent on the system clock.
+The `performance.now()` method on the other hand is relative to the `timeOrigin` property which is a [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock): its current time never decreases and isn't subject to adjustments.
+
+### `performance.now` specification changes
+
+The semantics of the `performance.now()` method changed between High Resolution Time Level 1 and Level 2.
+
+| Changes               | Level 1                                                                                       | Level 2                                                                                                                                                     |
+| --------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Relative to           | [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) | {{domxref("Performance.timeOrigin")}}                                                                                                                       |
+| Triggering conditions | Document fetch or unload prompt (if any).                                                     | Creation of the browsing context (if no prior document), unload prompt (if any), or start of the navigation (as defined in HTML, a few steps before fetch). |
+
+The `performance.now()` method used to be relative to [`performance.timing.navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart) property from the Navigation Timing specification. This changed and `performance.now()` is now relative to {{domxref("Performance.timeOrigin")}} which avoids clock change risks when comparing timestamps across webpages.
+
+```js
+// Level 1 (clock change risks)
+currentTime = performance.timing.navigationStart + performance.now();
+
+// Level 2 (no clock change risks)
+currentTime = performance.timeOrigin + performance.now();
+```
+
+### Ticking during sleep
+
+The specification (Level 2) requires that `performance.now()` should tick during sleep. It appears that only Firefox on Windows, and Chromiums on Windows keep ticking during sleep. Relevant browser bugs for other operating systems:
+
+- Chrome/Chromium ([bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
+- Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
+- Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
+
+More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115).
+
 ## Examples
+
+### Using `performance.now()`
+
+To determine how much time has elapsed since a particular point in your code, you can do something like this:
 
 ```js
 const t0 = performance.now();
@@ -60,47 +75,14 @@ const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
 
-Unlike other timing data available to JavaScript (for example [`Date.now`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now)),
-the timestamps returned by `performance.now()` are not limited to
-one-millisecond resolution. Instead, they represent times as floating-point numbers with
-up to microsecond precision.
+## Security requirements
 
-Also unlike `Date.now()`, the values returned by
-`performance.now()` always increase at a constant rate, independent of the
-system clock (which might be adjusted manually or skewed by software like NTP).
-Otherwise, `performance.timing.navigationStart + performance.now()` will be
-approximately equal to `Date.now()`.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), `performance.now()` is coarsened based on site isolation status.
 
-## Reduced time precision
+- Resolution in isolated contexts: 5 microseconds
+- Resolution in non-isolated contexts: 100 microseconds
 
-To offer protection against timing attacks and fingerprinting, the precision of
-`performance.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
-default and defaults to 1ms.
-
-```js
-// reduced time precision (1ms) in Firefox 60
-performance.now();
-// 8781416
-// 8781815
-// 8782206
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-performance.now();
-// 8865400
-// 8866200
-// 8866700
-// …
-```
-
-In Firefox, you can also enable `privacy.resistFingerprinting` — this
-changes the precision to 100ms or the value of
-`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
-is larger.
-
-Starting with Firefox 79, high resolution timers can be used if you cross-origin
-isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
+Cross-origin isolate your site using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
 
 ```http
@@ -123,4 +105,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/)
+- {{domxref("Performance.timeOrigin")}}

@@ -1,21 +1,8 @@
 ---
-title: RTCIceCandidate.address
+title: "RTCIceCandidate: address property"
+short-title: address
 slug: Web/API/RTCIceCandidate/address
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Candidate
-  - ICE
-  - IP
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate.address
 ---
 
@@ -43,7 +30,7 @@ It's important to note here that although WebRTC does not require the two peers 
 `address` property on `RTCIceCandidate` _can_ expose more
 information about the source of the remote peer than the user expects. The IP address
 can be used to derive information about the remote device's location, network topology,
-and so forth. It can also be used for fingerprinting purposes.
+and so forth. It can also be used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) purposes.
 
 The candidate IP addresses are _always_ exposed to the application through
 `address`, and unsavory applications can in turn potentially reveal the
@@ -60,11 +47,11 @@ const rtcConfig = {
     {
       urls: "turn:myturn.server.ip",
       username: "username",
-      credential: "password"
-    }
+      credential: "password",
+    },
   ],
-  iceTransportPolicy: "relay"
-}
+  iceTransportPolicy: "relay",
+};
 ```
 
 By setting `iceTransportPolicy` to `"relay"`,

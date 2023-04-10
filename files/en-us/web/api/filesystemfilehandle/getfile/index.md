@@ -1,15 +1,8 @@
 ---
-title: FileSystemFileHandle.getFile()
+title: "FileSystemFileHandle: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - getFile
-  - working with files
 browser-compat: api.FileSystemFileHandle.getFile
 ---
 

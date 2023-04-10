@@ -1,13 +1,10 @@
 ---
-title: PerformanceTiming.toJSON()
+title: "PerformanceTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.toJSON
 ---
 

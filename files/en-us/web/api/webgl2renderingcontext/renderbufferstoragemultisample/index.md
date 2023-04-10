@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.renderbufferStorageMultisample()
+title: "WebGL2RenderingContext: renderbufferStorageMultisample() method"
+short-title: renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
 
@@ -91,7 +86,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RGBA4, 256, 256);
 ```
 
 ## Specifications

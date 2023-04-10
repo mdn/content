@@ -1,9 +1,6 @@
 ---
 title: Critical rendering path
 slug: Web/Performance/Critical_rendering_path
-tags:
-  - Performance
-  - Reference
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

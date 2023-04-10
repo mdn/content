@@ -1,17 +1,8 @@
 ---
-title: Window.innerWidth
+title: "Window: innerWidth property"
+short-title: innerWidth
 slug: Web/API/Window/innerWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Layout
-  - Property
-  - Reference
-  - Window
-  - innerWidth
-  - width
 browser-compat: api.Window.innerWidth
 ---
 

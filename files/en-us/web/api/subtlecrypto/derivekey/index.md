@@ -1,15 +1,8 @@
 ---
-title: SubtleCrypto.deriveKey()
+title: "SubtleCrypto: deriveKey() method"
+short-title: deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web
-  - deriveKey
 browser-compat: api.SubtleCrypto.deriveKey
 ---
 
@@ -147,12 +140,12 @@ function deriveSecretKey(privateKey, publicKey) {
   return window.crypto.subtle.deriveKey(
     {
       name: "ECDH",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     {
       name: "AES-GCM",
-      length: 256
+      length: 256,
     },
     false,
     ["encrypt", "decrypt"]
@@ -166,7 +159,7 @@ async function agreeSharedSecretKey() {
   let alicesKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
     ["deriveKey"]
@@ -175,17 +168,23 @@ async function agreeSharedSecretKey() {
   let bobsKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
     ["deriveKey"]
   );
 
   // Alice then generates a secret key using her private key and Bob's public key.
-  let alicesSecretKey = await deriveSecretKey(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  let alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey
+  );
 
   // Bob generates the same secret key using his private key and Alice's public key.
-  let bobsSecretKey = await deriveSecretKey(bobsKeyPair.privateKey, alicesKeyPair.publicKey);
+  let bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey
+  );
 
   // Alice can then use her copy of the secret key to encrypt a message to Bob.
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
@@ -220,7 +219,7 @@ function getKeyMaterial() {
     enc.encode(password),
     "PBKDF2",
     false,
-    ["deriveBits", "deriveKey"],
+    ["deriveBits", "deriveKey"]
   );
 }
 
@@ -234,16 +233,12 @@ async function encrypt(plaintext, salt, iv) {
       hash: "SHA-256",
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: "AES-GCM", length: 256 },
     true,
-    ["encrypt", "decrypt"],
+    ["encrypt", "decrypt"]
   );
 
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
-    key,
-    plaintext,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
 }
 ```
 

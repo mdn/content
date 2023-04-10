@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.identifier
+title: "PerformanceElementTiming: identifier property"
+short-title: identifier
 slug: Web/API/PerformanceElementTiming/identifier
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - identifier
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.identifier
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: 'MIDIInput: midimessage event'
+title: "MIDIInput: midimessage event"
+short-title: midimessage
 slug: Web/API/MIDIInput/midimessage_event
 page-type: web-api-event
-tags:
-  - midimessage
-  - API
-  - Event
-  - Reference
-  - MIDIInput
 browser-compat: api.MIDIInput.midimessage_event
 ---
 
@@ -20,9 +15,9 @@ The `midimessage` event of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('midimessage', (event) => { });
+addEventListener("midimessage", (event) => {});
 
-onmidimessage = (event) => { };
+onmidimessage = (event) => {};
 ```
 
 ## Event type
@@ -46,8 +41,8 @@ In the following example `midimessage` events are listened for on all input port
 inputs.forEach((input) => {
   input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

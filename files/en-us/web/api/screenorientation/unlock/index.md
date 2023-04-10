@@ -1,15 +1,8 @@
 ---
-title: ScreenOrientation.unlock()
+title: "ScreenOrientation: unlock() method"
+short-title: unlock()
 slug: Web/API/ScreenOrientation/unlock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Orientation
-  - Method
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - Unlock
 browser-compat: api.ScreenOrientation.unlock
 ---
 

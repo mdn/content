@@ -1,14 +1,8 @@
 ---
-title: CanvasRenderingContext2D.drawFocusIfNeeded()
+title: "CanvasRenderingContext2D: drawFocusIfNeeded() method"
+short-title: drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 page-type: web-api-instance-method
-tags:
-  - API
-  - Accessibility
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
 

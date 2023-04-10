@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaSetSize
+title: "ElementInternals: ariaSetSize property"
+short-title: ariaSetSize
 slug: Web/API/ElementInternals/ariaSetSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSetSize
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaSetSize
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: Window.close()
+title: "Window: close() method"
+short-title: close()
 slug: Web/API/Window/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.close
 ---
 
@@ -53,7 +47,7 @@ opened by calling {{domxref("window.open()")}}.
 let openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {

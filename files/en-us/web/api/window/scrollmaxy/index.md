@@ -1,18 +1,10 @@
 ---
-title: Window.scrollMaxY
+title: "Window: scrollMaxY property"
+short-title: scrollMaxY
 slug: Web/API/Window/scrollMaxY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM_0
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Non-standard
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.scrollMaxY
 ---
 

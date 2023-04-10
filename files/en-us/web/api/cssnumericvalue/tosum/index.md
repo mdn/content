@@ -1,20 +1,12 @@
 ---
-title: CSSNumericValue.toSum()
+title: "CSSNumericValue: toSum() method"
+short-title: toSum()
 slug: Web/API/CSSNumericValue/toSum
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toSum()
 browser-compat: api.CSSNumericValue.toSum
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`toSum()`** method of the
 {{domxref("CSSNumericValue")}} interface converts the object's value to a

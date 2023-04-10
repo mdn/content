@@ -1,13 +1,8 @@
 ---
-title: HTMLSelectElement.form
+title: "HTMLSelectElement: form property"
+short-title: form
 slug: Web/API/HTMLSelectElement/form
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLSelectElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLSelectElement.form
 ---
 

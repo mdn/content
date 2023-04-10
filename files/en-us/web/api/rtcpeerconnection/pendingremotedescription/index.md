@@ -1,16 +1,8 @@
 ---
-title: RTCPeerConnection.pendingRemoteDescription
+title: "RTCPeerConnection: pendingRemoteDescription property"
+short-title: pendingRemoteDescription
 slug: Web/API/RTCPeerConnection/pendingRemoteDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - pendingRemoteDescription
 browser-compat: api.RTCPeerConnection.pendingRemoteDescription
 ---
 
@@ -43,8 +35,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.pendingRemoteDescription;
 if (sd) {
   // There's a description change underway!
-}
-else {
+} else {
   // No description change pending
 }
 ```

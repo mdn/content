@@ -1,13 +1,8 @@
 ---
-title: AbortSignal.abort()
+title: "AbortSignal: abort() static method"
+short-title: abort()
 slug: Web/API/AbortSignal/abort
 page-type: web-api-static-method
-tags:
-  - API
-  - AbortSignal
-  - Method
-  - Reference
-  - abort
 browser-compat: api.AbortSignal.abort
 ---
 

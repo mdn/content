@@ -1,14 +1,8 @@
 ---
-title: WheelEvent.deltaMode
+title: "WheelEvent: deltaMode property"
+short-title: deltaMode
 slug: Web/API/WheelEvent/deltaMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.deltaMode
 ---
 
@@ -31,7 +25,10 @@ An `unsigned long`.
 ## Examples
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaX": 4, "deltaMode": 0 });
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaMode);
 ```

@@ -1,13 +1,10 @@
 ---
-title: Highlight()
+title: "Highlight: Highlight() constructor"
+short-title: Highlight()
 slug: Web/API/Highlight/Highlight
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - CSS Custom Highlight API
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.Highlight
 ---
 

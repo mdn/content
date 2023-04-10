@@ -1,17 +1,10 @@
 ---
-title: XRCompositionLayer.needsRedraw
+title: "XRCompositionLayer: needsRedraw property"
+short-title: needsRedraw
 slug: Web/API/XRCompositionLayer/needsRedraw
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.needsRedraw
 ---
 

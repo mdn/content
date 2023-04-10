@@ -2,13 +2,6 @@
 title: <custom-ident>
 slug: Web/CSS/custom-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 spec-urls:
   - https://drafts.csswg.org/css-values/#custom-idents
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
@@ -111,6 +104,8 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
+- {{CSSxRef("view-transition-name")}}
+  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("will-change")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values `will-change`, `auto`, `scroll-position`, and `contents`.
 

@@ -2,19 +2,12 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
 
 {{JSRef}}
 
-The **`push()`** method adds one or more elements to the end of
+The **`push()`** method adds the specified elements to the end of
 an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
@@ -22,6 +15,7 @@ an array and returns the new length of the array.
 ## Syntax
 
 ```js-nolint
+push()
 push(element0)
 push(element0, element1)
 push(element0, element1, /* … ,*/ elementN)

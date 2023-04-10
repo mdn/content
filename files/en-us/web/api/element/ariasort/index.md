@@ -1,15 +1,8 @@
 ---
-title: Element.ariaSort
+title: "Element: ariaSort property"
+short-title: ariaSort
 slug: Web/API/Element/ariaSort
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSort
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSort
 ---
 
@@ -85,9 +78,9 @@ In this example the `aria-sort` attribute on the element with an ID of `role-hea
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaSort); // none
-el.ariaSort = "ascending"
+el.ariaSort = "ascending";
 console.log(el.ariaSort); // ascending
 ```
 

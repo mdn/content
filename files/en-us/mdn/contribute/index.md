@@ -1,10 +1,7 @@
 ---
 title: Contributing to MDN
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
+page-type: landing-page
 ---
 
 {{MDNSidebar}}
@@ -17,13 +14,14 @@ MDN Web Docs needs your help! We have a large number of typos to fix, examples t
 
 There are multiple avenues you can take to contribute to MDN depending on your skill set and interests. Along with each task we provide a short description and an approximate time that each type of task typically takes.
 
-If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you are not sure what to do, you are always welcome to [ask for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Primary contribution types
 
 The links in this section lead to detailed guides explaining how to do a particular contribution task that we are most interested in getting community help with, either because they are a critical function, and/or because they have a large backlog associated with them. Please consider helping out with these tasks before you consider contributing in other ways.
 
 <table class="standard-table">
+  <caption>Contribution Categories</caption>
   <thead>
     <tr>
       <th scope="col">Tasks</th>

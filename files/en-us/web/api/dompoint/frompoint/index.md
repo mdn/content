@@ -1,20 +1,8 @@
 ---
-title: DOMPoint.fromPoint()
+title: "DOMPoint: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 page-type: web-api-static-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Method
-  - Point
-  - Reference
-  - Static
-  - Static Method
-  - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
 
@@ -77,7 +65,7 @@ use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y
 values (0 and 1 respectively).
 
 ```js
-const center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
+const center = DOMPoint.fromPoint({ x: 75, y: -50, z: -55, w: 0.25 });
 ```
 
 ## Specifications

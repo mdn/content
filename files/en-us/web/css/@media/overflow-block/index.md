@@ -2,18 +2,12 @@
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.overflow-block
 ---
 
 {{CSSRef}}
 
-The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Containing_block) along the block axis.
+The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Containing_block) along the block axis.
 
 ## Syntax
 

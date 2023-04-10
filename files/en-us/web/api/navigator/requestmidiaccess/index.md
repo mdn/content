@@ -1,15 +1,8 @@
 ---
-title: Navigator.requestMIDIAccess()
+title: "Navigator: requestMIDIAccess() method"
+short-title: requestMIDIAccess()
 slug: Web/API/Navigator/requestMIDIAccess
 page-type: web-api-instance-method
-tags:
-  - API
-  - Web MIDI
-  - Reference
-  - Method
-  - Navigator
-  - Secure context
-  - requestMIDIAccess
 browser-compat: api.Navigator.requestMIDIAccess
 ---
 
@@ -50,14 +43,14 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the feature or options are not supported by the system.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, because of a [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or because the user previously denied a permission request).
+  - : Thrown if the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, because of a [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy), or because the user previously denied a permission request).
 
 ## Security requirements
 
 Access to the API is subject to the following constraints:
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - The user must explicitly grant permission to use the API though a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 

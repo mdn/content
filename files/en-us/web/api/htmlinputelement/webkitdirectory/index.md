@@ -1,17 +1,8 @@
 ---
-title: HTMLInputElement.webkitdirectory
+title: "HTMLInputElement: webkitdirectory property"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - Reference
-  - Web
-  - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
 
@@ -72,7 +63,7 @@ The entry for `PIC2343.jpg` will have a `webkitRelativePath` of
 possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 
 > **Note:** The behavior of `webkitRelativePath` is different
-> in _Chromium < 72_. See [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187) for
+> in _Chromium < 72_. See [this bug](https://crbug.com/124187) for
 > further details.
 
 ## Examples
@@ -91,14 +82,18 @@ within the selected directory hierarchies is generated and displayed.
 ### JavaScript content
 
 ```js
-document.getElementById("filepicker").addEventListener("change", (event) => {
-  let output = document.getElementById("listing");
-  for (const file of event.target.files) {
-    let item = document.createElement("li");
-    item.textContent = file.webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+document.getElementById("filepicker").addEventListener(
+  "change",
+  (event) => {
+    let output = document.getElementById("listing");
+    for (const file of event.target.files) {
+      let item = document.createElement("li");
+      item.textContent = file.webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false
+);
 ```
 
 ### Result

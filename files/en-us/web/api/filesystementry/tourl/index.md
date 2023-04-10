@@ -1,17 +1,11 @@
 ---
-title: FileSystemEntry.toURL()
+title: "FileSystemEntry: toURL() method"
+short-title: toURL()
 slug: Web/API/FileSystemEntry/toURL
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - toURL
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.toURL
 ---
 

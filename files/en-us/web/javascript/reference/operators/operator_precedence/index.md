@@ -1,11 +1,7 @@
 ---
 title: Operator precedence
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - precedence
 ---
 
 {{jsSidebar("Operators")}}
@@ -255,7 +251,7 @@ Several notes about the table:
     <tr>
       <td rowspan="5">17</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
+        {{jsxref("Operators/Property_accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
       <td rowspan="2">left-to-right</td>
@@ -272,7 +268,7 @@ Several notes about the table:
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member
+        {{jsxref("Operators/Property_accessors", "Computed Member
                 Access","#Bracket_notation", 1)}}
       </td>
       <td rowspan="3">n/a</td>
@@ -656,7 +652,7 @@ Several notes about the table:
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >Conditional (ternary) operator</a
         >
       </td>
@@ -693,7 +689,7 @@ Several notes about the table:
     <tr>
       <td >1</td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >Comma / Sequence</a
         >
       </td>

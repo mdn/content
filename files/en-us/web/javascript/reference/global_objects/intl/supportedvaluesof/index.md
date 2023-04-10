@@ -2,13 +2,6 @@
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
-  - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
@@ -23,8 +16,6 @@ It can also be used to build UIs that allow users to select their preferred loca
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
 ```js-nolint
@@ -34,8 +25,7 @@ Intl.supportedValuesOf(key)
 ### Parameters
 
 - `key`
-  - : A key string indicating the category of values to be returned.
-    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+  - : A key string indicating the category of values to be returned. This is one of: `"calendar"`, `"collation"`, `"currency"`, `"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 
@@ -43,8 +33,8 @@ A sorted array of unique string values indicating the values supported by the im
 
 ### Exceptions
 
-- `RangeError`
-  - : An unsupported key was passed as a parameter.
+- {{jsxref("RangeError")}}
+  - : Thrown if an unsupported key was passed as a parameter.
 
 ## Examples
 

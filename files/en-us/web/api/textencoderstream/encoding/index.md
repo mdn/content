@@ -1,14 +1,8 @@
 ---
-title: TextEncoderStream.encoding
+title: "TextEncoderStream: encoding property"
+short-title: encoding
 slug: Web/API/TextEncoderStream/encoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encoding
-  - TextEncoderStream
-  - Read-only
 browser-compat: api.TextEncoderStream.encoding
 ---
 

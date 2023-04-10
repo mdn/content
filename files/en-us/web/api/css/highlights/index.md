@@ -1,14 +1,10 @@
 ---
-title: CSS.highlights
+title: "CSS: highlights static property"
+short-title: highlights
 slug: Web/API/CSS/highlights
 page-type: web-api-static-property
-tags:
-  - API
-  - CSS
-  - CSS Custom Highlight API
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CSS.highlights
 ---
 

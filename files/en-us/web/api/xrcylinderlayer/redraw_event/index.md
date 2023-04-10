@@ -1,17 +1,10 @@
 ---
-title: 'XRCylinderLayer: redraw event'
+title: "XRCylinderLayer: redraw event"
+short-title: redraw
 slug: Web/API/XRCylinderLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.redraw_event
 ---
 

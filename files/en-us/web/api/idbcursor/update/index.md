@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.update()
+title: "IDBCursor: update() method"
+short-title: update()
 slug: Web/API/IDBCursor/update
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Update
 browser-compat: api.IDBCursor.update
 ---
 

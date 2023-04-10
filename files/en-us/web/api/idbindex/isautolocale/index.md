@@ -1,18 +1,11 @@
 ---
-title: IDBIndex.isAutoLocale
+title: "IDBIndex: isAutoLocale property"
+short-title: isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - isAutoLocale
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.IDBIndex.isAutoLocale
 ---
 
@@ -32,33 +25,34 @@ The `isAutoLocale` value is logged to the console.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   console.log(myIndex.isAutoLocale);
 
   myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.value.id}</td>` +
+        `<td>${cursor.value.lName}</td>` +
+        `<td>${cursor.value.fName}</td>` +
+        `<td>${cursor.value.jTitle}</td>` +
+        `<td>${cursor.value.company}</td>` +
+        `<td>${cursor.value.eMail}</td>` +
+        `<td>${cursor.value.phone}</td>` +
+        `<td>${cursor.value.age}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

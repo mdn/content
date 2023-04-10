@@ -1,17 +1,8 @@
 ---
-title: OverconstrainedError()
+title: "OverconstrainedError: OverconstrainedError() constructor"
+short-title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - OverconstrainedError
-  - Reference
-  - Video
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
 

@@ -1,15 +1,8 @@
 ---
-title: Element.ariaRequired
+title: "Element: ariaRequired property"
+short-title: ariaRequired
 slug: Web/API/Element/ariaRequired
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRequired
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRequired
 ---
 
@@ -44,9 +37,9 @@ In this example the `aria-required` attribute on the element with an ID of `txtB
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaRequired); // "true"
-el.ariaRequired = "false"
+el.ariaRequired = "false";
 console.log(el.ariaRequired); // "false"
 ```
 

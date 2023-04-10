@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.fill()
+title: "CanvasRenderingContext2D: fill() method"
+short-title: fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.fill
 ---
 

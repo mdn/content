@@ -1,14 +1,10 @@
 ---
-title: CustomStateSet.has()
+title: "CustomStateSet: has() method"
+short-title: has()
 slug: Web/API/CustomStateSet/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - has
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.has
 ---
 

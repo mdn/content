@@ -1,22 +1,8 @@
 ---
-title: RTCIceCandidatePairStats.bytesSent
+title: "RTCIceCandidatePairStats: bytesSent property"
+short-title: bytesSent
 slug: Web/API/RTCIceCandidatePairStats/bytesSent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Candidate Pair
-  - ICE
-  - Pair
-  - RTCIceCandidatePairStats
-  - Sent
-  - Statistics
-  - Stats
-  - Transmitted
-  - WebRTC
-  - WebRTC API
-  - bytesSent
-  - rtc
 browser-compat: api.RTCIceCandidatePairStats.bytesSent
 ---
 

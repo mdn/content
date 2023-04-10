@@ -1,14 +1,8 @@
 ---
-title: RTCDataChannel.bufferedAmount
+title: "RTCDataChannel: bufferedAmount property"
+short-title: bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - bufferedAmount
 browser-compat: api.RTCDataChannel.bufferedAmount
 ---
 

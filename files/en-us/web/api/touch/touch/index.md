@@ -1,12 +1,8 @@
 ---
-title: Touch()
+title: "Touch: Touch() constructor"
+short-title: Touch()
 slug: Web/API/Touch/Touch
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - touch
 browser-compat: api.Touch.Touch
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.uniform[1234][fi][v]()
+title: "WebGLRenderingContext: uniform[1234][fi][v]() method"
+short-title: uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
 

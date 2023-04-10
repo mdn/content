@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaSelected
+title: "ElementInternals: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/ElementInternals/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaSelected
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: BiquadFilterNode.getFrequencyResponse()
+title: "BiquadFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - BiquadFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.BiquadFilterNode.getFrequencyResponse
 ---
 

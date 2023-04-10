@@ -1,14 +1,8 @@
 ---
-title: URL.port
+title: "URL: port property"
+short-title: port
 slug: Web/API/URL/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - port
 browser-compat: api.URL.port
 ---
 
@@ -28,7 +22,7 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://mydomain.com:80/svn/Repos/');
+const url = new URL("https://example.com:80/svn/Repos/");
 console.log(url.port); // Logs '80'
 ```
 

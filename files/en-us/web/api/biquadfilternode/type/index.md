@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.type
+title: "BiquadFilterNode: type property"
+short-title: type
 slug: Web/API/BiquadFilterNode/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Type
-  - Web Audio API
 browser-compat: api.BiquadFilterNode.type
 ---
 

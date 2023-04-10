@@ -2,14 +2,8 @@
 title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
 page-type: css-property
-tags:
-  - "-moz-user-focus"
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-moz-user-focus
 ---
 
@@ -91,5 +85,5 @@ Not part of any standard.
 ## See also
 
 - {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-modify")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxref("user-modify")}}
+- {{cssxref("user-select", "-moz-user-select")}}

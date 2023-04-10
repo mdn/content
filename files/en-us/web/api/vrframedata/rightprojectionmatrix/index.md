@@ -1,18 +1,11 @@
 ---
-title: VRFrameData.rightProjectionMatrix
+title: "VRFrameData: rightProjectionMatrix property"
+short-title: rightProjectionMatrix
 slug: Web/API/VRFrameData/rightProjectionMatrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - rightProjectionMatrix
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.rightProjectionMatrix
 ---
 

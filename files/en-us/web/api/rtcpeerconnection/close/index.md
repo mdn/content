@@ -1,13 +1,8 @@
 ---
-title: RTCPeerConnection.close()
+title: "RTCPeerConnection: close() method"
+short-title: close()
 slug: Web/API/RTCPeerConnection/close
 page-type: web-api-instance-method
-tags:
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - close
 browser-compat: api.RTCPeerConnection.close
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: "BroadcastChannel: message event"
+short-title: message
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
 

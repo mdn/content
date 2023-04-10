@@ -1,13 +1,8 @@
 ---
-title: TextDecoder.ignoreBOM
+title: "TextDecoder: ignoreBOM property"
+short-title: ignoreBOM
 slug: Web/API/TextDecoder/ignoreBOM
 page-type: web-api-instance-property
-tags:
-  - API
-  - TextDecoder
-  - ignoreBOM
-  - Property
-  - Reference
 browser-compat: api.TextDecoder.ignoreBOM
 ---
 

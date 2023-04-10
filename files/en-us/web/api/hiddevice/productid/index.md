@@ -1,14 +1,10 @@
 ---
-title: HIDDevice.productId
+title: "HIDDevice: productId property"
+short-title: productId
 slug: Web/API/HIDDevice/productId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - productId
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.productId
 ---
 
@@ -25,7 +21,7 @@ An integer. If the device has no product ID, or the product ID cannot be accesse
 The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productId` to the console.
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach((device) => {
     console.log(`HID: ${device.productId}`);

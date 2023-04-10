@@ -1,9 +1,6 @@
 ---
 title: Object-oriented programming
 slug: Learn/JavaScript/Objects/Object-oriented_programming
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
@@ -187,7 +184,7 @@ class Student : extends Person
     properties
        year
     constructor
-        Student(name, year)
+       Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year > 1 }
@@ -244,13 +241,3 @@ This article has described the basic features of class-based object oriented pro
 In the next article, we'll look at the features JavaScript provides to support class-based object-oriented programming.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- **Object-oriented programming concepts**
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

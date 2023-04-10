@@ -1,16 +1,8 @@
 ---
-title: FontFace.featureSettings
+title: "FontFace: featureSettings property"
+short-title: featureSettings
 slug: Web/API/FontFace/featureSettings
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - featureSettings
 browser-compat: api.FontFace.featureSettings
 ---
 

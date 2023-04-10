@@ -1,21 +1,8 @@
 ---
-title: RTCOutboundRtpStreamStats.remoteId
+title: "RTCOutboundRtpStreamStats: remoteId property"
+short-title: remoteId
 slug: Web/API/RTCOutboundRtpStreamStats/remoteId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - remoteId
 browser-compat: api.RTCOutboundRtpStreamStats.remoteId
 ---
 

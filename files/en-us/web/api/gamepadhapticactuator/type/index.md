@@ -1,15 +1,8 @@
 ---
-title: GamepadHapticActuator.type
+title: "GamepadHapticActuator: type property"
+short-title: type
 slug: Web/API/GamepadHapticActuator/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Property
-  - Reference
-  - Type
 browser-compat: api.GamepadHapticActuator.type
 ---
 

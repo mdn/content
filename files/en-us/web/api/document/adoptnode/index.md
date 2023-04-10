@@ -1,16 +1,8 @@
 ---
-title: Document.adoptNode()
+title: "Document: adoptNode() method"
+short-title: adoptNode()
 slug: Web/API/Document/adoptNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
 browser-compat: api.Document.adoptNode
 ---
 
@@ -47,9 +39,9 @@ After calling this method, `importedNode` and
 ## Examples
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
 iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));

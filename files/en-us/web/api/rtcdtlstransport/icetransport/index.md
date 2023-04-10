@@ -1,14 +1,8 @@
 ---
-title: RTCDtlsTransport.iceTransport
+title: "RTCDtlsTransport: iceTransport property"
+short-title: iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCDtlsTransport
-  - Read-only
-  - Reference
-  - iceTransport
 browser-compat: api.RTCDtlsTransport.iceTransport
 ---
 

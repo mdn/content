@@ -1,16 +1,8 @@
 ---
-title: SpeechSynthesisVoice.localService
+title: "SpeechSynthesisVoice: localService property"
+short-title: localService
 slug: Web/API/SpeechSynthesisVoice/localService
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - localService
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisVoice.localService
 ---
 
@@ -32,18 +24,18 @@ A boolean value.
 ## Examples
 
 ```js
-for (let i = 0; i < voices.length ; i++) {
-  const option = document.createElement('option');
+for (let i = 0; i < voices.length; i++) {
+  const option = document.createElement("option");
   option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
   if (voices[i].default) {
-    option.textContent += ' — DEFAULT';
+    option.textContent += " — DEFAULT";
   }
 
   console.log(voices[i].localService);
 
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+  option.setAttribute("data-lang", voices[i].lang);
+  option.setAttribute("data-name", voices[i].name);
   voiceSelect.appendChild(option);
 }
 ```

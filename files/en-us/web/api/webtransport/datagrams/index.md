@@ -1,15 +1,10 @@
 ---
-title: WebTransport.datagrams
+title: "WebTransport: datagrams property"
+short-title: datagrams
 slug: Web/API/WebTransport/datagrams
 page-type: web-api-instance-property
-tags:
-  - API
-  - datagrams
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.datagrams
 ---
 
@@ -47,7 +42,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable")}} property returns a 
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

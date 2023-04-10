@@ -1,12 +1,8 @@
 ---
-title: CanvasRenderingContext2D.resetTransform()
+title: "CanvasRenderingContext2D: resetTransform() method"
+short-title: resetTransform()
 slug: Web/API/CanvasRenderingContext2D/resetTransform
 page-type: web-api-instance-method
-tags:
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.resetTransform
 ---
 

@@ -2,12 +2,8 @@
 title: HighlightRegistry
 slug: Web/API/HighlightRegistry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - CSS Custom Highlight API
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HighlightRegistry
 ---
 
@@ -73,7 +69,8 @@ The following example demonstrates how to create ranges, instantiate a new `High
 const text = document.getElementById("foo").firstChild;
 
 if (!CSS.highlights) {
-  text.textContent = "The CSS Custom Highlight API is not supported in this browser!";
+  text.textContent =
+    "The CSS Custom Highlight API is not supported in this browser!";
 }
 
 // Create a couple of ranges.
@@ -89,7 +86,7 @@ range2.setEnd(text, 24);
 const highlight = new Highlight(range1, range2);
 
 // Register the ranges in the HighlightRegistry.
-CSS.highlights.set('my-custom-highlight', highlight);
+CSS.highlights.set("my-custom-highlight", highlight);
 ```
 
 #### Result

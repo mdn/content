@@ -1,13 +1,8 @@
 ---
-title: ValidityState.typeMismatch
+title: "ValidityState: typeMismatch property"
+short-title: typeMismatch
 slug: Web/API/ValidityState/typeMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.typeMismatch
 ---
 
@@ -55,7 +50,7 @@ input:invalid {
 
 The above each produce a `typeMismatch` because the email address is just a domain and the URL has no protocol
 
-The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Attributes/value) expected via the [`type`](/en-US/docs/Web/HTML/Element/input#%3cinput%3e_types) attribute and the data that is actually present. The `typeMismatch` is only one of the many possible errors and is only relevant for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types. When the value provided doesn't match the expected value based on the type for other input types, you get different errors. For example, if the {{HTMLElement("input/number", "number")}} input value is not a floating point number, the `badInput` is `true`. If the email is [`required`](/en-US/docs/Web/HTML/Attributes/required) but is empty, the {{domxref('ValidityState.valueMissing','valueMissing')}} will be `true`.
+The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Attributes/value) expected via the [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute and the data that is actually present. The `typeMismatch` is only one of the many possible errors and is only relevant for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types. When the value provided doesn't match the expected value based on the type for other input types, you get different errors. For example, if the {{HTMLElement("input/number", "number")}} input value is not a floating point number, the `badInput` is `true`. If the email is [`required`](/en-US/docs/Web/HTML/Attributes/required) but is empty, the {{domxref('ValidityState.valueMissing','valueMissing')}} will be `true`.
 
 ## Specifications
 
@@ -67,6 +62,6 @@ The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-U
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

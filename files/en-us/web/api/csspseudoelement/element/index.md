@@ -1,14 +1,10 @@
 ---
-title: CSSPseudoElement.element
+title: "CSSPseudoElement: element property"
+short-title: element
 slug: Web/API/CSSPseudoElement/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPseudoElement
-  - Element
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.element
 ---
 

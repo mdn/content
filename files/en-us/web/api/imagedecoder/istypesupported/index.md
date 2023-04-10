@@ -1,14 +1,10 @@
 ---
-title: ImageDecoder.isTypeSupported()
+title: "ImageDecoder: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/ImageDecoder/isTypeSupported
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isTypeSupported
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.isTypeSupported
 ---
 
@@ -30,11 +26,11 @@ A {{jsxref("promise")}} that resolves with a boolean value indicating whether im
 The following example checks if GIF and PCX images are supported for decoding and prints the result to the console.
 
 ```js
-let isGifSupported = await ImageDecoder.isTypeSupported('image/gif');
-console.log(`GIF supported: ${isGifSupported}`);  // Likely true.
+let isGifSupported = await ImageDecoder.isTypeSupported("image/gif");
+console.log(`GIF supported: ${isGifSupported}`); // Likely true.
 
-let isPcxSupported = await ImageDecoder.isTypeSupported('image/pcx');
-console.log(`PCX supported: ${isPcxSupported}`);  // Probably false
+let isPcxSupported = await ImageDecoder.isTypeSupported("image/pcx");
+console.log(`PCX supported: ${isPcxSupported}`); // Probably false
 ```
 
 ## Specifications

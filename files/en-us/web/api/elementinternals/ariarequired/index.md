@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaRequired
+title: "ElementInternals: ariaRequired property"
+short-title: ariaRequired
 slug: Web/API/ElementInternals/ariaRequired
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRequired
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRequired
 ---
 

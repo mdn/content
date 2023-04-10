@@ -1,13 +1,10 @@
 ---
-title: NDEFMessage.records
+title: "NDEFMessage: records property"
+short-title: records
 slug: Web/API/NDEFMessage/records
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFMessage.records
 ---
 

@@ -2,10 +2,8 @@
 title: contentScriptType
 slug: Web/SVG/Attribute/contentScriptType
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.contentScriptType
 ---
 

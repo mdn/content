@@ -1,17 +1,12 @@
 ---
-title: Response()
+title: "Response: Response() constructor"
+short-title: Response()
 slug: Web/API/Response/Response
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Fetch
-  - Reference
-  - Response
 browser-compat: api.Response.Response
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 
@@ -62,7 +57,7 @@ we create a new `Response` object using the constructor, passing it a new {{domx
 
 ```js
 const myBlob = new Blob();
-const myOptions = { status: 200, statusText: 'SuperSmashingGreat!' };
+const myOptions = { status: 200, statusText: "SuperSmashingGreat!" };
 const myResponse = new Response(myBlob, myOptions);
 ```
 

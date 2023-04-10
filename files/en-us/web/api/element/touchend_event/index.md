@@ -1,18 +1,8 @@
 ---
-title: 'Element: touchend event'
+title: "Element: touchend event"
+short-title: touchend
 slug: Web/API/Element/touchend_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
 browser-compat: api.Element.touchend_event
 ---
 
@@ -25,9 +15,9 @@ The `touchend` event fires when one or more touch points are removed from the to
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchend', (event) => {});
+addEventListener("touchend", (event) => {});
 
-ontouchend = (event) => { };
+ontouchend = (event) => {};
 ```
 
 ## Event type

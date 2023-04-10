@@ -1,21 +1,10 @@
 ---
-title: NavigateEvent.formData
+title: "NavigateEvent: formData property"
+short-title: formData
 slug: Web/API/NavigateEvent/formData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - formData
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.formData
 ---
 
@@ -50,7 +39,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```

@@ -2,12 +2,6 @@
 title: Quaternion
 slug: Glossary/Quaternion
 page-type: glossary-definition
-tags:
-  - Definition
-  - Orientation
-  - Quaternion
-  - WebXR
-  - rotation
 ---
 
 A **quaternion** is the quotient of two 3D vectors and is used in 3D graphics and in accelerometer-based sensors to represent orientation or rotational data.

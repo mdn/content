@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaDisabled
+title: "ElementInternals: ariaDisabled property"
+short-title: ariaDisabled
 slug: Web/API/ElementInternals/ariaDisabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaDisabled
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaDisabled
 ---
 

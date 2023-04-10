@@ -1,10 +1,10 @@
 ---
-title: 'HTMLElement: mscandidatewindowupdate event'
+title: "HTMLElement: mscandidatewindowupdate event"
+short-title: mscandidatewindowupdate
 slug: Web/API/HTMLElement/mscandidatewindowupdate_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}
@@ -26,9 +26,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowupdate', (event) => { })
+addEventListener("mscandidatewindowupdate", (event) => {});
 
-onmscandidatewindowupdate = (event) => { }
+onmscandidatewindowupdate = (event) => {};
 ```
 
 ## Event type

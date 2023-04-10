@@ -1,26 +1,10 @@
 ---
-title: XRInputSourceArray.forEach()
+title: "XRInputSourceArray: forEach() method"
+short-title: forEach()
 slug: Web/API/XRInputSourceArray/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - forEach
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.forEach
 ---
 

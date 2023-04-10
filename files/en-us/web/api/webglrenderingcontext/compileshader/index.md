@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.compileShader()
+title: "WebGLRenderingContext: compileShader() method"
+short-title: compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compileShader
 ---
 

@@ -1,16 +1,10 @@
 ---
-title: XRAnchor.delete()
+title: "XRAnchor: delete() method"
+short-title: delete()
 slug: Web/API/XRAnchor/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRAnchor.delete
 ---
 

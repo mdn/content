@@ -1,13 +1,8 @@
 ---
-title: Element.part
+title: "Element: part property"
+short-title: part
 slug: Web/API/Element/part
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - part
 browser-compat: api.Element.part
 ---
 
@@ -34,21 +29,21 @@ const tabs = [];
 const children = this.shadowRoot.children;
 
 for (const elem of children) {
-  if (elem.getAttribute('part')) {
+  if (elem.getAttribute("part")) {
     tabs.push(elem);
   }
 }
 
 tabs.forEach((tab) => {
-  tab.addEventListener('click', (e) => {
+  tab.addEventListener("click", (e) => {
     tabs.forEach((tab) => {
-      tab.part = 'tab';
-    })
-    e.target.part = 'tab active';
-  })
+      tab.part = "tab";
+    });
+    e.target.part = "tab active";
+  });
 
   console.log(tab.part);
-})
+});
 ```
 
 ## Specifications
@@ -62,4 +57,4 @@ tabs.forEach((tab) => {
 ## See also
 
 - {{cssxref("::part")}}
-- {{htmlattrxref("part")}}
+- [part](/en-US/docs/Web/HTML/Global_attributes#part)

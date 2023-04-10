@@ -1,15 +1,8 @@
 ---
-title: WheelEvent.deltaZ
+title: "WheelEvent: deltaZ property"
+short-title: deltaZ
 slug: Web/API/WheelEvent/deltaZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.deltaZ
 ---
 
@@ -26,7 +19,10 @@ A number.
 ## Examples
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", { "deltaZ": 4, "deltaMode": 0 });
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaZ: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaZ);
 ```

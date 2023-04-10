@@ -1,15 +1,8 @@
 ---
-title: Element.ariaRowIndex
+title: "Element: ariaRowIndex property"
+short-title: ariaRowIndex
 slug: Web/API/Element/ariaRowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndex
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowIndex
 ---
 
@@ -75,9 +68,9 @@ In this example the `aria-rowindex` attribute on the element with an ID of `role
 ```
 
 ```js
-let el = document.getElementById('role-heading');
+let el = document.getElementById("role-heading");
 console.log(el.ariaRowIndex); // 1
-el.ariaRowIndex = "2"
+el.ariaRowIndex = "2";
 console.log(el.ariaRowIndex); // 2
 ```
 

@@ -1,17 +1,8 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() method"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
 browser-compat: api.HTMLMediaElement.play
 ---
 

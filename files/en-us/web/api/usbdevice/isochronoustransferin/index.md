@@ -1,17 +1,10 @@
 ---
-title: USBDevice.isochronousTransferIn()
+title: "USBDevice: isochronousTransferIn() method"
+short-title: isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - isochronousTransferIn
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
 

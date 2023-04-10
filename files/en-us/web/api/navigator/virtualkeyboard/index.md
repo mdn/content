@@ -1,14 +1,10 @@
 ---
-title: Navigator.virtualKeyboard
+title: "Navigator: virtualKeyboard property"
+short-title: virtualKeyboard
 slug: Web/API/Navigator/virtualKeyboard
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Experimental
-  - VirtualKeyboard
+status:
+  - experimental
 browser-compat: api.Navigator.virtualKeyboard
 ---
 

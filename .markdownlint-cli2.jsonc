@@ -187,6 +187,20 @@
           "search": "](https://developer.mozilla.org/",
           "replace": "](/",
           "skipCode": true
+        },
+        {
+          "name": "incorrect-spelling",
+          "message": "Incorrect spelling",
+          "searchPattern": ["/e-mail/ig"],
+          "replace": ["email"],
+          "skipCode": false
+        },
+        {
+          "name": "localhost-links",
+          "message": "Don't use localhost for links",
+          "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+          "replace": "](/",
+          "skipCode": true
         }
       ]
     }

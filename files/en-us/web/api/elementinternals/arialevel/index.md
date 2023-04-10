@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaLevel
+title: "ElementInternals: ariaLevel property"
+short-title: ariaLevel
 slug: Web/API/ElementInternals/ariaLevel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLevel
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaLevel
 ---
 

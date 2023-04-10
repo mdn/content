@@ -1,13 +1,8 @@
 ---
-title: RTCPeerConnection()
+title: "RTCPeerConnection: RTCPeerConnection() constructor"
+short-title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
 

@@ -2,12 +2,6 @@
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
 browser-compat: css.types.filter-function.grayscale
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: Notification.requestPermission()
+title: "Notification: requestPermission() static method"
+short-title: requestPermission()
 slug: Web/API/Notification/requestPermission
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
 browser-compat: api.Notification.requestPermission
 ---
 

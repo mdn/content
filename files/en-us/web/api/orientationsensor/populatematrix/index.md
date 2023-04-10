@@ -1,18 +1,8 @@
 ---
-title: OrientationSensor.populateMatrix()
+title: "OrientationSensor: populateMatrix() method"
+short-title: populateMatrix()
 slug: Web/API/OrientationSensor/populateMatrix
 page-type: web-api-instance-method
-tags:
-  - API
-  - Generic Sensor API
-  - Method
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - populateMatrix()
 browser-compat: api.OrientationSensor.populateMatrix
 ---
 

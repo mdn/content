@@ -1,14 +1,8 @@
 ---
-title: MessagePort.postMessage()
+title: "MessagePort: postMessage() method"
+short-title: postMessage()
 slug: Web/API/MessagePort/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
 
@@ -32,7 +26,7 @@ postMessage(message, transferList)
   - : The message you want to send through the channel. This can be of any basic data
     type. Multiple data items can be sent as an array.
 - `transferList` {{optional_inline}}
-  - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
+  - : [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to be transferred — these objects have their
     ownership transferred to the receiving browsing context, so are no longer usable by
     the sending browsing context.
 
@@ -53,15 +47,15 @@ The `handleMessage` handler then responds to a message being sent back from the 
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Transferring message port', '*', [channel.port2]);
+  otherWindow.postMessage("Transferring message port", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -71,7 +65,7 @@ function handleMessage(e) {
 
 // in the iframe…
 
-window.addEventListener('message', (event) => {
+window.addEventListener("message", (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });

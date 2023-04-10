@@ -1,20 +1,12 @@
 ---
-title: cssTransformValue.forEach()
+title: "cssTransformValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSTransformValue/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - forEach
 browser-compat: api.CSSTransformValue.forEach
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
 

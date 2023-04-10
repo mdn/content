@@ -1,17 +1,10 @@
 ---
-title: XRRay.origin
+title: "XRRay: origin property"
+short-title: origin
 slug: Web/API/XRRay/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRRay.origin
 ---
 

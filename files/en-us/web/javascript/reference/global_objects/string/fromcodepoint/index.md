@@ -2,15 +2,6 @@
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - UTF-32
-  - Unicode
-  - Polyfill
 browser-compat: javascript.builtins.String.fromCodePoint
 ---
 
@@ -40,8 +31,8 @@ A string created by using the specified sequence of code points.
 
 ### Exceptions
 
-- A {{jsxref("Errors/Not_a_codepoint", "RangeError")}} is thrown if an invalid Unicode
-  code point is given (e.g. `"RangeError: NaN is not a valid code point"`).
+- {{jsxref("RangeError")}}
+  - : Thrown if an invalid Unicode code point is given.
 
 ## Description
 

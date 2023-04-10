@@ -1,30 +1,10 @@
 ---
-title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
+title: "XRWebGLLayer: getNativeFramebufferScaleFactor() static method"
+short-title: getNativeFramebufferScaleFactor()
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
 page-type: web-api-static-method
-tags:
-  - API
-  - AR
-  - Effective
-  - Factor
-  - Reality
-  - Reference
-  - Scaling
-  - Static
-  - Static Method
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
-  - getNativeFramebufferScaleFactor
-  - native
-  - resolution
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
 

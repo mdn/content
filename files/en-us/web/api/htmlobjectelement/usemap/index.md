@@ -1,15 +1,8 @@
 ---
-title: HTMLObjectElement.useMap
+title: "HTMLObjectElement: useMap property"
+short-title: useMap
 slug: Web/API/HTMLObjectElement/useMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - useMap
 browser-compat: api.HTMLObjectElement.useMap
 ---
 
@@ -17,7 +10,7 @@ browser-compat: api.HTMLObjectElement.useMap
 
 The **`useMap`** property of the
 {{domxref("HTMLObjectElement")}} interface returns a string that
-reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
+reflects the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) HTML attribute, specifying a
 {{HTMLElement("map")}} element to use.
 
 ## Value

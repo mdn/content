@@ -2,13 +2,6 @@
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 page-type: javascript-instance-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
 
@@ -28,7 +21,7 @@ The set accessor of `hasIndices` is `undefined`. You cannot change this property
 
 ## Examples
 
-There's a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups_and_match_indices).
+There's a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups_and_match_indices).
 
 ### Using hasIndices
 

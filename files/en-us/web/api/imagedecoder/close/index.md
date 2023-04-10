@@ -1,14 +1,10 @@
 ---
-title: ImageDecoder.close()
+title: "ImageDecoder: close() method"
+short-title: close()
 slug: Web/API/ImageDecoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.close
 ---
 

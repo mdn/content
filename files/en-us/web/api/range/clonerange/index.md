@@ -1,12 +1,8 @@
 ---
-title: Range.cloneRange()
+title: "Range: cloneRange() method"
+short-title: cloneRange()
 slug: Web/API/Range/cloneRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.cloneRange
 ---
 

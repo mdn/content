@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.isEnabled()
+title: "WebGLRenderingContext: isEnabled() method"
+short-title: isEnabled()
 slug: Web/API/WebGLRenderingContext/isEnabled
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isEnabled
 ---
 

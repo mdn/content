@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaAutoComplete
+title: "ElementInternals: ariaAutoComplete property"
+short-title: ariaAutoComplete
 slug: Web/API/ElementInternals/ariaAutoComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAutoComplete
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaAutoComplete
 ---
 

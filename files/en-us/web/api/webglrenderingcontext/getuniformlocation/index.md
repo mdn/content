@@ -1,18 +1,8 @@
 ---
-title: WebGLRenderingContext.getUniformLocation()
+title: "WebGLRenderingContext: getUniformLocation() method"
+short-title: getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Uniform Variables
-  - Uniforms
-  - Variables
-  - Variables in WebGL
-  - WebGL
-  - WebGLRenderingContext
-  - getUniformLocation
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
 
@@ -33,10 +23,12 @@ inputs:
 
 - {{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}
   - : Returns the value of the uniform at the given location.
+  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
 - [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Sets the uniform's value to the specified value, which may be a single floating
     point or integer number, or a 2-4 component vector specified either as a list of
     values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.
+    <!-- markdownlint-disable MD052 — text in code block is misidentified as image -->
 - [`WebGLRenderingContext.uniformMatrix[234][fv]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix)
   - : Sets the uniform's value to the specified matrix, possibly with transposition. The
     value is represented as a sequence of `GLfloat` values or as a
@@ -111,12 +103,9 @@ the shading program, then sets the value of each of the three uniforms.
 ```js
 gl.useProgram(shaderProgram);
 
-uScalingFactor =
-    gl.getUniformLocation(shaderProgram, "uScalingFactor");
-uGlobalColor =
-    gl.getUniformLocation(shaderProgram, "uGlobalColor");
-uRotationVector =
-    gl.getUniformLocation(shaderProgram, "uRotationVector")
+uScalingFactor = gl.getUniformLocation(shaderProgram, "uScalingFactor");
+uGlobalColor = gl.getUniformLocation(shaderProgram, "uGlobalColor");
+uRotationVector = gl.getUniformLocation(shaderProgram, "uRotationVector");
 
 gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);

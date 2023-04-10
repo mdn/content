@@ -1,14 +1,8 @@
 ---
-title: ConvolverNode.buffer
+title: "ConvolverNode: buffer property"
+short-title: buffer
 slug: Web/API/ConvolverNode/buffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Buffer
-  - ConvolverNode
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.ConvolverNode.buffer
 ---
 

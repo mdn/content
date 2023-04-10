@@ -1,14 +1,8 @@
 ---
-title: WebGL2RenderingContext.uniform[1234][uif][v]()
+title: "WebGL2RenderingContext: uniform[1234][uif][v]() method"
+short-title: uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGL2RenderingContext
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
 

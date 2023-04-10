@@ -2,15 +2,6 @@
 title: Destructuring assignment
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 page-type: javascript-language-feature
-tags:
-  - Destructuring
-  - Destructuring_assignment
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Nested object and array destructuring
-  - Operator
 browser-compat: javascript.operators.destructuring
 ---
 
@@ -590,7 +581,7 @@ console.log(fizzBuzz); // true
 
 ### Destructuring primitive values
 
-Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
 
 ```js
 const { a, toFixed } = 1;

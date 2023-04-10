@@ -1,18 +1,12 @@
 ---
-title: Response.type
+title: "Response: type property"
+short-title: type
 slug: Web/API/Response/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - Type
 browser-compat: api.Response.type
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
@@ -42,9 +36,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `type` to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.type); // returns basic by default

@@ -1,11 +1,8 @@
 ---
-title: Event.isTrusted
+title: "Event: isTrusted property"
+short-title: isTrusted
 slug: Web/API/Event/isTrusted
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.isTrusted
 ---
 

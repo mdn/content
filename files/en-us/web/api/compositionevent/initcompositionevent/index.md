@@ -1,14 +1,10 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() method"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
+status:
+  - deprecated
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
 

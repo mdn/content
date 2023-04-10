@@ -2,13 +2,6 @@
 title: OscillatorNode
 slug: Web/API/OscillatorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - OscillatorNode
-  - Reference
-  - Web Audio API
 browser-compat: api.OscillatorNode
 ---
 
@@ -86,7 +79,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
 oscillator.start();

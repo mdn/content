@@ -2,14 +2,6 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
-tags:
-  - Class
-  - Date
-  - Epoch
-  - JavaScript
-  - Time
-  - Unix Epoch
-  - timeStamp
 browser-compat: javascript.builtins.Date
 ---
 
@@ -38,9 +30,7 @@ In addition to methods to read and alter individual components of the local date
 ## Constructor
 
 - {{jsxref("Date/Date", "Date()")}}
-  - : When called as a function, returns a string representation of the current date and time. All arguments are ignored. The result is the same as executing `new Date().toString()`.
-- {{jsxref("Date/Date", "new Date()")}}
-  - : When called as a constructor, returns a new `Date` object.
+  - : When called as a constructor, returns a new `Date` object. When called as a function, returns a string representation of the current date and time.
 
 ## Static methods
 
@@ -54,6 +44,13 @@ In addition to methods to read and alter individual components of the local date
 
 - {{jsxref("Date.UTC()")}}
   - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
+
+## Instance properties
+
+These properties are defined on `Date.prototype` and shared by all `Date` instances.
+
+- {{jsxref("Object/constructor", "Date.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Date` instances, the initial value is the {{jsxref("Date/Date", "Date")}} constructor.
 
 ## Instance methods
 
@@ -147,6 +144,8 @@ In addition to methods to read and alter individual components of the local date
   - : Converts a date to a string using the UTC timezone.
 - {{jsxref("Date.prototype.valueOf()")}}
   - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
+- [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+  - : Converts this `Date` object to a primitive value.
 
 ## Examples
 

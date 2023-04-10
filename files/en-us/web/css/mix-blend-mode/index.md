@@ -2,13 +2,6 @@
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
-tags:
-  - Blending
-  - CSS
-  - CSS Property
-  - Compositing
-  - Compositing and Blending
-  - recipe:css-property
 browser-compat: css.properties.mix-blend-mode
 ---
 
@@ -641,7 +634,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", "1600px")}}
 
 ### Using mix-blend-mode with HTML
 

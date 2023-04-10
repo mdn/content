@@ -1,17 +1,8 @@
 ---
-title: 'Element: mouseleave event'
+title: "Element: mouseleave event"
+short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseleave
-  - move
 browser-compat: api.Element.mouseleave_event
 ---
 
@@ -26,9 +17,9 @@ The **`mouseleave`** event is fired at an {{domxref("Element")}} when the cursor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mouseleave', (event) => {});
+addEventListener("mouseleave", (event) => {});
 
-onmouseleave = (event) => { };
+onmouseleave = (event) => {};
 ```
 
 ## Event type
@@ -139,17 +130,17 @@ Styling the `<div>` to make it more visible.
 ```js
 let enterEventCount = 0;
 let leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', (e) => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
   addListItem(`This is mouseenter event ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', (e) => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
   addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });

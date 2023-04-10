@@ -2,12 +2,6 @@
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.defineProperty
 ---
 
@@ -355,7 +349,7 @@ Object.defineProperty(o, "b", {
 
 ### Adding properties and default values
 
-It is important to consider the way default values of attributes are applied. There is often a difference between using dot notation to assign a value and using `Object.defineProperty()`, as shown in the example below.
+It is important to consider the way default values of attributes are applied. There is often a difference between using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to assign a value and using `Object.defineProperty()`, as shown in the example below.
 
 ```js
 const o = {};
@@ -477,7 +471,7 @@ a.x = 1;
 console.log(b.x); // undefined
 ```
 
-Unlike accessor properties, value properties are always set on the object itself, not on a prototype. However, if a non-writable value property is inherited, it is still prevented from being modified on the object.
+Unlike accessor properties, data properties are always set on the object itself, not on a prototype. However, if a non-writable data property is inherited, it is still prevented from being modified on the object.
 
 ```js
 function MyClass() {}

@@ -1,13 +1,8 @@
 ---
-title: CSSStyleSheet.insertRule()
+title: "CSSStyleSheet: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSStyleSheet
-  - Method
-  - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
 

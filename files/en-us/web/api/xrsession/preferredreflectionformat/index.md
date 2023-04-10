@@ -1,17 +1,10 @@
 ---
-title: XRSession.preferredReflectionFormat
+title: "XRSession: preferredReflectionFormat property"
+short-title: preferredReflectionFormat
 slug: Web/API/XRSession/preferredReflectionFormat
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRSession.preferredReflectionFormat
 ---
 

@@ -1,20 +1,8 @@
 ---
-title: RTCIceCandidatePair.local
+title: "RTCIceCandidatePair: local property"
+short-title: local
 slug: Web/API/RTCIceCandidatePair/local
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceCandidatePair
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - local
-  - rtc
 browser-compat: api.RTCIceCandidatePair.local
 ---
 
@@ -38,7 +26,9 @@ This one-line example obtains the current candidate pair and then from that gets
 local candidate.
 
 ```js
-const candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
+const candidatePair = pc
+  .getSenders()[0]
+  .transport.transport.getSelectedCandidatePair();
 const localCandidate = candidatePair.local;
 ```
 

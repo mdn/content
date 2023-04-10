@@ -1,17 +1,10 @@
 ---
-title: XMLHttpRequest.mozAnon
+title: "XMLHttpRequest: mozAnon property"
+short-title: mozAnon
 slug: Web/API/XMLHttpRequest/mozAnon
 page-type: web-api-instance-property
-tags:
-  - API
-  - Authentication
-  - Cookies
-  - Non-standard
-  - Property
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - mozAnon
+status:
+  - non-standard
 ---
 
 {{APIRef('XMLHttpRequest')}}

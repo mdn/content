@@ -1,18 +1,10 @@
 ---
-title: MediaRecorder.onwarning
+title: "MediaRecorder: warning event"
+short-title: warning
 slug: Web/API/MediaRecorder/warning_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onwarning
-  - warning event
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaRecorder.warning_event
 ---
 

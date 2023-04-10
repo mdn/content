@@ -2,15 +2,6 @@
 title: margin-block-end
 slug: Web/CSS/margin-block-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - margin-block
-  - margin-block-end
-  - recipe:css-property
 browser-compat: css.properties.margin-block-end
 ---
 

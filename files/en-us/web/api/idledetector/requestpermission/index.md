@@ -1,14 +1,10 @@
 ---
-title: IdleDetector.requestPermission()
+title: "IdleDetector: requestPermission() method"
+short-title: requestPermission()
 slug: Web/API/IdleDetector/requestPermission
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - requestPermission
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
 
@@ -42,12 +38,12 @@ A `Promise` that resolves with `"granted"` or `"denied"`.
 The following example uses a `click` event on a button to trigger requesting the user for permission to detect when user is idle.
 
 ```js
-startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() !== "granted") {
+startButton.addEventListener("click", async () => {
+  if ((await IdleDetector.requestPermission()) !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }
-})
+});
 ```
 
 ## Specifications

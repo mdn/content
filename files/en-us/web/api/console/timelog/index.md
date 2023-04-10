@@ -1,14 +1,8 @@
 ---
-title: console.timeLog()
+title: "console: timeLog() method"
+short-title: timeLog()
 slug: Web/API/console/timeLog
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.timeLog
 ---
 

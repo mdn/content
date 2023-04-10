@@ -1,14 +1,8 @@
 ---
-title: Selection.rangeCount
+title: "Selection: rangeCount property"
+short-title: rangeCount
 slug: Web/API/Selection/rangeCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.rangeCount
 ---
 

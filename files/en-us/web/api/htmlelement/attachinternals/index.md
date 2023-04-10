@@ -1,13 +1,8 @@
 ---
-title: HTMLElement.attachInternals()
+title: "HTMLElement: attachInternals() method"
+short-title: attachInternals()
 slug: Web/API/HTMLElement/attachInternals
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - attachInternals
 browser-compat: api.HTMLElement.attachInternals
 ---
 

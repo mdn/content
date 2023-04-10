@@ -1,18 +1,8 @@
 ---
-title: VideoTrack.selected
+title: "VideoTrack: selected property"
+short-title: selected
 slug: Web/API/VideoTrack/selected
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - VideoTrack
-  - selected
-  - track
 browser-compat: api.VideoTrack.selected
 ---
 

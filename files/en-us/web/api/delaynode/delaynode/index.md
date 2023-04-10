@@ -1,15 +1,8 @@
 ---
-title: DelayNode()
+title: "DelayNode: DelayNode() constructor"
+short-title: DelayNode()
 slug: Web/API/DelayNode/DelayNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - DelayNode
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.DelayNode.DelayNode
 ---
 

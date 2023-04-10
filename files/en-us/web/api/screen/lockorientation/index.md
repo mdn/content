@@ -1,15 +1,10 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() method"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsUpdate
-  - Screen Orientation
-  - screen
+status:
+  - deprecated
 browser-compat: api.Screen.lockOrientation
 ---
 
@@ -94,7 +89,10 @@ doesn't indicate that the screen orientation is indeed locked: there may be a de
 ### Usage with a string argument
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // Orientation was locked
@@ -106,9 +104,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### Usage with an `Array` argument
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // Orientation was locked
 } else {
   // Orientation lock failed

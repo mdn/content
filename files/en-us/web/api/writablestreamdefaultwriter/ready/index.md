@@ -1,16 +1,8 @@
 ---
-title: WritableStreamDefaultWriter.ready
+title: "WritableStreamDefaultWriter: ready property"
+short-title: ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Ready
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-  - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.ready
 ---
 
@@ -38,7 +30,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, {stream: true});
+  const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     // Make sure the stream and its writer are able to
     //   receive data.

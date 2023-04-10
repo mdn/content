@@ -1,12 +1,8 @@
 ---
-title: HTMLAreaElement.username
+title: "HTMLAreaElement: username property"
+short-title: username
 slug: Web/API/HTMLAreaElement/username
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.username
 ---
 

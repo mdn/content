@@ -1,13 +1,8 @@
 ---
-title: location.reload()
+title: "location: reload() method"
+short-title: reload()
 slug: Web/API/Location/reload
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - Method
-  - Reference
 browser-compat: api.Location.reload
 ---
 

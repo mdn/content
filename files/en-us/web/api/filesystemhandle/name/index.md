@@ -1,14 +1,8 @@
 ---
-title: FileSystemHandle.name
+title: "FileSystemHandle: name property"
+short-title: name
 slug: Web/API/FileSystemHandle/name
 page-type: web-api-instance-property
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
 browser-compat: api.FileSystemHandle.name
 ---
 
@@ -36,7 +30,6 @@ async function getFile() {
   [fileHandle] = await window.showOpenFilePicker();
 
   const fileName = fileHandle.name;
-
 }
 ```
 

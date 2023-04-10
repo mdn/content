@@ -2,15 +2,6 @@
 title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 page-type: javascript-instance-method
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.of
 ---
 
@@ -19,8 +10,6 @@ browser-compat: javascript.builtins.Intl.DisplayNames.of
 The **`Intl.DisplayNames.prototype.of()`** method receives a code and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

@@ -1,15 +1,10 @@
 ---
-title: WebTransport.createUnidirectionalStream()
+title: "WebTransport: createUnidirectionalStream() method"
+short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createUnidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
@@ -24,7 +19,7 @@ The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}}
 ## Syntax
 
 ```js
-createUnidirectionalStream()
+createUnidirectionalStream();
 ```
 
 ### Parameters
@@ -57,7 +52,7 @@ async function writeData() {
 
   try {
     await writer.close();
-    console.log('All data has been sent.');
+    console.log("All data has been sent.");
   } catch (error) {
     console.error(`An error occurred: ${error}`);
   }

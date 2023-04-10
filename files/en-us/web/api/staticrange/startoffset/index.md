@@ -1,17 +1,8 @@
 ---
-title: StaticRange.startOffset
+title: "StaticRange: startOffset property"
+short-title: startOffset
 slug: Web/API/StaticRange/startOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM API
-  - Property
-  - Read-only
-  - Reference
-  - Static Range API
-  - StaticRange
-  - startContainer
 browser-compat: api.StaticRange.startOffset
 ---
 

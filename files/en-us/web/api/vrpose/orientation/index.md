@@ -1,18 +1,11 @@
 ---
-title: VRPose.orientation
+title: "VRPose: orientation property"
+short-title: orientation
 slug: Web/API/VRPose/orientation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Orientation
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.orientation
 ---
 

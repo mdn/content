@@ -1,13 +1,8 @@
 ---
-title: EventSource()
+title: "EventSource: EventSource() constructor"
+short-title: EventSource()
 slug: Web/API/EventSource/EventSource
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - EventSource
-  - Reference
-  - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
 
@@ -40,15 +35,15 @@ new EventSource(url, options)
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 > **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).

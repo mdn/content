@@ -1,14 +1,8 @@
 ---
-title: CanvasRenderingContext2D.createRadialGradient()
+title: "CanvasRenderingContext2D: createRadialGradient() method"
+short-title: createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
 

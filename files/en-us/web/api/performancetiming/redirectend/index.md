@@ -1,17 +1,10 @@
 ---
-title: PerformanceTiming.redirectEnd
+title: "PerformanceTiming: redirectEnd property"
+short-title: redirectEnd
 slug: Web/API/PerformanceTiming/redirectEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.redirectEnd
 ---
 

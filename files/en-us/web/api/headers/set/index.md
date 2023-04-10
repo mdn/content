@@ -1,17 +1,12 @@
 ---
-title: Headers.set()
+title: "Headers: set() method"
+short-title: set()
 slug: Web/API/Headers/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - set
 browser-compat: api.Headers.set
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
 sets a new value for an existing header inside a `Headers` object, or adds
@@ -56,8 +51,8 @@ You could add a header to this using {{domxref("Headers.append")}}, then set a n
 value for this header using `set()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.set('Content-Type', 'text/html');
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.set("Content-Type", "text/html");
 ```
 
 If the specified header does not already exist, `set()` will create it and
@@ -66,9 +61,9 @@ does accept multiple values, `set()` will overwrite the existing value with
 the new one:
 
 ```js
-myHeaders.set('Accept-Encoding', 'deflate');
-myHeaders.set('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'gzip'
+myHeaders.set("Accept-Encoding", "deflate");
+myHeaders.set("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns 'gzip'
 ```
 
 You'd need {{domxref("Headers.append")}} to append the new value onto the values, not

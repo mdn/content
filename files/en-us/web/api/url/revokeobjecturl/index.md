@@ -1,13 +1,8 @@
 ---
-title: URL.revokeObjectURL()
+title: "URL: revokeObjectURL() static method"
+short-title: revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - URL
-  - URL API
-  - revokeObjectURL
 browser-compat: api.URL.revokeObjectURL
 ---
 

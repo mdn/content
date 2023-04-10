@@ -1,20 +1,8 @@
 ---
-title: Document.querySelectorAll()
+title: "Document: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - Document
-  - Finding Elements
-  - Locating Elements
-  - Method
-  - Reference
-  - Searching Elements
-  - Selecting Elements
-  - Selectors
-  - querySelectorAll
 browser-compat: api.Document.querySelectorAll
 ---
 

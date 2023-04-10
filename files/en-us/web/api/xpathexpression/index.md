@@ -2,16 +2,6 @@
 title: XPathExpression
 slug: Web/API/XPathExpression
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathExpression
 browser-compat: api.XPathExpression
 ---
 

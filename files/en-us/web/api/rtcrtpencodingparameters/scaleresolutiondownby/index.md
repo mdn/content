@@ -1,25 +1,8 @@
 ---
-title: RTCRtpEncodingParameters.scaleResolutionDownBy
+title: "RTCRtpEncodingParameters: scaleResolutionDownBy property"
+short-title: scaleResolutionDownBy
 slug: Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Codec
-  - Encoding
-  - Media
-  - RTCRtpEncodingParameters
-  - RTP
-  - Reference
-  - Scale
-  - Scaling
-  - Settings
-  - Video
-  - WebRTC
-  - WebRTC API
-  - parameters
-  - rtc
-  - scaleResolutionDownBy
-  - size
 browser-compat: api.RTCRtpEncodingParameters.scaleResolutionDownBy
 ---
 

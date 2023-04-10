@@ -1,21 +1,10 @@
 ---
-title: MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
+title: "MouseEvent: WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN static property"
+short-title: WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 slug: Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 page-type: web-api-static-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - JavaScript
-  - MouseEvent
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Property
-  - Reference
-  - WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
+status:
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_header()}}

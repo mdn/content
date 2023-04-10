@@ -2,12 +2,6 @@
 title: Logical properties for margins, borders, and padding
 slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 page-type: guide
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Guide
-  - concepts
-  - writing modes
 ---
 
 {{CSSRef}}
@@ -128,7 +122,7 @@ The demo below uses some longhands and three shorthand values. As with the other
 
 ### New border shorthands
 
-There are two-value shorthands to set the width, style and, color of the block or inline dimension, and two-value shorthands to set all three values in the block or inline dimension. The below code, in a horizontal writing mode, would give you a 2px green solid border on the top and bottom of the box, and a 4px dotted purple border on the left and right.
+There are two-value shorthands to set the width, style, and color of the block or inline dimension, and shorthands to set all three values in the block or inline dimension. The below code, in a horizontal writing mode, would give you a 2px green solid border on the top and bottom of the box, and a 4px dotted purple border on the left and right.
 
 ```css
 .box {
@@ -141,7 +135,7 @@ There are two-value shorthands to set the width, style and, color of the block o
 
 ### Flow relative border-radius properties
 
-The specification has fairly recently added flow-relative values for the {{cssxref("border-radius")}} longhands. These have not yet been implemented by any browser. The below example, in a horizontal `writing-mode`, would set the top-right border radius to 1em, the bottom-right to 0, the bottom-left to 20px and the top-left to 40px.
+The specification has flow-relative equivalents for the {{cssxref("border-radius")}} longhands. The below example, in a horizontal `writing-mode`, would set the top-right border radius to 1em, the bottom-right to 0, the bottom-left to 20px and the top-left to 40px.
 
 ```css
 .box {
@@ -156,4 +150,4 @@ The specification has fairly recently added flow-relative values for the {{cssxr
 
 The specification makes a suggestion for the four-value shorthands such as the `margin` property, however the final decision on how this should be indicated is as yet unresolved, and is discussed in [this issue](https://github.com/w3c/csswg-drafts/issues/1282).
 
-Using any four-value shorthand such as margin, padding, or border will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.
+Using any four-value shorthand such as `margin`, `padding`, or `border` will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.

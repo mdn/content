@@ -1,14 +1,8 @@
 ---
 title: "Node: selectstart event"
+short-title: selectstart
 slug: Web/API/Node/selectstart_event
 page-type: web-api-event
-tags:
-  - Document
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectstart
 browser-compat: api.Node.selectstart_event
 ---
 
@@ -42,7 +36,7 @@ document.addEventListener("selectstart", () => {
 
 // onselectstart version
 document.onselectstart = () => {
-  console.log("Selection changed.");
+  console.log("Selection started.");
 };
 ```
 

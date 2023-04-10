@@ -1,20 +1,8 @@
 ---
-title: HTMLImageElement.srcset
+title: "HTMLImageElement: srcset property"
+short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Image Candidates
-  - Property
-  - Reference
-  - Responsive Design
-  - list
-  - source
-  - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
 
@@ -31,11 +19,11 @@ that indicates the conditions under which that candidate should be used instead 
 image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
 The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
-  "sizes")}} property, are a crucial component in designing responsive web sites, as they
+  "sizes")}} property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the {{htmlattrxref("srcset", "img")}} attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -110,9 +98,7 @@ a `2x` descriptor) should be used for 2x displays.
   <img
     src="/en-us/web/html/element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="
-      /en-us/web/html/element/img/clock-demo-400px.png 2x
-    " />
+    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 

@@ -1,22 +1,12 @@
 ---
-title: CSSUnparsedValue.forEach()
+title: "CSSUnparsedValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSUnparsedValue/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.forEach()`** method
 executes a provided function once for each element of the

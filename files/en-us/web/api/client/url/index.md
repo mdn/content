@@ -1,14 +1,8 @@
 ---
-title: Client.url
+title: "Client: url property"
+short-title: url
 slug: Web/API/Client/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - URL
 browser-compat: api.Client.url
 ---
 

@@ -1,13 +1,8 @@
 ---
 title: "Permissions-Policy: magnetometer"
 slug: Web/HTTP/Headers/Permissions-Policy/magnetometer
-tags:
-  - Directive
-  - Permissions-Policy
-  - HTTP
-  - Magnetometer
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.magnetometer
 ---
 

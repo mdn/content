@@ -2,13 +2,6 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Generator.return
 ---
 
@@ -20,7 +13,7 @@ The **`return()`** method of a generator acts as if a `return` statement is inse
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "return" is a keyword, so otherwise it's invalid syntax. -->
 
-```js
+```js-nolint
 generatorObject.return(value)
 ```
 

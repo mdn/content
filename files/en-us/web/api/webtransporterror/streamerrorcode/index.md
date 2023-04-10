@@ -1,15 +1,10 @@
 ---
-title: WebTransportError.streamErrorCode
+title: "WebTransportError: streamErrorCode property"
+short-title: streamErrorCode
 slug: Web/API/WebTransportError/streamErrorCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - streamErrorCode
-  - WebTransportError
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 
@@ -29,7 +24,6 @@ A number, or `null`.
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -38,11 +32,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

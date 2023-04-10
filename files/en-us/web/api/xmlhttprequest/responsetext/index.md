@@ -1,16 +1,8 @@
 ---
-title: XMLHttpRequest.responseText
+title: "XMLHttpRequest: responseText property"
+short-title: responseText
 slug: Web/API/XMLHttpRequest/responseText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetching Text
-  - Loading Text
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
 
@@ -33,7 +25,7 @@ data has not been completely received yet.
 
 You know the entire content has been received when the value of
 {{domxref("XMLHttpRequest.readyState", "readyState")}} becomes
-{{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`), and
+`XMLHttpRequest.DONE` (`4`), and
 {{domxref("XMLHttpRequest.status", "status")}} becomes 200 (`"OK"`).
 
 ### Exceptions

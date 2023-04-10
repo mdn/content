@@ -1,14 +1,8 @@
 ---
-title: RTCDataChannel.protocol
+title: "RTCDataChannel: protocol property"
+short-title: protocol
 slug: Web/API/RTCDataChannel/protocol
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Protocol
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
 browser-compat: api.RTCDataChannel.protocol
 ---
 
@@ -36,11 +30,11 @@ channel. If none has been established, this is an empty string ("").
 ```js
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel", {
-           protocol: "json"
+  protocol: "json",
 });
 
 function handleChannelMessage(dataChannel, msg) {
-  switch(dataChannel.protocol) {
+  switch (dataChannel.protocol) {
     case "json":
       /* process JSON data */
       break;

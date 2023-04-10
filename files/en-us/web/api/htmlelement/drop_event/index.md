@@ -1,15 +1,8 @@
 ---
-title: 'HTMLElement: drop event'
+title: "HTMLElement: drop event"
+short-title: drop
 slug: Web/API/HTMLElement/drop_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Drag Event
-  - Drop
-  - Event
-  - HTML 5
-  - Reference
-  - drag and drop
 browser-compat: api.HTMLElement.drop_event
 ---
 
@@ -22,9 +15,9 @@ The **`drop`** event is fired when an element or text selection is dropped on a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('drop', (event) => {});
+addEventListener("drop", (event) => {});
 
-ondrop = (event) => { };
+ondrop = (event) => {};
 ```
 
 ## Event type

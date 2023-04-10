@@ -2,13 +2,8 @@
 title: "::-webkit-meter-even-less-good-value"
 slug: Web/CSS/::-webkit-meter-even-less-good-value
 page-type: css-pseudo-element
-tags:
-  - "-webkit-meter-even-less-good-value"
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-meter-even-less-good-value
 ---
 

@@ -1,21 +1,8 @@
 ---
-title: Clipboard.read()
+title: "Clipboard: read() method"
+short-title: read()
 slug: Web/API/Clipboard/read
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Editing
-  - Method
-  - Reference
-  - Scrap
-  - Text
-  - copy
-  - paste
-  - read
 browser-compat: api.Clipboard.read
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: 'FileReader: error event'
+title: "FileReader: error event"
+short-title: error
 slug: Web/API/FileReader/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Error
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - onerror
 browser-compat: api.FileReader.error_event
 ---
 
@@ -25,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## Event type
@@ -54,22 +46,21 @@ const fileInput = document.querySelector('input[type="file"]');
 const reader = new FileReader();
 
 function handleSelected(e) {
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    reader.addEventListener("error", () => {
+      console.error(`Error occurred reading file: ${selectedFile.name}`);
+    });
 
-        reader.addEventListener('error', () => {
-            console.error(`Error occurred reading file: ${selectedFile.name}`);
-        });
+    reader.addEventListener("load", () => {
+      console.log(`File: ${selectedFile.name} read successfully`);
+    });
 
-        reader.addEventListener('load', () => {
-            console.log(`File: ${selectedFile.name} read successfully`);
-        });
-
-        reader.readAsDataURL(selectedFile);
-    }
+    reader.readAsDataURL(selectedFile);
+  }
 }
 
-fileInput.addEventListener('change', handleSelected);
+fileInput.addEventListener("change", handleSelected);
 ```
 
 ## Specifications

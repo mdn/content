@@ -2,22 +2,12 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.entries
 ---
 
 {{JSRef}}
 
-The **`entries()`** method returns a new **Array
-Iterator** object that contains the key/value pairs for each index in the
-array.
+The **`entries()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
@@ -29,7 +19,7 @@ entries()
 
 ### Return value
 
-A new {{jsxref("Array")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Description
 

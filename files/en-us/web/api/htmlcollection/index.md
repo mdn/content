@@ -2,13 +2,6 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Element Lists
-  - HTMLCollection
-  - Interface
-  - Reference
 browser-compat: api.HTMLCollection
 ---
 

@@ -1,15 +1,8 @@
 ---
-title: Element.ariaLabel
+title: "Element: ariaLabel property"
+short-title: ariaLabel
 slug: Web/API/Element/ariaLabel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLabel
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaLabel
 ---
 
@@ -30,9 +23,9 @@ In this example the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes
 ```
 
 ```js
-let el = document.getElementById('close-button');
+let el = document.getElementById("close-button");
 console.log(el.ariaLabel); // "Close"
-el.ariaLabel = "Close dialog"
+el.ariaLabel = "Close dialog";
 console.log(el.ariaLabel); // "Close dialog"
 ```
 

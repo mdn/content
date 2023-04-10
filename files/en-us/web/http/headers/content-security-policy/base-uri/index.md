@@ -1,12 +1,6 @@
 ---
 title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
-tags:
-  - CSP
-  - Directive
-  - Document directive
-  - HTTP
-  - Security
 browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
 

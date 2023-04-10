@@ -1,13 +1,7 @@
 ---
-title: get TypedArray[@@species]
+title: TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.@@species
 ---
 
@@ -67,7 +61,7 @@ class BadArray2 extends Int8Array {
 new BadArray2(1).map(() => 0n); // TypeError: TypedArray.prototype.map constructed typed array of different content type from |this|
 ```
 
-> **Note:** Due to a bug in both [SpiderMonkey](https://bugzilla.mozilla.org/show_bug.cgi?id=1640194) and V8, the content type match is not checked. Only Safari will throw a {{jsxref("TypeError")}} in the second example.
+> **Note:** Due to a bug in both [SpiderMonkey](https://bugzil.la/1640194) and V8, the content type match is not checked. Only Safari will throw a {{jsxref("TypeError")}} in the second example.
 
 ## Examples
 

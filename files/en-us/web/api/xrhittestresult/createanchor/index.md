@@ -1,16 +1,10 @@
 ---
-title: XRHitTestResult.createAnchor()
+title: "XRHitTestResult: createAnchor() method"
+short-title: createAnchor()
 slug: Web/API/XRHitTestResult/createAnchor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestResult.createAnchor
 ---
 

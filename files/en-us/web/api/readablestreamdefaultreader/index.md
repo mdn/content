@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
 
@@ -67,10 +60,10 @@ fetch("https://www.example.org/").then((response) => {
           controller.enqueue(value);
           push();
         });
-      };
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });

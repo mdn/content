@@ -1,14 +1,10 @@
 ---
-title: NavigatorUAData.brands
+title: "NavigatorUAData: brands property"
+short-title: brands
 slug: Web/API/NavigatorUAData/brands
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - brands
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.brands
 ---
 

@@ -2,17 +2,6 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - "l10n:priority"
-  - statements
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -28,7 +17,7 @@ contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
 Any JavaScript expression is also a statement.
-See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 for complete information about expressions.
 
 ## Block statement

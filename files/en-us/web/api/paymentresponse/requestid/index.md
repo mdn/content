@@ -1,15 +1,8 @@
 ---
-title: PaymentResponse.requestId
+title: "PaymentResponse: requestId property"
+short-title: requestId
 slug: Web/API/PaymentResponse/requestId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Secure context
-  - requestId
 browser-compat: api.PaymentResponse.requestId
 ---
 

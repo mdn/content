@@ -1,13 +1,8 @@
 ---
-title: scheduler
+title: "Window: scheduler property"
+short-title: scheduler
 slug: Web/API/Window/scheduler
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - scheduler
-  - Window
-  - WorkerGlobalScope
 browser-compat: api.scheduler
 ---
 
@@ -31,10 +26,9 @@ It demonstrates how to check that the property exists and then posts a task that
 
 ```js
 // Check if the prioritized task API is supported
-if ('scheduler' in this) {
-
+if ("scheduler" in this) {
   // Callback function - "the task"
-  const myTask = () => 'Task 1: user-visible';
+  const myTask = () => "Task 1: user-visible";
 
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
@@ -45,7 +39,7 @@ if ('scheduler' in this) {
     // Handle error or abort
     .catch((error) => console.log(`Error: ${error}`));
 } else {
-  console.log('Feature: NOT Supported');
+  console.log("Feature: NOT Supported");
 }
 ```
 

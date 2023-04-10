@@ -1,13 +1,8 @@
 ---
-title: DocumentFragment()
+title: "DocumentFragment: DocumentFragment() constructor"
+short-title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DocumentFragment
-  - Reference
 browser-compat: api.DocumentFragment.DocumentFragment
 ---
 

@@ -2,19 +2,12 @@
 title: TypeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypeError
 browser-compat: javascript.builtins.TypeError.TypeError
 ---
 
 {{JSRef}}
 
-The **`TypeError()`** constructor creates a new error when an
-operation could not be performed, typically (but not exclusively) when a value is not of
-the expected type.
+The **`TypeError()`** constructor creates {{jsxref("TypeError")}} objects.
 
 ## Syntax
 

@@ -1,13 +1,8 @@
 ---
-title: ImageBitmap.height
+title: "ImageBitmap: height property"
+short-title: height
 slug: Web/API/ImageBitmap/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - ImageBitmap
-  - Property
-  - Reference
 browser-compat: api.ImageBitmap.height
 ---
 

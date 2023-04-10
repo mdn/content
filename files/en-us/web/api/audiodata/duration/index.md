@@ -1,14 +1,10 @@
 ---
-title: AudioData.duration
+title: "AudioData: duration property"
+short-title: duration
 slug: Web/API/AudioData/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - duration
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.duration
 ---
 

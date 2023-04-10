@@ -1,15 +1,8 @@
 ---
-title: MouseEvent.getModifierState()
+title: "MouseEvent: getModifierState() method"
+short-title: getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Method
-  - MouseEvent
-  - Reference
-  - getModifierState
 browser-compat: api.MouseEvent.getModifierState
 ---
 

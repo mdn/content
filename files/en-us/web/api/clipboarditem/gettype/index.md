@@ -1,16 +1,8 @@
 ---
-title: ClipboardItem.getType()
+title: "ClipboardItem: getType() method"
+short-title: getType()
 slug: Web/API/ClipboardItem/getType
 page-type: web-api-instance-method
-tags:
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Method
-  - copy
-  - getTypes
-  - paste
 browser-compat: api.ClipboardItem.getType
 ---
 

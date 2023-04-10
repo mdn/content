@@ -1,21 +1,6 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibility
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Images
-  - JavaScript
-  - Learn
-  - Multimedia
-  - Video
-  - captions
-  - subtitles
-  - text tracks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -321,7 +306,7 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 - Save it as a .vtt file in a sensible place.
-- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
+- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 
@@ -356,13 +341,3 @@ It is not always easy to make multimedia accessible. If for example, you are dea
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

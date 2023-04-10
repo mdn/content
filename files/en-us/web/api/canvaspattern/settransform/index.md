@@ -1,13 +1,8 @@
 ---
-title: CanvasPattern.setTransform()
+title: "CanvasPattern: setTransform() method"
+short-title: setTransform()
 slug: Web/API/CanvasPattern/setTransform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasPattern
-  - Method
-  - Reference
 browser-compat: api.CanvasPattern.setTransform
 ---
 

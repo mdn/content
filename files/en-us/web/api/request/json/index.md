@@ -1,14 +1,8 @@
 ---
-title: Request.json()
+title: "Request: json() method"
+short-title: json()
 slug: Web/API/Request/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.json
 ---
 
@@ -37,12 +31,12 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 ## Examples
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
 request.json().then((data) => {
   // do something with the data sent in the request

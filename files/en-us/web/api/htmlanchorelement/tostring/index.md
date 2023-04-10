@@ -1,12 +1,8 @@
 ---
-title: HTMLAnchorElement.toString()
+title: "HTMLAnchorElement: toString() method"
+short-title: toString()
 slug: Web/API/HTMLAnchorElement/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLAnchorElement
-  - Method
-  - Stringifier
 browser-compat: api.HTMLAnchorElement.toString
 ---
 

@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaPlaceholder
+title: "ElementInternals: ariaPlaceholder property"
+short-title: ariaPlaceholder
 slug: Web/API/ElementInternals/ariaPlaceholder
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPlaceholder
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaPlaceholder
 ---
 

@@ -1,14 +1,10 @@
 ---
-title: CustomStateSet.forEach()
+title: "CustomStateSet: forEach() method"
+short-title: forEach()
 slug: Web/API/CustomStateSet/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forEach
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet.forEach
 ---
 

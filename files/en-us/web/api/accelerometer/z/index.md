@@ -1,19 +1,10 @@
 ---
-title: Accelerometer.z
+title: "Accelerometer: z property"
+short-title: z
 slug: Web/API/Accelerometer/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - z
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer.z
 ---
 

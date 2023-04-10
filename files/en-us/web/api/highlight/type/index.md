@@ -1,14 +1,10 @@
 ---
-title: Highlight.type
+title: "Highlight: type property"
+short-title: type
 slug: Web/API/Highlight/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - CSS Custom Highlight API
-  - Reference
-  - type
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Highlight.type
 ---
 

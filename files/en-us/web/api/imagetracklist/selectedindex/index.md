@@ -1,14 +1,10 @@
 ---
-title: ImageTrackList.selectedIndex
+title: "ImageTrackList: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/ImageTrackList/selectedIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - selectedIndex
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList.selectedIndex
 ---
 

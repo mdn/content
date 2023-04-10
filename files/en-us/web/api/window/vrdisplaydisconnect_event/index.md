@@ -1,14 +1,11 @@
 ---
-title: 'Window: vrdisplaydisconnect event'
+title: "Window: vrdisplaydisconnect event"
+short-title: vrdisplaydisconnect
 slug: Web/API/Window/vrdisplaydisconnect_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebVR
-  - Deprecated
-  - vrdisplaydisconnect
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.vrdisplaydisconnect_event
 ---
 
@@ -23,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaydisconnect', (event) => { });
+addEventListener("vrdisplaydisconnect", (event) => {});
 
-onvrdisplaydisconnect = (event) => { };
+onvrdisplaydisconnect = (event) => {};
 ```
 
 ## Event type
@@ -50,8 +47,8 @@ You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/en-US/do
 > **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ```js
-window.addEventListener('vrdisplaydisconnect', () => {
-  info.textContent = 'Display disconnected.';
+window.addEventListener("vrdisplaydisconnect", () => {
+  info.textContent = "Display disconnected.";
   reportDisplays();
 });
 ```
@@ -60,7 +57,7 @@ Or use the `onvrdisplaydisconnect` event handler property:
 
 ```js
 window.onvrdisplaydisconnect = () => {
-  info.textContent = 'Display disconnected.';
+  info.textContent = "Display disconnected.";
   reportDisplays();
 };
 ```

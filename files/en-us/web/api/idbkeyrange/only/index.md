@@ -1,16 +1,8 @@
 ---
-title: IDBKeyRange.only()
+title: "IDBKeyRange: only() static method"
+short-title: only()
 slug: Web/API/IDBKeyRange/only
 page-type: web-api-static-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - only
 browser-compat: api.IDBKeyRange.only
 ---
 
@@ -58,22 +50,22 @@ the cursor will only retrieve the record with the key value "A".
 function displayData() {
   const keyRangeValue = IDBKeyRange.only("A");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications

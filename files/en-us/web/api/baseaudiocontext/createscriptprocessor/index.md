@@ -1,16 +1,10 @@
 ---
-title: BaseAudioContext.createScriptProcessor()
+title: "BaseAudioContext: createScriptProcessor() method"
+short-title: createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createScriptProcessor
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
 
@@ -135,7 +129,7 @@ scriptNode.onaudioprocess = (audioProcessingEvent) => {
 
 getData();
 
-// wire up play button
+// Wire up the play button
 playButton.onclick = () => {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);

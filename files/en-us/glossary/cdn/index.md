@@ -2,8 +2,6 @@
 title: CDN
 slug: Glossary/CDN
 page-type: glossary-definition
-tags:
-  - Infrastructure
 ---
 
 A **CDN** (Content Delivery Network) is a group of servers spread out over many locations. These servers store duplicate copies of data so that servers can fulfill data requests based on which servers are closest to the respective end-users. CDNs make for fast service less affected by high traffic.

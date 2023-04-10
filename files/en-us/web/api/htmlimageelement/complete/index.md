@@ -1,17 +1,8 @@
 ---
-title: HTMLImageElement.complete
+title: "HTMLImageElement: complete property"
+short-title: complete
 slug: Web/API/HTMLImageElement/complete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetching
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Loading
-  - Property
-  - Reference
-  - complete
 browser-compat: api.HTMLImageElement.complete
 ---
 
@@ -28,7 +19,7 @@ otherwise, the value is `false`.
 
 The image is considered completely loaded if any of the following are true:
 
-- Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}}
+- Neither the [`src`](/en-US/docs/Web/HTML/Element/img#src) nor the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset)
   attribute is specified.
 - The `srcset` attribute is absent and the `src` attribute,
   while specified, is the empty string (`""`).

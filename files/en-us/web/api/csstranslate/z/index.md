@@ -1,20 +1,12 @@
 ---
-title: CSSTranslate.z
+title: "CSSTranslate: z property"
+short-title: z
 slug: Web/API/CSSTranslate/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - CSSTransformValue
-  - CSSTranslate
-  - Experimental
-  - Houdini
-  - Property
 browser-compat: api.CSSTranslate.z
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`z`** property of the
 {{domxref("CSSTranslate")}} interface representing the z-component of the translating

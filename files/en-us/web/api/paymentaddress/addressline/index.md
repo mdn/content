@@ -1,20 +1,11 @@
 ---
-title: PaymentAddress.addressLine
+title: "PaymentAddress: addressLine property"
+short-title: addressLine
 slug: Web/API/PaymentAddress/addressLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Read-only
-  - Reference
-  - payment
-  - paymentAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.addressLine
 ---
 

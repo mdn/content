@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.isPointInPath()
+title: "CanvasRenderingContext2D: isPointInPath() method"
+short-title: isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
 

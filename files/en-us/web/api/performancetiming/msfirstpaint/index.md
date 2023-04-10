@@ -1,11 +1,10 @@
 ---
-title: PerformanceTiming.msFirstPaint
+title: "PerformanceTiming: msFirstPaint property"
+short-title: msFirstPaint
 slug: Web/API/PerformanceTiming/MsFirstPaint
 page-type: web-api-instance-property
-tags:
-  - msFirstPaint
-  - Property
-  - Non-standard
+status:
+  - non-standard
 ---
 
 {{APIRef("Performance API API")}}
@@ -43,6 +42,6 @@ The following example shows how to calculate the time that is required to reques
 document before the document begins to display for the user.
 
 ```js
-  const oTiming = window.performance.timing;
-  const iTimeMS = oTiming.msFirstPaint - oTiming.navigationStart;
+const oTiming = window.performance.timing;
+const iTimeMS = oTiming.msFirstPaint - oTiming.navigationStart;
 ```

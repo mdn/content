@@ -2,11 +2,6 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
 
@@ -150,8 +145,10 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
+
+> **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
 
 ## Static methods
 
@@ -357,7 +354,7 @@ The `products` proxy object evaluates the passed value and converts it to an arr
 ```js
 const products = new Proxy(
   {
-    browsers: ["Internet Explorer", "Netscape"],
+    browsers: ["Firefox", "Chrome"],
   },
   {
     get(obj, prop) {
@@ -391,21 +388,21 @@ const products = new Proxy(
 );
 
 console.log(products.browsers);
-//  ['Internet Explorer', 'Netscape']
+//  ['Firefox', 'Chrome']
 
-products.browsers = "Firefox";
+products.browsers = "Safari";
 //  pass a string (by mistake)
 
 console.log(products.browsers);
-//  ['Firefox'] <- no problem, the value is an array
+//  ['Safari'] <- no problem, the value is an array
 
-products.latestBrowser = "Chrome";
+products.latestBrowser = "Edge";
 
 console.log(products.browsers);
-//  ['Firefox', 'Chrome']
+//  ['Safari', 'Edge']
 
 console.log(products.latestBrowser);
-//  'Chrome'
+//  'Edge'
 ```
 
 ### Finding an array item object by its property

@@ -1,15 +1,7 @@
 ---
 title: Learn web development
 slug: Learn
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Index
-  - Intro
-  - Landing
-  - Learn
-  - Web
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

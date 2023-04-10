@@ -1,19 +1,8 @@
 ---
-title: MediaTrackConstraints.deviceId
+title: "MediaTrackConstraints: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackConstraints/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - deviceId
-  - getusermedia
 browser-compat: api.MediaTrackConstraints.deviceId
 ---
 

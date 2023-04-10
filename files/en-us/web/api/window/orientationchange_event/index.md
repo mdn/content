@@ -1,15 +1,10 @@
 ---
-title: 'Window: orientationchange event'
+title: "Window: orientationchange event"
+short-title: orientationchange
 slug: Web/API/Window/orientationchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Sensors
-  - Window
-  - orientationchange
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.orientationchange_event
 ---
 
@@ -26,9 +21,9 @@ This event is deprecated. Listen for the {{domxref("ScreenOrientation/onchange",
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('orientationchange', (event) => { });
+addEventListener("orientationchange", (event) => {});
 
-onorientationchange = (event) => { };
+onorientationchange = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +36,9 @@ You can use the `orientationchange` event in an {{domxref("EventTarget/addEventL
 
 ```js
 window.addEventListener("orientationchange", (event) => {
-  console.log(`the orientation of the device is now ${event.target.screen.orientation.angle}`);
+  console.log(
+    `the orientation of the device is now ${event.target.screen.orientation.angle}`
+  );
 });
 ```
 
@@ -49,7 +46,9 @@ Or use the `onorientationchange` event handler property:
 
 ```js
 window.onorientationchange = (event) => {
-  console.log(`the orientation of the device is now ${event.target.screen.orientation.angle}`);
+  console.log(
+    `the orientation of the device is now ${event.target.screen.orientation.angle}`
+  );
 };
 ```
 

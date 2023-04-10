@@ -1,17 +1,8 @@
 ---
-title: SpeechRecognitionResult.item()
+title: "SpeechRecognitionResult: item() method"
+short-title: item()
 slug: Web/API/SpeechRecognitionResult/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Getter
-  - Method
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - item
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.item
 ---
 
@@ -55,7 +46,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

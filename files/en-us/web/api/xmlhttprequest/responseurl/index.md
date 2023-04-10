@@ -1,15 +1,8 @@
 ---
-title: XMLHttpRequest.responseURL
+title: "XMLHttpRequest: responseURL property"
+short-title: responseURL
 slug: Web/API/XMLHttpRequest/responseURL
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - XMLHttpRequest
-  - responseURL
 browser-compat: api.XMLHttpRequest.responseURL
 ---
 

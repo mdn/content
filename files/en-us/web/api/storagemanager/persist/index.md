@@ -1,19 +1,14 @@
 ---
-title: StorageManager.persist()
+title: "StorageManager: persist() method"
+short-title: persist()
 slug: Web/API/StorageManager/persist
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-  - Secure context
-  - Storage API
-  - persist()
 browser-compat: api.StorageManager.persist
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}
 
-The **`persist()`** method of the {{domxref("StorageManager")}} interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to `true` if permission is granted and box mode is persistent, and `false` otherwise.
+The **`persist()`** method of the {{domxref("StorageManager")}} interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to `true` if permission is granted and bucket mode is persistent, and `false` otherwise.
 
 ## Syntax
 

@@ -1,13 +1,7 @@
 ---
 title: Permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
-tags:
-  - API
-  - Add-ons
-  - Permissions
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.permissions.Permissions
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: chrome_url_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_url_overrides
 ---
 

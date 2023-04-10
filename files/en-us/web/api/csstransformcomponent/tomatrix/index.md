@@ -1,20 +1,12 @@
 ---
-title: CSSTransformComponent.toMatrix()
+title: "CSSTransformComponent: toMatrix() method"
+short-title: toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toMatrix
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`toMatrix()`** method of the
 {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}

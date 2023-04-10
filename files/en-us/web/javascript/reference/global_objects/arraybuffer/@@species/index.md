@@ -1,12 +1,7 @@
 ---
-title: get ArrayBuffer[@@species]
+title: ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Property
-  - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.@@species
 ---
 
@@ -18,7 +13,7 @@ The **`ArrayBuffer[@@species]`** static accessor property returns the constructo
 
 ## Syntax
 
-```js
+```js-nolint
 ArrayBuffer[Symbol.species]
 ```
 

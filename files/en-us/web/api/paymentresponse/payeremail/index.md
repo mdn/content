@@ -1,18 +1,11 @@
 ---
-title: PaymentResponse.payerEmail
+title: "PaymentResponse: payerEmail property"
+short-title: payerEmail
 slug: Web/API/PaymentResponse/payerEmail
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - payerEmail
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentResponse.payerEmail
 ---
 

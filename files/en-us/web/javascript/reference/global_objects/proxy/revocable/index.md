@@ -2,11 +2,6 @@
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.revocable
 ---
 
@@ -44,7 +39,7 @@ The `revoke` function does not take any parameters, nor does it rely on the `thi
 
 After the `revoke()` function gets called, the proxy becomes unusable: any trap to a handler throws a {{jsxref("TypeError")}}. Once a proxy is revoked, it remains revoked, and calling `revoke()` again has no effect — in fact, the call to `revoke()` detaches the `proxy` object from the `revoke` function, so the `revoke` function will not be able to access the proxy again at all. If the proxy is not referenced elsewhere, it will then be eligible for garbage collection. The `revoke` function also detaches `target` and `handler` from the `proxy`, so if `target` is not referenced elsewhere, it will also be eligible for garbage collection, even when its proxy is still alive, since there's no longer a way to meaningfully interact with the target object.
 
-Letting users interact with an object through a revocable proxy allows you to [control the lifetime](/en-US/docs/Web/JavaScript/Memory_Management) of the object exposed to the user — you can make the object garbage-collectable even when the user is still holding a reference to its proxy.
+Letting users interact with an object through a revocable proxy allows you to [control the lifetime](/en-US/docs/Web/JavaScript/Memory_management) of the object exposed to the user — you can make the object garbage-collectable even when the user is still holding a reference to its proxy.
 
 ## Examples
 

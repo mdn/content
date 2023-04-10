@@ -1,20 +1,10 @@
 ---
-title: NavigationDestination.sameDocument
+title: "NavigationDestination: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationDestination/sameDocument
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - sameDocument
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination.sameDocument
 ---
 
@@ -32,7 +22,7 @@ A boolean.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.sameDocument);
 });
 ```

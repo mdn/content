@@ -1,19 +1,10 @@
 ---
-title: 'Element: DOMActivate event'
+title: "Element: DOMActivate event"
+short-title: DOMActivate
 slug: Web/API/Element/DOMActivate_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Mouse Events
-  - MouseEvent
-  - Reference
-  - activate event
-  - onactivate
+status:
+  - deprecated
 browser-compat: api.Element.DOMActivate_event
 ---
 
@@ -26,9 +17,9 @@ The **`DOMActivate`** event is fired at an element when it becomes active, such 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('DOMActivate', (event) => {});
+addEventListener("DOMActivate", (event) => {});
 
-onDOMActivate = (event) => { };
+onDOMActivate = (event) => {};
 ```
 
 ## Event type
@@ -55,17 +46,12 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
   <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
 
   <!-- ECMAScript to change the radius -->
- <script type="application/ecmascript"><![CDATA[
-    function change(evt) {
-      const circle = evt.target;
-      const currentRadius = circle.getFloatTrait("r");
-      if (currentRadius === 100) {
-        circle.setFloatTrait("r", currentRadius * 2);
-      } else {
-        circle.setFloatTrait("r", currentRadius * 0.5);
-      }
-    }
-  ]]></script>
+  <script type="application/ecmascript">
+    <![CDATA[ function change(evt) { const circle = evt.target; const
+    currentRadius = circle.getFloatTrait("r"); if (currentRadius === 100) {
+    circle.setFloatTrait("r", currentRadius * 2); } else {
+    circle.setFloatTrait("r", currentRadius * 0.5); } } ]]>
+  </script>
 
   <!-- Act on each DOMActivate event -->
   <circle cx="300" cy="225" r="100" fill="red">

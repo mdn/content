@@ -1,13 +1,10 @@
 ---
-title: PerformanceLongTaskTiming.toJSON()
+title: "PerformanceLongTaskTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceLongTaskTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance,
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming.toJSON
 ---
 

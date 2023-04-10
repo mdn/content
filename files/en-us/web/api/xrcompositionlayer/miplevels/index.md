@@ -1,17 +1,10 @@
 ---
-title: XRCompositionLayer.mipLevels
+title: "XRCompositionLayer: mipLevels property"
+short-title: mipLevels
 slug: Web/API/XRCompositionLayer/mipLevels
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.mipLevels
 ---
 

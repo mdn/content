@@ -1,12 +1,8 @@
 ---
-title: HTMLAnchorElement.hash
+title: "HTMLAnchorElement: hash property"
+short-title: hash
 slug: Web/API/HTMLAnchorElement/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
 
@@ -17,7 +13,7 @@ The
 string containing a `'#'` followed by the fragment
 identifier of the URL.
 
-The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+The fragment is not [URL encoded](https://en.wikipedia.org/wiki/URL_encoding). If the URL does not
 have a fragment identifier, this property contains an empty string, `""`.
 
 ## Value

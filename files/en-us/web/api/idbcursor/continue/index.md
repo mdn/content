@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.continue()
+title: "IDBCursor: continue() method"
+short-title: continue()
 slug: Web/API/IDBCursor/continue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - continue
 browser-compat: api.IDBCursor.continue
 ---
 
@@ -64,22 +56,22 @@ our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

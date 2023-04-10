@@ -1,14 +1,8 @@
 ---
-title: PublicKeyCredential.getClientExtensionResults()
+title: "PublicKeyCredential: getClientExtensionResults() method"
+short-title: getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
 
@@ -51,8 +45,8 @@ and their results from the processing.
 
 > **Warning:** As of March 2019, only `appId` (used during
 > creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
-> supported by [Chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) and
-> Firefox does not seem to [support any extension](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728).
+> supported by [Chromium](https://crbug.com/818303) and
+> Firefox does not seem to [support any extension](https://bugzil.la/1370728).
 
 ## Examples
 
@@ -60,13 +54,13 @@ and their results from the processing.
 const publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
-    "loc": true, // This extension has been defined to include location information in attestation
-    "uvi": true  // user verification index: how the user was verified
+    loc: true, // This extension has been defined to include location information in attestation
+    uvi: true, // user verification index: how the user was verified
   },
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
@@ -76,17 +70,19 @@ const publicKey = {
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then((newCredentialInfo) => {
     const myBuffer = newCredentialInfo.getClientExtensionResults();
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
-  }).catch((err) => {
-     console.error(err);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 

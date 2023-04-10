@@ -1,18 +1,10 @@
 ---
-title: XRWebGLLayer.fixedFoveation
+title: "XRWebGLLayer: fixedFoveation property"
+short-title: fixedFoveation
 slug: Web/API/XRWebGLLayer/fixedFoveation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
-
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.fixedFoveation
 ---
 

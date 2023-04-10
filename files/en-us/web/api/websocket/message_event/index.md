@@ -1,12 +1,8 @@
 ---
-title: 'WebSocket: message event'
+title: "WebSocket: message event"
+short-title: message
 slug: Web/API/WebSocket/message_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - WebSocket
-  - message
 browser-compat: api.WebSocket.message_event
 ---
 
@@ -19,9 +15,9 @@ The `message` event is fired when data is received through a `WebSocket`.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { })
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { }
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -49,11 +45,11 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```js
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Listen for messages
-socket.addEventListener('message', (event) => {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

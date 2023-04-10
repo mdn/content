@@ -1,20 +1,8 @@
 ---
-title: AudioTrack.sourceBuffer
+title: "AudioTrack: sourceBuffer property"
+short-title: sourceBuffer
 slug: Web/API/AudioTrack/sourceBuffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Property
-  - Read-only
-  - Reference
-  - SourceBuffer
-  - track
 browser-compat: api.AudioTrack.sourceBuffer
 ---
 

@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.latency
+title: "MediaTrackSettings: latency property"
+short-title: latency
 slug: Web/API/MediaTrackSettings/latency
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - latency
 browser-compat: api.MediaTrackSettings.latency
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.globalAlpha
+title: "CanvasRenderingContext2D: globalAlpha property"
+short-title: globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.globalAlpha
 ---
 

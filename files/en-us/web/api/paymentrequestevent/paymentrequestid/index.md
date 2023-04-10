@@ -1,16 +1,10 @@
 ---
-title: PaymentRequestEvent.paymentRequestId
+title: "PaymentRequestEvent: paymentRequestId property"
+short-title: paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - paymentRequestId
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.paymentRequestId
 ---
 
@@ -27,7 +21,7 @@ A string containing the ID.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.paymentRequestId);
 });
 ```

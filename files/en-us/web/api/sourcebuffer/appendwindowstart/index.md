@@ -1,17 +1,8 @@
 ---
-title: SourceBuffer.appendWindowStart
+title: "SourceBuffer: appendWindowStart property"
+short-title: appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendWindowStart
 browser-compat: api.SourceBuffer.appendWindowStart
 ---
 

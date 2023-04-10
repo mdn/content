@@ -1,15 +1,8 @@
 ---
-title: console.assert()
+title: "console: assert() method"
+short-title: assert()
 slug: Web/API/console/assert
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.assert
 ---
 

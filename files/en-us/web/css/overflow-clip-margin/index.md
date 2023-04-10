@@ -2,12 +2,6 @@
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
 page-type: css-property
-tags:
-  - CSS
-  - CSS Overflow
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.overflow-clip-margin
 ---
 
@@ -18,8 +12,12 @@ The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines ho
 ## Syntax
 
 ```css
+/* <length> values */
 overflow-clip-margin: 20px;
 overflow-clip-margin: 1em;
+
+/* <visual-box> | <length> */
+overflow-clip-margin: content-box 5px;
 
 /* Global values */
 overflow-clip-margin: inherit;
@@ -29,7 +27,7 @@ overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
-The `overflow-clip-margin` property is specified as a length, negative values are not allowed.
+The `<visual-box>` value, which defaults to `padding-box`, specifies the box edge to use as the overflow clip edge origin. The `<length>` value specified in `overflow-clip-margin` must be nonnegative.
 
 > **Note:** If the element does not have `overflow: clip` then this property will be ignored.
 

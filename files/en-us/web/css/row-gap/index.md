@@ -2,14 +2,6 @@
 title: row-gap
 slug: Web/CSS/row-gap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - row-gap
 browser-compat: css.properties.row-gap
 ---
 

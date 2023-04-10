@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaSort
+title: "ElementInternals: ariaSort property"
+short-title: ariaSort
 slug: Web/API/ElementInternals/ariaSort
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSort
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaSort
 ---
 

@@ -1,19 +1,8 @@
 ---
-title: Document.timeline
+title: "Document: timeline property"
+short-title: timeline
 slug: Web/API/Document/timeline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Document
-  - DocumentTimeline
-  - Property
-  - Reference
-  - Web Animations
-  - timeline
-  - waapi
-  - web animations api
 browser-compat: api.Document.timeline
 ---
 

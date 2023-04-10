@@ -1,13 +1,8 @@
 ---
-title: SVGStyleElement.disabled
+title: "SVGStyleElement: disabled property"
+short-title: disabled
 slug: Web/API/SVGStyleElement/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.disabled
 ---
 
@@ -58,19 +53,19 @@ The style already exists because it is defined in the SVG, so this should succee
 
 ```js
 const svg = document.querySelector("svg");
-const style = svg.getElementById("circle_style_id")
+const style = svg.getElementById("circle_style_id");
 style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the disabled state and button text.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   button.textContent = style.disabled ? 'Enable' : 'Disable';
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  button.textContent = style.disabled ? "Enable" : "Disable";
+});
 ```
 
 #### Result
@@ -111,8 +106,8 @@ This is done by first creating a style element in the SVG namespace using [`Docu
 const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 svg.appendChild(style);
 style.appendChild(node);
 ```
@@ -123,18 +118,18 @@ Before this point the SVG did not have a style associated, and so the value defa
 
 ```js
 //Disable the style
-style.disabled=true;
+style.disabled = true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   button.textContent = style.disabled ? 'Enable' : 'Disable';
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  button.textContent = style.disabled ? "Enable" : "Disable";
+});
 ```
 
 #### Result

@@ -1,14 +1,8 @@
 ---
-title: ReadableStreamBYOBReader.closed
+title: "ReadableStreamBYOBReader: closed property"
+short-title: closed
 slug: Web/API/ReadableStreamBYOBReader/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - closed
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
 
@@ -27,10 +21,14 @@ A {{jsxref("Promise")}}.
 The code below shows the pattern for handling the closed/error state of a BYOBReader.
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 reader.closed
-  .then(() => { /* Resolved - code to handle stream closing */ } )
-  .catch(() => { /* Rejected - code to handle error */ } );
+  .then(() => {
+    // Resolved - code to handle stream closing
+  })
+  .catch(() => {
+    // Rejected - code to handle error
+  });
 ```
 
 ## Specifications

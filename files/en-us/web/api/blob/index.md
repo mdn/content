@@ -2,12 +2,6 @@
 title: Blob
 slug: Web/API/Blob
 page-type: web-api-interface
-tags:
-  - API
-  - Blob
-  - File API
-  - Interface
-  - Reference
 browser-compat: api.Blob
 ---
 
@@ -75,7 +69,7 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 
 #### JavaScript
 
-The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).
+The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute (assuming the data contains an image, of course).
 
 ```js
 function showViewLiveResultButton() {

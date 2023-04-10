@@ -1,16 +1,8 @@
 ---
-title: Animation.playbackRate
+title: "Animation: playbackRate property"
+short-title: playbackRate
 slug: Web/API/Animation/playbackRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Interface
-  - Property
-  - Reference
-  - Web Animations
-  - playbackRate
-  - web animations api
 browser-compat: api.Animation.playbackRate
 ---
 

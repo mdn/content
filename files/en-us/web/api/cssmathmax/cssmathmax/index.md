@@ -1,23 +1,17 @@
 ---
-title: CSSMathMax()
+title: "CSSMathMax: CSSMathMax() constructor"
+short-title: CSSMathMax()
 slug: Web/API/CSSMathMax/CSSMathMax
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMax
-  - CSSNumericValue
-  - Constructor
-  - Experimental
-  - Houdini
+status:
+  - experimental
 browser-compat: api.CSSMathMax.CSSMathMax
 ---
 
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMax()`** constructor creates a
-new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
-  'max()')}} function.
+new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max', 'max()')}} function.
 
 ## Syntax
 

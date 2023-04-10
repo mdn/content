@@ -1,13 +1,8 @@
 ---
-title: FileReader.error
+title: "FileReader: error property"
+short-title: error
 slug: Web/API/FileReader/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
 browser-compat: api.FileReader.error
 ---
 

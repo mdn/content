@@ -1,13 +1,8 @@
 ---
-title: Document.hasFocus()
+title: "Document: hasFocus() method"
+short-title: hasFocus()
 slug: Web/API/Document/hasFocus
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
 browser-compat: api.Document.hasFocus
 ---
 

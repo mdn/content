@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframesRule.cssRules
+title: "CSSKeyframesRule: cssRules property"
+short-title: cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframesRule.cssRules
 ---
 

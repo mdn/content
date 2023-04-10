@@ -1,18 +1,8 @@
 ---
-title: RTCStats.type
+title: "RTCStats: type property"
+short-title: type
 slug: Web/API/RTCStats/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCStats
-  - Report
-  - Statistics
-  - Stats
-  - Type
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCStats.type
 ---
 

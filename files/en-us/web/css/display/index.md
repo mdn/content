@@ -2,13 +2,6 @@
 title: display
 slug: Web/CSS/display
 page-type: css-property
-tags:
-  - CSS
-  - CSS Display
-  - CSS Property
-  - Reference
-  - display
-  - recipe:css-property
 browser-compat: css.properties.display
 ---
 
@@ -161,7 +154,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `contents`
 
-      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
+      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://w3c.github.io/csswg-drafts/css-display/#unbox) for more details.
 
     - `none`
       - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the element did not exist). All descendant elements also have their display turned off.
@@ -283,7 +276,7 @@ Current implementations in some browsers will remove from the [accessibility tre
 
 ### Tables
 
-Changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
+In some browsers, changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)

@@ -1,20 +1,10 @@
 ---
-title: NavigationHistoryEntry.url
+title: "NavigationHistoryEntry: url property"
+short-title: url
 slug: Web/API/NavigationHistoryEntry/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
-  - url
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.url
 ---
 

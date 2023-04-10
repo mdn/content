@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaKeyShortcuts
+title: "ElementInternals: ariaKeyShortcuts property"
+short-title: ariaKeyShortcuts
 slug: Web/API/ElementInternals/ariaKeyShortcuts
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaKeyShortcuts
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaKeyShortcuts
 ---
 

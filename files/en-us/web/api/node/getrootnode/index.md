@@ -1,10 +1,8 @@
 ---
-title: Node.getRootNode()
+title: "Node: getRootNode() method"
+short-title: getRootNode()
 slug: Web/API/Node/getRootNode
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.getRootNode
 ---
 
@@ -65,23 +63,30 @@ root including the shadow root.
 ```
 
 ```js
-const parent = document.querySelector('.parent');
-const child = document.querySelector('.child');
-const shadowHost = document.querySelector('.shadowHost');
-const output = document.getElementById('output');
+const parent = document.querySelector(".parent");
+const child = document.querySelector(".child");
+const shadowHost = document.querySelector(".shadowHost");
+const output = document.getElementById("output");
 
 output.textContent += `\nparent's root: ${parent.getRootNode().nodeName} \n`; // #document
-output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`;  // #document
+output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`; // #document
 
 // create a ShadowRoot
-const shadowRoot = shadowHost.attachShadow({mode:'open'});
-shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
-const shadowChild = shadowRoot.querySelector('.shadowChild');
+const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+shadowRoot.innerHTML =
+  '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
+const shadowChild = shadowRoot.querySelector(".shadowChild");
 
 // The default value of composed is false
-output.textContent += `shadowChild.getRootNode() === shadowRoot : ${shadowChild.getRootNode() === shadowRoot} \n`; // true
-output.textContent += `shadowChild.getRootNode({composed:false}) === shadowRoot : ${shadowChild.getRootNode({composed:false}) === shadowRoot} \n`; // true
-output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${shadowChild.getRootNode({composed:true}).nodeName} \n`; // #document
+output.textContent += `shadowChild.getRootNode() === shadowRoot : ${
+  shadowChild.getRootNode() === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:false}) === shadowRoot : ${
+  shadowChild.getRootNode({ composed: false }) === shadowRoot
+} \n`; // true
+output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
+  shadowChild.getRootNode({ composed: true }).nodeName
+} \n`; // #document
 ```
 
 {{ EmbedLiveSample('Example 2', '100%', '200px') }}

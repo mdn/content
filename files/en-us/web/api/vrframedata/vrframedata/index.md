@@ -1,17 +1,11 @@
 ---
-title: VRFrameData()
+title: "VRFrameData: VRFrameData() constructor"
+short-title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Deprecated
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.VRFrameData
 ---
 

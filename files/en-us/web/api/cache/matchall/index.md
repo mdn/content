@@ -1,15 +1,8 @@
 ---
-title: Cache.matchAll()
+title: "Cache: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Cache/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - matchAll
 browser-compat: api.Cache.matchAll
 ---
 

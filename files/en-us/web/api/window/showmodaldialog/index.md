@@ -1,14 +1,11 @@
 ---
-title: Window.showModalDialog()
+title: "Window: showModalDialog() method"
+short-title: showModalDialog()
 slug: Web/API/Window/showModalDialog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Window
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.showModalDialog
 ---
 

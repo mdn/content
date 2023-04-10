@@ -1,12 +1,8 @@
 ---
-title: location.hostname
+title: "location: hostname property"
+short-title: hostname
 slug: Web/API/Location/hostname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.hostname
 ---
 
@@ -25,7 +21,7 @@ A string.
 const anchor = document.createElement("a");
 anchor.href = "https://developer.mozilla.org:4097/en-US/docs/Location.hostname";
 
-console.log(anchor.hostname);  // developer.mozilla.org
+console.log(anchor.hostname); // developer.mozilla.org
 ```
 
 ## Specifications

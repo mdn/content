@@ -1,14 +1,8 @@
 ---
-title: XRPose.angularVelocity
+title: "XRPose: angularVelocity property"
+short-title: angularVelocity
 slug: Web/API/XRPose/angularVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - XRPose
 browser-compat: api.XRPose.angularVelocity
 ---
 

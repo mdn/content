@@ -1,15 +1,8 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: "CustomElementRegistry: whenDefined() method"
+short-title: whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
 

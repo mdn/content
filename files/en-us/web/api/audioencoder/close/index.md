@@ -1,14 +1,10 @@
 ---
-title: AudioEncoder.close()
+title: "AudioEncoder: close() method"
+short-title: close()
 slug: Web/API/AudioEncoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.close
 ---
 

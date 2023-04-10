@@ -1,13 +1,8 @@
 ---
-title: Touch.rotationAngle
+title: "Touch: rotationAngle property"
+short-title: rotationAngle
 slug: Web/API/Touch/rotationAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.rotationAngle
 ---
 
@@ -21,7 +16,7 @@ A number.
 
 ## Examples
 
-The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
+The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#examples) includes an example of this property's usage.
 
 ## Specifications
 

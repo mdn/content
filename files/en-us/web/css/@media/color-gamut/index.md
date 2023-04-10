@@ -2,18 +2,12 @@
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.color-gamut
 ---
 
 {{CSSRef}}
 
-The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to apply CSS styles based on the approximate range of color {{glossary("gamut")}} supported by the {{glossary("user agent")}} and the output device.
+The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on the approximate range of color {{glossary("gamut")}} supported by the {{glossary("user agent")}} and the output device.
 
 ## Syntax
 
@@ -37,6 +31,11 @@ The `color-gamut` feature is specified as one of the following keyword values:
 ### CSS
 
 ```css
+p {
+  padding: 10px;
+  border: solid;
+}
+
 @media (color-gamut: srgb) {
   p {
     background: #f4ae8a;
@@ -58,5 +57,6 @@ The `color-gamut` feature is specified as one of the following keyword values:
 
 ## See also
 
+- [color()](/en-US/docs/Web/CSS/color_value/color) function to specify colors in a defined colorspace.
 - [@media](/en-US/docs/Web/CSS/@media) at-rule that is used to specify the color-gamut expression.
 - [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to understand when and how to use a media query.

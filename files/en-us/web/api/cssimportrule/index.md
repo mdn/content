@@ -2,11 +2,6 @@
 title: CSSImportRule
 slug: Web/API/CSSImportRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSImportRule
 ---
 

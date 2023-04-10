@@ -2,13 +2,6 @@
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - else
-  - if
 browser-compat: javascript.statements.if_else
 ---
 
@@ -176,4 +169,4 @@ However, in the rare case you find yourself wanting to do something like that, t
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

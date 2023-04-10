@@ -1,13 +1,8 @@
 ---
-title: TextDecoderStream.writable
+title: "TextDecoderStream: writable property"
+short-title: writable
 slug: Web/API/TextDecoderStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextDecoderStream
 browser-compat: api.TextDecoderStream.writable
 ---
 

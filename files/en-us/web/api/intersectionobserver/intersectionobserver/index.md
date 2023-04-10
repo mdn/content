@@ -1,15 +1,8 @@
 ---
-title: IntersectionObserver()
+title: "IntersectionObserver: IntersectionObserver() constructor"
+short-title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
 
@@ -82,8 +75,7 @@ Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begi
 This example creates a new intersection observer which calls the function `myObserverCallback` every time the visible area of the element being observed changes by at least 10%.
 
 ```js
-let observer = new IntersectionObserver(myObserverCallback,
-                   {threshold: 0.1});
+let observer = new IntersectionObserver(myObserverCallback, { threshold: 0.1 });
 ```
 
 ## Specifications

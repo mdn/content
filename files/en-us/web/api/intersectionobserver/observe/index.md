@@ -1,19 +1,13 @@
 ---
-title: IntersectionObserver.observe()
+title: "IntersectionObserver: observe() method"
+short-title: observe()
 slug: Web/API/IntersectionObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - observe
 browser-compat: api.IntersectionObserver.observe
 ---
 
 {{APIRef("Intersection Observer API")}}
+
 The {{domxref("IntersectionObserver")}} method
 **`observe()`** adds an element to the set of target elements
 being watched by the `IntersectionObserver`. One observer has one set of
@@ -59,19 +53,19 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       // Add 'active' class if observation target is inside viewport
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     } else {
       // Remove 'active' class otherwise
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
-  })
-})
+  });
+});
 
 // Declares what to observe, and observes its properties.
-const boxElList = document.querySelectorAll('.box');
+const boxElList = document.querySelectorAll(".box");
 boxElList.forEach((el) => {
   io.observe(el);
-})
+});
 ```
 
 ## Specifications

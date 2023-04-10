@@ -1,14 +1,10 @@
 ---
-title: CanvasRenderingContext2D.fontVariantCaps
+title: "CanvasRenderingContext2D: fontVariantCaps property"
+short-title: fontVariantCaps
 slug: Web/API/CanvasRenderingContext2D/fontVariantCaps
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.fontVariantCaps
 ---
 

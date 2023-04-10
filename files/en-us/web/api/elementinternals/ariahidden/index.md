@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaHidden
+title: "ElementInternals: ariaHidden property"
+short-title: ariaHidden
 slug: Web/API/ElementInternals/ariaHidden
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaHidden
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaHidden
 ---
 

@@ -1,16 +1,11 @@
 ---
-title: CSS.registerProperty()
+title: "CSS: registerProperty() static method"
+short-title: registerProperty()
 slug: Web/API/CSS/RegisterProperty
 page-type: web-api-static-method
-tags:
-  - CSS
-  - Houdini
-  - Reference
-  - Experimental
 browser-compat: api.CSS.registerProperty
 ---
 
-{{SeeCompatTable}}
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** method registers

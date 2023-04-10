@@ -1,14 +1,10 @@
 ---
-title: LargestContentfulPaint.url
+title: "LargestContentfulPaint: url property"
+short-title: url
 slug: Web/API/LargestContentfulPaint/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - url
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.url
 ---
 

@@ -2,14 +2,6 @@
 title: Using the CSS properties and values API
 slug: Web/API/CSS_Properties_and_Values_API/guide
 page-type: guide
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values
-  - Guide
-  - Houdini
-  - JavaScript
-  - Learn
 ---
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}{{SeeCompatTable}}

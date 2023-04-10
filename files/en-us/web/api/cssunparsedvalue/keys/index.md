@@ -1,22 +1,12 @@
 ---
-title: CSSUnparsedValue.keys()
+title: "CSSUnparsedValue: keys() method"
+short-title: keys()
 slug: Web/API/CSSUnparsedValue/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
-  - keys()
 browser-compat: api.CSSUnparsedValue.keys
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.keys()`** method
 returns a new _array iterator_ object that contains the keys

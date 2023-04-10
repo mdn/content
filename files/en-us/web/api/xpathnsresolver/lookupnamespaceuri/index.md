@@ -1,15 +1,8 @@
 ---
-title: XPathNSResolver.lookupNamespaceURI()
+title: "XPathNSResolver: lookupNamespaceURI() method"
+short-title: lookupNamespaceURI()
 slug: Web/API/XPathNSResolver/lookupNamespaceURI
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathNSResolver
 browser-compat: api.XPathNSResolver.lookupNamespaceURI
 ---
 

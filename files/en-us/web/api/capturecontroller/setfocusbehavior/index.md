@@ -1,13 +1,10 @@
 ---
-title: CaptureController.setFocusBehavior()
+title: "CaptureController: setFocusBehavior() method"
+short-title: setFocusBehavior()
 slug: Web/API/CaptureController/setFocusBehavior
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - setFocusBehavior
+status:
+  - experimental
 browser-compat: api.CaptureController.setFocusBehavior
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.hint()
+title: "WebGLRenderingContext: hint() method"
+short-title: hint()
 slug: Web/API/WebGLRenderingContext/hint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.hint
 ---
 

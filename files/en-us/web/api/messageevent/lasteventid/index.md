@@ -1,15 +1,8 @@
 ---
-title: MessageEvent.lastEventId
+title: "MessageEvent: lastEventId property"
+short-title: lastEventId
 slug: Web/API/MessageEvent/lastEventId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - lastEventID
-  - messaging
 browser-compat: api.MessageEvent.lastEventId
 ---
 
@@ -28,7 +21,7 @@ A string representing the ID.
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.lastEventId);
 };
 ```

@@ -1,13 +1,8 @@
 ---
-title: 'VisualViewport: scroll event'
+title: "VisualViewport: scroll event"
+short-title: scroll
 slug: Web/API/VisualViewport/scroll_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Scroll
-  - VisualViewport
-  - events
 browser-compat: api.VisualViewport.scroll_event
 ---
 
@@ -20,9 +15,9 @@ The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewp
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('scroll', (event) => { })
+addEventListener("scroll", (event) => {});
 
-onscroll = (event) => { }
+onscroll = (event) => {};
 ```
 
 ## Event type
@@ -34,7 +29,7 @@ A generic {{domxref("Event")}}.
 You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-visualViewport.addEventListener('scroll', () => {
+visualViewport.addEventListener("scroll", () => {
   // …
 });
 ```

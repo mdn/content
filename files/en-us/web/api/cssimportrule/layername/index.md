@@ -1,19 +1,13 @@
 ---
-title: CSSImportRule.layerName
+title: "CSSImportRule: layerName property"
+short-title: layerName
 slug: Web/API/CSSImportRule/layerName
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Cascade layers
-  - Read-only
 browser-compat: api.CSSImportRule.layerName
 ---
 
 {{APIRef("CSSOM")}}
+
 The read-only **`layerName`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layer created by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 If the created layer is anonymous, the string is empty (`""`), if no layer has been

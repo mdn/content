@@ -1,14 +1,10 @@
 ---
-title: AudioContext.sinkId
+title: "AudioContext: sinkId property"
+short-title: sinkId
 slug: Web/API/AudioContext/sinkId
 page-type: web-api-instance-property
-tags:
-  - API
-  - sinkId
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
+status:
+  - experimental
 browser-compat: api.AudioContext.sinkId
 ---
 

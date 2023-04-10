@@ -1,15 +1,8 @@
 ---
-title: CSS.escape()
+title: "CSS: escape() static method"
+short-title: escape()
 slug: Web/API/CSS/escape
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - Method
-  - Reference
-  - Static
-  - escape()
 browser-compat: api.CSS.escape
 ---
 

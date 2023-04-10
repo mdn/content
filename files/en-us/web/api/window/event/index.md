@@ -1,16 +1,10 @@
 ---
-title: Window.event
+title: "Window: event property"
+short-title: event
 slug: Web/API/Window/event
 page-type: web-api-instance-property
-tags:
-  - API
-  - Event
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Read-only
-  - Window
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.event
 ---
 

@@ -1,17 +1,10 @@
 ---
-title: console.profileEnd()
+title: "console: profileEnd() method"
+short-title: profileEnd()
 slug: Web/API/console/profileEnd
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Reference
-  - Web Development
-  - profileEnd
-  - web console
+status:
+  - non-standard
 browser-compat: api.console.profileEnd
 ---
 
@@ -19,7 +12,7 @@ browser-compat: api.console.profileEnd
 
 > **Warning:** Calling this API immediately after console.profile() can cause it to not work. To
 > work around this, call it in a setTimeout with at least 5ms delay. See
-> {{bug(1240249)}}.
+> [Firefox bug 1240249](https://bugzil.la/1240249).
 
 The **`console.profileEnd()`** method stops recording a profile previously started with
 {{DOMxRef("console.profile()")}}.

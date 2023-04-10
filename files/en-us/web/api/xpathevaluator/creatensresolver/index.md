@@ -1,16 +1,8 @@
 ---
-title: XPathEvaluator.createNSResolver()
+title: "XPathEvaluator: createNSResolver() method"
+short-title: createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - NeedsExample
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.createNSResolver
 ---
 

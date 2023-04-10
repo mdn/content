@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.createProgram()
+title: "WebGLRenderingContext: createProgram() method"
+short-title: createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createProgram
 ---
 
