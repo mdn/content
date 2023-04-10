@@ -1,6 +1,7 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
+page-type: mathml-element
 browser-compat: mathml.elements.mrow
 ---
 
