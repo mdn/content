@@ -2,8 +2,8 @@
 title: >-
   Content Security Policy: The page's settings blocked the loading of a
   resource: xyz
-page-type: guide
 slug: Web/HTTP/CSP/Errors/CSPViolation
+page-type: guide
 ---
 
 {{HTTPSidebar}}
