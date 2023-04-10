@@ -10,19 +10,19 @@ Have you ever hovered over a black-and-white or sepia image and the full-color i
 
 The CSS filter effects module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
 
-## Properties and Values
+## Filter effect properties
 
 There are two filter properties defined in the CSS filter effects module enable applying zero, one, or more graphical effects to an element.
 
-### Filter effect properties
+With the {{cssxref("filter")}} property, filter effects like blur, drop-shadow, sepia, etc., are applied before the element is rendered.
 
-With the {{cssxref("filter")}} property, the effects are applied to the element on which the `filter` property is defined.
+With the {{cssxref("backdrop-filter")}} property, the graphical effects are applied to the area behind the element, or the element's "backdrop", not the element itself. The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
 
-With the {{cssxref("backdrop-filter")}} property, the graphical effects are applied to the area behind the element, or the element's "backdrop". The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
+With `filter`, the filters effects are applied to element, including the element's contents, borders, and padding, directly. With `backdrop-filter`, the filter effects are applied only to the background of the element on which the `backdrop-filter` is applied, not to the element’s content.
 
-### Filter functions
+## Filter functions
 
-While the [CSS filter effects module](/en-US/docs/Web/CSS/Filter_Effects) provides for unlimited filter effects via SVG filter effects, the specification defines 10 named [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions and the parameter values of each.
+An almost endless array of effects can be defined with SVG filters and applied via `url()` refernce. The [CSS filter effects module](/en-US/docs/Web/CSS/Filter_Effects) names and defines 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions along with ranges of parameter values that are supported for each.
 
 The following table lists the 10 filter functions, the value type, the minimum valid value if applicable, the largest value that creates an effect, and the initial value for [interpolation](/en-US/docs/Glossary/Interpolation).
 
@@ -161,7 +161,7 @@ img {
 }
 ```
 
-```css no-lint
+```css nolint
 img {
   filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
       -2px -2px 0 hsl(210deg 100% 50%)
@@ -179,13 +179,9 @@ In the first Manadala example, four drop shadows are applied to a line-drawn SVG
 
 {{EmbedLiveSample("Applying_repeated_filters", 600, 400)}}
 
-### Applying a filter to an element
+### Filter function order
 
-Before focusing on the properties, we'll provide a quick overview of the filter functions.
-
-While generally applied to images, the `filter` and `backdrop-filter` properties can be applied to any element.
-
-To apply a filter effect to an element or pseudo-element, include a list of space-separated [filter functions](#defined_filter_functions). The effects are applied in the order in which they appear:
+When creating filter effects, you provide the `filter` or `backdrop-filter` property a list of filters spaceTo apply a filter effect to an element or pseudo-element, include a list of space-separated [filter functions](#defined_filter_functions). The effects are applied in the order in which they appear:
 
 ```css
 h1 {
@@ -220,7 +216,7 @@ No filter effect was applied to the third example to show the original effect as
 
 > **Note:** The rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)` while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
-## Filter functions
+## Filter functions 2
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
