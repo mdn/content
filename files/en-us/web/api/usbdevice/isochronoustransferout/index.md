@@ -24,7 +24,7 @@ isochronousTransferOut(endpointNumber, data, packetLengths)
 - `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
 - `data`
-  - : A {{jsxxref("TypedArray")}} containing the data to send to the device.
+  - : A {{jsxref("TypedArray")}} containing the data to send to the device.
 - `packetLengths`
   - : An array of lengths for the packets being transferred.
 
