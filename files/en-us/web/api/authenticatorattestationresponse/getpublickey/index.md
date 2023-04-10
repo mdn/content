@@ -1,5 +1,6 @@
 ---
 title: "AuthenticatorAttestationResponse: getPublicKey() method"
+short-title: getPublicKey()
 slug: Web/API/AuthenticatorAttestationResponse/getPublicKey
 page-type: web-api-instance-method
 browser-compat: api.AuthenticatorAttestationResponse.getPublicKey

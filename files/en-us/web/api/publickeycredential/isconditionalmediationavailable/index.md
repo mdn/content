@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.isConditionalMediationAvailable()
+title: "PublicKeyCredential: isConditionalMediationAvailable() static method"
+short-title: isConditionalMediationAvailable()
 slug: Web/API/PublicKeyCredential/isConditionalMediationAvailable
 page-type: web-api-static-method
 browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable

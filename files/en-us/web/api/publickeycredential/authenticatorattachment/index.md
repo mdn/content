@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.authenticatorAttachment
+title: "PublicKeyCredential: authenticatorAttachment property"
+short-title: authenticatorAttachment
 slug: Web/API/PublicKeyCredential/authenticatorAttachment
 page-type: web-api-instance-property
 browser-compat: api.PublicKeyCredential.authenticatorAttachment

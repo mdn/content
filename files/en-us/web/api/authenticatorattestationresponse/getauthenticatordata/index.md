@@ -1,5 +1,6 @@
 ---
 title: "AuthenticatorAttestationResponse: getAuthenticatorData() method"
+short-title: getAuthenticatorData()
 slug: Web/API/AuthenticatorAttestationResponse/getAuthenticatorData
 page-type: web-api-instance-method
 browser-compat: api.AuthenticatorAttestationResponse.getAuthenticatorData
