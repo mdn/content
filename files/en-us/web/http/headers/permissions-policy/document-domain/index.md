@@ -5,8 +5,7 @@ status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.document-domain
 ---
-
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{HTTPSidebar}} {{Deprecated_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header
 `document-domain` directive controls whether the current document is
