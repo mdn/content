@@ -1,6 +1,7 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
+page-type: http-header
 browser-compat: http.headers.Expect
 ---
 

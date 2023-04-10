@@ -1,6 +1,7 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
+page-type: http-method
 browser-compat: http.methods.HEAD
 ---
 

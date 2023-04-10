@@ -1,6 +1,7 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
+page-type: http-method
 browser-compat: http.methods.CONNECT
 ---
 

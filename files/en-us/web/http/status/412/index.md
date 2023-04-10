@@ -1,6 +1,7 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
+page-type: http-status-code
 browser-compat: http.status.412
 ---
 

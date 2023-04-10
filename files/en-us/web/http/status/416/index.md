@@ -1,6 +1,7 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
+page-type: http-status-code
 browser-compat: http.status.416
 ---
 

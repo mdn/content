@@ -1,6 +1,7 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
+page-type: http-status-code
 browser-compat: http.status.410
 ---
 

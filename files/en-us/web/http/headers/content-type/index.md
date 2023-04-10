@@ -1,6 +1,7 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
+page-type: http-header
 browser-compat: http.headers.Content-Type
 ---
 

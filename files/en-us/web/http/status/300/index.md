@@ -1,6 +1,7 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
 ---
 

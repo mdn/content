@@ -1,6 +1,7 @@
 ---
 title: >-
   Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from
+page-type: http-cors-error
   CORS preflight channel
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---

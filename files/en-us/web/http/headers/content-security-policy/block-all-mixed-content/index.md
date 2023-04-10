@@ -1,6 +1,7 @@
 ---
 title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
+page-type: http-csp-directive
 status:
   - deprecated
 browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content

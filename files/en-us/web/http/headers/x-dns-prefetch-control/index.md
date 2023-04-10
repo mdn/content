@@ -1,6 +1,7 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
+page-type: http-header
 status:
   - non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control

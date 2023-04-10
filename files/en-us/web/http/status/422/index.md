@@ -1,6 +1,7 @@
 ---
 title: 422 Unprocessable Content
 slug: Web/HTTP/Status/422
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 ---
 
