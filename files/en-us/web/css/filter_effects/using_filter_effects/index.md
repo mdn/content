@@ -18,7 +18,7 @@ With the {{cssxref("filter")}} property, filter effects like blur, drop-shadow, 
 
 With the {{cssxref("backdrop-filter")}} property, the graphical effects are applied to the area behind the element, or the element's "backdrop", not the element itself. The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
 
-With `filter`, the filters effects are applied to element, including the element's contents, borders, and padding, directly. With `backdrop-filter`, the filter effects are applied only to the background of the element on which the `backdrop-filter` is applied, not to the element’s content.
+With `filter`, the filters effects are applied to element, including the element's contents, borders, and padding, directly. With `backdrop-filter`, the filter effects are applied only to the background of the element on which the `backdrop-filter` is applied, not to the element's content.
 
 ## Filter functions
 
@@ -36,7 +36,7 @@ The following table lists the 10 filter functions, the value type, the minimum v
 | {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                         |             |            | `0`                  | `hue-rotate(0deg)`                    |
 | {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}   | `0`         | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
 | {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}   | `0`         | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref  ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`         | `100%`     | `1`                  | `saturate(100%)`                      |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`         | `100%`     | `1`                  | `saturate(100%)`                      |
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}   | `0`         | `100%`     | `0`                  | `sepia(0%)`                           |
 
 The minimum value allowed is included for filter functions that have a minimum value. Included a value less than the minimum value for any filter function with a defined min value invalidates the entire property declaration, not just the invalid function in the comma-separated list.
@@ -108,7 +108,7 @@ h1 {
 
 While the basic example used only the a sepia filter, we are not limited to a single filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters which are applied in the order declared.
 
-This example applies two filters -- a [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and a [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) -- via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the {{HTMLElement("p")}}.
+This example applies two filters — a [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and a [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the {{HTMLElement("p")}}.
 
 ```css
 .container {
@@ -216,27 +216,40 @@ No filter effect was applied to the third example to show the original effect as
 
 > **Note:** The rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)` while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
-## Filter functions 2
+## Using SVG filters
 
-The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
+In addition to the 10 defined filter functions, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an internal or external SVG file.
 
-When a `filter` property has two or more functions, its results are different from the same functions applied separately using multiple `filter` properties.
+A single SVG can be used to define several filters, each with an `id`:
 
-### SVG filter
-
-#### url()
-
-Takes an URI pointing to an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an external XML file.
-
-```css
-filter: url(resources.svg#c1);
+```html
+<svg role="none">
+  <defs>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1" edgeMode="duplicate" />
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3" edgeMode="duplicate" />
+    </filter>
+    <filter id="hue-rotate90">
+      <feColorMatrix type="hueRotate" values="90" />
+    </filter>
+  </defs>
+</svg>
 ```
 
-### Filter functions
+The filter's `id` is referenced in the `url()` for both inline and external SVGs:
 
-#### blur()
+```css
+filter: url(#blur3);
+filter: url("https://example.com/svg/filters.svg#blur3");
+```
 
-The {{cssxref("filter-function/blur", "blur()")}} function applies a Gaussian blur to the elements on which it is applied. The blur radius parameter value, defined as a CSS {{cssxref("&lt;length&gt;")}}, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. The initial value for interpolation is `0`. Percentage values are invalid.
+### Blur example
+
+Just like the {{cssxref("filter-function/blur", "blur()")}} filter function applies a Gaussian blur to the elements on which it is applied, the SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content.
+
+In both cases, the blur radius value, defined as a {{cssxref("&lt;length&gt;")}} in CSS and a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur.
 
 ```css
 .filter {
@@ -250,7 +263,7 @@ svg:not([height]) {
 }
 ```
 
-The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content. The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
+The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html
 <svg role="img" aria-label="Flag">
@@ -265,8 +278,8 @@ The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur
 <table cellpadding="5">
   <thead>
     <tr>
-      <th>Live example</th>
-      <th>SVG Equivalent</th>
+      <th>CSS example</th>
+      <th>SVG example</th>
       <th>Original image</th>
     </tr>
   </thead>
@@ -291,7 +304,7 @@ The SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur
 </table>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+{{EmbedLiveSample('blur_example','100%','280')}}
 
 ## See also
 
