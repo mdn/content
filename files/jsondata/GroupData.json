@@ -1012,8 +1012,7 @@
       "interfaces": ["PeriodicSyncEvent", "PeriodicSyncManager"],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.periodicSync",
-        "ServiceWorkerGlobalScope.onperiodicsync"
+        "ServiceWorkerRegistration.periodicSync"
       ],
       "events": ["ServiceWorkerGlobalScope: periodicsync"]
     },
