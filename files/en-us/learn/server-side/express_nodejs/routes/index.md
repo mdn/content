@@ -174,7 +174,7 @@ If `err` is returned, `next` is called with `err` as the value in its first para
 On success the desired data is returned and then used in the response.
 
 ```js
-router.get("/about", function (req, res, err) {
+router.get("/about", function (req, res, next) {
   About.find({}).exec(function (err, queryResults) {
       if (err) {
         return next(err);
@@ -188,29 +188,30 @@ router.get("/about", function (req, res, err) {
 ### Handling exceptions in route functions
 
 The previous section shows how Express expects route functions to return errors.
-The framework is designed for using with asynchronous functions that take callback functions that return an error and a result when the operation completes, and not [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based APIs that might throw an exception.
-That's a problem because later on we will be making Mongoose database queries that may throw exceptions in our route functions.
+The framework is designed for use with asynchronous functions that take a callback function (with an error and result argument), which is called when the operation completes.
+That's a problem because later on we will be making Mongoose database queries that use [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based APIs, and which may throw exceptions in our route functions (rather than returning errors in a callback).
 
-In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors in the normal way.
+In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors as shown in the previous section..
 
 > **Note:** Express 5, which is currently in beta, is expected to handle JavaScript exceptions natively.
 
-Re-imagining our simple example in the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a `try...catch` block like this:
+Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
-exports.get("/about", function (req, res, err) {
+exports.get("/about", function (req, res, next) {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
   }
-  catch e {
-    return next(err);
+  catch (error) {
+    return next(error);
   }
 };
 ```
 
+That's quite a lot of boilerplate code to add to every function.
 Instead, for this tutorial we'll use the [express-async-handler](https://www.npmjs.com/package/express-async-handler) module.
-This defines a wrapper function that we can use instead of including all that boilerplate code.
+This defines a wrapper function that hides the `try...catch` block and the code to forward the error.
 The same example is now very simple, because we only need to write code for the case where we assume success:
 
 ```js
@@ -313,9 +314,10 @@ exports.author_update_post = asyncHandler(async (req, res, next) => {
 ```
 
 The module first requires the `Author` model that we'll later be using to access and update our data, and the `asyncHandler` wrapper we'll use to catch any exceptions thrown in our route handler functions.
-It then exports functions for each of the URLs we wish to handle (the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on).
+It then exports functions for each of the URLs we wish to handle.
+Note that the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on.
 
-The functions all use the wrapper function described above in [Handling exceptions in route functions](#handling_exceptions_in_route_functions), with with arguments for the request, response, and next.
+The functions all use the wrapper function described above in [Handling exceptions in route functions](#handling_exceptions_in_route_functions), with arguments for the request, response, and next.
 The functions respond with a string indicating that the associated page has not yet been created.
 If a controller function is expected to receive path parameters, these are output in the message string (see `req.params.id` above).
 
