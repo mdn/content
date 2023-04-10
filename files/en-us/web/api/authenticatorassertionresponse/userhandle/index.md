@@ -13,16 +13,7 @@ object which is an opaque identifier for the given user. Such an identifier can 
 by the relying party's server to link the user account with its corresponding
 credentials and other data.
 
-This value is set in the `id` field of the `user` options object passed in parameter of
-{{domxref("CredentialsContainer.create()")}}
-(used for the creation of the `PublicKeyCredential` instance).
-
-> **Note:** An `AuthenticatorAssertionResponse` instance is
-> available on {{domxref("PublicKeyCredential.response")}} after calling
-> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
-
-> **Note:** This property may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
+This value specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
 
 ## Value
 

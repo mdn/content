@@ -24,89 +24,218 @@ create()
 create(options)
 ```
 
+> **Note:** When providing an `options` object, you should only provide a single property containing the properties that define the type of credential being requested — this means only one of `federated`, `password`, or `publicKey`.
+
 ### Parameters
 
 - `options` {{optional_inline}}
 
-  - : An object of type {{domxref("CredentialCreationOptions")}} that contains options for
-    the requested new `Credentials` object. It must include one of the options
-    "password", "federated", or "publicKey". The options are:
-
-    - `password` {{optional_inline}}
-
-      - : Either an
-        {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
-        TBD
-
-        - `id`: (required) string Inherited from
-          {{domxref("CredentialData")}}.
-        - `name`: string {{optional_inline}} TBD
-        - `iconURL`: string {{optional_inline}} TBD
-        - `password`: (required) string TBD
+  - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
     - `federated` {{optional_inline}}
 
-      - : An
-        {{domxref("FederatedCredentialInit")}} object. Contains requirements for
-        creating/obtaining federated credentials. The available options are:
+      - : An object (see [`federated` object structure](#federated_object_structure)) containing details of a {{domxref("FederatedCredential")}} to be created.
 
-        - `id`: (required) string Inherited from
-          {{domxref("CredentialData")}}.
-        - `name`: string {{optional_inline}} TBD
-        - `iconURL`: string {{optional_inline}} TBD
-        - `provider`: (required) string TBD
-        - `protocol`: string {{optional_inline}} TBD
+    - `password` {{optional_inline}}
+
+      - : An object (see [`password` object structure](#password_object_structure)) containing details of a {{domxref("PasswordCredential")}} to be created.
 
     - `publicKey` {{optional_inline}}
-      - : An object that describes the options for creating a [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential containing the following properties:
-        - `rp`
-          - : An object describing the relying party which requested the credential creation. It can contain the following properties:
-            - `id` {{optional_inline}}
-              - : The ID of the relying party. If omitted, the document origin will be used as the default value.
-            - `name`
-              - : The name of the relying party. This is the name the user will be presented with when creating or validating a WebAuthn operation.
-        - `user`
-          - : An object describing the user account for which the credential is generated. It can contain the following properties:
-            - `id`: A unique user id of type {{jsxref("BufferSource")}}. This value cannot exceed 64 bytes.
-            - `name`: A user handle (ex: `john34`).
-            - `displayName`: A human-friendly user display name (example: `John Doe`).
-        - `challenge`
-          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
-            emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
-        - `pubKeyCredParams`
-          - : An {{jsxref("Array")}} of items which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference. Each item can be composed of the following properties:
-            - `alg`: A [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms). For instance, -257 refers to the algorithm RS256.
-            - `type`: Must be the string `public-key`.
-        - `timeout` {{optional_inline}}
-          - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the creation operation to complete. This hint may be overridden by the browser.
-        - `excludeCredentials` {{optional_inline}}
-          - : An {{jsxref("Array")}} of descriptors for existing credentials. This is provided by the relying party to avoid creating new public key credentials for an existing user who already has some. Each item should be of the form:
-            - `id`: The credential ID as a {{jsxref("BufferSource")}}.
-            - `type`: Must be the string `public-key`.
-            - `transports`: An {{jsxref("Array")}} of allowed transports. Possible transports are: `usb`, `nfc`, `ble`, and `internal`.
-        - `authenticatorSelection` {{optional_inline}}
-          - : An object whose properties are criteria used to filter out the potential authenticators for the creation operation. Can contain the properties:
-            - `authenticatorAttachment` {{optional_inline}} : Allowed values are `platform` or `cross-platform`.
-            - `residentKey` {{optional_inline}} : Allowed values are `discouraged`, `preferred`, or `required`. The default value is `required` if `requireResidentKey` is `true`; otherwise the default value is `discouraged`.
-            - `requireResidentKey` {{optional_inline}} : This property is deprecated. The value should be set to `true` if the `residentKey` is set to `required`.
-            - `userVerification` {{optional_inline}} : Allowed values are `discouraged`, `preferred`, or `required`.
-        - `attestation` {{optional_inline}}
-          - : A {{jsxref("String")}} which indicates how the attestation (for the authenticator's origin) should be transported. Should be one of `none`, `indirect`, `direct`, or `enterprise`. The default value is `none`.
-        - `extensions` {{optional_inline}}
-          - : An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
+
+      - : An object (see [`publicKey` object structure](#publicKey_object_structure)) containing requirements for a created {{domxref("PublicKeyCredential")}} (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
+
+    - `signal` {{optional_inline}}
+
+      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+### `federated` object structure
+
+`federated` can contain the following properties:
+
+- `iconURL` {{optional_inline}}
+  - : A string representing the URL of an icon or avatar to be associated with the credential.
+- `id`
+  - : A string representing a unique ID for the credential.
+- `name` {{optional_inline}}
+  - : A string representing the credential username.
+- `origin`
+  - : A string representing the credential's origin. {{domxref("FederatedCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
+- `protocol` {{optional_inline}}
+  - : A string representing the protocol of the credentials' federated identity provider (for example, `"openidconnect"`).
+- `provider`
+  - : A string representing the credentials' federated identity provider (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
+
+### `password` object structure
+
+A `password` object can be a reference to an object literal or an {{domxref("HTMLFormElement")}}. In both cases, they need to provide the following data:
+
+- `iconURL` {{optional_inline}}
+  - : A string representing the URL of an icon or avatar to be associated with the credential.
+- `id`
+  - : A string representing a unique ID for the credential.
+- `name` {{optional_inline}}
+  - : A string representing the credential username.
+- `origin`
+  - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
+- `password`
+  - : A string representing the credential password.
+
+In the case of the string literal, the properties are provided as-is. In the case of the {{domxref("HTMLFormElement")}}, the values need to be provided in form input fields (this can include {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} elements) with the following `name` attribute values:
+
+- `id`: `username`
+- `name`: `name` or `nickname`
+- `iconURL`: `photo`
+- `password`: `new-password` or `current-password`
+
+The exception to this is `origin` — this is set to the origin of the document the {{domxref("HTMLFormElement")}} is contained within.
+
+### `publicKey` object structure
+
+`publicKey` can contain the following properties:
+
+- `attestation` {{optional_inline}}
+
+  - : A string specifying the relying party's preference for how the attestation statement (i.e. provision of verifiable evidence of the authenticity of the authenticator and its data) is conveyed during credential creation. The value can be one of the following:
+
+    - `"none"`: Specifies that the relying party is not interested in authenticator attestation. This might be to avoid additional user consent for round trips to the relying party server to relay identifying information, or round trips to an attestation certificate authority (CA), with the aim of making the authentication process smoother. If `"none"` is chosen as the `attestation` value, and the authenticator signals that it uses a CA to generate its attestation statement, the client app will replace it with a "None" attestation statement, indicating that no attestation statement is available.
+
+    - `"direct"`: Specifies that the relying party wants to receive the attestation statement as generated by the authenticator.
+
+    - `"enterprise"`: Specifies that the Relying Party wants to receive an attestation statement that may include uniquely identifying information. This is intended for controlled deployments within an enterprise where the organization wishes to tie registrations to specific authenticators.
+
+    - `"indirect"`: Specifies that the relying party wants to receive a verifiable attestation statement, but it will allow the client to decide how to receive it. For example, the client could choose to replace the authenticator's assertation statement with one generated by an Anonymization CA to protect user privacy.
+
+    If `attestation` is omitted, it will default to `"none"`.
+
+- `attestationFormats` {{optional_inline}}
+
+  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-attestation-statement-format-ids).
+
+    If omitted, `attestationFormats` defaults to an empty array.
+
+- `authenticatorSelection` {{optional_inline}}
+
+  - : An object whose properties are criteria used to filter out the potential authenticators for the credential creation operation. This object can contain the properties:
+
+    - `authenticatorAttachment` {{optional_inline}}: A string indicating which authenticator attachment type should be permitted for the chosen authenticator. Possible values are: Allowed values are:
+
+      - `"platform"`: The authenticator is part of the device WebAuthn is running on (termed a **platform authenticator**), therefore WebAuthn will communicate with it using a transport available to that platform, such as a platform-specific API. A public key credential bound to a platform authenticator is called a **platform credential**.
+      - `"cross-platform"`: The authenticator is not a part of the device WebAuthn is running on (termed a **roaming authenticator** as it can roam between different devices), therefore WebAuthn will communicate with it using a cross-platform transport protocol such as Bluetooth or NFC. A public key credential bound to a roaming authenticator is called a **roaming credential**.
+
+    - `requireResidentKey` {{optional_inline}} : A boolean. If set to `true`, it indicates that a resident key is required (see `residentKey`) This property is deprecated, but still available in some implementations for backwards compatibility with WebAuthn Level 1. The value should be set to `true` if `residentKey` is set to `required`.
+
+      If omitted, `requireResidentKey` defaults to `false`.
+
+    - `residentKey` {{optional_inline}} : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e. one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party is required to provide credential IDs in the `get()` `allowCredentials` value. Possible values are:
+
+      - `discouraged`: The relying party prefers creation of a server-side credential, but will accept a client-side discoverable credential.
+      - `preferred`: The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
+      - `required`: The relying party requires a client-side discoverable credential. If one cannot be created, an error is thrown.
+
+      If omitted, `residentKey` defaults to `required` if `requireResidentKey` is `true`, otherwise the default value is `discouraged`.
+
+    - `userVerification` {{optional_inline}}: A string that specifies the relying party's requirements for user verification for the `create()` operation. Possible values are:
+
+      - `discouraged`: The relying party prefers no user verification for the `create()` operation, in the interests of minimizing disruption to the user experience.
+      - `preferred`: The relying party prefers user verification for the `create()` operation, but it will not fail if user verification cannot be performed.
+      - `required`: The relying party requires user verification for the `create()` operation — if user verification cannot be performed, an error is thrown.
+
+      If omitted, `userVerification` defaults to `preferred`.
+
+- `challenge`
+
+  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} provided by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
+
+- `excludeCredentials` {{optional_inline}}
+
+  - : An {{jsxref("Array")}} of objects describing existing credentials that are already mapped to this user account (as identified by `user.id`). This is provided by the relying party, and checked by the user agent to avoid creating a new public key credential on an authenticator that already has a credential mapped to the specified user account. for an existing user who already has some. Each item should be of the form:
+
+    - `id`: An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the existing credential ID.
+
+    - `transports` {{optional_inline}}: An {{jsxref("Array")}} of allowed transports. Possible transports are: `usb`, `nfc`, `ble`, and `internal`.
+
+    - `type`: A string defining the type of public key credential to create. This can currently take a single value, `"public-key"`, but more values may be added in the future.
+
+    If the `create()` call is attempting to create a duplicate public key credential on an authenticator, the user agent will guide to user to create the credential using a different authenticator, or fail if that is not possible.
+
+    If `excludeCredentials` is omitted, it defaults to an empty array.
+
+- `extensions` {{optional_inline}}
+
+  - : An object containing properties representing the input values for any requested extensions. These extensions are used to specific additional processing by the client or authenticator during the credential creation process. Examples include specifying whether a returned credential is discoverable, or whether the relying party will be able to store large blob data associated with a credential.
+
+- `pubKeyCredParams`
+
+  - : An {{jsxref("Array")}} of objects which specify the key types and signature algorithms the Relying Party supports, ordered from most preferred to least preferred. The client and authenticator will make a best-effort to create a credential of the most preferred type possible. These objects will contain the following properties:
+
+    - `alg`: A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
+
+      - `-8`: Ed25519
+      - `-7`: ES256
+      - `-257`: RS256
+
+    - `type`: A string defining the type of public key credential to create. This can currently take a single value, `"public-key"`, but more values may be added in the future.
+
+    If none of the listed credential types can be created, the `create()` operation fails.
+
+- `rp`
+
+  - : An object describing the relying party that requested the credential creation. It can contain the following properties:
+
+    - `id` {{optional_inline}}: A string representing the ID of the relying party. If omitted, the document origin will be used as the default value.
+    - `name`: A string representing the name of the relying party (e.g. `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
+
+- `timeout` {{optional_inline}}
+
+  - : A numerical hint, in milliseconds, which indicates the time the calling web app is willing to wait for the creation operation to complete. This hint may be overridden by the browser.
+
+- `user`
+
+  - : An object describing the user account for which the credential is generated. It can contain the following properties:
+
+    - `displayName`: A string providing a human-friendly user display name (example: `"John Doe"`), which will have been set by user during initial registration with the relying party.
+
+    - `id`: An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
+
+    - `name`: A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"johndoe667"`).
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that matches the provided parameters. Note that if the `create()` call includes
+A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that matches the provided parameters.
 
-- the `federated` option, the promise fulfills with a {{domxref("FederatedCredential")}} instance.
-- the `password` option, the promise fulfills with a {{domxref("PasswordCredential")}} instance.
-- the `publicKey` option, the promise fulfills with a {{domxref("PublicKeyCredential")}} instance (see the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for more details).
+- If the `create()` call includes the `federated` option, the promise fulfills with a {{domxref("FederatedCredential")}} instance.
+- If the `create()` call includes the `password` option, the promise fulfills with a {{domxref("PasswordCredential")}} instance.
+- If the `create()` call includes the `publicKey` option, the promise fulfills with a {{domxref("PublicKeyCredential")}} instance (see the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for more details).
 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `TypeError` {{domxref("DOMException")}}
+  - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
+
+## Examples
+
+### Creating a public key credential using the WebAuthn API
+
+The following snippet shows a typical `create()` call with the WebAuthn `publicKey` option, to create a new public key credential that can later be used to authenticate a user via a WebAuthn {{domxref("CredentialsContainer.get()", "get()")}} call:
+
+```js
+let credential = await navigator.credentials.create({
+  publicKey: {
+    challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+    rp: { id: "acme.com", name: "ACME Corporation" },
+    user: {
+      id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
+      name: "jamiedoe",
+      displayName: "Jamie Doe"
+    },
+    pubKeyCredParams: [ {type: "public-key", alg: -7} ]
+  }
+});
+```
+
+See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
 
 ## Specifications
 
@@ -115,3 +244,8 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
+- {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} directive

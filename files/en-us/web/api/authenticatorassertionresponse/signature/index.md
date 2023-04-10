@@ -18,13 +18,6 @@ This signature will be sent to the server for control, as part of the response. 
 provides the proof that an authenticator does possess the private key which was used for
 the credential's generation.
 
-> **Note:** An `AuthenticatorAssertionResponse` instance is
-> available on {{domxref("PublicKeyCredential.response")}} after calling
-> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
-
-> **Note:** This property may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
-
 ## Value
 
 An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its

@@ -7,20 +7,9 @@ browser-compat: api.AuthenticatorAttestationResponse.getTransports
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-**`getTransports()`** is a method of the
-{{domxref("AuthenticatorAttestationResponse")}} interface that returns an
-{{jsxref("Array")}} containing strings describing the different transports which may be
-used by the authenticator.
+The **`getTransports()`** method of the {{domxref("AuthenticatorAttestationResponse")}} interface returns an array of strings describing the different transports which may be used by the authenticator.
 
-Such transports may be USB, NFC, BLE or internal (applicable when the authenticator is
-not removable from the device).
-
-> **Note:** An `AuthenticatorAttestationResponse` instance is
-> available on {{domxref("PublicKeyCredential.response")}} after calling
-> {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}.
-
-> **Note:** This method may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
+Such transports may be USB, NFC, BLE or internal (applicable when the authenticator is not removable from the device).
 
 ## Syntax
 
@@ -34,15 +23,12 @@ None.
 
 ### Return value
 
-An {{jsxref("Array")}} containing the different transports supported by the
-authenticator or nothing if this information is not available. The elements of this array are supposed to be in
-lexicographical order. Their values may be :
+An {{jsxref("Array")}} of strings representing the different transports supported by the authenticator, in lexicographical order. Values may include:
 
-- `"usb"`: the authenticator can be contacted via a removable USB link
-- `"nfc"`: the authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
-- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
-- `"internal"`: the authenticator is specifically bound to the client
-  device (cannot be removed).
+- `"usb"`: the authenticator can be contacted via a removable USB link.
+- `"nfc"`: the authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication).
+- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy).
+- `"internal"`: the authenticator is specifically bound to the client device (cannot be removed).
 
 ## Examples
 

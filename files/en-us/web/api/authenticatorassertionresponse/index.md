@@ -7,7 +7,9 @@ browser-compat: api.AuthenticatorAssertionResponse
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`AuthenticatorAssertionResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.
+The **`AuthenticatorAssertionResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) provides proof to a service that it has a key pair and that an authentication request is valid and approved.
+
+An `AuthenticatorAssertionResponse` object instance is available in the {{domxref("PublicKeyCredential.response", "response")}} property of a {{domxref("PublicKeyCredential")}} object returned by a successful {{domxref("CredentialsContainer.get()")}} call.
 
 This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
@@ -21,10 +23,12 @@ _Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}.
 
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{securecontext_inline}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence and user verification flags, and any extensions processed by the authenticator.
+- {{domxref("AuthenticatorResponse.clientDataJSON")}} {{securecontext_inline}} {{ReadOnlyInline}}
+  - : Inherited from {{domxref("AuthenticatorResponse")}}, this property contains the JSON-compatible serialization of client data passed to the authenticator by the client in order to authenticate with this credential (i.e. the options paramater passed into the originating {{domxref("CredentialsContainer.get()")}} call).
 - {{domxref("AuthenticatorAssertionResponse.signature")}} {{securecontext_inline}} {{ReadOnlyInline}}
-  - : An assertion signature over {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and {{domxref("AuthenticatorResponse.clientDataJSON")}}. The assertion signature is created with the private key of keypair that was created during the {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call and verified using the public key of that same keypair.
+  - : An assertion signature over {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and {{domxref("AuthenticatorResponse.clientDataJSON")}}. The assertion signature is created with the private key of the key pair that was created during the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call and verified using the public key of that same key pair.
 - {{domxref("AuthenticatorAssertionResponse.userHandle")}} {{securecontext_inline}} {{ReadOnlyInline}}
-  - : An {{jsxref("ArrayBuffer")}} containing an opaque user identifier.
+  - : An {{jsxref("ArrayBuffer")}} containing an opaque user identifier, specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
 
 ## Instance methods
 

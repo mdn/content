@@ -7,25 +7,35 @@ browser-compat: api.AuthenticatorAttestationResponse
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`AuthenticatorAttestationResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.
+The **`AuthenticatorAttestationResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) provides a cryptographic root of trust for a newly-created key pair. The data from this response should be sent to the relying party's server to complete the creation of the credential.
+
+An `AuthenticatorAttestationResponse` object instance is available in the {{domxref("PublicKeyCredential.response", "response")}} property of a {{domxref("PublicKeyCredential")}} object returned by a successful {{domxref("CredentialsContainer.create()")}} call.
 
 This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 {{InheritanceDiagram}}
 
-> **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
+> **Note:** This interface is restricted to top-level contexts. Use of its features from within an {{HTMLElement("iframe")}} element will not have any effect.
 
 ## Instance properties
 
 _Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}._
 
 - {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{ReadOnlyInline}}
-  - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
+  - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair. This data is opaque to, and cryptographically protected against tampering by, the client.
+- {{domxref("AuthenticatorResponse.clientDataJSON")}} {{securecontext_inline}} {{ReadOnlyInline}}
+  - : Inherited from {{domxref("AuthenticatorResponse")}}, this property contains the JSON-compatible serialization of client data passed to the authenticator by the client in order to generate this credential (i.e. the options paramater passed into the originating {{domxref("CredentialsContainer.create()")}} call).
 
 ## Instance methods
 
+- {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData()")}} {{securecontext_inline}}
+  - : Returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} property.
+- {{domxref("AuthenticatorAttestationResponse.getPublicKey()")}} {{securecontext_inline}}
+  - : Returns an {{jsxref("ArrayBuffer")}} containing the DER `SubjectPublicKeyInfo` of the new credential (see [Subject Public Key Info](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)), or `null` if this is not available.
+- {{domxref("AuthenticatorAttestationResponse.getPublicKeyAlgorithm()")}} {{securecontext_inline}}
+  - : Returns a number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm used for the new credential.
 - {{domxref("AuthenticatorAttestationResponse.getTransports()")}} {{securecontext_inline}}
-  - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g., `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
+  - : Returns an array of strings describing which transport methods (e.g., `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
 
 ## Examples
 
