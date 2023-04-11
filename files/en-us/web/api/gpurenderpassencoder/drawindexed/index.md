@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.drawIndexed()
+title: "GPURenderPassEncoder: drawIndexed() method"
+short-title: drawIndexed()
 slug: Web/API/GPURenderPassEncoder/drawIndexed
 page-type: web-api-instance-method
 status:

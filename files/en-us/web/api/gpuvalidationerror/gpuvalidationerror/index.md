@@ -1,5 +1,6 @@
 ---
-title: GPUValidationError()
+title: "GPUValidationError: GPUValidationError() constructor"
+short-title: GPUValidationError()
 slug: Web/API/GPUValidationError/GPUValidationError
 page-type: web-api-constructor
 status:

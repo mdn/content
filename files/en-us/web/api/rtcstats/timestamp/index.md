@@ -1,5 +1,6 @@
 ---
-title: RTCStats.timestamp
+title: "RTCStats: timestamp property"
+short-title: timestamp
 slug: Web/API/RTCStats/timestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCStats.timestamp

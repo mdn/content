@@ -1,5 +1,6 @@
 ---
 title: "MediaStreamTrack: mute event"
+short-title: mute
 slug: Web/API/MediaStreamTrack/mute_event
 page-type: web-api-event
 browser-compat: api.MediaStreamTrack.mute_event

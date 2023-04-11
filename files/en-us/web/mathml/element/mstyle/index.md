@@ -1,6 +1,7 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
+page-type: mathml-element
 browser-compat: mathml.elements.mstyle
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: CSSMathSum.values
+title: "CSSMathSum: values property"
+short-title: values
 slug: Web/API/CSSMathSum/values
 page-type: web-api-instance-property
 browser-compat: api.CSSMathSum.values

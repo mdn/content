@@ -1,5 +1,6 @@
 ---
-title: WebGLShaderPrecisionFormat.precision
+title: "WebGLShaderPrecisionFormat: precision property"
+short-title: precision
 slug: Web/API/WebGLShaderPrecisionFormat/precision
 page-type: web-api-instance-property
 browser-compat: api.WebGLShaderPrecisionFormat.precision

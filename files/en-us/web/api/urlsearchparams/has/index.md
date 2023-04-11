@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.has()
+title: "URLSearchParams: has() method"
+short-title: has()
 slug: Web/API/URLSearchParams/has
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.has

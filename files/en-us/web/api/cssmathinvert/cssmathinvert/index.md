@@ -1,5 +1,6 @@
 ---
-title: CSSMathInvert()
+title: "CSSMathInvert: CSSMathInvert() constructor"
+short-title: CSSMathInvert()
 slug: Web/API/CSSMathInvert/CSSMathInvert
 page-type: web-api-constructor
 browser-compat: api.CSSMathInvert.CSSMathInvert

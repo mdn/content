@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.features
+title: "GPUDevice: features property"
+short-title: features
 slug: Web/API/GPUDevice/features
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.tee()
+title: "ReadableStream: tee() method"
+short-title: tee()
 slug: Web/API/ReadableStream/tee
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.tee

@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.getLayers()
+title: "VRDisplay: getLayers() method"
+short-title: getLayers()
 slug: Web/API/VRDisplay/getLayers
 page-type: web-api-instance-method
 status:

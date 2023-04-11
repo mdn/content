@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.requestAnimationFrame()
+title: "VRDisplay: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 page-type: web-api-instance-method
 status:

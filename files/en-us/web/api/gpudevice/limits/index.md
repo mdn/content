@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.limits
+title: "GPUDevice: limits property"
+short-title: limits
 slug: Web/API/GPUDevice/limits
 page-type: web-api-instance-property
 status:

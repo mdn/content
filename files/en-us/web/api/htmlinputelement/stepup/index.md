@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.stepUp()
+title: "HTMLInputElement: stepUp() method"
+short-title: stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.stepUp

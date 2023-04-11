@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.referenceNode
+title: "NodeIterator: referenceNode property"
+short-title: referenceNode
 slug: Web/API/NodeIterator/referenceNode
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.referenceNode

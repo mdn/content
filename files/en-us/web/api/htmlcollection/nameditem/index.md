@@ -1,5 +1,6 @@
 ---
-title: HTMLCollection.namedItem()
+title: "HTMLCollection: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLCollection/namedItem
 page-type: web-api-instance-method
 browser-compat: api.HTMLCollection.namedItem

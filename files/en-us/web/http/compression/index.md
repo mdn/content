@@ -1,6 +1,7 @@
 ---
 title: Compression in HTTP
 slug: Web/HTTP/Compression
+page-type: guide
 ---
 
 {{HTTPSidebar}}

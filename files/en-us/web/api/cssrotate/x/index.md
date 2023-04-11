@@ -1,5 +1,6 @@
 ---
-title: CSSRotate.x
+title: "CSSRotate: x property"
+short-title: x
 slug: Web/API/CSSRotate/x
 page-type: web-api-instance-property
 browser-compat: api.CSSRotate.x

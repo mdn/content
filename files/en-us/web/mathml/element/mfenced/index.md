@@ -1,6 +1,7 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
+page-type: mathml-element
 status:
   - deprecated
   - non-standard

@@ -18,7 +18,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `cite`
   - : The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
-## Example
+## Examples
 
 ```html
 <p>
@@ -26,6 +26,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q>
 </p>
 ```
+
+### Result
 
 {{EmbedLiveSample('Example')}}
 

@@ -1,5 +1,6 @@
 ---
 title: "Window: pagehide event"
+short-title: pagehide
 slug: Web/API/Window/pagehide_event
 page-type: web-api-event
 browser-compat: api.Window.pagehide_event

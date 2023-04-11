@@ -1,5 +1,6 @@
 ---
-title: DedicatedWorkerGlobalScope.name
+title: "DedicatedWorkerGlobalScope: name property"
+short-title: name
 slug: Web/API/DedicatedWorkerGlobalScope/name
 page-type: web-api-instance-property
 browser-compat: api.DedicatedWorkerGlobalScope.name

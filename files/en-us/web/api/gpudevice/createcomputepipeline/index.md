@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createComputePipeline()
+title: "GPUDevice: createComputePipeline() method"
+short-title: createComputePipeline()
 slug: Web/API/GPUDevice/createComputePipeline
 page-type: web-api-instance-method
 status:

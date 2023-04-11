@@ -1,5 +1,6 @@
 ---
-title: GPUError.message
+title: "GPUError: message property"
+short-title: message
 slug: Web/API/GPUError/message
 page-type: web-api-instance-property
 status:

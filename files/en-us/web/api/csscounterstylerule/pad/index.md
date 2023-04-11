@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.pad
+title: "CSSCounterStyleRule: pad property"
+short-title: pad
 slug: Web/API/CSSCounterStyleRule/pad
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.pad

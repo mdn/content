@@ -1,5 +1,6 @@
 ---
-title: OTPCredential.code
+title: "OTPCredential: code property"
+short-title: code
 slug: Web/API/OTPCredential/code
 page-type: web-api-instance-property
 status:

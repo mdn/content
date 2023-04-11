@@ -1,5 +1,6 @@
 ---
-title: console.trace()
+title: "console: trace() method"
+short-title: trace()
 slug: Web/API/console/trace
 page-type: web-api-instance-method
 browser-compat: api.console.trace

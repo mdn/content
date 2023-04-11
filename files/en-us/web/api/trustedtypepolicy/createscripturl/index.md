@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicy.createScriptURL()
+title: "TrustedTypePolicy: createScriptURL() method"
+short-title: createScriptURL()
 slug: Web/API/TrustedTypePolicy/createScriptURL
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicy.createScriptURL

@@ -1,5 +1,6 @@
 ---
 title: "Element: pointercancel event"
+short-title: pointercancel
 slug: Web/API/Element/pointercancel_event
 browser-compat: api.Element.pointercancel_event
 page-type: web-api-event

@@ -1,5 +1,6 @@
 ---
-title: Document.documentElement
+title: "Document: documentElement property"
+short-title: documentElement
 slug: Web/API/Document/documentElement
 page-type: web-api-instance-property
 browser-compat: api.Document.documentElement

@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.nativeProjectionScaleFactor
+title: "XRWebGLBinding: nativeProjectionScaleFactor property"
+short-title: nativeProjectionScaleFactor
 slug: Web/API/XRWebGLBinding/nativeProjectionScaleFactor
 page-type: web-api-instance-property
 status:

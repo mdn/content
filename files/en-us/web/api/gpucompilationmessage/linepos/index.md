@@ -1,5 +1,6 @@
 ---
-title: GPUCompilationMessage.linePos
+title: "GPUCompilationMessage: linePos property"
+short-title: linePos
 slug: Web/API/GPUCompilationMessage/linePos
 page-type: web-api-instance-property
 status:

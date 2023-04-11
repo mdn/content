@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createPipelineLayout()
+title: "GPUDevice: createPipelineLayout() method"
+short-title: createPipelineLayout()
 slug: Web/API/GPUDevice/createPipelineLayout
 page-type: web-api-instance-method
 status:

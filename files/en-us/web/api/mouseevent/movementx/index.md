@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.movementX
+title: "MouseEvent: movementX property"
+short-title: movementX
 slug: Web/API/MouseEvent/movementX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.movementX

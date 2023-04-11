@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.label
+title: "GPUQueue: label property"
+short-title: label
 slug: Web/API/GPUQueue/label
 page-type: web-api-instance-property
 status:

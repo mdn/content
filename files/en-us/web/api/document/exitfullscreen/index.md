@@ -1,5 +1,6 @@
 ---
-title: Document.exitFullscreen()
+title: "Document: exitFullscreen() method"
+short-title: exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 page-type: web-api-instance-method
 browser-compat: api.Document.exitFullscreen

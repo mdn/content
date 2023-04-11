@@ -15,7 +15,7 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 
 ## Constructor
 
-- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
   - : Creates a new `ReferenceError` object.
 
 ## Instance properties

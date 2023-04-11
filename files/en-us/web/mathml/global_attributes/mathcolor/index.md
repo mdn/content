@@ -1,6 +1,7 @@
 ---
 title: mathcolor
 slug: Web/MathML/Global_attributes/mathcolor
+page-type: mathml-attribute
 status:
   - deprecated
 browser-compat: mathml.global_attributes.mathcolor

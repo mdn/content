@@ -1,5 +1,6 @@
 ---
 title: "MediaRecorder: stop event"
+short-title: stop
 slug: Web/API/MediaRecorder/stop_event
 page-type: web-api-event
 browser-compat: api.MediaRecorder.stop_event

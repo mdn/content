@@ -1,5 +1,6 @@
 ---
-title: IDBFactory.open()
+title: "IDBFactory: open() method"
+short-title: open()
 slug: Web/API/IDBFactory/open
 page-type: web-api-instance-method
 browser-compat: api.IDBFactory.open

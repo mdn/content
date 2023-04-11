@@ -1,6 +1,7 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
+page-type: http-header
 browser-compat: http.headers.If-Range
 ---
 

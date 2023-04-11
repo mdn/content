@@ -2,6 +2,8 @@
 title: GPURenderBundleEncoder
 slug: Web/API/GPURenderBundleEncoder
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPURenderBundleEncoder
 ---
 

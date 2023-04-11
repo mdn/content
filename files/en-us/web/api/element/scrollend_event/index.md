@@ -1,5 +1,6 @@
 ---
 title: "Element: scrollend event"
+short-title: scrollend
 slug: Web/API/Element/scrollend_event
 page-type: web-api-event
 browser-compat: api.Element.scrollend_event

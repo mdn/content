@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.state
+title: "VideoDecoder: state property"
+short-title: state
 slug: Web/API/VideoDecoder/state
 page-type: web-api-instance-property
 browser-compat: api.VideoDecoder.state

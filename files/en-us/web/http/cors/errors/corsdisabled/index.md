@@ -1,6 +1,7 @@
 ---
 title: "Reason: CORS disabled"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.width
+title: "HTMLImageElement: width property"
+short-title: width
 slug: Web/API/HTMLImageElement/width
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.width

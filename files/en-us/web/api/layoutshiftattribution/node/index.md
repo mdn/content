@@ -1,5 +1,6 @@
 ---
-title: LayoutShiftAttribution.node
+title: "LayoutShiftAttribution: node property"
+short-title: node
 slug: Web/API/LayoutShiftAttribution/node
 page-type: web-api-instance-property
 status:

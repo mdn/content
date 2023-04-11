@@ -1,5 +1,6 @@
 ---
-title: Performance.memory
+title: "Performance: memory property"
+short-title: memory
 slug: Web/API/Performance/memory
 page-type: web-api-instance-property
 browser-compat: api.Performance.memory

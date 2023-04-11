@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.deleteShader()
+title: "WebGLRenderingContext: deleteShader() method"
+short-title: deleteShader()
 slug: Web/API/WebGLRenderingContext/deleteShader
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteShader

@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createComputePipelineAsync()
+title: "GPUDevice: createComputePipelineAsync() method"
+short-title: createComputePipelineAsync()
 slug: Web/API/GPUDevice/createComputePipelineAsync
 page-type: web-api-instance-method
 status:

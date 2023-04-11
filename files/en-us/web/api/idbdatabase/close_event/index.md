@@ -1,5 +1,6 @@
 ---
 title: "IDBDatabase: close event"
+short-title: close
 slug: Web/API/IDBDatabase/close_event
 page-type: web-api-event
 browser-compat: api.IDBDatabase.close_event

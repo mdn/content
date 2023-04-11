@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.navigationPreload
+title: "ServiceWorkerRegistration: navigationPreload property"
+short-title: navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.navigationPreload

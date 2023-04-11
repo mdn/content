@@ -1,5 +1,6 @@
 ---
-title: Element.ariaAutoComplete
+title: "Element: ariaAutoComplete property"
+short-title: ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaAutoComplete

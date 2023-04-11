@@ -1,5 +1,6 @@
 ---
-title: Response.status
+title: "Response: status property"
+short-title: status
 slug: Web/API/Response/status
 page-type: web-api-instance-property
 browser-compat: api.Response.status

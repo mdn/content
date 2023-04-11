@@ -1,5 +1,6 @@
 ---
-title: Window.launchQueue
+title: "Window: launchQueue property"
+short-title: launchQueue
 slug: Web/API/Window/launchQueue
 page-type: web-api-instance-property
 status:

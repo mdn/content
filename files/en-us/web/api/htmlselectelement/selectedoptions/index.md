@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.selectedOptions
+title: "HTMLSelectElement: selectedOptions property"
+short-title: selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.selectedOptions

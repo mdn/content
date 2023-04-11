@@ -1,5 +1,6 @@
 ---
-title: window.requestIdleCallback()
+title: "window: requestIdleCallback() method"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 page-type: web-api-instance-method
 browser-compat: api.Window.requestIdleCallback

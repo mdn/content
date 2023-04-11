@@ -268,14 +268,14 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 
 ## Constructor
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- {{jsxref("BigInt/BigInt", "BigInt()")}}
   - : Creates a new BigInt value.
 
 ## Static methods
 
-- [`BigInt.asIntN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN)
+- {{jsxref("BigInt.asIntN()")}}
   - : Clamps a BigInt value to a signed integer value, and returns that value.
-- [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
+- {{jsxref("BigInt.asUintN()")}}
   - : Clamps a BigInt value to an unsigned integer value, and returns that value.
 
 ## Instance properties
@@ -289,11 +289,11 @@ These properties are defined on `BigInt.prototype` and shared by all `BigInt` in
 
 ## Instance methods
 
-- [`BigInt.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
+- {{jsxref("BigInt.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this BigInt value. Overrides the [`Object.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) method.
-- [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
+- {{jsxref("BigInt.prototype.toString()")}}
   - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
-- [`BigInt.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
+- {{jsxref("BigInt.prototype.valueOf()")}}
   - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
 
 ## Examples

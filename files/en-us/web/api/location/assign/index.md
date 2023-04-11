@@ -1,5 +1,6 @@
 ---
-title: location.assign()
+title: "location: assign() method"
+short-title: assign()
 slug: Web/API/Location/assign
 page-type: web-api-instance-method
 browser-compat: api.Location.assign

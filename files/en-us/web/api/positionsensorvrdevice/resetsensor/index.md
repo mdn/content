@@ -1,5 +1,6 @@
 ---
-title: PositionSensorVRDevice.resetSensor()
+title: "PositionSensorVRDevice: resetSensor() method"
+short-title: resetSensor()
 slug: Web/API/PositionSensorVRDevice/resetSensor
 page-type: web-api-instance-method
 status:

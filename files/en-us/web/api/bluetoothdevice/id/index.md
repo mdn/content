@@ -1,5 +1,6 @@
 ---
-title: BluetoothDevice.id
+title: "BluetoothDevice: id property"
+short-title: id
 slug: Web/API/BluetoothDevice/id
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
+page-type: http-header
 browser-compat: http.headers.Server
 ---
 

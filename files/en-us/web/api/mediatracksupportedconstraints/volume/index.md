@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.volume
+title: "MediaTrackSupportedConstraints: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
 page-type: web-api-instance-property
 status:

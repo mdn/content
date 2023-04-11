@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.deleteQuery()
+title: "WebGL2RenderingContext: deleteQuery() method"
+short-title: deleteQuery()
 slug: Web/API/WebGL2RenderingContext/deleteQuery
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.deleteQuery

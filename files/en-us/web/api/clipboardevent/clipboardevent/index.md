@@ -1,5 +1,6 @@
 ---
-title: ClipboardEvent()
+title: "ClipboardEvent: ClipboardEvent() constructor"
+short-title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 page-type: web-api-constructor
 browser-compat: api.ClipboardEvent.ClipboardEvent

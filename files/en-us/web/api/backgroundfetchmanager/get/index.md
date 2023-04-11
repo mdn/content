@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchManager.get()
+title: "BackgroundFetchManager: get() method"
+short-title: get()
 slug: Web/API/BackgroundFetchManager/get
 page-type: web-api-instance-method
 status:

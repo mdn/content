@@ -1,5 +1,6 @@
 ---
-title: DOMImplementation.createDocumentType()
+title: "DOMImplementation: createDocumentType() method"
+short-title: createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
 page-type: web-api-instance-method
 browser-compat: api.DOMImplementation.createDocumentType

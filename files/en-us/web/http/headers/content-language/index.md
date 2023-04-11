@@ -1,6 +1,7 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
+page-type: http-header
 browser-compat: http.headers.Content-Language
 ---
 
@@ -71,7 +72,7 @@ The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is us
 Do **not** use this meta element like this for stating a document language:
 
 ```html example-bad
-<!-- /!\ This is bad practice -->
+<!-- ⚠️ This is bad practice -->
 <meta http-equiv="content-language" content="de" />
 ```
 

@@ -35,7 +35,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
 
-  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
+  - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
 

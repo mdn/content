@@ -1,5 +1,6 @@
 ---
-title: Navigator.getGamepads()
+title: "Navigator: getGamepads() method"
+short-title: getGamepads()
 slug: Web/API/Navigator/getGamepads
 page-type: web-api-instance-method
 browser-compat: api.Navigator.getGamepads

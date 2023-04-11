@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.centralAngle
+title: "XRCylinderLayer: centralAngle property"
+short-title: centralAngle
 slug: Web/API/XRCylinderLayer/centralAngle
 page-type: web-api-instance-property
 status:

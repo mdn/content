@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.naturalWidth
+title: "HTMLImageElement: naturalWidth property"
+short-title: naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.naturalWidth

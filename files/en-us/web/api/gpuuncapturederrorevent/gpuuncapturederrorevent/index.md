@@ -1,5 +1,6 @@
 ---
-title: GPUUncapturedErrorEvent()
+title: "GPUUncapturedErrorEvent: GPUUncapturedErrorEvent() constructor"
+short-title: GPUUncapturedErrorEvent()
 slug: Web/API/GPUUncapturedErrorEvent/GPUUncapturedErrorEvent
 page-type: web-api-constructor
 status:

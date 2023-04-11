@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.reset()
+title: "AudioDecoder: reset() method"
+short-title: reset()
 slug: Web/API/AudioDecoder/reset
 page-type: web-api-instance-method
 status:

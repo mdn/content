@@ -1,5 +1,6 @@
 ---
-title: TextTrackCue.id
+title: "TextTrackCue: id property"
+short-title: id
 slug: Web/API/TextTrackCue/id
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCue.id

@@ -1,5 +1,6 @@
 ---
-title: Event()
+title: "Event: Event() constructor"
+short-title: Event()
 slug: Web/API/Event/Event
 page-type: web-api-constructor
 browser-compat: api.Event.Event

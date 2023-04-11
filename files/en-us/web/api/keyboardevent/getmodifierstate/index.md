@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.getModifierState()
+title: "KeyboardEvent: getModifierState() method"
+short-title: getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 page-type: web-api-instance-method
 browser-compat: api.KeyboardEvent.getModifierState

@@ -1,5 +1,6 @@
 ---
 title: "VideoTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/VideoTrackList/removetrack_event
 page-type: web-api-event
 browser-compat: api.VideoTrackList.removetrack_event

@@ -1,5 +1,6 @@
 ---
-title: Selection.toString()
+title: "Selection: toString() method"
+short-title: toString()
 slug: Web/API/Selection/toString
 page-type: web-api-instance-method
 browser-compat: api.Selection.toString

@@ -1,5 +1,6 @@
 ---
 title: "Notification: click event"
+short-title: click
 slug: Web/API/Notification/click_event
 page-type: web-api-event
 browser-compat: api.Notification.click_event

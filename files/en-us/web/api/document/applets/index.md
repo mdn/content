@@ -1,5 +1,6 @@
 ---
-title: Document.applets
+title: "Document: applets property"
+short-title: applets
 slug: Web/API/Document/applets
 page-type: web-api-instance-property
 status:

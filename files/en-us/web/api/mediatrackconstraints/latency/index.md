@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.latency
+title: "MediaTrackConstraints: latency property"
+short-title: latency
 slug: Web/API/MediaTrackConstraints/latency
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.latency

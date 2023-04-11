@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.draw()
+title: "GPURenderPassEncoder: draw() method"
+short-title: draw()
 slug: Web/API/GPURenderPassEncoder/draw
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.tHead
+title: "HTMLTableElement: tHead property"
+short-title: tHead
 slug: Web/API/HTMLTableElement/tHead
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.tHead

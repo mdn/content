@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.takeRecords()
+title: "IntersectionObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 page-type: web-api-instance-method
 browser-compat: api.IntersectionObserver.takeRecords

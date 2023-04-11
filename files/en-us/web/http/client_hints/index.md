@@ -1,6 +1,7 @@
 ---
 title: HTTP Client hints
 slug: Web/HTTP/Client_hints
+page-type: guide
 ---
 
 {{HTTPSidebar}}

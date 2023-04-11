@@ -1,5 +1,6 @@
 ---
 title: "Node: selectstart event"
+short-title: selectstart
 slug: Web/API/Node/selectstart_event
 page-type: web-api-event
 browser-compat: api.Node.selectstart_event

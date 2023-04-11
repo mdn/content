@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setPositionState()
+title: "MediaSession: setPositionState() method"
+short-title: setPositionState()
 slug: Web/API/MediaSession/setPositionState
 page-type: web-api-instance-method
 browser-compat: api.MediaSession.setPositionState

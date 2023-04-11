@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.isRenderbuffer()
+title: "WebGLRenderingContext: isRenderbuffer() method"
+short-title: isRenderbuffer()
 slug: Web/API/WebGLRenderingContext/isRenderbuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isRenderbuffer

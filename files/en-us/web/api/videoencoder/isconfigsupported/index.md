@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.isConfigSupported()
+title: "VideoEncoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/VideoEncoder/isConfigSupported
 page-type: web-api-static-method
 browser-compat: api.VideoEncoder.isConfigSupported

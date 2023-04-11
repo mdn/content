@@ -1,5 +1,6 @@
 ---
-title: HMDVRDevice.getEyeParameters()
+title: "HMDVRDevice: getEyeParameters() method"
+short-title: getEyeParameters()
 slug: Web/API/HMDVRDevice/getEyeParameters
 page-type: web-api-instance-method
 status:

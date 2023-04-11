@@ -1,5 +1,6 @@
 ---
-title: XRLightEstimate.sphericalHarmonicsCoefficients
+title: "XRLightEstimate: sphericalHarmonicsCoefficients property"
+short-title: sphericalHarmonicsCoefficients
 slug: Web/API/XRLightEstimate/sphericalHarmonicsCoefficients
 page-type: web-api-instance-property
 status:

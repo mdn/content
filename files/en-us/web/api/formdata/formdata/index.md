@@ -1,5 +1,6 @@
 ---
-title: FormData()
+title: "FormData: FormData() constructor"
+short-title: FormData()
 slug: Web/API/FormData/FormData
 page-type: web-api-constructor
 browser-compat: api.FormData.FormData

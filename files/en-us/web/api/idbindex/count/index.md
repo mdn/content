@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.count()
+title: "IDBIndex: count() method"
+short-title: count()
 slug: Web/API/IDBIndex/count
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.count

@@ -1,5 +1,6 @@
 ---
-title: NamedNodeMap.length
+title: "NamedNodeMap: length property"
+short-title: length
 slug: Web/API/NamedNodeMap/length
 page-type: web-api-instance-property
 browser-compat: api.NamedNodeMap.length

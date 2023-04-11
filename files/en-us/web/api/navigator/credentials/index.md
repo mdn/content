@@ -1,5 +1,6 @@
 ---
-title: Navigator.credentials
+title: "Navigator: credentials property"
+short-title: credentials
 slug: Web/API/Navigator/credentials
 page-type: web-api-instance-property
 browser-compat: api.Navigator.credentials

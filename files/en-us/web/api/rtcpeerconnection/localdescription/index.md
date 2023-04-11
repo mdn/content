@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.localDescription
+title: "RTCPeerConnection: localDescription property"
+short-title: localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.localDescription

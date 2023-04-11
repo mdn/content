@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createCylinderLayer()
+title: "XRWebGLBinding: createCylinderLayer() method"
+short-title: createCylinderLayer()
 slug: Web/API/XRWebGLBinding/createCylinderLayer
 page-type: web-api-instance-method
 status:

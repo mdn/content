@@ -1,5 +1,6 @@
 ---
-title: SerialPort.forget()
+title: "SerialPort: forget() method"
+short-title: forget()
 slug: Web/API/SerialPort/forget
 page-type: web-api-instance-method
 status:

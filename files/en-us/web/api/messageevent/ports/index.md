@@ -1,5 +1,6 @@
 ---
-title: MessageEvent.ports
+title: "MessageEvent: ports property"
+short-title: ports
 slug: Web/API/MessageEvent/ports
 page-type: web-api-instance-property
 browser-compat: api.MessageEvent.ports

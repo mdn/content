@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.onwarning
+title: "MediaRecorder: warning event"
+short-title: warning
 slug: Web/API/MediaRecorder/warning_event
 page-type: web-api-event
 status:

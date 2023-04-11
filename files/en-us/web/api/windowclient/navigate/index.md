@@ -1,5 +1,6 @@
 ---
-title: WindowClient.navigate()
+title: "WindowClient: navigate() method"
+short-title: navigate()
 slug: Web/API/WindowClient/navigate
 page-type: web-api-instance-method
 browser-compat: api.WindowClient.navigate

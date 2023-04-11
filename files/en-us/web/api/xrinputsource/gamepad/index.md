@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.gamepad
+title: "XRInputSource: gamepad property"
+short-title: gamepad
 slug: Web/API/XRInputSource/gamepad
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.gamepad

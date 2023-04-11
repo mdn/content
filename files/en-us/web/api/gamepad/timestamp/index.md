@@ -1,5 +1,6 @@
 ---
-title: Gamepad.timestamp
+title: "Gamepad: timestamp property"
+short-title: timestamp
 slug: Web/API/Gamepad/timestamp
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.timestamp

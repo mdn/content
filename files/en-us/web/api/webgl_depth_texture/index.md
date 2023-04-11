@@ -1,5 +1,6 @@
 ---
-title: WEBGL_depth_texture
+title: WEBGL_depth_texture extension
+short-title: WEBGL_depth_texture
 slug: Web/API/WEBGL_depth_texture
 page-type: webgl-extension
 browser-compat: api.WEBGL_depth_texture

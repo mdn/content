@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.ownerNode
+title: "StyleSheet: ownerNode property"
+short-title: ownerNode
 slug: Web/API/StyleSheet/ownerNode
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.ownerNode

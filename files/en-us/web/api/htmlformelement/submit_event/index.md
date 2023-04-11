@@ -1,5 +1,6 @@
 ---
 title: "HTMLFormElement: submit event"
+short-title: submit
 slug: Web/API/HTMLFormElement/submit_event
 page-type: web-api-event
 browser-compat: api.HTMLFormElement.submit_event

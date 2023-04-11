@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.label
+title: "GPUComputePassEncoder: label property"
+short-title: label
 slug: Web/API/GPUComputePassEncoder/label
 page-type: web-api-instance-property
 status:

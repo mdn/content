@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.remove()
+title: "MediaKeySession: remove() method"
+short-title: remove()
 slug: Web/API/MediaKeySession/remove
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.remove

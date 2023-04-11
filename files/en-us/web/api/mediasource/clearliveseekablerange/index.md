@@ -1,5 +1,6 @@
 ---
-title: MediaSource.clearLiveSeekableRange()
+title: "MediaSource: clearLiveSeekableRange() method"
+short-title: clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.clearLiveSeekableRange

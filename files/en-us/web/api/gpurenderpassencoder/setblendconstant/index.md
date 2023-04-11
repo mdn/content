@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setBlendConstant()
+title: "GPURenderPassEncoder: setBlendConstant() method"
+short-title: setBlendConstant()
 slug: Web/API/GPURenderPassEncoder/setBlendConstant
 page-type: web-api-instance-method
 status:

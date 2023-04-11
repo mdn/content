@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.destroy()
+title: "GPUTexture: destroy() method"
+short-title: destroy()
 slug: Web/API/GPUTexture/destroy
 page-type: web-api-instance-method
 status:

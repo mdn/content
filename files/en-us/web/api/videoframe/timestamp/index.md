@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.timestamp
+title: "VideoFrame: timestamp property"
+short-title: timestamp
 slug: Web/API/VideoFrame/timestamp
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.timestamp

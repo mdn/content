@@ -1,5 +1,6 @@
 ---
-title: XRCubeLayer.space
+title: "XRCubeLayer: space property"
+short-title: space
 slug: Web/API/XRCubeLayer/space
 page-type: web-api-instance-property
 status:

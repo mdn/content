@@ -58,7 +58,7 @@ The **`<shadow>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of th
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-## Example
+## Examples
 
 Here is a simple example of using the `<shadow>` element. It is an HTML file with everything needed in it.
 

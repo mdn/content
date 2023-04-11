@@ -1,5 +1,6 @@
 ---
-title: Cache.matchAll()
+title: "Cache: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Cache/matchAll
 page-type: web-api-instance-method
 browser-compat: api.Cache.matchAll

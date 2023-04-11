@@ -1,6 +1,7 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
+page-type: http-header
 browser-compat: http.headers.X-Content-Type-Options
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.bytesReceived
+title: "RTCInboundRtpStreamStats: bytesReceived property"
+short-title: bytesReceived
 slug: Web/API/RTCInboundRtpStreamStats/bytesReceived
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.bytesReceived

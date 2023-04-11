@@ -1,5 +1,6 @@
 ---
-title: Window.pageXOffset
+title: "Window: pageXOffset property"
+short-title: pageXOffset
 slug: Web/API/Window/pageXOffset
 page-type: web-api-instance-property
 browser-compat: api.Window.pageXOffset

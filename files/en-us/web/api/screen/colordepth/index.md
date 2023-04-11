@@ -1,5 +1,6 @@
 ---
-title: Screen.colorDepth
+title: "Screen: colorDepth property"
+short-title: colorDepth
 slug: Web/API/Screen/colorDepth
 page-type: web-api-instance-property
 browser-compat: api.Screen.colorDepth

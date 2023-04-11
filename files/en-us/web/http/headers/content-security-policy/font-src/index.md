@@ -1,6 +1,7 @@
 ---
 title: "CSP: font-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.font-src
 ---
 

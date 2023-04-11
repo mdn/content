@@ -1,5 +1,6 @@
 ---
-title: CSSRotate.angle
+title: "CSSRotate: angle property"
+short-title: angle
 slug: Web/API/CSSRotate/angle
 page-type: web-api-instance-property
 browser-compat: api.CSSRotate.angle

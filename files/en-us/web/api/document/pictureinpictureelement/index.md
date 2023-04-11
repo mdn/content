@@ -1,5 +1,6 @@
 ---
-title: Document.pictureInPictureElement
+title: "Document: pictureInPictureElement property"
+short-title: pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
 page-type: web-api-instance-property
 browser-compat: api.Document.pictureInPictureElement

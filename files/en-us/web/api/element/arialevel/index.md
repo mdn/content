@@ -1,5 +1,6 @@
 ---
-title: Element.ariaLevel
+title: "Element: ariaLevel property"
+short-title: ariaLevel
 slug: Web/API/Element/ariaLevel
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaLevel

@@ -1,6 +1,7 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
+page-type: http-status-code
 browser-compat: http.status.204
 ---
 

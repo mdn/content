@@ -1,5 +1,6 @@
 ---
-title: Notification.tag
+title: "Notification: tag property"
+short-title: tag
 slug: Web/API/Notification/tag
 page-type: web-api-instance-property
 browser-compat: api.Notification.tag

@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.tangentialPressure
+title: "PointerEvent: tangentialPressure property"
+short-title: tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.tangentialPressure

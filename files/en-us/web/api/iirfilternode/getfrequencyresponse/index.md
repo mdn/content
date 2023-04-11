@@ -1,5 +1,6 @@
 ---
-title: IIRFilterNode.getFrequencyResponse()
+title: "IIRFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
 browser-compat: api.IIRFilterNode.getFrequencyResponse

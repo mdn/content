@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.deleteProgram()
+title: "WebGLRenderingContext: deleteProgram() method"
+short-title: deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteProgram

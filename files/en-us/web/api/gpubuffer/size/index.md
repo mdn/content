@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.size
+title: "GPUBuffer: size property"
+short-title: size
 slug: Web/API/GPUBuffer/size
 page-type: web-api-instance-property
 status:

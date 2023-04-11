@@ -1,5 +1,6 @@
 ---
-title: Worker()
+title: "Worker: Worker() constructor"
+short-title: Worker()
 slug: Web/API/Worker/Worker
 page-type: web-api-constructor
 browser-compat: api.Worker.Worker

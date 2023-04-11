@@ -1,5 +1,6 @@
 ---
-title: ValidityState.patternMismatch
+title: "ValidityState: patternMismatch property"
+short-title: patternMismatch
 slug: Web/API/ValidityState/patternMismatch
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.patternMismatch

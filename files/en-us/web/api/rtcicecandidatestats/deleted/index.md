@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidateStats.deleted
+title: "RTCIceCandidateStats: deleted property"
+short-title: deleted
 slug: Web/API/RTCIceCandidateStats/deleted
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.deleted

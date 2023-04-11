@@ -1,5 +1,6 @@
 ---
 title: "Window: vrdisplaypresentchange event"
+short-title: vrdisplaypresentchange
 slug: Web/API/Window/vrdisplaypresentchange_event
 page-type: web-api-event
 status:

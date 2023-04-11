@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.bindTexture()
+title: "WebGLRenderingContext: bindTexture() method"
+short-title: bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindTexture

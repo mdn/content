@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.entries()
+title: "HighlightRegistry: entries() method"
+short-title: entries()
 slug: Web/API/HighlightRegistry/entries
 page-type: web-api-instance-method
 status:

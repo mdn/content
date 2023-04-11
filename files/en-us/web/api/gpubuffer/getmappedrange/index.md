@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.getMappedRange()
+title: "GPUBuffer: getMappedRange() method"
+short-title: getMappedRange()
 slug: Web/API/GPUBuffer/getMappedRange
 page-type: web-api-instance-method
 status:

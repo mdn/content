@@ -1,5 +1,6 @@
 ---
-title: MediaKeys.setServerCertificate()
+title: "MediaKeys: setServerCertificate() method"
+short-title: setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
 page-type: web-api-instance-method
 browser-compat: api.MediaKeys.setServerCertificate

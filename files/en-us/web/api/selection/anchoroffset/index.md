@@ -1,5 +1,6 @@
 ---
-title: Selection.anchorOffset
+title: "Selection: anchorOffset property"
+short-title: anchorOffset
 slug: Web/API/Selection/anchorOffset
 page-type: web-api-instance-property
 browser-compat: api.Selection.anchorOffset

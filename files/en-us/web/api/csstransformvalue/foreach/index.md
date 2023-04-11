@@ -1,5 +1,6 @@
 ---
-title: cssTransformValue.forEach()
+title: "cssTransformValue: forEach() method"
+short-title: forEach()
 slug: Web/API/CSSTransformValue/forEach
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.forEach

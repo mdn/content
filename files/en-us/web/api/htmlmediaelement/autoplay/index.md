@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.autoplay
+title: "HTMLMediaElement: autoplay property"
+short-title: autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.autoplay

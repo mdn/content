@@ -1,5 +1,6 @@
 ---
-title: RTCTrackEvent.track
+title: "RTCTrackEvent: track property"
+short-title: track
 slug: Web/API/RTCTrackEvent/track
 page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.track

@@ -1,5 +1,6 @@
 ---
-title: Window.moveBy()
+title: "Window: moveBy() method"
+short-title: moveBy()
 slug: Web/API/Window/moveBy
 page-type: web-api-instance-method
 browser-compat: api.Window.moveBy

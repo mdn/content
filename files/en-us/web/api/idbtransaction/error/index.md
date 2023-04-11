@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.error
+title: "IDBTransaction: error property"
+short-title: error
 slug: Web/API/IDBTransaction/error
 page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.error

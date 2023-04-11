@@ -1,5 +1,6 @@
 ---
-title: GPUAdapter.requestDevice()
+title: "GPUAdapter: requestDevice() method"
+short-title: requestDevice()
 slug: Web/API/GPUAdapter/requestDevice
 page-type: web-api-instance-method
 status:

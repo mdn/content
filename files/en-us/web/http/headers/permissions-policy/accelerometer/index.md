@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.accelerometer

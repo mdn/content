@@ -1,5 +1,6 @@
 ---
-title: Document.implementation
+title: "Document: implementation property"
+short-title: implementation
 slug: Web/API/Document/implementation
 page-type: web-api-instance-property
 browser-compat: api.Document.implementation

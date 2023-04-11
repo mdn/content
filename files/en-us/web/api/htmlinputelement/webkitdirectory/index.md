@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.webkitdirectory
+title: "HTMLInputElement: webkitdirectory property"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.webkitdirectory

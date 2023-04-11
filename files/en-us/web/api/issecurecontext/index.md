@@ -1,5 +1,6 @@
 ---
-title: isSecureContext
+title: isSecureContext global property
+short-title: isSecureContext
 slug: Web/API/isSecureContext
 page-type: web-api-global-property
 browser-compat: api.isSecureContext

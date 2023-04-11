@@ -1,5 +1,6 @@
 ---
-title: CSSUnitValue()
+title: "CSSUnitValue: CSSUnitValue() constructor"
+short-title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 page-type: web-api-constructor
 browser-compat: api.CSSUnitValue.CSSUnitValue

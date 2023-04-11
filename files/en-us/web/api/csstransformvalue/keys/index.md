@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue.keys()
+title: "CSSTransformValue: keys() method"
+short-title: keys()
 slug: Web/API/CSSTransformValue/keys
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.keys

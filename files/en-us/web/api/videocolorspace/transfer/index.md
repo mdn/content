@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace.transfer
+title: "VideoColorSpace: transfer property"
+short-title: transfer
 slug: Web/API/VideoColorSpace/transfer
 page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.transfer

@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.style
+title: "HTMLElement: style property"
+short-title: style
 slug: Web/API/HTMLElement/style
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.style

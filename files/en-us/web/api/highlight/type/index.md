@@ -1,5 +1,6 @@
 ---
-title: Highlight.type
+title: "Highlight: type property"
+short-title: type
 slug: Web/API/Highlight/type
 page-type: web-api-instance-property
 status:

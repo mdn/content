@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.ready
+title: "WritableStreamDefaultWriter: ready property"
+short-title: ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.ready

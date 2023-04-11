@@ -1,5 +1,6 @@
 ---
-title: WritableStream.locked
+title: "WritableStream: locked property"
+short-title: locked
 slug: Web/API/WritableStream/locked
 page-type: web-api-instance-property
 browser-compat: api.WritableStream.locked

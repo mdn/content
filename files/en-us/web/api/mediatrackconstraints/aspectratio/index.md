@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.aspectRatio
+title: "MediaTrackConstraints: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.aspectRatio

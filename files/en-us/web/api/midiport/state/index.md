@@ -1,5 +1,6 @@
 ---
-title: MIDIPort.state
+title: "MIDIPort: state property"
+short-title: state
 slug: Web/API/MIDIPort/state
 page-type: web-api-instance-property
 browser-compat: api.MIDIPort.state

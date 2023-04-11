@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.sourceFile
+title: "DeprecationReportBody: sourceFile property"
+short-title: sourceFile
 slug: Web/API/DeprecationReportBody/sourceFile
 page-type: web-api-instance-property
 status:

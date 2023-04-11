@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.phone
+title: "PaymentAddress: phone property"
+short-title: phone
 slug: Web/API/PaymentAddress/phone
 page-type: web-api-instance-property
 status:

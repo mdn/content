@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.copyTexSubImage2D()
+title: "WebGLRenderingContext: copyTexSubImage2D() method"
+short-title: copyTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexSubImage2D
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
