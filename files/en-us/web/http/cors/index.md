@@ -1,6 +1,7 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
+page-type: guide
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 

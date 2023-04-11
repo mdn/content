@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.@@iterator
 
 {{JSRef}}
 
-The **`[@@iterator]()`** method of a `Iterator` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.
+The **`[@@iterator]()`** method of {{jsxref("Iterator")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
@@ -45,4 +45,4 @@ for (const value of arrIterator) {
 
 ## See also
 
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- {{jsxref("Statements/for...of", "for...of")}}

@@ -1,6 +1,7 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
+page-type: http-status-code
 browser-compat: http.status.304
 ---
 

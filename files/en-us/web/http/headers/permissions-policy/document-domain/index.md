@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: document-domain"
 slug: Web/HTTP/Headers/Permissions-Policy/document-domain
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.document-domain

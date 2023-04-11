@@ -18,22 +18,8 @@ The **`forEach()`** method of the {{domxref("HighlightRegistry")}} interface exe
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* … */ } )
-forEach((highlight) => { /* … */ } )
-forEach((highlight, name) => { /* … */ } )
-forEach((highlight, name, registry) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* … */ })
-forEach(function(highlight) { /* … */ })
-forEach(function(highlight, name) { /* … */ })
-forEach(function(highlight, name, registry) { /* … */ })
-forEach(function(highlight, name, registry) { /* … */ }, thisArg)
 ```
 
 ### Parameters

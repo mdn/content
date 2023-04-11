@@ -1,6 +1,7 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 ---
 

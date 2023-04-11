@@ -851,7 +851,6 @@
 /en-US/docs/CSS/transition-duration	/en-US/docs/Web/CSS/transition-duration
 /en-US/docs/CSS/transition-property	/en-US/docs/Web/CSS/transition-property
 /en-US/docs/CSS/transition-timing-function	/en-US/docs/Web/CSS/transition-timing-function
-/en-US/docs/CSS/translation-value	/en-US/docs/Web/CSS/translation-value
 /en-US/docs/CSS/unicode-bidi	/en-US/docs/Web/CSS/unicode-bidi
 /en-US/docs/CSS/uri	/en-US/docs/Web/CSS/url
 /en-US/docs/CSS/used_value	/en-US/docs/Web/CSS/used_value
@@ -5625,7 +5624,7 @@
 /en-US/docs/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/MathML	/en-US/docs/Web/MathML
 /en-US/docs/MathML/Attributes	/en-US/docs/Web/MathML/Attribute
-/en-US/docs/MathML/Attributes/Values	/en-US/docs/Web/MathML/Attribute/Values
+/en-US/docs/MathML/Attributes/Values	/en-US/docs/Web/MathML/Values
 /en-US/docs/MathML/Element	/en-US/docs/Web/MathML/Element
 /en-US/docs/MathML/Element/maction	/en-US/docs/Web/MathML/Element/maction
 /en-US/docs/MathML/Element/math	/en-US/docs/Web/MathML/Element/math
@@ -12511,6 +12510,7 @@
 /en-US/docs/Web/Manifest/dir	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/iarc_rating_id	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/lang	/en-US/docs/Web/Manifest
+/en-US/docs/Web/MathML/Attribute/Values	/en-US/docs/Web/MathML/Values
 /en-US/docs/Web/MathML/Element/annotation	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/annotation-xml	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
@@ -13387,7 +13387,6 @@
 /en-US/docs/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /en-US/docs/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
-/en-US/docs/translation-value	/en-US/docs/Web/CSS/translation-value
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var
 /en-US/docs/video	/es/docs/Web/HTML/Elemento/video
