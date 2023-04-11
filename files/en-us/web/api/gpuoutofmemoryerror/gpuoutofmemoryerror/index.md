@@ -1,5 +1,6 @@
 ---
-title: GPUOutOfMemoryError()
+title: "GPUOutOfMemoryError: GPUOutOfMemoryError() constructor"
+short-title: GPUOutOfMemoryError()
 slug: Web/API/GPUOutOfMemoryError/GPUOutOfMemoryError
 page-type: web-api-constructor
 status:

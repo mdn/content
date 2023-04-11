@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.id
+title: "PresentationConnection: id property"
+short-title: id
 slug: Web/API/PresentationConnection/id
 page-type: web-api-instance-property
 status:

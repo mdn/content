@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.beginRenderPass()
+title: "GPUCommandEncoder: beginRenderPass() method"
+short-title: beginRenderPass()
 slug: Web/API/GPUCommandEncoder/beginRenderPass
 page-type: web-api-instance-method
 status:

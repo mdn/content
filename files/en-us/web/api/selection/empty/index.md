@@ -1,5 +1,6 @@
 ---
-title: Selection.empty()
+title: "Selection: empty() method"
+short-title: empty()
 slug: Web/API/Selection/empty
 page-type: web-api-instance-method
 browser-compat: api.Selection.empty

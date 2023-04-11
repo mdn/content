@@ -1,5 +1,6 @@
 ---
-title: OES_vertex_array_object
+title: OES_vertex_array_object extension
+short-title: OES_vertex_array_object
 slug: Web/API/OES_vertex_array_object
 page-type: webgl-extension
 browser-compat: api.OES_vertex_array_object

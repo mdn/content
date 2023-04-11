@@ -1,5 +1,6 @@
 ---
-title: AudioListener.forwardX
+title: "AudioListener: forwardX property"
+short-title: forwardX
 slug: Web/API/AudioListener/forwardX
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.forwardX

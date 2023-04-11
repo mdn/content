@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.openKeyCursor()
+title: "IDBObjectStore: openKeyCursor() method"
+short-title: openKeyCursor()
 slug: Web/API/IDBObjectStore/openKeyCursor
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.openKeyCursor

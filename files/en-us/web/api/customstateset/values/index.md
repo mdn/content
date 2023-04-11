@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.values()
+title: "CustomStateSet: values() method"
+short-title: values()
 slug: Web/API/CustomStateSet/values
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncEvent.tag
+title: "PeriodicSyncEvent: tag property"
+short-title: tag
 slug: Web/API/PeriodicSyncEvent/tag
 page-type: web-api-instance-property
 status:

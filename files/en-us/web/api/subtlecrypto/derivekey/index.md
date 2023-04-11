@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.deriveKey()
+title: "SubtleCrypto: deriveKey() method"
+short-title: deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.deriveKey

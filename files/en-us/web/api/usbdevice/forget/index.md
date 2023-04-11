@@ -1,5 +1,6 @@
 ---
-title: USBDevice.forget()
+title: "USBDevice: forget() method"
+short-title: forget()
 slug: Web/API/USBDevice/forget
 page-type: web-api-instance-method
 status:

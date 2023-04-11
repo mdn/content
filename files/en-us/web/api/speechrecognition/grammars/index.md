@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.grammars
+title: "SpeechRecognition: grammars property"
+short-title: grammars
 slug: Web/API/SpeechRecognition/grammars
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.grammars

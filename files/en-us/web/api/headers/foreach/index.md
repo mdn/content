@@ -1,5 +1,6 @@
 ---
-title: Headers.forEach()
+title: "Headers: forEach() method"
+short-title: forEach()
 slug: Web/API/Headers/forEach
 page-type: web-api-instance-method
 browser-compat: api.Headers.forEach

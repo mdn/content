@@ -1,5 +1,6 @@
 ---
-title: XSLTProcessor.clearParameters()
+title: "XSLTProcessor: clearParameters() method"
+short-title: clearParameters()
 slug: Web/API/XSLTProcessor/clearParameters
 page-type: web-api-instance-method
 browser-compat: api.XSLTProcessor.clearParameters 

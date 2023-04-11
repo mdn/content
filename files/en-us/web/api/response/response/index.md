@@ -1,5 +1,6 @@
 ---
-title: Response()
+title: "Response: Response() constructor"
+short-title: Response()
 slug: Web/API/Response/Response
 page-type: web-api-constructor
 browser-compat: api.Response.Response

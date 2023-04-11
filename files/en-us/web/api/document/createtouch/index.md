@@ -1,5 +1,6 @@
 ---
-title: Document.createTouch()
+title: "Document: createTouch() method"
+short-title: createTouch()
 slug: Web/API/Document/createTouch
 page-type: web-api-instance-method
 status:

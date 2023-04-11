@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.replace()
+title: "CSSStyleSheet: replace() method"
+short-title: replace()
 slug: Web/API/CSSStyleSheet/replace
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.replace

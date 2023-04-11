@@ -1,5 +1,6 @@
 ---
-title: Selection.getRangeAt()
+title: "Selection: getRangeAt() method"
+short-title: getRangeAt()
 slug: Web/API/Selection/getRangeAt
 page-type: web-api-instance-method
 browser-compat: api.Selection.getRangeAt

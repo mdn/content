@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.src
+title: "HTMLImageElement: src property"
+short-title: src
 slug: Web/API/HTMLImageElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.src

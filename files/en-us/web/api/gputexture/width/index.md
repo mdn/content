@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.width
+title: "GPUTexture: width property"
+short-title: width
 slug: Web/API/GPUTexture/width
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace.matrix
+title: "VideoColorSpace: matrix property"
+short-title: matrix
 slug: Web/API/VideoColorSpace/matrix
 page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.matrix

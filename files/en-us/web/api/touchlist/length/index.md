@@ -1,5 +1,6 @@
 ---
-title: TouchList.length
+title: "TouchList: length property"
+short-title: length
 slug: Web/API/TouchList/length
 page-type: web-api-instance-property
 browser-compat: api.TouchList.length

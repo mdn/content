@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.password
+title: "HTMLAreaElement: password property"
+short-title: password
 slug: Web/API/HTMLAreaElement/password
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.password

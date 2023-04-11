@@ -1,5 +1,6 @@
 ---
-title: HTMLDialogElement.show()
+title: "HTMLDialogElement: show() method"
+short-title: show()
 slug: Web/API/HTMLDialogElement/show
 page-type: web-api-instance-method
 browser-compat: api.HTMLDialogElement.show

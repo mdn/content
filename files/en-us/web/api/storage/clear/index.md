@@ -1,5 +1,6 @@
 ---
-title: Storage.clear()
+title: "Storage: clear() method"
+short-title: clear()
 slug: Web/API/Storage/clear
 page-type: web-api-instance-method
 browser-compat: api.Storage.clear

@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.emptyScript
+title: "TrustedTypePolicyFactory: emptyScript property"
+short-title: emptyScript
 slug: Web/API/TrustedTypePolicyFactory/emptyScript
 page-type: web-api-instance-property
 browser-compat: api.TrustedTypePolicyFactory.emptyScript

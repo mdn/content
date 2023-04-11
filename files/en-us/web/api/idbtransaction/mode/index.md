@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.mode
+title: "IDBTransaction: mode property"
+short-title: mode
 slug: Web/API/IDBTransaction/mode
 page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.mode

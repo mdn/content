@@ -1,5 +1,6 @@
 ---
-title: SubmitEvent.submitter
+title: "SubmitEvent: submitter property"
+short-title: submitter
 slug: Web/API/SubmitEvent/submitter
 page-type: web-api-instance-property
 browser-compat: api.SubmitEvent.submitter

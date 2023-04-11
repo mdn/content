@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: icecandidate event"
+short-title: icecandidate
 slug: Web/API/RTCPeerConnection/icecandidate_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.icecandidate_event

@@ -1,6 +1,7 @@
 ---
 title: Connection management in HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
+page-type: guide
 ---
 
 {{HTTPSidebar}}

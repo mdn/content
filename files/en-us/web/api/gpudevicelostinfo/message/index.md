@@ -1,5 +1,6 @@
 ---
-title: GPUDeviceLostInfo.message
+title: "GPUDeviceLostInfo: message property"
+short-title: message
 slug: Web/API/GPUDeviceLostInfo/message
 page-type: web-api-instance-property
 status:

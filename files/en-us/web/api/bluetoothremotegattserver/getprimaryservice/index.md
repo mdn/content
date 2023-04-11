@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.getPrimaryService()
+title: "BluetoothRemoteGATTServer: getPrimaryService() method"
+short-title: getPrimaryService()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryService
 page-type: web-api-instance-method
 status:

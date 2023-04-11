@@ -2,6 +2,8 @@
 title: GPURenderPassEncoder
 slug: Web/API/GPURenderPassEncoder
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPURenderPassEncoder
 ---
 

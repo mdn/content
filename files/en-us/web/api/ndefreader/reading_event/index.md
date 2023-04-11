@@ -1,5 +1,6 @@
 ---
 title: "NDEFReader: reading event"
+short-title: reading
 slug: Web/API/NDEFReader/reading_event
 page-type: web-api-event
 status:

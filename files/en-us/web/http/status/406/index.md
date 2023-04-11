@@ -1,6 +1,7 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
+page-type: http-status-code
 browser-compat: http.status.406
 ---
 

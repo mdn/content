@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.duration
+title: "EncodedAudioChunk: duration property"
+short-title: duration
 slug: Web/API/EncodedAudioChunk/duration
 page-type: web-api-instance-property
 status:

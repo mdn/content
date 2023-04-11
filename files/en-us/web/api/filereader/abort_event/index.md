@@ -1,5 +1,6 @@
 ---
 title: "FileReader: abort event"
+short-title: abort
 slug: Web/API/FileReader/abort_event
 page-type: web-api-event
 browser-compat: api.FileReader.abort_event

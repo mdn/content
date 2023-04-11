@@ -1,5 +1,6 @@
 ---
-title: GPUComputePassEncoder.dispatchWorkgroupsIndirect()
+title: "GPUComputePassEncoder: dispatchWorkgroupsIndirect() method"
+short-title: dispatchWorkgroupsIndirect()
 slug: Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect
 page-type: web-api-instance-method
 status:

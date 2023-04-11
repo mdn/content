@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.compressedTexImage[23]D()
+title: "WebGLRenderingContext: compressedTexImage[23]D() method"
+short-title: compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 page-type: web-api-instance-method
 browser-compat:

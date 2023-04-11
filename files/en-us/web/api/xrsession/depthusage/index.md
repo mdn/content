@@ -1,5 +1,6 @@
 ---
-title: XRSession.depthUsage
+title: "XRSession: depthUsage property"
+short-title: depthUsage
 slug: Web/API/XRSession/depthUsage
 page-type: web-api-instance-property
 status:

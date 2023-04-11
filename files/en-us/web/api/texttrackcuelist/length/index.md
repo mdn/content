@@ -1,5 +1,6 @@
 ---
-title: TextTrackCueList.length
+title: "TextTrackCueList: length property"
+short-title: length
 slug: Web/API/TextTrackCueList/length
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCueList.length

@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.firstElementChild
+title: "DocumentFragment: firstElementChild property"
+short-title: firstElementChild
 slug: Web/API/DocumentFragment/firstElementChild
 page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.firstElementChild

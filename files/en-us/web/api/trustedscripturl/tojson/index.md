@@ -1,5 +1,6 @@
 ---
-title: TrustedScriptURL.toJSON()
+title: "TrustedScriptURL: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TrustedScriptURL/toJSON
 page-type: web-api-instance-method
 browser-compat: api.TrustedScriptURL.toJSON

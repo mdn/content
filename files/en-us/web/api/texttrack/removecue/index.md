@@ -1,5 +1,6 @@
 ---
-title: TextTrack.removeCue()
+title: "TextTrack: removeCue() method"
+short-title: removeCue()
 slug: Web/API/TextTrack/removeCue
 page-type: web-api-instance-method
 browser-compat: api.TextTrack.removeCue

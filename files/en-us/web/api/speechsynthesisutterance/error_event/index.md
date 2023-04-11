@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: error event"
+short-title: error
 slug: Web/API/SpeechSynthesisUtterance/error_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.error_event

@@ -28,7 +28,7 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
     <tr>
       <th scope="row">Channel count mode</th>
       <td>
-        <code>"explicit</code>" Older implementations, as per earlier versions
+        <code>"explicit"</code> Older implementations, as per earlier versions
         of the spec use <code>"max"</code>.
       </td>
     </tr>

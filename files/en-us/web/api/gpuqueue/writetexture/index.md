@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.writeTexture()
+title: "GPUQueue: writeTexture() method"
+short-title: writeTexture()
 slug: Web/API/GPUQueue/writeTexture
 page-type: web-api-instance-method
 status:

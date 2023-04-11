@@ -1,5 +1,6 @@
 ---
-title: XPathResult.numberValue
+title: "XPathResult: numberValue property"
+short-title: numberValue
 slug: Web/API/XPathResult/numberValue
 page-type: web-api-instance-property
 browser-compat: api.XPathResult.numberValue

@@ -151,7 +151,7 @@ In both cases the approach is less elegant, and does not grant access to private
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/static", "static")}}
 - {{jsxref("Statements/class", "class")}}

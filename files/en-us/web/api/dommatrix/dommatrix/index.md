@@ -1,5 +1,6 @@
 ---
-title: DOMMatrix()
+title: "DOMMatrix: DOMMatrix() constructor"
+short-title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 page-type: web-api-constructor
 browser-compat: api.DOMMatrix.DOMMatrix

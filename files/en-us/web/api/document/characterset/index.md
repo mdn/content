@@ -1,5 +1,6 @@
 ---
-title: Document.characterSet
+title: "Document: characterSet property"
+short-title: characterSet
 slug: Web/API/Document/characterSet
 page-type: web-api-instance-property
 browser-compat: api.Document.characterSet

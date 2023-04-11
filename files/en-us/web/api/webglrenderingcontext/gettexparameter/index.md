@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getTexParameter()
+title: "WebGLRenderingContext: getTexParameter() method"
+short-title: getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getTexParameter

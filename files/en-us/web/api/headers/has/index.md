@@ -1,5 +1,6 @@
 ---
-title: Headers.has()
+title: "Headers: has() method"
+short-title: has()
 slug: Web/API/Headers/has
 page-type: web-api-instance-method
 browser-compat: api.Headers.has

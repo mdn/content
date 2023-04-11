@@ -1,5 +1,6 @@
 ---
-title: VRPose.angularAcceleration
+title: "VRPose: angularAcceleration property"
+short-title: angularAcceleration
 slug: Web/API/VRPose/angularAcceleration
 page-type: web-api-instance-property
 status:

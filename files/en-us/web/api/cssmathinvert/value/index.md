@@ -1,5 +1,6 @@
 ---
-title: CSSMathInvert.value
+title: "CSSMathInvert: value property"
+short-title: value
 slug: Web/API/CSSMathInvert/value
 page-type: web-api-instance-property
 browser-compat: api.CSSMathInvert.value

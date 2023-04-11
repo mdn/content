@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.resume()
+title: "MediaRecorder: resume() method"
+short-title: resume()
 slug: Web/API/MediaRecorder/resume
 page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.resume

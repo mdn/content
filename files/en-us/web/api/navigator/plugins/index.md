@@ -1,5 +1,6 @@
 ---
-title: Navigator.plugins
+title: "Navigator: plugins property"
+short-title: plugins
 slug: Web/API/Navigator/plugins
 page-type: web-api-instance-property
 status:

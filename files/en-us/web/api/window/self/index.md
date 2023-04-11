@@ -1,5 +1,6 @@
 ---
-title: Window.self
+title: "Window: self property"
+short-title: self
 slug: Web/API/Window/self
 page-type: web-api-instance-property
 browser-compat: api.Window.self

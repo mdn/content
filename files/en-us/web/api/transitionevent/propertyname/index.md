@@ -1,5 +1,6 @@
 ---
-title: TransitionEvent.propertyName
+title: "TransitionEvent: propertyName property"
+short-title: propertyName
 slug: Web/API/TransitionEvent/propertyName
 page-type: web-api-instance-property
 browser-compat: api.TransitionEvent.propertyName

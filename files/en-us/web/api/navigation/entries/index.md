@@ -1,5 +1,6 @@
 ---
-title: Navigation.entries()
+title: "Navigation: entries() method"
+short-title: entries()
 slug: Web/API/Navigation/entries
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: BarcodeDetector.getSupportedFormats()
+title: "BarcodeDetector: getSupportedFormats() static method"
+short-title: getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
 page-type: web-api-static-method
 status:

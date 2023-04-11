@@ -1,5 +1,6 @@
 ---
-title: Gamepad.mapping
+title: "Gamepad: mapping property"
+short-title: mapping
 slug: Web/API/Gamepad/mapping
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.mapping

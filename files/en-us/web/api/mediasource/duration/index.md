@@ -1,5 +1,6 @@
 ---
-title: MediaSource.duration
+title: "MediaSource: duration property"
+short-title: duration
 slug: Web/API/MediaSource/duration
 page-type: web-api-instance-property
 browser-compat: api.MediaSource.duration

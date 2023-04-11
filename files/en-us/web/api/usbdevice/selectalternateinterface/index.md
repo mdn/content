@@ -1,5 +1,6 @@
 ---
-title: USBDevice.selectAlternateInterface()
+title: "USBDevice: selectAlternateInterface() method"
+short-title: selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
 page-type: web-api-instance-method
 status:

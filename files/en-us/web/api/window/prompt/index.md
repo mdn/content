@@ -1,5 +1,6 @@
 ---
-title: Window.prompt()
+title: "Window: prompt() method"
+short-title: prompt()
 slug: Web/API/Window/prompt
 page-type: web-api-instance-method
 browser-compat: api.Window.prompt

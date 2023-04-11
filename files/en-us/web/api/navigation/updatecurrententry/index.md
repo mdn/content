@@ -1,5 +1,6 @@
 ---
-title: Navigation.updateCurrentEntry()
+title: "Navigation: updateCurrentEntry() method"
+short-title: updateCurrentEntry()
 slug: Web/API/Navigation/updateCurrentEntry
 page-type: web-api-instance-method
 status:

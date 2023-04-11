@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.writeTimestamp()
+title: "GPUCommandEncoder: writeTimestamp() method"
+short-title: writeTimestamp()
 slug: Web/API/GPUCommandEncoder/writeTimestamp
 page-type: web-api-instance-method
 status:

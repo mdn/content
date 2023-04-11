@@ -1,5 +1,6 @@
 ---
-title: CSSPrimitiveValue.getRectValue()
+title: "CSSPrimitiveValue: getRectValue() method"
+short-title: getRectValue()
 slug: Web/API/CSSPrimitiveValue/getRectValue
 page-type: web-api-instance-method
 status:

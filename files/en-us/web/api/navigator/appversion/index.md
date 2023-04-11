@@ -1,5 +1,6 @@
 ---
-title: Navigator.appVersion
+title: "Navigator: appVersion property"
+short-title: appVersion
 slug: Web/API/Navigator/appVersion
 page-type: web-api-instance-property
 status:

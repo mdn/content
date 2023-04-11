@@ -1,5 +1,6 @@
 ---
-title: GPUUncapturedErrorEvent.error
+title: "GPUUncapturedErrorEvent: error property"
+short-title: error
 slug: Web/API/GPUUncapturedErrorEvent/error
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.keyPath
+title: "IDBObjectStore: keyPath property"
+short-title: keyPath
 slug: Web/API/IDBObjectStore/keyPath
 page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.keyPath

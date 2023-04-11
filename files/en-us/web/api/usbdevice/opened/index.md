@@ -1,5 +1,6 @@
 ---
-title: USBDevice.opened
+title: "USBDevice: opened property"
+short-title: opened
 slug: Web/API/USBDevice/opened
 page-type: web-api-instance-property
 status:

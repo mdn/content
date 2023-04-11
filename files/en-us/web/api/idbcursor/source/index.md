@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.source
+title: "IDBCursor: source property"
+short-title: source
 slug: Web/API/IDBCursor/source
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.source

@@ -1,5 +1,6 @@
 ---
-title: Navigator.serviceWorker
+title: "Navigator: serviceWorker property"
+short-title: serviceWorker
 slug: Web/API/Navigator/serviceWorker
 page-type: web-api-instance-property
 browser-compat: api.Navigator.serviceWorker

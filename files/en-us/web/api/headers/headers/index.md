@@ -1,5 +1,6 @@
 ---
-title: Headers()
+title: "Headers: Headers() constructor"
+short-title: Headers()
 slug: Web/API/Headers/Headers
 page-type: web-api-constructor
 browser-compat: api.Headers.Headers

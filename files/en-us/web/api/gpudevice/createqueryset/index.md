@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createQuerySet()
+title: "GPUDevice: createQuerySet() method"
+short-title: createQuerySet()
 slug: Web/API/GPUDevice/createQuerySet
 page-type: web-api-instance-method
 status:

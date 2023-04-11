@@ -1,5 +1,6 @@
 ---
-title: VideoFrame()
+title: "VideoFrame: VideoFrame() constructor"
+short-title: VideoFrame()
 slug: Web/API/VideoFrame/VideoFrame
 page-type: web-api-constructor
 browser-compat: api.VideoFrame.VideoFrame

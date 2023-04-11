@@ -1,5 +1,6 @@
 ---
-title: Animation.timeline
+title: "Animation: timeline property"
+short-title: timeline
 slug: Web/API/Animation/timeline
 page-type: web-api-instance-property
 browser-compat: api.Animation.timeline

@@ -1,5 +1,6 @@
 ---
-title: WebTransport.ready
+title: "WebTransport: ready property"
+short-title: ready
 slug: Web/API/WebTransport/ready
 page-type: web-api-instance-property
 status:

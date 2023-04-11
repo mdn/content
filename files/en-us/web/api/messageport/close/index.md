@@ -1,5 +1,6 @@
 ---
-title: MessagePort.close()
+title: "MessagePort: close() method"
+short-title: close()
 slug: Web/API/MessagePort/close
 page-type: web-api-instance-method
 browser-compat: api.MessagePort.close

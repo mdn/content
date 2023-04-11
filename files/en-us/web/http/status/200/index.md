@@ -1,6 +1,7 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
+page-type: http-status-code
 browser-compat: http.status.200
 ---
 

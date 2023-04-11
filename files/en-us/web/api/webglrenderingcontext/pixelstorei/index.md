@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.pixelStorei()
+title: "WebGLRenderingContext: pixelStorei() method"
+short-title: pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.pixelStorei

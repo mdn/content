@@ -1,5 +1,6 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() static method"
+short-title: redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
 browser-compat: api.Response.redirect

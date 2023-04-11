@@ -1,5 +1,5 @@
 ---
-title: get ArrayBuffer[@@species]
+title: ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.@@species

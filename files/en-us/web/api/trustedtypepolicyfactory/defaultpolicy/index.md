@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.defaultPolicy
+title: "TrustedTypePolicyFactory: defaultPolicy property"
+short-title: defaultPolicy
 slug: Web/API/TrustedTypePolicyFactory/defaultPolicy
 page-type: web-api-instance-property
 browser-compat: api.TrustedTypePolicyFactory.defaultPolicy

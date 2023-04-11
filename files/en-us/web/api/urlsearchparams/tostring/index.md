@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.toString()
+title: "URLSearchParams: toString() method"
+short-title: toString()
 slug: Web/API/URLSearchParams/toString
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.toString

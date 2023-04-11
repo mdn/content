@@ -1,5 +1,6 @@
 ---
-title: FileSystemWritableFileStream.write()
+title: "FileSystemWritableFileStream: write() method"
+short-title: write()
 slug: Web/API/FileSystemWritableFileStream/write
 page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.write

@@ -1,5 +1,6 @@
 ---
-title: Event.composed
+title: "Event: composed property"
+short-title: composed
 slug: Web/API/Event/composed
 page-type: web-api-instance-property
 browser-compat: api.Event.composed

@@ -1,8 +1,9 @@
 ---
-title: OES_draw_buffers_indexed.blendEquationSeparateiOES()
+title: "OES_draw_buffers_indexed: blendEquationSeparateiOES() method"
+short-title: blendEquationSeparateiOES()
 slug: Web/API/OES_draw_buffers_indexed/blendEquationSeparateiOES
 page-type: web-api-instance-method
-browser-compat: api.OES_draw_buffers_indexed.blendEquationSeparateiOES 
+browser-compat: api.OES_draw_buffers_indexed.blendEquationSeparateiOES
 ---
 
 {{APIRef("WebGL")}}

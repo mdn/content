@@ -1,5 +1,6 @@
 ---
-title: USBDevice.releaseInterface()
+title: "USBDevice: releaseInterface() method"
+short-title: releaseInterface()
 slug: Web/API/USBDevice/releaseInterface
 page-type: web-api-instance-method
 status:

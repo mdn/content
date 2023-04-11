@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.altKey
+title: "MouseEvent: altKey property"
+short-title: altKey
 slug: Web/API/MouseEvent/altKey
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.altKey

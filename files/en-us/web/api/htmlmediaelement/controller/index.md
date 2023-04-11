@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.controller
+title: "HTMLMediaElement: controller property"
+short-title: controller
 slug: Web/API/HTMLMediaElement/controller
 page-type: web-api-instance-property
 status:

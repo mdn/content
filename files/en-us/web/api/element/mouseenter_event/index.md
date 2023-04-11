@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseenter event"
+short-title: mouseenter
 slug: Web/API/Element/mouseenter_event
 page-type: web-api-event
 browser-compat: api.Element.mouseenter_event

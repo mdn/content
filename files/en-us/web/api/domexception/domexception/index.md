@@ -1,5 +1,6 @@
 ---
-title: DOMException()
+title: "DOMException: DOMException() constructor"
+short-title: DOMException()
 slug: Web/API/DOMException/DOMException
 page-type: web-api-constructor
 browser-compat: api.DOMException.DOMException

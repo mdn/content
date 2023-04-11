@@ -1,5 +1,6 @@
 ---
-title: GPUDeviceLostInfo.reason
+title: "GPUDeviceLostInfo: reason property"
+short-title: reason
 slug: Web/API/GPUDeviceLostInfo/reason
 page-type: web-api-instance-property
 status:

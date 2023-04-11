@@ -1,5 +1,6 @@
 ---
-title: Headers.set()
+title: "Headers: set() method"
+short-title: set()
 slug: Web/API/Headers/set
 page-type: web-api-instance-method
 browser-compat: api.Headers.set

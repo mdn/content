@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.values()
+title: "StylePropertyMapReadOnly: values() method"
+short-title: values()
 slug: Web/API/StylePropertyMapReadOnly/values
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.values

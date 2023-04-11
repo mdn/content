@@ -1,5 +1,6 @@
 ---
-title: XRLightProbe.probeSpace
+title: "XRLightProbe: probeSpace property"
+short-title: probeSpace
 slug: Web/API/XRLightProbe/probeSpace
 page-type: web-api-instance-property
 status:

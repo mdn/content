@@ -1,5 +1,6 @@
 ---
-title: GPUShaderModule.label
+title: "GPUShaderModule: label property"
+short-title: label
 slug: Web/API/GPUShaderModule/label
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.pliCount
+title: "RTCRtpStreamStats: pliCount property"
+short-title: pliCount
 slug: Web/API/RTCRtpStreamStats/pliCount
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.pliCount

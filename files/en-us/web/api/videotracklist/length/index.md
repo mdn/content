@@ -1,5 +1,6 @@
 ---
-title: VideoTrackList.length
+title: "VideoTrackList: length property"
+short-title: length
 slug: Web/API/VideoTrackList/length
 page-type: web-api-instance-property
 browser-compat: api.VideoTrackList.length

@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.device
+title: "BluetoothRemoteGATTServer: device property"
+short-title: device
 slug: Web/API/BluetoothRemoteGATTServer/device
 page-type: web-api-instance-property
 status:

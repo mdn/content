@@ -1,5 +1,6 @@
 ---
-title: MediaSource.isTypeSupported()
+title: "MediaSource: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 page-type: web-api-static-method
 browser-compat: api.MediaSource.isTypeSupported

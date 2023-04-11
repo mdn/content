@@ -1,5 +1,6 @@
 ---
-title: Navigator.getAutoplayPolicy()
+title: "Navigator: getAutoplayPolicy() method"
+short-title: getAutoplayPolicy()
 slug: Web/API/Navigator/getAutoplayPolicy
 page-type: web-api-instance-method
 status:

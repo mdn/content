@@ -1,5 +1,6 @@
 ---
-title: GPUShaderModule.getCompilationInfo()
+title: "GPUShaderModule: getCompilationInfo() method"
+short-title: getCompilationInfo()
 slug: Web/API/GPUShaderModule/getCompilationInfo
 page-type: web-api-instance-method
 status:

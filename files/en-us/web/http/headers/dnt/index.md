@@ -1,6 +1,7 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
+page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.DNT

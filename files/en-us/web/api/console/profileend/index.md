@@ -1,5 +1,6 @@
 ---
-title: console.profileEnd()
+title: "console: profileEnd() method"
+short-title: profileEnd()
 slug: Web/API/console/profileEnd
 page-type: web-api-instance-method
 status:

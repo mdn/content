@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.lang
+title: "SpeechRecognition: lang property"
+short-title: lang
 slug: Web/API/SpeechRecognition/lang
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.lang

@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createGain()
+title: "BaseAudioContext: createGain() method"
+short-title: createGain()
 slug: Web/API/BaseAudioContext/createGain
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createGain

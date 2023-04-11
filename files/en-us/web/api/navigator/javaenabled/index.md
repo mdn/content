@@ -1,5 +1,6 @@
 ---
-title: Navigator.javaEnabled()
+title: "Navigator: javaEnabled() method"
+short-title: javaEnabled()
 slug: Web/API/Navigator/javaEnabled
 page-type: web-api-instance-method
 status:

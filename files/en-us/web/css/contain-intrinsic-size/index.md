@@ -39,6 +39,7 @@ contain-intrinsic-size: auto 300px auto 4rem;
 contain-intrinsic-size: inherit;
 contain-intrinsic-size: initial;
 contain-intrinsic-size: revert;
+contain-intrinsic-size: revert-layer;
 contain-intrinsic-size: unset;
 ```
 

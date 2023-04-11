@@ -1,5 +1,6 @@
 ---
 title: "Sensor: activate event"
+short-title: activate
 slug: Web/API/Sensor/activate_event
 page-type: web-api-event
 browser-compat: api.Sensor.activate_event

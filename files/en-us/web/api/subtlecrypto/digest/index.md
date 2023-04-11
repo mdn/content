@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.digest()
+title: "SubtleCrypto: digest() method"
+short-title: digest()
 slug: Web/API/SubtleCrypto/digest
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.digest

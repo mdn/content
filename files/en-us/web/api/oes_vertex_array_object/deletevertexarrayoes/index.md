@@ -1,5 +1,6 @@
 ---
-title: OES_vertex_array_object.deleteVertexArrayOES()
+title: "OES_vertex_array_object: deleteVertexArrayOES() method"
+short-title: deleteVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/deleteVertexArrayOES
 page-type: webgl-extension-method
 browser-compat: api.OES_vertex_array_object.deleteVertexArrayOES

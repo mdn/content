@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.ctrlKey
+title: "MouseEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.ctrlKey

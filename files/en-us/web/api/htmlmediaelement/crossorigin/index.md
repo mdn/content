@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.crossOrigin
+title: "HTMLMediaElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.crossOrigin

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.setLocalDescription()
+title: "RTCPeerConnection: setLocalDescription() method"
+short-title: setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setLocalDescription

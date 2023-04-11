@@ -1,5 +1,6 @@
 ---
-title: Selection.collapseToStart()
+title: "Selection: collapseToStart() method"
+short-title: collapseToStart()
 slug: Web/API/Selection/collapseToStart
 page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToStart

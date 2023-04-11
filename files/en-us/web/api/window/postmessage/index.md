@@ -1,5 +1,6 @@
 ---
-title: Window.postMessage()
+title: "Window: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Window/postMessage
 page-type: web-api-instance-method
 browser-compat: api.Window.postMessage

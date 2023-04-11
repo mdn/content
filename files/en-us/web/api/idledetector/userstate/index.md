@@ -1,5 +1,6 @@
 ---
-title: IdleDetector.userState
+title: "IdleDetector: userState property"
+short-title: userState
 slug: Web/API/IdleDetector/userState
 page-type: web-api-instance-property
 status:

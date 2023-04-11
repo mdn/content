@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackGenerator()
+title: "MediaStreamTrackGenerator: MediaStreamTrackGenerator() constructor"
+short-title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
 page-type: web-api-constructor
 status:

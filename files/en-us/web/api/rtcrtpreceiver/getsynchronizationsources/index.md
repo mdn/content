@@ -1,5 +1,6 @@
 ---
-title: RTCRtpReceiver.getSynchronizationSources()
+title: "RTCRtpReceiver: getSynchronizationSources() method"
+short-title: getSynchronizationSources()
 slug: Web/API/RTCRtpReceiver/getSynchronizationSources
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpReceiver.getSynchronizationSources

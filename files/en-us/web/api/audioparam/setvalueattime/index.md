@@ -1,5 +1,6 @@
 ---
-title: AudioParam.setValueAtTime()
+title: "AudioParam: setValueAtTime() method"
+short-title: setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 page-type: web-api-instance-method
 browser-compat: api.AudioParam.setValueAtTime

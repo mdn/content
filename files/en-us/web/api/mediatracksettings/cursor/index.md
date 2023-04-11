@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.cursor
+title: "MediaTrackSettings: cursor property"
+short-title: cursor
 slug: Web/API/MediaTrackSettings/cursor
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.cursor

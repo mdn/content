@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setScissorRect()
+title: "GPURenderPassEncoder: setScissorRect() method"
+short-title: setScissorRect()
 slug: Web/API/GPURenderPassEncoder/setScissorRect
 page-type: web-api-instance-method
 status:

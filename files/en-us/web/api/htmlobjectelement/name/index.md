@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.name
+title: "HTMLObjectElement: name property"
+short-title: name
 slug: Web/API/HTMLObjectElement/name
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.name

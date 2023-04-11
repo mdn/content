@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.nextNode()
+title: "TreeWalker: nextNode() method"
+short-title: nextNode()
 slug: Web/API/TreeWalker/nextNode
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.nextNode

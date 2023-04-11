@@ -1,5 +1,6 @@
 ---
 title: "Sensor: reading event"
+short-title: reading
 slug: Web/API/Sensor/reading_event
 page-type: web-api-event
 browser-compat: api.Sensor.reading_event

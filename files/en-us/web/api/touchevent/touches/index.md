@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.touches
+title: "TouchEvent: touches property"
+short-title: touches
 slug: Web/API/TouchEvent/touches
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.touches
@@ -16,7 +17,7 @@ You can think of it as how many separate fingers are able to be identified as to
 the screen.
 
 > **Note:** Touches inside the array are not necessarily ordered by order of occurrences (the
-i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the `touch` object IDs.
+> i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the `touch` object IDs.
 
 ## Value
 

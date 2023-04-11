@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.referrerPolicy

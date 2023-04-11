@@ -1,5 +1,6 @@
 ---
-title: Element.ariaDisabled
+title: "Element: ariaDisabled property"
+short-title: ariaDisabled
 slug: Web/API/Element/ariaDisabled
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaDisabled

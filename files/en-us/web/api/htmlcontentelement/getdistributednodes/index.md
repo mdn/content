@@ -1,5 +1,6 @@
 ---
-title: HTMLContentElement.getDistributedNodes()
+title: "HTMLContentElement: getDistributedNodes() method"
+short-title: getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
 page-type: web-api-instance-method
 status:

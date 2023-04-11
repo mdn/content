@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.results
+title: "SpeechRecognitionEvent: results property"
+short-title: results
 slug: Web/API/SpeechRecognitionEvent/results
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionEvent.results

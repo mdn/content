@@ -1,5 +1,6 @@
 ---
-title: AudioContext.close()
+title: "AudioContext: close() method"
+short-title: close()
 slug: Web/API/AudioContext/close
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.close

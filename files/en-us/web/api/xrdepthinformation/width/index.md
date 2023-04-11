@@ -1,5 +1,6 @@
 ---
-title: XRDepthInformation.width
+title: "XRDepthInformation: width property"
+short-title: width
 slug: Web/API/XRDepthInformation/width
 page-type: web-api-instance-property
 status:
