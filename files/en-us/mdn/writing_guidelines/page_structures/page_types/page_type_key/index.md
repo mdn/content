@@ -66,6 +66,17 @@ This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web
 - `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
 - `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
 
+### HTTP page types
+
+This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+- `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed).
+- `http-permissions-policy-directive`: a [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) directive, like [`accelerometer`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer).
+- `http-header`: an [HTTP header](/en-US/docs/Web/HTTP/Headers), like [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer).
+- `http-method`: an [HTTP request method](/en-US/docs/Web/HTTP/Methods) like [`GET`](/en-US/docs/Web/HTTP/Methods/GET).
+- `http-status-code`: an [HTTP response status code](/en-US/docs/Web/HTTP/Status), like [`404`](/en-US/docs/Web/HTTP/Status/404).
+
 ### JavaScript page types
 
 This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/JavaScript). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
@@ -85,17 +96,6 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-static-accessor-property`: a static accessor property, like [`RegExp.lastMatch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch).
 - `javascript-static-data-property`: a static data property, like [`Math.E`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E).
 - `javascript-static-method`: a static method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
-
-### HTTP page types
-
-This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
-
-- `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
-- `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed).
-- `http-permissions-policy-directive`: a [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) directive, like [`accelerometer`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer).
-- `http-header`: an [HTTP header](/en-US/docs/Web/HTTP/Headers), like [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer).
-- `http-method`: an [HTTP request method](/en-US/docs/Web/HTTP/Methods) like [`GET`](/en-US/docs/Web/HTTP/Methods/GET).
-- `http-status-code`: an [HTTP response status code](/en-US/docs/Web/HTTP/Status), like [`404`](/en-US/docs/Web/HTTP/Status/404).
 
 ### SVG page types
 
