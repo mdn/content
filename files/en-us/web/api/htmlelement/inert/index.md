@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.inert
 
 The {{domxref("HTMLElement")}} property **`inert`** reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. It is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
-It is important to make sure that any content or interactive elements that are important to the functionality of the page are not enclosed within an element that has the `inert` attribute, otherwise they will not be perceivable by all users, or interactive.
+> **Note:** Do not nest interactive elements or important content within elements with the `inert` attribute as inert content and their descendants are neither focusable nor perceivable by all users.
 
 ## Value
 
