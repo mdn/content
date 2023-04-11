@@ -40,7 +40,6 @@ var y = "Outer y";
 
 class A {
   static field = "Inner y";
-
   static {
     var y = this.field;
   }
@@ -68,13 +67,10 @@ The output shows that the blocks and fields are evaluated in execution order.
 ```js
 class MyClass {
   static field1 = console.log("static field1");
-
   static {
     console.log("static block1");
   }
-
   static field2 = console.log("static field2");
-
   static {
     console.log("static block2");
   }
@@ -95,7 +91,6 @@ This code shows how to access a public static field.
 ```js
 class A {
   static field = "static field";
-
   static {
     console.log(this.field);
   }
@@ -127,11 +122,9 @@ let getDPrivateField;
 
 class D {
   #privateField;
-
   constructor(v) {
     this.#privateField = v;
   }
-
   static {
     getDPrivateField = (d) => d.#privateField;
   }
