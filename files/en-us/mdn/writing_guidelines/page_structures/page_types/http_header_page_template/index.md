@@ -20,6 +20,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > title: NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader
+> page-type: http-header
 > status:
 >   - experimental
 >   - deprecated
@@ -31,7 +32,9 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - **title**
 >   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
+> - **page-type**
+>   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
 >   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
