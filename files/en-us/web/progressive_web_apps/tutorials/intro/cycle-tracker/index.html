@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cycle Tracker</title>
+    <link rel="icon" href="icon-512.png" type="image/png" />
+
+    <!-- Load the app's CSS styles. -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Load the app's web app manifest file. -->
+    <link rel="manifest" href="cyclemanifest.json?issue=1" />
+  </head>
+
+  <body>
+    <h1>Cycle Tracker</h1>
+
+    <!-- The form used to add new periods to the app. -->
+    <form id="new-period">
+      <p>
+        <label for="start-date">Start date</label>
+        <input type="date" id="start-date" />
+      </p>
+      <p>
+        <label for="end-date">End date</label>
+        <input type="date" id="end-date" />
+      </p>
+      <p>
+        <button type="submit">Add Period</button>
+      </p>
+    </form>
+
+    <button>Install</button>
+
+    <!-- The list of past periods will be displayed here. -->
+    <ul id="past-periods"></ul>
+
+    <!-- Load the app's main script. -->
+    <script src="app.js"></script>
+
+    <!-- Register the app's service worker. -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </body>
+</html>
