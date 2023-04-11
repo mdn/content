@@ -1,6 +1,7 @@
 ---
 title: <mi>
 slug: Web/MathML/Element/mi
+page-type: mathml-element
 browser-compat: mathml.elements.mi
 ---
 

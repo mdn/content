@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.flush()
+title: "AudioDecoder: flush() method"
+short-title: flush()
 slug: Web/API/AudioDecoder/flush
 page-type: web-api-instance-method
 status:
@@ -37,7 +38,7 @@ If an error occurs, the promise will resolve with one of the following exception
 The following example flushes the `AudioDecoder`.
 
 ```js
-AudioDecoder.flush();
+await audioDecoder.flush();
 ```
 
 ## Specifications

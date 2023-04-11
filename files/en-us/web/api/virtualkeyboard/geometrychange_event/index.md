@@ -1,5 +1,6 @@
 ---
 title: "VirtualKeyboard: geometrychange event"
+short-title: geometrychange
 slug: Web/API/VirtualKeyboard/geometrychange_event
 page-type: web-api-event
 status:

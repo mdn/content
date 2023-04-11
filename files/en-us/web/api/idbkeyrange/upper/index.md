@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.upper
+title: "IDBKeyRange: upper property"
+short-title: upper
 slug: Web/API/IDBKeyRange/upper
 page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.upper

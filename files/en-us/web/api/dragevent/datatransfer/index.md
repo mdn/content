@@ -1,5 +1,6 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 page-type: web-api-instance-property
 browser-compat: api.DragEvent.dataTransfer

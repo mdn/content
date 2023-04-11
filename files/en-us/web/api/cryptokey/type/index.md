@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.type
+title: "CryptoKey: type property"
+short-title: type
 slug: Web/API/CryptoKey/type
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.type

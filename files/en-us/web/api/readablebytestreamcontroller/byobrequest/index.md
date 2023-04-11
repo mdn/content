@@ -1,5 +1,6 @@
 ---
-title: ReadableByteStreamController.byobRequest
+title: "ReadableByteStreamController: byobRequest property"
+short-title: byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
 page-type: web-api-instance-property
 browser-compat: api.ReadableByteStreamController.byobRequest

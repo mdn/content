@@ -1,5 +1,6 @@
 ---
-title: SerialPort.open()
+title: "SerialPort: open() method"
+short-title: open()
 slug: Web/API/SerialPort/open
 page-type: web-api-instance-method
 status:

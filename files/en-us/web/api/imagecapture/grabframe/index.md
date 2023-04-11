@@ -1,5 +1,6 @@
 ---
-title: ImageCapture.grabFrame()
+title: "ImageCapture: grabFrame() method"
+short-title: grabFrame()
 slug: Web/API/ImageCapture/grabFrame
 page-type: web-api-instance-method
 status:

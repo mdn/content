@@ -1,5 +1,6 @@
 ---
-title: ImageCapture() constructor
+title: "ImageCapture: ImageCapture() constructor"
+short-title: ImageCapture()
 slug: Web/API/ImageCapture/ImageCapture
 page-type: web-api-constructor
 status:

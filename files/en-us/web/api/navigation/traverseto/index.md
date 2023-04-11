@@ -1,5 +1,6 @@
 ---
-title: Navigation.traverseTo()
+title: "Navigation: traverseTo() method"
+short-title: traverseTo()
 slug: Web/API/Navigation/traverseTo
 page-type: web-api-instance-method
 status:

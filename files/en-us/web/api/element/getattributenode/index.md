@@ -1,5 +1,6 @@
 ---
-title: Element.getAttributeNode()
+title: "Element: getAttributeNode() method"
+short-title: getAttributeNode()
 slug: Web/API/Element/getAttributeNode
 page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNode

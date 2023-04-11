@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.sheet
+title: "HTMLLinkElement: sheet property"
+short-title: sheet
 slug: Web/API/HTMLLinkElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.sheet

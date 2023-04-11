@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.unique
+title: "IDBIndex: unique property"
+short-title: unique
 slug: Web/API/IDBIndex/unique
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.unique

@@ -76,7 +76,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -163,7 +163,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
+The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
@@ -354,8 +354,8 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (May 14, 2015)

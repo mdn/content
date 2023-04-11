@@ -1,5 +1,6 @@
 ---
-title: MediaQueryListEvent.matches
+title: "MediaQueryListEvent: matches property"
+short-title: matches
 slug: Web/API/MediaQueryListEvent/matches
 page-type: web-api-instance-property
 browser-compat: api.MediaQueryListEvent.matches

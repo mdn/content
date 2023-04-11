@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.currentTime
+title: "HTMLMediaElement: currentTime property"
+short-title: currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentTime
@@ -58,6 +59,6 @@ otherwise adjust the value returned by `currentTime`.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentTime` property
 - {{domxref("HTMLMediaElement.fastSeek()")}}: Another way to set the time
 - {{domxref("HTMLMediaElement.duration")}}: The duration of the media in seconds

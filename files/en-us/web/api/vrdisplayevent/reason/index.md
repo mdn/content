@@ -1,5 +1,6 @@
 ---
-title: VRDisplayEvent.reason
+title: "VRDisplayEvent: reason property"
+short-title: reason
 slug: Web/API/VRDisplayEvent/reason
 page-type: web-api-instance-property
 status:

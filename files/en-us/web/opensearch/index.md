@@ -35,7 +35,7 @@ The XML file that describes a search engine follows the basic template below. Se
 - Description
   - : A brief description of the search engine. It must be **1024 or fewer characters** of plain text, with no HTML or other markup.
 - InputEncoding
-  - : The [character encoding](/en-US/docs/Glossary/character_encoding) to use when submitting input to the search engine.
+  - : The [character encoding](/en-US/docs/Glossary/Character_encoding) to use when submitting input to the search engine.
 - Image
 
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.

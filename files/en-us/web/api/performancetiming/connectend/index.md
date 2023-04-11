@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.connectEnd
+title: "PerformanceTiming: connectEnd property"
+short-title: connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.label
+title: "AudioTrack: label property"
+short-title: label
 slug: Web/API/AudioTrack/label
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.label

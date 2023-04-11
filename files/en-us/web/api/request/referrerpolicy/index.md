@@ -1,11 +1,12 @@
 ---
-title: Request.referrerPolicy
+title: "Request: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/Request/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.Request.referrerPolicy
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`referrerPolicy`** read-only property of the
 {{domxref("Request")}} interface returns the referrer policy, which governs what

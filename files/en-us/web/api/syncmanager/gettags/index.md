@@ -1,5 +1,6 @@
 ---
-title: SyncManager.getTags()
+title: "SyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/SyncManager/getTags
 page-type: web-api-instance-method
 status:

@@ -1,6 +1,7 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
+page-type: http-status-code
 browser-compat: http.status.418
 ---
 

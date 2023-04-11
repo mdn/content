@@ -1,5 +1,6 @@
 ---
-title: CSSPerspective()
+title: "CSSPerspective: CSSPerspective() constructor"
+short-title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
 page-type: web-api-constructor
 browser-compat: api.CSSPerspective.CSSPerspective

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.bindRenderbuffer()
+title: "WebGLRenderingContext: bindRenderbuffer() method"
+short-title: bindRenderbuffer()
 slug: Web/API/WebGLRenderingContext/bindRenderbuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindRenderbuffer

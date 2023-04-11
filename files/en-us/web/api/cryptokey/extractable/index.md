@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.extractable
+title: "CryptoKey: extractable property"
+short-title: extractable
 slug: Web/API/CryptoKey/extractable
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.extractable

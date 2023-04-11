@@ -1,5 +1,6 @@
 ---
-title: CSSTransformComponent.toString()
+title: "CSSTransformComponent: toString() method"
+short-title: toString()
 slug: Web/API/CSSTransformComponent/toString
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformComponent.toString

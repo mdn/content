@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getAttachedShaders()
+title: "WebGLRenderingContext: getAttachedShaders() method"
+short-title: getAttachedShaders()
 slug: Web/API/WebGLRenderingContext/getAttachedShaders
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getAttachedShaders

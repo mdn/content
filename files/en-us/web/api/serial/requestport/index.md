@@ -1,5 +1,6 @@
 ---
-title: Serial.requestPort()
+title: "Serial: requestPort() method"
+short-title: requestPort()
 slug: Web/API/Serial/requestPort
 page-type: web-api-instance-method
 status:

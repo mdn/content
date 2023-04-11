@@ -1,5 +1,6 @@
 ---
-title: File.webkitRelativePath
+title: "File: webkitRelativePath property"
+short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 page-type: web-api-instance-property
 browser-compat: api.File.webkitRelativePath

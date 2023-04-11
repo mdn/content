@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas.width
+title: "OffscreenCanvas: width property"
+short-title: width
 slug: Web/API/OffscreenCanvas/width
 page-type: web-api-instance-property
 browser-compat: api.OffscreenCanvas.width

@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.key
+title: "KeyboardEvent: key property"
+short-title: key
 slug: Web/API/KeyboardEvent/key
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.key

@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace()
+title: "VideoColorSpace: VideoColorSpace() constructor"
+short-title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaAutoComplete
+title: "ElementInternals: ariaAutoComplete property"
+short-title: ariaAutoComplete
 slug: Web/API/ElementInternals/ariaAutoComplete
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaAutoComplete

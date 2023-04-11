@@ -1,5 +1,6 @@
 ---
-title: console.countReset()
+title: "console: countReset() method"
+short-title: countReset()
 slug: Web/API/console/countReset
 page-type: web-api-instance-method
 browser-compat: api.console.countReset

@@ -1,5 +1,6 @@
 ---
-title: MIDIAccess.inputs
+title: "MIDIAccess: inputs property"
+short-title: inputs
 slug: Web/API/MIDIAccess/inputs
 page-type: web-api-instance-property
 browser-compat: api.MIDIAccess.inputs

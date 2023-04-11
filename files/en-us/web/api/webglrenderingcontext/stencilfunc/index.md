@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.stencilFunc()
+title: "WebGLRenderingContext: stencilFunc() method"
+short-title: stencilFunc()
 slug: Web/API/WebGLRenderingContext/stencilFunc
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilFunc

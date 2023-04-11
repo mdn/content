@@ -1,5 +1,6 @@
 ---
-title: Screen.mozEnabled
+title: "Screen: mozEnabled property"
+short-title: mozEnabled
 slug: Web/API/Screen/mozEnabled
 page-type: web-api-instance-property
 status:

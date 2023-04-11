@@ -1,5 +1,6 @@
 ---
-title: CSSContainerRule.containerQuery
+title: "CSSContainerRule: containerQuery property"
+short-title: containerQuery
 slug: Web/API/CSSContainerRule/containerQuery
 page-type: web-api-instance-property
 browser-compat: api.CSSContainerRule.containerQuery

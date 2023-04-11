@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.getCapabilities()
+title: "MediaStreamTrack: getCapabilities() method"
+short-title: getCapabilities()
 slug: Web/API/MediaStreamTrack/getCapabilities
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.getCapabilities

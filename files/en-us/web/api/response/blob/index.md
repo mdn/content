@@ -1,11 +1,12 @@
 ---
-title: Response.blob()
+title: "Response: blob() method"
+short-title: blob()
 slug: Web/API/Response/blob
 page-type: web-api-instance-method
 browser-compat: api.Response.blob
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`blob()`** method of the {{domxref("Response")}} interface takes
 a {{domxref("Response")}} stream and reads it to completion. It returns a promise that

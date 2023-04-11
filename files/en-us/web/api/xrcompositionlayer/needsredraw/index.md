@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.needsRedraw
+title: "XRCompositionLayer: needsRedraw property"
+short-title: needsRedraw
 slug: Web/API/XRCompositionLayer/needsRedraw
 page-type: web-api-instance-property
 status:

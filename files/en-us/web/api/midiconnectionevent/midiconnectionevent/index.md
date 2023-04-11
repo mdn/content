@@ -1,5 +1,6 @@
 ---
-title: MIDIConnectionEvent()
+title: "MIDIConnectionEvent: MIDIConnectionEvent() constructor"
+short-title: MIDIConnectionEvent()
 slug: Web/API/MIDIConnectionEvent/MIDIConnectionEvent
 page-type: web-api-constructor
 browser-compat: api.MIDIConnectionEvent.MIDIConnectionEvent

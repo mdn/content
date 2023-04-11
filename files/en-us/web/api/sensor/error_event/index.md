@@ -1,5 +1,6 @@
 ---
 title: "Sensor: error event"
+short-title: error
 slug: Web/API/Sensor/error_event
 page-type: web-api-event
 browser-compat: api.Sensor.error_event

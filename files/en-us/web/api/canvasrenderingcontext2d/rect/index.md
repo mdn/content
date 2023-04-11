@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.rect()
+title: "CanvasRenderingContext2D: rect() method"
+short-title: rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.rect

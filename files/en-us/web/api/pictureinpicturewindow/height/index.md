@@ -1,5 +1,6 @@
 ---
-title: PictureInPictureWindow.height
+title: "PictureInPictureWindow: height property"
+short-title: height
 slug: Web/API/PictureInPictureWindow/height
 page-type: web-api-instance-property
 browser-compat: api.PictureInPictureWindow.height

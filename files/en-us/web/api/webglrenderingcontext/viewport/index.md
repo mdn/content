@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.viewport()
+title: "WebGLRenderingContext: viewport() method"
+short-title: viewport()
 slug: Web/API/WebGLRenderingContext/viewport
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.viewport

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.toJSON()
+title: "RTCIceCandidate: toJSON() method"
+short-title: toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
 page-type: web-api-instance-method
 browser-compat: api.RTCIceCandidate.toJSON

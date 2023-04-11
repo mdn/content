@@ -1,5 +1,6 @@
 ---
-title: Worklet.addModule()
+title: "Worklet: addModule() method"
+short-title: addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
 browser-compat: api.Worklet.addModule

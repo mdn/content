@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.changedTouches
+title: "TouchEvent: changedTouches property"
+short-title: changedTouches
 slug: Web/API/TouchEvent/changedTouches
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.changedTouches

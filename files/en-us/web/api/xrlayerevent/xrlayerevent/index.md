@@ -1,5 +1,6 @@
 ---
-title: XRLayerEvent()
+title: "XRLayerEvent: XRLayerEvent() constructor"
+short-title: XRLayerEvent()
 slug: Web/API/XRLayerEvent/XRLayerEvent
 page-type: web-api-constructor
 status:

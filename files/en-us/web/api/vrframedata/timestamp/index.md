@@ -1,5 +1,6 @@
 ---
-title: VRFrameData.timestamp
+title: "VRFrameData: timestamp property"
+short-title: timestamp
 slug: Web/API/VRFrameData/timestamp
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
 title: "Element: contentvisibilityautostatechange event"
+short-title: contentvisibilityautostatechange
 slug: Web/API/Element/contentvisibilityautostatechange_event
 page-type: web-api-event
 status:

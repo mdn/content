@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.media
+title: "MediaQueryList: media property"
+short-title: media
 slug: Web/API/MediaQueryList/media
 page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.media

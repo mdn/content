@@ -1,5 +1,6 @@
 ---
-title: ReportingObserver.disconnect()
+title: "ReportingObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/ReportingObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.disconnect

@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.dump()
+title: "WorkerGlobalScope: dump() method"
+short-title: dump()
 slug: Web/API/WorkerGlobalScope/dump
 page-type: web-api-instance-method
 status:

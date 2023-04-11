@@ -1,5 +1,6 @@
 ---
-title: AbortSignal.abort()
+title: "AbortSignal: abort() static method"
+short-title: abort()
 slug: Web/API/AbortSignal/abort
 page-type: web-api-static-method
 browser-compat: api.AbortSignal.abort

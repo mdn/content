@@ -1,5 +1,6 @@
 ---
-title: MediaStream.id
+title: "MediaStream: id property"
+short-title: id
 slug: Web/API/MediaStream/id
 page-type: web-api-instance-property
 browser-compat: api.MediaStream.id

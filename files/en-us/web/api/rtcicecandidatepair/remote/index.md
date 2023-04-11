@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePair.remote
+title: "RTCIceCandidatePair: remote property"
+short-title: remote
 slug: Web/API/RTCIceCandidatePair/remote
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePair.remote

@@ -1,6 +1,6 @@
 ---
 title: Property accessors
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 page-type: javascript-operator
 browser-compat: javascript.operators.property_accessors
 ---

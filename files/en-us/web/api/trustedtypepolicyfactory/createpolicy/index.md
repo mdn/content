@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.createPolicy()
+title: "TrustedTypePolicyFactory: createPolicy() method"
+short-title: createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.createPolicy

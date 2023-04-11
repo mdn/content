@@ -1,5 +1,6 @@
 ---
-title: LaunchQueue.setConsumer()
+title: "LaunchQueue: setConsumer() method"
+short-title: setConsumer()
 slug: Web/API/LaunchQueue/setConsumer
 page-type: web-api-instance-method
 status:

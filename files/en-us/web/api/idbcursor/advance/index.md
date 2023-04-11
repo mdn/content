@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.advance()
+title: "IDBCursor: advance() method"
+short-title: advance()
 slug: Web/API/IDBCursor/advance
 page-type: web-api-instance-method
 browser-compat: api.IDBCursor.advance

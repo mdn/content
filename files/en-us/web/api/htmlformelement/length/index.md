@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.length
+title: "HTMLFormElement: length property"
+short-title: length
 slug: Web/API/HTMLFormElement/length
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.length

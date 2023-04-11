@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.close()
+title: "VideoDecoder: close() method"
+short-title: close()
 slug: Web/API/VideoDecoder/close
 page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.close

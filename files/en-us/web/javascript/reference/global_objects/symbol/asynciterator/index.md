@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
 
 {{JSRef}}
 
-The **`Symbol.asyncIterator`** static data property represents the well-known symbol specifying the method that returns the [async iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
+The **`Symbol.asyncIterator`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@asyncIterator`. The [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) looks up this symbol for the method that returns the async iterator for an object. In order for an object to be async iterable, it must have an `@@asyncIterator` key.
 
 {{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
 
@@ -16,10 +16,6 @@ The **`Symbol.asyncIterator`** static data property represents the well-known sy
 The well-known symbol `@@asyncIterator`.
 
 {{js_property_attributes(0, 0, 0)}}
-
-## Description
-
-The `Symbol.asyncIterator` symbol is a builtin symbol that is used to access an object's `@@asyncIterator` method. In order for an object to be async iterable, it must have a `Symbol.asyncIterator` key.
 
 ## Examples
 

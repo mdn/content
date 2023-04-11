@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.frame
+title: "HTMLTableElement: frame property"
+short-title: frame
 slug: Web/API/HTMLTableElement/frame
 page-type: web-api-instance-property
 status:

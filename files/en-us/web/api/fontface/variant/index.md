@@ -1,5 +1,6 @@
 ---
-title: FontFace.variant
+title: "FontFace: variant property"
+short-title: variant
 slug: Web/API/FontFace/variant
 page-type: web-api-instance-property
 browser-compat: api.FontFace.variant

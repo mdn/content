@@ -1,5 +1,6 @@
 ---
-title: CharacterData.previousElementSibling
+title: "CharacterData: previousElementSibling property"
+short-title: previousElementSibling
 slug: Web/API/CharacterData/previousElementSibling
 page-type: web-api-instance-property
 browser-compat: api.Element.previousElementSibling

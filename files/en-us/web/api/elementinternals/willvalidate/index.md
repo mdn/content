@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.willValidate
+title: "ElementInternals: willValidate property"
+short-title: willValidate
 slug: Web/API/ElementInternals/willValidate
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.willValidate

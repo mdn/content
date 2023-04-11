@@ -1,5 +1,6 @@
 ---
-title: WebTransportError.streamErrorCode
+title: "WebTransportError: streamErrorCode property"
+short-title: streamErrorCode
 slug: Web/API/WebTransportError/streamErrorCode
 page-type: web-api-instance-property
 status:

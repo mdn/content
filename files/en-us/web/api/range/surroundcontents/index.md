@@ -1,5 +1,6 @@
 ---
-title: Range.surroundContents()
+title: "Range: surroundContents() method"
+short-title: surroundContents()
 slug: Web/API/Range/surroundContents
 page-type: web-api-instance-method
 browser-compat: api.Range.surroundContents

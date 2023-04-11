@@ -13,4 +13,4 @@ Regular expressions are implemented in various languages, but the best-known imp
 - [Regular expressions](https://en.wikipedia.org/wiki/Regular_expressions) on Wikipedia
 - [Interactive tutorial](https://regexone.com/)
 - [Visualized Regular Expression](https://regexper.com/)
-- [Writing regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Writing regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

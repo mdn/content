@@ -1,5 +1,6 @@
 ---
-title: GamepadPose.linearAcceleration
+title: "GamepadPose: linearAcceleration property"
+short-title: linearAcceleration
 slug: Web/API/GamepadPose/linearAcceleration
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.toBlob()
+title: "HTMLCanvasElement: toBlob() method"
+short-title: toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 page-type: web-api-instance-method
 browser-compat: api.HTMLCanvasElement.toBlob

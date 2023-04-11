@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.get()
+title: "IDBObjectStore: get() method"
+short-title: get()
 slug: Web/API/IDBObjectStore/get
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.get

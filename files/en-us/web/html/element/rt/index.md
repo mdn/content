@@ -36,7 +36,7 @@ body {
 }
 ```
 
-The output looks like this in your browser:
+#### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 

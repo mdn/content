@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.createIndex()
+title: "IDBObjectStore: createIndex() method"
+short-title: createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.createIndex

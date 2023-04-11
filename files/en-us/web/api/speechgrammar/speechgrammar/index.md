@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammar()
+title: "SpeechGrammar: SpeechGrammar() constructor"
+short-title: SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
 page-type: web-api-constructor
 status:

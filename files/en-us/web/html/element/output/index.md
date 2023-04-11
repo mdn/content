@@ -38,6 +38,8 @@ In the following example, the form provides a slider whose value can range betwe
 </form>
 ```
 
+### Result
+
 {{ EmbedLiveSample('Examples')}}
 
 ## Accessibility Concerns

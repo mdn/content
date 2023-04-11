@@ -1,5 +1,6 @@
 ---
-title: NDEFReadingEvent.serialNumber
+title: "NDEFReadingEvent: serialNumber property"
+short-title: serialNumber
 slug: Web/API/NDEFReadingEvent/serialNumber
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.deleteTransformFeedback()
+title: "WebGL2RenderingContext: deleteTransformFeedback() method"
+short-title: deleteTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/deleteTransformFeedback
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.deleteTransformFeedback

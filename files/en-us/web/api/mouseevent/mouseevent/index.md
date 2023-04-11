@@ -1,7 +1,8 @@
 ---
-title: MouseEvent()
+title: "MouseEvent: MouseEvent() constructor"
+short-title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-page-type: web-api-instance-property
+page-type: web-api-constructor
 browser-compat: api.MouseEvent.MouseEvent
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Animation.play()
+title: "Animation: play() method"
+short-title: play()
 slug: Web/API/Animation/play
 page-type: web-api-instance-method
 browser-compat: api.Animation.play

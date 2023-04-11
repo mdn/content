@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: selectionchange event"
+short-title: selectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
 page-type: web-api-event
 status:

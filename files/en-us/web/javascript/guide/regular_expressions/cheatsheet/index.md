@@ -1,16 +1,16 @@
 ---
 title: Regular expression syntax cheat sheet
-slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
-This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Character classes
 
-[Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) distinguish kinds of characters such as, for example, distinguishing between letters and digits.
+[Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
 <table class="standard-table">
   <thead>
@@ -70,7 +70,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <p>
             <strong>Note:</strong> The ^ character may also indicate the
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
               >beginning of input</a
             >.
           </p>
@@ -198,7 +198,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         Matches a backspace. If you're looking for the word-boundary character
         (<code>\b</code>), see
         <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+          href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
           >Boundaries</a
         >.
       </td>
@@ -285,7 +285,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           unescaped character equivalents in regular expressions. However, in
           regular expressions with the
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags"
             >unicode flag</a
           >, these will cause an <em>invalid identity escape</em> error. This is
           done to ensure backward compatibility with existing code that uses new
@@ -312,7 +312,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
+            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
           </p>
         </div>
       </td>
@@ -322,7 +322,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 ## Assertions
 
-[Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
+[Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
 ### Boundary-type assertions
 
@@ -348,7 +348,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
             <strong>Note:</strong> This character has a different meaning when
             it appears at the start of a
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
               >character class</a
             >.
           </p>
@@ -396,7 +396,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         <p>
           To match a backspace character (<code>[\b]</code>), see
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >Character Classes</a
           >.
         </p>
@@ -490,7 +490,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 ## Groups and backreferences
 
-[Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) indicate groups of expression characters.
+[Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) indicate groups of expression characters.
 
 <table class="standard-table">
   <thead>
@@ -607,9 +607,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 ## Quantifiers
 
-[Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
+[Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
-> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
   <thead>
@@ -737,7 +737,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 ## Unicode property escapes
 
-[Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) allow for matching characters based on their Unicode properties.
+[Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) allow for matching characters based on their Unicode properties.
 
 ```js
 // Non-binary values

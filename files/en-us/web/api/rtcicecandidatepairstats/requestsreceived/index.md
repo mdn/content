@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.requestsReceived
+title: "RTCIceCandidatePairStats: requestsReceived property"
+short-title: requestsReceived
 slug: Web/API/RTCIceCandidatePairStats/requestsReceived
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.requestsReceived

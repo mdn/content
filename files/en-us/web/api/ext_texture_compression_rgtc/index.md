@@ -1,5 +1,6 @@
 ---
-title: EXT_texture_compression_rgtc
+title: EXT_texture_compression_rgtc extension
+short-title: EXT_texture_compression_rgtc
 slug: Web/API/EXT_texture_compression_rgtc
 page-type: webgl-extension
 browser-compat: api.EXT_texture_compression_rgtc

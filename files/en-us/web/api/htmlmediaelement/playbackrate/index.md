@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.playbackRate
+title: "HTMLMediaElement: playbackRate property"
+short-title: playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.playbackRate
@@ -36,4 +37,4 @@ console.log(obj.playbackRate); // Expected Output: 1
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.playbackRate` property

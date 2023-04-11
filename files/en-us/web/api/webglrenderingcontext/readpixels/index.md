@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.readPixels()
+title: "WebGLRenderingContext: readPixels() method"
+short-title: readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.readPixels

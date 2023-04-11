@@ -1,5 +1,6 @@
 ---
-title: PushManager.hasPermission()
+title: "PushManager: hasPermission() method"
+short-title: hasPermission()
 slug: Web/API/PushManager/hasPermission
 page-type: web-api-instance-method
 status:

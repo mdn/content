@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserverEntryList.getEntriesByType()
+title: "PerformanceObserverEntryList: getEntriesByType() method"
+short-title: getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
 page-type: web-api-instance-method
 browser-compat: api.PerformanceObserverEntryList.getEntriesByType

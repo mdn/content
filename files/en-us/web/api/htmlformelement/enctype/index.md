@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.enctype
+title: "HTMLFormElement: enctype property"
+short-title: enctype
 slug: Web/API/HTMLFormElement/enctype
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.enctype

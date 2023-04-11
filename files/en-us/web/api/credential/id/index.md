@@ -1,5 +1,6 @@
 ---
-title: Credential.id
+title: "Credential: id property"
+short-title: id
 slug: Web/API/Credential/id
 page-type: web-api-instance-property
 browser-compat: api.Credential.id

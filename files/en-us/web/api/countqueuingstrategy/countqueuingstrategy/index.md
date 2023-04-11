@@ -1,5 +1,6 @@
 ---
-title: CountQueuingStrategy()
+title: "CountQueuingStrategy: CountQueuingStrategy() constructor"
+short-title: CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 page-type: web-api-constructor
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy

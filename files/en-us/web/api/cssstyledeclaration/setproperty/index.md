@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.setProperty()
+title: "CSSStyleDeclaration: setProperty() method"
+short-title: setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleDeclaration.setProperty

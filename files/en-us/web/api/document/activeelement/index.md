@@ -1,5 +1,6 @@
 ---
-title: Document.activeElement
+title: "Document: activeElement property"
+short-title: activeElement
 slug: Web/API/Document/activeElement
 page-type: web-api-instance-property
 browser-compat: api.Document.activeElement

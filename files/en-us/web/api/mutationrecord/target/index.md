@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.target
+title: "MutationRecord: target property"
+short-title: target
 slug: Web/API/MutationRecord/target
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.target

@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.update()
+title: "MediaKeySession: update() method"
+short-title: update()
 slug: Web/API/MediaKeySession/update
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.update

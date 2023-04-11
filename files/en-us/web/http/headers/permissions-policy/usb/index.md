@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: usb"
 slug: Web/HTTP/Headers/Permissions-Policy/usb
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.usb

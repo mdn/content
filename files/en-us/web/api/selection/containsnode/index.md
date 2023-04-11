@@ -1,5 +1,6 @@
 ---
-title: Selection.containsNode()
+title: "Selection: containsNode() method"
+short-title: containsNode()
 slug: Web/API/Selection/containsNode
 page-type: web-api-instance-method
 browser-compat: api.Selection.containsNode

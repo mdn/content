@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.track
+title: "RTCRtpSender: track property"
+short-title: track
 slug: Web/API/RTCRtpSender/track
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpSender.track

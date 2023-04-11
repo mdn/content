@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.getVoices()
+title: "SpeechSynthesis: getVoices() method"
+short-title: getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.getVoices

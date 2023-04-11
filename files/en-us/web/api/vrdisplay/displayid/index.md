@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.displayId
+title: "VRDisplay: displayId property"
+short-title: displayId
 slug: Web/API/VRDisplay/displayId
 page-type: web-api-instance-property
 status:

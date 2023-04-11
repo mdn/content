@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackProcessor.readable
+title: "MediaStreamTrackProcessor: readable property"
+short-title: readable
 slug: Web/API/MediaStreamTrackProcessor/readable
 page-type: web-api-instance-property
 status:

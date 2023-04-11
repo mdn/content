@@ -1,5 +1,6 @@
 ---
-title: Option()
+title: "HTMLOptionElement: Option() constructor"
+short-title: Option()
 slug: Web/API/HTMLOptionElement/Option
 page-type: web-api-constructor
 browser-compat: api.HTMLOptionElement.Option

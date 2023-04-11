@@ -1,5 +1,6 @@
 ---
-title: EventTarget.addEventListener()
+title: "EventTarget: addEventListener() method"
+short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 page-type: web-api-instance-method
 browser-compat: api.EventTarget.addEventListener
@@ -580,7 +581,7 @@ my_element.addEventListener("click", function (e) {
 });
 ```
 
-As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
+As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods).
 
 ```js
 my_element.addEventListener("click", (e) => {

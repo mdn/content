@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.isConfigSupported()
+title: "AudioDecoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/AudioDecoder/isConfigSupported
 page-type: web-api-static-method
 status:

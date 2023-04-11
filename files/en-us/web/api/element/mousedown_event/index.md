@@ -1,5 +1,6 @@
 ---
 title: "Element: mousedown event"
+short-title: mousedown
 slug: Web/API/Element/mousedown_event
 page-type: web-api-event
 browser-compat: api.Element.mousedown_event
