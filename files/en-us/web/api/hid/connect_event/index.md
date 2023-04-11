@@ -1,5 +1,6 @@
 ---
 title: "HID: connect event"
+short-title: connect
 slug: Web/API/HID/connect_event
 page-type: web-api-event
 status:

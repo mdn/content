@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.getLocalParameters()
+title: "RTCIceTransport: getLocalParameters() method"
+short-title: getLocalParameters()
 slug: Web/API/RTCIceTransport/getLocalParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getLocalParameters

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.disableVertexAttribArray()
+title: "WebGLRenderingContext: disableVertexAttribArray() method"
+short-title: disableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/disableVertexAttribArray
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.disableVertexAttribArray

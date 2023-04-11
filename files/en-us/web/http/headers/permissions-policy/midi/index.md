@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: midi"
 slug: Web/HTTP/Headers/Permissions-Policy/midi
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.midi

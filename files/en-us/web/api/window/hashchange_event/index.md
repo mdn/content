@@ -1,5 +1,6 @@
 ---
 title: "Window: hashchange event"
+short-title: hashchange
 slug: Web/API/Window/hashchange_event
 page-type: web-api-event
 browser-compat: api.Window.hashchange_event

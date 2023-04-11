@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.bindTransformFeedback()
+title: "WebGL2RenderingContext: bindTransformFeedback() method"
+short-title: bindTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/bindTransformFeedback
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindTransformFeedback

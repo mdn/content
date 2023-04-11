@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.has()
+title: "CustomStateSet: has() method"
+short-title: has()
 slug: Web/API/CustomStateSet/has
 page-type: web-api-instance-method
 status:

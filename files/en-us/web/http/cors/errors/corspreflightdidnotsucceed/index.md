@@ -1,6 +1,7 @@
 ---
 title: "Reason: CORS preflight channel did not succeed"
 slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}

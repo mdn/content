@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.deriveBits()
+title: "SubtleCrypto: deriveBits() method"
+short-title: deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.deriveBits

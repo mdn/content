@@ -1,5 +1,6 @@
 ---
-title: PaymentManager.enableDelegations()
+title: "PaymentManager: enableDelegations() method"
+short-title: enableDelegations()
 slug: Web/API/PaymentManager/enableDelegations
 page-type: web-api-instance-method
 status:

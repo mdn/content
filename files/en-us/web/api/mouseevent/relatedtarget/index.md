@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.relatedTarget
+title: "MouseEvent: relatedTarget property"
+short-title: relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.relatedTarget

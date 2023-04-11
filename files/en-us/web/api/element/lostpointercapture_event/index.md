@@ -1,5 +1,6 @@
 ---
 title: "Element: lostpointercapture event"
+short-title: lostpointercapture
 slug: Web/API/Element/lostpointercapture_event
 browser-compat: api.Element.lostpointercapture_event
 page-type: web-api-event

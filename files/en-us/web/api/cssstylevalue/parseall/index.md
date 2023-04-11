@@ -1,5 +1,6 @@
 ---
-title: CSSStyleValue.parseAll()
+title: "CSSStyleValue: parseAll() method"
+short-title: parseAll()
 slug: Web/API/CSSStyleValue/parseAll
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleValue.parseAll

@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.heading
+title: "GeolocationCoordinates: heading property"
+short-title: heading
 slug: Web/API/GeolocationCoordinates/heading
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.heading

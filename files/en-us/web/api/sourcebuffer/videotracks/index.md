@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.videoTracks
+title: "SourceBuffer: videoTracks property"
+short-title: videoTracks
 slug: Web/API/SourceBuffer/videoTracks
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.videoTracks

@@ -1,5 +1,6 @@
 ---
-title: RTCTrackEvent.transceiver
+title: "RTCTrackEvent: transceiver property"
+short-title: transceiver
 slug: Web/API/RTCTrackEvent/transceiver
 page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.transceiver

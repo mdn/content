@@ -1,5 +1,6 @@
 ---
-title: PushManager.registrations()
+title: "PushManager: registrations() method"
+short-title: registrations()
 slug: Web/API/PushManager/registrations
 page-type: web-api-instance-method
 status:

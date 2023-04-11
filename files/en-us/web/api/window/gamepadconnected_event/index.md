@@ -1,5 +1,6 @@
 ---
 title: "Window: gamepadconnected event"
+short-title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 page-type: web-api-event
 browser-compat: api.Window.gamepadconnected_event

@@ -1,5 +1,6 @@
 ---
-title: UIEvent.detail
+title: "UIEvent: detail property"
+short-title: detail
 slug: Web/API/UIEvent/detail
 page-type: web-api-instance-property
 browser-compat: api.UIEvent.detail

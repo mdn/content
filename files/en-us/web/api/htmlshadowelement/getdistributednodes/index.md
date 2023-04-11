@@ -1,5 +1,6 @@
 ---
-title: HTMLShadowElement.getDistributedNodes()
+title: "HTMLShadowElement: getDistributedNodes() method"
+short-title: getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
 page-type: web-api-instance-method
 status:

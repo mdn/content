@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance()
+title: "SpeechSynthesisUtterance: SpeechSynthesisUtterance() constructor"
+short-title: SpeechSynthesisUtterance()
 slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
 page-type: web-api-constructor
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance

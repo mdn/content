@@ -1,5 +1,6 @@
 ---
-title: ContentVisibilityAutoStateChangeEvent.skipped
+title: "ContentVisibilityAutoStateChangeEvent: skipped property"
+short-title: skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 page-type: web-api-instance-property
 browser-compat: api.ContentVisibilityAutoStateChangeEvent.skipped

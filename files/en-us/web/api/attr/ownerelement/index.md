@@ -1,5 +1,6 @@
 ---
-title: Attr.ownerElement
+title: "Attr: ownerElement property"
+short-title: ownerElement
 slug: Web/API/Attr/ownerElement
 page-type: web-api-instance-property
 browser-compat: api.Attr.ownerElement

@@ -1,5 +1,6 @@
 ---
-title: Report.url
+title: "Report: url property"
+short-title: url
 slug: Web/API/Report/url
 page-type: web-api-instance-property
 browser-compat: api.Report.url

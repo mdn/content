@@ -1,11 +1,12 @@
 ---
-title: Headers.set()
+title: "Headers: set() method"
+short-title: set()
 slug: Web/API/Headers/set
 page-type: web-api-instance-method
 browser-compat: api.Headers.set
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
 sets a new value for an existing header inside a `Headers` object, or adds

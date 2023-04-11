@@ -1,6 +1,7 @@
 ---
 title: Examples
 slug: Web/MathML/Examples
+page-type: landing-page
 ---
 
 {{MathMLRef}}

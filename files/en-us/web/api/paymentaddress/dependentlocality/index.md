@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.dependentLocality
+title: "PaymentAddress: dependentLocality property"
+short-title: dependentLocality
 slug: Web/API/PaymentAddress/dependentLocality
 page-type: web-api-instance-property
 status:

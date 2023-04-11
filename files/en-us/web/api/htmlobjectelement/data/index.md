@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.data
+title: "HTMLObjectElement: data property"
+short-title: data
 slug: Web/API/HTMLObjectElement/data
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.data

@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerContainer: error event"
+short-title: error
 slug: Web/API/ServiceWorkerContainer/error_event
 page-type: web-api-event
 status:

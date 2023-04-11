@@ -1,5 +1,6 @@
 ---
-title: TextDecoderStream.readable
+title: "TextDecoderStream: readable property"
+short-title: readable
 slug: Web/API/TextDecoderStream/readable
 page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.readable

@@ -1,5 +1,6 @@
 ---
-title: console.time()
+title: "console: time() method"
+short-title: time()
 slug: Web/API/console/time
 page-type: web-api-instance-method
 browser-compat: api.console.time

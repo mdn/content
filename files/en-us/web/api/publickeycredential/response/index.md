@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.response
+title: "PublicKeyCredential: response property"
+short-title: response
 slug: Web/API/PublicKeyCredential/response
 page-type: web-api-instance-property
 browser-compat: api.PublicKeyCredential.response

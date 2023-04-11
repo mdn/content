@@ -1,5 +1,6 @@
 ---
-title: CSSImportRule.href
+title: "CSSImportRule: href property"
+short-title: href
 slug: Web/API/CSSImportRule/href
 page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.href

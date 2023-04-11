@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackGenerator.writable
+title: "MediaStreamTrackGenerator: writable property"
+short-title: writable
 slug: Web/API/MediaStreamTrackGenerator/writable
 page-type: web-api-instance-property
 status:

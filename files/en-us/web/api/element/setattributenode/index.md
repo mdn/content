@@ -1,5 +1,6 @@
 ---
-title: Element.setAttributeNode()
+title: "Element: setAttributeNode() method"
+short-title: setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 page-type: web-api-instance-method
 browser-compat: api.Element.setAttributeNode

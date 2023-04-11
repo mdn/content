@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.codecId
+title: "RTCRtpStreamStats: codecId property"
+short-title: codecId
 slug: Web/API/RTCRtpStreamStats/codecId
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.codecId

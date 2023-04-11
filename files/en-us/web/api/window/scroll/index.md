@@ -1,5 +1,6 @@
 ---
-title: Window.scroll()
+title: "Window: scroll() method"
+short-title: scroll()
 slug: Web/API/Window/scroll
 page-type: web-api-instance-method
 browser-compat: api.Window.scroll

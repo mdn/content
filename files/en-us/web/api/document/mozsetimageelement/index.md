@@ -1,5 +1,6 @@
 ---
-title: Document.mozSetImageElement()
+title: "Document: mozSetImageElement() method"
+short-title: mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
 page-type: web-api-instance-method
 status:

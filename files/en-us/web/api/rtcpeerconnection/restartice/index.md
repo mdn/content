@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.restartIce()
+title: "RTCPeerConnection: restartIce() method"
+short-title: restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.restartIce

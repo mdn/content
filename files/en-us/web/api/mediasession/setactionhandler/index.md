@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setActionHandler()
+title: "MediaSession: setActionHandler() method"
+short-title: setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
 page-type: web-api-instance-method
 browser-compat: api.MediaSession.setActionHandler

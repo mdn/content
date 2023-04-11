@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.networkState
+title: "HTMLMediaElement: networkState property"
+short-title: networkState
 slug: Web/API/HTMLMediaElement/networkState
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.networkState
@@ -53,4 +54,4 @@ obj.addEventListener("playing", () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.networkState` property

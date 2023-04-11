@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.srcdoc
+title: "HTMLIFrameElement: srcdoc property"
+short-title: srcdoc
 slug: Web/API/HTMLIFrameElement/srcdoc
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.srcdoc

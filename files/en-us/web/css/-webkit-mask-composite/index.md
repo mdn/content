@@ -28,6 +28,8 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 /* Global values */
 -webkit-mask-composite: inherit;
 -webkit-mask-composite: initial;
+-webkit-mask-composite: revert;
+-webkit-mask-composite: revert-layer;
 -webkit-mask-composite: unset;
 ```
 

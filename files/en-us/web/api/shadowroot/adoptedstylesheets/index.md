@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.adoptedStyleSheets
+title: "ShadowRoot: adoptedStyleSheets property"
+short-title: adoptedStyleSheets
 slug: Web/API/ShadowRoot/adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.adoptedStyleSheets

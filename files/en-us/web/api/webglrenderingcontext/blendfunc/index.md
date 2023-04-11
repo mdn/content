@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.blendFunc()
+title: "WebGLRenderingContext: blendFunc() method"
+short-title: blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendFunc

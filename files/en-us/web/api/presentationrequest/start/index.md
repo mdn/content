@@ -1,5 +1,6 @@
 ---
-title: PresentationRequest.start()
+title: "PresentationRequest: start() method"
+short-title: start()
 slug: Web/API/PresentationRequest/start
 page-type: web-api-instance-method
 status:

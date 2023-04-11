@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.product
+title: "WorkerNavigator: product property"
+short-title: product
 slug: Web/API/WorkerNavigator/product
 page-type: web-api-instance-property
 status:

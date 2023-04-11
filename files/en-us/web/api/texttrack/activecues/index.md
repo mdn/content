@@ -1,5 +1,6 @@
 ---
-title: TextTrack.activeCues
+title: "TextTrack: activeCues property"
+short-title: activeCues
 slug: Web/API/TextTrack/activeCues
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.activeCues

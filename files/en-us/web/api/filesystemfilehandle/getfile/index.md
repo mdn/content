@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileHandle.getFile()
+title: "FileSystemFileHandle: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.getFile

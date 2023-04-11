@@ -1,6 +1,7 @@
 ---
 title: CSP errors and warnings (Content Security Policy)
 slug: Web/HTTP/CSP/Errors
+page-type: guide
 ---
 
 {{HTTPSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: IdentityCredential.token
+title: "IdentityCredential: token property"
+short-title: token
 slug: Web/API/IdentityCredential/token
 page-type: web-api-instance-property
 status:

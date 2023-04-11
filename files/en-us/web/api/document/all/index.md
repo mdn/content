@@ -1,5 +1,6 @@
 ---
-title: Document.all
+title: "Document: all property"
+short-title: all
 slug: Web/API/Document/all
 page-type: web-api-instance-property
 status:

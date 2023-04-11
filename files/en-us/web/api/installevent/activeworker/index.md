@@ -1,5 +1,6 @@
 ---
-title: InstallEvent.activeWorker
+title: "InstallEvent: activeWorker property"
+short-title: activeWorker
 slug: Web/API/InstallEvent/activeWorker
 page-type: web-api-instance-property
 status:

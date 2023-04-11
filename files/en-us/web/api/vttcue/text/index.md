@@ -1,5 +1,6 @@
 ---
-title: VTTCue.text
+title: "VTTCue: text property"
+short-title: text
 slug: Web/API/VTTCue/text
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.text

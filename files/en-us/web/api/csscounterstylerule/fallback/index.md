@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.fallback
+title: "CSSCounterStyleRule: fallback property"
+short-title: fallback
 slug: Web/API/CSSCounterStyleRule/fallback
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.fallback

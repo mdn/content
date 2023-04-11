@@ -1,11 +1,12 @@
 ---
-title: Response.type
+title: "Response: type property"
+short-title: type
 slug: Web/API/Response/type
 page-type: web-api-instance-property
 browser-compat: api.Response.type
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:

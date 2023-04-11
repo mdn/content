@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.controls
+title: "HTMLMediaElement: controls property"
+short-title: controls
 slug: Web/API/HTMLMediaElement/controls
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.controls
@@ -33,4 +34,4 @@ obj.controls = true;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.controls` property

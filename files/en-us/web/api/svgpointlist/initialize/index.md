@@ -1,5 +1,6 @@
 ---
-title: SVGPointList.initialize()
+title: "SVGPointList: initialize() method"
+short-title: initialize()
 slug: Web/API/SVGPointList/initialize
 page-type: web-api-instance-method
 browser-compat: api.SVGPointList.initialize

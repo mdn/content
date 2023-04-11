@@ -1,5 +1,6 @@
 ---
-title: TextTrackCue.startTime
+title: "TextTrackCue: startTime property"
+short-title: startTime
 slug: Web/API/TextTrackCue/startTime
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCue.startTime

@@ -1,5 +1,6 @@
 ---
-title: VideoTrack.id
+title: "VideoTrack: id property"
+short-title: id
 slug: Web/API/VideoTrack/id
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.id

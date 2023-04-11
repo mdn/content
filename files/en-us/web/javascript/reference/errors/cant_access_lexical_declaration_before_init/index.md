@@ -29,7 +29,9 @@ This happens within any block statement, when variables declared with [`let`](/e
 Note that it is the execution order of access and variable declaration that matters, not the order in which the lines appear in the code.
 For more information, see the description of [Temporal Dead Zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
-Note also that this issue does not occur for variables declared using `var`, because they are initialized with a default value of `undefined` when they are [hoisted](/en-US/docs/Glossary/Hoisting).
+This issue does not occur for variables declared using `var`, because they are initialized with a default value of `undefined` when they are [hoisted](/en-US/docs/Glossary/Hoisting).
+
+This error can also occur in [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports) when a module uses a variable that depends on the module itself being evaluated.
 
 ## Examples
 
@@ -48,6 +50,21 @@ function test() {
 test();
 ```
 
+In this example, the imported variable `a` is accessed but is uninitialized, because the evaluation of `a.js` is blocked by the evaluation of the current module `b.js`.
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+export const b = 1;
+```
+
 ### Valid cases
 
 In the following example, we correctly declare a variable using the `const` keyword before accessing it.
@@ -59,4 +76,21 @@ function test() {
   console.log(foo); // 33
 }
 test();
+```
+
+In this example, the imported variable `a` is asynchronously accessed, so both modules are evaluated before the access to `a` occurs.
+
+```js
+// -- a.js (entry module) --
+import { b } from "./b.js";
+
+export const a = 2;
+
+// -- b.js --
+import { a } from "./a.js";
+
+setTimeout(() => {
+  console.log(a); // 2
+}, 10);
+export const b = 1;
 ```

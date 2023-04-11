@@ -1,5 +1,6 @@
 ---
 title: "Window: orientationchange event"
+short-title: orientationchange
 slug: Web/API/Window/orientationchange_event
 page-type: web-api-event
 status:

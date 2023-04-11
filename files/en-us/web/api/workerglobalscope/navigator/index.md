@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.navigator
+title: "WorkerGlobalScope: navigator property"
+short-title: navigator
 slug: Web/API/WorkerGlobalScope/navigator
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.navigator

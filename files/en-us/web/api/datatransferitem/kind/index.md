@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.kind
+title: "DataTransferItem: kind property"
+short-title: kind
 slug: Web/API/DataTransferItem/kind
 page-type: web-api-instance-property
 browser-compat: api.DataTransferItem.kind

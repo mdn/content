@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.error
+title: "HTMLMediaElement: error property"
+short-title: error
 slug: Web/API/HTMLMediaElement/error
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.error
@@ -42,5 +43,5 @@ videoElement.src = "https://example.com/bogusvideo.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.error` property
 - {{HTMLElement("audio")}} and {{HTMLElement("video")}}

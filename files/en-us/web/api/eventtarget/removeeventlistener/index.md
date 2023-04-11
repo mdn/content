@@ -1,5 +1,6 @@
 ---
-title: EventTarget.removeEventListener()
+title: "EventTarget: removeEventListener() method"
+short-title: removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 page-type: web-api-instance-method
 browser-compat: api.EventTarget.removeEventListener

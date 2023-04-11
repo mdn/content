@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: periodicsync event"
+short-title: periodicsync
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
 page-type: web-api-event
 status:

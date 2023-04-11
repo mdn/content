@@ -1,5 +1,6 @@
 ---
-title: SharedWorker.port
+title: "SharedWorker: port property"
+short-title: port
 slug: Web/API/SharedWorker/port
 page-type: web-api-instance-property
 browser-compat: api.SharedWorker.port

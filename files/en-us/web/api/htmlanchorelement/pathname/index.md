@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.pathname
+title: "HTMLAnchorElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAnchorElement/pathname
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.pathname

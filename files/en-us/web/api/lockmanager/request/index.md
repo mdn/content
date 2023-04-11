@@ -1,5 +1,6 @@
 ---
-title: LockManager.request()
+title: "LockManager: request() method"
+short-title: request()
 slug: Web/API/LockManager/request
 page-type: web-api-instance-method
 browser-compat: api.LockManager.request

@@ -1,5 +1,6 @@
 ---
-title: CSSPerspective.length
+title: "CSSPerspective: length property"
+short-title: length
 slug: Web/API/CSSPerspective/length
 page-type: web-api-instance-property
 browser-compat: api.CSSPerspective.length

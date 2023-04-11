@@ -1,5 +1,6 @@
 ---
-title: Storage.removeItem()
+title: "Storage: removeItem() method"
+short-title: removeItem()
 slug: Web/API/Storage/removeItem
 page-type: web-api-instance-method
 browser-compat: api.Storage.removeItem

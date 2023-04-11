@@ -24,7 +24,7 @@ leftExpr ?? rightExpr
 
 The nullish coalescing operator can be seen as a special case of the [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR). The latter returns the right-hand side operand if the left operand is _any_ {{Glossary("falsy")}} value, not only `null` or `undefined`. In other words, if you use `||` to provide some default value to another variable `foo`, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., `''` or `0`). See [below](#assigning_a_default_value_to_a_variable) for more examples.
 
-The nullish coalescing operator has the fifth-lowest [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), directly lower than `||` and directly higher than the [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+The nullish coalescing operator has the fifth-lowest [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directly lower than `||` and directly higher than the [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
 It is not possible to combine both the AND (`&&`) and OR operators (`||`) directly with `??`. A [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) will be thrown in such cases.
 

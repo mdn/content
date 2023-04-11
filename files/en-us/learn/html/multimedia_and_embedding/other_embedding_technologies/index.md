@@ -201,7 +201,7 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 
 Before diving into using `<iframe>` elements, there are some security concerns to be aware of.
 Say you wanted to include the MDN glossary on one of your web pages using the {{htmlelement("iframe")}} element, you might try something like the next code example.
-If you were to do add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
+If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
 <head>

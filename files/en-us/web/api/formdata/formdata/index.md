@@ -1,5 +1,6 @@
 ---
-title: FormData()
+title: "FormData: FormData() constructor"
+short-title: FormData()
 slug: Web/API/FormData/FormData
 page-type: web-api-constructor
 browser-compat: api.FormData.FormData
@@ -24,7 +25,7 @@ new FormData(form, submitter)
 - `form` {{optional_inline}}
   - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the `form`'s current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
 - `submitter` {{optional_inline}}
-  - : A {{Glossary("submit button")}} that is a member of the `form`. If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#Form_data_entries) in the {{domxref("FormData")}} object (e.g. `btnName=btnValue`).
+  - : A {{Glossary("submit button")}} that is a member of the `form`. If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#form_data_entries) in the {{domxref("FormData")}} object (e.g. `btnName=btnValue`).
 
 ### Exceptions
 
@@ -32,7 +33,7 @@ new FormData(form, submitter)
   - : Thrown if the specified `submitter` is not a {{Glossary("submit button")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the `form`. The `submitter` must be either a
-    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
+    descendant of the form element or must have a [`form`](/en-US/docs/Web/HTML/Element/input#form)
     attribute referring to the form.
 
 ## Examples

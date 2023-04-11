@@ -1,5 +1,6 @@
 ---
 title: "Element: transitionrun event"
+short-title: transitionrun
 slug: Web/API/Element/transitionrun_event
 browser-compat: api.Element.transitionrun_event
 page-type: web-api-event

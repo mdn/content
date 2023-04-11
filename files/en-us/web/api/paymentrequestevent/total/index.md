@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.total
+title: "PaymentRequestEvent: total property"
+short-title: total
 slug: Web/API/PaymentRequestEvent/total
 page-type: web-api-instance-property
 status:

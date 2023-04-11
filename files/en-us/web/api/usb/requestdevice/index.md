@@ -1,5 +1,6 @@
 ---
-title: USB.requestDevice()
+title: "USB: requestDevice() method"
+short-title: requestDevice()
 slug: Web/API/USB/requestDevice
 page-type: web-api-instance-method
 status:

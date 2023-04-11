@@ -1,5 +1,6 @@
 ---
-title: StaticRange.collapsed
+title: "StaticRange: collapsed property"
+short-title: collapsed
 slug: Web/API/StaticRange/collapsed
 page-type: web-api-instance-property
 browser-compat: api.StaticRange.collapsed

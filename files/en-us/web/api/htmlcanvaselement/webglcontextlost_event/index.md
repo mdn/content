@@ -1,5 +1,6 @@
 ---
 title: "HTMLCanvasElement: webglcontextlost event"
+short-title: webglcontextlost
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextlost_event

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.sdpMLineIndex
+title: "RTCIceCandidate: sdpMLineIndex property"
+short-title: sdpMLineIndex
 slug: Web/API/RTCIceCandidate/sdpMLineIndex
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.sdpMLineIndex

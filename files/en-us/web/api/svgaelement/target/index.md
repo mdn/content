@@ -1,5 +1,6 @@
 ---
-title: SVGAElement.target
+title: "SVGAElement: target property"
+short-title: target
 slug: Web/API/SVGAElement/target
 page-type: web-api-instance-property
 browser-compat: api.SVGAElement.target

@@ -1,5 +1,6 @@
 ---
-title: TextEncoderStream()
+title: "TextEncoderStream: TextEncoderStream() constructor"
+short-title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
 page-type: web-api-constructor
 browser-compat: api.TextEncoderStream.TextEncoderStream

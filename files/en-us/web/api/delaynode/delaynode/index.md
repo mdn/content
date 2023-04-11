@@ -1,5 +1,6 @@
 ---
-title: DelayNode()
+title: "DelayNode: DelayNode() constructor"
+short-title: DelayNode()
 slug: Web/API/DelayNode/DelayNode
 page-type: web-api-constructor
 browser-compat: api.DelayNode.DelayNode

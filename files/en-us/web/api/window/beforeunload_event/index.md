@@ -1,5 +1,6 @@
 ---
 title: "Window: beforeunload event"
+short-title: beforeunload
 slug: Web/API/Window/beforeunload_event
 page-type: web-api-event
 browser-compat: api.Window.beforeunload_event

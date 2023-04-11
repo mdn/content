@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTService.isPrimary
+title: "BluetoothRemoteGATTService: isPrimary property"
+short-title: isPrimary
 slug: Web/API/BluetoothRemoteGATTService/isPrimary
 page-type: web-api-instance-property
 status:

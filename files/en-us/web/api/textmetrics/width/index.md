@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.width
+title: "TextMetrics: width property"
+short-title: width
 slug: Web/API/TextMetrics/width
 page-type: web-api-instance-property
 browser-compat: api.TextMetrics.width

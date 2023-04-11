@@ -1,5 +1,6 @@
 ---
-title: MIDIConnectionEvent.port
+title: "MIDIConnectionEvent: port property"
+short-title: port
 slug: Web/API/MIDIConnectionEvent/port
 page-type: web-api-instance-property
 browser-compat: api.MIDIConnectionEvent.port

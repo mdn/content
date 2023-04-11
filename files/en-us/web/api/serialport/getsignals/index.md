@@ -1,5 +1,6 @@
 ---
-title: SerialPort.getSignals()
+title: "SerialPort: getSignals() method"
+short-title: getSignals()
 slug: Web/API/SerialPort/getSignals
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Document.embeds
+title: "Document: embeds property"
+short-title: embeds
 slug: Web/API/Document/embeds
 page-type: web-api-instance-property
 browser-compat: api.Document.embeds

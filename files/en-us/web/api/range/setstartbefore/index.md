@@ -1,5 +1,6 @@
 ---
-title: Range.setStartBefore()
+title: "Range: setStartBefore() method"
+short-title: setStartBefore()
 slug: Web/API/Range/setStartBefore
 page-type: web-api-instance-method
 browser-compat: api.Range.setStartBefore

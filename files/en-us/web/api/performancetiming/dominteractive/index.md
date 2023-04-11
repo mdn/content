@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domInteractive
+title: "PerformanceTiming: domInteractive property"
+short-title: domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
 page-type: web-api-instance-property
 status:

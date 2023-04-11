@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.setData()
+title: "DataTransfer: setData() method"
+short-title: setData()
 slug: Web/API/DataTransfer/setData
 page-type: web-api-instance-method
 browser-compat: api.DataTransfer.setData

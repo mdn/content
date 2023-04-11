@@ -1,5 +1,6 @@
 ---
-title: RTCSessionDescription()
+title: "RTCSessionDescription: RTCSessionDescription() constructor"
+short-title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 page-type: web-api-constructor
 status:

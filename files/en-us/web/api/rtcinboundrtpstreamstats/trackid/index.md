@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.trackId
+title: "RTCInboundRtpStreamStats: trackId property"
+short-title: trackId
 slug: Web/API/RTCInboundRtpStreamStats/trackId
 page-type: web-api-instance-property
 status:

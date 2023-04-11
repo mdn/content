@@ -1,5 +1,6 @@
 ---
 title: "HTMLTrackElement: cuechange event"
+short-title: cuechange
 slug: Web/API/HTMLTrackElement/cuechange_event
 page-type: web-api-event
 browser-compat: api.HTMLTrackElement.cuechange_event

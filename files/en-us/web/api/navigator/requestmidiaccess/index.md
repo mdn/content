@@ -1,5 +1,6 @@
 ---
-title: Navigator.requestMIDIAccess()
+title: "Navigator: requestMIDIAccess() method"
+short-title: requestMIDIAccess()
 slug: Web/API/Navigator/requestMIDIAccess
 page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMIDIAccess

@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.cancelAnimationFrame()
+title: "VRDisplay: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 page-type: web-api-instance-method
 status:

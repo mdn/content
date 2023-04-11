@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.encode()
+title: "VideoEncoder: encode() method"
+short-title: encode()
 slug: Web/API/VideoEncoder/encode
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.encode

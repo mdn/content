@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.drawImage()
+title: "CanvasRenderingContext2D: drawImage() method"
+short-title: drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.drawImage

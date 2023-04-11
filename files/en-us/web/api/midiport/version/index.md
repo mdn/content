@@ -1,5 +1,6 @@
 ---
-title: MIDIPort.version
+title: "MIDIPort: version property"
+short-title: version
 slug: Web/API/MIDIPort/version
 page-type: web-api-instance-property
 browser-compat: api.MIDIPort.version

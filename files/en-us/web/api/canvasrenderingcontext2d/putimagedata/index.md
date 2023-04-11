@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.putImageData()
+title: "CanvasRenderingContext2D: putImageData() method"
+short-title: putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.putImageData

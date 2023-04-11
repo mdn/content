@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.length
+title: "CSSStyleDeclaration: length property"
+short-title: length
 slug: Web/API/CSSStyleDeclaration/length
 page-type: web-api-instance-property
 browser-compat: api.CSSStyleDeclaration.length

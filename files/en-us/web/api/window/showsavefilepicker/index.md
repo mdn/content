@@ -1,5 +1,6 @@
 ---
-title: Window.showSaveFilePicker()
+title: "Window: showSaveFilePicker() method"
+short-title: showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 page-type: web-api-instance-method
 status:

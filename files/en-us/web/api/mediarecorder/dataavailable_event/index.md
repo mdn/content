@@ -1,5 +1,6 @@
 ---
 title: "MediaRecorder: dataavailable event"
+short-title: dataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
 page-type: web-api-event
 browser-compat: api.MediaRecorder.dataavailable_event

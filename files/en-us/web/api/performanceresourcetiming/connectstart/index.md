@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.connectStart
+title: "PerformanceResourceTiming: connectStart property"
+short-title: connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.connectStart

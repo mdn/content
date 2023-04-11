@@ -1,5 +1,6 @@
 ---
-title: Window.frames
+title: "Window: frames property"
+short-title: frames
 slug: Web/API/Window/frames
 page-type: web-api-instance-property
 browser-compat: api.Window.frames

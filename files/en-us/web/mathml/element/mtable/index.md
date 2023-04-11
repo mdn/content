@@ -1,6 +1,7 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
+page-type: mathml-element
 browser-compat: mathml.elements.mtable
 ---
 

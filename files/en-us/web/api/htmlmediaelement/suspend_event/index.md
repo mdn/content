@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: suspend event"
+short-title: suspend
 slug: Web/API/HTMLMediaElement/suspend_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.suspend_event

@@ -1,5 +1,6 @@
 ---
 title: "HTMLTextAreaElement: select event"
+short-title: select
 slug: Web/API/HTMLTextAreaElement/select_event
 browser-compat: api.HTMLTextAreaElement.select_event
 page-type: web-api-event

@@ -1,5 +1,6 @@
 ---
-title: NDEFReadingEvent.message
+title: "NDEFReadingEvent: message property"
+short-title: message
 slug: Web/API/NDEFReadingEvent/message
 page-type: web-api-instance-property
 status:

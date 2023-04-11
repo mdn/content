@@ -1,5 +1,6 @@
 ---
-title: ImageCapture.track
+title: "ImageCapture: track property"
+short-title: track
 slug: Web/API/ImageCapture/track
 page-type: web-api-instance-property
 status:

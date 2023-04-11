@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceArray.entries()
+title: "XRInputSourceArray: entries() method"
+short-title: entries()
 slug: Web/API/XRInputSourceArray/entries
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: ratechange event"
+short-title: ratechange
 slug: Web/API/HTMLMediaElement/ratechange_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.ratechange_event

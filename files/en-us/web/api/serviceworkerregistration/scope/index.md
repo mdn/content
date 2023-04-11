@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.scope
+title: "ServiceWorkerRegistration: scope property"
+short-title: scope
 slug: Web/API/ServiceWorkerRegistration/scope
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.scope

@@ -1,5 +1,6 @@
 ---
-title: Screen.left
+title: "Screen: left property"
+short-title: left
 slug: Web/API/Screen/left
 page-type: web-api-instance-property
 status:

@@ -39,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `checkbox`: Represents a command that can be toggled between two different states.
     - `radio`: Represent one selection from a group of commands that can be toggled as radio buttons.
 
-## Example
+## Examples
 
 ### HTML
 

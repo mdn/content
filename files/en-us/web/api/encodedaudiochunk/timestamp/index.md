@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.timestamp
+title: "EncodedAudioChunk: timestamp property"
+short-title: timestamp
 slug: Web/API/EncodedAudioChunk/timestamp
 page-type: web-api-instance-property
 status:

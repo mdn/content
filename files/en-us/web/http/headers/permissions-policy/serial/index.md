@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: serial"
 slug: Web/HTTP/Headers/Permissions-Policy/serial
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.serial

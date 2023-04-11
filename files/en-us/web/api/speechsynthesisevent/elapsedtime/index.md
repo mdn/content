@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.elapsedTime
+title: "SpeechSynthesisEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.elapsedTime
