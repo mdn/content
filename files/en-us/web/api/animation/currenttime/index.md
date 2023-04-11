@@ -1,5 +1,6 @@
 ---
-title: Animation.currentTime
+title: "Animation: currentTime property"
+short-title: currentTime
 slug: Web/API/Animation/currentTime
 page-type: web-api-instance-property
 browser-compat: api.Animation.currentTime

@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.requestPresent()
+title: "VRDisplay: requestPresent() method"
+short-title: requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 page-type: web-api-instance-method
 status:

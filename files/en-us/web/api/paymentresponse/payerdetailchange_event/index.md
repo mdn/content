@@ -1,5 +1,6 @@
 ---
 title: "PaymentResponse: payerdetailchange event"
+short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
 status:

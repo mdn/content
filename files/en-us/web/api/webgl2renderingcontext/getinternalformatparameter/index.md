@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getInternalformatParameter()
+title: "WebGL2RenderingContext: getInternalformatParameter() method"
+short-title: getInternalformatParameter()
 slug: Web/API/WebGL2RenderingContext/getInternalformatParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getInternalformatParameter

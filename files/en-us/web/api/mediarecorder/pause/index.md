@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.pause()
+title: "MediaRecorder: pause() method"
+short-title: pause()
 slug: Web/API/MediaRecorder/pause
 page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.pause

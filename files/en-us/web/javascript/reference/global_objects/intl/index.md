@@ -7,9 +7,11 @@ browser-compat: javascript.builtins.Intl
 
 {{JSRef}}
 
-The **`Intl`** object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The **`Intl`** object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
+The **`Intl`** namespace object contains several constructors as well as functionality common to the internationalization constructors and other language sensitive functions. Collectively, they comprise the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, date and time formatting, and more.
 
 ## Description
+
+Unlike most global objects, `Intl` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Intl` object as a function. All properties and methods of `Intl` are static (just like the {{jsxref("Math")}} object).
 
 The internationalization constructors as well as several language sensitive methods of other constructors (listed under [See also](#see_also)) use a common pattern for identifying locales and determining the one they will actually use: they all accept `locales` and `options` arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the `options.localeMatcher` property.
 
@@ -74,6 +76,8 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
+- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+  - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
   - : Constructor for objects that enable language-sensitive list formatting.
 - {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
@@ -132,11 +136,13 @@ log("de-DE"); // 24.5.2012 26.254,39
 
   - {{jsxref("Intl/Collator", "Intl.Collator()")}}
   - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/DisplayNames", "Intl.DisplayNames()")}}
+  - {{jsxref("Intl/DurationFormat", "Intl.DurationFormat()")}}
   - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods

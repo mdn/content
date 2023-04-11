@@ -38,6 +38,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 </p>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example', 350, 80) }}
 
 ### Representing keystrokes within an input
@@ -115,6 +117,8 @@ Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents in
   <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
 </blockquote>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Echoed_input", 650, 100)}}
 

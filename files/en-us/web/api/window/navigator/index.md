@@ -1,5 +1,6 @@
 ---
-title: Window.navigator
+title: "Window: navigator property"
+short-title: navigator
 slug: Web/API/Window/navigator
 page-type: web-api-instance-property
 browser-compat: api.Window.navigator

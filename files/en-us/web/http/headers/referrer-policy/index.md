@@ -1,6 +1,7 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
+page-type: http-header
 browser-compat: http.headers.Referrer-Policy
 ---
 

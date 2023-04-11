@@ -1,6 +1,7 @@
 ---
 title: Accept-Post
 slug: Web/HTTP/Headers/Accept-Post
+page-type: http-header
 spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 ---
 

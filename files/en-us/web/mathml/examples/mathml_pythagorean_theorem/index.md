@@ -1,6 +1,7 @@
 ---
 title: Proving the Pythagorean theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
+page-type: guide
 ---
 
 {{MathMLRef}}

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnectionIceErrorEvent.address
+title: "RTCPeerConnectionIceErrorEvent: address property"
+short-title: address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnectionIceErrorEvent.address

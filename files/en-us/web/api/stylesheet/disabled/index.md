@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.disabled
+title: "StyleSheet: disabled property"
+short-title: disabled
 slug: Web/API/StyleSheet/disabled
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.disabled

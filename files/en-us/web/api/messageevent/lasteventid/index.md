@@ -1,5 +1,6 @@
 ---
-title: MessageEvent.lastEventId
+title: "MessageEvent: lastEventId property"
+short-title: lastEventId
 slug: Web/API/MessageEvent/lastEventId
 page-type: web-api-instance-property
 browser-compat: api.MessageEvent.lastEventId

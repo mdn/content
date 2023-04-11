@@ -1,5 +1,6 @@
 ---
-title: NDEFRecord()
+title: "NDEFRecord: NDEFRecord() constructor"
+short-title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
 page-type: web-api-constructor
 status:

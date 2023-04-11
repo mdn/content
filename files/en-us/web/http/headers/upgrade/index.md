@@ -1,6 +1,7 @@
 ---
 title: Upgrade
 slug: Web/HTTP/Headers/Upgrade
+page-type: http-header
 browser-compat: http.headers.Upgrade
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Document.execCommand()
+title: "Document: execCommand() method"
+short-title: execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
 status:

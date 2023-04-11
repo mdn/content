@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.hardwareConcurrency
+title: "WorkerNavigator: hardwareConcurrency property"
+short-title: hardwareConcurrency
 slug: Web/API/WorkerNavigator/hardwareConcurrency
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.hardwareConcurrency

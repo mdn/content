@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.tracks
+title: "ImageDecoder: tracks property"
+short-title: tracks
 slug: Web/API/ImageDecoder/tracks
 page-type: web-api-instance-property
 status:

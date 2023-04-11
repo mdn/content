@@ -1,5 +1,6 @@
 ---
-title: Navigator.activeVRDisplays
+title: "Navigator: activeVRDisplays property"
+short-title: activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 page-type: web-api-instance-property
 status:

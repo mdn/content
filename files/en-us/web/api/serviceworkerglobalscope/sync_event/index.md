@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: sync event"
+short-title: sync
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.sync_event

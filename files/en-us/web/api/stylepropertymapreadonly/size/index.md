@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.size
+title: "StylePropertyMapReadOnly: size property"
+short-title: size
 slug: Web/API/StylePropertyMapReadOnly/size
 page-type: web-api-instance-property
 browser-compat: api.StylePropertyMapReadOnly.size

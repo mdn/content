@@ -1,5 +1,6 @@
 ---
-title: USBDevice.close()
+title: "USBDevice: close() method"
+short-title: close()
 slug: Web/API/USBDevice/close
 page-type: web-api-instance-method
 status:

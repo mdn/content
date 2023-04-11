@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.respondWith()
+title: "PaymentRequestEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/PaymentRequestEvent/respondWith
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframeRule.style
+title: "CSSKeyframeRule: style property"
+short-title: style
 slug: Web/API/CSSkeyframeRule/style
 page-type: web-api-instance-property
 browser-compat: api.CSSKeyframeRule.style

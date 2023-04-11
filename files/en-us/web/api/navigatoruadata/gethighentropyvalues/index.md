@@ -1,5 +1,6 @@
 ---
-title: NavigatorUAData.getHighEntropyValues()
+title: "NavigatorUAData: getHighEntropyValues() method"
+short-title: getHighEntropyValues()
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 page-type: web-api-instance-method
 status:

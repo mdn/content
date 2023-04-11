@@ -1,5 +1,6 @@
 ---
-title: Metadata.size
+title: "Metadata: size property"
+short-title: size
 slug: Web/API/Metadata/size
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Notification.body
+title: "Notification: body property"
+short-title: body
 slug: Web/API/Notification/body
 page-type: web-api-instance-property
 browser-compat: api.Notification.body

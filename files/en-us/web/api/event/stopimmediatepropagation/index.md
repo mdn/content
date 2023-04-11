@@ -1,5 +1,6 @@
 ---
-title: Event.stopImmediatePropagation()
+title: "Event: stopImmediatePropagation() method"
+short-title: stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 page-type: web-api-instance-method
 browser-compat: api.Event.stopImmediatePropagation

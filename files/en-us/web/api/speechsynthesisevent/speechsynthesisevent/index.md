@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent()
+title: "SpeechSynthesisEvent: SpeechSynthesisEvent() constructor"
+short-title: SpeechSynthesisEvent()
 slug: Web/API/SpeechSynthesisEvent/SpeechSynthesisEvent
 page-type: web-api-constructor
 browser-compat: api.SpeechSynthesisEvent.SpeechSynthesisEvent

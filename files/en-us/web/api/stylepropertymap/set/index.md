@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMap.set()
+title: "StylePropertyMap: set() method"
+short-title: set()
 slug: Web/API/StylePropertyMap/set
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMap.set

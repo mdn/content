@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.emma
+title: "SpeechRecognitionEvent: emma property"
+short-title: emma
 slug: Web/API/SpeechRecognitionEvent/emma
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.slotAssignment
+title: "ShadowRoot: slotAssignment property"
+short-title: slotAssignment
 slug: Web/API/ShadowRoot/slotAssignment
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.slotAssignment

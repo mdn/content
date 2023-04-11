@@ -1,6 +1,7 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
+page-type: http-header
 browser-compat: http.headers.Content-Language
 ---
 

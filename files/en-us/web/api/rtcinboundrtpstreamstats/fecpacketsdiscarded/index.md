@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.fecPacketsDiscarded
+title: "RTCInboundRtpStreamStats: fecPacketsDiscarded property"
+short-title: fecPacketsDiscarded
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsDiscarded

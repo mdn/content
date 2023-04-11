@@ -1,5 +1,6 @@
 ---
-title: XPathEvaluator.evaluate()
+title: "XPathEvaluator: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathEvaluator/evaluate
 page-type: web-api-instance-method
 browser-compat: api.XPathEvaluator.evaluate

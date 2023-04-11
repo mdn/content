@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.isConfigSupported()
+title: "VideoDecoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/VideoDecoder/isConfigSupported
 page-type: web-api-static-method
 browser-compat: api.VideoDecoder.isConfigSupported

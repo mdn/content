@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: payment"
 slug: Web/HTTP/Headers/Permissions-Policy/payment
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.payment

@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.toJSON()
+title: "PushSubscription: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PushSubscription/toJSON
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.toJSON

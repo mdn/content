@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.role
+title: "ElementInternals: role property"
+short-title: role
 slug: Web/API/ElementInternals/role
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.role

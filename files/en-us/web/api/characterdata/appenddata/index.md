@@ -1,5 +1,6 @@
 ---
-title: CharacterData.appendData()
+title: "CharacterData: appendData() method"
+short-title: appendData()
 slug: Web/API/CharacterData/appendData
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.appendData

@@ -1,5 +1,6 @@
 ---
-title: CSSSkew.ay
+title: "CSSSkew: ay property"
+short-title: ay
 slug: Web/API/CSSSkew/ay
 page-type: web-api-instance-property
 browser-compat: api.CSSSkew.ay

@@ -1,5 +1,6 @@
 ---
-title: DocumentType.systemId
+title: "DocumentType: systemId property"
+short-title: systemId
 slug: Web/API/DocumentType/systemId
 page-type: web-api-instance-property
 browser-compat: api.DocumentType.systemId

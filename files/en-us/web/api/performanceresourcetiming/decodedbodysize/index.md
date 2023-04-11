@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.decodedBodySize
+title: "PerformanceResourceTiming: decodedBodySize property"
+short-title: decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.decodedBodySize

@@ -1,5 +1,6 @@
 ---
-title: Navigator.vibrate()
+title: "Navigator: vibrate() method"
+short-title: vibrate()
 slug: Web/API/Navigator/vibrate
 page-type: web-api-instance-method
 browser-compat: api.Navigator.vibrate

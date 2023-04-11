@@ -1,6 +1,7 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
+page-type: http-header
 browser-compat: http.headers.Expect-CT
 ---
 

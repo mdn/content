@@ -1,5 +1,6 @@
 ---
-title: Navigator.getBattery()
+title: "Navigator: getBattery() method"
+short-title: getBattery()
 slug: Web/API/Navigator/getBattery
 page-type: web-api-instance-method
 browser-compat: api.Navigator.getBattery

@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.getKey()
+title: "IDBIndex: getKey() method"
+short-title: getKey()
 slug: Web/API/IDBIndex/getKey
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.getKey

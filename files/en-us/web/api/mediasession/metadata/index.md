@@ -1,5 +1,6 @@
 ---
-title: MediaSession.metadata
+title: "MediaSession: metadata property"
+short-title: metadata
 slug: Web/API/MediaSession/metadata
 page-type: web-api-instance-property
 browser-compat: api.MediaSession.metadata

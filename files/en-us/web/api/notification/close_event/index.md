@@ -1,5 +1,6 @@
 ---
 title: "Notification: close event"
+short-title: close
 slug: Web/API/Notification/close_event
 page-type: web-api-event
 browser-compat: api.Notification.close_event

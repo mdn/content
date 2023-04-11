@@ -1,5 +1,6 @@
 ---
-title: ImageBitmapRenderingContext.transferFromImageBitmap()
+title: "ImageBitmapRenderingContext: transferFromImageBitmap() method"
+short-title: transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 page-type: web-api-instance-method
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap

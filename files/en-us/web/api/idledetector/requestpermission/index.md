@@ -1,5 +1,6 @@
 ---
-title: IdleDetector.requestPermission()
+title: "IdleDetector: requestPermission() method"
+short-title: requestPermission()
 slug: Web/API/IdleDetector/requestPermission
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk.timestamp
+title: "EncodedVideoChunk: timestamp property"
+short-title: timestamp
 slug: Web/API/EncodedVideoChunk/timestamp
 page-type: web-api-instance-property
 browser-compat: api.EncodedVideoChunk.timestamp

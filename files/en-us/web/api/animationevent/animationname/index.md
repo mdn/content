@@ -1,11 +1,12 @@
 ---
-title: AnimationEvent.animationName
+title: "AnimationEvent: animationName property"
+short-title: animationName
 slug: Web/API/AnimationEvent/animationName
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.animationName
 ---
 
-{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
 The **`AnimationEvent.animationName`** read-only property is a
 string containing the value of the {{cssxref("animation-name")}} CSS

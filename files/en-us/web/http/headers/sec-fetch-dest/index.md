@@ -1,6 +1,7 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Dest
 ---
 

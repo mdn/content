@@ -3,6 +3,8 @@ title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 ---
 
+{{PWASidebar}}
+
 Usually, websites are very dependent on both reliable network connectivity and on the user having their pages open in a browser. Without network connectivity, most websites are just unusable, and if the user does not have the site open in a browser tab, most websites are unable to do anything.
 
 However, consider the following scenarios:
@@ -127,7 +129,7 @@ For much more detail about setting up service workers and using them to add offl
 
 ## Background operation
 
-While offine operation is probably the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker is allowed to run while the main app is not running.
+While offline operations are the most common use for service workers, they also enable a PWA to operate even while the main app is closed. This is possible because the service worker can run while the main app is not running.
 
 This doesn't mean service workers run all the time: browsers may stop service workers when they think it is appropriate. For example, if a service worker has been inactive for a while, it will be stopped. However, the browser will restart the service worker when an event has happened that it needs to take care of. This enables a PWA to implement background operations in the following way:
 
@@ -369,6 +371,8 @@ async function registerPeriodicSync() {
 The [Push API](/en-US/docs/Web/API/Push_API) enables a PWA to receive messages pushed from the server, whether the app is running or not. When the message is received by the device, the app's service worker is started and handles the message, and a [notification](/en-US/docs/Web/API/Notifications_API) is shown to the user. The specification allows for "silent push" in which no notification is shown, but no browsers support this, because of privacy concerns (for example, that push could then be used to track a user's location).
 
 Displaying a notification to the user distracts them from whatever they were doing and has the potential to be very annoying, so use push messages with care. In general, they are suitable for situations in which you need to alert the user about something, and can't wait until the next time they open your app.
+
+A common use case for push notifications is chat apps: when the user receives a message from one of their contacts, it is delivered as a push message and the app shows a notification.
 
 Push messages are not sent directly from the app server to the device. Instead, your app server sends messages to a push service, from which the device can retrieve them and deliver them to the app.
 

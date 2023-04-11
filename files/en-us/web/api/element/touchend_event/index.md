@@ -1,5 +1,6 @@
 ---
 title: "Element: touchend event"
+short-title: touchend
 slug: Web/API/Element/touchend_event
 page-type: web-api-event
 browser-compat: api.Element.touchend_event

@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.pause()
+title: "SpeechSynthesis: pause() method"
+short-title: pause()
 slug: Web/API/SpeechSynthesis/pause
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.pause

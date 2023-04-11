@@ -1,11 +1,12 @@
 ---
-title: Response.ok
+title: "Response: ok property"
+short-title: ok
 slug: Web/API/Response/ok
 page-type: web-api-instance-property
 browser-compat: api.Response.ok
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`ok`** read-only property of the {{domxref("Response")}} interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
 

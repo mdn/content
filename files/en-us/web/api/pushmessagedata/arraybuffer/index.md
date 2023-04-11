@@ -1,5 +1,6 @@
 ---
-title: PushMessageData.arrayBuffer()
+title: "PushMessageData: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.PushMessageData.arrayBuffer

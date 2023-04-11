@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.rate
+title: "SpeechSynthesisUtterance: rate property"
+short-title: rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.rate

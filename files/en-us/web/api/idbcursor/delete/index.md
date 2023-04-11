@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.delete()
+title: "IDBCursor: delete() method"
+short-title: delete()
 slug: Web/API/IDBCursor/delete
 page-type: web-api-instance-method
 browser-compat: api.IDBCursor.delete

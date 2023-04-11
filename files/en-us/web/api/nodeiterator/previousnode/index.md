@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.previousNode()
+title: "NodeIterator: previousNode() method"
+short-title: previousNode()
 slug: Web/API/NodeIterator/previousNode
 page-type: web-api-instance-method
 browser-compat: api.NodeIterator.previousNode

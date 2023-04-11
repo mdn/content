@@ -1,6 +1,7 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
 

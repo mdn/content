@@ -1,5 +1,6 @@
 ---
-title: WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()
+title: "WEBGL_multi_draw: multiDrawArraysInstancedWEBGL() method"
+short-title: multiDrawArraysInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL

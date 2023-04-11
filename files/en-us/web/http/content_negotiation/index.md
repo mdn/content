@@ -1,6 +1,7 @@
 ---
 title: Content negotiation
 slug: Web/HTTP/Content_negotiation
+page-type: guide
 ---
 
 {{HTTPSidebar}}

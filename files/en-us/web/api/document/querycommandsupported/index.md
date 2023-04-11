@@ -1,5 +1,6 @@
 ---
-title: Document.queryCommandSupported()
+title: "Document: queryCommandSupported() method"
+short-title: queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 page-type: web-api-instance-method
 status:

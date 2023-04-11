@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.fetchPriority
+title: "HTMLImageElement: fetchPriority property"
+short-title: fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
 page-type: web-api-instance-property
 status:

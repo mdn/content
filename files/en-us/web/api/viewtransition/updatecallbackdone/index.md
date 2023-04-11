@@ -1,5 +1,6 @@
 ---
-title: ViewTransition.updateCallbackDone
+title: "ViewTransition: updateCallbackDone property"
+short-title: updateCallbackDone
 slug: Web/API/ViewTransition/updateCallbackDone
 page-type: web-api-instance-property
 status: experimental
@@ -23,10 +24,9 @@ A promise.
 // start new view transition
 const transition = document.startViewTransition(() => displayNewImage());
 
-transition.updateCallbackDone
-  .then(() => {
-    // Respond to the DOM being updated successfully
-  });
+transition.updateCallbackDone.then(() => {
+  // Respond to the DOM being updated successfully
+});
 ```
 
 See [Transitions as an enhancement](https://developer.chrome.com/docs/web-platform/view-transitions/#transitions-as-an-enhancement) for a useful example.

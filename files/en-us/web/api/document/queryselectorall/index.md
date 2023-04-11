@@ -1,5 +1,6 @@
 ---
-title: Document.querySelectorAll()
+title: "Document: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 page-type: web-api-instance-method
 browser-compat: api.Document.querySelectorAll

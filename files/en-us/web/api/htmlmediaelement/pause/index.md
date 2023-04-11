@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.pause()
+title: "HTMLMediaElement: pause() method"
+short-title: pause()
 slug: Web/API/HTMLMediaElement/pause
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.pause

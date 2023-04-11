@@ -1,5 +1,6 @@
 ---
-title: XRSession.depthDataFormat
+title: "XRSession: depthDataFormat property"
+short-title: depthDataFormat
 slug: Web/API/XRSession/depthDataFormat
 page-type: web-api-instance-property
 status:

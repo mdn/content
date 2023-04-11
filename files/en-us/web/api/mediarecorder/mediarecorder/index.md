@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder()
+title: "MediaRecorder: MediaRecorder() constructor"
+short-title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 page-type: web-api-constructor
 browser-compat: api.MediaRecorder.MediaRecorder

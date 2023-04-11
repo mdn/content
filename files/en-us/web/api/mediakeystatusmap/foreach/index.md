@@ -1,5 +1,6 @@
 ---
-title: MediaKeyStatusMap.forEach()
+title: "MediaKeyStatusMap: forEach() method"
+short-title: forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
 page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.forEach

@@ -1,5 +1,6 @@
 ---
-title: MediaMetadata()
+title: "MediaMetadata: MediaMetadata() constructor"
+short-title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 page-type: web-api-constructor
 browser-compat: api.MediaMetadata.MediaMetadata

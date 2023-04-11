@@ -1,5 +1,6 @@
 ---
-title: FontFace.featureSettings
+title: "FontFace: featureSettings property"
+short-title: featureSettings
 slug: Web/API/FontFace/featureSettings
 page-type: web-api-instance-property
 browser-compat: api.FontFace.featureSettings

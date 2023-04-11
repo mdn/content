@@ -1,5 +1,6 @@
 ---
-title: Range.extractContents()
+title: "Range: extractContents() method"
+short-title: extractContents()
 slug: Web/API/Range/extractContents
 page-type: web-api-instance-method
 browser-compat: api.Range.extractContents

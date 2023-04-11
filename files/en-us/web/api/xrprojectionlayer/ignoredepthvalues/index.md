@@ -1,5 +1,6 @@
 ---
-title: XRProjectionLayer.ignoreDepthValues
+title: "XRProjectionLayer: ignoreDepthValues property"
+short-title: ignoreDepthValues
 slug: Web/API/XRProjectionLayer/ignoreDepthValues
 page-type: web-api-instance-property
 status:

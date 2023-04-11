@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled property"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.enabled

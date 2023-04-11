@@ -1,5 +1,6 @@
 ---
-title: Accelerometer.z
+title: "Accelerometer: z property"
+short-title: z
 slug: Web/API/Accelerometer/z
 page-type: web-api-instance-property
 status:

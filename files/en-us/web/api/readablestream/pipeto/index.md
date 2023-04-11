@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.pipeTo()
+title: "ReadableStream: pipeTo() method"
+short-title: pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeTo

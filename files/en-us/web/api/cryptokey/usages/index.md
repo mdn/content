@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.usages
+title: "CryptoKey: usages property"
+short-title: usages
 slug: Web/API/CryptoKey/usages
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.usages

@@ -113,4 +113,4 @@ g.next(2); // Returns { value: undefined, done: false }
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

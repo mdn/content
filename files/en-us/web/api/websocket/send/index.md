@@ -1,5 +1,6 @@
 ---
-title: WebSocket.send()
+title: "WebSocket: send() method"
+short-title: send()
 slug: Web/API/WebSocket/send
 page-type: web-api-instance-method
 browser-compat: api.WebSocket.send

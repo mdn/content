@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.trackId
+title: "RTCRtpStreamStats: trackId property"
+short-title: trackId
 slug: Web/API/RTCRtpStreamStats/trackId
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.trackId

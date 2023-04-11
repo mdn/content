@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.textTracks
+title: "HTMLMediaElement: textTracks property"
+short-title: textTracks
 slug: Web/API/HTMLMediaElement/textTracks
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.textTracks

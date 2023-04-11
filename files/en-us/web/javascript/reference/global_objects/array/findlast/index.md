@@ -25,37 +25,20 @@ If you need to find:
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLast((element) => { /* … */ })
-findLast((element, index) => { /* … */ })
-findLast((element, index, array) => { /* … */ })
-
-// Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
-
-// Inline callback function
-findLast(function (element) { /* … */ })
-findLast(function (element, index) { /* … */ })
-findLast(function (element, index, array) { /* … */ })
-findLast(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `findLast()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 

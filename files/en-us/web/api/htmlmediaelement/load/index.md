@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.load()
+title: "HTMLMediaElement: load() method"
+short-title: load()
 slug: Web/API/HTMLMediaElement/load
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.load

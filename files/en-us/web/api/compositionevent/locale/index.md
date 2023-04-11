@@ -1,5 +1,6 @@
 ---
-title: CompositionEvent.locale
+title: "CompositionEvent: locale property"
+short-title: locale
 slug: Web/API/CompositionEvent/locale
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: "CSP: report-to"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.report-to
 ---
 

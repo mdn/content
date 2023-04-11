@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.periodicSync
+title: "ServiceWorkerRegistration: periodicSync property"
+short-title: periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 page-type: web-api-instance-property
 status:

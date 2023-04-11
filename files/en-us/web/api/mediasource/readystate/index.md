@@ -1,5 +1,6 @@
 ---
-title: MediaSource.readyState
+title: "MediaSource: readyState property"
+short-title: readyState
 slug: Web/API/MediaSource/readyState
 page-type: web-api-instance-property
 browser-compat: api.MediaSource.readyState

@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.city
+title: "PaymentAddress: city property"
+short-title: city
 slug: Web/API/PaymentAddress/city
 page-type: web-api-instance-property
 status:

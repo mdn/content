@@ -1,5 +1,6 @@
 ---
-title: Document.createEvent()
+title: "Document: createEvent() method"
+short-title: createEvent()
 slug: Web/API/Document/createEvent
 page-type: web-api-instance-method
 browser-compat: api.Document.createEvent

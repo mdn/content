@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.accessKey
+title: "HTMLElement: accessKey property"
+short-title: accessKey
 slug: Web/API/HTMLElement/accessKey
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKey

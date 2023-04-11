@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.selectedIndex
+title: "HTMLSelectElement: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.selectedIndex

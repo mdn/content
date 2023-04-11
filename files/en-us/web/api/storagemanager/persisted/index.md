@@ -1,5 +1,6 @@
 ---
-title: StorageManager.persisted()
+title: "StorageManager: persisted() method"
+short-title: persisted()
 slug: Web/API/StorageManager/persisted
 page-type: web-api-instance-method
 browser-compat: api.StorageManager.persisted

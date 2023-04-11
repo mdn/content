@@ -1,5 +1,6 @@
 ---
-title: HTMLContentElement.select
+title: "HTMLContentElement: select property"
+short-title: select
 slug: Web/API/HTMLContentElement/select
 page-type: web-api-instance-property
 status:

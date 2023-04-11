@@ -1,5 +1,6 @@
 ---
-title: Element.ariaLive
+title: "Element: ariaLive property"
+short-title: ariaLive
 slug: Web/API/Element/ariaLive
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaLive

@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.id
+title: "BackgroundFetchRegistration: id property"
+short-title: id
 slug: Web/API/BackgroundFetchRegistration/id
 page-type: web-api-instance-property
 status:

@@ -80,7 +80,7 @@ console.log(B() || A());
 
 The following expressions might seem equivalent, but they are not, because the
 `&&` operator is executed before the `||` operator
-(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 true || false && false; // returns true, because && is executed first

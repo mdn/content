@@ -1,5 +1,6 @@
 ---
-title: Window.mozInnerScreenX
+title: "Window: mozInnerScreenX property"
+short-title: mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 page-type: web-api-instance-property
 status:

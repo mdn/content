@@ -1,6 +1,6 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 page-type: guide
 ---
 
@@ -36,7 +36,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
             <strong>Note:</strong> This character has a different meaning when
             it appears at the start of a
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
               >character class</a
             >.
           </p>
@@ -84,7 +84,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
         <p>
           To match a backspace character (<code>[\b]</code>), see
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >Character Classes</a
           >.
         </p>
@@ -216,7 +216,7 @@ const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes).
+In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes).
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -268,7 +268,7 @@ console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 
 ### Different meaning of '?!' combination usage in assertions and character classes
 
-The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) like `[^?!]`.
+The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) like `[^?!]`.
 
 ```js
 const orangeNotLemon =
@@ -293,12 +293,12 @@ console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)

@@ -1,5 +1,6 @@
 ---
-title: Range.compareNode()
+title: "Range: compareNode() method"
+short-title: compareNode()
 slug: Web/API/Range/compareNode
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Selection.removeAllRanges()
+title: "Selection: removeAllRanges() method"
+short-title: removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 page-type: web-api-instance-method
 browser-compat: api.Selection.removeAllRanges

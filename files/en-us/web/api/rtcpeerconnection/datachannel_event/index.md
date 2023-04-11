@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: datachannel event"
+short-title: datachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.datachannel_event

@@ -1,5 +1,6 @@
 ---
-title: RTCDtlsTransport.state
+title: "RTCDtlsTransport: state property"
+short-title: state
 slug: Web/API/RTCDtlsTransport/state
 page-type: web-api-instance-property
 browser-compat: api.RTCDtlsTransport.state

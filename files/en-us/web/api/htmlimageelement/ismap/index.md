@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.isMap
+title: "HTMLImageElement: isMap property"
+short-title: isMap
 slug: Web/API/HTMLImageElement/isMap
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.isMap

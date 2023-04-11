@@ -1,5 +1,6 @@
 ---
-title: Window.showDirectoryPicker()
+title: "Window: showDirectoryPicker() method"
+short-title: showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 page-type: web-api-instance-method
 status:

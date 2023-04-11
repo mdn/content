@@ -30,9 +30,7 @@ In addition to methods to read and alter individual components of the local date
 ## Constructor
 
 - {{jsxref("Date/Date", "Date()")}}
-  - : When called as a function, returns a string representation of the current date and time. All arguments are ignored. The result is the same as executing `new Date().toString()`.
-- {{jsxref("Date/Date", "new Date()")}}
-  - : When called as a constructor, returns a new `Date` object.
+  - : When called as a constructor, returns a new `Date` object. When called as a function, returns a string representation of the current date and time.
 
 ## Static methods
 
@@ -146,6 +144,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Converts a date to a string using the UTC timezone.
 - {{jsxref("Date.prototype.valueOf()")}}
   - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
+- [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+  - : Converts this `Date` object to a primitive value.
 
 ## Examples
 

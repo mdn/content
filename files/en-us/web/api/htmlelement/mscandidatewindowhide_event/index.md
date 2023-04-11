@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: mscandidatewindowhide event"
+short-title: mscandidatewindowhide
 slug: Web/API/HTMLElement/mscandidatewindowhide_event
 page-type: web-api-event
 status:

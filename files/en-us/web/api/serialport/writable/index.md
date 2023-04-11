@@ -1,5 +1,6 @@
 ---
-title: SerialPort.writable
+title: "SerialPort: writable property"
+short-title: writable
 slug: Web/API/SerialPort/writable
 page-type: web-api-instance-property
 status:

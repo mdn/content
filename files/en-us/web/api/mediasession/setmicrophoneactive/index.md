@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setMicrophoneActive()
+title: "MediaSession: setMicrophoneActive() method"
+short-title: setMicrophoneActive()
 slug: Web/API/MediaSession/setMicrophoneActive
 page-type: web-api-instance-method
 status:

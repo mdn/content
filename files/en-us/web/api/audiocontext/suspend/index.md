@@ -1,5 +1,6 @@
 ---
-title: AudioContext.suspend()
+title: "AudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/AudioContext/suspend
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.suspend

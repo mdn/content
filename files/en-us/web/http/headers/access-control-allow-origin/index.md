@@ -1,6 +1,7 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 

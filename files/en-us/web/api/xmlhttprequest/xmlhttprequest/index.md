@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest()
+title: "XMLHttpRequest: XMLHttpRequest() constructor"
+short-title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 page-type: web-api-constructor
 browser-compat: api.XMLHttpRequest.XMLHttpRequest

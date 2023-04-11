@@ -1,11 +1,12 @@
 ---
-title: Headers.forEach()
+title: "Headers: forEach() method"
+short-title: forEach()
 slug: Web/API/Headers/forEach
 page-type: web-api-instance-method
 browser-compat: api.Headers.forEach
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}}
 
 The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 

@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.pointerBeforeReferenceNode
+title: "NodeIterator: pointerBeforeReferenceNode property"
+short-title: pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.pointerBeforeReferenceNode

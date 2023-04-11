@@ -1,5 +1,6 @@
 ---
-title: OrientationSensor.quaternion
+title: "OrientationSensor: quaternion property"
+short-title: quaternion
 slug: Web/API/OrientationSensor/quaternion
 page-type: web-api-instance-property
 browser-compat: api.OrientationSensor.quaternion

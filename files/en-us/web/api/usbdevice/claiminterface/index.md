@@ -1,5 +1,6 @@
 ---
-title: USBDevice.claimInterface()
+title: "USBDevice: claimInterface() method"
+short-title: claimInterface()
 slug: Web/API/USBDevice/claimInterface
 page-type: web-api-instance-method
 status:

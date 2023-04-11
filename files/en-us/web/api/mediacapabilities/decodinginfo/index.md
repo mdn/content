@@ -1,5 +1,6 @@
 ---
-title: MediaCapabilities.decodingInfo()
+title: "MediaCapabilities: decodingInfo() method"
+short-title: decodingInfo()
 slug: Web/API/MediaCapabilities/decodingInfo
 page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.decodingInfo

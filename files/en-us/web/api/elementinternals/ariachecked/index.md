@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaChecked
+title: "ElementInternals: ariaChecked property"
+short-title: ariaChecked
 slug: Web/API/ElementInternals/ariaChecked
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaChecked

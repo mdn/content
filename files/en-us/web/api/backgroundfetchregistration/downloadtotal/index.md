@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.downloadTotal
+title: "BackgroundFetchRegistration: downloadTotal property"
+short-title: downloadTotal
 slug: Web/API/BackgroundFetchRegistration/downloadTotal
 page-type: web-api-instance-property
 status:

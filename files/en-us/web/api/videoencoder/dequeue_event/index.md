@@ -1,5 +1,6 @@
 ---
 title: "VideoEncoder: dequeue event"
+short-title: dequeue
 slug: Web/API/VideoEncoder/dequeue_event
 page-type: web-api-event
 browser-compat: api.VideoEncoder.dequeue_event

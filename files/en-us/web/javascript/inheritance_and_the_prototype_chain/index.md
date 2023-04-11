@@ -72,7 +72,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
+Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 Similarly, you can create longer prototype chains, and a property will be sought on all of them.
 

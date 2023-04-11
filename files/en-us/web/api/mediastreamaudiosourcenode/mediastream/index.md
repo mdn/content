@@ -1,5 +1,6 @@
 ---
-title: MediaStreamAudioSourceNode.mediaStream
+title: "MediaStreamAudioSourceNode: mediaStream property"
+short-title: mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamAudioSourceNode.mediaStream

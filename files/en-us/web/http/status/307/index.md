@@ -1,6 +1,7 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
+page-type: http-status-code
 browser-compat: http.status.307
 ---
 

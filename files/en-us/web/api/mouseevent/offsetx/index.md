@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.offsetX
+title: "MouseEvent: offsetX property"
+short-title: offsetX
 slug: Web/API/MouseEvent/offsetX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.offsetX

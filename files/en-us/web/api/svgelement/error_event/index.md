@@ -1,5 +1,6 @@
 ---
 title: "SVGElement: error event"
+short-title: error
 slug: Web/API/SVGElement/error_event
 page-type: web-api-event
 browser-compat: api.SVGElement.error_event

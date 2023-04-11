@@ -1,5 +1,6 @@
 ---
 title: "Window: vrdisplayconnect event"
+short-title: vrdisplayconnect
 slug: Web/API/Window/vrdisplayconnect_event
 page-type: web-api-event
 status:

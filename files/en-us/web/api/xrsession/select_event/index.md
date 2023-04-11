@@ -1,5 +1,6 @@
 ---
-title: 'XRSession: select event'
+title: "XRSession: select event"
+short-title: select
 slug: Web/API/XRSession/select_event
 page-type: web-api-event
 status:

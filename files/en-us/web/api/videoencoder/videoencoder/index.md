@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder()
+title: "VideoEncoder: VideoEncoder() constructor"
+short-title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
 page-type: web-api-constructor
 browser-compat: api.VideoEncoder.VideoEncoder

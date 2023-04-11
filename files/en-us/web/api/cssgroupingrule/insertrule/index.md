@@ -1,5 +1,6 @@
 ---
-title: CSSGroupingRule.insertRule()
+title: "CSSGroupingRule: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
 page-type: web-api-instance-method
 browser-compat: api.CSSGroupingRule.insertRule

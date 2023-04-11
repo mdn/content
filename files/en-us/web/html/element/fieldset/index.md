@@ -55,6 +55,8 @@ This example shows a really simple `<fieldset>` example, with a `<legend>`, and 
 </form>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
 
 ### Disabled fieldset
@@ -76,6 +78,8 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
   </fieldset>
 </form>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}
 
