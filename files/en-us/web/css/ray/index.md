@@ -7,7 +7,7 @@ browser-compat: css.types.ray
 
 {{CSSRef}}
 
-The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a line segment that starts from a position of an element and proceeds in the direction defined by the specified angle.
+The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a straight line segment or path that starts from a position of an element and proceeds in the direction defined by the specified angle.
 
 {{EmbedInteractiveExample("pages/css/function-ray.html")}}
 
@@ -27,15 +27,26 @@ offset-path: ray(45deg);
 
 ### Parameters
 
-- `<angle>`
-  - : The filling rule for the interior of the path.
-    Possible values are `nonzero` or `evenodd`.
-    The default value is `nonzero`.
-    See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
-- `<ray-size>`
-  - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path).
+- [`<angle>`](/en-US/docs/Web/CSS/angle)
+  - : Specifies the direction in which the line segment proceeds. `0deg` is pointing up and positive angles increase in the clockwise direction.
+- `<size>`
+
+  - : Specifies the length of the line segment and is an optional parameter. It represents the distance between [`offset-distance`](/en-US/docs/Web/CSS/offset-distance)`: 0%` and `offset-distance: 100%`. This parameter accepts one of the following keywords:
+
+    `closest-side`: Distance between the starting point and the closest side of the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element. This is the default value. If the starting point is on the containing block's boundary, the distance is zero. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
+
+    `closest-corner`: Distance between the starting point and the closest corner of the containing block of the element. If the starting point is on a corner of the containing block, the distance is zero.
+
+    `farthest-side`: Distance between the starting point and the farthest side of the containing block of the element. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
+
+    `farthest-corner`: Distance between the starting point and the farthest corner of the containing block of the element.
+
+    `sides`: Distance between the starting point and the point where the line segment intersects the containing block's boundary. If the starting point is on or outside the containing block's boundary, the distance is zero.
+
+> **Note:** In the case of `sides`, the segment length depends on the specified `<angle>`. For all other size values, the segment length is constant regardless of the specified `<angle>`.
+
 - `contain`
-  - :
+  - : Reduces the length of the line segment so that the element stays within the containing block even at `offset-distance: 100%`. Specifically, the segment's length is reduced by half the width or half the height of the element's border box, whichever is greater.
 
 ## Formal syntax
 
@@ -46,51 +57,23 @@ offset-path: ray(45deg);
 
 ## Examples
 
-### Examples of correct values for path()
-
-```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-```
-
-### Use as the value of offset-path
-
-The `path()` function is used to create a path for the item to travel round. Changing any of the values will cause the path to not neatly run round the circle.
-
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
-
 ### Modify the value of the SVG path d attribute
-
-The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Attribute/d), which can also be set to `none` in your CSS.
-
-The "V" symbol will flip vertically when you hover over it, if `d` is supported as a CSS property.
 
 #### CSS
 
 ```css
-html,
-body,
-svg {
-  height: 100%;
-}
 
-/* This path is displayed on hover*/
-#svg_css_ex1:hover path {
-  d: path("M20,80 L50,20 L80,80");
-}
 ```
 
 #### HTML
 
 ```html
-<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
-</svg>
+
 ```
 
 #### Result
 
-{{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
+<!-- {{EmbedLiveSample('', '100%', 200)}} -->
 
 ## Specifications
 
@@ -102,7 +85,5 @@ svg {
 
 ## See also
 
-- {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- [`offset-distance`](/en-US/docs/Web/CSS/offset-distance)
+- [`offset-path`](/en-US/docs/Web/CSS/offset-path)
