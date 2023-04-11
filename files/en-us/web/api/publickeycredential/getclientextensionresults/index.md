@@ -74,7 +74,3 @@ navigator.credentials
 - [The list of the currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
   result of the authenticator's extensions processing
-- {{domxref("PublicKeyCredentialCreationOptions")}}, which contains the
-  client extensions' input values for the creation of the credential
-- {{domxref("PublicKeyCredentialRequestOptions")}}, which contains the
-  client extensions' input values for the retrieval of the credential

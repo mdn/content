@@ -63,7 +63,7 @@ get(options)
 
     - `publicKey` {{optional_inline}}
 
-      - : An object (see [`publicKey` object structure](#publicKey_object_structure)) containing requirements for returned public key credentials (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party.
+      - : An object (see [`publicKey` object structure](#publickey_object_structure)) containing requirements for returned public key credentials (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party.
 
     - `signal` {{optional_inline}}
 

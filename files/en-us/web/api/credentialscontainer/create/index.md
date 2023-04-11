@@ -43,7 +43,7 @@ create(options)
 
     - `publicKey` {{optional_inline}}
 
-      - : An object (see [`publicKey` object structure](#publicKey_object_structure)) containing requirements for a created {{domxref("PublicKeyCredential")}} (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
+      - : An object (see [`publicKey` object structure](#publickey_object_structure)) containing requirements for a created {{domxref("PublicKeyCredential")}} (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
 
     - `signal` {{optional_inline}}
 

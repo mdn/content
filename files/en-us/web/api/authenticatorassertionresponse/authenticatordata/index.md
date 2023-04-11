@@ -29,7 +29,7 @@ An {{jsxref("ArrayBuffer")}} with a {{jsxref("ArrayBuffer.byteLength")}} of at l
   - : A signature count from the authenticator. The server will use this counter to detect authenticator cloning.
 - **attestedCredentialData** (variable length)
 
-  - : The credential that was created. This is only present during a {{domxref("ClientCredentials.create", "navigator.credentials.create()")}} call. This is a sequence of bytes with the following format:
+  - : The credential that was created. This is only present during a {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} call. This is a sequence of bytes with the following format:
 
     - **AAGUID** (16 bytes): Authenticator Attestation Globally Unique Identifier, a unique number that identifies the model of the authenticator (not the specific instance of the authenticator) so that a relying party can understand the characteristics of the authenticator by looking up its metadata statement.
     - **_credentialIdLength_** (2 bytes): The length of the credential ID that immediately follows these bytes.
