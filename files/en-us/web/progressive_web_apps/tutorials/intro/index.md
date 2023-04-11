@@ -7,17 +7,19 @@ Progressive web applications, known as PWAs, are a way to build applications for
 
 ## PWA benefits
 
-Using the languages of the web, we can create fully functioning applications that work both online and offline, both in the browsers and on the user's operating systems.
+Using the languages of the web, we can create fully functioning applications that work both online and offline, both in the browsers and on the user's operating systems (OS).
 
 ### Code once. Install everywhere
 
-Historically, operating system specific applications needed to be written in operating system targeted programming languages, then compiled and packaged based on OS language and application requirement, which differ by operating system, and distributed to users thru downloads, often in proprietary app stores, and then installed by the user.
+Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the application are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies: HTML, CSS, and JavaScript.
 
-For an application to be installable on an operating system, such as Windows, iOS, MacOS, Linux, and Android, the application had to be developed in a programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies.
+Historically, in most cases, the application code had to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or other installable files. Depending on the language, compiling and packaging requires the OS's SDK. PWAs solve this problem. Yes, developer teams can have complex build systems, but a PWA can be built out of just HTML and JavaScript.
 
-Historically, in most cases, the application code had to be compiled and packaged using the operating system's SDK into downloadable .exe, .dmg, or other installable files or were made available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements.
+Historically, single-OS-only applications are distributed to users thru downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store App](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. A PWA can be acquired by visiting the online version of the app.
 
-Like regular web sites, PWA are hosted on and downloable from web servers. They don't require any packaging. They can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees). PWA don't require any additional programming language knowledge, any proprietary SDK, or even an app store.
+Historically, downloaded single-OS-only applications have to be intentionally installed by the user. Depending on the OS, install format, and download origin, this can be a multi-step installation process. PWAs are streamlined. PWAs are available to anyone with a supporting browser, [installable](/en-US/docs/Web/Progressive_web_apps/Installing) with a couple of clicks.
+
+Like regular web sites, PWA are hosted on and downloable from web servers. They don't require any packaging. They can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees). PWA don't require any additional programming language knowledge or proprietary SDK.
 
 While PWAs don't require an intermediary, the Play store and App Store do distribute PWAs, undifferentiated from other iOS or Android apps.
 
@@ -53,7 +55,7 @@ You will be installing node.js, MAMP, or other local server to create a local se
 The steps include:
 
 - [Basic site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
-  - : We will create a website that shows a picture of a cat with an installation button, using HTML, CSS, and JavaScript.
+  - : We will create a website with a date picker and an installation button, using HTML, CSS, and JavaScript.
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest)
   - : A PWA requires a manifest is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure)
@@ -61,9 +63,9 @@ The steps include:
 - [Service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker)
   - : The service worker enables the application to work offline. With the secure connection in the previous step, On the very first visit to a web page that installs a new service worker, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
 - [Offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline)
-  - : With JavaScript, we will determine whether the user in online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
+  - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
 - [Session storage](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/storage)
-  - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA with a counter of how many cat pictures have been shown.
+  - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 
 ## See Also
 
