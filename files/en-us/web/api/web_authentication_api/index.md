@@ -35,7 +35,7 @@ To illustrate how the credential creation process works, let's describe the typi
 
 1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)).
 
-2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics). The value of this option is a {{domxref("PublicKeyCredentialCreationOptions")}} object.
+2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics).
 
    A typical `create()` call might look like so:
 
@@ -79,7 +79,7 @@ A typical authentication flow is as follows:
 
 1. The relying party generates a "challenge" and sends it to the user agent using an appropriate secure mechanism, along with a list of relying party and user credentials. It can also indicate where to look for the credential, e.g., on a local built-in authenticator, or on an external one over USB, BLE, etc.
 
-2. The browser asks the authenticator to sign the challenge via a {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call, which is passed the credentials in a `publicKey` option. The value of this option is a {{domxref("PublicKeyCredentialRequestOptions")}} object.
+2. The browser asks the authenticator to sign the challenge via a {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call, which is passed the credentials in a `publicKey` option.
 
    A typical `get()` call might look like so:
 
@@ -134,9 +134,9 @@ Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")
 ## Extensions to other interfaces
 
 - {{domxref("CredentialsContainer.create()")}}, the `publicKey` option
-  - : Calling `create()` with a `publicKey` option initiates the creation of new asymmetric key credentials via an authenticator, as explained above. In this case, the `publicKey` value will be a {{domxref("PublicKeyCredentialCreationOptions")}} object.
+  - : Calling `create()` with a `publicKey` option initiates the creation of new asymmetric key credentials via an authenticator, as explained above.
 - {{domxref("CredentialsContainer.get()")}}, the `publicKey` option
-  - : Calling `get()` with a `publicKey` option instructs the user agent uses an existing set of credentials to authenticate to a relying party. In this case, the `publicKey` value will be a {{domxref("PublicKeyCredentialRequestOptions")}} object.
+  - : Calling `get()` with a `publicKey` option instructs the user agent uses an existing set of credentials to authenticate to a relying party.
 
 ## Examples
 

@@ -26,6 +26,8 @@ None.
 
 An {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} property.
 
+> **Note:** Authenticator data can also be retrieved via the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "response.authenticatorData")}} property available in the {{domxref("PublicKeyCredential")}} returned by a successful {{domxref("CredentialsContainer.get()")}} call. Consult the `authenticatorData` page for a detailed description of the authenticator data format.
+
 ## Examples
 
 ```js
