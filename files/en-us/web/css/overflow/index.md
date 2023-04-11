@@ -37,14 +37,14 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` and the second one applies to `overflow-y`, always in that order.
+The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` and the second one applies to `overflow-y`.
 
 ### Values
 
 - `visible`
   - : Overflow content is not clipped and may be visible outside content's padding box. This is the default value. In this case, the element is not a {{glossary("scroll container")}}.
 - `hidden`
-  - : Overflow content is clipped at the content's padding box. Overflow content outside the clipped region is not visible. User agents do not add a scroll bar and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ still be scrolled programmatically though (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case, the element box is a {{glossary("scroll container")}}.
+  - : Overflow content is clipped at the content's padding box. Overflow content outside the clipped region is not visible. User agents do not add a scroll bar and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ still be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case, the element box is a {{glossary("scroll container")}}.
 - `clip`
   - : Overflow content is clipped, as with `hidden`, but at the element's _overflow clip edge_ (defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property). Similar to `hidden`, overflow content outside the clipped region is not visible with the `clip` keyword, and user agents do not add a scroll bar. However, unlike `hidden`, the `clip` keyword does not allow adding support for scrolling programmatically. Therefore, with `overflow: clip`, an element box is never a {{glossary("scroll container")}}.
 
