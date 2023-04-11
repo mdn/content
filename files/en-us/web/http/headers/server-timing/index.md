@@ -1,6 +1,7 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
+page-type: http-header
 browser-compat: http.headers.Server-Timing
 ---
 

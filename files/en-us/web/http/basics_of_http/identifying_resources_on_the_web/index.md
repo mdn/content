@@ -1,6 +1,7 @@
 ---
 title: Identifying resources on the Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+page-type: guide
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 

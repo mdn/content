@@ -1,6 +1,7 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
+page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
 

@@ -16,14 +16,7 @@ given callback with the drag data item's string data as the argument if the item
 ## Syntax
 
 ```js-nolint
-// Arrow function
-getAsString((data) => { /* … */ } )
-
-// Callback function
 getAsString(callbackFn)
-
-// Inline callback function
-getAsString(function(data) { /* … */ })
 ```
 
 ### Parameters

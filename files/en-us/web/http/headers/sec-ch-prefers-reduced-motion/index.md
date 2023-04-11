@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-Prefers-Reduced-Motion
 slug: Web/HTTP/Headers/Sec-CH-Prefers-Reduced-Motion
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Reduced-Motion

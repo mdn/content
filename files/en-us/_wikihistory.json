@@ -91584,22 +91584,6 @@
       "Siilwyn"
     ]
   },
-  "Web/CSS/translation-value": {
-    "modified": "2020-11-18T06:50:42.399Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "wbamberg",
-      "mfluehr",
-      "Solin1363@gmail.com",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "teoli",
-      "jswisher",
-      "MattBrubeck"
-    ]
-  },
   "Web/CSS/unicode-bidi": {
     "modified": "2020-10-15T21:06:09.388Z",
     "contributors": [
@@ -124209,10 +124193,6 @@
       "Sheppy"
     ]
   },
-  "Web/MathML/Attribute/Values": {
-    "modified": "2019-10-25T11:46:38.660Z",
-    "contributors": ["fscholz", "maryannetpdx", "Sheppy"]
-  },
   "Web/MathML/Authoring": {
     "modified": "2020-11-28T13:32:39.862Z",
     "contributors": [
@@ -124590,6 +124570,10 @@
       "Paul_Mollomo",
       "ethertank"
     ]
+  },
+  "Web/MathML/Values": {
+    "modified": "2019-10-25T11:46:38.660Z",
+    "contributors": ["fscholz", "maryannetpdx", "Sheppy"]
   },
   "Web/Media": {
     "modified": "2020-05-29T11:42:14.330Z",
