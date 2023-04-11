@@ -7,7 +7,7 @@ browser-compat:
   - api.CredentialsContainer.get.publicKey_option.extensions
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Web Authentication API")}}
+{{DefaultAPISidebar("Web Authentication API")}}
 
 The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) has a system of extensions — extra functionality that can be requested during credential creation ({{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}) or authentication ({{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}) operations. This article explains how to request WebAuthn extensions, how to retrieve information about the responses from those requests, and the extensions that are available — including browser support and expected inputs and outputs.
 
