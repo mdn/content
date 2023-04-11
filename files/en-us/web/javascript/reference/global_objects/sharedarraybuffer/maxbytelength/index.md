@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.maxByteLength
 
 {{JSRef}}
 
-The **`maxByteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances represents the maximum length, in bytes, that the `SharedArrayBuffer` can be grown to.
+The **`maxByteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns the maximum length (in bytes) that this `SharedArrayBuffer` can be grown to.
 
 ## Description
 
