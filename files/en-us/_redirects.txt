@@ -851,7 +851,6 @@
 /en-US/docs/CSS/transition-duration	/en-US/docs/Web/CSS/transition-duration
 /en-US/docs/CSS/transition-property	/en-US/docs/Web/CSS/transition-property
 /en-US/docs/CSS/transition-timing-function	/en-US/docs/Web/CSS/transition-timing-function
-/en-US/docs/CSS/translation-value	/en-US/docs/Web/CSS/translation-value
 /en-US/docs/CSS/unicode-bidi	/en-US/docs/Web/CSS/unicode-bidi
 /en-US/docs/CSS/uri	/en-US/docs/Web/CSS/url
 /en-US/docs/CSS/used_value	/en-US/docs/Web/CSS/used_value
@@ -13388,7 +13387,6 @@
 /en-US/docs/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /en-US/docs/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
-/en-US/docs/translation-value	/en-US/docs/Web/CSS/translation-value
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var
 /en-US/docs/video	/es/docs/Web/HTML/Elemento/video
