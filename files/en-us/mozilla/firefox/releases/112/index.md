@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/112
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 11, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 was released on April 11, 2023.
 
 ## Changes for web developers
 
@@ -13,7 +13,7 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### HTML
 
-- {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
+- The {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
 
 #### Removals
 
