@@ -97,6 +97,13 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-static-data-property`: a static data property, like [`Math.E`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E).
 - `javascript-static-method`: a static method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
+### MathML page types
+
+This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Global_attributes/mathcolor).
+- `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Element/msqrt).
+
 ### SVG page types
 
 This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
