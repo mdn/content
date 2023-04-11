@@ -801,7 +801,7 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
 
 ### :nth-child of &lt;selector&gt; syntax
 
-The CSS [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also match a defined selector.
+The CSS [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
 See ([Firefox bug 1819711](https://bugzil.la/1819711)) for more details.
 
 <table>
