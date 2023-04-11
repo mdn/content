@@ -1,6 +1,7 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
+page-type: http-header
 browser-compat: http.headers.WWW-Authenticate
 ---
 

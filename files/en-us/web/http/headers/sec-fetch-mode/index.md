@@ -1,6 +1,7 @@
 ---
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Mode
 ---
 

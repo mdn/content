@@ -1,6 +1,7 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
+page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Pragma

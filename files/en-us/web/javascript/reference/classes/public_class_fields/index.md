@@ -31,7 +31,7 @@ This page introduces public instance fields in detail.
 
 - For public static fields, see [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static).
 - For private fields, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
-- For public methods, see [methods definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+- For public methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 - For public accessors, see [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set).
 
 Public instance fields exist on every created instance of a class. By declaring a public field, you can ensure the field is always present, and the class definition is more self-documenting.
@@ -128,7 +128,7 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-existent private field throws an error, even if the private field is declared below.s
+> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-existent private field throws an error, even if the private field is declared below.
 
 Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 

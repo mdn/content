@@ -79,7 +79,7 @@ The cascade algorithm is applied _before_ the specificity algorithm, meaning if 
 
 Before taking a deeper look at how cascade layers impact the cascade, let's look at an example involving multiple sources of CSS across the various origins, and work through the steps of the cascade algorithm:
 
-Here we have a user agent style sheet, two author style sheets, a user stylesheet, and inline styles within the HTML:
+Here we have a user agent style sheet, two author style sheets, and a user stylesheet, with no inline styles within the HTML:
 
 **User-agent CSS:**
 

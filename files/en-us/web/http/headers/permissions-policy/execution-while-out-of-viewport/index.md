@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: execution-while-out-of-viewport"
 slug: Web/HTTP/Headers/Permissions-Policy/execution-while-out-of-viewport
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.execution-while-out-of-viewport

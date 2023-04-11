@@ -1,6 +1,7 @@
 ---
 title: Want-Digest
 slug: Web/HTTP/Headers/Want-Digest
+page-type: http-header
 browser-compat: http.headers.Want-Digest
 ---
 

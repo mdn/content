@@ -1,6 +1,7 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}

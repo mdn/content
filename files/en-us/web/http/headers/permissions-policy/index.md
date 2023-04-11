@@ -1,6 +1,7 @@
 ---
 title: Permissions-Policy
 slug: Web/HTTP/Headers/Permissions-Policy
+page-type: http-header
 browser-compat: http.headers.Permissions-Policy
 ---
 

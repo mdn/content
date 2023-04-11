@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Headers/Permissions-Policy/web-share
+page-type: http-permissions-policy-directive
 browser-compat: http.headers.Permissions-Policy.web-share
 ---
 
