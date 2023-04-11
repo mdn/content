@@ -20,7 +20,7 @@ setAppBadge(contents)
 ### Parameters
 
 - `contents` {{optional_inline}}
-  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then a badge not containing a count will be displayed.
+  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
 
 ### Return value
 
