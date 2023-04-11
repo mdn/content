@@ -8533,9 +8533,6 @@
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.disabled	/en-US/docs/Web/API/HTMLSelectElement/disabled
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.form	/en-US/docs/Web/API/HTMLSelectElement/form
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex	/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
-/en-US/docs/Web/API/HTMLShadowElement.getDistributedNodes	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
-/en-US/docs/Web/API/HTMLShadowElement.getDistributedNodes()	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
-/en-US/docs/Web/API/HTMLShadowElement/HTMLShadowElement.getDistributedNodes	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
 /en-US/docs/Web/API/HTMLStyleElement.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/HTMLStyleElement.scoped	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/Web/API/HTMLStyleElement.type	/en-US/docs/Web/API/HTMLStyleElement/type
