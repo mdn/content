@@ -132,7 +132,7 @@ There is a "Save" button and a "Cancel" button:
 - When the "Save" button is clicked, the component emits the new label via an `item-edited` event.
 - When the "Cancel" button is clicked, the component signals this by emitting an `edit-cancelled` event.
 
-## Modifying our `ToDoItem` component
+## Modifying our ToDoItem component
 
 Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
 
