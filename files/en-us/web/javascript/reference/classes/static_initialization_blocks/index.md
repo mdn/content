@@ -98,7 +98,7 @@ class A {
 // 'static field'
 ```
 
-The [`super.<property>`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference static properties of a super class.
+The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference static properties of a super class.
 
 ```js
 class A {
