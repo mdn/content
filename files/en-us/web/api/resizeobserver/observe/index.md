@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver.observe()
+title: "ResizeObserver: observe() method"
+short-title: observe()
 slug: Web/API/ResizeObserver/observe
 page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.observe

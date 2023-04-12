@@ -1,5 +1,6 @@
 ---
 title: "IDBOpenDBRequest: upgradeneeded event"
+short-title: upgradeneeded
 slug: Web/API/IDBOpenDBRequest/upgradeneeded_event
 page-type: web-api-event
 browser-compat: api.IDBOpenDBRequest.upgradeneeded_event

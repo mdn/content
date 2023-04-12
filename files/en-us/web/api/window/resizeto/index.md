@@ -1,5 +1,6 @@
 ---
-title: Window.resizeTo()
+title: "Window: resizeTo() method"
+short-title: resizeTo()
 slug: Web/API/Window/resizeTo
 page-type: web-api-instance-method
 browser-compat: api.Window.resizeTo

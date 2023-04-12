@@ -1,5 +1,6 @@
 ---
-title: TrackEvent()
+title: "TrackEvent: TrackEvent() constructor"
+short-title: TrackEvent()
 slug: Web/API/TrackEvent/TrackEvent
 page-type: web-api-constructor
 browser-compat: api.TrackEvent.TrackEvent

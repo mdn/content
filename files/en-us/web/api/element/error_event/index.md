@@ -1,5 +1,6 @@
 ---
 title: "Element: error event"
+short-title: error
 slug: Web/API/Element/error_event
 page-type: web-api-event
 browser-compat: api.Element.error_event

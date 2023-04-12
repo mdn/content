@@ -85,6 +85,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 <span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
 
+### Result
+
 {{EmbedLiveSample("Examples")}}
 
 ## Accessibility concerns

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.beginTransformFeedback()
+title: "WebGL2RenderingContext: beginTransformFeedback() method"
+short-title: beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.beginTransformFeedback

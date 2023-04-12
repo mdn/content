@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestHitTestSourceForTransientInput()
+title: "XRSession: requestHitTestSourceForTransientInput() method"
+short-title: requestHitTestSourceForTransientInput()
 slug: Web/API/XRSession/requestHitTestSourceForTransientInput
 page-type: web-api-instance-method
 status:

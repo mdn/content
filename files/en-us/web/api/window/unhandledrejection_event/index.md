@@ -1,5 +1,6 @@
 ---
 title: "Window: unhandledrejection event"
+short-title: unhandledrejection
 slug: Web/API/Window/unhandledrejection_event
 page-type: web-api-event
 browser-compat: api.Window.unhandledrejection_event

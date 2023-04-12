@@ -1,6 +1,7 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
+page-type: http-status-code
 status:
   - experimental
 browser-compat: http.status.103

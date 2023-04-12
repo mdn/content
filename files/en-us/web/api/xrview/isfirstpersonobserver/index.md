@@ -1,5 +1,6 @@
 ---
-title: XRView.isFirstPersonObserver
+title: "XRView: isFirstPersonObserver property"
+short-title: isFirstPersonObserver
 slug: Web/API/XRView/isFirstPersonObserver
 page-type: web-api-instance-property
 status:

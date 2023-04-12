@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncEvent()
+title: "PeriodicSyncEvent: PeriodicSyncEvent() constructor"
+short-title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
 page-type: web-api-constructor
 status:

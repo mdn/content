@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragover event"
+short-title: dragover
 slug: Web/API/HTMLElement/dragover_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragover_event

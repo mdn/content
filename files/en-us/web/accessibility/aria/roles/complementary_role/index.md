@@ -6,7 +6,7 @@ spec-urls:
   - https://w3c.github.io/aria-practices/#aria_lh_complementary
 ---
 
-The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
+The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
 
 ```html
 <div role="complementary">

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getActiveUniforms()
+title: "WebGL2RenderingContext: getActiveUniforms() method"
+short-title: getActiveUniforms()
 slug: Web/API/WebGL2RenderingContext/getActiveUniforms
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms

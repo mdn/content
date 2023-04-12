@@ -97,7 +97,7 @@ However, if there is a property with such a name which is not a function, using 
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation), which allows passing an expression as the property name:
+You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
 const nestedProp = obj?.["prop" + "Name"];

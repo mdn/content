@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.response
+title: "XMLHttpRequest: response property"
+short-title: response
 slug: Web/API/XMLHttpRequest/response
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.response

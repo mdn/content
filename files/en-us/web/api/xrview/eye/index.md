@@ -1,5 +1,6 @@
 ---
-title: XRView.eye
+title: "XRView: eye property"
+short-title: eye
 slug: Web/API/XRView/eye
 page-type: web-api-instance-property
 status:

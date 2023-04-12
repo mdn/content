@@ -33,7 +33,7 @@ An example for `<em>` could be: "Just _do_ it already!", or: "We _had_ to do som
 
 An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named _Queen Mary_. Another example for `<i>` could be: "The word _the_ is an article".
 
-## Example
+## Examples
 
 The `<em>` element is often used to indicate an implicit or explicit contrast.
 

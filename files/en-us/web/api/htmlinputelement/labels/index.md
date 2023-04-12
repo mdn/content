@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.labels
+title: "HTMLInputElement: labels property"
+short-title: labels
 slug: Web/API/HTMLInputElement/labels
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.labels

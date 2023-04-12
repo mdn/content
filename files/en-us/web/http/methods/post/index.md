@@ -1,6 +1,7 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
+page-type: http-method
 browser-compat: http.methods.POST
 ---
 

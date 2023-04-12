@@ -1,5 +1,6 @@
 ---
-title: CSSKeywordValue.value
+title: "CSSKeywordValue: value property"
+short-title: value
 slug: Web/API/CSSKeywordValue/value
 page-type: web-api-instance-property
 browser-compat: api.CSSKeywordValue.value

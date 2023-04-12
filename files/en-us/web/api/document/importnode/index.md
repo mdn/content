@@ -1,5 +1,6 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() method"
+short-title: importNode()
 slug: Web/API/Document/importNode
 page-type: web-api-instance-method
 browser-compat: api.Document.importNode

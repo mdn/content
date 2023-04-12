@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.parentNode()
+title: "TreeWalker: parentNode() method"
+short-title: parentNode()
 slug: Web/API/TreeWalker/parentNode
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.parentNode

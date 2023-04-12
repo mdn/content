@@ -1,5 +1,6 @@
 ---
 title: "HTMLCanvasElement: contextlost event"
+short-title: contextlost
 slug: Web/API/HTMLCanvasElement/contextlost_event
 page-type: web-api-event
 status:

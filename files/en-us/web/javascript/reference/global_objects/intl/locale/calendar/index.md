@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.calendar
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.calendar`** accessor property returns the calendar type for the `Locale`.
+The **`calendar`** accessor property of {{jsxref("Intl.Locale")}} instances returns the calendar type for this locale.
 
 ## Description
 

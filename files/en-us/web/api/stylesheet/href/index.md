@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.href
+title: "StyleSheet: href property"
+short-title: href
 slug: Web/API/StyleSheet/href
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.href

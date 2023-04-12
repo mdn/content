@@ -1,5 +1,6 @@
 ---
-title: MediaQueryListEvent()
+title: "MediaQueryListEvent: MediaQueryListEvent() constructor"
+short-title: MediaQueryListEvent()
 slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 page-type: web-api-constructor
 browser-compat: api.MediaQueryListEvent.MediaQueryListEvent

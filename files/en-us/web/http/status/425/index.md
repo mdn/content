@@ -1,6 +1,7 @@
 ---
 title: 425 Too Early
 slug: Web/HTTP/Status/425
+page-type: http-status-code
 browser-compat: http.status.425
 ---
 

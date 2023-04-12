@@ -1,6 +1,7 @@
 ---
 title: <mo>
 slug: Web/MathML/Element/mo
+page-type: mathml-element
 browser-compat: mathml.elements.mo
 ---
 

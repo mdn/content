@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.range
+title: "CSSCounterStyleRule: range property"
+short-title: range
 slug: Web/API/CSSCounterStyleRule/range
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.range

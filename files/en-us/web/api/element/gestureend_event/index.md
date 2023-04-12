@@ -1,5 +1,6 @@
 ---
 title: "Element: gestureend event"
+short-title: gestureend
 slug: Web/API/Element/gestureend_event
 page-type: web-api-event
 status:

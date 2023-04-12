@@ -1,6 +1,7 @@
 ---
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
+page-type: guide
 ---
 
 {{HTTPSidebar}}

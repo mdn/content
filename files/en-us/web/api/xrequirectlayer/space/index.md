@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.space
+title: "XREquirectLayer: space property"
+short-title: space
 slug: Web/API/XREquirectLayer/space
 page-type: web-api-instance-property
 status:

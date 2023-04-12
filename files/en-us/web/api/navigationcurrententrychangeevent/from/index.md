@@ -1,5 +1,6 @@
 ---
-title: NavigationCurrentEntryChangeEvent.from
+title: "NavigationCurrentEntryChangeEvent: from property"
+short-title: from
 slug: Web/API/NavigationCurrentEntryChangeEvent/from
 page-type: web-api-instance-property
 status:

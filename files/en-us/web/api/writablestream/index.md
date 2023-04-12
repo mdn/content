@@ -42,7 +42,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
       .then(() => defaultWriter.write(chunk))

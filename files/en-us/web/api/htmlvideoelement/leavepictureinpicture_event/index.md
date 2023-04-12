@@ -1,5 +1,6 @@
 ---
 title: "HTMLVideoElement: leavepictureinpicture event"
+short-title: leavepictureinpicture
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 page-type: web-api-event
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event

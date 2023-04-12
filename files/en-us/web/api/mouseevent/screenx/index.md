@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.screenX
+title: "MouseEvent: screenX property"
+short-title: screenX
 slug: Web/API/MouseEvent/screenX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenX

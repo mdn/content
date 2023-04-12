@@ -1,6 +1,7 @@
 ---
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -110,4 +111,4 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

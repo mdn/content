@@ -1,5 +1,6 @@
 ---
-title: TaskAttributionTiming.toJSON()
+title: "TaskAttributionTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TaskAttributionTiming/toJSON
 page-type: web-api-instance-method
 status:

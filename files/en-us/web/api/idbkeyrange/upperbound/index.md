@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.upperBound()
+title: "IDBKeyRange: upperBound() static method"
+short-title: upperBound()
 slug: Web/API/IDBKeyRange/upperBound
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.upperBound
@@ -16,8 +17,8 @@ it includes the upper endpoint value and is closed.
 ## Syntax
 
 ```js-nolint
-upperBound(upper)
-upperBound(upper, open)
+IDBKeyRange.upperBound(upper)
+IDBKeyRange.upperBound(upper, open)
 ```
 
 ### Parameters

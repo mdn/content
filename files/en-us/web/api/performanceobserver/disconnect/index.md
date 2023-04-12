@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver.disconnect()
+title: "PerformanceObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.disconnect

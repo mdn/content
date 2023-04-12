@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceArray.length
+title: "XRInputSourceArray: length property"
+short-title: length
 slug: Web/API/XRInputSourceArray/length
 page-type: web-api-instance-property
 status:

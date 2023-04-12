@@ -1,5 +1,6 @@
 ---
-title: MerchantValidationEvent.methodName
+title: "MerchantValidationEvent: methodName property"
+short-title: methodName
 slug: Web/API/MerchantValidationEvent/methodName
 page-type: web-api-instance-property
 status:

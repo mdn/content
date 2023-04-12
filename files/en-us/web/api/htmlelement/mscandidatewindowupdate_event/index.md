@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: mscandidatewindowupdate event"
+short-title: mscandidatewindowupdate
 slug: Web/API/HTMLElement/mscandidatewindowupdate_event
 page-type: web-api-event
 status:

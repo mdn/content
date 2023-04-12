@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.abort()
+title: "SourceBuffer: abort() method"
+short-title: abort()
 slug: Web/API/SourceBuffer/abort
 page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.abort

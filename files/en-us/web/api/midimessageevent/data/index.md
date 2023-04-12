@@ -1,5 +1,6 @@
 ---
-title: MIDIMessageEvent.data
+title: "MIDIMessageEvent: data property"
+short-title: data
 slug: Web/API/MIDIMessageEvent/data
 page-type: web-api-instance-property
 browser-compat: api.MIDIMessageEvent.data

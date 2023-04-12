@@ -1,5 +1,6 @@
 ---
-title: "XRSystem: isSessionSupported()"
+title: "XRSystem: isSessionSupported() method"
+short-title: isSessionSupported()
 slug: Web/API/XRSystem/isSessionSupported
 page-type: web-api-instance-method
 status:

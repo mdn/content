@@ -1,6 +1,7 @@
 ---
 title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
 

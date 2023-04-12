@@ -1,5 +1,6 @@
 ---
-title: ServiceWorker.postMessage()
+title: "ServiceWorker: postMessage() method"
+short-title: postMessage()
 slug: Web/API/ServiceWorker/postMessage
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorker.postMessage
@@ -28,6 +29,7 @@ postMessage(message, transfer)
     The `message` parameter is mandatory. If the data to be passed to the worker is unimportant, `null` or `undefined` must be passed explicitly.
 
 - `options` {{optional_inline}}
+
   - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of.
 
 - `transfer` {{optional_inline}}
@@ -64,8 +66,8 @@ navigator.serviceWorker.ready.then((registration) => {
 In order to receive the message, the service worker, in `service-worker.js` has to listen to the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
 
 ```js
-// This must be in `service-worker.s``
-addEventListener("message", (event) => 
+// This must be in `service-worker.js`
+addEventListener("message", (event) =>
   console.log(`Message received: ${event.data}`);
 );
 ```

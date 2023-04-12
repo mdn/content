@@ -1,5 +1,6 @@
 ---
-title: console.dir()
+title: "console: dir() method"
+short-title: dir()
 slug: Web/API/console/dir
 page-type: web-api-instance-method
 browser-compat: api.console.dir

@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.shiftKey
+title: "KeyboardEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.shiftKey

@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.getResponseHeader()
+title: "XMLHttpRequest: getResponseHeader() method"
+short-title: getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader

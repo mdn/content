@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.disableRemotePlayback
+title: "HTMLMediaElement: disableRemotePlayback property"
+short-title: disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.disableRemotePlayback
@@ -32,4 +33,4 @@ obj.disableRemotePlayback = true;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.disableRemotePlayback` property

@@ -1,5 +1,6 @@
 ---
-title: SVGPointList.insertItemBefore()
+title: "SVGPointList: insertItemBefore() method"
+short-title: insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
 page-type: web-api-instance-method
 browser-compat: api.SVGPointList.insertItemBefore

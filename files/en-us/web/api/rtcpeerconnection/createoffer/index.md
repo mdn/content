@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.createOffer()
+title: "RTCPeerConnection: createOffer() method"
+short-title: createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.createOffer

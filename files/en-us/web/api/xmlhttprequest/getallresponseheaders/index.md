@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders

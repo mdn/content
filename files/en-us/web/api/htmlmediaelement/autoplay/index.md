@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.autoplay
+title: "HTMLMediaElement: autoplay property"
+short-title: autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.autoplay
@@ -62,5 +63,5 @@ document.querySelector("#video").autoplay = false;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.autoplay` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

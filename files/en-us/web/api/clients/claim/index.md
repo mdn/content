@@ -1,5 +1,6 @@
 ---
-title: Clients.claim()
+title: "Clients: claim() method"
+short-title: claim()
 slug: Web/API/Clients/claim
 page-type: web-api-instance-method
 browser-compat: api.Clients.claim

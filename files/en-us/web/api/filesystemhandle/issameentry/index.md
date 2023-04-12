@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.isSameEntry()
+title: "FileSystemHandle: isSameEntry() method"
+short-title: isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
 page-type: web-api-instance-method
 browser-compat: api.FileSystemHandle.isSameEntry

@@ -1,5 +1,6 @@
 ---
-title: DOMImplementation.createHTMLDocument()
+title: "DOMImplementation: createHTMLDocument() method"
+short-title: createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
 page-type: web-api-instance-method
 browser-compat: api.DOMImplementation.createHTMLDocument

@@ -1,5 +1,6 @@
 ---
 title: "MediaStreamTrack: ended event"
+short-title: ended
 slug: Web/API/MediaStreamTrack/ended_event
 page-type: web-api-event
 browser-compat: api.MediaStreamTrack.ended_event

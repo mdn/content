@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.shippingOption
+title: "PaymentResponse: shippingOption property"
+short-title: shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 page-type: web-api-instance-property
 status:

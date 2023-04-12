@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: select event"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
 browser-compat: api.HTMLInputElement.select_event
 page-type: web-api-event

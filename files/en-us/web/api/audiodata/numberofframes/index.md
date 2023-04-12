@@ -1,5 +1,6 @@
 ---
-title: AudioData.numberOfFrames
+title: "AudioData: numberOfFrames property"
+short-title: numberOfFrames
 slug: Web/API/AudioData/numberOfFrames
 page-type: web-api-instance-property
 status:

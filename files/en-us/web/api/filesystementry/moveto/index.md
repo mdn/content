@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.moveTo()
+title: "FileSystemEntry: moveTo() method"
+short-title: moveTo()
 slug: Web/API/FileSystemEntry/moveTo
 page-type: web-api-instance-method
 status:

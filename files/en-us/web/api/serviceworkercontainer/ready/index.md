@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.ready
+title: "ServiceWorkerContainer: ready property"
+short-title: ready
 slug: Web/API/ServiceWorkerContainer/ready
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerContainer.ready

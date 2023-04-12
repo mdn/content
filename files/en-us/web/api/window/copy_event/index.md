@@ -1,5 +1,6 @@
 ---
 title: "Window: copy event"
+short-title: copy
 slug: Web/API/Window/copy_event
 page-type: web-api-event
 browser-compat: api.Element.copy_event

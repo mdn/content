@@ -1,11 +1,12 @@
 ---
-title: Response.statusText
+title: "Response: statusText property"
+short-title: statusText
 slug: Web/API/Response/statusText
 page-type: web-api-instance-property
 browser-compat: api.Response.statusText
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`statusText`** read-only property of the {{domxref("Response")}} interface contains the status message corresponding to the HTTP status code in {{domxref("Response.status")}}.
 

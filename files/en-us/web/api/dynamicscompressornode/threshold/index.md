@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.threshold
+title: "DynamicsCompressorNode: threshold property"
+short-title: threshold
 slug: Web/API/DynamicsCompressorNode/threshold
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.threshold
@@ -27,7 +28,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.value = -50;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

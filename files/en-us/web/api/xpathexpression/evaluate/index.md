@@ -1,5 +1,6 @@
 ---
-title: XPathExpression.evaluate()
+title: "XPathExpression: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathExpression/evaluate
 page-type: web-api-instance-method
 browser-compat: api.XPathExpression.evaluate

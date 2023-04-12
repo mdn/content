@@ -1,5 +1,6 @@
 ---
-title: HTMLScriptElement.supports()
+title: "HTMLScriptElement: supports() static method"
+short-title: supports()
 slug: Web/API/HTMLScriptElement/supports
 page-type: web-api-static-method
 browser-compat: api.HTMLScriptElement.supports
@@ -14,7 +15,7 @@ The method is expected to return `true` for classic and module scripts, which ar
 ## Syntax
 
 ```js-nolint
-supports(type)
+HTMLScriptElement.supports(type)
 ```
 
 ### Parameters
@@ -45,16 +46,15 @@ Returns `true` if the indicated script type is supported and `false` otherwise.
 The code below shows how to check if `HTMLScriptElement.supports()` is defined, and if so, to use it to test whether particular types of scripts are supported.
 
 ```js
+const log = document.getElementById("log");
+
 function checkSupport(type) {
-  if (HTMLScriptElement.supports(type)) {
-    console.log(`HTMLScriptElement.supports('${type}') is true`);
-  } else {
-    console.log(`HTMLScriptElement.supports('${type}') is false`);
-  }
+  const result = HTMLScriptElement.supports(type) ? "true" : "false";
+  log.textContent += `HTMLScriptElement.supports('${type}') is ${result}\n`;
 }
 
 if (typeof HTMLScriptElement.supports === "undefined") {
-  console.log("HTMLScriptElement.supports() method is not supported");
+  log.textContent = "HTMLScriptElement.supports() method is not supported";
 } else {
   // Check if various script types are supported
   checkSupport("module");
@@ -67,7 +67,7 @@ if (typeof HTMLScriptElement.supports === "undefined") {
 ```
 
 ```html hidden
-<textarea id="log" rows="5" cols="80"></textarea>
+<textarea id="log" rows="6" cols="80"></textarea>
 ```
 
 {{ EmbedLiveSample('Examples') }}

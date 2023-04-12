@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.type
+title: "BiquadFilterNode: type property"
+short-title: type
 slug: Web/API/BiquadFilterNode/type
 page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.type

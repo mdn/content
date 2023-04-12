@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.component
+title: "RTCIceTransport: component property"
+short-title: component
 slug: Web/API/RTCIceTransport/component
 page-type: web-api-instance-property
 browser-compat: api.RTCIceTransport.component

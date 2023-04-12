@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammar.src
+title: "SpeechGrammar: src property"
+short-title: src
 slug: Web/API/SpeechGrammar/src
 page-type: web-api-instance-property
 status:

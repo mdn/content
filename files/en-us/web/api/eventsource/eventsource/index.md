@@ -1,5 +1,6 @@
 ---
-title: EventSource()
+title: "EventSource: EventSource() constructor"
+short-title: EventSource()
 slug: Web/API/EventSource/EventSource
 page-type: web-api-constructor
 browser-compat: api.EventSource.EventSource

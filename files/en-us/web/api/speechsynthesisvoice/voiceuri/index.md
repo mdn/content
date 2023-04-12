@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisVoice.voiceURI
+title: "SpeechSynthesisVoice: voiceURI property"
+short-title: voiceURI
 slug: Web/API/SpeechSynthesisVoice/voiceURI
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisVoice.voiceURI

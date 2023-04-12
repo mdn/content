@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.appVersion
+title: "WorkerNavigator: appVersion property"
+short-title: appVersion
 slug: Web/API/WorkerNavigator/appVersion
 page-type: web-api-instance-property
 status:

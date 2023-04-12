@@ -1,6 +1,7 @@
 ---
 title: <menclose>
 slug: Web/MathML/Element/menclose
+page-type: mathml-element
 status:
   - non-standard
 browser-compat: mathml.elements.menclose

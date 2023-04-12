@@ -1,5 +1,6 @@
 ---
-title: HTMLSlotElement.assignedElements()
+title: "HTMLSlotElement: assignedElements() method"
+short-title: assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
 page-type: web-api-instance-method
 browser-compat: api.HTMLSlotElement.assignedElements

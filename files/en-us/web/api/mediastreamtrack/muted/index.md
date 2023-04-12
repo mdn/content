@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.muted
+title: "MediaStreamTrack: muted property"
+short-title: muted
 slug: Web/API/MediaStreamTrack/muted
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.muted

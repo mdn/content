@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.abort()
+title: "XMLHttpRequest: abort() method"
+short-title: abort()
 slug: Web/API/XMLHttpRequest/abort
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.abort

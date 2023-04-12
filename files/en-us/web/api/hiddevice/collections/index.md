@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.collections
+title: "HIDDevice: collections property"
+short-title: collections
 slug: Web/API/HIDDevice/collections
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addStream()
+title: "RTCPeerConnection: addStream() method"
+short-title: addStream()
 slug: Web/API/RTCPeerConnection/addStream
 page-type: web-api-instance-method
 status:

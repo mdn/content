@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.totalVideoFrames
+title: "VideoPlaybackQuality: totalVideoFrames property"
+short-title: totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 page-type: web-api-instance-property
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames

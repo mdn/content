@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.framebuffer
+title: "XRWebGLLayer: framebuffer property"
+short-title: framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
 page-type: web-api-instance-property
 status:
@@ -56,7 +57,7 @@ framebuffer:
   creating the layer.
 - The XR compositor assumes that opaque framebuffers use colors with premultiplied
   alpha, regardless of whether or not the WebGL context's
- `premultipliedAlpha`")}}` context
+  `premultipliedAlpha`")}}` context
   attribute is set.
 
 > **Note:** The `depth` and `stencil` properties are

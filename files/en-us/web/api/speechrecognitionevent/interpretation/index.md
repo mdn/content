@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.interpretation
+title: "SpeechRecognitionEvent: interpretation property"
+short-title: interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
 page-type: web-api-instance-property
 status:

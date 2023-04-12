@@ -1,5 +1,6 @@
 ---
-title: IIRFilterNode()
+title: "IIRFilterNode: IIRFilterNode() constructor"
+short-title: IIRFilterNode()
 slug: Web/API/IIRFilterNode/IIRFilterNode
 page-type: web-api-constructor
 browser-compat: api.IIRFilterNode.IIRFilterNode

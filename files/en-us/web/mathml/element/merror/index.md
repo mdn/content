@@ -1,6 +1,7 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
+page-type: mathml-element
 browser-compat: mathml.elements.merror
 ---
 

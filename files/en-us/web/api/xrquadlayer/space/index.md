@@ -1,5 +1,6 @@
 ---
-title: XRQuadLayer.space
+title: "XRQuadLayer: space property"
+short-title: space
 slug: Web/API/XRQuadLayer/space
 page-type: web-api-instance-property
 status:

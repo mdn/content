@@ -1,5 +1,6 @@
 ---
-title: MediaError.msExtendedCode
+title: "MediaError: msExtendedCode property"
+short-title: msExtendedCode
 slug: Web/API/MediaError/msExtendedCode
 page-type: web-api-instance-property
 ---

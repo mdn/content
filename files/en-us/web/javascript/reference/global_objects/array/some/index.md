@@ -16,37 +16,20 @@ function. It returns true if, in the array, it finds an element for which the pr
 ## Syntax
 
 ```js-nolint
-// Arrow function
-some((element) => { /* … */ })
-some((element, index) => { /* … */ })
-some((element, index, array) => { /* … */ })
-
-// Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
-
-// Inline callback function
-some(function (element) { /* … */ })
-some(function (element, index) { /* … */ })
-some(function (element, index, array) { /* … */ })
-some(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `some()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 

@@ -1,5 +1,6 @@
 ---
-title: Permissions.query()
+title: "Permissions: query() method"
+short-title: query()
 slug: Web/API/Permissions/query
 page-type: web-api-instance-method
 browser-compat: api.Permissions.query

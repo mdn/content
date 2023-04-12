@@ -1,5 +1,6 @@
 ---
 title: "PictureInPictureWindow: resize event"
+short-title: resize
 slug: Web/API/PictureInPictureWindow/resize_event
 page-type: web-api-event
 browser-compat: api.PictureInPictureWindow.resize_event
@@ -23,9 +24,9 @@ onresize = (event) => {};
 
 ## Event type
 
-A {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("PictureInPictureWindow")}}
+{{InheritanceDiagram("PictureInPictureEvent")}}
 
 ## Event properties
 
@@ -51,7 +52,7 @@ const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
 function resize(evt) {
-  heightOutput.textContent = evt.target.width;
+  heightOutput.textContent = evt.target.height;
   widthOutput.textContent = evt.target.width;
 }
 

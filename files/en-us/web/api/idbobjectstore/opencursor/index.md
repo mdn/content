@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.openCursor()
+title: "IDBObjectStore: openCursor() method"
+short-title: openCursor()
 slug: Web/API/IDBObjectStore/openCursor
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.openCursor

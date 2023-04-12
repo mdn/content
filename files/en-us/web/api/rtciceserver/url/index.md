@@ -1,5 +1,6 @@
 ---
-title: RTCIceServer.url
+title: "RTCIceServer: url property"
+short-title: url
 slug: Web/API/RTCIceServer/url
 page-type: web-api-instance-property
 status:

@@ -1,11 +1,12 @@
 ---
 title: "Window: popstate event"
+short-title: popstate
 slug: Web/API/Window/popstate_event
 page-type: web-api-event
 browser-compat: api.Window.popstate_event
 ---
 
-{{APIRef}}
+{{APIRef("History API")}}
 
 The **`popstate`** event of the {{domxref("Window")}} interface is fired when the active history entry changes while the user navigates the session history. It changes the current history entry to that of the last page the user visited or, if {{domxref("history.pushState()")}} has been used to add a history entry to the history stack, that history entry is used instead.
 

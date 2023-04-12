@@ -1,5 +1,6 @@
 ---
-title: CSSImportRule.layerName
+title: "CSSImportRule: layerName property"
+short-title: layerName
 slug: Web/API/CSSImportRule/layerName
 page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.layerName

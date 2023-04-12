@@ -29,8 +29,8 @@ Related properties are {{cssxref("border-block-start-color")}}, {{cssxref("borde
 
 ### Values
 
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 

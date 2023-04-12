@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.ignoreDepthValues
+title: "XRWebGLLayer: ignoreDepthValues property"
+short-title: ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
 page-type: web-api-instance-property
 status:

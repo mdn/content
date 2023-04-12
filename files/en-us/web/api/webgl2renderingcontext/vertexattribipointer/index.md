@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.vertexAttribIPointer()
+title: "WebGL2RenderingContext: vertexAttribIPointer() method"
+short-title: vertexAttribIPointer()
 slug: Web/API/WebGL2RenderingContext/vertexAttribIPointer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer

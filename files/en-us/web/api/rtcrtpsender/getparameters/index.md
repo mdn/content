@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.getParameters()
+title: "RTCRtpSender: getParameters() method"
+short-title: getParameters()
 slug: Web/API/RTCRtpSender/getParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.getParameters
@@ -24,13 +25,14 @@ None.
 An object indicating the current configuration of the sender. <!-- RTCRtpSendParameters, derived from RTCRtpParameters -->
 
 <!-- spec defines following in RTCRtpSendParameters -->
+
 - `encodings`
   - : An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters and settings for a single codec that could be used to encode the track's media.
 - `transactionId`
   - : A string containing a unique ID.
-    This value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to modify the parameters returned by a specific previous call to `getParameters()`.
-    This parameter cannot be changed by the caller.
-<!-- spec defines following in RTCRtpParameters -->
+  This value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to modify the parameters returned by a specific previous call to `getParameters()`.
+  This parameter cannot be changed by the caller.
+  <!-- spec defines following in RTCRtpParameters -->
 - `codecs`
   - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose.
     This parameter cannot be changed once initially set.

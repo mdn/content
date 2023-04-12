@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.pointer
 
 {{CSSRef}}
 
-The **`pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has a pointing device (such as a mouse), and if so, how accurate the _primary_ pointing device is.
+The **`pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) tests whether the user has a pointing device (such as a mouse), and if so, how accurate the _primary_ pointing device is.
 
 > **Note:** If you want to test the accuracy of _any_ pointing device, use [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) instead.
 

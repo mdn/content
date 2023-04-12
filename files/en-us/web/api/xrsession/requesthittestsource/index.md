@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestHitTestSource()
+title: "XRSession: requestHitTestSource() method"
+short-title: requestHitTestSource()
 slug: Web/API/XRSession/requestHitTestSource
 page-type: web-api-instance-method
 status:

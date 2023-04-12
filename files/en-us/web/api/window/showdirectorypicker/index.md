@@ -1,5 +1,6 @@
 ---
-title: Window.showDirectoryPicker()
+title: "Window: showDirectoryPicker() method"
+short-title: showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 page-type: web-api-instance-method
 status:
@@ -38,7 +39,7 @@ showDirectoryPicker()
 
 ### Return value
 
-A {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemDirectoryHandle')}} object.
 
 ### Exceptions
 

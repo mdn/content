@@ -1,5 +1,6 @@
 ---
-title: setTimeout()
+title: setTimeout() global function
+short-title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
 browser-compat: api.setTimeout
@@ -127,7 +128,7 @@ To create a progression in which one function only fires after the completion of
 ### The "this" problem
 
 When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
-expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+expectation. The general issue is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
 Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
@@ -434,7 +435,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
 
 ## Specifications
 

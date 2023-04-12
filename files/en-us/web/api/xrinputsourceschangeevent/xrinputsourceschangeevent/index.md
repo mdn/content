@@ -1,5 +1,6 @@
 ---
-title: XRInputSourcesChangeEvent()
+title: "XRInputSourcesChangeEvent: XRInputSourcesChangeEvent() constructor"
+short-title: XRInputSourcesChangeEvent()
 slug: Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 page-type: web-api-constructor
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent

@@ -1,5 +1,6 @@
 ---
-title: Element.previousElementSibling
+title: "Element: previousElementSibling property"
+short-title: previousElementSibling
 slug: Web/API/Element/previousElementSibling
 page-type: web-api-instance-property
 browser-compat: api.Element.previousElementSibling

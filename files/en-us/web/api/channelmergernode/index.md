@@ -57,7 +57,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#example) for example code.
+See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#examples) for example code.
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: AudioNode.context
+title: "AudioNode: context property"
+short-title: context
 slug: Web/API/AudioNode/context
 page-type: web-api-instance-property
 browser-compat: api.AudioNode.context

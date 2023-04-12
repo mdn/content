@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.readyState
+title: "XMLHttpRequest: readyState property"
+short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.readyState

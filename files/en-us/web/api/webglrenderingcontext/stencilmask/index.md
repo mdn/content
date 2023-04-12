@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.stencilMask()
+title: "WebGLRenderingContext: stencilMask() method"
+short-title: stencilMask()
 slug: Web/API/WebGLRenderingContext/stencilMask
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilMask

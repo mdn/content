@@ -1,5 +1,6 @@
 ---
-title: Animation.cancel()
+title: "Animation: cancel() method"
+short-title: cancel()
 slug: Web/API/Animation/cancel
 page-type: web-api-instance-method
 browser-compat: api.Animation.cancel

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.deleteRenderbuffer()
+title: "WebGLRenderingContext: deleteRenderbuffer() method"
+short-title: deleteRenderbuffer()
 slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteRenderbuffer

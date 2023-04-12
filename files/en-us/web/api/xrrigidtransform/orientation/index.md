@@ -1,5 +1,6 @@
 ---
-title: XRRigidTransform.orientation
+title: "XRRigidTransform: orientation property"
+short-title: orientation
 slug: Web/API/XRRigidTransform/orientation
 page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.orientation

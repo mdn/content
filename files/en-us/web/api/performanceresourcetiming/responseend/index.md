@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.responseEnd
+title: "PerformanceResourceTiming: responseEnd property"
+short-title: responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.responseEnd

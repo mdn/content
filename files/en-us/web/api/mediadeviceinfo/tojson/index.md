@@ -1,5 +1,6 @@
 ---
-title: MediaDeviceInfo.toJSON()
+title: "MediaDeviceInfo: toJSON() method"
+short-title: toJSON()
 slug: Web/API/MediaDeviceInfo/toJSON
 page-type: web-api-instance-method
 browser-compat: api.MediaDeviceInfo.toJSON

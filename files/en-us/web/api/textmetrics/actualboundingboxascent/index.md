@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.actualBoundingBoxAscent
+title: "TextMetrics: actualBoundingBoxAscent property"
+short-title: actualBoundingBoxAscent
 slug: Web/API/TextMetrics/actualBoundingBoxAscent
 page-type: web-api-instance-property
 browser-compat: api.TextMetrics.actualBoundingBoxAscent

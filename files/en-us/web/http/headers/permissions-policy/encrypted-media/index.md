@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: encrypted-media"
 slug: Web/HTTP/Headers/Permissions-Policy/encrypted-media
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.encrypted-media
