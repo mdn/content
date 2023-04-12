@@ -1,6 +1,7 @@
 ---
 title: aria-errormessage
 slug: Web/Accessibility/ARIA/Attributes/aria-errormessage
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 
