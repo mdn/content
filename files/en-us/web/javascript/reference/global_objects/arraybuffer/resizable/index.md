@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.resizable
 
 {{JSRef}}
 
-The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances represents whether the `ArrayBuffer` can be resized or not.
+The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances returns whether this array buffer can be resized or not.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-resizable.html")}}
 
