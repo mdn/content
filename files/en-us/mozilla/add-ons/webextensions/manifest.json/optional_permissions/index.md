@@ -67,6 +67,8 @@ You can include any of the following here, but not in all browsers: check the co
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -94,6 +96,7 @@ Of this set, the following permissions are granted silently, without a user prom
 
 - `activeTab`
 - `cookies`
+- `declarativeNetRequestWithHostAccess`
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
