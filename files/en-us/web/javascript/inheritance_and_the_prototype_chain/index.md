@@ -628,7 +628,7 @@ class FilledRectangle extends Rectangle {
   }
 }
 
-const filledRectangle = new FilledRectangle(5, 10, 'blue');
+const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
