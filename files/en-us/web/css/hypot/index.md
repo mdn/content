@@ -42,6 +42,72 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
 
 {{CSSSyntax}}
 
+## Examples
+
+### Sizes based on hypot function
+
+#### HTML
+
+```html
+<div class="boxes">
+  <div class="box">100px</div>
+  <div class="box one">100px</div>
+  <div class="box two">141.417px</div>
+  <div class="box three">250px</div>
+</div>
+```
+
+#### CSS
+
+```css
+* {
+  --size-0: 100px;
+  --size-1: hypot(var(--size-0)); /*  100px */
+  --size-2: hypot(var(--size-0), var(--size-0)); /*  141.417px */
+  --size-3: hypot(
+    calc(var(--size-0) * 1.5),
+    calc(var(--size-0) * 2)
+  ); /*  250px */
+}
+```
+
+```css hidden
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  width: var(--size-0);
+  height: var(--size-0);
+  background-color: tomato;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+```css
+.one {
+  width: var(--size-1);
+  height: var(--size-1);
+}
+.two {
+  width: var(--size-2);
+  height: var(--size-2);
+}
+.three {
+  width: var(--size-3);
+  height: var(--size-3);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Sizes based on hypot function', '100%', '270px')}}
+
 ## Specifications
 
 {{Specifications}}

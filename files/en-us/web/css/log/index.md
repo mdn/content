@@ -45,6 +45,69 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 {{CSSSyntax}}
 
+## Examples
+
+### Sizes based on `log()` function
+
+#### HTML
+
+```html
+<div class="boxes">
+  <div class="box zero">50px</div>
+  <div class="box one">100px</div>
+  <div class="box two">150px</div>
+  <div class="box three">200px</div>
+</div>
+```
+
+#### CSS
+
+```css
+* {
+  --size-0: 50px;
+  --size-1: calc(var(--size-0) * log(7.389)); /*  100px */
+  --size-2: calc(var(--size-0) * log(8, 2)); /*  150px */
+  --size-3: calc(var(--size-0) * log(625, 5)); /*  200px */
+}
+```
+
+```css hidden
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  width: var(--size-0);
+  height: var(--size-0);
+  background-color: tomato;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+```css
+.one {
+  width: var(--size-1);
+  height: var(--size-1);
+}
+.two {
+  width: var(--size-2);
+  height: var(--size-2);
+}
+.three {
+  width: var(--size-3);
+  height: var(--size-3);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Sizes based on log() function', '100%', '220px')}}
+
 ## Specifications
 
 {{Specifications}}

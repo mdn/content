@@ -41,6 +41,69 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 
 {{CSSSyntax}}
 
+## Examples
+
+### Scale sizes based on square root
+
+#### HTML
+
+```html
+<div class="boxes">
+  <div class="box">50px</div>
+  <div class="box one">100px</div>
+  <div class="box two">150px</div>
+  <div class="box three">200px</div>
+</div>
+```
+
+#### CSS
+
+```css
+* {
+  --size-0: 50px;
+  --size-1: calc(var(--size-0) * sqrt(4)); /*  100px */
+  --size-2: calc(var(--size-0) * sqrt(9)); /*  150px */
+  --size-3: calc(var(--size-0) * sqrt(16)); /*  200px */
+}
+```
+
+```css hidden
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  width: var(--size-0);
+  height: var(--size-0);
+  background-color: tomato;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+```css
+.one {
+  width: var(--size-1);
+  height: var(--size-1);
+}
+.two {
+  width: var(--size-2);
+  height: var(--size-2);
+}
+.three {
+  width: var(--size-3);
+  height: var(--size-3);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Scale sizes based on square root', '100%', '220px')}}
+
 ## Specifications
 
 {{Specifications}}
