@@ -1,6 +1,7 @@
 ---
 title: "Multipart labels: Using ARIA for labels with embedded fields inside them"
 slug: Web/Accessibility/ARIA/Multipart_labels
+page-type: guide
 ---
 
 <section id="Quick_links">

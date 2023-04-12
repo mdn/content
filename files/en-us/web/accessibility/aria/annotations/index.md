@@ -1,6 +1,7 @@
 ---
 title: ARIA annotations
 slug: Web/Accessibility/ARIA/Annotations
+page-type: guide
 ---
 
 <section id="Quick_links">

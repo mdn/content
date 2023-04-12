@@ -1,6 +1,7 @@
 ---
 title: How to file ARIA-related bugs
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+page-type: guide
 ---
 
 <section id="Quick_links">

@@ -1,6 +1,7 @@
 ---
 title: Architecture
 slug: Web/Accessibility/Architecture
+page-type: guide
 ---
 
 <section id="Quick_links">
