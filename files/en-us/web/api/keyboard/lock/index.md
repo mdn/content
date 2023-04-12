@@ -1,5 +1,6 @@
 ---
-title: Keyboard.lock()
+title: "Keyboard: lock() method"
+short-title: lock()
 slug: Web/API/Keyboard/lock
 page-type: web-api-instance-method
 status:

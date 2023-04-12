@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.entries()
+title: "FontFaceSet: entries() method"
+short-title: entries()
 slug: Web/API/FontFaceSet/entries
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.entries

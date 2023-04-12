@@ -1,5 +1,6 @@
 ---
-title: ReportBody.toJSON()
+title: "ReportBody: toJSON() method"
+short-title: toJSON()
 slug: Web/API/ReportBody/toJSON
 page-type: web-api-instance-method
 browser-compat: api.ReportBody.toJSON

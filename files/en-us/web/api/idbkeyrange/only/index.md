@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.only()
+title: "IDBKeyRange: only() static method"
+short-title: only()
 slug: Web/API/IDBKeyRange/only
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.only
@@ -15,7 +16,7 @@ interface creates a new key range containing a single value.
 ## Syntax
 
 ```js-nolint
-only(value)
+IDBKeyRange.only(value)
 ```
 
 ### Parameters

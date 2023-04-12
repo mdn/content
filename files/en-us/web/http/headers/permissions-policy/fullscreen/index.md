@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: fullscreen"
 slug: Web/HTTP/Headers/Permissions-Policy/fullscreen
+page-type: http-permissions-policy-directive
 browser-compat: http.headers.Permissions-Policy.fullscreen
 ---
 

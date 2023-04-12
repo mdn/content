@@ -1,5 +1,6 @@
 ---
-title: Animation.pause()
+title: "Animation: pause() method"
+short-title: pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
 browser-compat: api.Animation.pause

@@ -1,5 +1,6 @@
 ---
-title: InputEvent.data
+title: "InputEvent: data property"
+short-title: data
 slug: Web/API/InputEvent/data
 page-type: web-api-instance-property
 browser-compat: api.InputEvent.data

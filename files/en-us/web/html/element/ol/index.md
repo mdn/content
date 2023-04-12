@@ -60,7 +60,7 @@ To determine which list to use, try changing the order of the list items; if the
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Simple_example", 400, 100)}}
 
@@ -74,7 +74,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
 
@@ -90,7 +90,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
 
@@ -113,7 +113,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Nesting_lists", 400, 150)}}
 
@@ -136,7 +136,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
 

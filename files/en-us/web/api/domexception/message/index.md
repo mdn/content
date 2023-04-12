@@ -1,5 +1,6 @@
 ---
-title: DOMException.message
+title: "DOMException: message property"
+short-title: message
 slug: Web/API/DOMException/message
 page-type: web-api-instance-property
 browser-compat: api.DOMException.message

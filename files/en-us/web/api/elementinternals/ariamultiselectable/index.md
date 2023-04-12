@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaMultiSelectable
+title: "ElementInternals: ariaMultiSelectable property"
+short-title: ariaMultiSelectable
 slug: Web/API/ElementInternals/ariaMultiSelectable
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaMultiSelectable

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingQuality
+title: "CanvasRenderingContext2D: imageSmoothingQuality property"
+short-title: imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality

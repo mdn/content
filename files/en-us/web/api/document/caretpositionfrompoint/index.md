@@ -1,5 +1,6 @@
 ---
-title: Document.caretPositionFromPoint()
+title: "Document: caretPositionFromPoint() method"
+short-title: caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
 page-type: web-api-instance-method
 browser-compat: api.Document.caretPositionFromPoint

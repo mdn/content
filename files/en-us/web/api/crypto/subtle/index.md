@@ -1,5 +1,6 @@
 ---
-title: Crypto.subtle
+title: "Crypto: subtle property"
+short-title: subtle
 slug: Web/API/Crypto/subtle
 page-type: web-api-instance-property
 browser-compat: api.Crypto.subtle

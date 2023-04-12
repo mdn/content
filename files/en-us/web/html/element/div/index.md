@@ -39,7 +39,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 </div>
 ```
 
-The result looks like this:
+#### Result
 
 {{EmbedLiveSample("A_simple_example", 650, 60)}}
 

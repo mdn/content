@@ -173,7 +173,7 @@ const observer = new PerformanceObserver((list) => {
     const eventHandlerTime = entry.processingEnd - entry.processingStart;
     console.log(`Total duration: ${duration}`);
     console.log(`Event delay: ${delay}`);
-    console.log(`Event handler duration: ${time}`);
+    console.log(`Event handler duration: ${eventHandlerTime}`);
   });
 });
 

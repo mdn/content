@@ -1,5 +1,6 @@
 ---
-title: XMLSerializer()
+title: "XMLSerializer: XMLSerializer() constructor"
+short-title: XMLSerializer()
 slug: Web/API/XMLSerializer/XMLSerializer
 page-type: web-api-constructor
 browser-compat: api.XMLSerializer.XMLSerializer

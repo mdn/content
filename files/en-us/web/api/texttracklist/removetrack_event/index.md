@@ -1,5 +1,6 @@
 ---
 title: "TextTrackList: removeTrack event"
+short-title: removeTrack
 slug: Web/API/TextTrackList/removeTrack_event
 page-type: web-api-event
 browser-compat: api.TextTrackList.removetrack_event

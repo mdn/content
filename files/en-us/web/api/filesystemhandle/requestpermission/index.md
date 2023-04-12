@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.requestPermission()
+title: "FileSystemHandle: requestPermission() method"
+short-title: requestPermission()
 slug: Web/API/FileSystemHandle/requestPermission
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.continue()
+title: "IDBCursor: continue() method"
+short-title: continue()
 slug: Web/API/IDBCursor/continue
 page-type: web-api-instance-method
 browser-compat: api.IDBCursor.continue

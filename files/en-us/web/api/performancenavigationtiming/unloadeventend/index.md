@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.unloadEventEnd
+title: "PerformanceNavigationTiming: unloadEventEnd property"
+short-title: unloadEventEnd
 slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.unloadEventEnd

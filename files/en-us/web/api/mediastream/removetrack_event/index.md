@@ -1,5 +1,6 @@
 ---
 title: "MediaStream: removetrack event"
+short-title: removetrack
 slug: Web/API/MediaStream/removetrack_event
 page-type: web-api-event
 browser-compat: api.MediaStream.removetrack_event

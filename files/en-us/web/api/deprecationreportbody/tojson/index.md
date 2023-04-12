@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.toJSON()
+title: "DeprecationReportBody: toJSON() method"
+short-title: toJSON()
 slug: Web/API/DeprecationReportBody/toJSON
 page-type: web-api-instance-method
 status:

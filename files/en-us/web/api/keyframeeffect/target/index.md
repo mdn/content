@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.target
+title: "KeyframeEffect: target property"
+short-title: target
 slug: Web/API/KeyframeEffect/target
 page-type: web-api-instance-property
 browser-compat: api.KeyframeEffect.target

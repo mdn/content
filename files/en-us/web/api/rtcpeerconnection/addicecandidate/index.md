@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addIceCandidate()
+title: "RTCPeerConnection: addIceCandidate() method"
+short-title: addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addIceCandidate

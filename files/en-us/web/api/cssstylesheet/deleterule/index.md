@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.deleteRule()
+title: "CSSStyleSheet: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.deleteRule

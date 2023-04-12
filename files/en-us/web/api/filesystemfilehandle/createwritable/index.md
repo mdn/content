@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileHandle.createWritable()
+title: "FileSystemFileHandle: createWritable() method"
+short-title: createWritable()
 slug: Web/API/FileSystemFileHandle/createWritable
 page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.createWritable

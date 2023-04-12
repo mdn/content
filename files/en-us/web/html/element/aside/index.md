@@ -38,6 +38,8 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 </article>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Using_aside")}}
 
 ## Technical summary

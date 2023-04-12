@@ -1,5 +1,6 @@
 ---
-title: Window.customElements
+title: "Window: customElements property"
+short-title: customElements
 slug: Web/API/Window/customElements
 page-type: web-api-instance-property
 browser-compat: api.Window.customElements

@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.send()
+title: "PresentationConnection: send() method"
+short-title: send()
 slug: Web/API/PresentationConnection/send
 page-type: web-api-instance-method
 status:

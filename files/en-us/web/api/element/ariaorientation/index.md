@@ -1,5 +1,6 @@
 ---
-title: Element.ariaOrientation
+title: "Element: ariaOrientation property"
+short-title: ariaOrientation
 slug: Web/API/Element/ariaOrientation
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaOrientation

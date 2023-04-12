@@ -1,5 +1,6 @@
 ---
-title: Blob.slice()
+title: "Blob: slice() method"
+short-title: slice()
 slug: Web/API/Blob/slice
 page-type: web-api-instance-method
 browser-compat: api.Blob.slice

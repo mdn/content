@@ -1,5 +1,6 @@
 ---
-title: Range.detach()
+title: "Range: detach() method"
+short-title: detach()
 slug: Web/API/Range/detach
 page-type: web-api-instance-method
 browser-compat: api.Range.detach

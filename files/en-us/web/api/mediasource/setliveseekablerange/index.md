@@ -1,5 +1,6 @@
 ---
-title: MediaSource.setLiveSeekableRange()
+title: "MediaSource: setLiveSeekableRange() method"
+short-title: setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.setLiveSeekableRange

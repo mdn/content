@@ -1,6 +1,7 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
+page-type: http-header
 browser-compat: http.headers.Referer
 ---
 

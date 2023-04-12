@@ -1,5 +1,6 @@
 ---
-title: SyncEvent.lastChance
+title: "SyncEvent: lastChance property"
+short-title: lastChance
 slug: Web/API/SyncEvent/lastChance
 page-type: web-api-instance-property
 status:

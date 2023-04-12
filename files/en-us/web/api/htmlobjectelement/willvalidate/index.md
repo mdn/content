@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.willValidate
+title: "HTMLObjectElement: willValidate property"
+short-title: willValidate
 slug: Web/API/HTMLObjectElement/willValidate
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.willValidate

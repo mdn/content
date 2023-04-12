@@ -1,5 +1,6 @@
 ---
-title: CompositionEvent.data
+title: "CompositionEvent: data property"
+short-title: data
 slug: Web/API/CompositionEvent/data
 page-type: web-api-instance-property
 browser-compat: api.CompositionEvent.data

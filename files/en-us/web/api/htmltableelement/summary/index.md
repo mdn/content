@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.summary
+title: "HTMLTableElement: summary property"
+short-title: summary
 slug: Web/API/HTMLTableElement/summary
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Highlight()
+title: "Highlight: Highlight() constructor"
+short-title: Highlight()
 slug: Web/API/Highlight/Highlight
 page-type: web-api-constructor
 status:

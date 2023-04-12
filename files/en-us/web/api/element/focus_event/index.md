@@ -1,5 +1,6 @@
 ---
 title: "Element: focus event"
+short-title: focus
 slug: Web/API/Element/focus_event
 page-type: web-api-event
 browser-compat: api.Element.focus_event

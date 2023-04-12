@@ -1,5 +1,6 @@
 ---
-title: AbortSignal.aborted
+title: "AbortSignal: aborted property"
+short-title: aborted
 slug: Web/API/AbortSignal/aborted
 page-type: web-api-instance-property
 browser-compat: api.AbortSignal.aborted

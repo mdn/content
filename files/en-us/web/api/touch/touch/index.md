@@ -1,5 +1,6 @@
 ---
-title: Touch()
+title: "Touch: Touch() constructor"
+short-title: Touch()
 slug: Web/API/Touch/Touch
 page-type: web-api-constructor
 browser-compat: api.Touch.Touch

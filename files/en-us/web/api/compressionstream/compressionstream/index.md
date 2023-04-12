@@ -1,5 +1,6 @@
 ---
-title: CompressionStream()
+title: "CompressionStream: CompressionStream() constructor"
+short-title: CompressionStream()
 slug: Web/API/CompressionStream/CompressionStream
 page-type: web-api-constructor
 browser-compat: api.CompressionStream.CompressionStream

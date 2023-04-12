@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.defaultMuted
+title: "HTMLMediaElement: defaultMuted property"
+short-title: defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.defaultMuted

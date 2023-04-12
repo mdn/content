@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.append()
+title: "DocumentFragment: append() method"
+short-title: append()
 slug: Web/API/DocumentFragment/append
 page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.append

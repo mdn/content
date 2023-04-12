@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x property"
+short-title: x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.x

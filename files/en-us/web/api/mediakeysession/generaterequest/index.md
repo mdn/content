@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.generateRequest()
+title: "MediaKeySession: generateRequest() method"
+short-title: generateRequest()
 slug: Web/API/MediaKeySession/generateRequest
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.generateRequest

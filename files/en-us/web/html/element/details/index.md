@@ -66,7 +66,7 @@ This example shows a simple `<details>` element with a `<summary>`.
 </details>
 ```
 
-The result of this HTML is:
+#### Result
 
 {{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
@@ -85,7 +85,7 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 </details>
 ```
 
-This results in:
+#### Result
 
 {{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 

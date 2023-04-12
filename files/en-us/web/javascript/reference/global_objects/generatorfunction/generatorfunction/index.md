@@ -61,5 +61,5 @@ console.log(iterator.next().value); // 20
 - [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 - {{jsxref("Functions", "Functions", "", 1)}}

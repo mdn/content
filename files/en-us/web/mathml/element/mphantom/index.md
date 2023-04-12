@@ -1,6 +1,7 @@
 ---
 title: <mphantom>
 slug: Web/MathML/Element/mphantom
+page-type: mathml-element
 browser-compat: mathml.elements.mphantom
 ---
 

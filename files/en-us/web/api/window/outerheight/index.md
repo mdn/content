@@ -1,5 +1,6 @@
 ---
-title: Window.outerHeight
+title: "Window: outerHeight property"
+short-title: outerHeight
 slug: Web/API/Window/outerHeight
 page-type: web-api-instance-property
 browser-compat: api.Window.outerHeight

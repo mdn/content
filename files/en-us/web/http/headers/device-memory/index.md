@@ -1,6 +1,7 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Device-Memory

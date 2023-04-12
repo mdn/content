@@ -6,13 +6,13 @@ page-type: glossary-definition
 
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
-Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies to the same site that set them.
+Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookies to the same site that set them.
 
 For this more precise definition a site is determined by the _registrable domain_ portion of the domain name. The registrable domain consists of an entry in the [Public Suffix List](https://publicsuffix.org/list/) plus the portion of the domain name just before it. This means that, for example, `theguardian.co.uk`, `sussex.ac.uk`, and `bookshop.org` are all registrable domains.
 
 According to this definition, `support.mozilla.org` and `developer.mozilla.org` are part of the same site, because `mozilla.org` is a registrable domain.
 
-In some contexts, the scheme is also considered when differentiating sites. This would make `http://vpl.ca` and `https://vpl.ca` different sites. Including the scheme prevents an insecure (HTTP) site from being treated as the same site as a secure (HTTPS) site. A definition that considers the scheme is sometimes called a _schemeful same-site_. This stricter definition is applied in the rules for handling [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies.
+In some contexts, the scheme is also considered when differentiating sites. This would make `http://vpl.ca` and `https://vpl.ca` different sites. Including the scheme prevents an insecure (HTTP) site from being treated as the same site as a secure (HTTPS) site. A definition that considers the scheme is sometimes called a _schemeful same-site_. This stricter definition is applied in the rules for handling [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookies.
 
 ## Examples
 

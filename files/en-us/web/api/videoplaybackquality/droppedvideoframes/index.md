@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.droppedVideoFrames
+title: "VideoPlaybackQuality: droppedVideoFrames property"
+short-title: droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
 page-type: web-api-instance-property
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames

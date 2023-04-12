@@ -1,5 +1,6 @@
 ---
-title: ClipboardItem.presentationStyle
+title: "ClipboardItem: presentationStyle property"
+short-title: presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
 page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.presentationStyle

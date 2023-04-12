@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.connected
+title: "BluetoothRemoteGATTServer: connected property"
+short-title: connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
 page-type: web-api-instance-property
 status:

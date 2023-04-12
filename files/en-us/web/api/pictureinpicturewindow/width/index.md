@@ -1,5 +1,6 @@
 ---
-title: PictureInPictureWindow.width
+title: "PictureInPictureWindow: width property"
+short-title: width
 slug: Web/API/PictureInPictureWindow/width
 page-type: web-api-instance-property
 browser-compat: api.PictureInPictureWindow.width

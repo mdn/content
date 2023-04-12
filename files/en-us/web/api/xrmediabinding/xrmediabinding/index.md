@@ -1,5 +1,6 @@
 ---
-title: XRMediaBinding()
+title: "XRMediaBinding: XRMediaBinding() constructor"
+short-title: XRMediaBinding()
 slug: Web/API/XRMediaBinding/XRMediaBinding
 page-type: web-api-constructor
 status:

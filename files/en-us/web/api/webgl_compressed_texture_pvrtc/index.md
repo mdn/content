@@ -1,5 +1,6 @@
 ---
-title: WEBGL_compressed_texture_pvrtc
+title: WEBGL_compressed_texture_pvrtc extension
+short-title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
 page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_pvrtc

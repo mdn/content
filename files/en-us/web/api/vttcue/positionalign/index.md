@@ -1,5 +1,6 @@
 ---
-title: VTTCue.positionAlign
+title: "VTTCue: positionAlign property"
+short-title: positionAlign
 slug: Web/API/VTTCue/positionAlign
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.positionAlign

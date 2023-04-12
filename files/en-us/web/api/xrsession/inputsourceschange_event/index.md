@@ -1,5 +1,6 @@
 ---
-title: 'XRSession: inputsourceschange event'
+title: "XRSession: inputsourceschange event"
+short-title: inputsourceschange
 slug: Web/API/XRSession/inputsourceschange_event
 page-type: web-api-event
 status:

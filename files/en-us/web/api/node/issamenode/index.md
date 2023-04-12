@@ -1,5 +1,6 @@
 ---
-title: Node.isSameNode()
+title: "Node: isSameNode() method"
+short-title: isSameNode()
 slug: Web/API/Node/isSameNode
 page-type: web-api-instance-method
 browser-compat: api.Node.isSameNode

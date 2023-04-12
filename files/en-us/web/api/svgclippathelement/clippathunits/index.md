@@ -1,5 +1,6 @@
 ---
-title: SVGClipPathElement.clipPathUnits
+title: "SVGClipPathElement: clipPathUnits property"
+short-title: clipPathUnits
 slug: Web/API/SVGClipPathElement/clipPathUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGClipPathElement.clipPathUnits

@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
+title: "ServiceWorkerRegistration: getNotifications() method"
+short-title: getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.getNotifications

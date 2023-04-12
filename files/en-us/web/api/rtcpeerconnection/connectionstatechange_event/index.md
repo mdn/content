@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: connectionstatechange event"
+short-title: connectionstatechange
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.connectionstatechange_event

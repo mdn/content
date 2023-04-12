@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.pathname
+title: "HTMLAreaElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAreaElement/pathname
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.pathname

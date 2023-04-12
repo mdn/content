@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.parse()
+title: "CSSNumericValue: parse() static method"
+short-title: parse()
 slug: Web/API/CSSNumericValue/parse
 page-type: web-api-static-method
 browser-compat: api.CSSNumericValue.parse
@@ -14,7 +15,7 @@ members are value and the units.
 ## Syntax
 
 ```js-nolint
-parse(cssText)
+CSSNumericValue.parse(cssText)
 ```
 
 ### Parameters

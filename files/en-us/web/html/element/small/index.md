@@ -26,6 +26,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </p>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_usage")}}
 
 ### CSS alternative
@@ -36,6 +38,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
+
+#### Result
 
 {{EmbedLiveSample("CSS_alternative")}}
 

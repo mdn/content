@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.paymentRequestId
+title: "PaymentRequestEvent: paymentRequestId property"
+short-title: paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 page-type: web-api-instance-property
 status:

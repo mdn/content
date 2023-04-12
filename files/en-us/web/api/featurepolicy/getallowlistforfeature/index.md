@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.getAllowlistForFeature()
+title: "FeaturePolicy: getAllowlistForFeature() method"
+short-title: getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
 status:

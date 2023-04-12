@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletGlobalScope.currentTime
+title: "AudioWorkletGlobalScope: currentTime property"
+short-title: currentTime
 slug: Web/API/AudioWorkletGlobalScope/currentTime
 page-type: web-api-instance-property
 browser-compat: api.AudioWorkletGlobalScope.currentTime

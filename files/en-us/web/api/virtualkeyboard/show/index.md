@@ -1,5 +1,6 @@
 ---
-title: VirtualKeyboard.show()
+title: "VirtualKeyboard: show() method"
+short-title: show()
 slug: Web/API/VirtualKeyboard/show
 page-type: web-api-instance-method
 status:

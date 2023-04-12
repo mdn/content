@@ -1,5 +1,6 @@
 ---
-title: EventTarget.addEventListener()
+title: "EventTarget: addEventListener() method"
+short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 page-type: web-api-instance-method
 browser-compat: api.EventTarget.addEventListener

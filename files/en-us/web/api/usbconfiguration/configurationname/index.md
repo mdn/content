@@ -1,5 +1,6 @@
 ---
-title: USBConfiguration.configurationName
+title: "USBConfiguration: configurationName property"
+short-title: configurationName
 slug: Web/API/USBConfiguration/configurationName
 page-type: web-api-instance-property
 status:

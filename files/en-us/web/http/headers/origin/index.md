@@ -1,6 +1,7 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
+page-type: http-header
 browser-compat: http.headers.Origin
 ---
 

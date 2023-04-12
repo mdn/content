@@ -1,5 +1,6 @@
 ---
-title: XRQuadLayer.height
+title: "XRQuadLayer: height property"
+short-title: height
 slug: Web/API/XRQuadLayer/height
 page-type: web-api-instance-property
 status:

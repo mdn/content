@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue.length
+title: "CSSUnparsedValue: length property"
+short-title: length
 slug: Web/API/CSSUnparsedValue/length
 page-type: web-api-instance-property
 browser-compat: api.CSSUnparsedValue.length

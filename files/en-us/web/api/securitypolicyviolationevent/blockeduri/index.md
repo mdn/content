@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.blockedURI
+title: "SecurityPolicyViolationEvent: blockedURI property"
+short-title: blockedURI
 slug: Web/API/SecurityPolicyViolationEvent/blockedURI
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI

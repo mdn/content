@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.credentialless
+title: "HTMLIFrameElement: credentialless property"
+short-title: credentialless
 slug: Web/API/HTMLIFrameElement/credentialless
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: HashChangeEvent.oldURL
+title: "HashChangeEvent: oldURL property"
+short-title: oldURL
 slug: Web/API/HashChangeEvent/oldURL
 page-type: web-api-instance-property
 browser-compat: api.HashChangeEvent.oldURL

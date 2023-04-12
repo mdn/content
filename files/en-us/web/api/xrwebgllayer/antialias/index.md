@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.antialias
+title: "XRWebGLLayer: antialias property"
+short-title: antialias
 slug: Web/API/XRWebGLLayer/antialias
 page-type: web-api-instance-property
 status:

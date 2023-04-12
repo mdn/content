@@ -43,7 +43,7 @@ In this simple example, a paragraph includes an example of the output of a progr
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 100)}}
 

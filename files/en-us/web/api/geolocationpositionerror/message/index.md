@@ -1,5 +1,6 @@
 ---
-title: GeolocationPositionError.message
+title: "GeolocationPositionError: message property"
+short-title: message
 slug: Web/API/GeolocationPositionError/message
 page-type: web-api-instance-property
 browser-compat: api.GeolocationPositionError.message

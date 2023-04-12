@@ -1,5 +1,6 @@
 ---
-title: Animation.id
+title: "Animation: id property"
+short-title: id
 slug: Web/API/Animation/id
 page-type: web-api-instance-property
 browser-compat: api.Animation.id

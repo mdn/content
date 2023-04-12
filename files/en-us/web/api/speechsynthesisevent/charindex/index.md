@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.charIndex
+title: "SpeechSynthesisEvent: charIndex property"
+short-title: charIndex
 slug: Web/API/SpeechSynthesisEvent/charIndex
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.charIndex

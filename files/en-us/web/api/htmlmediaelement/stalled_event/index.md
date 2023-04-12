@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: stalled event"
+short-title: stalled
 slug: Web/API/HTMLMediaElement/stalled_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.stalled_event

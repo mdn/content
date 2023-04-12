@@ -1,5 +1,6 @@
 ---
-title: DOMMatrixReadOnly.flipX()
+title: "DOMMatrixReadOnly: flipX() method"
+short-title: flipX()
 slug: Web/API/DOMMatrixReadOnly/flipX
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.flipX

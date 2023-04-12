@@ -32,7 +32,7 @@ These properties are defined on `Intl.Collator.prototype` and shared by all `Int
 
 ## Instance methods
 
-- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
+- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare()")}}
   - : Getter function that compares two strings according to the sort order of this {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} object.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.

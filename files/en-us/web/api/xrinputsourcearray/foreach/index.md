@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceArray.forEach()
+title: "XRInputSourceArray: forEach() method"
+short-title: forEach()
 slug: Web/API/XRInputSourceArray/forEach
 page-type: web-api-instance-method
 status:

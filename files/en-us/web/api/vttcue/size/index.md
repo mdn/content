@@ -1,5 +1,6 @@
 ---
-title: VTTCue.size
+title: "VTTCue: size property"
+short-title: size
 slug: Web/API/VTTCue/size
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.size

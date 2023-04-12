@@ -1,5 +1,6 @@
 ---
-title: Attr.localName
+title: "Attr: localName property"
+short-title: localName
 slug: Web/API/Attr/localName
 page-type: web-api-instance-property
 browser-compat: api.Attr.localName

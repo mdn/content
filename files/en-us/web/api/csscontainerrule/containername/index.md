@@ -1,5 +1,6 @@
 ---
-title: CSSContainerRule.containerName
+title: "CSSContainerRule: containerName property"
+short-title: containerName
 slug: Web/API/CSSContainerRule/containerName
 page-type: web-api-instance-property
 browser-compat: api.CSSContainerRule.containerName

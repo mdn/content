@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.getAll()
+title: "URLSearchParams: getAll() method"
+short-title: getAll()
 slug: Web/API/URLSearchParams/getAll
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.getAll

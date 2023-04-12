@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.maxDecibels
+title: "AnalyserNode: maxDecibels property"
+short-title: maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
 page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.maxDecibels

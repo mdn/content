@@ -1,5 +1,6 @@
 ---
-title: VideoColorSpace.fullRange
+title: "VideoColorSpace: fullRange property"
+short-title: fullRange
 slug: Web/API/VideoColorSpace/fullRange
 page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.fullRange

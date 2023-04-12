@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.targetRayMode
+title: "XRInputSource: targetRayMode property"
+short-title: targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.targetRayMode

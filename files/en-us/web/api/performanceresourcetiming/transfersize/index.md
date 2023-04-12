@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.transferSize
+title: "PerformanceResourceTiming: transferSize property"
+short-title: transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.transferSize

@@ -1,5 +1,6 @@
 ---
 title: "VideoTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/VideoTrackList/addtrack_event
 page-type: web-api-event
 browser-compat: api.VideoTrackList.addtrack_event

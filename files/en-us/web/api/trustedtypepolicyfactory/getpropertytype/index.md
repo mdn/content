@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.getPropertyType()
+title: "TrustedTypePolicyFactory: getPropertyType() method"
+short-title: getPropertyType()
 slug: Web/API/TrustedTypePolicyFactory/getPropertyType
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType

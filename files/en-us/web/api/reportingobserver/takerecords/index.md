@@ -1,5 +1,6 @@
 ---
-title: ReportingObserver.takeRecords()
+title: "ReportingObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
 page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.takeRecords

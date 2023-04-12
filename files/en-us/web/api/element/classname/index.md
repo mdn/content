@@ -1,5 +1,6 @@
 ---
-title: Element.className
+title: "Element: className property"
+short-title: className
 slug: Web/API/Element/className
 page-type: web-api-instance-property
 browser-compat: api.Element.className

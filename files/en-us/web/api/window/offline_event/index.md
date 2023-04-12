@@ -1,5 +1,6 @@
 ---
 title: "Window: offline event"
+short-title: offline
 slug: Web/API/Window/offline_event
 page-type: web-api-event
 browser-compat: api.Window.offline_event

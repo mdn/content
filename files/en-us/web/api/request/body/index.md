@@ -1,11 +1,12 @@
 ---
-title: Request.body
+title: "Request: body property"
+short-title: body
 slug: Web/API/Request/body
 page-type: web-api-instance-property
 browser-compat: api.Request.body
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The read-only **`body`** property of the {{domxref("Request")}}
 interface contains a {{domxref("ReadableStream")}} with the body contents

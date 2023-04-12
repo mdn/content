@@ -1,5 +1,6 @@
 ---
-title: Window.outerWidth
+title: "Window: outerWidth property"
+short-title: outerWidth
 slug: Web/API/Window/outerWidth
 page-type: web-api-instance-property
 browser-compat: api.Window.outerWidth

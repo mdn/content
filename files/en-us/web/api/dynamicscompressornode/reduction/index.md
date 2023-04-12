@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.reduction
+title: "DynamicsCompressorNode: reduction property"
+short-title: reduction
 slug: Web/API/DynamicsCompressorNode/reduction
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.reduction
@@ -23,7 +24,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 const myReduction = compressor.reduction;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

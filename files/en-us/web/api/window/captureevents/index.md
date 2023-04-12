@@ -1,5 +1,6 @@
 ---
-title: Window.captureEvents()
+title: "Window: captureEvents() method"
+short-title: captureEvents()
 slug: Web/API/Window/captureEvents
 page-type: web-api-instance-method
 status:

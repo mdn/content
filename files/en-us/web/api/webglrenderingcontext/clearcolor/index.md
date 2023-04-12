@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.clearColor()
+title: "WebGLRenderingContext: clearColor() method"
+short-title: clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.clearColor

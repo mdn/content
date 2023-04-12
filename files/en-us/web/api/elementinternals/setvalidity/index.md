@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.setValidity()
+title: "ElementInternals: setValidity() method"
+short-title: setValidity()
 slug: Web/API/ElementInternals/setValidity
 page-type: web-api-instance-method
 browser-compat: api.ElementInternals.setValidity

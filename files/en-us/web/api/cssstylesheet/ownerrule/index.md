@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.ownerRule
+title: "CSSStyleSheet: ownerRule property"
+short-title: ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 page-type: web-api-instance-property
 browser-compat: api.CSSStyleSheet.ownerRule

@@ -1,6 +1,7 @@
 ---
 title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
 ---
 

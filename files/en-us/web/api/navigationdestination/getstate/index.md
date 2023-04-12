@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.getState()
+title: "NavigationDestination: getState() method"
+short-title: getState()
 slug: Web/API/NavigationDestination/getState
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Window.dump()
+title: "Window: dump() method"
+short-title: dump()
 slug: Web/API/Window/dump
 page-type: web-api-instance-method
 status:

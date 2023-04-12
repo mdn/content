@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.console
+title: "WorkerGlobalScope: console property"
+short-title: console
 slug: Web/API/WorkerGlobalScope/console
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.console

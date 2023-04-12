@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.numberingSystem
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.numberingSystem`** accessor property returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for the locale.
+The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 
 ## Description
 

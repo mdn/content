@@ -1,5 +1,6 @@
 ---
-title: XRViewport.y
+title: "XRViewport: y property"
+short-title: y
 slug: Web/API/XRViewport/y
 page-type: web-api-instance-property
 browser-compat: api.XRViewport.y

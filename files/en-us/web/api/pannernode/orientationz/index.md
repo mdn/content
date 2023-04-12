@@ -1,5 +1,6 @@
 ---
-title: PannerNode.orientationZ
+title: "PannerNode: orientationZ property"
+short-title: orientationZ
 slug: Web/API/PannerNode/orientationZ
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.orientationZ

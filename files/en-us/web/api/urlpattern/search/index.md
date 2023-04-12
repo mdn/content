@@ -1,5 +1,6 @@
 ---
-title: URLPattern.search
+title: "URLPattern: search property"
+short-title: search
 slug: Web/API/URLPattern/search
 page-type: web-api-instance-property
 status:

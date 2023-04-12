@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.depthNear
+title: "XRRenderState: depthNear property"
+short-title: depthNear
 slug: Web/API/XRRenderState/depthNear
 page-type: web-api-instance-property
 status:

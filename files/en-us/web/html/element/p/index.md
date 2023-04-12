@@ -91,7 +91,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -108,7 +108,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Styling paragraphs
 

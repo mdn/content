@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorAttestationResponse.attestationObject
+title: "AuthenticatorAttestationResponse: attestationObject property"
+short-title: attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
 page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.generateCertificate() static function
+title: "RTCPeerConnection: generateCertificate() static method"
+short-title: generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate
 page-type: web-api-static-method
 browser-compat: api.RTCPeerConnection.generateCertificate
@@ -14,7 +15,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 ## Syntax
 
 ```js-nolint
-generateCertificate(keygenAlgorithm) // static function
+RTCPeerConnection.generateCertificate(keygenAlgorithm)
 ```
 
 ### Parameters

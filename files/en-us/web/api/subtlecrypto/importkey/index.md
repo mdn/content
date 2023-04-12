@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.importKey()
+title: "SubtleCrypto: importKey() method"
+short-title: importKey()
 slug: Web/API/SubtleCrypto/importKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.importKey

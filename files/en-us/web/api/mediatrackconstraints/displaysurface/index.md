@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.displaySurface
+title: "MediaTrackConstraints: displaySurface property"
+short-title: displaySurface
 slug: Web/API/MediaTrackConstraints/displaySurface
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.displaySurface

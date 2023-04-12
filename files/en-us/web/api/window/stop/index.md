@@ -1,5 +1,6 @@
 ---
-title: Window.stop()
+title: "Window: stop() method"
+short-title: stop()
 slug: Web/API/Window/stop
 page-type: web-api-instance-method
 browser-compat: api.Window.stop

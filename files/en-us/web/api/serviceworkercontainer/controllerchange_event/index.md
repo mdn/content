@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerContainer: controllerchange event"
+short-title: controllerchange
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.controllerchange_event

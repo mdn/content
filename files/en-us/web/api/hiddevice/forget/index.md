@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.forget()
+title: "HIDDevice: forget() method"
+short-title: forget()
 slug: Web/API/HIDDevice/forget
 page-type: web-api-instance-method
 status:

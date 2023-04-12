@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.mozOpaque
+title: "HTMLCanvasElement: mozOpaque property"
+short-title: mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 page-type: web-api-instance-property
 status:

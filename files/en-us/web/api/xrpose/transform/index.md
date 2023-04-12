@@ -1,5 +1,6 @@
 ---
-title: XRPose.transform
+title: "XRPose: transform property"
+short-title: transform
 slug: Web/API/XRPose/transform
 page-type: web-api-instance-property
 browser-compat: api.XRPose.transform

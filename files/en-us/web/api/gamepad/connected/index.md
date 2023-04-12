@@ -1,5 +1,6 @@
 ---
-title: Gamepad.connected
+title: "Gamepad: connected property"
+short-title: connected
 slug: Web/API/Gamepad/connected
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.connected

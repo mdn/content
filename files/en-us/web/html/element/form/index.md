@@ -43,6 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `on`: The browser may automatically complete entries.
 
 - `name`
+
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
 - `rel`
@@ -71,7 +72,7 @@ The following attributes control behavior during form submission.
 
     - `post`: The {{HTTPMethod("POST")}} method; form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get` (default): The {{HTTPMethod("GET")}}; form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
-    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and causes a `submit` event to be fired on submission, without submitting data or clearing the form.
 
     This value is overridden by [`formmethod`](/en-US/docs/Web/HTML/Element/button#formmethod) attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
@@ -118,6 +119,10 @@ The following attributes control behavior during form submission.
   </fieldset>
 </form>
 ```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Technical summary
 

@@ -1,5 +1,6 @@
 ---
-title: TextTrackCue.track
+title: "TextTrackCue: track property"
+short-title: track
 slug: Web/API/TextTrackCue/track
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCue.track

@@ -1,5 +1,6 @@
 ---
-title: CredentialsContainer.create()
+title: "CredentialsContainer: create() method"
+short-title: create()
 slug: Web/API/CredentialsContainer/create
 page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.create

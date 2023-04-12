@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.fontBoundingBoxAscent
+title: "TextMetrics: fontBoundingBoxAscent property"
+short-title: fontBoundingBoxAscent
 slug: Web/API/TextMetrics/fontBoundingBoxAscent
 page-type: web-api-instance-property
 browser-compat: api.TextMetrics.fontBoundingBoxAscent

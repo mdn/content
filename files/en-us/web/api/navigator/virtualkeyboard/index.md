@@ -1,5 +1,6 @@
 ---
-title: Navigator.virtualKeyboard
+title: "Navigator: virtualKeyboard property"
+short-title: virtualKeyboard
 slug: Web/API/Navigator/virtualKeyboard
 page-type: web-api-instance-property
 status:

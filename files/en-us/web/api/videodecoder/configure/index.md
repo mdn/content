@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.configure()
+title: "VideoDecoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.configure
