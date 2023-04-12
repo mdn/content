@@ -15,7 +15,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 ## Syntax
 
 ```js-nolint
-generateCertificate(keygenAlgorithm) // static function
+RTCPeerConnection.generateCertificate(keygenAlgorithm)
 ```
 
 ### Parameters

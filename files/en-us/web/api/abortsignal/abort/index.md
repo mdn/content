@@ -25,8 +25,8 @@ This could, for example, be passed to a fetch method in order to run its abort l
 ## Syntax
 
 ```js-nolint
-abort()
-abort(reason)
+AbortSignal.abort()
+AbortSignal.abort(reason)
 ```
 
 ### Parameters

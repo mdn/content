@@ -18,7 +18,7 @@ You can also create a new `DOMPointReadOnly` object using the
 ## Syntax
 
 ```js-nolint
-fromPoint(sourcePoint)
+DOMPointReadOnly.fromPoint(sourcePoint)
 ```
 
 ### Parameters

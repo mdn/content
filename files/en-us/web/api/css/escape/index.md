@@ -15,7 +15,7 @@ use as part of a CSS selector.
 ## Syntax
 
 ```js-nolint
-escape(str)
+CSS.escape(str)
 ```
 
 ### Parameters

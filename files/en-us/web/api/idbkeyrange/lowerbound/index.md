@@ -17,8 +17,8 @@ By default, it includes the lower endpoint value and is closed.
 ## Syntax
 
 ```js-nolint
-lowerBound(lower)
-lowerBound(lower, open)
+IDBKeyRange.lowerBound(lower)
+IDBKeyRange.lowerBound(lower, open)
 ```
 
 ### Parameters

@@ -27,7 +27,7 @@ from the user in order to identify them. Common user-verifying platform authenti
 ## Syntax
 
 ```js-nolint
-isUserVerifyingPlatformAuthenticatorAvailable()
+PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 
 ### Parameters
