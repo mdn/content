@@ -50,7 +50,7 @@ console.log(y); // 'Outer y'
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
-`super.<property>` can be used to access static properties of a super class.
+`super.property` can be used to access static properties of a super class.
 Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to attempt to access arguments of the class constructor function.
 
 The scope of the static block is nested _within_ the lexical scope of the class body, and can access the private instance fields of the class.
