@@ -1,14 +1,8 @@
 ---
-title: HTMLLinkElement.relList
+title: "HTMLLinkElement: relList property"
+short-title: relList
 slug: Web/API/HTMLLinkElement/relList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLLinkElement.relList
 ---
 

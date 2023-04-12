@@ -1,13 +1,8 @@
 ---
-title: RTCSessionDescription.sdp
+title: "RTCSessionDescription: sdp property"
+short-title: sdp
 slug: Web/API/RTCSessionDescription/sdp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
 

@@ -2,13 +2,6 @@
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.endsWith
 ---
 
@@ -39,7 +32,7 @@ endsWith(searchString, endPosition)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
+  - : Thrown if `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 

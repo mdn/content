@@ -1,15 +1,8 @@
 ---
-title: Element.ariaValueText
+title: "Element: ariaValueText property"
+short-title: ariaValueText
 slug: Web/API/Element/ariaValueText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueText
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueText
 ---
 
@@ -36,7 +29,7 @@ In this example the `aria-valuetext` attribute on the element with an ID of `sli
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueText); // Sunday
 el.ariaValueText = "Monday";
 console.log(el.ariaValueText); // Monday

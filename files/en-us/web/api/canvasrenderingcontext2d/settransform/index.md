@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.setTransform()
+title: "CanvasRenderingContext2D: setTransform() method"
+short-title: setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.setTransform
 ---
 
@@ -113,7 +108,9 @@ type), and draw a circle on it.
 #### HTML
 
 ```html
+<!-- First canvas (ctx1) -->
 <canvas width="240"></canvas>
+<!-- Second canvas (ctx2) -->
 <canvas width="240"></canvas>
 ```
 

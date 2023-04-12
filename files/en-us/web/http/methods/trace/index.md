@@ -1,10 +1,7 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - Reference
-  - Request method
+page-type: http-method
 browser-compat: http.methods.TRACE
 ---
 

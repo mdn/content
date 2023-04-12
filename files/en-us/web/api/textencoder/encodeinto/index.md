@@ -1,13 +1,8 @@
 ---
-title: TextEncoder.encodeInto()
+title: "TextEncoder: encodeInto() method"
+short-title: encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - TextEncoder
-  - encodeInto
 browser-compat: api.TextEncoder.encodeInto
 ---
 

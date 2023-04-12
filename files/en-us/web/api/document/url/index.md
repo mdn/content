@@ -1,13 +1,8 @@
 ---
-title: Document.URL
+title: "Document: URL property"
+short-title: URL
 slug: Web/API/Document/URL
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.URL
 ---
 

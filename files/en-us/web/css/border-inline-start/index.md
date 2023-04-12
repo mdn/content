@@ -2,17 +2,6 @@
 title: border-inline-start
 slug: Web/CSS/border-inline-start
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-start
-  - border-inline-start-color
-  - border-inline-start-style
-  - border-inline-start-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline-start
 ---
 
@@ -57,8 +46,8 @@ The `border-inline-start` is specified with one or more of the following, in any
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 

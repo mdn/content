@@ -1,10 +1,6 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
-tags:
-  - Manifest
-  - Web
-  - theme_color
 browser-compat: html.manifest.theme_color
 ---
 
@@ -15,10 +11,6 @@ browser-compat: html.manifest.theme_color
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

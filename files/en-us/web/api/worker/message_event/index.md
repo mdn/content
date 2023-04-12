@@ -1,13 +1,8 @@
 ---
-title: 'Worker: message event'
+title: "Worker: message event"
+short-title: message
 slug: Web/API/Worker/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Worker
-  - Event
-  - Reference
-  - message
 browser-compat: api.Worker.message_event
 ---
 
@@ -22,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -55,8 +50,8 @@ This code creates a new worker and listens to messages from it using [`addEventL
 ```js
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+worker.addEventListener("message", (event) => {
+  console.log(`Received message from worker: ${event.data}`);
 });
 ```
 
@@ -66,7 +61,7 @@ Alternatively, it could listen using the `onmessage` event handler property:
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+  console.log(`Received message from worker: ${event.data}`);
 };
 ```
 
@@ -75,7 +70,7 @@ The worker posts messages using [`self.postMessage()`](/en-US/docs/Web/API/Dedic
 ```js
 // static/scripts/worker.js
 
-self.postMessage('I\'m alive!');
+self.postMessage("I'm alive!");
 ```
 
 ## Specifications

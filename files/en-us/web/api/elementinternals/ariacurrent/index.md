@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaCurrent
+title: "ElementInternals: ariaCurrent property"
+short-title: ariaCurrent
 slug: Web/API/ElementInternals/ariaCurrent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaCurrent
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaCurrent
 ---
 

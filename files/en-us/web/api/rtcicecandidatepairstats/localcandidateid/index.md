@@ -1,23 +1,8 @@
 ---
-title: RTCIceCandidateStats.localCandidateId
+title: "RTCIceCandidateStats: localCandidateId property"
+short-title: localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - local
-  - localCandidateId
 browser-compat: api.RTCIceCandidatePairStats.localCandidateId
 ---
 

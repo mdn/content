@@ -2,12 +2,6 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
 

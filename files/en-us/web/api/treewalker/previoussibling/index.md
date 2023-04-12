@@ -1,15 +1,8 @@
 ---
-title: TreeWalker.previousSibling()
+title: "TreeWalker: previousSibling() method"
+short-title: previousSibling()
 slug: Web/API/TreeWalker/previousSibling
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
-  - createTreeWalker
-  - treeWalker.previousSibling
 browser-compat: api.TreeWalker.previousSibling
 ---
 
@@ -17,7 +10,7 @@ browser-compat: api.TreeWalker.previousSibling
 
 The **`TreeWalker.previousSibling()`** method moves the current
 {{domxref("Node")}} to its previous sibling, if any, and returns the found sibling. If
-there is no such node, return `null` and the current node is not changed.
+there is no such node, it returns `null` and the current node is not changed.
 
 ## Syntax
 
@@ -37,10 +30,14 @@ A {{domxref("Node")}} object or `null`.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false
 );
 const node = treeWalker.previousSibling(); // returns null as there is no previous sibling
 ```

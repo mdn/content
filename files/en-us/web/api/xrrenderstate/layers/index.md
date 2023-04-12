@@ -1,17 +1,10 @@
 ---
-title: XRRenderState.layers
+title: "XRRenderState: layers property"
+short-title: layers
 slug: Web/API/XRRenderState/layers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRRenderState.layers
 ---
 

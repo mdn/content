@@ -1,15 +1,10 @@
 ---
-title: WebTransportBidirectionalStream.readable
+title: "WebTransportBidirectionalStream: readable property"
+short-title: readable
 slug: Web/API/WebTransportBidirectionalStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - readable
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportBidirectionalStream.readable
 ---
 

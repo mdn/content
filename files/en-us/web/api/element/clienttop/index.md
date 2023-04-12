@@ -1,14 +1,8 @@
 ---
-title: Element.clientTop
+title: "Element: clientTop property"
+short-title: clientTop
 slug: Web/API/Element/clientTop
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientTop
 ---
 

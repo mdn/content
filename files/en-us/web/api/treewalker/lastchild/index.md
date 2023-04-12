@@ -1,13 +1,8 @@
 ---
-title: TreeWalker.lastChild()
+title: "TreeWalker: lastChild() method"
+short-title: lastChild()
 slug: Web/API/TreeWalker/lastChild
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
 
@@ -15,8 +10,7 @@ browser-compat: api.TreeWalker.lastChild
 
 The **`TreeWalker.lastChild()`** method moves the current
 {{domxref("Node")}} to the last _visible_ child of the current node, and returns
-the found child. It also moves the current node to this child. If no such child exists,
-returns `null` and the current node is not changed.
+the found child. If no such child exists, it returns `null` and the current node is not changed.
 
 ## Syntax
 
@@ -36,9 +30,13 @@ A {{domxref("Node")}} object or `null`.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```

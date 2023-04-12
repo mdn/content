@@ -2,13 +2,9 @@
 title: Text formatting
 slug: Web/JavaScript/Guide/Text_formatting
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}
 
 This chapter introduces how to work with strings and text in JavaScript.
 
@@ -327,4 +323,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 For more information about the {{jsxref("Intl")}} API, see also [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}

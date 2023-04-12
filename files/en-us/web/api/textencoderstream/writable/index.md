@@ -1,14 +1,8 @@
 ---
-title: TextEncoderStream.writable
+title: "TextEncoderStream: writable property"
+short-title: writable
 slug: Web/API/TextEncoderStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextEncoderStream
-  - Read-only
 browser-compat: api.TextEncoderStream.writable
 ---
 

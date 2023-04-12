@@ -1,15 +1,8 @@
 ---
-title: 'HTMLElement: copy event'
+title: "HTMLElement: copy event"
+short-title: copy
 slug: Web/API/HTMLElement/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - HTMLElement
-  - Event
-  - Reference
-  - Web
-  - copy
 browser-compat: api.Element.copy_event
 ---
 
@@ -22,9 +15,9 @@ The **`copy`** event fires when the user initiates a copy action through the bro
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## Event type
@@ -59,7 +52,7 @@ Try copying and pasting text into this field!
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 function logCopy(event) {
   log.innerText = `Copy blocked!\n${log.innerText}`;
@@ -71,7 +64,7 @@ function logPaste(event) {
   event.preventDefault();
 }
 
-const editor = document.getElementById('editor');
+const editor = document.getElementById("editor");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

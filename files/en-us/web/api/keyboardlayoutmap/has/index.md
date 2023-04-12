@@ -1,17 +1,10 @@
 ---
-title: KeyboardLayoutMap.has()
+title: "KeyboardLayoutMap: has() method"
+short-title: has()
 slug: Web/API/KeyboardLayoutMap/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Method
-  - Reference
-  - has()
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.has
 ---
 

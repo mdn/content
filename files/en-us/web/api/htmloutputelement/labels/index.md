@@ -1,13 +1,8 @@
 ---
-title: HTMLOutputElement.labels
+title: "HTMLOutputElement: labels property"
+short-title: labels
 slug: Web/API/HTMLOutputElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLOutputElement
-  - Property
-  - Reference
 browser-compat: api.HTMLOutputElement.labels
 ---
 

@@ -1,14 +1,10 @@
 ---
-title: CookieStore.get()
+title: "CookieStore: get() method"
+short-title: get()
 slug: Web/API/CookieStore/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.get
 ---
 
@@ -48,23 +44,28 @@ Or
 A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted name or options. This object contains the following properties:
 
 - `domain`
+
   - : A string containing the domain of the cookie.
 
 - `expires`
+
   - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 
 - `name`
+
   - : A string containing the name of the cookie.
 
 - `partitioned`
+
   - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
 
 - `path`
+
   - : A string containing the path of the cookie.
 
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values (see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) for more information):
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -74,6 +75,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
       - : Cookies will be sent in all contexts.
 
 - `secure`
+
   - : A boolean value indicating whether the cookie is to be used in secure contexts only (`true`) or not (`false`).
 
 - `value`

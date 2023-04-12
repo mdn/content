@@ -1,15 +1,10 @@
 ---
-title: WebTransportDatagramDuplexStream.incomingMaxAge
+title: "WebTransportDatagramDuplexStream: incomingMaxAge property"
+short-title: incomingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/incomingMaxAge
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingMaxAge
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.incomingMaxAge
 ---
 
@@ -26,7 +21,7 @@ A number, or `null` if no maximum age has been set.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection

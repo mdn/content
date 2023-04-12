@@ -1,17 +1,10 @@
 ---
-title: ContentIndex.getAll()
+title: "ContentIndex: getAll() method"
+short-title: getAll()
 slug: Web/API/ContentIndex/getAll
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content indexing
-  - getAll
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.getAll
 ---
 
@@ -91,36 +84,32 @@ async function createReadingList() {
   const entries = await registration.index.getAll();
 
   // create a containing element
-  const readingListElem = document.createElement('div');
+  const readingListElem = document.createElement("div");
 
   // test for entries
   if (!Array.length) {
-
     // if there are no entries, display a message
-    const message = document.createElement('p');
-    message.innerText = 'You currently have no articles saved for offline reading.'
+    const message = document.createElement("p");
+    message.innerText =
+      "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
-
   } else {
-
     // if entries are present, display in a list of links to the content
-    const listElem = document.createElement('ul');
+    const listElem = document.createElement("ul");
 
     for (const entry of entries) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
 
-      const anchorElem = document.createElement('a');
+      const anchorElem = document.createElement("a");
       anchorElem.innerText = entry.title;
-      anchorElem.setAttribute('href', entry.url);
+      anchorElem.setAttribute("href", entry.url);
 
       listElem.append(listItem);
-
     }
 
     readingListElem.append(listElem);
   }
-
 }
 ```
 

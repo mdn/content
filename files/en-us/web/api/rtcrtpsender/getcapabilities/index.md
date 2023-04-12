@@ -1,22 +1,8 @@
 ---
-title: RTCRtpSender.getCapabilities() static function
+title: "RTCRtpSender: getCapabilities() static method"
+short-title: getCapabilities()
 slug: Web/API/RTCRtpSender/getCapabilities
 page-type: web-api-static-method
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Media
-  - Method
-  - RTCRtpSender
-  - Reference
-  - Static Function
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - capabilities
-  - getCapabilities
 browser-compat: api.RTCRtpSender.getCapabilities
 ---
 
@@ -33,7 +19,7 @@ calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 ## Syntax
 
 ```js-nolint
-getCapabilities(kind) //static function
+RTCRtpSender.getCapabilities(kind)
 ```
 
 ### Parameters

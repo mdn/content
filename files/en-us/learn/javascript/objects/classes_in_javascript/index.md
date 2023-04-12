@@ -1,9 +1,6 @@
 ---
 title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
@@ -219,15 +216,4 @@ You've reached the end of this article, but can you remember the most important 
 ## Summary
 
 In this article, we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
-
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- **Classes in JavaScript**
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

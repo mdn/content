@@ -1,14 +1,8 @@
 ---
-title: HTMLTableElement.deleteRow()
+title: "HTMLTableElement: deleteRow() method"
+short-title: deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.deleteRow
 ---
 
@@ -68,7 +62,7 @@ This example uses JavaScript to delete a table's second row.
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 
 // Delete second row
 table.deleteRow(1);

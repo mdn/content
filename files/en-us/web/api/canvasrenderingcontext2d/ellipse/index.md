@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
+title: "CanvasRenderingContext2D: ellipse() method"
+short-title: ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.ellipse
 ---
 
@@ -42,10 +37,10 @@ the direction given by `counterclockwise` (defaulting to clockwise).
 - `rotation`
   - : The rotation of the ellipse, expressed in radians.
 - `startAngle`
-  - : The angle at which the ellipse starts, measured clockwise from the positive x-axis
+  - : The [eccentric angle](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse) at which the ellipse starts, measured clockwise from the positive x-axis
     and expressed in radians.
 - `endAngle`
-  - : The angle at which the ellipse ends, measured clockwise from the positive x-axis and
+  - : The [eccentric angle](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse) at which the ellipse ends, measured clockwise from the positive x-axis and
     expressed in radians.
 - `counterclockwise` {{optional_inline}}
   - : An optional boolean value which, if `true`, draws the ellipse
@@ -73,8 +68,8 @@ ends at an angle of 2π radians (360**°**).
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw the ellipse
 ctx.beginPath();
@@ -106,22 +101,22 @@ This example creates three elliptical paths with varying properties.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.beginPath();
-ctx.ellipse(60, 75, 50, 30, Math.PI * .25, 0, Math.PI * 1.5);
+ctx.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5);
 ctx.fill();
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.ellipse(150, 75, 50, 30, Math.PI * .25, 0, Math.PI);
+ctx.ellipse(150, 75, 50, 30, Math.PI * 0.25, 0, Math.PI);
 ctx.fill();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.beginPath();
-ctx.ellipse(240, 75, 50, 30, Math.PI * .25, 0, Math.PI, true);
+ctx.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
 ctx.fill();
 ```
 

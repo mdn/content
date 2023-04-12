@@ -1,17 +1,10 @@
 ---
-title: HTMLLinkElement.fetchPriority
+title: "HTMLLinkElement: fetchPriority property"
+short-title: fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - Link
-  - Preload API
-  - Property
-  - Reference
-  - fetchPriority
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
 

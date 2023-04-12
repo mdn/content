@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.copyTexSubImage2D()
+title: "WebGLRenderingContext: copyTexSubImage2D() method"
+short-title: copyTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexSubImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
 ---
 
@@ -70,7 +64,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0,0, 0, 0, 16, 16);
+gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0, 0, 0, 0, 16, 16);
 ```
 
 ## Specifications

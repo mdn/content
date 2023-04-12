@@ -1,11 +1,7 @@
 ---
 title: Evolution of HTTP
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - NeedsUpdate
-  - NeedsUpdate(HTTP/3)
+page-type: guide
 ---
 
 {{HTTPSidebar}}

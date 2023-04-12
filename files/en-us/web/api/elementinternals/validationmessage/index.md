@@ -1,13 +1,8 @@
 ---
-title: ElementInternals.validationMessage
+title: "ElementInternals: validationMessage property"
+short-title: validationMessage
 slug: Web/API/ElementInternals/validationMessage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - validationMessage
-  - ElementInternals
 browser-compat: api.ElementInternals.validationMessage
 ---
 
@@ -24,7 +19,7 @@ A string containing the validation message of this element.
 In the following example the validation message is set with {{domxref("ElementInternals.setValidity()")}}, and then returned with `validationMessage`.
 
 ```js
-this.internals_.setValidity({'valueMissing':true},"my message");
+this.internals_.setValidity({ valueMissing: true }, "my message");
 console.log(this.internals_.validationMessage); // "my message"
 ```
 

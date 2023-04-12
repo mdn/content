@@ -1,20 +1,8 @@
 ---
-title: RTCPeerConnection.setRemoteDescription()
+title: "RTCPeerConnection: setRemoteDescription() method"
+short-title: setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - Method
-  - Negotiation
-  - Offer
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - answer
-  - setRemoteDescription
 browser-compat: api.RTCPeerConnection.setRemoteDescription
 ---
 
@@ -68,9 +56,7 @@ myPeerConnection
 to be:
 
 ```js
-myPeerConnection
-  .setRemoteDescription(description)
-  .then(() => createMyStream());
+myPeerConnection.setRemoteDescription(description).then(() => createMyStream());
 ```
 
 Using

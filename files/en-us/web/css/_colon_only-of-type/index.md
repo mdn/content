@@ -2,13 +2,6 @@
 title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.only-of-type
 ---
 
@@ -22,8 +15,10 @@ The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) r
 
 ## Syntax
 
-```
-:only-of-type
+```css
+:only-of-type {
+  /* ... */
+}
 ```
 
 ## Examples

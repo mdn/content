@@ -1,15 +1,10 @@
 ---
-title: PannerNode.setOrientation()
+title: "PannerNode: setOrientation() method"
+short-title: setOrientation()
 slug: Web/API/PannerNode/setOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setOrientation
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PannerNode.setOrientation
 ---
 
@@ -44,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

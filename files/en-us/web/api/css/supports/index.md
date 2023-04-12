@@ -1,14 +1,8 @@
 ---
-title: CSS.supports()
+title: "CSS: supports() static method"
+short-title: supports()
 slug: Web/API/CSS/supports
 page-type: web-api-static-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - Method
-  - Reference
-  - supports
 browser-compat: api.CSS.supports
 ---
 
@@ -20,8 +14,8 @@ indicating if the browser supports a given CSS feature, or not.
 ## Syntax
 
 ```js-nolint
-supports(propertyName, value)
-supports(supportCondition)
+CSS.supports(propertyName, value)
+CSS.supports(supportCondition)
 ```
 
 ### Parameters
@@ -51,7 +45,9 @@ result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
 
-result = CSS.supports("(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)");
+result = CSS.supports(
+  "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)"
+);
 
 // result is true or false
 ```

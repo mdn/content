@@ -1,19 +1,8 @@
 ---
-title: PaymentMethodChangeEvent.methodName
+title: "PaymentMethodChangeEvent: methodName property"
+short-title: methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Payment Handler
-  - Payment Method
-  - Payment Request
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - Property
-  - Reference
-  - methodName
-  - payment
 browser-compat: api.PaymentMethodChangeEvent.methodName
 ---
 

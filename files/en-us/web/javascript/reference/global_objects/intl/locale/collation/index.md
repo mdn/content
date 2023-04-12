@@ -2,21 +2,12 @@
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.collation
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.collation`** accessor property returns the [collation type](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) for the `Locale`, which is used to order strings according to the locale's rules.
+The **`collation`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [collation type](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) for this locale, which is used to order strings according to the locale's rules.
 
 ## Description
 

@@ -1,15 +1,8 @@
 ---
-title: AudioWorkletNode.parameters
+title: "AudioWorkletNode: parameters property"
+short-title: parameters
 slug: Web/API/AudioWorkletNode/parameters
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletNode.parameters
 ---
 

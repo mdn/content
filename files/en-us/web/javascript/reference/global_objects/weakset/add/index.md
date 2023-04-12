@@ -2,12 +2,6 @@
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
 browser-compat: javascript.builtins.WeakSet.add
 ---
 
@@ -26,12 +20,17 @@ add(value)
 
 ### Parameters
 
-- value
-  - : Required. The object to add to the `WeakSet` collection.
+- `value`
+  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The value to add to the `WeakSet` collection.
 
 ### Return value
 
 The `WeakSet` object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

@@ -1,14 +1,9 @@
 ---
 title: ECT
 slug: Web/HTTP/Headers/ECT
-tags:
-  - ect
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.ect
 ---
 
@@ -81,5 +76,5 @@ ECT: 2g
   - {{HTTPHeader("Save-Data")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
 - {{domxref("NetworkInformation.effectiveType")}}

@@ -1,13 +1,7 @@
 ---
-title: Document.adoptedStyleSheets
+title: "Document: adoptedStyleSheets property"
+short-title: adoptedStyleSheets
 slug: Web/API/Document/adoptedStyleSheets
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
-  - adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.Document.adoptedStyleSheets
 ---
@@ -49,7 +43,7 @@ The stylesheet is then added to an array and assigned to the `adoptedStyleSheets
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 
 // Apply the stylesheet to a document
 document.adoptedStyleSheets = [sheet];
@@ -58,8 +52,8 @@ document.adoptedStyleSheets = [sheet];
 We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
- sheet.insertRule("* { background-color: blue; }");
- // The document will now have blue background.
+sheet.insertRule("* { background-color: blue; }");
+// The document will now have blue background.
 ```
 
 ### Append a new stylesheet
@@ -69,7 +63,7 @@ This is demonstrated below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-sheet.replaceSync('p { color: green; }');
+sheet.replaceSync("p { color: green; }");
 
 // Combine the existing sheets and new one
 document.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
@@ -81,8 +75,8 @@ We can share a stylesheet to a shadow root in a similar way.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
 //Adopt the same sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];

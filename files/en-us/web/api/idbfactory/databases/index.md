@@ -1,15 +1,8 @@
 ---
-title: IDBFactory.databases()
+title: "IDBFactory: databases() method"
+short-title: databases()
 slug: Web/API/IDBFactory/databases
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - Method
-  - Reference
-  - Storage
-  - databases
 browser-compat: api.IDBFactory.databases
 ---
 
@@ -48,10 +41,10 @@ A promise that resolves either to an error or a list of dictionaries, each with 
 ## Examples
 
 ```js
-const promise = indexedDB.databases()
+const promise = indexedDB.databases();
 promise.then((databases) => {
-  console.log(databases)
-})
+  console.log(databases);
+});
 ```
 
 ## Specifications

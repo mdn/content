@@ -1,14 +1,8 @@
 ---
-title: CountQueuingStrategy.size()
+title: "CountQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/CountQueuingStrategy/size
 page-type: web-api-instance-method
-tags:
-  - API
-  - CountQueuingStrategy
-  - Method
-  - Reference
-  - Streams
-  - size
 browser-compat: api.CountQueuingStrategy.size
 ---
 

@@ -2,14 +2,6 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 page-type: web-api-interface
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Interface
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransferItemList
 ---
 
@@ -17,7 +9,7 @@ browser-compat: api.DataTransferItemList
 
 The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
 
-The individual items can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
+The individual items can be accessed using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) `[]`.
 
 This interface has no constructor.
 
@@ -34,7 +26,7 @@ This interface has no constructor.
   - : Removes the drag item from the list at the given index.
 - {{domxref("DataTransferItemList.clear()")}}
   - : Removes all of the drag items from the list.
-- {{domxref("DataTransferItemList.DataTransferItem()")}}
+- {{domxref("DataTransferItemList.operator[]")}}
   - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
 
 ## Example
@@ -54,7 +46,7 @@ function dragstartHandler(ev) {
 
   // Add some other items to the drag payload
   dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
+  dataList.add("http://www.example.org", "text/uri-list");
 }
 
 function dropHandler(ev) {
@@ -63,17 +55,17 @@ function dropHandler(ev) {
 
   // Loop through the dropped items and log their data
   for (const item of ev.dataTransfer.items) {
-    if (item.kind === 'string' && item.type.match(/^text\/plain/)) {
+    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
       // This item is the target node
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (item.kind === 'string' && item.type.match(/^text\/html/)) {
+    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
       // Drag data item is HTML
       item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if (item.kind === 'string' && item.type.match(/^text\/uri-list/)) {
+    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
       // Drag data item is URI
       item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
@@ -87,7 +79,7 @@ function dragoverHandler(ev) {
   ev.preventDefault();
 
   // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 
 function dragendHandler(ev) {

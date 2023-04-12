@@ -1,11 +1,8 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
-tags:
-  - Manifest
-  - Screenshots
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.screenshots
 ---
 
@@ -16,10 +13,6 @@ browser-compat: html.manifest.screenshots
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

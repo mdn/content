@@ -2,14 +2,6 @@
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - PluralRules
-  - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 ---
 
@@ -31,7 +23,7 @@ Intl.PluralRules.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
@@ -68,9 +60,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
 // "id-u-co-pinyin, de-ID"
 ```
 

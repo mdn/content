@@ -1,14 +1,8 @@
 ---
-title: AuthenticatorAssertionResponse.authenticatorData
+title: "AuthenticatorAssertionResponse: authenticatorData property"
+short-title: authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
 page-type: web-api-instance-property
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
 ---
 

@@ -1,15 +1,10 @@
 ---
 title: "AudioEncoder: dequeue event"
+short-title: dequeue
 slug: Web/API/AudioEncoder/dequeue_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - Event
-  - ondequeue
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.dequeue_event
 ---
 

@@ -1,17 +1,8 @@
 ---
-title: RTCPeerConnection.currentRemoteDescription
+title: "RTCPeerConnection: currentRemoteDescription property"
+short-title: currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentRemoteDescription
 browser-compat: api.RTCPeerConnection.currentRemoteDescription
 ---
 
@@ -54,8 +45,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.currentRemoteDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

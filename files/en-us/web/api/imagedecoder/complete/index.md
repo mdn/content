@@ -1,14 +1,10 @@
 ---
-title: ImageDecoder.complete
+title: "ImageDecoder: complete property"
+short-title: complete
 slug: Web/API/ImageDecoder/complete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - complete
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.complete
 ---
 

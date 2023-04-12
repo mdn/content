@@ -1,17 +1,8 @@
 ---
-title: MediaSource.activeSourceBuffers
+title: "MediaSource: activeSourceBuffers property"
+short-title: activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - MediaSource
-  - MediaSourceExtensions
-  - Property
-  - Reference
-  - Video
-  - activeSourceBuffers
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
 
@@ -39,7 +30,7 @@ function sourceOpen() {
   console.log(mediaSource.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       console.log(mediaSource.activeSourceBuffers);
       // will contain the source buffer that was added above,
@@ -49,7 +40,7 @@ function sourceOpen() {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

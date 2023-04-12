@@ -1,12 +1,8 @@
 ---
-title: 'DeviceMotionEventAcceleration: z'
+title: "DeviceMotionEventAcceleration: z property"
+short-title: z
 slug: Web/API/DeviceMotionEventAcceleration/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - DeviceAcceleration
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEventAcceleration.z
 ---
 

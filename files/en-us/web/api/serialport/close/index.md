@@ -1,14 +1,10 @@
 ---
-title: SerialPort.close()
+title: "SerialPort: close() method"
+short-title: close()
 slug: Web/API/SerialPort/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.close
 ---
 

@@ -1,17 +1,10 @@
 ---
-title: XRCPUDepthInformation.getDepthInMeters()
+title: "XRCPUDepthInformation: getDepthInMeters() method"
+short-title: getDepthInMeters()
 slug: Web/API/XRCPUDepthInformation/getDepthInMeters
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRCPUDepthInformation.getDepthInMeters
 ---
 

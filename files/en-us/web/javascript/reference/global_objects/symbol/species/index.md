@@ -2,17 +2,12 @@
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
 browser-compat: javascript.builtins.Symbol.species
 ---
 
 {{JSRef}}
 
-The **`Symbol.species`** static data property represents the well-known symbol specifying the method that a constructor function uses to create derived objects.
+The **`Symbol.species`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@species`. Methods that create copies of an object may look up this symbol on the object for the constructor function to use when creating the copy.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 

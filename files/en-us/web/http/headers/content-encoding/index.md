@@ -1,10 +1,7 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - HTTP
-  - Headers
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Content-Encoding
 ---
 

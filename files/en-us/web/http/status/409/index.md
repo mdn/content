@@ -1,11 +1,7 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
+page-type: http-status-code
 browser-compat: http.status.409
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Last-Modified
 ---
 

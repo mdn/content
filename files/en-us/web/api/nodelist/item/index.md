@@ -1,13 +1,8 @@
 ---
-title: NodeList.item()
+title: "NodeList: item() method"
+short-title: item()
 slug: Web/API/NodeList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeList
-  - Reference
 browser-compat: api.NodeList.item
 ---
 
@@ -28,7 +23,7 @@ JavaScript also offers an array-like bracketed syntax for obtaining an item from
 NodeList by index:
 
 ```js
-nodeItem = nodeList[index]
+nodeItem = nodeList[index];
 ```
 
 ### Parameters

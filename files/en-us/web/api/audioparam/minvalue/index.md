@@ -1,15 +1,8 @@
 ---
-title: AudioParam.minValue
+title: "AudioParam: minValue property"
+short-title: minValue
 slug: Web/API/AudioParam/minValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Property
-  - Reference
-  - Web Audio API
-  - minValue
 browser-compat: api.AudioParam.minValue
 ---
 

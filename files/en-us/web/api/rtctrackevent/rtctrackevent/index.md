@@ -1,17 +1,8 @@
 ---
-title: RTCTrackEvent()
+title: "RTCTrackEvent: RTCTrackEvent() constructor"
+short-title: RTCTrackEvent()
 slug: Web/API/RTCTrackEvent/RTCTrackEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Media
-  - RTCTrackEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - track
 browser-compat: api.RTCTrackEvent.RTCTrackEvent
 ---
 

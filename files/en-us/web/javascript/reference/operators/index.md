@@ -2,12 +2,6 @@
 title: Expressions and operators
 slug: Web/JavaScript/Reference/Operators
 page-type: landing-page
-tags:
-  - JavaScript
-  - Landing page
-  - Operators
-  - Overview
-  - Reference
 browser-compat: javascript.operators
 ---
 
@@ -21,7 +15,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ### Primary expressions
 
-Basic keywords and general expressions in JavaScript. These expressions have the highest precedence (higher than [operators](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Basic keywords and general expressions in JavaScript. These expressions have the highest precedence (higher than [operators](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 - {{JSxRef("Operators/this", "this")}}
   - : The `this` keyword refers to a special property of an execution context.
@@ -174,7 +168,7 @@ Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and 
 
 ### Binary logical operators
 
-Logical operators implement boolean (logical) values and have [short-circuiting](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#short-circuiting) behavior.
+Logical operators implement boolean (logical) values and have [short-circuiting](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting) behavior.
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
   - : Logical AND.
@@ -185,7 +179,7 @@ Logical operators implement boolean (logical) values and have [short-circuiting]
 
 ### Conditional (ternary) operator
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : The conditional operator returns one of two values based on the logical value of the condition.
 
 ### Assignment operators
@@ -241,7 +235,7 @@ An assignment operator assigns a value to its left operand based on the value of
 
 ### Comma operator
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
   - : The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.
 
 ## Specifications
@@ -254,4 +248,4 @@ An assignment operator assigns a value to its left operand based on the value of
 
 ## See also
 
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

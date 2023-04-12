@@ -1,16 +1,6 @@
 ---
 title: "ARIA: rowheader role"
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - table
-  - document structure role
-  - Accessibility
-  - ARIA role
 spec-urls: https://w3c.github.io/aria/#rowheader
 ---
 
@@ -157,7 +147,7 @@ none
 - [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
 - [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridell_role)
+- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 
 <section id="Quick_links">
 

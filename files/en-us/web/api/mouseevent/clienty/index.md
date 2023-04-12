@@ -1,15 +1,8 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY property"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.clientY
 ---
 
@@ -37,8 +30,8 @@ This example displays your mouse's coordinates whenever you trigger the {{domxre
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

@@ -1,16 +1,10 @@
 ---
-title: XRFrame.createAnchor()
+title: "XRFrame: createAnchor() method"
+short-title: createAnchor()
 slug: Web/API/XRFrame/createAnchor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.createAnchor
 ---
 

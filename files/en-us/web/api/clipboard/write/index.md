@@ -1,20 +1,8 @@
 ---
-title: Clipboard.write()
+title: "Clipboard: write() method"
+short-title: write()
 slug: Web/API/Clipboard/write
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Method
-  - Pasteboard
-  - Reference
-  - Scrap
-  - copy
-  - paste
-  - write
 browser-compat: api.Clipboard.write
 ---
 
@@ -59,25 +47,25 @@ string.
 
 ```js
 function setClipboard(text) {
-    const type = "text/plain";
-    const blob = new Blob([text], { type });
-    const data = [new ClipboardItem({ [type]: blob })];
+  const type = "text/plain";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
 
-    navigator.clipboard.write(data).then(
-        () => {
-        /* success */
-        },
-        () => {
-        /* failure */
-        }
-    );
+  navigator.clipboard.write(data).then(
+    () => {
+      /* success */
+    },
+    () => {
+      /* failure */
+    }
+  );
 }
 ```
 
 The code begins by creating a new a {{domxref("Blob")}} object. This object is
 required to construct a {{domxref("ClipboardItem")}} object which is sent to the
 clipboard. The {{domxref("Blob")}} constructor takes in the content we want to copy
-and its type. This {{domxref("Blob")}} object can be derived from many sources e.g. a {{domxref("Canvas")}}.
+and its type. This {{domxref("Blob")}} object can be derived from many sources; for example, a [canvas](/en-US/docs/Web/API/HTMLCanvasElement).
 
 Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard.
 The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. Then `write()` is called, specifying both a fulfillment function
@@ -90,11 +78,14 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
   canvas.toBlob((blob) => {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
-    navigator.clipboard.write(data).then(() => {
-      onDone();
-    }, (err) => {
-      onError(err);
-    })
+    navigator.clipboard.write(data).then(
+      () => {
+        onDone();
+      },
+      (err) => {
+        onError(err);
+      }
+    );
   });
 }
 ```

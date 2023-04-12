@@ -2,9 +2,6 @@
 title: Key
 slug: Glossary/Key
 page-type: glossary-definition
-tags:
-  - Cryptography
-  - Security
 ---
 
 A key is a piece of information used by a {{Glossary("cipher")}} for {{Glossary("encryption")}} and/or {{Glossary("decryption")}}.

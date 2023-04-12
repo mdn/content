@@ -1,17 +1,8 @@
 ---
 title: "XMLHttpRequest: loadend event"
+short-title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - ProgressEvent
-  - Reference
-  - Web
-  - events
-  - loadend
 browser-compat: api.XMLHttpRequest.loadend_event
 ---
 

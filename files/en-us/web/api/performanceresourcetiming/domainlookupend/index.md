@@ -1,12 +1,8 @@
 ---
-title: PerformanceResourceTiming.domainLookupEnd
+title: "PerformanceResourceTiming: domainLookupEnd property"
+short-title: domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.domainLookupEnd
 ---
 

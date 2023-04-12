@@ -1,18 +1,11 @@
 ---
-title: VRStageParameters.sittingToStandingTransform
+title: "VRStageParameters: sittingToStandingTransform property"
+short-title: sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - sittingToStandingTransform
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters.sittingToStandingTransform
 ---
 

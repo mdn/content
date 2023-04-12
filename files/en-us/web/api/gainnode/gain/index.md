@@ -1,14 +1,8 @@
 ---
-title: GainNode.gain
+title: "GainNode: gain property"
+short-title: gain
 slug: Web/API/GainNode/gain
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gain
-  - GainNode
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.GainNode.gain
 ---
 

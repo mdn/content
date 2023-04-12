@@ -1,15 +1,8 @@
 ---
-title: Element.ariaValueMin
+title: "Element: ariaValueMin property"
+short-title: ariaValueMin
 slug: Web/API/Element/ariaValueMin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueMin
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaValueMin
 ---
 
@@ -35,7 +28,7 @@ In this example the `aria-valuemin` attribute on the element with an ID of `slid
 ```
 
 ```js
-let el = document.getElementById('slider');
+let el = document.getElementById("slider");
 console.log(el.ariaValueMin); // 1
 el.ariaValueMin = "2";
 console.log(el.ariaValueMin); // 2

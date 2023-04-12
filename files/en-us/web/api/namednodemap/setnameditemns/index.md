@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.setNamedItemNS()
+title: "NamedNodeMap: setNamedItemNS() method"
+short-title: setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.setNamedItemNS
 ---
 

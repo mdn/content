@@ -1,14 +1,8 @@
 ---
-title: TransitionEvent.propertyName
+title: "TransitionEvent: propertyName property"
+short-title: propertyName
 slug: Web/API/TransitionEvent/propertyName
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - Property
-  - Reference
-  - TransitionEvent
 browser-compat: api.TransitionEvent.propertyName
 ---
 

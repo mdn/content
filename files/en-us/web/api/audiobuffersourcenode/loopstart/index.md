@@ -1,17 +1,8 @@
 ---
-title: AudioBufferSourceNode.loopStart
+title: "AudioBufferSourceNode: loopStart property"
+short-title: loopStart
 slug: Web/API/AudioBufferSourceNode/loopStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - loopStart
-  - sound
 browser-compat: api.AudioBufferSourceNode.loopStart
 ---
 

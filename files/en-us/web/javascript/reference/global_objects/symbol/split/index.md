@@ -2,20 +2,14 @@
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
 browser-compat: javascript.builtins.Symbol.split
 ---
 
 {{JSRef}}
 
-The **`Symbol.split`** static data property represents the well-known symbol specifying the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
+The **`Symbol.split`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@split`. The {{jsxref("String.prototype.split()")}} method looks up this symbol on its first argument for the method that splits a string at the indices that match the current object.
 
-For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.
+For more information, see[`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) and {{jsxref("String.prototype.split()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-split.html")}}
 
@@ -53,6 +47,8 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 
 - [Polyfill of `Symbol.split` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("String.prototype.split()")}}
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)

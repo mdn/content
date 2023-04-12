@@ -1,13 +1,8 @@
 ---
-title: CSSCounterStyleRule.name
+title: "CSSCounterStyleRule: name property"
+short-title: name
 slug: Web/API/CSSCounterStyleRule/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.name
 ---
 

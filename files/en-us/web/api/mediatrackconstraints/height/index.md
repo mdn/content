@@ -1,18 +1,8 @@
 ---
-title: MediaTrackConstraints.height
+title: "MediaTrackConstraints: height property"
+short-title: height
 slug: Web/API/MediaTrackConstraints/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - height
 browser-compat: api.MediaTrackConstraints.height
 ---
 

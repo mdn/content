@@ -1,14 +1,10 @@
 ---
-title: AudioEncoder.encodeQueueSize
+title: "AudioEncoder: encodeQueueSize property"
+short-title: encodeQueueSize
 slug: Web/API/AudioEncoder/encodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - encodeQueueSize
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.encodeQueueSize
 ---
 

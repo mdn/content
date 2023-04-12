@@ -1,14 +1,8 @@
 ---
-title: HTMLInputElement.select()
+title: "HTMLInputElement: select() method"
+short-title: select()
 slug: Web/API/HTMLInputElement/select
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsCompatTable
-  - Reference
 browser-compat: api.HTMLInputElement.select
 ---
 
@@ -48,7 +42,7 @@ Click the button in this example to select all the text in the
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.select();
 }

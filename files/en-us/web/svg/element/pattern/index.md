@@ -2,10 +2,6 @@
 title: <pattern>
 slug: Web/SVG/Element/pattern
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.pattern
 ---
 

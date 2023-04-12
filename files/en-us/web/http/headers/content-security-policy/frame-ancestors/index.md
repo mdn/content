@@ -1,15 +1,7 @@
 ---
 title: "CSP: frame-ancestors"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-tags:
-  - Ancestors
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Frame
-  - HTTP
-  - Security
-  - frame-ancestors
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 ---
 

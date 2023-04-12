@@ -1,13 +1,8 @@
 ---
-title: HTMLElement.contentEditable
+title: "HTMLElement: contentEditable property"
+short-title: contentEditable
 slug: Web/API/HTMLElement/contentEditable
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.contentEditable
 ---
 
@@ -41,6 +36,5 @@ A string.
 
 ## See also
 
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
-- The {{htmlattrxref("contenteditable")}} global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) global attribute.

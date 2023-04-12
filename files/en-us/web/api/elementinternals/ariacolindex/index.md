@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaColIndex
+title: "ElementInternals: ariaColIndex property"
+short-title: ariaColIndex
 slug: Web/API/ElementInternals/ariaColIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColIndex
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaColIndex
 ---
 

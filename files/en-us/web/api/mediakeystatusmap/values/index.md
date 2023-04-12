@@ -1,14 +1,8 @@
 ---
-title: MediaKeyStatusMap.values()
+title: "MediaKeyStatusMap: values() method"
+short-title: values()
 slug: Web/API/MediaKeyStatusMap/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
 

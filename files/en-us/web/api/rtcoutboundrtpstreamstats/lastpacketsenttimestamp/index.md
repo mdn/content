@@ -1,21 +1,8 @@
 ---
-title: RTCOutboundRtpStreamStats.lastPacketSentTimestamp
+title: "RTCOutboundRtpStreamStats: lastPacketSentTimestamp property"
+short-title: lastPacketSentTimestamp
 slug: Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Packet
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - lastPacketSentTImestamp
-  - timeStamp
 browser-compat: api.RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 ---
 

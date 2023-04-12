@@ -1,24 +1,8 @@
 ---
-title: XRRigidTransform.matrix
+title: "XRRigidTransform: matrix property"
+short-title: matrix
 slug: Web/API/XRRigidTransform/matrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - matrix
-  - transform
 browser-compat: api.XRRigidTransform.matrix
 ---
 

@@ -2,9 +2,6 @@
 title: Prototype
 slug: Glossary/Prototype
 page-type: glossary-definition
-tags:
-  - Apps
-  - Composing
 ---
 
 A prototype is a model that displays the appearance and behavior of an application or product early in the development lifecycle.

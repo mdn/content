@@ -2,13 +2,6 @@
 title: Using CSS custom properties (variables)
 slug: Web/CSS/Using_CSS_custom_properties
 page-type: guide
-tags:
-  - CSS
-  - CSS Variables
-  - Custom Properties
-  - Guide
-  - Web
-  - cascading variables
 ---
 
 {{CSSRef}}
@@ -18,6 +11,8 @@ tags:
 Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
 
 Custom properties are subject to the cascade and inherit their value from their parent.
+
+> **Note:** Variables do not work inside media queries and container queries. The {{cssxref("var", "var()")}} function can be used in place of any part of a value in any property on an element. The {{cssxref("var", "var()")}} function cannot be used as property names, selectors, or anything else besides property values. So, we can't use it in a media query or container query.
 
 ## Basic usage
 

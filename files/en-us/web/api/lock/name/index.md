@@ -1,15 +1,8 @@
 ---
-title: Locks.name
+title: "Locks: name property"
+short-title: name
 slug: Web/API/Lock/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
-  - name
 browser-compat: api.Lock.name
 ---
 

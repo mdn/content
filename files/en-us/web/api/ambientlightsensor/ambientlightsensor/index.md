@@ -1,14 +1,10 @@
 ---
-title: AmbientLightSensor()
+title: "AmbientLightSensor: AmbientLightSensor() constructor"
+short-title: AmbientLightSensor()
 slug: Web/API/AmbientLightSensor/AmbientLightSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Ambient Light Sensor API
-  - AmbientLightSensor
-  - Constructor
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
 

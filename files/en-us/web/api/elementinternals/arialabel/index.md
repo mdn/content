@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaLabel
+title: "ElementInternals: ariaLabel property"
+short-title: ariaLabel
 slug: Web/API/ElementInternals/ariaLabel
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLabel
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaLabel
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: WorkerLocation.href
+title: "WorkerLocation: href property"
+short-title: href
 slug: Web/API/WorkerLocation/href
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.href
 ---
 

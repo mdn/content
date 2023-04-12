@@ -1,13 +1,8 @@
 ---
-title: reportError()
+title: reportError() global function
+short-title: reportError()
 slug: Web/API/reportError
 page-type: web-api-global-function
-tags:
-  - API
-  - Method
-  - Reference
-  - Global
-  - Errors
 browser-compat: api.reportError
 ---
 
@@ -46,7 +41,7 @@ None ({{jsxref("undefined")}}).
 Feature test for the method using:
 
 ```js
-if (typeof self.reportError === 'function') {
+if (typeof self.reportError === "function") {
   // function is defined
 }
 ```
@@ -55,15 +50,15 @@ The following code shows how you might create and report an error, and how it ma
 Note that the handler assigned to `onerror` must return `true` to stop the event propagating further.
 
 ```js
-const newError = new Error('Some error message', "someFile.js", 11);
+const newError = new Error("Some error message", "someFile.js", 11);
 self.reportError(newError);
 
 window.onerror = (message, source, lineno, colno, error) => {
-  console.error(`message: ${error.message}, lineno: ${lineno}` );
+  console.error(`message: ${error.message}, lineno: ${lineno}`);
   return true;
 };
 
-self.addEventListener('error', (error) => {
+self.addEventListener("error", (error) => {
   console.error(error.filename);
 });
 

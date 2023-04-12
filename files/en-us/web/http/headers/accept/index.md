@@ -1,11 +1,7 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Accept
 ---
 

@@ -2,21 +2,12 @@
 title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.numberingSystem`** accessor property returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for the locale.
+The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 
 ## Description
 

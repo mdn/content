@@ -1,17 +1,10 @@
 ---
-title: USBDevice.usbVersionSubminor
+title: "USBDevice: usbVersionSubminor property"
+short-title: usbVersionSubminor
 slug: Web/API/USBDevice/usbVersionSubminor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - usbVersionSubminor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.usbVersionSubminor
 ---
 

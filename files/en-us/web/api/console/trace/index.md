@@ -1,19 +1,8 @@
 ---
-title: console.trace()
+title: "console: trace() method"
+short-title: trace()
 slug: Web/API/console/trace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Chrome
-  - DOM
-  - Debugging
-  - Firefox
-  - Method
-  - String
-  - Web Development
-  - console.trace()
-  - trace
-  - web console
 browser-compat: api.console.trace
 ---
 
@@ -23,6 +12,8 @@ The **`console.trace()`** method outputs a stack trace to the
 [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 {{AvailableInWorkers}}
+
+> **Note:** In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
 
 See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
 {{domxref("console")}} documentation for details and examples.

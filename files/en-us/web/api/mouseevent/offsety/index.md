@@ -1,13 +1,8 @@
 ---
-title: MouseEvent.offsetY
+title: "MouseEvent: offsetY property"
+short-title: offsetY
 slug: Web/API/MouseEvent/offsetY
 page-type: web-api-instance-property
-tags:
-  - API
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.offsetY
 ---
 

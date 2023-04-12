@@ -2,22 +2,12 @@
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
-  - weekInfo
 browser-compat: javascript.builtins.Intl.Locale.weekInfo
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.weekInfo`** property is an accessor property which returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for the associated `Locale`.
+The **`weekInfo`** accessor property of {{jsxref("Intl.Locale")}} instances returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for this locale.
 
 ## Description
 
@@ -37,10 +27,10 @@ const af = new Intl.Locale("af");
 console.log(af.weekInfo); // { firstDay: 7, weekend: [6, 7], minimalDays: 1 }
 
 const enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo) // { firstDay: 1, weekend: [6, 7], minimalDays: 4 }
+console.log(enGB.weekInfo); // { firstDay: 1, weekend: [6, 7], minimalDays: 4 }
 
 const msBN = new Intl.Locale("ms-BN");
-console.log(msBN.weekInfo) // { firstDay: 7, weekend: [5, 7], minimalDays: 1 }
+console.log(msBN.weekInfo); // { firstDay: 7, weekend: [5, 7], minimalDays: 1 }
 // Brunei weekend is Friday and Sunday but not Saturday
 ```
 

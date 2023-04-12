@@ -2,12 +2,6 @@
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
 
@@ -40,11 +34,9 @@ with one digit before the decimal point, rounded to
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `fractionDigits` is too small or too large. Values between
-    `0` and `100`, inclusive, will not cause a
-    {{jsxref("RangeError")}}.
+  - : Thrown if `fractionDigits` is not between `1` and `100` (inclusive).
 - {{jsxref("TypeError")}}
-  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 

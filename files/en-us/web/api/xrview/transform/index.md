@@ -1,29 +1,10 @@
 ---
-title: XRView.transform
+title: "XRView: transform property"
+short-title: transform
 slug: Web/API/XRView/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - View
-  - Viewpoint
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - augmented
-  - camera
-  - transform
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.transform
 ---
 

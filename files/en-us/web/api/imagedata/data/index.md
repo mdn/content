@@ -1,13 +1,8 @@
 ---
-title: ImageData.data
+title: "ImageData: data property"
+short-title: data
 slug: Web/API/ImageData/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
 browser-compat: api.ImageData.data
 ---
 
@@ -32,8 +27,8 @@ for each pixel, making 4 x 10,000, or 40,000 values in all.
 
 ```js
 let imageData = new ImageData(100, 100);
-console.log(imageData.data);         // Uint8ClampedArray[40000]
-console.log(imageData.data.length);  // 40000
+console.log(imageData.data); // Uint8ClampedArray[40000]
+console.log(imageData.data.length); // 40000
 ```
 
 ### Filling a blank ImageData object
@@ -54,22 +49,22 @@ Since each pixel consists of four values within the `data` array, the
 pixel are R (red), G (green), B (blue), and A (alpha), in that order.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 const imageData = ctx.createImageData(100, 100);
 
 // Fill the array with RGBA values
 for (let i = 0; i < imageData.data.length; i += 4) {
   // Percentage in the x direction, times 255
-  let x = (i % 400) / 400 * 255;
+  let x = ((i % 400) / 400) * 255;
   // Percentage in the y direction, times 255
-  let y = Math.ceil(i / 400) / 100 * 255;
+  let y = (Math.ceil(i / 400) / 100) * 255;
 
   // Modify pixel data
-  imageData.data[i + 0] = x;        // R value
-  imageData.data[i + 1] = y;        // G value
-  imageData.data[i + 2] = 255 - x;  // B value
-  imageData.data[i + 3] = 255;      // A value
+  imageData.data[i + 0] = x; // R value
+  imageData.data[i + 1] = y; // G value
+  imageData.data[i + 2] = 255 - x; // B value
+  imageData.data[i + 3] = 255; // A value
 }
 
 // Draw image data to the canvas

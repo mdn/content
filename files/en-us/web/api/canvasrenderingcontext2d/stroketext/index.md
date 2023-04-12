@@ -1,20 +1,8 @@
 ---
-title: CanvasRenderingContext2D.strokeText()
+title: "CanvasRenderingContext2D: strokeText() method"
+short-title: strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - Drawing Strings
-  - Drawing Text
-  - Method
-  - Reference
-  - Stroke String
-  - Stroking Text
-  - strokeText
 browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
 

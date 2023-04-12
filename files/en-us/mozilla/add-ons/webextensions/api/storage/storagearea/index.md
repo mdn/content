@@ -1,16 +1,7 @@
 ---
 title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageArea
 ---
 

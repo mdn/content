@@ -1,15 +1,8 @@
 ---
-title: StaticRange()
+title: "StaticRange: StaticRange() constructor"
+short-title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM API
-  - Range
-  - Reference
-  - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
 

@@ -1,19 +1,8 @@
 ---
-title: HTMLMediaElement.textTracks
+title: "HTMLMediaElement: textTracks property"
+short-title: textTracks
 slug: Web/API/HTMLMediaElement/textTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Web
-  - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
 
@@ -78,12 +67,12 @@ The `HTMLMediaElement.textTracks` returns a
 of each English track to the console.
 
 ```js
-const tracks = document.querySelector('video').textTracks;
+const tracks = document.querySelector("video").textTracks;
 
 for (const track of tracks) {
-   if (track.language === 'en') {
-      console.dir(track);
-   }
+  if (track.language === "en") {
+    console.dir(track);
+  }
 }
 ```
 
@@ -99,19 +88,13 @@ for (const track of tracks) {
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
-- {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
-- {{DOMxRef("AudioTrack")}} and {{DOMxRef("AudioTrackList")}}
-- VideoTrackList
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.textTracks` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{DOMxRef("AudioTrack")}}, {{DOMxRef("AudioTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}
+- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
   [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
-  [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
-  and
-  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
-  events
-- Audio TrackList
-  [`change`](/en-US/docs/Web/API/AudioTrackList/change_event),
-  [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event)
-  and
-  [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
-  events
+  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): AudioTrackList events
+- [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event),
+  [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
+  [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event): VideoTrackList events

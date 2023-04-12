@@ -2,22 +2,12 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Beginner
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
 
 {{JSRef}}
 
-The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the value of each index in the array.
+The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -29,7 +19,7 @@ values()
 
 ### Return value
 
-A new iterable iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Description
 
@@ -172,4 +162,3 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

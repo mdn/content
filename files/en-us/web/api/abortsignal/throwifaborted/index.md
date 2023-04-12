@@ -1,14 +1,8 @@
 ---
-title: AbortSignal.throwIfAborted()
+title: "AbortSignal: throwIfAborted() method"
+short-title: throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
 page-type: web-api-instance-method
-tags:
-  - API
-  - AbortSignal
-  - throwIfAborted
-  - method
-  - Reference
-  - reason
 browser-compat: api.AbortSignal.throwIfAborted
 ---
 

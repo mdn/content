@@ -2,12 +2,6 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 page-type: javascript-operator
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
 browser-compat: javascript.operators.await
 ---
 
@@ -175,7 +169,7 @@ export default await colors;
 
 ### Control flow effects of await
 
-When an `await` is encountered in code (either in an async function or in a module), the awaited expression is executed, while all code that depends on the expression's value is paused and pushed into the [microtask queue](/en-US/docs/Web/JavaScript/EventLoop). The main thread is then freed for the next task in the event loop. This happens even if the awaited value is an already-resolved promise or not a promise. For example, consider the following code:
+When an `await` is encountered in code (either in an async function or in a module), the awaited expression is executed, while all code that depends on the expression's value is paused and pushed into the [microtask queue](/en-US/docs/Web/JavaScript/Event_loop). The main thread is then freed for the next task in the event loop. This happens even if the awaited value is an already-resolved promise or not a promise. For example, consider the following code:
 
 ```js
 async function foo(name) {
@@ -349,5 +343,5 @@ However, there's a little performance penalty coming with `return await` because
 
 - {{jsxref("Statements/async_function", "async function")}}
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
-- {{jsxref("AsyncFunction")}} object
-- [Top level await](https://v8.dev/features/top-level-await) on v8.dev
+- {{jsxref("AsyncFunction")}}
+- [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)

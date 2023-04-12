@@ -1,12 +1,8 @@
 ---
-title: PerformanceEventTiming.target
+title: "PerformanceEventTiming: target property"
+short-title: target
 slug: Web/API/PerformanceEventTiming/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming.target
 ---
 
@@ -37,7 +33,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 ## Specifications

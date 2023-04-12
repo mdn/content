@@ -2,14 +2,6 @@
 title: ":empty"
 slug: Web/CSS/:empty
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - NeedsUpdate
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.empty
 ---
 
@@ -23,8 +15,10 @@ The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:empty
+```css
+:empty {
+  /* ... */
+}
 ```
 
 ## Examples

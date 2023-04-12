@@ -1,14 +1,10 @@
 ---
-title: StorageEvent.initStorageEvent()
+title: "StorageEvent: initStorageEvent() method"
+short-title: initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Deprecated
-  - Reference
-  - StorageEvent
-  - Web Storage API
+status:
+  - deprecated
 browser-compat: api.StorageEvent.initStorageEvent
 ---
 

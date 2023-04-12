@@ -1,14 +1,8 @@
 ---
-title: OES_vertex_array_object.createVertexArrayOES()
+title: "OES_vertex_array_object: createVertexArrayOES() method"
+short-title: createVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/createVertexArrayOES
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VAO
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_vertex_array_object.createVertexArrayOES
 ---
 
@@ -38,7 +32,7 @@ points to vertex array data.
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_vertex_array_object');
+const ext = gl.getExtension("OES_vertex_array_object");
 const vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 

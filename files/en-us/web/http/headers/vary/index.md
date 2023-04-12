@@ -1,12 +1,7 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Vary
 ---
 

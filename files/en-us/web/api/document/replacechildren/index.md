@@ -1,15 +1,8 @@
 ---
-title: Document.replaceChildren()
+title: "Document: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Document/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
-  - replaceChildren
 browser-compat: api.Document.replaceChildren
 ---
 

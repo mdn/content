@@ -1,17 +1,10 @@
 ---
-title: XMLHttpRequest.mozSystem
+title: "XMLHttpRequest: mozSystem property"
+short-title: mozSystem
 slug: Web/API/XMLHttpRequest/mozSystem
 page-type: web-api-instance-property
-tags:
-  - AP
-  - Non-standard
-  - Property
-  - Reference
-  - Same Origin Policy
-  - XHR
-  - XMLHttpRequest
-  - mozSystem
-  - origin
+status:
+  - non-standard
 ---
 
 {{APIRef('XMLHttpRequest')}}

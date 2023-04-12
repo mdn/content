@@ -1,22 +1,8 @@
 ---
-title: RTCRtpSender.transport
+title: "RTCRtpSender: transport property"
+short-title: transport
 slug: Web/API/RTCRtpSender/transport
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connectivity
-  - DTLS
-  - Networking
-  - Property
-  - RTCP
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sender
 browser-compat: api.RTCRtpSender.transport
 ---
 

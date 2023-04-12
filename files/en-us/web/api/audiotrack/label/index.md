@@ -1,20 +1,8 @@
 ---
-title: AudioTrack.label
+title: "AudioTrack: label property"
+short-title: label
 slug: Web/API/AudioTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - label
-  - metadata
-  - track
 browser-compat: api.AudioTrack.label
 ---
 

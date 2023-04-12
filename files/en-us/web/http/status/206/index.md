@@ -1,11 +1,7 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-tags:
-  - HTTP
-  - HTTP Status
-  - Range Requests
-  - Success
+page-type: http-status-code
 browser-compat: http.status.206
 ---
 

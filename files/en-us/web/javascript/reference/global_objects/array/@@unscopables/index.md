@@ -2,12 +2,6 @@
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 page-type: javascript-instance-data-property
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
 browser-compat: javascript.builtins.Array.@@unscopables
 ---
 
@@ -37,6 +31,9 @@ The default `Array` properties that are ignored for `with` statement-binding pur
 - [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
 - [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 - [`keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
+- [`toReversed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+- [`toSorted()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
+- [`toSpliced()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
 `Array.prototype[@@unscopables]` is an empty object only containing all the above property names with the value `true`. Its [prototype is `null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects), so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.

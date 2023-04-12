@@ -1,19 +1,8 @@
 ---
-title: HTMLImageElement.naturalWidth
+title: "HTMLImageElement: naturalWidth property"
+short-title: naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Intrinsic Width
-  - Intrinsic size
-  - Property
-  - Reference
-  - naturalWidth
-  - size
-  - width
 browser-compat: api.HTMLImageElement.naturalWidth
 ---
 
@@ -34,7 +23,7 @@ returns the natural height of the image.
 
 > **Note:** Most of the time the natural width is the actual width of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-> [degrades the resolution of images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
+> [degrades the resolution of images on low-end devices](https://crbug.com/1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
 > by such browser interventions as the natural width, and returns this value.
 
 ## Value
@@ -51,7 +40,7 @@ information, `naturalWidth` returns 0.
 
 ## Examples
 
-See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
+See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#examples) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
 
 ## Specifications
 

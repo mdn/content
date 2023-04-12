@@ -1,20 +1,10 @@
 ---
-title: XRView.isFirstPersonObserver
+title: "XRView: isFirstPersonObserver property"
+short-title: isFirstPersonObserver
 slug: Web/API/XRView/isFirstPersonObserver
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - Augmented Reality
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.isFirstPersonObserver
 ---
 

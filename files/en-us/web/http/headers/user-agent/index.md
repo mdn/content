@@ -1,11 +1,7 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - User-agent
+page-type: http-header
 browser-compat: http.headers.User-Agent
 ---
 
@@ -115,14 +111,6 @@ In this example, the user agent string is mobile Safari's version. It contains t
 
 ```plain
 Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
-```
-
-## Internet Explorer UA string
-
-### Examples
-
-```plain
-Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
 ```
 
 ## Crawler and bot UA strings

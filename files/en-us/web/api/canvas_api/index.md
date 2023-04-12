@@ -2,13 +2,6 @@
 title: Canvas API
 slug: Web/API/Canvas_API
 page-type: web-api-overview
-tags:
-  - API
-  - Canvas
-  - Graphics
-  - JavaScript
-  - Overview
-  - Reference
 browser-compat: html.elements.canvas
 ---
 

@@ -2,13 +2,6 @@
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.TypedArray.of
 ---
 
@@ -23,9 +16,10 @@ The **`TypedArray.of()`** static method creates a new
 ## Syntax
 
 ```js-nolint
+TypedArray.of()
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, /* ... ,*/ elementN)
+TypedArray.of(element0, element1, /* … ,*/ elementN)
 ```
 
 Where `TypedArray` is one of:

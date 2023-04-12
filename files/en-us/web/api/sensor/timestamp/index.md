@@ -1,16 +1,8 @@
 ---
-title: Sensor.timestamp
+title: "Sensor: timestamp property"
+short-title: timestamp
 slug: Web/API/Sensor/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - timeStamp
 browser-compat: api.Sensor.timestamp
 ---
 

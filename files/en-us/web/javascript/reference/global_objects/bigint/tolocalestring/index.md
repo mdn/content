@@ -2,19 +2,14 @@
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 page-type: javascript-instance-method
-tags:
-  - BigInt
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
 browser-compat: javascript.builtins.BigInt.toLocaleString
 ---
 
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
+
+When formatting large numbers of numbers, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use the function provided by its {{jsxref("Intl/NumberFormat/format", "format()")}} method.
 
 {{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 
@@ -52,12 +47,6 @@ A string with a language-sensitive representation of the given BigInt.
 
 In implementations with `Intl.NumberFormat`, this is equivalent to `new Intl.NumberFormat(locales, options).format(number)`.
 
-## Performance
-
-When formatting large numbers of numbers, it is better to create a
-{{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format", "format()")}} method.
-
 ## Examples
 
 ### Using `toLocaleString`
@@ -70,6 +59,16 @@ const bigint = 3500n;
 
 console.log(bigint.toLocaleString());
 // "3,500" if in U.S. English locale
+```
+
+### Checking for support for locales and options parameters
+
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+
+```js
+function toLocaleStringSupportsLocales() {
+  return typeof Intl === "object" && !!Intl && typeof Intl.NumberFormat === "function";
+}
 ```
 
 ### Using `locales`

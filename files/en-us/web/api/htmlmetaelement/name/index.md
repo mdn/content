@@ -1,19 +1,14 @@
 ---
-title: HTMLMetaElement.name
+title: "HTMLMetaElement: name property"
+short-title: name
 slug: Web/API/HTMLMetaElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.name
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.name`** is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
+The **`HTMLMetaElement.name`** property is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
 The `name` attribute defines the metadata name and the `content` attribute defines the value.
 
 ## Value

@@ -1,13 +1,8 @@
 ---
-title: RTCPeerConnection.sctp
+title: "RTCPeerConnection: sctp property"
+short-title: sctp
 slug: Web/API/RTCPeerConnection/sctp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - SCTP
-  - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
 

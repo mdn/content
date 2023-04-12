@@ -1,13 +1,8 @@
 ---
-title: WorkerLocation.hostname
+title: "WorkerLocation: hostname property"
+short-title: hostname
 slug: Web/API/WorkerLocation/hostname
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.hostname
 ---
 

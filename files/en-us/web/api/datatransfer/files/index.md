@@ -1,13 +1,8 @@
 ---
-title: DataTransfer.files
+title: "DataTransfer: files property"
+short-title: files
 slug: Web/API/DataTransfer/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.files
 ---
 

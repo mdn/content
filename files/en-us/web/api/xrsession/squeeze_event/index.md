@@ -1,29 +1,10 @@
 ---
-title: 'XRSession: squeeze event'
+title: "XRSession: squeeze event"
+short-title: squeeze
 slug: Web/API/XRSession/squeeze_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Primary Squeeze Action
-  - Reality
-  - Reference
-  - Squeeze Action
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - squeeze
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.squeeze_event
 ---
 

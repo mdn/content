@@ -1,25 +1,8 @@
 ---
-title: XRInputSource.targetRayMode
+title: "XRInputSource: targetRayMode property"
+short-title: targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Pointing
-  - Property
-  - Ray
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - direction
-  - pointer
-  - target
-  - targetRayMode
 browser-compat: api.XRInputSource.targetRayMode
 ---
 

@@ -1,15 +1,10 @@
 ---
-title: WebTransport.close()
+title: "WebTransport: close() method"
+short-title: close()
 slug: Web/API/WebTransport/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - close
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.close
 ---
 
@@ -22,7 +17,7 @@ The **`close()`** method of the {{domxref("WebTransport")}} interface closes an 
 ## Syntax
 
 ```js
-close(info)
+close(info);
 ```
 
 ### Parameters
@@ -46,7 +41,7 @@ close(info)
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 // Initialize transport connection
 const transport = new WebTransport(url);
 
@@ -54,7 +49,7 @@ const transport = new WebTransport(url);
 
 transport.close({
   closeCode: 017,
-  reason: 'CloseButtonPressed'
+  reason: "CloseButtonPressed",
 });
 ```
 

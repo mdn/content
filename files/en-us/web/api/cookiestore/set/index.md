@@ -1,14 +1,10 @@
 ---
-title: CookieStore.set()
+title: "CookieStore: set() method"
+short-title: set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - set()
-  - CookieStore
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStore.set
 ---
 
@@ -50,7 +46,7 @@ Or
       - : A string containing the path of the cookie.
     - `sameSite` {{Optional_Inline}}
 
-      - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values (see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) for more information):
+      - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
         - `"strict"`
           - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.
@@ -71,7 +67,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 - {{jsxref("TypeError")}}
   - : Thrown if setting the cookie with the given values fails.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin does not {{glossary("serialize")}} to a URL.
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 
 ## Examples
 

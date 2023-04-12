@@ -2,9 +2,6 @@
 title: Syntax sections
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -37,12 +34,12 @@ A few rules to follow in terms of markup within the syntax block:
 - Do **not** use \<code> within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.
 - Only specify the function and arguments. Example showing "corrected" examples below
 
-  ```js
+  ```js-nolint
   querySelector(selector)
-  //responseStr = element.querySelector(selector);
+  //responseStr = element.querySelector(selector)
 
   new IntersectionObserver(callback, options)
-  // const observer = new IntersectionObserver(callback, options);
+  // const observer = new IntersectionObserver(callback, options)
   ```
 
 ### Constructors and methods
@@ -51,14 +48,20 @@ A few rules to follow in terms of markup within the syntax block:
 
 Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
 
-```js
+```js-nolint
 new IntersectionObserver(callback, options)
 ```
 
-or this (from {{DOMxRef("Document.hasStorageAccess")}}):
+or this (from {{DOMxRef("Document.hasStorageAccess()")}}):
 
-```js
+```js-nolint
 hasStorageAccess()
+```
+
+When the method is static, for example {{DOMxRef("URL.createObjectURL()")}}, then provide its interface as well:
+
+```js-nolint
+URL.createObjectURL(object)
 ```
 
 ##### Multiple lines/Optional parameters
@@ -67,7 +70,7 @@ Methods that can be used in many different ways should be expanded out into mult
 
 Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 
-```js
+```js-nolint
 slice()
 slice(begin)
 slice(begin, end)
@@ -75,7 +78,7 @@ slice(begin, end)
 
 Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:
 
-```js
+```js-nolint
 drawImage(image, dx, dy)
 drawImage(image, dx, dy, dWidth, dHeight)
 drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
@@ -83,7 +86,7 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
 Similarly for the {{jsxref("Date")}} constructor:
 
-```js
+```js-nolint
 new Date()
 new Date(value)
 new Date(dateString)
@@ -96,11 +99,11 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 ##### Formal syntax
 
-Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](#multiple_lines).
+Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](multiple_linesoptional_parameters).
 
 While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, "`[ ]`" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
 
-```js
+```js-nolint
 arr.slice([begin[, end]])
 ```
 
@@ -110,44 +113,46 @@ For specific cases where it is seen as beneficial, a separate **Formal syntax** 
 
 The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:
 
-```js
-caches.match(request, options).then(function(response) {
+```js-nolint
+caches.match(request, options).then(function (response) {
   // Do something with the response
-});
+})
 ```
 
 But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:
 
-```js
+```js-nolint
 match(request, options)
 ```
 
 ##### Callback syntax blocks
 
-For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:
+For methods accepting a callback function, show the callback as a parameter, not as an arrow function or `function` expression.
 
-```js
-// Arrow function
-filter((currentValue) => { /* … */ } )
-filter((currentValue, index) => { /* … */ } )
-filter((currentValue, index, array) => { /* … */ } )
-
-// Callback function
+```js-nolint
 filter(callbackFn)
 filter(callbackFn, thisArg)
+```
 
-// Inline callback function
-filter(function(currentValue) { /* … */ })
-filter(function(currentValue, index) { /* … */ })
-filter(function(currentValue, index, array){ /* … */ })
-filter(function(currentValue, index, array) { /* … */ }, thisArg)
+Then, in the "Parameters" section, list the callback function's parameters and what it's expected to return.
+
+```md
+- `callbackFn`
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
+    - `element`
+      - : The current element being processed in the array.
+    - `index`
+      - : The index of the current element being processed in the array.
+    - `array`
+      - : The array `filter()` was called upon.
 ```
 
 ##### Syntax for arbitrary number of parameters
 
 For methods that accept an arbitrary number of parameters, the syntax block is written like this:
 
-```js
+```js-nolint
+unshift()
 unshift(element0)
 unshift(element0, element1)
 unshift(element0, element1, /* … ,*/ elementN)
@@ -220,7 +225,7 @@ The last section, "Formal syntax", is automatically generated from the data incl
 
 The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 
 ### Selectors
 
@@ -230,7 +235,7 @@ This block is automatically generated from the data included in the [MDN data re
 
 The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data).
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 
 ## HTML reference syntax
 

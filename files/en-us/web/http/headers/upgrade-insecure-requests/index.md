@@ -1,11 +1,7 @@
 ---
 title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Upgrade-Insecure-Requests
 ---
 

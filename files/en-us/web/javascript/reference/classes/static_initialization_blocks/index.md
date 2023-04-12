@@ -2,14 +2,6 @@
 title: Static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2022
-  - JavaScript
-  - Language feature
-  - Static
-  - Reference
-  - Initialization
 browser-compat: javascript.classes.static_initialization_blocks
 ---
 
@@ -44,10 +36,10 @@ The scope of the variables declared inside the static block is local to the bloc
 Since `var`, `function`, `const` or `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
 
 ```js
-var y = 'Outer y';
+var y = "Outer y";
 
 class A {
-  static field = 'Inner y';
+  static field = "Inner y";
   static {
     var y = this.field;
   }
@@ -74,13 +66,13 @@ The output shows that the blocks and fields are evaluated in execution order.
 
 ```js
 class MyClass {
-  static field1 = console.log('field1 called');
+  static field1 = console.log("field1 called");
   static {
-    console.log('Class static block #1 called');
+    console.log("Class static block #1 called");
   }
-  static field2 = console.log('field2 called');
+  static field2 = console.log("field2 called");
   static {
-    console.log('Class static block #2 called');
+    console.log("Class static block #2 called");
   }
 }
 
@@ -101,7 +93,7 @@ This code shows how to access a public static field.
 
 ```js
 class A {
-  static field = 'A static field';
+  static field = "A static field";
   static {
     console.log(this.field);
   }
@@ -113,7 +105,7 @@ This includes static properties, as shown below:
 
 ```js
 class A {
-  static fieldA = 'A.fieldA';
+  static fieldA = "A.fieldA";
 }
 class B extends A {
   static {
@@ -140,7 +132,7 @@ class D {
   }
 }
 
-console.log(getDPrivateField(new D('private'))); // private
+console.log(getDPrivateField(new D("private"))); // private
 ```
 
 ### Workarounds
@@ -159,8 +151,9 @@ In both cases the approach is less elegant, and does not grant access to private
 
 ## See also
 
-- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) (v8.dev blog)
-- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) (2ality.com blog)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- {{jsxref("Operators/super", "super()")}}
-- [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- {{jsxref("Classes/static", "static")}}
+- {{jsxref("Statements/class", "class")}}
+- [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (March 30, 2021)
+- [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) on 2ality.com (September 1, 2021)

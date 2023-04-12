@@ -2,12 +2,6 @@
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.toString
 ---
 

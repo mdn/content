@@ -1,14 +1,8 @@
 ---
-title: HTMLDialogElement.showModal()
+title: "HTMLDialogElement: showModal() method"
+short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Strict-Transport-Security
 ---
 
@@ -95,7 +90,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-If a `max-age` of 1 year is acceptable for a domain, however, two years is the recommended value as explained on <https://hstspreload.org>.
+Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on <https://hstspreload.org>.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 

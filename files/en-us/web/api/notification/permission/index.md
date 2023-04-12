@@ -1,14 +1,8 @@
 ---
-title: Notification.permission
+title: "Notification: permission static property"
+short-title: permission
 slug: Web/API/Notification/permission
 page-type: web-api-static-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.permission
 ---
 

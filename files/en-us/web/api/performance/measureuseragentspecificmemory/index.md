@@ -1,13 +1,10 @@
 ---
-title: performance.measureUserAgentSpecificMemory()
+title: "Performance: measureUserAgentSpecificMemory() method"
+short-title: measureUserAgentSpecificMemory()
 slug: Web/API/Performance/measureUserAgentSpecificMemory
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Performance.measureUserAgentSpecificMemory
 ---
 
@@ -17,7 +14,7 @@ The **`measureUserAgentSpecificMemory()`** method is used to estimate the memory
 
 ## Description
 
-The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_Management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
+The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
 
 The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Rather than make single calls to this method, it's better to make periodic calls to track how memory usage changes over the duration of a session.
 

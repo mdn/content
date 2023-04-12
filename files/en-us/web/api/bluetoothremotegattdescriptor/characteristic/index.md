@@ -1,17 +1,10 @@
 ---
-title: BluetoothRemoteGATTDescriptor.characteristic
+title: "BluetoothRemoteGATTDescriptor: characteristic property"
+short-title: characteristic
 slug: Web/API/BluetoothRemoteGATTDescriptor/characteristic
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
-  - characteristic
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - samesite
+page-type: http-header
 browser-compat: http.headers.Set-Cookie
 ---
 
@@ -64,12 +58,11 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Defines the cookie name and its value.
     A cookie definition begins with a name-value pair.
 
-    A `<cookie-name>` can contain any US-ASCII characters except for: the control character, space, or a tab.
-    It also must not contain separator characters like the following: `( ) < > @ , ; : \ " / [ ] ? = { }`.
+    A `<cookie-name>` can contain any US-ASCII characters except for: control characters (ASCII characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: `( ) < > @ , ; : \ " / [ ] ? = { }`)
 
-    A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding a control character, {{glossary("Whitespace")}}, double quotes, comma, semicolon, and backslash.
+    A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
-    **Encoding**: Many implementations perform URL encoding on cookie values.
+    **Encoding**: Many implementations perform [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) on cookie values.
     However, this is not required by the RFC specification.
     The URL encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
@@ -83,6 +76,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Domain=<domain-value>` {{optional_inline}}
 
   - : Defines the host to which the cookie will be sent.
+
+    Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
 
     If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
 
@@ -104,11 +99,13 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
 
 - `HttpOnly` {{optional_inline}}
+
   - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property.
     Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}.
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 
 - `Max-Age=<number>` {{optional_inline}}
+
   - : Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `Expires` and `Max-Age` are set, `Max-Age` has precedence.
 
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
@@ -133,25 +130,26 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - `Strict`
 
-      - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
+      - : Means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
         If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
 
-      - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
+      - : Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
     - `None`
-      - : means that the browser sends the cookie with both cross-site and same-site requests.
-        The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`
 
-    > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed, such that:
-    >
-    > 1. The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously, cookies were sent for all requests by default.
-    > 2. Cookies with `SameSite=None` must now also specify the `Secure` attribute (in other words, they require a secure context).
-    > 3. Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
-    >
-    > See the [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about specific browser implementation (rows: "`SameSite`: Defaults to `Lax`", "`SameSite`: Secure context required", and "`SameSite`: URL scheme-aware ("schemeful")").
+      - : means that the browser sends the cookie with both cross-site and same-site requests.
+        The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`. If `Secure` is missing an error will be logged:
+
+        ```
+        Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
+
+        This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
+        ```
+
+        > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
 - `Secure` {{optional_inline}}
 
@@ -249,4 +247,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [Samesite cookies explained](https://web.dev/samesite-cookies-explained/) (web.dev blog)

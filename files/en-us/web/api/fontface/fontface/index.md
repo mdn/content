@@ -1,15 +1,8 @@
 ---
-title: FontFace()
+title: "FontFace: FontFace() constructor"
+short-title: FontFace()
 slug: Web/API/FontFace/FontFace
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - Constructor
-  - FontFace
-  - Fonts
-  - Reference
 browser-compat: api.FontFace.FontFace
 ---
 
@@ -39,7 +32,7 @@ new FontFace(family, source, descriptors)
     This can be either:
 
     - A URL to a font face file.
-    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or {{domxref("ArrayBufferView")}}).
+    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
 - `descriptors` {{optional_inline}}
 

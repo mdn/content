@@ -1,14 +1,10 @@
 ---
-title: AudioSinkInfo.type
+title: "AudioSinkInfo: type property"
+short-title: type
 slug: Web/API/AudioSinkInfo/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - type
+status:
+  - experimental
 browser-compat: api.AudioSinkInfo.type
 ---
 

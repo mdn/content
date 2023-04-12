@@ -1,12 +1,10 @@
 ---
-title: 'HTMLCanvasElement: contextlost event'
+title: "HTMLCanvasElement: contextlost event"
+short-title: contextlost
 slug: Web/API/HTMLCanvasElement/contextlost_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Canvas
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 
@@ -23,9 +21,9 @@ User code can the context from being restored by calling [`Event.preventDefault(
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('contextlost', (event) => {});
+addEventListener("contextlost", (event) => {});
 
-oncontextlost = (event) => { };
+oncontextlost = (event) => {};
 ```
 
 ## Event type
@@ -37,9 +35,9 @@ A generic {{domxref("Event")}}.
 The code fragment below detects the `contextlost` event.
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-canvas.addEventListener('contextlost', (event) => {
+canvas.addEventListener("contextlost", (event) => {
   console.log(event);
 });
 ```
@@ -47,9 +45,9 @@ canvas.addEventListener('contextlost', (event) => {
 To prevent the context from being restored the code might instead look like this:
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-canvas.addEventListener('contextlost', (event) => {
+canvas.addEventListener("contextlost", (event) => {
   event.preventDefault();
 });
 ```

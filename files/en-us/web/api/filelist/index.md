@@ -2,10 +2,6 @@
 title: FileList
 slug: Web/API/FileList
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Files
 browser-compat: api.FileList
 ---
 
@@ -22,7 +18,7 @@ All `<input>` element nodes have a `files` attribute of type `FileList` on them 
 The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
 
 ```js
-const file = document.getElementById('fileItem').files[0];
+const file = document.getElementById("fileItem").files[0];
 ```
 
 > **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
@@ -63,7 +59,7 @@ In this example, we log the names of all the files selected by the user.
 #### JavaScript
 
 ```js
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 const fileInput = document.querySelector("#myfiles");
 
 fileInput.addEventListener("change", () => {

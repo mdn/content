@@ -2,12 +2,6 @@
 title: border-inline
 slug: Web/CSS/border-inline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline
 ---
 
@@ -52,8 +46,8 @@ The `border-inline` is specified with one or more of the following, in any order
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 

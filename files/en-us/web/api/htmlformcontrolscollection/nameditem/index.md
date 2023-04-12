@@ -1,13 +1,8 @@
 ---
-title: HTMLFormControlsCollection.namedItem()
+title: "HTMLFormControlsCollection: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLFormControlsCollection/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - Method
-  - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
 
@@ -53,7 +48,7 @@ namedItem(str)
 
 ```js
 // Returns the HTMLInputElement representing #my-form-control
-elem1 = document.forms[0]['my-form-control'];
+elem1 = document.forms[0]["my-form-control"];
 ```
 
 ## Specifications

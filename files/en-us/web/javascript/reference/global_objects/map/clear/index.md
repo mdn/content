@@ -2,13 +2,6 @@
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Map.clear
 ---
 

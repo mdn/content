@@ -1,22 +1,8 @@
 ---
-title: TextTrackList.getTrackById()
+title: "TextTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/TextTrackList/getTrackById
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - TextTrack
-  - TextTrackList
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
 browser-compat: api.TextTrackList.getTrackById
 ---
 

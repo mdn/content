@@ -1,21 +1,10 @@
 ---
-title: MerchantValidationEvent.validationURL
+title: "MerchantValidationEvent: validationURL property"
+short-title: validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Merchant
-  - Merchant Validation
-  - MerchantValidationEvent
-  - NeedsExample
-  - Payment Request
-  - Payment Request API
-  - Payments
-  - Property
-  - Reference
-  - validationURL
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
 

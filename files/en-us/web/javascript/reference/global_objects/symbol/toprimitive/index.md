@@ -2,17 +2,12 @@
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
 browser-compat: javascript.builtins.Symbol.toPrimitive
 ---
 
 {{JSRef}}
 
-The **`Symbol.toPrimitive`** static data property represents the well-known symbol specifying the method that accepts a preferred type and returns a primitive representation of an object. It is called in priority by all [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) algorithms.
+The **`Symbol.toPrimitive`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@toPrimitive`. All [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) algorithms look up this symbol on objects for the method that accepts a preferred type and returns a primitive representation of the object, before falling back to using the object's `valueOf()` and `toString()` methods.
 
 {{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
@@ -70,7 +65,8 @@ console.log(obj2 + ""); // "true"    — hint is "default"
 
 ## See also
 
-- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]()")}}
-- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]()")}}
+- [Polyfill of `Symbol.toPrimitive` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
 - {{jsxref("Object.prototype.toString()")}}
 - {{jsxref("Object.prototype.valueOf()")}}

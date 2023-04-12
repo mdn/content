@@ -1,14 +1,8 @@
 ---
-title: XPathResult.invalidIteratorState
+title: "XPathResult: invalidIteratorState property"
+short-title: invalidIteratorState
 slug: Web/API/XPathResult/invalidIteratorState
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.invalidIteratorState
 ---
 

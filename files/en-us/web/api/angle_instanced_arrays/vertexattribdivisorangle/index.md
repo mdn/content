@@ -1,14 +1,8 @@
 ---
-title: ANGLE_instanced_arrays.vertexAttribDivisorANGLE()
+title: "ANGLE_instanced_arrays: vertexAttribDivisorANGLE() method"
+short-title: vertexAttribDivisorANGLE()
 slug: Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE
 ---
 

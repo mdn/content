@@ -1,15 +1,8 @@
 ---
-title: MediaStreamAudioDestinationNode.stream
+title: "MediaStreamAudioDestinationNode: stream property"
+short-title: stream
 slug: Web/API/MediaStreamAudioDestinationNode/stream
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MediaStreamAudioDestinationNode
-  - Property
-  - Reference
-  - Web Audio API
-  - stream
 browser-compat: api.MediaStreamAudioDestinationNode.stream
 ---
 

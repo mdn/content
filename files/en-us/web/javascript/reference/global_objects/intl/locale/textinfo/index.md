@@ -2,23 +2,12 @@
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
-  - textInfo
-  - text direction
 browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.textInfo`** property is an accessor property which returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for the associated `Locale`.
+The **`textInfo`** accessor property of {{jsxref("Intl.Locale")}} instances returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for this locale.
 
 ## Description
 

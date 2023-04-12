@@ -1,13 +1,8 @@
 ---
-title: SVGMarkerElement.refX
+title: "SVGMarkerElement: refX property"
+short-title: refX
 slug: Web/API/SVGMarkerElement/refX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - refX
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.refX
 ---
 

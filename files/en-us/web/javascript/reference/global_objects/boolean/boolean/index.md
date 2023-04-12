@@ -2,17 +2,12 @@
 title: Boolean() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 page-type: javascript-constructor
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.Boolean.Boolean
 ---
 
 {{JSRef}}
 
-The **`Boolean()`** constructor can create {{jsxref("Boolean")}} objects or return primitive values of type boolean.
+The **`Boolean()`** constructor creates {{jsxref("Boolean")}} objects. When called as a function, it returns primitive values of type Boolean.
 
 {{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
 

@@ -1,22 +1,11 @@
 ---
-title: MediaTrackConstraints.volume
+title: "MediaTrackConstraints: volume property"
+short-title: volume
 slug: Web/API/MediaTrackConstraints/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-  - getusermedia
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaTrackConstraints.volume
 ---
 

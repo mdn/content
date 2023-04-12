@@ -1,15 +1,8 @@
 ---
-title: ElementInternals.ariaRowIndex
+title: "ElementInternals: ariaRowIndex property"
+short-title: ariaRowIndex
 slug: Web/API/ElementInternals/ariaRowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndex
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRowIndex
 ---
 

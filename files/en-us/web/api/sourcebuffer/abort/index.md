@@ -1,17 +1,8 @@
 ---
-title: SourceBuffer.abort()
+title: "SourceBuffer: abort() method"
+short-title: abort()
 slug: Web/API/SourceBuffer/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Method
-  - Reference
-  - SourceBuffer
-  - Video
-  - abort
 browser-compat: api.SourceBuffer.abort
 ---
 
@@ -53,7 +44,7 @@ to stop the current append (or whatever) operation occurring on a sourcebuffer, 
 immediately start performing operations on it again. For example, consider this code:
 
 ```js
-sourceBuffer.addEventListener('updateend', (ev) => {
+sourceBuffer.addEventListener("updateend", (ev) => {
   // ...
 });
 

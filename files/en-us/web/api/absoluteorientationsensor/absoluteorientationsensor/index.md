@@ -1,17 +1,8 @@
 ---
-title: AbsoluteOrientationSensor()
+title: "AbsoluteOrientationSensor: AbsoluteOrientationSensor() constructor"
+short-title: AbsoluteOrientationSensor()
 slug: Web/API/AbsoluteOrientationSensor/AbsoluteOrientationSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - AbsoluteOrientationSensor
-  - Constructor
-  - Generic Sensor API
-  - Orientation Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.AbsoluteOrientationSensor.AbsoluteOrientationSensor
 ---
 

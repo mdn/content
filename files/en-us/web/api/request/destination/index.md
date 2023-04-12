@@ -1,24 +1,12 @@
 ---
-title: Request.destination
+title: "Request: destination property"
+short-title: destination
 slug: Web/API/Request/destination
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
 browser-compat: api.Request.destination
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string
@@ -40,7 +28,7 @@ where the received data is stored for processing later. Others are script-based,
 which case the received data is delivered to a script by calling it and passing the data
 along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
 any of the {{domxref("Worklet")}}-based destinations
-(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+(including subclasses like {{domxref("AudioWorklet")}}), and the
 {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
 and {{domxref("SharedWorker")}}.
 
@@ -51,7 +39,7 @@ A string which indicates the type of content the request is asking for. This typ
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`
@@ -96,7 +84,7 @@ In the following snippet, we create a new request using the
 directory as the script), then save the request's destination:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myDestination = myRequest.destination; // returns the empty string by default
 ```
 

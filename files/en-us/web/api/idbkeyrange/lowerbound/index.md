@@ -1,16 +1,8 @@
 ---
-title: IDBKeyRange.lowerBound()
+title: "IDBKeyRange: lowerBound() static method"
+short-title: lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
 page-type: web-api-static-method
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - lowerBound
 browser-compat: api.IDBKeyRange.lowerBound
 ---
 
@@ -25,8 +17,8 @@ By default, it includes the lower endpoint value and is closed.
 ## Syntax
 
 ```js-nolint
-lowerBound(lower)
-lowerBound(lower, open)
+IDBKeyRange.lowerBound(lower)
+IDBKeyRange.lowerBound(lower, open)
 ```
 
 ### Parameters
@@ -66,22 +58,22 @@ only the values after it.
 function displayData() {
   const keyRangeValue = IDBKeyRange.lowerBound("F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications

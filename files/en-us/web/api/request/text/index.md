@@ -1,18 +1,12 @@
 ---
-title: Request.text()
+title: "Request: text() method"
+short-title: text()
 slug: Web/API/Request/text
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Method
-  - Reference
-  - Text
-  - Request
 browser-compat: api.Request.text
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`text()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{jsxref("String")}}.
@@ -37,9 +31,9 @@ A Promise that resolves with a {{jsxref("String")}}.
 ```js
 const text = "Hello world";
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: text
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: text,
 });
 
 request.text().then((text) => {

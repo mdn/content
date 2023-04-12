@@ -1,13 +1,8 @@
 ---
-title: CSSStyleSheet.replace()
+title: "CSSStyleSheet: replace() method"
+short-title: replace()
 slug: Web/API/CSSStyleSheet/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replace
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replace
 ---
 
@@ -49,12 +44,13 @@ In the following example a new stylesheet is created and two CSS rules are added
 ```js
 const stylesheet = new CSSStyleSheet();
 
-stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
+stylesheet
+  .replace("body { font-size: 1.4em; } p { color: red; }")
   .then(() => {
     console.log(stylesheet.cssRules[0].cssText);
   })
   .catch((err) => {
-    console.error('Failed to replace styles:', err);
+    console.error("Failed to replace styles:", err);
   });
 ```
 

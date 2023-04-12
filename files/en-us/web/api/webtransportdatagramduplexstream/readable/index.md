@@ -1,15 +1,10 @@
 ---
-title: WebTransportDatagramDuplexStream.readable
+title: "WebTransportDatagramDuplexStream: readable property"
+short-title: readable
 slug: Web/API/WebTransportDatagramDuplexStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - readable
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.readable
 ---
 

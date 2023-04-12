@@ -1,13 +1,8 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
+title: "AnalyserNode: getByteFrequencyData() method"
+short-title: getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -172,8 +171,7 @@ Note that we include the CSS and JS files from this file, just like a web page.
 The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
-html,
-body {
+html, body {
   width: 100px;
 }
 
@@ -245,7 +243,7 @@ function listenForClicks() {
      */
     function beastify(tabs) {
       browser.tabs.insertCSS({ code: hidePage }).then(() => {
-        let url = beastNameToURL(e.target.textContent);
+        const url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
           beastURL: url
@@ -276,14 +274,16 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
+    if (e.target.tagName !== "BUTTON" || !e.target.closest("#popup-content")) {
+      // Ignore when click is not on a button within <div id="popup-content">.
+      return;
+    } 
     if (e.target.type === "reset") {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+      browser.tabs.query({active: true, currentWindow: true})
         .then(reset)
         .catch(reportError);
     } else {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+      browser.tabs.query({active: true, currentWindow: true})
         .then(beastify)
         .catch(reportError);
     }
@@ -311,14 +311,15 @@ browser.tabs
   .catch(reportExecuteScriptError);
 ```
 
-The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
+The place to start here is line 99. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
 
 A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `<div id="popup-content">` element, show the `<div id="error-content"...` element, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="beast"`, then we call `beastify()`.
-- If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was not on a button in the popup, we ignore it and do nothing.
+- If the click was on a button with `type="reset"`, then we call `reset()`.
+- If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
 

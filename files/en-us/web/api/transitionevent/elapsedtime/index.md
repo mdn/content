@@ -1,15 +1,8 @@
 ---
-title: TransitionEvent.elapsedTime
+title: "TransitionEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/TransitionEvent/elapsedTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Property
-  - Reference
-  - TransitionEvent
 browser-compat: api.TransitionEvent.elapsedTime
 ---
 

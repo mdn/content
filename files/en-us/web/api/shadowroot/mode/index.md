@@ -1,14 +1,8 @@
 ---
-title: ShadowRoot.mode
+title: "ShadowRoot: mode property"
+short-title: mode
 slug: Web/API/ShadowRoot/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - mode
-  - shadow dom
 browser-compat: api.ShadowRoot.mode
 ---
 
@@ -32,16 +26,16 @@ enum — either `open` or `closed`.
 ## Examples
 
 ```js
-  // We create a closed shadow root, that is not accessible
-  let element = document.createElement("div");
-  element.attachShadow({ mode: "closed" });
-  element.shadowRoot // null as the shadow root is closed
+// We create a closed shadow root, that is not accessible
+let element = document.createElement("div");
+element.attachShadow({ mode: "closed" });
+element.shadowRoot; // null as the shadow root is closed
 
-  // We create an open shadow root, that is accessible
-  let element2 = document.createElement("div");
-  element2.attachShadow({ mode: "open" });
-  console.log(`The shadow is ${element2.shadowRoot.mode}`) // logs "The shadow is open"
-  element2.shadowRoot.textContent("Opened shadow") // The shadow is open, we can access it from outside
+// We create an open shadow root, that is accessible
+let element2 = document.createElement("div");
+element2.attachShadow({ mode: "open" });
+console.log(`The shadow is ${element2.shadowRoot.mode}`); // logs "The shadow is open"
+element2.shadowRoot.textContent("Opened shadow"); // The shadow is open, we can access it from outside
 ```
 
 ## Specifications

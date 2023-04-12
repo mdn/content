@@ -1,14 +1,8 @@
 ---
-title: FontFaceSet.load()
+title: "FontFaceSet: load() method"
+short-title: load()
 slug: Web/API/FontFaceSet/load
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFaceSet
-  - Method
-  - Reference
 browser-compat: api.FontFaceSet.load
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: PannerNode.positionX
+title: "PannerNode: positionX property"
+short-title: positionX
 slug: Web/API/PannerNode/positionX
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionX
 browser-compat: api.PannerNode.positionX
 ---
 
@@ -58,8 +52,7 @@ panner.positionX.setValueAtTime(-1, context.currentTime + 1);
 panner.positionX.setValueAtTime(1, context.currentTime + 2);
 panner.positionX.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

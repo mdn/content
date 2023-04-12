@@ -1,15 +1,8 @@
 ---
-title: BlobEvent()
+title: "BlobEvent: BlobEvent() constructor"
+short-title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - BlobEvent
-  - Constructor
-  - DOM
-  - DOM Reference
-  - Media Stream Encoding
-  - Reference
 browser-compat: api.BlobEvent.BlobEvent
 ---
 

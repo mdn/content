@@ -1,14 +1,8 @@
 ---
-title: ResizeObserverEntry.borderBoxSize
+title: "ResizeObserverEntry: borderBoxSize property"
+short-title: borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - borderBoxSize
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
 

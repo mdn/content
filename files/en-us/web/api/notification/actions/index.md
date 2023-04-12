@@ -1,16 +1,10 @@
 ---
-title: Notification.actions
+title: "Notification: actions property"
+short-title: actions
 slug: Web/API/Notification/actions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - actions
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.actions
 ---
 

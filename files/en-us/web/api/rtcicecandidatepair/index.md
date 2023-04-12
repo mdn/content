@@ -2,18 +2,6 @@
 title: RTCIceCandidatePair
 slug: Web/API/RTCIceCandidatePair
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Interface
-  - Negotiation
-  - Pair
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidatePair
 ---
 
@@ -30,7 +18,7 @@ The **`RTCIceCandidatePair`** dictionary describes a pair of ICE candidates whic
 
 ## Examples
 
-See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#example) for example code.
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#examples) for example code.
 
 ## Specifications
 

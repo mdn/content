@@ -2,21 +2,12 @@
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.calendar
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.calendar`** accessor property returns the calendar type for the `Locale`.
+The **`calendar`** accessor property of {{jsxref("Intl.Locale")}} instances returns the calendar type for this locale.
 
 ## Description
 

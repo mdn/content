@@ -1,15 +1,8 @@
 ---
-title: CustomElementRegistry.define()
+title: "CustomElementRegistry: define() method"
+short-title: define()
 slug: Web/API/CustomElementRegistry/define
 page-type: web-api-instance-method
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - define
 browser-compat: api.CustomElementRegistry.define
 ---
 
@@ -83,30 +76,32 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // Create a shadow root
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // Create spans
-    const wrapper = document.createElement('span');
-    wrapper.setAttribute('class', 'wrapper');
+    const wrapper = document.createElement("span");
+    wrapper.setAttribute("class", "wrapper");
 
-    const icon = document.createElement('span');
-    icon.setAttribute('class', 'icon');
-    icon.setAttribute('tabindex', 0);
+    const icon = document.createElement("span");
+    icon.setAttribute("class", "icon");
+    icon.setAttribute("tabindex", 0);
 
-    const info = document.createElement('span');
-    info.setAttribute('class', 'info');
+    const info = document.createElement("span");
+    info.setAttribute("class", "info");
 
     // Take attribute content and put it inside the info span
-    const text = this.getAttribute('data-text');
+    const text = this.getAttribute("data-text");
     info.textContent = text;
 
     // Insert icon
-    const img = document.createElement('img');
-    img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+    const img = document.createElement("img");
+    img.src = this.hasAttribute("img")
+      ? this.getAttribute("img")
+      : "img/default.png";
     icon.appendChild(img);
 
     // Create some CSS to apply to the shadow dom
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     console.log(style.isConnected);
 
     style.textContent = `
@@ -146,7 +141,7 @@ class PopUpInfo extends HTMLElement {
 }
 
 // Define the new element
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
@@ -173,18 +168,21 @@ class WordCount extends HTMLParagraphElement {
     // count words in element's parent element
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
 
     // Create a shadow root
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // Create text node and add word count to it
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // Append it to the shadow root
@@ -199,7 +197,7 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html
@@ -212,12 +210,14 @@ If the class used for the element contains the static property `disabledFeatures
 
 ```js
 class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() { return ['shadow']; }
+  static get disabledFeatures() {
+    return ["shadow"];
+  }
 
   constructor() {
     super();
 
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
     // this will cause an error to be thrown when the element is defined.
   }
 }

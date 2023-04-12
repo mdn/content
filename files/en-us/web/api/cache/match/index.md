@@ -1,16 +1,8 @@
 ---
-title: Cache.match()
+title: "Cache: match() method"
+short-title: match()
 slug: Web/API/Cache/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
 browser-compat: api.Cache.match
 ---
 

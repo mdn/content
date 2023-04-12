@@ -2,16 +2,6 @@
 title: border-block-start-width
 slug: Web/CSS/border-block-start-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-start
-  - border-block-start-width
-  - border-block-width
-  - recipe:css-property
 browser-compat: css.properties.border-block-start-width
 ---
 

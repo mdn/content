@@ -1,21 +1,8 @@
 ---
-title: 'Element: mousedown event'
+title: "Element: mousedown event"
+short-title: mousedown
 slug: Web/API/Element/mousedown_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Down
-  - Element
-  - Event
-  - Interface
-  - MouseEvent
-  - Press
-  - Reference
-  - UI
-  - button
-  - mouse
-  - mousedown
 browser-compat: api.Element.mousedown_event
 ---
 
@@ -30,9 +17,9 @@ The **`mousedown`** event is fired at an {{domxref("Element")}} when a pointing 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mousedown', (event) => {});
+addEventListener("mousedown", (event) => {});
 
-onmousedown = (event) => { };
+onmousedown = (event) => {};
 ```
 
 ## Event type

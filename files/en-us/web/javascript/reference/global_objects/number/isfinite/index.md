@@ -2,12 +2,6 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number.isFinite
 ---
 

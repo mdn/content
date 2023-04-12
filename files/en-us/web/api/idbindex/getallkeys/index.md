@@ -1,13 +1,8 @@
 ---
-title: IDBIndex.getAllKeys()
+title: "IDBIndex: getAllKeys() method"
+short-title: getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
 page-type: web-api-instance-method
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
 browser-compat: api.IDBIndex.getAllKeys
 ---
 

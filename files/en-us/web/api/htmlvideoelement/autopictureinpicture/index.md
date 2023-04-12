@@ -1,19 +1,8 @@
 ---
-title: HTMLVideoElement.autoPictureInPicture
+title: "HTMLVideoElement: autoPictureInPicture property"
+short-title: autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Reference
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
 

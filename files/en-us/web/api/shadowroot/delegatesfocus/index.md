@@ -1,15 +1,8 @@
 ---
-title: ShadowRoot.delegatesFocus
+title: "ShadowRoot: delegatesFocus property"
+short-title: delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - delegatesFocus
-  - shadow dom
 browser-compat: api.ShadowRoot.delegatesFocus
 ---
 
@@ -26,7 +19,7 @@ The property value is set using the `delegatesFocus` property of the object pass
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
 // ...

@@ -1,13 +1,8 @@
 ---
-title: ReadableStreamBYOBReader()
+title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() constructor"
+short-title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
 
@@ -44,7 +39,7 @@ The constructor is rarely called directly.
 Instead call {{domxref("ReadableStream.getReader()")}} as shown:
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 ```
 
 ## Specifications

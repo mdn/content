@@ -1,18 +1,8 @@
 ---
-title: MediaTrackSupportedConstraints.noiseSuppression
+title: "MediaTrackSupportedConstraints: noiseSuppression property"
+short-title: noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Constraints
-  - Media Streams API
-  - MediaStreamTrackSupportedConstraints
-  - Property
-  - noiseSuppression
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
 
@@ -59,7 +49,8 @@ This example displays whether or not your browser supports the
 
 ```js
 const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
+const supported =
+  navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
 result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 

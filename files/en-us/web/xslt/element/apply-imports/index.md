@@ -1,11 +1,6 @@
 ---
 title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - apply-imports
 ---
 
 {{ XsltRef() }}

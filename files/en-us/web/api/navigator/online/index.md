@@ -1,14 +1,8 @@
 ---
-title: Navigator.onLine
+title: "Navigator: onLine property"
+short-title: onLine
 slug: Web/API/Navigator/onLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM Reference
-  - Navigator
-  - Online
-  - Property
-  - Reference
 browser-compat: api.Navigator.onLine
 ---
 
@@ -32,10 +26,10 @@ is running a virtualization software that has virtual ethernet adapters that are
 "connected." Therefore, if you really want to determine the online status of the
 browser, you should develop additional means for checking.
 
-In Firefox and Internet Explorer, switching the browser to offline mode sends a
-`false` value. Until Firefox 41, all other conditions return a
-`true` value; testing actual behavior on Nightly 68 on Windows shows that it
-only looks for LAN connection like Chrome and Safari giving false positives.
+In Firefox, switching the browser to offline mode sends a `false` value. Until Firefox
+41, all other conditions returned a `true` value; testing actual behavior on Nightly 68 on
+Windows shows that it only looks for LAN connection like Chrome and Safari giving false
+positives.
 
 You can see changes in the network state by listening to the [`online`](/en-US/docs/Web/API/Window/online_event) and [`offline`](/en-US/docs/Web/API/Window/offline_event) events.
 
@@ -52,9 +46,9 @@ following example:
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -69,9 +63,13 @@ listen for the events on `window.online` and `window.offline`, as
 in the following example:
 
 ```js
-window.addEventListener('offline', (e) => { console.log('offline'); });
+window.addEventListener("offline", (e) => {
+  console.log("offline");
+});
 
-window.addEventListener('online', (e) => { console.log('online'); });
+window.addEventListener("online", (e) => {
+  console.log("online");
+});
 ```
 
 ## Specifications

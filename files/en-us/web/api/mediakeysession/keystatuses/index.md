@@ -1,15 +1,8 @@
 ---
-title: MediaKeySession.keyStatuses
+title: "MediaKeySession: keyStatuses property"
+short-title: keyStatuses
 slug: Web/API/MediaKeySession/keyStatuses
 page-type: web-api-instance-property
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeySession
-  - NeedsExample
-  - Property
-  - Reference
-  - keyStatuses
 browser-compat: api.MediaKeySession.keyStatuses
 ---
 

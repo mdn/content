@@ -2,17 +2,6 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 page-type: html-element
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
 browser-compat: html.elements.input.type_color
 ---
 
@@ -28,7 +17,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
 > **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
@@ -38,7 +27,7 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 
 ### Providing a default color
 
-You can update the simple example above to set a default value, so that the color well is pre-filled with the default color and the color picker (if any) will also default to that color:
+You can update the simple example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color:
 
 ```html
 <input type="color" value="#ff0000" />
@@ -50,7 +39,7 @@ If you don't specify a value, the default is `#000000`, which is black. The valu
 
 ### Tracking color changes
 
-As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{htmlattrxref("value", "input")}}.
+As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its [`value`](/en-US/docs/Web/HTML/Element/input#value).
 
 Here's an example that watches changes over time to the color value:
 
@@ -69,10 +58,10 @@ function watchColorPicker(event) {
 
 When a browser doesn't support a color picker interface, its implementation of color inputs will be a text box that validates the contents automatically to ensure that the value is in the correct format. In this case you can use the {{domxref("HTMLInputElement.select", "select()")}} method to select the text currently in the edit field.
 
-If the browser instead uses a color well, `select()` does nothing. You should be aware of this behavior so your code can respond appropriately in either case.
+If the browser instead uses a color picker, `select()` does nothing. You should be aware of this behavior so your code can respond appropriately in either case.
 
 ```js
-colorWell.select();
+colorPicker.select();
 ```
 
 ## Validation
@@ -85,7 +74,7 @@ Let's create an example which does a little more with the color input by trackin
 
 ### HTML
 
-The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `colorWell`, which we'll use to change the color of the paragraphs' text.
+The HTML is fairly straightforward — a couple of paragraphs of descriptive material with an {{HTMLElement("input")}} of type `color` with the ID `color-picker`, which we'll use to change the color of the paragraphs' text.
 
 ```html
 <p>
@@ -93,8 +82,8 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
   <code>&lt;input type="color"&gt;</code> control.
 </p>
 
-<label for="colorWell">Color:</label>
-<input type="color" value="#ff0000" id="colorWell" />
+<label for="color-picker">Color:</label>
+<input type="color" value="#ff0000" id="color-picker" />
 
 <p>
   Watch the paragraph colors change when you adjust the color picker. As you
@@ -107,10 +96,10 @@ The HTML is fairly straightforward — a couple of paragraphs of descriptive mat
 
 ### JavaScript
 
-First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color well to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
+First, there's some setup. Here we establish some variables, setting up a variable that contains the color we'll set the color picker to when we first load up, and then setting up a {{domxref("Window/load_event", "load")}} handler to do the main startup work once the page is fully loaded.
 
 ```js
-let colorWell;
+let colorPicker;
 const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -122,15 +111,15 @@ Once the page is loaded, our `load` event handler, `startup()`, is called:
 
 ```js
 function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
-  colorWell.addEventListener("change", updateAll, false);
-  colorWell.select();
+  colorPicker = document.querySelector("#color-picker");
+  colorPicker.value = defaultColor;
+  colorPicker.addEventListener("input", updateFirst, false);
+  colorPicker.addEventListener("change", updateAll, false);
+  colorPicker.select();
 }
 ```
 
-This gets a reference to the color `<input>` element in a variable called `colorWell`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("HTMLElement/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.
+This gets a reference to the color `<input>` element in a variable called `colorPicker`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("HTMLElement/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.
 
 Finally, we call {{domxref("HTMLInputElement.select", "select()")}} to select the text content of the color input if the control is implemented as a text field (this has no effect if a color picker interface is provided instead).
 
@@ -147,7 +136,7 @@ function updateFirst(event) {
 }
 ```
 
-When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{htmlattrxref("value", "input", "Event.target.value")}} to obtain the final selected color:
+When the color picker is dismissed, indicating that the value will not change again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using [`Event.target.value`](/en-US/docs/Web/HTML/Element/input#value) to obtain the final selected color:
 
 ```js
 function updateAll(event) {
@@ -186,8 +175,8 @@ The final result looks like this:
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} and
-        {{htmlattrxref("list", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> and
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>

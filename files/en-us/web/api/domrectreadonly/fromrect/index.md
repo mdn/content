@@ -1,13 +1,8 @@
 ---
-title: DOMRectReadOnly.fromRect()
+title: "DOMRectReadOnly: fromRect() static method"
+short-title: fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 page-type: web-api-static-method
-tags:
-  - API
-  - DOMRectReadOnly
-  - Geometry
-  - Method
-  - Reference
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
 
@@ -20,8 +15,8 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js-nolint
-fromRect()
-fromRect(rectangle)
+DOMRectReadOnly.fromRect()
+DOMRectReadOnly.fromRect(rectangle)
 ```
 
 ### Parameters

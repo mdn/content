@@ -1,27 +1,6 @@
 ---
 title: Web audio codec guide
 slug: Web/Media/Formats/Audio_codecs
-tags:
-  - AAC
-  - ALAC
-  - Apple Lossless
-  - Audio
-  - Codecs
-  - Compress
-  - Decompress
-  - Encoding
-  - FLAC
-  - Guide
-  - Media
-  - Opus
-  - Vorbis
-  - Web
-  - data
-  - decoding
-  - formats
-  - mp3
-  - mp4
-  - sound
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

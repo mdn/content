@@ -1,14 +1,8 @@
 ---
-title: AudioBuffer.numberOfChannels
+title: "AudioBuffer: numberOfChannels property"
+short-title: numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfChannels
 browser-compat: api.AudioBuffer.numberOfChannels
 ---
 

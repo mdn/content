@@ -1,19 +1,13 @@
 ---
-title: Function.prototype.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Property
-  - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
 
 {{JSRef}}
 
-The **`name`** property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
+The **`name`** data property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}
 

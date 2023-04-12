@@ -1,17 +1,8 @@
 ---
 title: "AudioTrackList: change event"
+short-title: change
 slug: Web/API/AudioTrackList/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio Tracks
-  - Audio
-  - AudioTrackList
-  - Change
-  - Event
-  - Reference
-  - HTML API
-  - Media
 browser-compat: api.AudioTrackList.change_event
 ---
 

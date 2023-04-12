@@ -1,10 +1,7 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Location
 ---
 
@@ -43,8 +40,8 @@ Content-Location: <url>
 ## Directives
 
 - \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
+  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls)
     URL.
 
 ## Examples
@@ -108,13 +105,15 @@ money to another user of a site.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
+    <label
+      >Who do you want to send the money to?
       <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
+    <label
+      >How much?
       <input type="number" name="amount" />
     </label>
   </p>

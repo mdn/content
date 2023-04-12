@@ -1,11 +1,8 @@
 ---
-title: Attr.name
+title: "Attr: name property"
+short-title: name
 slug: Web/API/Attr/name
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.name
 ---
 

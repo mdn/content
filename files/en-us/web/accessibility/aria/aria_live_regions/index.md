@@ -1,10 +1,6 @@
 ---
 title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-tags:
-  - ARIA
-  - Accessibility
-  - ariaLive
 ---
 
 <section id="Quick_links">
@@ -173,12 +169,12 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>marquee</td>
-   <td>for text which scrolls, such as a stock ticker.</td>
+   <td>Text which scrolls, such as a stock ticker.</td>
    <td></td>
   </tr>
   <tr>
    <td>timer</td>
-   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td>Any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
    <td></td>
   </tr>
  </tbody>
@@ -268,7 +264,7 @@ As an example, consider a chat site that wants to display a list of users curren
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add and remove users here -->
 </ul>
 ```
 

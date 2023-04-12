@@ -1,16 +1,7 @@
 ---
-title: 'CSP: object-src'
+title: "CSP: object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Object
-  - Reference
-  - Security
-  - object-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src
 ---
 

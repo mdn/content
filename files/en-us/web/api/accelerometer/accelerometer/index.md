@@ -1,18 +1,10 @@
 ---
-title: Accelerometer()
+title: "Accelerometer: Accelerometer() constructor"
+short-title: Accelerometer()
 slug: Web/API/Accelerometer/Accelerometer
 page-type: web-api-constructor
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Constructor
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer.Accelerometer
 ---
 

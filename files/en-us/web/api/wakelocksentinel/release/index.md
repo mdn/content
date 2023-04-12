@@ -1,20 +1,12 @@
 ---
-title: WakeLockSentinel.release()
+title: "WakeLockSentinel: release() method"
+short-title: release()
 slug: Web/API/WakeLockSentinel/release
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
-  - Experimental
 browser-compat: api.WakeLockSentinel.release
 ---
 
-{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`release()`** method of the
 {{domxref("WakeLockSentinel")}} interface releases the
@@ -46,9 +38,9 @@ In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}}
 released.
 
 ```js
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   WakeLockSentinel.release();
-})
+});
 ```
 
 ## Specifications

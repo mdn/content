@@ -1,14 +1,10 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Error.stack
+status:
+  - non-standard
 ---
 
 {{JSRef}} {{non-standard_header}}

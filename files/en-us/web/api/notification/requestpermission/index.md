@@ -1,14 +1,8 @@
 ---
-title: Notification.requestPermission()
+title: "Notification: requestPermission() static method"
+short-title: requestPermission()
 slug: Web/API/Notification/requestPermission
 page-type: web-api-static-method
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
 browser-compat: api.Notification.requestPermission
 ---
 
@@ -22,10 +16,10 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 
 ```js-nolint
 // The latest spec has updated this method to a promise-based syntax that works like this:
-requestPermission()
+Notification.requestPermission()
 
 // Previously, the syntax was based on a simple callback; this version is now deprecated:
-requestPermission(callback)
+Notification.requestPermission(callback)
 ```
 
 ### Parameters

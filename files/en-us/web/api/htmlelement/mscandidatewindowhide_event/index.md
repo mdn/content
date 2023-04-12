@@ -1,10 +1,10 @@
 ---
-title: 'HTMLElement: mscandidatewindowhide event'
+title: "HTMLElement: mscandidatewindowhide event"
+short-title: mscandidatewindowhide
 slug: Web/API/HTMLElement/mscandidatewindowhide_event
 page-type: web-api-event
-tags:
-  - Non-standard
-  - Event
+status:
+  - non-standard
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,9 +24,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowhide', (event) => { })
+addEventListener("mscandidatewindowhide", (event) => {});
 
-onmscandidatewindowhide = (event) => { }
+onmscandidatewindowhide = (event) => {};
 ```
 
 ## Event type

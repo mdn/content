@@ -1,14 +1,9 @@
 ---
-title: 'CSP: prefetch-src'
+title: "CSP: prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-tags:
-  - CSP
-  - Content Security Policy
-  - Directive
-  - HTTP
-  - Reference
-  - prefetch-src
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.prefetch-src
 ---
 
@@ -67,8 +62,8 @@ Fetches for the following code will return network errors, as the URLs provided 
 match `prefetch-src`'s source list:
 
 ```html
-    <link rel="prefetch" href="https://example.org/" />
-    <link rel="prerender" href="https://example.org/" />
+<link rel="prefetch" href="https://example.org/" />
+<link rel="prerender" href="https://example.org/" />
 ```
 
 ## Specifications

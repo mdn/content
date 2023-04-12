@@ -2,11 +2,6 @@
 title: Web Workers API
 slug: Web/API/Web_Workers_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
 spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
 
@@ -32,7 +27,7 @@ There are a number of different types of workers:
 - {{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
-> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.
+> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141). This has been implemented in Firefox 42.
 
 ### Worker global contexts and functions
 

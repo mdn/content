@@ -1,10 +1,8 @@
 ---
-title: Node.isDefaultNamespace()
+title: "Node: isDefaultNamespace() method"
+short-title: isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
 
@@ -50,12 +48,12 @@ Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;:
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector('output');
-  const aSvgElt = document.querySelector('svg');
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true
   result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
   result[2].value = aSvgElt.isDefaultNamespace(""); // true

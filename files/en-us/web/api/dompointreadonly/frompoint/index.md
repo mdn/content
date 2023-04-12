@@ -1,19 +1,8 @@
 ---
-title: DOMPointReadOnly.fromPoint()
+title: "DOMPointReadOnly: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
 page-type: web-api-static-method
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Method
-  - Point
-  - Reference
-  - Static Method
-  - fromPoint
 browser-compat: api.DOMPointReadOnly.fromPoint
 ---
 
@@ -29,7 +18,7 @@ You can also create a new `DOMPointReadOnly` object using the
 ## Syntax
 
 ```js-nolint
-fromPoint(sourcePoint)
+DOMPointReadOnly.fromPoint(sourcePoint)
 ```
 
 ### Parameters
@@ -62,7 +51,7 @@ use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y
 default values (`0` and `1` respectively).
 
 ```js
-const point2D = DOMPointReadOnly.fromPoint({x: 25, y: 25})
+const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
 ```
 
 ### Creating a 3D point using an existing point
@@ -73,9 +62,9 @@ point is then used as the input for `fromPoint()` to create a new point,
 `newPoint`.
 
 ```js
-const origPoint = new DOMPoint(25, 25, 100, 0.5)
+const origPoint = new DOMPoint(25, 25, 100, 0.5);
 
-const newPoint = DOMPointReadOnly.fromPoint(origPoint)
+const newPoint = DOMPointReadOnly.fromPoint(origPoint);
 ```
 
 ## Specifications

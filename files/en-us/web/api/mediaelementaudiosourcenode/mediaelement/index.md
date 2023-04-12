@@ -1,14 +1,8 @@
 ---
-title: MediaElementAudioSourceNode.mediaElement
+title: "MediaElementAudioSourceNode: mediaElement property"
+short-title: mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaElementAudioSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - mediaElement
 browser-compat: api.MediaElementAudioSourceNode.mediaElement
 ---
 
@@ -33,11 +27,11 @@ of audio for the node.
 
 ```js
 const audioCtx = new window.AudioContext();
-const audioElem = document.querySelector('audio');
+const audioElem = document.querySelector("audio");
 
 let options = {
-  mediaElement: audioElem
-}
+  mediaElement: audioElem,
+};
 
 let source = new MediaElementAudioSourceNode(audioCtx, options);
 console.log(source.mediaElement);

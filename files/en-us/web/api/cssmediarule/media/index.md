@@ -1,13 +1,8 @@
 ---
-title: CSSMediaRule.media
+title: "CSSMediaRule: media property"
+short-title: media
 slug: Web/API/CSSMediaRule/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSMediaRule
-  - Property
-  - Reference
 browser-compat: api.CSSMediaRule.media
 ---
 

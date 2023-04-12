@@ -1,13 +1,7 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - Response Header
-  - Security
-  - nginx
+page-type: http-header
 browser-compat: http.headers.X-Frame-Options
 ---
 
@@ -49,7 +43,7 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
 - `SAMEORIGIN`
   - : The page can only be displayed if all ancestor frames are same origin to the page itself.
-- `ALLOW-FROM=url` {{deprecated_inline}}
+- `ALLOW-FROM origin` {{deprecated_inline}}
   - : This is an obsolete directive that no longer works in modern browsers. (Using it will give the same behavior as omitting the header.) Don't use it. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
 
 ## Examples
@@ -117,16 +111,16 @@ http-response set-header X-Frame-Options SAMEORIGIN
 To configure Express to send the `X-Frame-Options` header, you can use [helmet](https://helmetjs.github.io/) which uses [frameguard](https://helmetjs.github.io/docs/frameguard/) to set the header. Add this to your server configuration:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 Alternatively, you can use frameguard directly:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Specifications

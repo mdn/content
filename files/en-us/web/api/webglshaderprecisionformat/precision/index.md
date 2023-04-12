@@ -1,12 +1,8 @@
 ---
-title: WebGLShaderPrecisionFormat.precision
+title: "WebGLShaderPrecisionFormat: precision property"
+short-title: precision
 slug: Web/API/WebGLShaderPrecisionFormat/precision
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.precision
 ---
 
@@ -19,8 +15,8 @@ For integer formats this value is always 0.
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT).precision; // 23
 gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.LOW_INT).precision; // 0

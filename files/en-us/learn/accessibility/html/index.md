@@ -1,22 +1,6 @@
 ---
 title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
-tags:
-  - AT
-  - Accessibility
-  - Article
-  - Beginner
-  - Buttons
-  - CodingScripting
-  - Forms
-  - HTML
-  - Learn
-  - Links
-  - a11y
-  - assistive technology
-  - keyboard
-  - screenreader
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -361,7 +345,7 @@ Adding such advantages back in takes a bit of work (you can see an example in ou
 </div>
 ```
 
-Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
+Basically, the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
 
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
 - `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
@@ -608,7 +592,7 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-If an icon is used in place of text to signify this kind of links behavior, make sure it includes an {{HTMLAttrxRef("alt", "img", "alternate description", "true")}}.
+If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Element/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -643,13 +627,3 @@ You've reached the end of this article, but can you remember the most important 
 You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

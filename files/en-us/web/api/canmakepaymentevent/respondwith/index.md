@@ -1,13 +1,10 @@
 ---
-title: CanMakePaymentEvent.respondWith()
+title: "CanMakePaymentEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/CanMakePaymentEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - respondWith
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanMakePaymentEvent.respondWith
 ---
 
@@ -33,12 +30,18 @@ None (`undefined`).
 ## Examples
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  );
 });
 ```
 

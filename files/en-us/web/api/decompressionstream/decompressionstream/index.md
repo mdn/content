@@ -1,12 +1,8 @@
 ---
-title: DecompressionStream()
+title: "DecompressionStream: DecompressionStream() constructor"
+short-title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - DecompressionStream
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
 
@@ -40,7 +36,7 @@ new DecompressionStream(format)
 In this example a blob is decompressed using gzip compression.
 
 ```js
-const ds = new DecompressionStream('gzip');
+const ds = new DecompressionStream("gzip");
 const decompressedStream = blob.stream().pipeThrough(ds);
 ```
 

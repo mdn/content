@@ -1,18 +1,8 @@
 ---
-title: VideoPlaybackQuality.creationTime
+title: "VideoPlaybackQuality: creationTime property"
+short-title: creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - creationTime
 browser-compat: api.VideoPlaybackQuality.creationTime
 ---
 
@@ -42,7 +32,11 @@ update a quality indicator to show an increase in frame loss.
 const videoElem = document.getElementById("my_vid");
 const quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
+if (
+  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
+    quality.totalVideoFrames >
+  0.1
+) {
   lostFramesThresholdExceeded();
 }
 ```

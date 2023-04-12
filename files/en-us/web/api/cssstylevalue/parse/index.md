@@ -1,20 +1,12 @@
 ---
-title: CSSStyleValue.parse()
+title: "CSSStyleValue: parse() method"
+short-title: parse()
 slug: Web/API/CSSStyleValue/parse
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - parse()
 browser-compat: api.CSSStyleValue.parse
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`parse()`** method of the {{domxref("CSSStyleValue")}}
 interface sets a specific CSS property to the specified values and returns the first
@@ -46,7 +38,9 @@ in a developer tools console.
 
 ```js
 const css = CSSStyleValue.parse(
-    'transform', 'translate3d(10px,10px,0) scale(0.5)');
+  "transform",
+  "translate3d(10px,10px,0) scale(0.5)"
+);
 ```
 
 ```css

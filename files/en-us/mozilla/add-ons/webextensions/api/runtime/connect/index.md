@@ -1,16 +1,7 @@
 ---
 title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connect
 ---
 

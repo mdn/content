@@ -1,14 +1,8 @@
 ---
-title: SubtleCrypto.generateKey()
+title: "SubtleCrypto: generateKey() method"
+short-title: generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
 
@@ -89,7 +83,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     name: "RSA-OAEP",
     modulusLength: 4096,
     publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256"
+    hash: "SHA-256",
   },
   true,
   ["encrypt", "decrypt"]
@@ -105,7 +99,7 @@ This code generates an ECDSA signing key pair.
 let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   true,
   ["sign", "verify"]
@@ -121,7 +115,7 @@ This code generates an HMAC signing key.
 let key = await window.crypto.subtle.generateKey(
   {
     name: "HMAC",
-    hash: {name: "SHA-512"}
+    hash: { name: "SHA-512" },
   },
   true,
   ["sign", "verify"]
@@ -137,7 +131,7 @@ This code generates an AES-GCM encryption key.
 let key = await window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
-    length: 256
+    length: 256,
   },
   true,
   ["encrypt", "decrypt"]

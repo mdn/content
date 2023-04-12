@@ -1,14 +1,9 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Device-Memory
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Device-Memory
 ---
 
@@ -49,7 +44,7 @@ Device-Memory: <number>
 - `<number>`
   - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
-The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+The amount of device RAM can be used as a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
 
 ## Examples
 
@@ -86,4 +81,4 @@ Device-Memory: 1
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

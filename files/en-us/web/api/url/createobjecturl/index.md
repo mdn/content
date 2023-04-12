@@ -1,17 +1,8 @@
 ---
-title: URL.createObjectURL()
+title: "URL: createObjectURL() static method"
+short-title: createObjectURL()
 slug: Web/API/URL/createObjectURL
 page-type: web-api-static-method
-tags:
-  - API
-  - Blob
-  - DOM
-  - File
-  - Method
-  - Object URL
-  - URL
-  - URL API
-  - createObjectURL
 browser-compat: api.URL.createObjectURL
 ---
 
@@ -35,7 +26,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 ## Syntax
 
 ```js-nolint
-createObjectURL(object)
+URL.createObjectURL(object)
 ```
 
 ### Parameters

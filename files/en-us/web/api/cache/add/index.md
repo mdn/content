@@ -1,15 +1,8 @@
 ---
-title: Cache.add()
+title: "Cache: add() method"
+short-title: add()
 slug: Web/API/Cache/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
 browser-compat: api.Cache.add
 ---
 

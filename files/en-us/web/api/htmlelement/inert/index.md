@@ -1,11 +1,8 @@
 ---
-title: HTMLElement.inert
+title: "HTMLElement: inert property"
+short-title: inert
 slug: Web/API/HTMLElement/inert
 page-type: web-api-instance-property
-tags:
-- API
-- DOM
-- Property
 browser-compat: api.HTMLElement.inert
 ---
 

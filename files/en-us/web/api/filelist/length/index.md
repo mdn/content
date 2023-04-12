@@ -1,13 +1,8 @@
 ---
-title: FileList.length
+title: "FileList: length property"
+short-title: length
 slug: Web/API/FileList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
 browser-compat: api.FileList.length
 ---
 
@@ -36,7 +31,7 @@ In this example, we use `length` to find the number of items in the `FileList`.
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

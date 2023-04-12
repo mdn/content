@@ -2,14 +2,6 @@
 title: border
 slug: Web/CSS/border
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Shorthand property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border
 ---
 

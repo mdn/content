@@ -1,11 +1,7 @@
 ---
 title: 425 Too Early
 slug: Web/HTTP/Status/425
-tags:
-  - Browser
-  - Client error
-  - HTTP
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.425
 ---
 

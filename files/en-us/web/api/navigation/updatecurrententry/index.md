@@ -1,20 +1,10 @@
 ---
-title: Navigation.updateCurrentEntry()
+title: "Navigation: updateCurrentEntry() method"
+short-title: updateCurrentEntry()
 slug: Web/API/Navigation/updateCurrentEntry
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - reload
-  - Scroll
-  - Traversal
-  - updateCurrentEntry
+status:
+  - experimental
 browser-compat: api.Navigation.updateCurrentEntry
 ---
 
@@ -52,9 +42,9 @@ None (`undefined`).
 You could use something like the following to update the open/closed state of a {{htmlelement("details")}} element so that the state can be restored when reloading the page or navigating back from somewhere else.
 
 ```js
-detailsElem.addEventListener('toggle', () => {
-  navigation.updateCurrentEntry({ state: { detailOpen : detailsElem.open } });
-})
+detailsElem.addEventListener("toggle", () => {
+  navigation.updateCurrentEntry({ state: { detailOpen: detailsElem.open } });
+});
 ```
 
 ## Specifications

@@ -1,14 +1,10 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
-tags:
-  - Content-DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-DPR
 ---
 
@@ -77,4 +73,4 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

@@ -1,18 +1,7 @@
 ---
 title: "Reason: CORS header 'Origin' cannot be added"
 slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
-tags:
-  - CORS
-  - CORSOriginHeaderNotAdded
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}

@@ -1,15 +1,8 @@
 ---
-title: DocumentFragment.replaceChildren()
+title: "DocumentFragment: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/DocumentFragment/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - DocumentFragment
-  - Reference
-  - replaceChildren
 browser-compat: api.DocumentFragment.replaceChildren
 ---
 

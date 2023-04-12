@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.bindSampler()
+title: "WebGL2RenderingContext: bindSampler() method"
+short-title: bindSampler()
 slug: Web/API/WebGL2RenderingContext/bindSampler
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindSampler
 ---
 

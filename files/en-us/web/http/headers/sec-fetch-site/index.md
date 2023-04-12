@@ -1,13 +1,7 @@
 ---
 title: Sec-Fetch-Site
 slug: Web/HTTP/Headers/Sec-Fetch-Site
-tags:
-  - Sec-Fetch-Site
-  - Fetch Metadata Request Headers
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Site
 ---
 

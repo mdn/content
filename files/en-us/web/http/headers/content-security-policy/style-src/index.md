@@ -1,17 +1,7 @@
 ---
-title: 'CSP: style-src'
+title: "CSP: style-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Style
-  - source
-  - style-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src
 ---
 
@@ -95,14 +85,14 @@ Inline style attributes are also blocked:
 As well as styles that are applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
 ```js
-document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';
+document.querySelector("div").setAttribute("style", "display:none;");
+document.querySelector("div").style.cssText = "display:none;";
 ```
 
 However, styles properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector('div').style.display = 'none';
+document.querySelector("div").style.display = "none";
 ```
 
 These types of manipulations can be prevented by disallowing JavaScript via the {{CSP("script-src")}} CSP directive.

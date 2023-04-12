@@ -1,18 +1,12 @@
 ---
-title: ReportingObserver()
+title: "ReportingObserver: ReportingObserver() constructor"
+short-title: ReportingObserver()
 slug: Web/API/ReportingObserver/ReportingObserver
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Reporting API
-  - ReportingObserver
 browser-compat: api.ReportingObserver.ReportingObserver
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`ReportingObserver()`** constructor of the [Reporting API](/en-US/docs/Web/API/Reporting_API) creates a new
 {{domxref("ReportingObserver")}} object instance, which can be used to collect and

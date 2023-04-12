@@ -1,18 +1,11 @@
 ---
-title: VRPose.angularVelocity
+title: "VRPose: angularVelocity property"
+short-title: angularVelocity
 slug: Web/API/VRPose/angularVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - angularVelocity
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.angularVelocity
 ---
 

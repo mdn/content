@@ -1,18 +1,12 @@
 ---
-title: Response.statusText
+title: "Response: statusText property"
+short-title: statusText
 slug: Web/API/Response/statusText
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - statusText
 browser-compat: api.Response.statusText
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`statusText`** read-only property of the {{domxref("Response")}} interface contains the status message corresponding to the HTTP status code in {{domxref("Response.status")}}.
 
@@ -34,9 +28,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `statusText` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.statusText); // returns "OK" if the response returned successfully

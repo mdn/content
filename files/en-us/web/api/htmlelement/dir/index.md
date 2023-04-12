@@ -1,13 +1,8 @@
 ---
-title: HTMLElement.dir
+title: "HTMLElement: dir property"
+short-title: dir
 slug: Web/API/HTMLElement/dir
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.dir
 ---
 
@@ -34,7 +29,7 @@ directionality of its parent element.
 > **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }}
 > and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome
 > and Safari provide a directionality option in the contextual menu of input fields
-> while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
+> while pre-Chromium Edge uses the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
 > the **`dir`** attribute value.
 
 ## Value

@@ -1,16 +1,8 @@
 ---
-title: PushSubscription.getKey()
+title: "PushSubscription: getKey() method"
+short-title: getKey()
 slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - getKey
 browser-compat: api.PushSubscription.getKey
 ---
 
@@ -54,7 +46,7 @@ reg.pushManager.getSubscription().then((subscription) => {
   subBtn.disabled = false;
 
   if (!subscription) {
-    console.log('Not yet subscribed to Push')
+    console.log("Not yet subscribed to Push");
     // We aren't subscribed to push, so set UI
     // to allow the user to enable push
     return;
@@ -62,14 +54,14 @@ reg.pushManager.getSubscription().then((subscription) => {
 
   // Set your UI to show they have subscribed for
   // push messages
-  subBtn.textContent = 'Unsubscribe from Push Messaging';
+  subBtn.textContent = "Unsubscribe from Push Messaging";
   isPushEnabled = true;
 
   // initialize status, which includes setting UI elements for subscribed status
   // and updating Subscribers list via push
   const endpoint = subscription.endpoint;
-  const key = subscription.getKey('p256dh');
-  const auth = subscription.getKey('auth');
+  const key = subscription.getKey("p256dh");
+  const auth = subscription.getKey("auth");
 
   // ...
 });

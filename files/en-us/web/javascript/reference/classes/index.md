@@ -2,14 +2,6 @@
 title: Classes
 slug: Web/JavaScript/Reference/Classes
 page-type: guide
-tags:
-  - Classes
-  - Constructors
-  - ECMAScript 2015
-  - Guide
-  - Inheritance
-  - Intermediate
-  - JavaScript
 browser-compat: javascript.classes
 ---
 
@@ -17,7 +9,7 @@ browser-compat: javascript.classes
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
-For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes) guide.
+For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide.
 
 ## Description
 
@@ -51,7 +43,7 @@ const Rectangle = class Rectangle2 {
 };
 ```
 
-Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting).
+Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting).
 
 ### Class body
 
@@ -101,7 +93,7 @@ class Rectangle {
 }
 ```
 
-Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#public_field_declarations).
+Alternatively, if your instance properties' values do not depend on the constructor's arguments, you can define them as [class fields](#field_declarations).
 
 #### Static initialization blocks
 
@@ -143,7 +135,7 @@ console.log([...square.getSides()]); // [10, 10, 10, 10]
 
 #### Static methods and fields
 
-The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static")}} keyword defines a static method or field for a class. Static properties (fields and methods) are defined on the class itself instead of each instance. Static methods are often used to create utility functions for an application, whereas static fields are useful for caches, fixed-configuration, or any other data that don't need to be replicated across instances.
 
 ```js
 class Point {
@@ -164,11 +156,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -187,7 +179,7 @@ class Rectangle {
 }
 ```
 
-Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private fields](#private_field_declarations) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private features](#private_class_features) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 
@@ -291,7 +283,7 @@ obj.speak(); // the Animal object
 const speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 const eat = Animal.eat;
 eat(); // undefined
 ```
@@ -303,11 +295,11 @@ function Animal() {}
 
 Animal.prototype.speak = function () {
   return this;
-}
+};
 
 Animal.eat = function () {
   return this;
-}
+};
 
 const obj = new Animal();
 const speak = obj.speak;
@@ -327,11 +319,8 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- {{jsxref("Functions", "Functions", "", "true")}}
-- {{jsxref("Statements/class", "class declaration", "", "true")}}
-- {{jsxref("Operators/class", "class expression", "", "true")}}
-- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}
-- {{jsxref("Operators/super", "super")}}
-- [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
-- [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [ES6 In Depth: Classes](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/) on hacks.mozilla.org (July 22, 2015)

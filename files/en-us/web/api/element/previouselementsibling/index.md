@@ -1,14 +1,8 @@
 ---
-title: Element.previousElementSibling
+title: "Element: previousElementSibling property"
+short-title: previousElementSibling
 slug: Web/API/Element/previousElementSibling
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Element.previousElementSibling
 ---
 

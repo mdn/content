@@ -2,14 +2,6 @@
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@replace
 ---
 
@@ -133,9 +125,10 @@ console.log(newstr); // ###34567
 - [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.replaceAll()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
-- [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
+- {{jsxref("Symbol.replace")}}

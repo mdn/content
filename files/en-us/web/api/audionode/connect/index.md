@@ -1,16 +1,8 @@
 ---
-title: AudioNode.connect()
+title: "AudioNode: connect() method"
+short-title: connect()
 slug: Web/API/AudioNode/connect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - connect
 browser-compat: api.AudioNode.connect
 ---
 

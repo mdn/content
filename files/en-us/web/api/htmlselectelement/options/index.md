@@ -1,14 +1,8 @@
 ---
-title: HTMLSelectElement.options
+title: "HTMLSelectElement: options property"
+short-title: options
 slug: Web/API/HTMLSelectElement/options
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLSelectElement.options
 ---
 

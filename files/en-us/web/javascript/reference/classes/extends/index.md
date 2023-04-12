@@ -2,11 +2,6 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
 browser-compat: javascript.classes.extends
 ---
 
@@ -113,6 +108,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
@@ -190,7 +186,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -207,7 +203,7 @@ Classes cannot extend regular (non-constructible) objects. If you want to inheri
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -229,7 +225,7 @@ This example extends the built-in {{jsxref("Date")}} object. This example is ext
 ```js
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
@@ -253,7 +249,7 @@ const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 This behavior is implemented by many built-in copying methods. For caveats of this feature, see the [subclassing built-ins](#subclassing_built-ins) discussion.
@@ -265,13 +261,15 @@ Abstract subclasses or _mix-ins_ are templates for classes. A class can only hav
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins:
 
 ```js
-const calculatorMixin = (Base) => class extends Base {
-  calc() {}
-};
+const calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-const randomizerMixin = (Base) => class extends Base {
-  randomize() {}
-};
+const randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 A class that uses these mix-ins can then be written like this:
@@ -345,7 +343,8 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-- [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- {{jsxref("Classes/constructor", "constructor")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Operators/super", "super")}}

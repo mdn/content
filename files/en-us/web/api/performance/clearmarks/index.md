@@ -1,12 +1,8 @@
 ---
-title: performance.clearMarks()
+title: "Performance: clearMarks() method"
+short-title: clearMarks()
 slug: Web/API/Performance/clearMarks
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.clearMarks
 ---
 

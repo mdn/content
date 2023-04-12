@@ -1,15 +1,10 @@
 ---
-title: AudioListener.speedOfSound
+title: "AudioListener: speedOfSound property"
+short-title: speedOfSound
 slug: Web/API/AudioListener/speedOfSound
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioListener
-  - Deprecated
-  - Property
-  - Reference
-  - Web Audio API
-  - speedOfSound
+status:
+  - deprecated
 browser-compat: api.AudioListener.speedOfSound
 ---
 
@@ -32,7 +27,7 @@ A double.
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Browser compatibility
 

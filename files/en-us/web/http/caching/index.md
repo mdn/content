@@ -1,10 +1,7 @@
 ---
 title: HTTP caching
 slug: Web/HTTP/Caching
-tags:
-  - Caching
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}

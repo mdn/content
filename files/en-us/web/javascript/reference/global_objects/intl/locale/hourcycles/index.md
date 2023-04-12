@@ -2,22 +2,12 @@
 title: Intl.Locale.prototype.hourCycles
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycles
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
-  - hourCycles
 browser-compat: javascript.builtins.Intl.Locale.hourCycles
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.hourCycles`** accessor property returns a list of one or more unique hour cycle identifiers for the `Locale`.
+The **`hourCycles`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more unique hour cycle identifiers for this locale.
 
 ## Description
 

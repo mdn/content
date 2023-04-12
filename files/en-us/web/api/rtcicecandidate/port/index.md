@@ -1,20 +1,8 @@
 ---
-title: RTCIceCandidate.port
+title: "RTCIceCandidate: port property"
+short-title: port
 slug: Web/API/RTCIceCandidate/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - port
 browser-compat: api.RTCIceCandidate.port
 ---
 
@@ -56,8 +44,8 @@ into an object for future use.
 ```js
 const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

@@ -1,20 +1,10 @@
 ---
-title: XRSession.requestAnimationFrame()
+title: "XRSession: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - requestAnimationFrame()
+status:
+  - experimental
 browser-compat: api.XRSession.requestAnimationFrame
 ---
 

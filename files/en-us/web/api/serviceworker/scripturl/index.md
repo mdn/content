@@ -1,14 +1,8 @@
 ---
-title: ServiceWorker.scriptURL
+title: "ServiceWorker: scriptURL property"
+short-title: scriptURL
 slug: Web/API/ServiceWorker/scriptURL
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - scriptURL
 browser-compat: api.ServiceWorker.scriptURL
 ---
 
@@ -25,7 +19,9 @@ A string.
 ## Examples
 
 ```js
-TBD
+const sw = navigator.serviceWorker.controller;
+console.log(sw.scriptURL);
+// https://example.com/scripts/service-worker.js
 ```
 
 ## Specifications

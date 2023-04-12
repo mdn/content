@@ -1,16 +1,10 @@
 ---
-title: ContentIndexEvent.id
+title: "ContentIndexEvent: id property"
+short-title: id
 slug: Web/API/ContentIndexEvent/id
 page-type: web-api-instance-property
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - content indexing
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndexEvent.id
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: WebGLRenderingContext.isContextLost()
+title: "WebGLRenderingContext: isContextLost() method"
+short-title: isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
 page-type: web-api-instance-method
-tags:
-  - API
-  - Context
-  - Lost
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
 

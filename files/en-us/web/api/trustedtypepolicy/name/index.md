@@ -1,13 +1,8 @@
 ---
-title: TrustedTypePolicy.name
+title: "TrustedTypePolicy: name property"
+short-title: name
 slug: Web/API/TrustedTypePolicy/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.name
 ---
 
@@ -25,7 +20,7 @@ In the below example a policy called `myEscapePolicy` is created using {{domxref
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 console.log(escapeHTMLPolicy.name); /* "myEscapePolicy" */

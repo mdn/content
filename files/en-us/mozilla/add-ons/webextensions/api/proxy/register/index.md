@@ -1,16 +1,7 @@
 ---
 title: proxy.register()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/register
-tags:
-  - API
-  - Add-ons
-  - Function
-  - Method
-  - Proxy
-  - Reference
-  - WebExtensions
-  - register
-  - registerProxyScript
+page-type: webextension-api-function
 browser-compat: webextensions.api.proxy.register
 ---
 

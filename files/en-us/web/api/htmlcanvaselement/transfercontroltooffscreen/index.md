@@ -1,13 +1,8 @@
 ---
-title: HTMLCanvasElement.transferControlToOffscreen()
+title: "HTMLCanvasElement: transferControlToOffscreen() method"
+short-title: transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLCanvasElement
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.HTMLCanvasElement.transferControlToOffscreen
 ---
 
@@ -34,9 +29,9 @@ An {{domxref("OffscreenCanvas")}} object.
 The following example shows how to transfer control to an {{domxref("OffscreenCanvas")}} object on the main thread.
 
 ```js
-const htmlCanvas = document.createElement('canvas');
+const htmlCanvas = document.createElement("canvas");
 const offscreen = htmlCanvas.transferControlToOffscreen();
-const gl = offscreen.getContext('webgl');
+const gl = offscreen.getContext("webgl");
 
 // Some drawing using the gl context…
 ```
@@ -44,8 +39,8 @@ const gl = offscreen.getContext('webgl');
 The following example shows how to transfer control to an {{domxref("OffscreenCanvas")}} object on a worker.
 
 ```js
-const offscreen = document.querySelector('canvas').transferControlToOffscreen();
-const worker = new Worker('myworkerurl.js');
+const offscreen = document.querySelector("canvas").transferControlToOffscreen();
+const worker = new Worker("myworkerurl.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 

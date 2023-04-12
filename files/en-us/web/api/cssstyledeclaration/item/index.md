@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.item()
+title: "CSSStyleDeclaration: item() method"
+short-title: item()
 slug: Web/API/CSSStyleDeclaration/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.item
 ---
 
@@ -49,7 +45,7 @@ const propertyName = style[index];
 ## Examples
 
 ```js
-const style = document.getElementById('div1').style;
+const style = document.getElementById("div1").style;
 const propertyName = style.item(1); // or style[1] - returns the second style listed
 ```
 
