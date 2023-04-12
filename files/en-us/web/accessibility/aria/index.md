@@ -1,6 +1,7 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
+page-type: landing-page
 ---
 
 <section id="Quick_links">
