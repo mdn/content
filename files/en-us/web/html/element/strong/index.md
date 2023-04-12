@@ -49,7 +49,7 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 80)}}
 
@@ -62,7 +62,7 @@ The resulting output:
 </p>
 ```
 
-This results in:
+#### Result
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 

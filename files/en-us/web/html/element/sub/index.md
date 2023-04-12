@@ -56,7 +56,7 @@ Traditional footnotes are denoted using numbers which are rendered in subscript.
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Footnote_numbers", 650, 80)}}
 
@@ -71,7 +71,7 @@ In mathematics, families of variables related to the same concept (such as dista
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Variable_subscripts", 650, 80)}}
 
@@ -89,7 +89,7 @@ Another example:
 </p>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Chemical_formulas", 650, 120)}}
 
