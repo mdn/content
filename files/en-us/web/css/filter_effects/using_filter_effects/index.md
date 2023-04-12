@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations used to require image editing software, time, and HTTP requests. 
+Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations used to require image editing software, time, and HTTP requests.
 
 ## Advantages of using CSS filter effects
 
