@@ -98,6 +98,7 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 showButton.addEventListener('click', () => {
     favDialog.showModal();
 });
+
 // "Favorite animal" input sets the value of the submit button
 selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
