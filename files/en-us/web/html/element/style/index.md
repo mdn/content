@@ -60,6 +60,8 @@ In the following example, we apply a very simple stylesheet to a document:
 </html>
 ```
 
+#### Result
+
 {{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
 
 ### Multiple style elements
@@ -93,6 +95,8 @@ In this example we've included two `<style>` elements — notice how the conflic
 </html>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
 
 ### Including a media query
@@ -125,6 +129,8 @@ In this example we build on the previous one, including a `media` attribute on t
   </body>
 </html>
 ```
+
+#### Result
 
 {{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
