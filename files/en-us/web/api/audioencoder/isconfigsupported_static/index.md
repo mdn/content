@@ -1,7 +1,7 @@
 ---
 title: 'AudioEncoder: isConfigSupported() static method'
-slug: Web/API/AudioEncoder/isConfigSupported_static
 short-title: isConfigSupported()
+slug: Web/API/AudioEncoder/isConfigSupported_static
 page-type: web-api-static-method
 status:
   - experimental
