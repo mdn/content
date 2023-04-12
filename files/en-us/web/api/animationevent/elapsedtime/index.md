@@ -1,5 +1,6 @@
 ---
-title: AnimationEvent.elapsedTime
+title: "AnimationEvent: elapsedTime property"
+short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 page-type: web-api-instance-property
 browser-compat: api.AnimationEvent.elapsedTime

@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.frequencyBinCount
+title: "AnalyserNode: frequencyBinCount property"
+short-title: frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.frequencyBinCount

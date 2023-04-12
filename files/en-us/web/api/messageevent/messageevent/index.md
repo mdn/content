@@ -1,5 +1,6 @@
 ---
-title: MessageEvent()
+title: "MessageEvent: MessageEvent() constructor"
+short-title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 page-type: web-api-constructor
 browser-compat: api.MessageEvent.MessageEvent

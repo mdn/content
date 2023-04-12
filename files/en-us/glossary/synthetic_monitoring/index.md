@@ -16,4 +16,4 @@ Unlike [RUM](/en-US/docs/Glossary/Real_User_Monitoring), synthetic monitoring pr
 
 - [Real User Monitoring (RUM)](/en-US/docs/Glossary/Real_User_Monitoring)
 - [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Rum-vs-Synthetic)
-- [Beacon](/en-US/docs/Glossary/beacon)
+- [Beacon](/en-US/docs/Glossary/Beacon)

@@ -1,5 +1,6 @@
 ---
-title: WEBGL_compressed_texture_astc.getSupportedProfiles()
+title: "WEBGL_compressed_texture_astc: getSupportedProfiles() method"
+short-title: getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles

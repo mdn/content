@@ -1,5 +1,6 @@
 ---
-title: Selection.focusNode
+title: "Selection: focusNode property"
+short-title: focusNode
 slug: Web/API/Selection/focusNode
 page-type: web-api-instance-property
 browser-compat: api.Selection.focusNode

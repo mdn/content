@@ -1,6 +1,7 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
+page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Tk

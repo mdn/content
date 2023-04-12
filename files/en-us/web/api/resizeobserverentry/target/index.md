@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.target
+title: "ResizeObserverEntry: target property"
+short-title: target
 slug: Web/API/ResizeObserverEntry/target
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.target

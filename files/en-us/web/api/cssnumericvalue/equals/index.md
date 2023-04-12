@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.equals()
+title: "CSSNumericValue: equals() method"
+short-title: equals()
 slug: Web/API/CSSNumericValue/equals
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.equals

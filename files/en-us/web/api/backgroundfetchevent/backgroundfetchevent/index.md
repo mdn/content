@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchEvent()
+title: "BackgroundFetchEvent: BackgroundFetchEvent() constructor"
+short-title: BackgroundFetchEvent()
 slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
 page-type: web-api-constructor
 status:

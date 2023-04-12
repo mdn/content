@@ -1,5 +1,6 @@
 ---
-title: WakeLockSentinel.released
+title: "WakeLockSentinel: released property"
+short-title: released
 slug: Web/API/WakeLockSentinel/released
 page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.released

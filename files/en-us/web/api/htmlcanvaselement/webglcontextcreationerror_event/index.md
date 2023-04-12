@@ -1,5 +1,6 @@
 ---
 title: "HTMLCanvasElement: webglcontextcreationerror event"
+short-title: webglcontextcreationerror
 slug: Web/API/HTMLCanvasElement/webglcontextcreationerror_event
 page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextcreationerror_event

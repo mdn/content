@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.colorSpace
+title: "VideoFrame: colorSpace property"
+short-title: colorSpace
 slug: Web/API/VideoFrame/colorSpace
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.colorSpace

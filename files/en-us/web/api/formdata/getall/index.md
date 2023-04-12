@@ -1,5 +1,6 @@
 ---
-title: FormData.getAll()
+title: "FormData: getAll() method"
+short-title: getAll()
 slug: Web/API/FormData/getAll
 page-type: web-api-instance-method
 browser-compat: api.FormData.getAll

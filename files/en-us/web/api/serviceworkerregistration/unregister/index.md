@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.unregister()
+title: "ServiceWorkerRegistration: unregister() method"
+short-title: unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.unregister

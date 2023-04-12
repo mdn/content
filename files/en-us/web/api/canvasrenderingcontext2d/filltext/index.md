@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: "CanvasRenderingContext2D: fillText() method"
+short-title: fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.fillText

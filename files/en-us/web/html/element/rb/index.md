@@ -36,6 +36,8 @@ In this example, we provide an annotation for the original character equivalent 
 
 Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
 
+#### Result
+
 {{EmbedLiveSample("Using_rb", "100%", 60)}}
 
 ### Separate annotations
@@ -48,6 +50,10 @@ Note that we could also write this example with the two base text parts annotate
   字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Separate annotations')}}
 
 See the article about the {{HTMLElement("ruby")}} element for further examples.
 

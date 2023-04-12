@@ -1,5 +1,6 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() static method"
+short-title: redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
 browser-compat: api.Response.redirect
@@ -16,8 +17,8 @@ The **`redirect()`** method of the {{domxref("Response")}} interface returns a `
 ## Syntax
 
 ```js-nolint
-redirect(url)
-redirect(url, status)
+Response.redirect(url)
+Response.redirect(url, status)
 ```
 
 ### Parameters

@@ -1,5 +1,6 @@
 ---
-title: AudioListener.upZ
+title: "AudioListener: upZ property"
+short-title: upZ
 slug: Web/API/AudioListener/upZ
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.upZ

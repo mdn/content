@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.getTransform()
+title: "CanvasRenderingContext2D: getTransform() method"
+short-title: getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.getTransform

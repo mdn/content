@@ -1,5 +1,6 @@
 ---
-title: ValidityState.stepMismatch
+title: "ValidityState: stepMismatch property"
+short-title: stepMismatch
 slug: Web/API/ValidityState/stepMismatch
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.stepMismatch

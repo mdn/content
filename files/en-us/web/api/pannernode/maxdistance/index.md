@@ -1,5 +1,6 @@
 ---
-title: PannerNode.maxDistance
+title: "PannerNode: maxDistance property"
+short-title: maxDistance
 slug: Web/API/PannerNode/maxDistance
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.maxDistance

@@ -1,5 +1,6 @@
 ---
-title: console.log()
+title: "console: log() method"
+short-title: log()
 slug: Web/API/console/log
 page-type: web-api-instance-method
 browser-compat: api.console.log

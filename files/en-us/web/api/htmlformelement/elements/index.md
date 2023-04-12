@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements property"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.elements

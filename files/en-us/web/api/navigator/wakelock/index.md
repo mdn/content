@@ -1,5 +1,6 @@
 ---
-title: Navigator.wakeLock
+title: "Navigator: wakeLock property"
+short-title: wakeLock
 slug: Web/API/Navigator/wakeLock
 page-type: web-api-instance-property
 browser-compat: api.Navigator.wakeLock

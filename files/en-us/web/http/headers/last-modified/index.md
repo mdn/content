@@ -1,6 +1,7 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
+page-type: http-header
 browser-compat: http.headers.Last-Modified
 ---
 

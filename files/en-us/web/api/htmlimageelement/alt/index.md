@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.alt
+title: "HTMLImageElement: alt property"
+short-title: alt
 slug: Web/API/HTMLImageElement/alt
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.alt

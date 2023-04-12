@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.iterationComposite
+title: "KeyframeEffect: iterationComposite property"
+short-title: iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
 page-type: web-api-instance-property
 browser-compat: api.KeyframeEffect.iterationComposite

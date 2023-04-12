@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.buffer
+title: "AudioBufferSourceNode: buffer property"
+short-title: buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.buffer

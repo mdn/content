@@ -1,5 +1,6 @@
 ---
-title: Window.ondragdrop
+title: "Window: ondragdrop property"
+short-title: ondragdrop
 slug: Web/API/Window/ondragdrop
 page-type: web-api-instance-property
 status:

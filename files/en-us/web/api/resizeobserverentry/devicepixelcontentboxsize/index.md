@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize property"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize

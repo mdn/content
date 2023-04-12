@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.children
+title: "DocumentFragment: children property"
+short-title: children
 slug: Web/API/DocumentFragment/children
 page-type: web-api-instance-property
 browser-compat: api.DocumentFragment.children

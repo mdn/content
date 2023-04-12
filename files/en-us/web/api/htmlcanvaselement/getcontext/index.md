@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.getContext()
+title: "HTMLCanvasElement: getContext() method"
+short-title: getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 page-type: web-api-instance-method
 browser-compat: api.HTMLCanvasElement.getContext

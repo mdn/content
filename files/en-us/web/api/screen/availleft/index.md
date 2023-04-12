@@ -1,5 +1,6 @@
 ---
-title: Screen.availLeft
+title: "Screen: availLeft property"
+short-title: availLeft
 slug: Web/API/Screen/availLeft
 page-type: web-api-instance-property
 status:

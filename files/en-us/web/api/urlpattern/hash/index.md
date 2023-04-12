@@ -1,5 +1,6 @@
 ---
-title: URLPattern.hash
+title: "URLPattern: hash property"
+short-title: hash
 slug: Web/API/URLPattern/hash
 page-type: web-api-instance-property
 status:

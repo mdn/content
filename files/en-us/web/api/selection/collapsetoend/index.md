@@ -1,5 +1,6 @@
 ---
-title: Selection.collapseToEnd()
+title: "Selection: collapseToEnd() method"
+short-title: collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
 page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToEnd

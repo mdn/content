@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.popErrorScope()
+title: "GPUDevice: popErrorScope() method"
+short-title: popErrorScope()
 slug: Web/API/GPUDevice/popErrorScope
 page-type: web-api-instance-method
 status:
@@ -46,7 +47,7 @@ let sampler = device.createSampler({
 device.popErrorScope().then((error) => {
   if (error) {
     sampler = null;
-    console.error(`An error occured while creating sampler: ${error.message}`);
+    console.error(`An error occurred while creating sampler: ${error.message}`);
   }
 });
 ```

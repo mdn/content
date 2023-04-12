@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.language
+title: "WorkerNavigator: language property"
+short-title: language
 slug: Web/API/WorkerNavigator/language
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.language

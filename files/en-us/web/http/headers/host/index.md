@@ -1,6 +1,7 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
+page-type: http-header
 browser-compat: http.headers.Host
 ---
 

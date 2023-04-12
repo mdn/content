@@ -1,5 +1,6 @@
 ---
-title: GPUCanvasContext.getCurrentTexture()
+title: "GPUCanvasContext: getCurrentTexture() method"
+short-title: getCurrentTexture()
 slug: Web/API/GPUCanvasContext/getCurrentTexture
 page-type: web-api-instance-method
 status:

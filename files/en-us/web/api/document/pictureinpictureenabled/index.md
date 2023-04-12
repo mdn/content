@@ -1,5 +1,6 @@
 ---
-title: Document.pictureInPictureEnabled
+title: "Document: pictureInPictureEnabled property"
+short-title: pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
 page-type: web-api-instance-property
 browser-compat: api.Document.pictureInPictureEnabled

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpEncodingParameters.scaleResolutionDownBy
+title: "RTCRtpEncodingParameters: scaleResolutionDownBy property"
+short-title: scaleResolutionDownBy
 slug: Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpEncodingParameters.scaleResolutionDownBy

@@ -1,5 +1,6 @@
 ---
 title: "Element: pointerdown event"
+short-title: pointerdown
 slug: Web/API/Element/pointerdown_event
 browser-compat: api.Element.pointerdown_event
 page-type: web-api-event

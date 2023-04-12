@@ -1,5 +1,6 @@
 ---
-title: XRSession.cancelAnimationFrame()
+title: "XRSession: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
 page-type: web-api-instance-method
 status:

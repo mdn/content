@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.scale
+title: "VisualViewport: scale property"
+short-title: scale
 slug: Web/API/VisualViewport/scale
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.scale

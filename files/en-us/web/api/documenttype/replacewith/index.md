@@ -1,5 +1,6 @@
 ---
-title: DocumentType.replaceWith()
+title: "DocumentType: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/DocumentType/replaceWith
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.replaceWith

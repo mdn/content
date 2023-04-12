@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.webkitEntries
+title: "HTMLInputElement: webkitEntries property"
+short-title: webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.webkitEntries

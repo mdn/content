@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk()
+title: "EncodedVideoChunk: EncodedVideoChunk() constructor"
+short-title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
 page-type: web-api-constructor
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk

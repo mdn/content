@@ -1,6 +1,7 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
+page-type: http-header
 browser-compat: http.headers.Content-Range
 ---
 

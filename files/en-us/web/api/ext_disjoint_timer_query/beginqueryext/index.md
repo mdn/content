@@ -1,5 +1,6 @@
 ---
-title: EXT_disjoint_timer_query.beginQueryEXT()
+title: "EXT_disjoint_timer_query: beginQueryEXT() method"
+short-title: beginQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/beginQueryEXT
 page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.beginQueryEXT

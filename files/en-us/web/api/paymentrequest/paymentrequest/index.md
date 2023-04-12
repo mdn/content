@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest()
+title: "PaymentRequest: PaymentRequest() constructor"
+short-title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 page-type: web-api-constructor
 browser-compat: api.PaymentRequest.PaymentRequest

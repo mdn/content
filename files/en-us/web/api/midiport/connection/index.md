@@ -1,5 +1,6 @@
 ---
-title: MIDIPort.connection
+title: "MIDIPort: connection property"
+short-title: connection
 slug: Web/API/MIDIPort/connection
 page-type: web-api-instance-property
 browser-compat: api.MIDIPort.connection

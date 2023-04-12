@@ -1,5 +1,6 @@
 ---
-title: InstallEvent()
+title: "InstallEvent: InstallEvent() constructor"
+short-title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
 page-type: web-api-constructor
 status:

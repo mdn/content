@@ -1,5 +1,6 @@
 ---
 title: "SharedWorker: error event"
+short-title: error
 slug: Web/API/SharedWorker/error_event
 page-type: web-api-event
 browser-compat: api.SharedWorker.error_event

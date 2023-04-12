@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.getReader()
+title: "ReadableStream: getReader() method"
+short-title: getReader()
 slug: Web/API/ReadableStream/getReader
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.getReader

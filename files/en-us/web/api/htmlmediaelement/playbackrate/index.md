@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.playbackRate
+title: "HTMLMediaElement: playbackRate property"
+short-title: playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.playbackRate

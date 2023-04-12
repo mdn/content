@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.networkState
+title: "HTMLMediaElement: networkState property"
+short-title: networkState
 slug: Web/API/HTMLMediaElement/networkState
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.networkState

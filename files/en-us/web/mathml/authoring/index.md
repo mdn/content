@@ -1,6 +1,7 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
+page-type: guide
 ---
 
 {{MathMLRef}}

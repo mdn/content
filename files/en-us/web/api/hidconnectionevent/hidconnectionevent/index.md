@@ -1,5 +1,6 @@
 ---
-title: HIDConnectionEvent()
+title: "HIDConnectionEvent: HIDConnectionEvent() constructor"
+short-title: HIDConnectionEvent()
 slug: Web/API/HIDConnectionEvent/HIDConnectionEvent
 page-type: web-api-constructor
 status:

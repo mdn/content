@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.getLineDash()
+title: "CanvasRenderingContext2D: getLineDash() method"
+short-title: getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.getLineDash

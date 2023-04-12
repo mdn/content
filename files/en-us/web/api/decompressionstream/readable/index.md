@@ -1,5 +1,6 @@
 ---
-title: DecompressionStream.readable
+title: "DecompressionStream: readable property"
+short-title: readable
 slug: Web/API/DecompressionStream/readable
 page-type: web-api-instance-property
 browser-compat: api.DecompressionStream.readable

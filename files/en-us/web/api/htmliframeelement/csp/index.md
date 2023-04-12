@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.csp
+title: "HTMLIFrameElement: csp property"
+short-title: csp
 slug: Web/API/HTMLIFrameElement/csp
 page-type: web-api-instance-property
 status:

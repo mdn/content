@@ -1,5 +1,6 @@
 ---
-title: Navigator.taintEnabled()
+title: "Navigator: taintEnabled() method"
+short-title: taintEnabled()
 slug: Web/API/Navigator/taintEnabled
 page-type: web-api-instance-method
 status:

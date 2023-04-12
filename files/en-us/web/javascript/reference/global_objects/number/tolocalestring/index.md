@@ -60,33 +60,15 @@ const number = 3500;
 console.log(number.toLocaleString()); // "3,500" if in U.S. English locale
 ```
 
-### Checking for support for locales and options arguments
+### Checking for support for locales and options parameters
 
-Not all implementations are required to support ECMA-402 (the Internationalization API). For those that don't, the `locales` and `options` arguments must both be ignored. You can check support by testing if illegal language tags are rejected with a {{jsxref("Global_Objects/RangeError", "RangeError")}}:
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
 
 ```js
 function toLocaleStringSupportsLocales() {
-  const number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
-  }
-  return false;
+  return typeof Intl === "object" && !!Intl && typeof Intl.NumberFormat === "function";
 }
 ```
-
-However, prior to ES5.1, implementations were not required to throw a range error exception if `toLocaleString` is called with illegal arguments. A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1, is to test for the features specified in ECMA-402 that are required to support regional options for `Number.prototype.toLocaleString` directly:
-
-```js
-function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl === 'object' && Intl && typeof Intl.NumberFormat === 'function');
-}
-```
-
-This tests for a global `Intl` object, checks that it's not
-`null` and that it has a `NumberFormat` property that is a
-function.
 
 ### Using locales
 

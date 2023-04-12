@@ -1,5 +1,6 @@
 ---
 title: "HTMLDialogElement: close event"
+short-title: close
 slug: Web/API/HTMLDialogElement/close_event
 page-type: web-api-event
 browser-compat: api.HTMLDialogElement.close_event

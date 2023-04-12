@@ -1,5 +1,6 @@
 ---
-title: MIDIOutput.send()
+title: "MIDIOutput: send() method"
+short-title: send()
 slug: Web/API/MIDIOutput/send
 page-type: web-api-instance-method
 browser-compat: api.MIDIOutput.send

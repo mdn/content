@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.composite
+title: "KeyframeEffect: composite property"
+short-title: composite
 slug: Web/API/KeyframeEffect/composite
 page-type: web-api-instance-property
 browser-compat: api.KeyframeEffect.composite

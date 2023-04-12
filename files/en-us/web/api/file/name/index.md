@@ -1,5 +1,6 @@
 ---
-title: File.name
+title: "File: name property"
+short-title: name
 slug: Web/API/File/name
 page-type: web-api-instance-property
 browser-compat: api.File.name

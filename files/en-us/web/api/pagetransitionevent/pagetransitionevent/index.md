@@ -1,5 +1,6 @@
 ---
-title: PageTransitionEvent()
+title: "PageTransitionEvent: PageTransitionEvent() constructor"
+short-title: PageTransitionEvent()
 slug: Web/API/PageTransitionEvent/PageTransitionEvent
 page-type: web-api-constructor
 browser-compat: api.PageTransitionEvent.PageTransitionEvent

@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.show()
+title: "PaymentRequest: show() method"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.show

@@ -1,5 +1,6 @@
 ---
 title: "Worker: message event"
+short-title: message
 slug: Web/API/Worker/message_event
 page-type: web-api-event
 browser-compat: api.Worker.message_event

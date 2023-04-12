@@ -1,5 +1,6 @@
 ---
-title: Gamepad.hand
+title: "Gamepad: hand property"
+short-title: hand
 slug: Web/API/Gamepad/hand
 page-type: web-api-instance-property
 status:

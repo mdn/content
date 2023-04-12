@@ -1,5 +1,6 @@
 ---
-title: MediaSource.handle
+title: "MediaSource: handle property"
+short-title: handle
 slug: Web/API/MediaSource/handle
 page-type: web-api-instance-property
 status:

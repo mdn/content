@@ -1,5 +1,6 @@
 ---
 title: "DedicatedWorkerGlobalScope: messageerror event"
+short-title: messageerror
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
 page-type: web-api-event
 browser-compat: api.DedicatedWorkerGlobalScope.messageerror_event

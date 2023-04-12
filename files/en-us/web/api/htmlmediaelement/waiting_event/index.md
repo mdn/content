@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: waiting event"
+short-title: waiting
 slug: Web/API/HTMLMediaElement/waiting_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.waiting_event

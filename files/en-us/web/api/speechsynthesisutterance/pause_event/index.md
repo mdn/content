@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: pause event"
+short-title: pause
 slug: Web/API/SpeechSynthesisUtterance/pause_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.pause_event

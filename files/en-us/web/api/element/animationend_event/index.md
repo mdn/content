@@ -1,5 +1,6 @@
 ---
 title: "Element: animationend event"
+short-title: animationend
 slug: Web/API/Element/animationend_event
 browser-compat: api.Element.animationend_event
 page-type: web-api-event

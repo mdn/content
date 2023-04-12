@@ -1,6 +1,7 @@
 ---
 title: Width
 slug: Web/HTTP/Headers/Width
+page-type: http-header
 status:
   - deprecated
   - non-standard

@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaDescription
+title: "ElementInternals: ariaDescription property"
+short-title: ariaDescription
 slug: Web/API/ElementInternals/ariaDescription
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaDescription

@@ -1,5 +1,6 @@
 ---
-title: Document.createExpression()
+title: "Document: createExpression() method"
+short-title: createExpression()
 slug: Web/API/Document/createExpression
 page-type: web-api-instance-method
 browser-compat: api.Document.createExpression

@@ -1,5 +1,6 @@
 ---
-title: XRSession.environmentBlendMode
+title: "XRSession: environmentBlendMode property"
+short-title: environmentBlendMode
 slug: Web/API/XRSession/environmentBlendMode
 page-type: web-api-instance-property
 status:

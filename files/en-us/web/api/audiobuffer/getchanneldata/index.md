@@ -1,5 +1,6 @@
 ---
-title: AudioBuffer.getChannelData()
+title: "AudioBuffer: getChannelData() method"
+short-title: getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
 page-type: web-api-instance-method
 browser-compat: api.AudioBuffer.getChannelData

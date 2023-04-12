@@ -1,6 +1,7 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
+page-type: http-status-code
 browser-compat: http.status.500
 ---
 

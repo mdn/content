@@ -1,5 +1,6 @@
 ---
-title: Gamepad.hapticActuators
+title: "Gamepad: hapticActuators property"
+short-title: hapticActuators
 slug: Web/API/Gamepad/hapticActuators
 page-type: web-api-instance-property
 status:

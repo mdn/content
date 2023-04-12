@@ -1,5 +1,6 @@
 ---
-title: VRFrameData.leftProjectionMatrix
+title: "VRFrameData: leftProjectionMatrix property"
+short-title: leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
 page-type: web-api-instance-property
 status:

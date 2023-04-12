@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Symbol.description
 
 {{JSRef}}
 
-The read-only **`description`** property is a string returning the optional description of {{JSxRef("Symbol")}} objects.
+The **`description`** accessor property of {{jsxref("Symbol")}} values returns a string containing the description of this symbol, or `undefined` if the symbol has no description.
 
 {{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
 

@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.lowerBound()
+title: "IDBKeyRange: lowerBound() static method"
+short-title: lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.lowerBound
@@ -16,8 +17,8 @@ By default, it includes the lower endpoint value and is closed.
 ## Syntax
 
 ```js-nolint
-lowerBound(lower)
-lowerBound(lower, open)
+IDBKeyRange.lowerBound(lower)
+IDBKeyRange.lowerBound(lower, open)
 ```
 
 ### Parameters

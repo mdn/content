@@ -28,7 +28,7 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown when `unregisterToken` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+  - : Thrown if `unregisterToken` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Description
 

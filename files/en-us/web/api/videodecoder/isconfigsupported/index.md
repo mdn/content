@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.isConfigSupported()
+title: "VideoDecoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/VideoDecoder/isConfigSupported
 page-type: web-api-static-method
 browser-compat: api.VideoDecoder.isConfigSupported
@@ -12,7 +13,7 @@ The **`isConfigSupported()`** static method of the {{domxref("VideoDecoder")}} i
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+VideoDecoder.isConfigSupported(config)
 ```
 
 ### Parameters

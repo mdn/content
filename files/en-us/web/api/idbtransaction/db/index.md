@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.db
+title: "IDBTransaction: db property"
+short-title: db
 slug: Web/API/IDBTransaction/db
 page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.db

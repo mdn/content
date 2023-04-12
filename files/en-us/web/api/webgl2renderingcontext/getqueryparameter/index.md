@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getQueryParameter()
+title: "WebGL2RenderingContext: getQueryParameter() method"
+short-title: getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getQueryParameter

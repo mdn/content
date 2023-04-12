@@ -1,5 +1,6 @@
 ---
 title: "Navigation: currententrychange event"
+short-title: currententrychange
 slug: Web/API/Navigation/currententrychange_event
 page-type: web-api-event
 status:

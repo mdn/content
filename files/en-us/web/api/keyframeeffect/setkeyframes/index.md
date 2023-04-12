@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.setKeyframes()
+title: "KeyframeEffect: setKeyframes() method"
+short-title: setKeyframes()
 slug: Web/API/KeyframeEffect/setKeyframes
 page-type: web-api-instance-method
 browser-compat: api.KeyframeEffect.setKeyframes

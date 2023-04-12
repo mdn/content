@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.respondWith()
+title: "FetchEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
 browser-compat: api.FetchEvent.respondWith

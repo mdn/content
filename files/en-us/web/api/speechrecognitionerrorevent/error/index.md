@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionErrorEvent.error
+title: "SpeechRecognitionErrorEvent: error property"
+short-title: error
 slug: Web/API/SpeechRecognitionErrorEvent/error
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionErrorEvent.error

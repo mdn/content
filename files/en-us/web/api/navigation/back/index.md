@@ -1,5 +1,6 @@
 ---
-title: Navigation.back()
+title: "Navigation: back() method"
+short-title: back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
 status:

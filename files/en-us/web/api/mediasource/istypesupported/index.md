@@ -1,5 +1,6 @@
 ---
-title: MediaSource.isTypeSupported()
+title: "MediaSource: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 page-type: web-api-static-method
 browser-compat: api.MediaSource.isTypeSupported
@@ -15,7 +16,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 ## Syntax
 
 ```js-nolint
-isTypeSupported(type)
+MediaSource.isTypeSupported(type)
 ```
 
 ### Parameters

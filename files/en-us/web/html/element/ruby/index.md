@@ -85,6 +85,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </ruby>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Example 1: Character')}}
+
 ### Example 2: Word
 
 ```html
@@ -92,6 +96,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Example 1: Word')}}
 
 ## Specifications
 

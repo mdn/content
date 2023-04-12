@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.relList
+title: "HTMLLinkElement: relList property"
+short-title: relList
 slug: Web/API/HTMLLinkElement/relList
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.relList

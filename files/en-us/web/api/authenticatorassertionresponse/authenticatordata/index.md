@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorAssertionResponse.authenticatorData
+title: "AuthenticatorAssertionResponse: authenticatorData property"
+short-title: authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
 page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAssertionResponse.authenticatorData

@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackAudioSourceNode()
+title: "MediaStreamTrackAudioSourceNode: MediaStreamTrackAudioSourceNode() constructor"
+short-title: MediaStreamTrackAudioSourceNode()
 slug: Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode
 page-type: web-api-constructor
 browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode

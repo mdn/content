@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.translate()
+title: "CanvasRenderingContext2D: translate() method"
+short-title: translate()
 slug: Web/API/CanvasRenderingContext2D/translate
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.translate

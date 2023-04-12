@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.alphabeticBaseline
+title: "TextMetrics: alphabeticBaseline property"
+short-title: alphabeticBaseline
 slug: Web/API/TextMetrics/alphabeticBaseline
 page-type: web-api-instance-property
 status:

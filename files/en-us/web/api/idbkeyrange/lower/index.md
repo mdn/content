@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.lower
+title: "IDBKeyRange: lower property"
+short-title: lower
 slug: Web/API/IDBKeyRange/lower
 page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.lower

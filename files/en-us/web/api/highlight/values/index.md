@@ -1,5 +1,6 @@
 ---
-title: Highlight.values()
+title: "Highlight: values() method"
+short-title: values()
 slug: Web/API/Highlight/values
 page-type: web-api-instance-method
 status:

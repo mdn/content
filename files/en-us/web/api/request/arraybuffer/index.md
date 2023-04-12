@@ -1,5 +1,6 @@
 ---
-title: Request.arrayBuffer()
+title: "Request: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Request/arrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.Request.arrayBuffer

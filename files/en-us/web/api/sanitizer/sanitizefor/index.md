@@ -1,5 +1,6 @@
 ---
-title: Sanitizer.sanitizeFor()
+title: "Sanitizer: sanitizeFor() method"
+short-title: sanitizeFor()
 slug: Web/API/Sanitizer/sanitizeFor
 page-type: web-api-instance-method
 status:

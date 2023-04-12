@@ -1,5 +1,6 @@
 ---
-title: setTimeout()
+title: setTimeout() global function
+short-title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
 browser-compat: api.setTimeout
@@ -434,7 +435,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
 
 ## Specifications
 

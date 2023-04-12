@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: loadend event"
+short-title: loadend
 slug: Web/API/XMLHttpRequestUpload/loadend_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.loadend_event

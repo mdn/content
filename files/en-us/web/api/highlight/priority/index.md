@@ -1,5 +1,6 @@
 ---
-title: Highlight.priority
+title: "Highlight: priority property"
+short-title: priority
 slug: Web/API/Highlight/priority
 page-type: web-api-instance-property
 status:

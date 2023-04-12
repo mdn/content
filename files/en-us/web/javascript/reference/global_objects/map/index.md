@@ -276,7 +276,7 @@ console.log(contacts.size) // 1
 
 ## Static properties
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- {{jsxref("Map/@@species", "Map[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
 ## Instance properties
@@ -298,22 +298,22 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Returns `true` if an element in the `Map` object existed and has been
     removed, or `false` if the element does not exist. `map.has(key)`
     will return `false` afterwards.
-- {{jsxref("Map.prototype.get()")}}
-  - : Returns the value associated to the passed key, or `undefined` if there is none.
-- {{jsxref("Map.prototype.has()")}}
-  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
-- {{jsxref("Map.prototype.set()")}}
-  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
-  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
-- {{jsxref("Map.prototype.keys()")}}
-  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
-- {{jsxref("Map.prototype.values()")}}
-  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.entries()")}}
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.forEach()")}}
   - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
+- {{jsxref("Map.prototype.get()")}}
+  - : Returns the value associated to the passed key, or `undefined` if there is none.
+- {{jsxref("Map.prototype.has()")}}
+  - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
+- {{jsxref("Map.prototype.keys()")}}
+  - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.
+- {{jsxref("Map.prototype.set()")}}
+  - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
+- {{jsxref("Map.prototype.values()")}}
+  - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
+- [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+  - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
 ## Examples
 

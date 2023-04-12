@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.uniformMatrix[234]fv()
+title: "WebGLRenderingContext: uniformMatrix[234]fv() method"
+short-title: uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.uniformMatrix2fv

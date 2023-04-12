@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.transaction()
+title: "IDBDatabase: transaction() method"
+short-title: transaction()
 slug: Web/API/IDBDatabase/transaction
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.transaction

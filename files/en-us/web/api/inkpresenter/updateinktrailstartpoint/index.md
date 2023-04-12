@@ -1,5 +1,6 @@
 ---
-title: InkPresenter.updateInkTrailStartPoint()
+title: "InkPresenter: updateInkTrailStartPoint() method"
+short-title: updateInkTrailStartPoint()
 slug: Web/API/InkPresenter/updateInkTrailStartPoint
 page-type: web-api-instance-method
 status:

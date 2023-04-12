@@ -1,5 +1,6 @@
 ---
-title: MediaKeyStatusMap.keys()
+title: "MediaKeyStatusMap: keys() method"
+short-title: keys()
 slug: Web/API/MediaKeyStatusMap/keys
 page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.keys

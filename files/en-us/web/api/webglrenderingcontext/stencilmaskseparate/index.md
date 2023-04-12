@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.stencilMaskSeparate()
+title: "WebGLRenderingContext: stencilMaskSeparate() method"
+short-title: stencilMaskSeparate()
 slug: Web/API/WebGLRenderingContext/stencilMaskSeparate
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate

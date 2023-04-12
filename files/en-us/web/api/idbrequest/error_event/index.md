@@ -1,5 +1,6 @@
 ---
 title: "IDBRequest: error event"
+short-title: error
 slug: Web/API/IDBRequest/error_event
 page-type: web-api-event
 browser-compat: api.IDBRequest.error_event

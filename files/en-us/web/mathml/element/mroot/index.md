@@ -1,6 +1,7 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
+page-type: mathml-element
 browser-compat: mathml.elements.mroot
 ---
 
