@@ -240,7 +240,7 @@ There are many other server-side technologies you can use for form handling, inc
 - Python
   - [Django](/en-US/docs/Learn/Server-side/Django)
   - [Flask](https://flask.palletsprojects.com/)
-  - [web2py](http://web2py.com) (easiest to get started with)
+  - [web2py](https://github.com/web2py/web2py) (easiest to get started with)
   - [py4web](https://py4web.com/) (written by the same develops as web2py, has a more Django-like setup)
 - Node.js
   - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
