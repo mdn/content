@@ -629,7 +629,7 @@ class FilledRectangle extends Rectangle {
 }
 
 const filledRectangle = new FilledRectangle(5, 10, 'blue');
-//filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
+// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
 <table class="standard-table">
