@@ -29,17 +29,17 @@ Note that the only behavior specified by the ECMAScript specification is that `F
   if (Object.hasOwn(f, "arguments")) {
     console.log(
       "arguments is an own property with descriptor",
-      Object.getOwnPropertyDescriptor(f, "arguments")
+      Object.getOwnPropertyDescriptor(f, "arguments"),
     );
   } else {
     console.log(
-      "f doesn't have an own property named arguments. Trying to get f.[[Prototype]].arguments"
+      "f doesn't have an own property named arguments. Trying to get f.[[Prototype]].arguments",
     );
     console.log(
       Object.getOwnPropertyDescriptor(
         Object.getPrototypeOf(f),
-        "arguments"
-      ).get.call(f)
+        "arguments",
+      ).get.call(f),
     );
   }
 })();
