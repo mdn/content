@@ -46,6 +46,8 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
 
 ### Sizes based on hypot function
 
+This example shows how you can use the `hypot()` function to calculate sizes.
+
 #### HTML
 
 ```html
@@ -59,8 +61,14 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
 
 #### CSS
 
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+
+- `--size-1` is calculated with the hypotenuse of `--size-0` (100px), this takes square the value and as there is no other value returns the square root of the value which results in 100px
+- `--size-2` is calculated with the hypotenuse of `--size-0` (100px) twice, this takes square the value (10000) and adds it to the square of `--size-0` again (20000) returns the square root of 20000 which results in 141.417px
+- `--size-3` is calculated with the hypotenuse `--size-0` _ 1.5 (150px) and `--size-0` _ 2 (200), these values are squared (22500 and 40000) and added together (62500) and then square rooted, which results in 250px
+
 ```css
-* {
+:root {
   --size-0: 100px;
   --size-1: hypot(var(--size-0)); /*  100px */
   --size-2: hypot(var(--size-0), var(--size-0)); /*  141.417px */
@@ -88,6 +96,8 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
   justify-content: center;
 }
 ```
+
+The sizes are then applied as the `width` and `height` values of the selectors.
 
 ```css
 .one {

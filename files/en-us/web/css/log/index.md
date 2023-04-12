@@ -49,6 +49,8 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 ### Sizes based on `log()` function
 
+This example shows how you can use the `log()` function to calculate sizes.
+
 #### HTML
 
 ```html
@@ -62,8 +64,14 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 #### CSS
 
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+
+- `--size-1` is calculated by multiplying `--size-0` (50px) by the value of `log(7.389)` (2) which results in 100px
+- `--size-2` is calculated by multiplying `--size-0` (50px) by the value of `log(8, 2)` (3) which results in 150px
+- `--size-3` is calculated by multiplying `--size-0` (50px) by the value of `log(625, 5)` (4) which results in 200px
+
 ```css
-* {
+:root {
   --size-0: 50px;
   --size-1: calc(var(--size-0) * log(7.389)); /*  100px */
   --size-2: calc(var(--size-0) * log(8, 2)); /*  150px */
@@ -88,6 +96,8 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
   justify-content: center;
 }
 ```
+
+The sizes are then applied as the `width` and `height` values of the selectors.
 
 ```css
 .one {

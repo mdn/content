@@ -45,6 +45,8 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 
 ### Scale sizes based on square root
 
+This example shows how you can use the `sqrt()` function to calculate sizes.
+
 #### HTML
 
 ```html
@@ -58,8 +60,14 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 
 #### CSS
 
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+
+- `--size-1` is calculated by multiplying the value of `--size-0` (50px) by the square root of 4 (2) which results in 100px
+- `--size-2` is calculated by multiplying the value of `--size-0` (50px) by the square root of 9 (3) which results in 150px
+- `--size-3` is calculated by multiplying the value of `--size-0` (50px) by the square root of 16 (4) which results in 200px
+
 ```css
-* {
+:root {
   --size-0: 50px;
   --size-1: calc(var(--size-0) * sqrt(4)); /*  100px */
   --size-2: calc(var(--size-0) * sqrt(9)); /*  150px */
@@ -84,6 +92,8 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
   justify-content: center;
 }
 ```
+
+The sizes are then applied as the `width` and `height` values of the selectors.
 
 ```css
 .one {
