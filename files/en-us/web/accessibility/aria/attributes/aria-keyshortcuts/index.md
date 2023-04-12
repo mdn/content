@@ -1,6 +1,7 @@
 ---
 title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
   - https://w3c.github.io/aria-practices/#kbd_shortcuts

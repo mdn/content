@@ -1,6 +1,7 @@
 ---
 title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
 

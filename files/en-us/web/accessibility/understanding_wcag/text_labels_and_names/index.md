@@ -1,6 +1,7 @@
 ---
 title: Text labels and names
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

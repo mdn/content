@@ -1,6 +1,7 @@
 ---
 title: "ARIA: generic role"
 slug: Web/Accessibility/ARIA/Roles/generic_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#generic
 ---
 

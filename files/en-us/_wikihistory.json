@@ -72446,6 +72446,20 @@
       "Aaronlev"
     ]
   },
+  "Web/Accessibility/ARIA/Multipart_labels": {
+    "modified": "2019-08-06T19:47:32.075Z",
+    "contributors": [
+      "Tigt",
+      "dkocho4",
+      "david_ross",
+      "kscarfone",
+      "StephenKelly",
+      "Kritz",
+      "Fredchat",
+      "Sheppy",
+      "Aaronlev"
+    ]
+  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2020-04-01T14:49:41.249Z",
     "contributors": [
@@ -72861,24 +72875,6 @@
       "hhillen"
     ]
   },
-  "Web/Accessibility/ARIA/forms": {
-    "modified": "2019-03-24T00:16:34.608Z",
-    "contributors": ["PhilippeV", "Sheppy", "anastasia", "Aaronlev"]
-  },
-  "Web/Accessibility/ARIA/forms/Multipart_labels": {
-    "modified": "2019-08-06T19:47:32.075Z",
-    "contributors": [
-      "Tigt",
-      "dkocho4",
-      "david_ross",
-      "kscarfone",
-      "StephenKelly",
-      "Kritz",
-      "Fredchat",
-      "Sheppy",
-      "Aaronlev"
-    ]
-  },
   "Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely": {
     "modified": "2019-12-31T18:58:55.559Z",
     "contributors": ["andrewpyper", "austin-2019", "estelle"]
@@ -72886,10 +72882,6 @@
   "Web/Accessibility/Accessibility_and_Spacial_Patterns": {
     "modified": "2019-11-07T11:39:44.805Z",
     "contributors": ["austin-2019", "estelle"]
-  },
-  "Web/Accessibility/Accessible_dynamic_content": {
-    "modified": "2019-01-16T13:14:58.285Z",
-    "contributors": ["julianosilvaa", "Sheppy", "anastasia"]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-06-19T20:00:17.673Z",
@@ -72931,23 +72923,6 @@
   "Web/Accessibility/Cognitive_accessibility": {
     "modified": "2019-11-18T16:53:41.344Z",
     "contributors": ["Igor-Sangin", "ericwbailey", "estelle", "jswisher"]
-  },
-  "Web/Accessibility/Community": {
-    "modified": "2019-03-24T00:14:39.691Z",
-    "contributors": ["rralian", "Sheppy", "MoniqueB", "Ken Saundders", "Dria"]
-  },
-  "Web/Accessibility/FAQ": {
-    "modified": "2019-03-24T00:07:55.251Z",
-    "contributors": [
-      "Sheppy",
-      "ethertank",
-      "MatthewKastor",
-      "jswisher",
-      "trevorh",
-      "Mgjbot",
-      "Kohei",
-      "Sjfern"
-    ]
   },
   "Web/Accessibility/Information_for_Web_authors": {
     "modified": "2019-03-23T23:27:44.949Z",

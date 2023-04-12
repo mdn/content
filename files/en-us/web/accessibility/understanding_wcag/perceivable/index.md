@@ -1,6 +1,7 @@
 ---
 title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

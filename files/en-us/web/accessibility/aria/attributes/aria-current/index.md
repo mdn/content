@@ -1,6 +1,7 @@
 ---
 title: aria-current
 slug: Web/Accessibility/ARIA/Attributes/aria-current
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
 

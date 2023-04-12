@@ -1,6 +1,7 @@
 ---
 title: "ARIA: status role"
 slug: Web/Accessibility/ARIA/Roles/status_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#status
 ---
 
