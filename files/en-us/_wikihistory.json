@@ -41071,30 +41071,6 @@
       "Jesdisciple"
     ]
   },
-  "Web/API/HTMLShadowElement": {
-    "modified": "2020-10-15T21:32:54.546Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills",
-      "DomenicDenicola",
-      "Sebastianz",
-      "sideshowbarker",
-      "markg",
-      "teoli"
-    ]
-  },
-  "Web/API/HTMLShadowElement/getDistributedNodes": {
-    "modified": "2020-10-15T21:32:55.396Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills",
-      "DomenicDenicola",
-      "Sebastianz",
-      "markg",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/HTMLSlotElement": {
     "modified": "2020-10-15T21:49:23.236Z",
     "contributors": [
@@ -98530,19 +98506,6 @@
       "fscholz",
       "McGurk",
       "volkmar"
-    ]
-  },
-  "Web/HTML/Element/shadow": {
-    "modified": "2020-10-15T21:31:28.083Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "DomenicDenicola",
-      "sideshowbarker",
-      "Sebastianz",
-      "m32po",
-      "markg",
-      "webours"
     ]
   },
   "Web/HTML/Element/slot": {
