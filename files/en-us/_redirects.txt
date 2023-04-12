@@ -8385,8 +8385,11 @@
 /en-US/docs/Web/API/HTMLCanvasElement/mozGetAsFile	/en-US/docs/Web/API/HTMLCanvasElement
 /en-US/docs/Web/API/HTMLCollection.item	/en-US/docs/Web/API/HTMLCollection/item
 /en-US/docs/Web/API/HTMLCollection/HTMLCollection.length	/en-US/docs/Web/API/HTMLCollection/length
-/en-US/docs/Web/API/HTMLContentElement.getDistributedNodes	/en-US/docs/Web/API/HTMLContentElement/getDistributedNodes
-/en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLContentElement/select
+/en-US/docs/Web/API/HTMLContentElement	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLContentElement.getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -12029,6 +12032,7 @@
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/en-US/docs/Web/HTML/element/content	/en-US/docs/Web/HTML/element/slot
 /en-US/docs/Web/HTTP/Access_control_CORS	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Basic_access_authentication	/en-US/docs/Web/HTTP/Authentication
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
