@@ -48,4 +48,4 @@ have been sent in an equivalent {{HTTPStatus("200")}} `OK` response:
 
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- [204 No Content](/en-US/docs/Web/HTTP/Status/204
+- [204 No Content](/en-US/docs/Web/HTTP/Status/204)
