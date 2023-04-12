@@ -309,7 +309,7 @@ Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to loo
 
 And there you have it — you should now be able to edit and delete items from the list!
 
-## Fixing a small bug with `isDone` status
+## Fixing a small bug with isDone status
 
 This is great so far, but we've actually introduced a bug by adding in the edit functionality. Try doing this:
 
