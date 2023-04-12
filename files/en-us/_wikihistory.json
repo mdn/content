@@ -72966,19 +72966,6 @@
     "modified": "2019-03-24T00:14:39.691Z",
     "contributors": ["rralian", "Sheppy", "MoniqueB", "Ken Saundders", "Dria"]
   },
-  "Web/Accessibility/FAQ": {
-    "modified": "2019-03-24T00:07:55.251Z",
-    "contributors": [
-      "Sheppy",
-      "ethertank",
-      "MatthewKastor",
-      "jswisher",
-      "trevorh",
-      "Mgjbot",
-      "Kohei",
-      "Sjfern"
-    ]
-  },
   "Web/Accessibility/Information_for_Web_authors": {
     "modified": "2019-03-23T23:27:44.949Z",
     "contributors": ["fscholz", "Fredchat", "Sheppy", "openjck"]
