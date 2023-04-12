@@ -61,6 +61,16 @@ console.log(bigint.toLocaleString());
 // "3,500" if in U.S. English locale
 ```
 
+### Checking for support for locales and options parameters
+
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+
+```js
+function toLocaleStringSupportsLocales() {
+  return typeof Intl === "object" && !!Intl && typeof Intl.NumberFormat === "function";
+}
+```
+
 ### Using `locales`
 
 This example shows some of the variations in localized number formats. In order to get
