@@ -111,7 +111,7 @@
 /en-US/docs/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/Accessible_dynamic_content
+/en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Architecture	/en-US/docs/Web/Accessibility/Architecture
@@ -10870,6 +10870,7 @@
 /en-US/docs/Web/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs//en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Implementing_MSAA_server	/en-US/docs/Web/Accessibility
