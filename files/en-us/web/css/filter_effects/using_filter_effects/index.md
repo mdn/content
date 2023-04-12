@@ -1,32 +1,36 @@
 ---
 title: Using filter effects
-slug: Web/CSS/filter_effects/using_filter_effects
+slug: Web/CSS/filter_effects/Using_filter_effects
 page-type: guide
 ---
 
 {{CSSRef}}
 
-Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? These manipulations used to require image editing software, time, and HTTP requests. [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) enable applying these visual effects live, without Photoshop and without extra HTTP requests. The only software required is the user's browser. And, unlike with pre-set image effects, CSS filter effects are responsive and animatable.
+Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations used to require image editing software, time, and HTTP requests. 
 
-The CSS filter effects module defines the {{cssxref("&lt;filter-function&gt;")}} data type which provides graphical effects, like blur or color shifting, that can alter the appearance of an element as well as the ability to reference an SVG filter with a filter of your own creation. The CSS {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties are used to apply these filters, impacting the rendering of text, images, backgrounds, and borders, or any element on which these properties are applied.
+## Advantages of using CSS filter effects
+
+The [Filter effects](/en-US/docs/Web/CSS/Filter_Effects) module in CSS provides properties and functions that let you apply the visual effects described above without using Photoshop or sending extra HTTP requests. The only software required is the user's browser. Moreover, unlike pre-set image effects, CSS filter effects are responsive and animatable.
+
+The CSS filter effects module provides the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that you can use to impact the rendering of text, images, backgrounds, and borders, or any element on which you apply these properties. This module also defines the {{cssxref("&lt;filter-function&gt;")}} data type that lets you add graphical effects such as blurring or color shifting. Using the filter functions, you can not only alter the appearance of an element but also reference an SVG filter using a filter that you create.
 
 ## Filter effect properties
 
-There are two filter properties defined in the CSS filter effects module that enable applying zero, one, or more graphical effects to an element.
+The following two filter properties of the CSS filter effects module enable you to apply zero, one, or more graphical effects to an element:
 
-With the {{cssxref("filter")}} property, filter effects like blur, drop-shadow, sepia, etc., are applied before the element is rendered.
+- Using the {{cssxref("filter")}} property, you can apply filter effects such as blur, drop-shadow, and sepia to an element before the element is rendered. The filters effects are applied directly on the element, including the element's contents, borders, and padding.
 
-With the {{cssxref("backdrop-filter")}} property, the graphical effects are applied to the area behind the element, or the element's "backdrop", not the element itself. The `backdrop-filter` property is often used to make foreground content more legible when the larger area upon which it is located would otherwise not provide enough contrast.
+- Using the the {{cssxref("backdrop-filter")}} property, you can apply graphical effects to the area behind an element (the element's "backdrop"). The `backdrop-filter` property is often used to make the foreground content more legible, especially when the larger area on which the content is placed otherwise does not provide enough contrast for the content. The filter effects are applied only to the background of the element and not to the element's content.
 
-With `filter`, the filters effects are applied to element, including the element's contents, borders, and padding, directly. With `backdrop-filter`, the filter effects are applied only to the background of the element on which the `backdrop-filter` is applied, not to the element's content.
+The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 
 ## Filter functions
 
-An almost endless array of effects can be defined with SVG filters and applied via `url()` refernce. The [CSS filter effects module](/en-US/docs/Web/CSS/Filter_Effects) names and defines 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions along with ranges of parameter values that are supported for each.
+An almost endless array of effects can be defined using SVG filters and applied via the `url()` reference. The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions.
 
-The following table lists the 10 filter functions, the value type, the minimum valid value if applicable, the largest value that creates an effect, and the initial value for [interpolation](/en-US/docs/Glossary/Interpolation).
+The following table lists the these filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
-| Filter function                                             | parameter type                                                      | min allowed | max effect | interpo&shy;lation   | default (no effect)                   |
+| Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value   | Default value (no effect)                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------- | ----------- | ---------- | -------------------- | ------------------------------------- |
 | {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                       | `0`         |            | `0`                  | `blur(0)`                             |
 | {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         |            | `1`                  | `brightness(1)` or `brightness(100%)` |
@@ -39,19 +43,21 @@ The following table lists the 10 filter functions, the value type, the minimum v
 | {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`         | `100%`     | `1`                  | `saturate(100%)`                      |
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `0`                  | `sepia(0%)`                           |
 
-The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function with a defined min value invalidates the entire property declaration, not just the invalid function in the comma-separated list.
+The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the invalid function in the comma-separated list.
 
-Maximum effect values can be exceeded. Including a value greater than the listed maximumum value is valid, but does not increase the effect over the maxiumum listed. In other words, it will look the same as if the maximum effect value had been set. For example, had we set `sepia(400%)` in the basic example, the effect would be the same: the image would appear as if `sepia(100%)`, the maximum value, were set.
+A maximum effect value can be exceeded. Including a value greater than the listed maximum value is valid, but it does not increase the effect over the listed maximum value. In other words, the effect on the element will look the same as when the maximum effect value is set. For example, setting `sepia(400%)` in the [Basic example](#basic_example) will produce the same effect as `sepia(100%)`, the maximum value.
 
-The default value listed is the value that creates no effect. While they create no effect, they are the initial interpolation value, provide an example of how the value can be set, and provide a guague between the minimum allowed and maximum effect values.
+The default value is a value that creates no effect. While they create no effect, they are the initial interpolation value and offer an example of how the value can be set. They provide a gauge between the minimum value allowed and the maximum effect value.
 
 ## Applying filter effects
 
-The `filter` and `backdrop-filter` properties take as their value a filter function list, containing one or more {{CSSXref("filter-function")}}s, the default keyword `none`, or an SVG filter using `url()` syntax.
+The `filter` and `backdrop-filter` properties accept a filter function list, which may contain one or more `<filter-function>`s, the default keyword `none`, or an SVG filter using the `url()` syntax.
 
-### Basic example
+### Applying sepia filter effect
 
-If you haven't ever hovered over a black-and-white or sepia image and the full-color image came into view instantly, here's your chance!
+If you hover over the sepia image below, you'll see the full-color image come into view instantly!
+
+The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:focus`](/en-US/docs/Web/CSS/:focus) by setting `filter: none`. 
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
@@ -67,7 +73,7 @@ img:focus {
 }
 ```
 
-The image is set to be sepia by default by including the [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia) filter function as the value of the `filter` property. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:focus`]((/en-US/docs/Web/CSS/) by setting `filter: none;`. We included [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to enable focus without altering the tabbing order for keyboard users as {{HTMLElement("img")}} is not an interactive element.
+In the {{HTMLElement("img")}} element, [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is set to `0` to enable focus without altering the tabbing order for keyboard users because `<img>` is not an interactive element.
 
 ```css hidden
 img {
@@ -76,13 +82,13 @@ img {
 }
 ```
 
-{{EmbedLiveSample("Basic_example", 600, 300)}}
+{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 300)}}
 
-### Applicable to all elements
+### Applying filter effects to other elements
 
 While generally applied to images, the `filter` and `backdrop-filter` properties can be applied to any element or pseudo-element.
 
-In this example, we add a glow effect using a [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter with a `3px` blur and `0` offset:
+In this example, a glow effect is added using a [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter with a `3px` blur and `0` offset.
 
 ```css
 h1 {
@@ -99,16 +105,16 @@ h1 {
 ```
 
 ```html hidden
-<h1>Glow created with CSS filter.</h1>
+<h1>Glow created with CSS filter</h1>
 ```
 
-{{EmbedLiveSample('Applicable_to_all_elements','100%','80')}}
+{{EmbedLiveSample('Applying_filter_effects_to_other_elements','100%','80')}}
 
 ### Applying multiple filters
 
-While the basic example used only the a sepia filter, we are not limited to a single filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters which are applied in the order declared.
+While the sepia filter example uses a single `filter` property, you can set more than one filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 
-This example applies two filters — a [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and a [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` CSS property the paragraph color shifting to the area behind the {{HTMLElement("p")}}.
+This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` property. The paragraph color shifts to the area behind the {{HTMLElement("p")}} element.
 
 ```css
 .container {
