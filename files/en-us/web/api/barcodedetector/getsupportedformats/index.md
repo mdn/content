@@ -17,7 +17,7 @@ fulfills with an {{jsxref('Array')}} of supported barcode format types.
 ## Syntax
 
 ```js-nolint
-getSupportedFormats()
+BarcodeDetector.getSupportedFormats()
 ```
 
 ### Parameters

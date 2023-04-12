@@ -33,7 +33,7 @@ superscaling or anti-aliasing techniques to improve perceived image quality.
 ## Syntax
 
 ```js-nolint
-getNativeFramebufferScaleFactor(session)
+XRWebGLLayer.getNativeFramebufferScaleFactor(session)
 ```
 
 ### Parameters

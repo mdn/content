@@ -25,7 +25,7 @@ longer.
 ## Syntax
 
 ```js-nolint
-revokeObjectURL(objectURL)
+URL.revokeObjectURL(objectURL)
 ```
 
 ### Parameters
