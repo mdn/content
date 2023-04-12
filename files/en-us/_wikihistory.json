@@ -37802,40 +37802,6 @@
     "modified": "2020-10-15T22:28:42.682Z",
     "contributors": ["NotWoods"]
   },
-  "Web/API/HTMLContentElement": {
-    "modified": "2020-10-15T21:32:02.054Z",
-    "contributors": [
-      "ExE-Boss",
-      "DomenicDenicola",
-      "sideshowbarker",
-      "slimsag",
-      "maybe",
-      "fscholz",
-      "markg"
-    ]
-  },
-  "Web/API/HTMLContentElement/getDistributedNodes": {
-    "modified": "2020-10-15T21:32:22.819Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "DomenicDenicola",
-      "fscholz",
-      "markg"
-    ]
-  },
-  "Web/API/HTMLContentElement/select": {
-    "modified": "2020-10-15T21:32:21.487Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "DomenicDenicola",
-      "fscholz",
-      "markg"
-    ]
-  },
   "Web/API/HTMLDListElement": {
     "modified": "2020-10-15T21:13:40.380Z",
     "contributors": [
@@ -95089,22 +95055,6 @@
       "Softwayer",
       "Kohei",
       "Jonata"
-    ]
-  },
-  "Web/HTML/Element/content": {
-    "modified": "2020-10-15T21:25:48.419Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "DomenicDenicola",
-      "sideshowbarker",
-      "KevinLozandier",
-      "slimsag",
-      "Sebastianz",
-      "m32po",
-      "markg",
-      "Jeremie",
-      "kscarfone"
     ]
   },
   "Web/HTML/Element/data": {
