@@ -40,6 +40,22 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 
     It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
+### The `of <selector>` syntax
+
+By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
+
+```css
+:nth-last-child(-n+3 of li.important) ;
+```
+
+> **Note:** This is different from moving the selector outside of the function, like:
+
+```css
+li.important: nth-last-child(-n + 3);
+```
+
+This selector instead just selects only the _important_ list items if they happen to be in the last three children.
+
 ## Examples
 
 ### Example selectors
@@ -150,6 +166,80 @@ li:nth-last-child(3) ~ li {
 #### Result
 
 {{EmbedLiveSample('Quantity_query', '100%', 270)}}
+
+### `of <selector>` syntax example
+
+In this example there is an unordered list of names, some of them have been marked as **noted** using `class="noted"`. These have been highlighted with a thick bottom border.
+
+#### HTML
+
+```html
+<ul>
+  <li class="noted">Deangelo</li>
+  <li>Hannah</li>
+  <li class="noted">Kimberly</li>
+  <li>Jayla</li>
+  <li>Ben</li>
+  <li>Ricardo</li>
+  <li class="noted">Milton</li>
+  <li>Sienna</li>
+  <li>Arthur</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Corbin</li>
+  <li>Veronica</li>
+  <li class="noted">Mathew</li>
+  <li>Tiana</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css
+* {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+In the following CSS we are targeting the **odd** list items that are marked with `class="noted"`.
+
+```css
+li:nth-last-child(odd of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### Result
+
+Here you can see that items 1, 3, 7, 10, 14, 17 and 20 have a thick bottom border as they have `class="noted"`.
+
+Items 1, 7, 14 and 20 have a solid background as they are the odd list items with `class="noted"`.
+
+{{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 
 ## Specifications
 
