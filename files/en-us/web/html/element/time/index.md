@@ -1,5 +1,5 @@
 ---
-title: '<time>: The (Date) Time element'
+title: "<time>: The (Date) Time element"
 slug: Web/HTML/Element/time
 page-type: html-element
 browser-compat: html.elements.time

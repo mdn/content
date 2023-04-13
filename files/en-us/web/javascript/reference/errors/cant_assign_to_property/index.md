@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t assign to property "x" on "y": not an object'
+title: "TypeError: can't assign to property \"x\" on \"y\": not an object"
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 page-type: javascript-error
 ---

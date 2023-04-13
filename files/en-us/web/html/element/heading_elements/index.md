@@ -1,5 +1,5 @@
 ---
-title: '<h1>–<h6>: The HTML Section Heading elements'
+title: "<h1>–<h6>: The HTML Section Heading elements"
 slug: Web/HTML/Element/Heading_Elements
 page-type: html-element
 browser-compat: html.elements.h1

@@ -1,5 +1,5 @@
 ---
-title: '<marquee>: The Marquee element'
+title: "<marquee>: The Marquee element"
 slug: Web/HTML/Element/marquee
 page-type: html-element
 status:

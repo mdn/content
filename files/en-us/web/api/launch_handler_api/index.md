@@ -4,8 +4,7 @@ slug: Web/API/Launch_Handler_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat:
-  - api.Window.launchQueue
+browser-compat: api.Window.launchQueue
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Launch Handler API")}}
