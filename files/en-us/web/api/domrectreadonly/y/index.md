@@ -1,6 +1,6 @@
 ---
 title: "DOMRectReadOnly: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/DOMRectReadOnly/y
 page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.y

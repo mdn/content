@@ -2,8 +2,8 @@
 title: "Element: transitionstart event"
 short-title: transitionstart
 slug: Web/API/Element/transitionstart_event
-browser-compat: api.Element.transitionstart_event
 page-type: web-api-event
+browser-compat: api.Element.transitionstart_event
 ---
 
 {{APIRef}}

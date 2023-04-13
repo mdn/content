@@ -1,6 +1,6 @@
 ---
 title: "ARIA: radiogroup role"
-slug: web/accessibility/aria/roles/radiogroup_role
+slug: Web/Accessibility/ARIA/Roles/radiogroup_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#radiogroup
