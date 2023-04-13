@@ -3616,6 +3616,7 @@
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
+/en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
