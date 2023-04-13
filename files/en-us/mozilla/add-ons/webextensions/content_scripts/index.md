@@ -23,13 +23,11 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 > - api.accounts.firefox.com
 > - content.cdn.mozilla.net
 > - discovery.addons.mozilla.org
-> - input.mozilla.org
 > - install.mozilla.org
 > - oauth.accounts.firefox.com
 > - profile.accounts.firefox.com
 > - support.mozilla.org
 > - sync.services.mozilla.com
-> - testpilot.firefox.com
 >
 > If you try to inject a content script into a page in these domains, it fails and the page logs a [CSP](/en-US/docs/Web/HTTP/CSP) error.
 >
