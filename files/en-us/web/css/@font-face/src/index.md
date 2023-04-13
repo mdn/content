@@ -149,7 +149,7 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ```css
 <url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
-local(<family-name>)
+local( <family-name> )
 
 <font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
 
