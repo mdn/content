@@ -111,7 +111,7 @@ In the example below we have styled some text inputs using CSS — you can see t
 
 > **Warning:** You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognize and fill in.
 
-As explained in the lessons on [form styling](/en-US/docs/Learn/Forms/Styling_web_forms) in the HTML part of this course, many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should therefore always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.
+As explained in the lessons on [styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms), many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should, therefore, always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.
 
 ### Inheritance and form elements
 
