@@ -1,7 +1,7 @@
 ---
 title: Web Components
 slug: Web/API/Web_components
-page-type: landing-page
+page-type: web-api-overview
 browser-compat:
   - html.elements.template
   - api.ShadowRoot
