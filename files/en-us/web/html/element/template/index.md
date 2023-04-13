@@ -214,5 +214,5 @@ container.appendChild(secondClone);
 
 ## See also
 
-- Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
+- Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)}})
 - [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
