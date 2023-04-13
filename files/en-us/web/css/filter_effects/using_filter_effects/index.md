@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations used to require image editing software, time, and HTTP requests.
+Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations required image editing software, time, and additional HTTP requests.
 
 ## Advantages of using CSS filter effects
 
@@ -26,9 +26,9 @@ The `filter` and `backdrop-filter` properties accept a space-separated list of f
 
 ## Filter functions
 
-An almost endless array of effects can be defined using SVG filters and applied via the `url()` reference. The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions.
+The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/CSS/filter#functions) functions, as well as the ability to define an almost endless array of effects using SVG filters applied via a `url()` reference. .
 
-The following table lists the these filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
+The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
 | Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value   | Default value (no effect)                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------- | ----------- | ---------- | -------------------- | ------------------------------------- |
@@ -43,15 +43,15 @@ The following table lists the these filter functions, along with their value typ
 | {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`         | `100%`     | `1`                  | `saturate(100%)`                      |
 | {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `0`                  | `sepia(0%)`                           |
 
-The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the invalid function in the comma-separated list.
+The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the offending filter function in the comma-separated list.
 
-A maximum effect value can be exceeded. Including a value greater than the listed maximum value is valid, but it does not increase the effect over the listed maximum value. In other words, the effect on the element will look the same as when the maximum effect value is set. For example, setting `sepia(400%)` in the [Basic example](#basic_example) will produce the same effect as `sepia(100%)`, the maximum value.
+The maximum effect value can be exceeded. Including a value greater than the listed maximum value is valid, but it does not increase the effect over the listed maximum value. In other words, the effect on the element will look the same as when the maximum effect value is set. For example, setting `sepia(400%)` in the [sepia example](#applying_sepia_filter_effect) will produce the same effect as `sepia(100%)`, the maximum value.
 
-The default value is a value that creates no effect. While they create no effect, they are the initial interpolation value and offer an example of how the value can be set. They provide a gauge between the minimum value allowed and the maximum effect value.
+The default value is a value that creates no effect. While these values create no effect, they are the initial interpolation value and offer an example of how the value can be set. These default values provide a gauge between the minimum value allowed and the maximum effect value.
 
 ## Applying filter effects
 
-The `filter` and `backdrop-filter` properties accept a filter function list, which may contain one or more `<filter-function>`s, the default keyword `none`, or an SVG filter using the `url()` syntax.
+The `filter` and `backdrop-filter` properties accept a filter function list, which may contain one or more `<filter-function>`s, the default keyword `none`, or an [SVG filter using the `url()`](#using_svg_filters) syntax.
 
 ### Applying sepia filter effect
 
