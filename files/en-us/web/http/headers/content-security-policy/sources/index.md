@@ -1,5 +1,5 @@
 ---
-title: "CSP source values"
+title: CSP source values
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 page-type: http-csp-directive
 ---

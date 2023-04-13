@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: size'
+title: "HTML attribute: size"
 slug: Web/HTML/Attributes/size
 page-type: html-attribute
 browser-compat: html.elements.attribute.size

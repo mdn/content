@@ -3,8 +3,7 @@ title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
 status: experimental
-browser-compat:
-  - api.GPU
+browser-compat: api.GPU
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("WebGPU API")}}

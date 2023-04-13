@@ -1,5 +1,5 @@
 ---
-title: '<sup>: The Superscript element'
+title: "<sup>: The Superscript element"
 slug: Web/HTML/Element/sup
 page-type: html-element
 browser-compat: html.elements.sup
