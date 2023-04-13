@@ -12,7 +12,7 @@ The {{domxref("MutationObserver")}} interface provides the ability to watch for 
 ## Constructor
 
 - {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
-  - : Creates and returns a new `MutationObserver` which will invoke a specified callback function when DOM changes occur.
+  - : Creates and returns a new `MutationObserver` which will invoke a specified callback function when DOM changes occur.  The callback takes up to two arguments, a [MutationRecord](https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord) and the MutationObserver itself.
 
 ## Instance methods
 
