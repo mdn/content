@@ -1,6 +1,7 @@
 ---
 title: "ARIA: listitem role"
 slug: Web/Accessibility/ARIA/Roles/listitem_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#listitem
 ---
 

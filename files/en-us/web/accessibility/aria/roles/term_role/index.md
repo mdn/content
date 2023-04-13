@@ -1,6 +1,7 @@
 ---
 title: "ARIA: term role"
 slug: Web/Accessibility/ARIA/Roles/term_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#term
 ---
 

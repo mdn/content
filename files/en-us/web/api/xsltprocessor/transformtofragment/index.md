@@ -3,7 +3,7 @@ title: "XSLTProcessor: transformToFragment() method"
 short-title: transformToFragment()
 slug: Web/API/XSLTProcessor/transformToFragment
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.transformToFragment 
+browser-compat: api.XSLTProcessor.transformToFragment
 ---
 
 {{APIRef("XSLT")}}

@@ -1,6 +1,7 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
+page-type: guide
 ---
 
 <section id="Quick_links">

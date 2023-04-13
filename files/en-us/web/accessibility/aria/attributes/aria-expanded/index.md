@@ -1,6 +1,7 @@
 ---
 title: aria-expanded
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 

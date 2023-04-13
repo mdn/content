@@ -1,6 +1,7 @@
 ---
 title: aria-level
 slug: Web/Accessibility/ARIA/Attributes/aria-level
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 
