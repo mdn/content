@@ -1,6 +1,6 @@
 ---
 title: Using filter effects
-slug: Web/CSS/filter_effects/Using_filter_effects
+slug: Web/CSS/Filter_Effects/Using_filter_effects
 page-type: guide
 ---
 
@@ -154,7 +154,7 @@ p {
 
 ### Applying repeated filters
 
-As filters are applied in sequential order, we are not limited to using filter functions just once. In this example, we include the [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter four times, each with a different `<shadow>` value.
+As filters are applied in sequential order, you can use filter functions more than once. In this example, the [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter has been used four times, each time with a different `<shadow>` value.
 
 ```html
 <img src="mandala.svg" alt="Colorful mandala" role="img" />
@@ -183,11 +183,11 @@ In the first Manadala example, four drop shadows are applied to a line-drawn SVG
 
 {{EmbedLiveSample("Applying_repeated_filters", 600, 400)}}
 
-### Filter function order
+### Specifying filter function order
 
 When creating filter effects, the `filter` or `backdrop-filter` property is provided a space-separated list of filters. These filter effects are applied in the order in which they appear.
 
-In this example, we include both a magenta drop shadow and a `180deg` hue rotation on the level-one heading, but these filters are applied in different order:
+In this example, both `magenta` drop shadow and `180deg` hue rotation are applied on the level-one heading. The example shows the effect when these filters are applied in different orders.
 
 ```css
 h1 {
@@ -216,11 +216,11 @@ h1 {
 
 {{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
 
-The same filters were applied to both lines of text, but in a different order. In the first example, the hue of the text was altered before the shadow was applied; so the magenta shadow is magenta. In the second example, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow were changed.
+The same filters are applied to both lines of text but in a different order. In the first line, the hue of the text is altered before the shadow is applied; so the shadow is `magenta`. In the second line, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow are altered.
 
-No filter effect was applied to the third example to show the original effect as a comparison. The text in the third example has remained as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changed the text in the first two examples to `#252500`.
+No filter effect is applied to the third line to show the original effect as a comparison. So the third line stays as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changes the text in the first two lines to `#252500`.
 
-> **Note:** The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)` while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
+> **Note:** The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)`, while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
 ## Using SVG filters
 
@@ -251,11 +251,11 @@ filter: url(#blur3);
 filter: url("https://example.com/svg/filters.svg#blur3");
 ```
 
-### Blur example
+### Blurring an image
 
 Just like the {{cssxref("filter-function/blur", "blur()")}} filter function applies a Gaussian blur to the elements on which it is applied, the SVG {{SVGElement("feGaussianBlur")}} filter element can also be used to blur content.
 
-In both cases, the blur radius value, defined as a {{cssxref("&lt;length&gt;")}} in CSS and a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur.
+In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&gt;")}} in CSS and as a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function. In other words, it defines the number of pixels on the screen that blend into each other; a larger value creates more blur.
 
 The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
@@ -310,8 +310,8 @@ The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`]
 
 ## See also
 
-- The [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module which defines these functions and the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that takes these functions as their value.
-- CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
-- The CSS {{cssxref("mask")}} property
-- [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
+- {{cssxref("mask")}}
+- {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
+- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects)
+- SVG {{SVGElement("filter")}} element, SVG {{SVGAttr("filter")}} attribute in [SVG](/en-US/docs/Web/SVG)
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
