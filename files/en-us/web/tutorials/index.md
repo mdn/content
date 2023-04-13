@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 slug: Web/Tutorials
+page-type: landing-page
 ---
 
 The links on this page lead to a variety of tutorials and training materials. Whether you are just starting, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
