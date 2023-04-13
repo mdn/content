@@ -112,9 +112,9 @@ h1 {
 
 ### Applying multiple filters
 
-While the sepia `filter` example included a single filter function, you can set more than one filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
+While the sepia `filter` example included only a single filter function, you can set multiple filters. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 
-This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` property. The paragraph color shifts to the area behind the {{HTMLElement("p")}} element.
+This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` property. The backdrop, the area behind the {{HTMLElement("p")}} element, has a color shift and a blur applied.
 
 ```css
 .container {
@@ -154,7 +154,7 @@ p {
 
 ### Applying repeated filters
 
-As filters are applied in sequential order, we are not limited to using a filter only once. In this example, we include the [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter four times, each with a different `<shadow>` value.
+As filters are applied in sequential order, we are not limited to using filter functions just once. In this example, we include the [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter four times, each with a different `<shadow>` value.
 
 ```html
 <img src="mandala.svg" alt="Colorful mandala" role="img" />
@@ -169,12 +169,10 @@ img {
 
 ```css nolint
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(210deg 100% 50%)
-    )
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(30deg 100% 50%)
-    );
+  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) 
+     drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
+     drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) 
+     drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
 }
 img + img {
   filter: none;
