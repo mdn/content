@@ -2,8 +2,8 @@
 title: "Element: transitionend event"
 short-title: transitionend
 slug: Web/API/Element/transitionend_event
-browser-compat: api.Element.transitionend_event
 page-type: web-api-event
+browser-compat: api.Element.transitionend_event
 ---
 
 {{APIRef}}

@@ -1,6 +1,6 @@
 ---
 title: "DOMPointReadOnly: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/DOMPointReadOnly/y
 page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.y
