@@ -40,6 +40,8 @@ No notable changes.
 
 - WebRTC methods {{domxref("RTCRtpSender.getParameters()")}}, {{domxref("RTCRtpSender.setParameters()")}}, and {{domxref("RTCRtpReceiver.getParameters()")}} are now compliant with the specification ([Firefox bug 1401592](https://bugzil.la/1401592)).
 
+#### DOM
+
 - {{domxref("CSSContainerRule")}} is supported, allowing JavaScript to access the name and query used in an {{cssxref("@container")}} at-rule definition ([Firefox bug 1787173](https://bugzil.la/1787173)).
 
 - Elements now lose focus if a style is applied that makes them ineligible to hold focus, such as `hidden`, and the [`blur` event](/en-US/docs/Web/API/Element/blur_event) is fired.

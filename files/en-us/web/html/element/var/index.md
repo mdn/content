@@ -1,5 +1,5 @@
 ---
-title: '<var>: The Variable element'
+title: "<var>: The Variable element"
 slug: Web/HTML/Element/var
 page-type: html-element
 browser-compat: html.elements.var

@@ -1,5 +1,5 @@
 ---
-title: '<aside>: The Aside element'
+title: "<aside>: The Aside element"
 slug: Web/HTML/Element/aside
 page-type: html-element
 browser-compat: html.elements.aside

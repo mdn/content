@@ -1,5 +1,5 @@
 ---
-title: '<details>: The Details disclosure element'
+title: "<details>: The Details disclosure element"
 slug: Web/HTML/Element/details
 page-type: html-element
 browser-compat: html.elements.details

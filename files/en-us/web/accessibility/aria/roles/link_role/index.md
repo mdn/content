@@ -1,6 +1,7 @@
 ---
 title: "ARIA: link role"
 slug: Web/Accessibility/ARIA/Roles/link_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#link
 ---
 

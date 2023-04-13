@@ -1,6 +1,7 @@
 ---
 title: aria-busy
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-busy
   - https://w3c.github.io/aria-practices/#feed

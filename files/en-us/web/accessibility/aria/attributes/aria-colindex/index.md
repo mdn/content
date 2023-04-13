@@ -1,6 +1,7 @@
 ---
 title: aria-colindex
 slug: Web/Accessibility/ARIA/Attributes/aria-colindex
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindex
 ---
 

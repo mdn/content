@@ -1,6 +1,7 @@
 ---
 title: aria-readonly
 slug: Web/Accessibility/ARIA/Attributes/aria-readonly
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 
