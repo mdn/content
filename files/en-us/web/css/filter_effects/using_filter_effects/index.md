@@ -279,12 +279,6 @@ The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`]
 }
 ```
 
-```css hidden
-svg:not([height]) {
-  display: none;
-}
-```
-
 ```html hidden
 <table cellpadding="5">
   <thead>
@@ -300,15 +294,11 @@ svg:not([height]) {
         <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
-          <filter id="svgBlur">
-            <feGaussianBlur stdDeviation="3.5" />
-          </filter>
-          <image xlink:href="flag.jpg" filter="url(#svgBlur)" />
-        </svg>
+       <img src="flag.jpg" alt="Pride flag" class="svgFilter"
+ />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" class="svgFilter"
+        <img src="flag.jpg" alt="Pride flag"
  />
       </td>
     </tr>
