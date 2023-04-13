@@ -51,11 +51,11 @@ The default value is a value that creates no effect. While these values create n
 
 ## Applying filter effects
 
-The `filter` and `backdrop-filter` properties accept a filter function list, which may contain one or more `<filter-function>`s, the default keyword `none`, or an [SVG filter using the `url()`](#using_svg_filters) syntax.
+The `filter` and `backdrop-filter` properties accept a filter function list, which may contain one or more `<filter-function>`s, the default keyword `none`, or an [SVG filter](#using_svg_filters) as a `url()` value.
 
 ### Applying sepia filter effect
 
-If you hover over the sepia image below, you'll see the full-color image come into view instantly!
+If you hover over the sepia image below, you'll see the full-color image come into view instantly.
 
 The image is set to be sepia by specifying the value of the `filter` property as the [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia) filter function. The filter is removed on [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:focus`](/en-US/docs/Web/CSS/:focus) by setting `filter: none`. 
 
@@ -112,7 +112,7 @@ h1 {
 
 ### Applying multiple filters
 
-While the sepia filter example uses a single `filter` property, you can set more than one filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
+While the sepia `filter` example included a single filter function, you can set more than one filter. The `filter` and `backdrop-filter` properties accept a space-separated list of filters, which are applied in the order declared.
 
 This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate) and [`blur()`](/en-US/docs/Web/CSS/filter-function/blur) — via the `backdrop-filter` property. The paragraph color shifts to the area behind the {{HTMLElement("p")}} element.
 
