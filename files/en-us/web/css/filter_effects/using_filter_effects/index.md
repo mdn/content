@@ -179,13 +179,15 @@ img + img {
 }
 ```
 
-In the first Manadala example, four drop shadows are applied to a line-drawn SVG. The second example, the same SVG with the filter removed with `filter: none`, is included for comparison.
+In the first Manadala example, four drop shadows are applied to a line-drawn SVG. The same SVG, with the filter removed with `filter: none`, is included for comparison.
 
 {{EmbedLiveSample("Applying_repeated_filters", 600, 400)}}
 
 ### Filter function order
 
-When creating filter effects, you provide the `filter` or `backdrop-filter` property a list of filters spaceTo apply a filter effect to an element or pseudo-element, include a list of space-separated [filter functions](#defined_filter_functions). The effects are applied in the order in which they appear:
+When creating filter effects, the `filter` or `backdrop-filter` property is provided a space-separated list of filters. These filter effects are applied in the order in which they appear.
+
+In this example, we include both a magenta drop shadow and a `180deg` hue rotation on the level-one heading, but these filters are applied in different order:
 
 ```css
 h1 {
@@ -214,15 +216,15 @@ h1 {
 
 {{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
 
-The same filters were applied to both lines of text, but in a different order. Magenta drop shadows were applied to both lines of text. In the first example, the hue of the text was altered before the shadow was applied; so the magenta shadow is magenta. In the second example, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow were changed.
+The same filters were applied to both lines of text, but in a different order. In the first example, the hue of the text was altered before the shadow was applied; so the magenta shadow is magenta. In the second example, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow were changed.
 
-No filter effect was applied to the third example to show the original effect as a comparison. The text in the third example has remained as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changed text in the first two examples `#252500`
+No filter effect was applied to the third example to show the original effect as a comparison. The text in the third example has remained as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changed the text in the first two examples to `#252500`.
 
-> **Note:** The rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)` while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
+> **Note:** The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)` while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
 ## Using SVG filters
 
-In addition to the 10 defined filter functions, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an internal or external SVG file.
+In addition to the 10 defined {{cssxref("filter-function")}}s, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an internal or external SVG file.
 
 A single SVG can be used to define several filters, each with an `id`:
 
@@ -255,19 +257,7 @@ Just like the {{cssxref("filter-function/blur", "blur()")}} filter function appl
 
 In both cases, the blur radius value, defined as a {{cssxref("&lt;length&gt;")}} in CSS and a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur.
 
-```css
-.filter {
-  filter: blur(3.5px);
-}
-```
-
-```css hidden
-svg:not([height]) {
-  display: none;
-}
-```
-
-The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
+The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html
 <svg role="img" aria-label="Flag">
@@ -276,6 +266,23 @@ The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enab
   </filter>
   <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
 </svg>
+```
+
+The SVG `ulr()` filter value can be included as the value of the <image>`s filter attribute or as part of the value of CSS `filter` or `backdrop-filter` property.
+
+```css
+.filter {
+  filter: blur(3.5px);
+}
+.svgFilter {
+  filter: url(#blur);
+}
+```
+
+```css hidden
+svg:not([height]) {
+  display: none;
+}
 ```
 
 ```html hidden
@@ -301,7 +308,8 @@ The filter's {{SVGAttr("stdDeviation")}} attribute accepts up to two values enab
         </svg>
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img src="flag.jpg" alt="Pride flag" class="svgFilter
+ />
       </td>
     </tr>
   </tbody>
