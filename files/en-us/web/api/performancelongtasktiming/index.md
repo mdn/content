@@ -72,7 +72,7 @@ This interface also supports the following properties:
 
 ### Getting long tasks
 
-To get long task timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"longtasks"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. You also need to set `buffered` to `true` to get access to long tasks the user agent buffered while constructing the document. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceLongTaskTiming` objects which you can analyze.
+To get long task timing information, create a {{domxref("PerformanceObserver")}} instance and then call its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"longtask"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. You also need to set `buffered` to `true` to get access to long tasks the user agent buffered while constructing the document. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceLongTaskTiming` objects which you can analyze.
 
 ```js
 const observer = new PerformanceObserver((list) => {
