@@ -1,6 +1,7 @@
 ---
 title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-autocomplete,
   - https://w3c.github.io/aria-practices/#combobox

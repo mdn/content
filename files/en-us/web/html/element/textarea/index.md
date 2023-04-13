@@ -1,5 +1,5 @@
 ---
-title: '<textarea>: The Textarea element'
+title: "<textarea>: The Textarea element"
 slug: Web/HTML/Element/textarea
 page-type: html-element
 browser-compat: html.elements.textarea

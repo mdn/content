@@ -1,5 +1,5 @@
 ---
-title: '<template>: The Content Template element'
+title: "<template>: The Content Template element"
 slug: Web/HTML/Element/template
 page-type: html-element
 browser-compat: html.elements.template

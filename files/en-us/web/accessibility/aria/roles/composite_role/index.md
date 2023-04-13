@@ -1,6 +1,7 @@
 ---
 title: "ARIA: composite role"
 slug: Web/Accessibility/ARIA/Roles/composite_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#composite
 ---
 

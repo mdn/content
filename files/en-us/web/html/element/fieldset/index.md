@@ -1,5 +1,5 @@
 ---
-title: '<fieldset>: The Field Set element'
+title: "<fieldset>: The Field Set element"
 slug: Web/HTML/Element/fieldset
 page-type: html-element
 browser-compat: html.elements.fieldset

@@ -117,26 +117,13 @@ Thus a matrix that looks like this:
 
 Is represented in array form like this:
 
-```js
+```js-nolint
 let matrixArray = [
-  a1,
-  a2,
-  a3,
-  a4,
-  a5,
-  a6,
-  a7,
-  a8,
-  a9,
-  a10,
-  a11,
-  a12,
-  a13,
-  a14,
-  a15,
-  a16,
+  a1, a2, a3, a4,
+  a5, a6, a7, a8,
+  a9, a10, a11, a12,
+  a13, a14, a15, a16,
 ];
-```
 
 In this array, the leftmost column contains the entries *a*₁, *a*₂, *a*₃, and *a*₄. The topmost row contains the entries *a*₁, *a*₅, *a*₉, and *a*₁₃.
 
@@ -201,15 +188,20 @@ Unlike a true "zoom", **scaling** involves multiplying each of the `x`, `y`, and
 
 If you want to scale up by a factor of 2, you need to multiply each component by 2.0. To scale down by the same amount, multiply them by -2.0. In matrix terms, this is performed using a transform matrix with scaling factored into it, like this:
 
-```js
-let scaleTransform = [Sx, 0, 0, 0, 0, Sy, 0, 0, 0, 0, Sz, 0, 0, 0, 0, 1];
+```js-nolint
+let scaleTransform = [
+  Sx,  0,  0,  0,
+   0, Sy,  0,  0,
+   0,  0, Sz,  0,
+   0,  0,  0,  1
+];
 ```
 
 This matrix represents a transform that scales up or down by a factor indicated by `(Sx, Sy, Sz)`, where `Sx` indicates the scaling factor along the X axis, `Sy` the scaling factor along the Y axis, and `Sz` the factor for the Z axis. If any of these values differs from the others, the result will be stretching or contraction which is different in some dimensions compared to others.
 
 If the same scaling factor is to be applied in every direction, you can create a simple function to generate the scaling transform matrix for you:
 
-```js
+```js-nolint
 function createScalingMatrix(f) {
   return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
@@ -217,7 +209,7 @@ function createScalingMatrix(f) {
 
 With the transform matrix in hand, we apply the transform `scaleTransform` to the vector (or vertex) `myVector`:
 
-```js
+```js-nolint
 let myVector = [2, 1, -3];
 let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);

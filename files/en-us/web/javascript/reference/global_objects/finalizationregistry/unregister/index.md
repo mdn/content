@@ -49,7 +49,7 @@ class Thingy {
   static #cleanup = (label) => {
     //               ^^^^^−−−−− held value
     console.error(
-      `The "release" method was never called for the object with the label "${label}"`
+      `The "release" method was never called for the object with the label "${label}"`,
     );
   };
   #registry = new FinalizationRegistry(Thingy.#cleanup);
@@ -84,7 +84,7 @@ class Thingy {
   static #cleanup = (file) => {
     //               ^^^^−−−−− held value
     console.error(
-      `The "release" method was never called for the "Thingy" for the file "${file.name}"`
+      `The "release" method was never called for the "Thingy" for the file "${file.name}"`,
     );
   };
   #registry = new FinalizationRegistry(Thingy.#cleanup);

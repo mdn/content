@@ -1,6 +1,7 @@
 ---
 title: Understandable
 slug: Web/Accessibility/Understanding_WCAG/Understandable
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

@@ -530,7 +530,6 @@ input:valid + span::after {
 ## See also
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
-- [Forms and accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
 - {{HTMLElement("input")}}
 
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)

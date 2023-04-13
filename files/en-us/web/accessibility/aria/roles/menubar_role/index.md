@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menubar role"
 slug: Web/Accessibility/ARIA/Roles/menubar_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menubar
   - https://w3c.github.io/aria-practices/#menu

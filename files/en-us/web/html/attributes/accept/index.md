@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: accept'
+title: "HTML attribute: accept"
 slug: Web/HTML/Attributes/accept
 page-type: html-attribute
 browser-compat: html.elements.input.accept
