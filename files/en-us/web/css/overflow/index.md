@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow
 
 {{CSSRef}}
 
-The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior when content does not fit (overflows) in the parent element box in the horizontal and/or vertical direction.
+The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior when content does not fit in the parent element box (overflows) in the horizontal and/or vertical direction.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
@@ -37,29 +37,26 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` and the second one applies to `overflow-y`.
+The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
 
 ### Values
 
 - `visible`
-  - : Overflow content is not clipped and may be visible outside content's padding box. This is the default value. In this case, the element is not a {{glossary("scroll container")}}.
+  - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value of the `overflow` property.
 - `hidden`
-  - : Overflow content is clipped at the content's padding box. Overflow content outside the clipped region is not visible. User agents do not add a scroll bar and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ still be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case, the element box is a {{glossary("scroll container")}}.
+  - : Overflow content is clipped at the element's padding box. There are no scroll bars, the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case. The element box is a scroll container.
 - `clip`
-  - : Overflow content is clipped, as with `hidden`, but at the element's _overflow clip edge_ (defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property). Similar to `hidden`, overflow content outside the clipped region is not visible with the `clip` keyword, and user agents do not add a scroll bar. However, unlike `hidden`, the `clip` keyword does not allow adding support for scrolling programmatically. Therefore, with `overflow: clip`, an element box is never a {{glossary("scroll container")}}.
-
-> **Note:** `overflow: clip` prevents a new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). If you want the element box to also establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}.
-
+  - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) can be created. To establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}. The element box is not a scroll container.
 - `scroll`
-  - : Overflow content is clipped at the content's padding box, as with `hidden`. Unlike `hidden`, overflow content can be scrolled into view in the {{glossary("Scrollport", "scrollport")}} (the element box is a {{glossary("scroll container")}}). User agents always display scroll bars in both horizontal and vertical directions, whether or not any content is overflowing or clipped. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflowing content.
+  - : Overflow content is clipped at the element's padding box, as with `hidden`. Unlike `hidden`, overflow content can be scrolled into view in the {{glossary("Scrollport", "scrollport")}} (the element box is a scroll container). User agents always display scroll bars in both horizontal and vertical directions, whether or not any content is overflowing or clipped. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflowing content.
 - `auto`
-  - : Overflow content is clipped at the content's padding box, as with `hidden`, and overflow content can be scrolled into view, as with `scroll`. User agents display scroll bars _only if_ the content is overflowing and hide scroll bars by default. If content fits inside the padding box, it looks the same as `visible` but still establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+  - : Overflow content is clipped at the element's padding box, as with `hidden`, and overflow content can be scrolled into view, as with `scroll`. User agents display scroll bars _only if_ the content is overflowing and hide scroll bars by default. If content fits inside the padding box, it looks the same as `visible` but still establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Note:** The keyword `overlay` is a legacy value alias for `auto` and behaves the same as `auto`.
+> **Note:** The keyword value `overlay` is a legacy value alias for `auto`. With `overlay`, the scroll bars are drawn on top of the content instead of taking up space.
 
 ## Description
 
-Overflow options include hiding overflowing content, showing scroll bars to view overflow content, or displaying the content flowing out of an element box into the surrounding area.
+Overflow options include hiding overflowing content, enabling scroll bars to view overflow content or displaying the content flowing out of an element box into the surrounding area, and combinations there of.
 
 The following nuances should be kept in mind while using the various keywords for `overflow`:
 
