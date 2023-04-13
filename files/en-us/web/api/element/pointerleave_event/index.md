@@ -2,8 +2,8 @@
 title: "Element: pointerleave event"
 short-title: pointerleave
 slug: Web/API/Element/pointerleave_event
-browser-compat: api.Element.pointerleave_event
 page-type: web-api-event
+browser-compat: api.Element.pointerleave_event
 ---
 
 {{APIRef}}

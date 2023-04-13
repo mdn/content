@@ -1,8 +1,8 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-browser-compat: api.MediaStream
 page-type: web-api-overview
+browser-compat: api.MediaStream
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}

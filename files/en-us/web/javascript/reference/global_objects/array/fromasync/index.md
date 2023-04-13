@@ -2,9 +2,9 @@
 title: Array.fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
-browser-compat: javascript.builtins.Array.fromAsync
 status:
   - experimental
+browser-compat: javascript.builtins.Array.fromAsync
 ---
 
 {{JSRef}} {{SeeCompatTable}}
