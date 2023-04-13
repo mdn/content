@@ -21,6 +21,11 @@ jobs:
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      # This is the directory where the built files will be placed.
+      # It's also hardcoded in the `yarn build` command in package.json.
+      # If you change it here, you must also make the same change in
+      # package.json.
+      BUILD_OUT_ROOT: build
 
     steps:
       - uses: actions/checkout@v3
@@ -94,43 +99,31 @@ jobs:
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-          echo "Disk usage size of build/"
-          du -sh $BUILD_OUT_ROOT
+          echo "Disk usage size of the build"
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
           # Save the PR number into the build
-          echo ${{ github.event.number }} > build/NR
+          echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
 
-          # Download the raw diff blob and store that inside the ./build/
+          # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O build/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
-          rsync -a node_modules/@mdn/yari/client/build/ build/
-
-          # Now that build/ directory contains everything you need to deploy
-          # that as a site. HTML, static assets, images, etc.
-          # However, that Yari static files is very heavy and it's in large
-          # part due to the .map files.
-          # In fact, as of March 2021, the client/build/static directory
-          # is 2.3MB but only 864KB without all the .map files.
-          # Let's delete those this time because this isn't the right time
-          # to debug JS or CSS.
-          echo "Before..."
-          du -sh build
-          find build/static -type f -name "*.map" | xargs ls -lh
-          find build/static -type f -name "*.map" | xargs rm
-          echo "After..."
-          du -sh build
+          # Exclude the .map files, as they're used for debugging JS and CSS.
+          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ ${{ env.BUILD_OUT_ROOT }}
+          # Show the final disk usage size of the build.
+          du -sh ${{ env.BUILD_OUT_ROOT }}
 
       - uses: actions/upload-artifact@v3
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
-          path: build/
+          path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}
