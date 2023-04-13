@@ -130,6 +130,8 @@ The following example shows a very simple textarea, with a set numbers of rows a
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example','600','150') }}
 
 ### Example using "minlength" and "maxlength"
@@ -141,6 +143,8 @@ This example has a minimum and maximum number of characters — of 10 and 20 res
 Write something here…
 </textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
 
@@ -157,6 +161,8 @@ This example has a placeholder set. Notice how it disappears when you start typi
   cols="30"
   placeholder="Comment text."></textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example using "placeholder"','600','80') }}
 
@@ -176,6 +182,8 @@ I am a disabled textarea.
 I am a read-only textarea.
 </textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
 
