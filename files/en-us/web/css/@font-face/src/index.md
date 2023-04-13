@@ -147,7 +147,7 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```css
+```plain
 <url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
 local( <family-name> )
 
