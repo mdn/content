@@ -7,7 +7,7 @@ browser-compat: css.types.ray
 
 {{CSSRef}}
 
-The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a straight line segment or path that starts from a position of an element and proceeds in the direction defined by the specified angle.
+The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a straight line segment or path that starts from the specified position of an element and proceeds in the direction defined by the specified angle. The `ray()` function can be used as a parameter in the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path an animated element can follow.
 
 {{EmbedInteractiveExample("pages/css/function-ray.html")}}
 
