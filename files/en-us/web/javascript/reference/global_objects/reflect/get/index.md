@@ -67,18 +67,18 @@ const obj2 = new Proxy(
     get(t, k, r) {
       return k + "bar";
     },
-  }
+  },
 );
 Reflect.get(obj2, "foo"); // "foobar"
 
-//Proxy with get handler and receiver
+// Proxy with get handler and receiver
 const obj3 = new Proxy(
   { p: 1, foo: 2 },
   {
     get(t, prop, receiver) {
       return receiver[prop] + "bar";
     },
-  }
+  },
 );
 Reflect.get(obj, "foo", { foo: 3 }); // "3bar"
 ```

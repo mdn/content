@@ -47,8 +47,8 @@ For BigInt division, a {{jsxref("RangeError")}} is thrown if the divisor `y` is 
 
 ```js
 -13 % 5; // -3
--1 % 2;  // -1
--4 % 2;  // -0
+-1 % 2; // -1
+-4 % 2; // -0
 
 -3n % 2n; // -1n
 ```

@@ -23,10 +23,7 @@ An {{jsxref("Array")}} containing values in the same order as the iterable passe
 try {
   throw new AggregateError(
     // An iterable of errors
-    new Set([
-      new Error("some error"),
-      new Error("another error"),
-    ]),
+    new Set([new Error("some error"), new Error("another error")]),
     "Multiple errors thrown",
   );
 } catch (err) {

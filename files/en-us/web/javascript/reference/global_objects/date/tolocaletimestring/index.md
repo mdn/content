@@ -69,7 +69,11 @@ The `locales` and `options` parameters may not be supported in all implementatio
 
 ```js
 function toLocaleTimeStringSupportsLocales() {
-  return typeof Intl === "object" && !!Intl && typeof Intl.DateTimeFormat === "function";
+  return (
+    typeof Intl === "object" &&
+    !!Intl &&
+    typeof Intl.DateTimeFormat === "function"
+  );
 }
 ```
 

@@ -66,7 +66,7 @@ const float32 = new Float32Array(buffer, 0, 2);
 
 console.log(float32.byteLength); // 8
 console.log(float32.length); // 2
-console.log(float32[0]) // 0, the initial value
+console.log(float32[0]); // 0, the initial value
 
 buffer.resize(12);
 

@@ -111,7 +111,7 @@ function func2(d, e, f, g) {
   console.log(arguments[3]);
 }
 
-const obj1 = Reflect.construct(func1, ['I', 'Love', 'my', 'country']);
+const obj1 = Reflect.construct(func1, ["I", "Love", "my", "country"]);
 ```
 
 However, while the end result is the same, there is one important difference in the process. When using `Object.create()` and {{jsxref("Function.prototype.apply()")}}, the `new.target` operator will point to `undefined` within the function used as the constructor, since the `new` keyword is not being used to create the object. (In fact, it uses the [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply) semantic, not `construct`, although normal functions happen to operate nearly the same.)

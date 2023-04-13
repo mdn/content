@@ -155,8 +155,8 @@ The following table lists the methods that mutate the original array, and the co
 
 | Mutating method                                | Non-mutating alternative                              |
 | ---------------------------------------------- | ----------------------------------------------------- |
-| {{jsxref("Array/copyWithin", "copyWithin()")}} | No one-method alternative                                |
-| {{jsxref("Array/fill", "fill()")}}             | No one-method alternative                                |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | No one-method alternative                             |
+| {{jsxref("Array/fill", "fill()")}}             | No one-method alternative                             |
 | {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
 | {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
 | {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |

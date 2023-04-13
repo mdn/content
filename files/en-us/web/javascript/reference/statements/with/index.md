@@ -130,7 +130,7 @@ If you're producing an expression that must reuse a long-named reference multipl
 ```js
 const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
 
-if ((o => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+if (((o) => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
   // This branch runs.
 }
 ```

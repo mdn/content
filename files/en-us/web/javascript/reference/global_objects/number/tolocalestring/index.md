@@ -66,7 +66,11 @@ The `locales` and `options` parameters may not be supported in all implementatio
 
 ```js
 function toLocaleStringSupportsLocales() {
-  return typeof Intl === "object" && !!Intl && typeof Intl.NumberFormat === "function";
+  return (
+    typeof Intl === "object" &&
+    !!Intl &&
+    typeof Intl.NumberFormat === "function"
+  );
 }
 ```
 

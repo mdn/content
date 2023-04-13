@@ -24,6 +24,7 @@ sort(compareFn)
 ### Parameters
 
 - `compareFunction` {{optional_inline}}
+
   - : A function that defines the sort order. The return value should be a number whose positivity indicates the relative order of the two elements. The function is called with the following arguments:
 
     - `a`
