@@ -268,7 +268,7 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
 </svg>
 ```
 
-The SVG `ulr()` filter value can be included as the value of the <image>`s filter attribute or as part of the value of CSS `filter` or `backdrop-filter` property.
+The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
 
 ```css
 .filter {
@@ -308,7 +308,7 @@ svg:not([height]) {
         </svg>
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" class="svgFilter
+        <img src="flag.jpg" alt="Pride flag" class="svgFilter"
  />
       </td>
     </tr>
