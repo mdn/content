@@ -259,26 +259,6 @@ In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&g
 
 The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
-```html
-<svg role="img" aria-label="Flag">
-  <filter id="blur">
-    <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
-  </filter>
-  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
-</svg>
-```
-
-The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
-
-```css
-.filter {
-  filter: blur(3.5px);
-}
-.svgFilter {
-  filter: url(#blur);
-}
-```
-
 ```html hidden
 <table cellpadding="5">
   <thead>
@@ -304,6 +284,26 @@ The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`]
     </tr>
   </tbody>
 </table>
+```
+
+```html
+<svg role="img" aria-label="Flag">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
+  </filter>
+  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+</svg>
+```
+
+The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+
+```css
+.filter {
+  filter: blur(3.5px);
+}
+.svgFilter {
+  filter: url(#blur);
+}
 ```
 
 {{EmbedLiveSample('blur_example','100%','280')}}
