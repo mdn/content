@@ -1,5 +1,5 @@
 ---
-title: '<col>: The Table Column element'
+title: "<col>: The Table Column element"
 slug: Web/HTML/Element/col
 page-type: html-element
 browser-compat: html.elements.col

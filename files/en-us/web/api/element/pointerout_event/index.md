@@ -2,8 +2,8 @@
 title: "Element: pointerout event"
 short-title: pointerout
 slug: Web/API/Element/pointerout_event
-browser-compat: api.Element.pointerout_event
 page-type: web-api-event
+browser-compat: api.Element.pointerout_event
 ---
 
 {{APIRef}}

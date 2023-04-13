@@ -4,8 +4,7 @@ slug: Web/API/WebTransport_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat:
-  - api.WebTransport
+browser-compat: api.WebTransport
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}

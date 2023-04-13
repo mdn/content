@@ -1,5 +1,5 @@
 ---
-title: '<mark>: The Mark Text element'
+title: "<mark>: The Mark Text element"
 slug: Web/HTML/Element/mark
 page-type: html-element
 browser-compat: html.elements.mark

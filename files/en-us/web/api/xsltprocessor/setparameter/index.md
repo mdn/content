@@ -3,7 +3,7 @@ title: "XSLTProcessor: setParameter() method"
 short-title: setParameter()
 slug: Web/API/XSLTProcessor/setParameter
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.setParameter 
+browser-compat: api.XSLTProcessor.setParameter
 ---
 
 {{APIRef("XSLT")}}

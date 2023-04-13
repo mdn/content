@@ -80,7 +80,7 @@ following:
 
 The following session features and reference spaces can be requested, either as `optionalFeatures` or `requiredFeatures`.
 
-- `anchor`
+- `anchors`
   - : Enable use of {{domxref("XRAnchor")}} objects.
 - `bounded-floor`
   - : Similar to the `local` type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.

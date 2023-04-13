@@ -1,5 +1,5 @@
 ---
-title: '<code>: The Inline Code element'
+title: "<code>: The Inline Code element"
 slug: Web/HTML/Element/code
 page-type: html-element
 browser-compat: html.elements.code
