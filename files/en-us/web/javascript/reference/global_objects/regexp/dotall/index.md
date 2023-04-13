@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.dotAll
 
 {{JSRef}}
 
-The **`dotAll`** accessor property indicates whether or not the `s` flag is used with the regular expression.
+The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `s` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
 

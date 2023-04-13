@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: required'
+title: "HTML attribute: required"
 slug: Web/HTML/Attributes/required
 page-type: html-attribute
 browser-compat: html.elements.attributes.required

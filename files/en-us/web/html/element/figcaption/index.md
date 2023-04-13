@@ -1,5 +1,5 @@
 ---
-title: '<figcaption>: The Figure Caption element'
+title: "<figcaption>: The Figure Caption element"
 slug: Web/HTML/Element/figcaption
 page-type: html-element
 browser-compat: html.elements.figcaption

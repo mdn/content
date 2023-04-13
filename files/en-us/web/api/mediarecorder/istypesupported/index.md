@@ -16,7 +16,7 @@ should be able to successfully record.
 ## Syntax
 
 ```js-nolint
-isTypeSupported(mimeType)
+MediaRecorder.isTypeSupported(mimeType)
 ```
 
 ### Parameters

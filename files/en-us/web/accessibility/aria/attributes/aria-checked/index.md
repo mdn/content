@@ -1,6 +1,7 @@
 ---
 title: aria-checked
 slug: Web/Accessibility/ARIA/Attributes/aria-checked
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-checked
   - https://w3c.github.io/aria-practices/#checkbox

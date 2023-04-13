@@ -15,7 +15,7 @@ members are value and the units.
 ## Syntax
 
 ```js-nolint
-parse(cssText)
+CSSNumericValue.parse(cssText)
 ```
 
 ### Parameters

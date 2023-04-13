@@ -1,6 +1,7 @@
 ---
 title: "ARIA: input role"
 slug: Web/Accessibility/ARIA/Roles/input_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#input
 ---
 

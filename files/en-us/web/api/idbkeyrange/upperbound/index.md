@@ -17,8 +17,8 @@ it includes the upper endpoint value and is closed.
 ## Syntax
 
 ```js-nolint
-upperBound(upper)
-upperBound(upper, open)
+IDBKeyRange.upperBound(upper)
+IDBKeyRange.upperBound(upper, open)
 ```
 
 ### Parameters

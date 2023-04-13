@@ -27,7 +27,7 @@ overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
-The `<visual-box>` value, which defaults to `padding-box`, specifies the box edge to use as the overflow clip edge origin. The `<length>` value specified in `overflow-clip-margin` must be nonnegative.
+The `<visual-box>` value, which defaults to `padding-box`, specifies the box edge to use as the overflow clip edge origin. The {{cssxref("&lt;length&gt;")}} value specified in `overflow-clip-margin` must be nonnegative.
 
 > **Note:** If the element does not have `overflow: clip` then this property will be ignored.
 

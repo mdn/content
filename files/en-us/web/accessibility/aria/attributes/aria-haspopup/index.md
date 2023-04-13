@@ -1,6 +1,7 @@
 ---
 title: aria-haspopup
 slug: Web/Accessibility/ARIA/Attributes/aria-haspopup
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
 

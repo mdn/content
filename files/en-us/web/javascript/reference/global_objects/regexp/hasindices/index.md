@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.hasIndices
 
 {{JSRef}}
 
-The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.
+The **`hasIndices`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `d` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 

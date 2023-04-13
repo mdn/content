@@ -1,6 +1,7 @@
 ---
 title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 

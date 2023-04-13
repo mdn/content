@@ -19,7 +19,7 @@ calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 ## Syntax
 
 ```js-nolint
-getCapabilities(kind) //static function
+RTCRtpSender.getCapabilities(kind)
 ```
 
 ### Parameters

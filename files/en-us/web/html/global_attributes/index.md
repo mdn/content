@@ -94,7 +94,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
-  - : Specifies that the element should be treated like a popover. An element with the `popover` attribute is hidden from the page unless it is opened by interacting with an invoking element that has [`popovertarget`](/en-US/docs/Web/HTML/button#popovertarget), or via [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover/).
+  - : Specifies that the element should be treated like a popover. An element with the `popover` attribute is hidden from the page unless it is opened by interacting with an invoking element that has [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget), or via [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover/).
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
