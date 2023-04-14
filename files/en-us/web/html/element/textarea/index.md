@@ -164,7 +164,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 #### Result
 
-{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
+{{ EmbedLiveSample('Example using "placeholder"','600','100') }}
 
 > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
