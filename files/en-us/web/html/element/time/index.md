@@ -85,7 +85,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('Simple_example', 250, 80)}}
 
@@ -99,7 +99,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 </p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 
