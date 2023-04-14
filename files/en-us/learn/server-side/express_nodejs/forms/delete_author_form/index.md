@@ -22,7 +22,7 @@ exports.author_delete_get = asyncHandler(async (req, res, next) => {
     Book.find({ author: req.params.id }, "title summary").exec(),
   ]);
 
-  if (author == null) {
+  if (author === null) {
     // No results.
     res.redirect("/catalog/authors");
   }
@@ -43,7 +43,7 @@ When both operations have completed it renders the **author_delete.pug** view, p
 > In this case there is nothing to delete, so we immediately redirect to the list of all authors.
 >
 > ```js
->  if (author == null) {
+>  if (author === null) {
 >    // No results.
 >    res.redirect("/catalog/authors");
 >  }

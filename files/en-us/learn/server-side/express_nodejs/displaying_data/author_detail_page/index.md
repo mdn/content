@@ -26,7 +26,7 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
     Book.find({ author: req.params.id }, "title summary").exec(),
   ]);
 
-  if (author == null) {
+  if (author === null) {
     // No results.
     const err = new Error("Author not found");
     err.status = 404;
