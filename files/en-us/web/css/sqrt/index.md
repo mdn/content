@@ -2,8 +2,6 @@
 title: sqrt()
 slug: Web/CSS/sqrt
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.sqrt
 ---
 

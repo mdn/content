@@ -2,8 +2,6 @@
 title: exp()
 slug: Web/CSS/exp
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.exp
 ---
 

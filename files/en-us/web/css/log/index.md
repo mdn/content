@@ -2,8 +2,6 @@
 title: log()
 slug: Web/CSS/log
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.log
 ---
 

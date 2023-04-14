@@ -2,8 +2,6 @@
 title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.hypot
 ---
 

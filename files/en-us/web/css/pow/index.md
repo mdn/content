@@ -2,8 +2,6 @@
 title: pow()
 slug: Web/CSS/pow
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.pow
 ---
 
