@@ -33,7 +33,7 @@ information about the battery's state.
 
 ### Exceptions
 
-This method doesn't throw true exceptions; instead, it rejects the returned promise, passing into it a {{domxref("DOMException")}} whose `name` is one of the following:
+The promise will be rejected when one of the following exceptions is encountered:
 
 - `NotAllowedError` {{domxref("DOMException")}}
 
