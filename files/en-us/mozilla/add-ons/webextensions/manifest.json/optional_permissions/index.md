@@ -95,7 +95,6 @@ Of this set, the following permissions are granted silently, without a user prom
 
 - `activeTab`
 - `cookies`
-- `declarativeNetRequestWithHostAccess`
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
