@@ -16,9 +16,9 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 
 > **Note:** Content scripts are only executed if the extension is granted [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
 >
-> [Restricted domains](#restricted_domains) can never be accessed, regardless of the granted permissions.
+> However, [restricted domains](#restricted_domains) can never be accessed, regardless of the granted permissions.
 >
-> Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or opt out of host permissions after the installation of the extension.
+> Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
 
 ## Loading content scripts
 
@@ -42,7 +42,7 @@ Using method (3), you can also load scripts into pages packaged with your extens
 
 ## Restricted domains
 
-Even with the right [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), some domains cannot be accessed by extensions. Content scripts are blocked from executing on these domains, for example to protect the user from an extension escalating privileges through special pages.
+Even with the right [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), extensions cannot access some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
 In Firefox, this includes the following domains:
 
@@ -59,9 +59,9 @@ In Firefox, this includes the following domains:
 - support.mozilla.org
 - sync.services.mozilla.com
 
-Other browsers have similar restrictions for the website from where extensions can be installed. For example, access to chrome.google.com is restricted in Chrome.
+Other browsers have similar restrictions over the websites extensions can be installed from. For example, access to chrome.google.com is restricted in Chrome.
 
-Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
+> **Note:** Because these restrictions include addons.mozilla.org, users who try to use your extension immediately after installation may find that it doesn't work. To avoid this, you should add an appropriate warning or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
 The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
 
