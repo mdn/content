@@ -1,6 +1,7 @@
 ---
 title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
 

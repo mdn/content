@@ -1,6 +1,7 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
+page-type: http-header
 status:
   - deprecated
   - non-standard

@@ -3,7 +3,8 @@ title: "ViewTransition: updateCallbackDone property"
 short-title: updateCallbackDone
 slug: Web/API/ViewTransition/updateCallbackDone
 page-type: web-api-instance-property
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition.updateCallbackDone
 ---
 

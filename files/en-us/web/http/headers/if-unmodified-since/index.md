@@ -1,6 +1,7 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
+page-type: http-header
 browser-compat: http.headers.If-Unmodified-Since
 ---
 

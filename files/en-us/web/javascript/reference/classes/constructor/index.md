@@ -200,6 +200,8 @@ foo.constructor(); // Logs "called"
 console.log(foo); // Foo { a: 1 }
 ```
 
+Async methods, generator methods, accessors, and class fields are forbidden from being called `constructor`. Private names cannot be called `#constructor`. Any member named `constructor` must be a plain method.
+
 ## Examples
 
 ### Using the constructor

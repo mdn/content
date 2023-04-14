@@ -1,5 +1,5 @@
 ---
-title: '<datalist>: The HTML Data List element'
+title: "<datalist>: The HTML Data List element"
 slug: Web/HTML/Element/datalist
 page-type: html-element
 browser-compat: html.elements.datalist

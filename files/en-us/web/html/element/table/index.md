@@ -153,6 +153,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </table>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Simple_table', '100%', '100')}}
 
 ### Further simple examples
@@ -260,6 +262,8 @@ td {
   border: 1px solid black;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
 
@@ -619,7 +623,7 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
-#### Example
+#### Examples
 
 ```html
 <table>
@@ -648,6 +652,10 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
   </tbody>
 </table>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Examples')}}
 
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 

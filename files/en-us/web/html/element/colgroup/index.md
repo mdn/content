@@ -1,5 +1,5 @@
 ---
-title: '<colgroup>: The Table Column Group element'
+title: "<colgroup>: The Table Column Group element"
 slug: Web/HTML/Element/colgroup
 page-type: html-element
 browser-compat: html.elements.colgroup

@@ -1,6 +1,6 @@
 ---
 title: "CSSTranslate: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/CSSTranslate/y
 page-type: web-api-instance-property
 browser-compat: api.CSSTranslate.y

@@ -1,6 +1,7 @@
 ---
 title: Web Components
-slug: Web/Web_Components
+slug: Web/API/Web_components
+page-type: web-api-overview
 browser-compat:
   - html.elements.template
   - api.ShadowRoot
@@ -28,13 +29,13 @@ The basic approach for implementing a web component generally looks something li
 4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
 5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
 
-## Tutorials
+## Guides
 
-- [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements)
+- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
   - : A guide showing how to use the features of custom elements to create simple web components, as well as looking into lifecycle callbacks and some other more advanced features.
-- [Using shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
   - : A guide that looks at shadow DOM fundamentals, showing how to attach a shadow DOM to an element, add to the shadow DOM tree, style it, and more.
-- [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
   - : A guide showing how to define a reusable HTML structure using {{htmlelement("template")}} and {{htmlelement("slot")}} elements, and then use that structure inside your web components.
 
 ## Reference
@@ -45,7 +46,7 @@ The basic approach for implementing a web component generally looks something li
   - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.
 - {{domxref("Window.customElements")}}
   - : Returns a reference to the `CustomElementRegistry` object.
-- [Life cycle callbacks](/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks)
+- [Life cycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : Special callback functions defined inside the custom element's class definition, which affect its behavior:
 
@@ -66,15 +67,15 @@ The basic approach for implementing a web component generally looks something li
   - : Pseudo-classes relating specifically to custom elements:
 
     - {{cssxref(":defined")}}: Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`.
-    - {{cssxref(":host")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside.
-    - {{cssxref(":host", ":host()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
-    - {{cssxref(":host-context", ":host-context()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+    - {{cssxref(":host")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside.
+    - {{cssxref(":host", ":host()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
+    - {{cssxref(":host-context", ":host-context()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
 
 - CSS pseudo-elements
 
   - : Pseudo-elements relating specifically to custom elements:
 
-    - {{cssxref("::part")}}: Represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+    - {{cssxref("::part")}}: Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 ### Shadow DOM
 

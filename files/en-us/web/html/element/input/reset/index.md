@@ -153,7 +153,6 @@ We've included simple examples above. There isn't really anything more to say ab
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
 - [HTML forms](/en-US/docs/Learn/Forms)
 - The {{HTMLElement("button")}} element
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

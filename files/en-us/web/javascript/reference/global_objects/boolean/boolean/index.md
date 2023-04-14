@@ -46,11 +46,11 @@ The value passed as the first parameter is [converted to a boolean value](/en-US
 ```js
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
-const bEmptyString = new Boolean('');
+const bEmptyString = new Boolean("");
 const bfalse = new Boolean(false);
 
-typeof bfalse // "object"
-Boolean(bfalse) // true
+typeof bfalse; // "object"
+Boolean(bfalse); // true
 ```
 
 Note how converting a `Boolean` object to a primitive with `Boolean()` always yields `true`, even if the object holds a value of `false`. You are therefore always advised to avoid constructing `Boolean` wrapper objects.
@@ -60,16 +60,16 @@ If you need to take the primitive value out from the wrapper object, instead of 
 ```js
 const bfalse = new Boolean(false);
 
-bfalse.valueOf() // false
+bfalse.valueOf(); // false
 ```
 
 ### Creating `Boolean` objects with an initial value of `true`
 
 ```js
 const btrue = new Boolean(true);
-const btrueString = new Boolean('true');
-const bfalseString = new Boolean('false');
-const bSuLin = new Boolean('Su Lin');
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
 const bArrayProto = new Boolean([]);
 const bObjProto = new Boolean({});
 ```

@@ -1,6 +1,7 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
+page-type: http-status-code
 browser-compat: http.status.100
 ---
 

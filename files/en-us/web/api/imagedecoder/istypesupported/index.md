@@ -12,6 +12,12 @@ browser-compat: api.ImageDecoder.isTypeSupported
 
 The **`ImageDecoder.isTypeSupported()`** static method checks if a given [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can be decoded by the user agent.
 
+## Syntax
+
+```js-nolint
+ImageDecoder.isTypeSupported(type)
+```
+
 ### Parameters
 
 - `type`

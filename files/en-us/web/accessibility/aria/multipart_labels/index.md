@@ -1,6 +1,7 @@
 ---
 title: "Multipart labels: Using ARIA for labels with embedded fields inside them"
-slug: Web/Accessibility/ARIA/forms/Multipart_labels
+slug: Web/Accessibility/ARIA/Multipart_labels
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -10,13 +11,6 @@ slug: Web/Accessibility/ARIA/forms/Multipart_labels
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li class="toggle">
-      <details open><summary>Forms</summary>
-        <ol>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels">Multipart labels</a></li>
-        </ol>
-      </details>
-    </li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>

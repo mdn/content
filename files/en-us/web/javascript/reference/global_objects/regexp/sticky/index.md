@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.sticky
 
 {{JSRef}}
 
-The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
+The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `y` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
 

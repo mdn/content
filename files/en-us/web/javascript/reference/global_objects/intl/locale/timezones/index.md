@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.timeZones
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.timeZones`** accessor property returns a list of supported time zones for the `Locale`.
+The **`timeZones`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of supported time zones for this locale.
 
 ## Description
 

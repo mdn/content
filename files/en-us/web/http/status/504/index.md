@@ -1,6 +1,7 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
+page-type: http-status-code
 browser-compat: http.status.504
 ---
 

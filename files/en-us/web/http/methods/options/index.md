@@ -1,6 +1,7 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
+page-type: http-method
 browser-compat: http.methods.OPTIONS
 ---
 

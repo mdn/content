@@ -1,6 +1,7 @@
 ---
 title: "ARIA: table role"
 slug: Web/Accessibility/ARIA/Roles/table_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#table
   - https://w3c.github.io/aria-practices/#table

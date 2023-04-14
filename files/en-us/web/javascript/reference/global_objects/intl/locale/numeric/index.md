@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.numeric
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.numeric`** property is an accessor property that returns whether the locale has special collation handling for numeric characters.
+The **`numeric`** accessor property of {{jsxref("Intl.Locale")}} instances returns whether this locale has special collation handling for numeric characters.
 
 ## Description
 

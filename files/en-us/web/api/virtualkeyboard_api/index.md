@@ -4,8 +4,7 @@ slug: Web/API/VirtualKeyboard_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat:
-  - api.VirtualKeyboard
+browser-compat: api.VirtualKeyboard
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}

@@ -15,7 +15,7 @@ The **`isConfigSupported()`** static method of the {{domxref("AudioDecoder")}} i
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+AudioDecoder.isConfigSupported(config)
 ```
 
 ### Parameters

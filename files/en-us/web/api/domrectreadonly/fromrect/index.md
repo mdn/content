@@ -15,8 +15,8 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js-nolint
-fromRect()
-fromRect(rectangle)
+DOMRectReadOnly.fromRect()
+DOMRectReadOnly.fromRect(rectangle)
 ```
 
 ### Parameters

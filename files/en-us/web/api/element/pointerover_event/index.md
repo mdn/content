@@ -2,8 +2,8 @@
 title: "Element: pointerover event"
 short-title: pointerover
 slug: Web/API/Element/pointerover_event
-browser-compat: api.Element.pointerover_event
 page-type: web-api-event
+browser-compat: api.Element.pointerover_event
 ---
 
 {{APIRef}}

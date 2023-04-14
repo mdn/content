@@ -14,8 +14,8 @@ indicating if the browser supports a given CSS feature, or not.
 ## Syntax
 
 ```js-nolint
-supports(propertyName, value)
-supports(supportCondition)
+CSS.supports(propertyName, value)
+CSS.supports(supportCondition)
 ```
 
 ### Parameters

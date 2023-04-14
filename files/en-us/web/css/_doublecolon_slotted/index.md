@@ -7,9 +7,9 @@ browser-compat: css.selectors.slotted
 
 {{CSSRef}}
 
-The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
+The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
-This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). Note also that this selector won't select a text node placed into a slot; it only targets actual elements.
+This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Note also that this selector won't select a text node placed into a slot; it only targets actual elements.
 
 ```css
 /* Selects any element placed inside a slot */
@@ -102,4 +102,4 @@ The element looks like this when inserted into the page:
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

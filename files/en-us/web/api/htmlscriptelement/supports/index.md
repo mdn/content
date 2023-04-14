@@ -15,7 +15,7 @@ The method is expected to return `true` for classic and module scripts, which ar
 ## Syntax
 
 ```js-nolint
-supports(type)
+HTMLScriptElement.supports(type)
 ```
 
 ### Parameters

@@ -109,7 +109,7 @@ In this section, we review some tools to convert MathML from a [lightweight mark
 
 With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
+A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
 <!DOCTYPE html>

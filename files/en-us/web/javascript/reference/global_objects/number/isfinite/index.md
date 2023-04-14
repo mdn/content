@@ -44,7 +44,7 @@ Number.isFinite(2e64); // true
 In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't first convert the parameter to a number. This means only values of the type number _and_ are finite return `true`, and non-numbers always return `false`.
 
 ```js
-isFinite('0'); // true; coerced to number 0
+isFinite("0"); // true; coerced to number 0
 Number.isFinite("0"); // false
 isFinite(null); // true; coerced to number 0
 Number.isFinite(null); // false

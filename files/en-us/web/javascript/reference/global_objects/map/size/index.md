@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Map.size
 
 {{JSRef}}
 
-The **`size`** accessor property returns the number of elements in a
-{{jsxref("Map")}} object.
+The **`size`** accessor property of {{jsxref("Map")}} instances returns the number of elements in this map.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
@@ -24,9 +23,9 @@ property.
 
 ```js
 const myMap = new Map();
-myMap.set('a', 'alpha');
-myMap.set('b', 'beta');
-myMap.set('g', 'gamma');
+myMap.set("a", "alpha");
+myMap.set("b", "beta");
+myMap.set("g", "gamma");
 
 console.log(myMap.size); // 3
 ```
