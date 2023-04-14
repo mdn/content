@@ -179,7 +179,6 @@ router.get("/about", (req, res, next) => {
       if (err) {
         return next(err);
       }
-      
       //Successful, so render
       res.render("about_view", { title: "About", list: queryResults });
     });
