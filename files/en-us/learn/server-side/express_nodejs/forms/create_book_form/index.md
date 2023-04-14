@@ -108,9 +108,7 @@ exports.book_create_post = [
     } else {
       // Data from form is valid. Save book.
       await book.save();
-      book.save(function (err) {
-        res.redirect(book.url);
-      });
+      res.redirect(book.url);
     }
   }),
 ];
