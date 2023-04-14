@@ -27,13 +27,10 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
   }
 
   // Mark our selected genres as checked.
-  for (let all_g_iter = 0; all_g_iter < allGenres.length; all_g_iter++) {
-    for (let book_g_iter = 0; book_g_iter < book.genre.length; book_g_iter++) {
-      if (
-        allGenres[all_g_iter]._id.toString() ===
-        book.genre[book_g_iter]._id.toString()
-      ) {
-        allGenres[all_g_iter].checked = "true";
+  for (const genre of allGenres) {
+    for (const book_g of book.genre) {
+      if (genre._id.toString() === book_g._id.toString()) {
+        genre.checked = "true";
       }
     }
   }
