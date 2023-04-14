@@ -7,12 +7,7 @@ browser-compat: javascript.classes.static_initialization_blocks
 
 {{jsSidebar("Classes")}}
 
-**Static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
-
-Static blocks allow statements to be evaluated during initialization, which allows initializations that (for example) include `try...catch` or set multiple fields from a single value.
-
-Initialization is performed in the context of the current class declaration, with privileged access to private state.
-This means that static blocks can also be used to share information between classes with private instance fields and other classes or functions declared in the same scope (analogous to "friend" classes in C++).
+**Static initialization blocks** are declared within a {{jsxref("Statements/class", "class")}}. It contains statements to be evaluated during class initialization. This permits more flexible initialization logic than {{jsxref("Classes/static", "static")}} properties, such as using `try...catch` or setting multiple fields from a single value. Initialization is performed in the context of the current class declaration, with access to private state, which allows the class to share information of its private properties with other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
 {{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
 
@@ -28,12 +23,25 @@ class ClassWithSIB {
 
 ## Description
 
+Without static initialization blocks, complex static initialization might be achieved by calling a static method after the class declaration:
+
+```js
+class MyClass {
+  static init() {
+    // Access to private static fields is allowed here
+  }
+}
+
+MyClass.init();
+```
+
+However, this approach exposes an implementation detail (the `init()` method) to the user of the class. On the other hand, any initialization logic declared outside the class does not have access to private static fields. Static initialization blocks allow arbitrary initialization logic to be declared within the class and executed during class evaluation.
+
 A {{jsxref("Statements/class", "class")}} can have any number of `static {}` initialization blocks in its class body.
 These are evaluated, along with any interleaved static field initializers, in the order they are declared.
 Any static initialization of a super class is performed first, before that of its sub classes.
 
-The scope of the variables declared inside the static block is local to the block.
-Since `var`, `function`, `const` or `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
+The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations in the block are not hoisted.
 
 ```js
 var y = "Outer y";
@@ -50,10 +58,10 @@ console.log(y); // 'Outer y'
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
-`super.property` can be used to access static properties of a super class.
-Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to attempt to access arguments of the class constructor function.
+`super.property` can be used to access static properties of the super class.
+Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to use the {{jsxref("Functions/arguments", "arguments")}} object.
 
-The scope of the static block is nested _within_ the lexical scope of the class body, and can access the private instance fields of the class.
+The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) declared within the class without causing a syntax error.
 
 A static initialization block may not have decorators (the class itself may).
 
@@ -98,7 +106,7 @@ class A {
 // 'static field'
 ```
 
-The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference static properties of a super class.
+The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) syntax can be used inside a `static` block to reference static properties of a super class.
 
 ```js
 class A {
@@ -132,12 +140,6 @@ class D {
 
 console.log(getDPrivateField(new D("private"))); // 'private'
 ```
-
-### Workarounds
-
-Prior to ES13 more complex static initialization might be achieved by using a static method that is called after the other properties to perform static initialization, or having a method that is external to the class that performs initialization tasks.
-
-In both cases the approach is less elegant, and does not grant access to private properties in the class.
 
 ## Specifications
 
