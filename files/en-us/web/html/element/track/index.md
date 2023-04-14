@@ -144,10 +144,6 @@ textTrackElem.addEventListener("cuechange", (event) => {
 </video>
 ```
 
-### Result
-
-{{EmbedLiveSample('Examples')}}
-
 ## Specifications
 
 {{Specifications}}
