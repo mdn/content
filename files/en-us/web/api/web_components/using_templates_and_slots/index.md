@@ -1,6 +1,7 @@
 ---
 title: Using templates and slots
-slug: Web/Web_Components/Using_templates_and_slots
+slug: Web/API/Web_components/Using_templates_and_slots
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -177,8 +178,12 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
   <details>
     <summary>
       <span>
-        <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-        <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
+        <code class="name"
+          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+        >
+        <span class="desc"
+          ><slot name="description">NEED DESCRIPTION</slot></span
+        >
       </span>
     </summary>
     <div class="attributes">
@@ -229,10 +234,10 @@ Now let's take that **`<element-details>`** element and actually use it in our d
 ```html
 <element-details>
   <span slot="element-name">slot</span>
-  <span slot="description">A placeholder inside a web
-    component that users can fill with their own markup,
-    with the effect of composing different DOM trees
-    together.</span>
+  <span slot="description"
+    >A placeholder inside a web component that users can fill with their own
+    markup, with the effect of composing different DOM trees together.</span
+  >
   <dl slot="attributes">
     <dt>name</dt>
     <dd>The name of the slot.</dd>
@@ -241,10 +246,11 @@ Now let's take that **`<element-details>`** element and actually use it in our d
 
 <element-details>
   <span slot="element-name">template</span>
-  <span slot="description">A mechanism for holding client-
-    side content that is not to be rendered when a page is
-    loaded but may subsequently be instantiated during
-    runtime using JavaScript.</span>
+  <span slot="description"
+    >A mechanism for holding client- side content that is not to be rendered
+    when a page is loaded but may subsequently be instantiated during runtime
+    using JavaScript.</span
+  >
 </element-details>
 ```
 
