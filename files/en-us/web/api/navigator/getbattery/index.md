@@ -28,8 +28,7 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} which, when resolved, calls its fulfillment handler with a
-single parameter: a {{DOMxRef("BatteryManager")}} object which you can use to get
+A {{JSxRef("Promise")}} that fulfills with a {{DOMxRef("BatteryManager")}} object which you can use to get
 information about the battery's state.
 
 ### Exceptions
