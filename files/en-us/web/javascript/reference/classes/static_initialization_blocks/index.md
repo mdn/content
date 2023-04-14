@@ -38,7 +38,7 @@ MyClass.init();
 However, this approach exposes an implementation detail (the `init()` method) to the user of the class. On the other hand, any initialization logic declared outside the class does not have access to private static fields. Static initialization blocks allow arbitrary initialization logic to be declared within the class and executed during class evaluation.
 
 A {{jsxref("Statements/class", "class")}} can have any number of `static {}` initialization blocks in its class body.
-These are evaluated, along with any interleaved static field initializers, in the order they are declared.
+These are [evaluated](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order), along with any interleaved static field initializers, in the order they are declared.
 Any static initialization of a super class is performed first, before that of its sub classes.
 
 The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations in the block are not hoisted.
@@ -60,6 +60,8 @@ console.log(y); // 'Outer y'
 The `this` inside a static block refers to the constructor object of the class.
 `super.property` can be used to access static properties of the super class.
 Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to use the {{jsxref("Functions/arguments", "arguments")}} object.
+
+The statements are evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in this block. (Think of the initialization statements as being implicitly wrapped in a function.)
 
 The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) declared within the class without causing a syntax error.
 
