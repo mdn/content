@@ -216,7 +216,7 @@ h1 {
 
 {{EmbedLiveSample('Applying_a_filter_to_an_element','100%','280')}}
 
-The same filters are applied to both lines of text but in a different order. In the first line, the hue of the text is altered before the shadow is applied; so the shadow is `magenta`. In the second line, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow are altered.
+The same filters are applied to both the lines of text but in a different order. In the first line, the hue of the text is altered before the shadow is applied, so the shadow is `magenta`. In the second line, the drop shadow is added to the dark blue text, and then the hue of both the text and the shadow are altered.
 
 No filter effect is applied to the third line to show the original effect as a comparison. So the third line stays as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changes the text in the first two lines to `#252500`.
 
