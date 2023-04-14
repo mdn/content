@@ -23,7 +23,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener("contentvisibilityautostatechange", (event) => {});
-contentvisibilityautostatechange = (event) => {};
+oncontentvisibilityautostatechange = (event) => {};
 ```
 
 > **Note:** The event object is of type {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
