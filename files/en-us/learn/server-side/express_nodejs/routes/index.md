@@ -174,11 +174,12 @@ If `err` is returned, `next` is called with `err` as the value in its first para
 On success the desired data is returned and then used in the response.
 
 ```js
-router.get("/about", function (req, res, next) {
-  About.find({}).exec(function (err, queryResults) {
+router.get("/about", (req, res, next) => {
+  About.find({}).exec((err, queryResults) => {
       if (err) {
         return next(err);
       }
+      
       //Successful, so render
       res.render("about_view", { title: "About", list: queryResults });
     });
