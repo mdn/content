@@ -30,18 +30,18 @@ The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/
 
 The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
-| Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value   | Default value (no effect)                   |
-| ----------------------------------------------------------- | ------------------------------------------------------------------- | ----------- | ---------- | -------------------- | ------------------------------------- |
-| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                       | `0`         |            | `0`                  | `blur(0)`                             |
-| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         |            | `1`                  | `brightness(1)` or `brightness(100%)` |
-| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                       | `0`         |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                          |             |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
-| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
-| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                        |             |            | `0`                  | `hue-rotate(0deg)`                    |
-| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
-| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`         | `100%`     | `1`                  | `saturate(100%)`                      |
-| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`         | `100%`     | `0`                  | `sepia(0%)`                           |
+| Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value  | Default value (no effect)             |
+| ----------------------------------------------------------- | ------------------------------------------------------------------- | --------- | ---------- | -------------------- | ------------------------------------- |
+| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `0`                  | `blur(0)`                             |
+| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
+| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                          |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
+| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
+| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                        |           |            | `0`                  | `hue-rotate(0deg)`                    |
+| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
+| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `saturate(100%)`                      |
+| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `sepia(0%)`                           |
 
 The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the offending filter function in the comma-separated list.
 
@@ -169,17 +169,19 @@ img {
 
 ```css nolint
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) 
-     drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
-     drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) 
-     drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
+  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
+      -2px -2px 0 hsl(210deg 100% 50%)
+    )
+    drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) drop-shadow(
+      -2px -2px 0 hsl(30deg 100% 50%)
+    );
 }
 img + img {
   filter: none;
 }
 ```
 
-In the first Manadala example, four drop shadows are applied to a line-drawn SVG. The same SVG, with the filter removed with `filter: none`, is included for comparison.
+In the first Mandala example, four drop shadows are applied to a line-drawn SVG. The same SVG, with the filter removed with `filter: none`, is included for comparison.
 
 {{EmbedLiveSample("Applying_repeated_filters", 600, 400)}}
 
@@ -274,12 +276,10 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
         <img class="filter" src="flag.jpg" alt="Pride flag" />
       </td>
       <td>
-       <img src="flag.jpg" alt="Pride flag" class="svgFilter"
- />
+        <img src="flag.jpg" alt="Pride flag" class="svgFilter" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag"
- />
+        <img src="flag.jpg" alt="Pride flag" />
       </td>
     </tr>
   </tbody>
@@ -295,7 +295,7 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
 </svg>
 ```
 
-The SVG `ulr()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
 
 ```css
 .filter {
