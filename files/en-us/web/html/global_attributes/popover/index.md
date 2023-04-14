@@ -15,7 +15,7 @@ The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is 
 
 - The {{cssxref(':popover-open')}} CSS pseudo-selector can be used to style the element when it is open.
 
-- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style the backdrop that is displayed behind the element. For example, to dim unreachable content behind the modal dialog.
+- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style the backdrop that is displayed behind the element; for example, to dim unreachable content behind the modal dialog.
 
 - {{HTMLElement('button')}} elements can open a popover by adding the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, with a value matching the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element with the `popover` attribute.
 

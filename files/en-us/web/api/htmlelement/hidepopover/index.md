@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.hidePopover
 
 The **`HTMLElement.hidePopover()`** method opens an element that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
 
-When `hidePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute that is currently open, then a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} non-cancellable event will be fired, followed by the popover closing, and a {{domxref("HTMLElement/toggle_event", "toggle")}} event will be fired. If the element is already closed, then nothing will happen.
+When `hidePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute that is currently open, then a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} non-cancelable event will be fired, followed by the popover closing, and a {{domxref("HTMLElement/toggle_event", "toggle")}} event will be fired. If the element is already closed, then nothing will happen.
 
 ## Syntax
 

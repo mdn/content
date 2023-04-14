@@ -7,7 +7,7 @@ browser-compat: api.ToggleEvent
 
 {{APIRef("UI Events")}}
 
-The **`ToggleEvent`** interface represents an event notifying the user of an element which is toggle state between `'open'` and `'closed'`.
+The **`ToggleEvent`** interface represents an event notifying the user of an element whose state toggles between being open or closed.
 
 {{InheritanceDiagram}}
 
@@ -21,9 +21,9 @@ The **`ToggleEvent`** interface represents an event notifying the user of an ele
 _This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
 
 - {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
-  - : Returns a string of either `'open'` or `'closed'`, depending on which state the element is transitioning from.
+  - : Returns either `open` or `closed`, depending on which state the element is transitioning from.
 - {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
-  - : Returns a string of either `'open'` or `'closed'`, depending on which state the element is transitioning to.
+  - : Returns either `open` or `closed`, depending on which state the element is transitioning to.
 
 ## Specifications
 
