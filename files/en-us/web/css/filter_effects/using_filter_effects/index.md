@@ -47,7 +47,7 @@ The minimum value allowed is included for filter functions that have a minimum v
 
 The maximum effect value can be exceeded. Including a value greater than the listed maximum value is valid, but it does not increase the effect over the listed maximum value. In other words, the effect on the element will look the same as when the maximum effect value is set. For example, setting `sepia(400%)` in the [sepia example](#applying_sepia_filter_effect) will produce the same effect as `sepia(100%)`, the maximum value.
 
-The default value is a value that creates no effect. While these values create no effect, they are the initial interpolation value and offer an example of how the value can be set. These default values provide a gauge between the minimum value allowed and the maximum effect value.
+The default value is a value that creates no effect. While these values create no effect, they provide the initial interpolation values and offer an example of how the value can be set. These default values provide a gauge between the minimum value allowed and the maximum effect value.
 
 ## Applying filter effects
 
