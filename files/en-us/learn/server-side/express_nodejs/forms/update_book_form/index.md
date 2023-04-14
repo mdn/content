@@ -11,58 +11,45 @@ Open **/controllers/bookController.js**. Find the exported `book_update_get()` c
 
 ```js
 // Display book update form on GET.
-exports.book_update_get = (req, res, next) => {
+exports.book_update_get = asyncHandler(async (req, res, next) => {
   // Get book, authors and genres for form.
-  async.parallel(
-    {
-      book(callback) {
-        Book.findById(req.params.id)
-          .populate("author")
-          .populate("genre")
-          .exec(callback);
-      },
-      authors(callback) {
-        Author.find(callback);
-      },
-      genres(callback) {
-        Genre.find(callback);
-      },
-    },
-    (err, results) => {
-      if (err) {
-        return next(err);
+  const [book, allAuthors, allGenres] = await Promise.all([
+    Book.findById(req.params.id).populate("author").populate("genre").exec(),
+    Author.find().exec(),
+    Genre.find().exec(),
+  ]);
+
+  if (book === null) {
+    // No results.
+    const err = new Error("Book not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  // Mark our selected genres as checked.
+  for (const genre of allGenres) {
+    for (const book_g of book.genre) {
+      if (genre._id.toString() === book_g._id.toString()) {
+        genre.checked = "true";
       }
-      if (results.book == null) {
-        // No results.
-        const err = new Error("Book not found");
-        err.status = 404;
-        return next(err);
-      }
-      // Success.
-      // Mark our selected genres as checked.
-      for (const genre of results.genres) {
-        for (const bookGenre of results.book.genre) {
-          if (genre._id.toString() === bookGenre._id.toString()) {
-            genre.checked = "true";
-          }
-        }
-      }
-      res.render("book_form", {
-        title: "Update Book",
-        authors: results.authors,
-        genres: results.genres,
-        book: results.book,
-      });
     }
-  );
-};
+  }
+
+  res.render("book_form", {
+    title: "Update Book",
+    authors: allAuthors,
+    genres: allGenres,
+    book: book,
+  });
+});
 ```
 
-The controller gets the id of the `Book` to be updated from the URL parameter (`req.params.id`). It uses the `async.parallel()` method to get the specified `Book` record (populating its genre and author fields) and lists of all the `Author` and `Genre` objects.
+The controller gets the id of the `Book` to be updated from the URL parameter (`req.params.id`).
+It `awaits` on the promise returned by `Promise.all()` to get the specified `Book` record (populating its genre and author fields) and all the `Author` and `Genre` records.
 
-When the operations complete it checks for any errors in the find operation, and also whether any books were found.
+When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`results==null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) to the query.
+> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -73,11 +60,14 @@ Find the exported `book_update_post()` controller method, and replace it with th
 ```js
 // Handle book update on POST.
 exports.book_update_post = [
-  // Convert the genre to an array
+  // Convert the genre to an array.
   (req, res, next) => {
-    if (!Array.isArray(req.body.genre)) {
-      req.body.genre =
-        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
+    if (!(req.body.genre instanceof Array)) {
+      if (typeof req.body.genre === "undefined") {
+        req.body.genre = [];
+      } else {
+        req.body.genre = new Array(req.body.genre);
+      }
     }
     next();
   },
@@ -99,7 +89,7 @@ exports.book_update_post = [
   body("genre.*").escape(),
 
   // Process request after validation and sanitization.
-  (req, res, next) => {
+  asyncHandler(async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -110,63 +100,48 @@ exports.book_update_post = [
       summary: req.body.summary,
       isbn: req.body.isbn,
       genre: typeof req.body.genre === "undefined" ? [] : req.body.genre,
-      _id: req.params.id, //This is required, or a new ID will be assigned!
+      _id: req.params.id, // This is required, or a new ID will be assigned!
     });
 
     if (!errors.isEmpty()) {
       // There are errors. Render form again with sanitized values/error messages.
 
-      // Get all authors and genres for form.
-      async.parallel(
-        {
-          authors(callback) {
-            Author.find(callback);
-          },
-          genres(callback) {
-            Genre.find(callback);
-          },
-        },
-        (err, results) => {
-          if (err) {
-            return next(err);
-          }
+      // Get all authors and genres for form
+      const [allAuthors, allGenres] = await Promise.all([
+        Author.find().exec(),
+        Genre.find().exec(),
+      ]);
 
-          // Mark our selected genres as checked.
-          for (const genre of results.genres) {
-            if (book.genre.includes(genre._id)) {
-              genre.checked = "true";
-            }
-          }
-          res.render("book_form", {
-            title: "Update Book",
-            authors: results.authors,
-            genres: results.genres,
-            book,
-            errors: errors.array(),
-          });
+      // Mark our selected genres as checked.
+      for (const genre of allGenres) {
+        if (book.genre.indexOf(genres._id) > -1) {
+          genre.checked = "true";
         }
-      );
-      return;
-    }
-
-    // Data from form is valid. Update the record.
-    Book.findByIdAndUpdate(req.params.id, book, {}, (err, thebook) => {
-      if (err) {
-        return next(err);
       }
-
-      // Successful: redirect to book detail page.
+      res.render("book_form", {
+        title: "Update Book",
+        authors: allAuthors,
+        genres: allGenres,
+        book: book,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      // Data from form is valid. Update the record.
+      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      // Redirect to book detail page.
       res.redirect(thebook.url);
-    });
-  },
+    }
+  }),
 ];
 ```
 
-This is very similar to the post route used when creating a Book. First we validate and sanitize the book data from the form and use it to create a new `Book` object (setting its `_id` value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call `Book.findByIdAndUpdate()` to update the `Book` document, and then redirect to its detail page.
+This is very similar to the post route used when creating a `Book`.
+First we validate and sanitize the book data from the form and use it to create a new `Book` object (setting its `_id` value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call `Book.findByIdAndUpdate()` to update the `Book` document, and then redirect to its detail page.
 
 ## View
 
-There is no need to change the view for the form (**/views/book_form.pug**) as the same code works for both creating and updating the book.
+There is no need to change the view for the form (**/views/book_form.pug**) as the same template works for both creating and updating the book.
 
 ## Add an update button
 
