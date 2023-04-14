@@ -71,7 +71,7 @@ Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_
 
 #### Web Components
 
-Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) has been modified:
+Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) has been modified:
 
 - When trying to invoke {{domxref('Node.cloneNode()')}} on a {{domxref('ShadowRoot')}}, throws a `DataCloneError` exception ([Firefox bug 1176757](https://bugzil.la/1176757)).
 - When invoking {{domxref('Document.importNode()')}} with a {{domxref('ShadowRoot')}} as an argument, we now throws a `NotSupportedError` {{domxref("DOMException")}} ([Firefox bug 1177914](https://bugzil.la/1177914)).
