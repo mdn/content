@@ -68,7 +68,6 @@ You can include any of the following here, but not in all browsers: check the co
 - `cookies`
 - `debugger`
 - `declarativeNetRequestFeedback`
-- `declarativeNetRequestWithHostAccess`
 - `downloads`
 - `downloads.open`
 - `find`
