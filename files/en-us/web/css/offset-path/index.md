@@ -44,7 +44,7 @@ offset-path: unset;
 ### Values
 
 - {{cssxref("ray","ray()")}}
-  - : Defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle. This value accepts up to three parameters – an angle similar to the CSS gradient angle, where `0deg` is pointing up and positive angles increase in the clockwise direction, a size value similar to the CSS radial gradient size values, and the keyword `contain`.
+  - : Defines a path that is a line segment from the starting position of an element and proceeding in the direction defined by the specified angle. This value accepts up to three parameters – an angle similar to the CSS gradient angle, a size value similar to the CSS radial gradient size values, and the keyword `contain`. The angle `0deg` starts on the y-axis pointing up, and positive angles increase in the clockwise direction. The possible values for size include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. Both the size value and the `contain` keyword are optional. The default size value used is `closest-side`.
 - `url()`
   - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
