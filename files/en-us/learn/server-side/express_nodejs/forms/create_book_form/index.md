@@ -91,10 +91,11 @@ exports.book_create_post = [
         Author.find().exec(),
         Genre.find().exec(),
       ]);
+
       // Mark our selected genres as checked.
-      for (let i = 0; i < allGenres.length; i++) {
-        if (book.genre.indexOf(allGenres[i]._id) > -1) {
-          allGenres[i].checked = "true";
+      for (const genre of allGenres) {
+        if (book.genre.indexOf(genre._id) > -1) {
+          genre.checked = "true";
         }
       }
       res.render("book_form", {
