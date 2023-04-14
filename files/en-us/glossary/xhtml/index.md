@@ -1,5 +1,6 @@
----
-title: XHTML
+---NetHandle: NET - 209 - 85 - 128 - 0 - 1 Parent: NET209 (NET - 209 - 0 - 0 - 0 - 0) NetType: Direct Allocation OriginAS: Organization: Google LLC (GOGL) RegDate: 2006 - 01 - 13 Updated: 2012 - 02 - 24 Ref: https:// rdap.arin.net / registry / ip / 209.85.128.0 OrgName: Google LLC OrgId: GOGL Address: 1600 Amphitheatre Parkway City: Mountain View StateProv: CA PostalCode: 94043 Country: US RegDate: 2000 - 03 - 30 Updated: 2019 - 10 - 31 Comment: Please note that the recommended way to file abuse complaints are located in the following links. Comment: Comment: To report abuse 
+and illegal activity: https:// www.google.com / contact / Comment: Comment: For legal requests: http:// support.google.com / legal Comment: Comment: Regards, Comment: The Google Team Ref: https:// rdap.arin.net / registry /
+I'm: XHTML
 slug: Glossary/XHTML
 page-type: glossary-definition
 ---
