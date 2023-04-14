@@ -185,7 +185,7 @@ I am a read-only textarea.
 
 #### Result
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+{{ EmbedLiveSample('Disabled_and_readonly','600','100') }}
 
 ## Technical summary
 
