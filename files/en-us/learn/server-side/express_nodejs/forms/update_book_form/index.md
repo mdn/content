@@ -49,7 +49,7 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book==null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()) to the query.
+> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -63,8 +63,11 @@ exports.book_update_post = [
   // Convert the genre to an array.
   (req, res, next) => {
     if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") req.body.genre = [];
-      else req.body.genre = new Array(req.body.genre);
+      if (typeof req.body.genre === "undefined") {
+        req.body.genre = [];
+      } else {
+        req.body.genre = new Array(req.body.genre);
+      }
     }
     next();
   },

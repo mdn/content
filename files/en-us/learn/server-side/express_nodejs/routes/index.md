@@ -219,8 +219,8 @@ The same example is now very simple, because we only need to write code for the 
 const asyncHandler = require('express-async-handler')
 
 exports.get("/about", asyncHandler(async (req, res, next) => {
-    const successfulResult = await About.find({}).exec();
-    res.render("about_view", { title: "About", list: successfulResult });
+  const successfulResult = await About.find({}).exec();
+  res.render("about_view", { title: "About", list: successfulResult });
 }));
 ```
 

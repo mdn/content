@@ -44,7 +44,7 @@ block content
 
   ul
     each book in book_list
-      li 
+      li
         a(href=book.url) #{book.title}
         |  (#{book.author.name})
 
