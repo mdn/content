@@ -732,7 +732,7 @@
 /en-US/docs/CSS/image-orientation	/en-US/docs/Web/CSS/image-orientation
 /en-US/docs/CSS/image-rendering	/en-US/docs/Web/CSS/image-rendering
 /en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/inherit
-/en-US/docs/CSS/Inheritance	/en-US/docs/Web/CSS/Inheritance
+/en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/Inheritance
 /en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
 /en-US/docs/CSS/initial	/en-US/docs/Web/CSS/initial
 /en-US/docs/CSS/initial_value	/en-US/docs/Web/CSS/initial_value
