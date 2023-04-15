@@ -227,7 +227,7 @@ However, when the values of custom properties are parsed, the browser doesn't ye
 
 Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense. Properties and custom variables can lead to invalid CSS statements, leading to the new concept of _valid at computed time._
 
-When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/inheritance) value of the property is used.
+When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used.
 
 The next two examples illustrate this.
 
