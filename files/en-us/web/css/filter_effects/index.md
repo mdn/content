@@ -40,7 +40,7 @@ To see the code for this filter effects sample, [view the source on Github](http
 ## Guides
 
 - [Using CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects/Using_filter_effects)
-  - : Overview of the concepts surrounding CSS filter effects, including properties, filter functions, and SVG filters, with an explaination of filter values, source order, and value interactions.
+  - : Overview of the concepts surrounding CSS filter effects, including properties, filter functions, and SVG filters, with an explanation of filter values, source order, and value interactions.
 
 ## Related concepts
 
