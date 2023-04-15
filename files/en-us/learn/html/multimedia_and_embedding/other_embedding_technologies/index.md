@@ -334,7 +334,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br />><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
          <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
