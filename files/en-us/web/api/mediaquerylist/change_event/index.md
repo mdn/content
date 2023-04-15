@@ -1,5 +1,6 @@
 ---
 title: "MediaQueryList: change event"
+short-title: change
 slug: Web/API/MediaQueryList/change_event
 page-type: web-api-event
 browser-compat: api.MediaQueryList.change_event

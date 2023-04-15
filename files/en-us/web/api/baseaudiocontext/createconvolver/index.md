@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createConvolver()
+title: "BaseAudioContext: createConvolver() method"
+short-title: createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createConvolver

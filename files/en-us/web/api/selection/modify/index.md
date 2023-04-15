@@ -1,5 +1,6 @@
 ---
-title: Selection.modify()
+title: "Selection: modify() method"
+short-title: modify()
 slug: Web/API/Selection/modify
 page-type: web-api-instance-method
 browser-compat: api.Selection.modify

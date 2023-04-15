@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.depthFar
+title: "XRRenderState: depthFar property"
+short-title: depthFar
 slug: Web/API/XRRenderState/depthFar
 page-type: web-api-instance-property
 status:

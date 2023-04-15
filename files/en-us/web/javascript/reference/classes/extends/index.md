@@ -74,7 +74,7 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
 
-The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins).
+The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins). The `this` value in the `extends` expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await")}} and {{jsxref("Operators/yield")}} work as expected in this expression.
 
 ```js
 class SomeClass extends class {
@@ -108,6 +108,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
@@ -342,7 +343,7 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Statements/class", "class")}}

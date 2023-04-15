@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.layers
+title: "XRRenderState: layers property"
+short-title: layers
 slug: Web/API/XRRenderState/layers
 page-type: web-api-instance-property
 status:

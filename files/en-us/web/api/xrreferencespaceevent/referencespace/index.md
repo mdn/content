@@ -1,5 +1,6 @@
 ---
-title: XRReferenceSpaceEvent.referenceSpace
+title: "XRReferenceSpaceEvent: referenceSpace property"
+short-title: referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
 page-type: web-api-instance-property
 browser-compat: api.XRReferenceSpaceEvent.referenceSpace

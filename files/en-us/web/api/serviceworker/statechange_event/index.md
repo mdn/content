@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorker: statechange event"
+short-title: statechange
 slug: Web/API/ServiceWorker/statechange_event
 page-type: web-api-event
 browser-compat: api.ServiceWorker.statechange_event

@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.importExternalTexture()
+title: "GPUDevice: importExternalTexture() method"
+short-title: importExternalTexture()
 slug: Web/API/GPUDevice/importExternalTexture
 page-type: web-api-instance-method
 status:

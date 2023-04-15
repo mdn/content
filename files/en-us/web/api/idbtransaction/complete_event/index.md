@@ -1,5 +1,6 @@
 ---
 title: "IDBTransaction: complete event"
+short-title: complete
 slug: Web/API/IDBTransaction/complete_event
 page-type: web-api-event
 browser-compat: api.IDBTransaction.complete_event

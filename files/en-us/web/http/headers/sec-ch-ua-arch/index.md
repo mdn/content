@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Arch
 slug: Web/HTTP/Headers/Sec-CH-UA-Arch
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Arch

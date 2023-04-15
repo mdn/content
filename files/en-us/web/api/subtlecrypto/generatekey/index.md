@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.generateKey()
+title: "SubtleCrypto: generateKey() method"
+short-title: generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.generateKey

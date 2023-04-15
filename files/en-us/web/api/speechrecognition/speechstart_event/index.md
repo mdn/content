@@ -1,5 +1,6 @@
 ---
 title: "SpeechRecognition: speechstart event"
+short-title: speechstart
 slug: Web/API/SpeechRecognition/speechstart_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.speechstart_event

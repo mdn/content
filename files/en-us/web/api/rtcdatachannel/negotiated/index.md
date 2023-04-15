@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.negotiated
+title: "RTCDataChannel: negotiated property"
+short-title: negotiated
 slug: Web/API/RTCDataChannel/negotiated
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.negotiated

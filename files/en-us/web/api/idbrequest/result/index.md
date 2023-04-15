@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.result
+title: "IDBRequest: result property"
+short-title: result
 slug: Web/API/IDBRequest/result
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.result

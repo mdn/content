@@ -1,5 +1,6 @@
 ---
-title: MediaStream.getTrackById()
+title: "MediaStream: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/MediaStream/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.getTrackById

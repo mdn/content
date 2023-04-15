@@ -1,5 +1,6 @@
 ---
-title: MediaKeySystemAccess.getConfiguration()
+title: "MediaKeySystemAccess: getConfiguration() method"
+short-title: getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
 page-type: web-api-instance-method
 browser-compat: api.MediaKeySystemAccess.getConfiguration

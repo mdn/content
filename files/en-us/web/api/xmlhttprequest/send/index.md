@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.send()
+title: "XMLHttpRequest: send() method"
+short-title: send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.send

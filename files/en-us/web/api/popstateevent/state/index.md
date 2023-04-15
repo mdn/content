@@ -1,5 +1,6 @@
 ---
-title: PopStateEvent.state
+title: "PopStateEvent: state property"
+short-title: state
 slug: Web/API/PopStateEvent/state
 page-type: web-api-instance-property
 browser-compat: api.PopStateEvent.state

@@ -1,5 +1,6 @@
 ---
-title: Headers.entries()
+title: "Headers: entries() method"
+short-title: entries()
 slug: Web/API/Headers/entries
 page-type: web-api-instance-method
 browser-compat: api.Headers.entries

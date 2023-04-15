@@ -1,6 +1,7 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
+page-type: http-header
 browser-compat: http.headers.Authorization
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: URL.searchParams
+title: "URL: searchParams property"
+short-title: searchParams
 slug: Web/API/URL/searchParams
 page-type: web-api-instance-property
 browser-compat: api.URL.searchParams

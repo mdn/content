@@ -1,5 +1,5 @@
 ---
-title: '<wbr>: The Line Break Opportunity element'
+title: "<wbr>: The Line Break Opportunity element"
 slug: Web/HTML/Element/wbr
 page-type: html-element
 browser-compat: html.elements.wbr

@@ -1,5 +1,6 @@
 ---
-title: Request.method
+title: "Request: method property"
+short-title: method
 slug: Web/API/Request/method
 page-type: web-api-instance-property
 browser-compat: api.Request.method

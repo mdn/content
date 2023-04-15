@@ -1,5 +1,6 @@
 ---
-title: FederatedCredential.protocol
+title: "FederatedCredential: protocol property"
+short-title: protocol
 slug: Web/API/FederatedCredential/protocol
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: backgroundfetchabort event"
+short-title: backgroundfetchabort
 slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchabort_event
 page-type: web-api-event
 status:

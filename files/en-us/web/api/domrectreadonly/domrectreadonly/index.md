@@ -1,5 +1,6 @@
 ---
-title: DOMRectReadOnly()
+title: "DOMRectReadOnly: DOMRectReadOnly() constructor"
+short-title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 page-type: web-api-constructor
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly

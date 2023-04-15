@@ -1,5 +1,6 @@
 ---
-title: GPUAdapter.limits
+title: "GPUAdapter: limits property"
+short-title: limits
 slug: Web/API/GPUAdapter/limits
 page-type: web-api-instance-property
 status:

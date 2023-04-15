@@ -1,5 +1,6 @@
 ---
-title: CanvasCaptureMediaStreamTrack.canvas
+title: "CanvasCaptureMediaStreamTrack: canvas property"
+short-title: canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
 page-type: web-api-instance-property
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas

@@ -1,5 +1,6 @@
 ---
-title: ExtendableEvent()
+title: "ExtendableEvent: ExtendableEvent() constructor"
+short-title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
 page-type: web-api-constructor
 browser-compat: api.ExtendableEvent.ExtendableEvent

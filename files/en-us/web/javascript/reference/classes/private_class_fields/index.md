@@ -123,8 +123,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass();
-// SubClass {#subPrivateField: 23}
+new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
@@ -278,7 +277,7 @@ class C {
 }
 
 console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
+console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
 ```
 
 #### Private static methods

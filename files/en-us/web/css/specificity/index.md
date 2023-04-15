@@ -52,7 +52,7 @@ All inputs, no matter the type, when receiving focus, match the second selector 
 
 The specificity for a required input nested in an element with attribute `id="myApp"` is `1-2-1`, based on one ID, two pseudo-classes, and one element type.
 
-If the password input type is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right.
+If the password input type with `required` is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, based on one ID, two pseudo-classes, and one element type, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right.
 
 ```css
 [type="password"]             /* 0-1-0 */

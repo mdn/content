@@ -97,8 +97,6 @@ The web is the first and the best choice for HTML games, but if you want to reac
 
 There are various tools to choose from depending on your skills, preferred frameworks or target platforms. It's all about picking the best tool for your particular task.
 
-- [Phonegap](https://phonegap.com/) — based on Cordova, this is the most popular tool for building/packaging JavaScript apps for native platforms.
-- [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML games for multiple native stores. It has its own performance optimizations for games rendered on Canvas and supports many game frameworks.
 - [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it supports only one framework and app store.
 - [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 

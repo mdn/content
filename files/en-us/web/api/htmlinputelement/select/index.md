@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.select()
+title: "HTMLInputElement: select() method"
+short-title: select()
 slug: Web/API/HTMLInputElement/select
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.select

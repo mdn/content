@@ -1,5 +1,6 @@
 ---
-title: Node.removeChild()
+title: "Node: removeChild() method"
+short-title: removeChild()
 slug: Web/API/Node/removeChild
 page-type: web-api-instance-method
 browser-compat: api.Node.removeChild

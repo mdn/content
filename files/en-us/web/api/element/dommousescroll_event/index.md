@@ -1,5 +1,6 @@
 ---
 title: "Element: DOMMouseScroll event"
+short-title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 page-type: web-api-event
 status:

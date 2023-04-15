@@ -1,5 +1,6 @@
 ---
-title: GPUCanvasContext.configure()
+title: "GPUCanvasContext: configure() method"
+short-title: configure()
 slug: Web/API/GPUCanvasContext/configure
 page-type: web-api-instance-method
 status:

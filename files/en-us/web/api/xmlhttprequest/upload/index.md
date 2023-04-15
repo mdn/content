@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.upload
+title: "XMLHttpRequest: upload property"
+short-title: upload
 slug: Web/API/XMLHttpRequest/upload
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.upload

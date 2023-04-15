@@ -1,5 +1,6 @@
 ---
-title: HTMLScriptElement.supports()
+title: "HTMLScriptElement: supports() static method"
+short-title: supports()
 slug: Web/API/HTMLScriptElement/supports
 page-type: web-api-static-method
 browser-compat: api.HTMLScriptElement.supports
@@ -14,7 +15,7 @@ The method is expected to return `true` for classic and module scripts, which ar
 ## Syntax
 
 ```js-nolint
-supports(type)
+HTMLScriptElement.supports(type)
 ```
 
 ### Parameters

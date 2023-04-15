@@ -1,5 +1,6 @@
 ---
-title: Element.toggleAttribute()
+title: "Element: toggleAttribute() method"
+short-title: toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.toggleAttribute

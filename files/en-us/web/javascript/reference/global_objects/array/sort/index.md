@@ -12,6 +12,8 @@ The **`sort()`** method sorts the elements of an array _[in place](https://en.wi
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
 
+To sort the elements in an array without mutating the original array, use {{jsxref("Array/toSorted", "toSorted()")}}.
+
 {{EmbedInteractiveExample("pages/js/array-sort.html")}}
 
 ## Syntax
@@ -232,7 +234,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 1, 4, 1, 5];
@@ -349,6 +351,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
+- {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
 - [V8 sort stability](https://v8.dev/features/stable-sort)

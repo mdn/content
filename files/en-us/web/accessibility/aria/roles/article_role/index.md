@@ -1,6 +1,7 @@
 ---
 title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed

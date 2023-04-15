@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.duration
+title: "VideoFrame: duration property"
+short-title: duration
 slug: Web/API/VideoFrame/duration
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.duration

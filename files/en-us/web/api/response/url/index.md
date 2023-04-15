@@ -1,5 +1,6 @@
 ---
-title: Response.url
+title: "Response: url property"
+short-title: url
 slug: Web/API/Response/url
 page-type: web-api-instance-property
 browser-compat: api.Response.url

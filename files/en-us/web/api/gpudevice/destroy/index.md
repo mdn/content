@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.destroy()
+title: "GPUDevice: destroy() method"
+short-title: destroy()
 slug: Web/API/GPUDevice/destroy
 page-type: web-api-instance-method
 status:

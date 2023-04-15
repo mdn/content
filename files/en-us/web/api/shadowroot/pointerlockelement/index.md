@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.pointerLockElement
+title: "ShadowRoot: pointerLockElement property"
+short-title: pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.pointerLockElement

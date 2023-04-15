@@ -1,5 +1,6 @@
 ---
-title: USBConnectionEvent()
+title: "USBConnectionEvent: USBConnectionEvent() constructor"
+short-title: USBConnectionEvent()
 slug: Web/API/USBConnectionEvent/USBConnectionEvent
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: Element.assignedSlot
+title: "Element: assignedSlot property"
+short-title: assignedSlot
 slug: Web/API/Element/assignedSlot
 page-type: web-api-instance-property
 browser-compat: api.Element.assignedSlot

@@ -1,5 +1,6 @@
 ---
 title: "Performance: resourcetimingbufferfull event"
+short-title: resourcetimingbufferfull
 slug: Web/API/Performance/resourcetimingbufferfull_event
 page-type: web-api-event
 browser-compat: api.Performance.resourcetimingbufferfull_event

@@ -90,7 +90,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
+Note that several of the {{jsxref("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
 
 ## Constructor
 
@@ -99,19 +99,19 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 ## Static properties
 
-- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
-- {{JSxRef("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
+- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
   - : Static read-only properties that contain parenthesized substring matches.
-- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{deprecated_inline}}
+- {{jsxref("RegExp.input", "RegExp.input ($_)")}} {{Deprecated_Inline}}
   - : A static property that contains the last string against which a regular expression was successfully matched.
-- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the last matched substring.
-- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the last parenthesized substring match.
-- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
+- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring preceding the most recent match.
-- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
+- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring following the most recent match.
 
 ## Instance properties
@@ -120,23 +120,23 @@ These properties are defined on `RegExp.prototype` and shared by all `RegExp` in
 
 - {{jsxref("Object/constructor", "RegExp.prototype.constructor")}}
   - : The constructor function that created the instance object. For `RegExp` instances, the initial value is the {{jsxref("RegExp/RegExp", "RegExp")}} constructor.
-- {{JSxRef("RegExp.prototype.flags")}}
-  - : A string that contains the flags of the `RegExp` object.
-- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
   - : Whether `.` matches newlines or not.
-- {{JSxRef("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.flags")}}
+  - : A string that contains the flags of the `RegExp` object.
+- {{jsxref("RegExp.prototype.global")}}
   - : Whether to test the regular expression against all possible matches in a string, or only against the first.
-- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
   - : Whether the regular expression result exposes the start and end indices of captured substrings.
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
   - : Whether to ignore case while attempting a match in a string.
-- {{JSxRef("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.multiline")}}
   - : Whether or not to search in strings across multiple lines.
-- {{JSxRef("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.source")}}
   - : The text of the pattern.
-- {{JSxRef("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.sticky")}}
   - : Whether or not the search is sticky.
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
 
 These properties are own properties of each `RegExp` instance.
@@ -146,23 +146,23 @@ These properties are own properties of each `RegExp` instance.
 
 ## Instance methods
 
-- {{JSxRef("RegExp.prototype.compile()")}} {{deprecated_inline}}
+- {{jsxref("RegExp.prototype.compile()")}} {{Deprecated_Inline}}
   - : (Re-)compiles a regular expression during execution of a script.
-- {{JSxRef("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
   - : Executes a search for a match in its string parameter.
-- {{JSxRef("RegExp.prototype.test()")}}
+- {{jsxref("RegExp.prototype.test()")}}
   - : Tests for a match in its string parameter.
-- {{JSxRef("RegExp.prototype.toString()")}}
-  - : Returns a string representing the specified object. Overrides the {{JSxRef("Object.prototype.toString()")}} method.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
   - : Performs match to given string and returns match result.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
   - : Returns all matches of the regular expression against a string.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
   - : Replaces matches in given string with new substring.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
   - : Searches the match in given string and returns the index the pattern found in the string.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
   - : Splits given string into an array by separating the string into substrings.
 
 ## Examples
@@ -208,7 +208,7 @@ s.match(/yes[^]*day/);
 
 ### Using a regular expression with the sticky flag
 
-The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
+The {{jsxref("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
 const str = "#foo#";

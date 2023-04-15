@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.blitFramebuffer()
+title: "WebGL2RenderingContext: blitFramebuffer() method"
+short-title: blitFramebuffer()
 slug: Web/API/WebGL2RenderingContext/blitFramebuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.blitFramebuffer

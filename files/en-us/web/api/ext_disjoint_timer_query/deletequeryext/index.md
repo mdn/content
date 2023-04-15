@@ -1,5 +1,6 @@
 ---
-title: EXT_disjoint_timer_query.deleteQueryEXT()
+title: "EXT_disjoint_timer_query: deleteQueryEXT() method"
+short-title: deleteQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/deleteQueryEXT
 page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.deleteQueryEXT

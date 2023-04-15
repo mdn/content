@@ -1,5 +1,6 @@
 ---
 title: "WebSocket: close event"
+short-title: close
 slug: Web/API/WebSocket/close_event
 page-type: web-api-event
 browser-compat: api.WebSocket.close_event

@@ -1,5 +1,6 @@
 ---
-title: EventSource.close()
+title: "EventSource: close() method"
+short-title: close()
 slug: Web/API/EventSource/close
 page-type: web-api-instance-method
 browser-compat: api.EventSource.close

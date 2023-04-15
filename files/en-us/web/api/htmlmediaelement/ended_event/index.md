@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: ended event"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.ended_event

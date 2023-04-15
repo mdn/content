@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.status
+title: "XMLHttpRequest: status property"
+short-title: status
 slug: Web/API/XMLHttpRequest/status
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.status

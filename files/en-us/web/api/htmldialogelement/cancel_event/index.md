@@ -1,5 +1,6 @@
 ---
 title: "HTMLDialogElement: cancel event"
+short-title: cancel
 slug: Web/API/HTMLDialogElement/cancel_event
 page-type: web-api-event
 browser-compat: api.HTMLDialogElement.cancel_event

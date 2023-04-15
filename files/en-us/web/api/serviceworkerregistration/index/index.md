@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.index
+title: "ServiceWorkerRegistration: index property"
+short-title: index
 slug: Web/API/ServiceWorkerRegistration/index
 page-type: web-api-instance-property
 status:

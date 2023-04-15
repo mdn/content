@@ -1,5 +1,6 @@
 ---
-title: XRReferenceSpaceEvent()
+title: "XRReferenceSpaceEvent: XRReferenceSpaceEvent() constructor"
+short-title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 page-type: web-api-constructor
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent

@@ -1,5 +1,6 @@
 ---
-title: Window.clearImmediate()
+title: "Window: clearImmediate() method"
+short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
 page-type: web-api-instance-method
 browser-compat: api.Window.clearImmediate

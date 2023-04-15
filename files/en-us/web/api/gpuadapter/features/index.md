@@ -1,5 +1,6 @@
 ---
-title: GPUAdapter.features
+title: "GPUAdapter: features property"
+short-title: features
 slug: Web/API/GPUAdapter/features
 page-type: web-api-instance-property
 status:
@@ -30,26 +31,25 @@ In the following code we check whether a {{domxref("GPUAdapter")}} has the `text
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const requiredFeatures = [];
 
-  if (adapter.features.has('texture-compression-astc')) {
-    requiredFeatures.push('texture-compression-astc')
+  if (adapter.features.has("texture-compression-astc")) {
+    requiredFeatures.push("texture-compression-astc");
   }
 
   const device = await adapter.requestDevice({
-    requiredFeatures
+    requiredFeatures,
   });
 
   // ...
-
 }
 ```
 

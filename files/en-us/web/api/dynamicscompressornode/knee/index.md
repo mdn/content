@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.knee
+title: "DynamicsCompressorNode: knee property"
+short-title: knee
 slug: Web/API/DynamicsCompressorNode/knee
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.knee

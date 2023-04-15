@@ -1,5 +1,6 @@
 ---
-title: GPUAdapter.requestAdapterInfo()
+title: "GPUAdapter: requestAdapterInfo() method"
+short-title: requestAdapterInfo()
 slug: Web/API/GPUAdapter/requestAdapterInfo
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.createAnswer()
+title: "RTCPeerConnection: createAnswer() method"
+short-title: createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.createAnswer

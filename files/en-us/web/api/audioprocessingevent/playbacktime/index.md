@@ -1,5 +1,6 @@
 ---
-title: AudioProcessingEvent.playbackTime
+title: "AudioProcessingEvent: playbackTime property"
+short-title: playbackTime
 slug: Web/API/AudioProcessingEvent/playbackTime
 page-type: web-api-instance-property
 status:

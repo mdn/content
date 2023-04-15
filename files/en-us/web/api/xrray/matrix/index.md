@@ -1,5 +1,6 @@
 ---
-title: XRRay.matrix
+title: "XRRay: matrix property"
+short-title: matrix
 slug: Web/API/XRRay/matrix
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Element.before()
+title: "Element: before() method"
+short-title: before()
 slug: Web/API/Element/before
 page-type: web-api-instance-method
 browser-compat: api.Element.before

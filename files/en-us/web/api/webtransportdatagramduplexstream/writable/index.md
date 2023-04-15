@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.writable
+title: "WebTransportDatagramDuplexStream: writable property"
+short-title: writable
 slug: Web/API/WebTransportDatagramDuplexStream/writable
 page-type: web-api-instance-property
 status:

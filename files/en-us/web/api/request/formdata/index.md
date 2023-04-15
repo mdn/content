@@ -1,5 +1,6 @@
 ---
-title: Request.formData()
+title: "Request: formData() method"
+short-title: formData()
 slug: Web/API/Request/formData
 page-type: web-api-instance-method
 browser-compat: api.Request.formData

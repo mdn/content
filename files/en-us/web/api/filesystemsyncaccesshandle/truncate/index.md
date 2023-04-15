@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.truncate()
+title: "FileSystemSyncAccessHandle: truncate() method"
+short-title: truncate()
 slug: Web/API/FileSystemSyncAccessHandle/truncate
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.truncate

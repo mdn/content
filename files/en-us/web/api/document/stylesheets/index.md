@@ -1,5 +1,6 @@
 ---
-title: Document.styleSheets
+title: "Document: styleSheets property"
+short-title: styleSheets
 slug: Web/API/Document/styleSheets
 page-type: web-api-instance-property
 browser-compat: api.Document.styleSheets

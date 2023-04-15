@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.echoCancellation
+title: "MediaTrackSettings: echoCancellation property"
+short-title: echoCancellation
 slug: Web/API/MediaTrackSettings/echoCancellation
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.echoCancellation

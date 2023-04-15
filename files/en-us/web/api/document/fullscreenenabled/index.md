@@ -1,5 +1,6 @@
 ---
-title: Document.fullscreenEnabled
+title: "Document: fullscreenEnabled property"
+short-title: fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 page-type: web-api-instance-property
 browser-compat: api.Document.fullscreenEnabled

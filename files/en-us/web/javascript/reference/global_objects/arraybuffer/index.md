@@ -25,12 +25,12 @@ These features make resizing `ArrayBuffer`s more efficient — otherwise, you ha
 
 ## Constructor
 
-- {{jsxref("ArrayBuffer.ArrayBuffer", "ArrayBuffer()")}}
+- {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}}
   - : Creates a new `ArrayBuffer` object.
 
 ## Static properties
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -44,21 +44,21 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and can only be changed using the {{jsxref("ArrayBuffer.prototype.resize()")}} method if the `ArrayBuffer` is resizable.
+- {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
   - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
-- {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
-- {{jsxref("ArrayBuffer.prototype.slice()")}}
-  - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 - {{jsxref("ArrayBuffer.prototype.resize()")}}
   - : Resizes the `ArrayBuffer` to the specified size, in bytes.
+- {{jsxref("ArrayBuffer.prototype.slice()")}}
+  - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 ## Examples
 

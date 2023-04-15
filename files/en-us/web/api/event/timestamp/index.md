@@ -1,5 +1,6 @@
 ---
-title: Event.timeStamp
+title: "Event: timeStamp property"
+short-title: timeStamp
 slug: Web/API/Event/timeStamp
 page-type: web-api-instance-property
 browser-compat: api.Event.timeStamp

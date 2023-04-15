@@ -1,5 +1,6 @@
 ---
-title: WebTransport.createBidirectionalStream()
+title: "WebTransport: createBidirectionalStream() method"
+short-title: createBidirectionalStream()
 slug: Web/API/WebTransport/createBidirectionalStream
 page-type: web-api-instance-method
 status:

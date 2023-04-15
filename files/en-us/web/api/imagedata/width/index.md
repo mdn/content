@@ -1,5 +1,6 @@
 ---
-title: ImageData.width
+title: "ImageData: width property"
+short-title: width
 slug: Web/API/ImageData/width
 page-type: web-api-instance-property
 browser-compat: api.ImageData.width

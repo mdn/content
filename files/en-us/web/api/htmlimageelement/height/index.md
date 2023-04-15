@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.height
+title: "HTMLImageElement: height property"
+short-title: height
 slug: Web/API/HTMLImageElement/height
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.height

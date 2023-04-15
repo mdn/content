@@ -1,5 +1,6 @@
 ---
-title: AnimationEffect.getComputedTiming()
+title: "AnimationEffect: getComputedTiming() method"
+short-title: getComputedTiming()
 slug: Web/API/AnimationEffect/getComputedTiming
 page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.getComputedTiming

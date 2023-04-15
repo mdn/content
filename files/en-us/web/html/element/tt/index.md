@@ -1,5 +1,5 @@
 ---
-title: '<tt>: The Teletype Text element'
+title: "<tt>: The Teletype Text element"
 slug: Web/HTML/Element/tt
 page-type: html-element
 status:

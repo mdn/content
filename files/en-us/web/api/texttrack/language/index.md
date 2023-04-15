@@ -1,5 +1,6 @@
 ---
-title: TextTrack.language
+title: "TextTrack: language property"
+short-title: language
 slug: Web/API/TextTrack/language
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.language

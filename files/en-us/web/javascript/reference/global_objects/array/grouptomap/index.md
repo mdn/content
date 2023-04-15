@@ -41,11 +41,6 @@ groupToMap(callbackFn, thisArg)
 
 A {{jsxref("Map")}} object with keys for each group, each assigned to an array containing the elements of the associated group.
 
-### Exceptions
-
-- `TypeError`
-  - : The specified callback function is not callable.
-
 ## Description
 
 The `groupToMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array.

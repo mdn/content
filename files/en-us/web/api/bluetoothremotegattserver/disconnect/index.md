@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.disconnect()
+title: "BluetoothRemoteGATTServer: disconnect() method"
+short-title: disconnect()
 slug: Web/API/BluetoothRemoteGATTServer/disconnect
 page-type: web-api-instance-method
 status:

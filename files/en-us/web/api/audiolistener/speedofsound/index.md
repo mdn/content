@@ -1,5 +1,6 @@
 ---
-title: AudioListener.speedOfSound
+title: "AudioListener: speedOfSound property"
+short-title: speedOfSound
 slug: Web/API/AudioListener/speedOfSound
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.dataset
+title: "HTMLElement: dataset property"
+short-title: dataset
 slug: Web/API/HTMLElement/dataset
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.dataset

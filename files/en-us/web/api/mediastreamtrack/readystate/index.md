@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.readyState
+title: "MediaStreamTrack: readyState property"
+short-title: readyState
 slug: Web/API/MediaStreamTrack/readyState
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.readyState

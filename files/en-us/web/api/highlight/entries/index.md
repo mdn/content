@@ -1,5 +1,6 @@
 ---
-title: Highlight.entries()
+title: "Highlight: entries() method"
+short-title: entries()
 slug: Web/API/Highlight/entries
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.texParameter[fi]()
+title: "WebGLRenderingContext: texParameter[fi]() method"
+short-title: texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
 page-type: web-api-instance-method
 browser-compat:

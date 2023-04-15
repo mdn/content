@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createBuffer()
+title: "GPUDevice: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/GPUDevice/createBuffer
 page-type: web-api-instance-method
 status:

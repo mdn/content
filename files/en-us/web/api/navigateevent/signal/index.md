@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.signal
+title: "NavigateEvent: signal property"
+short-title: signal
 slug: Web/API/NavigateEvent/signal
 page-type: web-api-instance-property
 status:

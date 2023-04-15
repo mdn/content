@@ -1,5 +1,6 @@
 ---
-title: Document.fonts
+title: "Document: fonts property"
+short-title: fonts
 slug: Web/API/Document/fonts
 page-type: web-api-instance-property
 browser-compat: api.Document.fonts

@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.facingMode
+title: "MediaTrackConstraints: facingMode property"
+short-title: facingMode
 slug: Web/API/MediaTrackConstraints/facingMode
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.facingMode

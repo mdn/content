@@ -1,5 +1,6 @@
 ---
-title: Node.cloneNode()
+title: "Node: cloneNode() method"
+short-title: cloneNode()
 slug: Web/API/Node/cloneNode
 page-type: web-api-instance-method
 browser-compat: api.Node.cloneNode

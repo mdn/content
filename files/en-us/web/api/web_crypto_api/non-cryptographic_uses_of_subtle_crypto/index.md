@@ -19,7 +19,7 @@ If in doubt don't try doing it yourself, hire someone with experience and ensure
 
 This is the simplest useful thing you can do with the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API). It doesn't involve generating keys or certificates and has one single step.
 
-[Hashing](/en-US/docs/Glossary/hash) is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
+[Hashing](/en-US/docs/Glossary/Hash) is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
 
 If two generated hashes are the same, but the files that used to generate them are different, that is known as a _hash collision_ which is an extremely improbable thing to occur by accident and, for a secure hash function like SHA256, almost impossible to manufacture. So if the two strings are the same you can be reasonably sure the two original files are identical.
 

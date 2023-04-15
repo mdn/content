@@ -1,5 +1,6 @@
 ---
-title: GPUCanvasContext.canvas
+title: "GPUCanvasContext: canvas property"
+short-title: canvas
 slug: Web/API/GPUCanvasContext/canvas
 page-type: web-api-instance-property
 status:

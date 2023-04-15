@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.reset()
+title: "HTMLFormElement: reset() method"
+short-title: reset()
 slug: Web/API/HTMLFormElement/reset
 page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.reset

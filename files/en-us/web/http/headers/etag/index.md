@@ -1,6 +1,7 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
+page-type: http-header
 browser-compat: http.headers.ETag
 ---
 

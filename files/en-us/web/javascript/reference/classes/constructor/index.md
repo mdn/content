@@ -200,6 +200,8 @@ foo.constructor(); // Logs "called"
 console.log(foo); // Foo { a: 1 }
 ```
 
+Async methods, generator methods, accessors, and class fields are forbidden from being called `constructor`. Private names cannot be called `#constructor`. Any member named `constructor` must be a plain method.
+
 ## Examples
 
 ### Using the constructor
@@ -230,7 +232,7 @@ class Square extends Polygon {
 
 ### Calling super in a constructor bound to a different prototype
 
-`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor of the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
+`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor that's the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
 
 ```js
 class Polygon {
@@ -278,7 +280,7 @@ console.log(newInstance.name); // Rectangle
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}

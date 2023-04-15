@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.deleteTFoot()
+title: "HTMLTableElement: deleteTFoot() method"
+short-title: deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteTFoot

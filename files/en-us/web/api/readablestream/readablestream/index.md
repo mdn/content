@@ -1,5 +1,6 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() constructor"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream

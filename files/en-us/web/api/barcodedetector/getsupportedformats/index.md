@@ -1,5 +1,6 @@
 ---
-title: BarcodeDetector.getSupportedFormats()
+title: "BarcodeDetector: getSupportedFormats() static method"
+short-title: getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
 page-type: web-api-static-method
 status:
@@ -16,7 +17,7 @@ fulfills with an {{jsxref('Array')}} of supported barcode format types.
 ## Syntax
 
 ```js-nolint
-getSupportedFormats()
+BarcodeDetector.getSupportedFormats()
 ```
 
 ### Parameters

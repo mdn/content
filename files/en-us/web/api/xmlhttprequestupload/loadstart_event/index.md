@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: loadstart event"
+short-title: loadstart
 slug: Web/API/XMLHttpRequestUpload/loadstart_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.loadstart_event

@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.creationTime
+title: "VideoPlaybackQuality: creationTime property"
+short-title: creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
 page-type: web-api-instance-property
 browser-compat: api.VideoPlaybackQuality.creationTime

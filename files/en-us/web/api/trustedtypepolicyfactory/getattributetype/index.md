@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.getAttributeType()
+title: "TrustedTypePolicyFactory: getAttributeType() method"
+short-title: getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType

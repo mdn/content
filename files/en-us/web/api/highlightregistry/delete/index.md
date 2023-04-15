@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.delete()
+title: "HighlightRegistry: delete() method"
+short-title: delete()
 slug: Web/API/HighlightRegistry/delete
 page-type: web-api-instance-method
 status:

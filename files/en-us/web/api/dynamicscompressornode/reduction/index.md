@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.reduction
+title: "DynamicsCompressorNode: reduction property"
+short-title: reduction
 slug: Web/API/DynamicsCompressorNode/reduction
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.reduction

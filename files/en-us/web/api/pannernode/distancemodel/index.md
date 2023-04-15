@@ -1,5 +1,6 @@
 ---
-title: PannerNode.distanceModel
+title: "PannerNode: distanceModel property"
+short-title: distanceModel
 slug: Web/API/PannerNode/distanceModel
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.distanceModel
