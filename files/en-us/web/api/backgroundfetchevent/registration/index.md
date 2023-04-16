@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchEvent.registration
+title: "BackgroundFetchEvent: registration property"
+short-title: registration
 slug: Web/API/BackgroundFetchEvent/registration
 page-type: web-api-instance-property
 status:

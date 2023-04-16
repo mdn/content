@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.mimeType
+title: "MediaRecorder: mimeType property"
+short-title: mimeType
 slug: Web/API/MediaRecorder/mimeType
 page-type: web-api-instance-property
 browser-compat: api.MediaRecorder.mimeType

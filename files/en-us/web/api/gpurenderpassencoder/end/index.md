@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.end()
+title: "GPURenderPassEncoder: end() method"
+short-title: end()
 slug: Web/API/GPURenderPassEncoder/end
 page-type: web-api-instance-method
 status:

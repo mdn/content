@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.space
+title: "XRCylinderLayer: space property"
+short-title: space
 slug: Web/API/XRCylinderLayer/space
 page-type: web-api-instance-property
 status:

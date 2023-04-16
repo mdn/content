@@ -1,5 +1,6 @@
 ---
-title: ImageData.height
+title: "ImageData: height property"
+short-title: height
 slug: Web/API/ImageData/height
 page-type: web-api-instance-property
 browser-compat: api.ImageData.height

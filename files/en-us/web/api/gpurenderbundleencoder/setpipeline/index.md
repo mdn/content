@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.setPipeline()
+title: "GPURenderBundleEncoder: setPipeline() method"
+short-title: setPipeline()
 slug: Web/API/GPURenderBundleEncoder/setPipeline
 page-type: web-api-instance-method
 status:

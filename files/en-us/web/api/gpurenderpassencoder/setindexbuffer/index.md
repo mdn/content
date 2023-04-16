@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setIndexBuffer()
+title: "GPURenderPassEncoder: setIndexBuffer() method"
+short-title: setIndexBuffer()
 slug: Web/API/GPURenderPassEncoder/setIndexBuffer
 page-type: web-api-instance-method
 status:

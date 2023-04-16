@@ -225,7 +225,7 @@ console.log(words); // ['two', 'three', 'four']
 ### Flatten an array
 
 The following example is only here for learning purpose. If you want to flatten an
-array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
+array using built-in methods, you can use {{jsxref("Array.prototype.flat()")}}.
 
 ```js
 const flatten = (arr) => {

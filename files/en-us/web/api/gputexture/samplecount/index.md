@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.sampleCount
+title: "GPUTexture: sampleCount property"
+short-title: sampleCount
 slug: Web/API/GPUTexture/sampleCount
 page-type: web-api-instance-property
 status:

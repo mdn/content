@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.rootBounds
+title: "IntersectionObserverEntry: rootBounds property"
+short-title: rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.rootBounds

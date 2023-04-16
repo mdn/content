@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.height
+title: "GPUTexture: height property"
+short-title: height
 slug: Web/API/GPUTexture/height
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.finish()
+title: "GPURenderBundleEncoder: finish() method"
+short-title: finish()
 slug: Web/API/GPURenderBundleEncoder/finish
 page-type: web-api-instance-method
 status:

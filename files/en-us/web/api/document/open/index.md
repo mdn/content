@@ -1,5 +1,6 @@
 ---
-title: Document.open()
+title: "Document: open() method"
+short-title: open()
 slug: Web/API/Document/open
 page-type: web-api-instance-method
 browser-compat: api.Document.open

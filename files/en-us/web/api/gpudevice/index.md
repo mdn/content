@@ -19,7 +19,7 @@ A `GPUDevice` object is requested using the {{domxref("GPUAdapter.requestDevice(
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device.
 
@@ -27,15 +27,15 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
-- {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
   - : A {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the device.
 
-- {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
   - : Contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
 
-- {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the primary {{domxref("GPUQueue")}} for the device.
 
 ## Instance methods

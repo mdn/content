@@ -1,5 +1,6 @@
 ---
-title: Window.resizeBy()
+title: "Window: resizeBy() method"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
 page-type: web-api-instance-method
 browser-compat: api.Window.resizeBy

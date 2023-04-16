@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.label
+title: "GPUDevice: label property"
+short-title: label
 slug: Web/API/GPUDevice/label
 page-type: web-api-instance-property
 status:

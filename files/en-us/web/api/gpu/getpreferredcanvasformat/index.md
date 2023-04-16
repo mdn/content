@@ -1,5 +1,6 @@
 ---
-title: GPU.getPreferredCanvasFormat()
+title: "GPU: getPreferredCanvasFormat() method"
+short-title: getPreferredCanvasFormat()
 slug: Web/API/GPU/getPreferredCanvasFormat
 page-type: web-api-instance-method
 status:

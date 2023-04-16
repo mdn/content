@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.isScript()
+title: "TrustedTypePolicyFactory: isScript() method"
+short-title: isScript()
 slug: Web/API/TrustedTypePolicyFactory/isScript
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isScript

@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.unwrapKey()
+title: "SubtleCrypto: unwrapKey() method"
+short-title: unwrapKey()
 slug: Web/API/SubtleCrypto/unwrapKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.unwrapKey

@@ -1,5 +1,6 @@
 ---
-title: GPUAdapter.isFallbackAdapter
+title: "GPUAdapter: isFallbackAdapter property"
+short-title: isFallbackAdapter
 slug: Web/API/GPUAdapter/isFallbackAdapter
 page-type: web-api-instance-property
 status:

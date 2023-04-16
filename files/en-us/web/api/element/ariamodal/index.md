@@ -1,5 +1,6 @@
 ---
-title: Element.ariaModal
+title: "Element: ariaModal property"
+short-title: ariaModal
 slug: Web/API/Element/ariaModal
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaModal

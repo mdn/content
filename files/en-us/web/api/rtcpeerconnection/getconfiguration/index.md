@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getConfiguration()
+title: "RTCPeerConnection: getConfiguration() method"
+short-title: getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getConfiguration

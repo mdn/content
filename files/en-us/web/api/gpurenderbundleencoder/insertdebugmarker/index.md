@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.insertDebugMarker()
+title: "GPURenderBundleEncoder: insertDebugMarker() method"
+short-title: insertDebugMarker()
 slug: Web/API/GPURenderBundleEncoder/insertDebugMarker
 page-type: web-api-instance-method
 status:

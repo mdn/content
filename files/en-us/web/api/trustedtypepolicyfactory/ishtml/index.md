@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.isHTML()
+title: "TrustedTypePolicyFactory: isHTML() method"
+short-title: isHTML()
 slug: Web/API/TrustedTypePolicyFactory/isHTML
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isHTML

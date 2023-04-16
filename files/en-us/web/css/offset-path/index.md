@@ -37,6 +37,7 @@ offset-path: stroke-box;
 offset-path: inherit;
 offset-path: initial;
 offset-path: revert;
+offset-path: revert-layer;
 offset-path: unset;
 ```
 

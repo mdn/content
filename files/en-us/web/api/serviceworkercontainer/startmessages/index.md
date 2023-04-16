@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.startMessages()
+title: "ServiceWorkerContainer: startMessages() method"
+short-title: startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.startMessages

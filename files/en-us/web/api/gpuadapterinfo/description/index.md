@@ -1,5 +1,6 @@
 ---
-title: GPUAdapterInfo.description
+title: "GPUAdapterInfo: description property"
+short-title: description
 slug: Web/API/GPUAdapterInfo/description
 page-type: web-api-instance-property
 status:
@@ -21,19 +22,18 @@ A string.
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error('WebGPU not supported.');
+    throw Error("WebGPU not supported.");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error('Couldn\'t request WebGPU adapter.');
+    throw Error("Couldn't request WebGPU adapter.");
   }
 
   const adapterInfo = await adapter.requestAdapterInfo();
   console.log(adapterInfo.description);
 
   // ...
-
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: icecandidateerror event"
+short-title: icecandidateerror
 slug: Web/API/RTCPeerConnection/icecandidateerror_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.icecandidateerror_event

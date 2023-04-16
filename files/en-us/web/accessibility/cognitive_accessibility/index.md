@@ -1,6 +1,7 @@
 ---
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
+page-type: guide
 ---
 
 <section id="Quick_links">

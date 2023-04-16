@@ -1,6 +1,7 @@
 ---
 title: aria-modal
 slug: Web/Accessibility/ARIA/Attributes/aria-modal
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 

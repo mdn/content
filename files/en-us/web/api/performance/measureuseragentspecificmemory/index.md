@@ -1,5 +1,6 @@
 ---
-title: performance.measureUserAgentSpecificMemory()
+title: "Performance: measureUserAgentSpecificMemory() method"
+short-title: measureUserAgentSpecificMemory()
 slug: Web/API/Performance/measureUserAgentSpecificMemory
 page-type: web-api-instance-method
 status:

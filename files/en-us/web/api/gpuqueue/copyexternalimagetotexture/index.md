@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.copyExternalImageToTexture()
+title: "GPUQueue: copyExternalImageToTexture() method"
+short-title: copyExternalImageToTexture()
 slug: Web/API/GPUQueue/copyExternalImageToTexture
 page-type: web-api-instance-method
 status:

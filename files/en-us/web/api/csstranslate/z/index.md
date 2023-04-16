@@ -1,5 +1,6 @@
 ---
-title: CSSTranslate.z
+title: "CSSTranslate: z property"
+short-title: z
 slug: Web/API/CSSTranslate/z
 page-type: web-api-instance-property
 browser-compat: api.CSSTranslate.z

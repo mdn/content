@@ -1,5 +1,6 @@
 ---
 title: "Element: auxclick event"
+short-title: auxclick
 slug: Web/API/Element/auxclick_event
 page-type: web-api-event
 browser-compat: api.Element.auxclick_event

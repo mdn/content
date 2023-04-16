@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.buffer
 
 {{JSRef}}
 
-The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} referenced by a _TypedArray_ at construction time.
+The **`buffer`** accessor property of {{jsxref("TypedArray")}} instances returns the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by this typed array at construction time.
 
 {{EmbedInteractiveExample("pages/js/typedarray-buffer.html","shorter")}}
 

@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.depthOrArrayLayers
+title: "GPUTexture: depthOrArrayLayers property"
+short-title: depthOrArrayLayers
 slug: Web/API/GPUTexture/depthOrArrayLayers
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.executeBundles()
+title: "GPURenderPassEncoder: executeBundles() method"
+short-title: executeBundles()
 slug: Web/API/GPURenderPassEncoder/executeBundles
 page-type: web-api-instance-method
 status:

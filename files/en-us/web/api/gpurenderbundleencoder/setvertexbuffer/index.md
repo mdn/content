@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.setVertexBuffer()
+title: "GPURenderBundleEncoder: setVertexBuffer() method"
+short-title: setVertexBuffer()
 slug: Web/API/GPURenderBundleEncoder/setVertexBuffer
 page-type: web-api-instance-method
 status:

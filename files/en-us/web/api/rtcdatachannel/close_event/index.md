@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: close event"
+short-title: close
 slug: Web/API/RTCDataChannel/close_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.close_event

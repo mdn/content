@@ -1,5 +1,6 @@
 ---
-title: GPUCompilationInfo.messages
+title: "GPUCompilationInfo: messages property"
+short-title: messages
 slug: Web/API/GPUCompilationInfo/messages
 page-type: web-api-instance-property
 status:

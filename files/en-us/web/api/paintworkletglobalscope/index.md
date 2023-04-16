@@ -1,5 +1,5 @@
 ---
-title: PaintWorkletGLobalScope
+title: PaintWorkletGlobalScope
 slug: Web/API/PaintWorkletGlobalScope
 page-type: web-api-interface
 status:
@@ -9,7 +9,7 @@ browser-compat: api.PaintWorkletGlobalScope
 
 {{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The **`PaintWorkletGLobalScope`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) represents the global object available inside a paint {{domxref("Worklet")}}.
+The **`PaintWorkletGlobalScope`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) represents the global object available inside a paint {{domxref("Worklet")}}.
 
 ## Privacy concerns
 

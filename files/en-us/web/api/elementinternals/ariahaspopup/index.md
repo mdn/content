@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaHasPopup
+title: "ElementInternals: ariaHasPopup property"
+short-title: ariaHasPopup
 slug: Web/API/ElementInternals/ariaHasPopup
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaHasPopup

@@ -1,5 +1,6 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() method"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 page-type: web-api-instance-method
 browser-compat: api.Element.releasePointerCapture

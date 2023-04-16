@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.dimension
+title: "GPUTexture: dimension property"
+short-title: dimension
 slug: Web/API/GPUTexture/dimension
 page-type: web-api-instance-property
 status:

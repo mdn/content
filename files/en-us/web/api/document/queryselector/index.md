@@ -1,5 +1,6 @@
 ---
-title: Document.querySelector()
+title: "Document: querySelector() method"
+short-title: querySelector()
 slug: Web/API/Document/querySelector
 page-type: web-api-instance-method
 browser-compat: api.Document.querySelector

@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.format
+title: "GPUTexture: format property"
+short-title: format
 slug: Web/API/GPUTexture/format
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: "CSP: prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
+page-type: http-csp-directive
 status:
   - experimental
 browser-compat: http.headers.Content-Security-Policy.prefetch-src

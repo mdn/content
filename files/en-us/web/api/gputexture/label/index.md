@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.label
+title: "GPUTexture: label property"
+short-title: label
 slug: Web/API/GPUTexture/label
 page-type: web-api-instance-property
 status:

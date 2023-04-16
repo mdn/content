@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.pushDebugGroup()
+title: "GPURenderBundleEncoder: pushDebugGroup() method"
+short-title: pushDebugGroup()
 slug: Web/API/GPURenderBundleEncoder/pushDebugGroup
 page-type: web-api-instance-method
 status:

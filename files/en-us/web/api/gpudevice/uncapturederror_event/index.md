@@ -1,5 +1,6 @@
 ---
 title: "GPUDevice: uncapturederror event"
+short-title: uncapturederror
 slug: Web/API/GPUDevice/uncapturederror_event
 page-type: web-api-event
 status:

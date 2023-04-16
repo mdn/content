@@ -41,11 +41,6 @@ group(callbackFn, thisArg)
 
 A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
 
-### Exceptions
-
-- `TypeError`
-  - : The specified callback function is not callable.
-
 ## Description
 
 The `group()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, returning a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the element.

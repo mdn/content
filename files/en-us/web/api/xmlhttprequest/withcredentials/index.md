@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.withCredentials
+title: "XMLHttpRequest: withCredentials property"
+short-title: withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.withCredentials

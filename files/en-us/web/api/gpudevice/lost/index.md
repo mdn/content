@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.lost
+title: "GPUDevice: lost property"
+short-title: lost
 slug: Web/API/GPUDevice/lost
 page-type: web-api-instance-property
 status:

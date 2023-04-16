@@ -1,5 +1,6 @@
 ---
-title: GPUCompilationMessage.lineNum
+title: "GPUCompilationMessage: lineNum property"
+short-title: lineNum
 slug: Web/API/GPUCompilationMessage/lineNum
 page-type: web-api-instance-property
 status:

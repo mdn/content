@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode()
+title: "AudioBufferSourceNode: AudioBufferSourceNode() constructor"
+short-title: AudioBufferSourceNode()
 slug: Web/API/AudioBufferSourceNode/AudioBufferSourceNode
 page-type: web-api-constructor
 browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode

@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.values()
+title: "HighlightRegistry: values() method"
+short-title: values()
 slug: Web/API/HighlightRegistry/values
 page-type: web-api-instance-method
 status:

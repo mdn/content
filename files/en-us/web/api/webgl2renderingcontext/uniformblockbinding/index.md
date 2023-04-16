@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.uniformBlockBinding()
+title: "WebGL2RenderingContext: uniformBlockBinding() method"
+short-title: uniformBlockBinding()
 slug: Web/API/WebGL2RenderingContext/uniformBlockBinding
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.uniformBlockBinding

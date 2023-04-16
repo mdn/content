@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Bitness

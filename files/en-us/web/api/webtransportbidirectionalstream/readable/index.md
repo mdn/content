@@ -1,5 +1,6 @@
 ---
-title: WebTransportBidirectionalStream.readable
+title: "WebTransportBidirectionalStream: readable property"
+short-title: readable
 slug: Web/API/WebTransportBidirectionalStream/readable
 page-type: web-api-instance-property
 status:

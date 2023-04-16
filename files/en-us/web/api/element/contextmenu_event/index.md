@@ -1,5 +1,6 @@
 ---
 title: "Element: contextmenu event"
+short-title: contextmenu
 slug: Web/API/Element/contextmenu_event
 page-type: web-api-event
 browser-compat: api.Element.contextmenu_event

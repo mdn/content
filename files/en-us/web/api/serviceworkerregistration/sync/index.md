@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.sync
+title: "ServiceWorkerRegistration: sync property"
+short-title: sync
 slug: Web/API/ServiceWorkerRegistration/sync
 page-type: web-api-instance-property
 status:

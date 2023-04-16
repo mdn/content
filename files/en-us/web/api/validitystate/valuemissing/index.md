@@ -1,5 +1,6 @@
 ---
-title: ValidityState.valueMissing
+title: "ValidityState: valueMissing property"
+short-title: valueMissing
 slug: Web/API/ValidityState/valueMissing
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.valueMissing

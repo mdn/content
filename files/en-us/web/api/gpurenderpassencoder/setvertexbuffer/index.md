@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setVertexBuffer()
+title: "GPURenderPassEncoder: setVertexBuffer() method"
+short-title: setVertexBuffer()
 slug: Web/API/GPURenderPassEncoder/setVertexBuffer
 page-type: web-api-instance-method
 status:

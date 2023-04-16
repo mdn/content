@@ -1,5 +1,6 @@
 ---
-title: AudioListener.dopplerFactor
+title: "AudioListener: dopplerFactor property"
+short-title: dopplerFactor
 slug: Web/API/AudioListener/dopplerFactor
 page-type: web-api-instance-property
 status:

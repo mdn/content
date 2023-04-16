@@ -1,5 +1,6 @@
 ---
-title: GPUCompilationMessage.offset
+title: "GPUCompilationMessage: offset property"
+short-title: offset
 slug: Web/API/GPUCompilationMessage/offset
 page-type: web-api-instance-property
 status:

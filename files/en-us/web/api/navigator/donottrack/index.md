@@ -1,5 +1,6 @@
 ---
-title: Navigator.doNotTrack
+title: "Navigator: doNotTrack property"
+short-title: doNotTrack
 slug: Web/API/Navigator/doNotTrack
 page-type: web-api-instance-property
 status:

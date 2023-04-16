@@ -1,5 +1,6 @@
 ---
-title: Navigator.sendBeacon()
+title: "Navigator: sendBeacon() method"
+short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 page-type: web-api-instance-method
 browser-compat: api.Navigator.sendBeacon

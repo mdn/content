@@ -1,5 +1,6 @@
 ---
-title: CSSNamespaceRule.namespaceURI
+title: "CSSNamespaceRule: namespaceURI property"
+short-title: namespaceURI
 slug: Web/API/CSSNamespaceRule/namespaceURI
 page-type: web-api-instance-property
 browser-compat: api.CSSNamespaceRule.namespaceURI

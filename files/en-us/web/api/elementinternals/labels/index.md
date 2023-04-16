@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.labels
+title: "ElementInternals: labels property"
+short-title: labels
 slug: Web/API/ElementInternals/labels
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.labels

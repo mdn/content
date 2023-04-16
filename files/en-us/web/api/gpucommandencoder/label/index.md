@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.label
+title: "GPUCommandEncoder: label property"
+short-title: label
 slug: Web/API/GPUCommandEncoder/label
 page-type: web-api-instance-property
 status:

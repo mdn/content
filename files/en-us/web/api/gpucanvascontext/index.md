@@ -15,7 +15,7 @@ The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 ## Instance properties
 
-- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the canvas that the context was created from.
 
 ## Instance methods

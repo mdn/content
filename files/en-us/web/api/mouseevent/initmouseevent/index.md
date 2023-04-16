@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: "MouseEvent: initMouseEvent() method"
+short-title: initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 page-type: web-api-instance-method
 status:

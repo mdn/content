@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.insertDebugMarker()
+title: "GPURenderPassEncoder: insertDebugMarker() method"
+short-title: insertDebugMarker()
 slug: Web/API/GPURenderPassEncoder/insertDebugMarker
 page-type: web-api-instance-method
 status:

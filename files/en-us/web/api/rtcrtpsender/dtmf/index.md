@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.dtmf
+title: "RTCRtpSender: dtmf property"
+short-title: dtmf
 slug: Web/API/RTCRtpSender/dtmf
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpSender.dtmf

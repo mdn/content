@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorResponse.clientDataJSON
+title: "AuthenticatorResponse: clientDataJSON property"
+short-title: clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
 page-type: web-api-instance-property
 browser-compat: api.AuthenticatorResponse.clientDataJSON

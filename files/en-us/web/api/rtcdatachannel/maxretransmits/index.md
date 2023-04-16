@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.maxRetransmits
+title: "RTCDataChannel: maxRetransmits property"
+short-title: maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.maxRetransmits

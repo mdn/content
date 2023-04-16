@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.drawIndexed()
+title: "GPURenderBundleEncoder: drawIndexed() method"
+short-title: drawIndexed()
 slug: Web/API/GPURenderBundleEncoder/drawIndexed
 page-type: web-api-instance-method
 status:

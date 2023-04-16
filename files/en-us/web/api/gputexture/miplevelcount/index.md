@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.mipLevelCount
+title: "GPUTexture: mipLevelCount property"
+short-title: mipLevelCount
 slug: Web/API/GPUTexture/mipLevelCount
 page-type: web-api-instance-property
 status:

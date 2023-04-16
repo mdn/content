@@ -1,6 +1,7 @@
 ---
 title: <msup>
 slug: Web/MathML/Element/msup
+page-type: mathml-element
 browser-compat: mathml.elements.msup
 ---
 

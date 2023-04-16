@@ -1,5 +1,6 @@
 ---
-title: RTCIceServer.credentialType
+title: "RTCIceServer: credentialType property"
+short-title: credentialType
 slug: Web/API/RTCIceServer/credentialType
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.clearBuffer()
+title: "GPUCommandEncoder: clearBuffer() method"
+short-title: clearBuffer()
 slug: Web/API/GPUCommandEncoder/clearBuffer
 page-type: web-api-instance-method
 status:

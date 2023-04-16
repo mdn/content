@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.chromaticAberrationCorrection
+title: "XRCompositionLayer: chromaticAberrationCorrection property"
+short-title: chromaticAberrationCorrection
 slug: Web/API/XRCompositionLayer/chromaticAberrationCorrection
 page-type: web-api-instance-property
 status:

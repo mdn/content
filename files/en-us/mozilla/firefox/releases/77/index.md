@@ -67,7 +67,7 @@ This article provides information about the changes in Firefox 77 that will affe
 ### Other
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ([Firefox bug 1630413](https://bugzil.la/1630413))
-- Changes related to [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
+- Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
 
 ## Older versions
 

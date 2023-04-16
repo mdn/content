@@ -1,5 +1,6 @@
 ---
 title: "Element: blur event"
+short-title: blur
 slug: Web/API/Element/blur_event
 page-type: web-api-event
 browser-compat: api.Element.blur_event

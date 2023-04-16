@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.type()
+title: "CSSNumericValue: type() method"
+short-title: type()
 slug: Web/API/CSSNumericValue/type
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.type

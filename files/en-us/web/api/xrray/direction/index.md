@@ -1,5 +1,6 @@
 ---
-title: XRRay.direction
+title: "XRRay: direction property"
+short-title: direction
 slug: Web/API/XRRay/direction
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPUQuerySet.label
+title: "GPUQuerySet: label property"
+short-title: label
 slug: Web/API/GPUQuerySet/label
 page-type: web-api-instance-property
 status:

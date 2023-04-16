@@ -119,4 +119,8 @@ console.log(result[1]);
 
 - [Polyfill of `RegExp.prototype[@@matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.matchAll()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("Symbol.matchAll")}}

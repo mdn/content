@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.flush()
+title: "FileSystemSyncAccessHandle: flush() method"
+short-title: flush()
 slug: Web/API/FileSystemSyncAccessHandle/flush
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.flush

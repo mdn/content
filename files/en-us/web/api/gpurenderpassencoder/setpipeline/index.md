@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setPipeline()
+title: "GPURenderPassEncoder: setPipeline() method"
+short-title: setPipeline()
 slug: Web/API/GPURenderPassEncoder/setPipeline
 page-type: web-api-instance-method
 status:

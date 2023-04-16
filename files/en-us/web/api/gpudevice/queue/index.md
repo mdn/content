@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.queue
+title: "GPUDevice: queue property"
+short-title: queue
 slug: Web/API/GPUDevice/queue
 page-type: web-api-instance-property
 status:

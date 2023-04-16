@@ -1,5 +1,6 @@
 ---
-title: 'XRReferenceSpace: reset event'
+title: "XRReferenceSpace: reset event"
+short-title: reset
 slug: Web/API/XRReferenceSpace/reset_event
 page-type: web-api-event
 browser-compat: api.XRReferenceSpace.reset_event

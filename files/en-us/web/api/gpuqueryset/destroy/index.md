@@ -1,5 +1,6 @@
 ---
-title: GPUQuerySet.destroy()
+title: "GPUQuerySet: destroy() method"
+short-title: destroy()
 slug: Web/API/GPUQuerySet/destroy
 page-type: web-api-instance-method
 status:

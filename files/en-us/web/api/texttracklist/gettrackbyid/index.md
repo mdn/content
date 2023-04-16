@@ -1,5 +1,6 @@
 ---
-title: TextTrackList.getTrackById()
+title: "TextTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/TextTrackList/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.TextTrackList.getTrackById

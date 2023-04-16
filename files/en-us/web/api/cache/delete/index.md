@@ -1,5 +1,6 @@
 ---
-title: Cache.delete()
+title: "Cache: delete() method"
+short-title: delete()
 slug: Web/API/Cache/delete
 page-type: web-api-instance-method
 browser-compat: api.Cache.delete

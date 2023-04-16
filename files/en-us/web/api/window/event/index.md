@@ -1,5 +1,6 @@
 ---
-title: Window.event
+title: "Window: event property"
+short-title: event
 slug: Web/API/Window/event
 page-type: web-api-instance-property
 status:

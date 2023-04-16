@@ -1,5 +1,6 @@
 ---
-title: GPUSampler.label
+title: "GPUSampler: label property"
+short-title: label
 slug: Web/API/GPUSampler/label
 page-type: web-api-instance-property
 status:

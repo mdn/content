@@ -20,11 +20,11 @@ A `GPUBuffer` object instance is created using the {{domxref("GPUDevice.createBu
 - {{domxref("GPUBuffer.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in
     {{domxref("GPUError")}} messages or console warnings.
-- {{domxref("GPUBuffer.mapState", "mapState")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUBuffer.mapState", "mapState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : An enumerated value representing the mapped state of the `GPUBuffer`.
-- {{domxref("GPUBuffer.size", "size")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUBuffer.size", "size")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A number representing the length of the `GPUBuffer`'s memory allocation, in bytes.
-- {{domxref("GPUBuffer.usage", "usage")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUBuffer.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : The {{glossary("bitwise flags")}} representing the allowed usages of the `GPUBuffer`.
 
 ## Instance methods

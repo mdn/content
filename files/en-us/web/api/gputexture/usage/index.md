@@ -1,5 +1,6 @@
 ---
-title: GPUTexture.usage
+title: "GPUTexture: usage property"
+short-title: usage
 slug: Web/API/GPUTexture/usage
 page-type: web-api-instance-property
 status:

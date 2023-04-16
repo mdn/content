@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setViewport()
+title: "GPURenderPassEncoder: setViewport() method"
+short-title: setViewport()
 slug: Web/API/GPURenderPassEncoder/setViewport
 page-type: web-api-instance-method
 status:

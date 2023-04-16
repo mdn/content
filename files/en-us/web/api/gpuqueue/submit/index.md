@@ -1,5 +1,6 @@
 ---
-title: GPUQueue.submit()
+title: "GPUQueue: submit() method"
+short-title: submit()
 slug: Web/API/GPUQueue/submit
 page-type: web-api-instance-method
 status:

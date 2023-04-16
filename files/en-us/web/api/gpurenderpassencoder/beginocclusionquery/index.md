@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.beginOcclusionQuery()
+title: "GPURenderPassEncoder: beginOcclusionQuery() method"
+short-title: beginOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/beginOcclusionQuery
 page-type: web-api-instance-method
 status:

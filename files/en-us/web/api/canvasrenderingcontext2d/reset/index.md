@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.reset()
+title: "CanvasRenderingContext2D: reset() method"
+short-title: reset()
 slug: Web/API/CanvasRenderingContext2D/reset
 page-type: web-api-instance-method
 status:

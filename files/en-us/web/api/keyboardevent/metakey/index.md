@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.metaKey
+title: "KeyboardEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/KeyboardEvent/metaKey
 page-type: web-api-instance-property
 browser-compat: api.KeyboardEvent.metaKey

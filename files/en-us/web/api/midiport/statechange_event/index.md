@@ -1,5 +1,6 @@
 ---
 title: "MIDIPort: statechange event"
+short-title: statechange
 slug: Web/API/MIDIPort/statechange_event
 page-type: web-api-event
 browser-compat: api.MIDIPort.statechange_event

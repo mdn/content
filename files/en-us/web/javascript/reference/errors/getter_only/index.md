@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: setting getter-only property "x"'
+title: "TypeError: setting getter-only property \"x\""
 slug: Web/JavaScript/Reference/Errors/Getter_only
 page-type: javascript-error
 ---

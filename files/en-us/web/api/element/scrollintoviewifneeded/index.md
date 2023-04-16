@@ -1,5 +1,6 @@
 ---
-title: Element.scrollIntoViewIfNeeded()
+title: "Element: scrollIntoViewIfNeeded() method"
+short-title: scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
 page-type: web-api-instance-method
 status:

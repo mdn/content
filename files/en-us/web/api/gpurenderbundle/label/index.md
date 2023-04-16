@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundle.label
+title: "GPURenderBundle: label property"
+short-title: label
 slug: Web/API/GPURenderBundle/label
 page-type: web-api-instance-property
 status:

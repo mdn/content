@@ -1,5 +1,6 @@
 ---
-title: Storage.setItem()
+title: "Storage: setItem() method"
+short-title: setItem()
 slug: Web/API/Storage/setItem
 page-type: web-api-instance-method
 browser-compat: api.Storage.setItem

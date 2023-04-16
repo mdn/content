@@ -23,12 +23,12 @@ A `GPUQuerySet` object instance is created using the {{domxref("GPUDevice.create
 
 ## Instance properties
 
-- {{domxref("GPUQuerySet.count", "count")}} {{Experimental_Inline}} {{readonlyinline}}
+- {{domxref("GPUQuerySet.count", "count")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A number specifying the number of queries managed by the `GPUQuerySet`.
 - {{domxref("GPUQuerySet.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
-- {{domxref("GPUQuerySet.type", "type")}} {{Experimental_Inline}} {{readonlyinline}}
-  - : An emumerated value specifying the type of queries managed by the `GPUQuerySet`.
+- {{domxref("GPUQuerySet.type", "type")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : An enumerated value specifying the type of queries managed by the `GPUQuerySet`.
 
 ## Instance methods
 

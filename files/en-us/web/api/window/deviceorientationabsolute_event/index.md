@@ -1,5 +1,6 @@
 ---
 title: "Window: deviceorientationabsolute event"
+short-title: deviceorientationabsolute
 slug: Web/API/Window/deviceorientationabsolute_event
 page-type: web-api-event
 browser-compat: api.Window.deviceorientationabsolute_event

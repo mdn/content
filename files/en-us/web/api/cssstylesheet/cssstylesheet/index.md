@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet()
+title: "CSSStyleSheet: CSSStyleSheet() constructor"
+short-title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
@@ -88,5 +89,5 @@ For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

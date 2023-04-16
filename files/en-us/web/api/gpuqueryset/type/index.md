@@ -1,5 +1,6 @@
 ---
-title: GPUQuerySet.type
+title: "GPUQuerySet: type property"
+short-title: type
 slug: Web/API/GPUQuerySet/type
 page-type: web-api-instance-property
 status:

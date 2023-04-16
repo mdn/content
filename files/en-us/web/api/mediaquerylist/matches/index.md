@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.matches
+title: "MediaQueryList: matches property"
+short-title: matches
 slug: Web/API/MediaQueryList/matches
 page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.matches

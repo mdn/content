@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.version
+title: "IDBDatabase: version property"
+short-title: version
 slug: Web/API/IDBDatabase/version
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.version

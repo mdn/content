@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.unmap()
+title: "GPUBuffer: unmap() method"
+short-title: unmap()
 slug: Web/API/GPUBuffer/unmap
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.draw()
+title: "GPURenderBundleEncoder: draw() method"
+short-title: draw()
 slug: Web/API/GPURenderBundleEncoder/draw
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: "Window: beforeprint event"
+short-title: beforeprint
 slug: Web/API/Window/beforeprint_event
 page-type: web-api-event
 browser-compat: api.Window.beforeprint_event

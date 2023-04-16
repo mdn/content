@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.insertDebugMarker()
+title: "GPUCommandEncoder: insertDebugMarker() method"
+short-title: insertDebugMarker()
 slug: Web/API/GPUCommandEncoder/insertDebugMarker
 page-type: web-api-instance-method
 status:

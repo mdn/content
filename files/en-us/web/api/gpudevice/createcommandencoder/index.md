@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createCommandEncoder()
+title: "GPUDevice: createCommandEncoder() method"
+short-title: createCommandEncoder()
 slug: Web/API/GPUDevice/createCommandEncoder
 page-type: web-api-instance-method
 status:

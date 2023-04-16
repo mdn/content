@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.label
+title: "GPURenderPassEncoder: label property"
+short-title: label
 slug: Web/API/GPURenderPassEncoder/label
 page-type: web-api-instance-property
 status:

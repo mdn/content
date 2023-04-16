@@ -1,5 +1,6 @@
 ---
-title: location.hash
+title: "location: hash property"
+short-title: hash
 slug: Web/API/Location/hash
 page-type: web-api-instance-property
 browser-compat: api.Location.hash

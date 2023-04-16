@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.endOcclusionQuery()
+title: "GPURenderPassEncoder: endOcclusionQuery() method"
+short-title: endOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/endOcclusionQuery
 page-type: web-api-instance-method
 status:

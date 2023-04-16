@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.createObjectStore()
+title: "IDBDatabase: createObjectStore() method"
+short-title: createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.createObjectStore

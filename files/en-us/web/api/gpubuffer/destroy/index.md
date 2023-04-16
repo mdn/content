@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.destroy()
+title: "GPUBuffer: destroy() method"
+short-title: destroy()
 slug: Web/API/GPUBuffer/destroy
 page-type: web-api-instance-method
 status:

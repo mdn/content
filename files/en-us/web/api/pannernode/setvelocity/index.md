@@ -1,5 +1,6 @@
 ---
-title: PannerNode.setVelocity()
+title: "PannerNode: setVelocity() method"
+short-title: setVelocity()
 slug: Web/API/PannerNode/setVelocity
 page-type: web-api-instance-method
 status:

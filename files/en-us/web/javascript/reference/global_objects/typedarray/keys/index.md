@@ -60,6 +60,6 @@ console.log(arrKeys.next().value); // 4
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

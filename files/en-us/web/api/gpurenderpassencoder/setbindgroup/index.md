@@ -1,5 +1,6 @@
 ---
-title: GPURenderPassEncoder.setBindGroup()
+title: "GPURenderPassEncoder: setBindGroup() method"
+short-title: setBindGroup()
 slug: Web/API/GPURenderPassEncoder/setBindGroup
 page-type: web-api-instance-method
 status:

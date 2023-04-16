@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createShaderModule()
+title: "GPUDevice: createShaderModule() method"
+short-title: createShaderModule()
 slug: Web/API/GPUDevice/createShaderModule
 page-type: web-api-instance-method
 status:

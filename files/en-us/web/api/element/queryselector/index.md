@@ -1,5 +1,6 @@
 ---
-title: Element.querySelector()
+title: "Element: querySelector() method"
+short-title: querySelector()
 slug: Web/API/Element/querySelector
 page-type: web-api-instance-method
 browser-compat: api.Element.querySelector

@@ -1,5 +1,6 @@
 ---
-title: HTMLTimeElement.dateTime
+title: "HTMLTimeElement: dateTime property"
+short-title: dateTime
 slug: Web/API/HTMLTimeElement/dateTime
 page-type: web-api-instance-property
 browser-compat: api.HTMLTimeElement.dateTime

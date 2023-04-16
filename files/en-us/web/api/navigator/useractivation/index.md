@@ -1,5 +1,6 @@
 ---
-title: Navigator.userActivation
+title: "Navigator: userActivation property"
+short-title: userActivation
 slug: Web/API/Navigator/userActivation
 page-type: web-api-instance-property
 browser-compat: api.Navigator.userActivation

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
+title: "SyntaxError: \"use strict\" not allowed in function with non-simple parameters"
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 page-type: javascript-error
 ---

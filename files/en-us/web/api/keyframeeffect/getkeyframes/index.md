@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect.getKeyframes()
+title: "KeyframeEffect: getKeyframes() method"
+short-title: getKeyframes()
 slug: Web/API/KeyframeEffect/getKeyframes
 page-type: web-api-instance-method
 browser-compat: api.KeyframeEffect.getKeyframes

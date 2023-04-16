@@ -1,5 +1,6 @@
 ---
-title: GPUBindGroup.label
+title: "GPUBindGroup: label property"
+short-title: label
 slug: Web/API/GPUBindGroup/label
 page-type: web-api-instance-property
 status:

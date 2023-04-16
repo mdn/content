@@ -1,5 +1,6 @@
 ---
-title: Notification.silent
+title: "Notification: silent property"
+short-title: silent
 slug: Web/API/Notification/silent
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.close()
+title: "ReadableStreamDefaultController: close() method"
+short-title: close()
 slug: Web/API/ReadableStreamDefaultController/close
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.close

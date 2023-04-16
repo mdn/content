@@ -1,5 +1,6 @@
 ---
-title: BroadcastChannel()
+title: "BroadcastChannel: BroadcastChannel() constructor"
+short-title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 page-type: web-api-constructor
 browser-compat: api.BroadcastChannel.BroadcastChannel

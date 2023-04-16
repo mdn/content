@@ -1,5 +1,6 @@
 ---
-title: HTMLDataElement.value
+title: "HTMLDataElement: value property"
+short-title: value
 slug: Web/API/HTMLDataElement/value
 page-type: web-api-instance-property
 browser-compat: api.HTMLDataElement.value

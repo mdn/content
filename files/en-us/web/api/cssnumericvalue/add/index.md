@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.add()
+title: "CSSNumericValue: add() method"
+short-title: add()
 slug: Web/API/CSSNumericValue/add
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.add

@@ -1,5 +1,6 @@
 ---
-title: GPUPipelineError()
+title: "GPUPipelineError: GPUPipelineError() constructor"
+short-title: GPUPipelineError()
 slug: Web/API/GPUPipelineError/GPUPipelineError
 page-type: web-api-constructor
 status:

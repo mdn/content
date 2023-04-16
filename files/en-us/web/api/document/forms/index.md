@@ -1,5 +1,6 @@
 ---
-title: Document.forms
+title: "Document: forms property"
+short-title: forms
 slug: Web/API/Document/forms
 page-type: web-api-instance-property
 browser-compat: api.Document.forms

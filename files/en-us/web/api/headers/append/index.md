@@ -1,5 +1,6 @@
 ---
-title: Headers.append()
+title: "Headers: append() method"
+short-title: append()
 slug: Web/API/Headers/append
 page-type: web-api-instance-method
 browser-compat: api.Headers.append

@@ -1,5 +1,6 @@
 ---
-title: GPURenderBundleEncoder.popDebugGroup()
+title: "GPURenderBundleEncoder: popDebugGroup() method"
+short-title: popDebugGroup()
 slug: Web/API/GPURenderBundleEncoder/popDebugGroup
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: GPUDevice.createRenderBundleEncoder()
+title: "GPUDevice: createRenderBundleEncoder() method"
+short-title: createRenderBundleEncoder()
 slug: Web/API/GPUDevice/createRenderBundleEncoder
 page-type: web-api-instance-method
 status:

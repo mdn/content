@@ -1,5 +1,6 @@
 ---
-title: GPUExternalTexture.label
+title: "GPUExternalTexture: label property"
+short-title: label
 slug: Web/API/GPUExternalTexture/label
 page-type: web-api-instance-property
 status:

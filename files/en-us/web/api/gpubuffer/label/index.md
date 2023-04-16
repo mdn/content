@@ -1,5 +1,6 @@
 ---
-title: GPUBuffer.label
+title: "GPUBuffer: label property"
+short-title: label
 slug: Web/API/GPUBuffer/label
 page-type: web-api-instance-property
 status:

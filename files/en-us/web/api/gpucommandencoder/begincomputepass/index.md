@@ -1,5 +1,6 @@
 ---
-title: GPUCommandEncoder.beginComputePass()
+title: "GPUCommandEncoder: beginComputePass() method"
+short-title: beginComputePass()
 slug: Web/API/GPUCommandEncoder/beginComputePass
 page-type: web-api-instance-method
 status:

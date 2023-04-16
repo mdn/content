@@ -1,5 +1,6 @@
 ---
-title: Element.ariaColSpan
+title: "Element: ariaColSpan property"
+short-title: ariaColSpan
 slug: Web/API/Element/ariaColSpan
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaColSpan
