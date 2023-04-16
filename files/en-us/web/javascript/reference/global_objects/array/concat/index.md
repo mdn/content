@@ -153,6 +153,5 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.unshift()")}}
 - {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("TypedArray.prototype.concat()")}}
 - {{jsxref("String.prototype.concat()")}}
 - {{jsxref("Symbol.isConcatSpreadable")}}
