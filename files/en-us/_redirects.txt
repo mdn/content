@@ -732,8 +732,8 @@
 /en-US/docs/CSS/image-orientation	/en-US/docs/Web/CSS/image-orientation
 /en-US/docs/CSS/image-rendering	/en-US/docs/Web/CSS/image-rendering
 /en-US/docs/CSS/inherit	/en-US/docs/Web/CSS/inherit
-/en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/inheritance
-/en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
+/en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/Inheritance
+/en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
 /en-US/docs/CSS/initial	/en-US/docs/Web/CSS/initial
 /en-US/docs/CSS/initial_value	/en-US/docs/Web/CSS/initial_value
 /en-US/docs/CSS/integer	/en-US/docs/Web/CSS/integer
@@ -1039,8 +1039,8 @@
 /en-US/docs/CSS:height	/en-US/docs/Web/CSS/height
 /en-US/docs/CSS:hidden	/en-US/docs/Web/CSS/visibility
 /en-US/docs/CSS:inherit	/en-US/docs/Web/CSS/inherit
-/en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/inheritance
-/en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
+/en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/Inheritance
+/en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
 /en-US/docs/CSS:initial	/en-US/docs/Web/CSS/initial
 /en-US/docs/CSS:initial_value	/en-US/docs/Web/CSS/initial_value
 /en-US/docs/CSS:integer	/en-US/docs/Web/CSS/integer
@@ -11436,7 +11436,7 @@
 /en-US/docs/Web/CSS/image/image-set()	/en-US/docs/Web/CSS/image/image-set
 /en-US/docs/Web/CSS/image/paint()	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/imagefunction	/en-US/docs/Web/CSS/image/image
-/en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/inheritance
+/en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/Web/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
