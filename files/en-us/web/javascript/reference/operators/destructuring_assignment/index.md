@@ -268,8 +268,8 @@ You can also ignore all returned values:
 The rest property of array destructuring assignment can be another array or object binding pattern. This allows you to simultaneously unpack the properties and indices of arrays.
 
 ```js
-const [a, b, ...{ length }] = [1, 2];
-console.log(a, b, length); // 1 2 2
+const [a, b, ...{ length }] = [1, 2, 3];
+console.log(a, b, length); // 1 2 1
 ```
 
 ```js
