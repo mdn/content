@@ -90,6 +90,7 @@ class MyArray extends Array {
 
 ## See also
 
-- [Polyfill of `Array[Symbol.species]` and support of `Symbol.species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array[@@species]` and support of `@@species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}
