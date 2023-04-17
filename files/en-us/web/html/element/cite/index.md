@@ -1,5 +1,5 @@
 ---
-title: '<cite>: The Citation element'
+title: "<cite>: The Citation element"
 slug: Web/HTML/Element/cite
 page-type: html-element
 browser-compat: html.elements.cite

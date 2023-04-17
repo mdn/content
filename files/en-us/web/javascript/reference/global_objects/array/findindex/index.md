@@ -112,5 +112,11 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}

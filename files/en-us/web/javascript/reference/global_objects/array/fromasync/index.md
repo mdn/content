@@ -2,9 +2,9 @@
 title: Array.fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
-browser-compat: javascript.builtins.Array.fromAsync
 status:
   - experimental
+browser-compat: javascript.builtins.Array.fromAsync
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -206,7 +206,9 @@ If you need to close the iterator, you need to use a {{jsxref("Statements/for...
 ## See also
 
 - [Polyfill of `Array.fromAsync` in `core-js`](https://github.com/zloirock/core-js#arrayfromasync)
-- {{jsxref("Statements/for-await...of", "for await...of")}}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Statements/for-await...of", "for await...of")}}

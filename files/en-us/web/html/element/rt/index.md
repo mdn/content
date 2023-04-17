@@ -1,5 +1,5 @@
 ---
-title: '<rt>: The Ruby Text element'
+title: "<rt>: The Ruby Text element"
 slug: Web/HTML/Element/rt
 page-type: html-element
 browser-compat: html.elements.rt

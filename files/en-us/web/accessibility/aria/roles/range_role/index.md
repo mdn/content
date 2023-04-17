@@ -1,6 +1,7 @@
 ---
 title: "ARIA: range role"
 slug: Web/Accessibility/ARIA/Roles/range_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#range
 ---
 
