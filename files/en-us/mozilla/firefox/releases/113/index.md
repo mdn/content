@@ -41,6 +41,8 @@ This article provides information about the changes in Firefox 113 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- The AV1 video codec is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
+
 #### Removals
 
 ### WebAssembly
