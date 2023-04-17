@@ -1190,7 +1190,10 @@ This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web
 
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
+See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
 <table>
   <thead>
@@ -1208,13 +1211,13 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
