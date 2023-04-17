@@ -30,7 +30,7 @@ If no `Set-Cookie` headers are set, the method will return an empty array (`[ ]`
 
 ## Examples
 
-As alluded to above, running code like the following on the client won't return any results — `Set-Cookie` is filtered out from client-side {{domxref("Headers")}}.
+As alluded to above, running code like the following on the client won't return any results — `Set-Cookie` is filtered out from {{domxref("Headers")}} retrieved over the network.
 
 ```js
 fetch("https://example.com").then((response) => {
@@ -39,7 +39,7 @@ fetch("https://example.com").then((response) => {
 });
 ```
 
-However, something like the following can be used to query `Set-Cookie` values on the server:
+However, something like the following can be used to query `Set-Cookie` values. This is much more useful on the server, but it would also work on the client.
 
 ```js
 const headers = new Headers({
