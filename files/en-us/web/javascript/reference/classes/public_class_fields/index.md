@@ -54,6 +54,18 @@ console.log(instance.fieldWithInitializer); // "instance field"
 console.log(instance.prefixField); // "prefixed field"
 ```
 
+Computed field names are only evaluated once, at [class definition time](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order). This means that each class always has a fixed set of field names, and two instances cannot have different field names via computed names. The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await")}} and {{jsxref("Operators/yield")}} work as expected in this expression.
+
+```js
+class C {
+  [Math.random()] = 1;
+}
+
+console.log(new C());
+console.log(new C());
+// Both instances have the same field name
+```
+
 In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) refers to the class instance under construction, and [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) refers to the `prototype` property of the base class, which contains the base class's instance methods, but not its instance fields.
 
 ```js
@@ -88,6 +100,8 @@ const instance1 = new C();
 const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
+
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
 

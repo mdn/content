@@ -135,7 +135,7 @@ The `background` key can also contain this optional property:
       <td><code>type</code></td>
       <td>
         <p>A <code>String</code> value.</p>
-        <p>Determines whether the scripts specified in `"scripts"` are loaded as ES modules.</p>
+        <p>Determines whether the scripts specified in <code>"scripts"</code> are loaded as ES modules.</p>
         <ul>
           <li>
             <code>classic</code> indicates the background scripts or service workers are not included as an ES Module.

@@ -25,17 +25,17 @@ Note that the only behavior specified by the ECMAScript specification is that `F
   if (Object.hasOwn(f, "caller")) {
     console.log(
       "caller is an own property with descriptor",
-      Object.getOwnPropertyDescriptor(f, "caller")
+      Object.getOwnPropertyDescriptor(f, "caller"),
     );
   } else {
     console.log(
-      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller"
+      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller",
     );
     console.log(
       Object.getOwnPropertyDescriptor(
         Object.getPrototypeOf(f),
-        "caller"
-      ).get.call(f)
+        "caller",
+      ).get.call(f),
     );
   }
 })();

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed
@@ -70,7 +71,7 @@ This role does not support any specific keyboard interaction.
 
 ## Examples
 
-- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/example-index/feed/feedDisplay.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
+- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
 
 ## Specifications
 

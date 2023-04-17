@@ -1,6 +1,7 @@
 ---
 title: Using custom elements
-slug: Web/Web_Components/Using_custom_elements
+slug: Web/API/Web_components/Using_custom_elements
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -90,9 +91,7 @@ img.src = this.hasAttribute("img")
   ? this.getAttribute("img")
   : "img/default.png";
 // Always include descriptive text when adding an image
-img.alt = this.hasAttribute("alt")
-  ? this.getAttribute("alt")
-  : "";
+img.alt = this.hasAttribute("alt") ? this.getAttribute("alt") : "";
 
 const info = wrapper.appendChild(document.createElement("span"));
 info.setAttribute("class", "info");
