@@ -39,15 +39,16 @@ fetch("https://example.com").then((response) => {
 });
 ```
 
-However, something like the following can be used to query `Set-Cookie` values. This is much more useful on the server, but it would also work on the client.
+However, the following could be used to query `Set-Cookie` values. This is much more useful on the server, but it would also work on the client.
 
 ```js
 const headers = new Headers({
-  "Set-Cookie": "name=value",
+  "Set-Cookie": "name1=value1",
+  "Set-Cookie": "name2=value2",
 });
 
 headers.getSetCookie();
-// Returns ["name=value"]
+// Returns ["name1=value1", "name2=value2"]
 ```
 
 ## Specifications
