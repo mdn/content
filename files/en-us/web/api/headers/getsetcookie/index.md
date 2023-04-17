@@ -8,9 +8,9 @@ browser-compat: api.Headers.getSetCookie
 
 {{APIRef("Fetch API")}}
 
-The **`getSetCookie()`** method of the {{domxref("Headers")}} interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response.
+The **`getSetCookie()`** method of the {{domxref("Headers")}} interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows {{domxref("Headers")}} objects to handle having multiple `Set-Cookie` headers, which wasn't possible prior to its implementation.
 
-This allows {{domxref("Headers")}} objects to handle having multiple `Set-Cookie` headers, which wasn't possible prior to its implementation.
+This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the {{httpheader("Set-Cookie")}} header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
 
 ## Syntax
 
@@ -30,11 +30,24 @@ If no `Set-Cookie` headers are set, the method will return an empty array (`[ ]`
 
 ## Examples
 
+As alluded to above, running code like the following on the client won't return any results — `Set-Cookie` is filtered out from client-side {{domxref("Headers")}}.
+
 ```js
 fetch("https://example.com").then((response) => {
   console.log(response.headers.getSetCookie());
-  // ["value1", "value2", etc.]
+  // No header values returned
 });
+```
+
+However, something like the following can be used to query `Set-Cookie` values on the server:
+
+```js
+const headers = new Headers({
+  "Set-Cookie": "name=value",
+});
+
+headers.getSetCookie();
+// Returns ["name=value"]
 ```
 
 ## Specifications
