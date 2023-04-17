@@ -5754,6 +5754,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging_(Firefox_50_onwards)	https://extensionworkshop.com/documentation/develop/debugging/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
