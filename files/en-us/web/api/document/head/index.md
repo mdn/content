@@ -1,6 +1,6 @@
 ---
 title: "Document: head property"
-short-title: head
+short-title: head <meta name="google-site-verification" content="2MhusxnplSXVZ-p_6pdLFD2GC2Fraxnq0d94-aBISRI" />
 slug: Web/API/Document/head
 page-type: web-api-instance-property
 browser-compat: api.Document.head
