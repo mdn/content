@@ -21,16 +21,13 @@ oklch(59.69% 0.156 49.77 / .5)
 
 - Functional notation: `oklch(L C H [/ A])`
 
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `100` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
 
-  - `C` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `0.5`).
+  - `C` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, where `0%` is `0` and `100%` is the number `0.4`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while the maximum is theoretically unbounded (but in practice does not exceed `0.5`).
 
   - `H` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;angle&gt;")}} that specifies the hue angle along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
 
-  - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-
-> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This case is notable in that `100%` is equal to the number `100` for the `L` value and `0.4` for the `C` value.
+  - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 

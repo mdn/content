@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Numbers_and_dates
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
 
@@ -308,7 +308,7 @@ const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
 
 Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
 
-Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
 ## Date object
 
@@ -412,4 +412,4 @@ The next statement appends a `minute` value to `temp`. If the value of `minute` 
 
 Finally, a conditional expression appends "P.M." to `temp` if `hour` is 12 or greater; otherwise, it appends "A.M." to `temp`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}

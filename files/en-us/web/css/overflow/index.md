@@ -51,7 +51,7 @@ The `overflow` property is specified as one or two keywords chosen from the list
   - : Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.
 - `auto`
   - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
-- `overlay` {{deprecated_inline}}
+- `overlay`
   - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space.
 
 #### Mozilla extensions

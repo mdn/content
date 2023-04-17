@@ -1,5 +1,6 @@
 ---
-title: VideoTrackList.getTrackById()
+title: "VideoTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.VideoTrackList.getTrackById

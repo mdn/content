@@ -90,16 +90,16 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Basic arithmetic
 
-- {{CSSxRef("calc")}}
+- {{CSSxRef("calc", "calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
 
 ### Comparison functions
 
-- {{CSSxRef("min")}}
+- {{CSSxRef("min", "min()")}}
   - : Calculates the smallest of a list of values.
-- {{CSSxRef("max")}}
+- {{CSSxRef("max", "max()")}}
   - : Calculates the largest of a list of values.
-- {{CSSxRef("clamp")}}
+- {{CSSxRef("clamp", "clamp()")}}
   - : Calculates the central of a minimum, central, and maximum values.
 
 ### Stepped value functions
@@ -113,39 +113,39 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Trigonometric functions
 
-- {{CSSxRef("sin")}}
+- {{CSSxRef("sin", "sin()")}}
   - : Calculates the trigonometric sine of a number.
-- {{CSSxRef("cos")}}
+- {{CSSxRef("cos", "cos()")}}
   - : Calculates the trigonometric cosine of a number.
-- {{CSSxRef("tan")}}
+- {{CSSxRef("tan", "tan()")}}
   - : Calculates the trigonometric tangent of a number.
-- {{CSSxRef("asin")}}
+- {{CSSxRef("asin", "asin()")}}
   - : Calculates the trigonometric inverse sine of a number.
-- {{CSSxRef("acos")}}
+- {{CSSxRef("acos", "acos()")}}
   - : Calculates the trigonometric inverse cosine of a number.
-- {{CSSxRef("atan")}}
+- {{CSSxRef("atan", "atan()")}}
   - : Calculates the trigonometric inverse tangent of a number.
-- {{CSSxRef("atan2")}}
+- {{CSSxRef("atan2", "atan2()")}}
   - : Calculates the trigonometric inverse tangent of two-numbers in a plane.
 
 ### Exponential functions
 
-- {{CSSxRef("pow")}} {{Experimental_Inline}}
+- {{CSSxRef("pow", "pow()")}} {{Experimental_Inline}}
   - : Calculates the base raised to the power of a number.
-- {{CSSxRef("sqrt")}} {{Experimental_Inline}}
+- {{CSSxRef("sqrt", "sqrt()")}} {{Experimental_Inline}}
   - : Calculates the square root of a number.
-- {{CSSxRef("hypot")}} {{Experimental_Inline}}
+- {{CSSxRef("hypot", "hypot()")}} {{Experimental_Inline}}
   - : Calculates the square root of the sum of the squares of its arguments.
-- {{CSSxRef("log")}} {{Experimental_Inline}}
+- {{CSSxRef("log", "log()")}} {{Experimental_Inline}}
   - : Calculates the logarithm of a number.
-- {{CSSxRef("exp")}} {{Experimental_Inline}}
+- {{CSSxRef("exp", "exp()")}} {{Experimental_Inline}}
   - : Calculates `e` raised to the power of a number.
 
 ### Sign-related functions
 
-- {{CSSxRef("abs")}} {{Experimental_Inline}}
+- {{CSSxRef("abs", "abs()")}} {{Experimental_Inline}}
   - : Calculates the absolute value of a number.
-- {{CSSxRef("sign")}} {{Experimental_Inline}}
+- {{CSSxRef("sign", "sign()")}} {{Experimental_Inline}}
   - : Calculates the sign (positive or negative) of the number.
 
 ## Filter functions
@@ -225,22 +225,22 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
   - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
-- {{CSSxRef("cross-fade")}}
+- {{CSSxRef("cross-fade", "cross-fade()")}}
   - : Blends two or more images at a defined transparency.
-- {{CSSxRef("element")}} {{Experimental_Inline}}
+- {{CSSxRef("element", "element()")}} {{Experimental_Inline}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
-- {{CSSxRef("paint")}}
+- {{CSSxRef("image/paint", "paint()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
 
 ## Counter functions
 
 CSS counter functions are generally used with the {{CSSxRef("content")}} property, although in theory, they may be used wherever a {{CSSxRef("&lt;string&gt;")}} is supported.
 
-- {{CSSxRef("counter")}}
+- {{CSSxRef("counter", "counter()")}}
   - : Returns a string representing the current value of the named counter if there is one.
-- {{CSSxRef("counters")}}
+- {{CSSxRef("counters", "counters()")}}
   - : Enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
-- {{CSSxRef("symbols")}}
+- {{CSSxRef("symbols", "symbols()")}}
   - : Defines the counter styles inline, directly as the value of a property.
 
 ## Shape functions
@@ -255,20 +255,20 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an inset rectangle shape.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
-- {{CSSxRef("path")}}
+- {{CSSxRef("path", "path()")}}
   - : Accepts an SVG path string to enable a shape to be drawn.
 
 ## Reference functions
 
 The following functions are used as a value of properties to reference a value defined elsewhere.
 
-- {{CSSxRef("attr")}}
+- {{CSSxRef("attr", "attr()")}}
   - : Uses the attributes defined on HTML element.
-- {{CSSxRef("env")}}
+- {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{CSSxRef("url")}}
+- {{CSSxRef("url", "url()")}}
   - : Uses a file from the specified URL.
-- {{CSSxRef("var")}}
+- {{CSSxRef("var", "var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
 
 ## Grid functions
@@ -277,26 +277,26 @@ The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
-- {{CSSxRef("minmax")}}
+- {{CSSxRef("minmax", "minmax()")}}
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
-- {{CSSxRef("repeat")}}
+- {{CSSxRef("repeat", "repeat()")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
 
 ## Font functions
 
 CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} property to control the use of alternate glyphs.
 
-- {{CSSxRef("font-variant-alternates/stylistic", "stylistic()")}}
+- {{CSSxRef("font-variant-alternates#stylistic", "stylistic()")}}
   - : Enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
-- {{CSSxRef("font-variant-alternates/styleset", "styleset()")}}
+- {{CSSxRef("font-variant-alternates#styleset", "styleset()")}}
   - : Enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, such as `ss02`.
-- {{CSSxRef("font-variant-alternates/character-variant", "character-variant()")}}
+- {{CSSxRef("font-variant-alternates#character-variant", "character-variant()")}}
   - : Enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, such as `cv02`.
-- {{CSSxRef("font-variant-alternates/swash", "swash()")}}
+- {{CSSxRef("font-variant-alternates#swash", "swash()")}}
   - : Enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, such as `swsh 2` and `cswh 2`.
-- {{CSSxRef("font-variant-alternates/ornaments", "ornaments()")}}
+- {{CSSxRef("font-variant-alternates#ornaments", "ornaments()")}}
   - : Enables ornaments such as [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, such as `ornm 2`.
-- {{CSSxRef("font-variant-alternates/annotation", "annotation()")}}
+- {{CSSxRef("font-variant-alternates#annotation", "annotation()")}}
   - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
 
 ## Animation functions

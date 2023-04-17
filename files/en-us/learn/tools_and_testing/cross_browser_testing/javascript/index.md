@@ -239,7 +239,7 @@ For example:
   For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
   Arrow functions are supported across all modern browsers, except for IE.
 - Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
-  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
+  It is arguably a good idea to use strict mode, as it makes for better, more efficient code. Strict mode is supported in all modern browsers.
 - [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
   These are available in IE10 and above, and all modern browsers.
 

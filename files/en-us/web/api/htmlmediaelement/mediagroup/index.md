@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.mediaGroup
+title: "HTMLMediaElement: mediaGroup property"
+short-title: mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
 page-type: web-api-instance-property
 status:
@@ -26,4 +27,4 @@ In 2016, the whole Media Controller feature was [removed from the HTML specifica
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.mediaGroup` property

@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.destination
+title: "NavigateEvent: destination property"
+short-title: destination
 slug: Web/API/NavigateEvent/destination
 page-type: web-api-instance-property
 status:

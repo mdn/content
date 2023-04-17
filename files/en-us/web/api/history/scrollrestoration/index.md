@@ -1,5 +1,6 @@
 ---
-title: History.scrollRestoration
+title: "History: scrollRestoration property"
+short-title: scrollRestoration
 slug: Web/API/History/scrollRestoration
 page-type: web-api-instance-property
 browser-compat: api.History.scrollRestoration

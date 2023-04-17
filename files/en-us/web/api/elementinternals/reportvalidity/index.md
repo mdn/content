@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.reportValidity()
+title: "ElementInternals: reportValidity() method"
+short-title: reportValidity()
 slug: Web/API/ElementInternals/reportValidity
 page-type: web-api-instance-method
 browser-compat: api.ElementInternals.reportValidity

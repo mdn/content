@@ -1,5 +1,6 @@
 ---
-title: Node.textContent
+title: "Node: textContent property"
+short-title: textContent
 slug: Web/API/Node/textContent
 page-type: web-api-instance-property
 browser-compat: api.Node.textContent

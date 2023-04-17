@@ -12,5 +12,5 @@ Although browser page prediction and prediction services enable faster page load
 
 ## See also
 
-- [prerender](/en-US/docs/Glossary/prerender)
+- [prerender](/en-US/docs/Glossary/Prerender)
 - [prefetch](/en-US/docs/Glossary/Prefetch)

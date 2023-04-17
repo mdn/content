@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.self
+title: "WorkerGlobalScope: self property"
+short-title: self
 slug: Web/API/WorkerGlobalScope/self
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.self

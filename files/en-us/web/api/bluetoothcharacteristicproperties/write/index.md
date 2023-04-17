@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.write
+title: "BluetoothCharacteristicProperties: write property"
+short-title: write
 slug: Web/API/BluetoothCharacteristicProperties/write
 page-type: web-api-instance-property
 status:

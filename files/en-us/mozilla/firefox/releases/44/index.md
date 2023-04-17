@@ -89,7 +89,7 @@ Highlights:
 
 #### Removals
 
-- Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks) has been dropped ([Firefox bug 1167029](https://bugzil.la/1167029).
+- Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) has been dropped ([Firefox bug 1167029](https://bugzil.la/1167029).
 - The non-standard and deprecated property `Object.prototype.__noSuchMethod__` has been removed ([Firefox bug 683218](https://bugzil.la/683218)).
 
 ### Interfaces/APIs/DOM

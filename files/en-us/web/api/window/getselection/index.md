@@ -1,5 +1,6 @@
 ---
-title: Window.getSelection()
+title: "Window: getSelection() method"
+short-title: getSelection()
 slug: Web/API/Window/getSelection
 page-type: web-api-instance-method
 browser-compat: api.Window.getSelection
@@ -37,10 +38,10 @@ browsers will return a {{domxref("Selection")}} object with
 
 ```js
 function foo() {
-    const selObj = window.getSelection();
-    alert(selObj);
-    const selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  const selObj = window.getSelection();
+  alert(selObj);
+  const selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 

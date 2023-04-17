@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.encodeQueueSize
+title: "VideoEncoder: encodeQueueSize property"
+short-title: encodeQueueSize
 slug: Web/API/VideoEncoder/encodeQueueSize
 page-type: web-api-instance-property
 browser-compat: api.VideoEncoder.encodeQueueSize

@@ -47,31 +47,28 @@ let wakeLock = null;
 // create an async function to request a wake lock
 const requestWakeLock = async () => {
   try {
-    wakeLock = await navigator.wakeLock.request('screen');
+    wakeLock = await navigator.wakeLock.request("screen");
 
     // listen for our release event
-    wakeLock.addEventListener('release', () => {
+    wakeLock.addEventListener("release", () => {
       // if wake lock is released alter the UI accordingly
     });
-
   } catch (err) {
     // if wake lock request fails - usually system related, such as battery
-
   }
-}
+};
 
-wakeLockOnButton.addEventListener('click', () => {
+wakeLockOnButton.addEventListener("click", () => {
   requestWakeLock();
-})
+});
 
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   if (wakeLock !== null) {
-    wakeLock.release()
-      .then(() => {
-        wakeLock = null;
-      })
+    wakeLock.release().then(() => {
+      wakeLock = null;
+    });
   }
-})
+});
 ```
 
 ## Specifications

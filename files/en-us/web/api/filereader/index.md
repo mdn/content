@@ -20,7 +20,7 @@ File objects may be obtained from a {{domxref("FileList")}} object returned as a
 ## Constructor
 
 - {{domxref("FileReader.FileReader", "FileReader()")}}
-  - : Returns a newly constructed `FileReader`.
+  - : Returns a new `FileReader` object.
 
 See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) for details and examples.
 

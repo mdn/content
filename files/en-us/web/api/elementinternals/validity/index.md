@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.validity
+title: "ElementInternals: validity property"
+short-title: validity
 slug: Web/API/ElementInternals/validity
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.validity

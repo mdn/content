@@ -1,5 +1,6 @@
 ---
-title: AudioEncoder.isConfigSupported()
+title: "AudioEncoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/AudioEncoder/isConfigSupported
 page-type: web-api-static-method
 status:
@@ -14,7 +15,7 @@ The **`isConfigSupported()`** static method of the {{domxref("AudioEncoder")}} i
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+AudioEncoder.isConfigSupported(config)
 ```
 
 ### Parameters

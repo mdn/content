@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.label
+title: "MediaStreamTrack: label property"
+short-title: label
 slug: Web/API/MediaStreamTrack/label
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.label

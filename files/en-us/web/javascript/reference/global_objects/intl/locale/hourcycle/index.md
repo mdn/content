@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.hourCycle
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.hourCycle`** accessor property returns the hour cycle type for the locale.
+The **`hourCycle`** accessor property of {{jsxref("Intl.Locale")}} instances returns the hour cycle type for this locale.
 
 ## Description
 

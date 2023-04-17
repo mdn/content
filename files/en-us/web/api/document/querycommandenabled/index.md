@@ -1,5 +1,6 @@
 ---
-title: Document.queryCommandEnabled()
+title: "Document: queryCommandEnabled() method"
+short-title: queryCommandEnabled()
 slug: Web/API/Document/queryCommandEnabled
 page-type: web-api-instance-method
 status:

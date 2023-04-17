@@ -1,6 +1,6 @@
 ---
 title: JavaScript language overview
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 page-type: guide
 ---
 
@@ -264,7 +264,7 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Grammar
 
@@ -413,7 +413,7 @@ const obj = {
 };
 ```
 
-Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
+Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
 // Dot notation
@@ -736,11 +736,11 @@ class Admin extends withAuthentication(Person) {
 
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
 
-For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
@@ -824,5 +824,5 @@ There are some essential parts of the language that we have omitted due to space
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

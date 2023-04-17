@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.methodName
+title: "PaymentResponse: methodName property"
+short-title: methodName
 slug: Web/API/PaymentResponse/methodName
 page-type: web-api-instance-property
 browser-compat: api.PaymentResponse.methodName

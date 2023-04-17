@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.sampleSize
+title: "MediaTrackConstraints: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.sampleSize

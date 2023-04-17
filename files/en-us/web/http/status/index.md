@@ -1,6 +1,7 @@
 ---
 title: HTTP response status codes
 slug: Web/HTTP/Status
+page-type: landing-page
 browser-compat: http.status
 ---
 

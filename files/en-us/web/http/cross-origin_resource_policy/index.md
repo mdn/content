@@ -1,6 +1,7 @@
 ---
 title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Cross-Origin_Resource_Policy
+page-type: guide
 browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
 

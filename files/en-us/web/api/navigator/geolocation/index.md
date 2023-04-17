@@ -1,5 +1,6 @@
 ---
-title: Navigator.geolocation
+title: "Navigator: geolocation property"
+short-title: geolocation
 slug: Web/API/Navigator/geolocation
 page-type: web-api-instance-property
 browser-compat: api.Navigator.geolocation

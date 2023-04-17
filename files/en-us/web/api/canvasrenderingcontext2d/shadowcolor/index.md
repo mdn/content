@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.shadowColor
+title: "CanvasRenderingContext2D: shadowColor property"
+short-title: shadowColor
 slug: Web/API/CanvasRenderingContext2D/shadowColor
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.shadowColor

@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.getFrequencyResponse()
+title: "BiquadFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
 browser-compat: api.BiquadFilterNode.getFrequencyResponse

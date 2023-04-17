@@ -1,11 +1,12 @@
 ---
-title: Response.text()
+title: "Response: text() method"
+short-title: text()
 slug: Web/API/Response/text
 page-type: web-api-instance-method
 browser-compat: api.Response.text
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`text()`** method of the {{domxref("Response")}} interface takes a {{domxref("Response")}} stream and reads it to completion.
 It returns a promise that resolves with a {{jsxref("String")}}.

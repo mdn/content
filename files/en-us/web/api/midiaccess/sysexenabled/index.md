@@ -1,5 +1,6 @@
 ---
-title: MIDIAccess.sysexEnabled
+title: "MIDIAccess: sysexEnabled property"
+short-title: sysexEnabled
 slug: Web/API/MIDIAccess/sysexEnabled
 page-type: web-api-instance-property
 browser-compat: api.MIDIAccess.sysexEnabled

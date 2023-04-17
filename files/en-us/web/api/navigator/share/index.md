@@ -1,5 +1,6 @@
 ---
-title: Navigator.share()
+title: "Navigator: share() method"
+short-title: share()
 slug: Web/API/Navigator/share
 page-type: web-api-instance-method
 browser-compat: api.Navigator.share

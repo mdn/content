@@ -1,5 +1,6 @@
 ---
 title: "IDBTransaction: abort event"
+short-title: abort
 slug: Web/API/IDBTransaction/abort_event
 page-type: web-api-event
 browser-compat: api.IDBTransaction.abort_event

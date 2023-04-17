@@ -1,5 +1,6 @@
 ---
-title: Notification.close()
+title: "Notification: close() method"
+short-title: close()
 slug: Web/API/Notification/close
 page-type: web-api-instance-method
 browser-compat: api.Notification.close

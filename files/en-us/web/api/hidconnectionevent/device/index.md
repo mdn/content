@@ -1,5 +1,6 @@
 ---
-title: HIDConnectionEvent.device
+title: "HIDConnectionEvent: device property"
+short-title: device
 slug: Web/API/HIDConnectionEvent/device
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Animation.persist()
+title: "Animation: persist() method"
+short-title: persist()
 slug: Web/API/Animation/persist
 page-type: web-api-instance-method
 browser-compat: api.Animation.persist

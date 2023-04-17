@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.start()
+title: "AudioBufferSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioBufferSourceNode/start
 page-type: web-api-instance-method
 browser-compat: api.AudioBufferSourceNode.start

@@ -1,5 +1,6 @@
 ---
-title: Navigator.registerProtocolHandler()
+title: "Navigator: registerProtocolHandler() method"
+short-title: registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 page-type: web-api-instance-method
 browser-compat: api.Navigator.registerProtocolHandler

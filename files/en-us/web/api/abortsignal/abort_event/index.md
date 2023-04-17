@@ -1,5 +1,6 @@
 ---
 title: "AbortSignal: abort event"
+short-title: abort
 slug: Web/API/AbortSignal/abort_event
 page-type: web-api-event
 browser-compat: api.AbortSignal.abort_event

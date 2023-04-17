@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.negative
+title: "CSSCounterStyleRule: negative property"
+short-title: negative
 slug: Web/API/CSSCounterStyleRule/negative
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.negative

@@ -1,5 +1,6 @@
 ---
 title: "SVGAnimationElement: beginEvent event"
+short-title: beginEvent
 slug: Web/API/SVGAnimationElement/beginEvent_event
 page-type: web-api-event
 browser-compat: api.SVGAnimationElement.beginEvent_event

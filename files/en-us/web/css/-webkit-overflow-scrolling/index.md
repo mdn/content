@@ -13,6 +13,19 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ## Syntax
 
+```css
+/* Keyword values */
+-webkit-overflow-scrolling: auto;
+-webkit-overflow-scrolling: touch;
+
+/* Global values */
+-webkit-overflow-scrolling: inherit;
+-webkit-overflow-scrolling: initial;
+-webkit-overflow-scrolling: revert;
+-webkit-overflow-scrolling: revert-layer;
+-webkit-overflow-scrolling: unset;
+```
+
 ### Values
 
 - `auto`

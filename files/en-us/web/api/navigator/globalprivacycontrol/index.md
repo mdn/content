@@ -1,5 +1,6 @@
 ---
-title: Navigator.globalPrivacyControl
+title: "Navigator: globalPrivacyControl property"
+short-title: globalPrivacyControl
 slug: Web/API/Navigator/globalPrivacyControl
 page-type: web-api-instance-property
 status:

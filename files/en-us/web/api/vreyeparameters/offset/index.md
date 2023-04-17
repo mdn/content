@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.offset
+title: "VREyeParameters: offset property"
+short-title: offset
 slug: Web/API/VREyeParameters/offset
 page-type: web-api-instance-property
 status:

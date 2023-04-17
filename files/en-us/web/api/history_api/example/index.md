@@ -1,10 +1,10 @@
 ---
-title: Ajax navigation example
+title: History navigation example
 slug: Web/API/History_API/Example
 page-type: guide
 ---
 
-This is an example of an AJAX website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
+This is an example of a website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
 > **Note:** For fully integrating the {{HTMLElement("form")}} elements within this _mechanism_, please take a look at the paragraph [Submitting forms and uploading files](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
@@ -422,5 +422,5 @@ For more information, please see: [Working with the History API](/en-US/docs/Web
 
 ## See also
 
-- {{ domxref("window.history") }}
+- {{domxref("window.history", "history")}} global object
 - {{domxref("Window/popstate_event", "popstate")}} event

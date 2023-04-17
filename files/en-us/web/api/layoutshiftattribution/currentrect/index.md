@@ -1,5 +1,6 @@
 ---
-title: LayoutShiftAttribution.currentRect
+title: "LayoutShiftAttribution: currentRect property"
+short-title: currentRect
 slug: Web/API/LayoutShiftAttribution/currentRect
 page-type: web-api-instance-property
 status:

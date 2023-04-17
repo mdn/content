@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.name
+title: "HTMLImageElement: name property"
+short-title: name
 slug: Web/API/HTMLImageElement/name
 page-type: web-api-instance-property
 status:

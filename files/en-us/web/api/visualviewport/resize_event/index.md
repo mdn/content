@@ -1,5 +1,6 @@
 ---
 title: "VisualViewport: resize event"
+short-title: resize
 slug: Web/API/VisualViewport/resize_event
 page-type: web-api-event
 browser-compat: api.VisualViewport.resize_event

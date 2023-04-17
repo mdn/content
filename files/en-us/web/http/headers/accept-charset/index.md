@@ -1,6 +1,7 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
+page-type: http-header
 ---
 
 {{HTTPSidebar}}

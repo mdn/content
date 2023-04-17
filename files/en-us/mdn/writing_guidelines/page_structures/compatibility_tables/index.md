@@ -11,7 +11,7 @@ MDN has a standard format for tables that illustrate compatibility of shared tec
 To make this data available in multiple projects programmatically, a Node.js package is built from the [`browser-compat-data` repository](https://github.com/mdn/browser-compat-data) and published to npm.
 
 To modify the data within these tables, comprehensive documentation along with the most recent details of conventions and JSON schemas used to represent the data can be found in the repository's [contributing guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md).
-If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Using BCD data in MDN pages
 

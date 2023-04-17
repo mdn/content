@@ -1,6 +1,7 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
 

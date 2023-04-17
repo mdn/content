@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 111 that affect d
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
   This allows developers to associate `inbound-rtp` statistics with a particular track when using {{domxref("RTCPeerConnection.getStats()")}}.
-  (For more information see [Firefox bug 1680606](https://bugzil.la/1680606).)
+  (For more information see [Firefox bug 1804676](https://bugzil.la/1804676).)
 
 #### Removals
 

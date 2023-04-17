@@ -18,46 +18,6 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### inert attribute
-
-The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}. When present, it may make the browser "ignore" the element from assistive technologies, page search, and text selection. For more details on the status of this feature, see [Firefox bug 1655722](https://bugzil.la/1655722).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>html5.inert.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Layout for input type="search"
 
 Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
@@ -515,9 +475,7 @@ For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Fir
   </tbody>
 </table>
 
-When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005
-](https://bugzil.la/1809005
-).
+When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005](https://bugzil.la/1809005).
 
 <table>
   <thead>
@@ -1190,49 +1148,12 @@ Permitted values are:
   </tbody>
 </table>
 
-#### AV1 support for Firefox on Android
-
-This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web/Media/Formats/Video_codecs#av1). This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">—</td>
-    </tr>
-  </tbody>
-</table>
-
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
+See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
 <table>
   <thead>
@@ -1250,13 +1171,13 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1596,49 +1517,6 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Navigator method: getAutoplayPolicy()
-
-The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
-The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
-The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
-See [Firefox bug 1773551](https://bugzil.la/1773551) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>110</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2134,7 +2012,7 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 
 ### SameSite=Lax by default
 
-[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax) have a default value of [`Lax`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax).
+[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
 With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 

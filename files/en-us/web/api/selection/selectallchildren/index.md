@@ -1,5 +1,6 @@
 ---
-title: Selection.selectAllChildren()
+title: "Selection: selectAllChildren() method"
+short-title: selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 page-type: web-api-instance-method
 browser-compat: api.Selection.selectAllChildren

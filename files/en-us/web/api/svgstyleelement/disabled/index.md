@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.disabled
+title: "SVGStyleElement: disabled property"
+short-title: disabled
 slug: Web/API/SVGStyleElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.SVGStyleElement.disabled

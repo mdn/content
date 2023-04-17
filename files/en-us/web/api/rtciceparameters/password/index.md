@@ -1,5 +1,6 @@
 ---
-title: RTCIceParameters.password
+title: "RTCIceParameters: password property"
+short-title: password
 slug: Web/API/RTCIceParameters/password
 page-type: web-api-instance-property
 browser-compat: api.RTCIceParameters.password

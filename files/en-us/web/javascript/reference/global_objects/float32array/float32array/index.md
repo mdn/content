@@ -7,13 +7,7 @@ browser-compat: javascript.builtins.Float32Array.Float32Array
 
 {{JSRef}}
 
-The **`Float32Array()`** typed array constructor creates a new
-{{jsxref("Float32Array")}} object, which is, an array of 32-bit floating point numbers
-(corresponding to the C `float` data type) in the platform byte order. If
-control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are
-initialized to `0`. Once established, you can reference elements in the array
-using the object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Float32Array()`** constructor creates {{jsxref("Float32Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 

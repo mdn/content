@@ -1,6 +1,6 @@
 ---
 title: Groups and backreferences
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 page-type: guide
 ---
 
@@ -191,12 +191,12 @@ console.log(lines.join("\n"));
 ## See also
 
 - A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [ClassRanges in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

@@ -64,7 +64,7 @@ _No changes._
 
 #### New APIs
 
-- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
+- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/API/Web_components) for more details.
 - The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ([Firefox bug 1409664](https://bugzil.la/1409664)).
 - The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ([Firefox bug 1461465](https://bugzil.la/1461465)). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 - The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ([Firefox bug 1472661](https://bugzil.la/1472661)).

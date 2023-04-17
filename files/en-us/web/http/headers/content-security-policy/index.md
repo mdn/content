@@ -1,6 +1,7 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 

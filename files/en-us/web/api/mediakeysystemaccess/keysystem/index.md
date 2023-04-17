@@ -1,5 +1,6 @@
 ---
-title: MediaKeySystemAccess.keySystem
+title: "MediaKeySystemAccess: keySystem property"
+short-title: keySystem
 slug: Web/API/MediaKeySystemAccess/keySystem
 page-type: web-api-instance-property
 browser-compat: api.MediaKeySystemAccess.keySystem

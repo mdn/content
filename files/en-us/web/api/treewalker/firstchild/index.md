@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.firstChild()
+title: "TreeWalker: firstChild() method"
+short-title: firstChild()
 slug: Web/API/TreeWalker/firstChild
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.firstChild

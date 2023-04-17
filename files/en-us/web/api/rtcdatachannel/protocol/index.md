@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.protocol
+title: "RTCDataChannel: protocol property"
+short-title: protocol
 slug: Web/API/RTCDataChannel/protocol
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.protocol

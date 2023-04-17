@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.lowerOpen
+title: "IDBKeyRange: lowerOpen property"
+short-title: lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
 page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.lowerOpen

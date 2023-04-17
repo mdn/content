@@ -1,11 +1,12 @@
 ---
-title: Request.integrity
+title: "Request: integrity property"
+short-title: integrity
 slug: Web/API/Request/integrity
 page-type: web-api-instance-property
 browser-compat: api.Request.integrity
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
