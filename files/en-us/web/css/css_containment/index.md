@@ -145,7 +145,7 @@ Its possible values are:
 
 ### Relevant to the user
 
-The specification refers to the concept of [relevant to the user](https://www.w3.org/TR/css-contain-2/#relevant-to-the-user). An element that is relevant to the user should be rendered, as it is visible, and/or being interacted with by the user.
+The specification refers to the concept of [relevant to the user](https://w3c.github.io/csswg-drafts/css-contain/#relevant-to-the-user). An element that is relevant to the user should be rendered, as it is visible, and/or being interacted with by the user.
 
 To be precise, an element is relevant to the user if any of the following are true:
 
@@ -156,7 +156,7 @@ To be precise, an element is relevant to the user if any of the following are tr
 
 ### Skips its contents
 
-The specification refers to the concept of [skips its contents](https://www.w3.org/TR/css-contain-2/#skips-its-contents). This means that the element referred to is not relevant to the user and will not be rendered to improve performance.
+The specification refers to the concept of [skips its contents](https://w3c.github.io/csswg-drafts/css-contain/#skips-its-contents). This means that the element referred to is not relevant to the user and will not be rendered to improve performance.
 
 To be precise, when an element skips its contents:
 
