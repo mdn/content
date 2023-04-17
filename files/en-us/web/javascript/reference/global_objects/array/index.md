@@ -844,10 +844,6 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 
 ## See also
 
-- From the JavaScript Guide:
-
-  - [Accessing properties](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#accessing_properties)
-  - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-- [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
