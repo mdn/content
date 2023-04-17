@@ -629,8 +629,8 @@ const obj = {
 };
 const { self, prot } = obj;
 
-console.log(self) // "123"
-console.log(prot) // "456"
+console.log(self); // "123"
+console.log(prot); // "456"
 ```
 
 ## Specifications
