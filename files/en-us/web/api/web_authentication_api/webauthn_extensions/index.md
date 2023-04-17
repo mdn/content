@@ -78,7 +78,7 @@ As demonstrated by the above code snippet, there are two different places to fin
    - In the case of `PublicKeyCredential`s returned from successful `create()` calls, this can be returned via a call to {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "publicKeyCredential.response.getAuthenticatorData()")}}.
    - In the case of `PublicKeyCredential`s returned from successful `get()` calls, this can be found in the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "publicKeyCredential.response.authenticatorData")}} property.
 
-   Authenticator data takes the form of an {{jsxref("ArrayBuffer")}} with a consistent structure. The authenticator extension results data is always found in a section at the end, as a [CBOR map](https://cbor.io/) representing the results. See {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} for a detailed description of the complete authenticator data structure.
+   Authenticator data takes the form of an {{jsxref("ArrayBuffer")}} with a consistent structure — see [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data). The authenticator extension results data is always found in a section at the end, as a [CBOR map](https://cbor.io/) representing the results. See {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} for a detailed description of the complete authenticator data structure.
 
    Back to our example, if the relying party is authorized to receive the `minPinLength` value, the authenticator data would contain a representation of it in the following form: `"minPinLength": uint`.
 

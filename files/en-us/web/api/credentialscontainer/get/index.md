@@ -99,15 +99,9 @@ get(options)
 
     - `id`: An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-    - `transports`: An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Values can include:
+    - `transports`: An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"` (see {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} for more details).
 
-      - `"ble"`
-      - `"hybrid"`
-      - `"internal"`
-      - `"nfc"`
-      - `"usb"`
-
-      This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential. At that point, it should be stored by the app for later use.
+      > **Note:** This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential. At that point, it should be stored by the app for later use.
 
     - `type`: A string defining the type of the public key credential to retrieve. This can currently take a single value, `"public-key"`, but more values may be added in the future. This value is mirrored by the {{domxref("Credential.type", "type")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
@@ -191,23 +185,45 @@ If a single credential cannot be unambiguously obtained, the Promise will resolv
 
 ### User login using the WebAuthn API
 
-The following snippet shows a typical `get()` call with the WebAuthn `publicKey` option, to authenticate a user using a set of credentials previously created via a WebAuthn {{domxref("CredentialsContainer.create()", "create()")}} call:
+The following snippet shows a typical `get()` call with the WebAuthn `publicKey` option:
 
 ```js
-let credential = await navigator.credentials.get({
-  publicKey: {
-    challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
-    rpId: "acme.com",
-    allowCredentials: [{
-      type: "public-key",
-      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-    }],
-    userVerification: "required",
-  }
+const publicKey = {
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+  rpId: "acme.com",
+  allowCredentials: [{
+    type: "public-key",
+    id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
+  }],
+  userVerification: "required",
+}
+
+navigator.credentials.get({ publicKey })
+```
+
+A successful `get()` call returns a promise that resolves with a {{domxref("PublicKeyCredential")}} object instance, representing a public key credential previously created via a WebAuthn {{domxref("CredentialsContainer.create()", "create()")}} that has now been used to authenticate a user. Its {{domxref("PublicKeyCredential.response")}} property contains an {{domxref("AuthenticatorAssertionResponse")}} object providing access to several useful pieces of information including the authenticator data, signature, and user handle.
+
+```js
+navigator.credentials.get({ publicKey }).then((publicKeyCredential) => {
+  const response = publicKeyCredential.response;
+
+  // Access authenticator data ArrayBuffer
+  const authenticatorData = response.authenticatorData;
+
+  // Access client JSON
+  const clientJSON = response.clientDataJSON;
+
+  // Access signature ArrayBuffer
+  const clientJSON = response.signature;
+
+  // Access userHandle ArrayBuffer
+  const clientJSON = response.userHandle;
 });
 ```
 
-See [Authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) for more information about how the overall flow works.
+Some of this data will need to be stored on the server — for example the `signature` to provide proof that authenticator possesses the genuine private key used to create the credential, and the `userHandle` to link the user with the credential, sign in attempt, and other data.
+
+> **Note:** See [Authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) for more information about how the overall flow works.
 
 ### User login using the FedCM API
 

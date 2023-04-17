@@ -15,7 +15,7 @@ When an authenticator registers a new key pair with a service, the authenticator
 The attestation is returned through the WebAuthn API as the [AuthenticatorAttestationResponse](/en-US/docs/Web/API/AuthenticatorAttestationResponse). The attestation format contains two basic ArrayBuffers:
 
 - **clientDataJSON** - An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.
-- [attestationObject](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject) - Cryptographic attestation that a newly generated keypair was created by that authenticator. Contains authenticator data and an attestation statement. The authenticator data contains an attestedCredentialData field. The attestedCredentialData field contains the credentialId and credentialPublicKey. (The [authenticator data](/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData) is the same structure that is used in the AuthenticatorAssertionResponse. The attestedCredentialData is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.)
+- [attestationObject](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject) - Cryptographic attestation that a newly generated keypair was created by that authenticator. Contains [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) and an attestation statement. The authenticator data contains an `attestedCredentialData` field, which contains the `credentialId` and `credentialPublicKey`. The `attestedCredentialData` is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.)
 
 Different devices have different attestation formats. The [pre-defined attestation formats in WebAuthn](https://www.w3.org/TR/webauthn/#defined-attestation-formats) are:
 
@@ -35,7 +35,7 @@ When a user chooses to log into a service, the server sends a challenge and the 
 The assertion is returned through the WebAuthn API as the [AuthenticatorAssertionResponse](/en-US/docs/Web/API/AuthenticatorAssertionResponse). The assertion format is fairly simple as it contains four basic ArrayBuffers:
 
 - [clientDataJSON](/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON) - The same as in attestation. An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.
-- [authenticatorData](/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData) - data created and/or used by the authenticator
+- [authenticatorData](/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData) - data created and/or used by the authenticator (see also [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data)).
 - **signature** - a signature over the clientDataJSON and authenticatorData that can be verified with the public key that was created during registration.
 - **userHandle** - Optional. (Nullable) A user identifier. This may be a username, or a hash of a username, etc. Used by a service to give a scope to credentials. Maximum length of 64 bytes. Older authenticators (U2F) do not support this output.
 

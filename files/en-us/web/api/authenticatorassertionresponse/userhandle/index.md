@@ -8,38 +8,19 @@ browser-compat: api.AuthenticatorAssertionResponse.userHandle
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`userHandle`** read-only property of the
-{{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
-object which is an opaque identifier for the given user. Such an identifier can be used
-by the relying party's server to link the user account with its corresponding
-credentials and other data.
+The **`userHandle`** read-only property of the {{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}} object providing an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data.
 
-This value specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
+This value is specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
 
 ## Value
 
-An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
-This is not human-readable and does **not** contain any personally
-identifying information (e.g. username, email, phone number, etc.)
+An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user. This is not human-readable and does **not** contain any personally identifying information (e.g. username, email, phone number, etc.).
+
+For {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} calls made with a non-empty `allowCredentials` properties, the returned `userHandle` may be null.
 
 ## Examples
 
-```js
-const options = {
-  challenge: new Uint8Array(26), // will be another value, provided by the relying party server
-  timeout: 60000,
-};
-
-navigator.credentials
-  .get({ publicKey: options })
-  .then((assertionPKCred) => {
-    const userHandle = assertionPKCred.response.userHandle;
-
-    // Send response and client extensions to the server so that it can
-    // go on with the authentication
-  })
-  .catch((err) => console.error(err));
-```
+See [User login using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/get#user_login_using_the_webauthn_api) for a detailed example.
 
 ## Specifications
 

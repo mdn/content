@@ -83,10 +83,10 @@ A `password` object can be a reference to an object literal or an {{domxref("HTM
 
 In the case of the string literal, the properties are provided as-is. In the case of the {{domxref("HTMLFormElement")}}, the values need to be provided in form input fields (this can include {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} elements) with the following `name` attribute values:
 
-- `id`: `username`
-- `name`: `name` or `nickname`
-- `iconURL`: `photo`
-- `password`: `new-password` or `current-password`
+- `id`: `"username"`
+- `name`: `"name"` or `"nickname"`
+- `iconURL`: `"photo"`
+- `password`: `"new-password"` or `"current-password"`
 
 The exception to this is `origin` — this is set to the origin of the document the {{domxref("HTMLFormElement")}} is contained within.
 
@@ -123,25 +123,25 @@ The exception to this is `origin` — this is set to the origin of the document 
       - `"platform"`: The authenticator is part of the device WebAuthn is running on (termed a **platform authenticator**), therefore WebAuthn will communicate with it using a transport available to that platform, such as a platform-specific API. A public key credential bound to a platform authenticator is called a **platform credential**.
       - `"cross-platform"`: The authenticator is not a part of the device WebAuthn is running on (termed a **roaming authenticator** as it can roam between different devices), therefore WebAuthn will communicate with it using a cross-platform transport protocol such as Bluetooth or NFC. A public key credential bound to a roaming authenticator is called a **roaming credential**.
 
-    - `requireResidentKey` {{optional_inline}} : A boolean. If set to `true`, it indicates that a resident key is required (see `residentKey`) This property is deprecated, but still available in some implementations for backwards compatibility with WebAuthn Level 1. The value should be set to `true` if `residentKey` is set to `required`.
+    - `requireResidentKey` {{optional_inline}} : A boolean. If set to `true`, it indicates that a resident key is required (see `residentKey`) This property is deprecated, but still available in some implementations for backwards compatibility with WebAuthn Level 1. The value should be set to `true` if `residentKey` is set to `"required"`.
 
       If omitted, `requireResidentKey` defaults to `false`.
 
     - `residentKey` {{optional_inline}} : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e. one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party is required to provide credential IDs in the `get()` `allowCredentials` value. Possible values are:
 
-      - `discouraged`: The relying party prefers creation of a server-side credential, but will accept a client-side discoverable credential.
-      - `preferred`: The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
-      - `required`: The relying party requires a client-side discoverable credential. If one cannot be created, an error is thrown.
+      - `"discouraged"`: The relying party prefers creation of a server-side credential, but will accept a client-side discoverable credential.
+      - `"preferred"`: The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
+      - `"required"`: The relying party requires a client-side discoverable credential. If one cannot be created, an error is thrown.
 
-      If omitted, `residentKey` defaults to `required` if `requireResidentKey` is `true`, otherwise the default value is `discouraged`.
+      If omitted, `residentKey` defaults to `"required"` if `requireResidentKey` is `true`, otherwise the default value is `"discouraged"`.
 
     - `userVerification` {{optional_inline}}: A string that specifies the relying party's requirements for user verification for the `create()` operation. Possible values are:
 
-      - `discouraged`: The relying party prefers no user verification for the `create()` operation, in the interests of minimizing disruption to the user experience.
-      - `preferred`: The relying party prefers user verification for the `create()` operation, but it will not fail if user verification cannot be performed.
-      - `required`: The relying party requires user verification for the `create()` operation — if user verification cannot be performed, an error is thrown.
+      - `"discouraged"`: The relying party prefers no user verification for the `create()` operation, in the interests of minimizing disruption to the user experience.
+      - `"preferred"`: The relying party prefers user verification for the `create()` operation, but it will not fail if user verification cannot be performed.
+      - `"required"`: The relying party requires user verification for the `create()` operation — if user verification cannot be performed, an error is thrown.
 
-      If omitted, `userVerification` defaults to `preferred`.
+      If omitted, `userVerification` defaults to `"preferred"`.
 
 - `challenge`
 
@@ -153,7 +153,7 @@ The exception to this is `origin` — this is set to the origin of the document 
 
     - `id`: An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the existing credential ID.
 
-    - `transports` {{optional_inline}}: An {{jsxref("Array")}} of allowed transports. Possible transports are: `usb`, `nfc`, `ble`, and `internal`.
+    - `transports` {{optional_inline}}: An {{jsxref("Array")}} of strings representing allowed transports. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"` (see {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} for more details).
 
     - `type`: A string defining the type of public key credential to create. This can currently take a single value, `"public-key"`, but more values may be added in the future.
 
@@ -221,24 +221,52 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance 
 
 ### Creating a public key credential using the WebAuthn API
 
-The following snippet shows a typical `create()` call with the WebAuthn `publicKey` option, to create a new public key credential that can later be used to authenticate a user via a WebAuthn {{domxref("CredentialsContainer.get()", "get()")}} call:
+The following snippet shows a typical `create()` call with the WebAuthn `publicKey` option:
 
 ```js
-let credential = await navigator.credentials.create({
-  publicKey: {
-    challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
-    rp: { id: "acme.com", name: "ACME Corporation" },
-    user: {
-      id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
-      name: "jamiedoe",
-      displayName: "Jamie Doe"
-    },
-    pubKeyCredParams: [ {type: "public-key", alg: -7} ]
-  }
+const publicKey = {
+  challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+  rp: { id: "acme.com", name: "ACME Corporation" },
+  user: {
+    id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
+    name: "jamiedoe",
+    displayName: "Jamie Doe"
+  },
+  pubKeyCredParams: [ {type: "public-key", alg: -7} ]
+}
+
+navigator.credentials.create({ publicKey })
+```
+
+A successful `create()` call returns a promise that resolves with a {{domxref("PublicKeyCredential")}} object instance, representing a public key credential that can later be used to authenticate a user via a WebAuthn {{domxref("CredentialsContainer.get()", "get()")}} call. Its {{domxref("PublicKeyCredential.response")}} property contains an {{domxref("AuthenticatorAttestationResponse")}} object providing access to several useful pieces of information including the authenticator data, public key, transport mechanisms, and more.
+
+```js
+navigator.credentials.create({ publicKey }).then((publicKeyCredential) => {
+  const response = publicKeyCredential.response;
+
+  // Access attestationObject ArrayBuffer
+  const attestationObj = response.attestationObject;
+
+  // Access client JSON
+  const clientJSON = response.clientDataJSON;
+
+  // Return authenticator data ArrayBuffer
+  const authenticatorData = response.getAuthenticatorData();
+
+  // Return public key ArrayBuffer
+  const pk = response.getPublicKey();
+
+  // Return public key algorithm identifier
+  const pkAlgo = response.getPublicKeyAlgorithm();
+
+  // Return permissable transports array
+  const transports = response.getTransports();
 });
 ```
 
-See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissable transports.
+
+> **Note:** See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
 
 ## Specifications
 
