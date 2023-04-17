@@ -265,7 +265,7 @@ You can also ignore all returned values:
 
 #### Using a binding pattern as the rest property
 
-The rest property of array destructuring assignment can be another array or object binding pattern. This allows you to simultaneously unpack the properties and indices of arrays.
+The rest property of array destructuring assignment can be another array or object binding pattern. The inner destructuring destructures from the array created after collecting the rest elements, so you cannot access any properties present on the original iterable in this way.
 
 ```js
 const [a, b, ...{ length }] = [1, 2, 3];
