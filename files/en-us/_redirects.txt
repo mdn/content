@@ -10258,6 +10258,7 @@
 /en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
+/en-US/docs/Web/API/XRCompositionLayer/chromaticAberrationCorrection	/en-US/docs/Web/API/XRCompositionLayer
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
 /en-US/docs/Web/API/XREye	/en-US/docs/Web/API/XRView/eye
 /en-US/docs/Web/API/XRFrameRequestCallback	/en-US/docs/Web/API/XRSession/requestAnimationFrame
