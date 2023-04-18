@@ -8571,6 +8571,7 @@
 /en-US/docs/Web/API/HTMLTextAreaElement1	/en-US/docs/Web/API/HTMLTextAreaElement
 /en-US/docs/Web/API/HTMLTimeElement.dateTime	/en-US/docs/Web/API/HTMLTimeElement/dateTime
 /en-US/docs/Web/API/HTMLVideoElement.getVideoPlaybackQuality	/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality
+/en-US/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement
