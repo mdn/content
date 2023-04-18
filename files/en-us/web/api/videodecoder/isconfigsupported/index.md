@@ -13,7 +13,7 @@ The **`isConfigSupported()`** static method of the {{domxref("VideoDecoder")}} i
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+VideoDecoder.isConfigSupported(config)
 ```
 
 ### Parameters

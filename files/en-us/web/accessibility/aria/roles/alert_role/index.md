@@ -1,6 +1,7 @@
 ---
 title: "ARIA: alert role"
 slug: Web/Accessibility/ARIA/Roles/alert_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alert
   - https://w3c.github.io/aria-practices/#log

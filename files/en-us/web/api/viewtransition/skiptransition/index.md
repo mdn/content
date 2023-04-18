@@ -3,7 +3,8 @@ title: "ViewTransition: skipTransition() method"
 short-title: skipTransition()
 slug: Web/API/ViewTransition/skipTransition
 page-type: web-api-instance-method
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition.skipTransition
 ---
 

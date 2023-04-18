@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/112
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 11, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 was released on April 11, 2023.
 
 ## Changes for web developers
 
@@ -13,12 +13,14 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### HTML
 
-- {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
+- The {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
 
 #### Removals
 
 ### CSS
 
+- [Exponential functions](/en-US/docs/Web/CSS/CSS_Functions#exponential_functions) are now enabled by default.
+  This allows the use of `pow()`, `sqrt()`, `hypot()`, `log()` and `exp()` functions ([Firefox bug 1814469](https://bugzil.la/1814469)).
 - The `overlay` keyword value for the {{cssxref("overflow")}} property is now supported as a legacy alias of the keyword value `auto` ([Firefox bug 1817189](https://bugzil.la/1817189)).
 
 #### Removals
@@ -48,7 +50,6 @@ This article provides information about the changes in Firefox 112 that affect d
   See [Firefox bug 1773551](https://bugzil.la/1773551) for more details.
 - Rounded rectangles can now be drawn in 2D canvases using {{domxref("CanvasRenderingContext2D.roundRect()")}}, [`Path2D.roundRect()`](/en-US/docs/Web/API/Path2D#path2d.roundrect) and [`OffscreenCanvasRenderingContext2D.roundRect()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.roundrect).
   See [Firefox bug 1756175](https://bugzil.la/1756175) for more details.
-- The {{domxref("HTMLElement")}} property **`inert`** is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
 
 #### DOM
 

@@ -190,7 +190,7 @@ Keep in mind that these are custom properties, not actual variables like you mig
 
 ## Custom property fallback values
 
-Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 > **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
@@ -227,7 +227,7 @@ However, when the values of custom properties are parsed, the browser doesn't ye
 
 Unfortunately, these valid values can be used, via the `var()` functional notation, in a context where they might not make sense. Properties and custom variables can lead to invalid CSS statements, leading to the new concept of _valid at computed time._
 
-When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/inheritance) value of the property is used.
+When the browser encounters an invalid `var()` substitution, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used.
 
 The next two examples illustrate this.
 
