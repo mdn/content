@@ -9,9 +9,9 @@ browser-compat: webextensions.api.storage.StorageArea.setAccessLevel
 
 Sets the access level for the storage area.
 
-This method is currently only supported for the `storage.session` StorageArea.
+This method is only supported for the `storage.session` StorageArea.
 
-Unlike other storage areas, `storage.session` is only available to privileged extension contexts. This `setAccessLevel` method can be used to opt in to exposing the storage area to content scripts too. All other storage areas default to being exposed to all extension contexts, including content scripts.
+Unlike other storage areas, `storage.session` is only available to privileged (trusted) extension contexts. This `setAccessLevel` method is used to expose the session storage area to content scripts too. By default, all other storage areas are exposed to all extension contexts, including content scripts.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
