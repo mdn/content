@@ -163,5 +163,9 @@ console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
 
 ## See also
 
-- {{jsxref("Array.prototype.groupToMap()")}} – Group an array into a map, using any kind of object as a key or value.
 - [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.fromEntries()")}}

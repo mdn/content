@@ -39,11 +39,13 @@ This page introduces public static properties of classes, which include static m
 - For private static features, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
 - For instance features, see [methods definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), and [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
-Public static features are declared using the `static` keyword. They are added to the class constructor at the time of class evaluation using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}). They are accessed again from the class constructor.
+Public static features are declared using the `static` keyword. They are added to the class constructor at the time of [class evaluation](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}). They are accessed again from the class constructor.
 
 Static methods are often utility functions, such as functions to create or clone instances. Public static fields are useful when you want a field to exist only once per class, not on every class instance you create. This is useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-Static fields without initializers are initialized to `undefined`. Public static fields are not reinitialized on subclasses, but can be accessed via the prototype chain.
+Static field names can be [computed](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names). The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await")}} and {{jsxref("Operators/yield")}} work as expected in this expression.
+
+Static fields can have an initializer. Static fields without initializers are initialized to `undefined`. Public static fields are not reinitialized on subclasses, but can be accessed via the prototype chain.
 
 ```js
 class ClassWithStaticField {
@@ -81,6 +83,8 @@ class SubClassWithStaticField extends ClassWithStaticField {
 console.log(ClassWithStaticField.anotherBaseStaticField); // "base static field"
 console.log(SubClassWithStaticField.subStaticField); // "base static method output"
 ```
+
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
 
 ## Examples
 
