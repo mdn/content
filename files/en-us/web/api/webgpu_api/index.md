@@ -585,7 +585,7 @@ You can find more information about WebGPU error handling in the explainer — s
 
 ## Security requirements
 
-- Access to the whole APIis available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+The whole API is available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ## Examples
 
