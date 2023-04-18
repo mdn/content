@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisErrorEvent()
+title: "SpeechSynthesisErrorEvent: SpeechSynthesisErrorEvent() constructor"
+short-title: SpeechSynthesisErrorEvent()
 slug: Web/API/SpeechSynthesisErrorEvent/SpeechSynthesisErrorEvent
 page-type: web-api-constructor
 browser-compat: api.SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent

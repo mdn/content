@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.codedRect
+title: "VideoFrame: codedRect property"
+short-title: codedRect
 slug: Web/API/VideoFrame/codedRect
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedRect

@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.pointerId
+title: "PointerEvent: pointerId property"
+short-title: pointerId
 slug: Web/API/PointerEvent/pointerId
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.pointerId

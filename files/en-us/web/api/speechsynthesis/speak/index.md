@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.speak()
+title: "SpeechSynthesis: speak() method"
+short-title: speak()
 slug: Web/API/SpeechSynthesis/speak
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.speak

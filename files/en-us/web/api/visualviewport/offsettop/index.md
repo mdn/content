@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.offsetTop
+title: "VisualViewport: offsetTop property"
+short-title: offsetTop
 slug: Web/API/VisualViewport/offsetTop
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.offsetTop

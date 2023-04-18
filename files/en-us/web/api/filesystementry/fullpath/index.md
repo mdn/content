@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.fullPath
+title: "FileSystemEntry: fullPath property"
+short-title: fullPath
 slug: Web/API/FileSystemEntry/fullPath
 page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.fullPath

@@ -1,6 +1,7 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
+page-type: http-status-code
 browser-compat: http.status.206
 ---
 

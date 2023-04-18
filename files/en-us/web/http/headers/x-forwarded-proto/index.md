@@ -1,6 +1,7 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
+page-type: http-header
 status:
   - non-standard
 ---

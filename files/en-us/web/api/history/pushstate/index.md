@@ -1,5 +1,6 @@
 ---
-title: History.pushState()
+title: "History: pushState() method"
+short-title: pushState()
 slug: Web/API/History/pushState
 page-type: web-api-instance-method
 browser-compat: api.History.pushState

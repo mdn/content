@@ -20,11 +20,6 @@ text-stroke: 4px navy;
 -webkit-text-stroke: revert;
 -webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
-text-stroke: inherit;
-text-stroke: initial;
-text-stroke: revert;
-text-stroke: revert-layer;
-text-stroke: unset;
 ```
 
 ## Constituent properties

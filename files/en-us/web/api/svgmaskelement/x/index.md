@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.x
+title: "SVGMaskElement: x property"
+short-title: x
 slug: Web/API/SVGMaskElement/x
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.x

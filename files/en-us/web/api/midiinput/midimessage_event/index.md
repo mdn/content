@@ -1,5 +1,6 @@
 ---
 title: "MIDIInput: midimessage event"
+short-title: midimessage
 slug: Web/API/MIDIInput/midimessage_event
 page-type: web-api-event
 browser-compat: api.MIDIInput.midimessage_event

@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.flush()
+title: "VideoDecoder: flush() method"
+short-title: flush()
 slug: Web/API/VideoDecoder/flush
 page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.flush

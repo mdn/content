@@ -52,7 +52,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### JavaScript
 
 - Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see [Webkit bug 28285](https://webkit.org/b/28285). This feature had existed for a long time but was never documented (at least, not here on MDC).
-- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions).
+- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions).
 - The following [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
 - DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
 - The JSON parser has been re-written for improved speed and compliance. This includes a fix for [Firefox bug 572279](https://bugzil.la/572279).

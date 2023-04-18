@@ -1,5 +1,6 @@
 ---
-title: PasswordCredential.name
+title: "PasswordCredential: name property"
+short-title: name
 slug: Web/API/PasswordCredential/name
 page-type: web-api-instance-property
 status:

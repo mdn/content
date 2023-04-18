@@ -1,5 +1,6 @@
 ---
-title: Response.text()
+title: "Response: text() method"
+short-title: text()
 slug: Web/API/Response/text
 page-type: web-api-instance-method
 browser-compat: api.Response.text

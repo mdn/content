@@ -1,5 +1,6 @@
 ---
-title: HTMLLabelElement.htmlFor
+title: "HTMLLabelElement: htmlFor property"
+short-title: htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
 page-type: web-api-instance-property
 browser-compat: api.HTMLLabelElement.htmlFor

@@ -1,5 +1,6 @@
 ---
-title: Event.stopPropagation()
+title: "Event: stopPropagation() method"
+short-title: stopPropagation()
 slug: Web/API/Event/stopPropagation
 page-type: web-api-instance-method
 browser-compat: api.Event.stopPropagation

@@ -1,5 +1,6 @@
 ---
 title: "PaymentRequest: merchantvalidation event"
+short-title: merchantvalidation
 slug: Web/API/PaymentRequest/merchantvalidation_event
 page-type: web-api-event
 status:

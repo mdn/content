@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.loop
+title: "HTMLMediaElement: loop property"
+short-title: loop
 slug: Web/API/HTMLMediaElement/loop
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.loop

@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.direction
+title: "IDBCursor: direction property"
+short-title: direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.direction

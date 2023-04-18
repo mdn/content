@@ -1,5 +1,6 @@
 ---
 title: "WorkerGlobalScope: error event"
+short-title: error
 slug: Web/API/WorkerGlobalScope/error_event
 page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.error_event

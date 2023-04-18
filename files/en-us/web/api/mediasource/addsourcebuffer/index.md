@@ -1,5 +1,6 @@
 ---
-title: MediaSource.addSourceBuffer()
+title: "MediaSource: addSourceBuffer() method"
+short-title: addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.addSourceBuffer

@@ -1,5 +1,6 @@
 ---
-title: Screen.width
+title: "Screen: width property"
+short-title: width
 slug: Web/API/Screen/width
 page-type: web-api-instance-property
 browser-compat: api.Screen.width

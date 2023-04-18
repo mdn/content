@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.deleteIndex()
+title: "IDBObjectStore: deleteIndex() method"
+short-title: deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.deleteIndex

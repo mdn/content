@@ -1,5 +1,6 @@
 ---
-title: DataTransferItem.webkitGetAsEntry()
+title: "DataTransferItem: webkitGetAsEntry() method"
+short-title: webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.webkitGetAsEntry

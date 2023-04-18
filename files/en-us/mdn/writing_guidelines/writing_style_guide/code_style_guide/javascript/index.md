@@ -636,7 +636,7 @@ This section lists our recommendations of which operators to use and when.
 
 ### Conditional operators
 
-When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
+When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
 const x = condition ? 1 : 2;

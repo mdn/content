@@ -1,5 +1,6 @@
 ---
-title: Window.showModalDialog()
+title: "Window: showModalDialog() method"
+short-title: showModalDialog()
 slug: Web/API/Window/showModalDialog
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Worker.terminate()
+title: "Worker: terminate() method"
+short-title: terminate()
 slug: Web/API/Worker/terminate
 page-type: web-api-instance-method
 browser-compat: api.Worker.terminate

@@ -1,6 +1,7 @@
 ---
 title: <munder>
 slug: Web/MathML/Element/munder
+page-type: mathml-element
 browser-compat: mathml.elements.munder
 ---
 

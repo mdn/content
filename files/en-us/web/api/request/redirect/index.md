@@ -1,5 +1,6 @@
 ---
-title: Request.redirect
+title: "Request: redirect property"
+short-title: redirect
 slug: Web/API/Request/redirect
 page-type: web-api-instance-property
 browser-compat: api.Request.redirect

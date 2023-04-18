@@ -1,5 +1,6 @@
 ---
-title: Window.scrollByPages()
+title: "Window: scrollByPages() method"
+short-title: scrollByPages()
 slug: Web/API/Window/scrollByPages
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.setStreams()
+title: "RTCRtpSender: setStreams() method"
+short-title: setStreams()
 slug: Web/API/RTCRtpSender/setStreams
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.setStreams

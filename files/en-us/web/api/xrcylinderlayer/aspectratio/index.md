@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.aspectRatio
+title: "XRCylinderLayer: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/XRCylinderLayer/aspectRatio
 page-type: web-api-instance-property
 status:

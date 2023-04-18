@@ -1,5 +1,6 @@
 ---
-title: SVGCircleElement.r
+title: "SVGCircleElement: r property"
+short-title: r
 slug: Web/API/SVGCircleElement/r
 page-type: web-api-instance-property
 browser-compat: api.SVGCircleElement.r

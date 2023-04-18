@@ -1,5 +1,6 @@
 ---
-title: PannerNode()
+title: "PannerNode: PannerNode() constructor"
+short-title: PannerNode()
 slug: Web/API/PannerNode/PannerNode
 page-type: web-api-constructor
 browser-compat: api.PannerNode.PannerNode

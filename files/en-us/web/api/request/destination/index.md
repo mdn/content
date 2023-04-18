@@ -1,5 +1,6 @@
 ---
-title: Request.destination
+title: "Request: destination property"
+short-title: destination
 slug: Web/API/Request/destination
 page-type: web-api-instance-property
 browser-compat: api.Request.destination
@@ -27,7 +28,7 @@ where the received data is stored for processing later. Others are script-based,
 which case the received data is delivered to a script by calling it and passing the data
 along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
 any of the {{domxref("Worklet")}}-based destinations
-(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+(including subclasses like {{domxref("AudioWorklet")}}), and the
 {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
 and {{domxref("SharedWorker")}}.
 

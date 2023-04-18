@@ -1,5 +1,6 @@
 ---
-title: URLPattern.hostname
+title: "URLPattern: hostname property"
+short-title: hostname
 slug: Web/API/URLPattern/hostname
 page-type: web-api-instance-property
 status:

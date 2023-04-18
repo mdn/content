@@ -1,5 +1,6 @@
 ---
-title: XRSession.updateRenderState()
+title: "XRSession: updateRenderState() method"
+short-title: updateRenderState()
 slug: Web/API/XRSession/updateRenderState
 page-type: web-api-instance-method
 status:

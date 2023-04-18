@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue.values()
+title: "CSSTransformValue: values() method"
+short-title: values()
 slug: Web/API/CSSTransformValue/values
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.values

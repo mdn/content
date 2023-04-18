@@ -1,5 +1,6 @@
 ---
-title: MIDIAccess.outputs
+title: "MIDIAccess: outputs property"
+short-title: outputs
 slug: Web/API/MIDIAccess/outputs
 page-type: web-api-instance-property
 browser-compat: api.MIDIAccess.outputs

@@ -1,5 +1,6 @@
 ---
-title: Path2D.addPath()
+title: "Path2D: addPath() method"
+short-title: addPath()
 slug: Web/API/Path2D/addPath
 page-type: web-api-instance-method
 browser-compat: api.Path2D.addPath

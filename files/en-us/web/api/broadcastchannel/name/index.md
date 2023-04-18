@@ -1,5 +1,6 @@
 ---
-title: BroadcastChannel.name
+title: "BroadcastChannel: name property"
+short-title: name
 slug: Web/API/BroadcastChannel/name
 page-type: web-api-instance-property
 browser-compat: api.BroadcastChannel.name

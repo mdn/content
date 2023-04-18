@@ -1,6 +1,7 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
+page-type: http-header
 browser-compat: http.headers.From
 ---
 

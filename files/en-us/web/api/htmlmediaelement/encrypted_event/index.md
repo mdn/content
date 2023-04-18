@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: encrypted event"
+short-title: encrypted
 slug: Web/API/HTMLMediaElement/encrypted_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.encrypted_event

@@ -1,5 +1,6 @@
 ---
-title: PushEvent()
+title: "PushEvent: PushEvent() constructor"
+short-title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 page-type: web-api-constructor
 browser-compat: api.PushEvent.PushEvent

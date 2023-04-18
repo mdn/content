@@ -1,5 +1,6 @@
 ---
-title: XRProjectionLayer.textureWidth
+title: "XRProjectionLayer: textureWidth property"
+short-title: textureWidth
 slug: Web/API/XRProjectionLayer/textureWidth
 page-type: web-api-instance-property
 status:

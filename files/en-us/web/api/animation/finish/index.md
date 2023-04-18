@@ -1,5 +1,6 @@
 ---
-title: Animation.finish()
+title: "Animation: finish() method"
+short-title: finish()
 slug: Web/API/Animation/finish
 page-type: web-api-instance-method
 browser-compat: api.Animation.finish

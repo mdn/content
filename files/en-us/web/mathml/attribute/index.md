@@ -1,6 +1,7 @@
 ---
 title: Attributes
 slug: Web/MathML/Attribute
+page-type: landing-page
 ---
 
 {{MathMLRef}}

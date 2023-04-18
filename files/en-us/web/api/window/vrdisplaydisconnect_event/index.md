@@ -1,5 +1,6 @@
 ---
 title: "Window: vrdisplaydisconnect event"
+short-title: vrdisplaydisconnect
 slug: Web/API/Window/vrdisplaydisconnect_event
 page-type: web-api-event
 status:

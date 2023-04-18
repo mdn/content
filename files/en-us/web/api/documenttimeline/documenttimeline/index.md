@@ -1,5 +1,6 @@
 ---
-title: DocumentTimeline()
+title: "DocumentTimeline: DocumentTimeline() constructor"
+short-title: DocumentTimeline()
 slug: Web/API/DocumentTimeline/DocumentTimeline
 page-type: web-api-constructor
 browser-compat: api.DocumentTimeline.DocumentTimeline

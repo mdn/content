@@ -1,5 +1,6 @@
 ---
-title: WritableStream.close()
+title: "WritableStream: close() method"
+short-title: close()
 slug: Web/API/WritableStream/close
 page-type: web-api-instance-method
 browser-compat: api.WritableStream.close

@@ -1,5 +1,6 @@
 ---
-title: AudioData.timestamp
+title: "AudioData: timestamp property"
+short-title: timestamp
 slug: Web/API/AudioData/timestamp
 page-type: web-api-instance-property
 status:

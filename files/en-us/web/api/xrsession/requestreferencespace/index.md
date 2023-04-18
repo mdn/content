@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestReferenceSpace()
+title: "XRSession: requestReferenceSpace() method"
+short-title: requestReferenceSpace()
 slug: Web/API/XRSession/requestReferenceSpace
 page-type: web-api-instance-method
 status:

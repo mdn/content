@@ -1,6 +1,7 @@
 ---
 title: "ARIA: treegrid role"
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
   - https://w3c.github.io/aria-practices/#treegrid

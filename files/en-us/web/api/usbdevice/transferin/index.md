@@ -1,5 +1,6 @@
 ---
-title: USBDevice.transferIn()
+title: "USBDevice: transferIn() method"
+short-title: transferIn()
 slug: Web/API/USBDevice/transferIn
 page-type: web-api-instance-method
 status:

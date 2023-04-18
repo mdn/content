@@ -1,5 +1,6 @@
 ---
-title: Clients.get()
+title: "Clients: get() method"
+short-title: get()
 slug: Web/API/Clients/get
 page-type: web-api-instance-method
 browser-compat: api.Clients.get

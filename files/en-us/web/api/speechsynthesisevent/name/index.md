@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.name
+title: "SpeechSynthesisEvent: name property"
+short-title: name
 slug: Web/API/SpeechSynthesisEvent/name
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.name

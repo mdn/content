@@ -1,5 +1,6 @@
 ---
-title: DOMParser.parseFromString()
+title: "DOMParser: parseFromString() method"
+short-title: parseFromString()
 slug: Web/API/DOMParser/parseFromString
 page-type: web-api-instance-method
 browser-compat: api.DOMParser.parseFromString

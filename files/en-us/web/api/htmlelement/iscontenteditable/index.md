@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.isContentEditable
+title: "HTMLElement: isContentEditable property"
+short-title: isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.isContentEditable

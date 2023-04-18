@@ -1,5 +1,6 @@
 ---
-title: HTMLDetailsElement.open
+title: "HTMLDetailsElement: open property"
+short-title: open
 slug: Web/API/HTMLDetailsElement/open
 page-type: web-api-instance-property
 browser-compat: api.HTMLDetailsElement.open

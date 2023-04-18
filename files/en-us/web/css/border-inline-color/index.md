@@ -29,8 +29,8 @@ border-inline-color: unset;
 
 ### Values
 
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 

@@ -1,5 +1,6 @@
 ---
-title: Element.part
+title: "Element: part property"
+short-title: part
 slug: Web/API/Element/part
 page-type: web-api-instance-property
 browser-compat: api.Element.part

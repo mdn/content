@@ -1,5 +1,6 @@
 ---
-title: MediaDeviceInfo.label
+title: "MediaDeviceInfo: label property"
+short-title: label
 slug: Web/API/MediaDeviceInfo/label
 page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.label

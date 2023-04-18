@@ -1,5 +1,6 @@
 ---
-title: TextTrack.addCue()
+title: "TextTrack: addCue() method"
+short-title: addCue()
 slug: Web/API/TextTrack/addCue
 page-type: web-api-instance-method
 browser-compat: api.TextTrack.addCue

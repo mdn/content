@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.autoIncrement
+title: "IDBObjectStore: autoIncrement property"
+short-title: autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
 page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.autoIncrement

@@ -1,5 +1,6 @@
 ---
-title: VirtualKeyboard.boundingRect
+title: "VirtualKeyboard: boundingRect property"
+short-title: boundingRect
 slug: Web/API/VirtualKeyboard/boundingRect
 page-type: web-api-instance-property
 status:

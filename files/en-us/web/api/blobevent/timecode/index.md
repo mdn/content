@@ -1,5 +1,6 @@
 ---
-title: BlobEvent.timecode
+title: "BlobEvent: timecode property"
+short-title: timecode
 slug: Web/API/BlobEvent/timecode
 page-type: web-api-instance-property
 browser-compat: api.BlobEvent.timecode

@@ -1,5 +1,6 @@
 ---
-title: NavigationHistoryEntry.key
+title: "NavigationHistoryEntry: key property"
+short-title: key
 slug: Web/API/NavigationHistoryEntry/key
 page-type: web-api-instance-property
 status:

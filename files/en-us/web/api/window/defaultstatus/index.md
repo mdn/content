@@ -1,5 +1,6 @@
 ---
-title: Window.defaultStatus
+title: "Window: defaultStatus property"
+short-title: defaultStatus
 slug: Web/API/Window/defaultStatus
 page-type: web-api-instance-property
 status:

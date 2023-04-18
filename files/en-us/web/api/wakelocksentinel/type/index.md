@@ -1,5 +1,6 @@
 ---
-title: WakeLockSentinel.type
+title: "WakeLockSentinel: type property"
+short-title: type
 slug: Web/API/WakeLockSentinel/type
 page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.type

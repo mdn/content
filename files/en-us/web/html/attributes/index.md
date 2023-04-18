@@ -706,8 +706,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("link") }}
+        {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
       </td>
       <td>Specifies the language of the linked resource.</td>
     </tr>

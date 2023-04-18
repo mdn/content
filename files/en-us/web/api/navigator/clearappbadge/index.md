@@ -1,5 +1,6 @@
 ---
-title: Navigator.clearAppBadge()
+title: "Navigator: clearAppBadge() method"
+short-title: clearAppBadge()
 slug: Web/API/Navigator/clearAppBadge
 page-type: web-api-instance-method
 browser-compat: api.Navigator.clearAppBadge

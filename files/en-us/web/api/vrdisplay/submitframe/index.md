@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.submitFrame()
+title: "VRDisplay: submitFrame() method"
+short-title: submitFrame()
 slug: Web/API/VRDisplay/submitFrame
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: Gamepad.vibrationActuator
+title: "Gamepad: vibrationActuator property"
+short-title: vibrationActuator
 slug: Web/API/Gamepad/vibrationActuator
 page-type: web-api-instance-property
 status:

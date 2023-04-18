@@ -1,5 +1,6 @@
 ---
-title: Navigator.userAgentData
+title: "Navigator: userAgentData property"
+short-title: userAgentData
 slug: Web/API/Navigator/userAgentData
 page-type: web-api-instance-property
 status:

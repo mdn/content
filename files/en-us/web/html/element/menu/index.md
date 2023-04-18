@@ -1,5 +1,5 @@
 ---
-title: '<menu>: The Menu element'
+title: "<menu>: The Menu element"
 slug: Web/HTML/Element/menu
 page-type: html-element
 browser-compat: html.elements.menu

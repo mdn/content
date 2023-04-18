@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.type
+title: "HTMLObjectElement: type property"
+short-title: type
 slug: Web/API/HTMLObjectElement/type
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.type
