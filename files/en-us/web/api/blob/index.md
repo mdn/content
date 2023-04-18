@@ -49,7 +49,7 @@ The {{DOMxRef("Blob.Blob", "Blob()")}} constructor can create blobs from other o
 ```js
 const obj = { hello: "world" };
 const blob = new Blob([JSON.stringify(obj, null, 2)], {
-  type: "application/json",
+  type: "application/json"
 });
 ```
 
