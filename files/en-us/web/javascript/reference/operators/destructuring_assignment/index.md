@@ -449,7 +449,7 @@ function userDisplayName({ displayName: dname }) {
   return dname;
 }
 
-console.log(userDisplayName(user)); // `jdoe`
+console.log(userDisplayName(user)); // "jdoe"
 ```
 
 Nested objects can also be unpacked.
@@ -591,7 +591,7 @@ Same as accessing properties, destructuring `null` or `undefined` throws a {{jsx
 
 ```js example-bad
 const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
-const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+const { b } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
 ```
 
 This happens even when the pattern is empty.
@@ -600,9 +600,9 @@ This happens even when the pattern is empty.
 const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
-#### Combined Array and Object Destructuring
+#### Combined array and object destructuring
 
-Array and Object destructuring can be combined. Say you want the third element in the array `props` below, and then you want the `name` property in the object, you can do the following:
+Array and object destructuring can be combined. Say you want the third element in the array `props` below, and then you want the `name` property in the object, you can do the following:
 
 ```js
 const props = [
@@ -628,8 +628,9 @@ const obj = {
   },
 };
 const { self, prot } = obj;
-// self "123"
-// prot "456" (Access to the prototype chain)
+
+console.log(self); // "123"
+console.log(prot); // "456"
 ```
 
 ## Specifications
