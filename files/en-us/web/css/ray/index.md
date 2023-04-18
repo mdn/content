@@ -7,16 +7,21 @@ browser-compat: css.types.ray
 
 {{CSSRef}}
 
-The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a straight line segment or path that starts from the specified position of an element and proceeds in the direction defined by the specified angle. The `ray()` function can be used as a parameter in the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path an animated element can follow.
+The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a line segment that begins from an [offset starting position](https://drafts.fxtf.org/motion/#offset-starting-position) and extends in the direction of the specified angle. The line segment is referred to as "ray". The length of a ray can be constrained by specifying a size.
 
-{{EmbedInteractiveExample("pages/css/function-ray.html")}}
+The `ray()` function is used in [CSS motion path](/en-US/docs/Web/CSS/CSS_Motion_Path). It is used as a value for the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property to define the path that an animated element can follow. The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the path's offset starting position. The default offset starting position of a ray is at the top-left corner of the element box.
 
 ## Syntax
 
 ```css
+ray() = ray( <angle> && <ray-size>? && contain? )
+<ray-size> = closest-side | closest-corner | farthest-side | farthest-corner | sides
+```
+
+```css
 /* property: ray(expression) */
 /* all parameters specified */
-offset-path: ray(0deg closest-corner contain);
+offset-path: ray(50deg closest-corner contain);
 
 /* two parameters specified, order does not matter */
 offset-path: ray(contain 200deg);
@@ -28,52 +33,238 @@ offset-path: ray(45deg);
 ### Parameters
 
 - [`<angle>`](/en-US/docs/Web/CSS/angle)
-  - : Specifies the direction in which the line segment proceeds. `0deg` is pointing up and positive angles increase in the clockwise direction.
-- `<size>`
+  - : Specifies the direction in which the line segment extends from the offset starting position. The angle `0deg` lies on the y-axis pointing up, and positive angles increase in the clockwise direction.
+- `<ray-size>`
 
-  - : Specifies the length of the line segment and is an optional parameter. It represents the distance between [`offset-distance`](/en-US/docs/Web/CSS/offset-distance)`: 0%` and `offset-distance: 100%`. This parameter accepts one of the following keywords:
+  - : Specifies the length of the line segment, which is the distance between [`offset-distance`](/en-US/docs/Web/CSS/offset-distance)`: 0%` and `offset-distance: 100%`. This is an optional parameter and accepts one of the following keyword values:
 
-    `closest-side`: Distance between the starting point and the closest side of the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element. This is the default value. If the starting point is on the containing block's boundary, the distance is zero. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
+    `closest-side`: Specifies the length of the line segment as the distance between the ray's starting point and the closest side of the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element. This is the default value used when no `<size>` is specified. If the starting point lies on the containing block's boundary, the length of the line segment is zero. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
 
-    `closest-corner`: Distance between the starting point and the closest corner of the containing block of the element. If the starting point is on a corner of the containing block, the distance is zero.
+    `closest-corner`: Specifies the length of the line segment as the distance between the ray's starting point and the closest corner in the element's containing block. If the starting point lies on a corner of the containing block, the length of the line segment is zero.
 
-    `farthest-side`: Distance between the starting point and the farthest side of the containing block of the element. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
+    `farthest-side`: Specifies the length of the line segment as the distance between the ray's starting point and the farthest side of the containing block of the element. If the starting point is outside the containing block, the edge of the containing block is considered to extend to infinity.
 
-    `farthest-corner`: Distance between the starting point and the farthest corner of the containing block of the element.
+    `farthest-corner`: Specifies the length of the line segment as the distance between the ray's starting point and the farthest corner in the element's containing block.
 
-    `sides`: Distance between the starting point and the point where the line segment intersects the containing block's boundary. If the starting point is on or outside the containing block's boundary, the distance is zero.
-
-> **Note:** In the case of `sides`, the segment length depends on the specified `<angle>`. For all other size values, the segment length is constant regardless of the specified `<angle>`.
+    `sides`: Specifies the length of the line segment as the distance between the ray's starting point and the point where the line segment intersects the containing block's boundary. If the starting point is on or outside the containing block's boundary, the length of the line segment is zero.
 
 - `contain`
   - : Reduces the length of the line segment so that the element stays within the containing block even at `offset-distance: 100%`. Specifically, the segment's length is reduced by half the width or half the height of the element's border box, whichever is greater.
 
-## Formal syntax
-
-{{CSSSyntax}}
-
-<!-- ray() = ray( <angle> && <ray-size>? && contain? )
-<ray-size> = closest-side | closest-corner | farthest-side | farthest-corner | sides -->
-
 ## Examples
 
-### Modify the value of the SVG path d attribute
+### Defining an angle for the ray
+
+This example shows how an element's anchor point gets positioned initially at a ray's starting point and how the element gets oriented at the specified ray angle.
 
 #### CSS
 
 ```css
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+}
 
+.example {
+  position: relative;
+  margin: 1em 2em 4em 3em;
+}
+
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: solid 0.05em;
+  background-color: palegreen;
+  border-top: 4px solid black;
+}
+
+.original {
+  position: absolute;
+  left: 0;
+  opacity: 20%;
+}
+
+.box1 {
+  offset-path: ray(0deg);
+}
+
+.box2 {
+  offset-path: ray(0deg);
+  offset-anchor: 0px 0px;
+}
+
+.box3 {
+  offset-path: ray(150deg);
+  offset-anchor: 0px 0px;
+}
+
+.box4 {
+  offset-path: ray(150deg);
+  offset-anchor: 0px 0px;
+  offset-rotate: 0deg;
+}
+```
+
+```html hidden
+<div class="container">
+  <div class="example">
+    <div class="box">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
+
+  <pre>/* original */</pre>
+
+  <div class="example">
+    <div class="box box1">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
+
+  <pre>offset-path: ray(0deg);<br>/* box1 */<br>/* Default anchor point is at the center */<br>/* Default starting position is at the top-left corner */</pre>
+
+  <div class="example">
+    <div class="box box2">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
+
+  <pre>offset-path: ray(0deg);<br>offset-anchor: 0px 0px;<br>/* box2 */<br>/* Anchor point moves to the top-left corner */<br>/* Default starting position is at the top-left corner */</pre>
+
+  <div class="example">
+    <div class="box box3">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
+
+  <pre>offset-path: ray(150deg);<br>offset-anchor: 0px 0px;<br>/* box3 */</pre>
+
+  <div class="example">
+    <div class="box box4">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
+
+  <pre>offset-path: ray(150deg);<br>offset-anchor: 0px 0px;<br>offset-rotate: 0deg;<br>/* box4 */</pre>
+</div>
+```
+
+The default anchor point is at the center of an element, which can be modified using the [`offset-anchor`](/en-US/docs/Web/CSS/offset-distance) property. The default offset starting position of a path at is the top-left corner of the element box.
+
+In this example, various `offset-anchor` and `offset-path: ray()` values are applied to a box and results are displayed side-by-side for comparison. One box border is highlighted to demonstrate different ray starting points and box orientations. After a box is positioned at the ray's starting point, it is oriented in the direction of the specified ray angle.
+
+#### Result
+
+{{EmbedLiveSample('Giving an angle to the ray', '100%', 650)}}
+
+- `box1` gets initially positioned such that its anchor point (at the center) is at the offset starting position (top-left corner). `box1` is also rotated to orient it towards the `0deg` angle of the ray. This will now be the starting point of the path. You can observe the change in position and rotation of the box by comparing it to the faded `original` box in the background.
+- The anchor point of `box2` is changed to the top-left corner (`0px 0px`) using the `anchor-position` property, and as a result, the element's anchor point and the offset starting position coincide. The ray angle is applied to the element at this starting point, the top-left corner. The box is rotated to match the `0deg` angle along y-axis and pointing up.
+- With other settings the same as in `box2`, a greater positive angle of `150deg` is applied on `box3`. Starting from the top-left corner, the box is rotated in a clockwise direction to reach the specified angle.
+- If you do not want an element to constantly rotate in the direction of the path, you can apply a fixed rotation, such as `offset-rotate: 0deg`, to the element; the element will remain rotated at this specific angle all along the ray's path. This is shown in `box4`, where the ray path will be at `150deg`, but the box orientation will not change along the path.
+
+### Animating an element along the ray
+
+#### CSS
+
+```css
+body {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  gap: 40px;
+}
+
+.container {
+   transform-style: preserve-3d;
+   width: 150px;
+   height: 100px;
+   border: 2px dotted green;
+}
+
+.shape {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 10px;
+  top: 5px;
+  background: #2bc4a2;
+  margin: 5px;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+  offset-anchor: 0px 0px;
+  animation: move 5000ms infinite alternate ease-in-out;
+}
+
+.shape2 {
+  offset-path: ray(120deg sides contain);
+}
+
+.shape3 {
+  offset-rotate: 0deg;
+  offset-path: ray(120deg sides contain);
+}
+
+.shape4 {
+  offset-path: ray(120deg closest-corner);
+}
+
+.shape5 {
+  offset-path: ray(120deg farthest-corner);
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
 ```
 
 #### HTML
 
 ```html
+<div>
+  <div class="container">
+    <div class=" shape shape1"></div>
+  </div>
+</div>
 
+<pre>/* no offset-path applied */</pre>
+
+<div>
+  <div class="container">
+    <div class="shape shape2"></div>
+  </div>
+</div>
+
+<pre>offset-path: ray(120deg sides contain);</pre>
+
+<div>
+  <div class="container">
+    <div class="shape shape3"></div>
+  </div>
+</div>
+
+<pre>offset-path: ray(120deg sides contain);<br>offset-rotate: 0deg;</pre>
+
+<div>
+  <div class="container">
+    <div class="shape shape4"></div>
+  </div>
+</div>
+
+<pre>offset-path: ray(120deg closest-corner)</pre>
+
+<div>
+  <div class="container">
+    <div class="shape shape5"></div>
+  </div>
+</div>
+
+<pre>offset-path: ray(120deg farthest-corner)</pre>
+</div>
 ```
 
 #### Result
 
-<!-- {{EmbedLiveSample('', '100%', 200)}} -->
+{{EmbedLiveSample('Animating an element along the ray', '100%', 750)}}
+
+The first shape is shown as a reference for its position and orientation. A ray motion path is applied on the other shapes. In the first two `offset-path` samples, notice the orientation of the shape with and without `offset-rotate`.
 
 ## Specifications
 
