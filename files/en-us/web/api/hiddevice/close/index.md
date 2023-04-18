@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.close()
+title: "HIDDevice: close() method"
+short-title: close()
 slug: Web/API/HIDDevice/close
 page-type: web-api-instance-method
 status:

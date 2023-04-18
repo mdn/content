@@ -1,5 +1,6 @@
 ---
-title: MessageEvent.origin
+title: "MessageEvent: origin property"
+short-title: origin
 slug: Web/API/MessageEvent/origin
 page-type: web-api-instance-property
 browser-compat: api.MessageEvent.origin

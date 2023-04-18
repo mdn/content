@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.attributeNamespace
+title: "MutationRecord: attributeNamespace property"
+short-title: attributeNamespace
 slug: Web/API/MutationRecord/attributeNamespace
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.attributeNamespace

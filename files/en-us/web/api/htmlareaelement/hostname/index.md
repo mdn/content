@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.hostname
+title: "HTMLAreaElement: hostname property"
+short-title: hostname
 slug: Web/API/HTMLAreaElement/hostname
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.hostname

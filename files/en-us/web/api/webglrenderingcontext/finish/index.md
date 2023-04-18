@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.finish()
+title: "WebGLRenderingContext: finish() method"
+short-title: finish()
 slug: Web/API/WebGLRenderingContext/finish
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.finish

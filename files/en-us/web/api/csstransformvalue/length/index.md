@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue.length
+title: "CSSTransformValue: length property"
+short-title: length
 slug: Web/API/CSSTransformValue/length
 page-type: web-api-instance-property
 browser-compat: api.CSSTransformValue.length

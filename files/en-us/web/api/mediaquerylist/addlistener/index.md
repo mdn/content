@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.addListener()
+title: "MediaQueryList: addListener() method"
+short-title: addListener()
 slug: Web/API/MediaQueryList/addListener
 page-type: web-api-instance-method
 status:

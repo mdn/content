@@ -54,7 +54,7 @@ The following example provides the special encoding required within UTF-8 {{HTTP
 ```js
 const fileName = "my file(2).txt";
 const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
-  fileName
+  fileName,
 )}`;
 
 console.log(header);
@@ -71,7 +71,7 @@ function encodeRFC5987ValueChars(str) {
       // The following are not required for percent-encoding per RFC5987,
       // so we can allow for a little better readability over the wire: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
-        String.fromCharCode(parseInt(hex, 16))
+        String.fromCharCode(parseInt(hex, 16)),
       )
   );
 }
@@ -83,13 +83,29 @@ The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserve
 
 ```js
 function encodeRFC3986URIComponent(str) {
-  return encodeURIComponent(str)
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-    );
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
 }
 ```
+
+### Encoding a lone high surrogate throws
+
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+
+```js
+// High-low pair OK
+encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
+
+// Lone high surrogate throws "URIError: malformed URI sequence"
+encodeURIComponent("\uD800");
+
+// Lone low surrogate throws "URIError: malformed URI sequence"
+encodeURIComponent("\uDFFF");
+```
+
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURIComponent()`.
 
 ## Specifications
 

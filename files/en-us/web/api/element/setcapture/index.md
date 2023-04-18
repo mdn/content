@@ -1,5 +1,6 @@
 ---
-title: Element.setCapture()
+title: "Element: setCapture() method"
+short-title: setCapture()
 slug: Web/API/Element/setCapture
 page-type: web-api-instance-method
 status:

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.collations
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.collations`** accessor property returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for the `Locale`.
+The **`collations`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for this locale.
 
 ## Description
 

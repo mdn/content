@@ -3,6 +3,8 @@ title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 ---
 
+{{PWASidebar}}
+
 One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
 We can summarize this as follows:
@@ -51,6 +53,8 @@ The manifest contains a single JSON object containing a collection of members, e
   ]
 }
 ```
+
+#### Required manifest members
 
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
@@ -130,7 +134,7 @@ By default, the install prompt contains the name and icon for the PWA. If you pr
 
 The screenshot below shows what the install prompt for the [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
 
-![Install prompt for pwamp on Android](pwamp-install-prompt-android.png)
+![Install prompt for PWAmp on Android](pwamp-install-prompt-android.png)
 
 ## Launching the app
 

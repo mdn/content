@@ -1,5 +1,5 @@
 ---
-title: '<ul>: The Unordered List element'
+title: "<ul>: The Unordered List element"
 slug: Web/HTML/Element/ul
 page-type: html-element
 browser-compat: html.elements.ul
@@ -53,9 +53,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Simple_example", 400, 120)}}
 
 ### Nesting a list
 
@@ -86,9 +86,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Nesting_a_list", 400, 220)}}
+{{EmbedLiveSample("Nesting_a_list", 400, 340)}}
 
 ### Ordered list inside unordered list
 
@@ -109,9 +109,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}
+{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 190)}}
 
 ## Technical summary
 
@@ -197,5 +197,5 @@ The above HTML will output:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists.
-  - the {{CSSxRef("line-height")}} property, to simulate the deprecated {{HTMLAttrxRef("compact", "ul")}} attribute.
+  - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute.
   - the {{CSSxRef("margin")}} property, to control the list indentation.

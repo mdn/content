@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultReader()
+title: "ReadableStreamDefaultReader: ReadableStreamDefaultReader() constructor"
+short-title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 page-type: web-api-constructor
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader

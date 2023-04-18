@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.toURL()
+title: "FileSystemEntry: toURL() method"
+short-title: toURL()
 slug: Web/API/FileSystemEntry/toURL
 page-type: web-api-instance-method
 status:

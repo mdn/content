@@ -24,6 +24,7 @@ align-tracks: start, center, end;
 align-tracks: inherit;
 align-tracks: initial;
 align-tracks: revert;
+align-tracks: revert-layer;
 align-tracks: unset;
 ```
 

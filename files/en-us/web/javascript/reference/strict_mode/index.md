@@ -2,6 +2,7 @@
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
 page-type: guide
+spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 ---
 
 {{JsSidebar("More")}}
@@ -48,7 +49,7 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ```js example-bad
 function sum(a = 1, b = 2) {
@@ -419,7 +420,11 @@ These differences are very subtle differences. It's possible that a test suite d
 - Block-scoped function declarations
   - : In sloppy mode, a function declaration inside a block may be visible outside the block and even callable. In strict mode, a function declaration inside a block is only visible inside the block.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
-- [Strict Mode Code in the ECMAScript specification](https://tc39.es/ecma262/#sec-strict-mode-code)
-- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

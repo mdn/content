@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GETMATCHEDRULES_QUOTA_INTERVAL
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
 ---
 

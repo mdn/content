@@ -1,6 +1,7 @@
 ---
 title: "CSP: img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.img-src
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerRegistration: updatefound event"
+short-title: updatefound
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerRegistration.updatefound_event

@@ -19,6 +19,15 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
 - {{jsxref("Intl/PluralRules/supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
+## Instance properties
+
+These properties are defined on `Intl.PluralRules.prototype` and shared by all `Intl.PluralRules` instances.
+
+- {{jsxref("Object/constructor", "Intl.PluralRules.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.PluralRules` instances, the initial value is the {{jsxref("Intl/PluralRules/PluralRules", "Intl.PluralRules")}} constructor.
+- `Intl.PluralRules.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.PluralRules"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}

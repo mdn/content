@@ -1,5 +1,6 @@
 ---
-title: Path2D()
+title: "Path2D: Path2D() constructor"
+short-title: Path2D()
 slug: Web/API/Path2D/Path2D
 page-type: web-api-constructor
 browser-compat: api.Path2D.Path2D

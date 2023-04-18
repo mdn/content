@@ -16,7 +16,7 @@ All pages on MDN Web Docs are authored in Markdown format. The content is writte
 
 There are a lot of different [page types](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) with certain structures and supporting page templates for them, which you can copy to get you started.
 
-A document's `index.md` file must start with front matter that defines the `title`, `slug`, `page-type`, and `tags`. All of this front matter information can be found in the aforementioned page templates. Alternatively, you might find it helpful to refer to the front matter within a similar document's `index.md`.
+A document's `index.md` file must start with front matter that defines the `title`, `slug`, and `page-type`. All of this front matter information can be found in the aforementioned page templates. Alternatively, you might find it helpful to refer to the front matter within a similar document's `index.md`.
 
 The general step-by-step process for creating a page would be:
 
@@ -166,10 +166,6 @@ To edit a page, you need to find the page source in our [content](https://github
 ### Preview changes
 
 If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command `yarn start`, go to `localhost:5042` in your browser, and navigate to the page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser as you edit the source.
-
-### Edit tags
-
-You can add or remove tags, which describe the page's content and purpose, in the "tags" list at the top of the page source. See [How to tag pages](/en-US/docs/MDN/Writing_guidelines/Howto/Tag) for information about which tags to apply.
 
 ### Attach files
 

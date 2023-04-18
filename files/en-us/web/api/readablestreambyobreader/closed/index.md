@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.closed
+title: "ReadableStreamBYOBReader: closed property"
+short-title: closed
 slug: Web/API/ReadableStreamBYOBReader/closed
 page-type: web-api-instance-property
 browser-compat: api.ReadableStreamBYOBReader.closed

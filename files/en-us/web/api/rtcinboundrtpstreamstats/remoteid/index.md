@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.remoteId
+title: "RTCInboundRtpStreamStats: remoteId property"
+short-title: remoteId
 slug: Web/API/RTCInboundRtpStreamStats/remoteId
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.remoteId

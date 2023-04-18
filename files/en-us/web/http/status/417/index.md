@@ -1,6 +1,7 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.417
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: StereoPannerNode()
+title: "StereoPannerNode: StereoPannerNode() constructor"
+short-title: StereoPannerNode()
 slug: Web/API/StereoPannerNode/StereoPannerNode
 page-type: web-api-constructor
 browser-compat: api.StereoPannerNode.StereoPannerNode

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: columnheader role"
 slug: Web/Accessibility/ARIA/Roles/columnheader_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#columnheader
   - https://w3c.github.io/aria-practices/#table

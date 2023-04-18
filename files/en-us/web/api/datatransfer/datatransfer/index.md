@@ -1,5 +1,6 @@
 ---
-title: DataTransfer()
+title: "DataTransfer: DataTransfer() constructor"
+short-title: DataTransfer()
 slug: Web/API/DataTransfer/DataTransfer
 page-type: web-api-constructor
 browser-compat: api.DataTransfer.DataTransfer

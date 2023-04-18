@@ -1,5 +1,6 @@
 ---
-title: ServiceWorker.state
+title: "ServiceWorker: state property"
+short-title: state
 slug: Web/API/ServiceWorker/state
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorker.state

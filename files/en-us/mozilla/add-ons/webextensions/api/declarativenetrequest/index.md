@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
+page-type: webextension-api
 browser-compat: webextensions.api.declarativeNetRequest
 ---
 

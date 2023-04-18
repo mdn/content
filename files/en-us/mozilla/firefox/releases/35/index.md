@@ -35,7 +35,7 @@ Highlights:
 
 ### JavaScript
 
-- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
+- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
 
   - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
   - Using a variable declared using `let` in function bodies before the declaration is reached and evaluated is now a runtime error.

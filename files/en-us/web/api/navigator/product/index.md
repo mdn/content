@@ -1,5 +1,6 @@
 ---
-title: Navigator.product
+title: "Navigator: product property"
+short-title: product
 slug: Web/API/Navigator/product
 page-type: web-api-instance-property
 status:

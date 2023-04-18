@@ -1,5 +1,6 @@
 ---
 title: "EventSource: message event"
+short-title: message
 slug: Web/API/EventSource/message_event
 page-type: web-api-event
 browser-compat: api.EventSource.message_event

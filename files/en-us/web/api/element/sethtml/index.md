@@ -1,5 +1,6 @@
 ---
-title: Element.setHTML()
+title: "Element: setHTML() method"
+short-title: setHTML()
 slug: Web/API/Element/setHTML
 page-type: web-api-instance-method
 status:

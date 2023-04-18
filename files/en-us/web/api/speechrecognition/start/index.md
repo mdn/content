@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.start()
+title: "SpeechRecognition: start() method"
+short-title: start()
 slug: Web/API/SpeechRecognition/start
 page-type: web-api-instance-method
 browser-compat: api.SpeechRecognition.start

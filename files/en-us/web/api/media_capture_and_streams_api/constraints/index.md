@@ -11,7 +11,7 @@ This article discusses the twin concepts of **constraints** and **capabilities**
 
 Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.
 
-Capabilities and constraints let the browser and Web site or app exchange information about what **constrainable properties** the browser's implementation supports and what values it supports for each one.
+Capabilities and constraints let the browser and website or app exchange information about what **constrainable properties** the browser's implementation supports and what values it supports for each.
 
 ## Overview
 
@@ -347,7 +347,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### Updating the settings display
 
-To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.
+To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/HTML/Element/textarea#value).
 
 ```js
 function getCurrentSettings() {

@@ -1,5 +1,6 @@
 ---
-title: Navigator.canShare()
+title: "Navigator: canShare() method"
+short-title: canShare()
 slug: Web/API/Navigator/canShare
 page-type: web-api-instance-method
 browser-compat: api.Navigator.canShare

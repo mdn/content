@@ -1,5 +1,6 @@
 ---
-title: MediaError.message
+title: "MediaError: message property"
+short-title: message
 slug: Web/API/MediaError/message
 page-type: web-api-instance-property
 browser-compat: api.MediaError.message
@@ -25,7 +26,7 @@ available, this string is empty.
 
 This example creates a {{HTMLElement("audio")}} element, establishes an error handler
 for it, then lets the user click buttons to choose whether to assign a valid audio file
-or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. The error
+or a missing file to the element's [`src`](/en-US/docs/Web/HTML/Element/audio#src) attribute. The error
 handler outputs a message to a box onscreen describing the error, including both the
 `code` and the `message`.
 
@@ -95,5 +96,5 @@ You can try out this example below, and can [see the example in action outside t
 
 ## See also
 
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
-- The interface defining it, {{domxref("MediaError")}}.
+- {{domxref("MediaError")}}: Interface used to define the `MediaError.message` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}

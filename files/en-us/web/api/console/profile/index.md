@@ -1,5 +1,6 @@
 ---
-title: console.profile()
+title: "console: profile() method"
+short-title: profile()
 slug: Web/API/console/profile
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
+title: "XRWebGLLayer: getNativeFramebufferScaleFactor() static method"
+short-title: getNativeFramebufferScaleFactor()
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
 page-type: web-api-static-method
 status:
@@ -32,7 +33,7 @@ superscaling or anti-aliasing techniques to improve perceived image quality.
 ## Syntax
 
 ```js-nolint
-getNativeFramebufferScaleFactor(session)
+XRWebGLLayer.getNativeFramebufferScaleFactor(session)
 ```
 
 ### Parameters

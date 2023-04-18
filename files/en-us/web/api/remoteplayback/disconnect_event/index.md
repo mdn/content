@@ -1,5 +1,6 @@
 ---
 title: "RemotePlayback: disconnect event"
+short-title: disconnect
 slug: Web/API/RemotePlayback/disconnect_event
 page-type: web-api-event
 browser-compat: api.RemotePlayback.disconnect_event

@@ -1,5 +1,6 @@
 ---
-title: Document.fgColor
+title: "Document: fgColor property"
+short-title: fgColor
 slug: Web/API/Document/fgColor
 page-type: web-api-instance-property
 status:

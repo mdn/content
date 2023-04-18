@@ -1,5 +1,6 @@
 ---
-title: Window.requestFileSystem()
+title: "Window: requestFileSystem() method"
+short-title: requestFileSystem()
 slug: Web/API/Window/requestFileSystem
 page-type: web-api-instance-method
 status:

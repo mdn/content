@@ -1,5 +1,6 @@
 ---
-title: PositionSensorVRDevice.getImmediateState()
+title: "PositionSensorVRDevice: getImmediateState() method"
+short-title: getImmediateState()
 slug: Web/API/PositionSensorVRDevice/getImmediateState
 page-type: web-api-instance-method
 status:

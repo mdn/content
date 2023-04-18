@@ -1,5 +1,6 @@
 ---
-title: Performance.timeOrigin
+title: "Performance: timeOrigin property"
+short-title: timeOrigin
 slug: Web/API/Performance/timeOrigin
 page-type: web-api-instance-property
 browser-compat: api.Performance.timeOrigin

@@ -1,5 +1,6 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() method"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
 page-type: web-api-instance-method
 browser-compat: api.Element.getClientRects

@@ -1,5 +1,6 @@
 ---
-title: URL.hash
+title: "URL: hash property"
+short-title: hash
 slug: Web/API/URL/hash
 page-type: web-api-instance-property
 browser-compat: api.URL.hash

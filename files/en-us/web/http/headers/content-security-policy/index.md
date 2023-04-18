@@ -1,13 +1,14 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
-web site administrators to control resources the user agent is allowed to load for a
+website administrators to control resources the user agent is allowed to load for a
 given page. With a few exceptions, policies mostly involve specifying server origins and
 script endpoints. This helps guard against cross-site scripting attacks
 ({{Glossary("Cross-site_scripting")}}).
@@ -109,7 +110,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
 
 ### Navigation directives
 
@@ -222,7 +223,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 ### Other values
 
 - `'nonce-*'`
-  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
+  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
 - `'sha*-*'`
   - : sha256, sha384, or sha512. Followed by a dash and then the sha\* value. For example, `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`.
 

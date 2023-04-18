@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.authenticatedSignedWrites
+title: "BluetoothCharacteristicProperties: authenticatedSignedWrites property"
+short-title: authenticatedSignedWrites
 slug: Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites
 page-type: web-api-instance-property
 status:

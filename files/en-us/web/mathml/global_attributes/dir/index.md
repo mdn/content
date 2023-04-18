@@ -1,6 +1,7 @@
 ---
 title: dir
 slug: Web/MathML/Global_attributes/dir
+page-type: mathml-attribute
 browser-compat: mathml.global_attributes.dir
 ---
 
@@ -59,4 +60,4 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 
 - All [global attributes](/en-US/docs/Web/MathML/Global_attributes).
 - {{cssxref("direction")}}
-- The HTML {{htmlattrxref("dir")}} global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute

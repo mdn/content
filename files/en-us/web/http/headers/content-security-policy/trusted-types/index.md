@@ -1,6 +1,7 @@
 ---
 title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
+page-type: http-csp-directive
 status:
   - experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types

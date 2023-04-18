@@ -1,5 +1,5 @@
 ---
-title: '<dfn>: The Definition element'
+title: "<dfn>: The Definition element"
 slug: Web/HTML/Element/dfn
 page-type: html-element
 browser-compat: html.elements.dfn
@@ -15,7 +15,7 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the ter
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-The {{htmlattrxref("title")}} attribute has special meaning, as noted below.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute has special meaning, as noted below.
 
 ## Usage notes
 
@@ -25,7 +25,7 @@ There are some not-entirely-obvious aspects to using the `<dfn>` element. We exa
 
 The term being defined is identified following these rules:
 
-1. If the `<dfn>` element has a {{htmlattrxref("title")}} attribute, the value of the `title` attribute is considered to be the term being defined. The element must still have text within it, but that text may be an abbreviation (perhaps using {{HTMLElement("abbr")}}) or another form of the term.
+1. If the `<dfn>` element has a [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute, the value of the `title` attribute is considered to be the term being defined. The element must still have text within it, but that text may be an abbreviation (perhaps using {{HTMLElement("abbr")}}) or another form of the term.
 2. If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
 3. Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown [in the first example below](#basic_identification_of_a_term).
 
@@ -33,7 +33,7 @@ The term being defined is identified following these rules:
 
 ### Links to `<dfn>` elements
 
-If you include an {{htmlattrxref("id")}} attribute on the `<dfn>` element, you can then link to it using {{HTMLElement("a")}} elements. Such links should be uses of the term, with the intent being that the reader can quickly navigate to the term's definition if they're not already aware of it, by clicking on the term's link.
+If you include an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute on the `<dfn>` element, you can then link to it using {{HTMLElement("a")}} elements. Such links should be uses of the term, with the intent being that the reader can quickly navigate to the term's definition if they're not already aware of it, by clicking on the term's link.
 
 This is shown in the example under [Links to definitions](#links_to_definitions) below.
 
@@ -57,8 +57,6 @@ sentence.</p>
 Since the `<dfn>` element has no `title`, the text contents of the `<dfn>` element itself are used as the term being defined.
 
 #### Result
-
-This looks like this rendered in your browser:
 
 {{EmbedLiveSample("Basic_identification_of_a_term", 650, 120)}}
 
@@ -96,11 +94,9 @@ definition phrase or sentence.</p>
 this project.</p>
 ```
 
-Here we see the definition — now with an {{htmlattrxref("id")}} attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the {{htmlattrxref("href", "a")}} attribute set to `"#definition-dfn"` to set up the link back to the definition.
+Here we see the definition — now with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute set to `"#definition-dfn"` to set up the link back to the definition.
 
 #### Result
-
-The resulting content looks like this:
 
 {{EmbedLiveSample("Links_to_definitions", 650, 300)}}
 
@@ -127,8 +123,6 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term represents a term being defined.
 
 #### Result
-
-The output of the above code looks like this:
 
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 

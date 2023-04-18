@@ -11,7 +11,7 @@ browser-compat: javascript.operators.import_meta.resolve
 
 ## Syntax
 
-```js
+```js-nolint
 import.meta.resolve(moduleName)
 ```
 

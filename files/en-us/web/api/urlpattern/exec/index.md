@@ -1,5 +1,6 @@
 ---
-title: URLPattern.exec()
+title: "URLPattern: exec() method"
+short-title: exec()
 slug: Web/API/URLPattern/exec
 page-type: web-api-instance-method
 status:

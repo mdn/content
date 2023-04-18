@@ -1,5 +1,6 @@
 ---
-title: Document.vlinkColor
+title: "Document: vlinkColor property"
+short-title: vlinkColor
 slug: Web/API/Document/vlinkColor
 page-type: web-api-instance-property
 status:

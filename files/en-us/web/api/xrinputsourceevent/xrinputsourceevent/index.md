@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceEvent()
+title: "XRInputSourceEvent: XRInputSourceEvent() constructor"
+short-title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
 page-type: web-api-constructor
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent

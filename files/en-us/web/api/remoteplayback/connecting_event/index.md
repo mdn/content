@@ -1,5 +1,6 @@
 ---
 title: "RemotePlayback: connecting event"
+short-title: connecting
 slug: Web/API/RemotePlayback/connecting_event
 page-type: web-api-event
 browser-compat: api.RemotePlayback.connecting_event

@@ -1,6 +1,7 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
 ---
 

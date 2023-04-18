@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletGlobalScope.registerProcessor()
+title: "AudioWorkletGlobalScope: registerProcessor() method"
+short-title: registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 page-type: web-api-instance-method
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor

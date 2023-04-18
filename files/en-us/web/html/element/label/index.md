@@ -1,5 +1,5 @@
 ---
-title: '<label>: The Label element'
+title: "<label>: The Label element"
 slug: Web/HTML/Element/label
 page-type: html-element
 browser-compat: html.elements.label
@@ -43,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `for`
 
-  - : The value of the `for` attribute must be a single {{htmlattrxref("id")}} for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
+  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes#id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
     > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
@@ -65,6 +65,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label>Click me <input type="text" /></label>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
 ### Defining an explicit label with the "for" attribute
@@ -73,6 +75,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label for="username">Click me to focus on the input field</label>
 <input type="text" id="username" />
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 

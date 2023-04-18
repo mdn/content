@@ -97,7 +97,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `border` {{Deprecated_inline}}
 
-  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the {{htmlattrxref("frame", "table")}} attribute is set to void.
+  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the [`frame`](#frame) attribute is set to void.
 
     To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.
 
@@ -152,6 +152,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   </tr>
 </table>
 ```
+
+#### Result
 
 {{EmbedLiveSample('Simple_table', '100%', '100')}}
 
@@ -260,6 +262,8 @@ td {
   border: 1px solid black;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
 
@@ -617,9 +621,9 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
+The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
-#### Example
+#### Examples
 
 ```html
 <table>
@@ -649,6 +653,10 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
 </table>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Examples')}}
+
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 
 - [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
@@ -658,11 +666,11 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 
-If the table cannot be broken apart, use a combination of the {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.
+If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to programmatically associate each table cell with the header(s) the cell is associated with.
 
 - [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)

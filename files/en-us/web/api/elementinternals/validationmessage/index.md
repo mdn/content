@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.validationMessage
+title: "ElementInternals: validationMessage property"
+short-title: validationMessage
 slug: Web/API/ElementInternals/validationMessage
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.validationMessage

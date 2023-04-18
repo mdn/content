@@ -1,5 +1,6 @@
 ---
 title: "Document: beforescriptexecute event"
+short-title: beforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
 page-type: web-api-event
 status:

@@ -1,5 +1,6 @@
 ---
 title: "VideoTrackList: change event"
+short-title: change
 slug: Web/API/VideoTrackList/change_event
 page-type: web-api-event
 browser-compat: api.VideoTrackList.change_event

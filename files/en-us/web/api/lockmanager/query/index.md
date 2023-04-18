@@ -1,5 +1,6 @@
 ---
-title: LockManager.query()
+title: "LockManager: query() method"
+short-title: query()
 slug: Web/API/LockManager/query
 page-type: web-api-instance-method
 browser-compat: api.LockManager.query

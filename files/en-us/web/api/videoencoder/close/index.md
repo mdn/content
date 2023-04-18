@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.close()
+title: "VideoEncoder: close() method"
+short-title: close()
 slug: Web/API/VideoEncoder/close
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.close

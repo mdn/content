@@ -1,5 +1,6 @@
 ---
-title: AbortSignal.reason
+title: "AbortSignal: reason property"
+short-title: reason
 slug: Web/API/AbortSignal/reason
 page-type: web-api-instance-property
 browser-compat: api.AbortSignal.reason

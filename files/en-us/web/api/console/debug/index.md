@@ -1,5 +1,6 @@
 ---
-title: console.debug()
+title: "console: debug() method"
+short-title: debug()
 slug: Web/API/console/debug
 page-type: web-api-instance-method
 browser-compat: api.console.debug

@@ -1,5 +1,6 @@
 ---
-title: EventSource.readyState
+title: "EventSource: readyState property"
+short-title: readyState
 slug: Web/API/EventSource/readyState
 page-type: web-api-instance-property
 browser-compat: api.EventSource.readyState

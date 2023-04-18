@@ -11,7 +11,7 @@ The **`flex-direction`** [CSS](/en-US/docs/Web/CSS) property sets how flex items
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its {{HTMLAttrxRef("dir")}} attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
+Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
 
 ## Syntax
 

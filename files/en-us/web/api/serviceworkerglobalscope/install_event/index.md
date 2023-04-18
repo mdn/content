@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: install event"
+short-title: install
 slug: Web/API/ServiceWorkerGlobalScope/install_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.install_event

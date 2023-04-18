@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.captureStream()
+title: "HTMLMediaElement: captureStream() method"
+short-title: captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.captureStream

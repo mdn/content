@@ -1,5 +1,6 @@
 ---
-title: XRRay()
+title: "XRRay: XRRay() constructor"
+short-title: XRRay()
 slug: Web/API/XRRay/XRRay
 page-type: web-api-constructor
 status:

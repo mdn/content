@@ -1,5 +1,6 @@
 ---
 title: "MediaKeySession: keystatuseschange event"
+short-title: keystatuseschange
 slug: Web/API/MediaKeySession/keystatuseschange_event
 page-type: web-api-event
 browser-compat: api.MediaKeySession.keystatuseschange_event
