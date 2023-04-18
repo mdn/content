@@ -41852,10 +41852,6 @@
       "jswisher"
     ]
   },
-  "Web/API/HTMLVideoElement/autoPictureInPicture": {
-    "modified": "2020-10-25T11:14:34.326Z",
-    "contributors": ["chrisdavidmills", "germain"]
-  },
   "Web/API/HTMLVideoElement/disablePictureInPicture": {
     "modified": "2020-10-25T11:15:18.854Z",
     "contributors": ["chrisdavidmills", "germain"]
@@ -79219,6 +79215,30 @@
       "miken32"
     ]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2020-09-16T06:00:09.005Z",
+    "contributors": [
+      "mfuji09",
+      "OtterOne",
+      "Malvoz",
+      "Sheppy",
+      "mfluehr",
+      "GiS91",
+      "kscarfone",
+      "teoli",
+      "shitface",
+      "FredB",
+      "sloppy_4455",
+      "miken32",
+      "Marsf",
+      "Zearin",
+      "Mgjbot",
+      "Killerowski",
+      "Bedi",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
   "Web/CSS/Inline_formatting_context": {
     "modified": "2020-04-27T22:33:13.546Z",
     "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
@@ -86538,30 +86558,6 @@
       "Abid",
       "Jürgen Jeka",
       "Mgjbot",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2020-09-16T06:00:09.005Z",
-    "contributors": [
-      "mfuji09",
-      "OtterOne",
-      "Malvoz",
-      "Sheppy",
-      "mfluehr",
-      "GiS91",
-      "kscarfone",
-      "teoli",
-      "shitface",
-      "FredB",
-      "sloppy_4455",
-      "miken32",
-      "Marsf",
-      "Zearin",
-      "Mgjbot",
-      "Killerowski",
-      "Bedi",
       "Fredchat",
       "DBaron"
     ]

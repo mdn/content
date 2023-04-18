@@ -22,11 +22,11 @@ If the server is under your control, add the origin of the requesting site to th
 of domains permitted access by adding it to the `Access-Control-Allow-Origin`
 header's value.
 
-For example, to allow a site at `https://amazing.site` to access the resource using CORS,
+For example, to allow a site at `https://example.com` to access the resource using CORS,
 the header should be:
 
 ```http
-Access-Control-Allow-Origin: https://amazing.site
+Access-Control-Allow-Origin: https://example.com
 ```
 
 You can also configure a site to allow any site to access it by using the
@@ -49,22 +49,28 @@ request's `Origin` header and use that value to set
 `Access-Control-Allow-Origin`, and must also set a `Vary: Origin`
 header to indicate that some headers are being set dynamically depending on the origin.
 
-The exact directive for setting headers depends on your web server. In Apache, add a
+## Examples for common web servers
+
+The exact directive for setting headers depends on your web server.
+
+In the examples below,
+
+In **Apache** ([docs](https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header)), add a
 line such as the following to the server's configuration (within the appropriate
 `<Directory>`, `<Location>`,
 `<Files>`, or `<VirtualHost>` section). The
 configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
-`.htaccess` file.
+`.htaccess` file:
 
 ```
-Header set Access-Control-Allow-Origin 'origin-list'
+Header set Access-Control-Allow-Origin 'https://example.com'
 ```
 
-For Nginx, the command to set up this header is:
+For **Nginx** ([docs](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header)), the command to set up this header is:
 
 ```
-add_header 'Access-Control-Allow-Origin' 'origin-list';
+add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ```
 
 ## See also

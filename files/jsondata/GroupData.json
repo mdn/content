@@ -1029,7 +1029,6 @@
         "Document.exitPictureInPicture()"
       ],
       "properties": [
-        "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
         "Document.pictureInPictureElement"
