@@ -24,11 +24,11 @@ setDate(dateValue)
 
 ### Return value
 
-Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `dateValue` is (or gets [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to, such as `undefined`) `NaN`, the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `dateValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
-If you specify a number outside the expected range, the date information in the {{jsxref("Date")}} object is updated accordingly. For example, if the `Date` object holds June 1th, `dateValue` of 40 changes the date to July 10th, while `dateValue` of 0 changes the date to the last day of the previous month.
+If you specify a number outside the expected range, the date information in the {{jsxref("Date")}} object is updated accordingly. For example, if the `Date` object holds June 1st, a `dateValue` of 40 changes the date to July 10th, while a `dateValue` of 0 changes the date to the last day of the previous month, May 31st.
 
 ## Examples
 
