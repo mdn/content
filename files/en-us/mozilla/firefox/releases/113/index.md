@@ -37,9 +37,14 @@ This article provides information about the changes in Firefox 113 that affect d
 
 ### APIs
 
+- [`CanvasRenderingContext2D.reset()`](/en-US/docs/Web/API/CanvasRenderingContext2D/reset) and [`OffscreenCanvasRenderingContext2D.reset()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.reset) are now supported, and can be used to return the associated rendering context to its default state.
+  ([Firefox bug 1709347](https://bugzil.la/1709347)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
 
 #### Removals
 

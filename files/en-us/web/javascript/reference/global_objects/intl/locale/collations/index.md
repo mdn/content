@@ -2,10 +2,13 @@
 title: Intl.Locale.prototype.collations
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collations
 page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Intl.Locale.collations
 ---
 
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`collations`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for this locale.
 

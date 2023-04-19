@@ -1,6 +1,7 @@
 ---
 title: Using shadow DOM
-slug: Web/Web_Components/Using_shadow_DOM
+slug: Web/API/Web_components/Using_shadow_DOM
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -133,9 +134,7 @@ const img = document.createElement("img");
 img.src = this.hasAttribute("img")
   ? this.getAttribute("img")
   : "img/default.png";
-img.alt = this.hasAttribute("alt")
-  ? this.getAttribute("alt")
-  : "";
+img.alt = this.hasAttribute("alt") ? this.getAttribute("alt") : "";
 icon.appendChild(img);
 ```
 
@@ -191,7 +190,7 @@ wrapper.appendChild(info);
 
 ### Using our custom element
 
-Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements):
+Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements):
 
 ```js
 // Define the new element
@@ -226,5 +225,5 @@ Many modern browsers implement an optimization for {{htmlelement("style")}} tags
 
 ## See also
 
-- [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements)
-- [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)

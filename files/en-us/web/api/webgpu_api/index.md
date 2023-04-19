@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPU
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("WebGPU API")}}
+{{DefaultAPISidebar("WebGPU API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser.
 
@@ -582,6 +582,10 @@ You can find more information about WebGPU error handling in the explainer — s
   - : The event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 - {{domxref("GPUValidationError")}}
   - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Describes an application error indicating that an operation did not pass the WebGPU API's validation constraints.
+
+## Security requirements
+
+The whole API is available only in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ## Examples
 

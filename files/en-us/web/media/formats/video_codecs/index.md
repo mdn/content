@@ -498,8 +498,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
       <th scope="row">Supported bit rates</th>
       <td>
         <p>
-          Varies depending on the video's level; theoretical maximum reaches 800
-          Mbps at level 6.3
+          Varies depending on the video's level; theoretical maximum reaches 800 Mbps at level 6.3
         </p>
         <p>
           See the AV1 specification's
@@ -512,8 +511,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
     <tr>
       <th scope="row">Supported frame rates</th>
       <td>
-        Varies by level; for example, level 2.0 has a maximum of 30 FPS while
-        level 6.3 can reach 120 FPS
+        Varies by level; for example, level 2.0 has a maximum of 30 FPS while level 6.3 can reach 120 FPS
       </td>
     </tr>
     <tr>
@@ -528,8 +526,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
     <tr>
       <th scope="row">Supported frame sizes</th>
       <td>
-        8 x 8 pixels to 65,535 x 65535 pixels with each dimension allowed to
-        take any value between these
+        8 x 8 pixels to 65,535 x 65535 pixels with each dimension allowed to take any value between these
       </td>
     </tr>
     <tr>
@@ -581,6 +578,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
+              <th scope="col">Firefox Android</th>
               <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
@@ -590,6 +588,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <td>70</td>
               <td>75</td>
               <td>67</td>
+              <td>113</td>
               <td>No</td>
               <td>57</td>
               <td>No</td>
