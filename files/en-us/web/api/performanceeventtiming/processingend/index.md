@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.processingEnd
+title: "PerformanceEventTiming: processingEnd property"
+short-title: processingEnd
 slug: Web/API/PerformanceEventTiming/processingEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.processingEnd

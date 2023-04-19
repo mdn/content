@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncManager.getTags()
+title: "PeriodicSyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/PeriodicSyncManager/getTags
 page-type: web-api-instance-method
 status:

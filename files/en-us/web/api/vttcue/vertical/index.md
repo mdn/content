@@ -1,5 +1,6 @@
 ---
-title: VTTCue.vertical
+title: "VTTCue: vertical property"
+short-title: vertical
 slug: Web/API/VTTCue/vertical
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.vertical

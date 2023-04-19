@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.canTrickleIceCandidates
+title: "RTCPeerConnection: canTrickleIceCandidates property"
+short-title: canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.canTrickleIceCandidates

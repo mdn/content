@@ -1,6 +1,7 @@
 ---
 title: HTTP range requests
 slug: Web/HTTP/Range_requests
+page-type: guide
 ---
 
 {{HTTPSidebar}}

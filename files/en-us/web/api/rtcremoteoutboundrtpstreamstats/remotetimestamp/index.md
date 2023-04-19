@@ -1,5 +1,6 @@
 ---
-title: RTCRemoteOutboundRtpStreamStats.remoteTimestamp
+title: "RTCRemoteOutboundRtpStreamStats: remoteTimestamp property"
+short-title: remoteTimestamp
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.remoteTimestamp

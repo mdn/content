@@ -1,5 +1,6 @@
 ---
-title: Document.hasStorageAccess()
+title: "Document: hasStorageAccess() method"
+short-title: hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
 page-type: web-api-instance-method
 browser-compat: api.Document.hasStorageAccess

@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.error
+title: "HTMLMediaElement: error property"
+short-title: error
 slug: Web/API/HTMLMediaElement/error
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.error

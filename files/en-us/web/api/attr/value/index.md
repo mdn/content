@@ -1,5 +1,6 @@
 ---
-title: Attr.value
+title: "Attr: value property"
+short-title: value
 slug: Web/API/Attr/value
 page-type: web-api-instance-property
 browser-compat: api.Attr.value

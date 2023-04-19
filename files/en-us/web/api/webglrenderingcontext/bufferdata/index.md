@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.bufferData()
+title: "WebGLRenderingContext: bufferData() method"
+short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bufferData

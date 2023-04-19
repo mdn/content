@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.contentBoxSize
+title: "ResizeObserverEntry: contentBoxSize property"
+short-title: contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.contentBoxSize

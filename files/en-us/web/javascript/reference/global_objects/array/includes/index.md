@@ -123,8 +123,10 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}

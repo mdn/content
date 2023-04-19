@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMap.append()
+title: "StylePropertyMap: append() method"
+short-title: append()
 slug: Web/API/StylePropertyMap/append
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMap.append

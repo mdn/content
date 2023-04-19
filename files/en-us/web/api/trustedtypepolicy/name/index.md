@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicy.name
+title: "TrustedTypePolicy: name property"
+short-title: name
 slug: Web/API/TrustedTypePolicy/name
 page-type: web-api-instance-property
 browser-compat: api.TrustedTypePolicy.name

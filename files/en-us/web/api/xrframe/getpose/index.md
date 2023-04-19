@@ -1,5 +1,6 @@
 ---
-title: XRFrame.getPose()
+title: "XRFrame: getPose() method"
+short-title: getPose()
 slug: Web/API/XRFrame/getPose
 page-type: web-api-instance-method
 status:

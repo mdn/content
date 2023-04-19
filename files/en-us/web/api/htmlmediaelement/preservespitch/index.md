@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.preservesPitch
+title: "HTMLMediaElement: preservesPitch property"
+short-title: preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.preservesPitch

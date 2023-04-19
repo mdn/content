@@ -1,5 +1,6 @@
 ---
-title: Element.ariaCurrent
+title: "Element: ariaCurrent property"
+short-title: ariaCurrent
 slug: Web/API/Element/ariaCurrent
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaCurrent

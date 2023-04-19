@@ -13,14 +13,7 @@ The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegis
 ## Syntax
 
 ```js-nolint
-// Arrow callback function
-new FinalizationRegistry((heldValue) => { /* … */ })
-
-// Callback function
 new FinalizationRegistry(callbackFn)
-
-// Inline callback function
-new FinalizationRegistry(function(heldValue) { /* … */ })
 ```
 
 > **Note:** `FinalizationRegistry()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
@@ -28,7 +21,9 @@ new FinalizationRegistry(function(heldValue) { /* … */ })
 ### Parameters
 
 - `callback`
-  - : The callback function this registry should use.
+  - : A function to be invoked each time a registered target value is garbage collected. Its return value is ignored. The function is called with the following arguments:
+    - `heldValue`
+      - : The value that was passed to the second parameter of the {{jsxref("FinalizationRegistry/register", "register()")}} method when the `target` object was registered.
 
 ## Examples
 

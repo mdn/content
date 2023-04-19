@@ -1,5 +1,6 @@
 ---
-title: Window.scrollY
+title: "Window: scrollY property"
+short-title: scrollY
 slug: Web/API/Window/scrollY
 page-type: web-api-instance-property
 browser-compat: api.Window.scrollY

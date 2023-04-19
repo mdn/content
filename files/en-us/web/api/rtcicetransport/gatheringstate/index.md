@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.gatheringState
+title: "RTCIceTransport: gatheringState property"
+short-title: gatheringState
 slug: Web/API/RTCIceTransport/gatheringState
 page-type: web-api-instance-property
 browser-compat: api.RTCIceTransport.gatheringState

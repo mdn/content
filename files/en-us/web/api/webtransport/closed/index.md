@@ -1,5 +1,6 @@
 ---
-title: WebTransport.closed
+title: "WebTransport: closed property"
+short-title: closed
 slug: Web/API/WebTransport/closed
 page-type: web-api-instance-property
 status:

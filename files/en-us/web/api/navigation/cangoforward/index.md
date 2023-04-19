@@ -1,5 +1,6 @@
 ---
-title: Navigation.canGoForward
+title: "Navigation: canGoForward property"
+short-title: canGoForward
 slug: Web/API/Navigation/canGoForward
 page-type: web-api-instance-property
 status:

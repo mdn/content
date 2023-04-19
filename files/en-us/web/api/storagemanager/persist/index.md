@@ -1,5 +1,6 @@
 ---
-title: StorageManager.persist()
+title: "StorageManager: persist() method"
+short-title: persist()
 slug: Web/API/StorageManager/persist
 page-type: web-api-instance-method
 browser-compat: api.StorageManager.persist

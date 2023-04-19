@@ -1,5 +1,6 @@
 ---
-title: Event.composedPath()
+title: "Event: composedPath() method"
+short-title: composedPath()
 slug: Web/API/Event/composedPath
 page-type: web-api-instance-method
 browser-compat: api.Event.composedPath

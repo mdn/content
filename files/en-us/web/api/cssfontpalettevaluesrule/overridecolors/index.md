@@ -1,5 +1,6 @@
 ---
-title: CSSFontPaletteValuesRule.overrideColors
+title: "CSSFontPaletteValuesRule: overrideColors property"
+short-title: overrideColors
 slug: Web/API/CSSFontPaletteValuesRule/overrideColors
 page-type: web-api-instance-property
 browser-compat: api.CSSFontPaletteValuesRule.overrideColors

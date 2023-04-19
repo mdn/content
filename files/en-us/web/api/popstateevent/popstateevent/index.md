@@ -1,5 +1,6 @@
 ---
-title: PopStateEvent()
+title: "PopStateEvent: PopStateEvent() constructor"
+short-title: PopStateEvent()
 slug: Web/API/PopStateEvent/PopStateEvent
 page-type: web-api-constructor
 browser-compat: api.PopStateEvent.PopStateEvent

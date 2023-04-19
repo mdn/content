@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.queryPermission()
+title: "FileSystemHandle: queryPermission() method"
+short-title: queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
 page-type: web-api-instance-method
 status:

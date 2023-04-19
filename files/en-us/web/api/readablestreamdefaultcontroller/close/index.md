@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.close()
+title: "ReadableStreamDefaultController: close() method"
+short-title: close()
 slug: Web/API/ReadableStreamDefaultController/close
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.close
@@ -48,6 +49,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {

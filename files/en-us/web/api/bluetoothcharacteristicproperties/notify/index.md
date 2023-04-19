@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.notify
+title: "BluetoothCharacteristicProperties: notify property"
+short-title: notify
 slug: Web/API/BluetoothCharacteristicProperties/notify
 page-type: web-api-instance-property
 status:

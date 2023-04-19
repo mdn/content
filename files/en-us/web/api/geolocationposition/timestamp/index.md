@@ -1,5 +1,6 @@
 ---
-title: GeolocationPosition.timestamp
+title: "GeolocationPosition: timestamp property"
+short-title: timestamp
 slug: Web/API/GeolocationPosition/timestamp
 page-type: web-api-instance-property
 browser-compat: api.GeolocationPosition.timestamp

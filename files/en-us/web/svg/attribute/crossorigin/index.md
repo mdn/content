@@ -1,5 +1,5 @@
 ---
-title: 'SVG attribute: crossorigin'
+title: "SVG attribute: crossorigin"
 slug: Web/SVG/Attribute/crossorigin
 page-type: svg-attribute
 browser-compat: api.SVGImageElement.crossOrigin

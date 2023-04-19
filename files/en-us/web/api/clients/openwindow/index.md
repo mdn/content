@@ -1,5 +1,6 @@
 ---
-title: Clients.openWindow()
+title: "Clients: openWindow() method"
+short-title: openWindow()
 slug: Web/API/Clients/openWindow
 page-type: web-api-instance-method
 browser-compat: api.Clients.openWindow

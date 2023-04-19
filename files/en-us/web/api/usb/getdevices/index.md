@@ -1,5 +1,6 @@
 ---
-title: USB.getDevices()
+title: "USB: getDevices() method"
+short-title: getDevices()
 slug: Web/API/USB/getDevices
 page-type: web-api-instance-method
 status:

@@ -1,6 +1,7 @@
 ---
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+page-type: guide
 ---
 
 {{HTTPSidebar}}

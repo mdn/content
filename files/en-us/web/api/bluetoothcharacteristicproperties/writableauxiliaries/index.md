@@ -1,5 +1,6 @@
 ---
-title: BluetoothCharacteristicProperties.writableAuxiliaries
+title: "BluetoothCharacteristicProperties: writableAuxiliaries property"
+short-title: writableAuxiliaries
 slug: Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
 page-type: web-api-instance-property
 status:

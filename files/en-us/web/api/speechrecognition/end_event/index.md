@@ -1,5 +1,6 @@
 ---
 title: "SpeechRecognition: end event"
+short-title: end
 slug: Web/API/SpeechRecognition/end_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.end_event

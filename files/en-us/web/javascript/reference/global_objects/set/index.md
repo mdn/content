@@ -30,7 +30,7 @@ The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method 
 
 ## Static properties
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/@@species", "Set[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
 ## Instance properties
@@ -52,22 +52,18 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.prototype.has()")}}
-  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values()")}}
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
-  - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
-  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order.
-
-    This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
-
+  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order. This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 - {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
+- {{jsxref("Set.prototype.has()")}}
+  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
+- {{jsxref("Set.prototype.keys()")}}
+  - : An alias for {{jsxref("Set.prototype.values()")}}.
+- {{jsxref("Set.prototype.values()")}}
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
+- [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 
 ## Examples
 

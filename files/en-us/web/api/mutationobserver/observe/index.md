@@ -1,5 +1,6 @@
 ---
-title: MutationObserver.observe()
+title: "MutationObserver: observe() method"
+short-title: observe()
 slug: Web/API/MutationObserver/observe
 page-type: web-api-instance-method
 browser-compat: api.MutationObserver.observe

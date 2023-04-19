@@ -1,5 +1,6 @@
 ---
-title: PushManager.supportedContentEncodings
+title: "PushManager: supportedContentEncodings property"
+short-title: supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 page-type: web-api-instance-property
 browser-compat: api.PushManager.supportedContentEncodings

@@ -2,12 +2,10 @@
 title: update
 slug: Web/CSS/@media/update-frequency
 page-type: css-media-feature
-status:
-  - experimental
 browser-compat: css.at-rules.media.update
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content once rendered.
 

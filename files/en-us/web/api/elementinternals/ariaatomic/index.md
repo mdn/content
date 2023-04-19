@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaAtomic
+title: "ElementInternals: ariaAtomic property"
+short-title: ariaAtomic
 slug: Web/API/ElementInternals/ariaAtomic
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaAtomic

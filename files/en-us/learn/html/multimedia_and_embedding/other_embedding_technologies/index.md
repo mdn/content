@@ -201,7 +201,7 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 
 Before diving into using `<iframe>` elements, there are some security concerns to be aware of.
 Say you wanted to include the MDN glossary on one of your web pages using the {{htmlelement("iframe")}} element, you might try something like the next code example.
-If you were to do add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
+If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
 <head>
@@ -334,7 +334,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br />><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
          <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>

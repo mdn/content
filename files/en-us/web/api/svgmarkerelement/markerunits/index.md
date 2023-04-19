@@ -1,5 +1,6 @@
 ---
-title: SVGMarkerElement.markerUnits
+title: "SVGMarkerElement: markerUnits property"
+short-title: markerUnits
 slug: Web/API/SVGMarkerElement/markerUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGMarkerElement.markerUnits

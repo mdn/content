@@ -72,4 +72,4 @@ Bitwise NOTing any number `x` twice returns `x` converted to a 32-bit integer. D
 
 ## See also
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)

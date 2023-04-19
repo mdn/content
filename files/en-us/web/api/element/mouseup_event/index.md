@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseup event"
+short-title: mouseup
 slug: Web/API/Element/mouseup_event
 page-type: web-api-event
 browser-compat: api.Element.mouseup_event

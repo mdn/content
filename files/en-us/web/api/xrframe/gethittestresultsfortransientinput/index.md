@@ -1,5 +1,6 @@
 ---
-title: XRFrame.getHitTestResultsForTransientInput()
+title: "XRFrame: getHitTestResultsForTransientInput() method"
+short-title: getHitTestResultsForTransientInput()
 slug: Web/API/XRFrame/getHitTestResultsForTransientInput
 page-type: web-api-instance-method
 status:

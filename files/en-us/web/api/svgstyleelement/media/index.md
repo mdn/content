@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.media
+title: "SVGStyleElement: media property"
+short-title: media
 slug: Web/API/SVGStyleElement/media
 page-type: web-api-instance-property
 browser-compat: api.SVGStyleElement.media

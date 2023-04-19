@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue()
+title: "CSSUnparsedValue: CSSUnparsedValue() constructor"
+short-title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 page-type: web-api-constructor
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue

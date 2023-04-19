@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.removeAsync()
+title: "SourceBuffer: removeAsync() method"
+short-title: removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
 page-type: web-api-instance-method
 status:

@@ -37,11 +37,8 @@ non-integer value, it is rounded to the nearest integer.
 
 ### Exceptions
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : If `precision` is not between `1` and `100`
-    (inclusive), a {{jsxref("RangeError")}} is thrown. Implementations are allowed to
-    support larger and smaller values as well. ECMA-262 only requires a precision of up to
-    21 significant digits.
+- {{jsxref("RangeError")}}
+  - : Thrown if `precision` is not between `1` and `100` (inclusive).
 
 ## Examples
 

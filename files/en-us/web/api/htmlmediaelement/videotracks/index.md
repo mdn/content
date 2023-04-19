@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.videoTracks
+title: "HTMLMediaElement: videoTracks property"
+short-title: videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.videoTracks

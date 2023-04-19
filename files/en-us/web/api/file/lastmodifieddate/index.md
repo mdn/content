@@ -1,5 +1,6 @@
 ---
-title: File.lastModifiedDate
+title: "File: lastModifiedDate property"
+short-title: lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 page-type: web-api-instance-property
 status:

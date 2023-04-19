@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.cellSpacing
+title: "HTMLTableElement: cellSpacing property"
+short-title: cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 page-type: web-api-instance-property
 status:

@@ -77,7 +77,7 @@ Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}
 
 ### Encoding a lone high surrogate throws
 
-An {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
+A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
 
 ```js
 // High-low pair OK
@@ -90,6 +90,8 @@ encodeURI("\uD800");
 encodeURI("\uDFFF");
 ```
 
+You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone surrogates with the Unicode replacement character (U+FFFD), to avoid this error. You can also use {{jsxref("String.prototype.isWellFormed()")}} to check if a string contains lone surrogates before passing it to `encodeURI()`.
+
 ### Encoding for RFC3986
 
 The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
@@ -101,7 +103,7 @@ function encodeRFC3986URI(str) {
     .replace(/%5D/g, "]")
     .replace(
       /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
     );
 }
 ```

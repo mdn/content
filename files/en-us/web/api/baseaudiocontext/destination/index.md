@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.destination
+title: "BaseAudioContext: destination property"
+short-title: destination
 slug: Web/API/BaseAudioContext/destination
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.destination

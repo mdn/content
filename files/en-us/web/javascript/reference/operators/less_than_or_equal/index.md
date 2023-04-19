@@ -19,7 +19,19 @@ x <= y
 
 ## Description
 
-The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, with the operands swapped and the result negated.
+The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, with the operands swapped and the result negated. `x <= y` is generally equivalent to `!(y < x)`, except for two cases where `x <= y` and `x > y` are both `false`:
+
+- If one of the operands gets converted to a BigInt, while the other gets converted to a string that cannot be converted to a BigInt value (it throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) when passed to [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)).
+- If one of the operands gets converted to `NaN`. (For example, strings that cannot be converted to numbers, or `undefined`.)
+
+In addition, `x <= y` coerces `x` to a primitive before `y`, while `y < x` coerces `y` to a primitive before `x`. Because coercion may have side effects, the order of the operands may matter.
+
+`x <= y` is generally equivalent to `x < y || x == y`, except for a few cases:
+
+- When one of `x` or `y` is `null`, and the other is something that's not `null` and becomes 0 when [coerced to numeric](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) (including `0`, `0n`, `false`, `""`, `"0"`, `new Date(0)`, etc.): `x <= y` is `true`, while `x < y || x == y` is `false`.
+- When one of `x` or `y` is `undefined`, and the other is one of `null` or `undefined`: `x <= y` is `false`, while `x == y` is `true`.
+- When `x` and `y` are the same object that becomes `NaN` after the first step of [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) (such as `new Date(NaN)`): `x <= y` is `false`, while `x == y` is `true`.
+- When `x` and `y` are different objects that become the same value after the first step of [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than): `x <= y` is `true`, while `x < y || x == y` is `false`.
 
 ## Examples
 

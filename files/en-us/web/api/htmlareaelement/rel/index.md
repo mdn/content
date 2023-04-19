@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.rel
+title: "HTMLAreaElement: rel property"
+short-title: rel
 slug: Web/API/HTMLAreaElement/rel
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.rel

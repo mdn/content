@@ -1,5 +1,6 @@
 ---
-title: CSSSkewY()
+title: "CSSSkewY: CSSSkewY() constructor"
+short-title: CSSSkewY()
 slug: Web/API/CSSSkewY/CSSSkewY
 page-type: web-api-constructor
 browser-compat: api.CSSSkewY.CSSSkewY

@@ -1,5 +1,6 @@
 ---
-title: Event.initEvent()
+title: "Event: initEvent() method"
+short-title: initEvent()
 slug: Web/API/Event/initEvent
 page-type: web-api-instance-method
 status:

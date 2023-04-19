@@ -1,6 +1,7 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
+page-type: http-header
 browser-compat: http.headers.Vary
 ---
 

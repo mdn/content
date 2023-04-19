@@ -1,5 +1,6 @@
 ---
-title: Animation.ready
+title: "Animation: ready property"
+short-title: ready
 slug: Web/API/Animation/ready
 page-type: web-api-instance-property
 browser-compat: api.Animation.ready

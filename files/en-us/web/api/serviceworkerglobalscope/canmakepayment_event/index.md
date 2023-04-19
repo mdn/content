@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: canmakepayment event"
+short-title: canmakepayment
 slug: Web/API/ServiceWorkerGlobalScope/canmakepayment_event
 page-type: web-api-event
 status:

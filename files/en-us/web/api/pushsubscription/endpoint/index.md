@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.endpoint
+title: "PushSubscription: endpoint property"
+short-title: endpoint
 slug: Web/API/PushSubscription/endpoint
 page-type: web-api-instance-property
 browser-compat: api.PushSubscription.endpoint

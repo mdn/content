@@ -1,5 +1,5 @@
 ---
-title: '<s>: The Strikethrough element'
+title: "<s>: The Strikethrough element"
 slug: Web/HTML/Element/s
 page-type: html-element
 browser-compat: html.elements.s
@@ -84,6 +84,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 <s>Today's Special: Salmon</s> SOLD OUT<br />
 <span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
+
+### Result
 
 {{EmbedLiveSample("Examples")}}
 

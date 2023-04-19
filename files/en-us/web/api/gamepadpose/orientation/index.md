@@ -1,5 +1,6 @@
 ---
-title: GamepadPose.orientation
+title: "GamepadPose: orientation property"
+short-title: orientation
 slug: Web/API/GamepadPose/orientation
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.decode()
+title: "VideoDecoder: decode() method"
+short-title: decode()
 slug: Web/API/VideoDecoder/decode
 page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.decode

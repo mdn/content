@@ -1,11 +1,12 @@
 ---
-title: Request.formData()
+title: "Request: formData() method"
+short-title: formData()
 slug: Web/API/Request/formData
 page-type: web-api-instance-method
 browser-compat: api.Request.formData
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`formData()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{domxref("FormData")}} object.

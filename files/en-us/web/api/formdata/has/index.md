@@ -1,5 +1,6 @@
 ---
-title: FormData.has()
+title: "FormData: has() method"
+short-title: has()
 slug: Web/API/FormData/has
 page-type: web-api-instance-method
 browser-compat: api.FormData.has

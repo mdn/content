@@ -1,5 +1,6 @@
 ---
-title: PeriodicWave()
+title: "PeriodicWave: PeriodicWave() constructor"
+short-title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
 page-type: web-api-constructor
 browser-compat: api.PeriodicWave.PeriodicWave

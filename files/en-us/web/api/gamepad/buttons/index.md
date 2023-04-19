@@ -1,5 +1,6 @@
 ---
-title: Gamepad.buttons
+title: "Gamepad: buttons property"
+short-title: buttons
 slug: Web/API/Gamepad/buttons
 page-type: web-api-instance-property
 browser-compat: api.Gamepad.buttons

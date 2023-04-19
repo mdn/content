@@ -1,5 +1,6 @@
 ---
-title: GamepadButton.pressed
+title: "GamepadButton: pressed property"
+short-title: pressed
 slug: Web/API/GamepadButton/pressed
 page-type: web-api-instance-property
 browser-compat: api.GamepadButton.pressed

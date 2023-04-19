@@ -13,12 +13,12 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 
 ## Constructor
 
-- [`Intl.Segmenter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
+- {{jsxref("Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
   - : Creates a new `Intl.Segmenter` object.
 
 ## Static methods
 
-- [`Intl.Segmenter.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
+- {{jsxref("Intl/Segmenter/supportedLocalesOf", "Intl.Segmenter.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties
@@ -32,9 +32,9 @@ These properties are defined on `Intl.Segmenter.prototype` and shared by all `In
 
 ## Instance methods
 
-- [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
+- {{jsxref("Intl/Segmenter/resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this `Intl.Segmenter` object.
-- [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
+- {{jsxref("Intl/Segmenter/segment", "Intl.Segmenter.prototype.segment()")}}
   - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instance representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
 
 ## Examples

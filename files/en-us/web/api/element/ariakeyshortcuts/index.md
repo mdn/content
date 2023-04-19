@@ -1,5 +1,6 @@
 ---
-title: Element.ariaKeyShortcuts
+title: "Element: ariaKeyShortcuts property"
+short-title: ariaKeyShortcuts
 slug: Web/API/Element/ariaKeyShortcuts
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaKeyShortcuts

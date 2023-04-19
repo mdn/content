@@ -1,5 +1,6 @@
 ---
-title: XRReferenceSpace.getOffsetReferenceSpace()
+title: "XRReferenceSpace: getOffsetReferenceSpace() method"
+short-title: getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 page-type: web-api-instance-method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace

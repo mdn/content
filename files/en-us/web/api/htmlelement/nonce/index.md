@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.nonce
+title: "HTMLElement: nonce property"
+short-title: nonce
 slug: Web/API/HTMLElement/nonce
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.nonce

@@ -1,5 +1,6 @@
 ---
-title: location.replace()
+title: "location: replace() method"
+short-title: replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method
 browser-compat: api.Location.replace

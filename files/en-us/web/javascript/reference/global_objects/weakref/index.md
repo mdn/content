@@ -13,6 +13,8 @@ A **`WeakRef`** object lets you hold a weak reference to another object, without
 
 A `WeakRef` object contains a weak reference to an object, which is called its _target_ or _referent_. A _weak reference_ to an object is a reference that does not prevent the object from being reclaimed by the garbage collector. In contrast, a normal (or _strong_) reference keeps an object in memory. When an object no longer has any strong references to it, the JavaScript engine's garbage collector may destroy the object and reclaim its memory. If that happens, you can't get the object from a weak reference anymore.
 
+Because [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) are also garbage collectable, they can also be used as the target of a `WeakRef` object. However, the use case of this is limited.
+
 ### Avoid where possible
 
 Correct use of `WeakRef` takes careful thought, and it's best avoided if possible. It's also important to avoid relying on any specific behaviors not guaranteed by the specification. When, how, and whether garbage collection occurs is down to the implementation of any given JavaScript engine. Any behavior you observe in one engine may be different in another engine, in another version of the same engine, or even in a slightly different situation with the same version of the same engine. Garbage collection is a hard problem that JavaScript engine implementers are constantly refining and improving their solutions to.
