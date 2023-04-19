@@ -44,9 +44,9 @@ The `overflow` property is specified as one or two keywords chosen from the list
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value of the `overflow` property.
 - `hidden`
-  - : Overflow content is clipped at the element's padding box. There are no scroll bars, the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case. The element box is a scroll container.
+  - : Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case. The element box is a scroll container.
 - `clip`
-  - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) can be created. To establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}. The element box is not a scroll container.
+  - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) is created. To establish a formatting context, use `overflow: clip` along with {{cssxref("display", "display: flow-root", "#flow-root")}}. The element box is not a scroll container.
 - `scroll`
   - : Overflow content is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. User agents always display scroll bars in both horizontal and vertical directions, whether or not any content is overflowing or clipped. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflowing content. The element box is a scroll container.
 - `auto`
@@ -63,7 +63,7 @@ The following nuances should be kept in mind while using the various keywords fo
 - Specifying a value other than `visible` (the default) or `clip` for `overflow` creates a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). This is necessary for technical reasons; if a float intersects with a scrolling element, it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
 - For an `overflow` setting to create the desired effect, the block-level element must have either a set height (`height` or `max-height`) or `white-space` set to `nowrap`.
 - Setting one axis to `visible` (the default) while setting the other to a _different_ value results in `visible` behaving as `auto`.
-- The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll an HTML element even when `overflow` is set to `hidden`.
+- The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, including when `overflow` is set to `hidden`.
 
 ## Formal definition
 
@@ -83,40 +83,45 @@ The following nuances should be kept in mind while using the various keywords fo
 <div>
   <code>visible</code>
   <p class="visible">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
   </p>
 </div>
 
 <div>
   <code>hidden</code>
   <p class="hidden">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
   </p>
 </div>
 
 <div>
   <code>clip</code>
   <p class="clip">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
   </p>
 </div>
 
 <div>
   <code>scroll</code>
   <p class="scroll">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
   </p>
 </div>
 
 <div>
   <code>auto</code>
   <p class="auto">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
   </p>
 </div>
 ```
@@ -131,7 +136,7 @@ body {
 }
 
 div {
-  margin: 1em;
+  margin: 2em;
   font-size: 1.2em;
 }
 
@@ -139,7 +144,7 @@ p {
   width: 8em;
   height: 5em;
   border: dotted;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
 }
 
 p.visible {
@@ -166,7 +171,7 @@ p.auto {
 
 #### Result
 
-{{EmbedLiveSample("Demonstrating results of various overflow keywords", "600", "400")}}
+{{EmbedLiveSample("Demonstrating results of various overflow keywords", "600", "500")}}
 
 ## Accessibility concerns
 
