@@ -15,10 +15,10 @@ When a containment context is given a name, it can be specifically targeted usin
 
 ```css
 /* A single name */
-container-name: my-layout;
+container-name: myLayout;
 
 /* Multiple names */
-container-name: my-page-layout my-component-library;
+container-name: myPageLayout myComponentLibrary;
 
 /* Global Values */
 container-name: inherit;
