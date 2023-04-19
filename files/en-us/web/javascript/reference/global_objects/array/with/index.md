@@ -19,8 +19,7 @@ array.with(index, value)
 
 - `index`
   - : Zero-based index at which to change the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
-    - If `start` is omitted, `0` is used.
+    - Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is used.
     - If the index after normalization is out of bounds, a {{jsxref("RangeError")}} is thrown.
 - `value`
   - : Any value to be assigned to the given index.
