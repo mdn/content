@@ -48,4 +48,4 @@ RegExp["$`"]; // "hello "
 - {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
