@@ -84,7 +84,11 @@ console.log(ClassWithStaticField.anotherBaseStaticField); // "base static field"
 console.log(SubClassWithStaticField.subStaticField); // "base static method output"
 ```
 
-The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+
+Static field initializers and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated one-by-one. Field initializers can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
+
+> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 ## Examples
 
