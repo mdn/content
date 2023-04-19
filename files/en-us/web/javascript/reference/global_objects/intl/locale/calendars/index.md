@@ -2,10 +2,13 @@
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
 page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
 
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`calendars`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more unique calendar identifiers for this locale.
 

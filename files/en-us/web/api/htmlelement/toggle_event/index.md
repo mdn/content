@@ -2,10 +2,12 @@
 title: "HTMLElement: toggle event"
 slug: Web/API/HTMLElement/toggle_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.HTMLElement.toggle_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`toggle`** event fires when an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute is about to be opened or closed.
 

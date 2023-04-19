@@ -15619,10 +15619,6 @@
       "freaktechnik"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Firefox_differentiators": {
-    "modified": "2020-06-22T16:29:34.101Z",
-    "contributors": ["hellosct1", "ExE-Boss", "irenesmith", "rebloor"]
-  },
   "Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview": {
     "modified": "2020-06-22T16:29:35.038Z",
     "contributors": ["Erman", "irenesmith", "hellosct1", "rebloor"]
@@ -41851,10 +41847,6 @@
       "smile4ever",
       "jswisher"
     ]
-  },
-  "Web/API/HTMLVideoElement/autoPictureInPicture": {
-    "modified": "2020-10-25T11:14:34.326Z",
-    "contributors": ["chrisdavidmills", "germain"]
   },
   "Web/API/HTMLVideoElement/disablePictureInPicture": {
     "modified": "2020-10-25T11:15:18.854Z",
@@ -79219,6 +79211,30 @@
       "miken32"
     ]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2020-09-16T06:00:09.005Z",
+    "contributors": [
+      "mfuji09",
+      "OtterOne",
+      "Malvoz",
+      "Sheppy",
+      "mfluehr",
+      "GiS91",
+      "kscarfone",
+      "teoli",
+      "shitface",
+      "FredB",
+      "sloppy_4455",
+      "miken32",
+      "Marsf",
+      "Zearin",
+      "Mgjbot",
+      "Killerowski",
+      "Bedi",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
   "Web/CSS/Inline_formatting_context": {
     "modified": "2020-04-27T22:33:13.546Z",
     "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
@@ -86538,30 +86554,6 @@
       "Abid",
       "Jürgen Jeka",
       "Mgjbot",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2020-09-16T06:00:09.005Z",
-    "contributors": [
-      "mfuji09",
-      "OtterOne",
-      "Malvoz",
-      "Sheppy",
-      "mfluehr",
-      "GiS91",
-      "kscarfone",
-      "teoli",
-      "shitface",
-      "FredB",
-      "sloppy_4455",
-      "miken32",
-      "Marsf",
-      "Zearin",
-      "Mgjbot",
-      "Killerowski",
-      "Bedi",
       "Fredchat",
       "DBaron"
     ]

@@ -61,9 +61,13 @@ The `this` inside a static block refers to the constructor object of the class.
 `super.property` can be used to access static properties of the super class.
 Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to use the {{jsxref("Functions/arguments", "arguments")}} object.
 
-The statements are evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in this block. (Think of the initialization statements as being implicitly wrapped in a function.)
+The statements are evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in this block. (Think of the initialization statements as being implicitly wrapped in a function.)
 
 The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) declared within the class without causing a syntax error.
+
+Static field initializers and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
+
+> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 A static initialization block may not have decorators (the class itself may).
 

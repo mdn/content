@@ -69,7 +69,6 @@ function enterPictureInPicture() {
 ## See also
 
 - The {{HTMLElement("video")}} element
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

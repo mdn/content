@@ -5754,6 +5754,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging_(Firefox_50_onwards)	https://extensionworkshop.com/documentation/develop/debugging/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
@@ -8571,6 +8572,7 @@
 /en-US/docs/Web/API/HTMLTextAreaElement1	/en-US/docs/Web/API/HTMLTextAreaElement
 /en-US/docs/Web/API/HTMLTimeElement.dateTime	/en-US/docs/Web/API/HTMLTimeElement/dateTime
 /en-US/docs/Web/API/HTMLVideoElement.getVideoPlaybackQuality	/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality
+/en-US/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement
@@ -10258,6 +10260,7 @@
 /en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
+/en-US/docs/Web/API/XRCompositionLayer/chromaticAberrationCorrection	/en-US/docs/Web/API/XRCompositionLayer
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
 /en-US/docs/Web/API/XREye	/en-US/docs/Web/API/XRView/eye
 /en-US/docs/Web/API/XRFrameRequestCallback	/en-US/docs/Web/API/XRSession/requestAnimationFrame
