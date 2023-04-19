@@ -22,6 +22,7 @@ This article provides information about the changes in Firefox 112 that affect d
 - [Exponential functions](/en-US/docs/Web/CSS/CSS_Functions#exponential_functions) are now enabled by default.
   This allows the use of `pow()`, `sqrt()`, `hypot()`, `log()` and `exp()` functions ([Firefox bug 1814469](https://bugzil.la/1814469)).
 - The `overlay` keyword value for the {{cssxref("overflow")}} property is now supported as a legacy alias of the keyword value `auto` ([Firefox bug 1817189](https://bugzil.la/1817189)).
+- The `<ray_size>` parameter is now optional in the `ray()` function that is used to define an [`offset-path`](/en-US/docs/Web/CSS/offset-path). If no `<ray_size>` parameter is provided, it has a default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
 
 #### Removals
 
