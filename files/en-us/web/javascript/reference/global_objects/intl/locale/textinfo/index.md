@@ -2,10 +2,13 @@
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
 page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
 
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`textInfo`** accessor property of {{jsxref("Intl.Locale")}} instances returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for this locale.
 
