@@ -36,8 +36,6 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 -webkit-mask-position-y: unset;
 ```
 
-{{cssinfo}}
-
 ## Syntax
 
 ### Values
