@@ -2,10 +2,12 @@
 title: "HTMLElement: beforetoggle event"
 slug: Web/API/HTMLElement/beforetoggle_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.HTMLElement.beforetoggle_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`beforetoggle`** event fires when an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute is about to be opened or closed.
 
