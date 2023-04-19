@@ -9,7 +9,7 @@ browser-compat: html.global_attributes.popover
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to specify that the element should be hidden on the page until it is opened by interacting with an _invoking element_ (a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/button#popovertarget)), or manually via [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover/).
+The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to specify that the element should be hidden on the page until it is opened by interacting with an _invoking element_ (a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)), or manually via [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover).
 
 ## Usage notes
 
