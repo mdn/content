@@ -56,7 +56,7 @@ if (canBrowserShareData(sharedDataSample)) {
 
 ### Handling exceptions
 
-The {{domxref("navigator.share()")}} method returns a {{jsxref("Promise")}} that may be rejected in cases such as when the shared data is incorrect, or when the user aborts the share operation, or when the data transmission failed.
+The {{domxref("navigator.share()")}} method returns a {{jsxref("Promise")}} that may be rejected in cases such as when the shared data is incorrect, when the user aborts the share operation, or when the data transmission failed.
 
 It's therefore important to catch the promise rejection in order to avoid errors in your app's JavaScript code.
 
@@ -103,7 +103,7 @@ if (canBrowserShareData({ text: "text", url: "https://example.com" })) {
 
 ### Sharing files
 
-The following code example demonstrates how to share a file when a button in the app is clicked. Similar to the previous example, the `canBrowserShareData` function is used to only display the button used to share files if the browser supports sharing files.
+The following code example demonstrates how to share a file when a button in the app is clicked. Similar to the previous example, the `canBrowserShareData` function is used to display the button used to share files only if the browser supports sharing files.
 
 ```js
 // Retrieve the button from the DOM. The button is hidden for now.
@@ -137,7 +137,7 @@ if (canBrowserShareData(testSharedData)) {
 }
 ```
 
-For more information, see [the Sharing files example](/en-US/docs/Web/API/Navigator/share#sharing_files) on the `navigator.share()` method page.
+For more information, see the [sharing files example](/en-US/docs/Web/API/Navigator/share#sharing_files) on the `navigator.share()` method page.
 
 ## Handling shared data from other apps
 
@@ -271,9 +271,9 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-In this code example, the shared files are extracted from the form data, and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method, or store them in an {{domxref("IndexedDB")}} database which can be accessed both by your service worker and app's main JavaScript code.
+In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an {{domxref("IndexedDB")}} database which can be accessed both by your service worker and app's main JavaScript code.
 
-For more information, see the example [Receiving shared files](/en-US/docs/Web/Manifest/share_target#receiving_shared_files) on the the `share_target` web app manifest member page.
+For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
 
 ## See also
 
