@@ -14,7 +14,7 @@ This value is specified as `user.id` in the options passed to the originating {{
 
 ## Value
 
-An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user. This is not human-readable and does **not** contain any personally identifying information (e.g. username, email, phone number, etc.).
+An {{jsxref("ArrayBuffer")}} object representing an identifier for the current user. This is not intended to be human-readable. The relying party should make sure that the `user.id` passed into the originating `create()` call does **not** contain any personally identifying information (for example user name, email, or phone number).
 
 For {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} calls made with a non-empty `allowCredentials` properties, the returned `userHandle` may be null.
 

@@ -185,7 +185,20 @@ The exception to this is `origin` — this is set to the origin of the document 
 
   - : An object describing the relying party that requested the credential creation. It can contain the following properties:
 
-    - `id` {{optional_inline}}: A string representing the ID of the relying party. If omitted, the document origin will be used as the default value.
+    - `id` {{optional_inline}}: A string representing the ID of the relying party. A public key credential can only be used for authentication with the same relying party (as identified by the `publicKey.rpId` in a {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call) it was registered with — the IDs need to match.
+
+      The `id` cannot include a port or scheme like a standard origin, but the domain scheme must be `https` scheme. The `id` needs to equal the origin's effective domain, or a domain suffix thereof. So for example if the relying party's origin is `https://login.example.com:1337`, the following `id`s are valid:
+
+      - `login.example.com`
+      - `example.com`
+
+      But not:
+
+      - `m.login.example.com`
+      - `com`
+
+      If omitted, `id` defaults to the document origin — which would be `login.example.com` in the above example.
+
     - `name`: A string representing the name of the relying party (e.g. `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
 
 - `timeout` {{optional_inline}}
