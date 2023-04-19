@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.with
 
 {{JSRef}}
 
-The **`with()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) to change the value of a given index. It returns a new array with the element at the given index replaced with the given value.
+The **`with()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) to change the value of a given index. It returns a new array with the element at the given index replaced with the given value.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ array.with(index, value)
   - : Zero-based index at which to change the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
     - If `start` is omitted, `0` is used.
-    - If the index, with negative values counted backwards, is out of bounds, a {{jsxref("RangeError")}} is thrown.
+    - If the index after normalization is out of bounds, a {{jsxref("RangeError")}} is thrown.
 - `value`
   - : Any value to be assigned to the given index.
 
