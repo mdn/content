@@ -19,6 +19,7 @@ offset-path: none;
 
 /* Line segment */
 offset-path: ray(45deg closest-side contain);
+offset-path: ray(45deg);
 
 /* URL */
 offset-path: url(#path);
@@ -44,7 +45,10 @@ offset-path: unset;
 ### Values
 
 - {{cssxref("ray","ray()")}}
-  - : Defines a path that is a line segment from the starting position of an element and proceeding in the direction defined by the specified angle. This value accepts up to three parameters – an angle similar to the CSS gradient angle, a size value similar to the CSS radial gradient size values, and the keyword `contain`. The angle `0deg` starts on the y-axis pointing up, and positive angles increase in the clockwise direction. The possible values for size include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. Both the size value and the `contain` keyword are optional. The default size value used is `closest-side`.
+  - : Defines a path that is a line segment from the starting position of an element and proceeding in the direction defined by the specified angle. This value accepts up to three parameters – an {{CSSxRef("angle")}} similar to the CSS [linear-gradient](/en-US/docs/Web/CSS/gradient/linear-gradient) angle, a size value similar to the CSS [radial-gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) size values, and the keyword `contain`. The angle `0deg` starts on the y-axis, pointing up, with positive angles increasing in the clockwise direction. The possible values for the optional size parameter include `closest-side`, `closest-corner`, `farthest-side`, `farthest-corner`, and `sides`. If omitted, the value of the size parameter defaults to `closest-side`. The optional `contain` keyword reduces the length of the offset path so that the element stays within its containing block.
+
+> **Note:** While the size parameter is optional in the specification, some browsers implement `ray()` with a required size value. Including the default `closest-side` is the equivalent of omitting the size, but has better support.
+
 - `url()`
   - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
