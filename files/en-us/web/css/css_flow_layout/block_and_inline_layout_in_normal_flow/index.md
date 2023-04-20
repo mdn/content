@@ -91,7 +91,7 @@ This concept of the outer and inner display type is important as this tells us t
 
 ### Changing the Formatting Context an element participates in
 
-Browsers display items as part of a block or inline formatting context in terms of what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to strongly emphasize a span of content and is displayed in bold in browsers by default. It would not generally make sense for that `<strong>` element to be displayed as a block-level element, breaking onto a new line. If you did want all `<strong>` elements to display as block elements, you could do so by setting `strong { display: block;}`. The ability to style content with CSS  means that you can always use the most appropriate semantic HTML elements to mark up your content and then change the way it is displayed with CSS.
+Browsers display items as part of a block or inline formatting context in terms of what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to strongly emphasize a span of content and is displayed in bold in browsers by default. It would not generally make sense for that `<strong>` element to be displayed as a block-level element, breaking onto a new line. If you did want all `<strong>` elements to display as block elements, you could do so by setting `strong { display: block;}`. The ability to style content with CSS means that you can always use the most appropriate semantic HTML elements to mark up your content and then change the way it is displayed with CSS.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
 
