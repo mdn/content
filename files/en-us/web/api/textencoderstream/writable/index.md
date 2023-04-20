@@ -20,7 +20,7 @@ The following example demonstrates how to return a `WritableStream` from a `Text
 
 ```js
 stream = new TextEncoderStream();
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications
