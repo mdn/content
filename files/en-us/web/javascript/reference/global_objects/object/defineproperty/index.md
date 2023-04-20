@@ -486,7 +486,7 @@ const a = new MyClass();
 a.x = 2;
 console.log(a.x); // 2
 console.log(MyClass.prototype.x); // 1
-a.y = 2; // Ignored, throws in strict mode
+a.y = 2; // Ignored, throws error in strict mode
 console.log(a.y); // 1
 console.log(MyClass.prototype.y); // 1
 ```
