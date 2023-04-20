@@ -21,8 +21,6 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
 
 ## Static properties
 
-- `Math[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Math.E")}}
   - : Euler's number and the base of natural logarithms; approximately `2.718`.
 - {{jsxref("Math.LN2")}}
@@ -39,6 +37,8 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
   - : Square root of ½; approximately `0.707`.
 - {{jsxref("Math.SQRT2")}}
   - : Square root of `2`; approximately `1.414`.
+- `Math[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

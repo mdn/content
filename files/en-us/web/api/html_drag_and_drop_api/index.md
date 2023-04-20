@@ -94,12 +94,12 @@ function dragstart_handler(ev) {
 By default, the browser supplies an image that appears beside the pointer during a drag operation. However, an application may define a custom image with the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method, as shown in the following example.
 
 ```js
+// Create an image and then use it for the drag image.
+// NOTE: change "example.gif" to a real image URL or the image
+// will not be created and the default drag image will be used.
+let img = new Image();
+img.src = "example.gif";
 function dragstart_handler(ev) {
-  // Create an image and then use it for the drag image.
-  // NOTE: change "example.gif" to a real image URL or the image
-  // will not be created and the default drag image will be used.
-  let img = new Image();
-  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```

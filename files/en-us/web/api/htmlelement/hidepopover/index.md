@@ -3,10 +3,12 @@ title: "HTMLElement: hidePopover() method"
 short-title: hidePopover()
 slug: Web/API/HTMLElement/hidePopover
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.HTMLElement.hidePopover
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
 
 The **`HTMLElement.hidePopover()`** method opens an element that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
 
