@@ -214,15 +214,7 @@ The **tags have to open and close in a way that they are inside or outside one a
 
 ### Element content categories
 
-Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping; it doesn't create a relationship among elements of these categories. These groupings help define and describe the categories' shared behavior and associated rules, especially when you encounter their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
-
-There are three types of content categories:
-
-- Main content categories, which describe common rules shared by many elements.
-- Form-related content categories, which describe rules common to form-related elements.
-- Specific content categories, which describe rare categories shared only by a few elements, sometimes only in a specific context.
-
-For more information refer to [Content categories](/en-US/docs/Web/HTML/Content_categories) page.
+Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more [**Content categories**](/en-US/docs/Web/HTML/Content_categories) — these categories group elements that share common characteristics. This is a loose grouping; it doesn't create a relationship among elements of these categories. These groupings help define and describe the categories' shared behavior and associated rules, especially when you encounter their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
 
 ### Void elements
 
