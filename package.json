@@ -29,7 +29,7 @@
     "env-cmd": "10.1.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.1",
-    "markdownlint-cli2": "0.6.0",
+    "markdownlint-cli2": "0.7.0",
     "markdownlint-rule-search-replace": "1.0.9",
     "prettier": "2.8.7"
   }
