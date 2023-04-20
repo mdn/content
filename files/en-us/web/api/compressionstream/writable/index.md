@@ -1,5 +1,6 @@
 ---
-title: CompressionStream.writable
+title: "CompressionStream: writable property"
+short-title: writable
 slug: Web/API/CompressionStream/writable
 page-type: web-api-instance-property
 browser-compat: api.CompressionStream.writable

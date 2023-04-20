@@ -1,6 +1,7 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Element/mfrac
+page-type: mathml-element
 browser-compat: mathml.elements.mfrac
 ---
 

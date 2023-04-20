@@ -1,5 +1,6 @@
 ---
-title: Node.normalize()
+title: "Node: normalize() method"
+short-title: normalize()
 slug: Web/API/Node/normalize
 page-type: web-api-instance-method
 browser-compat: api.Node.normalize

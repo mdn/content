@@ -1,13 +1,12 @@
 ---
-title: StylePropertyMap.delete()
+title: "StylePropertyMap: delete() method"
+short-title: delete()
 slug: Web/API/StylePropertyMap/delete
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMap.delete
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`delete()`** method of the
 {{domxref("StylePropertyMap")}} interface removes the CSS declaration with the given

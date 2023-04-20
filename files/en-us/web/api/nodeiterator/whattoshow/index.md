@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.whatToShow
+title: "NodeIterator: whatToShow property"
+short-title: whatToShow
 slug: Web/API/NodeIterator/whatToShow
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.whatToShow

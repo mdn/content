@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionResult.isFinal
+title: "SpeechRecognitionResult: isFinal property"
+short-title: isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionResult.isFinal

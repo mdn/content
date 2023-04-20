@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.getLocalCandidates()
+title: "RTCIceTransport: getLocalCandidates() method"
+short-title: getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
 page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getLocalCandidates

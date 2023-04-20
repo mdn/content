@@ -1,5 +1,6 @@
 ---
-title: Element.namespaceURI
+title: "Element: namespaceURI property"
+short-title: namespaceURI
 slug: Web/API/Element/namespaceURI
 page-type: web-api-instance-property
 browser-compat: api.Element.namespaceURI

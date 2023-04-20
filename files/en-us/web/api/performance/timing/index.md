@@ -1,5 +1,6 @@
 ---
-title: Performance.timing
+title: "Performance: timing property"
+short-title: timing
 slug: Web/API/Performance/timing
 page-type: web-api-instance-property
 status:

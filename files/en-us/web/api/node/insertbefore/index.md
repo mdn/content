@@ -1,5 +1,6 @@
 ---
-title: Node.insertBefore()
+title: "Node: insertBefore() method"
+short-title: insertBefore()
 slug: Web/API/Node/insertBefore
 page-type: web-api-instance-method
 browser-compat: api.Node.insertBefore

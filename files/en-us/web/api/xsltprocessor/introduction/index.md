@@ -4,6 +4,8 @@ slug: Web/API/XSLTProcessor/Introduction
 page-type: guide
 ---
 
+{{APIRef("XSLT")}}
+
 One noticeable trend in W3C standards has been the effort to separate content from style. This would allow the same style to be reused for multiple content, as well as simplify maintenance and allow a quick (only modify one file) way to change the look of content.
 
 CSS (Cascade Style Sheets) was one of the first ways proposed by the W3C. CSS is a simple way to apply style rules to a web document. These style rules define how the document (the content) should be laid out. However, it has several limitations, such as lack of programming structures and ability to create complex layout models. CSS also has limited support for changing the position of an element.

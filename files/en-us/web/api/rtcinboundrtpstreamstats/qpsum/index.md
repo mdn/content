@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.qpSum
+title: "RTCInboundRtpStreamStats: qpSum property"
+short-title: qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.qpSum

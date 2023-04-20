@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: timeupdate event"
+short-title: timeupdate
 slug: Web/API/HTMLMediaElement/timeupdate_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.timeupdate_event

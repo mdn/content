@@ -1,5 +1,6 @@
 ---
-title: BeforeInstallPromptEvent.prompt()
+title: "BeforeInstallPromptEvent: prompt() method"
+short-title: prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 page-type: web-api-instance-method
 status:
@@ -29,10 +30,10 @@ A {{jsxref("Promise")}} resolving to an object containing:
 
 - `userChoice` {{experimental_inline}}
 
-  - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
+  - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{domxref("BeforeInstallPromptEvent.userChoice")}} property.
 
 - `platform` {{non-standard_inline}}
-  - : A string containing the selected platform, reflecting the {{jsxref("BeforeInstallPromptEvent.platform")}} property.
+  - : A string containing the selected platform, reflecting the {{domxref("BeforeInstallPromptEvent.platform")}} property.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: CSSNamespaceRule.prefix
+title: "CSSNamespaceRule: prefix property"
+short-title: prefix
 slug: Web/API/CSSNamespaceRule/prefix
 page-type: web-api-instance-property
 browser-compat: api.CSSNamespaceRule.prefix

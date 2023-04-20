@@ -1,5 +1,6 @@
 ---
 title: "IdleDetector: change event"
+short-title: change
 slug: Web/API/IdleDetector/change_event
 page-type: web-api-event
 status:

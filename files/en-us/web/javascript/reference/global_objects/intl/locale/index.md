@@ -11,8 +11,6 @@ The **`Intl.Locale`** object is a standard built-in property of the Intl object 
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Description
 
 The **`Intl.Locale`** object was created to allow for easier manipulation of Unicode locales. Unicode represents locales with a string, called a _locale identifier_. The locale identifier consists of a _language identifier_ and _extension tags_. Language identifiers are the core of the locale, consisting of _language_, _script_, and _region subtags_. Additional information about the locale is stored in the optional _extension tags_. Extension tags hold information about locale aspects such as calendar type, clock type, and numbering system type.
@@ -26,27 +24,31 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 
 ## Instance properties
 
+These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.Locale` instances.
+
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : Returns basic, core information about the `Locale` in the form of a substring of the complete data string.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
   - : Returns the part of the `Locale` that indicates the Locale's calendar era.
-- {{jsxref("Intl/Locale/calendars", "Intl.Locale.prototype.calendars")}}
+- {{jsxref("Intl/Locale/calendars", "Intl.Locale.prototype.calendars")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an {{jsxref("Array")}} of available calendar identifiers, according to the locale's rules.
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
   - : Returns whether case is taken into account for the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
-- {{jsxref("Intl/Locale/collations", "Intl.Locale.prototype.collations")}}
+- {{jsxref("Intl/Locale/collations", "Intl.Locale.prototype.collations")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an {{jsxref("Array")}} of the collation types for the `Locale`.
+- {{jsxref("Object/constructor", "Intl.Locale.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Locale` instances, the initial value is the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
-- {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
+- {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an {{jsxref("Array")}} of hour cycle identifiers, indicating either the 12-hour format ("h11", "h12") or the 24-hour format ("h23", "h24").
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : Returns the language associated with the locale.
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
   - : Returns the numeral system used by the locale.
-- {{jsxref("Intl/Locale/numberingSystems", "Intl.Locale.prototype.numberingSystems")}}
+- {{jsxref("Intl/Locale/numberingSystems", "Intl.Locale.prototype.numberingSystems")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an {{jsxref("Array")}} of numbering system identifiers available according to the locale's rules.
 - {{jsxref("Intl/Locale/numeric", "Intl.Locale.prototype.numeric")}}
   - : Returns whether the locale has special collation handling for numeric characters.
@@ -54,12 +56,14 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns the region of the world (usually a country) associated with the locale.
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : Returns the script used for writing the particular language used in the locale.
-- {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}}
+- {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the part indicating the ordering of characters `ltr` (left-to-right) or `rtl` (right-to-left).
-- {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}}
+- {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an {{jsxref("Array")}} of time zone identifiers, associated with the `Locale`.
-- {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}
+- {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements) according to the locale rules.
+- `Intl.Locale.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Locale"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

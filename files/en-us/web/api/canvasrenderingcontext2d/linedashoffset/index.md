@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.lineDashOffset
+title: "CanvasRenderingContext2D: lineDashOffset property"
+short-title: lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineDashOffset

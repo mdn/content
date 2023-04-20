@@ -27,7 +27,7 @@ slug: Mozilla/Firefox/Releases/48
   - The default style for these elements has been adapted to match the spec ([Firefox bug 1258657](https://bugzil.la/1258657)).
   - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
 
-- The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
+- The [`meta`](/en-US/docs/Web/HTML/Element/meta) attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
 
 ### CSS
 
@@ -76,7 +76,7 @@ slug: Mozilla/Firefox/Releases/48
 
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
 - The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ([Firefox bug 1103588](https://bugzil.la/1103588)).
-- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
+- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) instead ([Firefox bug 1219757](https://bugzil.la/1219757)).
 - The [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) and [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods can no longer be called at the global scope without any object. ([Firefox bug 1253016](https://bugzil.la/1253016)).
 
 ### Interfaces/APIs/DOM
@@ -84,7 +84,7 @@ slug: Mozilla/Firefox/Releases/48
 #### DOM & HTML DOM
 
 - Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ([Firefox bug 1256178](https://bugzil.la/1256178)).
-- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets Web sites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
+- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
 - The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ([Firefox bug 1256299](https://bugzil.la/1256299)).
 - Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.
 - {{domxref("Element.animate()")}} is now activated by default ([Firefox bug 1245000](https://bugzil.la/1245000)).

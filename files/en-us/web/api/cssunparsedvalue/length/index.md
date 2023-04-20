@@ -1,13 +1,12 @@
 ---
-title: CSSUnparsedValue.length
+title: "CSSUnparsedValue: length property"
+short-title: length
 slug: Web/API/CSSUnparsedValue/length
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSUnparsedValue.length
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`length`** read-only property of the
 {{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.

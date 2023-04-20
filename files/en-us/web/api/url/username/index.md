@@ -1,5 +1,6 @@
 ---
-title: URL.username
+title: "URL: username property"
+short-title: username
 slug: Web/API/URL/username
 page-type: web-api-instance-property
 browser-compat: api.URL.username

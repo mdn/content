@@ -11,7 +11,7 @@ The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant co
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-A document mustn't have more than one `<main>` element that doesn't have the {{htmlattrxref("hidden")}} attribute specified.
+A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute specified.
 
 <table class="properties">
   <tbody>
@@ -84,7 +84,7 @@ The content of a `<main>` element should be unique to the document. Content that
 
 `<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("Heading_Elements", "h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
-## Example
+## Examples
 
 ```html
 <!-- other content -->
@@ -113,6 +113,10 @@ The content of a `<main>` element should be unique to the document. Content that
 <!-- other content -->
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Accessibility concerns
 
 ### Landmark
@@ -123,7 +127,7 @@ The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibil
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
 
-Adding an {{htmlattrxref("id")}} attribute to the `<main>` element lets it be a target of a skip navigation link.
+Adding an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the `<main>` element lets it be a target of a skip navigation link.
 
 ```html
 <body>

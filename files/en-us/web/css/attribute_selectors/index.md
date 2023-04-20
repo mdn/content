@@ -174,7 +174,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
 Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
 #### CSS

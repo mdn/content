@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.name
+title: "IDBDatabase: name property"
+short-title: name
 slug: Web/API/IDBDatabase/name
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.name

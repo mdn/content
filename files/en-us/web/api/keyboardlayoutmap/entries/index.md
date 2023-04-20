@@ -1,5 +1,6 @@
 ---
-title: KeyboardLayoutMap.entries
+title: "KeyboardLayoutMap: entries property"
+short-title: entries
 slug: Web/API/KeyboardLayoutMap/entries
 page-type: web-api-instance-property
 status:

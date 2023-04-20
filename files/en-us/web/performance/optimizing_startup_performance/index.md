@@ -31,7 +31,7 @@ However, even code like that can be made asynchronous, with a little work.
 
 Here are some suggestions for how to build your startup process to be as asynchronous as possible (whether it's a new app or a port):
 
-- Use the [`defer`](/en-US/docs/Web/HTML/Element/script#attr-defer) or [`async`](/en-US/docs/Web/HTML/Element/script#attr-async) attribute on script tags needed by the Web application. This allows HTML parsers to continue processing the document, instead of having to wait until the scripts have been downloaded and executed before continuing.
+- Use the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) or [`async`](/en-US/docs/Web/HTML/Element/script#async) attribute on script tags needed by the Web application. This allows HTML parsers to continue processing the document, instead of having to wait until the scripts have been downloaded and executed before continuing.
 - If you need to decode asset files (for example, decoding JPEG files and turning them into raw texture data for later use by WebGL), that's great to do in workers.
 - When dealing with data supported by the browser (for example, decoding image data), use the decoders built into the browser or device rather than rolling your own or using one from the original codebase. The provided one is almost certainly significantly faster, and will reduce your app size to boot. In addition, the browser may automatically parallelize these decoders.
 - Any data processing that can be done in parallel should be. Don't do one chunk of data after another; do them all at once when possible!

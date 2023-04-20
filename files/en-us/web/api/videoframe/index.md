@@ -2,12 +2,10 @@
 title: VideoFrame
 slug: Web/API/VideoFrame
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.VideoFrame
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
@@ -32,41 +30,41 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
   - : Creates a new `VideoFrame` object.
 
 ## Instance properties
 
-- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
-- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}}
   - : Returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} with the width and height matching `codedWidth` and `codedHeight`.
-- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
-- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}}
   - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the duration of the video in microseconds.
-- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the timestamp of the video in microseconds.
-- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 
 ## Instance methods
 
-- {{domxref("VideoFrame.allocationSize()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.allocationSize()")}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
-- {{domxref("VideoFrame.copyTo()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.copyTo()")}}
   - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
-- {{domxref("VideoFrame.clone()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.clone()")}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
-- {{domxref("VideoFrame.close()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.close()")}}
   - : Clears all states and releases the reference to the media resource.
 
 ## Examples

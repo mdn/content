@@ -62,9 +62,9 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 
 The features of note are:
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/en-US/docs/Web/HTML/Element/video#src)
   - : In the same way as for the {{htmlelement("img")}} element, the `src` (source) attribute contains a path to the video you want to embed. It works in exactly the same way.
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/en-US/docs/Web/HTML/Element/video#controls)
   - : Users must be able to control video and audio playback (it's especially critical for people who have [epilepsy](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology).) You must either use the `controls` attribute to include the browser's own control interface, or build your interface using the appropriate [JavaScript API](/en-US/docs/Web/API/HTMLMediaElement). At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.
 - The paragraph inside the `<video>` tags
   - : This is called **fallback content** — this will be displayed if the browser accessing the page doesn't support the `<video>` element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.
@@ -130,7 +130,7 @@ So how do we do this? Take a look at the following [updated example](https://git
 
 Here we've taken the `src` attribute out of the actual {{HTMLElement("video")}} tag, and instead included separate {{htmlelement("source")}} elements that point to their own sources. In this case the browser will go through the {{HTMLElement("source")}} elements and play the first one that it has the codec to support. Including WebM and MP4 sources should be enough to play your video on most platforms and browsers these days.
 
-Each `<source>` element also has a {{htmlattrxref("type", "source")}} attribute. This is optional, but it is advised that you include it. The `type` attribute contains the {{glossary("MIME type")}} of the file specified by the `<source>`, and browsers can use the `type` to immediately skip videos they don't understand. If `type` isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.
+Each `<source>` element also has a [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute. This is optional, but it is advised that you include it. The `type` attribute contains the {{glossary("MIME type")}} of the file specified by the `<source>`, and browsers can use the `type` to immediately skip videos they don't understand. If `type` isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.
 
 Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Formats) for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.
 
@@ -163,17 +163,17 @@ The resulting UI looks something like this:
 
 Features include:
 
-- {{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}
+- [`width`](/en-US/docs/Web/HTML/Element/video#width) and [`height`](/en-US/docs/Web/HTML/Element/video#height)
   - : You can control the video size either with these attributes or with {{Glossary("CSS")}}. In both cases, videos maintain their native width-height ratio — known as the **aspect ratio**. If the aspect ratio is not maintained by the sizes you set, the video will grow to fill the space horizontally, and the unfilled space will just be given a solid background color by default.
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay)
   - : Makes the audio or video start playing right away, while the rest of the page is loading. You are advised not to use autoplaying video (or audio) on your sites, because users can find it really annoying.
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/en-US/docs/Web/HTML/Element/video#loop)
   - : Makes the video (or audio) start playing again whenever it finishes. This can also be annoying, so only use if really necessary.
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/en-US/docs/Web/HTML/Element/video#muted)
   - : Causes the media to play with the sound turned off by default.
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/en-US/docs/Web/HTML/Element/video#poster)
   - : The URL of an image which will be displayed before the video is played. It is intended to be used for a splash screen or advertising screen.
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/en-US/docs/Web/HTML/Element/video#preload)
 
   - : Used for buffering large files; it can take one of three values:
 
@@ -252,7 +252,7 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 1. Save it as a `.vtt` file in a sensible place.
-2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identify the language they are searching for.
+2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in. Finally, add [`label`](/en-US/docs/Web/HTML/Element/track#label) to help readers identify the language they are searching for.
 
 Here's an example:
 
@@ -283,7 +283,7 @@ We would like you to:
 1. Save your audio and video files in a new directory on your computer.
 2. Create a new HTML file in the same directory, called `index.html`.
 3. Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
-4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include {{htmlattrxref("type", "source")}} attributes.
+4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include [`type`](/en-US/docs/Web/HTML/Element/source#type) attributes.
 5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
 For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.

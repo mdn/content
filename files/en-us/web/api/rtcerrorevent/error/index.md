@@ -1,5 +1,6 @@
 ---
-title: RTCErrorEvent.error
+title: "RTCErrorEvent: error property"
+short-title: error
 slug: Web/API/RTCErrorEvent/error
 page-type: web-api-instance-property
 browser-compat: api.RTCErrorEvent.error

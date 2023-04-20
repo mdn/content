@@ -1,5 +1,5 @@
 ---
-title: '<div>: The Content Division element'
+title: "<div>: The Content Division element"
 slug: Web/HTML/Element/div
 page-type: html-element
 browser-compat: html.elements.div
@@ -11,7 +11,7 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes, marking a section of a document as being written in a different language (using the {{htmlattrxref("lang")}} attribute), and so on.
+As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) or [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute), and so on.
 
 ## Attributes
 
@@ -39,13 +39,13 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 </div>
 ```
 
-The result looks like this:
+#### Result
 
 {{EmbedLiveSample("A_simple_example", 650, 60)}}
 
 ### A styled example
 
-This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the {{htmlattrxref("class")}} attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
+This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
 
 #### HTML
 

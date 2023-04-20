@@ -13,8 +13,6 @@ remove information about the locale that would be added by calling
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
 ```js-nolint

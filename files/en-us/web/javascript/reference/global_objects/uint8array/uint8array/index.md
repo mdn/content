@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Uint8Array.Uint8Array
 
 {{JSRef}}
 
-The **`Uint8Array()`** constructor creates a typed array of
-8-bit unsigned integers. The contents are initialized to `0`. Once
-established, you can reference elements in the array using the object's methods, or
-using standard array index syntax (that is, using bracket notation).
+The **`Uint8Array()`** constructor creates {{jsxref("Uint8Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 

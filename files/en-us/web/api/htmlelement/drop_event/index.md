@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: drop event"
+short-title: drop
 slug: Web/API/HTMLElement/drop_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.drop_event

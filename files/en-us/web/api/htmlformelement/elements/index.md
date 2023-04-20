@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements property"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.elements
@@ -36,7 +37,7 @@ Only the following elements are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}

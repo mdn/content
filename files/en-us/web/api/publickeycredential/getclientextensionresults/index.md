@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.getClientExtensionResults()
+title: "PublicKeyCredential: getClientExtensionResults() method"
+short-title: getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 page-type: web-api-instance-method
 browser-compat: api.PublicKeyCredential.getClientExtensionResults

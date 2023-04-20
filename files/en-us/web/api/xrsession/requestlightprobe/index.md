@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestLightProbe()
+title: "XRSession: requestLightProbe() method"
+short-title: requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.corruptedVideoFrames
+title: "VideoPlaybackQuality: corruptedVideoFrames property"
+short-title: corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
 page-type: web-api-instance-property
 status:

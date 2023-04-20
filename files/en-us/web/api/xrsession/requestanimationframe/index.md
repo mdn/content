@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestAnimationFrame()
+title: "XRSession: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
 page-type: web-api-instance-method
 status:

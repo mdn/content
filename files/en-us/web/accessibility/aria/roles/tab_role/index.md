@@ -1,6 +1,7 @@
 ---
 title: "ARIA: tab role"
 slug: Web/Accessibility/ARIA/Roles/tab_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tab
   - https://w3c.github.io/aria-practices/#tabpanel
@@ -50,7 +51,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- {{htmlattrxref("id")}}
+- [id](/en-US/docs/Web/HTML/Global_attributes#id)
   - : content
 
 ### Keyboard interaction

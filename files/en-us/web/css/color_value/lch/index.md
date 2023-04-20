@@ -2,12 +2,10 @@
 title: lch()
 slug: Web/CSS/color_value/lch
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.color.lch
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`lch()`** functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
 
@@ -67,6 +65,13 @@ div {
 ```
 
 ```css
+[data-color="blue"] {
+  background-color: lch(0% 100 240);
+}
+[data-color="blue-light"] {
+  background-color: lch(100% 100 240);
+}
+
 [data-color="red"] {
   background-color: lch(50% 130 20);
 }
@@ -79,13 +84,6 @@ div {
 }
 [data-color="green-hue"] {
   background-color: lch(50% 132 180);
-}
-
-[data-color="blue"] {
-  background-color: lch(0% 100 240);
-}
-[data-color="blue-light"] {
-  background-color: lch(100% 100 240);
 }
 ```
 

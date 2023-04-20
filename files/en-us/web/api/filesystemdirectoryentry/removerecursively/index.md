@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryEntry.removeRecursively()
+title: "FileSystemDirectoryEntry: removeRecursively() method"
+short-title: removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
 page-type: web-api-instance-method
 status:

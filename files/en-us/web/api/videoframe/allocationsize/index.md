@@ -1,13 +1,12 @@
 ---
-title: VideoFrame.allocationSize()
+title: "VideoFrame: allocationSize() method"
+short-title: allocationSize()
 slug: Web/API/VideoFrame/allocationSize
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.VideoFrame.allocationSize
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.
 

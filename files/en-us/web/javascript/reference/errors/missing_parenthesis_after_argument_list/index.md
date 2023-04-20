@@ -48,7 +48,7 @@ Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaS
 
 ```js example-good
 console.log(`PI: ${Math.PI}`);
-console.log("PI: ", Math.PI);
+console.log("PI:", Math.PI);
 ```
 
 ### Unterminated strings

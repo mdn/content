@@ -1,5 +1,6 @@
 ---
-title: Window.find()
+title: "Window: find() method"
+short-title: find()
 slug: Web/API/Window/find
 page-type: web-api-instance-method
 status:
@@ -45,7 +46,9 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent=`String found? ${window.find(text)}`;
+  document.querySelector("#output").textContent = `String found? ${window.find(
+    text
+  )}`;
 }
 ```
 

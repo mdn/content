@@ -1,5 +1,6 @@
 ---
-title: DecompressionStream.writable
+title: "DecompressionStream: writable property"
+short-title: writable
 slug: Web/API/DecompressionStream/writable
 page-type: web-api-instance-property
 browser-compat: api.DecompressionStream.writable

@@ -24,6 +24,8 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 /* Global values */
 -webkit-mask-repeat-x: inherit;
 -webkit-mask-repeat-x: initial;
+-webkit-mask-repeat-x: revert;
+-webkit-mask-repeat-x: revert-layer;
 -webkit-mask-repeat-x: unset;
 ```
 
@@ -92,4 +94,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}

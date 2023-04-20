@@ -1,5 +1,6 @@
 ---
-title: XRFrame.getViewerPose()
+title: "XRFrame: getViewerPose() method"
+short-title: getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
 page-type: web-api-instance-method
 status:

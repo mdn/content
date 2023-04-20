@@ -1,5 +1,6 @@
 ---
-title: Document.plugins
+title: "Document: plugins property"
+short-title: plugins
 slug: Web/API/Document/plugins
 page-type: web-api-instance-property
 browser-compat: api.Document.plugins

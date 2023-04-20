@@ -11,14 +11,14 @@ The **`charCodeAt()`** method returns
 an integer between `0` and `65535` representing the UTF-16 code
 unit at the given index.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
-
 The UTF-16 code unit matches the Unicode code point for code points which can be
 represented in a single UTF-16 code unit. If the Unicode code point cannot be
 represented in a single UTF-16 code unit (because its value is greater than
 `0xFFFF`) then the code unit returned will be _the first part of a
 surrogate pair_ for the code point. If you want the entire code point value, use
-{{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}.
+{{jsxref("String/codePointAt", "codePointAt()")}}.
+
+{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
 ## Syntax
 

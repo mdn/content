@@ -101,7 +101,7 @@ The _locallibrary_ project sub-folder is the entry point for the website:
 - **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.
 - **urls.py** defines the site URL-to-view mappings. While this could contain _all_ the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.
 - **wsgi.py** is used to help your Django application communicate with the web server. You can treat this as boilerplate.
-- **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.
+- **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. Asynchronous Server Gateway Interface (ASGI) is the asynchronous successor to Web Server Gateway Interface (WSGI). ASGI provides a standard for both asynchronous and synchronous Python apps, whereas WSGI provided a standard for synchronous apps only. ASGI is backward-compatible with WSGI and supports multiple servers and application frameworks.
 
 The **manage.py** script is used to create applications, work with databases, and start the development web server.
 

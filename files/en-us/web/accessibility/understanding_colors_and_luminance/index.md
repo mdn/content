@@ -1,6 +1,7 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -104,15 +105,15 @@ As we saw, one color within the same color space may be expressed in many ways. 
 
 RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Converting from RGB to HSL is not a simple equation. Fortunately, browsers do it automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
-In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG color contrast values.
+In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
 As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_Colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color, but because of its ubiquity, sRGB is the default and preferred colorspace for accessibility.
 
-Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios. In speaking specifically to relative luminance, [WCAG's definition of relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes:
+Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
-> **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, see Understanding Success Criterion 1.4.3."
+> **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, apply the principles of [minimum contrast ratios](https://webaim.org/articles/contrast/#sc143).
 
 [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) introduced [`lch()`](/en-US/docs/Web/CSS/color_value/lch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color coordinate system which can specify any visible color. These will change the domination of the sRGB color space in the future, but we are not there yet.
 
@@ -150,7 +151,7 @@ Also, note that icons need sufficient contrast for perception. See [WCAG 2.1 tec
 
 ### Luminance
 
-It is the difference in the luminance of a color that enables us to see the contrast. The definition of [_relative luminance_](https://www.w3.org/WAI/GL/wiki/Relative_luminance) as defined by the W3C is "The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
+It is the difference in the luminance of a color that enables us to see the contrast. Relative luminance is defined in WCAG as "the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white."
 
 This statement is of course accurate, but may be confusing when used in reference to the RGB color space, which is an integer between 0 and 255. White has 100% relative luminance, black has 0% relative luminance (in most but not all literature). Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an RGB value of `rgb(255 255 255)` and black, normalized to 0, would have an RGB value of `rgb(0 0 0)`. Note that black and white can also be written as `rgb(100% 100% 100%)` and `rgb(0% 0% 0%)` respectively, which may be more intuitive.
 
@@ -162,37 +163,25 @@ A color contrast ratio is meaningless without its luminance component, and once 
 
 Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
-### Measuring relative luminance
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://contrast-ratio.com/) available, and even instructions on how to [build your own contrast checker](https://alvaromontoro.com/blog/67854/building-your-own-color-contrast-checker).
 
-The W3C's [wiki on relative luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance) notes that as long as systems use sRGB encoding unless it is known that another color space will be used to process and display the content, the sRGB colorspace should be used when calculating luminance.
+## Perceiving color
 
-The calculations for evaluating luminance are spelled out in WCAG 2.1 in the definition for [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance), and is as follows:
+Color is our perception of the narrow band of visible light, from red through yellow and green to blue. Our sensitivity to these various hues of color are not equal. The light sensitive cells in our [eyes](https://www.verywellhealth.com/eye-cones-5088699), called cones, are tuned to perceive some colors more than others. About 65% of cones are _most_ sensitive to a yellow/green, but also respond to red (we'll call these "red" cones). 30% are green sensitive, and only [5% are blue sensitive](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). While there are far fewer blue-sensitive cones than the other two types, these cones are very sensitive, which partially makes up for their smaller numbers.
 
-R, G, and B have distinct weights in the relative luminance formula.For the sRGB colorspace, the relative luminance of a color is defined as `L = 0.2126 * R + 0.7152 * G+ 0.0722 * B` where red, green and blue, _R_, _G_ and _B_, are defined as:
+Deep, pure blue is perceived differently than other colors as blue cones do not contribute to luminance and we have far fewer blue cones than red or green.
 
-- if `RsRGB <= 0.03928` then `R = RsRGB/12.92` else `R = ((RsRGB+0.055)/1.055) ^ 2.4`
-- if `GsRGB <= 0.03928` then `G = GsRGB/12.92` else `G = ((GsRGB+0.055)/1.055) ^ 2.4`
-- if `BsRGB <= 0.03928` then `B = BsRGB/12.92` else `B = ((BsRGB+0.055)/1.055) ^ 2.4`
+![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](conemosaics.jpg)
 
-These formulas come from [sRGB](https://www.w3.org/TR/WCAG21/#bib-sRGB)] and [IEC-4WD](https://www.w3.org/TR/WCAG21/#bib-IEC-4WD).
+On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ConeMosaics.jpg))
 
-Calculations for relative luminance are not casual ones. Luckily, some tools will do it for you. Here are a few.
+The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color (hue and colorfulness).
 
-- [Relative luminance calculation.](https://planetcalc.com/7779/)
-- [Calculate relative luminance](https://www.topster.net/relative-luminance/)
-- [Analyze Luminosity Contrast Ratio](http://juicystudio.com/services/luminositycontrastratio.php)
+Luminance provides for fine vision details, including differentiating edges and text. Hue and colorfulness carry a third of the detail of luminance. Image data compression takes advantage of this fact. As an example, [h.264 video codec](/en-US/docs/Web/Media/Formats/Video_codecs) samples color at a fourth of the resolution of the luminance.
 
-## Color perception
+For accessibility, this means that luminance contrast is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map or bars in a graph.
 
-When _perceiving_ colors, not all colors are created equal: Our eyes are tuned to perceive specific colors, red, blue, and green, but we do not perceive these colors with equal strength. According to the article, [Hypersensitive cones](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html), the authors note that "By population, about 64% of the cones are red-sensitive, about 32% green sensitive, and about 2% are blue sensitive." Surprisingly, although blue-sensitive cones typically make up the fewest cones, they are also the most _sensitive_ to color.
-
-Put another way, as humans, blue is perceived differently than other colors for multiple reasons. First, because the blue cones are the most sensitive of the three; second, we have fewer blue cones than red or green; and third, it so happens that these blue-sensitive cones tend to be located at the rims of our eyeballs, away from the center ([fovea centralis](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2)) of the back of the eyeball, where the red and green cones tend to cluster.
-
-There is software that takes advantage of that fact. Because we do not perceive blue as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" more heavily than other parts. Television signals also use this fact to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.
-
-Another essential point to consider is the ambiance of light surrounding the color. The color will appear differently if the background lighting is dark or light.
-
-Internal and external factors impact color contrast and perception. In the following image both the yellow dots and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. Your context-sensitive perception of these colors makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+Another essential point to consider is the color or luminance that is surrounding a color. Colors appear differently depending on what is surrounding them. In the following image, both the yellow dots and the grey squares they are are the same sRGB color. Context-sensitive color perception makes them appear different; your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 
@@ -202,7 +191,7 @@ Our contrast, lightness, and color perception are affected by the context of the
 
 To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 
-## Adaption
+## Adaptation
 
 Our eyes don't adapt equally, in the same way, going from light areas to dark ones and vice versa. This is due to the physiological ways our eyes are built. This affects the ability of a user to read text against a background. At least two kinds of adaptation take place: local adaptation and adaptation to an ambient environment.
 
@@ -239,7 +228,7 @@ There is a loss of saturation at the extremes of luminance and the extremes of b
 
 Contrast alone is not enough when it comes to accessibility considerations. In the case of animation, certain color combinations are more likely to cause photosensitive seizures to those who are susceptible to them than others. For example, alternating flashes between red and blue is more problematic than alternating flashes between green and blue. It has been theorized that this is because the "red" sensitive cones of our eyes, which tend to cluster around the fovea (near the center), are physically located at a different location than the "blue" sensitive cones of our eyes, which are located away from the fovea and towards the rims. The electrical signals from the eye to the brain have much to resolve between them as the information is processed in our brains.
 
-In [Certain colors more likely to cause epileptic fits, researchers find](https://www.sciencedaily.com/releases/2009/09/090925092858.htm), the authors noted that "…complexities underlying brain dynamics could be modulated by certain color combinations more than the other, for example, red-blue flickering stimulus causes larger cortical excitation than red-green or blue-green stimulus".
+Some colors more likely to [cause epileptic seizures](https://www.epilepsy.com/sites/default/files/2022-10/Epilepsia_2022_fisher_visually_sensitive_seizures.pdf). Complexities underlying brain dynamics can be modulated by some color combinations more than the others. For example, red-blue flickering stimulus causes larger cortical excitation than red-green or blue-green stimulus.
 
 Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. The combination of red/blue is one such example.
 
@@ -259,7 +248,7 @@ The nature of blue light causes it to focus at a different location on the retin
 
 ## The special case of red
 
-Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm); There is an interesting observation in a discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" in which one of the participants states: "I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me."
+Not all colors ("hue") are processed similarly by our brains. Human physiology and psychology are affected by the color red, generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Some devices offer a ["grayscale" setting as an accessibility option](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" which can help people who are photo-sensitive. To mimic the grayscale setting, use the CSS {{cssxref("filter")}} property with a [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale) or [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/en-US/docs/Web/CSS/filter-function).
 
 ### Saturated red
 
@@ -315,8 +304,6 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - CSS [`color`](/en-US/docs/Web/CSS/color) property
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
-- [What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
-- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it, assessing the integrity of the optic nerve.
+- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
-- [WCAG Working Group's Wiki page on Relative Luminance](https://www.w3.org/WAI/GL/wiki/Relative_luminance)

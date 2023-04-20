@@ -12,17 +12,13 @@ This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tu
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
-          >Django Tutorial Part 5: Creating our home page</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand where and how to use generic class-based views, and how to
-        extract patterns from URLs and pass the information to views.
+        To understand where and how to use generic class-based views, and how to extract patterns from URLs and pass the information to views.
       </td>
     </tr>
   </tbody>
@@ -444,7 +440,8 @@ def book_detail_view(request, primary_key):
 
 The view first tries to get the specific book record from the model. If this fails the view should raise an `Http404` exception to indicate that the book is "not found". The final step is then, as usual, to call `render()` with the template name and the book data in the `context` parameter (as a dictionary).
 
-Alternatively, we can use the `get_object_or_404()` function as a shortcut to raise an `Http404` exception if the record is not found.
+Another way you could do this if you were not using a generic view would be to call the `get_object_or_404()` function.
+This is a shortcut to raise an `Http404` exception if the record is not found.
 
 ```python
 from django.shortcuts import get_object_or_404

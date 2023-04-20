@@ -1,5 +1,6 @@
 ---
-title: NDEFRecord.toRecords()
+title: "NDEFRecord: toRecords() method"
+short-title: toRecords()
 slug: Web/API/NDEFRecord/toRecords
 page-type: web-api-instance-method
 status:

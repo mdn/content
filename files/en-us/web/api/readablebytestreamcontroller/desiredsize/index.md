@@ -1,5 +1,6 @@
 ---
-title: ReadableByteStreamController.desiredSize
+title: "ReadableByteStreamController: desiredSize property"
+short-title: desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 page-type: web-api-instance-property
 browser-compat: api.ReadableByteStreamController.desiredSize

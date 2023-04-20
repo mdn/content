@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: loadeddata event"
+short-title: loadeddata
 slug: Web/API/HTMLMediaElement/loadeddata_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadeddata_event

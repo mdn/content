@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.ideographicBaseline
+title: "TextMetrics: ideographicBaseline property"
+short-title: ideographicBaseline
 slug: Web/API/TextMetrics/ideographicBaseline
 page-type: web-api-instance-property
 status:

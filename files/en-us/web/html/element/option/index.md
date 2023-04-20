@@ -1,5 +1,5 @@
 ---
-title: '<option>: The HTML Option element'
+title: "<option>: The HTML Option element"
 slug: Web/HTML/Element/option
 page-type: html-element
 browser-compat: html.elements.option
@@ -20,13 +20,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `label`
   - : This attribute is text for the label indicating the meaning of the option. If the `label` attribute isn't defined, its value is that of the element text content.
 - `selected`
-  - : If present, this Boolean attribute indicates that the option is initially selected. If the `<option>` element is the descendant of a {{HTMLElement("select")}} element whose {{htmlattrxref("multiple", "select")}} attribute is not set, only one single `<option>` of this {{HTMLElement("select")}} element may have the `selected` attribute.
+  - : If present, this Boolean attribute indicates that the option is initially selected. If the `<option>` element is the descendant of a {{HTMLElement("select")}} element whose [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute is not set, only one single `<option>` of this {{HTMLElement("select")}} element may have the `selected` attribute.
 - `value`
   - : The content of this attribute represents the value to be submitted with the form, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element.
 
 ## Styling with CSS
 
-Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set however in Chrome or Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
+Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set, however in Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 ## Examples
 

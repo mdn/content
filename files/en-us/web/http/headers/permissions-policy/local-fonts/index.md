@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: local-fonts"
 slug: Web/HTTP/Headers/Permissions-Policy/local-fonts
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.local-fonts

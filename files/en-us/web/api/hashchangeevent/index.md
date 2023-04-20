@@ -13,6 +13,11 @@ The fragment identifier is the part of the URL that follows (and includes) the `
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("HashChangeEvent.HashChangeEvent", "HashChangeEvent()")}}
+  - : Creates a new `HashChangeEvent` object.
+
 ## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._

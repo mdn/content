@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Date.setMilliseconds
 
 {{JSRef}}
 
-The **`setMilliseconds()`** method sets the milliseconds for a
-specified date according to local time.
+The **`setMilliseconds()`** method of a {{jsxref("Date")}} instance changes the milliseconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
 
@@ -21,17 +20,15 @@ setMilliseconds(millisecondsValue)
 ### Parameters
 
 - `millisecondsValue`
-  - : A number between 0 and 999, representing the milliseconds.
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `millisecondsValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
-If you specify a number outside the expected range, the date information in the
-{{jsxref("Date")}} object is updated accordingly. For example, if you specify 1005, the
-number of seconds is incremented by 1, and 5 is used for the milliseconds.
+If you specify a number outside the expected range, the date information in the {{jsxref("Date")}} object is updated accordingly. For example, if you specify 1005, the number of seconds is incremented by 1, and 5 is used for the milliseconds.
 
 ## Examples
 

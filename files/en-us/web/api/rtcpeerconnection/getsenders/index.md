@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getSenders()
+title: "RTCPeerConnection: getSenders() method"
+short-title: getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getSenders

@@ -1,5 +1,6 @@
 ---
-title: Document.requestStorageAccess()
+title: "Document: requestStorageAccess() method"
+short-title: requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
 page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
