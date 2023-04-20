@@ -4,25 +4,26 @@ slug: Glossary/Inline-level_content
 page-type: glossary-definition
 ---
 
-In CSS, content that participates in inline layout is called inline-level content. Mostly text sequences and inline boxes are inline-level.
+In CSS, content that participates in inline layout is called **inline-level content**. Most text sequences and replaced elements are inline-level by default.
 
-In inline layout, a mixed stream of text and inline boxes are laid out by fragmenting them into a stack of line boxes. Within each line box, inline-level boxes are aligned to each other vertically/horizontally based on writing mode. Typically, they are allinged by the baselines of their text.
+In inline layout, a mixed stream of text, replaced elements, and other inline boxes are laid out by fragmenting them into a stack of line boxes. Within each line box, inline-level boxes are aligned to each other vertically or horizontally, depending on the writing mode. Typically, they are aligned by the baselines of their text. This can be changed with CSS.
 
 ![inline layout](inline_layout.png)
 
-> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. As a presentational characteristic, this is now specified by CSS.
 
 ## Examples
 
 ```html
-<div>
+<p>
   The following span is an <span class="highlight">inline element</span>; its
   background has been colored to display both the beginning and end of the
-  inline element's influence.
-</div>
+  inline element's influence. Input elements, like <input type="radio"> and 
+  <input type="checkbox">, are also inline-level content.
+</p>
 ```
 
-In this example, the {{HTMLElement("div")}} element contains some text. Within that text is a {{HTMLElement("span")}} element, which is an inline element. Because the `<span>` element is inline, the paragraph correctly renders as a single, unbroken text flow, like this:
+In this example, the {{HTMLElement("p")}} element contains some text. Within that text is a {{HTMLElement("span")}} element and two {{HTMLElement("input")}} elements, which are inline-level elements. Because these elements are inline, the paragraph correctly renders as a single paragraph of unbroken text flow:
 
 ```css hidden
 body {

@@ -4,18 +4,18 @@ slug: Glossary/Block-level_content
 page-type: glossary-definition
 ---
 
-In CSS, content that participates in block layout is called block-level content.
+In CSS, content that participates in block layout is called **block-level content**.
 
 In a block layout, boxes are laid out one after the other, vertically, beginning at the top of a containing block. Each box's left outer edge touches the left edge of the containing block.\
-A block-level element always starts on a new line. And it occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".
+A block-level element always starts on a new line. In horizontal writing modes, like English or Arabic, it occupies the entire horizontal space of its parent element (container) and vertical space equal to the height of its contents, thereby creating a "block".
 
 > **Note:** The above behaviour of block layout changes if the containing block's [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) is set to value other than [the default value](/en-US/docs/Web/CSS/writing-mode#formal_definition).
 
-> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. As a presentational characteristic, this is now specified by CSS.
 
 ## Examples
 
-In this example two paragraph({{HTMLElement("p")}}) elements are put in a {{HTMLElement("div")}}.
+In this example, two paragraph ({{HTMLElement("p")}}) elements are put in a {{HTMLElement("div")}}.
 
 ```html
 <div>
