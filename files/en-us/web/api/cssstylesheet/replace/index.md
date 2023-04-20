@@ -65,4 +65,4 @@ stylesheet
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

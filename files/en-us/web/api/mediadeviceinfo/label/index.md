@@ -8,7 +8,7 @@ browser-compat: api.MediaDeviceInfo.label
 
 {{APIRef("Media Capture")}}
 
-The **`label`** ReadOnlyInline
+The **`label`** readonly
 property of the {{domxref("MediaDeviceInfo")}} interface returns a
 string describing this device (for example
 "External USB Webcam").

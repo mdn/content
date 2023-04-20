@@ -68,6 +68,10 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.values()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.values()")}}
+- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.keys()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,5 +1,5 @@
 ---
-title: '<center>: The Centered Text element'
+title: "<center>: The Centered Text element"
 slug: Web/HTML/Element/center
 page-type: html-element
 status:
