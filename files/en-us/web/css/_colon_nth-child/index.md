@@ -349,7 +349,7 @@ ul.two > li.noted:nth-child(-n + 3) {
 
 #### Result
 
-In both of the lists we can see that all the list items with `class="noted"` have a thick bottom border.
+In both of the lists, all the list items with `class="noted"` have a thick bottom border.
 
 In the first list, the first 3 items with `class="noted"` are highlighted.
 
