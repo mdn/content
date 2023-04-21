@@ -329,7 +329,7 @@ li {
 }
 ```
 
-The first case highlights the first list items with `class="noted"`.
+The first case highlights the first three list items with `class="noted"` whether or not they are the first three items in the list.
 
 ```css
 ul.one > li:nth-child(-n + 3 of .noted) {
