@@ -258,46 +258,46 @@ In this example there are two unordered list of names, the first to shows the ef
 
 ```html
 <ul class="one">
-  <li class="noted">Deangelo</li>
-  <li>Hannah</li>
-  <li class="noted">Kimberly</li>
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
   <li>Jayla</li>
-  <li>Ben</li>
+  <li>Tyrone</li>
   <li>Ricardo</li>
-  <li class="noted">Milton</li>
+  <li class="noted">Gila</li>
   <li>Sienna</li>
-  <li>Arthur</li>
+  <li>Titilayo</li>
   <li class="noted">Lexi</li>
   <li>Aylin</li>
   <li>Leo</li>
   <li>Leyla</li>
   <li class="noted">Bruce</li>
-  <li>Corbin</li>
+  <li>Aisha</li>
   <li>Veronica</li>
-  <li class="noted">Mathew</li>
-  <li>Tiana</li>
+  <li class="noted">Kyouko</li>
+  <li>Shireen</li>
   <li>Tanya</li>
   <li class="noted">Marlene</li>
 </ul>
 <ul class="two">
-  <li class="noted">Deangelo</li>
-  <li>Hannah</li>
-  <li class="noted">Kimberly</li>
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
   <li>Jayla</li>
-  <li>Ben</li>
+  <li>Tyrone</li>
   <li>Ricardo</li>
-  <li class="noted">Milton</li>
+  <li class="noted">Gila</li>
   <li>Sienna</li>
-  <li>Arthur</li>
+  <li>Titilayo</li>
   <li class="noted">Lexi</li>
   <li>Aylin</li>
   <li>Leo</li>
   <li>Leyla</li>
   <li class="noted">Bruce</li>
-  <li>Corbin</li>
+  <li>Aisha</li>
   <li>Veronica</li>
-  <li class="noted">Mathew</li>
-  <li>Tiana</li>
+  <li class="noted">Kyouko</li>
+  <li>Shireen</li>
   <li>Tanya</li>
   <li class="noted">Marlene</li>
 </ul>
