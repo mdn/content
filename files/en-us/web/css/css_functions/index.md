@@ -20,6 +20,8 @@ The value syntax starts with the **name of the function**, followed by a left pa
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
+> **Note:** These CSS value functions are used as property values. The four [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes) are not value functions, so are not included. [Linguistic pseudo-classes](/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes) and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) also require parameter values, but are not value functions. Parentheses in [conditional at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules) are groupings, not functions. 
+
 ## Transform functions
 
 The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
