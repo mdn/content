@@ -53,7 +53,7 @@ By passing a selector argument, we can select the **nth** element that matches t
 This is different from moving the selector outside of the function, like:
 
 ```css
-li.important:nth-child(-n + 3);
+li.important: nth-child(-n + 3);
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.
@@ -226,9 +226,7 @@ li {
   margin: 0.125rem;
   padding: 0.25rem;
 }
-```end
 
-```css
 li {
   border: 1px solid tomato;
 }
@@ -327,9 +325,7 @@ li {
   margin: 0.125rem;
   padding: 0.25rem;
 }
-```end
 
-```css
 li {
   border: 1px solid tomato;
 }
@@ -369,7 +365,7 @@ In the second list, only the items with `class="noted"` that are also among the 
 
 ### Using of selector to fix striped tables
 
-blah
+A common practice for tables is to use _zebra-stripe_ on table rows, this makes tables easier to read. Although if a row is hidden the the stripes will merge as the and alter the desired effect. In this example you can see two tables both with a `hidden` row the second table ignores the hidden row for styling.
 
 #### HTML
 
