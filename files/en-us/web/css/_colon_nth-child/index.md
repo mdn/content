@@ -56,7 +56,7 @@ This is different from moving the selector outside of the function, like:
 li.important:nth-child(-n + 3);
 ```
 
-This selector instead just selects only the _important_ list items if they happen to be in the first three children.
+This selector selects list items if they are among the first three children and match the selector `li.important`.
 
 ## Examples
 
