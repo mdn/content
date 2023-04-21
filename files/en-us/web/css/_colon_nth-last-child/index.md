@@ -235,7 +235,7 @@ li:nth-last-child(odd of .noted) {
 
 #### Result
 
-Here you can see that items 1, 3, 7, 10, 14, 17 and 20 have a thick bottom border as they have `class="noted"`.
+Items 1, 3, 7, 10, 14, 17, and 20 have a thick bottom border as they have `class="noted"`.
 
 Items 1, 7, 14 and 20 have a solid background as they are the odd list items with `class="noted"`.
 
