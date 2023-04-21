@@ -61,11 +61,6 @@ f.load().then(() => {
 
 {{Compat}}
 
-### Firefox-specific notes
-
-- Prior to Firefox 57 ([Firefox bug 1374885](https://bugzil.la/1374885)), when setting a system font as the value of a canvas 2D context's {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`),
-  no font would be returned.
-
 ## See also
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
