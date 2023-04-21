@@ -353,7 +353,7 @@ In both of the lists, all the list items with `class="noted"` have a thick botto
 
 In the first list, the first 3 items with `class="noted"` are highlighted.
 
-In the second list, all the items with `class="noted"` that are in the first 3 items are highlighted.
+In the second list, only the items with `class="noted"` that are also among the first 3 items are highlighted.
 
 {{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 210)}}
 
