@@ -444,7 +444,7 @@ console.log(
 // "4.33"
 ```
 
-The minimum factional digits have no effect if the value already has more than 2 fractional digits:
+The minimum fractional digits have no effect if the value already has more than 2 fractional digits:
 
 ```js
 // Minimum fractions have no effect if value is higher precision.
@@ -494,7 +494,7 @@ console.log(
 
 #### Using SignificantDigits
 
-The number of _significant digits_ is the total number of digits including both integer and factional parts.
+The number of _significant digits_ is the total number of digits including both integer and fractional parts.
 The `maximumSignificantDigits` is used to indicate the total number of digits from the original value to display.
 
 The examples below show how this works.

@@ -36,8 +36,6 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 -webkit-mask-position-x: unset;
 ```
 
-{{cssinfo}}
-
 ## Syntax
 
 ### Values

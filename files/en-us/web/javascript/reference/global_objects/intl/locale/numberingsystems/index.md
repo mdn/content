@@ -2,12 +2,15 @@
 title: Intl.Locale.prototype.numberingSystems
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems
 page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Intl.Locale.numberingSystems
 ---
 
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
-The **`Intl.Locale.prototype.numberingSystems`** accessor property returns a list of one or more unique [numbering system](https://en.wikipedia.org/wiki/Numeral_system) identifiers for the `Locale`.
+The **`numberingSystems`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more unique [numbering system](https://en.wikipedia.org/wiki/Numeral_system) identifiers for this locale.
 
 ## Description
 

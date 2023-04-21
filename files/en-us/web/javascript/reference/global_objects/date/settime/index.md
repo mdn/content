@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Date.setTime
 
 {{JSRef}}
 
-The **`setTime()`** method sets the {{jsxref("Date")}} object
-to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
+The **`setSeconds()`** method of a {{jsxref("Date")}} instance changes the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) for this date, which is the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
 
@@ -21,18 +20,11 @@ setTime(timeValue)
 ### Parameters
 
 - `timeValue`
-  - : An integer representing the number of milliseconds since 1 January 1970, 00:00:00
-    UTC.
+  - : An integer representing the new timestamp — the number of milliseconds since the midnight at the beginning of January 1, 1970, UTC.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date
-(effectively, the value of the argument).
-
-## Description
-
-Use the `setTime()` method to help assign a date and time to another
-{{jsxref("Date")}} object.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `timeValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Examples
 

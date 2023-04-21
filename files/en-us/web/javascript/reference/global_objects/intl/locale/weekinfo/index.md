@@ -2,12 +2,15 @@
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Intl.Locale.weekInfo
 ---
 
-{{JSRef}}
+{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
-The **`Intl.Locale.prototype.weekInfo`** property is an accessor property which returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for the associated `Locale`.
+The **`weekInfo`** accessor property of {{jsxref("Intl.Locale")}} instances returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for this locale.
 
 ## Description
 

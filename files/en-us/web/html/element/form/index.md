@@ -1,5 +1,5 @@
 ---
-title: '<form>: The Form element'
+title: "<form>: The Form element"
 slug: Web/HTML/Element/form
 page-type: html-element
 browser-compat: html.elements.form
