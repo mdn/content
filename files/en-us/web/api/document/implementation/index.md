@@ -27,7 +27,9 @@ console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 // Log: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 ```
 
-A list of module names (e.g., Core, HTML, XML, etc.) is available in the DOM Level 2 [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2).
+> **Warning:** Do not use this for feature detection. The `hasFeature()` method always returns true.
+
+A list of module names (e.g., Core, HTML, XML, etc.) is available in the [DOM Level 2 Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) and [DOM Level 3 Conformance Section](https://www.w3.org/TR/DOM-Level-3-Core/introduction.html#ID-Conformance-h2).
 
 ## Notes
 
