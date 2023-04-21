@@ -25,20 +25,36 @@ The following interactive example shows how changing the value of the `overflow`
 
 ### CSS properties
 
-- {{CSSxRef("overflow")}}
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
+- {{CSSxRef("overflow")}} shorthand
+- {{CSSxRef("overflow-clip-margin")}}
+- {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-overflow")}} {{experimental_inline}}
+- {{CSSxRef("block-ellipsis")}} (formerly {{CSSxRef("block-overflow")}}) {{experimental_inline}}
+- {{CSSxRef("continue")}} {{experimental_inline}}
 - {{CSSxRef("line-clamp")}} {{experimental_inline}}
 - {{CSSxRef("max-lines")}} {{experimental_inline}}
-- {{CSSxRef("continue")}} {{experimental_inline}}
 
 ### Non-standard properties
 
 - {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
+
+### Glossary
+
+- {{Glossary("Scroll container")}}
+
+## Guides
+
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+  - : CSS building block: learn what overflow is and how to manage it.
+
+## Related concepts
+
+- Element scrollTo() method
 
 ## Specifications
 
