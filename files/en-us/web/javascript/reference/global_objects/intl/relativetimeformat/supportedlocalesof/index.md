@@ -15,8 +15,8 @@ The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an 
 ## Syntax
 
 ```js-nolint
-supportedLocalesOf(locales)
-supportedLocalesOf(locales, options)
+Intl.RelativeTimeFormat.supportedLocalesOf(locales)
+Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
 ```
 
 ### Parameters

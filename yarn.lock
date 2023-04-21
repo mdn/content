@@ -39,20 +39,20 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.4.tgz#c62722e8b0d1fc595db62b0c9e61828061406b00"
   integrity sha512-X9Qs+Um1EyFiQVZ8wEGPMEwN53VePTpZGMt2S0glKjVxwpF1kMQfKtPoaTcWmRl7kmNpCVYjvB5c3MdMTyxrxQ==
 
-"@mdn/browser-compat-data@^5.2.48":
-  version "5.2.48"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.48.tgz#3ca72d56ff98f78c79167264e0ee92ef3a0a98af"
-  integrity sha512-D5cAp2r0Eq9yN4lBNkVpHzoULHYeCQjLFF7PbD/LBBCuWXPIB4X3rbi12REvaCnEar/0UiSSfjIMWxFAw0vIJg==
+"@mdn/browser-compat-data@^5.2.51":
+  version "5.2.51"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.51.tgz#4b7a6fb5499abf758bd246e983e0a25ad0659c25"
+  integrity sha512-E72TUHMgX9+coOwyRf2C6OwAGlYgFS2UhpgokIYzzwrvnXDN8Qh7c+2L2KAnRcvf7RTZV52u8DhS4ajknyjlNw==
 
-"@mdn/yari@2.15.5":
-  version "2.15.5"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.15.5.tgz#d9eef762c330b2a693d357ec3b8d2cdff03317d5"
-  integrity sha512-G1UBZKdK4c8t7tmXAmv4yFcT6FGGvcj7SsojjUs9U/lp50ujB2/Omuyr2VW/Cd2T9rTd4tPtmQRo1GGlwCJ57Q==
+"@mdn/yari@2.17.7":
+  version "2.17.7"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.17.7.tgz#824412037eb1486d870180a04a41917eb1bb1b5e"
+  integrity sha512-fBMuecx7o+R9a76oHkfDbdpoMt+NJsSi3m7qWqkl5vBYeDz260mBGsS0nb3Y6gTj8u0MCaV2c9Xg3fC5RpFjmA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.4"
-    "@mdn/browser-compat-data" "^5.2.48"
+    "@mdn/browser-compat-data" "^5.2.51"
     "@mozilla/glean" "1.3.0"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^5.4.4"
@@ -112,7 +112,7 @@
     unified "^10.1.2"
     unist-builder "^3.0.1"
     unist-util-visit "^4.1.2"
-    web-specs "^2.54.0"
+    web-specs "^2.56.0"
 
 "@mozilla/glean@1.3.0":
   version "1.3.0"
@@ -5623,10 +5623,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^2.54.0:
-  version "2.54.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-2.54.0.tgz#0d241c39bbc54cfd7084c95d35cc66f7b6453a52"
-  integrity sha512-6OO653+ezsCvNEN+4TAchAz6UozZCOCXF22JezUfqCTvvI7hr/yw9DEGjKvWp9X31obNjJfZX2GxiHdjS7Unig==
+web-specs@^2.56.0:
+  version "2.56.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-2.56.0.tgz#7ed41f47441de3dddb14dad3bb0787569bf91a4e"
+  integrity sha512-Msz7LPpUq5KaRHMvXCWZCDEBVI1OqmlfQj0JJq+PZemgeS44KzQZEHSZ6e5wAMMNNCymRIHbO3rSyOdoJPNIBQ==
 
 which@^1.2.9:
   version "1.3.1"

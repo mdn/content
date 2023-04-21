@@ -350,9 +350,12 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
-- [V8 sort stability](https://v8.dev/features/stable-sort)
-- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
+- {{jsxref("TypedArray.prototype.sort()")}}
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (September 28, 2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (July 2, 2019)
+- [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

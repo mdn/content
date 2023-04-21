@@ -87,7 +87,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(Array.prototype.toSorted.call(arrayLike));
-// [0, 4, undefined]
+// [4, 5, undefined]
 ```
 
 ## Specifications

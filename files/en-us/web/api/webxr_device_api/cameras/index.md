@@ -1,5 +1,5 @@
 ---
-title: 'Viewpoints and viewers: Simulating cameras in WebXR'
+title: "Viewpoints and viewers: Simulating cameras in WebXR"
 slug: Web/API/WebXR_Device_API/Cameras
 page-type: guide
 ---
@@ -117,7 +117,7 @@ Thus a matrix that looks like this:
 
 Is represented in array form like this:
 
-```js
+```js-nolint
 let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
                    a9, a10, a11, a12, a13, a14, a15, a16];
 ```
@@ -152,8 +152,7 @@ function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
-  mat4.perspective(transform, fovRadians, aspectRatio,
-                   nearClip, farClip);
+  mat4.perspective(transform, fovRadians, aspectRatio, nearClip, farClip);
   return transform;
 }
 ```
@@ -170,7 +169,11 @@ If you start each frame's rendering pass by computing the perspective matrix, yo
 
 ```js
 const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
-const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
+const translateVec = vec3.fromValues(
+  -trackDistance,
+  -craneDistance,
+  pushDistance
+);
 mat4.translate(transform, transform, translateVec);
 ```
 
@@ -182,7 +185,7 @@ Unlike a true "zoom", **scaling** involves multiplying each of the `x`, `y`, and
 
 If you want to scale up by a factor of 2, you need to multiply each component by 2.0. To scale down by the same amount, multiply them by -2.0. In matrix terms, this is performed using a transform matrix with scaling factored into it, like this:
 
-```js
+```js-nolint
 let scaleTransform = [
   Sx,  0,  0,  0,
    0, Sy,  0,  0,
@@ -195,7 +198,7 @@ This matrix represents a transform that scales up or down by a factor indicated 
 
 If the same scaling factor is to be applied in every direction, you can create a simple function to generate the scaling transform matrix for you:
 
-```js
+```js-nolint
 function createScalingMatrix(f) {
   return [
     f, 0, 0, 0,
@@ -208,7 +211,7 @@ function createScalingMatrix(f) {
 
 With the transform matrix in hand, we apply the transform `scaleTransform` to the vector (or vertex) `myVector`:
 
-```js
+```js-nolint
 let myVector = [2, 1, -3];
 let scaleTransform = [
   2, 0, 0, 0,
@@ -329,8 +332,11 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 The solution here is obvious. SInce the translation is expressed as a vector providing the distance to move along each axis, we can combine them like this:
 
 ```js
-mat4.translate(viewMatrix, viewMatrix,
-     [-truckDistance, -pedestalDistance, dollyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [
+  -truckDistance,
+  -pedestalDistance,
+  dollyDistance,
+]);
 ```
 
 This will shift the origin of the matrix `viewMatrix` by the specified amount along each axis.
@@ -388,7 +394,9 @@ function myAnimationFrameCallback(time, frame) {
   const adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
   const pose = frame.getViewerPose(adjustedRefSpace);
 
-  animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
+  animationFrameRequestID = frame.session.requestAnimationFrame(
+    myAnimationFrameCallback
+  );
 
   if (pose) {
     const glLayer = frame.session.renderState.baseLayer;

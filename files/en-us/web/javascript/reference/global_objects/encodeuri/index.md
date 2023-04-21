@@ -103,7 +103,7 @@ function encodeRFC3986URI(str) {
     .replace(/%5D/g, "]")
     .replace(
       /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
     );
 }
 ```

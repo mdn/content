@@ -54,6 +54,18 @@ console.log(instance.fieldWithInitializer); // "instance field"
 console.log(instance.prefixField); // "prefixed field"
 ```
 
+Computed field names are only evaluated once, at [class definition time](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order). This means that each class always has a fixed set of field names, and two instances cannot have different field names via computed names. The `this` value in the computed expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await", "await")}} and {{jsxref("Operators/yield", "yield")}} work as expected in this expression.
+
+```js
+class C {
+  [Math.random()] = 1;
+}
+
+console.log(new C());
+console.log(new C());
+// Both instances have the same field name
+```
+
 In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) refers to the class instance under construction, and [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) refers to the `prototype` property of the base class, which contains the base class's instance methods, but not its instance fields.
 
 ```js
@@ -89,6 +101,8 @@ const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
 
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
 
 ```js
@@ -113,7 +127,7 @@ const instance = new Derived();
 console.log(instance.field); // 2
 ```
 
-Fields are added one-by-one. Field initializers can refer to field values above it, but not below it.
+Fields are added one-by-one. Field initializers can refer to field values above it, but not below it. All instance and static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
 
 ```js
 class C {
@@ -128,7 +142,7 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-existent private field throws an error, even if the private field is declared below.
+> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 

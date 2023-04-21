@@ -24,7 +24,7 @@ The function `oklab()` can represent any color from the Oklab color space that i
 oklab(40.1% 0.1143 0.045);
 oklab(59.69% 0.1007 0.1191);
 
-/* oklab(lightness a-axis b-axis / Alpha) */
+/* oklab(lightness a-axis b-axis / alpha) */
 oklab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
@@ -146,5 +146,5 @@ div {
 ## See also
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
-- {{cssxref("color_value/oklch",'oklch()')}} use the same color space as `oklab()` but a polar coordinate system.
+- {{cssxref("color_value/oklch",'oklch()')}}: Another functional notation using the same color space as `oklab()` but in a polar coordinate system
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)

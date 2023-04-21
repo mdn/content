@@ -235,10 +235,6 @@ Submit a `<form>` into a new window:
 </html>
 ```
 
-### Submitting forms and uploading files using XMLHttpRequest
-
-If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
-
 ## Specifications
 
 {{Specifications}}

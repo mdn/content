@@ -13,14 +13,8 @@ The **`Headers.forEach()`** method executes a callback function once per each ke
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((value, key) => { /* … */ })
-forEach((value, key, object) => { /* … */ })
-
-// Inline callback function
-forEach(function (value, key) { /* … */ })
-forEach(function (value, key, object) { /* … */ })
-forEach(function (value, key) { /* … */ }, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
