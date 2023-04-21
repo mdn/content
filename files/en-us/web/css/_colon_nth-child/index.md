@@ -338,7 +338,7 @@ ul.one > li:nth-child(-n + 3 of .noted) {
 }
 ```
 
-The second case highlights the items with `class="noted"` if they are within the first 3 items in the list.
+The second case highlights the items with `class="noted"` only if they are within the first 3 items in the list.
 
 ```css
 ul.two > li.noted:nth-child(-n + 3) {
