@@ -50,6 +50,8 @@ This article provides information about the changes in Firefox 113 that affect d
 
 #### Removals
 
+- The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
+
 ### WebAssembly
 
 #### Removals
