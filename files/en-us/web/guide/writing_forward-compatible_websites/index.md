@@ -101,9 +101,9 @@ Until there's decently widespread support of the unprefixed version of something
 
 ## Code hygiene
 
-### Avoid missing `>`
+### Use best practices when coding
 
-Passing a validator is one way to ensure this, but even if your website doesn't validate entirely you should make sure all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that works in browsers without HTML5 support but breaks in a browser supporting HTML5:
+Passing a validator is one way to ensure your code is valid. But even if your website doesn't validate entirely you should make sure there are no errors, such as ensuring all your `>` characters are present. Missing those can lead to unexpected situations due to a following tag name being treated as an attribute on a previous tag. This can work for a bit, then break if a specification attaches a meaning to that attribute. Here's an example that worked in older browsers but breaks in all modern browsers:
 
 ```html
 <form action="http://www.example.com">
