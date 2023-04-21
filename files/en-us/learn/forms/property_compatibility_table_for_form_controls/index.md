@@ -1655,7 +1655,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
 
 ### Datalist
 
-See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list` attribute](/en-US/docs/Web/HTML/Attributes/list).
+See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute.
 
 <table>
   <thead>
