@@ -40,7 +40,7 @@ For each property there are two possible renderings:
 
 ## Compatibility tables
 
-Altering the appearance of form controls with CSS, such as with  {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, and {{cssxref("height")}} can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
+Altering the appearance of form controls with CSS, such as with {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, and {{cssxref("height")}} can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
 
 ### Text fields
 
