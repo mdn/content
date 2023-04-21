@@ -125,6 +125,10 @@ The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB
 
 Protanopia is a color vision deficiency in which the eye has no red cones; sRGB can still be perceived via green cones, though darker than normal vision. Both protan (red deficient) and deutan (green deficient) deficiencies cause difficulty distinguishing _between_ red and green.
 
+Developer tools can provide the ability to simulate color vision differences right in the browser. For example, Firefox enables similuating pronatopia, deuteranopia, tritanopia, achromatopsia, and contrast loss right in the developer tools, accessible in the accessibility pannel.
+
+![Snippet of Firefox developer tools showing the simulate popup](simulate_color_differences.jpg)
+
 ## Luminance and Contrast
 
 ### Contrast
