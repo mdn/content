@@ -50,7 +50,7 @@ By passing a selector argument, we can select the **nth** element that matches t
 :nth-child(-n+3 of li.important) ;
 ```
 
-> **Note:** This is different from moving the selector outside of the function, like:
+This is different from moving the selector outside of the function, like:
 
 ```css
 li.important:nth-child(-n + 3);
