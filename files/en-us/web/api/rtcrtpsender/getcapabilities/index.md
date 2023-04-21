@@ -50,7 +50,9 @@ For that reason, in privacy-sensitive contexts, the browser may choose to obscur
 
 ## Examples
 
-The function below returns a Boolean indicating whether or not the device supports sending H.264 video on an {{domxref("RTCRtpSender")}}.
+### Check support for a particular codec
+
+The function below returns a `true` or `false` indicating whether or not the device supports sending H.264 video on an {{domxref("RTCRtpSender")}}.
 
 > **Note:** Since `RTCRtpSender.getCapabilities()` actually only indicates _probable_ support.
 > So below H.264 support might still fail even after getting a positive response from this function.
@@ -67,6 +69,55 @@ function canSendH264() {
   return false;
 }
 ```
+
+## Get all capabilites
+
+This code example shows how we might get all supported codecs and headers.
+The HTML defines a selection list for the two kinds of capabilities, and a log area.
+
+```html
+<select id="kind">
+  <option value="audio">audio</option>
+  <option value="video">video</option>
+</select>
+<textarea rows="40" cols="100" id="log"></textarea>
+```
+
+The JavaScript defines a function to log the capabilities for a particular "kind".
+This is called initially with the value `audio`.
+A listener updates the value when the selection list `kind` is changed.
+
+```js
+const log = document.querySelector("#log");
+const kindSelector = document.querySelector("#kind");
+
+logMediaCapabilities("audio");
+
+kindSelector.addEventListener("click", () => {
+  log.textContent = "";
+  logMediaCapabilities(kindSelector.value);
+});
+
+function logMediaCapabilities(kind) {
+  const capabilities = RTCRtpSender.getCapabilities(`${kind}`);
+  log.textContent += "Headers\n";
+  capabilities.headerExtensions.forEach((header) => {
+    log.textContent += ` uri: ${header.uri}\n`;
+  });
+
+  log.textContent += "\nCodecs\n";
+  capabilities.codecs.forEach((codec) => {
+    log.textContent += ` mime type: ${codec.mimeType}\n`;
+    log.textContent += `   channels: ${codec.channels}\n`; //max channels - e.g. 2 is stereo
+    log.textContent += `   clockRate: ${codec.clockRate}\n`; // clock rate in Hz
+    log.textContent += `   sdpFmtpLine: ${codec.sdpFmtpLine}\n`; // mime meda type and subtype
+  });
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample('Get all capabilites', '100%', '500px') }}
 
 ## Specifications
 
