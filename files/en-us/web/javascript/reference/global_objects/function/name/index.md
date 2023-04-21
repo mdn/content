@@ -28,7 +28,7 @@ The `name` property is read-only and cannot be changed by the assignment operato
 ```js
 function someFunction() {}
 
-someFunction.name = 'otherFunction';
+someFunction.name = "otherFunction";
 console.log(someFunction.name); // someFunction
 ```
 
@@ -51,7 +51,7 @@ An [`export default`](/en-US/docs/Web/JavaScript/Reference/Statements/export) de
 
 ```js
 // -- someModule.js --
-export default function () {};
+export default function () {}
 
 // -- main.js --
 import someModule from "./someModule.js";
@@ -101,7 +101,7 @@ Variables and methods can infer the name of an anonymous function from its synta
 ```js
 const f = function () {};
 const object = {
-  someMethod: function () {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -152,7 +152,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.prototype.bind()")}} produces a function whose name is "bound " plus the function name.
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -225,7 +225,7 @@ new Foo().getNames();
 You can use `obj.constructor.name` to check the "class" of an object.
 
 ```js
-function Foo() {}  // Or: class Foo {}
+function Foo() {} // Or: class Foo {}
 
 const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo"
@@ -259,7 +259,7 @@ console.log(new Foo().constructor.name); // 123
 If a class has a static property called `name`, it will also become _writable_. The built-in definition in the absence of a custom static definition is _read-only_:
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name); // "Hello" if class Foo has a static "name" property, but "Foo" if not.
 ```
 
@@ -272,25 +272,25 @@ Therefore you may not rely on the built-in `name` property to always hold a clas
 Source code such as:
 
 ```js
-function Foo() {};
+function Foo() {}
 const foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
 may be compressed to:
 
 ```js
-function a() {};
+function a() {}
 const b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 

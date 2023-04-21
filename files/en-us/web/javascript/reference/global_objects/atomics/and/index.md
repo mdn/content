@@ -76,7 +76,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## Specifications

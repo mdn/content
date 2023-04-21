@@ -20,7 +20,7 @@ for there still to be an entry with the type `"Files"` left in the object's
 {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
 > **Note:** This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
-> because that's the only time the drag operation's data store is writeable.
+> because that's the only time the drag operation's data store is writable.
 
 ## Syntax
 

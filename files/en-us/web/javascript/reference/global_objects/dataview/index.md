@@ -32,14 +32,16 @@ Some browsers don't have support for {{jsxref("DataView.prototype.setBigInt64()"
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
-  const left =  dataview.getUint32(byteOffset, littleEndian);
-  const right = dataview.getUint32(byteOffset+4, littleEndian);
+  const left = dataview.getUint32(byteOffset, littleEndian);
+  const right = dataview.getUint32(byteOffset + 4, littleEndian);
 
   // combine the two 32-bit values
-  const combined = littleEndian? left + 2**32*right : 2**32*left + right;
+  const combined = littleEndian
+    ? left + 2 ** 32 * right
+    : 2 ** 32 * left + right;
 
   if (!Number.isSafeInteger(combined))
-    console.warn(combined, 'exceeds MAX_SAFE_INTEGER. Precision may be lost');
+    console.warn(combined, "exceeds MAX_SAFE_INTEGER. Precision may be lost");
 
   return combined;
 }
@@ -48,14 +50,20 @@ function getUint64(dataview, byteOffset, littleEndian) {
 Alternatively, if you need full 64-bit range, you can create a {{jsxref("BigInt")}}. Further, although native BigInts are much faster than user-land library equivalents, BigInts will always be much slower than 32-bit integers in JavaScript due to the nature of their variable size.
 
 ```js
-const BigInt = window.BigInt, bigThirtyTwo = BigInt(32), bigZero = BigInt(0);
+const BigInt = window.BigInt,
+  bigThirtyTwo = BigInt(32),
+  bigZero = BigInt(0);
 function getUint64BigInt(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
-  const left = BigInt(dataview.getUint32(byteOffset|0, !!littleEndian)>>>0);
-  const right = BigInt(dataview.getUint32((byteOffset|0) + 4|0, !!littleEndian)>>>0);
+  const left = BigInt(dataview.getUint32(byteOffset | 0, !!littleEndian) >>> 0);
+  const right = BigInt(
+    dataview.getUint32(((byteOffset | 0) + 4) | 0, !!littleEndian) >>> 0,
+  );
 
   // combine the two 32-bit values and return
-  return littleEndian ? (right<<bigThirtyTwo)|left : (left<<bigThirtyTwo)|right;
+  return littleEndian
+    ? (right << bigThirtyTwo) | left
+    : (left << bigThirtyTwo) | right;
 }
 ```
 

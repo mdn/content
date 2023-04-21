@@ -579,7 +579,6 @@
         "HTMLBRElement",
         "HTMLButtonElement",
         "HTMLCanvasElement",
-        "HTMLContentElement",
         "HTMLDataElement",
         "HTMLDataListElement",
         "HTMLDialogElement",
@@ -1030,7 +1029,6 @@
         "Document.exitPictureInPicture()"
       ],
       "properties": [
-        "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
         "Document.pictureInPictureElement"
@@ -1659,6 +1657,7 @@
       ]
     },
     "Web Components": {
+      "overview": ["Web components"],
       "guides": [
         "/docs/Web/Web_Components/Using_custom_elements",
         "/docs/Web/Web_Components/Using_shadow_DOM",

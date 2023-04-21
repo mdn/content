@@ -1,5 +1,5 @@
 ---
-title: '<small>: the side comment element'
+title: "<small>: the side comment element"
 slug: Web/HTML/Element/small
 page-type: html-element
 browser-compat: html.elements.small
