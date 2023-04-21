@@ -152,7 +152,7 @@ This selector selects list items if they are among the first three children and 
 
 #### CSS
 
-```css
+```css hidden
 * {
   font-family: sans-serif;
 }
@@ -164,7 +164,9 @@ div em {
   display: inline-block;
   margin-bottom: 3px;
 }
+```
 
+```css
 .first span:nth-child(2n + 1),
 .second span:nth-child(2n + 1),
 .third span:nth-of-type(2n + 1) {
