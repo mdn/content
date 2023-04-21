@@ -209,7 +209,7 @@ In this example there is an unordered list of names, some of them have been mark
 
 #### CSS
 
-```css
+```css hidden
 * {
   font-family: sans-serif;
 }
