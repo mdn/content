@@ -11,7 +11,7 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-> **Note:** In the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element _at that child position_ is of the specified element type.
+> **Note:** In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
 
 ## Syntax
 
