@@ -225,6 +225,11 @@ ul {
 li {
   margin: 0.125rem;
   padding: 0.25rem;
+}
+```end
+
+```css
+li {
   border: 1px solid tomato;
 }
 
