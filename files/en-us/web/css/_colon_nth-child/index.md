@@ -305,7 +305,7 @@ In this example there are two unordered list of names, the first to shows the ef
 
 #### CSS
 
-```css
+```css hidden
 * {
   font-family: sans-serif;
 }
