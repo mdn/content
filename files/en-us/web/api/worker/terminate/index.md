@@ -48,6 +48,5 @@ myWorker.terminate();
 ## See also
 
 - {{domxref("Worker")}} interface
-- {{domxref("DedicatedWorkerGlobalScope.close()")}}```
-- {{domxref("SharedWorkerGlobalScope.close()")}}```
-
+- {{domxref("DedicatedWorkerGlobalScope.close()")}}
+- {{domxref("SharedWorkerGlobalScope.close()")}}
