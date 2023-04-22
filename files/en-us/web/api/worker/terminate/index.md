@@ -33,6 +33,7 @@ const myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```
+
 > **Note :** There's another way to stop the {{domxref("Worker")}} from the worker instance, using the {{domxref("DedicatedWorkerGlobalScope.close", "close()")}} method.
 
 
@@ -46,7 +47,6 @@ myWorker.terminate();
 
 ## See also
 
-The {{domxref("Worker")}} interface it belongs to.
-
-The worker instance {{domxref("DedicatedWorkerGlobalScope.close", "close()")}} method
+- {{domxref("Worker")}} interface
+- {{domxref("DedicatedWorkerGlobalScope.close()")}}```
 
