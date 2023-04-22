@@ -93,7 +93,7 @@ Prefixed, non-standard features are provided by browser developers for you to ex
 
 ### When using cutting-edge features (even standard ones) that are not universally implemented, make sure to test fallback paths
 
-Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site. Also, use Javascript [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) and CSS [@supports](/en-US/docs/Web/CSS/@supports). 
+Make sure to test what happens in a browser that doesn't implement the feature you're using, especially if you don't use such a browser day-to-day while working on the site. Also, use Javascript [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) and CSS [@supports](/en-US/docs/Web/CSS/@supports).
 
 ### Don't use unprefixed versions of CSS properties or APIs until at least one browser supports them
 
