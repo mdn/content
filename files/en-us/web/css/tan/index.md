@@ -39,7 +39,7 @@ The tangent of an `angle` will always return a number between `−∞` and `+∞
 
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 - If `angle` is `0⁻`, the result is `0⁻`.
-- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `∞` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−∞` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
+- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result is **explicitly undefined**. Authors *must not* rely on `tan()` returning any particular value for these inputs.
 
 ### Formal syntax
 
@@ -47,9 +47,9 @@ The tangent of an `angle` will always return a number between `−∞` and `+∞
 
 ## Examples
 
-### Draw parallelograms
+### Drawing parallelograms
 
-The `tan()` function can be used draw a parallelogram.
+The `tan()` function can be used to draw a parallelogram.
 
 #### HTML
 
@@ -90,7 +90,7 @@ body {
 
 #### Result
 
-{{EmbedLiveSample('Draw parallelograms', '100%', '250px')}}
+{{EmbedLiveSample('Drawing parallelograms', '100%', '250px')}}
 
 ## Specifications
 
