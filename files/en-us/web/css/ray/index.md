@@ -2,10 +2,12 @@
 title: ray()
 slug: Web/CSS/ray
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.ray
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a line segment that begins from an [offset starting position](https://drafts.fxtf.org/motion/#offset-starting-position) and extends in the direction of the specified angle. The line segment is referred to as "ray". The length of a ray can be constrained by specifying a size and using the `contain` keyword.
 

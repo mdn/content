@@ -2,10 +2,12 @@
 title: ":popover-open"
 slug: Web/CSS/:popover-open
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.popover-open
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:popover-open`** [CSS](/en-US/docs/Web/CSS)
 [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element with a
