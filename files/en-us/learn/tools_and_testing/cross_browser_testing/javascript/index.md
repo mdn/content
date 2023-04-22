@@ -363,7 +363,6 @@ Historically developers used _browser sniffing code_ to detect which browser the
 All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.). Many developers implemented bad browser sniffing code and didn't maintain it. This lead to supporting browsers getting locked out of using websites they could easily render. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless.
 
 [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen provides a useful and amusing take on the history of browser sniffing.
- 
 Use [feature detection](#feature_detection) (and CSS @supports for CSS feature detection) to reliably detect whether a feature is supported. But doing so, you won't need to change your code when new browser versions come out.
 
 ### Handling JavaScript prefixes
