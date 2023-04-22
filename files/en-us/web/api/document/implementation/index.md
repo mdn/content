@@ -29,8 +29,6 @@ console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 
 > **Warning:** Do not use this for feature detection. The `hasFeature()` method always returns true.
 
-A list of module names (e.g., Core, HTML, XML, etc.) is available in the [DOM Level 2 Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) and [DOM Level 3 Conformance Section](https://www.w3.org/TR/DOM-Level-3-Core/introduction.html#ID-Conformance-h2).
-
 ## Notes
 
 The W3C's DOM Level 1 Recommendation only specified the `hasFeature` method,
