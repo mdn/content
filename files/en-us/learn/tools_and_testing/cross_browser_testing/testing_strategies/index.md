@@ -38,9 +38,9 @@ Since you can't test every combination of browser and device, it's enough that y
 
 You can classify browsers and devices by the amount of support you intend to give. For example:
 
-1. A grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
-2. B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
-3. C grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
+1. A-grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
+2. B-grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
+3. C-grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
 
 In the following sections, we'll build up a support chart in this format.
 
@@ -61,9 +61,9 @@ Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.
 Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
 This gives us the following support chart so far:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone/tablet
-2. B grade: IE for Windows, Opera Mini
-3. C grade: n/a
+1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone/tablet
+2. B-grade: IE for Windows, Opera Mini
+3. C-grade: n/a
 
 If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from the above.
 
@@ -115,9 +115,9 @@ Also, you should be aware of situation-specific needs. For example, if you are c
 
 So, our final support chart will end up looking like so:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge, and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2. B grade: IE 8 and 9 for Windows, Opera Mini.
-3. C grade: Opera, other niche modern browsers.
+1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge, and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2. B-grade: IE 8 and 9 for Windows, Opera Mini.
+3. C-grade: Opera, other niche modern browsers.
 
 ## What are you going to test?
 
@@ -136,7 +136,7 @@ A and B grade:
 - The text should be readable.
 - Visually impaired users using screen readers should be able to access the text.
 
-A grade:
+A-grade:
 
 - The information box should animate smoothly as it appears/disappears.
 - The gradient and text shadow should appear to enhance the look of the box.
