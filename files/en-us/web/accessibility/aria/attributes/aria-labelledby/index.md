@@ -102,7 +102,7 @@ The `aria-labelledby` attribute is **NOT** supported in:
 - [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
 - [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
