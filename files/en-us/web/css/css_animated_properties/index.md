@@ -14,7 +14,7 @@ page-type: landing-page
 
 ## Animation types
 
-There are mainly four animation types: not animatable, discrete, by computed value, and repeatable list.
+There are mainly four animation types as defined in [Web Animations](https://w3c.github.io/csswg-drafts/web-animations-1/#animating-properties): not animatable, discrete, by computed value, and repeatable list.
 
 > **Note:** Some properties have specific interpolation behavior not covered by the four types. In this case, refer to their "Interpolation" sections (e.g. {{CSSXref("visibility", "", "#interpolation")}}).
 
@@ -28,8 +28,8 @@ The property is not animatable. It is not processed when listed in an animation 
 
 The property's values are not additive, and interpolation swaps from the start value to the end value at `50%`. Specifically, denoting by `p` the progress value:
 
-  - : If `p < 0.5`, then `V_result = V_start`;
-  - : If `p ≥ 0.5`, then `V_result = V_end`.
+- If `p < 0.5`, then `V_result = V_start`;
+- If `p ≥ 0.5`, then `V_result = V_end`.
 
 ### By computed value
 
