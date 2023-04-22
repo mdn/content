@@ -14,15 +14,15 @@ page-type: landing-page
 
 ## Animation types
 
-There are mainly four animation types as defined in [Web Animations](https://w3c.github.io/csswg-drafts/web-animations-1/#animating-properties): not animatable, discrete, by computed value, and repeatable list.
+There are mainly four animation types as defined in the [Web Animations](https://w3c.github.io/csswg-drafts/web-animations-1/#animating-properties) specification: not animatable, discrete, by computed value, and repeatable list.
 
-> **Note:** Some properties have specific interpolation behavior not covered by the four types. In this case, refer to their "Interpolation" sections (e.g. {{CSSXref("visibility", "", "#interpolation")}}).
+> **Note:** Some properties have specific interpolation behavior not covered by the four types. In this case, refer to the property's "Interpolation" section (e.g. {{CSSXref("visibility", "", "#interpolation")}}).
 
 ### Not animatable
 
 The property is not animatable. It is not processed when listed in an animation keyframe, and is not affected by transitions.
 
-> **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect, e.g. firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event.
+> **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect (e.g. firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event).
 
 ### Discrete
 
@@ -40,6 +40,12 @@ If the number of components or the types of corresponding components do not matc
 ### Repeatable list
 
 Same as by computed value except that if the two lists have differing numbers of items, they are first repeated to the least common multiple number of items. Each item is then combined by computed value. If a pair of values cannot be combined or if any component value uses discrete animation, then the property values combine as discrete.
+
+## Animating custom properties
+
+For custom properties registered using the {{DOMXref("CSS/registerProperty", "registerProperty()")}} method, the animation type is by compute value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
+
+For unregistered custom properties, the animation type is discrete.
 
 ## See also
 
