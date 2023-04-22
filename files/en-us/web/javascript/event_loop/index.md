@@ -18,7 +18,7 @@ The following sections explain a theoretical model. Modern JavaScript engines im
 
 ### Stack
 
-Function calls form a stack of _frames_.
+Function calls from a stack of _frames_.
 
 ```js
 function foo(b) {
