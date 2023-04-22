@@ -356,6 +356,14 @@ You can see this code in action in [fetch-polyfill-only-when-needed.html](https:
 
 > **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
 
+#### JavaScript transpiling
+
+Another option that is becoming popular for people who want to use modern JavaScript features now is converting code that uses recent ECMAScript features to a version that will work in older browsers.
+
+> **Note:** This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).
+
+A common transpiler is [Babel.js](https://babeljs.io/) but there are others.
+
 ### Don't browser sniff
 
 Historically developers used _browser sniffing code_ to detect which browser the user was using, and give them appropriate code to work on that browser.
