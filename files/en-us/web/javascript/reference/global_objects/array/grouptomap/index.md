@@ -153,5 +153,9 @@ console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
 
 ## See also
 
+- [Polyfill of `Array.prototype.groupToMap` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.group()")}}
-- [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Map/Map", "Map()")}}

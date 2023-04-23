@@ -54,7 +54,7 @@ The following example provides the special encoding required within UTF-8 {{HTTP
 ```js
 const fileName = "my file(2).txt";
 const header = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
-  fileName
+  fileName,
 )}`;
 
 console.log(header);
@@ -71,7 +71,7 @@ function encodeRFC5987ValueChars(str) {
       // The following are not required for percent-encoding per RFC5987,
       // so we can allow for a little better readability over the wire: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
-        String.fromCharCode(parseInt(hex, 16))
+        String.fromCharCode(parseInt(hex, 16)),
       )
   );
 }
@@ -83,11 +83,10 @@ The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserve
 
 ```js
 function encodeRFC3986URIComponent(str) {
-  return encodeURIComponent(str)
-    .replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-    );
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
 }
 ```
 

@@ -54,6 +54,8 @@ A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} 
 </details>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_example", 650, 120)}}
 
 ### Summaries as headings
@@ -70,6 +72,8 @@ You can use heading elements in `<summary>`, like this:
   </ol>
 </details>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
@@ -91,6 +95,8 @@ This example adds some semantics to the `<summary>` element to indicate the labe
   </ol>
 </details>
 ```
+
+#### Result
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 

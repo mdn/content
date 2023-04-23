@@ -1,6 +1,7 @@
 ---
 title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#listbox
   - https://w3c.github.io/aria-practices/#Listbox

@@ -54,7 +54,7 @@ Exponents, or powers of a number, are among the most common uses of superscripte
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Exponents", 650, 80)}}
 
@@ -66,7 +66,7 @@ Superior lettering is not technically the same thing as superscript. However, it
 <p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Superior_lettering", 650, 80)}}
 
@@ -84,7 +84,7 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
 </ul>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 

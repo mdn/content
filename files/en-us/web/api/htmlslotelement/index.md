@@ -7,7 +7,7 @@ browser-compat: api.HTMLSlotElement
 
 {{APIRef('Web Components')}}
 
-The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
+The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
 
 {{InheritanceDiagram}}
 
