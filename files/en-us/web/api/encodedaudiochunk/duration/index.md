@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.duration
+title: "EncodedAudioChunk: duration property"
+short-title: duration
 slug: Web/API/EncodedAudioChunk/duration
 page-type: web-api-instance-property
 status:
@@ -21,10 +22,10 @@ In the following example the `duration` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 

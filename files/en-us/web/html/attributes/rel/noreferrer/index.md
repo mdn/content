@@ -2,11 +2,6 @@
 title: rel=noreferrer
 slug: Web/HTML/Attributes/rel/noreferrer
 page-type: html-attribute-value
-tags:
-  - Attribute
-  - HTML
-  - Link types
-  - Reference
 browser-compat: html.elements.a.rel.noreferrer
 ---
 

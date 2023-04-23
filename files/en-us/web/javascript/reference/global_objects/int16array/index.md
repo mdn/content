@@ -2,13 +2,6 @@
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 page-type: javascript-class
-tags:
-  - Class
-  - Int16Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int16Array
 ---
 
@@ -20,17 +13,15 @@ The **`Int16Array`** typed array represents an array of twos-complement 16-bit s
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Int16Array/Int16Array", "Int16Array()")}}
+- {{jsxref("Int16Array/Int16Array", "Int16Array()")}}
   - : Creates a new `Int16Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of `Int16Array`.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Returns the string value of the constructor name. `"Int16Array"` in the case of `Int16Array`.
 
 ## Static methods
 
@@ -40,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Int16Array.prototype` and shared by all `Int16Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int16Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `2` in the case of a `Int16Array`.
+- {{jsxref("Object/constructor", "Int16Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Int16Array` instances, the initial value is the {{jsxref("Int16Array/Int16Array", "Int16Array")}} constructor.
 
 ## Instance methods
 

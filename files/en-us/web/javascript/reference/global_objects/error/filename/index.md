@@ -2,11 +2,8 @@
 title: "Error: fileName"
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.fileName
 ---
 

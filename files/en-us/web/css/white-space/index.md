@@ -2,13 +2,6 @@
 title: white-space
 slug: Web/CSS/white-space
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-  - white-space
 browser-compat: css.properties.white-space
 ---
 

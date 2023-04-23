@@ -2,12 +2,6 @@
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - TypeError
 browser-compat: javascript.builtins.TypeError
 ---
 
@@ -27,7 +21,7 @@ A `TypeError` may be thrown when:
 
 ## Constructor
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError/TypeError", "TypeError()")}}
   - : Creates a new `TypeError` object.
 
 ## Instance properties
@@ -36,6 +30,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `TypeError.prototype` and shared by all `TypeError` instances.
 
+- {{jsxref("Object/constructor", "TypeError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `TypeError` instances, the initial value is the {{jsxref("TypeError/TypeError", "TypeError")}} constructor.
 - {{jsxref("Error/name", "TypeError.prototype.name")}}
   - : Represents the name for the type of error. For `TypeError.prototype.name`, the initial value is `"TypeError"`.
 

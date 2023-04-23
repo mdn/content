@@ -2,11 +2,6 @@
 title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - recipe:css-shorthand-property
 browser-compat: css.properties.margin
 ---
 

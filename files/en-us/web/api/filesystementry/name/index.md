@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.name
+title: "FileSystemEntry: name property"
+short-title: name
 slug: Web/API/FileSystemEntry/name
 page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.name
@@ -25,7 +26,7 @@ ends with a given extension.
 
 ```js
 function isFileWithExtension(entry, extension) {
-  return (entry.isFile && entry.name.endsWith(`.${extension}`));
+  return entry.isFile && entry.name.endsWith(`.${extension}`);
 }
 ```
 

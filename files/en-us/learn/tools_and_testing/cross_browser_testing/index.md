@@ -1,20 +1,6 @@
 ---
 title: Cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - Testing
-  - Tools
-  - cross browser
 ---
 
 {{LearnSidebar}}

@@ -2,13 +2,6 @@
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior
-  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior
 ---
 

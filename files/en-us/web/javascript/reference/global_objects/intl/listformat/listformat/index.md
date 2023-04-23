@@ -2,25 +2,14 @@
 title: Intl.ListFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
 
 {{JSRef}}
 
-The **`Intl.ListFormat()`** constructor creates
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} objects that enable language-sensitive list
-formatting.
+The **`Intl.ListFormat()`** constructor creates {{jsxref("Intl.ListFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -35,7 +24,7 @@ new Intl.ListFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:

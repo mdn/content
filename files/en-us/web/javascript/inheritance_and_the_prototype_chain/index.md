@@ -2,12 +2,6 @@
 title: Inheritance and the prototype chain
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 page-type: guide
-tags:
-  - Advanced
-  - Guide
-  - Inheritance
-  - JavaScript
-  - OOP
 ---
 
 {{jsSidebar("Advanced")}}
@@ -78,7 +72,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
+Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 Similarly, you can create longer prototype chains, and a property will be sought on all of them.
 
@@ -761,26 +755,28 @@ The lookup time for properties that are high up on the prototype chain can have 
 Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects, except those with `null` as `[[Prototype]]`, inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype` — unless it has been overridden further down the prototype chain. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
-console.log(g.hasOwnProperty("vertices"));
-// true
+function Graph() {
+  this.vertices = [];
+  this.edges = [];
+}
 
-console.log(Object.hasOwn(g, "vertices"));
-// true
+Graph.prototype.addVertex = function (v) {
+  this.vertices.push(v);
+};
 
-console.log(g.hasOwnProperty("nope"));
-// false
+const g = new Graph();
+// g ---> Graph.prototype ---> Object.prototype ---> null
 
-console.log(Object.hasOwn(g, "nope"));
-// false
+g.hasOwnProperty("vertices"); // true
+Object.hasOwn(g, "vertices"); // true
 
-console.log(g.hasOwnProperty("addVertex"));
-// false
+g.hasOwnProperty("nope"); // false
+Object.hasOwn(g, "nope"); // false
 
-console.log(Object.hasOwn(g, "addVertex"));
-// false
+g.hasOwnProperty("addVertex"); // false
+Object.hasOwn(g, "addVertex"); // false
 
-console.log(Object.getPrototypeOf(g).hasOwnProperty("addVertex"));
-// true
+Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 ```
 
 Note: It is **not** enough to check whether a property is [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). The property might very well exist, but its value just happens to be set to `undefined`.

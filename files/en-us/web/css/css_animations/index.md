@@ -2,12 +2,6 @@
 title: CSS animations
 slug: Web/CSS/CSS_Animations
 page-type: css-module
-tags:
-  - CSS
-  - CSS Animations
-  - Guide
-  - Overview
-  - Reference
 spec-urls:
   - https://w3c.github.io/csswg-drafts/css-animations-2/
   - https://w3c.github.io/csswg-drafts/css-animations/

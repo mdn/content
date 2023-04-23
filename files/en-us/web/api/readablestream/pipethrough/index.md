@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.pipeThrough()
+title: "ReadableStream: pipeThrough() method"
+short-title: pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeThrough
@@ -73,13 +74,13 @@ Next, we log the contents of the readable stream, use `pipeThrough()` to send it
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
-// Retrieve its body as ReadableStream
-.then((response) => response.body)
-.then((rs) => logReadableStream('Fetch Response Stream', rs))
-// Create a gray-scaled PNG stream out of the original
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => logReadableStream('PNG Chunk Stream', rs))
+fetch("png-logo.png")
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // Create a gray-scaled PNG stream out of the original
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## Specifications

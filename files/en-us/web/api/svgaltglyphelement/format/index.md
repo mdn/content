@@ -1,11 +1,14 @@
 ---
-title: SVGAltGlyphElement.format
+title: "SVGAltGlyphElement: format property"
+short-title: format
 slug: Web/API/SVGAltGlyphElement/format
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.SVGAltGlyphElement.format
 ---
 
-{{APIRef("SVGAltGlyphElement")}}
+{{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
 {{Deprecated_header}}
 

@@ -2,16 +2,6 @@
 title: "::cue"
 slug: Web/CSS/::cue
 page-type: css-pseudo-element
-tags:
-  - "::cue"
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web Video Text Tracks
-  - WebVTT
-  - cue
 browser-compat: css.selectors.cue
 ---
 

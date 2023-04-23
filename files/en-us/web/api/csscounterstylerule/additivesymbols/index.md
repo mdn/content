@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.additiveSymbols
+title: "CSSCounterStyleRule: additiveSymbols property"
+short-title: additiveSymbols
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.additiveSymbols

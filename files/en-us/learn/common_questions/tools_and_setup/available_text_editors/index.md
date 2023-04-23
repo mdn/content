@@ -1,12 +1,6 @@
 ---
 title: What text editors are available?
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
-tags:
-  - Beginner
-  - Composing
-  - Guide
-  - Tools
-  - text editor
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

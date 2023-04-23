@@ -1,5 +1,6 @@
 ---
-title: RTCDTMFToneChangeEvent.tone
+title: "RTCDTMFToneChangeEvent: tone property"
+short-title: tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
 page-type: web-api-instance-property
 browser-compat: api.RTCDTMFToneChangeEvent.tone
@@ -26,7 +27,7 @@ played, the string "\<none>".
 dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;"
+    tone = "&lt;none&gt;";
   }
 
   document.getElementById("playingTone").innerText = tone;

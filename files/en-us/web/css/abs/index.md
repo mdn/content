@@ -2,15 +2,8 @@
 title: abs()
 slug: Web/CSS/abs
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - abs
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.abs
 ---
 

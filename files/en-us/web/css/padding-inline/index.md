@@ -2,10 +2,6 @@
 title: padding-inline
 slug: Web/CSS/padding-inline
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - recipe:css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
 
@@ -37,6 +33,7 @@ padding-inline: 5% 2%; /* relative to the nearest block container's width */
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 

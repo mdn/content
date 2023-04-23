@@ -1,14 +1,7 @@
 ---
-title: '<label>: The Label element'
+title: "<label>: The Label element"
 slug: Web/HTML/Element/label
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.label
 ---
 
@@ -48,9 +41,9 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("for")}}
+- `for`
 
-  - : The value of the `for` attribute must be a single {{htmlattrxref("id")}} for a [labelable](/en-US/docs/Web/Guide/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
+  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes#id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
     > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
@@ -72,6 +65,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label>Click me <input type="text" /></label>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Simple_label_example', '200', '50', '')}}
 
 ### Defining an explicit label with the "for" attribute
@@ -80,6 +75,8 @@ There are no special styling considerations for `<label>` elements — structura
 <label for="username">Click me to focus on the input field</label>
 <input type="text" id="username" />
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 
@@ -144,23 +141,23 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated element</a
         >, palpable content.
       </td>
@@ -168,10 +165,10 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >, but no descendant <code>label</code> elements. No
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >
         elements other than the labeled control are allowed.
@@ -185,7 +182,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

@@ -1,12 +1,6 @@
 ---
 title: Node.js server without a framework
 slug: Learn/Server-side/Node_server_without_framework
-tags:
-  - JavaScript
-  - NeedsContent
-  - Node
-  - Server
-  - no framework
 ---
 
 {{LearnSidebar}}

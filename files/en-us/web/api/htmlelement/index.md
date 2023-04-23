@@ -20,13 +20,11 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
   - : Returns a string containing the element's assigned access key.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether or not the content of the element can be edited.
-- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
 - {{DOMxRef("HTMLElement.dir")}}
@@ -45,6 +43,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
+- {{DOMxRef("HTMLElement.popover")}} {{Experimental_Inline}}
+  - : A string value reflecting the value of the element's [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -70,7 +70,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
-  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}
@@ -90,6 +90,12 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
   - : Sends a mouse click event to the element.
 - {{DOMxRef("HTMLElement.focus()")}}
   - : Makes the element the current keyboard focus.
+- {{DOMxRef("HTMLElement.hidePopover()")}} {{Experimental_Inline}}
+  - : Hides the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+- {{DOMxRef("HTMLElement.showPopover()")}} {{Experimental_Inline}}
+  - : Shows the element, promoting it to the top layer, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+- {{DOMxRef("HTMLElement.togglePopover()")}} {{Experimental_Inline}}
+  - : Hides or shows the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
 
 ## Events
 
@@ -103,6 +109,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
+- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+  - : Fired when the element is a popover, before it is hidden or shown.
+- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+  - : Fired when the element is a popover, just after it is hidden or shown.
 
 ### Animation events
 

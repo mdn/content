@@ -1,15 +1,12 @@
 ---
-title: ContentVisibilityAutoStateChangeEvent()
-slug: >-
-  Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+title: "ContentVisibilityAutoStateChangeEvent: ContentVisibilityAutoStateChangeEvent() constructor"
+short-title: ContentVisibilityAutoStateChangeEvent()
+slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
-status:
-  - experimental
-browser-compat: >-
-  api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
+browser-compat: api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 The **`ContentVisibilityAutoStateChangeEvent()`** constructor creates a new {{domxref("ContentVisibilityAutoStateChangeEvent")}} object instance.
 

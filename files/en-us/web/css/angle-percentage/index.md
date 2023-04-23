@@ -2,14 +2,6 @@
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - angle-percentage
-  - units
-  - values
 browser-compat: css.types.angle-percentage
 ---
 

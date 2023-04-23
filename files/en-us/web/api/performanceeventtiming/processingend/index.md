@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.processingEnd
+title: "PerformanceEventTiming: processingEnd property"
+short-title: processingEnd
 slug: Web/API/PerformanceEventTiming/processingEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEventTiming.processingEnd
@@ -25,16 +26,16 @@ The `processingEnd` property can be used when observing event-timing entries ({{
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     // Full duration
-     const duration = entry.duration;
-     // Input delay (before processing event)
-     const delay = entry.processingStart - entry.startTime;
-     // Synchronous event processing time 
-     // (between start and end dispatch)
-     const time = entry.processingEnd - entry.processingStart;
+    const duration = entry.duration;
+    // Input delay (before processing event)
+    const delay = entry.processingStart - entry.startTime;
+    // Synchronous event processing time
+    // (between start and end dispatch)
+    const time = entry.processingEnd - entry.processingStart;
   });
 });
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 ## Specifications

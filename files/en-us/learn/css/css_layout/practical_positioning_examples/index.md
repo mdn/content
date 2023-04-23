@@ -1,17 +1,6 @@
 ---
 title: Practical positioning examples
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Learn
-  - absolute
-  - fixed
-  - relative
 ---
 
 {{LearnSidebar}}

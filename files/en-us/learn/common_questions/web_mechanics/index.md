@@ -1,8 +1,6 @@
 ---
 title: Web mechanics
 slug: Learn/Common_questions/Web_mechanics
-tags:
-  - Learn
 ---
 
 {{LearnSidebar}}

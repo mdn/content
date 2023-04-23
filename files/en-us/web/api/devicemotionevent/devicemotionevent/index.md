@@ -1,5 +1,6 @@
 ---
-title: DeviceMotionEvent()
+title: "DeviceMotionEvent: DeviceMotionEvent() constructor"
+short-title: DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
 page-type: web-api-constructor
 browser-compat: api.DeviceMotionEvent.DeviceMotionEvent

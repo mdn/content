@@ -1,13 +1,12 @@
 ---
-title: VideoFrame.format
+title: "VideoFrame: format property"
+short-title: format
 slug: Web/API/VideoFrame/format
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.VideoFrame.format
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`format`** property of the {{domxref("VideoFrame")}} interface returns the pixel format of the `VideoFrame`.
 

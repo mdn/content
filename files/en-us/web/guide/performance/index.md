@@ -1,11 +1,6 @@
 ---
 title: Optimization and performance
 slug: Web/Guide/Performance
-tags:
-  - Landing
-  - Optimization
-  - Performance
-  - Web
 ---
 
 <section id="Quick_links">

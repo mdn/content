@@ -1,13 +1,6 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
 ---
 
 {{LearnSidebar}}
@@ -656,6 +649,10 @@ window.addEventListener('load', () => {
     // Each time a user uses their keyboard on a focused control, we update the value accordingly
     select.addEventListener('keyup', (event) => {
       let index = getIndex(select);
+      // When the user hits the Escape key, deactivate the custom control 
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
 
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {

@@ -2,16 +2,6 @@
 title: line-break
 slug: Web/CSS/line-break
 page-type: css-property
-tags:
-  - Asian
-  - CSS
-  - CSS Property
-  - CSS Text
-  - NeedsExample
-  - Reference
-  - i18n
-  - l10n
-  - recipe:css-property
 browser-compat: css.properties.line-break
 ---
 

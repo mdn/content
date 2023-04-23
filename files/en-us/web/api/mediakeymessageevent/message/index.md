@@ -1,5 +1,6 @@
 ---
-title: MediaKeyMessageEvent.message
+title: "MediaKeyMessageEvent: message property"
+short-title: message
 slug: Web/API/MediaKeyMessageEvent/message
 page-type: web-api-instance-property
 browser-compat: api.MediaKeyMessageEvent.message

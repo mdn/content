@@ -2,14 +2,6 @@
 title: Basic concepts of flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 page-type: guide
-tags:
-  - CSS
-  - Flex
-  - Guide
-  - axes
-  - concepts
-  - container
-  - flexbox
 ---
 
 {{CSSRef}}

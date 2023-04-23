@@ -2,10 +2,6 @@
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}

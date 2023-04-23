@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.remoteDescription
+title: "RTCPeerConnection: remoteDescription property"
+short-title: remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.remoteDescription
@@ -41,8 +42,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.remoteDescription;
 if (sd) {
   alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No remote session yet.");
 }
 ```

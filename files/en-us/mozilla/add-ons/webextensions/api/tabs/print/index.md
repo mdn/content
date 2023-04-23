@@ -2,15 +2,6 @@
 title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - print
-  - tabs
 browser-compat: webextensions.api.tabs.print
 ---
 

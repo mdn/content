@@ -1,14 +1,6 @@
 ---
 title: Advanced form styling
 slug: Learn/Forms/Advanced_form_styling
-tags:
-  - Advanced
-  - CSS
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
@@ -251,8 +243,6 @@ We've also created a couple of other examples to give you more ideas:
 
 If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
 
-> **Note:** While Internet Explorer doesn't support any version of `appearance`, the `input[type=checkbox]::-ms-check` enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name `-ms-check`.
-
 ## What can be done about the "ugly" elements?
 
 Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
@@ -413,7 +403,7 @@ We then use generated content to generate a little down arrow, and put it in the
 }
 ```
 
-The second, slightly more major issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You'll notice that the options don't inherit the font set on the parent. You also can't consistently set things like spacing and colors. For example, Firefox will apply [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) when set on the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements, Chrome won't. Neither of them will apply any kind of spacing (e.g. [`padding`](/en-US/docs/Web/CSS/padding)). The same is also true of the autocomplete list that appears for the datalist.
+The second, slightly more major issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You'll notice that the options don't inherit the font set on the parent. You also can't consistently set things like spacing and colors. For example, Firefox will apply [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) when set on the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements. Neither of them will apply any kind of spacing (e.g. [`padding`](/en-US/docs/Web/CSS/padding)). The same is also true of the autocomplete list that appears for the datalist.
 
 If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
 

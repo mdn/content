@@ -2,12 +2,6 @@
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-combine-upright
 ---
 

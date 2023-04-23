@@ -1,5 +1,6 @@
 ---
-title: HTMLMeterElement.labels
+title: "HTMLMeterElement: labels property"
+short-title: labels
 slug: Web/API/HTMLMeterElement/labels
 page-type: web-api-instance-property
 browser-compat: api.HTMLMeterElement.labels

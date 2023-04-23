@@ -2,14 +2,6 @@
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 page-type: javascript-class
-tags:
-  - Class
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames
 ---
 
@@ -18,8 +10,6 @@ browser-compat: javascript.builtins.Intl.DisplayNames
 The **`Intl.DisplayNames`** object enables the consistent translation of language, region and script display names.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Constructor
 
@@ -30,6 +20,15 @@ The **`Intl.DisplayNames`** object enables the consistent translation of languag
 
 - {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.DisplayNames.prototype` and shared by all `Intl.DisplayNames` instances.
+
+- {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.DisplayNames` instances, the initial value is the {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}} constructor.
+- `Intl.DisplayNames.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DisplayNames"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

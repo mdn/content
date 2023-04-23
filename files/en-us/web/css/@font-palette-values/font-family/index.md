@@ -2,18 +2,12 @@
 title: font-family
 slug: Web/CSS/@font-palette-values/font-family
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - CSS Descriptor
-  - Reference
 browser-compat: css.at-rules.font-palette-values.font-family
 ---
 
 {{CSSRef}}
 
-The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
+The [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) [descriptor](/en-US/docs/Glossary/CSS_Descriptor) **`font-family`** is used to specify which font-family palette values are to be applied to. This need to match exactly the values used when setting the CSS [font-family](/en-US/docs/Web/CSS/font-family).
 
 ## Syntax
 
@@ -118,3 +112,4 @@ h2 {
 - {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
 - {{cssxref("font-palette/", "font-palette")}} property
+- {{domxref("CSSFontPaletteValuesRule.fontFamily")}}

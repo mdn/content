@@ -2,14 +2,9 @@
 title: "-moz-user-input"
 slug: Web/CSS/-moz-user-input
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Deprecated
-  - Non-standard
-  - Reference
-  - recipe:css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-user-input
 ---
 
@@ -40,9 +35,9 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 - `none` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The element does not respond to user input, and it does not become {{CSSxRef(":active")}}.
 - `enabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The element accepts user input. For textboxes, this is the default behavior. **Please note that this value is no longer supported in Firefox 60 onwards ({{bug(1405087)}}).**
+  - : The element accepts user input. For textboxes, this is the default behavior. **Please note that this value is no longer supported in Firefox 60 onwards ([Firefox bug 1405087](https://bugzil.la/1405087)).**
 - `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally. **Please note that this value is no longer supported in Firefox 60 onwards ({{bug(1405087)}}).**
+  - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally. **Please note that this value is no longer supported in Firefox 60 onwards ([Firefox bug 1405087](https://bugzil.la/1405087)).**
 
 ## Formal definition
 
@@ -77,5 +72,5 @@ Not part of any standard.
 ## See also
 
 - {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-modify")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-modify", "-moz-user-modify")}}
+- {{CSSxRef("user-select", "-moz-user-select")}}

@@ -1,9 +1,11 @@
 ---
-title: DocumentType.systemId
+title: "DocumentType: systemId property"
+short-title: systemId
 slug: Web/API/DocumentType/systemId
 page-type: web-api-instance-property
 browser-compat: api.DocumentType.systemId
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`systemId`** property of the {{domxref("DocumentType")}} returns the URL of the associated DTD.
@@ -19,7 +21,11 @@ A string.
 ## Examples
 
 ```js
-const docType = document.implementation.createDocumentType("svg", "", "http://www.w3.org/2000/svg");
+const docType = document.implementation.createDocumentType(
+  "svg",
+  "",
+  "http://www.w3.org/2000/svg"
+);
 
 console.log(docType.publicId); // Displays "http://www.w3.org/2000/svg"
 ```

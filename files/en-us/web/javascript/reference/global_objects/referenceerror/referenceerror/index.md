@@ -2,18 +2,12 @@
 title: ReferenceError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
 
 {{JSRef}}
 
-The **`ReferenceError`** object represents an error when a
-non-existent variable is referenced.
+The **`ReferenceError()`** constructor creates {{jsxref("ReferenceError")}} objects.
 
 ## Syntax
 

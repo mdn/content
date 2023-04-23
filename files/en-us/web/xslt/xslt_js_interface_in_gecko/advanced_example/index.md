@@ -1,8 +1,6 @@
 ---
 title: Advanced example
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - XSLT
 ---
 
 ## Advanced example

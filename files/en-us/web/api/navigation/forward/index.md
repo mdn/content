@@ -1,5 +1,6 @@
 ---
-title: Navigation.forward()
+title: "Navigation: forward() method"
+short-title: forward()
 slug: Web/API/Navigation/forward
 page-type: web-api-instance-method
 status:
@@ -50,7 +51,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -60,7 +61,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```

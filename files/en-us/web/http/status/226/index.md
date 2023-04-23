@@ -1,10 +1,7 @@
 ---
 title: 226 IM Used
 slug: Web/HTTP/Status/226
-tags:
-  - HTTP
-  - Status code
-  - Used
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 ---
 

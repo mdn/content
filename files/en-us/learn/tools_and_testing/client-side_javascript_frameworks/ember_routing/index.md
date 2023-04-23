@@ -1,14 +1,6 @@
 ---
 title: Routing in Ember
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing
-tags:
-  - Beginner
-  - Ember
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Routing
-  - client-side
 ---
 
 {{LearnSidebar}}

@@ -2,13 +2,6 @@
 title: AsyncGenerator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.AsyncGenerator.return
 ---
 
@@ -64,9 +57,9 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res));        // { value: 1, done: false }
-asyncGen.return('foo').then((res) => console.log(res)); // { value: "foo", done: true }
-asyncGen.next().then((res) => console.log(res));        // { value: undefined, done: true }
+asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
+asyncGen.return("foo").then((res) => console.log(res)); // { value: "foo", done: true }
+asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: true }
 ```
 
 ### Using return() once a generator is complete
@@ -82,11 +75,11 @@ async function* createAsyncGenerator() {
   yield await Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res));    // { value: 1, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 2, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 3, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 2, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 3, done: false }
 // value is returned undefined, as no value is passed and generator is 'done'
-asyncGen.return().then((res) => console.log(res));  // { value: undefined, done: true }
+asyncGen.return().then((res) => console.log(res)); // { value: undefined, done: true }
 // we can still return a value once the generator is complete
 asyncGen.return(1).then((res) => console.log(res)); // { value: 1, done: true }
 ```
@@ -102,4 +95,4 @@ asyncGen.return(1).then((res) => console.log(res)); // { value: 1, done: true }
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

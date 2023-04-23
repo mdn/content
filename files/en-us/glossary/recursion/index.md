@@ -2,8 +2,6 @@
 title: Recursion
 slug: Glossary/Recursion
 page-type: glossary-definition
-tags:
-  - CodingScripting
 ---
 
 The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).

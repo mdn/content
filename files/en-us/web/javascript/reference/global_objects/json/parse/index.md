@@ -2,12 +2,6 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
 
@@ -108,17 +102,15 @@ const map = new Map([
   [3, "three"],
 ]);
 
-const jsonText = JSON.stringify(
-  map,
-  (key, value) => (value instanceof Map ? Array.from(value.entries()) : value),
+const jsonText = JSON.stringify(map, (key, value) =>
+  value instanceof Map ? Array.from(value.entries()) : value,
 );
 
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
-const map2 = JSON.parse(
-  jsonText,
-  (key, value) => (key === "" ? new Map(value) : value),
+const map2 = JSON.parse(jsonText, (key, value) =>
+  key === "" ? new Map(value) : value,
 );
 
 console.log(map2);

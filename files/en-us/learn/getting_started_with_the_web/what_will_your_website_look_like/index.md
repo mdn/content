@@ -1,18 +1,8 @@
 ---
 title: What will your website look like?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Assets
-  - Beginner
-  - Composing
-  - Content
-  - Deprecated
-  - Design
-  - Fonts
-  - Learn
-  - Simple
-  - "l10n:priority"
-  - step by step
+status:
+  - deprecated
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}

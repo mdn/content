@@ -1,18 +1,7 @@
 ---
 title: "Reason: CORS request did not succeed"
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-tags:
-  - CORS
-  - CORSDidNotSucceed
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}
@@ -39,7 +28,7 @@ Other possible causes include:
 - Trying to access an `http` resource from a page with an
   `https` origin will also cause this error.
 - As of Firefox 68, `https` pages are not permitted to access
-  `http://localhost`, although this may be changed by [Bug 1488740](https://bugzilla.mozilla.org/show_bug.cgi?id=1488740).
+  `http://localhost`, although this may be changed by [Bug 1488740](https://bugzil.la/1488740).
 - The server did not respond to the actual request (even if it responded to the
   {{Glossary("Preflight request")}}). One scenario might be an HTTP service being
   developed that panicked without returning any data.

@@ -2,12 +2,6 @@
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-decoration-line
 ---
 

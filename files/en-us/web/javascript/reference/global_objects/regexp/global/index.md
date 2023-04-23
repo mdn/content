@@ -2,19 +2,12 @@
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 page-type: javascript-instance-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
 
 {{JSRef}}
 
-The **`global`** accessor property indicates whether or not the `g` flag is used with the regular expression.
+The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `g` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
 

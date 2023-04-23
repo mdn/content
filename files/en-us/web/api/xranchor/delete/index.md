@@ -1,5 +1,6 @@
 ---
-title: XRAnchor.delete()
+title: "XRAnchor: delete() method"
+short-title: delete()
 slug: Web/API/XRAnchor/delete
 page-type: web-api-instance-method
 status:

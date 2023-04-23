@@ -2,10 +2,8 @@
 title: xml:space
 slug: Web/SVG/Attribute/xml:space
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+status:
+  - deprecated
 browser-compat: svg.attributes.core.xml_space
 ---
 

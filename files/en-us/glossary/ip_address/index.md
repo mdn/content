@@ -2,10 +2,6 @@
 title: IP Address
 slug: Glossary/IP_Address
 page-type: glossary-definition
-tags:
-  - Beginner
-  - Infrastructure
-  - Web
 ---
 
 An **IP address** is a number used to address each device on an IP network uniquely.

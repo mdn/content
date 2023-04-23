@@ -2,12 +2,6 @@
 title: "<script>: type attribute"
 slug: Web/HTML/Element/script/type
 page-type: html-attribute
-tags:
-  - Script
-  - HTML
-  - Reference
-  - Element
-  - Attribute
 browser-compat: html.elements.script.type
 ---
 

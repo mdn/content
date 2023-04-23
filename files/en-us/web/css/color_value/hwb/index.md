@@ -2,14 +2,6 @@
 title: hwb()
 slug: Web/CSS/color_value/hwb
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color
-  - hwb
 browser-compat: css.types.color.hwb
 ---
 

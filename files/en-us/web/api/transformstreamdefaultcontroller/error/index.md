@@ -1,5 +1,6 @@
 ---
-title: TransformStreamDefaultController.error()
+title: "TransformStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/TransformStreamDefaultController/error
 page-type: web-api-instance-method
 browser-compat: api.TransformStreamDefaultController.error
@@ -30,7 +31,9 @@ In this example the `error()` method is used when a chunk could not be transform
 
 ```js
 const transformContent = {
-  start() { /* … */ },
+  start() {
+    /* … */
+  },
   async transform(chunk, controller) {
     try {
       chunk = await applyMyTransformation(chunk);

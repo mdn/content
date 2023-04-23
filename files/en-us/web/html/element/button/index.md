@@ -1,14 +1,7 @@
 ---
-title: '<button>: The Button element'
+title: "<button>: The Button element"
 slug: Web/HTML/Element/button
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 browser-compat: html.elements.button
 ---
 
@@ -24,61 +17,61 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
-- {{htmlattrdef("disabled")}}
+- `autocomplete` {{non-standard_inline}}
+  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 
+- `disabled`
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
-    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`](#autocomplete) attribute.
 
-- {{htmlattrdef("form")}}
+- `form`
 
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- {{htmlattrdef("formaction")}}
-  - : The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.
-- {{htmlattrdef("formenctype")}}
+- `formaction`
+  - : The URL that processes the information submitted by the button. Overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the button's form owner. Does nothing if there is no form owner.
+- `formenctype`
 
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
-    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+    - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their [`type`](/en-US/docs/Web/HTML/Element/input#type) attributes set to `file`.
     - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
 
-    If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
+    If this attribute is specified, it overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the button's form owner.
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
 
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
 
-    If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
+    If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the button's form owner.
 
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
 
-  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
 
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
 
-  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
+  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the button's form owner. The following keywords have special meanings:
 
     - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user's browser settings.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : The default behavior of the button. Possible values are:
 
@@ -86,7 +79,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `reset`: The button resets all the controls to their initial values, like [\<input type="reset">](/en-US/docs/Web/HTML/Element/input/reset). (This behavior tends to annoy users.)
     - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
 
-- {{htmlattrdef("value")}}
+- `value`
   - : Defines the value associated with the button's `name` when it's submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
 
 ## Notes
@@ -99,7 +92,7 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
-## Example
+## Examples
 
 ```html
 <button name="button">Press me</button>
@@ -115,7 +108,7 @@ Buttons that only show an icon to represent do not have an _accessible name_. Ac
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
-#### Example
+#### Examples
 
 ```html
 <button name="favorite">
@@ -125,6 +118,10 @@ To give an icon button an accessible name, put text in the `<button>` element th
   Add to favorites
 </button>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Icon buttons')}}
 
 If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
 
@@ -170,7 +167,7 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://bugs.webkit.org/show_bug.cgi?id=22261).
+Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261).
 
 ## Technical summary
 
@@ -178,32 +175,32 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >, and
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -212,12 +209,12 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         but there must be no
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >
       </td>
@@ -230,7 +227,7 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

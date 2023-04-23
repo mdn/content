@@ -2,14 +2,6 @@
 title: Create the Canvas and draw on it
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - HTML
-  - JavaScript
-  - Tutorial
 ---
 
 {{GamesSidebar}}

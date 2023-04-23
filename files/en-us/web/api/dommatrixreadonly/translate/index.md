@@ -1,5 +1,6 @@
 ---
-title: DOMMatrixReadOnly.translate()
+title: "DOMMatrixReadOnly: translate() method"
+short-title: translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.translate
@@ -62,8 +63,7 @@ document
 ```
 
 {{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-19_at_11.20.40.png',
-  'Web/API/DOMMatrixReadOnly/translate') }}
+  'screen_shot_2019-02-19_at_11.20.40.png') }}
 
 ## Specifications
 

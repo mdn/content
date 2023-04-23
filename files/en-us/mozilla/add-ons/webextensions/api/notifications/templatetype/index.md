@@ -2,16 +2,6 @@
 title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - TemplateType
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.notifications.TemplateType
 ---
 

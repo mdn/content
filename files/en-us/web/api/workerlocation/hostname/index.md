@@ -1,5 +1,6 @@
 ---
-title: WorkerLocation.hostname
+title: "WorkerLocation: hostname property"
+short-title: hostname
 slug: Web/API/WorkerLocation/hostname
 page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.hostname

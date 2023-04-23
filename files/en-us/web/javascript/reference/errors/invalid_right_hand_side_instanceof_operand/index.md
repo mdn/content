@@ -2,12 +2,6 @@
 title: "TypeError: invalid 'instanceof' operand 'x'"
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Reference
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,5 +1,6 @@
 ---
-title: MediaSource.isTypeSupported()
+title: "MediaSource: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 page-type: web-api-static-method
 browser-compat: api.MediaSource.isTypeSupported
@@ -15,7 +16,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 ## Syntax
 
 ```js-nolint
-isTypeSupported(type)
+MediaSource.isTypeSupported(type)
 ```
 
 ### Parameters
@@ -38,33 +39,33 @@ This is because media files are complex, intricate constructs with far too many 
 The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
-const assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 let mediaSource;
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   mediaSource = getMediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
 function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
       console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 ```
 
 ## Specifications
@@ -79,6 +80,6 @@ function sourceOpen() {
 
 - [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

@@ -2,9 +2,6 @@
 title: Canonical order
 slug: Glossary/Canonical_order
 page-type: glossary-definition
-tags:
-  - Canonical order
-  - CodingScripting
 ---
 
 In CSS, canonical order is used to refer to the order in which separate values need to be specified (or {{Glossary("parse", "parsed")}}) or are to be {{Glossary("serialization", "serialized")}} as part of a CSS property value. It is defined by the formal {{Glossary("syntax")}} of the property and normally refers to the order in which longhand values should be specified as part of a single shorthand value.

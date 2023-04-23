@@ -1,14 +1,9 @@
 ---
 title: WebKit CSS extensions
 slug: Web/CSS/WebKit_Extensions
-page-type: css-property
-tags:
-  - CSS
-  - CSS:WebKit Extensions
-  - Guide
-  - Non-standard
-  - Overview
-  - Reference
+page-type: landing-page
+status:
+  - non-standard
 ---
 
 {{CSSRef}}
@@ -421,7 +416,7 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 
 - {{CSSxRef("user-select", "-webkit-user-select")}}
 
-\* Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix. Microsoft Edge and IE Mobile support this property with the `-webkit-` prefix, rather than `-ms-` for interoperability reasons as well.
+\* Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix.
 \*\* These values are supported even though they are not standard and are not on track to becoming standard.
 \*\*\* Use flex-box properties instead.
 
@@ -461,7 +456,7 @@ The following properties were once supported with the -webkit- prefix but are no
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any", ":-webkit-any()")}}
+- {{CSSxRef(":is", ":-webkit-any()")}}
 - {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
 - {{CSSxRef(":autofill",":-webkit-autofill")}}
 - {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}
@@ -527,5 +522,4 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 ## See also
 
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_Extensions)
 - [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)

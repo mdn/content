@@ -2,11 +2,6 @@
 title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 page-type: javascript-language-feature
-tags:
-  - JavaScript
-  - Language feature
-  - Literal
-  - Primitive
 browser-compat: javascript.operators.null
 ---
 

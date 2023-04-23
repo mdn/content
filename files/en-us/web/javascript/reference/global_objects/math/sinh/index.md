@@ -2,13 +2,6 @@
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.sinh
 ---
 

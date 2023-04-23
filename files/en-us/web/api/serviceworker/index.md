@@ -29,7 +29,7 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("ServiceWorker.postMessage()")}}
-  - : Sends a message — consisting of any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) JavaScript object — to the service worker. The message is transmitted to the service worker using a {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
+  - : Sends a message — consisting of any [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) JavaScript object — to the service worker. The message is transmitted to the service worker using a {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
 
 ## Events
 

@@ -2,15 +2,6 @@
 title: offset-distance
 slug: Web/CSS/offset-distance
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Motion Path
-  - Reference
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
 browser-compat: css.properties.offset-distance
 ---
 

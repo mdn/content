@@ -2,10 +2,6 @@
 title: <hex-color>
 slug: Web/CSS/hex-color
 page-type: css-type
-tags:
-  - Reference
-  - CSS
-  - CSS Data Type
 browser-compat: css.types.color.rgb_hexadecimal_notation
 ---
 

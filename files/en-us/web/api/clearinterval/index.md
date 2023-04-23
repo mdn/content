@@ -1,5 +1,6 @@
 ---
-title: clearInterval()
+title: clearInterval() global function
+short-title: clearInterval()
 slug: Web/API/clearInterval
 page-type: web-api-global-function
 browser-compat: api.clearInterval

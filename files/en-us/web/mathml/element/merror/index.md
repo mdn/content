@@ -1,11 +1,7 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.merror
 ---
 

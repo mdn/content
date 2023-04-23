@@ -1,5 +1,6 @@
 ---
-title: Element.setAttributeNS()
+title: "Element: setAttributeNS() method"
+short-title: setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 page-type: web-api-instance-method
 browser-compat: api.Element.setAttributeNS
@@ -30,8 +31,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-let d = document.getElementById('d1');
-d.setAttributeNS('http://www.mozilla.org/ns/specialspace', 'spec:align', 'center');
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center"
+);
 ```
 
 ## Notes

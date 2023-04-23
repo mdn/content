@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.longitude
+title: "GeolocationCoordinates: longitude property"
+short-title: longitude
 slug: Web/API/GeolocationCoordinates/longitude
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.longitude

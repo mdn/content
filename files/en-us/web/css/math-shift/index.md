@@ -2,13 +2,8 @@
 title: math-shift
 slug: Web/CSS/math-shift
 page-type: css-property
-tags:
-  - CSS
-  - MathML
-  - CSS Property
-  - Reference
-  - math-shift
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.math-shift
 ---
 

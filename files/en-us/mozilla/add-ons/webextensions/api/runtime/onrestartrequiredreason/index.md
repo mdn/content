@@ -2,16 +2,6 @@
 title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnRestartRequiredReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
 browser-compat: webextensions.api.runtime.OnRestartRequiredReason
 ---
 

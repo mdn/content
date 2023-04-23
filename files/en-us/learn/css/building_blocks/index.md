@@ -1,11 +1,6 @@
 ---
 title: CSS building blocks
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - building blocks
 ---
 
 {{LearnSidebar}}

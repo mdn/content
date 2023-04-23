@@ -1,5 +1,6 @@
 ---
-title: URL.protocol
+title: "URL: protocol property"
+short-title: protocol
 slug: Web/API/URL/protocol
 page-type: web-api-instance-property
 browser-compat: api.URL.protocol
@@ -20,7 +21,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol');
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol"
+);
 console.log(url.protocol); // Logs "https:"
 ```
 

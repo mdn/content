@@ -1,16 +1,6 @@
 ---
 title: Graphics on the Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphics
-  - HTML
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
 ---
 
 <section id="Quick_links">

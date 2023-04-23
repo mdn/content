@@ -2,14 +2,6 @@
 title: CSS Fragmentation
 slug: Web/CSS/CSS_Fragmentation
 page-type: css-module
-tags:
-  - CSS
-  - CSS Fragmentation
-  - Guide
-  - NeedsCompatTable
-  - NeedsContent
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-break/
 ---
 

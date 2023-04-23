@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent()
+title: "SecurityPolicyViolationEvent: SecurityPolicyViolationEvent() constructor"
+short-title: SecurityPolicyViolationEvent()
 slug: Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent
 page-type: web-api-constructor
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
@@ -61,7 +62,9 @@ A new `SecurityPolicyViolationEvent` object.
 ## Examples
 
 ```js
-let SPVEvt = new SecurityPolicyViolationEvent('foo', { /* ... */ });
+let SPVEvt = new SecurityPolicyViolationEvent("foo", {
+  /* ... */
+});
 ```
 
 ## Specifications

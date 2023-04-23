@@ -1,11 +1,6 @@
 ---
 title: Introduction to game development for the Web
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Games
-  - Guide
-  - Mobile
 ---
 
 {{GamesSidebar}}
@@ -77,8 +72,7 @@ You can truly think of the Web as a better target platform for your game. As we 
       <td>
         <a href="/en-US/docs/Web/HTML">HTML</a>,
         <a href="/en-US/docs/Web/CSS">CSS</a>,
-        <a href="/en-US/docs/Web/SVG">SVG</a>,
-        <a href="/en-US/docs/Social_API">Social API</a> (and much more!)
+        <a href="/en-US/docs/Web/SVG">SVG</a> (and much more!)
       </td>
     </tr>
   </tbody>

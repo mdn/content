@@ -2,14 +2,6 @@
 title: Ember app structure and componentization
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization
-tags:
-  - Beginner
-  - Components
-  - Ember
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
 ---
 
 {{LearnSidebar}}

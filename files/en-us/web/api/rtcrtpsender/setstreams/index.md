@@ -1,5 +1,6 @@
 ---
-title: RTCRtpSender.setStreams()
+title: "RTCRtpSender: setStreams() method"
+short-title: setStreams()
 slug: Web/API/RTCRtpSender/setStreams
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.setStreams
@@ -57,7 +58,7 @@ function addTracksToStream(stream) {
   let senders = pc.getSenders();
 
   senders.forEach((sender) => {
-    if (sender.track && (sender.transport.state === connected)) {
+    if (sender.track && sender.transport.state === connected) {
       sender.setStreams(stream);
     }
   });

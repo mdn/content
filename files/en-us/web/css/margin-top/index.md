@@ -2,11 +2,6 @@
 title: margin-top
 slug: Web/CSS/margin-top
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.margin-top
 ---
 

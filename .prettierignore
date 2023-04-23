@@ -2,15 +2,17 @@
 # see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
 
 build/
+/files/en-us/_githistory.json
 
-# A full pass on all Markdown files is being performed, the following folders
-# still need a full pass:
+# A full pass on all Markdown files is being performed.
+# The following folders still need a full pass:
 /files/en-us/learn/**/*.md
-/files/en-us/mozilla/**/*.md
+/files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
 /files/en-us/web/svg/**/*.md
 
 # The /web/api folder is so large, it has been divided into multiple parts
 /files/en-us/web/api/**/*.md
-!/files/en-us/web/api/[a-d]*/**/*.md
+# Alphabetically 'allow' this range incrementally
+!/files/en-us/web/api/[a-w]*/**/*.md

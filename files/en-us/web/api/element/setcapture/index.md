@@ -1,5 +1,6 @@
 ---
-title: Element.setCapture()
+title: "Element: setCapture() method"
+short-title: setCapture()
 slug: Web/API/Element/setCapture
 page-type: web-api-instance-method
 status:
@@ -101,7 +102,7 @@ layout of other elements.
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

@@ -1,21 +1,7 @@
 ---
 title: Web accessibility for seizures and physical reactions
 slug: Web/Accessibility/Seizure_disorders
-tags:
-  - Media Queries
-  - PEAT
-  - Photosensitive Epilepsy Analysis Tool
-  - The Harding Test
-  - color
-  - epilepsy
-  - musicogenic seizures
-  - photosensitivity
-  - prefers-reduced-motion
-  - reflex epilepsy
-  - saturation
-  - seizure disorders
-  - seizures
-  - web animation
+page-type: guide
 ---
 
 <section id="Quick_links">

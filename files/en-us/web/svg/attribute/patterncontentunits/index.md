@@ -2,9 +2,6 @@
 title: patternContentUnits
 slug: Web/SVG/Attribute/patternContentUnits
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.pattern.patternContentUnits
 ---
 

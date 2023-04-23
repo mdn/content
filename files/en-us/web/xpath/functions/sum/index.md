@@ -1,9 +1,6 @@
 ---
 title: sum
 slug: Web/XPath/Functions/sum
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

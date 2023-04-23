@@ -2,15 +2,6 @@
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - PluralRules
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
 

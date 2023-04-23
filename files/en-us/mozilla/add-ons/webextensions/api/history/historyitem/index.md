@@ -2,16 +2,6 @@
 title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - HistoryItem
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.history.HistoryItem
 ---
 

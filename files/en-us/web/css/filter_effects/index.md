@@ -2,13 +2,7 @@
 title: CSS filter effects
 slug: Web/CSS/Filter_Effects
 page-type: css-module
-tags:
-  - CSS
-  - Filter Effects
-  - Guide
-  - Overview
-  - Reference
-spec-urls: 
+spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
   - https://drafts.fxtf.org/filter-effects-1/
 ---
@@ -23,7 +17,7 @@ Play with the various sliders to apply filter effects to the image below:
 
 {{EmbedGHLiveSample("css-examples/modules/filters.html", '100%', 420)}}
 
-To see the code for this filter effects sample, [view the source on Github](https://github.com/mdn/content/blob/main/files/en-us/web/css/css_filter_effects/index.md).
+To see the code for this filter effects sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/filters.html).
 
 ### Properties
 
@@ -43,6 +37,11 @@ To see the code for this filter effects sample, [view the source on Github](http
 - {{cssxref("filter-function/saturate", "saturate()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 
+## Guides
+
+- [Using CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects/Using_filter_effects)
+  - : Overview of the concepts surrounding CSS filter effects, including properties, filter functions, and SVG filters, with an explanation of filter values, source order, and value interactions.
+
 ## Related concepts
 
 - {{CSSxRef("&lt;image&gt;")}} data type
@@ -54,7 +53,7 @@ To see the code for this filter effects sample, [view the source on Github](http
 
 - {{glossary("interpolation")}} glossary term
 
-- {{cssxref("color-interpolation-filters")}} SVG property
+- [`color-interpolation-filters`](/en-US/docs/Web/SVG/Attribute/color-interpolation-filters) SVG property
 
 ## Specifications
 

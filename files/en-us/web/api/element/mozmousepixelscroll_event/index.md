@@ -1,5 +1,6 @@
 ---
-title: 'Element: MozMousePixelScroll event'
+title: "Element: MozMousePixelScroll event"
+short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 page-type: web-api-event
 status:
@@ -19,9 +20,9 @@ The Firefox-only, _non-standard_, and _obsolete_ **`MozMousePixelScroll`** event
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('MozMousePixelScroll', (event) => {});
+addEventListener("MozMousePixelScroll", (event) => {});
 
-onMozMousePixelScroll = (event) => { };
+onMozMousePixelScroll = (event) => {};
 ```
 
 ## Event type

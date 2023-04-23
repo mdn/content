@@ -2,12 +2,6 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
 
@@ -22,6 +16,7 @@ arguments.
 ## Syntax
 
 ```js-nolint
+Array.of()
 Array.of(element0)
 Array.of(element0, element1)
 Array.of(element0, element1, /* … ,*/ elementN)
@@ -93,8 +88,8 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
-- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)

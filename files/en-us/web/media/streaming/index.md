@@ -1,14 +1,6 @@
 ---
 title: Guide to streaming audio and video
 slug: Web/Media/Streaming
-tags:
-  - Audio
-  - Guide
-  - Media
-  - Networking
-  - Video
-  - streaming
-  - Draft
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

@@ -1,10 +1,6 @@
 ---
 title: declarative_net_request
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.declarative_net_request
 ---
 

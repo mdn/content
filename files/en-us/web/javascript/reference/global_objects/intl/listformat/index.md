@@ -2,13 +2,6 @@
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 page-type: javascript-class
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
 
@@ -17,8 +10,6 @@ browser-compat: javascript.builtins.Intl.ListFormat
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Constructor
 
@@ -29,6 +20,15 @@ The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 
 - {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.ListFormat.prototype` and shared by all `Intl.ListFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.ListFormat` instances, the initial value is the {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat")}} constructor.
+- `Intl.ListFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.ListFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

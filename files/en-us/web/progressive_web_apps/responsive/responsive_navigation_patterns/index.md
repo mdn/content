@@ -1,12 +1,6 @@
 ---
 title: Responsive navigation patterns
 slug: Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
-tags:
-  - Guide
-  - Mobile
-  - Navigation
-  - Responsive Design
-  - patterns
 ---
 
 Need some help designing your app's navigation? These patterns are a great place to start. The following present several ways to handle navigation on large and small screens. Top and left navigation menus are common on larger screens, but are often not the optimal way to present information on small screens because of the reduced screen real estate. Therefore, it is necessary to consider the presentation of content and ease of navigation for all screen sizes.

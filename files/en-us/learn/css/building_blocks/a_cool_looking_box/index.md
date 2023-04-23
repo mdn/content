@@ -1,16 +1,6 @@
 ---
 title: A cool-looking box
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - Learn
-  - backgrounds
-  - borders
-  - box
-  - box model
-  - effects
 ---
 
 {{LearnSidebar}}

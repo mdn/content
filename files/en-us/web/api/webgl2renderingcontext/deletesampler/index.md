@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.deleteSampler()
+title: "WebGL2RenderingContext: deleteSampler() method"
+short-title: deleteSampler()
 slug: Web/API/WebGL2RenderingContext/deleteSampler
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.deleteSampler

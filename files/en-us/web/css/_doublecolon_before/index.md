@@ -2,13 +2,6 @@
 title: "::before"
 slug: Web/CSS/::before
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.before
 ---
 

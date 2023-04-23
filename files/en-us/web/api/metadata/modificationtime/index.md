@@ -1,5 +1,6 @@
 ---
-title: Metadata.modificationTime
+title: "Metadata: modificationTime property"
+short-title: modificationTime
 slug: Web/API/Metadata/modificationTime
 page-type: web-api-instance-property
 status:
@@ -30,17 +31,29 @@ timestamp year is compared to the current year. If it was last modified in a yea
 least five prior to the current year, the file is removed and a new one is created.
 
 ```js
-workingDirectory.getFile("tmp/workfile.json", { create: true }, (fileEntry) => {
-  fileEntry.getMetadata((metadata) => {
-    if (new Date().getFullYear() - metadata.modificationTime.getFullYear() >= 5) {
-      fileEntry.remove(() => {
-        workingDirectory.getFile("tmp/workfile.json", { create: true }, (newEntry) => {
-          fileEntry = newEntry;
+workingDirectory.getFile(
+  "tmp/workfile.json",
+  { create: true },
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (
+        new Date().getFullYear() - metadata.modificationTime.getFullYear() >=
+        5
+      ) {
+        fileEntry.remove(() => {
+          workingDirectory.getFile(
+            "tmp/workfile.json",
+            { create: true },
+            (newEntry) => {
+              fileEntry = newEntry;
+            }
+          );
         });
-      });
-    }
-  });
-}, handleError);
+      }
+    });
+  },
+  handleError
+);
 ```
 
 ## Specifications

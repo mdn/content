@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.media
+title: "MediaQueryList: media property"
+short-title: media
 slug: Web/API/MediaQueryList/media
 page-type: web-api-instance-property
 browser-compat: api.MediaQueryList.media
@@ -24,7 +25,7 @@ value of the resulting `MediaQueryList`'s `media` property in a
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```

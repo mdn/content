@@ -2,9 +2,6 @@
 title: Using macros
 slug: MDN/Writing_guidelines/Page_structures/Macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

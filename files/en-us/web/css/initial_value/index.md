@@ -2,10 +2,6 @@
 title: Initial value
 slug: Web/CSS/initial_value
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 ---
 
@@ -13,8 +9,8 @@ spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 
 The **initial value** of a [CSS](/en-US/docs/Web/CSS) property is its default value, as listed in its definition table in the specification. The usage of the initial value depends on whether a property is inherited or not:
 
-- For [inherited properties](/en-US/docs/Web/CSS/inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](/en-US/docs/Web/CSS/specified_value) is supplied.
-- For [non-inherited properties](/en-US/docs/Web/CSS/inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no [specified value](/en-US/docs/Web/CSS/specified_value) is supplied.
+- For [inherited properties](/en-US/docs/Web/CSS/Inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](/en-US/docs/Web/CSS/specified_value) is supplied.
+- For [non-inherited properties](/en-US/docs/Web/CSS/Inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no [specified value](/en-US/docs/Web/CSS/specified_value) is supplied.
 
 You can explicitly specify the initial value by using the {{cssxref("initial")}} keyword.
 
@@ -32,7 +28,7 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

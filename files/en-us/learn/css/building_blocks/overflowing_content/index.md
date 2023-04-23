@@ -1,13 +1,6 @@
 ---
 title: Overflowing content
 slug: Learn/CSS/Building_blocks/Overflowing_content
-tags:
-  - Beginner
-  - Block Formatting Context
-  - CSS
-  - Data Loss
-  - Learn
-  - overflow
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}

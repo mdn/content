@@ -1,5 +1,6 @@
 ---
-title: Geolocation.getCurrentPosition()
+title: "Geolocation: getCurrentPosition() method"
+short-title: getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 page-type: web-api-instance-method
 browser-compat: api.Geolocation.getCurrentPosition
@@ -46,13 +47,13 @@ None ({{jsxref("undefined")}}).
 const options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   const crd = pos.coords;
 
-  console.log('Your current position is:');
+  console.log("Your current position is:");
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);

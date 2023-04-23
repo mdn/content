@@ -1,9 +1,7 @@
 ---
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - WCAG
-  - Web Content Accessibility Guidelines
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages}}

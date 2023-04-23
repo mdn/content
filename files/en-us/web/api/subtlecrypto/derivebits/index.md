@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.deriveBits()
+title: "SubtleCrypto: deriveBits() method"
+short-title: deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.deriveBits
@@ -94,7 +95,7 @@ async function deriveSharedSecret(privateKey, publicKey) {
     {
       name: "ECDH",
       namedCurve: "P-384",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     128
@@ -115,7 +116,7 @@ async function deriveSharedSecret(privateKey, publicKey) {
 const generateAlicesKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
   ["deriveBits"]
@@ -124,7 +125,7 @@ const generateAlicesKeyPair = window.crypto.subtle.generateKey(
 const generateBobsKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
   ["deriveBits"]
@@ -185,7 +186,9 @@ async function getDerivedBits() {
   );
 
   const buffer = new Uint8Array(derivedBits, 0, 5);
-  const derivedBitsValue = document.querySelector(".pbkdf2 .derived-bits-value");
+  const derivedBitsValue = document.querySelector(
+    ".pbkdf2 .derived-bits-value"
+  );
   derivedBitsValue.classList.add("fade-in");
   derivedBitsValue.addEventListener("animationend", () => {
     derivedBitsValue.classList.remove("fade-in");

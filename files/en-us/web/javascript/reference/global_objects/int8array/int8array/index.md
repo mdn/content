@@ -2,21 +2,12 @@
 title: Int8Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - Polyfill
 browser-compat: javascript.builtins.Int8Array.Int8Array
 ---
 
 {{JSRef}}
 
-The **`Int8Array()`** constructor creates a typed array of
-twos-complement 8-bit signed integers. The contents are initialized to `0`.
-Once established, you can reference elements in the array using the object's methods, or
-using standard array index syntax (that is, using bracket notation).
+The **`Int8Array()`** constructor creates {{jsxref("Int8Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 

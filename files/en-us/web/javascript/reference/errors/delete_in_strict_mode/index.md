@@ -4,11 +4,6 @@ title: >-
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -33,7 +28,7 @@ Normal variables in JavaScript can't be deleted using the [`delete`](/en-US/docs
 
 The `delete` operator can only delete properties on an object. Object properties are "qualified" if they are configurable.
 
-Unlike what common belief suggests, the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references, see the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page and the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator page for more details.
+Unlike what common belief suggests, the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references, see the [memory management](/en-US/docs/Web/JavaScript/Memory_management) page and the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator page for more details.
 
 This error only happens in [strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode). In non-strict code, the operation just returns `false`.
 
@@ -73,5 +68,5 @@ x = null;
 ## See also
 
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
-- [Memory management](/en-US/docs/Web/JavaScript/Memory_Management)
+- [Memory management](/en-US/docs/Web/JavaScript/Memory_management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete)

@@ -1,5 +1,6 @@
 ---
-title: Navigator.hardwareConcurrency
+title: "Navigator: hardwareConcurrency property"
+short-title: hardwareConcurrency
 slug: Web/API/Navigator/hardwareConcurrency
 page-type: web-api-instance-property
 browser-compat: api.Navigator.hardwareConcurrency
@@ -39,8 +40,8 @@ let workerList = [];
 
 for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
   let newWorker = {
-    worker: new Worker('cpuworker.js'),
-    inUse: false
+    worker: new Worker("cpuworker.js"),
+    inUse: false,
   };
   workerList.push(newWorker);
 }

@@ -57,7 +57,7 @@ function handleDataAvailable(event) {
 }
 function download() {
   const blob = new Blob(recordedChunks, {
-    type: "video/webm"
+    type: "video/webm",
   });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -89,8 +89,7 @@ If your goal is to record camera and/or microphone input, you may wish to examin
 In this code snippet, `enumerateDevices()` is used to examine the available input devices, locate those which are audio input devices, and create {{HTMLElement("option")}} elements that are then added to a {{HTMLElement("select")}} element representing an input source picker.
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-.then((devices) => {
+navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {

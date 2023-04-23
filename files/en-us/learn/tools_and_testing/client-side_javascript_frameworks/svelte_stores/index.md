@@ -1,14 +1,6 @@
 ---
 title: Working with Svelte stores
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Stores
-  - Svelte
-  - client-side
 ---
 
 {{LearnSidebar}}

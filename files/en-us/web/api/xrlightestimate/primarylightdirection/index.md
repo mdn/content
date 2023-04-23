@@ -1,5 +1,6 @@
 ---
-title: XRLightEstimate.primaryLightDirection
+title: "XRLightEstimate: primaryLightDirection property"
+short-title: primaryLightDirection
 slug: Web/API/XRLightEstimate/primaryLightDirection
 page-type: web-api-instance-property
 status:

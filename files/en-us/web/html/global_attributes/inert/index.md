@@ -2,16 +2,6 @@
 title: inert
 slug: Web/HTML/Global_attributes/inert
 page-type: html-attribute
-tags:
-  - Attribute
-  - Global attributes
-  - HTML
-  - Input
-  - Reference
-  - Text
-  - Web
-  - global
-  - inert
 browser-compat: html.global_attributes.inert
 ---
 

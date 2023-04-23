@@ -1,20 +1,6 @@
 ---
 title: Client-side web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - Articles
-  - Beginner
-  - CodingScripting
-  - DOM
-  - Graphics
-  - JavaScript
-  - Landing
-  - Learn
-  - Media
-  - Module
-  - WebAPI
-  - data
 ---
 
 {{LearnSidebar}}

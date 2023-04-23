@@ -1,10 +1,6 @@
 ---
 title: math:max()
 slug: Web/EXSLT/math/max
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

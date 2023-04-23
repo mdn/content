@@ -2,15 +2,6 @@
 title: mask
 slug: Web/CSS/mask
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Layout
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
 browser-compat: css.properties.mask
 ---
 

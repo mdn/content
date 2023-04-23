@@ -1,15 +1,6 @@
 ---
 title: omnibox.onDeleteSuggestion
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onDeleteSuggestion
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
-  - onDeleteSuggestion
 browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 ---
 

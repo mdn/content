@@ -1,17 +1,7 @@
 ---
-title: '<mark>: The Mark Text element'
+title: "<mark>: The Mark Text element"
 slug: Web/HTML/Element/mark
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Highlighting
-  - Highlighting Text
-  - Marking Text
-  - Reference
-  - Web
-  - mark
 browser-compat: html.elements.mark
 ---
 
@@ -51,7 +41,7 @@ In this first example, a `<mark>` element is used to mark some text within a quo
 </blockquote>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Marking_text_of_interest", 650, 130)}}
 
@@ -75,7 +65,7 @@ This example demonstrates using `<mark>` to mark search results within a passage
 
 To help distinguish the use of `<mark>` for search results from other potential usage, this example applies the custom class `"match"` to each match.
 
-The results look like this:
+#### Result
 
 {{EmbedLiveSample("Identifying_context-sensitive_passages", 650, 130)}}
 
@@ -115,15 +105,15 @@ Some people who use screen readers deliberately disable announcing content that 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -131,7 +121,7 @@ Some people who use screen readers deliberately disable announcing content that 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -144,7 +134,7 @@ Some people who use screen readers deliberately disable announcing content that 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

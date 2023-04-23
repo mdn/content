@@ -3,10 +3,6 @@ title: >-
   What is the difference between webpage, website, web server, and search
   engine?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-tags:
-  - Beginner
-  - NeedsActiveLearning
-  - WebMechanics
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -41,7 +37,7 @@ As with any area of knowledge, the web comes with a lot of jargon. Don't worry. 
 We'll cover these terms and technologies in more detail as we explore further, but these quick definitions will be a great start for you:
 
 - web page
-  - : A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Internet Explorer or Edge, or Apple's Safari. These are also often called just "pages."
+  - : A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Edge, or Apple Safari. These are also often called just "pages."
 - website
   - : A collection of web pages which are grouped together and usually connected together in various ways. Often called a "web site" or a "site."
 - web server

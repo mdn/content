@@ -1,15 +1,6 @@
 ---
-title: 'Django Tutorial: The Local Library website'
+title: "Django Tutorial: The Local Library website"
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Learn
-  - Tutorial
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

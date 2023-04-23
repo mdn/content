@@ -1,5 +1,6 @@
 ---
-title: 'ScriptProcessorNode: audioprocess event'
+title: "ScriptProcessorNode: audioprocess event"
+short-title: audioprocess
 slug: Web/API/ScriptProcessorNode/audioprocess_event
 page-type: web-api-event
 status:
@@ -42,7 +43,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
+scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
   const inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -60,10 +61,10 @@ scriptNode.addEventListener('audioprocess', (audioProcessingEvent) => {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-})
+});
 ```
 
 You could also set up the event handler using the `onaudioprocess` property:
@@ -71,7 +72,7 @@ You could also set up the event handler using the `onaudioprocess` property:
 ```js
 scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // ...
-}
+};
 ```
 
 ## Specifications

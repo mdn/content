@@ -2,14 +2,8 @@
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color-contrast
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.color-contrast
 ---
 

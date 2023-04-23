@@ -1,5 +1,6 @@
 ---
-title: Notification.maxActions
+title: "Notification: maxActions static property"
+short-title: maxActions
 slug: Web/API/Notification/maxActions
 page-type: web-api-static-property
 status:
@@ -25,7 +26,9 @@ The following snippet logs the maximum number of supported actions.
 
 ```js
 const maxActions = Notification.maxActions;
-console.log(`This device can display at most ${maxActions} actions on each notification.`);
+console.log(
+  `This device can display at most ${maxActions} actions on each notification.`
+);
 ```
 
 ## Specifications

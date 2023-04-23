@@ -2,9 +2,6 @@
 title: Progressive web apps
 slug: Glossary/Progressive_web_apps
 page-type: glossary-definition
-tags:
-  - Composing
-  - Progressive web apps
 ---
 
 Progressive web apps is a term used to describe the modern state of web app development. This involves taking standard web sites/apps that enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors — and supercharging them with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)) and features that confer other benefits more commonly attributed to native apps.

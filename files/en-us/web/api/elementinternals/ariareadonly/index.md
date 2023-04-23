@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaReadOnly
+title: "ElementInternals: ariaReadOnly property"
+short-title: ariaReadOnly
 slug: Web/API/ElementInternals/ariaReadOnly
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaReadOnly

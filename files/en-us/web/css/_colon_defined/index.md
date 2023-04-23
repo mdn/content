@@ -2,13 +2,6 @@
 title: ":defined"
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.defined
 ---
 
@@ -110,4 +103,4 @@ This is useful if you have a complex custom element that takes a while to load i
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

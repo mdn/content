@@ -1,12 +1,7 @@
 ---
 title: aria-colindextext
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-colindextext
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 

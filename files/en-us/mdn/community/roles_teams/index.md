@@ -2,10 +2,6 @@
 title: MDN Web Docs roles and teams
 slug: MDN/Community/Roles_teams
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

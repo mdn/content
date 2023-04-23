@@ -2,16 +2,6 @@
 title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - reload
-  - runtime
 browser-compat: webextensions.api.runtime.reload
 ---
 

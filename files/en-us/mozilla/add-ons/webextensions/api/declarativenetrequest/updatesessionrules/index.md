@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.updateSessionRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateSessionRules
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - updateSessionRules
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
 ---
 

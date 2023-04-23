@@ -1,13 +1,7 @@
 ---
 title: "ARIA: definition role"
 slug: Web/Accessibility/ARIA/Roles/definition_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#definition
 ---
 

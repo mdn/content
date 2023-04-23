@@ -1,5 +1,6 @@
 ---
-title: TimeRanges.length
+title: "TimeRanges: length property"
+short-title: length
 slug: Web/API/TimeRanges/length
 page-type: web-api-instance-property
 browser-compat: api.TimeRanges.length

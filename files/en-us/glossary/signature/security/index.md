@@ -2,10 +2,6 @@
 title: Signature (security)
 slug: Glossary/Signature/Security
 page-type: glossary-definition
-tags:
-  - Cryptography
-  - Privacy
-  - Security
 ---
 
 A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.

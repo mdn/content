@@ -2,13 +2,6 @@
 title: AsyncGenerator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.AsyncGenerator.throw
 ---
 
@@ -67,9 +60,10 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then((res) => console.log(res));    // { value: 42, done: false }
-asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wrong
-  .then((res) => console.log(res));                  // { value: 42, done: false }
+asyncGen.next(1).then((res) => console.log(res)); // { value: 42, done: false }
+asyncGen
+  .throw(new Error("Something went wrong")) // Error: Something went wrong
+  .then((res) => console.log(res)); // { value: 42, done: false }
 ```
 
 ## Specifications
@@ -83,4 +77,4 @@ asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wr
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

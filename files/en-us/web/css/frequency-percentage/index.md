@@ -2,14 +2,6 @@
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - frequency-percentage
-  - units
-  - values
 browser-compat: css.types.frequency-percentage
 ---
 

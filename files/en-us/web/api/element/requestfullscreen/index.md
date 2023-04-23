@@ -1,5 +1,6 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() method"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
 browser-compat: api.Element.requestFullscreen
@@ -81,7 +82,7 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}}
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute applied to it.
 
 Additionally, any set Permissions Policies must allow the use of this feature.
@@ -111,7 +112,9 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+      alert(
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+      );
     });
   } else {
     document.exitFullscreen();
@@ -140,9 +143,14 @@ In this example, the entire document is placed into fullscreen mode by calling
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
-  alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
-});
+elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`
+    );
+  });
 ```
 
 The promise's resolve handler does nothing, but if the promise is rejected, an error
@@ -163,4 +171,4 @@ message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- {{HTMLAttrxRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

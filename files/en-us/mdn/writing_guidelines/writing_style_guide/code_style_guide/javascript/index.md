@@ -2,9 +2,6 @@
 title: Guidelines for styling JavaScript code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -639,7 +636,7 @@ This section lists our recommendations of which operators to use and when.
 
 ### Conditional operators
 
-When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
+When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
 const x = condition ? 1 : 2;
@@ -757,7 +754,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   ```js example-bad
   let name = "Shilpa";
-  console.log(myName);
+  console.log(name);
   ```
 
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.

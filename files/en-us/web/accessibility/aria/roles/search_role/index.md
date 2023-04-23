@@ -1,13 +1,7 @@
 ---
 title: "ARIA: search role"
 slug: Web/Accessibility/ARIA/Roles/search_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - Search role
-  - ARIA search
-  - Accessibility
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#search
   - https://w3c.github.io/aria-practices/#aria_lh_search
@@ -23,7 +17,7 @@ The `search` role is used to identify the search functionality; the section of t
 
 ## Description
 
-The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. While there is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), there is no HTML element that defines a search landmark.
+The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. While there is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), there is no HTML element that defines a search landmark.
 
 ## Examples
 
@@ -39,7 +33,7 @@ When a {{HTMLElement('form')}} is a search form, use the `search` role instead o
 
 ## Accessibility concerns
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ## Best practices
 

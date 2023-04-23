@@ -1,21 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
-  - basics
-  - cell
-  - col
-  - colgroup
-  - colspan
-  - header
-  - row
-  - rowspan
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -556,9 +541,3 @@ See how you get on with the example. If you get stuck, or want to check your wor
 That just about wraps up the basics of HTML tables. In the next article, we'll look at some slightly more [advanced table features](/en-US/docs/Learn/HTML/Tables/Advanced), and start to think how accessible they are for visually impaired people.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

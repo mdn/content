@@ -2,13 +2,6 @@
 title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - device-cmyk
 browser-compat: css.types.color.device-cmyk
 ---
 

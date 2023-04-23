@@ -1,9 +1,6 @@
 ---
 title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - Firefox
-  - Firefox 2
 ---
 
 {{FirefoxSidebar}}
@@ -60,7 +57,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
 - [Theme changes in Firefox 2](/en-US/docs/Theme_changes_in_Firefox_2)
   - : Discusses the changes needed to update existing themes to work in Firefox 2.
 - Textbox Improvements (Firefox 2.0.0.1 and higher only)
-  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ({{Bug(312867)}}). Supports an `editor` property to get the internal `nsIEditor` for the text field ({{Bug(312867)}}).
+  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ([Webkit bug 312867](https://bugzil.la/312867)). Supports an `editor` property to get the internal `nsIEditor` for the text field ([Webkit bug 312867](https://bugzil.la/312867)).
 
 ## New features for end users
 

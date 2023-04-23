@@ -1,5 +1,6 @@
 ---
-title: InputEvent.isComposing
+title: "InputEvent: isComposing property"
+short-title: isComposing
 slug: Web/API/InputEvent/isComposing
 page-type: web-api-instance-property
 browser-compat: api.InputEvent.isComposing
@@ -18,7 +19,7 @@ A boolean.
 ## Examples
 
 ```js
-const inputEvent = new InputEvent('syntheticInput', false);
+const inputEvent = new InputEvent("syntheticInput", false);
 console.log(inputEvent.isComposing); // return false
 ```
 

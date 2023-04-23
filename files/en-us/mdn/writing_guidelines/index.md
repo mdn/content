@@ -2,9 +2,6 @@
 title: Writing guidelines
 slug: MDN/Writing_guidelines
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

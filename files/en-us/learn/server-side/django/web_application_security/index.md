@@ -1,17 +1,6 @@
 ---
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Python
-  - Security
-  - Server-side programming
-  - Web security
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

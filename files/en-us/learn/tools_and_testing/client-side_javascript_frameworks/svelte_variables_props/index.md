@@ -1,16 +1,7 @@
 ---
-title: 'Dynamic behavior in Svelte: working with variables and props'
+title: "Dynamic behavior in Svelte: working with variables and props"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - Variables
-  - client-side
-  - props
 ---
 
 {{LearnSidebar}}

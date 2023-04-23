@@ -2,13 +2,6 @@
 title: cross-fade()
 slug: Web/CSS/cross-fade
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
 browser-compat: css.types.image.cross-fade
 ---
 

@@ -6,7 +6,7 @@ page-type: guide
 
 {{APIRef("HTML DOM")}}
 
-A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/EventLoop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
+A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Event_loop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
 
 This event loop may be either the browser's main event loop or the event loop driving a [web worker](/en-US/docs/Web/API/Web_Workers_API). This lets the given function run without the risk of interfering with another script's execution, yet also ensures that the microtask runs before the user agent has the opportunity to react to actions taken by the microtask.
 
@@ -78,11 +78,13 @@ customElement.prototype.getData = (url) => {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -126,11 +128,13 @@ customElement.prototype.getData = (url) => {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -183,7 +187,7 @@ In this simple example, we see that enqueueing a microtask causes the microtask'
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -191,7 +195,7 @@ In the following code, we see a call to {{domxref("queueMicrotask()")}} used to 
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -212,7 +216,7 @@ In this example, a timeout is scheduled to fire after zero milliseconds (or "as 
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -248,7 +252,7 @@ This example expands slightly on the previous one by adding a function that does
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = (s) => logElem.innerHTML += `${s}<br>`;
+let log = (s) => (logElem.innerHTML += `${s}<br>`);
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
@@ -263,7 +267,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;

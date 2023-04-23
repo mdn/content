@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver.supportedEntryTypes
+title: "PerformanceObserver: supportedEntryTypes static property"
+short-title: supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes
 page-type: web-api-static-property
 browser-compat: api.PerformanceObserver.supportedEntryTypes
@@ -22,7 +23,7 @@ An array of {{domxref("PerformanceEntry.entryType")}} values.
 To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a browser supports, enter <kbd>PerformanceObserver.supportedEntryTypes</kbd> into the console. This will return an array of supported values.
 
 ```js
-PerformanceObserver.supportedEntryTypes
+PerformanceObserver.supportedEntryTypes;
 
 // returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "longtask", "mark", "measure", "navigation", "paint", "resource"] in Chrome 89
 ```

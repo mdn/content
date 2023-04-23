@@ -1,5 +1,5 @@
 ---
-title: 'In depth: Microtasks and the JavaScript runtime environment'
+title: "In depth: Microtasks and the JavaScript runtime environment"
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 page-type: guide
 ---
@@ -30,8 +30,8 @@ Each context is, in essence, a level of scope within your code. As one of these 
 let outputElem = document.getElementById("output");
 
 let userLanguages = {
-  "Mike": "en",
-  "Teresa": "es"
+  Mike: "en",
+  Teresa: "es",
 };
 
 function greetUser(user) {
@@ -39,7 +39,7 @@ function greetUser(user) {
     let greeting;
     let language = userLanguages[user];
 
-    switch(language) {
+    switch (language) {
       case "es":
         greeting = `¡Hola, ${user}!`;
         break;

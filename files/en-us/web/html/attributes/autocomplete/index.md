@@ -1,23 +1,7 @@
 ---
-title: 'HTML attribute: autocomplete'
+title: "HTML attribute: autocomplete"
 slug: Web/HTML/Attributes/autocomplete
 page-type: html-attribute
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
 browser-compat: html.global_attributes.autocomplete
 ---
 
@@ -29,9 +13,9 @@ It is available on {{HTMLElement("input")}} elements that take a text or numeric
 
 The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, then browsers use the `autocomplete` attribute of the element's form owner, which is either the {{HTMLElement("form")}} element that the element is a descendant of, or the `<form>` whose `id` is specified by the {{htmlattrxref("form", "input")}} attribute of the element.
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, then browsers use the `autocomplete` attribute of the element's form owner, which is either the {{HTMLElement("form")}} element that the element is a descendant of, or the `<form>` whose `id` is specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element.
 
-For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 > **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
@@ -154,13 +138,13 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`impp`"
   - : A URL for an instant messaging protocol endpoint, such as "xmpp:username\@example.net".
 - "`url`"
-  - : A URL, such as a home page or company web site address as appropriate given the context of the other fields in the form.
+  - : A URL, such as a home page or company website address as appropriate given the context of the other fields in the form.
 - "`photo`"
   - : The URL of an image representing the person, company, or contact information given in the other fields in the form.
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
 
-> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See {{bug(654072)}}.
+> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See [Firefox bug 654072](https://bugzil.la/654072).
 
 ## Examples
 

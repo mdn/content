@@ -2,12 +2,6 @@
 title: border-image
 slug: Web/CSS/border-image
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-image
 ---
 

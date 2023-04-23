@@ -1,9 +1,6 @@
 ---
 title: Animation performance and frame rate
 slug: Web/Performance/Animation_performance_and_frame_rate
-tags:
-  - CSS animation
-  - Web Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

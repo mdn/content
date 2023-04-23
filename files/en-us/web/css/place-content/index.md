@@ -2,13 +2,6 @@
 title: place-content
 slug: Web/CSS/place-content
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - place-content
-  - recipe:css-shorthand-property
 browser-compat: css.properties.place-content
 ---
 

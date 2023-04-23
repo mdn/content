@@ -2,14 +2,8 @@
 title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
 page-type: css-pseudo-element
-tags:
-  - "-webkit-meter-bar"
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
-  - WebKit
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-meter-bar
 ---
 

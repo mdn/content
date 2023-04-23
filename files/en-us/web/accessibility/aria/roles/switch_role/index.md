@@ -1,15 +1,7 @@
 ---
 title: "ARIA: switch role"
 slug: Web/Accessibility/ARIA/Roles/switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - On/Off
-  - Reference
-  - Switch
-  - a11y
-  - toggle
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch

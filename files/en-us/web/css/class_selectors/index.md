@@ -2,17 +2,12 @@
 title: Class selectors
 slug: Web/CSS/Class_selectors
 page-type: css-selector
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.class
 ---
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.
+The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute.
 
 ```css
 /* All elements with class="spacious" */

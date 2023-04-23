@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.appendWindowEnd
+title: "SourceBuffer: appendWindowEnd property"
+short-title: appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.appendWindowEnd

@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.state
+title: "RTCIceTransport: state property"
+short-title: state
 slug: Web/API/RTCIceTransport/state
 page-type: web-api-instance-property
 browser-compat: api.RTCIceTransport.state

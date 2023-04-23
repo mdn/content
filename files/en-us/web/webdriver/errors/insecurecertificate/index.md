@@ -1,11 +1,6 @@
 ---
 title: Insecure certificate
 slug: Web/WebDriver/Errors/InsecureCertificate
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - insecure certificate
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

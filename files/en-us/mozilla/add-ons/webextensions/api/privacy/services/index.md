@@ -2,14 +2,6 @@
 title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - Services
 browser-compat: webextensions.api.privacy.services
 ---
 

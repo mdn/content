@@ -2,11 +2,6 @@
 title: Universal selectors
 slug: Web/CSS/Universal_selectors
 page-type: css-selector
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.universal
 ---
 

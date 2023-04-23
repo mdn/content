@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN
+title: "MouseEvent: WEBKIT_FORCE_AT_MOUSE_DOWN static property"
+short-title: WEBKIT_FORCE_AT_MOUSE_DOWN
 slug: Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
 page-type: web-api-static-property
 status:

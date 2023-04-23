@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.hashChange
+title: "NavigateEvent: hashChange property"
+short-title: hashChange
 slug: Web/API/NavigateEvent/hashChange
 page-type: web-api-instance-property
 status:
@@ -38,7 +39,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```

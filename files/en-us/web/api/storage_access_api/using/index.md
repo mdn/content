@@ -16,7 +16,7 @@ The Storage Access API is designed to allow embedded content to request access t
 
 In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user's cookies under a storage access policy that blocks third-party cookies.
 
-First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
+First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
 <iframe
@@ -32,7 +32,7 @@ Now on to the code executed inside the embedded document. Since it does not know
 ```js
 function doThingsWithFirstPartyStorageAccess() {
   // Let's access some items from the first-party cookie jar
-  document.cookie = "foo=bar";              // set a cookie
+  document.cookie = "foo=bar"; // set a cookie
   localStorage.setItem("username", "John"); // access a localStorage entry
 }
 
@@ -47,23 +47,26 @@ if (document.hasStorageAccess == null) {
     } else {
       // As we don't have access, we need to request it. This request has to happen within
       // an event handler for a user interaction (e.g., clicking)
-      btn.addEventListener('click', () => {
-        document.requestStorageAccess().then(() => {
-          doThingsWithFirstPartyStorageAccess();
-        }).catch((err) => {
-          // If there is an error obtaining storage access.
-          console.error('Error obtaining storage access', err);
-        })
-      })
+      btn.addEventListener("click", () => {
+        document
+          .requestStorageAccess()
+          .then(() => {
+            doThingsWithFirstPartyStorageAccess();
+          })
+          .catch((err) => {
+            // If there is an error obtaining storage access.
+            console.error("Error obtaining storage access", err);
+          });
+      });
     }
-  })
+  });
 }
 ```
 
 Note that access requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click — so this code needs to be run inside some kind of user gesture-based event handler, for example:
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   // run code here
 });
 ```

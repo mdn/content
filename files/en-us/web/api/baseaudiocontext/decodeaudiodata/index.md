@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.decodeAudioData()
+title: "BaseAudioContext: decodeAudioData() method"
+short-title: decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.decodeAudioData

@@ -2,13 +2,8 @@
 title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-color-swatch
 ---
 

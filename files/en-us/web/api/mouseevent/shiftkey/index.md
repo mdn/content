@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.shiftKey
+title: "MouseEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/MouseEvent/shiftKey
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.shiftKey
@@ -27,8 +28,8 @@ This example logs the `shiftKey` property when you trigger a {{domxref("Element/
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The shift key is pressed: ${e.shiftKey}`;

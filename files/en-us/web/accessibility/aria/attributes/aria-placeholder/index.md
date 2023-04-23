@@ -1,13 +1,7 @@
 ---
-title: "aria-placeholder"
+title: aria-placeholder
 slug: Web/Accessibility/ARIA/Attributes/aria-placeholder
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-placeholder
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-placeholder
 ---
 

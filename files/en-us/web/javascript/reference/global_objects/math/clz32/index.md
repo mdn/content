@@ -2,13 +2,6 @@
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.clz32
 ---
 
@@ -48,15 +41,27 @@ This function is particularly useful for systems that compile to JS, like [Emscr
 ### Using Math.clz32()
 
 ```js
-Math.clz32(1);           // 31
-Math.clz32(1000);        // 22
-Math.clz32();            // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 
-const stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
-stuff.every((n) => Math.clz32(n) === 32);  // true
+const stuff = [
+  NaN,
+  Infinity,
+  -Infinity,
+  0,
+  -0,
+  false,
+  null,
+  undefined,
+  "foo",
+  {},
+  [],
+];
+stuff.every((n) => Math.clz32(n) === 32); // true
 
-Math.clz32(true);        // 31
-Math.clz32(3.5);         // 30
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ### Implementing Count Leading Ones and beyond
@@ -66,11 +71,11 @@ At present, there is no `Math.clon` for "Count Leading Ones" (named "clon", not 
 Consider the following 32-bit word:
 
 ```js
-const a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
-Math.clz32(a);   // 16
+const a = 32776; // 00000000000000001000000000001000 (16 leading zeros)
+Math.clz32(a); // 16
 
-const b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
-Math.clz32(b);   // 0 (this is equal to how many leading one's there are in a)
+const b = ~32776; // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
+Math.clz32(b); // 0 (this is equal to how many leading one's there are in a)
 ```
 
 Using this logic, a `clon` function can be created as follows:
@@ -121,7 +126,7 @@ const countTrailsMethods = (function (stdlib, foreign, heap) {
     }
     // Note: asm.js doesn't have compound assignment operators such as &=
     integer = integer & -integer; // equivalent to `int = int & (~int + 1)`
-    return 31 - clz(integer) | 0;
+    return (31 - clz(integer)) | 0;
   }
 
   // count trailing ones

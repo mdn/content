@@ -2,14 +2,6 @@
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
 page-type: css-property
-tags:
-  - CSS
-  - CSS Text Decoration
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-decoration-thickness
 browser-compat: css.properties.text-decoration-thickness
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: Componentizing our Svelte app
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - client-side
-  - conditional rendering
-  - passing data
 ---
 
 {{LearnSidebar}}

@@ -1,18 +1,7 @@
 ---
-title: '<cite>: The Citation element'
+title: "<cite>: The Citation element"
 slug: Web/HTML/Element/cite
 page-type: html-element
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
 browser-compat: html.elements.cite
 ---
 
@@ -49,7 +38,7 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - An exhibition
 - A legal case report
 - A computer program
-- A web site
+- A website
 - A web page
 - A blog post or comment
 - A forum post or comment
@@ -58,17 +47,17 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - A written or oral statement
 - And so forth.
 
-To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.
+To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute on the element.
 
 Typically, browsers style the contents of a `<cite>` element in italics by default. To avoid this, apply the CSS {{cssxref("font-style")}} property to the `<cite>` element.
 
-## Example
+## Examples
 
 ```html
 <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
 ```
 
-The HTML above outputs:
+### Result
 
 {{EmbedLiveSample("Example", 640, 80)}}
 
@@ -78,15 +67,15 @@ The HTML above outputs:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -94,7 +83,7 @@ The HTML above outputs:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -107,7 +96,7 @@ The HTML above outputs:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -146,4 +135,4 @@ The HTML above outputs:
 ## See also
 
 - The element {{HTMLElement("blockquote")}} for long quotations.
-- The element {{HTMLElement("q")}} for inline quotations and the [`cite`](/en-US/docs/Web/HTML/Element/q#attr-cite) attribute.
+- The element {{HTMLElement("q")}} for inline quotations and the [`cite`](/en-US/docs/Web/HTML/Element/q#cite) attribute.

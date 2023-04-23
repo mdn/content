@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.readyState
+title: "XMLHttpRequest: readyState property"
+short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.readyState
@@ -27,8 +28,6 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
   - : Response's body is being received. If [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text" or empty string, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) will have the partial text response as it loads.
 - DONE
   - : The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
-
-> **Note:** The state names are different in versions of Internet Explorer earlier than 11. Instead of `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) are used.
 
 ## Example
 

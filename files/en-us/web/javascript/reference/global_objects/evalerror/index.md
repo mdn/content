@@ -2,12 +2,6 @@
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 page-type: javascript-class
-tags:
-  - Class
-  - EvalError
-  - JavaScript
-  - Object
-  - Reference
 browser-compat: javascript.builtins.EvalError
 ---
 
@@ -30,12 +24,16 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `EvalError.prototype` and shared by all `EvalError` instances.
 
+- {{jsxref("Object/constructor", "EvalError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `EvalError` instances, the initial value is the {{jsxref("EvalError/EvalError", "EvalError")}} constructor.
 - {{jsxref("Error/name", "EvalError.prototype.name")}}
   - : Represents the name for the type of error. For `EvalError.prototype.name`, the initial value is `"EvalError"`.
 
 ## Instance methods
 
 _Inherits instance methods from its parent {{jsxref("Error")}}_.
+
+## Examples
 
 ### Creating an EvalError
 

@@ -1,5 +1,6 @@
 ---
-title: OES_texture_half_float_linear
+title: OES_texture_half_float_linear extension
+short-title: OES_texture_half_float_linear
 slug: Web/API/OES_texture_half_float_linear
 page-type: webgl-extension
 browser-compat: api.OES_texture_half_float_linear
@@ -22,14 +23,21 @@ With the help of this extension, you can now set the magnification or minificati
 ## Examples
 
 ```js
-const halfFloat = gl.getExtension('OES_texture_half_float');
-gl.getExtension('OES_texture_half_float_linear');
+const halfFloat = gl.getExtension("OES_texture_half_float");
+gl.getExtension("OES_texture_half_float_linear");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, halfFloat.HALF_FLOAT_OES, image);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  gl.RGBA,
+  gl.RGBA,
+  halfFloat.HALF_FLOAT_OES,
+  image
+);
 ```
 
 ## Specifications

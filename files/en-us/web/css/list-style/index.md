@@ -2,12 +2,6 @@
 title: list-style
 slug: Web/CSS/list-style
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.list-style
 ---
 
@@ -71,7 +65,7 @@ The `list-style` property is specified as one, two, or three keywords in any ord
 
 ## Accessibility concerns
 
-In a notable exception, Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style` value of `none`. This [behavior is intentional](https://bugs.webkit.org/show_bug.cgi?id=170179#c1) and not considered a bug.
+In a notable exception, Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style` value of `none`. This [behavior is intentional](https://webkit.org/b/170179#c1) and not considered a bug.
 
 The most straightforward way to address this is to add an explicit `role="list"` to the `<ol>` or `<ul>` element in the markup. This will restore the list semantics without affecting the design:
 
@@ -130,7 +124,7 @@ nav ul {
 
 These CSS workarounds should be used only when the HTML solution is not available, and only after testing to ensure that they don't result in unexpected behaviors that may negatively impact users' experiences.
 
-- [Bug #170179 | WebKit Bugzilla](https://bugs.webkit.org/show_bug.cgi?id=170179)
+- [Bug #170179 | WebKit Bugzilla](https://webkit.org/b/170179)
 - ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
 - [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)

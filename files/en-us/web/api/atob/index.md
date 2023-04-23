@@ -1,5 +1,6 @@
 ---
-title: atob()
+title: atob() global function
+short-title: atob()
 slug: Web/API/atob
 page-type: web-api-global-function
 browser-compat: api.atob

@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.keyCode
+title: "KeyboardEvent: keyCode property"
+short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 page-type: web-api-instance-property
 status:
@@ -20,25 +21,29 @@ You should avoid using this if possible; it's been deprecated for some time. Ins
 ## Examples
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Should do nothing if the default action has been cancelled
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Should do nothing if the default action has been cancelled
+    }
 
-  let handled = false;
-  if (event.key !== undefined) {
-    // Handle the event with KeyboardEvent.key
-    handled = true;
-  } else if (event.keyCode !== undefined) {
-    // Handle the event with KeyboardEvent.keyCode
-    handled = true;
-  }
+    let handled = false;
+    if (event.key !== undefined) {
+      // Handle the event with KeyboardEvent.key
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // Handle the event with KeyboardEvent.keyCode
+      handled = true;
+    }
 
-  if (handled) {
-    // Suppress "double action" if event handled
-    event.preventDefault();
-  }
-}, true);
+    if (handled) {
+      // Suppress "double action" if event handled
+      event.preventDefault();
+    }
+  },
+  true
+);
 ```
 
 ## Specifications
@@ -2306,7 +2311,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        {{bug(969247)}}.)
+        [Firefox bug 969247](https://bugzil.la/969247).)
       </td>
     </tr>
     <tr>

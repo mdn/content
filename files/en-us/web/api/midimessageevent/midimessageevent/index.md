@@ -1,5 +1,6 @@
 ---
-title: MIDIMessageEvent()
+title: "MIDIMessageEvent: MIDIMessageEvent() constructor"
+short-title: MIDIMessageEvent()
 slug: Web/API/MIDIMessageEvent/MIDIMessageEvent
 page-type: web-api-constructor
 browser-compat: api.MIDIMessageEvent.MIDIMessageEvent

@@ -2,14 +2,6 @@
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 ---
 
@@ -21,8 +13,6 @@ options computed during the construction of the current {{jsxref("Intl.ListForma
 object.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

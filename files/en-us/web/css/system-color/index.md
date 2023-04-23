@@ -2,9 +2,6 @@
 title: <system-color>
 slug: Web/CSS/system-color
 page-type: css-type
-tags:
-  - Reference
-  - color
 browser-compat: css.types.color.system-color
 ---
 

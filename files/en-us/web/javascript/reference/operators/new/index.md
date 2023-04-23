@@ -2,12 +2,6 @@
 title: new operator
 slug: Web/JavaScript/Reference/Operators/new
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Left-hand-side expressions
-  - Operator
-  - Reference
 browser-compat: javascript.operators.new
 ---
 

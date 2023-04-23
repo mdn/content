@@ -2,13 +2,6 @@
 title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-of-type
 ---
 

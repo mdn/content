@@ -1,19 +1,7 @@
 ---
-title: '<template>: The Content Template element'
+title: "<template>: The Content Template element"
 slug: Web/HTML/Element/template
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Template
-  - Web
-  - Web Components
 browser-compat: html.elements.template
 ---
 
@@ -151,22 +139,22 @@ container.appendChild(secondClone);
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          href="/en-US/docs/Web/HTML/Content_categories#script-supporting_elements"
           >script-supporting element</a
         >
       </td>
@@ -183,18 +171,18 @@ container.appendChild(secondClone);
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >metadata content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          href="/en-US/docs/Web/HTML/Content_categories#script-supporting_elements"
           >script-supporting elements</a
         >. Also allowed as a child of a {{HTMLElement("colgroup")}}
         element that does <em>not</em> have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
+        <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>
@@ -226,5 +214,5 @@ container.appendChild(secondClone);
 
 ## See also
 
-- Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-- [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+- Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)}})
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)

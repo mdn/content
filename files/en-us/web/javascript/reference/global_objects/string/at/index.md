@@ -2,14 +2,6 @@
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
-tags:
-  - String
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
 browser-compat: javascript.builtins.String.at
 ---
 

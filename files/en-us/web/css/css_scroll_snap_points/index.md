@@ -2,12 +2,6 @@
 title: CSS Scroll Snap Points
 slug: Web/CSS/CSS_Scroll_Snap_Points
 page-type: css-module
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ---
 

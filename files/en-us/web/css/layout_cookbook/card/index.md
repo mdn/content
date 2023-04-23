@@ -2,13 +2,6 @@
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
 page-type: guide
-tags:
-  - CSS
-  - CSS Cookbook
-  - CSS Grid
-  - Guide
-  - card
-  - CSS layout
 browser-compat:
   - css.properties.grid-template-columns
   - css.properties.grid-template-rows

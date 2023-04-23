@@ -2,14 +2,6 @@
 title: will-change
 slug: Web/CSS/will-change
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Will-change
-  - Performance
-  - Reference
-  - Transitions
-  - recipe:css-property
 browser-compat: css.properties.will-change
 ---
 

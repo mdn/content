@@ -1,19 +1,6 @@
 ---
 title: A first splash into JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Functions
-  - JavaScript
-  - Learn
-  - Objects
-  - Operators
-  - Variables
-  - events
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
@@ -170,7 +157,7 @@ Functions are reusable blocks of code that you can write once and run again and 
 
 When we want to run the code, we type the name of the function followed by the parentheses.
 
-Let's try that now. Save your code and refresh the page in your browser. Then go into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and enter the following line:
+Let's try that now. Save your code and refresh the page in your browser. Then go into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), and enter the following line:
 
 ```js
 checkGuess();
@@ -184,7 +171,7 @@ After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come 
 
 JavaScript operators allow us to perform tests, do math, join strings together, and other such things.
 
-If you haven't already done so, save your code, refresh the page in your browser, and open the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools). Then we can try typing in the examples shown below — type in each one from the "Example" columns exactly as shown, pressing <kbd>Return</kbd>/<kbd>Enter</kbd> after each one, and see what results they return.
+If you haven't already done so, save your code, refresh the page in your browser, and open the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Then we can try typing in the examples shown below — type in each one from the "Example" columns exactly as shown, pressing <kbd>Return</kbd>/<kbd>Enter</kbd> after each one, and see what results they return.
 
 First let's look at arithmetic operators, for example:
 
@@ -411,7 +398,7 @@ All we have left to do now in this article is to talk about a few other importan
 
 One part of the above code that we need to take a more detailed look at is the [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop. Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.
 
-To start with, go to your [browser developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) again, and enter the following:
+To start with, go to your [browser developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) again, and enter the following:
 
 ```js
 const fruits = ['apples', 'bananas', 'cherries'];
@@ -478,7 +465,7 @@ Variables that don't contain references to form elements won't have `focus()` av
 Let's play with some browser objects a bit.
 
 1. First of all, open up your program in a browser.
-2. Next, open your [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
+2. Next, open your [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
 3. Type `guessField` into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
 4. Now type in the following:
 
@@ -519,15 +506,3 @@ Let's play with some browser objects a bit.
 So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -1,15 +1,6 @@
 ---
 title: Game monetization
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - Games
-  - HTML
-  - JavaScript
-  - Monetization
-  - advertisements
-  - branding
-  - iap
-  - licensing
 ---
 
 {{GamesSidebar}}

@@ -2,14 +2,6 @@
 title: Replaced elements
 slug: Web/CSS/Replaced_element
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - CSS layout
-  - rendering
-  - replaced element
 ---
 
 {{CSSRef}}
@@ -65,7 +57,7 @@ Certain CSS properties can be used to specify how the object contained within th
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

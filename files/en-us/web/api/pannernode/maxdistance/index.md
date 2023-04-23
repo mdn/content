@@ -1,5 +1,6 @@
 ---
-title: PannerNode.maxDistance
+title: "PannerNode: maxDistance property"
+short-title: maxDistance
 slug: Web/API/PannerNode/maxDistance
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.maxDistance
@@ -22,7 +23,7 @@ A double. The default is `10000`, and non-positive values are not allowed.
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

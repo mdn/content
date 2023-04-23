@@ -1,5 +1,6 @@
 ---
-title: SerialPort.setSignals()
+title: "SerialPort: setSignals() method"
+short-title: setSignals()
 slug: Web/API/SerialPort/setSignals
 page-type: web-api-instance-method
 status:

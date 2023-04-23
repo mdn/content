@@ -1,14 +1,9 @@
 ---
-title: '<nobr>: The Non-Breaking Text element'
+title: "<nobr>: The Non-Breaking Text element"
 slug: Web/HTML/Element/nobr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
-  - nobr
+status:
+  - deprecated
 browser-compat: html.elements.nobr
 ---
 

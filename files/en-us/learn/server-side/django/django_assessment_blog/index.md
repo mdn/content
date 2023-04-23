@@ -1,15 +1,6 @@
 ---
-title: 'Assessment: DIY Django mini blog'
+title: "Assessment: DIY Django mini blog"
 slug: Learn/Server-side/Django/django_assessment_blog
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Server-side programming
-  - blog
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

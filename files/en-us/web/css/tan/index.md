@@ -2,14 +2,6 @@
 title: tan()
 slug: Web/CSS/tan
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - tan
 browser-compat: css.types.tan
 ---
 

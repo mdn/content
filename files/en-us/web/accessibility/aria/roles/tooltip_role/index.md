@@ -1,14 +1,7 @@
 ---
 title: "ARIA: tooltip role"
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
-  - Tooltip role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tooltip
   - https://w3c.github.io/aria-practices/#tooltip
@@ -34,7 +27,9 @@ The tooltip is not considered a popup in terms of the [`aria-haspopup`](/en-US/d
 
 Though a tooltip may appear and disappear, as its appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported.
 
-The accessible name of a tooltip can come from the contents, or from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+The accessible name of a tooltip can come from the contents. While, in theory, they could come from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), in most cases, using ARIA properties to provide a tooltip with an accessible name is not recommended.
+
+Tooltips provide additional information, generally with no direct interaction on the tooltip itself. They are generally associated with the content they're defining via an [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) with the `id` of the primary element. Therefore, if the tooltip has an accessible name explicitly set, that name is exposed as the primary element's description rather than the contents of the tooltip, meaning the tooltip contents may never be discovered by a screen reader user.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -103,6 +98,8 @@ The above hides the tooltip with CSS in the default state or if the hidetooltip 
 ## Accessibility Concerns
 
 If the information is important enough for a tooltip, isn't it important enough to always be visible?
+
+As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content made visible should be persistent, meaning it should not disappear without user action. Tooltips fail this criterion.
 
 ## Best Practices
 

@@ -2,14 +2,16 @@
 title: CSS Custom Highlight API
 slug: Web/API/CSS_Custom_Highlight_API
 page-type: web-api-overview
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
+status:
+  - experimental
 browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
+spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
 ---
 
-{{DefaultAPISidebar("CSS Custom Highlight API")}}
+{{DefaultAPISidebar("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
 The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
 
@@ -99,7 +101,7 @@ The final step is to style the registered highlights. This is done by using the 
 
 ## Interfaces
 
-- {{domxref("Highlight")}}
+- {{domxref("Highlight")}} {{Experimental_Inline}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
   - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.

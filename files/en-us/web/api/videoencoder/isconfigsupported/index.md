@@ -1,20 +1,19 @@
 ---
-title: VideoEncoder.isConfigSupported()
+title: "VideoEncoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/VideoEncoder/isConfigSupported
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.VideoEncoder.isConfigSupported
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config).
 
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+VideoEncoder.isConfigSupported(config)
 ```
 
 ### Parameters
@@ -42,8 +41,8 @@ The following example tests if the browser supports accelerated and un-accelerat
 versions of several video codecs.
 
 ```js
-const codecs = ['avc1.42001E', 'vp8', 'vp09.00.10.08', 'av01.0.04M.08'];
-const accelerations = ['prefer-hardware', 'prefer-software']
+const codecs = ["avc1.42001E", "vp8", "vp09.00.10.08", "av01.0.04M.08"];
+const accelerations = ["prefer-hardware", "prefer-software"];
 
 const configs = [];
 for (const codec of codecs) {
@@ -54,16 +53,20 @@ for (const codec of codecs) {
       width: 1280,
       height: 720,
       bitrate: 2_000_000,
-      bitrateMode: 'constant',
+      bitrateMode: "constant",
       framerate: 30,
-      not_supported_field: 123
+      not_supported_field: 123,
     });
   }
 }
 
 for (const config of configs) {
   const support = await VideoEncoder.isConfigSupported(config);
-  console.log(`VideoEncoder's config ${JSON.stringify(support.config)} support: ${support.supported}`);
+  console.log(
+    `VideoEncoder's config ${JSON.stringify(support.config)} support: ${
+      support.supported
+    }`
+  );
 }
 ```
 

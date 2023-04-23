@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.reset()
+title: "ImageDecoder: reset() method"
+short-title: reset()
 slug: Web/API/ImageDecoder/reset
 page-type: web-api-instance-method
 status:
@@ -31,9 +32,9 @@ The following example resets the `ImageDecoder`.
 
 ```js
 for (let i = 0; i < imageDecoder.tracks.selectedTrack.frameCount; ++i)
-  imageDecoder.decode({frameIndex: i}).catch(console.log);
+  imageDecoder.decode({ frameIndex: i }).catch(console.log);
 imageDecoder.reset();
-imageDecoder.decode({frameIndex: 0}).then(console.log);
+imageDecoder.decode({ frameIndex: 0 }).then(console.log);
 ```
 
 ## Specifications

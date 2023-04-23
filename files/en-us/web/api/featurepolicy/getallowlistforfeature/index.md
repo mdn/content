@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.getAllowlistForFeature()
+title: "FeaturePolicy: getAllowlistForFeature() method"
+short-title: getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
 status:
@@ -42,13 +43,13 @@ Permissions Policy. Please note that Camera API might also be restricted by the 
 
 ```js
 // First, get the FeaturePolicy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Query for specific feature
-const allowlist = featurePolicy.getAllowlistForFeature("camera")
+const allowlist = featurePolicy.getAllowlistForFeature("camera");
 
 for (const origin of allowlist) {
-  console.log(origin)
+  console.log(origin);
 }
 ```
 

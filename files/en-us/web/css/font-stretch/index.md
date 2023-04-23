@@ -2,12 +2,6 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-stretch
 ---
 

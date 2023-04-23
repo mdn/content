@@ -2,13 +2,6 @@
 title: margin-block
 slug: Web/CSS/margin-block
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-block
-  - recipe:css-shorthand-property
 browser-compat: css.properties.margin-block
 ---
 

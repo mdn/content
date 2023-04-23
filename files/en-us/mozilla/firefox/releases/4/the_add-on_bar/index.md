@@ -1,13 +1,6 @@
 ---
 title: The add-on bar
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 4
-  - Guide
-  - NeedsExample
-  - Toolbar
 ---
 
 {{FirefoxSidebar}}

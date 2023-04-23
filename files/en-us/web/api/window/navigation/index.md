@@ -1,5 +1,6 @@
 ---
-title: Window.navigation
+title: "Window: navigation property"
+short-title: navigation
 slug: Web/API/Window/navigation
 page-type: web-api-instance-property
 status:

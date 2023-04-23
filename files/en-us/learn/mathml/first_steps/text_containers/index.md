@@ -1,10 +1,6 @@
 ---
 title: MathML Text Containers
 slug: Learn/MathML/First_steps/Text_containers
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}

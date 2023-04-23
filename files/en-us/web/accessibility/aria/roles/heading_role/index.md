@@ -1,12 +1,7 @@
 ---
 title: "ARIA: heading role"
 slug: Web/Accessibility/ARIA/Roles/heading_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA heading
-  - document structure role
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#heading
   - https://w3c.github.io/aria-practices/#heading
@@ -22,7 +17,7 @@ The heading role indicates to assistive technologies that this element should be
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
+This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement("Heading_Elements", "h1")}} (thru {{HTMLElement("Heading_Elements", "h6")}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
@@ -44,7 +39,7 @@ This role does not require any special keyboard navigation. As with any heading,
 - Changing attribute values
   - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need `aria-level` attributes whose values are consistent with the rest of the document structure.
 
-> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement('h1')}} through {{HTMLElement('h6')}} elements instead to indicate that this text is a heading, and what part of the structure it represents.
+> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
 ## Examples
 
@@ -86,18 +81,18 @@ If you must use the `heading` role and [`aria-level`](/en-US/docs/Web/Accessibil
 
 ## Best practices
 
-The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement('h1')}} through {{HTMLElement('h6')}} as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
+The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
 
 Instead of using the ARIA `heading` role, use the semantic HTML element:
 
-| HTML Element          | `heading` role                        |
-| --------------------- | ------------------------------------- |
-| {{HTMLElement('h1')}} | `<div role="heading" aria-level="1">` |
-| {{HTMLElement('h2')}} | `<div role="heading" aria-level="2">` |
-| {{HTMLElement('h3')}} | `<div role="heading" aria-level="3">` |
-| {{HTMLElement('h4')}} | `<div role="heading" aria-level="4">` |
-| {{HTMLElement('h5')}} | `<div role="heading" aria-level="5">` |
-| {{HTMLElement('h6')}} | `<div role="heading" aria-level="6">` |
+| HTML Element                              | `heading` role                        |
+| ----------------------------------------- | ------------------------------------- |
+| {{HTMLElement("Heading_Elements", "h1")}} | `<div role="heading" aria-level="1">` |
+| {{HTMLElement("Heading_Elements", "h2")}} | `<div role="heading" aria-level="2">` |
+| {{HTMLElement("Heading_Elements", "h3")}} | `<div role="heading" aria-level="3">` |
+| {{HTMLElement("Heading_Elements", "h4")}} | `<div role="heading" aria-level="4">` |
+| {{HTMLElement("Heading_Elements", "h5")}} | `<div role="heading" aria-level="5">` |
+| {{HTMLElement("Heading_Elements", "h6")}} | `<div role="heading" aria-level="6">` |
 
 ### Added benefits
 

@@ -1,15 +1,6 @@
 ---
 title: Legacy layout methods
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - Beginner
-  - CSS
-  - Floats
-  - Guide
-  - Layout
-  - Learn
-  - grid system
-  - legacy
 ---
 
 {{LearnSidebar}}
@@ -101,7 +92,7 @@ body {
 }
 ```
 
-The body will be 90% of the viewport wide until it gets to 900px wide, in which case it will stay fixed at this width and center itself in the viewport. By default, its children (the {{htmlelement("h1")}} and the two {{htmlelement("div")}}s) will span 100% of the width of the body. If we want the two {{htmlelement("div")}}s to be floated alongside one another, we need to set their widths to total 100% of the width of their parent element or smaller so they can fit alongside one another. Add the following to the bottom of your CSS:
+The body will be 90% of the viewport wide until it gets to 900px wide, in which case it will stay fixed at this width and center itself in the viewport. By default, its children (the {{htmlelement("Heading_Elements", "h1")}} and the two {{htmlelement("div")}}s) will span 100% of the width of the body. If we want the two {{htmlelement("div")}}s to be floated alongside one another, we need to set their widths to total 100% of the width of their parent element or smaller so they can fit alongside one another. Add the following to the bottom of your CSS:
 
 ```css
 div:nth-of-type(1) {
@@ -581,7 +572,7 @@ Next, give the containers on the second row classes explaining the number of col
 
 Try saving your HTML file and loading it in your browser to see the effect.
 
-> **Note:** If you are having trouble getting this example to work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
+> **Note:** If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
 
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
