@@ -22342,10 +22342,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/CSS/RegisterProperty": {
-    "modified": "2020-10-15T22:23:15.780Z",
-    "contributors": ["Wind1808", "harrylewis", "chrisdavidmills", "estelle"]
-  },
   "Web/API/CSS/escape": {
     "modified": "2020-10-15T21:26:49.626Z",
     "contributors": [
@@ -22369,6 +22365,10 @@
   "Web/API/CSS/paintWorklet": {
     "modified": "2020-10-15T22:14:39.186Z",
     "contributors": ["ExE-Boss", "estelle", "jpmedley", "Sheppy"]
+  },
+  "Web/API/CSS/registerProperty": {
+    "modified": "2020-10-15T22:23:15.780Z",
+    "contributors": ["Wind1808", "harrylewis", "chrisdavidmills", "estelle"]
   },
   "Web/API/CSS/supports": {
     "modified": "2020-10-15T21:21:12.267Z",
