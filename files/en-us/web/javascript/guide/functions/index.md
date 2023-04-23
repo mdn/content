@@ -378,8 +378,8 @@ function outside(x) {
 }
 
 const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
-console.log(fnInside(5));    // 8
-console.log(outside(3)(5));  // 8
+console.log(fnInside(5)); // 8
+console.log(outside(3)(5)); // 8
 ```
 
 ### Preservation of variables
