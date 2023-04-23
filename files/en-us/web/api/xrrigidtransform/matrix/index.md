@@ -1,5 +1,6 @@
 ---
-title: XRRigidTransform.matrix
+title: "XRRigidTransform: matrix property"
+short-title: matrix
 slug: Web/API/XRRigidTransform/matrix
 page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.matrix

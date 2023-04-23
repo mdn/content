@@ -1,5 +1,6 @@
 ---
-title: Notification.dir
+title: "Notification: dir property"
+short-title: dir
 slug: Web/API/Notification/dir
 page-type: web-api-instance-property
 browser-compat: api.Notification.dir

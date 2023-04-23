@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.format
+title: "VideoFrame: format property"
+short-title: format
 slug: Web/API/VideoFrame/format
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.format

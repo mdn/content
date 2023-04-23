@@ -1,6 +1,7 @@
 ---
 title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
+page-type: guide
 ---
 
 {{HTTPSidebar}}

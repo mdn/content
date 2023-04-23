@@ -1,5 +1,6 @@
 ---
-title: StaticRange.endContainer
+title: "StaticRange: endContainer property"
+short-title: endContainer
 slug: Web/API/StaticRange/endContainer
 page-type: web-api-instance-property
 browser-compat: api.StaticRange.endContainer

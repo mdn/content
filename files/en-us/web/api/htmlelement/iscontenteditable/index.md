@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.isContentEditable
+title: "HTMLElement: isContentEditable property"
+short-title: isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.isContentEditable
@@ -55,4 +56,4 @@ infoText2.textContent += " " + secondParagraph.isContentEditable;
 ## See also
 
 - {{domxref("HTMLElement/contentEditable")}}
-- The {{htmlattrxref("contenteditable")}} global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) global attribute.

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePair.local
+title: "RTCIceCandidatePair: local property"
+short-title: local
 slug: Web/API/RTCIceCandidatePair/local
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePair.local

@@ -232,11 +232,11 @@ Interactive content is a subset of flow content that includes elements that are 
 
 Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present
-- {{HTMLElement("img")}}, if the {{htmlattrxref("usemap", "img")}} attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
-- {{HTMLElement("object")}}, if the {{htmlattrxref("usemap", "object")}} attribute is present
-- {{HTMLElement("video")}}, if the {{htmlattrxref("controls", "video")}} attribute is present
+- {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) attribute is present
+- {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) attribute is present
 
 ### Palpable content
 

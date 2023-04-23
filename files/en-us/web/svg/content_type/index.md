@@ -30,7 +30,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The unit identifiers in such \<angle> values must be in lower case.
 
-    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle objects")}}.
+    In the SVG DOM, \<angle> values are represented using {{domxref("SVGAngle")}} or {{domxref("SVGAnimatedAngle")}} objects.
 
 ## Anything
 

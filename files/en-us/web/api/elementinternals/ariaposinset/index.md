@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaPosInSet
+title: "ElementInternals: ariaPosInSet property"
+short-title: ariaPosInSet
 slug: Web/API/ElementInternals/ariaPosInSet
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaPosInSet

@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.entries()
+title: "StylePropertyMapReadOnly: entries() method"
+short-title: entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.entries

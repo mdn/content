@@ -1,5 +1,6 @@
 ---
-title: Navigator.language
+title: "Navigator: language property"
+short-title: language
 slug: Web/API/Navigator/language
 page-type: web-api-instance-property
 browser-compat: api.Navigator.language

@@ -1,5 +1,6 @@
 ---
-title: VideoTrack.label
+title: "VideoTrack: label property"
+short-title: label
 slug: Web/API/VideoTrack/label
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.label

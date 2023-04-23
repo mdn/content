@@ -1,5 +1,6 @@
 ---
-title: RemotePlayback.cancelWatchAvailability()
+title: "RemotePlayback: cancelWatchAvailability() method"
+short-title: cancelWatchAvailability()
 slug: Web/API/RemotePlayback/cancelWatchAvailability
 page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.cancelWatchAvailability

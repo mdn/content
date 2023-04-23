@@ -1,5 +1,6 @@
 ---
-title: History.pushState()
+title: "History: pushState() method"
+short-title: pushState()
 slug: Web/API/History/pushState
 page-type: web-api-instance-method
 browser-compat: api.History.pushState
@@ -10,6 +11,8 @@ browser-compat: api.History.pushState
 In an [HTML](/en-US/docs/Web/HTML) document, the
 **`history.pushState()`** method adds an entry to the browser's
 session history stack.
+
+This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
 
 ## Syntax
 
@@ -89,9 +92,9 @@ history.pushState(state, "", url);
 ### Change a query parameter
 
 ```js
-const url = new URL(window.location);
+const url = new URL(location);
 url.searchParams.set("foo", "bar");
-window.history.pushState({}, "", url);
+history.pushState({}, "", url);
 ```
 
 ## Specifications

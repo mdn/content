@@ -123,7 +123,7 @@ for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
   button.innerText = `Button ${i}`;
   button.onclick = (function (copyOfI) {
-    return () => {
+    return function () {
       console.log(copyOfI);
     };
   })(i);

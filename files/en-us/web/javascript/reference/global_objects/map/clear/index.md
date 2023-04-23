@@ -27,16 +27,16 @@ clear()
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-console.log(myMap.size);  // 2
-console.log(myMap.has('bar')); // true
+console.log(myMap.size); // 2
+console.log(myMap.has("bar")); // true
 
 myMap.clear();
 
-console.log(myMap.size);  // 0
-console.log(myMap.has('bar')); // false
+console.log(myMap.size); // 0
+console.log(myMap.has("bar")); // false
 ```
 
 ## Specifications

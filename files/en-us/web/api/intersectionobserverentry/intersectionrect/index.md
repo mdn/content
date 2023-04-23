@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.intersectionRect
+title: "IntersectionObserverEntry: intersectionRect property"
+short-title: intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.intersectionRect

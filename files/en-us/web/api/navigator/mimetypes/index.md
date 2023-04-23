@@ -1,5 +1,6 @@
 ---
-title: Navigator.mimeTypes
+title: "Navigator: mimeTypes property"
+short-title: mimeTypes
 slug: Web/API/Navigator/mimeTypes
 page-type: web-api-instance-property
 status:

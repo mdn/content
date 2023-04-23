@@ -46,7 +46,7 @@ There are three attributes and one nested element worth noting:
 
 2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the aspect ratio must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
 
-3. Including [`role="img"`](/en-US/docs/Web/accessibility/aria/role/img) ensures assistive technologies handle the SVG as an image.
+3. Including [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) ensures assistive technologies handle the SVG as an image.
 
 4. A [`<title>`](/en-US/docs/Web/SVG/Element/title) within an SVG provides the accessible, short-text description of the graphic. The title text is not rendered, but browsers may display it as a tooltip when the SVG is hovered. The `<title>` should be the first element after the `<svg>` opening tag.
 

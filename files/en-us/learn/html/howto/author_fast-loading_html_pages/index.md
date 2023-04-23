@@ -136,7 +136,7 @@ and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/El
 
 By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
-To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
+To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
 <img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />

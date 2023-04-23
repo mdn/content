@@ -1,6 +1,7 @@
 ---
 title: aria-rowindextext
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindextext
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindextext
 ---
 

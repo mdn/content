@@ -1,5 +1,6 @@
 ---
 title: "Document: pointerlockerror event"
+short-title: pointerlockerror
 slug: Web/API/Document/pointerlockerror_event
 page-type: web-api-event
 browser-compat: api.Document.pointerlockerror_event

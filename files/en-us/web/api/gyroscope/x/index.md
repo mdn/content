@@ -1,5 +1,6 @@
 ---
-title: Gyroscope.x
+title: "Gyroscope: x property"
+short-title: x
 slug: Web/API/Gyroscope/x
 page-type: web-api-instance-property
 browser-compat: api.Gyroscope.x

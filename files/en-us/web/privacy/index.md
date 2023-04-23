@@ -113,7 +113,7 @@ There are several web technologies and features at play to manage privacy and se
       <td>
         Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
         loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
-        The {{htmlattrxref("allow", "iframe")}} attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
+        The <a href="/en-US/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
       </td>
     </tr>
     <tr>
@@ -147,7 +147,7 @@ While specifications for these technologies either state or recommend tactics fo
 
 <!-- allow attribute, feature policy, and permissions api stuff -->
 
-A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the {{htmlattrxref("allow", "iframe")}} attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.
+A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.
 
 Browsers may choose to provide ways around this. For example, in Firefox 73, the user permission requests were revised so that when an `<iframe>` uses the `allow` keyword to delegate permission to the embedded document, the browser asks the user to grant the parent document permission to use the resource, and that permission is then shared with the embedded content that requested the resource, to begin with.
 

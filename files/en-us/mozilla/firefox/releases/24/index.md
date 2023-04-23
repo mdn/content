@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/24
 ### MathML
 
 - The `dir` attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
-- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#attr-stretchy).
+- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#stretchy).
 - The "`updiagonalarrow`" value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
 
 ## Changes for add-on and Mozilla developers

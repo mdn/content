@@ -1,5 +1,5 @@
 ---
-title: '<section>: The Generic Section element'
+title: "<section>: The Generic Section element"
 slug: Web/HTML/Element/section
 page-type: html-element
 browser-compat: html.elements.section
@@ -41,6 +41,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
 </div>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Before')}}
+
 #### After
 
 ```html
@@ -49,6 +53,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
   <p>Bunch of awesome content</p>
 </section>
 ```
+
+##### Result
+
+{{EmbedLiveSample('After')}}
 
 ### Using a section without a heading
 
@@ -83,6 +91,10 @@ Make sure to use some assistive technology and screen-reader-friendly CSS to hid
   left: -9999px;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample('Using a section without a heading')}}
 
 Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
 

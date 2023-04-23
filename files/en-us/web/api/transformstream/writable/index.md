@@ -1,5 +1,6 @@
 ---
-title: TransformStream.writable
+title: "TransformStream: writable property"
+short-title: writable
 slug: Web/API/TransformStream/writable
 page-type: web-api-instance-property
 browser-compat: api.TransformStream.writable

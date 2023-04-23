@@ -1,5 +1,6 @@
 ---
-title: OfflineAudioContext.resume()
+title: "OfflineAudioContext: resume() method"
+short-title: resume()
 slug: Web/API/OfflineAudioContext/resume
 page-type: web-api-instance-method
 browser-compat: api.OfflineAudioContext.resume

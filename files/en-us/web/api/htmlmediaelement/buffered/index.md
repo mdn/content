@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.buffered
+title: "HTMLMediaElement: buffered property"
+short-title: buffered
 slug: Web/API/HTMLMediaElement/buffered
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.buffered
@@ -32,4 +33,4 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.buffered` property

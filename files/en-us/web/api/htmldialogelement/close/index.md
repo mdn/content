@@ -1,5 +1,6 @@
 ---
-title: HTMLDialogElement.close()
+title: "HTMLDialogElement: close() method"
+short-title: close()
 slug: Web/API/HTMLDialogElement/close
 page-type: web-api-instance-method
 browser-compat: api.HTMLDialogElement.close
@@ -35,7 +36,7 @@ From there you can click the _X_ button to close the dialog (via the {{domxref("
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button id="close" aria-label="close" novalidate>X</button>
+    <button id="close" aria-label="close" formnovalidate>X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>

@@ -32,6 +32,17 @@ x = y; // x is 10
 x = y = z; // x, y and z are all 25
 ```
 
+### Value of assignment expressions
+
+The assignment expression itself evaluates to the value of the right-hand side, so you can log the value and assign to a variable at the same time.
+
+```js
+let x;
+console.log(x); // undefined
+console.log(x = 2); // 2
+console.log(x); // 2
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -42,5 +53,5 @@ x = y = z; // x, y and z are all 25
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
 - [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

@@ -1,5 +1,6 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() constructor"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream
@@ -108,6 +109,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {

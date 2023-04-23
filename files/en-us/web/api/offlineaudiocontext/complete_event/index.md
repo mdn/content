@@ -1,5 +1,6 @@
 ---
 title: "OfflineAudioContext: complete event"
+short-title: complete
 slug: Web/API/OfflineAudioContext/complete_event
 page-type: web-api-event
 browser-compat: api.OfflineAudioContext.complete_event

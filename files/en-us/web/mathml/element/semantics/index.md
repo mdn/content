@@ -1,6 +1,7 @@
 ---
 title: <semantics>
 slug: Web/MathML/Element/semantics
+page-type: mathml-element
 browser-compat: mathml.elements.semantics
 ---
 

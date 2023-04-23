@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.createDataChannel()
+title: "RTCPeerConnection: createDataChannel() method"
+short-title: createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.createDataChannel

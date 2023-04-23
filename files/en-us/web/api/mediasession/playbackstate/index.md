@@ -1,5 +1,6 @@
 ---
-title: MediaSession.playbackState
+title: "MediaSession: playbackState property"
+short-title: playbackState
 slug: Web/API/MediaSession/playbackState
 page-type: web-api-instance-property
 browser-compat: api.MediaSession.playbackState

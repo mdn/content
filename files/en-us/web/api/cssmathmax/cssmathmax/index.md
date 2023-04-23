@@ -1,5 +1,6 @@
 ---
-title: CSSMathMax()
+title: "CSSMathMax: CSSMathMax() constructor"
+short-title: CSSMathMax()
 slug: Web/API/CSSMathMax/CSSMathMax
 page-type: web-api-constructor
 status:

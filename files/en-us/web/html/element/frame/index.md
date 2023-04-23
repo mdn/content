@@ -20,7 +20,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 - `src` {{Deprecated_Inline}}
   - : This attribute specifies the document that will be displayed by the frame.
 - `name` {{Deprecated_Inline}}
-  - : This attribute is used for labeling frames. Without labeling, every link will open in the frame that it's in – the closest parent frame. See the {{htmlattrxref("target","a")}} attribute for more information.
+  - : This attribute is used for labeling frames. Without labeling, every link will open in the frame that it's in – the closest parent frame. See the [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute for more information.
 - `noresize` {{Deprecated_Inline}}
   - : This attribute prevents resizing of frames by users.
 - `scrolling` {{Deprecated_Inline}}

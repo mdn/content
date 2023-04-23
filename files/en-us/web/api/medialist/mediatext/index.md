@@ -1,5 +1,6 @@
 ---
-title: MediaList.mediaText
+title: "MediaList: mediaText property"
+short-title: mediaText
 slug: Web/API/MediaList/mediaText
 page-type: web-api-instance-property
 browser-compat: api.MediaList.mediaText

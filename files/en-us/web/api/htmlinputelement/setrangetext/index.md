@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.setRangeText()
+title: "HTMLInputElement: setRangeText() method"
+short-title: setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.setRangeText

@@ -1,5 +1,6 @@
 ---
-title: OES_texture_half_float_linear
+title: OES_texture_half_float_linear extension
+short-title: OES_texture_half_float_linear
 slug: Web/API/OES_texture_half_float_linear
 page-type: webgl-extension
 browser-compat: api.OES_texture_half_float_linear

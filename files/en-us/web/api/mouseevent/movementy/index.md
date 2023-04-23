@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.movementY
+title: "MouseEvent: movementY property"
+short-title: movementY
 slug: Web/API/MouseEvent/movementY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.movementY

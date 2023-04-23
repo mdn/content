@@ -1,5 +1,6 @@
 ---
-title: RTCOutboundRtpStreamStats.firCount
+title: "RTCOutboundRtpStreamStats: firCount property"
+short-title: firCount
 slug: Web/API/RTCOutboundRtpStreamStats/firCount
 page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.firCount

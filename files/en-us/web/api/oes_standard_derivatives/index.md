@@ -1,5 +1,6 @@
 ---
-title: OES_standard_derivatives
+title: OES_standard_derivatives extension
+short-title: OES_standard_derivatives
 slug: Web/API/OES_standard_derivatives
 page-type: webgl-extension
 browser-compat: api.OES_standard_derivatives

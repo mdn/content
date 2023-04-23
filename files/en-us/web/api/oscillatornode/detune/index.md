@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode.detune
+title: "OscillatorNode: detune property"
+short-title: detune
 slug: Web/API/OscillatorNode/detune
 page-type: web-api-instance-property
 browser-compat: api.OscillatorNode.detune

@@ -1,5 +1,6 @@
 ---
-title: Report.type
+title: "Report: type property"
+short-title: type
 slug: Web/API/Report/type
 page-type: web-api-instance-property
 browser-compat: api.Report.type

@@ -1,5 +1,5 @@
 ---
-title: '<track>: The Embed Text Track element'
+title: "<track>: The Embed Text Track element"
 slug: Web/HTML/Element/track
 page-type: html-element
 browser-compat: html.elements.track

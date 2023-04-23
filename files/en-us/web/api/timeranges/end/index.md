@@ -1,5 +1,6 @@
 ---
-title: TimeRanges.end()
+title: "TimeRanges: end() method"
+short-title: end()
 slug: Web/API/TimeRanges/end
 page-type: web-api-instance-method
 browser-compat: api.TimeRanges.end

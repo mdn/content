@@ -1,5 +1,6 @@
 ---
-title: DOMPoint.fromPoint()
+title: "DOMPoint: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 page-type: web-api-static-method
 browser-compat: api.DOMPoint.fromPoint
@@ -20,7 +21,7 @@ the properties within may be changed at will.
 ## Syntax
 
 ```js-nolint
-fromPoint(sourcePoint)
+DOMPoint.fromPoint(sourcePoint)
 ```
 
 ### Parameters

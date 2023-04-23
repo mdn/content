@@ -123,7 +123,7 @@ p {
 
 ### With url() and the SVG contrast filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by {{htmlattrxref("id")}}. The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes#id). The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
 
 ```svg
   <filter id="contrast">

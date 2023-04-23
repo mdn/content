@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.getKey()
+title: "PushSubscription: getKey() method"
+short-title: getKey()
 slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.getKey

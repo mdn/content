@@ -1,5 +1,6 @@
 ---
-title: Navigator.getUserMedia()
+title: "Navigator: getUserMedia() method"
+short-title: getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 page-type: web-api-instance-method
 status:

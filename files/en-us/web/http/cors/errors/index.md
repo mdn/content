@@ -1,6 +1,7 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}

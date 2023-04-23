@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: hid"
 slug: Web/HTTP/Headers/Permissions-Policy/hid
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.hid

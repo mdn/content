@@ -43,7 +43,7 @@ Highlights:
 
 - {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ([Firefox bug 366324](https://bugzil.la/366324)).
-- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
 
 ### JavaScript

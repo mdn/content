@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.cancel()
+title: "SpeechSynthesis: cancel() method"
+short-title: cancel()
 slug: Web/API/SpeechSynthesis/cancel
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.cancel

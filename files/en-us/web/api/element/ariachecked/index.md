@@ -1,5 +1,6 @@
 ---
-title: Element.ariaChecked
+title: "Element: ariaChecked property"
+short-title: ariaChecked
 slug: Web/API/Element/ariaChecked
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaChecked

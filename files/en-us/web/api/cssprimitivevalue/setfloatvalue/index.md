@@ -1,5 +1,6 @@
 ---
-title: CSSPrimitiveValue.setFloatValue()
+title: "CSSPrimitiveValue: setFloatValue() method"
+short-title: setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
 status:

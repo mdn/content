@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.isFile
+title: "FileSystemEntry: isFile property"
+short-title: isFile
 slug: Web/API/FileSystemEntry/isFile
 page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.isFile

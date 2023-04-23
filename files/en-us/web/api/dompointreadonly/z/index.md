@@ -1,5 +1,6 @@
 ---
-title: DOMPointReadOnly.z
+title: "DOMPointReadOnly: z property"
+short-title: z
 slug: Web/API/DOMPointReadOnly/z
 page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.z

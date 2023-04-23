@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer()
+title: "XRWebGLLayer: XRWebGLLayer() constructor"
+short-title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
 page-type: web-api-constructor
 status:

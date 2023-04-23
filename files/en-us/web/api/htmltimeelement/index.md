@@ -16,7 +16,7 @@ The **`HTMLTimeElement`** interface provides special properties (beyond the regu
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : A string that reflects the {{ htmlattrxref("datetime", "time") }} HTML attribute, containing a machine-readable form of the element's date and time value.
+  - : A string that reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute, containing a machine-readable form of the element's date and time value.
 
 ## Instance methods
 

@@ -1,5 +1,6 @@
 ---
-title: 'WakeLockSentinel: release event'
+title: "WakeLockSentinel: release event"
+short-title: release
 slug: Web/API/WakeLockSentinel/release_event
 page-type: web-api-event
 browser-compat: api.WakeLockSentinel.release_event
@@ -19,9 +20,9 @@ power save mode.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event-handler property.
 
 ```js
-addEventListener('release', (event) => { })
+addEventListener("release", (event) => {});
 
-onrelease = (event) => { }
+onrelease = (event) => {};
 ```
 
 ## Event type
@@ -33,10 +34,9 @@ A generic {{domxref("Event")}}.
 This example updates the UI if the wake lock is released.
 
 ```js
-wakeLock.addEventListener('release', () => {
-
+wakeLock.addEventListener("release", () => {
   // if wake lock is released alter the UI accordingly
-  statusElement.textContent = 'Wake Lock has been released';
+  statusElement.textContent = "Wake Lock has been released";
 });
 ```
 
