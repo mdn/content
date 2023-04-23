@@ -126,7 +126,7 @@ let matrixArray = [
 ];
 ```
 
-In this array, the leftmost column contains the entries *a*₁, *a*₂, *a*₃, and *a*₄. The topmost row contains the entries *a*₁, *a*₅, *a*₉, and *a*₁₃.
+In this array, the leftmost column contains the entries `a₁`, `a₂`, `a₃`, and `a₄`. The topmost row contains the entries `a₁`, `a₅`, `a₉`, and `a₁₃`.
 
 Keep in mind that most WebGL and WebXR programming is done using third-party libraries which expand upon the basic functionality of WebGL by adding routines that make it much easier to perform not only core matrix and other operations, but often also to simulate these standard cinematography techniques. You should strongly consider using one instead of directly using WebGL. This guide uses WebGL directly since it's useful to understand to some extent what goes on under the hood, and to aide in the development of libraries or to help you optimize code.
 
