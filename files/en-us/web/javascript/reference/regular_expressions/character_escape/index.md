@@ -64,6 +64,17 @@ In non-unicode mode, escape sequences within [character classes](/en-US/docs/Web
 
 ## Examples
 
+### Using character escapes
+
+Character escapes are useful when you want to match a character that is not easily represented in its literal form. For example, you cannot use a line break literally in a regex literal, so you must use a character escape:
+
+```js
+const pattern = /a\nb/;
+const string = `a
+b`;
+console.log(pattern.test(string)); // true
+```
+
 ## Specifications
 
 {{Specifications}}

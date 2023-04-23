@@ -36,6 +36,22 @@ The uppercase forms `\D`, `\W`, and `\S` negates the match or `\d`, `\w`, and `\
 
 Character class escapes can be used in [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class). However, they cannot be used as boundaries of character ranges. This is only allowed as a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
+## Examples
+
+### Splitting by whitespace
+
+The following example splits a string into an array of words, supporting all kinds of whitespace separators:
+
+```js
+function splitWords(str) {
+  return str.split(/\s+/);
+}
+
+splitWords(`Look at the stars
+Look  how they\tshine for you`);
+// ['Look', 'at', 'the', 'stars', 'Look', 'how', 'they', 'shine', 'for', 'you']
+```
+
 ## Specifications
 
 {{Specifications}}

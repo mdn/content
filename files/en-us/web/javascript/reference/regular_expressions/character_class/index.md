@@ -64,6 +64,20 @@ The `^` prefix in a character class inverts the match. For example, `[^abc]` mat
 
 ## Examples
 
+### Matching hexadecimal digits
+
+The following function determines whether a string contains a valid hexadecimal number:
+
+```js
+function isHexadecimal(str) {
+  return /^[0-9A-F]+$/i.test(str);
+}
+
+isHexadecimal("2F3"); // true
+isHexadecimal("beef"); // true
+isHexadecimal("undefined"); // false
+```
+
 ## Specifications
 
 {{Specifications}}

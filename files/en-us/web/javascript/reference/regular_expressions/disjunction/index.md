@@ -48,6 +48,20 @@ Alternatives are always attempted left-to-right, regardless of the direction of 
 
 ## Examples
 
+### Matching file extensions
+
+The following example matches file extensions, using the same code as the [input boundary assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion#matching_file_extensions) article:
+
+```js
+function isImage(filename) {
+  return /\.(?:png|jpe?g|webp|avif|gif)$/i.test(filename);
+}
+
+isImage("image.png"); // true
+isImage("image.jpg"); // true
+isImage("image.pdf"); // false
+```
+
 ## Specifications
 
 {{Specifications}}
