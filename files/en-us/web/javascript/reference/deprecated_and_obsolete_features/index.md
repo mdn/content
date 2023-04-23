@@ -65,7 +65,7 @@ The following regex syntaxes are deprecated and only available in non-[unicode](
 - An escape sequence that's not one of the recognized kinds becomes an ["identity escape"](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
 - Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
 - The sequence `\k` within a regex that doesn't have any [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) is treated as an identity escape.
-- The syntax characters `]`, `{`, and `}` may appear literally without escaping if they cannot be interpreted as the end of a character class or quantifier delimiters.
+- The syntax characters `]`, `{`, and `}` may appear [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) without escaping if they cannot be interpreted as the end of a character class or quantifier delimiters.
 
 In unicode mode, the above are all syntax errors.
 

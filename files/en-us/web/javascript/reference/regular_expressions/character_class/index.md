@@ -31,7 +31,7 @@ A character class specifies a list of characters between square brackets and mat
 
 These syntaxes can occur any number of times, and the character sets they represent are unioned. For example, `/[a-zA-Z0-9]/` matches any letter or digit.
 
-Unlike other parts of the regex, character classes interpret most character literally and have less restrictions about the characters they can contain. For example, `.` is the literal dot character, not the [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard). The only characters that cannot appear literally are `\`, `]`, and `-`.
+Unlike other parts of the regex, character classes interpret most character [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) and have less restrictions about the characters they can contain. For example, `.` is the literal dot character, not the [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard). The only characters that cannot appear literally are `\`, `]`, and `-`.
 
 - In character classes, most escape sequences are supported, except `\b`, `\B`, and [backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference). `\b` indicates a backspace character instead of a [word boundary](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion), while the other two cause syntax errors. To use `\` literally, escape it as `\\`.
 - The `]` character indicates the end of the character class. To use it literally, escape it as `\]`.
@@ -92,5 +92,6 @@ isHexadecimal("undefined"); // false
 - [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+- [Literal character: `a`, `b`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)

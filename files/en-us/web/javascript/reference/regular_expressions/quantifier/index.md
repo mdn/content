@@ -53,7 +53,7 @@ A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regu
 | `{min,}`    | `min`   | Infinity |
 | `{min,max}` | `min`   | `max`    |
 
-For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a literal pattern.
+For the `{count}`, `{min,}`, and `{min,max}` syntaxes, there cannot be white spaces around the numbers — otherwise, it becomes a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern.
 
 ```js example-bad
 const re = /a{1, 3}/;

@@ -58,7 +58,7 @@ The sections below list all available regex syntaxes, grouped by their syntactic
 
 ### Assertions
 
-Assertions are constructs that test whether the string meets a certain condition at the specified position, but not consume characters. Assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifiers).
+Assertions are constructs that test whether the string meets a certain condition at the specified position, but not consume characters. Assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
 
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
   - : Asserts that the current position is the start or end of input, or start or end of a line if the `m` flag is set.
@@ -83,6 +83,8 @@ Atoms are the most basic units of a regular expression. Each atom _consumes_ one
   - : Matches any character in or not in a predefined set of characters.
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
   - : Matches a character that may not be able to be conveniently represented in its literal form.
+- [Literal character: `a`, `b`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
+  - : Matches a specific character.
 - [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
   - : Matches a previously matched subpattern captured with a named capturing group.
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
@@ -113,5 +115,5 @@ These features do not specify any pattern themselves, but are used to compose pa
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("RegExp")}}

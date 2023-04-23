@@ -40,7 +40,7 @@ The following character escapes are recognized in regular expressions:
 - `\0`
   - : Represents the U+0000 NUL character. Cannot be followed by a digit (which makes it a [legacy octal escape](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) sequence).
 - `\^`, `\$`, `\\`, `\.` `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\{`, `\}`, `\|`, `\/`
-  - : Represents the character itself. For example, `\\` represents a backslash, and `\(` represents a left parenthesis. These are syntax characters in regexes (`/` is the delimiter of a regex literal), so they require escaping unless in a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
+  - : Represents the character itself. For example, `\\` represents a backslash, and `\(` represents a left parenthesis. These are [syntax characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) in regexes (`/` is the delimiter of a regex literal), so they require escaping unless in a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 - `\xHH`
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly two digits long.
 - `\uHHHH`
@@ -50,7 +50,7 @@ The following character escapes are recognized in regular expressions:
 
 In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in unicode mode.
 
-In non-unicode mode, `]`, `{`, and `}` may appear literally if it's not possible to parse them as the end of a character class or quantifier delimiters. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+In non-unicode mode, `]`, `{`, and `}` may appear [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) if it's not possible to parse them as the end of a character class or quantifier delimiters. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 In non-unicode mode, escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character. These syntaxes are also deprecated.
 
@@ -89,6 +89,7 @@ console.log(pattern.test(string)); // true
 - [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+- [Literal character: `a`, `b`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 - [Backreference: `\1`, `\2`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 - [Named backreference: `\k<name>)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)

@@ -70,7 +70,7 @@ isValidIdentifier("1foo"); // false
 isValidIdentifier("  foo  "); // false
 ```
 
-This function is useful when doing codegen (generating code using code), because you can use valid identifiers differently from other string properties, such as [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#dot_notation) instead of [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
+This function is useful when doing codegen (generating code using code), because you can use valid identifiers differently from other string properties, such as [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation) instead of [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
 
 ```js
 const variables = ["foo", "foo:bar", "  foo  "];
