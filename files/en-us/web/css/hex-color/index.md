@@ -60,6 +60,13 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 
 #### CSS
 
+```css hidden
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+```
+
 ```css
 div {
   width: 40px;
@@ -81,7 +88,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Hexadecimal_syntax_for_a_fully_opaque_hot_pink", "100%", "450")}}
+{{EmbedLiveSample("Hexadecimal_syntax_for_a_fully_opaque_hot_pink", "100%", 100)}}
 
 ## Specifications
 
