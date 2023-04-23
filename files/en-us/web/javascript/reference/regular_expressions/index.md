@@ -28,48 +28,80 @@ Assuming a finite alphabet (such as the 26 letters of the English alphabet, or t
 
 A regular expression is typically created as a literal by enclosing a pattern in forward slashes (`/`):
 
+```js
+const regex1 = /ab+c/g;
+```
+
+Regular expressions can also be created with the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor:
+
+```js
+const regex2 = new RegExp("ab+c", "g");
+```
+
+They have no runtime differences, although they may have implications on performance, static analyzability, and authoring ergonomic issues with escaping characters.
+
 ### Regex flags
+
+Flags are special parameters that can change the way a regular expression is interpreted or the way it interacts with the input text. Each flag corresponds to one accessor property on the `RegExp` object.
+
+| Flag | Description                                                                                   | Corresponding property                        |
+| ---- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
+| `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}         |
+| `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
+| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}   |
+| `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}         |
+| `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}       |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}         |
+
+The sections below list all available regex syntaxes, grouped by their syntactic nature.
 
 ### Assertions
 
+Assertions are constructs that test whether the string meets a certain condition at the specified position, but not consume characters. Assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifiers).
+
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
   - : Asserts that the current position is the start or end of input, or start or end of a line if the `m` flag is set.
-- [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
-  - : Asserts that the current position is a word boundary.
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
   - : Asserts that the current position is followed or not followed by a certain pattern.
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
   - : Asserts that the current position is preceded or not preceded by a certain pattern.
+- [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
+  - : Asserts that the current position is a word boundary.
 
 ### Atoms
 
-- [Wildcard: `.`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
-  - : Matches any character except line terminators, unless the `s` flag is set.
-- [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-  - : Matches any character in or not in a set of characters.
-- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
-  - : Matches a subpattern and remembers information about the match.
-- [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
-  - : Matches a subpattern without remembering information about the match.
-- [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
-  - : Matches a subpattern and remembers information about the match. The group can later be identified by a custom name instead of by its index in the pattern.
+Atoms are the most basic units of a regular expression. Each atom _consumes_ one or more characters in the string, and either fails the match or allows the pattern to continue matching with the next atom.
+
 - [Backreference: `\1`, `\2`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
   - : Matches a previously matched subpattern captured with a capturing group.
-- [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
-  - : Matches a previously matched subpattern captured with a named capturing group.
+- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+  - : Matches a subpattern and remembers information about the match.
+- [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+  - : Matches any character in or not in a set of characters.
 - [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
   - : Matches any character in or not in a predefined set of characters.
-- [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - : Matches any character in or not in a set of Unicode characters identified by a Unicode property.
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
   - : Matches a character that may not be able to be conveniently represented in its literal form.
+- [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+  - : Matches a previously matched subpattern captured with a named capturing group.
+- [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+  - : Matches a subpattern and remembers information about the match. The group can later be identified by a custom name instead of by its index in the pattern.
+- [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
+  - : Matches a subpattern without remembering information about the match.
+- [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - : Matches any character in or not in a set of Unicode characters identified by a Unicode property.
+- [Wildcard: `.`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
+  - : Matches any character except line terminators, unless the `s` flag is set.
 
 ### Other features
 
-- [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
-  - : Matches an atom a certain number of times.
+These features do not specify any pattern themselves, but are used to compose patterns.
+
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
   - : Matches any of a set of alternatives separated by the `|` character.
+- [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
+  - : Matches an atom a certain number of times.
 
 ## Specifications
 
@@ -81,4 +113,5 @@ A regular expression is typically created as a literal by enclosing a pattern in
 
 ## See also
 
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- {{jsxref("RegExp")}}
