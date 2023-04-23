@@ -81,7 +81,7 @@ where `<policy-directive>` consists of:
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
   - : Specifies valid sources for JavaScript and WebAssembly resources.

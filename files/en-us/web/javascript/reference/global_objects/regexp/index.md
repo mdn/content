@@ -99,9 +99,7 @@ Note that several of the {{jsxref("RegExp")}} properties have both long and shor
 
 ## Static properties
 
-- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
-  - : The constructor function that is used to create derived objects.
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
   - : Static read-only properties that contain parenthesized substring matches.
 - {{jsxref("RegExp.input", "RegExp.input ($_)")}} {{Deprecated_Inline}}
   - : A static property that contains the last string against which a regular expression was successfully matched.
@@ -113,6 +111,8 @@ Note that several of the {{jsxref("RegExp")}} properties have both long and shor
   - : A static read-only property that contains the substring preceding the most recent match.
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring following the most recent match.
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+  - : The constructor function that is used to create derived objects.
 
 ## Instance properties
 

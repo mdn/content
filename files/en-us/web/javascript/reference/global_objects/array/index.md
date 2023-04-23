@@ -163,7 +163,7 @@ The following table lists the methods that mutate the original array, and the co
 | {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                 |
 | {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}            |
 | {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
-| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/concat", "toSpliced(0, 0, v1, v2)")}} |
+| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/toSpliced", "toSpliced(0, 0, v1, v2)")}} |
 
 An easy way to change a mutating method into a non-mutating alternative is to use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or {{jsxref("Array/slice", "slice()")}} to create a copy first:
 
@@ -844,10 +844,6 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 
 ## See also
 
-- From the JavaScript Guide:
-
-  - [Accessing properties](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#accessing_properties)
-  - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-- [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
