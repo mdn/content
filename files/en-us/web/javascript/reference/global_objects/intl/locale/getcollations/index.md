@@ -1,20 +1,25 @@
 ---
-title: Intl.Locale.prototype.collations
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collations
-page-type: javascript-instance-accessor-property
-status:
-  - deprecated
-  - non-standard
-browser-compat: javascript.builtins.Intl.Locale.collations
+title: Intl.Locale.prototype.getCollations()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations
+page-type: javascript-instance-method
+browser-compat: javascript.builtins.Intl.Locale.getCollations
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{JSRef}}
 
-The **`collations`** accessor property of {{jsxref("Intl.Locale")}} instances returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for this locale.
+The **`getCollations()`** method of {{jsxref("Intl.Locale")}} instances returns a list of one or more [collation types](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_collation) for this locale.
 
-## Description
+> **Note:** In some versions of some browsers, this method was implemented as an accessor property called `collations`. However, because it returns a new array on each access, it is now implemented as a method to prevent the situation of `locale.collations === locale.collations` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
 
-Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The `collations` property returns an array of all collation types commonly used for the `Locale`, sorted in alphabetical order, with the `standard` and `search` values always excluded. If the `Locale` already has a [`collation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation), then the returned array contains that single value.
+## Syntax
+
+```js-nolint
+getCollations()
+```
+
+### Return value
+
+An array of strings representing all collation types commonly used for the `Locale`, sorted in alphabetical order, with the `standard` and `search` values always excluded. If the `Locale` already has a [`collation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation), then the returned array contains that single value.
 
 Below is a list of the supported collation types, adapted from the [Unicode collation specification](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
 
@@ -72,11 +77,11 @@ Below is a list of the supported collation types, adapted from the [Unicode coll
 
 ### Obtaining supported collation types
 
-If the `Locale` object doesn't have a `collation` already, the `collations` property lists all commonly-used collation types for the given `Locale`. For examples of explicitly setting a `collation`, see [`collation` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation#examples).
+If the `Locale` object doesn't have a `collation` already, `getCollations()` lists all commonly-used collation types for the given `Locale`. For examples of explicitly setting a `collation`, see [`collation` examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation#examples).
 
 ```js
 const locale = new Intl.Locale("zh");
-console.log(locale.collations); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
+console.log(locale.getCollations()); // ["pinyin", "stroke", "zhuyin", "emoji", "eor"]
 ```
 
 ## Specifications
