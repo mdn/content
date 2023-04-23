@@ -2,12 +2,10 @@
 title: sqrt()
 slug: Web/CSS/sqrt
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.sqrt
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`sqrt()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of a number.
 

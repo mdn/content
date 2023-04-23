@@ -37,11 +37,20 @@ This article provides information about the changes in Firefox 113 that affect d
 
 ### APIs
 
+- [`CanvasRenderingContext2D.reset()`](/en-US/docs/Web/API/CanvasRenderingContext2D/reset) and [`OffscreenCanvasRenderingContext2D.reset()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.reset) are now supported, and can be used to return the associated rendering context to its default state.
+  ([Firefox bug 1709347](https://bugzil.la/1709347)).
+- The [Compression Streams API](/en-US/docs/Web/API/Compression_Streams_API) is now supported.
+  The interfaces provided by this API are used to compress and decompress data using the `gzip` and `deflate` formats ([Firefox bug 1823619](https://bugzil.la/1823619)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
 
+- The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
+
 #### Removals
+
+- The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
 
 ### WebAssembly
 

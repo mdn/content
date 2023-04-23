@@ -434,7 +434,7 @@ class BadIdeas {
 
 Methods, [getters, and setters](#accessor_fields) can be private as well. They're useful when you have something complex that the class needs to do internally but no other part of the code should be allowed to call.
 
-For example, imagine creating [HTML custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
+For example, imagine creating [HTML custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
 
 ```js
 class Counter extends HTMLElement {
