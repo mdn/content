@@ -35,9 +35,11 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 
 ## Examples
 
-```html
-<p>Hexadecimal syntax for a fully opaque hot pink</p>
+### Hexadecimal syntax for a fully opaque hot pink
 
+#### HTML
+
+```html
 <span>
   #f09
   <div class="c1"></div>
@@ -55,6 +57,8 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
   <div class="c4"></div>
 </span>
 ```
+
+#### CSS
 
 ```css
 div {
@@ -75,7 +79,9 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", "100%", "450")}}
+#### Result
+
+{{EmbedLiveSample("Hexadecimal_syntax_for_a_fully_opaque_hot_pink", "100%", "450")}}
 
 ## Specifications
 
@@ -87,5 +93,5 @@ div {
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these values belong to.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), the function allowing to set the three components of the color, as well as its transparency, using decimal values.
+- [`<color>`](/en-US/docs/Web/CSS/color_value): the data type these values belong to
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb): the function allowing to set the three components of the color, as well as its transparency, using decimal values
