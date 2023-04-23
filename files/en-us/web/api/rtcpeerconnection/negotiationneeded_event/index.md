@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: negotiationneeded event"
+short-title: negotiationneeded
 slug: Web/API/RTCPeerConnection/negotiationneeded_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.negotiationneeded_event

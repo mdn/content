@@ -14,6 +14,11 @@ The **`Intl.DurationFormat`** object enables language-sensitive duration formatt
 - {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
   - : Creates a new `Intl.DurationFormat` object.
 
+## Static methods
+
+- {{jsxref("Intl.DurationFormat.supportedLocalesOf()")}}
+  - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
 ## Instance properties
 
 These properties are defined on `Intl.DurationFormat.prototype` and shared by all `Intl.DurationFormat` instances.

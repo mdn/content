@@ -79,7 +79,7 @@ The cascade algorithm is applied _before_ the specificity algorithm, meaning if 
 
 Before taking a deeper look at how cascade layers impact the cascade, let's look at an example involving multiple sources of CSS across the various origins, and work through the steps of the cascade algorithm:
 
-Here we have a user agent style sheet, two author style sheets, a user stylesheet, and inline styles within the HTML:
+Here we have a user agent style sheet, two author style sheets, and a user stylesheet, with no inline styles within the HTML:
 
 **User-agent CSS:**
 
@@ -396,7 +396,7 @@ After your content has finished altering styles, it may find itself in a situati
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

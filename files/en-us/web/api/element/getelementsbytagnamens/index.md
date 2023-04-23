@@ -1,5 +1,6 @@
 ---
-title: Element.getElementsByTagNameNS()
+title: "Element: getElementsByTagNameNS() method"
+short-title: getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
 page-type: web-api-instance-method
 browser-compat: api.Element.getElementsByTagNameNS

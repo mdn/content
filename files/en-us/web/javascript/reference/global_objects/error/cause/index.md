@@ -32,7 +32,7 @@ In this case you should pass the original error into the constructor for the new
 try {
   connectToDatabase();
 } catch (err) {
-  throw new Error('Connecting to database failed.', { cause: err });
+  throw new Error("Connecting to database failed.", { cause: err });
 }
 ```
 
@@ -45,14 +45,14 @@ Error messages written for human consumption may be inappropriate for machine pa
 ```js
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
-    throw new Error('RSA key generation requires integer inputs.', {
-      cause: { code: 'NonInteger', values: [p, q] },
+    throw new Error("RSA key generation requires integer inputs.", {
+      cause: { code: "NonInteger", values: [p, q] },
     });
   }
   if (!areCoprime(p, q)) {
-    throw new Error('RSA key generation requires two co-prime integers.', {
-      cause: { code: 'NonCoprime', values: [p, q] },
-    })
+    throw new Error("RSA key generation requires two co-prime integers.", {
+      cause: { code: "NonCoprime", values: [p, q] },
+    });
   }
   // rsa algorithm…
 }

@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode.smoothingTimeConstant
+title: "AnalyserNode: smoothingTimeConstant property"
+short-title: smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
 page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.smoothingTimeConstant

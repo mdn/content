@@ -1,5 +1,6 @@
 ---
-title: IDBFactory.databases()
+title: "IDBFactory: databases() method"
+short-title: databases()
 slug: Web/API/IDBFactory/databases
 page-type: web-api-instance-method
 browser-compat: api.IDBFactory.databases

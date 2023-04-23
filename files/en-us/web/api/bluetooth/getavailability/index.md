@@ -1,5 +1,6 @@
 ---
-title: Bluetooth.getAvailability()
+title: "Bluetooth: getAvailability() method"
+short-title: getAvailability()
 slug: Web/API/Bluetooth/getAvailability
 page-type: web-api-instance-method
 status:

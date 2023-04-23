@@ -15,7 +15,7 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 
 ## Constructor
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+- {{jsxref("SyntaxError/SyntaxError", "SyntaxError()")}}
   - : Creates a new `SyntaxError` object.
 
 ## Instance properties

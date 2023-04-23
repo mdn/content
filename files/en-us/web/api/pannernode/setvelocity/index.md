@@ -1,5 +1,6 @@
 ---
-title: PannerNode.setVelocity()
+title: "PannerNode: setVelocity() method"
+short-title: setVelocity()
 slug: Web/API/PannerNode/setVelocity
 page-type: web-api-instance-method
 status:
@@ -38,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

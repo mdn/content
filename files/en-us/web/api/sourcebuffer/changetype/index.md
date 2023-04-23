@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.changeType()
+title: "SourceBuffer: changeType() method"
+short-title: changeType()
 slug: Web/API/SourceBuffer/changeType
 page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.changeType

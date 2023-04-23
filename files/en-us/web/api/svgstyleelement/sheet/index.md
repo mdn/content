@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.sheet
+title: "SVGStyleElement: sheet property"
+short-title: sheet
 slug: Web/API/SVGStyleElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.SVGStyleElement.sheet

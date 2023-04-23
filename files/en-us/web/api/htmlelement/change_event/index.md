@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: change event"
+short-title: change
 slug: Web/API/HTMLElement/change_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.change_event

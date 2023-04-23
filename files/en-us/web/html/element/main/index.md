@@ -84,7 +84,7 @@ The content of a `<main>` element should be unique to the document. Content that
 
 `<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("Heading_Elements", "h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
-## Example
+## Examples
 
 ```html
 <!-- other content -->
@@ -112,6 +112,10 @@ The content of a `<main>` element should be unique to the document. Content that
 
 <!-- other content -->
 ```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Accessibility concerns
 

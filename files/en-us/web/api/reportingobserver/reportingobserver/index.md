@@ -1,5 +1,6 @@
 ---
-title: ReportingObserver()
+title: "ReportingObserver: ReportingObserver() constructor"
+short-title: ReportingObserver()
 slug: Web/API/ReportingObserver/ReportingObserver
 page-type: web-api-constructor
 browser-compat: api.ReportingObserver.ReportingObserver

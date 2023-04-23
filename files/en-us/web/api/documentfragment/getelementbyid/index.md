@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.getElementById()
+title: "DocumentFragment: getElementById() method"
+short-title: getElementById()
 slug: Web/API/DocumentFragment/getElementById
 page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.getElementById

@@ -1,5 +1,6 @@
 ---
-title: DOMRectReadOnly.width
+title: "DOMRectReadOnly: width property"
+short-title: width
 slug: Web/API/DOMRectReadOnly/width
 page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.width

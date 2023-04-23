@@ -1,5 +1,6 @@
 ---
-title: WebGLContextEvent.statusMessage
+title: "WebGLContextEvent: statusMessage property"
+short-title: statusMessage
 slug: Web/API/WebGLContextEvent/statusMessage
 page-type: web-api-instance-property
 browser-compat: api.WebGLContextEvent.statusMessage

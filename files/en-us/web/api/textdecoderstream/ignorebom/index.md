@@ -1,5 +1,6 @@
 ---
-title: TextDecoderStream.ignoreBOM
+title: "TextDecoderStream: ignoreBOM property"
+short-title: ignoreBOM
 slug: Web/API/TextDecoderStream/ignoreBOM
 page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.ignoreBOM

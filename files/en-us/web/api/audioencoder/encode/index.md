@@ -1,5 +1,6 @@
 ---
-title: AudioEncoder.encode()
+title: "AudioEncoder: encode() method"
+short-title: encode()
 slug: Web/API/AudioEncoder/encode
 page-type: web-api-instance-method
 status:

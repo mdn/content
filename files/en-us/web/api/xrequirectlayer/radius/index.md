@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.radius
+title: "XREquirectLayer: radius property"
+short-title: radius
 slug: Web/API/XREquirectLayer/radius
 page-type: web-api-instance-property
 status:

@@ -1,8 +1,9 @@
 ---
-title: XSLTProcessor.getParameter()
+title: "XSLTProcessor: getParameter() method"
+short-title: getParameter()
 slug: Web/API/XSLTProcessor/getParameter
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.getParameter 
+browser-compat: api.XSLTProcessor.getParameter
 ---
 
 {{APIRef("XSLT")}}

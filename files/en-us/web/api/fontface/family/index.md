@@ -1,5 +1,6 @@
 ---
-title: FontFace.family
+title: "FontFace: family property"
+short-title: family
 slug: Web/API/FontFace/family
 page-type: web-api-instance-property
 browser-compat: api.FontFace.family

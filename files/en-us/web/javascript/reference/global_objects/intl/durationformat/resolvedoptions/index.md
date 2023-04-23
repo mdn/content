@@ -28,7 +28,7 @@ The resulting object has the following properties:
 - `style`
   - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"digital"` identifying the duration formatting style used.
 - `years`
-  - : One of the strings `"long"`, `"shor"t`, or `"narrow"` identifying the formatting style used for the `years` field.
+  - : One of the strings `"long"`, `"short"`, or `"narrow"` identifying the formatting style used for the `years` field.
 - `yearsDisplay`
   - : One of the strings `"auto"` or `"always"` identifying when to display the `years` field.
 - `months`

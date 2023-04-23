@@ -1,5 +1,6 @@
 ---
-title: Event.cancelable
+title: "Event: cancelable property"
+short-title: cancelable
 slug: Web/API/Event/cancelable
 page-type: web-api-instance-property
 browser-compat: api.Event.cancelable

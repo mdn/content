@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.longDesc
+title: "HTMLImageElement: longDesc property"
+short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
 page-type: web-api-instance-property
 status:

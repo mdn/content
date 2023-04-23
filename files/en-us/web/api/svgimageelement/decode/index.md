@@ -1,5 +1,6 @@
 ---
-title: SVGImageElement.decode()
+title: "SVGImageElement: decode() method"
+short-title: decode()
 slug: Web/API/SVGImageElement/decode
 page-type: web-api-instance-method
 browser-compat: api.SVGImageElement.decode

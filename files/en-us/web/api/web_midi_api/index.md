@@ -2,11 +2,11 @@
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
 page-type: web-api-overview
-spec-urls: https://webaudio.github.io/web-midi-api/
 browser-compat:
   - api.Navigator.requestMIDIAccess
   - http.headers.Permissions-Policy.midi
   - api.Permissions.permission_midi
+spec-urls: https://webaudio.github.io/web-midi-api/
 ---
 
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}

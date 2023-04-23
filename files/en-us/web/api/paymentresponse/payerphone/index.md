@@ -1,5 +1,6 @@
 ---
-title: PayerResponse.payerPhone
+title: "PayerResponse: payerPhone property"
+short-title: payerPhone
 slug: Web/API/PaymentResponse/payerPhone
 page-type: web-api-instance-property
 status:

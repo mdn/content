@@ -1,6 +1,7 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
+page-type: http-header
 browser-compat: http.headers.TE
 ---
 

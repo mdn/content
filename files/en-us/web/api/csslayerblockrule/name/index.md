@@ -1,5 +1,6 @@
 ---
-title: CSSLayerBlockRule.name
+title: "CSSLayerBlockRule: name property"
+short-title: name
 slug: Web/API/CSSLayerBlockRule/name
 page-type: web-api-instance-property
 browser-compat: api.CSSLayerBlockRule.name

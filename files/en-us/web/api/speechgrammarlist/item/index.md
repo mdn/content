@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammarList.item()
+title: "SpeechGrammarList: item() method"
+short-title: item()
 slug: Web/API/SpeechGrammarList/item
 page-type: web-api-instance-method
 status:

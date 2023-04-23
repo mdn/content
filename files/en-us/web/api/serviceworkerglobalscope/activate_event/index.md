@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: activate event"
+short-title: activate
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.activate_event

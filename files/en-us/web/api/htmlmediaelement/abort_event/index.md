@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: abort event"
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.abort_event

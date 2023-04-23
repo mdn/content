@@ -1,5 +1,6 @@
 ---
-title: DOMRectReadOnly.top
+title: "DOMRectReadOnly: top property"
+short-title: top
 slug: Web/API/DOMRectReadOnly/top
 page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.top

@@ -1,5 +1,6 @@
 ---
-title: ProcessingInstruction.target
+title: "ProcessingInstruction: target property"
+short-title: target
 slug: Web/API/ProcessingInstruction/target
 page-type: web-api-instance-property
 browser-compat: api.ProcessingInstruction.target

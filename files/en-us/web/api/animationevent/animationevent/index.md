@@ -1,5 +1,6 @@
 ---
-title: AnimationEvent()
+title: "AnimationEvent: AnimationEvent() constructor"
+short-title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 page-type: web-api-constructor
 browser-compat: api.AnimationEvent.AnimationEvent

@@ -51,8 +51,7 @@ The value that results from running the "reducer" callback function to completio
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
-  - : The array contains no elements and `initialValue` is not provided.
+  - : Thrown if the array contains no elements and `initialValue` is not provided.
 
 ## Description
 
@@ -412,4 +411,12 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxref("TypedArray.prototype.reduce()")}}

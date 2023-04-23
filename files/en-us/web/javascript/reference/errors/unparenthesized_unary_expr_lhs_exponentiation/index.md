@@ -1,5 +1,7 @@
 ---
-title: "SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'"
+title: >-
+  SyntaxError: unparenthesized unary expression can't appear on the left-hand
+  side of '**'
 slug: Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation
 page-type: javascript-error
 ---
@@ -69,4 +71,4 @@ This also makes the code's intent much clearer to other readers.
 
 - [Original discussion of exponentiation operator precedence](https://esdiscuss.org/topic/exponentiation-operator-precedence)
 - [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

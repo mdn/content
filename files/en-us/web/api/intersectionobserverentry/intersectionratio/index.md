@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.intersectionRatio
+title: "IntersectionObserverEntry: intersectionRatio property"
+short-title: intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.intersectionRatio

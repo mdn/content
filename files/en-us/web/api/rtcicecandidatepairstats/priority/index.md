@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.priority
+title: "RTCIceCandidatePairStats: priority property"
+short-title: priority
 slug: Web/API/RTCIceCandidatePairStats/priority
 page-type: web-api-instance-property
 status:

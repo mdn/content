@@ -1,5 +1,6 @@
 ---
-title: TaskController()
+title: "TaskController: TaskController() constructor"
+short-title: TaskController()
 slug: Web/API/TaskController/TaskController
 page-type: web-api-constructor
 browser-compat: api.TaskController.TaskController

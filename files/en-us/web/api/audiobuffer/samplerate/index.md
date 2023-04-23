@@ -1,5 +1,6 @@
 ---
-title: AudioBuffer.sampleRate
+title: "AudioBuffer: sampleRate property"
+short-title: sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.AudioBuffer.sampleRate

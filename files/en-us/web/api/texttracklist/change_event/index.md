@@ -1,5 +1,6 @@
 ---
 title: "TextTrackList: change event"
+short-title: change
 slug: Web/API/TextTrackList/change_event
 page-type: web-api-event
 browser-compat: api.TextTrackList.change_event

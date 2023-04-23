@@ -1,5 +1,6 @@
 ---
-title: Sensor.timestamp
+title: "Sensor: timestamp property"
+short-title: timestamp
 slug: Web/API/Sensor/timestamp
 page-type: web-api-instance-property
 browser-compat: api.Sensor.timestamp

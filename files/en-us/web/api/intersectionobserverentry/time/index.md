@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserverEntry.time
+title: "IntersectionObserverEntry: time property"
+short-title: time
 slug: Web/API/IntersectionObserverEntry/time
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.time

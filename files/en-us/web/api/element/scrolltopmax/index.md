@@ -1,5 +1,6 @@
 ---
-title: Element.scrollTopMax
+title: "Element: scrollTopMax property"
+short-title: scrollTopMax
 slug: Web/API/Element/scrollTopMax
 page-type: web-api-instance-property
 status:

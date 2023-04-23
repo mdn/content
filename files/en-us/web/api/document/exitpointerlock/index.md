@@ -1,5 +1,6 @@
 ---
-title: Document.exitPointerLock()
+title: "Document: exitPointerLock() method"
+short-title: exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 page-type: web-api-instance-method
 browser-compat: api.Document.exitPointerLock

@@ -1,5 +1,5 @@
 ---
-title: '<applet>: The Embed Java Applet element'
+title: "<applet>: The Embed Java Applet element"
 slug: Web/HTML/Element/applet
 page-type: html-element
 status:

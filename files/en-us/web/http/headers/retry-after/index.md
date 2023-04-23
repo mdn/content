@@ -1,6 +1,7 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
+page-type: http-header
 browser-compat: http.headers.Retry-After
 ---
 

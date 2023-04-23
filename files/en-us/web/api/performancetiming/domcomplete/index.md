@@ -1,5 +1,6 @@
 ---
-title: PerformanceTiming.domComplete
+title: "PerformanceTiming: domComplete property"
+short-title: domComplete
 slug: Web/API/PerformanceTiming/domComplete
 page-type: web-api-instance-property
 status:

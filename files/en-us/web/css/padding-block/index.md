@@ -33,6 +33,7 @@ padding-block: 5% 2%; /* relative to the nearest block container's width */
 padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
+padding-block: revert-layer;
 padding-block: unset;
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: MIDIPort.id
+title: "MIDIPort: id property"
+short-title: id
 slug: Web/API/MIDIPort/id
 page-type: web-api-instance-property
 browser-compat: api.MIDIPort.id

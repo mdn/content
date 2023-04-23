@@ -1,5 +1,5 @@
 ---
-title: '<head>: The Document Metadata (Header) element'
+title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Element/head
 page-type: html-element
 browser-compat: html.elements.head
@@ -18,7 +18,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `profile` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>

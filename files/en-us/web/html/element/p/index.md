@@ -1,5 +1,5 @@
 ---
-title: '<p>: The Paragraph element'
+title: "<p>: The Paragraph element"
 slug: Web/HTML/Element/p
 page-type: html-element
 browser-compat: html.elements.p
@@ -91,7 +91,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -108,7 +108,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Styling paragraphs
 

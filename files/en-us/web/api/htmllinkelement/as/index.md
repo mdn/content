@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.as
+title: "HTMLLinkElement: as property"
+short-title: as
 slug: Web/API/HTMLLinkElement/as
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.as

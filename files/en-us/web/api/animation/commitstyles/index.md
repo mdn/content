@@ -1,5 +1,6 @@
 ---
-title: Animation.commitStyles()
+title: "Animation: commitStyles() method"
+short-title: commitStyles()
 slug: Web/API/Animation/commitStyles
 page-type: web-api-instance-method
 browser-compat: api.Animation.commitStyles

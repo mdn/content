@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragstart event"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragstart_event

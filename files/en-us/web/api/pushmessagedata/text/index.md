@@ -1,5 +1,6 @@
 ---
-title: PushMessageData.text()
+title: "PushMessageData: text() method"
+short-title: text()
 slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
 browser-compat: api.PushMessageData.text

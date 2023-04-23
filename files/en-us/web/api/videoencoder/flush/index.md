@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.flush()
+title: "VideoEncoder: flush() method"
+short-title: flush()
 slug: Web/API/VideoEncoder/flush
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.flush

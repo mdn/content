@@ -43,7 +43,7 @@ Otherwise -1 if no matching element is found.
 
 The `findLastIndex()` method executes the `callbackFn` function once for each index of the typed array in descending-index order until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
 `findLastIndex()` then returns the index of that element and stops iterating through the typed array.
-If `callbackFn` never returns a truthy value, `findLastIndex()` returns {{jsxref("undefined")}}.
+If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
 
 `callbackFn` is invoked with three arguments: the value of the element, the index of the element, and the typed array object being traversed.
 
@@ -82,7 +82,7 @@ console.log(uint8.findLastIndex(isPrime));
 // -1 (no primes in array)
 uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLastIndex(isPrime));
-// 11
+// 5
 ```
 
 ## Specifications

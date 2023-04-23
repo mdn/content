@@ -1,5 +1,5 @@
 ---
-title: '<script>: The Script element'
+title: "<script>: The Script element"
 slug: Web/HTML/Element/script
 page-type: html-element
 browser-compat: html.elements.script

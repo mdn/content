@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
+title: "SyntaxError: invalid regular expression flag \"x\""
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 page-type: javascript-error
 ---
@@ -26,7 +26,7 @@ SyntaxError: Invalid regular expression: invalid flags (Safari)
 
 The regular expression contains invalid flags, or valid flags have been used more than once in the expression.
 
-The valid (allowed) flags are listed in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), and reproduced below:
+The valid (allowed) flags are listed in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags), and reproduced below:
 
 | Flag | Description                                                                                                                             |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,5 +91,5 @@ const obj = {
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - [XRegEx flags](https://xregexp.com/flags/) – regular expression library that provides four new flags (`n`, `s`, `x`, `A`)

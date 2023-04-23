@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammarList.addFromString()
+title: "SpeechGrammarList: addFromString() method"
+short-title: addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
 page-type: web-api-instance-method
 status:

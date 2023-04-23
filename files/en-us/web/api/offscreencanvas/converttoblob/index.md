@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas.convertToBlob()
+title: "OffscreenCanvas: convertToBlob() method"
+short-title: convertToBlob()
 slug: Web/API/OffscreenCanvas/convertToBlob
 page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvas.convertToBlob

@@ -1,5 +1,6 @@
 ---
-title: WheelEvent.deltaZ
+title: "WheelEvent: deltaZ property"
+short-title: deltaZ
 slug: Web/API/WheelEvent/deltaZ
 page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaZ

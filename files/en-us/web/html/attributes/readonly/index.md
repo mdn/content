@@ -1,5 +1,5 @@
 ---
-title: 'HTML attribute: readonly'
+title: "HTML attribute: readonly"
 slug: Web/HTML/Attributes/readonly
 page-type: html-attribute
 browser-compat:

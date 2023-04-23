@@ -1,5 +1,6 @@
 ---
-title: Range.createContextualFragment()
+title: "Range: createContextualFragment() method"
+short-title: createContextualFragment()
 slug: Web/API/Range/createContextualFragment
 page-type: web-api-instance-method
 browser-compat: api.Range.createContextualFragment

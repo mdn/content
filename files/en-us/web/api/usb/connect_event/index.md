@@ -1,5 +1,6 @@
 ---
 title: "USB: connect event"
+short-title: connect
 slug: Web/API/USB/connect_event
 page-type: web-api-event
 status:

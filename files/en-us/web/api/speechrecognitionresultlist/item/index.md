@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionResultList.item()
+title: "SpeechRecognitionResultList: item() method"
+short-title: item()
 slug: Web/API/SpeechRecognitionResultList/item
 page-type: web-api-instance-method
 browser-compat: api.SpeechRecognitionResultList.item

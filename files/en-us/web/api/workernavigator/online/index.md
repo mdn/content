@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.onLine
+title: "WorkerNavigator: onLine property"
+short-title: onLine
 slug: Web/API/WorkerNavigator/onLine
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.onLine

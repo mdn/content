@@ -24,7 +24,23 @@ reducing performance and power efficiency, and adding additional development ove
 The WebCodecs API provides access to codecs that are already in the browser.
 It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
 
-Note: There is currently no API for demuxing media containers. Developers working with containerized media will need to implement their own
+### Processing Model
+
+The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance
+of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to
+keep this model in mind.
+
+Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages
+to the end the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the
+processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+
+Methods named `flush()` can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it
+should generally only be called once all desired work is queued. It is not intended to force progress at regular intervals. Calling it
+unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
+
+### Demuxing
+
+There is currently no API for demuxing media containers. Developers working with containerized media will need to implement their own
 or use third party libraries. E.g., [MP4Box.js](https://github.com/gpac/mp4box.js/) or [jswebm](https://github.com/jscodec/jswebm) can be
 used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{domxref("EncodedVideoChunk")}} objects respectively.
 

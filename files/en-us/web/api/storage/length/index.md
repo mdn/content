@@ -1,5 +1,6 @@
 ---
-title: Storage.length
+title: "Storage: length property"
+short-title: length
 slug: Web/API/Storage/length
 page-type: web-api-instance-property
 browser-compat: api.Storage.length

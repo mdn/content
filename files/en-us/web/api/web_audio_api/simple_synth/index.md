@@ -583,11 +583,12 @@ The code below adds [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and [
 ```js-nolint
 const synthKeys = document.querySelectorAll(".key");
 const keyCodes = [
-  "ControlLeft", "AltLeft", "Space",
+  "Space",
   "ShiftLeft", "KeyZ", "KeyX", "KeyC", "KeyV", "KeyB", "KeyN", "KeyM", "Comma", "Period", "Slash", "ShiftRight",
-  "KeyA", "KeyS", "KeyD", "KeyF", "KeyG", "KeyH", "KeyJ", "KeyK", "KeyL", "Semicolon", "Quote",
+  "KeyA", "KeyS", "KeyD", "KeyF", "KeyG", "KeyH", "KeyJ", "KeyK", "KeyL", "Semicolon", "Quote", "Enter",
   "Tab", "KeyQ", "KeyW", "KeyE", "KeyR", "KeyT", "KeyY", "KeyU", "KeyI", "KeyO", "KeyP", "BracketLeft", "BracketRight",
   "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6", "Digit7", "Digit8", "Digit9", "Digit0", "Minus", "Equal", "Backspace",
+  "Escape",
 ];
 function keyNote(event) {
   const elKey = synthKeys[keyCodes.indexOf(event.code)];
@@ -601,6 +602,7 @@ function keyNote(event) {
       elKey.classList.remove("active");
       noteReleased({ buttons: 1, target: elKey });
     }
+    event.preventDefault();
   }
 }
 addEventListener("keydown", keyNote);

@@ -1,5 +1,6 @@
 ---
 title: "WebSocket: message event"
+short-title: message
 slug: Web/API/WebSocket/message_event
 page-type: web-api-event
 browser-compat: api.WebSocket.message_event
