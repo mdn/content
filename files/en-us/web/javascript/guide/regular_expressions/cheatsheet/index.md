@@ -609,7 +609,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
 
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
-> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
   <thead>
@@ -734,37 +734,3 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     </tr>
   </tbody>
 </table>
-
-## Unicode property escapes
-
-[Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) allow for matching characters based on their Unicode properties.
-
-```js
-// Non-binary values
-/\p{UnicodePropertyValue}/
-/\p{UnicodePropertyName=UnicodePropertyValue}/
-
-// Binary and non-binary values
-/\p{UnicodeBinaryPropertyName}/
-
-// Negation: \P is negated \p
-/\P{UnicodePropertyValue}/
-/\P{UnicodeBinaryPropertyName}/
-```
-
-- `UnicodeBinaryPropertyName`
-  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) for more info.
-- `UnicodePropertyName`
-
-  - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
-
-    - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
-    - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
-    - [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
-
-    See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
-
-- `UnicodePropertyValue`
-  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the `UnicodePropertyName` part and equals sign may be omitted. If a `UnicodePropertyName` is specified, the value must correspond to the property type given.
-
-> **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples.

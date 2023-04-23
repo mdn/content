@@ -12274,6 +12274,7 @@
 /en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
