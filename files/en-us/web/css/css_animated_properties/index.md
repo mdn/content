@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{CSSRef}}
 
-[CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_Transitions) rely on the concept of **animatable** properties, and all CSS properties are animatable unless otherwise specified. Each property's **animation type** determines how values [combine](https://w3c.github.io/csswg-drafts/css-values/#combining-values) - interpolate, add, or accumulate - for this property. Transitions only involve interpolation, whereas animations may use all three methods of combination.
+[CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_Transitions) rely on the concept of **animatable** properties, and all CSS properties are animatable unless otherwise specified. Each property's _animation type_ determines how values [combine](https://w3c.github.io/csswg-drafts/css-values/#combining-values) - interpolate, add, or accumulate - for this property. Transitions only involve interpolation, whereas animations may use all three combination methods.
 
 > **Note:** The animation type for each CSS property is listed in its "Formal definition" table (E.g., {{CSSXref("color", "", "#formal_definition")}}).
 
