@@ -389,7 +389,7 @@ Only the first parameter is mandatory. Either the second, the third, or both may
 
 If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
+If both **wd1** and **wd2** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
 > **Warning:** _The order of the days matters_.
 > Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
