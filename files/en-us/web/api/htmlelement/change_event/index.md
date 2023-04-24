@@ -72,9 +72,9 @@ select {
 
 ```js
 const selectElement = document.querySelector(".ice-cream");
+const result = document.querySelector(".result");
 
 selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
   result.textContent = `You like ${event.target.value}`;
 });
 ```

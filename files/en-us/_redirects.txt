@@ -9510,7 +9510,7 @@
 /en-US/docs/Web/API/Range.Range()	/en-US/docs/Web/API/Range/Range
 /en-US/docs/Web/API/ReadableByteStream	/en-US/docs/Web/API/ReadableStream
 /en-US/docs/Web/API/Reference	/en-US/docs/Web/API
-/en-US/docs/Web/API/RegisterProperty	/en-US/docs/Web/API/CSS/RegisterProperty
+/en-US/docs/Web/API/RegisterProperty	/en-US/docs/Web/API/CSS/registerProperty
 /en-US/docs/Web/API/RemotePlayback/onconnect	/en-US/docs/Web/API/RemotePlayback/connect_event
 /en-US/docs/Web/API/RemotePlayback/onconnecting	/en-US/docs/Web/API/RemotePlayback/connecting_event
 /en-US/docs/Web/API/RemotePlayback/ondisconnect	/en-US/docs/Web/API/RemotePlayback/disconnect_event
