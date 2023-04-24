@@ -18,28 +18,23 @@ There are mainly four animation types as defined in the [Web Animations](https:/
 
 > **Note:** Some properties have specific interpolation behavior not covered by the four types. In this case, refer to the property's "Interpolation" section (e.g. {{CSSXref("visibility", "", "#interpolation")}}).
 
-### Not animatable
+- Not animatable
+- : The property is not animatable. It is not processed when listed in an animation keyframe and is unaffected by transitions.
+  > **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect (e.g., firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event).
 
-The property is not animatable. It is not processed when listed in an animation keyframe, and is not affected by transitions.
+- Discrete
+- : The property's values are not additive, and interpolation swaps from the start value to the end value at `50%`. Specifically, denoting by `p` the progress value:
 
-> **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect (e.g. firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event).
+  - If `p < 0.5`, then `V_result = V_start`;
+  - If `p ≥ 0.5`, then `V_result = V_end`.
 
-### Discrete
+- By computed value
+- : Corresponding individual components of the computed values are combined using the indicated procedure for that value type.
 
-The property's values are not additive, and interpolation swaps from the start value to the end value at `50%`. Specifically, denoting by `p` the progress value:
+  If the number of components or the types of corresponding components do not match, or if any component value uses discrete animation and the two corresponding values do not match, then the property values combine as discrete.
 
-- If `p < 0.5`, then `V_result = V_start`;
-- If `p ≥ 0.5`, then `V_result = V_end`.
-
-### By computed value
-
-Corresponding individual components of the computed values are combined using the indicated procedure for that value type.
-
-If the number of components or the types of corresponding components do not match, or if any component value uses discrete animation and the two corresponding values do not match, then the property values combine as discrete.
-
-### Repeatable list
-
-Same as by computed value except that if the two lists have differing numbers of items, they are first repeated to the least common multiple number of items. Each item is then combined by computed value. If a pair of values cannot be combined or if any component value uses discrete animation, then the property values combine as discrete.
+- Repeatable list
+- : Same as by computed value except that if the two lists have differing numbers of items, they are first repeated to the least common multiple numbers of items. Each item is then combined by computed value. If a pair of values cannot be combined or any component value uses discrete animation, then the property values combine as discrete.
 
 ## Animating custom properties
 
