@@ -191,7 +191,7 @@ console.log(1, buggyMultiline); // fix 'tey' => 'hey' and 'tangs' => 'hangs' but
 
 // 2) Use $ to fix matching at the end of the text.
 buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
-console.log(2, buggyMultiline); // fix 'traa' => 'tree'.
+console.log(2, buggyMultiline); // fix 'traa' => 'tree.'.
 
 // 3) Use \b to match characters right on border between a word and a space.
 buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
