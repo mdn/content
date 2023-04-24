@@ -1,5 +1,5 @@
 ---
-title: Animating CSS properties
+title: Animatable CSS properties
 slug: Web/CSS/CSS_animated_properties
 page-type: landing-page
 ---
