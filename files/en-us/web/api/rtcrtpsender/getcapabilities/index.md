@@ -8,10 +8,9 @@ browser-compat: api.RTCRtpSender.getCapabilities
 
 {{DefaultAPISidebar("WebRTC")}}
 
-The _static function_
-**`RTCRtpSender.getCapabilities()`** returns an {{domxref("RTCRtpCapabilities")}} object describing the codecs and capabilities supported by the {{domxref("RTCRtpSender")}}.
+The _static function_ **`RTCRtpSender.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by the {{domxref("RTCRtpSender")}}.
 
-You can, similarly, obtain the capabilities of an {{domxref("RTCRtpReceiver")}} by calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
+You can, similarly, obtain the capabilities of {{domxref("RTCRtpReceiver")}} objects on the device by calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 
 ## Syntax
 
@@ -22,13 +21,47 @@ RTCRtpSender.getCapabilities(kind)
 ### Parameters
 
 - `kind`
-  - : A string indicating the type of media for which you wish to get the sender's capability to receive.
-    All browsers support the primary media kinds: `audio` and `video`.
+  - : A string indicating the type of media for which the browser's send capabilities are requested.
+    The supported media kinds are: `audio` and `video`.
 
 ### Return value
 
-An {{domxref("RTCRtpCapabilities")}} object stating what capabilities the browser has for sending the specified media kind over an {{domxref("RTCPeerConnection")}}.
-If the browser doesn't have any support for the given media kind, the returned value is `null`.
+An object that indicates what capabilities the browser has for sending the specified media kind over an {{domxref("RTCPeerConnection")}}.
+If the browser doesn't have any support for the given media `kind`, the returned value is `null`.
+
+The returned object has the following properties:
+
+- `codecs`
+
+  - : An array of objects, each describing the basic capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs) supported by the {{domxref("RTCRtpSender")}}.
+
+    > **Note:** The array contains special entries that represent the underlying components of the transport — these may be ignored if you're only interested in the actual codecs used for the media itself.
+    > These are described below in the section [The codecs array](#the_codecs_array).
+
+    Each codec object has the following properties:
+
+    - `channels` {{optional_inline}}
+      - : A positive integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
+    - `clockRate`
+      - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+    - `mimeType`
+      - : A string indicating the codec's MIME media type and subtype.
+        The MIME type strings used by RTP differ from those used elsewhere.
+        See {{RFC(3555, "", 4)}} for the complete IANA registry of these types.
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+    - `sdpFmtpLine` {{optional_inline}}
+      - : A string giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists.
+        If there is no parameters field, this property is left out.
+
+- `headerExtensions`
+
+  - : An array of objects, each providing the URI of a [header extension](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) supported for the current `kind` of media.
+    Each object has the following property:
+
+    - `uri`
+      - : A string, specifying the URI of a header extension.
+        The URI is formatted as described in {{RFC(5285)}}.
 
 ## Description
 
@@ -48,7 +81,50 @@ It's a means of determining what might be usable before starting to try to acces
 Because the set of capabilities available tend to be stable for a length of time (people don't install and uninstall codecs and the like very often), the media capabilities can in whole or in part provide a cross-origin method for identifying a user.
 For that reason, in privacy-sensitive contexts, the browser may choose to obscure the capabilities; this might be done, for example, by leaving out rarely-used codec configurations.
 
+### The codecs array
+
+The `codecs` array is an array of objects that describes a single codec and its basic capabilities.
+The browser will only report distinct capability combinations separately.
+If two sets of capabilities can be described as one, they will be.
+That means that, for instance, if there are two entries for the H.264 codec (as identified by the [`mimeType`](#mimetype) being "video/H264"), there are other values in the capabilities objects indicating how they're different in some way.
+
+There are three special entries that should always be present, representing underlying components of the transport. Those components are:
+
+- RED (REDundant Audio Data)
+  - : The media type of an RED entry may vary due to there being several versions of it, but it will end with `red`, such as `video/red` or `video/fwdred`.
+    The base RED standard can be found in {{RFC(2198)}}. There may be multiple entries for RED if different forms are supported; each will have a unique media type in that case.
+- FEC (Forward Error Correction)
+  - : An FEC component handles error correction data; its media type may also vary due to there being advanced versions of the standard available, but it will always end with `fec`.
+    One possible value is `video/ulpfec` (a generic error connection model).
+    There may also be multiple FEC entries if more than one form is supported.
+- RTX (Retransmission)
+  - : This component is responsible for retransmission of data; it's media type should be `video/rtx`.
+    There will only be one entry for RTX, and it will not have an [`sdpFmtpLine`](#sdpfmtpline) property.
+
+These entries should be ignored if only codecs related to the media are of interest.
+
 ## Examples
+
+### Feature support
+
+You can use [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) to check that `RTCRtpSender.getCapabilities()` is supported:
+
+```html hidden
+<p id="log"></p>
+```
+
+```js hidden
+const log = document.querySelector("#log");
+```
+
+```js
+log.textContent = `RTCRtpSender.getCapabilities() supported: ${Object.hasOwn(
+  RTCRtpSender,
+  "getCapabilities"
+)}`;
+```
+
+{{ EmbedLiveSample('Feature support', '100%', '30px') }}
 
 ### Check support for a particular codec
 
@@ -70,7 +146,7 @@ function canSendH264() {
 }
 ```
 
-## Get all capabilites
+### Get all capabilities
 
 This code example shows how we might get all supported codecs and headers.
 The HTML defines a selection list for the two kinds of capabilities, and a log area.
@@ -117,7 +193,7 @@ function logMediaCapabilities(kind) {
 
 #### Result
 
-{{ EmbedLiveSample('Get all capabilites', '100%', '500px') }}
+{{ EmbedLiveSample('Get all capabilities', '100%', '500px') }}
 
 ## Specifications
 
