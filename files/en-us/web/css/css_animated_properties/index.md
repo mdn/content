@@ -43,7 +43,7 @@ Same as by computed value except that if the two lists have differing numbers of
 
 ## Animating custom properties
 
-For custom properties registered using the {{DOMXref("CSS/registerProperty", "registerProperty()")}} method, the animation type is by compute value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
+For custom properties registered using the {{DOMXref("CSS/registerProperty", "registerProperty()")}} method, the animation type is by computed value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
 
 For unregistered custom properties, the animation type is discrete.
 
