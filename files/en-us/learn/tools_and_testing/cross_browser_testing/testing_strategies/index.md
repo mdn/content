@@ -62,7 +62,7 @@ Thus, we've based our choice of which browsers to test on the browsers that we e
 This gives us the following support chart so far:
 
 1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone/tablet
-2. B-grade: IE for Windows, Opera Mini
+2. B-grade: Opera Mini
 3. C-grade: n/a
 
 If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from the above.
