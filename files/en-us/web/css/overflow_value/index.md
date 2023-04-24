@@ -158,24 +158,22 @@ Rubber Duckie, I'm awfully fond of you
 
 We define the size of `<pre>` to ensure the content overflows its container in both the inline and block directions. We set a different `<overflow>` value in each example, and include generated content to help you identify which overflow value is being demonstrated:
 
-```css hidden`
+```css hidden
 pre {
-border: 2px dashed red;
-margin-bottom: 3em;
-overflow-clip-margin: 1em;
+  border: 2px dashed red;
+  margin-bottom: 3em;
 }
 
 ::before {
-font-weight: bold;
-color: white;
-background: crimson;
-display: inline-block;
-width: 100%;
-padding: 3px 5px;
-box-sizing: border-box;
+  font-weight: bold;
+  color: white;
+  background: crimson;
+  display: inline-block;
+  width: 100%;
+  padding: 3px 5px;
+  box-sizing: border-box;
 }
-
-````
+```
 
 ```css
 pre {
@@ -192,6 +190,7 @@ pre:nth-of-type(1)::before {
 
 pre:nth-of-type(2) {
   overflow: clip;
+  overflow-clip-margin: 1em;
 }
 pre:nth-of-type(2)::before {
   content: "clip: ";
@@ -214,6 +213,7 @@ pre:nth-of-type(4)::before {
 pre:nth-of-type(5) {
   overflow: clip;
   overflow: overlay;
+  overflow-clip-margin: 3em;
 }
 pre:nth-of-type(5)::before {
   content: "overlay (or clip if not supported): ";
@@ -225,7 +225,9 @@ pre:nth-of-type(6) {
 pre:nth-of-type(6)::before {
   content: "visible: ";
 }
-````
+```
+
+We included {{CSSXref("overflow-clip-margin")}}, which only has an effect when used in conjunction with the `clip` value to demonstrate the clip effect.
 
 ### Results
 
