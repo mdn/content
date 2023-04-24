@@ -70,6 +70,7 @@ This article provides information about the changes in Firefox 113 that affect d
 
 - When an extension registers multiple listeners for the same event, all the event listeners are called when the event page wakes up, instead of only the first one ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - Support is now provided for the {{WebExtAPIRef("declarativeNetRequest")}} API ([Firefox bug 1782685](https://bugzil.la/1782685)).
+- The `gecko_android` subkey has been added to the [`browser_specific_settings`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This subkey enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
 
 ### Removals
 
