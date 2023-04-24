@@ -18,9 +18,9 @@ There are mainly four animation types as defined in the [Web Animations](https:/
 
 - Not animatable
 
-  The property is not animatable. It is not processed when listed in an animation keyframe and is unaffected by transitions.
+  - : The property is not animatable. It is not processed when listed in an animation keyframe and is unaffected by transitions.
 
-  > **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect (E.g., firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event).
+    > **Note:** An animation effect targeting only properties that are not animatable will still exhibit the usual behavior for an animation effect (E.g., firing the {{DOMXref("Element/animationstart_event", "animationstart")}} event).
 
 - Discrete
 
