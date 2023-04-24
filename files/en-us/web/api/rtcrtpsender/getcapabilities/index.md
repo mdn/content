@@ -8,7 +8,7 @@ browser-compat: api.RTCRtpSender.getCapabilities
 
 {{DefaultAPISidebar("WebRTC")}}
 
-The _static function_ **`RTCRtpSender.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by the {{domxref("RTCRtpSender")}}.
+The _static method_ **`RTCRtpSender.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by the {{domxref("RTCRtpSender")}}.
 
 You can, similarly, obtain the capabilities of {{domxref("RTCRtpReceiver")}} objects on the device by calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 
@@ -26,7 +26,7 @@ RTCRtpSender.getCapabilities(kind)
 
 ### Return value
 
-An object that indicates what capabilities the browser has for sending the specified media kind over an {{domxref("RTCPeerConnection")}}.
+A new object that indicates what capabilities the browser has for sending the specified media kind over an {{domxref("RTCPeerConnection")}}.
 If the browser doesn't have any support for the given media `kind`, the returned value is `null`.
 
 The returned object has the following properties:
@@ -126,7 +126,7 @@ log.textContent = `RTCRtpSender.getCapabilities() supported: ${Object.hasOwn(
 
 {{ EmbedLiveSample('Feature support', '100%', '30px') }}
 
-### Check support for a particular codec
+### Checking support for a particular codec
 
 The function below returns a `true` or `false` indicating whether or not the device supports sending H.264 video on an {{domxref("RTCRtpSender")}}.
 
@@ -146,7 +146,7 @@ function canSendH264() {
 }
 ```
 
-### Get all capabilities
+### Getting all capabilities
 
 This code example shows how we might get all supported codecs and headers.
 The HTML defines a selection list for the two kinds of capabilities, and a log area.
@@ -184,7 +184,7 @@ function logMediaCapabilities(kind) {
   log.textContent += "\nCodecs\n";
   capabilities.codecs.forEach((codec) => {
     log.textContent += ` mime type: ${codec.mimeType}\n`;
-    log.textContent += `   channels: ${codec.channels}\n`; //max channels - e.g. 2 is stereo
+    log.textContent += `   channels: ${codec.channels}\n`; // max channels - e.g. 2 is stereo
     log.textContent += `   clockRate: ${codec.clockRate}\n`; // clock rate in Hz
     log.textContent += `   sdpFmtpLine: ${codec.sdpFmtpLine}\n`; // mime meda type and subtype
   });
@@ -193,7 +193,7 @@ function logMediaCapabilities(kind) {
 
 #### Result
 
-{{ EmbedLiveSample('Get all capabilities', '100%', '500px') }}
+{{ EmbedLiveSample('Getting all capabilities', '100%', '500px') }}
 
 ## Specifications
 

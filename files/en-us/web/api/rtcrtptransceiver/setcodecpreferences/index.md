@@ -54,7 +54,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : The `codecs` list includes one or more codecs which are not supported by the transceiver.
 
 ## Usage notes
