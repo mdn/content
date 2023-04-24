@@ -10,7 +10,7 @@ page-type: landing-page
 
 > **Note:** The animation type for each CSS property is listed in its "Formal definition" table (e.g. {{CSSXref("color", "", "#formal_definition")}}).
 
-> **Note:** The interpolation method for each CSS data type is described in its "Interpolation" section (e.g. {{CSSXref("&lt;length&gt;", "", "#interpolation")}}).
+> **Note:** The interpolation method for each CSS data type is described in its "Interpolation" section (E.g., {{CSSXref("&lt;length&gt;", "", "#interpolation")}}).
 
 ## Animation types
 
