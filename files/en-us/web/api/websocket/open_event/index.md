@@ -1,5 +1,6 @@
 ---
 title: "WebSocket: open event"
+short-title: open
 slug: Web/API/WebSocket/open_event
 page-type: web-api-event
 browser-compat: api.WebSocket.open_event

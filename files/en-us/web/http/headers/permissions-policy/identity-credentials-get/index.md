@@ -1,6 +1,7 @@
 ---
-title: 'Permissions-Policy: identity-credentials-get'
+title: "Permissions-Policy: identity-credentials-get"
 slug: Web/HTTP/Headers/Permissions-Policy/identity-credentials-get
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.identity-credentials-get

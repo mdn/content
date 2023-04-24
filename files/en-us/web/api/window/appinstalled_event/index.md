@@ -1,5 +1,6 @@
 ---
 title: "Window: appinstalled event"
+short-title: appinstalled
 slug: Web/API/Window/appinstalled_event
 page-type: web-api-event
 browser-compat: api.Window.appinstalled_event

@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceEvent.frame
+title: "XRInputSourceEvent: frame property"
+short-title: frame
 slug: Web/API/XRInputSourceEvent/frame
 page-type: web-api-instance-property
 browser-compat: api.XRInputSourceEvent.frame

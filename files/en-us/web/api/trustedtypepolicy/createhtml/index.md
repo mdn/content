@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicy.createHTML()
+title: "TrustedTypePolicy: createHTML() method"
+short-title: createHTML()
 slug: Web/API/TrustedTypePolicy/createHTML
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicy.createHTML

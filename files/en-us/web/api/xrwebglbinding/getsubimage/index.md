@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.getSubImage()
+title: "XRWebGLBinding: getSubImage() method"
+short-title: getSubImage()
 slug: Web/API/XRWebGLBinding/getSubImage
 page-type: web-api-instance-method
 status:

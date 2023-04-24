@@ -1,5 +1,5 @@
 ---
-title: '<noscript>: The Noscript element'
+title: "<noscript>: The Noscript element"
 slug: Web/HTML/Element/noscript
 page-type: html-element
 browser-compat: html.elements.noscript

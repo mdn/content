@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.state
+title: "VideoEncoder: state property"
+short-title: state
 slug: Web/API/VideoEncoder/state
 page-type: web-api-instance-property
 browser-compat: api.VideoEncoder.state

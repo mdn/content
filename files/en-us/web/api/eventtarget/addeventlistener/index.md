@@ -23,7 +23,7 @@ but the target may be any object that supports events (such as {{domxref("XMLHtt
 > - It works on any event target, not just HTML or SVG elements.
 
 The method `addEventListener()` works by adding a function, or an object that implements
-{{domxref("EventListener")}}, to the list of event listeners for the specified event type
+{{domxref("EventTarget.addEventListener", "EventListener")}}, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
 > **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
@@ -501,8 +501,7 @@ function nonePassiveHandler(event) {
 
 Click the outer, middle, inner containers respectively to see how the options work.
 
-{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '',
-  'Web/API/EventTarget/addEventListener') }}
+{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '') }}
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition

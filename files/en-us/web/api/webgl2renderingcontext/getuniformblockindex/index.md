@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getUniformBlockIndex()
+title: "WebGL2RenderingContext: getUniformBlockIndex() method"
+short-title: getUniformBlockIndex()
 slug: Web/API/WebGL2RenderingContext/getUniformBlockIndex
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getUniformBlockIndex

@@ -1,5 +1,6 @@
 ---
-title: XRTransientInputHitTestResult.inputSource
+title: "XRTransientInputHitTestResult: inputSource property"
+short-title: inputSource
 slug: Web/API/XRTransientInputHitTestResult/inputSource
 page-type: web-api-instance-property
 status:

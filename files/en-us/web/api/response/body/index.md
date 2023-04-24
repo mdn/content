@@ -1,5 +1,6 @@
 ---
-title: Response.body
+title: "Response: body property"
+short-title: body
 slug: Web/API/Response/body
 page-type: web-api-instance-property
 browser-compat: api.Response.body

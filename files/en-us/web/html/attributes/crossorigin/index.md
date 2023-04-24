@@ -1,13 +1,14 @@
 ---
-title: 'HTML attribute: crossorigin'
+title: "HTML attribute: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
 page-type: html-attribute
-spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
+spec-urls: >-
+  https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 ---
 
 {{HTMLSidebar}}

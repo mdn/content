@@ -1,5 +1,6 @@
 ---
-title: Sanitizer()
+title: "Sanitizer: Sanitizer() constructor"
+short-title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
 status:

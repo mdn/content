@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.incomingMaxAge
+title: "WebTransportDatagramDuplexStream: incomingMaxAge property"
+short-title: incomingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/incomingMaxAge
 page-type: web-api-instance-property
 status:

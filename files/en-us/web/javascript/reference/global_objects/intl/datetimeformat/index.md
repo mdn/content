@@ -34,14 +34,14 @@ These properties are defined on `Intl.DateTimeFormat.prototype` and shared by al
 
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
   - : Getter function that formats a date according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} object.
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
-  - : Returns an {{jsxref("Array")}} of objects representing the date string in parts that can be used for custom locale-aware formatting.
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
   - : This method receives two [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
   - : This method receives two [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+  - : Returns an {{jsxref("Array")}} of objects representing the date string in parts that can be used for custom locale-aware formatting.
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+  - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 
 ## Examples
 
@@ -147,8 +147,8 @@ options = {
 console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // "12/19/2012, 19:00:00"
 
-// to specify options but use the browser's default locale, use 'default'
-console.log(new Intl.DateTimeFormat("default", options).format(date));
+// to specify options but use the browser's default locale, use undefined
+console.log(new Intl.DateTimeFormat(undefined, options).format(date));
 // "12/19/2012, 19:00:00"
 
 // sometimes it's helpful to include the period of the day
@@ -161,7 +161,7 @@ The used calendar and numbering formats can also be set independently via `optio
 
 ```js
 const options = { calendar: "chinese", numberingSystem: "arab" };
-const dateFormat = new Intl.DateTimeFormat("default", options);
+const dateFormat = new Intl.DateTimeFormat(undefined, options);
 const usedOptions = dateFormat.resolvedOptions();
 
 console.log(usedOptions.calendar);

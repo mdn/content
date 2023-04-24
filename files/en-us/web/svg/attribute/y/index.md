@@ -1,5 +1,5 @@
 ---
-title: 'y'
+title: "y"
 slug: Web/SVG/Attribute/y
 page-type: svg-attribute
 spec-urls:

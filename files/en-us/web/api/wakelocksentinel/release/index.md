@@ -1,5 +1,6 @@
 ---
-title: WakeLockSentinel.release()
+title: "WakeLockSentinel: release() method"
+short-title: release()
 slug: Web/API/WakeLockSentinel/release
 page-type: web-api-instance-method
 browser-compat: api.WakeLockSentinel.release

@@ -13,20 +13,8 @@ The **`CSSTransformValue.forEach()`** method executes a provided function once f
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((currentValue) => { /* … */ } )
-forEach((currentValue, index) => { /* … */ } )
-forEach((currentValue, index, array) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function(currentValue) { /* … */ })
-forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters

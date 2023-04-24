@@ -1,5 +1,6 @@
 ---
-title: PromiseRejectionEvent.reason
+title: "PromiseRejectionEvent: reason property"
+short-title: reason
 slug: Web/API/PromiseRejectionEvent/reason
 page-type: web-api-instance-property
 browser-compat: api.PromiseRejectionEvent.reason

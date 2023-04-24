@@ -1,5 +1,6 @@
 ---
-title: WaveShaperNode.oversample
+title: "WaveShaperNode: oversample property"
+short-title: oversample
 slug: Web/API/WaveShaperNode/oversample
 page-type: web-api-instance-property
 browser-compat: api.WaveShaperNode.oversample

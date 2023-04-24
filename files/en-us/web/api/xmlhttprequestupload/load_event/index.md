@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: load event"
+short-title: load
 slug: Web/API/XMLHttpRequestUpload/load_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequest.load_event

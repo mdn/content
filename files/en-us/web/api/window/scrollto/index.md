@@ -1,5 +1,6 @@
 ---
-title: Window.scrollTo()
+title: "Window: scrollTo() method"
+short-title: scrollTo()
 slug: Web/API/Window/scrollTo
 page-type: web-api-instance-method
 browser-compat: api.Window.scrollTo

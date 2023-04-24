@@ -1,8 +1,9 @@
 ---
-title: XSLTProcessor.importStylesheet()
+title: "XSLTProcessor: importStylesheet() method"
+short-title: importStylesheet()
 slug: Web/API/XSLTProcessor/importStylesheet
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.importStylesheet 
+browser-compat: api.XSLTProcessor.importStylesheet
 ---
 
 {{APIRef("XSLT")}}

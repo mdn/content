@@ -1,6 +1,7 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
+page-type: http-method
 browser-compat: http.methods.DELETE
 ---
 

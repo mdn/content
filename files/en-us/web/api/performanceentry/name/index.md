@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.name
+title: "PerformanceEntry: name property"
+short-title: name
 slug: Web/API/PerformanceEntry/name
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.name

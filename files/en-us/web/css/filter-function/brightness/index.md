@@ -199,7 +199,7 @@ In the images below, the first one has a `brightness()` filter function applied,
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/filter_effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}

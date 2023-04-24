@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: pushsubscriptionchange event"
+short-title: pushsubscriptionchange
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event

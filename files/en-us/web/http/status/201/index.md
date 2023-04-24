@@ -1,6 +1,7 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
+page-type: http-status-code
 browser-compat: http.status.201
 ---
 

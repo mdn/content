@@ -1,5 +1,6 @@
 ---
 title: "WebSocket: error event"
+short-title: error
 slug: Web/API/WebSocket/error_event
 page-type: web-api-event
 browser-compat: api.WebSocket.error_event

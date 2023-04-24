@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.getFrameData()
+title: "VRDisplay: getFrameData() method"
+short-title: getFrameData()
 slug: Web/API/VRDisplay/getFrameData
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.framebufferTextureLayer()
+title: "WebGL2RenderingContext: framebufferTextureLayer() method"
+short-title: framebufferTextureLayer()
 slug: Web/API/WebGL2RenderingContext/framebufferTextureLayer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.framebufferTextureLayer

@@ -29,7 +29,7 @@ suspend(suspendTime)
 ### Parameters
 
 - `suspendTime`
-  - : A {{jsxref("double")}} specifying the suspend time, in seconds.
+  - : A floating-point number specifying the suspend time, in seconds.
 
 ### Return value
 

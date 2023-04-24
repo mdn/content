@@ -1,5 +1,6 @@
 ---
-title: TextDecoder.fatal
+title: "TextDecoder: fatal property"
+short-title: fatal
 slug: Web/API/TextDecoder/fatal
 page-type: web-api-instance-property
 browser-compat: api.TextDecoder.fatal

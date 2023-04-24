@@ -1,5 +1,6 @@
 ---
-title: XRCubeLayer.orientation
+title: "XRCubeLayer: orientation property"
+short-title: orientation
 slug: Web/API/XRCubeLayer/orientation
 page-type: web-api-instance-property
 status:

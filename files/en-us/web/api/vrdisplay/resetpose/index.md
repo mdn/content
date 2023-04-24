@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.resetPose()
+title: "VRDisplay: resetPose() method"
+short-title: resetPose()
 slug: Web/API/VRDisplay/resetPose
 page-type: web-api-instance-method
 status:

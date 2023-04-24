@@ -66,6 +66,8 @@ All static properties of the `Symbol` constructor are Symbols themselves, whose 
 
 Prior to well-known Symbols, JavaScript used normal properties to implement certain built-in operations. For example, the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) function will attempt to call each object's `toJSON()` method, and the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function will call the object's `toString()` and `valueOf()` methods. However, as more operations are added to the language, designating each operation a "magic property" can break backward compatibility and make the language's behavior harder to reason with. Well-known Symbols allow the customizations to be "invisible" from normal code, which typically only read string properties.
 
+In MDN and other sources, well-known symbol values are stylized by prefixing `@@`. For example, {{jsxref("Symbol.hasInstance")}} is written as `@@hasInstance`. This is because symbols don't have actual literal formats, but using `Symbol.hasInstance` does not reflect the ability of using other aliases to refer to the same symbol. This is like the difference between `Function.name` and `"Function"`.
+
 Well-known symbols do not have the concept of garbage collectability, because they come in a fixed set and are unique throughout the lifetime of the program, similar to intrinsic objects such as `Array.prototype`, so they are also allowed in {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, {{jsxref("WeakRef")}}, and {{jsxref("FinalizationRegistry")}} objects.
 
 ### Finding Symbol properties on objects
@@ -74,7 +76,7 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 ## Constructor
 
-- [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
+- {{jsxref("Symbol/Symbol", "Symbol()")}}
   - : Creates a new `Symbol` object. It is not a constructor in the traditional sense, because it can only be called as a function, instead of being constructed with `new Symbol()`.
 
 ## Static properties
@@ -97,10 +99,10 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
   - : A method that replaces matched substrings of a string. Used by {{jsxref("String.prototype.replace()")}}.
 - {{jsxref("Symbol.search")}}
   - : A method that returns the index within a string that matches the regular expression. Used by {{jsxref("String.prototype.search()")}}.
-- {{jsxref("Symbol.split")}}
-  - : A method that splits a string at the indices that match a regular expression. Used by {{jsxref("String.prototype.split()")}}.
 - {{jsxref("Symbol.species")}}
   - : A constructor function that is used to create derived objects.
+- {{jsxref("Symbol.split")}}
+  - : A method that splits a string at the indices that match a regular expression. Used by {{jsxref("String.prototype.split()")}}.
 - {{jsxref("Symbol.toPrimitive")}}
   - : A method converting an object to a primitive value.
 - {{jsxref("Symbol.toStringTag")}}
@@ -110,9 +112,9 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 
 ## Static methods
 
-- {{jsxref("Symbol.for()", "Symbol.for(key)")}}
+- {{jsxref("Symbol.for()")}}
   - : Searches for existing Symbols with the given `key` and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with `key`.
-- {{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}
+- {{jsxref("Symbol.keyFor()")}}
   - : Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 
 ## Instance properties
@@ -132,7 +134,7 @@ These properties are defined on `Symbol.prototype` and shared by all `Symbol` in
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Returns the Symbol. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]()")}}
+- [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
   - : Returns the Symbol.
 
 ## Examples

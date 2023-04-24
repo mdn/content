@@ -1,5 +1,6 @@
 ---
-title: XRQuadLayer.transform
+title: "XRQuadLayer: transform property"
+short-title: transform
 slug: Web/API/XRQuadLayer/transform
 page-type: web-api-instance-property
 status:

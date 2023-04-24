@@ -1,5 +1,6 @@
 ---
-title: Sensor.activated
+title: "Sensor: activated property"
+short-title: activated
 slug: Web/API/Sensor/activated
 page-type: web-api-instance-property
 browser-compat: api.Sensor.activated

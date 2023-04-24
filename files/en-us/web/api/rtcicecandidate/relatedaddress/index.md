@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.relatedAddress
+title: "RTCIceCandidate: relatedAddress property"
+short-title: relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.relatedAddress

@@ -1,6 +1,7 @@
 ---
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
+page-type: guide
 ---
 
 {{HTTPSidebar}}

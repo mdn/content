@@ -1,5 +1,6 @@
 ---
-title: StereoPannerNode.pan
+title: "StereoPannerNode: pan property"
+short-title: pan
 slug: Web/API/StereoPannerNode/pan
 page-type: web-api-instance-property
 browser-compat: api.StereoPannerNode.pan

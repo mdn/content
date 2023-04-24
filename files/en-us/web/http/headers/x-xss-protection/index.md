@@ -1,6 +1,7 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
+page-type: http-header
 status:
   - non-standard
 browser-compat: http.headers.X-XSS-Protection

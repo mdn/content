@@ -1,6 +1,7 @@
 ---
 title: Using HTTP cookies
 slug: Web/HTTP/Cookies
+page-type: guide
 ---
 
 {{HTTPSidebar}}

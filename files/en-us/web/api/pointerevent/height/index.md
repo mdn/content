@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.height
+title: "PointerEvent: height property"
+short-title: height
 slug: Web/API/PointerEvent/height
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.height

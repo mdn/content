@@ -24,8 +24,6 @@ The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicat
 
 By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.
 
-{{cssinfo}}
-
 ## Syntax
 
 ### Values

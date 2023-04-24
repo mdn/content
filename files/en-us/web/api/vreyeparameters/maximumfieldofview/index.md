@@ -1,5 +1,6 @@
 ---
-title: VREyeParameters.maximumFieldOfView
+title: "VREyeParameters: maximumFieldOfView property"
+short-title: maximumFieldOfView
 slug: Web/API/VREyeParameters/maximumFieldOfView
 page-type: web-api-instance-property
 status:

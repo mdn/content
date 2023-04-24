@@ -2,6 +2,8 @@
 title: GPUQueue
 slug: Web/API/GPUQueue
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPUQueue
 ---
 

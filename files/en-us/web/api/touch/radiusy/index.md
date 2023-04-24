@@ -1,5 +1,6 @@
 ---
-title: Touch.radiusY
+title: "Touch: radiusY property"
+short-title: radiusY
 slug: Web/API/Touch/radiusY
 page-type: web-api-instance-property
 browser-compat: api.Touch.radiusY

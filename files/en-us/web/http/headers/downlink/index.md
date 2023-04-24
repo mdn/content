@@ -1,6 +1,7 @@
 ---
 title: Downlink
 slug: Web/HTTP/Headers/Downlink
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.downlink
