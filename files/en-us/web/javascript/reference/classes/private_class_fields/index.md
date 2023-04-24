@@ -99,11 +99,12 @@ For more information on how and when private fields are initialized, see [public
 
 ### Private fields
 
-Private fields include private instance fields and private static fields. Private fields are accessible on the class constructor from inside the class declaration itself. They are used for declaration of field names as well as for accessing a field's value.
+Private fields include private instance fields and private static fields. Private fields are only accessible from inside the class declaration. They are used for declaration of field names as well as for accessing a field's value.
 
 #### Private instance fields
 
-Like public fields, private fields are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass.
+Like public instance fields, private instance fields are only available on instances of the class.
+Like public instance fields, they are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass.
 
 ```js
 class ClassWithPrivateField {
@@ -162,7 +163,8 @@ console.log(obj instanceof Stamper); // false
 
 #### Private static fields
 
-Private static fields are added to the class constructor at class evaluation time. Like their public counterparts, private static fields are only accessible on the class itself or on the `this` context of static methods, but not on the `this` context of instance methods.
+Like public static fields, private static fields are only available on the class itself.
+Like public static fields, they are added to the class constructor at class evaluation time.
 
 ```js
 class ClassWithPrivateStaticField {
@@ -222,9 +224,11 @@ You are advised to always access static private fields through the class name, n
 
 ### Private methods
 
+Private methods include private instance methods and private static methods. Private methods are only accessible from inside the class declaration.
+
 #### Private instance methods
 
-Private instance methods are methods available on class instances whose access is restricted in the same manner as private instance fields.
+Like public instance methods, private instance methods are only available on instances of the class.
 
 ```js
 class ClassWithPrivateMethod {
@@ -281,7 +285,8 @@ console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
 
 #### Private static methods
 
-Private static methods are added to the class constructor at class evaluation time. Like their public counterparts, private static methods are only accessible on the class itself or on the `this` context of static methods, but not on the `this` context of instance methods.
+Like public static methods, private static methods are only available on the class itself.
+Like public static methods, they are added to the class constructor at class evaluation time.
 
 ```js
 class ClassWithPrivateStaticMethod {
