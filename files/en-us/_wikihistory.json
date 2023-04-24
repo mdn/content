@@ -55128,14 +55128,6 @@
     "modified": "2020-10-15T22:33:11.245Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCRtpCapabilities": {
-    "modified": "2020-10-15T22:33:10.178Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpCodecCapability": {
-    "modified": "2020-10-15T22:33:16.492Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCRtpCodecParameters": {
     "modified": "2019-05-20T18:28:16.993Z",
     "contributors": ["Sheppy"]
