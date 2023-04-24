@@ -57,7 +57,7 @@ Firefox stores browser-specific settings in these subkeys:
 The `gecko` subkey supports these properties:
 
 - `id`
-  - : The extension ID. For extensions submitted to [addons.mozilla.org](https://addons.mozilla.org/) (AMO), see [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID. When required by AMO, this property must contain 80 characters or less. For extensions not submitted to AMO, an ID is required if the extension is unsigned (and not loaded using `about:debugging`); otherwise, an ID is optional.
+  - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
 - `strict_min_version`
   - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
 - `strict_max_version`
@@ -70,7 +70,7 @@ The `gecko_android` subkey supports these properties:
 - `strict_min_version`
   - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
 - `strict_max_version`
-  - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
+  - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
