@@ -26,7 +26,7 @@ A **character class** matches any character in or not in a custom set of charact
 A character class specifies a list of characters between square brackets and matches any character in the list. The following syntaxes are available:
 
 - A single character: matches the character itself.
-- A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (`-`). The first character must be smaller in character value than the second character.
+- A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (`-`). The first character must be smaller in character value than the second character. The _character value_ is the Unicode code point of the character. Because Unicode code points are usually assigned to alphabets in order, `[a-z]` specifies all lowercase Latin characters, while `[α-ω]` specifies all lowercase Greek characters. In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, regexes are interpreted as a sequence of BMP characters. Therefore, surrogate pairs in character classes represent two characters instead of one; see below for details.
 - Escape sequences: `\b`, `\-`, [character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), [Unicode character class escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), and other [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
 
 These syntaxes can occur any number of times, and the character sets they represent are unioned. For example, `/[a-zA-Z0-9]/` matches any letter or digit.
@@ -56,6 +56,9 @@ In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unic
 ```js
 /[😄]/.test("\ud83d"); // true
 /[😄]/u.test("\ud83d"); // false
+
+/[😄-😛]/.test("😑"); // SyntaxError: Invalid regular expression: /[😄-😛]/: Range out of order in character class
+/[😄-😛]/u.test("😑"); // true
 ```
 
 Even if the pattern [ignores case](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), the case of the two ends of a range is significant in determining which characters belong to the range. For example, the pattern `/[E-F]/i` only matches `E`, `F`, `e`, and `f`, while the pattern `/[E-f]/i` matches all uppercase and lowercase ASCII letters (because it spans over `E–Z` and `a–f`), as well as `[`, `\`, `]`, `^`, `_`, and `` ` ``.
