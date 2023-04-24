@@ -9478,6 +9478,8 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
+/en-US/docs/Web/API/RTCRtpCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
+/en-US/docs/Web/API/RTCRtpCodecCapability	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCRtpParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpReceiveParameters	/en-US/docs/Web/API/RTCRtpReceiver/getParameters
 /en-US/docs/Web/API/RTCRtpSendParameters	/en-US/docs/Web/API/RTCRtpSender/setParameters
@@ -9510,7 +9512,7 @@
 /en-US/docs/Web/API/Range.Range()	/en-US/docs/Web/API/Range/Range
 /en-US/docs/Web/API/ReadableByteStream	/en-US/docs/Web/API/ReadableStream
 /en-US/docs/Web/API/Reference	/en-US/docs/Web/API
-/en-US/docs/Web/API/RegisterProperty	/en-US/docs/Web/API/CSS/RegisterProperty
+/en-US/docs/Web/API/RegisterProperty	/en-US/docs/Web/API/CSS/registerProperty
 /en-US/docs/Web/API/RemotePlayback/onconnect	/en-US/docs/Web/API/RemotePlayback/connect_event
 /en-US/docs/Web/API/RemotePlayback/onconnecting	/en-US/docs/Web/API/RemotePlayback/connecting_event
 /en-US/docs/Web/API/RemotePlayback/ondisconnect	/en-US/docs/Web/API/RemotePlayback/disconnect_event
