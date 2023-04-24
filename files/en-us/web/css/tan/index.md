@@ -39,7 +39,7 @@ The tangent of an `angle` will always return a number between `−∞` and `+∞
 
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 - If `angle` is `0⁻`, the result is `0⁻`.
-- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result is **explicitly undefined**. Authors _must not_ rely on `tan()` returning any particular value for these inputs.
+- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc.), the result is _explicitly undefined_. Authors _must not_ rely on `tan()` returning any particular value for these inputs.
 
 ### Formal syntax
 
