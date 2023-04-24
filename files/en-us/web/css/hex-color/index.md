@@ -100,5 +100,5 @@ div {
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value): the data type these values belong to
+- [`<color>`](/en-US/docs/Web/CSS/color_value): the color data type
 - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb): the function allowing to set the three components of the color, as well as its transparency, using decimal values
