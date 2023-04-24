@@ -375,7 +375,7 @@ Use [feature detection](#feature_detection) (and CSS @supports for CSS feature d
 
 ### Handling JavaScript prefixes
 
-In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes aswell, with JavaScript using camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
+In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
 
 - Mozilla would use `mozObject`
 - Chrome/Opera/Safari would use `webkitObject`
