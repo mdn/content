@@ -39,6 +39,8 @@ oklch(59.69% 0.156 49.77 / .5)
 
 The following example shows the effect of varying the `L` (lightness), `C` (chroma), and `H` (hue) values of the `oklch()` color function.
 
+#### HTML
+
 ```html
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
@@ -49,6 +51,8 @@ The following example shows the effect of varying the `L` (lightness), `C` (chro
 <div data-color="green"></div>
 <div data-color="green-hue"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -84,6 +88,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Adjusting_the_lightness_chroma_and_hue_of_a_color')}}
 
 ### Adjusting the alpha value of a color
@@ -92,12 +98,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -123,6 +133,8 @@ div {
   background-color: oklch(50% 130 20 / 0.4);
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Adjusting_the_alpha_value_of_a_color')}}
 

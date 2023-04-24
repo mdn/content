@@ -42,6 +42,8 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `lab()` function.
 
+#### HTML
+
 ```html
 <div data-color="red"></div>
 <div data-color="red-a"></div>
@@ -52,6 +54,8 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -87,6 +91,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Adjusting_lightness_and_color_axes_with_lab")}}
 
 ### Adjusting opacity with lab()
@@ -95,12 +101,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -126,6 +136,8 @@ div {
   background-color: lab(100 125 125 / 0.4);
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Adjusting_opacity_with_lab')}}
 
