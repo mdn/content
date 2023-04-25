@@ -159,7 +159,7 @@ For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_
 
   - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
 
-#### Absolute length units
+### Absolute length units
 
 Absolute length units represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a physical unit and then defining the others relative to it. The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
 
@@ -170,19 +170,19 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 > **Note:** Many users increase their {{Glossary("user agent")}}'s default font size to make text more legible. Absolute lengths can cause accessibility problems because they are fixed and do not scale according to user settings. For this reason, prefer relative lengths (such as `em` or `rem`) when setting `font-size`.
 
 - `px`
-  - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = 1/96th of `1in`.
+  - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = `1in / 96`.
 - `cm`
-  - : One centimeter. `1cm` = `96px/2.54`.
+  - : One centimeter. `1cm` = `96px / 2.54`.
 - `mm`
-  - : One millimeter. `1mm` = 1/10th of `1cm`.
+  - : One millimeter. `1mm` = `1cm / 10`.
 - `Q`
-  - : One quarter of a millimeter. `1Q` = 1/40th of `1cm`.
+  - : One quarter of a millimeter. `1Q` = `1cm / 40`.
 - `in`
   - : One inch. `1in` = `2.54cm` = `96px`.
 - `pc`
-  - : One pica. `1pc` = `12pt` = 1/6th of `1in`.
+  - : One pica. `1pc` = `12pt` = `1in / 6`.
 - `pt`
-  - : One point. `1pt` = 1/72nd of `1in`.
+  - : One point. `1pt` = `1in / 72`.
 
 ## Interpolation
 
@@ -228,14 +228,14 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px
-      rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 5px rgb(255 255 255 / 0.5), inset -3px -3px 5px
+      rgb(0 0 0 / 0.5);
 }
 
 .result {
   height: 20px;
-  box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px
-      rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 5px rgba(255 255 255 / 0.5), inset -3px -3px 5px
+      rgb(0 0 0 / 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
