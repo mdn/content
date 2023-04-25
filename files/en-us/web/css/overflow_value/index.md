@@ -7,9 +7,7 @@ browser-compat: css.types.overflow
 
 {{CSSRef}}
 
-The **`<overflow>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image.
-
-The `<overflow>` data type is used in the {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}} and {{cssxref("overflow-block")}} properties, as well as the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
+The **`<overflow>`** {{glossary("enumerated")}} value is a set of keyword values used in the {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}} and {{cssxref("overflow-block")}} properties, as well as the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
 
 ## Syntax
 
@@ -24,7 +22,7 @@ The `<overflow>` data type is specified using one of the values listed below.
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value of all the properties which have the `<overflow>` as the data type.
 - `hidden`
-  - : Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method), in which case. The element box on which this value is set is a {{glossary("scroll container")}}.
+  - : Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content _can_ be scrolled programmatically (for example, by setting the value of the {{domxref("Element.scrollLeft", "scrollLeft")}} property or the {{domxref("Element.scrollTo", "scrollTo()")}} method). The content can also be scrolled via keyboard interaction; arrows enable scrolling thru the content and tabbing to a focusable element within the hidden content scrolls that focused element into view. The element box on which this value is set is a {{glossary("scroll container")}}.
 - `clip`
   - : Overflow content is clipped at the element's _overflow clip edge_ that is defined using the [`overflow-clip-margin`](/en-US/docs/Web/CSS/overflow-clip-margin) property. As a result, content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin` or by `0px` if not set. Overflow content outside the clipped region is not visible, user agents do not add a scroll bar, and programmatic scrolling is also not supported. No new [formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) is created.
 - `scroll`
