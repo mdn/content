@@ -11,8 +11,6 @@ browser-compat: api.Document.hidden
 The **`Document.hidden`** read-only property returns a Boolean
 value indicating if the page is considered hidden or not.
 
-> **Note:** This property is described as "historical" in the [Page Visibility Level 2 specification](https://www.w3.org/TR/page-visibility-2/). Consider using the {{domxref("Document.visibilityState")}}
-> property instead.
 
 ## Syntax
 
