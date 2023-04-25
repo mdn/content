@@ -107,12 +107,12 @@ selectEl.addEventListener('change', (e) => {
 });
 
 // "Confirm" button triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', () => {
-  outputBox.value = favDialog.returnValue ? `ReturnValue: ${favDialog.returnValue}.` : "No return value";
+favDialog.addEventListener('close', (e) => {
+  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });
 confirmBtn.addEventListener('click', (event) => {
-    event.preventDefault(); // We don't want to submit this fake form
-    favDialog.close();
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
 });
 ```
 

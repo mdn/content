@@ -101,7 +101,7 @@ The following code shows all the heading levels, in use.
 <h6>Heading level 6</h6>
 ```
 
-Here is the result of this code:
+#### Result
 
 {{ EmbedLiveSample('All_headings', '280', '300', '') }}
 
@@ -125,7 +125,7 @@ The following code shows a few headings with some content under them.
 <p>Some text here…</p>
 ```
 
-Here is the result of this code:
+#### Result
 
 {{ EmbedLiveSample('Example_page', '280', '480', '') }}
 
@@ -197,7 +197,7 @@ Another common navigation technique for users of screen reading software is to g
 
 Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
-#### Example
+#### Examples
 
 ```html
 <header>
@@ -216,6 +216,10 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
   </nav>
 </footer>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Examples')}}
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
