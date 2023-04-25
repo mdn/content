@@ -101,37 +101,37 @@ _No changes._
 
 - The following proprietary Mozilla system metric pseudo-classes are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
 
-  - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
-  - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-end-forward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-start-backward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-start-forward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-thumb-proportional)")}}
-  - {{Cssxref(":-moz-system-metric(touch-enabled)")}}
-  - {{Cssxref(":-moz-system-metric(windows-default-theme)")}}
+  - `:-moz-system-metric(images-in-menus)`
+  - `:-moz-system-metric(mac-graphite-theme)`
+  - `:-moz-system-metric(scrollbar-end-backward)`
+  - `:-moz-system-metric(scrollbar-end-forward)`
+  - `:-moz-system-metric(scrollbar-start-backward)`
+  - `:-moz-system-metric(scrollbar-start-forward)`
+  - `:-moz-system-metric(scrollbar-thumb-proportional)`
+  - `:-moz-system-metric(touch-enabled)`
+  - `:-moz-system-metric(windows-default-theme)`
 
 - The following proprietary Mozilla media features are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
 
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
-  - [`-moz-mac-graphite-theme`](/en-US/docs/Web/CSS/@media/-moz-mac-graphite-theme)
+  - `-moz-mac-graphite-theme`
   - `-moz-mac-yosemite-theme`
-  - [`-moz-os-version`](/en-US/docs/Web/CSS/@media/-moz-os-version)
+  - `-moz-os-version`
   - `-moz-overlay-scrollbars`
   - `-moz-physical-home-button`
-  - [`-moz-scrollbar-end-backward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-backward)
-  - [`-moz-scrollbar-end-forward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-forward)
-  - [`-moz-scrollbar-start-backward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-backward)
-  - [`-moz-scrollbar-start-forward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-forward)
-  - [`-moz-scrollbar-thumb-proportional`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-thumb-proportional)
+  - `-moz-scrollbar-end-backward`
+  - `-moz-scrollbar-end-forward`
+  - `-moz-scrollbar-start-backward`
+  - `-moz-scrollbar-start-forward`
+  - `-moz-scrollbar-thumb-proportional`
   - `-moz-swipe-animation-enabled`
-  - [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/@media/-moz-windows-accent-color-in-titlebar)
-  - [`-moz-windows-classic`](/en-US/docs/Web/CSS/@media/-moz-windows-classic)
-  - [`-moz-windows-compositor`](/en-US/docs/Web/CSS/@media/-moz-windows-compositor)
-  - [`-moz-windows-default-theme`](/en-US/docs/Web/CSS/@media/-moz-windows-default-theme)
-  - [`-moz-windows-glass`](/en-US/docs/Web/CSS/@media/-moz-windows-glass)
-  - [`-moz-windows-theme`](/en-US/docs/Web/CSS/@media/-moz-windows-theme)
+  - `-moz-windows-accent-color-in-titlebar`
+  - `-moz-windows-classic`
+  - `-moz-windows-compositor`
+  - `-moz-windows-default-theme`
+  - `-moz-windows-glass`
+  - `-moz-windows-theme`
 
 - The proprietary Mozilla `:-moz-styleeditor-transitioning` pseudo-class is no longer available to web content ([Firefox bug 1396099](https://bugzil.la/1396099)).
 
