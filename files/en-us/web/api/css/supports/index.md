@@ -8,7 +8,7 @@ browser-compat: api.CSS.supports
 
 {{APIRef("CSSOM")}}
 
-The **`CSS.supports()`** method returns a boolean value
+The **`CSS.supports()`** static method returns a boolean value
 indicating if the browser supports a given CSS feature, or not.
 
 ## Syntax
