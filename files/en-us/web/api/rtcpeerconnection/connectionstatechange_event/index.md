@@ -29,48 +29,54 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-For an {{domxref("RTCPeerConnection")}}, `pc`, this example sets up a handler for `connectionstatechange` messages to handle changes to the connectivity of the WebRTC session. It calls an app-defined function called `setOnlineStatus()` to update a status display.
+For an {{domxref("RTCPeerConnection")}} named `peerConnection`, this example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle changes to the connectivity of the WebRTC session.
+It calls an app-defined function called `setOnlineStatus()` to update a status display.
 
 ```js
-pc.onconnectionstatechange = (ev) => {
-  switch (pc.connectionState) {
+peerConnection.addEventListener(
+  "connectionstatechange",
+  (event) => {
+    switch (peerConnection.connectionState) {
+      case "new":
+      case "checking":
+        setOnlineStatus("Connecting…");
+        break;
+      case "connected":
+        setOnlineStatus("Online");
+        break;
+      case "disconnected":
+        setOnlineStatus("Disconnecting…");
+        break;
+      case "closed":
+        setOnlineStatus("Offline");
+        break;
+      case "failed":
+        setOnlineStatus("Error");
+        break;
+      default:
+        setOnlineStatus("Unknown");
+        break;
+    }
+  },
+  false
+);
+```
+
+You can also create a handler for the `connectionstatechange` event using the `RTCPeerConnection.onconnectionstatechange` property:
+
+```js
+peerConnection.onconnectionstatechange = (ev) => {
+  switch (peerConnection.connectionState) {
     case "new":
     case "checking":
       setOnlineStatus("Connecting…");
       break;
-    case "connected":
-      setOnlineStatus("Online");
-      break;
-    case "disconnected":
-      setOnlineStatus("Disconnecting…");
-      break;
-    case "closed":
-      setOnlineStatus("Offline");
-      break;
-    case "failed":
-      setOnlineStatus("Error");
-      break;
+    // ...
     default:
       setOnlineStatus("Unknown");
       break;
   }
 };
-```
-
-You can also create a handler for `connectionstatechange` by using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
-
-```js
-pc.addEventListener(
-  "connectionstatechange",
-  (ev) => {
-    switch (
-      pc.connectionState
-      // …
-    ) {
-    }
-  },
-  false
-);
 ```
 
 ## Specifications
