@@ -52,7 +52,7 @@ This example shows how you can use the `hypot()` function to calculate sizes.
 <div class="boxes">
   <div class="box">100px</div>
   <div class="box one">100px</div>
-  <div class="box two">141.417px</div>
+  <div class="box two">141.42px</div>
   <div class="box three">250px</div>
 </div>
 ```
