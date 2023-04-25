@@ -42,6 +42,8 @@ lch(52.2345% 72.2 56.2 / .5);
 
 The following example shows the effect of varying the `L` (lightness), `C` (chroma), and `H` (hue) values of the `lch()` functional notation.
 
+#### HTML
+
 ```html
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
@@ -52,6 +54,8 @@ The following example shows the effect of varying the `L` (lightness), `C` (chro
 <div data-color="green"></div>
 <div data-color="green-hue"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -87,6 +91,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Adjusting_lightness,_chroma,_and_hue_with_lch')}}
 
 ### Adjusting opacity with lch()
@@ -95,12 +101,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -126,6 +136,8 @@ div {
   background-color: lch(50% 130 20 / 0.4);
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Adjusting_opacity_with_lch')}}
 

@@ -19,7 +19,7 @@ A JavaScript date is fundamentally specified as the time in milliseconds that ha
 
 > **Note:** While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to rge eoicg. This the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
+The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
 ```js
 console.log(new Date(8.64e15).toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (Coordinated Universal Time)"

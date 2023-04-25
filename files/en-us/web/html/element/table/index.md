@@ -655,7 +655,7 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
 
 ##### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Scoping_rows_and_columns')}}
 
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 
