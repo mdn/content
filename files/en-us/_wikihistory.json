@@ -73429,110 +73429,6 @@
       "ethertank"
     ]
   },
-  "Web/CSS/-moz-outline-radius": {
-    "modified": "2020-10-15T21:13:37.146Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "ddbeck",
-      "wbamberg",
-      "Davesjoshin",
-      "mfuji09",
-      "jhpratt",
-      "lucaswerkmeister",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Simplexible",
-      "Prinz_Rana",
-      "duncanmcdonald",
-      "Sebastianz",
-      "ethertank",
-      "Jürgen Jeka",
-      "BijuGC",
-      "Fredchat",
-      "Mgjbot",
-      "Spanglerco",
-      "Nickolay"
-    ]
-  },
-  "Web/CSS/-moz-outline-radius-bottomleft": {
-    "modified": "2020-10-15T21:18:05.091Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "ddbeck",
-      "chrisdavidmills",
-      "Davesjoshin",
-      "MNizam0802",
-      "mfluehr",
-      "wbamberg",
-      "Sebastianz",
-      "teoli",
-      "Yann Dìnendal",
-      "Fredchat",
-      "Mgjbot",
-      "Spanglerco"
-    ]
-  },
-  "Web/CSS/-moz-outline-radius-bottomright": {
-    "modified": "2020-10-15T21:18:05.508Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "ddbeck",
-      "wbamberg",
-      "chrisdavidmills",
-      "Davesjoshin",
-      "estelle",
-      "MNizam0802",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "Yann Dìnendal",
-      "Fredchat",
-      "Mgjbot",
-      "Spanglerco"
-    ]
-  },
-  "Web/CSS/-moz-outline-radius-topleft": {
-    "modified": "2020-10-15T21:18:11.568Z",
-    "contributors": [
-      "Sheppy",
-      "ddbeck",
-      "wbamberg",
-      "chrisdavidmills",
-      "Davesjoshin",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "Yann Dìnendal",
-      "Fredchat",
-      "Mgjbot",
-      "Spanglerco"
-    ]
-  },
-  "Web/CSS/-moz-outline-radius-topright": {
-    "modified": "2020-10-15T21:18:10.350Z",
-    "contributors": [
-      "Sheppy",
-      "ddbeck",
-      "wbamberg",
-      "chrisdavidmills",
-      "Davesjoshin",
-      "estelle",
-      "MNizam0802",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "Yann Dìnendal",
-      "ethertank",
-      "md.ali",
-      "Fredchat",
-      "Mgjbot",
-      "Spanglerco"
-    ]
-  },
   "Web/CSS/-moz-user-focus": {
     "modified": "2020-10-15T21:08:20.542Z",
     "contributors": [
@@ -73927,31 +73823,6 @@
       "Mw22"
     ]
   },
-  "Web/CSS/:-moz-list-bullet": {
-    "modified": "2020-07-29T00:11:45.506Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "duncanmcdonald",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "j.j.",
-      "Marsf",
-      "Zibibbo84"
-    ]
-  },
-  "Web/CSS/:-moz-list-number": {
-    "modified": "2020-07-29T00:11:54.995Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "velvel53",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/:-moz-loading": {
     "modified": "2020-07-29T00:10:43.068Z",
     "contributors": [
@@ -74066,6 +73937,31 @@
   "Web/CSS/::-moz-focus-inner": {
     "modified": "2020-10-15T22:25:40.021Z",
     "contributors": ["Sheppy", "wbamberg", "estelle"]
+  },
+  "Web/CSS/::-moz-list-bullet": {
+    "modified": "2020-07-29T00:11:45.506Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "duncanmcdonald",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "j.j.",
+      "Marsf",
+      "Zibibbo84"
+    ]
+  },
+  "Web/CSS/::-moz-list-number": {
+    "modified": "2020-07-29T00:11:54.995Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "Sebastianz",
+      "teoli",
+      "velvel53",
+      "Sheppy"
+    ]
   },
   "Web/CSS/::-moz-page": {
     "modified": "2020-10-15T21:08:00.388Z",
@@ -105639,10 +105535,6 @@
     "modified": "2020-04-16T11:52:48.784Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "nbp"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_octal": {
-    "modified": "2020-04-16T12:40:59.260Z",
-    "contributors": ["fscholz"]
-  },
   "Web/JavaScript/Reference/Errors/Bad_radix": {
     "modified": "2020-04-14T12:36:17.047Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "Sheppy"]
@@ -105651,7 +105543,7 @@
     "modified": "2020-07-13T07:10:02.676Z",
     "contributors": ["Amorymeltzer", "fscholz", "thewub", "PatrickKettner"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_return_or_yield": {
+  "Web/JavaScript/Reference/Errors/Bad_return": {
     "modified": "2020-05-06T09:44:43.817Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "lewisje"]
   },
@@ -105708,17 +105600,9 @@
     "modified": "2020-05-06T09:39:01.985Z",
     "contributors": ["fscholz", "PatrickKettner"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_String_generics": {
-    "modified": "2020-04-16T12:48:08.723Z",
-    "contributors": ["fscholz", "SphinxKnight", "sanjula40"]
-  },
   "Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage": {
     "modified": "2020-04-15T10:56:43.340Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_expression_closures": {
-    "modified": "2020-04-16T12:49:19.590Z",
-    "contributors": ["fscholz", "wbamberg", "SphinxKnight", "sanjula40"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-04-15T11:05:34.536Z",
@@ -105727,10 +105611,6 @@
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-11-30T05:50:18.195Z",
     "contributors": ["mfuji09", "fscholz"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat": {
-    "modified": "2020-04-16T12:42:53.932Z",
-    "contributors": ["fscholz"]
   },
   "Web/JavaScript/Reference/Errors/Equal_as_assign": {
     "modified": "2020-04-16T08:23:11.906Z",
@@ -105795,16 +105675,6 @@
   "Web/JavaScript/Reference/Errors/Malformed_URI": {
     "modified": "2020-04-16T12:36:11.639Z",
     "contributors": ["fscholz", "PatrickKettner", "thornedlove"]
-  },
-  "Web/JavaScript/Reference/Errors/Malformed_formal_parameter": {
-    "modified": "2020-04-28T13:28:22.712Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "PatrickKettner",
-      "nmve",
-      "jorendorff-moz"
-    ]
   },
   "Web/JavaScript/Reference/Errors/Missing_bracket_after_list": {
     "modified": "2020-04-16T07:55:30.556Z",
