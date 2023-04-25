@@ -3,44 +3,64 @@ title: CSS Scrollbar Styling module
 slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
-browser-compat:
-  - css.properties.scrollbar-width
-  - css.properties.scrollbar-color
 ---
 
 {{CSSRef}}
 
 The **CSS scrollbars styling** module defines properties to influence the visual styling of scrollbars, including controls for their color and width. It standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
-### Scrollbar styling in action
+## Scrollbar styling in action
 
-In this example, we have chosen to use a thin scrollbar with a green track and purple thumb.
+In this example, we have chosen to use a thin scrollbar with an orange track and red thumb.
 
-```css
-.scroller {
+```css hidden
+.poem {
   width: 300px;
   height: 100px;
+  border: 1px solid;
+}
+```
+
+```css
+.poem {
   overflow: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: red orange;
   scrollbar-width: thin;
 }
 ```
 
-### HTML
-
-```html
-<p class="scroller">
-  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-  earthnut pea peanut soko zucchini.
-</p>
+```html hidden
+<blockquote class="poem">
+  <h3>A Small Needful Fact</h3>
+  <pre>
+Is that Eric Garner worked
+for some time for the Parks and Rec.
+Horticultural Department, which means,
+perhaps, that with his very large hands,
+perhaps, in all likelihood,
+he put gently into the earth
+some plants which, most likely,
+some of them, in all likelihood,
+continue to grow, continue
+to do what such plants do, like house
+and feed small and necessary creatures,
+like being pleasant to touch and smell,
+like converting sunlight
+into food, like making it easier
+for us to breathe.
+</pre
+  >
+  <p>
+    - <a href="https://onbeing.org/poetry/a-small-needful-fact/">Ross Gay</a>
+  </p>
+</blockquote>
 ```
 
-### Result
+{{EmbedLiveSample("Scrollbar_styling_in_action")}}
 
-{{EmbedLiveSample("Scrollbar styling in action")}}
+In some browsers you will need to scroll the poem to view the scroll thumbs and hover over the scrollbars to see the track.
+
+> **Note:** When customizing scrollbars, ensure they have enough contrast and that their hit area is large enough for people who use touch input. See [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html).
 
 ## Reference
 
@@ -59,23 +79,23 @@ In this example, we have chosen to use a thin scrollbar with a green track and p
 - {{CSSxRef("overflow-clip-margin")}} CSS property
 - {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
+- {{cssxref("scroll-margin")}} CSS shorthand property
+- {{cssxref("scroll-padding")}} CSS shorthand property
+- {{cssxref("scroll-snap-align")}} CSS property
+- {{cssxref("scroll-snap-stop")}} CSS property
+- {{cssxref("scroll-snap-type")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
-
-## Accessibility concerns
-
-When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
-
-- [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- {{glossary("scroll container")}} glossary term
+- {{Glossary("scrollport")}} glossary term
+- ARIA [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) role
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- [CSS overflow module](/en-US/docs/Learn/CSS/CSS_overflow)
+- [CSS overflow module](/en-US/docs/web/CSS/CSS_overflow)
+- [CSS scroll snap module](/en-US/docs/web/CSS/CSS_Scroll_Snap)
+- [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets {{cssxref("scrollbar-color")}} to 'auto'
 - {{Experimental_Inline}} The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, to create animations tied to the scroll offset of a {{glossary("scroll container")}}.
