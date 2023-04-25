@@ -88,7 +88,7 @@ _No changes._
 ### JavaScript
 
 - The new {{jsxref("BigInt")}} primitive is enabled by default ([Firefox bug 1527902](https://bugzil.la/1527902)).
-- String generic methods have been removed ([Firefox bug 1222552](https://bugzil.la/1222552)). See the [deprecation warning](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics) for more information.
+- [String generic methods](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#string_2) have been removed ([Firefox bug 1222552](https://bugzil.la/1222552)).
 
 ### APIs
 

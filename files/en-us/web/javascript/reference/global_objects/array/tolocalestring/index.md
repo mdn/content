@@ -99,8 +99,12 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
 - {{jsxref("Intl")}}
+- {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}

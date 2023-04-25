@@ -130,6 +130,8 @@ The following example shows a very simple textarea, with a set numbers of rows a
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example','600','150') }}
 
 ### Example using "minlength" and "maxlength"
@@ -141,6 +143,8 @@ This example has a minimum and maximum number of characters — of 10 and 20 res
 Write something here…
 </textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
 
@@ -158,7 +162,9 @@ This example has a placeholder set. Notice how it disappears when you start typi
   placeholder="Comment text."></textarea>
 ```
 
-{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Example using "placeholder"','600','100') }}
 
 > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
@@ -177,7 +183,9 @@ I am a read-only textarea.
 </textarea>
 ```
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Disabled_and_readonly','600','100') }}
 
 ## Technical summary
 

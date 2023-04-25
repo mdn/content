@@ -53,9 +53,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Simple_example", 400, 120)}}
 
 ### Nesting a list
 
@@ -86,9 +86,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Nesting_a_list", 400, 220)}}
+{{EmbedLiveSample("Nesting_a_list", 400, 340)}}
 
 ### Ordered list inside unordered list
 
@@ -109,9 +109,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}
+{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 190)}}
 
 ## Technical summary
 

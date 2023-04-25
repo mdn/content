@@ -20,6 +20,8 @@ The value syntax starts with the **name of the function**, followed by a left pa
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
+> **Note:** The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The [conditional at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules) are also not value functions; the parentheses are used for groupings.
+
 ## Transform functions
 
 The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
@@ -299,9 +301,18 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 - {{CSSxRef("font-variant-alternates#annotation", "annotation()")}}
   - : Enables annotations such as circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, such as `nalt 2`.
 
+## Timing functions
+
+The following functions are used as a value in transition and animation properties.
+
+- {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
+  - : Easing function that defines a cubic Bézier curve.
+- {{cssxref("easing-function#step_easing_function", "steps()")}}
+  - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
+
 ## Animation functions
 
-This function can be used to provide the timeline for an animation.
+The following functions are used as a value of different {{CSSxRef("animation")}} properties.
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.

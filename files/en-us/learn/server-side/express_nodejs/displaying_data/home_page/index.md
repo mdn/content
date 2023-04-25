@@ -90,7 +90,7 @@ We use the [`countDocuments()`](https://mongoosejs.com/docs/api/model.html#Model
 This method is called on a model, with an optional set of conditions to match against, and returns a `Query` object.
 The query can be executed by calling [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec), which returns a `Promise` that is either fulfilled with a result, or rejected if there is a database error.
 
-Because the queries for document counts are are independent of each other we use [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to run them in parallel.
+Because the queries for document counts are independent of each other we use [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to run them in parallel.
 The method returns a new promise that we [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) for completion (execution pauses within _this function_ at `await`).
 When all the queries complete, the promise returned by `all()` fulfills, continuing execution of the route handler function, and populating the array with the results of the database queries.
 
