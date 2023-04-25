@@ -40,7 +40,7 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 - `scroll`
   - : Content is clipped if necessary to fit in the padding box in the inline dimension. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
 - `clip`
-   - : Overflow content is clipped at the element's overflow clip edge that is defined using the {{CSSXref("overflow-clip-margin")}} property.
+  - : Overflow content is clipped at the element's overflow clip edge that is defined using the {{CSSXref("overflow-clip-margin")}} property.
 - `auto`
   - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
 
@@ -81,7 +81,7 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
     <code>scroll</code>
     <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
-  
+
   <li>
     <code>overflow-inline: clip</code> — hides the text outside the box beyond the <code>overflow-clip-margin</code>
     <code>clip</code>
