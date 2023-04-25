@@ -17,8 +17,8 @@ The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) property sets what shows wh
 /* Keyword values */
 overflow-inline: visible;
 overflow-inline: hidden;
-overflow-inline: scroll;
 overflow-inline: clip;
+overflow-inline: scroll;
 overflow-inline: auto;
 
 /* Global values */
@@ -37,10 +37,10 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
   - : Content is not clipped and may be rendered outside the padding box's inline start and end edges.
 - `hidden`
   - : Content is clipped if necessary to fit the inline dimension in the padding box. No scrollbars are provided.
-- `scroll`
-  - : Content is clipped if necessary to fit in the padding box in the inline dimension. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
 - `clip`
   - : Overflow content is clipped at the element's overflow clip edge that is defined using the {{CSSXref("overflow-clip-margin")}} property.
+- `scroll`
+  - : Content is clipped if necessary to fit in the padding box in the inline dimension. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
 - `auto`
   - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
 
@@ -61,29 +61,29 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 ```html
 <ul>
   <li>
-    <code>overflow-inline: hidden</code> — hides the text outside the box
+    <code>overflow-inline: hidden</code> (hides the text outside the box)
     <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: scroll</code> — always adds a scrollbar
+    <code>overflow-inline: scroll</code> (always adds a scrollbar)
     <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: visible</code> — displays the text outside the box if
-    needed
+    <code>overflow-inline: visible</code> (displays the text outside the box if
+    needed)
     <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: auto</code> — on most browsers, equivalent to
-    <code>scroll</code>
+    <code>overflow-inline: auto</code> (equivalent to <code>scroll</code>
+    in most browsers)
     <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: clip</code> — hides the text outside the box beyond the <code>overflow-clip-margin</code>
+    <code>overflow-inline: clip</code> (hides the text outside the box beyond the overflow clip edge)
     <code>clip</code>
     <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
@@ -135,7 +135,6 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 
 ## See also
 
-- [CSS overflow module](/en-US/docs/Web/CSS/CSS_overflow)
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-block")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{CSSXref("overflow-clip-margin")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS Logical Properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
-- [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
+- {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
+- [CSS writing modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
