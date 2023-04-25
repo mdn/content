@@ -113,8 +113,8 @@ Also, you should be aware of situation-specific needs. For example, if you are c
 
 So, our final support chart will end up looking like so:
 
-1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge, and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2. B-grade: IE 8 and 9 for Windows, Opera Mini.
+1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, and Edge (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2. B-grade: Opera Mini.
 3. C-grade: Opera, other niche modern browsers.
 
 ## What are you going to test?
