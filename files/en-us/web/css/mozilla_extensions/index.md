@@ -8,62 +8,29 @@ status:
 
 {{CSSRef}}
 
-Mozilla applications such as Firefox support a number of special **Mozilla extensions to [CSS](/en-US/docs/Web/CSS)**, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.
+Firefox support a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.
 
-## Mozilla-only properties and pseudo-classes (avoid using on websites)
+> **Note:** These extensions are mostly experimental or deprecated but kept for backward compatibility. Avoid using them on production websites.
 
-> **Note:** These properties and pseudo-classes will only work in Mozilla applications such as Firefox, and are not on a standards track. Some of them apply only to [XUL](/en-US/docs/Mozilla/Tech/XUL) elements.
+## Mozilla-only properties
 
-### B
-
-- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-align")}}
-- {{CSSxRef("-moz-box-direction")}}
-- {{CSSxRef("-moz-box-flex")}}
-- {{CSSxRef("-moz-box-ordinal-group")}}
-- {{CSSxRef("-moz-box-orient")}}
-- {{CSSxRef("-moz-box-pack")}}
-
-### C–I
-
-- {{CSSxRef("-moz-float-edge")}}
-- {{CSSxRef("-moz-force-broken-image-icon")}}
-- {{CSSxRef("-moz-image-region")}}
-
-### O
-
-- {{CSSxRef("-moz-orient")}}
-- {{CSSxRef("-moz-osx-font-smoothing")}}
-- {{CSSxRef("-moz-outline-radius")}}
-- {{CSSxRef("-moz-outline-radius-bottomleft")}}
-- {{CSSxRef("-moz-outline-radius-bottomright")}}
-- {{CSSxRef("-moz-outline-radius-topleft")}}
-- {{CSSxRef("-moz-outline-radius-topright")}}
-- {{CSSxRef("overflow-clip-box")}}
-- {{CSSxRef("overflow-clip-box-block")}}
-- {{CSSxRef("overflow-clip-box-inline")}}
-
-### S–Z
-
-- {{CSSxRef("-moz-stack-sizing")}}
-- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-modify")}}
-- {{CSSxRef("-moz-window-dragging")}}
-- {{CSSxRef("-moz-window-shadow")}}
+- {{CSSxRef("-moz-box-align")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-box-direction")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-box-flex")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-box-ordinal-group")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-box-orient")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-box-pack")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-image-region")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-orient")}} {{non-standard_inline}}
+- {{CSSxRef("-moz-osx-font-smoothing")}} {{non-standard_inline}}
+- {{CSSxRef("overflow-clip-box")}} {{experimental_inline}} (To use inside the UA spreadsheet)
+- {{CSSxRef("overflow-clip-box-block")}} {{experimental_inline}} (To use inside the UA spreadsheet)
+- {{CSSxRef("overflow-clip-box-inline")}} {{experimental_inline}} (To use inside the UA spreadsheet)
+- {{CSSxRef("-moz-user-focus")}} {{non-standard_inline}}
+- {{CSSxRef("-moz-user-input")}} {{non-standard_inline}}
+- {{CSSxRef("-moz-user-modify")}} {{non-standard_inline}}
 
 ## Formerly proprietary properties that are now standard
 
@@ -111,7 +78,6 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
 
 ### F–M
 
@@ -530,20 +496,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-table-outer")}}
 - {{CSSxRef("::-moz-table-row")}}
 - {{CSSxRef("::-moz-table-row-group")}}
-- {{CSSxRef(":-moz-tree-cell")}}
-- {{CSSxRef(":-moz-tree-cell-text")}}
-- {{CSSxRef(":-moz-tree-cell-text(hover)")}}
-- {{CSSxRef(":-moz-tree-checkbox")}}
-- {{CSSxRef(":-moz-tree-column")}}
-- {{CSSxRef(":-moz-tree-drop-feedback")}}
-- {{CSSxRef(":-moz-tree-image")}}
-- {{CSSxRef(":-moz-tree-indentation")}}
-- {{CSSxRef(":-moz-tree-line")}}
-- {{CSSxRef(":-moz-tree-progressmeter")}}
-- {{CSSxRef(":-moz-tree-row")}}
-- {{CSSxRef(":-moz-tree-row(hover)")}}
-- {{CSSxRef(":-moz-tree-separator")}}
-- {{CSSxRef(":-moz-tree-twisty")}}
 
 ### U – X
 
@@ -553,7 +505,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-viewport")}}
 - {{CSSxRef("::-moz-viewport-scroll")}}
 - {{CSSxRef(":-moz-window-inactive")}}
-- {{CSSxRef("::-moz-xul-anonymous-block")}}
 
 ## At-rules
 
@@ -561,7 +512,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## Media features
 
-- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
+- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}}
 - {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
 - {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
 - {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
