@@ -58,7 +58,6 @@ for us to breathe.
 
 {{EmbedLiveSample("Scrollbar_styling_in_action")}}
 
-
 > **Note:** When customizing scrollbars, ensure that the thumb and track have enough contrast with the surrounding background. Also ensure that the scrollbar hit area is large enough for people who use touch input.
 
 ## Reference
@@ -96,4 +95,4 @@ for us to breathe.
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module
-- {{{cssxref('scroll-timeline-name')}}, {{cssxref('scroll-timeline-axis')}}, and {{cssxref('scroll-timeline')}} 
+- {{cssxref('scroll-timeline-name')}}, {{cssxref('scroll-timeline-axis')}}, and {{cssxref('scroll-timeline')}}
