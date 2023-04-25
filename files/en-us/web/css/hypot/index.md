@@ -69,7 +69,7 @@ Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_p
 :root {
   --size-0: 100px;
   --size-1: hypot(var(--size-0)); /*  100px */
-  --size-2: hypot(var(--size-0), var(--size-0)); /*  141.417px */
+  --size-2: hypot(var(--size-0), var(--size-0)); /*  141.42px */
   --size-3: hypot(
     calc(var(--size-0) * 1.5),
     calc(var(--size-0) * 2)
