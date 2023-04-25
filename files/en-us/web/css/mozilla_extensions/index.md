@@ -14,12 +14,12 @@ Firefox support a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, 
 
 ## Mozilla-only properties
 
-- {{CSSxRef("-moz-box-align")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-direction")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-flex")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-ordinal-group")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-orient")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-pack")}} {{deprecated_inline}}
+- {{CSSxRef("box-align", "-moz-box-align")}} {{deprecated_inline}}
+- {{CSSxRef("box-direction", "-moz-box-direction")}} {{deprecated_inline}}
+- {{CSSxRef("box-flex", "-moz-box-flex")}} {{deprecated_inline}}
+- {{CSSxRef("box-ordinal-group" ,"-moz-box-ordinal-group")}} {{deprecated_inline}}
+- {{CSSxRef("box-orient", "-moz-box-orient")}} {{deprecated_inline}}
+- {{CSSxRef("box-pack", "-moz-box-pack")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-image-region")}} {{deprecated_inline}}
