@@ -1,6 +1,7 @@
 ---
 title: "ARIA: tabpanel role"
 slug: Web/Accessibility/ARIA/Roles/tabpanel_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tabpanel
   - https://w3c.github.io/aria-practices/#tabpanel

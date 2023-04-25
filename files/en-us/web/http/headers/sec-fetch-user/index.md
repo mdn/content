@@ -1,6 +1,7 @@
 ---
 title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-User
 ---
 

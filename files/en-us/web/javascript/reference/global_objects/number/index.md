@@ -111,7 +111,7 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 
 ## Constructor
 
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
+- {{jsxref("Number/Number", "Number()")}}
   - : Creates a new `Number` value.
 
 When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
@@ -139,12 +139,12 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
 
 ## Static methods
 
-- {{jsxref("Number.isNaN()")}}
-  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isFinite()")}}
   - : Determine whether the passed value is a finite number.
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
+- {{jsxref("Number.isNaN()")}}
+  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}

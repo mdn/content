@@ -1,5 +1,5 @@
 ---
-title: '<tr>: The Table Row element'
+title: "<tr>: The Table Row element"
 slug: Web/HTML/Element/tr
 page-type: html-element
 browser-compat: html.elements.tr

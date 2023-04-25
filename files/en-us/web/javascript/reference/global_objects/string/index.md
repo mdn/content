@@ -308,11 +308,11 @@ These properties are own properties of each `String` instance.
     encoded code point starting at the specified `pos`.
 - {{jsxref("String.prototype.concat()")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()")}}
-  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.endsWith()")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
+- {{jsxref("String.prototype.includes()")}}
+  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
@@ -361,7 +361,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
   - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
@@ -374,8 +374,7 @@ These properties are own properties of each `String` instance.
     For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
@@ -401,7 +400,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 

@@ -1,6 +1,7 @@
 ---
 title: Redirections in HTTP
 slug: Web/HTTP/Redirections
+page-type: guide
 ---
 
 {{HTTPSidebar}}

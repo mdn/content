@@ -18,22 +18,8 @@ The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* ... */ })
-forEach((range) => { /* ... */ })
-forEach((range, key) => { /* ... */ })
-forEach((range, key, highlight) => { /* ... */ })
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(range) { /* ... */ })
-forEach(function(range, key) { /* ... */ })
-forEach(function(range, key, highlight) { /* ... */ })
-forEach(function(range, key, highlight) { /* ... */ }, thisArg)
 ```
 
 ### Parameters

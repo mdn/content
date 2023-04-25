@@ -21,7 +21,7 @@ the properties within may be changed at will.
 ## Syntax
 
 ```js-nolint
-fromPoint(sourcePoint)
+DOMPoint.fromPoint(sourcePoint)
 ```
 
 ### Parameters

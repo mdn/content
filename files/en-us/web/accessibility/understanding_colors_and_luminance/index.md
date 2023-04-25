@@ -1,6 +1,7 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -123,6 +124,10 @@ The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB
 ### Red / green color blindness
 
 Protanopia is a color vision deficiency in which the eye has no red cones; sRGB can still be perceived via green cones, though darker than normal vision. Both protan (red deficient) and deutan (green deficient) deficiencies cause difficulty distinguishing _between_ red and green.
+
+Developer tools can help simulate color vision differences right in your browser. For example, Firefox's Accessibility Inspector enables simulating protanopia, deuteranopia, tritanopia, achromatopsia, and contrast loss right in the accessibility panel.
+
+![Snippet of Firefox developer tools showing the simulate popup](simulate_color_differences.jpg)
 
 ## Luminance and Contrast
 

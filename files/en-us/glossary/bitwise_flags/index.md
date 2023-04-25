@@ -1,5 +1,5 @@
 ---
-title: "Bitwise flags"
+title: Bitwise flags
 slug: Glossary/Bitwise_flags
 page-type: glossary-definition
 ---

@@ -16,7 +16,7 @@ interface creates a new key range containing a single value.
 ## Syntax
 
 ```js-nolint
-only(value)
+IDBKeyRange.only(value)
 ```
 
 ### Parameters

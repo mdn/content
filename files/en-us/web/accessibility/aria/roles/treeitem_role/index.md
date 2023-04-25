@@ -1,6 +1,7 @@
 ---
 title: "ARIA: treeitem role"
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treeitem
   - https://w3c.github.io/aria-practices/#TreeView

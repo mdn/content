@@ -1,5 +1,5 @@
 ---
-title: '<blockquote>: The Block Quotation element'
+title: "<blockquote>: The Block Quotation element"
 slug: Web/HTML/Element/blockquote
 page-type: html-element
 browser-compat: html.elements.blockquote

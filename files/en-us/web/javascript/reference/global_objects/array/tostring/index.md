@@ -77,4 +77,9 @@ console.log(Array.prototype.toString.call({ join: "not function" }));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
+- {{jsxref("String.prototype.toString()")}}

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.language
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.language`** property is an accessor property that returns the language associated with the locale.
+The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 
 ## Description
 
