@@ -49,7 +49,7 @@ The `browser_specific_settings` key contains keys that are specific to a particu
 
 ### Firefox (Gecko) properties
 
-Firefox stores browser-specific settings in these subkeys:
+Firefox stores browser-specific settings in these sub-keys:
 
 - `gecko` for the desktop version of Firefox.
 - `gecko_android` for the Android version of Firefox.
