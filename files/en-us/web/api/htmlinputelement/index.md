@@ -53,11 +53,11 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
 
-  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Global_attributes/popovertargetaction) global HTML attribute.
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/input#popovertargetaction) HTML attribute.
 
 - {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
 
-  - : Gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Global_attributes/popovertarget) global HTML attribute.
+  - : Gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/input#popovertarget) HTML attribute.
 
 - {{domxref("HTMLInputElement.step", "step")}}
 

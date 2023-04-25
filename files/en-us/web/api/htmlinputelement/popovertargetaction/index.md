@@ -12,7 +12,7 @@ browser-compat: api.HTMLInputElement.popoverTargetAction
 
 The **`popoverTargetAction`** property of the {{domxref("HTMLInputElement")}} interface gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`.
 
-It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Global_attributes/popovertargetaction) global HTML attribute.
+It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
 
 ## Value
 

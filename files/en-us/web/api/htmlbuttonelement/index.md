@@ -41,9 +41,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.name")}}
   - : A string representing the name of the object when submitted with a form. If specified, it must not be the empty string.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}}
-  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Global_attributes/popovertargetaction) global HTML attribute.
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
-  - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Global_attributes/popovertarget) global HTML attribute.
+  - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.tabIndex")}}
   - : A `long` that represents this element's position in the tabbing order.
 - {{domxref("HTMLButtonElement.type")}}

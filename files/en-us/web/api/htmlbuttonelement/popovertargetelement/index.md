@@ -12,7 +12,7 @@ browser-compat: api.HTMLButtonElement.popoverTargetElement
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a control button.
 
-It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Global_attributes/popovertarget) global HTML attribute.
+It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 
 ## Value
 
