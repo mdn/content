@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **CSS scrollbars styling** module defines properties to influence the visual styling of scrollbars, including controls for their color and width. It standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
+The **CSS scrollbars styling** module defines properties that provide visual styling of scrollbars, including controls for their color and width.
 
 ## Scrollbar styling in action
 
