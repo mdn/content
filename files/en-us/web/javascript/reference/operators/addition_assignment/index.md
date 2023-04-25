@@ -30,6 +30,7 @@ let baz = true;
 
 // Boolean + Number -> addition
 baz += 1; // 2
+baz + 1 = 2;
 
 // Number + Boolean -> addition
 baz += false; // 2
