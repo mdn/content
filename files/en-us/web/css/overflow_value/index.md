@@ -7,9 +7,7 @@ browser-compat: css.types.overflow
 
 {{CSSRef}}
 
-The **`<overflow>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image.
-
-The `<overflow>` data type is used in the {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}} and {{cssxref("overflow-block")}} properties, as well as the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
+The **`<overflow>`** [CSS](/en-US/docs/Web/CSS) keyword values is a set of keyword values used in the {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}} and {{cssxref("overflow-block")}} properties, as well as the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
 
 ## Syntax
 
