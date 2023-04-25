@@ -1,6 +1,6 @@
 ---
 title: "::-moz-list-number"
-slug: Web/CSS/:-moz-list-number
+slug: Web/CSS/::-moz-list-number
 page-type: css-pseudo-class
 status:
   - non-standard

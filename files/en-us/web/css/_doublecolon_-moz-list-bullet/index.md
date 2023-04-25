@@ -1,6 +1,6 @@
 ---
 title: "::-moz-list-bullet"
-slug: Web/CSS/:-moz-list-bullet
+slug: Web/CSS/::-moz-list-bullet
 page-type: css-pseudo-class
 status:
   - non-standard
