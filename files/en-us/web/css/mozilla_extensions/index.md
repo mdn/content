@@ -54,17 +54,17 @@ Firefox support a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
 - {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-background-inline-policy")}} {{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
+- {{CSSxRef("box-decoration-break", "-moz-background-inline-policy")}} {{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
 - {{CSSxRef("background-size", "-moz-background-size")}} {{deprecated_inline}}
-- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
-- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
-- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
-- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-width")}}]
-- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
-- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start")}}]
-- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-color")}}]
-- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-style")}}]
-- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
+- {{CSSxRef("border-inline-end", "-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
+- {{CSSxRef("border-inline-color", "-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
+- {{CSSxRef("border-inline-style", "-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
+- {{CSSxRef("border-inline-width", "-moz-border-end-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-width")}}]
+- {{CSSxRef("border-image", "-moz-border-image")}} {{Deprecated_Inline}}
+- {{CSSxRef("border-inline-start", "-moz-border-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start")}}]
+- {{CSSxRef("border-inline-start-color", "-moz-border-start-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-color")}}]
+- {{CSSxRef("border-inline-start-style", "-moz-border-start-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-style")}}]
+- {{CSSxRef("border-inline-start-width", "-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
 - {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 
 ### C
