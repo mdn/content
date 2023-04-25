@@ -62,11 +62,11 @@ This example shows how you can use the `log()` function to calculate sizes.
 
 #### CSS
 
-Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First, we declare the first size (`--size-0`), which is then used to calculate the other sizes.
 
-- `--size-1` is calculated by multiplying `--size-0` (50px) by the value of `log(7.389)` (2) which results in 100px
-- `--size-2` is calculated by multiplying `--size-0` (50px) by the value of `log(8, 2)` (3) which results in 150px
-- `--size-3` is calculated by multiplying `--size-0` (50px) by the value of `log(625, 5)` (4) which results in 200px
+- `--size-1` is calculated by multiplying `--size-0` (50px) by the value of `log(7.389)` (2) which results in 100px.
+- `--size-2` is calculated by multiplying `--size-0` (50px) by the value of `log(8, 2)` (3) which results in 150px.
+- `--size-3` is calculated by multiplying `--size-0` (50px) by the value of `log(625, 5)` (4) which results in 200px.
 
 ```css
 :root {
