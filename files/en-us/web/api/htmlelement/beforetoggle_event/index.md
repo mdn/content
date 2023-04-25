@@ -9,9 +9,10 @@ browser-compat: api.HTMLElement.beforetoggle_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`beforetoggle`** event fires when an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute is about to be opened or closed.
+The **`beforetoggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) just before it is shown or hidden.
 
-If the element is currently not open, then the `.oldState` property will be set to `closed` and the `.newState` property will be set to `open`; otherwise if the element is open, then `.oldState` will be `open` and `.newState` will be `closed`.
+- If the popover is currently hidden, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
+- If the popover is currently showing, then `event.oldState` will be `open` and `event.newState` will be `closed`.
 
 ## Syntax
 
@@ -29,14 +30,21 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ToggleEvent")}}
 
-## Event properties
+## Examples
 
-_This interface inherits properties from its parent {{DOMxRef("Event")}}._
+```js
+const popover = document.getElementById("mypopover");
 
-- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
-  - : Returns either `open` or `closed`, depending on which state the element is transitioning from.
-- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
-  - : Returns either `open` or `closed`, depending on which state the element is transitioning to.
+// ...
+
+popover.addEventListener("beforetoggle", (event) => {
+  if (event.newState === "open") {
+    console.log("Popover is being shown");
+  } else {
+    console.log("Popover is being hidden");
+  }
+});
+```
 
 ## Specifications
 
@@ -48,5 +56,5 @@ _This interface inherits properties from its parent {{DOMxRef("Event")}}._
 
 ## See also
 
+- [Popover API](/en-US/docs/Web/API/Popover_API)
 - Related event: [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event)
-- The [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute

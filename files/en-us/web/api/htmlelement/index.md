@@ -43,8 +43,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
-- {{DOMxRef("HTMLElement.popover")}} {{Experimental_Inline}}
-  - : A string value reflecting the value of the element's [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
+- {{domxref("HTMLElement.popover")}}
+  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -91,11 +91,11 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.focus()")}}
   - : Makes the element the current keyboard focus.
 - {{DOMxRef("HTMLElement.hidePopover()")}} {{Experimental_Inline}}
-  - : Hides the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+  - : Hides a popover element by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
 - {{DOMxRef("HTMLElement.showPopover()")}} {{Experimental_Inline}}
-  - : Shows the element, promoting it to the top layer, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+  - : Shows a popover element by adding it to the {{glossary("top layer")}} and removing `display: none;` from its styles.
 - {{DOMxRef("HTMLElement.togglePopover()")}} {{Experimental_Inline}}
-  - : Hides or shows the element, if it has a valid {{DOMxRef("HTMLElement.popover")}} value.
+  - : Toggles a popover element between the hidden and showing states.
 
 ## Events
 

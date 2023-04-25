@@ -10,11 +10,15 @@ browser-compat: api.HTMLElement.togglePopover
 
 {{ APIRef("HTML DOM") }}{{SeeCompatTable}}
 
-The **`HTMLElement.togglePopover()`** method opens an element that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute.
+The **`togglePopover()`** method of the {{domxref("HTMLElement")}} interface toggles a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) between the hidden and showing states.
 
-When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute that is currently hidden, then a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} cancelable event will be fired, followed by the popover opening and a {{domxref("HTMLElement/toggle_event", "toggle")}} event being fired.
+When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute:
 
-If the element is already open, then a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} non-cancelable event will be fired followed by the popover closing and a {{domxref("HTMLElement/toggle_event", "toggle")}} event being fired.
+1. A {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event is fired.
+2. The popover toggles between hidden and showing:
+   1. If it was initially showing, it toggles to hidden.
+   2. If it was initially hidden, it toggles to showing.
+3. A {{domxref("HTMLElement/toggle_event", "toggle")}} event is fired.
 
 ## Syntax
 
@@ -30,6 +34,41 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+## Examples
+
+The following example provides functionality to toggle a popover on and off by pressing a particular key on the keyboard.
+
+First, some HTML:
+
+```html
+<div id="mypopover">
+  <h2>Help!</h2>
+
+  <p>You can use the following commands to control the app</p>
+
+  <ul>
+    <li>Press <ins>C</ins> to order cheese</li>
+    <li>Press <ins>T</ins> to order tofu</li>
+    <li>Press <ins>B</ins> to order bacon</li>
+    <hr />
+    <li>Say "Service" to summon the robot waiter to take your order</li>
+    <li>Say "Escape" to engage the ejector seat</li>
+  </ul>
+</div>
+```
+
+And now the JavaScript to wire up the functionality:
+
+```js
+const popover = document.getElementById("mypopover");
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "h") {
+    popover.togglePopover();
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -40,12 +79,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- Related event handlers
-
-  - {{domxref("HTMLElement.beforetoggle_event", "HTMLElement.beforetoggle")}}
-  - {{domxref("HTMLElement.toggle_event", "HTMLElement.toggle")}}
-
-- Related methods
-
-  - {{domxref("HTMLElement.hidePopover", "HTMLElement.hidePopover")}}
-  - {{domxref("HTMLElement.showPopover", "HTMLElement.showPopover")}}
+- [Popover API](/en-US/docs/Web/API/Popover_API)
