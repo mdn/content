@@ -70,50 +70,50 @@ Firefox support a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, 
 ### C
 
 - {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-count", "-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-fill", "-moz-column-fill")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-gap", "-moz-column-gap")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-width", "-moz-column-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule", "-moz-column-rule")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-width", "-moz-column-rule-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-style", "-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-color", "-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 
 ### F–M
 
 - {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-end")}}]
-- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
+- {{CSSxRef("font-feature-settings", "-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("font-language-override", "-moz-font-language-override")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("hyphens", "-moz-hyphens")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("margin-inline-end", "-moz-margin-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-end")}}]
+- {{CSSxRef("margin-inline-start", "-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
 - {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
 
 ### O
 
-- {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
-- {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
-- {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
-- {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
-- {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
-- {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
+- {{CSSxRef("opacity", "-moz-opacity")}} {{deprecated_inline}}
+- {{CSSxRef("outline", "-moz-outline")}} {{deprecated_inline}}
+- {{CSSxRef("outline-color", "-moz-outline-color")}} {{deprecated_inline}}
+- {{CSSxRef("outline-offset", "-moz-outline-offset")}} {{deprecated_inline}}
+- {{CSSxRef("outline-style", "-moz-outline-style")}} {{deprecated_inline}}
+- {{CSSxRef("outline-width", "-moz-outline-width")}} {{deprecated_inline}}
 
 ### P
 
-- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
-- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
+- {{CSSxRef("padding-inline-end", "-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
+- {{CSSxRef("padding-inline-start", "-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
 - {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("perspective-origin", "-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
 
 ### T–U
 
-- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last","-moz-text-align-last")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}} {{deprecated_inline}}
-- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
+- {{CSSxRef("tab-size", "-moz-tab-size")}} {{Experimental_Inline}}
+- {{CSSxRef("text-align-last", "-moz-text-align-last")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-color", "-moz-text-decoration-color")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-line", "-moz-text-decoration-line")}} {{deprecated_inline}}
+- {{CSSxRef("text-decoration-style", "-moz-text-decoration-style")}} {{deprecated_inline}}
+- {{CSSxRef("text-size-adjust", "-moz-text-size-adjust")}} {{Experimental_Inline}}
 - {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -122,17 +122,17 @@ Firefox support a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, 
 - {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
+- {{CSSxRef("user-select", "-moz-user-select")}} {{Experimental_Inline}}
 
 ## Values
 
 ### Global values
 
-- {{CSSxRef("initial","-moz-initial")}}
+- {{CSSxRef("initial", "-moz-initial")}}
 
 ### -moz-appearance
 
-Property: {{CSSxRef("-moz-appearance")}}
+Property: {{CSSxRef("appearance", "-moz-appearance")}}
 
 - `button`
 - `button-arrow-down`
@@ -225,8 +225,8 @@ Property: {{CSSxRef("background-image")}}
 
 #### Gradients
 
-- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("gradient/linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("gradient/radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
 #### Elements
 
@@ -344,7 +344,7 @@ Property: {{CSSxRef("image-rendering")}}
 
 Type: {{CSSxRef("&lt;length&gt;")}}
 
-- {{CSSxRef("-moz-calc")}}
+- {{CSSxRef("calc", "-moz-calc")}}
 
 ### list-style-type
 
@@ -407,7 +407,7 @@ Property: {{CSSxRef("text-decoration")}}
 
 ### -moz-user-select
 
-Property: {{CSSxRef("-moz-user-select")}}
+Property: {{CSSxRef("user-select", "-moz-user-select")}}
 
 - `-moz-all`
 - `-moz-none`
@@ -427,8 +427,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":-moz-any")}}
-- {{CSSxRef(":-moz-any-link")}} \[Matches `:link` and `:visited`]
+- {{CSSxRef(":is", ":-moz-any")}}
+- {{CSSxRef(":any-link", ":-moz-any-link")}} \[Matches `:link` and `:visited`]
 - {{CSSxRef(":-moz-broken")}}
 - {{CSSxRef("::-moz-canvas")}}
 - {{CSSxRef("::-moz-color-swatch")}}
@@ -441,7 +441,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
 - {{CSSxRef(":-moz-focusring")}}
-- {{CSSxRef(":-moz-full-screen")}}
+- {{CSSxRef(":fullscreen", ":-moz-full-screen")}}
 - {{CSSxRef(":-moz-full-screen-ancestor")}}
 - {{CSSxRef(":-moz-handler-blocked")}}
 - {{CSSxRef(":-moz-handler-crashed")}}
@@ -454,8 +454,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-list-bullet")}}
 - {{CSSxRef(":-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
@@ -468,8 +468,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::-moz-placeholder")}} {{deprecated_inline}}
+- {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
+- {{CSSxRef("::placeholder", "::-moz-placeholder")}} {{deprecated_inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
@@ -499,7 +499,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ### U – X
 
-- {{CSSxRef(":-moz-ui-invalid")}}
+- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
 - {{CSSxRef(":-moz-user-disabled")}}
 - {{CSSxRef("::-moz-viewport")}}
@@ -508,7 +508,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## At-rules
 
-- {{CSSxRef("@-moz-document")}}
+- {{CSSxRef("@document", "@-moz-document")}}
 
 ## Media features
 
