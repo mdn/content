@@ -96,5 +96,4 @@ for us to breathe.
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module
-- [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets {{cssxref("scrollbar-color")}} to 'auto'
 - {{{cssxref('scroll-timeline-name')}}, {{cssxref('scroll-timeline-axis')}}, and {{cssxref('scroll-timeline')}} 
