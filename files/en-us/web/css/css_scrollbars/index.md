@@ -5,13 +5,13 @@ page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **CSS scrollbars styling** module defines properties to influence the visual styling of scrollbars, including controls for their color and width. It standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
 ## Scrollbar styling in action
 
-In this example, we have chosen to use a thin scrollbar with an orange track and red thumb.
+This example defines a thin scrollbar with a red thumb and an orange track. To view the thumb, you will need to scroll the text. After the scrollbar is visible, hover over it to see the track.
 
 ```css hidden
 .poem {
@@ -58,9 +58,8 @@ for us to breathe.
 
 {{EmbedLiveSample("Scrollbar_styling_in_action")}}
 
-In some browsers you will need to scroll the poem to view the scroll thumbs and hover over the scrollbars to see the track.
 
-> **Note:** When customizing scrollbars, ensure they have enough contrast and that their hit area is large enough for people who use touch input. See [Baseline Rules for Scrollbar Usability | Adrian Roselli](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html).
+> **Note:** When customizing scrollbars, ensure that the thumb and track have enough contrast with the surrounding background. Also ensure that the scrollbar hit area is large enough for people who use touch input.
 
 ## Reference
 
@@ -87,7 +86,7 @@ In some browsers you will need to scroll the poem to view the scroll thumbs and 
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
 - {{glossary("scroll container")}} glossary term
 - {{Glossary("scrollport")}} glossary term
-- ARIA [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 
 ## Specifications
 
@@ -95,7 +94,7 @@ In some browsers you will need to scroll the poem to view the scroll thumbs and 
 
 ## See also
 
-- [CSS overflow module](/en-US/docs/web/CSS/CSS_overflow)
-- [CSS scroll snap module](/en-US/docs/web/CSS/CSS_Scroll_Snap)
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module
 - [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets {{cssxref("scrollbar-color")}} to 'auto'
-- {{Experimental_Inline}} The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, to create animations tied to the scroll offset of a {{glossary("scroll container")}}.
+- {{{cssxref('scroll-timeline-name')}}, {{cssxref('scroll-timeline-axis')}}, and {{cssxref('scroll-timeline')}} 
