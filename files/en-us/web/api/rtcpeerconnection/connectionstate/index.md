@@ -14,15 +14,10 @@ This state essentially represents the aggregate state of all ICE transports (whi
 
 When this property's value changes, a {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}} event is sent to the {{domxref("RTCPeerConnection")}} instance.
 
-## Syntax
-
-```js-nolint
-const connectionState = RTCPeerConnection.connectionState
-```
-
 ## Value
 
-A string representing the current state of the connection, that is one of the following literals:
+A string representing the current state of the connection.
+This can take on of the following values:
 
 - `new`
   - : At least one of the connection's {{Glossary("ICE")}} transports ({{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}} objects) is in the `new` state, and none of them are in one of the following states: `connecting`, `checking`, `failed`, `disconnected`, or all of the connection's transports are in the `closed` state.
@@ -42,11 +37,11 @@ A string representing the current state of the connection, that is one of the fo
 ## Example
 
 ```js
-const pc = new RTCPeerConnection(configuration);
+const peerConnection = new RTCPeerConnection(configuration);
 
 // …
 
-const connectionState = pc.connectionState;
+const connectionState = peerConnection.connectionState;
 ```
 
 ## Specifications
