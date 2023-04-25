@@ -48,6 +48,8 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `oklab()` function.
 
+#### HTML
+
 ```html
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
@@ -58,6 +60,8 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="green"></div>
 <div data-color="green-b"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -93,6 +97,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Adjusting_the_lightness_and_axes", "100%", 155)}}
 
 ### Adjusting opacity with oklab()
@@ -101,12 +107,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving the `red-alpha` element an opacity of `0.4` makes it appear more transparent than the `red` element.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -132,6 +142,8 @@ div {
   background-color: oklab(50% 130 20 / 0.4);
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("Adjusting_opacity_with_oklab", "100%", 155)}}
 

@@ -40,6 +40,8 @@ color(display-p3 1 0.5 0 / .5);
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `color()` function.
 
+#### HTML
+
 ```html
 <div data-color="red-a98-rgb"></div>
 <div data-color="red-prophoto-rgb"></div>
@@ -48,6 +50,8 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="blue-rec2020"></div>
 <div data-color="blue-srgb"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -81,17 +85,23 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Using_predefined_colorspaces_with_color')}}
 
 ### Using xyz colorspaces with color()
 
 The following example shows how to use `xyz` colorspaces to specify a color.
 
+#### HTML
+
 ```html
 <div data-color="red"></div>
 <div data-color="green"></div>
 <div data-color="blue"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -118,17 +128,23 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Using_xyz_colorspaces_with_color')}}
 
 ### Using color-gamut media queries with color()
 
 This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular colorspace and use that colorspace to specify a color.
 
+#### HTML
+
 ```html
 <div></div>
 <div></div>
 <div></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -160,6 +176,8 @@ div {
   }
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using_color-gamut_media_queries_with_color')}}
 
