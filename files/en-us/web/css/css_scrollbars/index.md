@@ -3,6 +3,9 @@ title: CSS scrollbars styling
 slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
+browser-compat:
+  - css.properties.scrollbar-width
+  - css.properties.scrollbar-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -90,6 +93,10 @@ for us to breathe.
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
