@@ -8,7 +8,7 @@ browser-compat: api.CSSNumericValue.parse
 
 {{APIRef("CSS Typed OM")}}
 
-The **`parse()`** method of the
+The **`parse()`** static method of the
 {{domxref("CSSNumericValue")}} interface converts a value string into an object whose
 members are value and the units.
 
