@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 browser-compat:
-  - css.properties.scrollbar-width
   - css.properties.scrollbar-color
 ---
 
