@@ -79,7 +79,7 @@ The `overflow-block` property is specified as a single keyword chosen from the l
       velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
-  
+
   <li>
     <code>overflow-block: clip</code> (hides the text outside the box beyond 
     the overflow clip edge)
