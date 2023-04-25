@@ -105639,10 +105639,6 @@
     "modified": "2020-04-16T11:52:48.784Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "nbp"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_octal": {
-    "modified": "2020-04-16T12:40:59.260Z",
-    "contributors": ["fscholz"]
-  },
   "Web/JavaScript/Reference/Errors/Bad_radix": {
     "modified": "2020-04-14T12:36:17.047Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "Sheppy"]
@@ -105651,7 +105647,7 @@
     "modified": "2020-07-13T07:10:02.676Z",
     "contributors": ["Amorymeltzer", "fscholz", "thewub", "PatrickKettner"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_return_or_yield": {
+  "Web/JavaScript/Reference/Errors/Bad_return": {
     "modified": "2020-05-06T09:44:43.817Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "lewisje"]
   },
@@ -105708,17 +105704,9 @@
     "modified": "2020-05-06T09:39:01.985Z",
     "contributors": ["fscholz", "PatrickKettner"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_String_generics": {
-    "modified": "2020-04-16T12:48:08.723Z",
-    "contributors": ["fscholz", "SphinxKnight", "sanjula40"]
-  },
   "Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage": {
     "modified": "2020-04-15T10:56:43.340Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_expression_closures": {
-    "modified": "2020-04-16T12:49:19.590Z",
-    "contributors": ["fscholz", "wbamberg", "SphinxKnight", "sanjula40"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-04-15T11:05:34.536Z",
@@ -105727,10 +105715,6 @@
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-11-30T05:50:18.195Z",
     "contributors": ["mfuji09", "fscholz"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat": {
-    "modified": "2020-04-16T12:42:53.932Z",
-    "contributors": ["fscholz"]
   },
   "Web/JavaScript/Reference/Errors/Equal_as_assign": {
     "modified": "2020-04-16T08:23:11.906Z",
@@ -105795,16 +105779,6 @@
   "Web/JavaScript/Reference/Errors/Malformed_URI": {
     "modified": "2020-04-16T12:36:11.639Z",
     "contributors": ["fscholz", "PatrickKettner", "thornedlove"]
-  },
-  "Web/JavaScript/Reference/Errors/Malformed_formal_parameter": {
-    "modified": "2020-04-28T13:28:22.712Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "PatrickKettner",
-      "nmve",
-      "jorendorff-moz"
-    ]
   },
   "Web/JavaScript/Reference/Errors/Missing_bracket_after_list": {
     "modified": "2020-04-16T07:55:30.556Z",
