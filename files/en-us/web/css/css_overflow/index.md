@@ -43,6 +43,10 @@ The following interactive example shows how changing the value of the `overflow`
 
 - {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
 
+### Data types
+
+- [`<overflow>`](/en-US/docs/Learn/CSS/overflow_value) value
+
 ### Glossary
 
 - {{Glossary("Scroll container")}}
@@ -54,6 +58,7 @@ The following interactive example shows how changing the value of the `overflow`
 
 ## Related concepts
 
+-
 - Element scrollTo() method
 
 ## Specifications
@@ -62,5 +67,5 @@ The following interactive example shows how changing the value of the `overflow`
 
 ## See also
 
-- Properties for controlling the look of scrollbars {{CSSxRef("scrollbar-width")}} and {{CSSxRef("scrollbar-color")}}
+- [CSS scrollbars styling module]() and the {{CSSxRef("scrollbar-width")}} and {{CSSxRef("scrollbar-color")}} properties
 - How to [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html).
