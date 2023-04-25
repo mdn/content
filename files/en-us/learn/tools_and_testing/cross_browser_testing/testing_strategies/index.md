@@ -54,8 +54,6 @@ A quick online search tells you that most people in North America and Western Eu
 
 Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
-For IE, you'd probably want to test the last couple of versions. Some people still use IE 9. Since IE is old and less capable, and Microsoft is phasing out IE support, let's put it in the B-grade tier.
-
 Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
 
 Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
