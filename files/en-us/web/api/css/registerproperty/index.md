@@ -1,7 +1,7 @@
 ---
 title: "CSS: registerProperty() static method"
 short-title: registerProperty()
-slug: Web/API/CSS/RegisterProperty
+slug: Web/API/CSS/registerProperty
 page-type: web-api-static-method
 browser-compat: api.CSS.registerProperty
 ---
