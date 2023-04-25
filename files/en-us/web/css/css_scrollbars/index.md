@@ -1,5 +1,5 @@
 ---
-title: CSS Scrollbar Styling module
+title: CSS scrollbars styling
 slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
