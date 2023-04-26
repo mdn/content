@@ -367,7 +367,7 @@ In the second list, only the items with `class="noted"` that are also among the 
 
 ### Using of selector to fix striped tables
 
-A common practice for tables is to use _zebra-stripes_ on table rows, this makes tables easier to read and more accessible. Although if a row is hidden the the stripes will merge and alter the desired effect. In this example you can see two tables both with a `hidden` row the second table ignores the hidden row for styling.
+A common practice for tables is to use _zebra-stripes_ which alternates between light and dark background colors for rows, making tables easier to read and more accessible. If a row is hidden, the stripes will appear merged and alter the desired effect. In this example, you can see two tables with a `hidden` row. The second table handles hidden rows using `of :not([hidden])`.
 
 #### HTML
 
