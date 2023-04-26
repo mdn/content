@@ -8,10 +8,10 @@ browser-compat: api.CredentialsContainer.get
 
 {{APIRef("Credential Management API")}}
 
-The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single {{domxref("Credential")}} instance that matches the provided parameters, which the browser can then use to authenticate with a relying party. This is used by a number of different credential-related APIs with significantly different purposes:
+The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single credential instance that matches the provided parameters, which the browser can then use to authenticate with a relying party. This is used by several different credential-related APIs with significantly different purposes:
 
 - The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `get()` to authenticate using basic federated credentials or username/password credentials.
-- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on based on asymmetric cryptography).
+- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on asymmetric cryptography).
 - The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers.
 
 The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
@@ -231,7 +231,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ### Examples
 

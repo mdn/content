@@ -8,24 +8,23 @@ browser-compat: api.CredentialsContainer.create
 
 {{APIRef("Credential Management API")}}
 
-The **`create()`** method of the
-{{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
-resolves with a new {{domxref("Credential")}} instance based on the provided options, or
-`null` if no `Credential` object can be created.
+The **`create()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that resolves with a new credential instance based on the provided options, the information from which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
 
-> **Note:** Usage of this feature may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+This is used by multiple different credential-related APIs with significantly different purposes:
 
-> **Note:** This method is restricted to top-level contexts. Calls to it within an
-> `<iframe>` element will resolve without effect.
+- The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `create()` to create basic federated credentials or username/password credentials.
+- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `create()` to create public key credentials (based on asymmetric cryptography).
 
-## Syntax
+The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
+
+> **Note:** This method is restricted to top-level contexts. Calls to it within an `<iframe>` element will resolve without effect.
+
+## General syntax
 
 ```js-nolint
 create()
 create(options)
 ```
-
-> **Note:** When providing an `options` object, you should only provide a single property containing the properties that define the type of credential being requested — this means only one of `federated`, `password`, or `publicKey`.
 
 ### Parameters
 
@@ -33,21 +32,21 @@ create(options)
 
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
-    - `federated` {{optional_inline}}
+    - "Credential type"
 
-      - : An object (see [`federated` object structure](#federated_object_structure)) containing details of a {{domxref("FederatedCredential")}} to be created.
+      - : An object defining the type of credential being requested — this can be one of one of:
 
-    - `password` {{optional_inline}}
-
-      - : An object (see [`password` object structure](#password_object_structure)) containing details of a {{domxref("PasswordCredential")}} to be created.
-
-    - `publicKey` {{optional_inline}}
-
-      - : An object (see [`publicKey` object structure](#publickey_object_structure)) containing requirements for a created {{domxref("PublicKeyCredential")}} (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
+        - `federated`: An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supercedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+        - `password`: An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
+        - `publicKey`: An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
     - `signal` {{optional_inline}}
 
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+## Credential Management API
+
+The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) lets a website store and retrieve password and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
 
 ### `federated` object structure
 
@@ -89,6 +88,41 @@ In the case of the string literal, the properties are provided as-is. In the cas
 - `password`: `"new-password"` or `"current-password"`
 
 The exception to this is `origin` — this is set to the origin of the document the {{domxref("HTMLFormElement")}} is contained within.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance matching the provided parameters:
+
+- If the created credential type was a `federated` object, the returned instance will be a {{domxref("FederatedCredential")}}.
+- If the created credential type was a `password` object, the returned instance will be a {{domxref("PasswordCredential")}}.
+
+If a single credential cannot be successfully created, the Promise will resolve to `null`.
+
+### Exceptions
+
+- `TypeError` {{domxref("DOMException")}}
+  - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
+
+### Examples
+
+```js
+navigator.credentials
+  .create({
+    id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
+    name: "fluffybunny",
+    origin: "example.com",
+    password: "fluffyhaxx0r",
+  })
+  .then((pwdCred) => {
+    console.log(pwdCred.name);
+  });
+```
+
+## Web Authentication API
+
+The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure multi-authentication (MFA) without SMS texts. Check out the linked API landing page for more usage information.
+
+> **Note:** Usage of `create()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ### `publicKey` object structure
 
@@ -217,22 +251,14 @@ The exception to this is `origin` — this is set to the origin of the document 
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that matches the provided parameters.
-
-- If the `create()` call includes the `federated` option, the promise fulfills with a {{domxref("FederatedCredential")}} instance.
-- If the `create()` call includes the `password` option, the promise fulfills with a {{domxref("PasswordCredential")}} instance.
-- If the `create()` call includes the `publicKey` option, the promise fulfills with a {{domxref("PublicKeyCredential")}} instance (see the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for more details).
+A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}} instance matching the provided parameters. If no credential object can be created, the promise resolves with `null`.
 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-- `TypeError` {{domxref("DOMException")}}
-  - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
+  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
-
-### Creating a public key credential using the WebAuthn API
 
 The following snippet shows a typical `create()` call with the WebAuthn `publicKey` option:
 
@@ -288,8 +314,3 @@ Some of this data will need to be stored on the server for future authentication
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
-- {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} directive
