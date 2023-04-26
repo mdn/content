@@ -10,9 +10,14 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable
 
 The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 
-Conditional mediation, if available, results in any discovered credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. This is requested by including `mediation: 'conditional'` in your `get()` call. In practice, this means autofilling available credentials.
+Conditional mediation, if available, results in any discovered credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. This is requested by including `mediation: 'conditional'` in your `get()` call. In practice, this means autofilling available credentials; you need to include `autocomplete="webauthn"` on your form fields so that they will show the WebAuthn sign-in options.
 
-If the user makes a gesture outside of the dialog, it closes without resolving or rejecting the Promise and without causing a user-visible error condition. If the user selects a credential, that credential is returned to the caller. The prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
+A conditional `get()` call does not show the browser UI and remains pending until the user picks an account to sign-in with from available autofill suggestions:
+
+- If the user makes a gesture outside of the dialog, it closes without resolving or rejecting the Promise and without causing a user-visible error condition.
+- If the user selects a credential, that credential is returned to the caller.
+
+The prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
 
 > **Note:** If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
 
