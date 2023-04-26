@@ -257,7 +257,7 @@ Items 3, 10 and 17 have a solid background as they are the even list items with 
 
 ### of selector syntax vs selector nth-child
 
-In this example there are two unordered list of names, the first to shows the effect of `li:nth-child(-n + 3 of .noted)` and the second to shows the effect of `li.noted:nth-child(-n + 3)`.
+In this example, there are two unordered lists of names. The first list shows the effect of `li:nth-child(-n + 3 of .noted)` and the second list shows the effect of `li.noted:nth-child(-n + 3)`.
 
 #### HTML
 
