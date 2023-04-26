@@ -3,12 +3,10 @@ title: "Headers: getSetCookie() method"
 short-title: getSetCookie()
 slug: Web/API/Headers/getSetCookie
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Headers.getSetCookie
 ---
 
-{{APIRef("Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}
 
 The **`getSetCookie()`** method of the {{domxref("Headers")}} interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows {{domxref("Headers")}} objects to handle having multiple `Set-Cookie` headers, which wasn't possible prior to its implementation.
 

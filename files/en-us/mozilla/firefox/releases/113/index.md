@@ -45,6 +45,7 @@ This article provides information about the changes in Firefox 113 that affect d
   ([Firefox bug 1709347](https://bugzil.la/1709347)).
 - The [Compression Streams API](/en-US/docs/Web/API/Compression_Streams_API) is now supported.
   The interfaces provided by this API are used to compress and decompress data using the `gzip` and `deflate` formats ([Firefox bug 1823619](https://bugzil.la/1823619)).
+- [`Window.print()`](/en-US/docs/Web/API/Window/print) now opens a print dialog on Firefox for Android, allowing the current document to be printed ([Firefox bug 1809922](https://bugzil.la/1809922)).
 
 #### DOM
 

@@ -67,6 +67,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequestFeedback`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -78,7 +79,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `notifications`
 - `pageCapture`
 - `privacy`
-- `scripting` (Manifest V3 or higher)
+- `scripting`
 - `tabHide`
 - `tabs`
 - `topSites`
