@@ -38,9 +38,6 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 - {{CSSxRef("continue")}} {{experimental_inline}}
 - {{CSSxRef("line-clamp")}} {{experimental_inline}}
 - {{CSSxRef("max-lines")}} {{experimental_inline}}
-
-### Non-standard properties
-
 - {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
 
 ### Data types
@@ -70,6 +67,7 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 - {{cssxref("scroll-snap-align")}} CSS property
 - {{cssxref("scroll-snap-stop")}} CSS property
 - {{cssxref("scroll-snap-type")}} CSS property
+- {{cssxref("text-overflow")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 - Element {{domxref("Element.scroll", "scroll()")}} method
@@ -90,5 +88,5 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 
 - [CSS scrollbars styling module](/en-US/docs/Web/CSS/CSS_scrollbars)
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [CSS OM view module](/en-US/docs/Web/CSS/CSSOM_View)
+- [CSSOM view module](/en-US/docs/Web/CSS/CSSOM_View)
 - How to [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html).
