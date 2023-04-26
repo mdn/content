@@ -27,7 +27,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (`*`) is used, the array will contain `*`. 
+An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (`*`) is used, the array will contain `*`.
 
 ## Errors
 
