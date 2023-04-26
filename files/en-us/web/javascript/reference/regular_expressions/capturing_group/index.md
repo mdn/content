@@ -95,7 +95,7 @@ parseDate("2019-06-19"); // [2019, 6, 19]
 
 ### Pairing quotes
 
-The following function matches the `title='xxx'` pattern in a string. To ensure the quotes match, we use a backreference to refer to the first quote.
+The following function matches the `title='xxx'` and `title="xxx"` patterns in a string. To ensure the quotes match, we use a backreference to refer to the first quote. Accessing the second capturing group (`[2]`) returns the string between the matching quote characters:
 
 ```js
 function parseTitle(metastring) {

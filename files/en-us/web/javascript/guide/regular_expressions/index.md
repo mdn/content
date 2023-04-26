@@ -380,7 +380,7 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 #### Using unicode regular expressions
 
-The "u" flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. An important feature that's enabled by the unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
+The `u` flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. An important feature that's enabled in unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
 /\p{L}*/u;

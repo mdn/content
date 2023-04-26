@@ -16,7 +16,7 @@ A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_
 atom?
 atom*
 atom+
-atom{cnt}
+atom{count}
 atom{min,}
 atom{min,max}
 
@@ -32,7 +32,7 @@ atom{min,max}?
 ### Parameters
 
 - `atom`
-  - : A pattern consisting of anything you may use in a regex literal, including a [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction).
+  - : A single [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms).
 - `count`
   - : A non-negative integer. The number of times the atom should be repeated.
 - `min`
