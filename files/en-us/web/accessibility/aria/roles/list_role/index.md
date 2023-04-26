@@ -1,6 +1,7 @@
 ---
 title: "ARIA: list role"
 slug: Web/Accessibility/ARIA/Roles/list_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#list
 ---
 

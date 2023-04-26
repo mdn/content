@@ -1,6 +1,6 @@
 ---
 title: "CSSRotate: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/CSSRotate/y
 page-type: web-api-instance-property
 browser-compat: api.CSSRotate.y

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.maxByteLength
 
 {{JSRef}}
 
-The **`maxByteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances represents the maximum length, in bytes, that the `ArrayBuffer` can be resized to.
+The **`maxByteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances returns the maximum length (in bytes) that this array buffer can be resized to.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-maxbytelength.html")}}
 

@@ -1,14 +1,14 @@
 ---
 title: "CSS: registerProperty() static method"
 short-title: registerProperty()
-slug: Web/API/CSS/RegisterProperty
+slug: Web/API/CSS/registerProperty
 page-type: web-api-static-method
 browser-compat: api.CSS.registerProperty
 ---
 
 {{APIRef("CSSOM")}}
 
-The **`CSS.registerProperty()`** method registers
+The **`CSS.registerProperty()`** static method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 

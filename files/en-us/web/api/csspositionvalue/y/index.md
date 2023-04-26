@@ -1,6 +1,6 @@
 ---
 title: "CSSPositionValue: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/CSSPositionValue/y
 page-type: web-api-instance-property
 status:

@@ -1,6 +1,7 @@
 ---
 title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Opener-Policy
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
 

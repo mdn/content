@@ -1,6 +1,7 @@
 ---
 title: Sec-GPC
 slug: Web/HTTP/Headers/Sec-GPC
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-GPC

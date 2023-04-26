@@ -32,7 +32,7 @@ Highlights:
   - The value `sideways` of the {{cssxref("text-orientation")}} property has been implemented and `sideways-right` has been made an alias of it ([Firefox bug 1193488](https://bugzil.la/1193488)).
   - The value `sideways-rl` and `sideways-lr` of the {{cssxref("writing-mode")}} property ([Firefox bug 1193488](https://bugzil.la/1193488) and [Firefox bug 1193519](https://bugzil.la/1193519)).
 
-- The non-standard properties {{cssxref("-moz-math-display")}} and {{cssxref("-moz-window-shadow")}} are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
+- The non-standard properties `-moz-math-display` and `-moz-window-shadow` are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
 - The {{cssxref("font-style")}} property now distinguishes between `oblique` and `italic` when both variants are available ([Firefox bug 543715](https://bugzil.la/543715)).
 - Though not supported, the properties {{cssxref("@page/marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
 - The internal value `-moz-mac-unified-toolbar` has been removed from the possible values for the {{cssxref("appearance")}} property ([Firefox bug 1206468](https://bugzil.la/1206468)).

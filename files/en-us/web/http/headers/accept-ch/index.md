@@ -1,6 +1,7 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
+page-type: http-header
 browser-compat: http.headers.Accept-CH
 ---
 

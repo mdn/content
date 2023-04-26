@@ -8,7 +8,7 @@ browser-compat: api.DOMPoint.fromPoint
 
 {{APIRef("DOM")}}
 
-The static **{{domxref("DOMPoint")}}** method
+The **{{domxref("DOMPoint")}}** static method
 `fromPoint()` creates and returns a new mutable `DOMPoint`
 object given a source point.
 
@@ -21,7 +21,7 @@ the properties within may be changed at will.
 ## Syntax
 
 ```js-nolint
-fromPoint(sourcePoint)
+DOMPoint.fromPoint(sourcePoint)
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: search role"
 slug: Web/Accessibility/ARIA/Roles/search_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#search
   - https://w3c.github.io/aria-practices/#aria_lh_search

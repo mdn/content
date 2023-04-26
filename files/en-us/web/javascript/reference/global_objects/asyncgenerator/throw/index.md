@@ -60,9 +60,10 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then((res) => console.log(res));    // { value: 42, done: false }
-asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wrong
-  .then((res) => console.log(res));                  // { value: 42, done: false }
+asyncGen.next(1).then((res) => console.log(res)); // { value: 42, done: false }
+asyncGen
+  .throw(new Error("Something went wrong")) // Error: Something went wrong
+  .then((res) => console.log(res)); // { value: 42, done: false }
 ```
 
 ## Specifications

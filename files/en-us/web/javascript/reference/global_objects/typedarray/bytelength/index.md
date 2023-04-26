@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.byteLength
 
 {{JSRef}}
 
-The **`byteLength`** accessor property represents the length (in bytes) of the typed array.
+The **`byteLength`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in bytes) of this typed array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
 

@@ -1,5 +1,5 @@
 ---
-title: '<span>: The Content Span element'
+title: "<span>: The Content Span element"
 slug: Web/HTML/Element/span
 page-type: html-element
 browser-compat: html.elements.span

@@ -101,43 +101,43 @@ _No changes._
 
 - The following proprietary Mozilla system metric pseudo-classes are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
 
-  - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
-  - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-end-forward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-start-backward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-start-forward)")}}
-  - {{Cssxref(":-moz-system-metric(scrollbar-thumb-proportional)")}}
-  - {{Cssxref(":-moz-system-metric(touch-enabled)")}}
-  - {{Cssxref(":-moz-system-metric(windows-default-theme)")}}
+  - `:-moz-system-metric(images-in-menus)`
+  - `:-moz-system-metric(mac-graphite-theme)`
+  - `:-moz-system-metric(scrollbar-end-backward)`
+  - `:-moz-system-metric(scrollbar-end-forward)`
+  - `:-moz-system-metric(scrollbar-start-backward)`
+  - `:-moz-system-metric(scrollbar-start-forward)`
+  - `:-moz-system-metric(scrollbar-thumb-proportional)`
+  - `:-moz-system-metric(touch-enabled)`
+  - `:-moz-system-metric(windows-default-theme)`
 
 - The following proprietary Mozilla media features are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
 
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
-  - [`-moz-mac-graphite-theme`](/en-US/docs/Web/CSS/@media/-moz-mac-graphite-theme)
+  - `-moz-mac-graphite-theme`
   - `-moz-mac-yosemite-theme`
-  - [`-moz-os-version`](/en-US/docs/Web/CSS/@media/-moz-os-version)
+  - `-moz-os-version`
   - `-moz-overlay-scrollbars`
   - `-moz-physical-home-button`
-  - [`-moz-scrollbar-end-backward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-backward)
-  - [`-moz-scrollbar-end-forward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-end-forward)
-  - [`-moz-scrollbar-start-backward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-backward)
-  - [`-moz-scrollbar-start-forward`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-start-forward)
-  - [`-moz-scrollbar-thumb-proportional`](/en-US/docs/Web/CSS/@media/-moz-scrollbar-thumb-proportional)
+  - `-moz-scrollbar-end-backward`
+  - `-moz-scrollbar-end-forward`
+  - `-moz-scrollbar-start-backward`
+  - `-moz-scrollbar-start-forward`
+  - `-moz-scrollbar-thumb-proportional`
   - `-moz-swipe-animation-enabled`
-  - [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/@media/-moz-windows-accent-color-in-titlebar)
-  - [`-moz-windows-classic`](/en-US/docs/Web/CSS/@media/-moz-windows-classic)
-  - [`-moz-windows-compositor`](/en-US/docs/Web/CSS/@media/-moz-windows-compositor)
-  - [`-moz-windows-default-theme`](/en-US/docs/Web/CSS/@media/-moz-windows-default-theme)
-  - [`-moz-windows-glass`](/en-US/docs/Web/CSS/@media/-moz-windows-glass)
-  - [`-moz-windows-theme`](/en-US/docs/Web/CSS/@media/-moz-windows-theme)
+  - `-moz-windows-accent-color-in-titlebar`
+  - `-moz-windows-classic`
+  - `-moz-windows-compositor`
+  - `-moz-windows-default-theme`
+  - `-moz-windows-glass`
+  - `-moz-windows-theme`
 
 - The proprietary Mozilla `:-moz-styleeditor-transitioning` pseudo-class is no longer available to web content ([Firefox bug 1396099](https://bugzil.la/1396099)).
 
 ### JavaScript
 
-- The non-standard {{jsxref("Date.prototype.toLocaleFormat()")}} method has been removed ([Firefox bug 818634](https://bugzil.la/818634)). See [Warning: Date.prototype.toLocaleFormat is deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat) for more information and migration help.
+- The non-standard [`Date.prototype.toLocaleFormat()`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#date_2) method has been removed ([Firefox bug 818634](https://bugzil.la/818634)).
 - The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ([Firefox bug 638054](https://bugzil.la/638054)). Consider using [setters and getters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) or [proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) instead.
 - The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator), the [`StopIteration`](/en-US/docs/Archive/Web/StopIteration) object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) instead ([Firefox bug 1083482](https://bugzil.la/1083482), [Firefox bug 1413867](https://bugzil.la/1413867), [Firefox bug 1119777](https://bugzil.la/1119777)).
 - The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) and [Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) have been removed ([Firefox bug 1414340](https://bugzil.la/1414340)).

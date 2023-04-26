@@ -4,8 +4,8 @@ slug: Web/API/Background_Synchronization_API
 page-type: web-api-overview
 status:
   - experimental
-spec-urls: https://wicg.github.io/background-sync/spec/
 browser-compat: api.SyncManager
+spec-urls: https://wicg.github.io/background-sync/spec/
 ---
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{SeeCompatTable}}

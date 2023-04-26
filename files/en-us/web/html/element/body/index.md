@@ -1,5 +1,5 @@
 ---
-title: '<body>: The Document Body element'
+title: "<body>: The Document Body element"
 slug: Web/HTML/Element/body
 page-type: html-element
 browser-compat: html.elements.body

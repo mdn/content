@@ -36,7 +36,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
   - : Stores a value at the specified index of the array, if it equals a value. Returns the old value.
 - {{jsxref("Atomics.exchange()")}}
   - : Stores a value at the specified index of the array. Returns the old value.
-- {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
+- {{jsxref("Atomics.isLockFree()")}}
   - : An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns `true` if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.
 - {{jsxref("Atomics.load()")}}
   - : Returns the value at the specified index of the array.

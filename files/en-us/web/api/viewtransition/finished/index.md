@@ -3,7 +3,8 @@ title: "ViewTransition: finished property"
 short-title: finished
 slug: Web/API/ViewTransition/finished
 page-type: web-api-instance-property
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition.finished
 ---
 

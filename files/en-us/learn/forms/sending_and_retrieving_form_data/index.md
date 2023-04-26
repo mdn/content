@@ -237,11 +237,24 @@ The two templates referenced in the above code are as follows (these need to be 
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.palletsprojects.com/), but with more tools and options).
-- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
-- [Laravel](https://laravel.com/) for PHP.
-- [Ruby On Rails](https://rubyonrails.org/) for Ruby.
-- [Spring Boot](https://spring.io/guides/gs/handling-form-submission/) for Java.
+- Python
+  - [Django](/en-US/docs/Learn/Server-side/Django)
+  - [Flask](https://flask.palletsprojects.com/)
+  - [web2py](https://github.com/web2py/web2py) (easiest to get started with)
+  - [py4web](https://py4web.com/) (written by the same develops as web2py, has a more Django-like setup)
+- Node.js
+  - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+  - [Next.js](https://nextjs.org/) (for React apps)
+  - [Nuxt](https://nuxtjs.org/) (for Vue apps)
+  - [Remix](https://remix.run/)
+- PHP
+  - [Laravel](https://laravel.com/)
+  - [Laminas](https://getlaminas.org/) (formerly Zend Framework)
+  - [Symfony](https://symfony.com/)
+- Ruby
+  - [Ruby On Rails](https://rubyonrails.org/)
+- Java
+  - [Spring Boot](https://spring.io/guides/gs/handling-form-submission/)
 
 It's worth noting that even using these frameworks, working with forms isn't necessarily _easy_. But it's much easier than trying to write all the functionality yourself from scratch, and will save you a lot of time.
 

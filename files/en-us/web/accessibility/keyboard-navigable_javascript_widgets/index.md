@@ -1,6 +1,7 @@
 ---
 title: Keyboard-navigable JavaScript widgets
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
+page-type: guide
 ---
 
 <section id="Quick_links">

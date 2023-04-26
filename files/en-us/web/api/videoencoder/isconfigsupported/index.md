@@ -8,12 +8,12 @@ browser-compat: api.VideoEncoder.isConfigSupported
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if the given config is supported (that is, if {{domxref("VideoEncoder")}} objects can be successfully configured with the given config).
+The **`isConfigSupported()`** static method of the {{domxref("VideoEncoder")}} interface checks if {{domxref("VideoEncoder")}} can be successfully configured with the given config.
 
 ## Syntax
 
 ```js-nolint
-isConfigSupported(config)
+VideoEncoder.isConfigSupported(config)
 ```
 
 ### Parameters
