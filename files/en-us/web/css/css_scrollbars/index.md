@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 browser-compat:
   - css.properties.scrollbar-color
+  - css.properties.scrollbar-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -92,10 +93,6 @@ for us to breathe.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
