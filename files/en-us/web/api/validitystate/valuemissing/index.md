@@ -8,9 +8,13 @@ browser-compat: api.ValidityState.valueMissing
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`valueMissing`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if a [`required`](/en-US/docs/Web/HTML/Attributes/required) control, such as an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}}, has an empty value.
+The read-only **`valueMissing`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if a [`required`](/en-US/docs/Web/HTML/Attributes/required) control, such as an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}}, has an empty value.
 
 If the `required` attribute is set, and no {{HTMLElement("option")}} is selected or a `<textarea>` or user-editable `<input>` is empty, the `valueMissing` property will be `true`. The property is only `true` if the field is required and has no value; if the field is not required, or if the field is required and has a value, the value is `false`.
+
+## Value
+
+A boolean that is `true` if the `ValidityState` is not set and the `required` attribute is.
 
 ## Specifications
 

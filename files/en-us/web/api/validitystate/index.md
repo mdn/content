@@ -15,7 +15,7 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 
 - {{domxref("ValidityState.badInput", "badInput")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
-- `customError` {{ReadOnlyInline}}
+- {{domxref("ValidityState.customError", "customError")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.
 - {{domxref("ValidityState.patternMismatch", "patternMismatch")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the value does not match the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), and `false` if it does match. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
@@ -31,7 +31,7 @@ For each of these Boolean properties, a value of `true` indicates that the speci
   - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the value is not in the required syntax (when [`type`](/en-US/docs/Web/HTML/Element/input#type) is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
-- `valid` {{ReadOnlyInline}}
+- {{domxref("ValidityState.valid", "valid")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the element meets all its validation constraints, and is therefore considered to be valid, or `false` if it fails any constraint. If `true`, the element matches the {{cssxref(":valid")}} CSS pseudo-class; the {{cssxref(":invalid")}} CSS pseudo-class otherwise.
 - {{domxref("ValidityState.valueMissing", "valueMissing")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the element has a [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, but no value, or `false` otherwise. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
