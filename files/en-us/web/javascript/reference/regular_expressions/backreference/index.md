@@ -67,6 +67,21 @@ parseTitle("title='foo' lang='en'"); // 'foo'
 parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing groups' advantages"
 ```
 
+### Matching duplicate words
+
+The following function finds duplicate words in a string (which are usually typos). Note that it uses the `\w` [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape), which only matches English letters but not any accented letters or other alphabets. If you want more generic matching, you may want to [split](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) the string by whitespace and iterate over the resulting array.
+
+```js
+function findDuplicates(text) {
+  return text.match(/\b(\w+)\s+\1\b/i)?.[1];
+}
+
+findDuplicates("foo foo bar"); // 'foo'
+findDuplicates("foo bar foo"); // undefined
+findDuplicates("Hello hello"); // 'Hello'
+findDuplicates("Hello hellos"); // undefined
+```
+
 ## Specifications
 
 {{Specifications}}

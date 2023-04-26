@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.RegExp
 
 The **`RegExp`** object is used for matching text with a pattern.
 
-For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+For an introduction to regular expressions, read the [Regular expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the JavaScript guide. For detailed information of regular expression syntax, read the [regular expression reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions).
 
 ## Description
 

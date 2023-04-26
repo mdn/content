@@ -38,7 +38,7 @@ Regular expressions can also be created with the {{jsxref("RegExp/RegExp", "RegE
 const regex2 = new RegExp("ab+c", "g");
 ```
 
-They have no runtime differences, although they may have implications on performance, static analyzability, and authoring ergonomic issues with escaping characters.
+They have no runtime differences, although they may have implications on performance, static analyzability, and authoring ergonomic issues with escaping characters. For more information, see the [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#literal_notation_and_constructor) reference.
 
 ### Regex flags
 
