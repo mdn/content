@@ -68,22 +68,6 @@
             }
           }
         }
-      },
-      {
-        "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
-        },
-        "then": {
-          "properties": {
-            "page-type": {
-              "enum": [
-                "landing-page",
-                "mdn-community-guide",
-                "mdn-writing-guide"
-              ]
-            }
-          }
-        }
       }
     ]
   },
