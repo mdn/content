@@ -11307,6 +11307,7 @@
 /en-US/docs/Web/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
 /en-US/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap
 /en-US/docs/Web/CSS/CSS_Scroll_Snap/compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap
+/en-US/docs/Web/CSS/CSS_Scroll_Snap_Points	/en-US/docs/Web/CSS/CSS_Scroll_Snap
 /en-US/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/en-US/docs/Web/XPath/Comparison_with_CSS_selectors
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_Shapes/From_box_values
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
