@@ -8,7 +8,7 @@ browser-compat: api.AbortSignal.timeout
 
 {{APIRef("DOM")}}
 
-The static **`AbortSignal.timeout()`** method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
+The **`AbortSignal.timeout()`** static method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
 
 The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout, or with `AbortError` {{domxref("DOMException")}} due to pressing a browser stop button (or some other inbuilt "stop" operation).
 This allow UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.

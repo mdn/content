@@ -10,7 +10,7 @@ browser-compat: api.Notification.requestPermission
 
 > **Note:** Safari still uses the callback syntax to get the permission. Read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API) for a good example of how to feature detect this and run code as appropriate.
 
-The **`requestPermission()`** method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.
+The **`requestPermission()`** static method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.
 
 ## Syntax
 

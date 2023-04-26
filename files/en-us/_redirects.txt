@@ -386,8 +386,8 @@
 /en-US/docs/CSS/:-moz-handler-crashed	/en-US/docs/Web/CSS/:-moz-handler-crashed
 /en-US/docs/CSS/:-moz-handler-disabled	/en-US/docs/Web/CSS/:-moz-handler-disabled
 /en-US/docs/CSS/:-moz-last-node	/en-US/docs/Web/CSS/:-moz-last-node
-/en-US/docs/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/:-moz-list-bullet
-/en-US/docs/CSS/:-moz-list-number	/en-US/docs/Web/CSS/:-moz-list-number
+/en-US/docs/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/::-moz-list-bullet
+/en-US/docs/CSS/:-moz-list-number	/en-US/docs/Web/CSS/::-moz-list-number
 /en-US/docs/CSS/:-moz-loading	/en-US/docs/Web/CSS/:-moz-loading
 /en-US/docs/CSS/:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/CSS/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
@@ -929,7 +929,7 @@
 /en-US/docs/CSS::-moz-drag-over	/en-US/docs/Web/CSS/:-moz-drag-over
 /en-US/docs/CSS::-moz-first-node	/en-US/docs/Web/CSS/:-moz-first-node
 /en-US/docs/CSS::-moz-last-node	/en-US/docs/Web/CSS/:-moz-last-node
-/en-US/docs/CSS::-moz-list-bullet	/en-US/docs/Web/CSS/:-moz-list-bullet
+/en-US/docs/CSS::-moz-list-bullet	/en-US/docs/Web/CSS/::-moz-list-bullet
 /en-US/docs/CSS::-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/CSS::-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS::-moz-only-whitespace	/en-US/docs/Web/CSS/:-moz-only-whitespace
@@ -11214,6 +11214,8 @@
 /en-US/docs/Web/CSS/:-moz-any	/en-US/docs/Web/CSS/:is
 /en-US/docs/Web/CSS/:-moz-any-link	/en-US/docs/Web/CSS/:any-link
 /en-US/docs/Web/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
+/en-US/docs/Web/CSS/:-moz-list-bullet	/en-US/docs/Web/CSS/::-moz-list-bullet
+/en-US/docs/Web/CSS/:-moz-list-number	/en-US/docs/Web/CSS/::-moz-list-number
 /en-US/docs/Web/CSS/:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/Web/CSS/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown

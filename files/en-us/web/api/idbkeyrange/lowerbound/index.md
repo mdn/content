@@ -8,7 +8,7 @@ browser-compat: api.IDBKeyRange.lowerBound
 
 {{ APIRef("IndexedDB") }}
 
-The **`lowerBound()`** method of the
+The **`lowerBound()`** static method of the
 {{domxref("IDBKeyRange")}} interface creates a new key range with only a lower bound.
 By default, it includes the lower endpoint value and is closed.
 
