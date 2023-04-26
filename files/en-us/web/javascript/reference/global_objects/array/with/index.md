@@ -71,7 +71,7 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 
 ### Calling with() on non-array objects
 
-The `with()` method reads the `length` property of `this`. It then reads each integer-keyed property of `this` and writes it to the new array, while `value` is written to the given `index`.
+The `with()` method reads the `length` property of `this`. It then reads each property of `this` having a nonnegative integer key less than `length` and writes it to the new array, while `value` is written to the given `index`.
 
 ```js
 const arrayLike = {
@@ -79,6 +79,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
