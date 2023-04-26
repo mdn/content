@@ -49,13 +49,9 @@ const mycar = {
   year: 1998,
 };
 
-// x gets the value "Honda"
-const x = mycar.make;
-
-// the make property is changed by the function
+console.log(mycar.make); // "Honda"
 myFunc(mycar);
-// y gets the value "Toyota"
-const y = mycar.make;
+console.log(mycar.make); // "Toyota"
 ```
 
 When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
@@ -82,7 +78,8 @@ Such a function can be **anonymous**; it does not have to have a name. For examp
 const square = function (number) {
   return number * number;
 };
-const x = square(4); // x gets the value 16
+
+console.log(square(4)); // 16
 ```
 
 However, a name _can_ be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:
@@ -92,7 +89,7 @@ const factorial = function fac(n) {
   return n < 2 ? 1 : n * fac(n - 1);
 };
 
-console.log(factorial(3));
+console.log(factorial(3)); // 6
 ```
 
 Function expressions are convenient when passing a function as an argument to another function. The following example shows a `map` function that should receive a function as first argument and an array as second argument:
@@ -118,16 +115,13 @@ function map(f, a) {
   return result;
 }
 
-const f = function (x) {
+const cube = function (x) {
   return x * x * x;
 };
 
 const numbers = [0, 1, 2, 5, 10];
-const cube = map(f, numbers);
-console.log(cube);
+console.log(map(cube, numbers)); // [0, 1, 8, 125, 1000]
 ```
-
-Function returns: `[0, 1, 8, 125, 1000]`.
 
 In JavaScript, a function can be defined based on a condition. For example, the following function definition defines `myFunc` only if `num` equals `0`:
 
@@ -175,11 +169,11 @@ function factorial(n) {
 You could then compute the factorials of `1` through `5` as follows:
 
 ```js
-const a = factorial(1); // a gets the value 1
-const b = factorial(2); // b gets the value 2
-const c = factorial(3); // c gets the value 6
-const d = factorial(4); // d gets the value 24
-const e = factorial(5); // e gets the value 120
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
 ```
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
@@ -209,7 +203,7 @@ function square(n) {
 console.log(square(5)); // 25
 ```
 
-Function hoisting only works with function _declarations_ — not with function _expressions_. The code below will not work.
+Function hoisting only works with function _declarations_ — not with function _expressions_. The following code will not work:
 
 ```js example-bad
 console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
@@ -235,7 +229,7 @@ function multiply() {
   return num1 * num2;
 }
 
-multiply(); // Returns 60
+console.log(multiply()); // 60
 
 // A nested function example
 function getScore() {
@@ -249,7 +243,7 @@ function getScore() {
   return add();
 }
 
-getScore(); // Returns "Chamakh scored 5"
+console.log(getScore()); // "Chamakh scored 5"
 ```
 
 ## Scope and the function stack
@@ -367,9 +361,10 @@ function addSquares(a, b) {
   }
   return square(a) + square(b);
 }
-const a = addSquares(2, 3); // returns 13
-const b = addSquares(3, 4); // returns 25
-const c = addSquares(4, 5); // returns 41
+
+console.log(addSquares(2, 3)); // 13
+console.log(addSquares(3, 4)); // 25
+console.log(addSquares(4, 5)); // 41
 ```
 
 Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
@@ -381,9 +376,10 @@ function outside(x) {
   }
   return inside;
 }
+
 const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
-const result = fnInside(5); // returns 8
-const result1 = outside(3)(5); // returns 8
+console.log(fnInside(5)); // 8
+console.log(outside(3)(5)); // 8
 ```
 
 ### Preservation of variables
@@ -440,7 +436,7 @@ function outside() {
   return inside;
 }
 
-outside()(10); // returns 20 instead of 10
+console.log(outside()(10)); // 20 (instead of 10)
 ```
 
 The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is {`inside`, `outside`, global object}. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
@@ -464,7 +460,7 @@ const pet = function (name) {
 };
 const myPet = pet("Vivie");
 
-myPet(); // Returns "Vivie"
+console.log(myPet()); // "Vivie"
 ```
 
 It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.
@@ -502,12 +498,12 @@ const createPet = function (name) {
 };
 
 const pet = createPet("Vivie");
-pet.getName(); // Vivie
+console.log(pet.getName()); // Vivie
 
 pet.setName("Oliver");
 pet.setSex("male");
-pet.getSex(); // male
-pet.getName(); // Oliver
+console.log(pet.getSex()); // male
+console.log(pet.getName()); // Oliver
 ```
 
 In the code above, the `name` variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.
@@ -521,7 +517,7 @@ const getCode = (function () {
   };
 })();
 
-getCode(); // Returns the apiCode
+console.log(getCode()); // "0]Eal(eh&2"
 ```
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
@@ -568,14 +564,14 @@ function myConcat(separator) {
 You can pass any number of arguments to this function, and it concatenates each argument into a string "list":
 
 ```js
-// returns "red, orange, blue, "
-myConcat(", ", "red", "orange", "blue");
+console.log(myConcat(", ", "red", "orange", "blue"));
+// "red, orange, blue, "
 
-// returns "elephant; giraffe; lion; cheetah; "
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+console.log(myConcat("; ", "elephant", "giraffe", "lion", "cheetah"));
+// "elephant; giraffe; lion; cheetah; "
 
-// returns "sage. basil. oregano. pepper. parsley. "
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+console.log(myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley"));
+// "sage. basil. oregano. pepper. parsley. "
 ```
 
 > **Note:** The `arguments` variable is "array-like", but not an array. It is array-like in that it has a numbered index and a `length` property. However, it does _not_ possess all of the array-manipulation methods.
@@ -600,7 +596,7 @@ function multiply(a, b) {
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
 
 With _default parameters_, a manual check in the function body is no longer necessary. You can put `1` as the default value for `b` in the function head:
@@ -610,7 +606,7 @@ function multiply(a, b = 1) {
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
 
 For more details, see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) in the reference.

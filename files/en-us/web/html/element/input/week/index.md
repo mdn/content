@@ -13,13 +13,7 @@ browser-compat: html.elements.input.type_week
 
 The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
-In Chrome/Opera the `week` control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.
-
 ![An input reading 'week 01, 2017'. The background of the 2017 is the same blue as the focus ring. There are 3 icons in the input: x or clear, a spinner with small up and down arrows, and a larger down arrow. A calendar is a pop-up below the input set to January 2017. The first column of the calendar is the week: 52, 1, 2, 3, 4, 5. the full month calendar is to the right of that. The row with Week 1 and January 2 to 8 is highlighted. On the same line as the month, there are buttons to move right and left for the next and previous months.](week-control-chrome.png)
-
-The Edge `week` control is somewhat more elaborate, opening up week and year pickers with sliding reels.
-
-![An input reading 'week 01, 2017'. A popup is open below with two columns. The left column has a list of weeks, from week 48 to Week 52, continuing with week 01 to week 05. The right side has years, from 2012 to 2022. Week 01 and 2017 are in the middle, highlighted with a blue background. At the bottom, there is a row with a checkbox and an X; likely buttons.](week-control-edge.png)
 
 ## Value
 

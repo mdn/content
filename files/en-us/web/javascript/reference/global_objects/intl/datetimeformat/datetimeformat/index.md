@@ -224,7 +224,6 @@ Intl.DateTimeFormat(locales, options)
       - : The number of digits used to represent fractions of a second (any
         additional digits are truncated). Possible values are:
 
-        - `0` (Fractional part dropped.)
         - `1` (Fractional part represented as 1 digit. For
           example, 736 is formatted as `7`.)
         - `2` (Fractional part represented as 2 digits. For

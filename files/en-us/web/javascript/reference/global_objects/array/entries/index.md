@@ -100,10 +100,10 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.entries()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

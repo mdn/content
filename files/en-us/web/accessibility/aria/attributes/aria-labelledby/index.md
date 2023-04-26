@@ -92,21 +92,21 @@ Used in almost all roles **except** roles that can not be provided an accessible
 
 The `aria-labelledby` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role)
-- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role)
-- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role)
-- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role)
-- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 ## Specifications
 
