@@ -169,7 +169,7 @@ li:nth-last-child(3) ~ li {
 
 ### `of <selector>` syntax example
 
-In this example there is an unordered list of names, some of them have been marked as **noted** using `class="noted"`. These have been highlighted with a thick bottom border.
+In this example, there is an unordered list of names. Some items have a `noted` class applied and are then highlighted with a thick bottom border.
 
 #### HTML
 
