@@ -34,7 +34,7 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-ellipsis")}} (formerly {{CSSxRef("block-overflow")}}) {{experimental_inline}}
+- {{CSSxRef("block-ellipsis")}}
 - {{CSSxRef("continue")}} {{experimental_inline}}
 - {{CSSxRef("line-clamp")}} {{experimental_inline}}
 - {{CSSxRef("max-lines")}} {{experimental_inline}}
