@@ -27,7 +27,7 @@ A specific feature name must be specified.
 
 ### Return value
 
-An [allowlist](/en-US/docs/Web/HTTP/Permissions_Policy#allowlists) for the
+An array of strings containing the serialized allowlisted origins for the feature. If a wildcard (`*`) is used, the array will contain `*`. 
 specified feature.
 
 ## Errors
