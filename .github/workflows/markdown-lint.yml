@@ -32,3 +32,4 @@ jobs:
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           yarn lint:md
+          yarn lint:fm
