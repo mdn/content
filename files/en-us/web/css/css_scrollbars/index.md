@@ -9,7 +9,7 @@ browser-compat:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **CSS scrollbars styling** module defines properties that provide visual styling of scrollbars, including controls for the color and width of scrollbar tracks, the background of the scrollbar, and the color of scrollbar thumbs, the draggable handle of the scrollbar.
+The **CSS scrollbars styling** module defines properties that you can use for visual styling of scrollbars. You can  customize the width of the scrollbar as required. You can also customize the color of the scrollbar _track_, which is the background of the scrollbar, and the color of the scrollbar _thumb_, which is the draggable handle of the scrollbar.
 
 ## Scrollbar styling in action
 
