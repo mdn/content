@@ -8,7 +8,7 @@ browser-compat: api.IDBKeyRange.upperBound
 
 {{ APIRef("IndexedDB") }}
 
-The **`upperBound()`** method of the
+The **`upperBound()`** static method of the
 {{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
 it includes the upper endpoint value and is closed.
 

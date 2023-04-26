@@ -8,7 +8,7 @@ browser-compat: api.CSS.registerProperty
 
 {{APIRef("CSSOM")}}
 
-The **`CSS.registerProperty()`** method registers
+The **`CSS.registerProperty()`** static method registers
 {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 
