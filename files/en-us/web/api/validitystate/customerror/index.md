@@ -8,7 +8,7 @@ browser-compat: api.ValidityState.customError
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`customError`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface if the element's custom validity message has been set to a non-empty string by calling the element's {{domxref("Element.setCustomValidity", "setCustomValidity()")}} method.
+The read-only **`customError`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface if the element's custom validity message has been set to a non-empty string by calling the element's {{domxref("HTMLObjectElement.setCustomValidity", "setCustomValidity()")}} method.
 
 ## Value
 
