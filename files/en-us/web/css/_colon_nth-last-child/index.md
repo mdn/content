@@ -54,7 +54,7 @@ By passing a selector argument, we can select the **nth-last** element that matc
 li.important:nth-last-child(-n + 3);
 ```
 
-This selector instead just selects only the _important_ list items if they happen to also be in the last three children.
+This selector applies a style to list items if they are also within the last three children.
 
 ## Examples
 
