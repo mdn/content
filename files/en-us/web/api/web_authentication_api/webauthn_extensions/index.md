@@ -15,11 +15,11 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) has a s
 
 When invoking {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}, the `publicKey` object parameter required to initiate a WebAuthn flow can include an `extensions` property. The value of `extensions` is itself an object, the properties of which are the input values for any extensions the relying party wishes to request the use of in the method you are calling.
 
-Behind the scenes, request extensions receive the inputs, and are processed by the user agent (client) and/or the authenticator.
+Behind the scenes, the inputs are processed by the user agent and/or the authenticator.
 
 For example, in a `publicKey` object for a `create()` call, we might want to request the use of two extensions:
 
-1. The `credProps` extension, which allows relying parties to specify that a resident key is required, meaning that the credential is a client-side discoverable credential. This requires `extensions.credProps` to be set to `true`. This also requires `authenticatorSelection.requireResidentKey` to be set to `true` (visit [`create()` > `publicKey` object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) and search for `requireResidentKey`). `credProps` is processed by the user agent only.
+1. The `credProps` extension. Relying parties set `credProps` to request that the browser tells the relying party whether the credential is resident/discoverable after registration. This is useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`. To request it, you also need to set `publicKey.extensions.credProps = true` when. The browser makes a credential and, depending on the type of authenticator used, it will be discoverable or not (for example, the FIDO2 authenticator would typically make it discoverable; FIDO1/U2F security key would be non-discoverable). `credProps` is processed by the user agent only.
 2. The `minPinLength` extension, which allows relying parties to request the authenticator's minimum PIN length. This requires `extensions.minPinLength` to be set to `true`. `minPinLength` is processed by the authenticator, with the user agent only serving to pass the input data along to it.
 
 ```js
@@ -33,7 +33,7 @@ const publicKey = {
   },
   pubKeyCredParams: [ {type: "public-key", alg: -7} ],
   authenticatorSelection: {
-    requireResidentKey: true
+    residentKey: "preferred"
   },
   extensions: {
     credProps: true,
@@ -50,7 +50,7 @@ navigator.credentials.create({ publicKey });
 
 ## Retrieving extension request results
 
-If successful, the `create()` call will return a {{jsxref("Promise")}} that resolves with a {{domxref("PublicKeyCredential")}} object. Behind the scenes, once extension processing has completed, output extensions are triggered that communicate the results of the processing (although not in all cases — it is possible for extensions to have no output).
+If successful, the `create()` call will return a {{jsxref("Promise")}} that resolves with a {{domxref("PublicKeyCredential")}} object. Once extension processing has completed, the results of the processing are communicated in the response (although not in all cases — it is possible for extensions to have no output).
 
 ```js
 navigator.credentials
@@ -71,7 +71,7 @@ navigator.credentials
 
 As demonstrated by the above code snippet, there are two different places to find your output extension results:
 
-1. You can find the results of client (user agent) extension processing by calling the {{domxref("PublicKeyCredential.getClientExtensionResults()")}} method. This returns a {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value. In the example above, if the browser supported the `credProps` extension and it was processed correctly, the `myClientExtResults` map object would contain one entry, `"credProps"`, with a value of `{ rk: true }`. This would verify that the created credential does indeed require a resident key when used for authentication.
+1. You can find the results of client (user agent) extension processing by calling the {{domxref("PublicKeyCredential.getClientExtensionResults()")}} method. This returns a {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value. In the example above, if the browser supported the `credProps` extension and it was processed correctly, the `myClientExtResults` map object would contain one entry, `"credProps"`, with a value of `{ rk: true }`. This would verify that the created credential is indeed discoverable.
 
 2. You can find the results of authenticator extension processing in the authenticator data for the operation:
 
@@ -92,11 +92,11 @@ The extensions below do not represent an exhaustive list of all the extensions a
 - Processed by: User agent
 - Specification: [FIDO AppID Extension (appid)](https://w3c.github.io/webauthn/#sctn-appid-extension)
 
-Allows a relying party to request an assertion for a credential previously registered using the legacy FIDO U2F JavaScript API, avoiding the hassle of re-registering the credential. The `appid` is that API's equivalent to the `rpId` in WebAuthn.
+Allows a relying party to request an assertion for a credential previously registered using the legacy FIDO U2F JavaScript API, avoiding the hassle of re-registering the credential. The `appid` is that API's equivalent to the `rpId` in WebAuthn (although bear in mind that `appid`s are in the form of URLs, whereas `rpId`s are in the form of domains).
 
 #### Input
 
-The `publicKey`'s `extensions` property must contain an `appid` property, the value of which is the relying party identifier used in the legacy API. For example:
+The `publicKey`'s `extensions` property must contain an `appid` property, the value of which is the application identifier used in the legacy API. For example:
 
 ```js
 extensions: {
@@ -104,7 +104,7 @@ extensions: {
 }
 ```
 
-You must also list the FIDO U2F credentials in the `publicKey`'s `allowCredentials` property, for example:
+You must also list the FIDO U2F credential IDs in the `publicKey`'s `allowCredentials` property, for example:
 
 ```js
 allowCredentials: {
@@ -160,7 +160,7 @@ Outputs `appidExclude: true` if the extension was acted upon, or `appidExclude: 
 - Processed by: User agent
 - Specification: [Credential Properties Extension (credProps)](https://w3c.github.io/webauthn/#sctn-authenticator-credential-properties-extension)
 
-Allows a relying party to specify credential properties; currently it only specifies that a resident key is required, meaning that the credential is a client-side discoverable credential (it may support specifying others in the future).
+Allows a relying party to request additional information/properties about the credential that was created. This is currently only useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`; it requests information on whether the created credential is discoverable.
 
 #### Input
 
@@ -213,9 +213,15 @@ extensions: {
 
 The available `credentialProtectionPolicy` values are as follows:
 
-- `"userVerificationOptional"`: User verification is optional. This is the default state if the extension is not specified. The equivalent `credProtect` value sent to the authenticator for processing is `0x01`.
+- `"userVerificationOptional"`: User verification is optional. The equivalent `credProtect` value sent to the authenticator for processing is `0x01`.
 - `"userVerificationOptionalWithCredentialIDList"`: User verification is optional, only if the credential is discoverable (i.e. it is client-side discoverable). The equivalent `credProtect` value sent to the authenticator for processing is `0x02`.
 - `"userVerificationRequired"`: User verification is always required. The equivalent `credProtect` value sent to the authenticator for processing is `0x03`.
+
+**Note:** Chromium will default to `userVerificationOptionalWithCredentialIDList` or `userVerificationRequired`, depending on the type of request:
+
+- Chromium will request a protection level of `userVerificationOptionalWithCredentialIDList` when creating a credential if `residentKey` is set to `preferred` or `required`. (Setting `requireResidentKey` is treated the same as required.) This ensures that simple physical possession of a security key does not allow the presence of a discoverable credential for a given `rpId` to be queried.
+- Additionally, if `residentKey` is `required` and `userVerification` is preferred, the protection level will be increased to `userVerificationRequired`. This ensures that physical possession of a security key does not allow sign-in to a site that doesn't demand user verification. (This is not a complete protection; sites should still carefully consider the security of their users.)
+- If an explicit `credProtect` level is requested by the site, that will override these defaults. These defaults never cause the protection level to be lower than the security key's default, if that is higher.
 
 If the `enforceCredentialProtectionPolicy` value is `true`, the `create()` call will fail if the policy cannot be adhered to (for example, it requires user verification, but the authenticator does not support user verification). If it is `false`, the system will make a best attempt to create a credential that conforms to the policy, but it will still create one that conforms as closely as it can, if this is not possible.
 

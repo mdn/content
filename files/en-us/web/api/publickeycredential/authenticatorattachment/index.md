@@ -8,8 +8,7 @@ browser-compat: api.PublicKeyCredential.authenticatorAttachment
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`authenticatorAttachment`** read-only property of the
-{{domxref("PublicKeyCredential")}} interface is a string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
+The **`authenticatorAttachment`** read-only property of the {{domxref("PublicKeyCredential")}} interface is a string that indicates the general category of authenticator used during the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
 
 ## Value
 

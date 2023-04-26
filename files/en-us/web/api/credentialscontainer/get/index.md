@@ -8,26 +8,20 @@ browser-compat: api.CredentialsContainer.get
 
 {{APIRef("Credential Management API")}}
 
-The **`get()`** method of the
-{{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
-single {{domxref("Credential")}} instance that matches the provided parameters.
+The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single {{domxref("Credential")}} instance that matches the provided parameters, which the browser can then use to authenticate with a relying party. This is used by a number of different credential-related APIs with significantly different purposes:
 
-This method first collects all credentials in the {{domxref("CredentialsContainer")}}
-that meet the necessary criteria (defined in the **`options`**
-argument). From the resulting set of credentials, it then selects the best one.
-Depending on the options, it may display a dialog to the user and ask the user to make
-the selection.
+- The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `get()` to authenticate using basic federated credentials or username/password credentials.
+- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on based on asymmetric cryptography).
+- The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers.
 
-> **Note:** Usage of this feature may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} or {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
 
-## Syntax
+## General syntax
 
 ```js-nolint
 get()
 get(options)
 ```
-
-> **Note:** When providing an `options` object, you should only provide a single property containing the properties that define the type of credential being requested — this means only one of `federated`, `identity`, `password`, or `publicKey`.
 
 ### Parameters
 
@@ -35,19 +29,20 @@ get(options)
 
   - : An object that contains options for the request. The options include criteria that the credentials are required or allowed to have, and options for interacting with the user. It can contain the following properties:
 
-    - `federated` {{optional_inline}}
+    - "Credential type"
 
-      - : An object (see [`federated` object structure](#federated_object_structure)) containing requirements for returned {{domxref("FederatedCredential")}}s.
+      - : An object or boolean defining the type of credential being requested — this can be one of one of:
 
-    - `identity` {{optional_inline}}
-
-      - : An object (see [`identity` object structure](#identity_object_structure)) containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes the `get()` call to initiate a request for a user to sign in to a RP with an IdP (see [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)).
+        - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supercedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+        - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
+        - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use to sign users in. Causes the `get()` call to initiate a request for a user to sign in to a relying party with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
+        - `publicKey`: An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
     - `mediation` {{optional_inline}}
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
-        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. If the user makes a gesture outside of the dialog, it closes without resolving or rejecting the Promise and without causing a user-visible error condition. If the user selects a credential, that credential is returned to the caller. `"conditional"` behavior always involves user mediation of some sort if applicable credentials are discovered ({{domxref("CredentialsContainer.preventSilentAccess()")}} is treated as being `true` regardless of its actual value). If no credentials are discovered, the user agent can prompt the user to take action in a way that depends on the type of credential (e.g. to insert a device containing credentials).
+        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more details of how this is used. If the user makes a gesture outside of the dialog, it closes without resolving or rejecting the Promise and without causing a user-visible error condition. If the user selects a credential, that credential is returned to the caller. `"conditional"` behavior always involves user mediation of some sort if applicable credentials are discovered ({{domxref("CredentialsContainer.preventSilentAccess()")}} is treated as being `true` regardless of its actual value). If no credentials are discovered, the user agent can prompt the user to take action in a way that depends on the type of credential (e.g. to insert a device containing credentials).
 
         - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
@@ -57,17 +52,13 @@ get(options)
 
         If `mediation` is omitted, it will default to `"optional"`.
 
-    - `password` {{optional_inline}}
-
-      - : A boolean value. If set to `true`, it indicates that the requested credential is a {{domxref("PasswordCredential")}} as opposed to another kind of credential.
-
-    - `publicKey` {{optional_inline}}
-
-      - : An object (see [`publicKey` object structure](#publickey_object_structure)) containing requirements for returned public key credentials (see [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) for more information). Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party.
-
     - `signal` {{optional_inline}}
 
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+## Credential Management API
+
+The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) lets a website store and retrieve password and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
 
 ### `federated` object structure
 
@@ -77,6 +68,38 @@ get(options)
   - : An array of strings representing the protocols of the requested credentials' federated identity providers (for example, `"openidconnect"`).
 - `providers`
   - : An array of strings representing the credentials' federated identity providers (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
+
+### `password` boolean value
+
+`password` is a single boolean value. If set to `true`, it indicates that the requested credential is a password credential.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance matching the provided parameters:
+
+- If the provided credential type was a `federated` object, the returned instance will be a {{domxref("FederatedCredential")}}.
+- If the provided credential type was a `password` boolean value of `true`, the returned instance will be a {{domxref("PasswordCredential")}}.
+
+If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+
+### Examples
+
+```js
+navigator.credentials
+  .get({
+    protocols: ["openidconnect"],
+    providers: ["https://www.facebook.com", "https://accounts.google.com"],
+  })
+  .then((fedCred) => {
+    console.log(fedCred.provider);
+  });
+```
+
+## Federated Credential Management API
+
+The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects, and a JavaScript API for sites that depend on those services for sign-in functionality to make use of them. Check out the linked API landing page for more usage information.
+
+> **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ### `identity` object structure
 
@@ -88,6 +111,45 @@ get(options)
   - : A string specifying the the RP's client identifier, issued by the IdP to the RP in a completely separate process specific to the IdP.
 - `nonce` {{optional_inline}}
   - : A random string that can be included to ensure the response is issued for this specific request, and prevent {{glossary("replay attack", "replay attacks")}}.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+
+### Exceptions
+
+- `NetworkError` {{domxref("DOMException")}}
+  - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
+### Examples
+
+Relying parties can call `get()` with the `identity` option to make a request for users to login to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
+
+```js
+async function signIn() {
+  const identityCredential = await navigator.credentials.get({
+    identity: {
+      providers: [
+        {
+          configURL: "https://accounts.idp.example/config.json",
+          clientId: "********",
+          nonce: "******",
+        },
+      ],
+    },
+  });
+}
+```
+
+Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+
+## Web Authentication API
+
+The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure multi-authentication (MFA) without SMS texts. Check out the linked API landing page for more usage information.
+
+> **Note:** Usage of `get()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ### `publicKey` object structure
 
@@ -164,26 +226,14 @@ get(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that
-matches the provided parameters.
-
-- If the `get()` call includes the `identity` option, the promise fulfills with an {{domxref("IdentityCredential")}} instance (see the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details).
-- If the `get()` call includes the `publicKey` option, the promise fulfills with a {{domxref("PublicKeyCredential")}} instance (see the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) for more details).
-
-If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
 
 ### Exceptions
 
-- `NetworkError` {{domxref("DOMException")}}
-  - : In the case of a `get()` call with an `identity` option, this exception is thrown if the IdP does not respond within 60 seconds, or if the provided credentials are not valid/found.
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `SecurityError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
-## Examples
-
-### User login using the WebAuthn API
+### Examples
 
 The following snippet shows a typical `get()` call with the WebAuthn `publicKey` option:
 
@@ -225,28 +275,6 @@ Some of this data will need to be stored on the server — for example the `sign
 
 > **Note:** See [Authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) for more information about how the overall flow works.
 
-### User login using the FedCM API
-
-Relying parties (RPs) can call `get()` with the `identity` option to make a request for users to login to the RP via an identity provider (IdP), using identity federation. A typical request would look like this:
-
-```js
-async function signIn() {
-  const identityCredential = await navigator.credentials.get({
-    identity: {
-      providers: [
-        {
-          configURL: "https://accounts.idp.example/config.json",
-          clientId: "********",
-          nonce: "******",
-        },
-      ],
-    },
-  });
-}
-```
-
-Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
-
 ## Specifications
 
 {{Specifications}}
@@ -254,11 +282,3 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
-- [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API)
-- {{HTTPHeader("Permissions-Policy")}} directives:
-  - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}
-  - {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}

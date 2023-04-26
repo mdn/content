@@ -109,16 +109,49 @@ A typical authentication flow is as follows:
 
 5. Once verified by the server, the authentication flow is considered successful.
 
-## Controlling access
+## Controlling access to the API
 
 The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:
 
-- `publickey-credentials-create`: Controls the availability of {{domxref("CredentialsContainer.create()")}} with the `publicKey` option.
-- `publickey-credentials-get`: Controls the availability of {{domxref("CredentialsContainer.get()")}} with the `publicKey` option.
+- {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
+- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
 Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts. In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document; `create()` on the other hand cannot be used in {{htmlelement("iframe")}}s.
 
-Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `SecurityError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `SecurityError` {{domxref("DOMException")}}.
+
+### Basic access control
+
+If you wish to allow access to a specific subdomain only, you could provide it like this:
+
+```http
+Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
+```
+
+### Allowing embedded `get()` calls in an `<iframe>`
+
+If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of steps to follow:
+
+1. The site embedding the relying party site must provide permission via an `allow` attribute:
+
+   ```html
+   <iframe
+     src="https://auth.provider.com"
+     allow="publickey-credentials-get *" />
+   ```
+
+2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
+
+   ```http
+   Permissions-Policy: publickey-credentials-get=*
+   ```
+
+   Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
+
+   ```http
+   Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+   ```
 
 ## Interfaces
 

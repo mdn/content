@@ -8,21 +8,15 @@ browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvai
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`isUserVerifyingPlatformAuthenticatorAvailable()`**
-static method of the {{domxref("PublicKeyCredential")}} interface returns a
-{{jsxref("Promise")}} which resolves to `true` if a user-verifying platform
-authenticator is available.
+The **`isUserVerifyingPlatformAuthenticatorAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if a user-verifying platform authenticator is present.
 
-A user-verifying platform authenticator is a kind of multi-factor authenticator that is
-part of the client device (it is generally not removable) and that involves an action
-from the user in order to identify them. Common user-verifying platform authenticators include:
+A user-verifying platform authenticator is a kind of multi-factor authenticator that is part of the client device (it is generally not removable) and that involves an action from the user in order to identify them. Common user-verifying platform authenticators include:
 
 - Touch ID or Face ID (macOS and iOS)
 - Windows Hello (Windows)
 - Device unlock (fingerprint, face, PIN, etc.) on Android
 
-> **Note:** This method may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
+> **Note:** This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Syntax
 

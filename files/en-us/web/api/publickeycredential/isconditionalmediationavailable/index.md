@@ -8,15 +8,13 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`isConditionalMediationAvailable()`**
-static method of the {{domxref("PublicKeyCredential")}} interface returns a
-{{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
+The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 
-Conditional mediation means that the user has to explicitly select a credential to return to the requesting party. Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials.
+Conditional mediation, if available, results in any discovered credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. This is requested by including `mediation: 'conditional'` in your `get()` call. In practice, this means autofilling available credentials.
 
 If the user makes a gesture outside of the dialog, it closes without resolving or rejecting the Promise and without causing a user-visible error condition. If the user selects a credential, that credential is returned to the caller. The prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
 
-If no credentials are discovered, the user agent can prompt the user to take action in a way that depends on the type of credential (e.g. to insert a device containing credentials).
+> **Note:** If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
 
 ## Syntax
 
@@ -34,20 +32,37 @@ A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or 
 
 ## Examples
 
+Before invoking a conditional WebAuthn API call, check if:
+
+- The browser supports WebAuthn.
+- The browser supports WebAuthn conditional UI.
+
 ```js
-PublicKeyCredential.isConditionalMediationAvailable()
-  .then((available) => {
-    if (available) {
-      // Continue with conditional mediation
-    } else {
-      // Use a code path that uses a different kind of conditional mediation
-    }
-  })
-  .catch((err) => {
-    // Something went wrong
-    console.error(err);
-  });
+// Availability of `window.PublicKeyCredential` means WebAuthn is usable.
+if (window.PublicKeyCredential &&
+    PublicKeyCredential.​​isConditionalMediationAvailable) {
+  // Check if conditional mediation is available.
+  const isCMA = await PublicKeyCredential.​​isConditionalMediationAvailable();
+  if (isCMA) {
+    // Call WebAuthn authentication
+    const publicKeyCredentialRequestOptions = {
+      // Server generated challenge
+      challenge: ****,
+      // The same RP ID as used during registration
+      rpId: 'example.com',
+    };
+
+    const credential = await navigator.credentials.get({
+      publicKey: publicKeyCredentialRequestOptions,
+      signal: abortController.signal,
+      // Specify 'conditional' to activate conditional UI
+      mediation: 'conditional'
+    });
+  }
+}
 ```
+
+> **Note:** see [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more information about using conditional mediation.
 
 ## Specifications
 
