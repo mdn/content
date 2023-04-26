@@ -12,7 +12,7 @@ The **`with()`** method of an {{jsxref("Array")}} instance is the [copying](/en-
 ## Syntax
 
 ```js-nolint
-array.with(index, value)
+with(index, value)
 ```
 
 ### Parameters
@@ -71,7 +71,7 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 
 ### Calling with() on non-array objects
 
-The `with()` method reads the `length` property of `this`. It then reads each property of `this` having a nonnegative integer key less than `length` and writes it to the new array, while `value` is written to the given `index`.
+The `with()` method reads the `length` property of `this`. It then reads each property of `this` that has a nonnegative integer key less than `length` and writes it to the new array, while `value` is written to the given `index`.
 
 ```js
 const arrayLike = {
