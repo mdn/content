@@ -8,7 +8,7 @@ browser-compat: api.IDBKeyRange.only
 
 {{ APIRef("IndexedDB") }}
 
-The **`only()`** method of the {{domxref("IDBKeyRange")}}
+The **`only()`** static method of the {{domxref("IDBKeyRange")}}
 interface creates a new key range containing a single value.
 
 {{AvailableInWorkers}}

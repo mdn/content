@@ -8,7 +8,7 @@ browser-compat: api.Response.redirect
 
 {{APIRef("Fetch API")}}
 
-The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
+The **`redirect()`** static method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 
 > **Note:** This is mainly relevant to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API).
 > A controlling service worker could intercept a page's request and redirect it as desired.

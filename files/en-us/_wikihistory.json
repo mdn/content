@@ -73823,31 +73823,6 @@
       "Mw22"
     ]
   },
-  "Web/CSS/:-moz-list-bullet": {
-    "modified": "2020-07-29T00:11:45.506Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "duncanmcdonald",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "j.j.",
-      "Marsf",
-      "Zibibbo84"
-    ]
-  },
-  "Web/CSS/:-moz-list-number": {
-    "modified": "2020-07-29T00:11:54.995Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "velvel53",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/:-moz-loading": {
     "modified": "2020-07-29T00:10:43.068Z",
     "contributors": [
@@ -73962,6 +73937,31 @@
   "Web/CSS/::-moz-focus-inner": {
     "modified": "2020-10-15T22:25:40.021Z",
     "contributors": ["Sheppy", "wbamberg", "estelle"]
+  },
+  "Web/CSS/::-moz-list-bullet": {
+    "modified": "2020-07-29T00:11:45.506Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "duncanmcdonald",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "j.j.",
+      "Marsf",
+      "Zibibbo84"
+    ]
+  },
+  "Web/CSS/::-moz-list-number": {
+    "modified": "2020-07-29T00:11:54.995Z",
+    "contributors": [
+      "wbamberg",
+      "mfluehr",
+      "Sebastianz",
+      "teoli",
+      "velvel53",
+      "Sheppy"
+    ]
   },
   "Web/CSS/::-moz-page": {
     "modified": "2020-10-15T21:08:00.388Z",
