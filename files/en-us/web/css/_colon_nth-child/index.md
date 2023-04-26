@@ -178,7 +178,7 @@ div em {
 
 {{EmbedLiveSample('Detailed_example', 550, 550)}}
 
-### of &lt;selector&gt; syntax example
+### Using 'of &lt;selector&gt;'
 
 In this example there is an unordered list of names, some of them have been marked as **noted** using `class="noted"`. These have been highlighted with a thick bottom border.
 
