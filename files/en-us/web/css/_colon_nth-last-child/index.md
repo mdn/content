@@ -51,7 +51,7 @@ By passing a selector argument, we can select the **nth-last** element that matc
 > **Note:** This is different from moving the selector outside of the function, like:
 
 ```css
-li.important:nth-last-child(-n + 3);
+li.important: nth-last-child(-n + 3);
 ```
 
 This selector applies a style to list items if they are also within the last three children.
@@ -235,9 +235,7 @@ li:nth-last-child(odd of .noted) {
 
 #### Result
 
-Items 1, 3, 7, 10, 14, 17, and 20 have a thick bottom border as they have `class="noted"`.
-
-Items 1, 7, 14, and 20 also have a solid background as they are the odd list items with `class="noted"`.
+Items with `class="noted"` have a think bottom border and items 1, 7, 14, and 20 have a solid background as they are the _odd_ list items with `class="noted"`.
 
 {{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 
@@ -251,5 +249,6 @@ Items 1, 7, 14, and 20 also have a solid background as they are the odd list ite
 
 ## See also
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{Cssxref(":nth-child")}}
+- {{Cssxref(":nth-last-of-type")}}
 - [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css/)

@@ -249,9 +249,7 @@ li:nth-child(even of .noted) {
 
 #### Result
 
-Here you can see that items 1, 3, 7, 10, 14, 17 and 20 have a thick bottom border as they have `class="noted"`.
-
-Items 3, 10 and 17 have a solid background as they are the even list items with `class="noted"`.
+Items with `class="noted"` have a think bottom border and items 3, 10 and 17 have a solid background as they are the _even_ list items with `class="noted"`.
 
 {{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 
@@ -273,16 +271,6 @@ In this example, there are two unordered lists of names. The first list shows th
   <li>Sienna</li>
   <li>Titilayo</li>
   <li class="noted">Lexi</li>
-  <li>Aylin</li>
-  <li>Leo</li>
-  <li>Leyla</li>
-  <li class="noted">Bruce</li>
-  <li>Aisha</li>
-  <li>Veronica</li>
-  <li class="noted">Kyouko</li>
-  <li>Shireen</li>
-  <li>Tanya</li>
-  <li class="noted">Marlene</li>
 </ul>
 <ul class="two">
   <li class="noted">Diego</li>
@@ -295,16 +283,6 @@ In this example, there are two unordered lists of names. The first list shows th
   <li>Sienna</li>
   <li>Titilayo</li>
   <li class="noted">Lexi</li>
-  <li>Aylin</li>
-  <li>Leo</li>
-  <li>Leyla</li>
-  <li class="noted">Bruce</li>
-  <li>Aisha</li>
-  <li>Veronica</li>
-  <li class="noted">Kyouko</li>
-  <li>Shireen</li>
-  <li>Tanya</li>
-  <li class="noted">Marlene</li>
 </ul>
 ```
 
@@ -337,18 +315,12 @@ li {
 }
 ```
 
-The first case highlights the first three list items with `class="noted"` whether or not they are the first three items in the list.
-
 ```css
 ul.one > li:nth-child(-n + 3 of .noted) {
   background-color: tomato;
   border-bottom-color: seagreen;
 }
-```
 
-The second case highlights the items with `class="noted"` only if they are within the first 3 items in the list.
-
-```css
 ul.two > li.noted:nth-child(-n + 3) {
   background-color: tomato;
   border-bottom-color: seagreen;
@@ -357,13 +329,11 @@ ul.two > li.noted:nth-child(-n + 3) {
 
 #### Result
 
-In both of the lists, all the list items with `class="noted"` have a thick bottom border.
+The first case applies a style to the first three list items with `class="noted"` whether or not they are the first three items in the list.
 
-In the first list, the first 3 items with `class="noted"` are highlighted.
+The second case applies a style to the items with `class="noted"` if they are within the first 3 items in the list.
 
-In the second list, only the items with `class="noted"` that are also among the first 3 items are highlighted.
-
-{{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 210)}}
+{{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 150)}}
 
 ### Using of selector to fix striped tables
 
@@ -450,4 +420,5 @@ In the second table the _of syntax_ is used to target only the `tr`s that are **
 
 ## See also
 
-- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}
+- {{ Cssxref(":nth-of-type") }}
+- {{ Cssxref(":nth-last-child") }}
