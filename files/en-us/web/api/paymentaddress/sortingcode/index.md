@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.sortingCode
+title: "PaymentAddress: sortingCode property"
+short-title: sortingCode
 slug: Web/API/PaymentAddress/sortingCode
 page-type: web-api-instance-property
 status:

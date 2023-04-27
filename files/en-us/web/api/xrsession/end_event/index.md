@@ -1,5 +1,6 @@
 ---
-title: 'XRSession: end event'
+title: "XRSession: end event"
+short-title: end
 slug: Web/API/XRSession/end_event
 page-type: web-api-event
 status:

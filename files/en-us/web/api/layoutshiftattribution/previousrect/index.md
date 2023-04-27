@@ -1,5 +1,6 @@
 ---
-title: LayoutShiftAttribution.previousRect
+title: "LayoutShiftAttribution: previousRect property"
+short-title: previousRect
 slug: Web/API/LayoutShiftAttribution/previousRect
 page-type: web-api-instance-property
 status:

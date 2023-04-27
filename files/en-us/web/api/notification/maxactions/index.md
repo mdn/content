@@ -1,5 +1,6 @@
 ---
-title: Notification.maxActions
+title: "Notification: maxActions static property"
+short-title: maxActions
 slug: Web/API/Notification/maxActions
 page-type: web-api-static-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: CSS.supports()
+title: "CSS: supports() static method"
+short-title: supports()
 slug: Web/API/CSS/supports
 page-type: web-api-static-method
 browser-compat: api.CSS.supports
@@ -7,14 +8,14 @@ browser-compat: api.CSS.supports
 
 {{APIRef("CSSOM")}}
 
-The **`CSS.supports()`** method returns a boolean value
+The **`CSS.supports()`** static method returns a boolean value
 indicating if the browser supports a given CSS feature, or not.
 
 ## Syntax
 
 ```js-nolint
-supports(propertyName, value)
-supports(supportCondition)
+CSS.supports(propertyName, value)
+CSS.supports(supportCondition)
 ```
 
 ### Parameters

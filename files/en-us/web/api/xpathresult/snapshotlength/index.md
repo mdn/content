@@ -1,5 +1,6 @@
 ---
-title: XPathResult.snapshotLength
+title: "XPathResult: snapshotLength property"
+short-title: snapshotLength
 slug: Web/API/XPathResult/snapshotLength
 page-type: web-api-instance-property
 browser-compat: api.XPathResult.snapshotLength

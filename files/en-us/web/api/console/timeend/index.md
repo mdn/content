@@ -1,5 +1,6 @@
 ---
-title: console.timeEnd()
+title: "console: timeEnd() method"
+short-title: timeEnd()
 slug: Web/API/console/timeEnd
 page-type: web-api-instance-method
 browser-compat: api.console.timeEnd

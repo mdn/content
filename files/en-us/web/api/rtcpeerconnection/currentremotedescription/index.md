@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.currentRemoteDescription
+title: "RTCPeerConnection: currentRemoteDescription property"
+short-title: currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.currentRemoteDescription

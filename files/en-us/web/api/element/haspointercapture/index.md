@@ -1,5 +1,6 @@
 ---
-title: Element.hasPointerCapture()
+title: "Element: hasPointerCapture() method"
+short-title: hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 page-type: web-api-instance-method
 browser-compat: api.Element.hasPointerCapture

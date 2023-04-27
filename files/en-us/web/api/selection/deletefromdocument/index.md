@@ -1,5 +1,6 @@
 ---
-title: Selection.deleteFromDocument()
+title: "Selection: deleteFromDocument() method"
+short-title: deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 page-type: web-api-instance-method
 browser-compat: api.Selection.deleteFromDocument

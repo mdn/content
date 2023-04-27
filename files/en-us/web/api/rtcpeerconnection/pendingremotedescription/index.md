@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.pendingRemoteDescription
+title: "RTCPeerConnection: pendingRemoteDescription property"
+short-title: pendingRemoteDescription
 slug: Web/API/RTCPeerConnection/pendingRemoteDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.pendingRemoteDescription

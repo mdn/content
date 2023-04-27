@@ -21,12 +21,67 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Instance properties
 
-- {{domxref("caches")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
+_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
+
 - {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
 - {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
+
+### Instance properties inherited from WorkerGlobalScope
+
+- {{domxref("caches", "ServiceWorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("WorkerGlobalScope.console", "ServiceWorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("console")}} associated with the worker.
+- {{domxref("WorkerGlobalScope.fonts", "ServiceWorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
+- {{domxref("indexedDB", "ServiceWorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
+  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+- {{domxref("isSecureContext", "ServiceWorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("WorkerGlobalScope.location", "ServiceWorkerGlobalScope.location")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
+- {{domxref("WorkerGlobalScope.navigator", "ServiceWorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
+- {{domxref("origin", "ServiceWorkerGlobalScope.origin")}} {{ReadOnlyInline}}
+  - : Returns the global object's origin, serialized as a string.
+- {{domxref("performance_property", "ServiceWorkerGlobalScope.performance")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
+- {{domxref("Window.scheduler", "ServiceWorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+- {{domxref("WorkerGlobalScope.self", "ServiceWorkerGlobalScope.self")}}
+  - : Returns an object reference to the `ServiceWorkerGlobalScope` object itself.
+
+## Instance methods
+
+_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
+
+- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
+  - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
+
+### Inherited from WorkerGlobalScope
+
+- {{domxref("atob", "ServiceWorkerGlobalScope.atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("btoa", "ServiceWorkerGlobalScope.btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
+- {{domxref("Window.cancelAnimationFrame", "ServiceWorkerGlobalScope.cancelAnimationFrame()")}}
+  - : Cancels a callback scheduled by requestAnimationFrame.
+- {{domxref("clearInterval", "ServiceWorkerGlobalScope.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+- {{domxref("clearTimeout", "ServiceWorkerGlobalScope.clearTimeout()")}}
+  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+- {{domxref("WorkerGlobalScope.dump", "ServiceWorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Writes a message to the console.
+- {{domxref("WorkerGlobalScope.importScripts", "ServiceWorkerGlobalScope.importScripts()")}}
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
+- {{domxref("Window.requestAnimationFrame", "ServiceWorkerGlobalScope.requestAnimationFrame()")}}
+  - : Requests the browser to execute a callback function before painting the next frame.
+- {{domxref("setInterval", "ServiceWorkerGlobalScope.setInterval()")}}
+  - : Schedules the execution of a function every X milliseconds.
+- {{domxref("setTimeout", "ServiceWorkerGlobalScope.setTimeout()")}}
+  - : Sets a delay for executing a function.
 
 ## Events
 
@@ -64,16 +119,6 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
   - : Occurs when a server push notification is received.
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
   - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
-
-## Instance methods
-
-- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
-  - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
-
-`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}}. Therefore it also has the following property available to it:
-
-- {{domxref("fetch()")}}
-  - : Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: DOMPoint()
+title: "DOMPoint: DOMPoint() constructor"
+short-title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 page-type: web-api-constructor
 browser-compat: api.DOMPoint.DOMPoint

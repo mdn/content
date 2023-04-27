@@ -1,5 +1,6 @@
 ---
-title: console.assert()
+title: "console: assert() method"
+short-title: assert()
 slug: Web/API/console/assert
 page-type: web-api-instance-method
 browser-compat: api.console.assert

@@ -1,6 +1,7 @@
 ---
 title: HTTP request methods
 slug: Web/HTTP/Methods
+page-type: landing-page
 browser-compat: http.methods
 ---
 

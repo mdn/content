@@ -1,5 +1,6 @@
 ---
-title: Range.toString()
+title: "Range: toString() method"
+short-title: toString()
 slug: Web/API/Range/toString
 page-type: web-api-instance-method
 browser-compat: api.Range.toString

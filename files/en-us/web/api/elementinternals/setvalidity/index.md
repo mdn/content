@@ -1,11 +1,12 @@
 ---
-title: ElementInternals.setValidity()
+title: "ElementInternals: setValidity() method"
+short-title: setValidity()
 slug: Web/API/ElementInternals/setValidity
 page-type: web-api-instance-method
 browser-compat: api.ElementInternals.setValidity
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface sets the validity of the element.
 

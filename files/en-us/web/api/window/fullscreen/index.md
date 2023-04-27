@@ -1,5 +1,6 @@
 ---
-title: Window.fullScreen
+title: "Window: fullScreen property"
+short-title: fullScreen
 slug: Web/API/Window/fullScreen
 page-type: web-api-instance-property
 status:
@@ -26,8 +27,7 @@ A boolean value with `true` meaning that the window is in full-screen mode and `
 ```js
 if (window.fullScreen) {
   // it's fullscreen!
-}
-else {
+} else {
   // not fullscreen!
 }
 ```

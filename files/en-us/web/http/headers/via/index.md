@@ -1,6 +1,7 @@
 ---
 title: Via
 slug: Web/HTTP/Headers/Via
+page-type: http-header
 browser-compat: http.headers.Via
 ---
 

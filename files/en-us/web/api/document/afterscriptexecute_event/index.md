@@ -1,5 +1,6 @@
 ---
 title: "Document: afterscriptexecute event"
+short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
 page-type: web-api-event
 status:

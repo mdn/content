@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.fontKerning
+title: "CanvasRenderingContext2D: fontKerning property"
+short-title: fontKerning
 slug: Web/API/CanvasRenderingContext2D/fontKerning
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.fontKerning

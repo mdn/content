@@ -1,5 +1,6 @@
 ---
 title: "HID: disconnect event"
+short-title: disconnect
 slug: Web/API/HID/disconnect_event
 page-type: web-api-event
 status:

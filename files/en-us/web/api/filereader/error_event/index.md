@@ -1,5 +1,6 @@
 ---
 title: "FileReader: error event"
+short-title: error
 slug: Web/API/FileReader/error_event
 page-type: web-api-event
 browser-compat: api.FileReader.error_event

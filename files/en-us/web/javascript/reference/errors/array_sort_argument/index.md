@@ -30,18 +30,13 @@ The argument of {{jsxref("Array.prototype.sort()")}} is expected to be either {{
 
 ```js example-bad
 [1, 3, 2].sort(5); // TypeError
-
-const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
 ```
 
 ### Valid cases
 
 ```js example-good
 [1, 3, 2].sort(); // [1, 2, 3]
-
-const cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
+[1, 3, 2].sort((a, b) => a - b); // [1, 2, 3]
 ```
 
 ## See also

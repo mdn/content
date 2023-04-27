@@ -1,6 +1,7 @@
 ---
 title: "ARIA: dialog role"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#dialog
   - https://w3c.github.io/aria-practices/#dialog_modal

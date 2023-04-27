@@ -148,7 +148,7 @@ Within this context, whitespace is treated very differently.
 
 Let's take a look at an example to explain how. We've marked the whitespace characters as before.
 
-We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
+We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 
 ```html-nolint
 <body>

@@ -1,5 +1,6 @@
 ---
 title: "AudioWorkletNode: processorerror event"
+short-title: processorerror
 slug: Web/API/AudioWorkletNode/processorerror_event
 page-type: web-api-event
 browser-compat: api.AudioWorkletNode.processorerror_event

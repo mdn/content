@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.fonts
+title: "WorkerGlobalScope: fonts property"
+short-title: fonts
 slug: Web/API/WorkerGlobalScope/fonts
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.fonts

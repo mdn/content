@@ -114,6 +114,8 @@ const obj = { [Forgeable.isInstanceFlag]: true };
 console.log(obj instanceof Forgeable); // true
 ```
 
+Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[@@hasInstance]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function. See the {{jsxref("Symbol.hasInstance")}} page for the exact algorithm of `instanceof`.
+
 ### instanceof and multiple realms
 
 JavaScript execution environments (windows, frames, etc.) are each in their own _realm_. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, `[] instanceof window.frames[0].Array` will return `false`, because `Array.prototype !== window.frames[0].Array.prototype` and arrays in the current realm inherit from the former.

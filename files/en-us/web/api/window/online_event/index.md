@@ -1,5 +1,6 @@
 ---
-title: 'Window: online event'
+title: "Window: online event"
+short-title: online
 slug: Web/API/Window/online_event
 page-type: web-api-event
 browser-compat: api.Window.online_event
@@ -16,8 +17,8 @@ The **`online`** event of the {{domxref("Window")}} interface is fired when the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('online', (event) => { });
-ononline = (event) => { };
+addEventListener("online", (event) => {});
+ononline = (event) => {};
 ```
 
 ## Event type
@@ -36,8 +37,8 @@ In addition to the `Window` interface, the event handler property `ononline` is 
 
 ```js
 // addEventListener version
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
+window.addEventListener("online", (event) => {
+  console.log("You are now connected to the network.");
 });
 
 // ononline version

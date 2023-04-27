@@ -1,5 +1,6 @@
 ---
-title: SVGImageElement.decoding
+title: "SVGImageElement: decoding property"
+short-title: decoding
 slug: Web/API/SVGImageElement/decoding
 page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.decoding

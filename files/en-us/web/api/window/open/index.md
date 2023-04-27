@@ -1,5 +1,6 @@
 ---
-title: Window.open()
+title: "Window: open() method"
+short-title: open()
 slug: Web/API/Window/open
 page-type: web-api-instance-method
 browser-compat: api.Window.open

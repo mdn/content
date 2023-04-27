@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
 
 {{JSRef}}
 
-The **`AsyncFunction()`** constructor creates a new {{jsxref("AsyncFunction")}} object. In JavaScript, every [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) is actually an `AsyncFunction` object.
+The **`AsyncFunction()`** constructor creates {{jsxref("AsyncFunction")}} objects.
 
 Note that `AsyncFunction` is _not_ a global object. It can be obtained with the following code:
 

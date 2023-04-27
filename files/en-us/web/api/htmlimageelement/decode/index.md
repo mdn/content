@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.decode()
+title: "HTMLImageElement: decode() method"
+short-title: decode()
 slug: Web/API/HTMLImageElement/decode
 page-type: web-api-instance-method
 browser-compat: api.HTMLImageElement.decode

@@ -30,7 +30,7 @@ _No change._
 
 - New ES2015-compatible [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) `[for (item of iterable) item]` and [generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` have been implemented ([Firefox bug 979865](https://bugzil.la/979865)).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) are now extensible and support new named properties ([Firefox bug 695438](https://bugzil.la/695438)).
-- The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Firefox bug 762556](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#stack_of_eval'ed_code). This can help you to better debug minified or generated JavaScript code.
+- The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Firefox bug 762556](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_evaled_code). This can help you to better debug minified or generated JavaScript code.
 - The `Promise.cast()` method has been renamed to {{jsxref("Promise.resolve()")}} ([Firefox bug 966348](https://bugzil.la/966348)).
 
 ### Interfaces/APIs/DOM

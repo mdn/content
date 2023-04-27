@@ -70,8 +70,8 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from websites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
 - The `touchenter` and `touchleave` events, removed from the specification, have been removed ([Firefox bug 1036444](https://bugzil.la/1036444)).
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{domxref("Window/load_event", "load")}} to match the specification ([Firefox bug 1035505](https://bugzil.la/1035505)).
-- The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ([Firefox bug 1006485](https://bugzil.la/1006485)).
-- The IndexedDB interface `LockedFile` has been renamed in {{domxref("IDBFileHandle")}} ([Firefox bug 1006485](https://bugzil.la/1006485)).
+- The IndexedDB interface `FileHandle` has been renamed in `IDBMutableFile` ([Firefox bug 1006485](https://bugzil.la/1006485)).
+- The IndexedDB interface `LockedFile` has been renamed in `IDBFileHandle` ([Firefox bug 1006485](https://bugzil.la/1006485)).
 - The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ([Firefox bug 903441](https://bugzil.la/903441)).
 - The {{domxref("NetworkInformation.type")}} now also support the `"unknown"` value ([Firefox bug 1023029](https://bugzil.la/1023029)).
 

@@ -1,5 +1,6 @@
 ---
-title: MediaEncryptedEvent()
+title: "MediaEncryptedEvent: MediaEncryptedEvent() constructor"
+short-title: MediaEncryptedEvent()
 slug: Web/API/MediaEncryptedEvent/MediaEncryptedEvent
 page-type: web-api-constructor
 browser-compat: api.MediaEncryptedEvent.MediaEncryptedEvent

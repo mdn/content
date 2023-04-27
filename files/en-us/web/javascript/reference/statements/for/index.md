@@ -228,7 +228,7 @@ Note that the semicolon after the `for` statement is mandatory, because it stand
 
 ### Using for with two iterating variables
 
-You can create two counters that are updated simultaneously in a for loop using the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator). Multiple `let` and `var` declarations can also be joined with commas.
+You can create two counters that are updated simultaneously in a for loop using the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator). Multiple `let` and `var` declarations can also be joined with commas.
 
 ```js
 const arr = [1, 2, 3, 4, 5, 6];

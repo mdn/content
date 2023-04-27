@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: volumechange event"
+short-title: volumechange
 slug: Web/API/HTMLMediaElement/volumechange_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.volumechange_event

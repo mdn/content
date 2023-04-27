@@ -1,5 +1,6 @@
 ---
-title: FormData.set()
+title: "FormData: set() method"
+short-title: set()
 slug: Web/API/FormData/set
 page-type: web-api-instance-method
 browser-compat: api.FormData.set

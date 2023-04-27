@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.copyTo()
+title: "VideoFrame: copyTo() method"
+short-title: copyTo()
 slug: Web/API/VideoFrame/copyTo
 page-type: web-api-instance-method
 browser-compat: api.VideoFrame.copyTo

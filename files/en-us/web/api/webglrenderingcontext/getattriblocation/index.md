@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
+title: "WebGLRenderingContext: getAttribLocation() method"
+short-title: getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getAttribLocation
@@ -33,7 +34,7 @@ Returns -1 otherwise.
 ## Examples
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
 ## Specifications

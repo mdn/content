@@ -1,5 +1,6 @@
 ---
-title: Screen.availHeight
+title: "Screen: availHeight property"
+short-title: availHeight
 slug: Web/API/Screen/availHeight
 page-type: web-api-instance-property
 browser-compat: api.Screen.availHeight

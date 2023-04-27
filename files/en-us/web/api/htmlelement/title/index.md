@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.title
+title: "HTMLElement: title property"
+short-title: title
 slug: Web/API/HTMLElement/title
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.title

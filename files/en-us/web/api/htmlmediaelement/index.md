@@ -212,5 +212,5 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these 
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning area: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Media type and format guide](/en-US/docs/Web/Media/Formats)
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)

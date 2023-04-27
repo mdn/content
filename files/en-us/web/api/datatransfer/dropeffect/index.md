@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.dropEffect
+title: "DataTransfer: dropEffect property"
+short-title: dropEffect
 slug: Web/API/DataTransfer/dropEffect
 page-type: web-api-instance-property
 browser-compat: api.DataTransfer.dropEffect

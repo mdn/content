@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 
 {{JSRef}}
 
-The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} objects.
+The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 

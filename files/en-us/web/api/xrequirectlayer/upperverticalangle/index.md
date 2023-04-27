@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.upperVerticalAngle
+title: "XREquirectLayer: upperVerticalAngle property"
+short-title: upperVerticalAngle
 slug: Web/API/XREquirectLayer/upperVerticalAngle
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.name
+title: "FileSystemEntry: name property"
+short-title: name
 slug: Web/API/FileSystemEntry/name
 page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.name

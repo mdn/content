@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.parse()
+title: "CSSNumericValue: parse() static method"
+short-title: parse()
 slug: Web/API/CSSNumericValue/parse
 page-type: web-api-static-method
 browser-compat: api.CSSNumericValue.parse
@@ -7,14 +8,14 @@ browser-compat: api.CSSNumericValue.parse
 
 {{APIRef("CSS Typed OM")}}
 
-The **`parse()`** method of the
+The **`parse()`** static method of the
 {{domxref("CSSNumericValue")}} interface converts a value string into an object whose
 members are value and the units.
 
 ## Syntax
 
 ```js-nolint
-parse(cssText)
+CSSNumericValue.parse(cssText)
 ```
 
 ### Parameters

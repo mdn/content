@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.key
+title: "IDBCursor: key property"
+short-title: key
 slug: Web/API/IDBCursor/key
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.key

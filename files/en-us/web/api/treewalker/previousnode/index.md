@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.previousNode()
+title: "TreeWalker: previousNode() method"
+short-title: previousNode()
 slug: Web/API/TreeWalker/previousNode
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.previousNode

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigInt.BigInt
 
 {{JSRef}}
 
-The **`BigInt()`** function returns a value of type **bigint**.
+The **`BigInt()`** function returns primitive values of type BigInt.
 
 ## Syntax
 

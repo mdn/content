@@ -1,5 +1,6 @@
 ---
-title: Element.matches()
+title: "Element: matches() method"
+short-title: matches()
 slug: Web/API/Element/matches
 page-type: web-api-instance-method
 browser-compat: api.Element.matches

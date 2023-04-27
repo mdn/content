@@ -196,10 +196,11 @@ In the following example, two layers are created with no rules applied, then CSS
 ## See also
 
 - [`@import`](/en-US/docs/Web/CSS/@import)
-- The two associated interfaces: {{domxref("CSSLayerBlockRule")}} and {{domxref("CSSLayerStatementRule")}}
-- [The `!important` flag](/en-US/docs/Web/CSS/important)
-- [The `revert-layer` keyword](/en-US/docs/Web/CSS/revert-layer)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
-- [CSS building block: cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS building block: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
-- [The Future of CSS: Cascade Layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- [`!important`](/en-US/docs/Web/CSS/important)
+- [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
+- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (September 15, 2021)

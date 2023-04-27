@@ -1,5 +1,6 @@
 ---
-title: XPathResult.booleanValue
+title: "XPathResult: booleanValue property"
+short-title: booleanValue
 slug: Web/API/XPathResult/booleanValue
 page-type: web-api-instance-property
 browser-compat: api.XPathResult.booleanValue

@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.clone()
+title: "VideoFrame: clone() method"
+short-title: clone()
 slug: Web/API/VideoFrame/clone
 page-type: web-api-instance-method
 browser-compat: api.VideoFrame.clone

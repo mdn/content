@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: loadedmetadata event"
+short-title: loadedmetadata
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadedmetadata_event
@@ -86,4 +87,3 @@ video.onloadedmetadata = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- This event is part of gecko's [Audio API extension](/en-US/docs/Introducing_the_Audio_API_Extension)

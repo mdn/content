@@ -1,5 +1,6 @@
 ---
-title: MediaSource.isTypeSupported()
+title: "MediaSource: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 page-type: web-api-static-method
 browser-compat: api.MediaSource.isTypeSupported
@@ -15,7 +16,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 ## Syntax
 
 ```js-nolint
-isTypeSupported(type)
+MediaSource.isTypeSupported(type)
 ```
 
 ### Parameters
@@ -79,6 +80,6 @@ function sourceOpen() {
 
 - [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

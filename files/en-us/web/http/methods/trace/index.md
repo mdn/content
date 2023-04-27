@@ -1,6 +1,7 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
+page-type: http-method
 browser-compat: http.methods.TRACE
 ---
 

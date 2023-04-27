@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.removeEntry()
+title: "FileSystemDirectoryHandle: removeEntry() method"
+short-title: removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry

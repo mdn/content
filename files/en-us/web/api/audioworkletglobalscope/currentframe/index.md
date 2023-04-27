@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletGlobalScope.currentFrame
+title: "AudioWorkletGlobalScope: currentFrame property"
+short-title: currentFrame
 slug: Web/API/AudioWorkletGlobalScope/currentFrame
 page-type: web-api-instance-property
 browser-compat: api.AudioWorkletGlobalScope.currentFrame

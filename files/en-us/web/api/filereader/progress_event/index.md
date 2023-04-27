@@ -1,5 +1,6 @@
 ---
 title: "FileReader: progress event"
+short-title: progress
 slug: Web/API/FileReader/progress_event
 page-type: web-api-event
 browser-compat: api.FileReader.progress_event

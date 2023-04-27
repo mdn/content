@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.hover
 
 {{CSSRef}}
 
-The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the user's _primary_ input mechanism can hover over elements.
+The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the user's _primary_ input mechanism can hover over elements.
 
 ## Syntax
 

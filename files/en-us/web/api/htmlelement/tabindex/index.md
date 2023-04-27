@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.tabIndex
+title: "HTMLElement: tabIndex property"
+short-title: tabIndex
 slug: Web/API/HTMLElement/tabIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.tabIndex

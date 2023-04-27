@@ -1,5 +1,6 @@
 ---
-title: WakeLockSentinel.type
+title: "WakeLockSentinel: type property"
+short-title: type
 slug: Web/API/WakeLockSentinel/type
 page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.type
@@ -23,7 +24,7 @@ This example shows an asynchronous function that acquires a
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // logs 'screen'
 };
 

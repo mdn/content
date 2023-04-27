@@ -634,7 +634,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", "1600px")}}
 
 ### Using mix-blend-mode with HTML
 
