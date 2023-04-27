@@ -54,7 +54,7 @@
         }
       }
     },
-    "allOf": [
+    "anyOf": [
       {
         "if": {
           "properties": {
@@ -67,7 +67,8 @@
               "enum": ["glossary-definition", "glossary-disambiguation"]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -83,7 +84,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -95,7 +97,8 @@
               "enum": ["guide", "landing-page", "svg-attribute", "svg-element"]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -115,7 +118,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -141,7 +145,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -169,7 +174,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -197,7 +203,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -229,7 +236,8 @@
               ]
             }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -242,7 +250,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["http-csp-directive"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -257,20 +266,22 @@
           "properties": {
             "page-type": { "enum": ["http-permissions-policy-directive"] }
           }
-        }
+        },
+        "else": false
       },
       {
         "if": {
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/(?!Content-Security-Policy|Permissions-Policy)"
+              "pattern": "^Web/HTTP/Headers/"
             }
           }
         },
         "then": {
           "properties": { "page-type": { "enum": ["guide", "http-header"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -280,7 +291,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["http-method"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -290,7 +302,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["http-status-code"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -300,7 +313,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["mathml-element"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -313,7 +327,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["mathml-attribute"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -326,7 +341,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["aria-attribute"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -339,7 +355,8 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["aria-role"] } }
-        }
+        },
+        "else": false
       },
       {
         "if": {
@@ -349,7 +366,23 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["http-cors-error"] } }
-        }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": ".*" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page"]
+            }
+          }
+        },
+        "else": false
       }
     ]
   },

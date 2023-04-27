@@ -87,4 +87,25 @@ describe("Test front-matter linter", () => {
       "property 'title' must not have more than 120 characters";
     await expect(result).toEqual([expected, null, validContent]);
   });
+
+  it("should flag and remove unknown attribute", async () => {
+    const filePath = fileURLToPath(
+      new URL("./unknown_attribute.md", SAMPLES_DIRECTORY)
+    );
+    const validPath = fileURLToPath(
+      new URL("./unknown_attribute.valid.md", SAMPLES_DIRECTORY)
+    );
+    const validContent = fs.readFileSync(validPath, "utf-8");
+
+    options.fix = false;
+    let result = await checkFrontMatter(filePath, options);
+    const expected =
+      "Error: tests/front-matter_test_files/unknown_attribute.md\n" +
+      "'tags' property is not expected to be here";
+    await expect(result).toEqual([expected, null, null]);
+
+    options.fix = true;
+    result = await checkFrontMatter(filePath, options);
+    await expect(result).toEqual([expected, null, validContent]);
+  });
 });
