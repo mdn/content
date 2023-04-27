@@ -1702,8 +1702,6 @@ The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked 
 Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
 See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
-Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
-
 <table>
   <thead>
     <tr>
@@ -1715,8 +1713,8 @@ Note that since locking the screen orientation isn't typically supported on desk
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
