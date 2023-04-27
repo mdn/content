@@ -29,7 +29,7 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
 - `hue-interpolation-method` {{optional_inline}}
 
   - : One of `shorter`, `longer`, `increasing`, and `decreasing`.
-  
+
     > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
 
 - `color`
