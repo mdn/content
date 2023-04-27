@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 113 that affect d
 - The [`color()`](/en-US/docs/Web/CSS/color_value/color), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), and [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notations are now supported, along with the [`forced-color-adjust`](/en-US/docs/Web/CSS/forced-color-adjust) property.
   For more information on the functional notations, see the [CSS color value](/en-US/docs/Web/CSS/color_value) documentation.
   ([Firefox bug 1352753](https://bugzil.la/1352753), [Firefox bug 1813497](https://bugzil.la/1813497), [Firefox bug 1818819](https://bugzil.la/1818819), [Firefox bug 1824526](https://bugzil.la/1824526)).
-- The CSS [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
+- The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
 
 #### Removals
