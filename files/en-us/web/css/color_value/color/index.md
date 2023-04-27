@@ -22,13 +22,19 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-- Functional notation: `color( [ [<ident> | <dashed-ident>]? [ <number-percentage>+ ] [ / <alpha-value> ]? ] )`
+Functional notation: `color( [colorspace] parameters [ / A ] )`
 
-  - : `[<ident> | <dashed-ident>]` is an optional {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
+- `colorspace` {{optional_inline}}
 
-    `[ <number-percentage>+ ]` is one or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
+  - : An {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a {{CSSXref("@color-profile")}} rule.
 
-    `/ <alpha-value>` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- `parameters`
+
+  - : One or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;)}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
