@@ -7,30 +7,32 @@ spec-urls: https://drafts.csswg.org/css-overflow/#propdef-overflow
 
 {{CSSRef}}
 
-The **CSS Overflow** module contains the features of CSS relating to scrollable overflow handling in visual media.
+The **CSS overflow** module properties enable you to handle scrollable overflow in visual media.
 
-CSS overflow happens when the content of a box extends past one or more of the box's edges. **Scrollable overflow** is content that appears outside of the box for which scrolling mechanisms need to be provided. The overflow properties are how we can control what happens when content overflows a box.
+Overflow happens when the content in an element box extends past one or more of the box's edges. **Scrollable overflow** is the content that appears outside the element box for which you might want to add a scrolling mechanism. CSS overflow properties enable you to control what happens when content overflows an element box.
 
-Painting effects that overflow content but do not participate in the CSS box model, also known as {{Glossary("ink overflow")}}, do not affect layout. Ink overflows, such as box shadows, border images, text decoration, overhanging glyphs, outlines, etc., do not extend the scrollable overflow region.
+Painting effects that overflow the content but do not participate in the CSS box model do not affect layout. This type of overflow is also known as {{Glossary("ink overflow")}}. Examples of ink overflows include box shadows, border images, text decoration, overhanging glyphs, and outlines. Ink overflows do not extend the scrollable overflow region.
 
 ## Overflow in action
 
-The following interactive example shows the effects of changing the value of the `overflow` property changes overflow of a fixed-size box. The example also includes options to change the `width` and `overflow-clip-margin` property values, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}.
+Use the following interactive example to see the effects of various `overflow` property values on the content overflow and scrollbars in the adjacent fixed-size box.
+
+The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out different `ScrollLeft` and `ScrollTop` slider settings. 
 
 {{EmbedGHLiveSample("css-examples/modules/overflow.html", '100%', 320)}}
 
-A link is included in the preformatted lyrics to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will only scroll if the enumerated `<overflow>` value created a scroll container.
+A link is included in content box above to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will scroll only if the enumerated `<overflow>` value created a scroll container.
 
 ## Reference
 
 ### CSS properties
 
+- {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
+- {{CSSxRef("overflow-clip-margin")}}
 - {{CSSxRef("overflow-inline")}}
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
-- {{CSSxRef("overflow")}} shorthand
-- {{CSSxRef("overflow-clip-margin")}}
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
@@ -44,11 +46,6 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 
 - [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) enumerated values
 
-### Glossary
-
-- {{Glossary("Scroll container")}}
-- {{Glossary("Ink overflow")}}
-
 ## Guides
 
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
@@ -58,8 +55,8 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 
 ## Related concepts
 
-- {{CSSxRef("scrollbar-width")}}
-- {{CSSxRef("scrollbar-color")}}
+- {{CSSxRef("scrollbar-width")}} CSS property
+- {{CSSxRef("scrollbar-color")}} CSS property
 - {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
 - {{cssxref("scroll-margin")}} CSS shorthand property
@@ -79,6 +76,8 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 - Element {{domxref("Element.scrollWidth", "scrollWidth")}} property
 - Element {{domxref("Element.scrollHeight", "scrollHeight")}} property
 - Document {{domxref("Document.scroll_event", "scroll")}} event
+- {{Glossary("Scroll container")}} glossary term
+- {{Glossary("Ink overflow")}} glossary term
 
 ## Specifications
 
@@ -86,7 +85,7 @@ A link is included in the preformatted lyrics to demonstrate the effects of keyb
 
 ## See also
 
-- [CSS scrollbars styling module](/en-US/docs/Web/CSS/CSS_scrollbars)
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [CSSOM view module](/en-US/docs/Web/CSS/CSSOM_View)
-- How to [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html).
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- How to [debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)
