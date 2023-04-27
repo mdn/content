@@ -227,7 +227,7 @@ pre:nth-of-type(6)::before {
 
 We included {{CSSXref("overflow-clip-margin")}}, which only has an effect when used in conjunction with the `clip` value to demonstrate the clip effect.
 
-### Results
+### Result
 
 {{EmbedLiveSample("Examples", "500", "600")}}
 
