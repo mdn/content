@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setTime
 
 {{JSRef}}
 
-The **`setSeconds()`** method of a {{jsxref("Date")}} instance changes the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) for this date, which is the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), defined as the midnight at the beginning of January 1, 1970, UTC.
+The **`setTime()`** method of a {{jsxref("Date")}} instance changes the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) for this date, which is the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
 
