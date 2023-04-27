@@ -38,7 +38,7 @@ This example demos all the `<overflow>` enumerated values for the {{cssxref("ove
 
 ### HTML
 
-The HTML in this example contains some lyrics within the {{HTMLELement("pre")}} element. The HTML also contains a link text to enable testing the effects of keyboard focus on overflow and scroll behaviors. The same HTML code is repeated multiple times to show the effect of each `<overflow>` enumerated value. 
+The HTML in this example contains some lyrics within the {{HTMLELement("pre")}} element. The HTML also contains a link text to enable testing the effects of keyboard focus on overflow and scroll behaviors. The same HTML code is repeated multiple times to show the effect of each `<overflow>` enumerated value.
 
 ```html
 <pre>&nbsp;
