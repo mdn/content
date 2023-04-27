@@ -26,7 +26,7 @@ Functional notation: `color( [colorspace] parameters [ / A ] )`
 
 - `colorspace` {{optional_inline}}
 
-  - : An {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a `@color-profile` rule.
+  - : An {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a {{CSSXref("@color-profile")}} rule.
 
 - `parameters`
 
@@ -34,7 +34,7 @@ Functional notation: `color( [colorspace] parameters [ / A ] )`
 
 - `A` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;alpha-value&gt;)}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
