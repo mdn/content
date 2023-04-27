@@ -393,10 +393,10 @@ These properties are own properties of each `String` instance.
   - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
 - {{jsxref("String.prototype.trim()")}}
   - : Trims whitespace from the beginning and end of the string.
-- {{jsxref("String.prototype.trimStart()")}}
-  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.trimEnd()")}}
   - : Trims whitespace from the end of the string.
+- {{jsxref("String.prototype.trimStart()")}}
+  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.

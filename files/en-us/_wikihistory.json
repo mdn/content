@@ -78543,20 +78543,6 @@
       "EvanGenest"
     ]
   },
-  "Web/CSS/CSS_Scroll_Snap_Points": {
-    "modified": "2020-07-07T12:26:12.735Z",
-    "contributors": [
-      "wbamberg",
-      "alattalatta",
-      "fscholz",
-      "pete_le",
-      "chrisdavidmills",
-      "twhb",
-      "mfluehr",
-      "c9s",
-      "teoli"
-    ]
-  },
   "Web/CSS/CSS_Scrollbars": {
     "modified": "2020-10-15T22:10:49.755Z",
     "contributors": [

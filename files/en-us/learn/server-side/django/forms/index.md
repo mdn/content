@@ -485,7 +485,7 @@ For more examples of how to manually render forms in templates and dynamically l
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a view showing all books on loan in the library, which is only visible to library staff.
 The view might look similar to this:
 
-```pug
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -510,7 +510,7 @@ The view might look similar to this:
 We can add a link to the book renew page next to each item by appending the following template code to the list item text above.
 Note that this template code can only run inside the `{% for %}` loop, because that is where the `bookinst` value is defined.
 
-```pug
+```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
