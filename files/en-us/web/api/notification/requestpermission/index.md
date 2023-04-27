@@ -1,5 +1,6 @@
 ---
-title: Notification.requestPermission()
+title: "Notification: requestPermission() static method"
+short-title: requestPermission()
 slug: Web/API/Notification/requestPermission
 page-type: web-api-static-method
 browser-compat: api.Notification.requestPermission
@@ -9,16 +10,16 @@ browser-compat: api.Notification.requestPermission
 
 > **Note:** Safari still uses the callback syntax to get the permission. Read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API) for a good example of how to feature detect this and run code as appropriate.
 
-The **`requestPermission()`** method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.
+The **`requestPermission()`** static method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.
 
 ## Syntax
 
 ```js-nolint
 // The latest spec has updated this method to a promise-based syntax that works like this:
-requestPermission()
+Notification.requestPermission()
 
 // Previously, the syntax was based on a simple callback; this version is now deprecated:
-requestPermission(callback)
+Notification.requestPermission(callback)
 ```
 
 ### Parameters

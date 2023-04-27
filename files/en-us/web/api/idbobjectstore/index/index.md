@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.index()
+title: "IDBObjectStore: index() method"
+short-title: index()
 slug: Web/API/IDBObjectStore/index
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.index

@@ -35,7 +35,6 @@ _Inherits properties from its parent, {{DOMxRef("DOMException")}}._
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -44,11 +43,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

@@ -1,5 +1,6 @@
 ---
-title: PushMessageData.json()
+title: "PushMessageData: json() method"
+short-title: json()
 slug: Web/API/PushMessageData/json
 page-type: web-api-instance-method
 browser-compat: api.PushMessageData.json

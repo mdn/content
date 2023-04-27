@@ -1,10 +1,11 @@
 ---
-title: LayoutShift.lastInputTime
+title: "LayoutShift: lastInputTime property"
+short-title: lastInputTime
 slug: Web/API/LayoutShift/lastInputTime
 page-type: web-api-instance-property
-browser-compat: api.LayoutShift.lastInputTime
 status:
   - experimental
+browser-compat: api.LayoutShift.lastInputTime
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}

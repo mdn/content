@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.role
+title: "RTCIceTransport: role property"
+short-title: role
 slug: Web/API/RTCIceTransport/role
 page-type: web-api-instance-property
 browser-compat: api.RTCIceTransport.role

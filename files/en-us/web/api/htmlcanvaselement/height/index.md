@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.height
+title: "HTMLCanvasElement: height property"
+short-title: height
 slug: Web/API/HTMLCanvasElement/height
 page-type: web-api-instance-property
 browser-compat: api.HTMLCanvasElement.height
@@ -45,6 +46,5 @@ console.log(canvas.height); // 300
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- The other property controlling the size of the canvas,
-  {{domxref("HTMLCanvasElement.width")}}.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.height` property
+- {{domxref("HTMLCanvasElement.width")}}: Other property used to control the size of the canvas

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.values
 
 {{JSRef}}
 
-The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ object that iterates the value of each item in the array.
+The **`values()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -19,7 +19,7 @@ values()
 
 ### Return value
 
-A new iterable iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Description
 
@@ -157,8 +157,10 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.keys()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.keys()")}}
+- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.values()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

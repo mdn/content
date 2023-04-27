@@ -1,5 +1,6 @@
 ---
-title: TextTrack.id
+title: "TextTrack: id property"
+short-title: id
 slug: Web/API/TextTrack/id
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.id

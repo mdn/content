@@ -14,7 +14,8 @@ The **`[@@split]()`** method of a regular expression specifies how [`String.prot
 ## Syntax
 
 ```js-nolint
-regexp[Symbol.split](str[, limit])
+regexp[Symbol.split](str)
+regexp[Symbol.split](str, limit)
 ```
 
 ### Parameters
@@ -97,8 +98,10 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 - [Polyfill of `RegExp.prototype[@@split]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.split()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.split")}}

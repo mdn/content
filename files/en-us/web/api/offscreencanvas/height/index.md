@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas.height
+title: "OffscreenCanvas: height property"
+short-title: height
 slug: Web/API/OffscreenCanvas/height
 page-type: web-api-instance-property
 browser-compat: api.OffscreenCanvas.height

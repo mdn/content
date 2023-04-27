@@ -1,6 +1,7 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
+page-type: http-header
 browser-compat: http.headers.Accept-Encoding
 ---
 

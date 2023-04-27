@@ -9,6 +9,11 @@ browser-compat: api.XMLSerializer
 
 The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 
+## Constructor
+
+- {{domxref("XMLSerializer.XMLSerializer", "XMLSerializer()")}}
+  - : Creates a new `XMLSerializer` object.
+
 ## Instance methods
 
 - {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}
@@ -18,16 +23,15 @@ The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToS
 
 ### Serializing XML into a string
 
-The first, basic, example just serializes an entire document into a string containing XML.
+This example just serializes an entire document into a string containing XML.
 
 ```js
  const s = new XMLSerializer();
- const d = document;
- const str = s.serializeToString(d);
+ const str = s.serializeToString(document);
  saveXML(str);
 ```
 
-This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document.
+This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document. `saveXML()` represents a function that would then save the serialized string.
 
 ### Inserting nodes into a DOM based on XML
 

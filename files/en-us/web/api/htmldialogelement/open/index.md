@@ -1,5 +1,6 @@
 ---
-title: HTMLDialogElement.open
+title: "HTMLDialogElement: open property"
+short-title: open
 slug: Web/API/HTMLDialogElement/open
 page-type: web-api-instance-property
 browser-compat: api.HTMLDialogElement.open

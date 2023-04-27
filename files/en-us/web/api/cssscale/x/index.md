@@ -1,5 +1,6 @@
 ---
-title: CSSScale.x
+title: "CSSScale: x property"
+short-title: x
 slug: Web/API/CSSScale/x
 page-type: web-api-instance-property
 browser-compat: api.CSSScale.x

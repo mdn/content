@@ -1,5 +1,6 @@
 ---
-title: AudioData.sampleRate
+title: "AudioData: sampleRate property"
+short-title: sampleRate
 slug: Web/API/AudioData/sampleRate
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.binaryType
+title: "PresentationConnection: binaryType property"
+short-title: binaryType
 slug: Web/API/PresentationConnection/binaryType
 page-type: web-api-instance-property
 status:

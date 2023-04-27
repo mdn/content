@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: open event"
+short-title: open
 slug: Web/API/RTCDataChannel/open_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.open_event

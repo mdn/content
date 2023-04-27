@@ -1,6 +1,7 @@
 ---
 title: Operable
 slug: Web/Accessibility/Understanding_WCAG/Operable
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

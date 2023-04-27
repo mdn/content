@@ -45,36 +45,36 @@ looks like this:
 
 Possible types are the following:
 
-- day
+- `day`
   - : The string used for the day, for example `"17"`.
-- dayPeriod
+- `dayPeriod`
   - : The string used for the day period, for example, `"AM"`,
     `"PM"`, `"in the morning"`, or `"noon"`
-- era
+- `era`
   - : The string used for the era, for example `"BC"` or `"AD"`.
-- fractionalSecond
+- `fractionalSecond`
   - : The string used for the fractional seconds, for example `"0"` or `"00"` or `"000"`.
-- hour
+- `hour`
   - : The string used for the hour, for example `"3"` or `"03"`.
-- literal
+- `literal`
   - : The string used for separating date and time values, for example `"/"`,
     `","`, `"o'clock"`, `"de"`, etc.
-- minute
+- `minute`
   - : The string used for the minute, for example `"00"`.
-- month
+- `month`
   - : The string used for the month, for example `"12"`.
-- relatedYear
+- `relatedYear`
   - : The string used for the related 4-digit Gregorian year, in the event that the
     calendar's representation would be a yearName instead of a year, for example `"2019"`.
-- second
+- `second`
   - : The string used for the second, for example `"07"` or `"42"`.
-- timeZone
+- `timeZone`
   - : The string used for the name of the time zone, for example `"UTC"`. Default is the timezone of the current environment.
-- weekday
+- `weekday`
   - : The string used for the weekday, for example `"M"`, `"Monday"`, or `"Montag"`.
-- year
+- `year`
   - : The string used for the year, for example `"2012"` or `"96"`.
-- yearName
+- `yearName`
   - : The string used for the yearName in relevant contexts, for example `"geng-zi"`
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.lang
+title: "SpeechSynthesisUtterance: lang property"
+short-title: lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.lang

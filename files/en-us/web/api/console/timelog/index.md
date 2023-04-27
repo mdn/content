@@ -1,5 +1,6 @@
 ---
-title: console.timeLog()
+title: "console: timeLog() method"
+short-title: timeLog()
 slug: Web/API/console/timeLog
 page-type: web-api-instance-method
 browser-compat: api.console.timeLog

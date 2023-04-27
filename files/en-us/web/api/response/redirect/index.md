@@ -1,13 +1,14 @@
 ---
-title: Response.redirect()
+title: "Response: redirect() static method"
+short-title: redirect()
 slug: Web/API/Response/redirect
 page-type: web-api-static-method
 browser-compat: api.Response.redirect
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
-The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
+The **`redirect()`** static method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 
 > **Note:** This is mainly relevant to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API).
 > A controlling service worker could intercept a page's request and redirect it as desired.
@@ -16,8 +17,8 @@ The **`redirect()`** method of the {{domxref("Response")}} interface returns a `
 ## Syntax
 
 ```js-nolint
-redirect(url)
-redirect(url, status)
+Response.redirect(url)
+Response.redirect(url, status)
 ```
 
 ### Parameters

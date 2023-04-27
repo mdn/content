@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.encrypt()
+title: "SubtleCrypto: encrypt() method"
+short-title: encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.encrypt

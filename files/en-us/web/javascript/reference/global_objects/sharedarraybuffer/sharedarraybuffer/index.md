@@ -7,15 +7,9 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 
 {{JSRef}}
 
-> **Note:** `SharedArrayBuffer` was disabled by default in all major
-> browsers on 5 January, 2018 in response to [Spectre](https://meltdownattack.com/).
-> Chrome [re-enabled it in v67](https://crbug.com/821270)
-> on platforms where its site-isolation feature is enabled to protect against
-> Spectre-style vulnerabilities.
+> **Note:** The `SharedArrayBuffer` constructor may not always be globally available unless certain [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-The **`SharedArrayBuffer()` constructor** is used to create a
-{{jsxref("SharedArrayBuffer")}} object representing a generic raw binary
-data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
+The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
 

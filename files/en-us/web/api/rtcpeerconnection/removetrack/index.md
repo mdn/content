@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.removeTrack()
+title: "RTCPeerConnection: removeTrack() method"
+short-title: removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.removeTrack

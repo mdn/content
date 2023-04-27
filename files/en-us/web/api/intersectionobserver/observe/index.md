@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.observe()
+title: "IntersectionObserver: observe() method"
+short-title: observe()
 slug: Web/API/IntersectionObserver/observe
 page-type: web-api-instance-method
 browser-compat: api.IntersectionObserver.observe

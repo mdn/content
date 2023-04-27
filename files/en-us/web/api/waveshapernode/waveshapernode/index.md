@@ -1,5 +1,6 @@
 ---
-title: WaveShaperNode()
+title: "WaveShaperNode: WaveShaperNode() constructor"
+short-title: WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
 page-type: web-api-constructor
 browser-compat: api.WaveShaperNode.WaveShaperNode

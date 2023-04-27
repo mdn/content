@@ -1,5 +1,6 @@
 ---
-title: NodeList.prototype.forEach()
+title: "NodeList: forEach() method"
+short-title: forEach()
 slug: Web/API/NodeList/forEach
 page-type: web-api-instance-method
 browser-compat: api.NodeList.forEach

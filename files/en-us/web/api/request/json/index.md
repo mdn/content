@@ -1,5 +1,6 @@
 ---
-title: Request.json()
+title: "Request: json() method"
+short-title: json()
 slug: Web/API/Request/json
 page-type: web-api-instance-method
 browser-compat: api.Request.json

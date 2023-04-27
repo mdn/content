@@ -1,5 +1,6 @@
 ---
-title: Touch.clientX
+title: "Touch: clientX property"
+short-title: clientX
 slug: Web/API/Touch/clientX
 page-type: web-api-instance-property
 browser-compat: api.Touch.clientX

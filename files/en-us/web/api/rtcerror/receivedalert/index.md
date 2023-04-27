@@ -1,5 +1,6 @@
 ---
-title: RTCError.receivedAlert
+title: "RTCError: receivedAlert property"
+short-title: receivedAlert
 slug: Web/API/RTCError/receivedAlert
 page-type: web-api-instance-property
 browser-compat: api.RTCError.receivedAlert

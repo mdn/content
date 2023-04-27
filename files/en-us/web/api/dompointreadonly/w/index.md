@@ -1,5 +1,6 @@
 ---
-title: DOMPointReadOnly.w
+title: "DOMPointReadOnly: w property"
+short-title: w
 slug: Web/API/DOMPointReadOnly/w
 page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.w

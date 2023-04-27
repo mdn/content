@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.border
+title: "HTMLImageElement: border property"
+short-title: border
 slug: Web/API/HTMLImageElement/border
 page-type: web-api-instance-property
 status:

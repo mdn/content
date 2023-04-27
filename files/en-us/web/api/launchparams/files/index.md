@@ -1,5 +1,6 @@
 ---
-title: LaunchParams.files
+title: "LaunchParams: files property"
+short-title: files
 slug: Web/API/LaunchParams/files
 page-type: web-api-instance-property
 status:

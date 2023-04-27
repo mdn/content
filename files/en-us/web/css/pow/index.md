@@ -2,12 +2,10 @@
 title: pow()
 slug: Web/CSS/pow
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.pow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`pow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the value of a base raised to the power of a number.
 

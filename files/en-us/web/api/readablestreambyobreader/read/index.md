@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.read()
+title: "ReadableStreamBYOBReader: read() method"
+short-title: read()
 slug: Web/API/ReadableStreamBYOBReader/read
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.read

@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 ---
 

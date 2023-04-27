@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode()
+title: "DynamicsCompressorNode: DynamicsCompressorNode() constructor"
+short-title: DynamicsCompressorNode()
 slug: Web/API/DynamicsCompressorNode/DynamicsCompressorNode
 page-type: web-api-constructor
 browser-compat: api.DynamicsCompressorNode.DynamicsCompressorNode

@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.min()
+title: "CSSNumericValue: min() method"
+short-title: min()
 slug: Web/API/CSSNumericValue/min
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.min

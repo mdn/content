@@ -1,5 +1,6 @@
 ---
-title: Document.timeline
+title: "Document: timeline property"
+short-title: timeline
 slug: Web/API/Document/timeline
 page-type: web-api-instance-property
 browser-compat: api.Document.timeline

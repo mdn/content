@@ -1,5 +1,6 @@
 ---
 title: "MessagePort: messageerror event"
+short-title: messageerror
 slug: Web/API/MessagePort/messageerror_event
 page-type: web-api-event
 browser-compat: api.MessagePort.messageerror_event

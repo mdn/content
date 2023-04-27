@@ -15,7 +15,7 @@ sequence of characters.
 Strings are useful for holding data that can be represented in text form. Some of the
 most-used operations on strings are to check their {{jsxref("String/length",
   "length")}}, to build and concatenate them using the
-[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators),
+[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
 checking for the existence or location of substrings with the
 {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
 with the {{jsxref("String.prototype.substring()", "substring()")}} method.
@@ -220,8 +220,7 @@ const longString =
 
 Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), or as an indent;
-otherwise it will not work.
+any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
 
 ```js
 const longString =
@@ -236,7 +235,14 @@ Both of the above methods result in identical strings.
 
 Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
-However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. Therefore, "lone surrogates" are often not valid values for string manipulation — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates. Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+
+A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
+
+- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e. is a high surrogate), but it is the last code unit in the string, or the next code unit is not a low surrogate.
+- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e. is a low surrogate), but it is the first code unit in the string, or the previous code unit is not a high surrogate.
+
+Lone surrogates do not represent any Unicode character. Although most JavaScript built-in methods handle them correctly because they all work based on UTF-16 code units, lone surrogates are often not valid values when interacting with other systems — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates, because URI encoding uses UTF-8 encoding, which does not have any encoding for lone surrogates. Strings not containing any lone surrogates are called _well-formed_ strings, and are safe to be used with functions that do not deal with UTF-16 (such as `encodeURI()` or {{domxref("TextEncoder")}}). You can check if a string is well-formed with the {{jsxref("String/isWellFormed", "isWellFormed()")}} method, or sanitize lone surrogates with the {{jsxref("String/toWellFormed", "toWellFormed()")}} method.
 
 On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
 
@@ -302,14 +308,16 @@ These properties are own properties of each `String` instance.
     encoded code point starting at the specified `pos`.
 - {{jsxref("String.prototype.concat()")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()")}}
-  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.endsWith()")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
+- {{jsxref("String.prototype.includes()")}}
+  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
+- {{jsxref("String.prototype.isWellFormed()")}}
+  - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
@@ -353,6 +361,8 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
+- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
+  - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
@@ -364,8 +374,7 @@ These properties are own properties of each `String` instance.
     For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
@@ -380,20 +389,22 @@ These properties are own properties of each `String` instance.
     {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : Returns the calling string value converted to uppercase.
+- {{jsxref("String.prototype.toWellFormed()")}}
+  - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
 - {{jsxref("String.prototype.trim()")}}
   - : Trims whitespace from the beginning and end of the string.
-- {{jsxref("String.prototype.trimStart()")}}
-  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.trimEnd()")}}
   - : Trims whitespace from the end of the string.
+- {{jsxref("String.prototype.trimStart()")}}
+  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
-## HTML wrapper methods
+### HTML wrapper methods
 
 > **Warning:** Deprecated. Avoid these methods.
 >

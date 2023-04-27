@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.roundRect()
+title: "CanvasRenderingContext2D: roundRect() method"
+short-title: roundRect()
 slug: Web/API/CanvasRenderingContext2D/roundRect
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.roundRect

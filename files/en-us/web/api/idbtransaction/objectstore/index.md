@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.objectStore()
+title: "IDBTransaction: objectStore() method"
+short-title: objectStore()
 slug: Web/API/IDBTransaction/objectStore
 page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.objectStore

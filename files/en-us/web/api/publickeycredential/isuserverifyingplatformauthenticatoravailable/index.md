@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+title: "PublicKeyCredential: isUserVerifyingPlatformAuthenticatorAvailable() static method"
+short-title: isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
 page-type: web-api-static-method
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
@@ -26,7 +27,7 @@ from the user in order to identify them. Common user-verifying platform authenti
 ## Syntax
 
 ```js-nolint
-isUserVerifyingPlatformAuthenticatorAvailable()
+PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 
 ### Parameters

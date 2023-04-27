@@ -1,6 +1,7 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
+page-type: http-header
 browser-compat: http.headers.Connection
 ---
 

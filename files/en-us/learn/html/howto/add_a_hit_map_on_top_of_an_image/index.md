@@ -8,6 +8,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 Here we go over how to set up an image map, and some downsides to consider first.
 
 <table>
+<caption>Here are some things you need to know</caption>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>

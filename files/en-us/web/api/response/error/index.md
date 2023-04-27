@@ -1,13 +1,14 @@
 ---
-title: Response.error()
+title: "Response: error() static method"
+short-title: error()
 slug: Web/API/Response/error
 page-type: web-api-static-method
 browser-compat: api.Response.error
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
-The **`error()`** method of the {{domxref("Response")}} interface returns a new `Response` object associated with a network error.
+The **`error()`** static method of the {{domxref("Response")}} interface returns a new `Response` object associated with a network error.
 
 > **Note:** This is mainly relevant to [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API); the error method is used to return an error if you so wish it.
 > An error response has its {{domxref("Response.type","type")}} set to `error`.
@@ -17,7 +18,7 @@ The **`error()`** method of the {{domxref("Response")}} interface returns a new 
 ## Syntax
 
 ```js-nolint
-error()
+Response.error()
 ```
 
 ### Parameters

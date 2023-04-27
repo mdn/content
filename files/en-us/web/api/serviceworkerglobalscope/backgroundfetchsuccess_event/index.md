@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: backgroundfetchsuccess event"
+short-title: backgroundfetchsuccess
 slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchsuccess_event
 page-type: web-api-event
 status:

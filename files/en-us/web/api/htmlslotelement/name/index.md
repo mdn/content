@@ -1,5 +1,6 @@
 ---
-title: HTMLSlotElement.name
+title: "HTMLSlotElement: name property"
+short-title: name
 slug: Web/API/HTMLSlotElement/name
 page-type: web-api-instance-property
 browser-compat: api.HTMLSlotElement.name

@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.fontStretch
+title: "CanvasRenderingContext2D: fontStretch property"
+short-title: fontStretch
 slug: Web/API/CanvasRenderingContext2D/fontStretch
 page-type: web-api-instance-property
 status:

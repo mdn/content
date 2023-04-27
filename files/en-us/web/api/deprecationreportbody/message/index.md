@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.message
+title: "DeprecationReportBody: message property"
+short-title: message
 slug: Web/API/DeprecationReportBody/message
 page-type: web-api-instance-property
 status:

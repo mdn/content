@@ -14,10 +14,6 @@ browser-compat: html.manifest.background_color
       <th scope="row">Type</th>
       <td><code>String</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

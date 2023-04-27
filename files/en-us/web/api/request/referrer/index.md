@@ -1,11 +1,12 @@
 ---
-title: Request.referrer
+title: "Request: referrer property"
+short-title: referrer
 slug: Web/API/Request/referrer
 page-type: web-api-instance-property
 browser-compat: api.Request.referrer
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`referrer`** read-only property of the
 {{domxref("Request")}} interface is set by the user agent to be the referrer of the

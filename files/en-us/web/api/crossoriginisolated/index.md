@@ -1,5 +1,6 @@
 ---
-title: crossOriginIsolated
+title: crossOriginIsolated global property
+short-title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
 page-type: web-api-global-property
 browser-compat: api.crossOriginIsolated

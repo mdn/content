@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.contentWindow
+title: "HTMLIFrameElement: contentWindow property"
+short-title: contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.contentWindow

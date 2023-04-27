@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.disable()
+title: "WebGLRenderingContext: disable() method"
+short-title: disable()
 slug: Web/API/WebGLRenderingContext/disable
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.disable

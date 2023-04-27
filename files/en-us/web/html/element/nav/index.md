@@ -1,5 +1,5 @@
 ---
-title: '<nav>: The Navigation Section element'
+title: "<nav>: The Navigation Section element"
 slug: Web/HTML/Element/nav
 page-type: html-element
 browser-compat: html.elements.nav
@@ -119,6 +119,10 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
   </p>
 </nav>
 ```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Uint16Array.Uint16Array
 
 {{JSRef}}
 
-The **`Uint16Array()`** typed array constructor creates an
-array of 16-bit unsigned integers in the platform byte order.
+The **`Uint16Array()`** constructor creates {{jsxref("Uint16Array")}} objects. The contents are initialized to `0`.
 
 ## Syntax
 

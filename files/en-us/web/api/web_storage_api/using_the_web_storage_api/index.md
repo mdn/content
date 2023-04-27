@@ -18,9 +18,9 @@ This article provides a walkthrough of how to make use of this technology.
 Storage objects are simple key-value stores, similar to objects, but they stay intact through page loads. The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings). You can access these values like an object, or with the {{domxref("Storage.getItem()")}} and {{domxref("Storage.setItem()")}} methods. These three lines all set the (same) colorSetting entry:
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > **Note:** It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
@@ -50,38 +50,39 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    let storage;
-    try {
-        storage = window[type];
-        const x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch (e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
-    }
+  let storage;
+  try {
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 And here is how you would use it:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -107,7 +108,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with, in [main.js](https://github.com/mdn/dom-examples/blob/main/web-storage/main.js), we test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if (!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -127,17 +128,17 @@ For example:
 
 ```js
 function setStyles() {
-  const currentColor = localStorage.getItem('bgcolor');
-  const currentFont = localStorage.getItem('font');
-  const currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem("bgcolor");
+  const currentFont = localStorage.getItem("font");
+  const currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
   htmlElem.style.backgroundColor = `#${currentColor}`;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -151,9 +152,9 @@ Finally, we update the styles/decorative image on the page, so your customizatio
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -176,12 +177,14 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/main/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', (e) => {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", (e) => {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea
+  );
 });
 ```
 

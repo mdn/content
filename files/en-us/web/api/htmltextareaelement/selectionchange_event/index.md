@@ -1,5 +1,6 @@
 ---
 title: "HTMLTextAreaElement: selectionchange event"
+short-title: selectionchange
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
 status:

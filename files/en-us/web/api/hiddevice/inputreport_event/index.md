@@ -1,5 +1,6 @@
 ---
 title: "HIDDevice: inputreport event"
+short-title: inputreport
 slug: Web/API/HIDDevice/inputreport_event
 page-type: web-api-event
 status:

@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.formData
+title: "NavigateEvent: formData property"
+short-title: formData
 slug: Web/API/NavigateEvent/formData
 page-type: web-api-instance-property
 status:

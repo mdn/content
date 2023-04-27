@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk.copyTo()
+title: "EncodedVideoChunk: copyTo() method"
+short-title: copyTo()
 slug: Web/API/EncodedVideoChunk/copyTo
 page-type: web-api-instance-method
 browser-compat: api.EncodedVideoChunk.copyTo

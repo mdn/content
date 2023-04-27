@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.installing
+title: "ServiceWorkerRegistration: installing property"
+short-title: installing
 slug: Web/API/ServiceWorkerRegistration/installing
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.installing

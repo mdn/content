@@ -1,5 +1,6 @@
 ---
-title: Node.lookupPrefix()
+title: "Node: lookupPrefix() method"
+short-title: lookupPrefix()
 slug: Web/API/Node/lookupPrefix
 page-type: web-api-instance-method
 browser-compat: api.Node.lookupPrefix

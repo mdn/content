@@ -1,5 +1,6 @@
 ---
-title: MessageEvent.source
+title: "MessageEvent: source property"
+short-title: source
 slug: Web/API/MessageEvent/source
 page-type: web-api-instance-property
 browser-compat: api.MessageEvent.source
