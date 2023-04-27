@@ -17,7 +17,7 @@ The **`<overflow>`** {{glossary("enumerated")}} value type represents the keywor
 
 ## Values
 
-The `<overflow>` data type is specified using one of the values listed below.
+The `<overflow>` enumerated value type is specified using one of the values listed below.
 
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value for all the properties that have the `<overflow>` enumerated value type.
