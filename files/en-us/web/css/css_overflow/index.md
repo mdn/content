@@ -17,7 +17,7 @@ Painting effects that overflow the content but do not participate in the CSS box
 
 Use the following interactive example to see the effects of various `overflow` property values on the content overflow and scrollbars in the adjacent fixed-size box.
 
-The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out different `ScrollLeft` and `ScrollTop` slider settings. 
+The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out different `ScrollLeft` and `ScrollTop` slider settings.
 
 {{EmbedGHLiveSample("css-examples/modules/overflow.html", '100%', 320)}}
 
