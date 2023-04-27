@@ -20,23 +20,25 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-- Functional notation: <code>color-mix( &lt;color-interpolation-method> , [ [`<color>`](/en-US/docs/Web/CSS/color_value) && [`<percentage [0,100]>`](/en-US/docs/Web/CSS/percentage)? ]#{2} )</code>
+Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ percentage], color[ percentage])`
 
-  - `<color-interpolation-method>` is the keyword `in` (for interpolation) followed by either:
+- `colorspace`
 
-    - `<rectangular-color-space>` or
-    - `<polar-color-space>` and an optional `<hue-interpolation-method>`.
+  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, and `oklch`, specifying the color space for interpolation.
 
-  - `<rectangular-color-space>` is one of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`.
+- `hue-interpolation-method` {{optional_inline}}
 
-  - `<polar-color-space>` is one of `hsl`, `hwb`, `lch`, `oklch`.
+  - : One of `shorter`, `longer`, `increasing`, and `decreasing`.
+  
+    > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
 
-  - `<hue-interpolation-method>` is one of `shorter`, `longer`, `increasing`, `decreasing` followed by the keyword `hue`.
+- `color`
 
-  - `<color>` is any valid {{cssxref("color_value","color")}}
+  - : Any valid {{CSSXref("&lt;color&gt;")}}.
 
-  - `<percentage>` is a number between 0 and 100 with an optional `%` sign.
-    If no percentage is specified, the default is 50%.
+- `percentage` {{optional_inline}}
+
+  - : A {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`. See [percentage normalization](https://w3c.github.io/csswg-drafts/css-color-5/#color-mix-percent-norm) for various cases of effects for specifying these two percentages.
 
 ### Formal syntax
 
