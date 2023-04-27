@@ -22,15 +22,15 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-Functional notation: `color( [colorspace] parameters [ / A ] )`
+Functional notation: `color([colorspace] parameters[ / A])`
 
 - `colorspace` {{optional_inline}}
 
-  - : An {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a {{CSSXref("@color-profile")}} rule.
+  - : An {{CSSXref("&lt;ident&gt;")}} or {{CSSXref("&lt;dashed-ident&gt;")}} denoting the color space. If this is an `<ident>` it denotes one of the predefined color spaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom color space, defined by a {{CSSXref("@color-profile")}} rule.
 
 - `parameters`
 
-  - : One or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
+  - : One or more {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
 
 - `A` {{optional_inline}}
 
