@@ -34,11 +34,11 @@ The `<overflow>` enumerated value type is specified using one of the values list
 
 ## Examples
 
-This example shows all the `<overflow>` values as values of the CSS {{cssxref("overflow")}} property.
+This example demos all the `<overflow>` enumerated values for the {{cssxref("overflow")}} property.
 
 ### HTML
 
-We include lyrics, using the HTML {{HTMLELement("pre")}} element for preformatted content. The same HTML is repeated multiple times. A link is included to enable testing the effects of keyboard focus on overflow and scroll behaviors.
+The HTML in this example contains some lyrics within the {{HTMLELement("pre")}} element. The HTML also contains a link text to enable testing the effects of keyboard focus on overflow and scroll behaviors. The same HTML code is repeated multiple times to show the effect of each `<overflow>` enumerated value. 
 
 ```html
 <pre>&nbsp;
@@ -154,7 +154,7 @@ Rubber Duckie, I'm awfully fond of you
 
 ### CSS
 
-We define the size of `<pre>` to ensure the content overflows its container in both the inline and block directions. We set a different `<overflow>` value in each example, and include generated content to help you identify which overflow value is being demonstrated:
+For the purpose of demonstration, the size of the `<pre>` element box has been defined to ensure that the content overflows its container in both the inline and block directions. A different `<overflow>` value is set for each of the repeating `<pre>` elements. For the `clip` value demonstration, a {{CSSXref("overflow-clip-margin")}} has been added.
 
 ```css hidden
 pre {
@@ -227,7 +227,7 @@ pre:nth-of-type(6)::before {
 
 ### Result
 
-{{EmbedLiveSample("Examples", "500", "600")}}
+{{EmbedLiveSample("Examples", "500", "800")}}
 
 To see the effect of keyboard focus on overflow and scroll behaviors, try tabbing through all the links in the example. Notice that the `clip` box does not create a scroll container, and the link does not come into view when the link is focused. The `visible` value, which has the link always in view, is also not a scroll container.
 
