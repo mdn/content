@@ -231,7 +231,7 @@ We included {{CSSXref("overflow-clip-margin")}}, which only has an effect when u
 
 {{EmbedLiveSample("Examples", "500", "600")}}
 
-A link is included in each `<pre>` to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing thru all the links in the example. Notice that the `clip` example does not create a {{glossary("scroll container")}}, and the link does not come into view when the link is focused. The `visible` value, which has the link always in view, is also not a scroll container.
+To see the effect of keyboard focus on overflow and scroll behaviors, try tabbing through all the links in the example. Notice that the `clip` box does not create a scroll container, and the link does not come into view when the link is focused. The `visible` value, which has the link always in view, is also not a scroll container.
 
 ## Specifications
 
