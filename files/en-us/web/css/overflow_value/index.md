@@ -7,7 +7,7 @@ browser-compat: css.types.overflow
 
 {{CSSRef}}
 
-The **`<overflow>`** {{glossary("enumerated")}} value type defines the set of overflow keyword values used in the {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow-inline")}} and {{cssxref("overflow-block")}} properties, as well as the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
+The **`<overflow>`** {{glossary("enumerated")}} value type represents the keyword values for the {{cssxref("overflow-block")}}, {{cssxref("overflow-inline")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} longhand properties and the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
 
 ## Syntax
 
