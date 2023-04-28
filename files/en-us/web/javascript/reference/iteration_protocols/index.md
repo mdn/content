@@ -2,7 +2,8 @@
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
-spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+spec-urls: >-
+  https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
 ---
 
 {{jsSidebar("More")}}

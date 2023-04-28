@@ -2,7 +2,8 @@
 title: Server-sent events
 slug: Web/API/Server-sent_events
 page-type: web-api-overview
-spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
+spec-urls: >-
+  https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}

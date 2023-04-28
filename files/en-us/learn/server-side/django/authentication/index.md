@@ -204,7 +204,7 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -265,7 +265,7 @@ If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) the
 
 Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -288,7 +288,7 @@ The following templates can be used as a starting point.
 
 This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -307,7 +307,7 @@ This is the form used to get the user's email address (for sending the password 
 
 This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -319,7 +319,7 @@ This form is displayed after your email address has been collected. Create **/lo
 
 This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -328,7 +328,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -364,7 +364,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -404,7 +404,7 @@ Typically you will first test against the `\{{ user.is_authenticated }}` templat
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
-```html
+```django
   <ul class="sidebar-nav">
 
     …
@@ -575,7 +575,7 @@ urlpatterns += [
 
 Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}

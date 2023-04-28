@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@match
 
 {{JSRef}}
 
-The **`[@@match]()`** method of a regular expression specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
+The **`[@@match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 

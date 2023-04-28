@@ -145,7 +145,7 @@ This may have unexpected results if special characters are not properly escaped.
 console.log("123".match("1.3")); // [ "123" ]
 ```
 
-This is a match because `.` in a regex matches all characters. In order to make it only match the dot character, you need to escape the input.
+This is a match because `.` in a regex matches any character. In order to make it only match specifically a dot character, you need to escape the input.
 
 ```js
 console.log("123".match("1\\.3")); // null
