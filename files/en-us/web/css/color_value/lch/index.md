@@ -19,7 +19,7 @@ lch(52.2345% 72.2 56.2 / .5);
 
 ### Values
 
-Functional notation: `lch(L C H[/ A])`
+Functional notation: `lch(L C H[ / A])`
 
 - `L`
 
