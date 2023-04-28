@@ -400,7 +400,7 @@ def renew_book_librarian(request, pk):
 
 Create the template referenced in the view (**/catalog/templates/catalog/book_renew_librarian.html**) and copy the code below into it:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -426,7 +426,8 @@ The form code is relatively simple. First, we declare the `form` tags, specifyin
 
 > **Note:** Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
 
-All that's left is the `\{{ form }}` template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
+All that's left is the `\{{ form }}` template variable, which we passed to the template in the context dictionary.
+Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
 
 ```html
 <tr>
@@ -645,7 +646,7 @@ The "create" and "update" views use the same template by default, which will be 
 
 Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -663,7 +664,7 @@ This is similar to our previous forms and renders the fields using a table. Note
 
 The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
