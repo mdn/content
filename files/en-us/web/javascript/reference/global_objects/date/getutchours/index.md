@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCHours
 
 {{JSRef}}
 
-The **`getUTCHours()`** method of a {{jsxref("Date")}} instance returns the hours for this date according to universal time.
+The **`getUTCHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutchours.html")}}
 

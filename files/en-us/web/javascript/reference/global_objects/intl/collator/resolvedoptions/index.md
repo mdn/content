@@ -7,9 +7,8 @@ browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.Collator.prototype.resolvedOptions()`** method
-returns a new object with properties reflecting the locale and collation options
-computed during initialization of this {{jsxref("Intl.Collator")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the locale and collation options
+computed during initialization of this collator object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
