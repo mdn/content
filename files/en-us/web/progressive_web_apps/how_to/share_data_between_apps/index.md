@@ -100,18 +100,26 @@ if (canBrowserShareData({ text: "text", url: "https://example.com" })) {
 
 ### Sharing files
 
-The following code example demonstrates how to share a file when a button in the app is clicked. Similar to the previous example, the `canBrowserShareData` function is used to display the button used to share files only if the browser supports sharing files.
+The following code example demonstrates how to share a file when a button in the app is clicked. The `canBrowserShareFiles` function is used to display the share button only if the browser supports sharing files.
 
 ```js
+function canBrowserShareFiles() {
+  if (!navigator.share || !navigator.canShare) {
+    return false;
+  }
+
+  // Create some test data with a file, to check if the browser supports
+  // sharing it.
+  const testFile = new File(["foo"], "foo.txt", { type: "text/plain" });
+  const data = { files: [testFile] };
+
+  return navigator.canShare(data);
+}
+
 // Retrieve the button from the DOM. The button is hidden for now.
 const button = document.querySelector("#share");
 
-// Create some test data with a file, to check if the browser supports
-// sharing it.
-const testFile = new File(["foo"], "foo.txt", { type: "text/plain" });
-const testSharedData = { files: [testFile] };
-
-if (canBrowserShareData(testSharedData)) {
+if (canBrowserShareFiles()) {
   // The browser supports sharing files. Show the button.
   button.style.display = "inline";
 
@@ -142,7 +150,7 @@ For more information, see the [sharing files example](/en-US/docs/Web/API/Naviga
 
 To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/en/articles/web-share-target/) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
 
-The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps.  Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
+The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps. Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
 
 The information you provide with the `share_target` member, in your manifest file, defines which data your app can be a target for, and how the operating system should launch your app when the user selects it as the target.
 
