@@ -21,7 +21,7 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
 ### Values
 
-Functional notation: `device-cmyk(C M Y K[/ A][, color])`
+Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
 - `C`, `M`, `Y`, `K`
 
