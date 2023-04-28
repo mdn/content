@@ -27,7 +27,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 ### Values
 
-Functional notation: `oklab(L a b[/ A])`
+Functional notation: `oklab(L a b[ / A])`
 
 - `L`
 
