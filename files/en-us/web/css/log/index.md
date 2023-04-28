@@ -9,7 +9,7 @@ browser-compat: css.types.log
 
 The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the logarithm of a number.
 
-The [logarithm, or log](https://en.wikipedia.org/wiki/Logarithm), is the inverse of {{CSSxRef("exp", "exponentiation")}}; it is the number that a fixed base has to be raised to in order to yield the number passed as the first parameter.
+[Logarithm](https://en.wikipedia.org/wiki/Logarithm) is the inverse of exponentiation. It is the number that a fixed base has to be raised to in order to yield the number passed as the first parameter.
 
 In CSS, when a single parameter is passed, the natural logarithm `e`, or approximately `2.7182818`, is used, though the base can be set to any value with an optional second parameter.
 
