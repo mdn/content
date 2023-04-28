@@ -511,7 +511,7 @@ The view might look similar to this:
 We can add a link to the book renew page next to each item by appending the following template code to the list item text above.
 Note that this template code can only run inside the `{% for %}` loop, because that is where the `bookinst` value is defined.
 
-```plain
+```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
