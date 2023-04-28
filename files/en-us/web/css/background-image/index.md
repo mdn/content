@@ -1,7 +1,7 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-page-type: bad-page-type
+page-type: css-property
 browser-compat: css.properties.background-image
 ---
 
