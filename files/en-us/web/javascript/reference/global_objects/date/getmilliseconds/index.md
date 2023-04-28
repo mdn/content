@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getMilliseconds
 
 {{JSRef}}
 
-The **`getMilliseconds()`** method of a {{jsxref("Date")}} instance returns the milliseconds for this date according to local time.
+The **`getMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
 
