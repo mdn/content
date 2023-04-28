@@ -7531,10 +7531,8 @@
 /en-US/docs/Web/API/AudioContextOptions/latencyHint	/en-US/docs/Web/API/AudioContext/AudioContext
 /en-US/docs/Web/API/AudioContextOptions/sampleRate	/en-US/docs/Web/API/AudioContext/AudioContext
 /en-US/docs/Web/API/AudioDestinationNode.maxChannelCount	/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount
-/en-US/docs/Web/API/AudioListener.dopplerFactor	/en-US/docs/Web/API/AudioListener/dopplerFactor
 /en-US/docs/Web/API/AudioListener.setOrientation	/en-US/docs/Web/API/AudioListener/setOrientation
 /en-US/docs/Web/API/AudioListener.setPosition	/en-US/docs/Web/API/AudioListener/setPosition
-/en-US/docs/Web/API/AudioListener.speedOfSound	/en-US/docs/Web/API/AudioListener/speedOfSound
 /en-US/docs/Web/API/AudioNode.channelCount	/en-US/docs/Web/API/AudioNode/channelCount
 /en-US/docs/Web/API/AudioNode.channelCountMode	/en-US/docs/Web/API/AudioNode/channelCountMode
 /en-US/docs/Web/API/AudioNode.channelInterpretation	/en-US/docs/Web/API/AudioNode/channelInterpretation
@@ -9214,7 +9212,6 @@
 /en-US/docs/Web/API/PannerNode.rolloffFactor	/en-US/docs/Web/API/PannerNode/rolloffFactor
 /en-US/docs/Web/API/PannerNode.setOrientation	/en-US/docs/Web/API/PannerNode/setOrientation
 /en-US/docs/Web/API/PannerNode.setPosition	/en-US/docs/Web/API/PannerNode/setPosition
-/en-US/docs/Web/API/PannerNode.setVelocity	/en-US/docs/Web/API/PannerNode/setVelocity
 /en-US/docs/Web/API/ParentNode.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild

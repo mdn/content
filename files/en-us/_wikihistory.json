@@ -20438,17 +20438,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/AudioListener/dopplerFactor": {
-    "modified": "2020-10-15T21:29:50.144Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "erikadoyle",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/AudioListener/forwardX": {
     "modified": "2020-10-15T21:50:17.738Z",
     "contributors": ["sideshowbarker", "sebbert", "fscholz", "chrisdavidmills"]
@@ -20488,18 +20477,6 @@
     "contributors": [
       "sideshowbarker",
       "fscholz",
-      "erikadoyle",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/AudioListener/speedOfSound": {
-    "modified": "2020-10-15T21:29:49.743Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
       "erikadoyle",
       "chrisdavidmills"
     ]
@@ -51173,17 +51150,6 @@
   "Web/API/PannerNode/setPosition": {
     "modified": "2020-10-15T21:29:52.026Z",
     "contributors": ["sideshowbarker", "fscholz", "abbycar", "chrisdavidmills"]
-  },
-  "Web/API/PannerNode/setVelocity": {
-    "modified": "2020-10-15T21:29:51.960Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "abbycar",
-      "chrisdavidmills"
-    ]
   },
   "Web/API/PasswordCredential": {
     "modified": "2020-10-15T21:44:48.781Z",
