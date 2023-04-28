@@ -45,7 +45,3 @@ console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor
