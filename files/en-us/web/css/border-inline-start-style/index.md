@@ -14,7 +14,7 @@ The **`border-inline-start-style`** [CSS](/en-US/docs/Web/CSS) property defines 
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* <line-style> values */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
 border-inline-start-style: groove;
@@ -31,8 +31,8 @@ Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-style'>`
-  - : The line style of the border. See {{ cssxref("border-style") }}.
+- `<line-style>`
+  - : The line style of the border. See {{ cssxref("line-style") }}.
 
 ## Formal definition
 

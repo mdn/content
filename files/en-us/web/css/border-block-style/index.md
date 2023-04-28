@@ -16,7 +16,7 @@ The border style in the other dimension can be set with {{cssxref("border-inline
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* <line-style> values */
 border-block-style: dashed;
 border-block-style: dotted;
 border-block-style: groove;
@@ -31,8 +31,8 @@ border-block-style: unset;
 
 ### Values
 
-- `<'border-style'>`
-  - : The line style of the border. See {{ cssxref("border-style") }}.
+- `<line-style>`
+  - : The line style of the border. See {{ cssxref("line-style") }}.
 
 ## Formal definition
 

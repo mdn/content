@@ -14,7 +14,7 @@ The **`column-rule-style`** [CSS](/en-US/docs/Web/CSS) property sets the style o
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* <line-style> values */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
