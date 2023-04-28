@@ -19,7 +19,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
 ### Values
 
-Functional notation: `oklch(L C H[/ A])`
+Functional notation: `oklch(L C H[ / A])`
 
 - `L`
 
