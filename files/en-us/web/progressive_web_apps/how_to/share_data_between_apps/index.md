@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
 
 {{PWASidebar}}
 
-Application sharing is the ability for one application to pass information or data to another application on a mobile or desktop device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
+Application sharing is the ability of one application to pass information or data to another application on the same device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
 
 For example, on your mobile device, you can share photos or videos from your photo app with another application that accepts images, such as an email application. This sharing pattern is orchestrated by the operating system (OS) where the two applications are installed:
 
@@ -25,9 +25,7 @@ To share data, use the {{domxref("navigator.share()")}} method in response to a 
 
 ### Checking for support
 
-The Web Share API doesn't work in all browsers. Check if the feature is supported first before displaying UI that's used to share content in your application.
-
-Even the browsers that support the Web Share API don't all support sharing all types of data. Therefore, it's a good practice to use the {{domxref("navigator.canShare()")}} method to first validate whether the data you intend to share is, indeed, shareable from the browser that's running your app.
+Before displaying content-sharing UI in your application, check to ensure the Web Share API feature is supported. Even the browsers that support the Web Share API don't all support sharing all types of data. Therefore, it's a good practice to use the {{domxref("navigator.canShare()")}} method first to validate whether the data you intend to share is, indeed, shareable from the browser that's running your app.
 
 This example shows how to check if the Web Share API is supported and if the data can be shared:
 
@@ -143,7 +141,7 @@ For more information, see the [sharing files example](/en-US/docs/Web/API/Naviga
 
 To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/en/articles/web-share-target/) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
 
-The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps.
+The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps.  Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
 
 The information you provide with the `share_target` member, in your manifest file, defines which data your app can be a target for, and how the operating system should launch your app when the user selects it as the target.
 
@@ -174,7 +172,7 @@ Here is a web app manifest example using the `share_target` member:
 }
 ```
 
-When your app is selected by the user to handle an other apps' shared content, it is launched and the shared content is passed to it similar to how {{htmlelement("form")}} elements are submitted.
+When your app is selected by the user to handle another apps' shared content, your app is launched and the shared content is passed to it in a similar way to that in which {{htmlelement("form")}} elements are submitted.
 
 In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
 
