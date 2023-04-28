@@ -71,7 +71,7 @@ peerConnection.onconnectionstatechange = (ev) => {
     case "checking":
       setOnlineStatus("Connecting…");
       break;
-    // ...
+    // …
     default:
       setOnlineStatus("Unknown");
       break;
