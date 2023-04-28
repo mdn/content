@@ -67,7 +67,7 @@ async function shareData(data) {
     // The data was shared successfully.
   } catch (e) {
     // The data could not be shared.
-    console.log(`Error: ${e}`);
+    console.error(`Error: ${e}`);
   }
 }
 ```
@@ -94,8 +94,7 @@ if (canBrowserShareData({ text: "text", url: "https://example.com" })) {
 
       console.log("The URL was successfully shared");
     } catch (err) {
-      console.log("The URL could not be shared");
-      console.error(err);
+      console.error(`The URL could not be shared: ${err}`);
     }
   });
 }
@@ -121,7 +120,10 @@ if (canBrowserShareData(testSharedData)) {
   // Listen for clicks on the button and share a file.
   button.addEventListener("click", async () => {
     try {
-      const file = getTheFileToShare();
+      // Get the file to be shared. This function should return a File
+      // object, perhaps by creating it dynamically, or retrieving it
+      // from IndexedDB.
+      const file = await getTheFileToShare();
 
       await navigator.share({
         title: "My shared file",
@@ -130,8 +132,7 @@ if (canBrowserShareData(testSharedData)) {
 
       console.log("The file was successfully shared");
     } catch (err) {
-      console.log("The file could not be shared");
-      console.error(err);
+      console.error(`The file could not be shared: ${err}`);
     }
   });
 }
@@ -236,7 +237,7 @@ As this example shows, each file object in the `files` property must have a `nam
 
 When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
 
-Because this is a `POST` request, your app's main JavaScript code can't access the form data directly. You can handle the submitted files in your server-side code, by receiving them at the `/share-file-handler` URL end point. However, for a better user experience that works offline, you can handle the files in your service worker code with a {{domxref("FetchEvent", "fetch")}} event listener, as shown here:
+Because this is a `POST` request, your app's main JavaScript code can't access the form data directly. You can handle the submitted files in your server-side code, by receiving them at the `/share-file-handler` URL end point. However, for a better user experience that works offline, you can handle the files in your service worker code with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event), as shown here:
 
 ```js
 // service-worker.js
