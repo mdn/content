@@ -1,9 +1,9 @@
 ---
-title: 'IDBKeyRange: bound() static method'
+title: "IDBKeyRange: bound() static method"
+short-title: bound()
 slug: Web/API/IDBKeyRange/bound_static
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.bound
-short-title: bound()
 ---
 
 {{ APIRef("IndexedDB") }}

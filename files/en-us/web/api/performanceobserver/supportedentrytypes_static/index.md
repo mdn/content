@@ -1,9 +1,9 @@
 ---
-title: 'PerformanceObserver: supportedEntryTypes static property'
+title: "PerformanceObserver: supportedEntryTypes static property"
+short-title: supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes_static
 page-type: web-api-static-property
 browser-compat: api.PerformanceObserver.supportedEntryTypes
-short-title: supportedEntryTypes
 ---
 
 {{APIRef("Performance API")}}

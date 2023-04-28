@@ -1,11 +1,11 @@
 ---
-title: 'XRWebGLLayer: getNativeFramebufferScaleFactor() static method'
+title: "XRWebGLLayer: getNativeFramebufferScaleFactor() static method"
+short-title: getNativeFramebufferScaleFactor()
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor_static
 page-type: web-api-static-method
-browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
-short-title: getNativeFramebufferScaleFactor()
 status:
   - experimental
+browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}

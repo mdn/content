@@ -2,11 +2,11 @@
 title: >-
   PublicKeyCredential: isUserVerifyingPlatformAuthenticatorAvailable() static
   method
+short-title: isUserVerifyingPlatformAuthenticatorAvailable()
 slug: >-
   Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
 page-type: web-api-static-method
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
-short-title: isUserVerifyingPlatformAuthenticatorAvailable()
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

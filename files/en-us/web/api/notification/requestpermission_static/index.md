@@ -1,9 +1,9 @@
 ---
-title: 'Notification: requestPermission() static method'
+title: "Notification: requestPermission() static method"
+short-title: requestPermission()
 slug: Web/API/Notification/requestPermission_static
 page-type: web-api-static-method
 browser-compat: api.Notification.requestPermission
-short-title: requestPermission()
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}

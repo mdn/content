@@ -1,9 +1,9 @@
 ---
-title: 'DOMPointReadOnly: fromPoint() static method'
+title: "DOMPointReadOnly: fromPoint() static method"
+short-title: fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint_static
 page-type: web-api-static-method
 browser-compat: api.DOMPointReadOnly.fromPoint
-short-title: fromPoint()
 ---
 
 {{APIRef("DOM")}}

@@ -1,9 +1,9 @@
 ---
-title: 'CSS: registerProperty() static method'
+title: "CSS: registerProperty() static method"
+short-title: registerProperty()
 slug: Web/API/CSS/registerProperty_static
 page-type: web-api-static-method
 browser-compat: api.CSS.registerProperty
-short-title: registerProperty()
 ---
 
 {{APIRef("CSSOM")}}

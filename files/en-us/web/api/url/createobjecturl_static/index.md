@@ -1,9 +1,9 @@
 ---
-title: 'URL: createObjectURL() static method'
+title: "URL: createObjectURL() static method"
+short-title: createObjectURL()
 slug: Web/API/URL/createObjectURL_static
 page-type: web-api-static-method
 browser-compat: api.URL.createObjectURL
-short-title: createObjectURL()
 ---
 
 {{APIRef("URL API")}}

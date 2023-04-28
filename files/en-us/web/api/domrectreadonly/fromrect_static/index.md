@@ -1,9 +1,9 @@
 ---
-title: 'DOMRectReadOnly: fromRect() static method'
+title: "DOMRectReadOnly: fromRect() static method"
+short-title: fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect_static
 page-type: web-api-static-method
 browser-compat: api.DOMRectReadOnly.fromRect
-short-title: fromRect()
 ---
 
 {{APIRef("Geometry Interfaces")}}

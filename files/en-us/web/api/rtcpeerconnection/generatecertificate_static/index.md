@@ -1,9 +1,9 @@
 ---
-title: 'RTCPeerConnection: generateCertificate() static method'
+title: "RTCPeerConnection: generateCertificate() static method"
+short-title: generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate_static
 page-type: web-api-static-method
 browser-compat: api.RTCPeerConnection.generateCertificate
-short-title: generateCertificate()
 ---
 
 {{APIRef("WebRTC")}}

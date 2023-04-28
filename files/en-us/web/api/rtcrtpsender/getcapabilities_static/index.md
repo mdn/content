@@ -1,9 +1,9 @@
 ---
-title: 'RTCRtpSender: getCapabilities() static method'
+title: "RTCRtpSender: getCapabilities() static method"
+short-title: getCapabilities()
 slug: Web/API/RTCRtpSender/getCapabilities_static
 page-type: web-api-static-method
 browser-compat: api.RTCRtpSender.getCapabilities
-short-title: getCapabilities()
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

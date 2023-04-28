@@ -1,9 +1,9 @@
 ---
-title: 'CSSNumericValue: parse() static method'
+title: "CSSNumericValue: parse() static method"
+short-title: parse()
 slug: Web/API/CSSNumericValue/parse_static
 page-type: web-api-static-method
 browser-compat: api.CSSNumericValue.parse
-short-title: parse()
 ---
 
 {{APIRef("CSS Typed OM")}}

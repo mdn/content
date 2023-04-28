@@ -1,9 +1,9 @@
 ---
-title: 'Notification: permission static property'
+title: "Notification: permission static property"
+short-title: permission
 slug: Web/API/Notification/permission_static
 page-type: web-api-static-property
 browser-compat: api.Notification.permission
-short-title: permission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

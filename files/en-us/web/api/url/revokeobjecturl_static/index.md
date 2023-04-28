@@ -1,9 +1,9 @@
 ---
-title: 'URL: revokeObjectURL() static method'
+title: "URL: revokeObjectURL() static method"
+short-title: revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL_static
 page-type: web-api-static-method
 browser-compat: api.URL.revokeObjectURL
-short-title: revokeObjectURL()
 ---
 
 {{ApiRef("URL API")}}

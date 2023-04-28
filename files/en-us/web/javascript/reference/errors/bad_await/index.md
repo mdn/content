@@ -1,5 +1,7 @@
 ---
-title: "SyntaxError: await is only valid in async functions, async generators and modules"
+title: >-
+  SyntaxError: await is only valid in async functions, async generators and
+  modules
 slug: Web/JavaScript/Reference/Errors/Bad_await
 page-type: javascript-error
 ---

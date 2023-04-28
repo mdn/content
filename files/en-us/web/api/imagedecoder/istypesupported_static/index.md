@@ -1,11 +1,11 @@
 ---
-title: 'ImageDecoder: isTypeSupported() static method'
+title: "ImageDecoder: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/ImageDecoder/isTypeSupported_static
 page-type: web-api-static-method
-browser-compat: api.ImageDecoder.isTypeSupported
-short-title: isTypeSupported()
 status:
   - experimental
+browser-compat: api.ImageDecoder.isTypeSupported
 ---
 
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}

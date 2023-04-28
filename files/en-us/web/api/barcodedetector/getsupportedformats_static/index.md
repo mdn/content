@@ -1,11 +1,11 @@
 ---
-title: 'BarcodeDetector: getSupportedFormats() static method'
+title: "BarcodeDetector: getSupportedFormats() static method"
+short-title: getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats_static
 page-type: web-api-static-method
-browser-compat: api.BarcodeDetector.getSupportedFormats
-short-title: getSupportedFormats()
 status:
   - experimental
+browser-compat: api.BarcodeDetector.getSupportedFormats
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}

@@ -1,9 +1,9 @@
 ---
-title: 'IDBKeyRange: only() static method'
+title: "IDBKeyRange: only() static method"
+short-title: only()
 slug: Web/API/IDBKeyRange/only_static
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.only
-short-title: only()
 ---
 
 {{ APIRef("IndexedDB") }}

@@ -1,11 +1,11 @@
 ---
-title: 'Notification: maxActions static property'
+title: "Notification: maxActions static property"
+short-title: maxActions
 slug: Web/API/Notification/maxActions_static
 page-type: web-api-static-property
-browser-compat: api.Notification.maxActions
-short-title: maxActions
 status:
   - experimental
+browser-compat: api.Notification.maxActions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}

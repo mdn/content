@@ -1,11 +1,11 @@
 ---
-title: 'AudioDecoder: isConfigSupported() static method'
+title: "AudioDecoder: isConfigSupported() static method"
+short-title: isConfigSupported()
 slug: Web/API/AudioDecoder/isConfigSupported_static
 page-type: web-api-static-method
-browser-compat: api.AudioDecoder.isConfigSupported
-short-title: isConfigSupported()
 status:
   - experimental
+browser-compat: api.AudioDecoder.isConfigSupported
 ---
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}

@@ -1,9 +1,9 @@
 ---
-title: 'Response: error() static method'
+title: "Response: error() static method"
+short-title: error()
 slug: Web/API/Response/error_static
 page-type: web-api-static-method
 browser-compat: api.Response.error
-short-title: error()
 ---
 
 {{APIRef("Fetch API")}}

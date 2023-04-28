@@ -1,9 +1,9 @@
 ---
-title: 'MediaSource: isTypeSupported() static method'
+title: "MediaSource: isTypeSupported() static method"
+short-title: isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported_static
 page-type: web-api-static-method
 browser-compat: api.MediaSource.isTypeSupported
-short-title: isTypeSupported()
 ---
 
 {{APIRef("Media Source Extensions")}}

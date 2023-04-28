@@ -1,11 +1,11 @@
 ---
-title: 'CSS: paintWorklet static property'
+title: "CSS: paintWorklet static property"
+short-title: paintWorklet
 slug: Web/API/CSS/paintWorklet_static
 page-type: web-api-static-property
-browser-compat: api.CSS.paintWorklet
-short-title: paintWorklet
 status:
   - experimental
+browser-compat: api.CSS.paintWorklet
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}

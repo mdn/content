@@ -1,11 +1,11 @@
 ---
-title: 'CSS: highlights static property'
+title: "CSS: highlights static property"
+short-title: highlights
 slug: Web/API/CSS/highlights_static
 page-type: web-api-static-property
-browser-compat: api.CSS.highlights
-short-title: highlights
 status:
   - experimental
+browser-compat: api.CSS.highlights
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

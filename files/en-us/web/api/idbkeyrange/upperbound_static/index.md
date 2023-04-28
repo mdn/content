@@ -1,9 +1,9 @@
 ---
-title: 'IDBKeyRange: upperBound() static method'
+title: "IDBKeyRange: upperBound() static method"
+short-title: upperBound()
 slug: Web/API/IDBKeyRange/upperBound_static
 page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.upperBound
-short-title: upperBound()
 ---
 
 {{ APIRef("IndexedDB") }}

@@ -1,11 +1,11 @@
 ---
-title: 'MediaSource: canConstructInDedicatedWorker static property'
+title: "MediaSource: canConstructInDedicatedWorker static property"
+short-title: canConstructInDedicatedWorker
 slug: Web/API/MediaSource/canConstructInDedicatedWorker_static
 page-type: web-api-static-property
-browser-compat: api.MediaSource.canConstructInDedicatedWorker
-short-title: canConstructInDedicatedWorker
 status:
   - experimental
+browser-compat: api.MediaSource.canConstructInDedicatedWorker
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}

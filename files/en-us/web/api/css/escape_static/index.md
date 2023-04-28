@@ -1,9 +1,9 @@
 ---
-title: 'CSS: escape() static method'
+title: "CSS: escape() static method"
+short-title: escape()
 slug: Web/API/CSS/escape_static
 page-type: web-api-static-method
 browser-compat: api.CSS.escape
-short-title: escape()
 ---
 
 {{APIRef("CSSOM")}}
