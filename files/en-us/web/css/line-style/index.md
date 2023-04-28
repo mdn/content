@@ -200,7 +200,7 @@ With some line-style values, the color may not be what you would expect. To crea
 
 Each {{HTMLElement("div")}} has a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style). For example:
 
-```html hidden no-lint
+```html-nolint hidden
 <section>
 ```
 
