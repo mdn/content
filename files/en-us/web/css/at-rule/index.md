@@ -46,7 +46,7 @@ A subset of nested statements, which can be used as a statement of a style sheet
 - {{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.
 - {{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
-- {{cssxref("@property")}} {{experimental_inline}} — Describes the aspect of custom properties and variables. _(currently at the Working Draft stage)_
+- {{cssxref("@property")}} — Describes the aspect of custom properties and variables. _(currently at the Working Draft stage)_
 - {{cssxref("@layer")}} – Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
 
 ## Conditional group rules
@@ -77,7 +77,7 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@media")}}
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
-- {{cssxref("@property")}} {{experimental_inline}}
+- {{cssxref("@property")}}
 - {{cssxref("@supports")}}
 
 ## Specifications
