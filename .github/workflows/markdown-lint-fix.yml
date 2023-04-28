@@ -25,7 +25,9 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Lint markdown files
-        run: yarn fix:md
+        run: |
+          yarn fix:md
+          yarn fix:fm
 
       - name: Create PR with only fixable issues
         if: success()
