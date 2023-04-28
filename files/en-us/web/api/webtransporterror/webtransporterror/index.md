@@ -1,5 +1,6 @@
 ---
-title: WebTransportError()
+title: "WebTransportError: WebTransportError() constructor"
+short-title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
 status:

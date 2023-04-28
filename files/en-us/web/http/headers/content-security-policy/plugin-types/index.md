@@ -1,6 +1,7 @@
 ---
 title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+page-type: http-csp-directive
 status:
   - deprecated
   - non-standard

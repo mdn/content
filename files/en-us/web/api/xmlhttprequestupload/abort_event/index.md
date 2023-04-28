@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: abort event"
+short-title: abort
 slug: Web/API/XMLHttpRequestUpload/abort_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.abort_event

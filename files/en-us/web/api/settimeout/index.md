@@ -1,5 +1,6 @@
 ---
-title: setTimeout()
+title: setTimeout() global function
+short-title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
 browser-compat: api.setTimeout

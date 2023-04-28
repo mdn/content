@@ -1,5 +1,6 @@
 ---
-title: TransformStream()
+title: "TransformStream: TransformStream() constructor"
+short-title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
 page-type: web-api-constructor
 browser-compat: api.TransformStream.TransformStream

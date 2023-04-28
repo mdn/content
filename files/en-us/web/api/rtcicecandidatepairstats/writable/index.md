@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.writable
+title: "RTCIceCandidatePairStats: writable property"
+short-title: writable
 slug: Web/API/RTCIceCandidatePairStats/writable
 page-type: web-api-instance-property
 status:

@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.select
 
 {{JSRef}}
 
-The **`Intl.PluralRules.prototype.select()`** method returns a
-string indicating which plural rule to use for locale-aware formatting.
+The **`select()`** method of {{jsxref("Intl.PluralRules")}} instances returns a string indicating which plural rule to use for locale-aware formatting.
 
 {{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
 

@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.codedHeight
+title: "VideoFrame: codedHeight property"
+short-title: codedHeight
 slug: Web/API/VideoFrame/codedHeight
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedHeight

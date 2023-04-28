@@ -1,5 +1,6 @@
 ---
-title: SVGElement.style
+title: "SVGElement: style property"
+short-title: style
 slug: Web/API/SVGElement/style
 page-type: web-api-instance-property
 browser-compat: api.SVGElement.style

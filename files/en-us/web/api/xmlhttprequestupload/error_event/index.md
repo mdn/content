@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: error event"
+short-title: error
 slug: Web/API/XMLHttpRequestUpload/error_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.error_event

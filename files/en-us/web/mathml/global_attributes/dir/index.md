@@ -1,6 +1,7 @@
 ---
 title: dir
 slug: Web/MathML/Global_attributes/dir
+page-type: mathml-attribute
 browser-compat: mathml.global_attributes.dir
 ---
 

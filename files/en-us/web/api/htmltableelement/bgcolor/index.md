@@ -10,15 +10,10 @@ browser-compat: api.HTMLTableElement.bgColor
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-The **`HTMLTableElement.bgcolor`** property represents the
+The **`bgcolor`** property of the {{domxref("HTMLTableElement")}} represents the
 background color of the table.
 
-The `bgColor` attribute is deprecated in HTML 4.01. The CSS
-{{cssxref("background-color")}} property should be used instead by modifying the
-element's [`style`](/en-US/docs/Web/API/HTMLElement/style) object
-or using a style rule.
-
-Also available on DOM [`tbody`](/en-US/docs/Web/API/HTMLTableElement/tBodies), [`row`](/en-US/docs/Web/API/HTMLTableElement/rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
+> **Note:** Do not use this attribute anymore. Instead, use the CSS {{cssxref("background-color")}} property by modifying the element's [`style`](/en-US/docs/Web/API/HTMLElement/style) attribute or using a style rule.
 
 ## Value
 
@@ -34,8 +29,12 @@ t.bgColor = "lightblue";
 
 ## Specifications
 
-- [DOM Level 2 HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("background-color")}}

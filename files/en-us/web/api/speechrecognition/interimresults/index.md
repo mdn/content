@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.interimResults
+title: "SpeechRecognition: interimResults property"
+short-title: interimResults
 slug: Web/API/SpeechRecognition/interimResults
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.interimResults

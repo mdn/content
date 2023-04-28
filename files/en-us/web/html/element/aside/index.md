@@ -1,5 +1,5 @@
 ---
-title: '<aside>: The Aside element'
+title: "<aside>: The Aside element"
 slug: Web/HTML/Element/aside
 page-type: html-element
 browser-compat: html.elements.aside
@@ -37,6 +37,8 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
   <p>More info about the movie…</p>
 </article>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Using_aside")}}
 

@@ -26,7 +26,7 @@ forEach(callbackFn, thisArg)
     - `set`
       - : The `FontFaceSet` which `forEach()` was called on.
 - `thisArg`
-  - : Value to use as {{jsxref('this')}} when executing `callbackFn`.
+  - : Value to use as [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) when executing `callbackFn`.
 
 ### Return value
 

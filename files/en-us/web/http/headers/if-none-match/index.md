@@ -1,6 +1,7 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
+page-type: http-header
 browser-compat: http.headers.If-None-Match
 ---
 

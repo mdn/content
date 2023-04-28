@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.willValidate
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns `true` if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 

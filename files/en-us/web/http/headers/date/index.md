@@ -1,6 +1,7 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
+page-type: http-header
 browser-compat: http.headers.Date
 ---
 

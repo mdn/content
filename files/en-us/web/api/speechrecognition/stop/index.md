@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.stop()
+title: "SpeechRecognition: stop() method"
+short-title: stop()
 slug: Web/API/SpeechRecognition/stop
 page-type: web-api-instance-method
 browser-compat: api.SpeechRecognition.stop

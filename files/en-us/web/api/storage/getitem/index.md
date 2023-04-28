@@ -1,5 +1,6 @@
 ---
-title: Storage.getItem()
+title: "Storage: getItem() method"
+short-title: getItem()
 slug: Web/API/Storage/getItem
 page-type: web-api-instance-method
 browser-compat: api.Storage.getItem

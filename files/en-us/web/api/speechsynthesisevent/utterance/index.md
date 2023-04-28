@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisEvent.utterance
+title: "SpeechSynthesisEvent: utterance property"
+short-title: utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.utterance

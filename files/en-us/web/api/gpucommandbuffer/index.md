@@ -2,6 +2,8 @@
 title: GPUCommandBuffer
 slug: Web/API/GPUCommandBuffer
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.GPUCommandBuffer
 ---
 

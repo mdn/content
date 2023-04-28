@@ -1,5 +1,6 @@
 ---
-title: Touch.screenX
+title: "Touch: screenX property"
+short-title: screenX
 slug: Web/API/Touch/screenX
 page-type: web-api-instance-property
 browser-compat: api.Touch.screenX

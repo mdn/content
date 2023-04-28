@@ -27,8 +27,6 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
   - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : The `autoPictureInPicture` attribute will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically
 

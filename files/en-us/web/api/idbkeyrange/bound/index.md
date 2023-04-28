@@ -8,7 +8,7 @@ browser-compat: api.IDBKeyRange.bound
 
 {{ APIRef("IndexedDB") }}
 
-The **`bound()`** method of the {{domxref("IDBKeyRange")}}
+The **`bound()`** static method of the {{domxref("IDBKeyRange")}}
 interface creates a new key range with the specified upper and lower bounds. The
 bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
 is, the bounds include the endpoint values). By default, the bounds are closed.
@@ -18,9 +18,9 @@ is, the bounds include the endpoint values). By default, the bounds are closed.
 ## Syntax
 
 ```js-nolint
-bound(lower, upper)
-bound(lower, upper, lowerOpen)
-bound(lower, upper, lowerOpen, upperOpen)
+IDBKeyRange.bound(lower, upper)
+IDBKeyRange.bound(lower, upper, lowerOpen)
+IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen)
 ```
 
 ### Parameters

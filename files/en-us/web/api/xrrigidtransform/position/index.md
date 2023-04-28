@@ -1,5 +1,6 @@
 ---
-title: XRRigidTransform.position
+title: "XRRigidTransform: position property"
+short-title: position
 slug: Web/API/XRRigidTransform/position
 page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.position

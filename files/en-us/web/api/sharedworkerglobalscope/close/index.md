@@ -1,5 +1,6 @@
 ---
-title: SharedWorkerGlobalScope.close()
+title: "SharedWorkerGlobalScope: close() method"
+short-title: close()
 slug: Web/API/SharedWorkerGlobalScope/close
 page-type: web-api-instance-method
 browser-compat: api.SharedWorkerGlobalScope.close

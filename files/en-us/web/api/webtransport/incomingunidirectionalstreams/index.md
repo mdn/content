@@ -1,5 +1,6 @@
 ---
-title: WebTransport.incomingUnidirectionalStreams
+title: "WebTransport: incomingUnidirectionalStreams property"
+short-title: incomingUnidirectionalStreams
 slug: Web/API/WebTransport/incomingUnidirectionalStreams
 page-type: web-api-instance-property
 status:

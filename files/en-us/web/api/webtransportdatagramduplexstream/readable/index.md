@@ -1,5 +1,6 @@
 ---
-title: WebTransportDatagramDuplexStream.readable
+title: "WebTransportDatagramDuplexStream: readable property"
+short-title: readable
 slug: Web/API/WebTransportDatagramDuplexStream/readable
 page-type: web-api-instance-property
 status:

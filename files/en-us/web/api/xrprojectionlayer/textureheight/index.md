@@ -1,5 +1,6 @@
 ---
-title: XRProjectionLayer.textureHeight
+title: "XRProjectionLayer: textureHeight property"
+short-title: textureHeight
 slug: Web/API/XRProjectionLayer/textureHeight
 page-type: web-api-instance-property
 status:

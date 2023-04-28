@@ -1,5 +1,6 @@
 ---
 title: "TextTrack: cuechange event"
+short-title: cuechange
 slug: Web/API/TextTrack/cuechange_event
 page-type: web-api-event
 browser-compat: api.TextTrack.cuechange_event

@@ -1,5 +1,6 @@
 ---
-title: WaveShaperNode.curve
+title: "WaveShaperNode: curve property"
+short-title: curve
 slug: Web/API/WaveShaperNode/curve
 page-type: web-api-instance-property
 browser-compat: api.WaveShaperNode.curve

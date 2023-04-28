@@ -1,6 +1,7 @@
 ---
 title: "ARIA: form role"
 slug: Web/Accessibility/ARIA/Roles/form_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#form
   - https://w3c.github.io/aria-practices/#aria_lh_form

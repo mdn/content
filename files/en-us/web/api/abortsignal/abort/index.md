@@ -8,7 +8,7 @@ browser-compat: api.AbortSignal.abort
 
 {{APIRef("DOM")}}
 
-The static **`AbortSignal.abort()`** method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an {{domxref("AbortSignal/abort_event","abort")}} event).
+The **`AbortSignal.abort()`** static method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an {{domxref("AbortSignal/abort_event","abort")}} event).
 
 This is shorthand for the following code:
 
@@ -25,8 +25,8 @@ This could, for example, be passed to a fetch method in order to run its abort l
 ## Syntax
 
 ```js-nolint
-abort()
-abort(reason)
+AbortSignal.abort()
+AbortSignal.abort(reason)
 ```
 
 ### Parameters

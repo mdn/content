@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlayGeometryChangeEvent.visible
+title: "WindowControlsOverlayGeometryChangeEvent: visible property"
+short-title: visible
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/visible
 page-type: web-api-instance-property
 status:

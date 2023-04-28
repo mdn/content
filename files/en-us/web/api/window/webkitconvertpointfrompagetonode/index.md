@@ -1,10 +1,11 @@
 ---
-title: Window.webkitConvertPointFromPageToNode()
+title: "Window: webkitConvertPointFromPageToNode() method"
+short-title: webkitConvertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 page-type: web-api-instance-method
 status:
-  - non-standard
   - deprecated
+  - non-standard
 browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
 

@@ -52,7 +52,7 @@ There are three attributes and one nested element worth noting:
 
 ## Best practices
 
-When an SVG is included via with {{HTMLElement('img')}}, the `alt` attribute provides alternative text making the image accessible. Inline SVG does not support the `alt` attribute. But it does support several other ways of making it accessible. With inline SVGs, the source is available in the DOM, meaning all the markup within an inline SVG file is accessible to the Accessibility Object Model, or AOM. Including the `<title>` element provides that alternative text.
+When an SVG is included via an {{HTMLElement('img')}} element, the `alt` attribute provides alternative text making the image accessible. Inline SVG does not support the `alt` attribute. But it does support several other ways of making it accessible. With inline SVGs, the source is available in the DOM, meaning all the markup within an inline SVG file is accessible to the Accessibility Object Model, or AOM. Including the `<title>` element provides that alternative text.
 
 If the image conveys more than a short title, include a longer description with the [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element. The `<desc>` element provides an accessible, long-text description. Similar to `<title>` text, the text within the `<desc>` is not rendered to the screen.
 

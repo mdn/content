@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.locked
+title: "ReadableStream: locked property"
+short-title: locked
 slug: Web/API/ReadableStream/locked
 page-type: web-api-instance-property
 browser-compat: api.ReadableStream.locked

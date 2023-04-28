@@ -12,7 +12,7 @@ browser-compat: api.ImageCapture.getPhotoCapabilities
 
 The **`getPhotoCapabilities()`**
 method of the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}}
-that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of
+that resolves with an object containing the ranges of
 available configuration options.
 
 ## Syntax

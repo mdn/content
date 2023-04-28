@@ -1,5 +1,6 @@
 ---
 title: "Window: afterprint event"
+short-title: afterprint
 slug: Web/API/Window/afterprint_event
 page-type: web-api-event
 browser-compat: api.Window.afterprint_event

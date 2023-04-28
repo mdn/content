@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.pendingLocalDescription
+title: "RTCPeerConnection: pendingLocalDescription property"
+short-title: pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.pendingLocalDescription

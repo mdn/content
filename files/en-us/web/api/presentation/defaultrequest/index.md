@@ -1,5 +1,6 @@
 ---
-title: Presentation.defaultRequest
+title: "Presentation: defaultRequest property"
+short-title: defaultRequest
 slug: Web/API/Presentation/defaultRequest
 page-type: web-api-instance-property
 status:

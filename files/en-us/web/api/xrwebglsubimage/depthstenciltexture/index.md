@@ -1,5 +1,6 @@
 ---
-title: XRWebGLSubImage.depthStencilTexture
+title: "XRWebGLSubImage: depthStencilTexture property"
+short-title: depthStencilTexture
 slug: Web/API/XRWebGLSubImage/depthStencilTexture
 page-type: web-api-instance-property
 status:

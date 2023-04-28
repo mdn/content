@@ -56,4 +56,4 @@ for (const file of fileInput.files) {
 
 ## See also
 
-- {{domxref("DataTransferItem.files")}}
+- {{domxref("DataTransfer.files")}}

@@ -1,6 +1,7 @@
 ---
 title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 

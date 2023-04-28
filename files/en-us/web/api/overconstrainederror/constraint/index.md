@@ -14,7 +14,7 @@ in the constructor, meaning the constraint that was not satisfied.
 
 ## Value
 
-A {{domxref('String')}}
+A string.
 
 ## Specifications
 

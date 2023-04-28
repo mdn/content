@@ -1,6 +1,7 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
+page-type: http-header
 browser-compat: http.headers.Accept
 ---
 

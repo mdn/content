@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
+title: "WebGLRenderingContext: getAttribLocation() method"
+short-title: getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getAttribLocation

@@ -138,7 +138,8 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Date
 
-- `Date.prototype.toLocaleFormat()` is obsolete. Use [`toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
+- `Date.prototype.toLocaleFormat()`, which used a format string in the same format expected by the
+`strftime()` function in C, is obsolete. Use [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
 
 ### Array
 
@@ -170,7 +171,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - `for each...in` is obsolete. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
-- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+- Expression closures (`function () 1` as a shorthand of `function () { return 1; }`) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
 
 ### Acquiring source text
 

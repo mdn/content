@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.transform
+title: "XRCylinderLayer: transform property"
+short-title: transform
 slug: Web/API/XRCylinderLayer/transform
 page-type: web-api-instance-property
 status:

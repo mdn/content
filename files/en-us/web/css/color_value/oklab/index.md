@@ -24,7 +24,7 @@ The function `oklab()` can represent any color from the Oklab color space that i
 oklab(40.1% 0.1143 0.045);
 oklab(59.69% 0.1007 0.1191);
 
-/* oklab(lightness a-axis b-axis / Alpha) */
+/* oklab(lightness a-axis b-axis / alpha) */
 oklab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
@@ -48,6 +48,8 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `oklab()` function.
 
+#### HTML
+
 ```html
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
@@ -58,6 +60,8 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="green"></div>
 <div data-color="green-b"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -93,6 +97,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Adjusting_the_lightness_and_axes", "100%", 155)}}
 
 ### Adjusting opacity with oklab()
@@ -101,12 +107,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving the `red-alpha` element an opacity of `0.4` makes it appear more transparent than the `red` element.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -133,6 +143,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Adjusting_opacity_with_oklab", "100%", 155)}}
 
 ## Specifications
@@ -146,5 +158,5 @@ div {
 ## See also
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
-- {{cssxref("color_value/oklch",'oklch()')}} use the same color space as `oklab()` but a polar coordinate system.
+- {{cssxref("color_value/oklch",'oklch()')}}: Another functional notation using the same color space as `oklab()` but in a polar coordinate system
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)

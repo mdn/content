@@ -1,5 +1,5 @@
 ---
-title: '<label>: The Label element'
+title: "<label>: The Label element"
 slug: Web/HTML/Element/label
 page-type: html-element
 browser-compat: html.elements.label

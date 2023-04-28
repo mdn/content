@@ -29,8 +29,6 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no `muted` attribute is present.
 
-- `autopictureinpicture` {{experimental_inline}}
-  - : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
 - `controlslist` {{experimental_inline}}{{non-standard_inline}}

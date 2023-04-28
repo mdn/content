@@ -1,5 +1,6 @@
 ---
-title: VideoTrack.language
+title: "VideoTrack: language property"
+short-title: language
 slug: Web/API/VideoTrack/language
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.language

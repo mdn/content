@@ -1,5 +1,6 @@
 ---
-title: 'XRSession: selectend event'
+title: "XRSession: selectend event"
+short-title: selectend
 slug: Web/API/XRSession/selectend_event
 page-type: web-api-event
 status:

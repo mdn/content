@@ -1,5 +1,6 @@
 ---
-title: EXT_float_blend
+title: EXT_float_blend extension
+short-title: EXT_float_blend
 slug: Web/API/EXT_float_blend
 page-type: webgl-extension
 browser-compat: api.EXT_float_blend
