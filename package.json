@@ -43,7 +43,7 @@
     "husky": "8.0.3",
     "js-yaml": "^4.1.0",
     "lint-staged": "13.2.1",
-    "markdownlint-cli2": "0.7.0",
+    "markdownlint-cli2": "0.7.1",
     "markdownlint-rule-search-replace": "1.0.10",
     "prettier": "2.8.8"
   },
