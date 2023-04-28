@@ -194,14 +194,14 @@ Notice the black border is not always black. The next example demonstrates line-
 
 ### Line style colors
 
-With some line-style values, the color may not be what you would expect. To create the required “3D” effect of `groove,` `ridge`, `inset`, and `outset`, when displaying these values in black or white, user agents display use different color calculations than any other color-line combinations.
+With some line-style values, the color may not be what you would expect. To create the required "3D" effect of `groove,` `ridge`, `inset`, and `outset`, when displaying these values in black or white, user agents display use different color calculations than any other color-line combinations.
 
 #### HTML
 
 Each {{HTMLElement("div")}} has a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style). For example:
 
 ```html hidden
-<section></section>
+<section>
 ```
 
 ```html
