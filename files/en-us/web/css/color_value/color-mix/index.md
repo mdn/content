@@ -20,7 +20,7 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ percentage], color[ percentage])`
+Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ p1], color[ p2])`
 
 - `colorspace`
 
@@ -36,9 +36,15 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
 
   - : Any valid {{CSSXref("&lt;color&gt;")}}.
 
-- `percentage` {{optional_inline}}
+- `p1`, `p2` {{optional_inline}}
 
-  - : A {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`. See [percentage normalization](https://w3c.github.io/csswg-drafts/css-color-5/#color-mix-percent-norm) for various cases of effects for specifying these two percentages.
+  - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%` with the following normalization procedure:
+
+    - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
+    - If `p1` is omitted, then `p1 = 100% - p2`.
+    - If `p2` is omitted, then `p2 = 100% - p1`.
+    - If `p1 = p2 = 0%`, the function is invalid.
+    - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
 
 ### Formal syntax
 
