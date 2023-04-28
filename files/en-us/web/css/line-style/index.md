@@ -20,7 +20,7 @@ The CSS properties that use this enumerated value type include {{cssxref("border
 
 ## Values
 
-The `<list-style>` enumerated type is specified using one of the values listed below:
+The `<line-style>` enumerated type is specified using one of the values listed below:
 
 - `none`
   - : Displays no line and the computed value of the line width will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed. Similar to the `hidden` value.
@@ -51,7 +51,7 @@ The first example demonstrates the appearance of all the `<line-style>` values. 
 
 ### Line styles
 
-This example shows all the `<list-style>` values as values of the CSS {{cssxref("border-style")}} and {{cssxref("column-rule-style")}} properties.
+This example shows all the `<line-style>` values as values of the CSS {{cssxref("border-style")}} and {{cssxref("column-rule-style")}} properties.
 
 #### HTML
 
