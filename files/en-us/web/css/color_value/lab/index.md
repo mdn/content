@@ -19,7 +19,7 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 ### Values
 
-Functional notation: `lab(L a b[/ A])`
+Functional notation: `lab(L a b[ / A])`
 
 - `L`
 
