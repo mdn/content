@@ -28,7 +28,7 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
 
 - `hue-interpolation-method` {{optional_inline}}
 
-  - : One of `shorter`, `longer`, `increasing`, and `decreasing`.
+  - : One of `shorter`, `longer`, `increasing`, and `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
 
     > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
 
@@ -38,7 +38,7 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
 
 - `p1`, `p2` {{optional_inline}}
 
-  - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%` with the following normalization procedure:
+  - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
 
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
     - If `p1` is omitted, then `p1 = 100% - p2`.
