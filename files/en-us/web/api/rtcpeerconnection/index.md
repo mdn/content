@@ -15,7 +15,7 @@ It provides methods to connect to a remote peer, maintain and monitor the connec
 ## Constructor
 
 - {{DOMxRef("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
-  - : Returns a newly-created `RTCPeerConnection`, which represents a connection between the local device and a remote peer.
+  - : Returns a new `RTCPeerConnection`, representing a connection between the local device and a remote peer.
 
 ## Instance properties
 
