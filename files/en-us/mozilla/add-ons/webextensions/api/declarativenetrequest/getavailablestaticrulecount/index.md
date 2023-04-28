@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.getAvailableStaticRuleCount
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getAvailableStaticRuleCount
+slug: >-
+  Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getAvailableStaticRuleCount
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getAvailableStaticRuleCount
 ---

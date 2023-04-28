@@ -1,9 +1,13 @@
 ---
-title: "ContentVisibilityAutoStateChangeEvent: ContentVisibilityAutoStateChangeEvent() constructor"
+title: >-
+  ContentVisibilityAutoStateChangeEvent: ContentVisibilityAutoStateChangeEvent()
+  constructor
 short-title: ContentVisibilityAutoStateChangeEvent()
-slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
+slug: >-
+  Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
-browser-compat: api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
+browser-compat: >-
+  api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
 ---
 
 {{APIRef("CSS Containment")}}
