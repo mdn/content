@@ -24,7 +24,7 @@ The function also accepts a legacy syntax in which all values are separated with
 
 ### Values
 
-Functional notation: `rgb(R G B[/ A])`
+Functional notation: `rgb(R G B[ / A])`
 
 - `R`, `G`, `B`
 
