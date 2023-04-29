@@ -3,7 +3,7 @@ title: "HTMLElement: error event"
 short-title: error
 slug: Web/API/HTMLElement/error_event
 page-type: web-api-event
-browser-compat: api.Element.error_event
+browser-compat: api.HTMLElement.error_event
 ---
 
 {{APIRef}}
