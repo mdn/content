@@ -22,6 +22,10 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ p1], color[ p2])`
 
+- `in`
+
+  - : A literal token as a component of the syntax.
+
 - `colorspace`
 
   - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, and `oklch`, specifying the color space for interpolation.
@@ -31,6 +35,10 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
   - : One of `shorter`, `longer`, `increasing`, and `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
 
     > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
+
+- `hue`
+
+  - : A literal token as a component of the syntax.
 
 - `color`
 
