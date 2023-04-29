@@ -31590,22 +31590,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Element/error_event": {
-    "modified": "2020-10-15T21:19:30.575Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "mfluehr",
-      "ExE-Boss",
-      "fscholz",
-      "Nickolay",
-      "teoli",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/Element/firstElementChild": {
     "modified": "2020-10-15T21:06:48.193Z",
     "contributors": [
@@ -38224,6 +38208,22 @@
       "GT",
       "Callek",
       "JesseW"
+    ]
+  },
+  "Web/API/HTMLElement/error_event": {
+    "modified": "2020-10-15T21:19:30.575Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "wbamberg",
+      "Sheppy",
+      "mfluehr",
+      "ExE-Boss",
+      "fscholz",
+      "Nickolay",
+      "teoli",
+      "ethertank",
+      "louisremi"
     ]
   },
   "Web/API/HTMLElement/focus": {

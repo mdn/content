@@ -1,14 +1,14 @@
 ---
-title: "Element: error event"
+title: "HTMLElement: error event"
 short-title: error
-slug: Web/API/Element/error_event
+slug: Web/API/HTMLElement/error_event
 page-type: web-api-event
 browser-compat: api.Element.error_event
 ---
 
 {{APIRef}}
 
-The `error` event is fired on an {{domxref("Element")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+The `error` event is fired on an {{domxref("HTMLElement")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 
 This event is not cancelable and does not bubble.
 
