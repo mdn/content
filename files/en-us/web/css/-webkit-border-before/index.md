@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-border-before
 
 The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
 
+>**Warning:** This property is non-standard. Use {{cssxref("border-block-start")}} instead.
+
 ```css
 /* Border values */
 -webkit-border-before: 1px;
@@ -39,10 +41,10 @@ One or more of the following, in any order:
 
 - `<'border-width'>`
   - : See {{cssxref("border-width")}}
-- `<'border-style'>`
+- {{cssxref("line-style")}}
   - : See {{cssxref("border-style")}}
-- `<'color'>`
-  - : See {{cssxref("color")}}
+- {{cssxref("color_value")}}
+  - : See {{cssxref("border-color")}}
 
 ## Formal definition
 

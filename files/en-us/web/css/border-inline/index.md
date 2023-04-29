@@ -44,8 +44,8 @@ The `border-inline` is specified with one or more of the following, in any order
 
 - `<'border-width'>`
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
-  - : The line style of the border. See {{cssxref("border-style")}}.
+- {{CSSXref("line-style")}}
+  - : The `<line-style>` of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
 

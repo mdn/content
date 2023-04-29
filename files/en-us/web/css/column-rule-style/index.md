@@ -34,12 +34,12 @@ column-rule-style: revert-layer;
 column-rule-style: unset;
 ```
 
-The `column-rule-style` property is specified as a single `<'border-style'>` value.
+The `column-rule-style` property is specified as a single {{ cssxref("line-style") }} keyword.
 
 ### Values
 
-- `<'border-style'>`
-  - : Is a keyword defined by {{ cssxref("border-style") }} describing the style of the rule. The styling must be interpreted as in the collapsing border model.
+- `<'line-style'>`
+  - : Is a keyword defined by {{ cssxref("line-style") }} describing the style of the rule. The styling must be interpreted as in the collapsing border model.
 
 ## Formal definition
 
