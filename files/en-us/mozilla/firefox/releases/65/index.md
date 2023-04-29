@@ -157,7 +157,7 @@ _No changes._
 
 ### Other
 
-- Support for [WebP](/en-US/docs/Glossary/webp) images has been added ([Firefox bug 1294490](https://bugzil.la/1294490)).
+- Support for [WebP](/en-US/docs/Glossary/WebP) images has been added ([Firefox bug 1294490](https://bugzil.la/1294490)).
 
   - In addition, to facilitate cross-browser compatibility in certain situations the WebP MIMEType (`image/webp`) has been added to the standard HTTP Request {{httpheader("Accept")}} header for HTML files ([Firefox bug 1507691](https://bugzil.la/1507691)).
 

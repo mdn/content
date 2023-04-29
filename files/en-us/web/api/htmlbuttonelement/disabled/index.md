@@ -1,5 +1,6 @@
 ---
-title: HTMLButtonElement.disabled
+title: "HTMLButtonElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLButtonElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.HTMLButtonElement.disabled

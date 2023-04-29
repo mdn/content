@@ -1,5 +1,6 @@
 ---
-title: XRSession.preferredReflectionFormat
+title: "XRSession: preferredReflectionFormat property"
+short-title: preferredReflectionFormat
 slug: Web/API/XRSession/preferredReflectionFormat
 page-type: web-api-instance-property
 status:

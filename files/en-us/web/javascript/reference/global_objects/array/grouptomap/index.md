@@ -41,11 +41,6 @@ groupToMap(callbackFn, thisArg)
 
 A {{jsxref("Map")}} object with keys for each group, each assigned to an array containing the elements of the associated group.
 
-### Exceptions
-
-- `TypeError`
-  - : The specified callback function is not callable.
-
 ## Description
 
 The `groupToMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array.
@@ -158,5 +153,9 @@ console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
 
 ## See also
 
+- [Polyfill of `Array.prototype.groupToMap` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.group()")}}
-- [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Map/Map", "Map()")}}

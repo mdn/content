@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk.duration
+title: "EncodedVideoChunk: duration property"
+short-title: duration
 slug: Web/API/EncodedVideoChunk/duration
 page-type: web-api-instance-property
 browser-compat: api.EncodedVideoChunk.duration

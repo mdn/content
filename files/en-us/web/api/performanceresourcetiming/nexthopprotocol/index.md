@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.nextHopProtocol
+title: "PerformanceResourceTiming: nextHopProtocol property"
+short-title: nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol

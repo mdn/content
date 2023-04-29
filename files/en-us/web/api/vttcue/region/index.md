@@ -1,5 +1,6 @@
 ---
-title: VTTCue.region
+title: "VTTCue: region property"
+short-title: region
 slug: Web/API/VTTCue/region
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.region

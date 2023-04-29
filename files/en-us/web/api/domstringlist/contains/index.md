@@ -1,5 +1,6 @@
 ---
-title: DOMStringList.contains()
+title: "DOMStringList: contains() method"
+short-title: contains()
 slug: Web/API/DOMStringList/contains
 page-type: web-api-instance-method
 browser-compat: api.DOMStringList.contains

@@ -1,5 +1,6 @@
 ---
-title: Window.confirm()
+title: "Window: confirm() method"
+short-title: confirm()
 slug: Web/API/Window/confirm
 page-type: web-api-instance-method
 browser-compat: api.Window.confirm

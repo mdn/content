@@ -1,5 +1,6 @@
 ---
-title: WEBGL_compressed_texture_s3tc
+title: WEBGL_compressed_texture_s3tc extension
+short-title: WEBGL_compressed_texture_s3tc
 slug: Web/API/WEBGL_compressed_texture_s3tc
 page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_s3tc

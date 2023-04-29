@@ -1,5 +1,6 @@
 ---
-title: MediaTrackConstraints.suppressLocalAudioPlayback
+title: "MediaTrackConstraints: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
 status:

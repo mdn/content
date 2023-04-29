@@ -59,7 +59,7 @@ In addition to the `type` attribute described above, the following attributes ar
       </td>
       <td>
         A
-        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
           >JavaScript regular expression</a
         >
         (compiled with the {{jsxref("RegExp.global", "global")}}, {{jsxref("RegExp.ignoreCase", "ignoreCase")}}, and

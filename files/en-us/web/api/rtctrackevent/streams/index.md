@@ -1,5 +1,6 @@
 ---
-title: RTCTrackEvent.streams
+title: "RTCTrackEvent: streams property"
+short-title: streams
 slug: Web/API/RTCTrackEvent/streams
 page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.streams

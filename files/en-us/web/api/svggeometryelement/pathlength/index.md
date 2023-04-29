@@ -1,5 +1,6 @@
 ---
-title: SVGGeometryElement.pathLength
+title: "SVGGeometryElement: pathLength property"
+short-title: pathLength
 slug: Web/API/SVGGeometryElement/pathLength
 page-type: web-api-instance-property
 browser-compat: api.SVGGeometryElement.pathLength

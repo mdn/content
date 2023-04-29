@@ -1,5 +1,6 @@
 ---
-title: WebTransport.createUnidirectionalStream()
+title: "WebTransport: createUnidirectionalStream() method"
+short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
 status:

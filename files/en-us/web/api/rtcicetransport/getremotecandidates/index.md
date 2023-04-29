@@ -1,5 +1,6 @@
 ---
-title: RTCIceTransport.getRemoteCandidates()
+title: "RTCIceTransport: getRemoteCandidates() method"
+short-title: getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
 page-type: web-api-instance-method
 browser-compat: api.RTCIceTransport.getRemoteCandidates

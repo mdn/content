@@ -1,5 +1,6 @@
 ---
-title: MediaEncryptedEvent.initDataType
+title: "MediaEncryptedEvent: initDataType property"
+short-title: initDataType
 slug: Web/API/MediaEncryptedEvent/initDataType
 page-type: web-api-instance-property
 browser-compat: api.MediaEncryptedEvent.initDataType

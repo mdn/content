@@ -1,5 +1,6 @@
 ---
-title: Window.credentialless
+title: "Window: credentialless property"
+short-title: credentialless
 slug: Web/API/Window/credentialless
 page-type: web-api-instance-property
 status:

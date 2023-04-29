@@ -1,5 +1,6 @@
 ---
-title: Node.isConnected
+title: "Node: isConnected property"
+short-title: isConnected
 slug: Web/API/Node/isConnected
 page-type: web-api-instance-property
 browser-compat: api.Node.isConnected

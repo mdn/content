@@ -1,5 +1,6 @@
 ---
-title: XRSessionEvent.session
+title: "XRSessionEvent: session property"
+short-title: session
 slug: Web/API/XRSessionEvent/session
 page-type: web-api-instance-property
 browser-compat: api.XRSessionEvent.session

@@ -1,5 +1,6 @@
 ---
-title: DOMStringList.length
+title: "DOMStringList: length property"
+short-title: length
 slug: Web/API/DOMStringList/length
 page-type: web-api-instance-property
 browser-compat: api.DOMStringList.length

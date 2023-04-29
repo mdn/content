@@ -1,5 +1,6 @@
 ---
-title: IdleDetector.start()
+title: "IdleDetector: start() method"
+short-title: start()
 slug: Web/API/IdleDetector/start
 page-type: web-api-instance-method
 status:

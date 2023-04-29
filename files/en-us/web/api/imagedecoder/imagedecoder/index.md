@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder()
+title: "ImageDecoder: ImageDecoder() constructor"
+short-title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: KeyframeEffect()
+title: "KeyframeEffect: KeyframeEffect() constructor"
+short-title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
 page-type: web-api-constructor
 browser-compat: api.KeyframeEffect.KeyframeEffect

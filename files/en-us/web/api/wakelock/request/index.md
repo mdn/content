@@ -1,5 +1,6 @@
 ---
-title: WakeLock.request()
+title: "WakeLock: request() method"
+short-title: request()
 slug: Web/API/WakeLock/request
 page-type: web-api-instance-method
 browser-compat: api.WakeLock.request

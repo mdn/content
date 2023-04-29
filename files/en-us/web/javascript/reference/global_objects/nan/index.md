@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.NaN
 
 {{jsSidebar("Objects")}}
 
-The global **`NaN`** property is a value representing Not-A-Number.
+The **`NaN`** global property is a value representing Not-A-Number.
 
 {{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
 

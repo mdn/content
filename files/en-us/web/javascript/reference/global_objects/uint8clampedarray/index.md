@@ -13,14 +13,14 @@ The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned in
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : Creates a new `Uint8ClampedArray` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Uint8ClampedArray`.
 
 ## Static methods
@@ -33,7 +33,7 @@ _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
 These properties are defined on `Uint8ClampedArray.prototype` and shared by all `Uint8ClampedArray` instances.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.prototype.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8ClampedArray.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8ClampedArray`.
 - {{jsxref("Object/constructor", "Uint8ClampedArray.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Uint8ClampedArray` instances, the initial value is the {{jsxref("Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray")}} constructor.

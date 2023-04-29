@@ -1,5 +1,6 @@
 ---
-title: CSSRuleList.item()
+title: "CSSRuleList: item() method"
+short-title: item()
 slug: Web/API/CSSRuleList/item
 page-type: web-api-instance-method
 browser-compat: api.CSSRuleList.item

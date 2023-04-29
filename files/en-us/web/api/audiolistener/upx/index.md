@@ -1,5 +1,6 @@
 ---
-title: AudioListener.upX
+title: "AudioListener: upX property"
+short-title: upX
 slug: Web/API/AudioListener/upX
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.upX

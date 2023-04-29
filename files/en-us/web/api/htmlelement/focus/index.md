@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.focus()
+title: "HTMLElement: focus() method"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
 browser-compat: api.HTMLElement.focus

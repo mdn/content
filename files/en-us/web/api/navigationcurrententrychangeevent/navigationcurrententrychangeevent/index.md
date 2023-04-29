@@ -1,5 +1,8 @@
 ---
-title: NavigationCurrentEntryChangeEvent()
+title: >-
+  NavigationCurrentEntryChangeEvent: NavigationCurrentEntryChangeEvent()
+  constructor
+short-title: NavigationCurrentEntryChangeEvent()
 slug: Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent
 page-type: web-api-constructor
 status:

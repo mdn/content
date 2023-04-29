@@ -1,5 +1,6 @@
 ---
-title: Client.frameType
+title: "Client: frameType property"
+short-title: frameType
 slug: Web/API/Client/frameType
 page-type: web-api-instance-property
 browser-compat: api.Client.frameType

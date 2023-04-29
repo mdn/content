@@ -1,5 +1,6 @@
 ---
-title: VRPose.linearVelocity
+title: "VRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/VRPose/linearVelocity
 page-type: web-api-instance-property
 status:

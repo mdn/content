@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.invalidateFramebuffer()
+title: "WebGL2RenderingContext: invalidateFramebuffer() method"
+short-title: invalidateFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateFramebuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.invalidateFramebuffer

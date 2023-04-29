@@ -1,5 +1,6 @@
 ---
-title: HTMLDialogElement.close()
+title: "HTMLDialogElement: close() method"
+short-title: close()
 slug: Web/API/HTMLDialogElement/close
 page-type: web-api-instance-method
 browser-compat: api.HTMLDialogElement.close

@@ -1,11 +1,13 @@
 ---
-title: HighlightRegistry.delete()
+title: "HighlightRegistry: delete() method"
+short-title: delete()
 slug: Web/API/HighlightRegistry/delete
 page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.HighlightRegistry.delete
-spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.delete
+spec-urls: >-
+  https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.delete
 ---
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}

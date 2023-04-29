@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.readyState
+title: "HTMLMediaElement: readyState property"
+short-title: readyState
 slug: Web/API/HTMLMediaElement/readyState
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.readyState

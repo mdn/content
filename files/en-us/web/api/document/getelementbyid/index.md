@@ -1,5 +1,6 @@
 ---
-title: Document.getElementById()
+title: "Document: getElementById() method"
+short-title: getElementById()
 slug: Web/API/Document/getElementById
 page-type: web-api-instance-method
 browser-compat: api.Document.getElementById

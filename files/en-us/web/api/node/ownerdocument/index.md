@@ -1,5 +1,6 @@
 ---
-title: Node.ownerDocument
+title: "Node: ownerDocument property"
+short-title: ownerDocument
 slug: Web/API/Node/ownerDocument
 page-type: web-api-instance-property
 browser-compat: api.Node.ownerDocument

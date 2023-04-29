@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetY
+title: "CanvasRenderingContext2D: shadowOffsetY property"
+short-title: shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetY

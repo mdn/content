@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.abort()
+title: "PaymentRequest: abort() method"
+short-title: abort()
 slug: Web/API/PaymentRequest/abort
 page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.abort

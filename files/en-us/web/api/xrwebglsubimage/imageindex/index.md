@@ -1,5 +1,6 @@
 ---
-title: XRWebGLSubImage.imageIndex
+title: "XRWebGLSubImage: imageIndex property"
+short-title: imageIndex
 slug: Web/API/XRWebGLSubImage/imageIndex
 page-type: web-api-instance-property
 status:

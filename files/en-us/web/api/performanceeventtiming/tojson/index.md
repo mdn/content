@@ -1,5 +1,6 @@
 ---
-title: PerformanceEventTiming.toJSON()
+title: "PerformanceEventTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceEventTiming/toJSON
 page-type: web-api-instance-method
 browser-compat: api.PerformanceEventTiming.toJSON

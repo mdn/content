@@ -1,5 +1,6 @@
 ---
-title: WebTransportError.source
+title: "WebTransportError: source property"
+short-title: source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
 status:

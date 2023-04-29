@@ -1,5 +1,6 @@
 ---
-title: FontFace.unicodeRange
+title: "FontFace: unicodeRange property"
+short-title: unicodeRange
 slug: Web/API/FontFace/unicodeRange
 page-type: web-api-instance-property
 browser-compat: api.FontFace.unicodeRange

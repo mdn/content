@@ -1,5 +1,6 @@
 ---
-title: Screen.availWidth
+title: "Screen: availWidth property"
+short-title: availWidth
 slug: Web/API/Screen/availWidth
 page-type: web-api-instance-property
 browser-compat: api.Screen.availWidth

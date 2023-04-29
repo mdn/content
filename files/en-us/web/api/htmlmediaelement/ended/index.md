@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.ended
+title: "HTMLMediaElement: ended property"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.ended

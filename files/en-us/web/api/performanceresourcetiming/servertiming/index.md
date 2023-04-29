@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.serverTiming
+title: "PerformanceResourceTiming: serverTiming property"
+short-title: serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.serverTiming

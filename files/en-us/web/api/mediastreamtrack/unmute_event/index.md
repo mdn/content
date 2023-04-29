@@ -1,5 +1,6 @@
 ---
 title: "MediaStreamTrack: unmute event"
+short-title: unmute
 slug: Web/API/MediaStreamTrack/unmute_event
 page-type: web-api-event
 browser-compat: api.MediaStreamTrack.unmute_event

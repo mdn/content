@@ -1,5 +1,5 @@
 ---
-title: '<image>: The Image element'
+title: "<image>: The Image element"
 slug: Web/HTML/Element/image
 page-type: html-element
 status:

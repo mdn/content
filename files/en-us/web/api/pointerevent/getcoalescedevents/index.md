@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.getCoalescedEvents()
+title: "PointerEvent: getCoalescedEvents() method"
+short-title: getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
 page-type: web-api-instance-method
 browser-compat: api.PointerEvent.getCoalescedEvents

@@ -1,5 +1,6 @@
 ---
-title: SVGAnimatedLength.baseVal
+title: "SVGAnimatedLength: baseVal property"
+short-title: baseVal
 slug: Web/API/SVGAnimatedLength/baseVal
 page-type: web-api-instance-property
 browser-compat: api.SVGAnimatedEnumeration.baseVal

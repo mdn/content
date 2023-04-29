@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.start()
+title: "MediaRecorder: start() method"
+short-title: start()
 slug: Web/API/MediaRecorder/start
 page-type: web-api-instance-method
 browser-compat: api.MediaRecorder.start

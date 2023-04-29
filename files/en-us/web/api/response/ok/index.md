@@ -1,5 +1,6 @@
 ---
-title: Response.ok
+title: "Response: ok property"
+short-title: ok
 slug: Web/API/Response/ok
 page-type: web-api-instance-property
 browser-compat: api.Response.ok

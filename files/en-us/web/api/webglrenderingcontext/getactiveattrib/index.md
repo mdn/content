@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getActiveAttrib()
+title: "WebGLRenderingContext: getActiveAttrib() method"
+short-title: getActiveAttrib()
 slug: Web/API/WebGLRenderingContext/getActiveAttrib
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getActiveAttrib

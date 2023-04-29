@@ -1,5 +1,6 @@
 ---
-title: Text.wholeText
+title: "Text: wholeText property"
+short-title: wholeText
 slug: Web/API/Text/wholeText
 page-type: web-api-instance-property
 browser-compat: api.Text.wholeText

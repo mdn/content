@@ -1,5 +1,6 @@
 ---
-title: TextTrackCueList.getCueById()
+title: "TextTrackCueList: getCueById() method"
+short-title: getCueById()
 slug: Web/API/TextTrackCueList/getCueById
 page-type: web-api-instance-method
 browser-compat: api.TextTrackCueList.getCueById

@@ -1,5 +1,6 @@
 ---
-title: WorkerLocation.pathname
+title: "WorkerLocation: pathname property"
+short-title: pathname
 slug: Web/API/WorkerLocation/pathname
 page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.pathname

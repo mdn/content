@@ -1,5 +1,6 @@
 ---
-title: ReadableByteStreamController.error()
+title: "ReadableByteStreamController: error() method"
+short-title: error()
 slug: Web/API/ReadableByteStreamController/error
 page-type: web-api-instance-method
 browser-compat: api.ReadableByteStreamController.error

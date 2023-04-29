@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.mul()
+title: "CSSNumericValue: mul() method"
+short-title: mul()
 slug: Web/API/CSSNumericValue/mul
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.mul

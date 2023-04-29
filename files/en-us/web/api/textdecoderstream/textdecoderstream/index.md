@@ -1,5 +1,6 @@
 ---
-title: TextDecoderStream()
+title: "TextDecoderStream: TextDecoderStream() constructor"
+short-title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
 page-type: web-api-constructor
 browser-compat: api.TextDecoderStream.TextDecoderStream

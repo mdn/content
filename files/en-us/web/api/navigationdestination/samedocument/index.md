@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.sameDocument
+title: "NavigationDestination: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationDestination/sameDocument
 page-type: web-api-instance-property
 status:

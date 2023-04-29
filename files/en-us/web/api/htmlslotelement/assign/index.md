@@ -1,5 +1,6 @@
 ---
-title: HTMLSlotElement.assign()
+title: "HTMLSlotElement: assign() method"
+short-title: assign()
 slug: Web/API/HTMLSlotElement/assign
 page-type: web-api-instance-method
 browser-compat: api.HTMLSlotElement.assign

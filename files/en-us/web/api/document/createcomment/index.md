@@ -1,5 +1,6 @@
 ---
-title: Document.createComment()
+title: "Document: createComment() method"
+short-title: createComment()
 slug: Web/API/Document/createComment
 page-type: web-api-instance-method
 browser-compat: api.Document.createComment

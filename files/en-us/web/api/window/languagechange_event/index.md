@@ -1,5 +1,6 @@
 ---
 title: "Window: languagechange event"
+short-title: languagechange
 slug: Web/API/Window/languagechange_event
 page-type: web-api-event
 browser-compat: api.Window.languagechange_event

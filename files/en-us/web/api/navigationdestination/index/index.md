@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.index
+title: "NavigationDestination: index property"
+short-title: index
 slug: Web/API/NavigationDestination/index
 page-type: web-api-instance-property
 status:

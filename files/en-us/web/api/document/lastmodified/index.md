@@ -1,5 +1,6 @@
 ---
-title: Document.lastModified
+title: "Document: lastModified property"
+short-title: lastModified
 slug: Web/API/Document/lastModified
 page-type: web-api-instance-property
 browser-compat: api.Document.lastModified

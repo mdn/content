@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: message event"
+short-title: message
 slug: Web/API/RTCDataChannel/message_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.message_event

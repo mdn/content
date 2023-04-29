@@ -1,5 +1,6 @@
 ---
-title: Element.attachShadow()
+title: "Element: attachShadow() method"
+short-title: attachShadow()
 slug: Web/API/Element/attachShadow
 page-type: web-api-instance-method
 browser-compat: api.Element.attachShadow

@@ -1,5 +1,6 @@
 ---
-title: PerformanceResourceTiming.requestStart
+title: "PerformanceResourceTiming: requestStart property"
+short-title: requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.requestStart

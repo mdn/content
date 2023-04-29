@@ -1,6 +1,7 @@
 ---
 title: "CSP: object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src
 ---
 

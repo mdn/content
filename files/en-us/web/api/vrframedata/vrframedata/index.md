@@ -1,5 +1,6 @@
 ---
-title: VRFrameData()
+title: "VRFrameData: VRFrameData() constructor"
+short-title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 page-type: web-api-constructor
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.renderbufferStorageMultisample()
+title: "WebGL2RenderingContext: renderbufferStorageMultisample() method"
+short-title: renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample

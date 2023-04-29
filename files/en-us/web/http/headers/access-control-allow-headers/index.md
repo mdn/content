@@ -1,6 +1,7 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Headers
 ---
 

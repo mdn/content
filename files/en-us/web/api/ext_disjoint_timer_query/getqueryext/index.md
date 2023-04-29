@@ -1,5 +1,6 @@
 ---
-title: EXT_disjoint_timer_query.getQueryEXT()
+title: "EXT_disjoint_timer_query: getQueryEXT() method"
+short-title: getQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryEXT
 page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.getQueryEXT
