@@ -257,8 +257,8 @@ process(inputList, outputList, parameters) {
   const gain = parameters.gain;
 
   for (let channelNum = 0; channelNum < input.length; channel++) {
-    const inputChannel = input[channel];
-    const outputChannel = output[channel];
+    const inputChannel = input[channelNum];
+    const outputChannel = output[channelNum];
 
     // If gain.length is 1, it's a k-rate parameter, so apply
     // the first entry to every frame. Otherwise, apply each
