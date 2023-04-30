@@ -77,7 +77,7 @@ console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 
 ### Calling flat() on non-array objects
 
-The `flat()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the element is not an array, it's directly appended to the result. If the element is an array, it's flattened according to` the `depth` parameter.
+The `flat()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the element is not an array, it's directly appended to the result. If the element is an array, it's flattened according to the `depth` parameter.
 
 ```js
 const arrayLike = {
