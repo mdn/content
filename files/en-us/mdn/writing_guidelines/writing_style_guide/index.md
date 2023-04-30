@@ -471,7 +471,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 - **Don't create single subsections.** Don't subdivide a topic into a single subtopic.
   It's either two subheadings or more or none at all.
-- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g. "Using `FooBar` interface").
+- **Don't use inline styles, classes, or macros within headings.** However, you should use backticks to indicate code terms (e.g. "Using `FooBar` interface").
 - **Don't create "bumping heads".** These are headings followed immediately by a subheading, with no content text in between them.
   This doesn't look good and leaves readers without any explanatory text at the beginning of the outer section.
 
