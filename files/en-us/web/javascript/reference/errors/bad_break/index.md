@@ -60,7 +60,11 @@ function increment() {
 
 ```js example-bad
 let containingIndex = 0;
-const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const matrix = [
+  [1, 2, 3], 
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
 while (containingIndex < matrix.length) {
   matrix[containingIndex].forEach((value) => {
@@ -76,7 +80,11 @@ Instead, refactor the code so the `break` is used outside the callback.
 
 ```js example-good
 let containingIndex = 0;
-const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
 outer: while (containingIndex < matrix.length) {
   for (const value of matrix[containingIndex]) {

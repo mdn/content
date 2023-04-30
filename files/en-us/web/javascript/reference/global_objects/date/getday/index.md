@@ -28,7 +28,7 @@ The return value of `getDay()` is zero-based, which is useful for indexing into 
 ```js
 const valentines = new Date("1995-02-14");
 const day = valentines.getDay();
-const dayNames = ["Sunday", "Monday", "Tuesday", /* … */];
+const dayNames = ["Sunday", "Monday", "Tuesday" /* , … */];
 
 console.log(dayNames[day]); // "Monday"
 ```
