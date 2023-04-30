@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Promise.then
 
 {{JSRef}}
 
-The **`then()`** method of a {{jsxref("Promise")}} object takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
+The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
 {{EmbedInteractiveExample("pages/js/promise-then.html")}}
 

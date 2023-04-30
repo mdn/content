@@ -96,7 +96,7 @@ The `path()` function defines the following:
 The `path()` function also specifies a `name` parameter, which is a unique identifier for _this_ particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that points to the resource that the mapper is designed to handle.
 For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:
 
-```html
+```django
 <a href="{% url 'index' %}">Home</a>.
 ```
 
@@ -178,7 +178,7 @@ You can leave the blocks empty, or include default content to use when rendering
 
 > **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,7 +195,7 @@ When defining a template for a particular view, we first specify the base templa
 
 For example, the code snippet below shows how to use the `extends` template tag and override the `content` block. The generated HTML will include the code and structure defined in the base template, including the default content you defined in the `title` block, but the new `content` block in place of the default one.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -212,7 +212,7 @@ We will use the following code snippet as the base template for the _LocalLibrar
 
 Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** and paste the following code to the file:
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -260,7 +260,7 @@ The base template also references a local CSS file (**styles.css**) that provide
 Create a new HTML file **index.html** in **/locallibrary/catalog/templates/** and paste the following code in the file.
 This code extends our base template on the first line, and then replaces the default `content` block for the template.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -302,7 +302,7 @@ Your project is likely to use static resources, including JavaScript, CSS, and i
 
 Within the template you first call the `load` template tag specifying "static" to add the template library, as shown in the code sample below. You can then use the `static` template tag and specify the relative URL to the required file.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
@@ -310,7 +310,7 @@ Within the template you first call the `load` template tag specifying "static" t
 
 You can add an image into the page in a similar way, for example:
 
-```html
+```django
 {% load static %}
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;" />
 ```

@@ -187,19 +187,19 @@ tangs on ihe greon traa`;
 
 // 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
 buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
-console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
+console.log(1, buggyMultiline); // fix 'tey' => 'hey' and 'tangs' => 'hangs' but do not touch 'traa'.
 
 // 2) Use $ to fix matching at the end of the text.
 buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
-console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
+console.log(2, buggyMultiline); // fix 'traa' => 'tree.'.
 
 // 3) Use \b to match characters right on border between a word and a space.
 buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
-console.log(3, buggyMultiline); // fix  'ihe' but do not touch 'light'.
+console.log(3, buggyMultiline); // fix 'ihe' => 'the' but do not touch 'light'.
 
 // 4) Use \B to match characters inside borders of an entity.
 fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
-console.log(4, fixedMultiline); // fix  'greon' but do not touch 'on'.
+console.log(4, fixedMultiline); // fix 'greon' => 'green' but do not touch 'on'.
 ```
 
 ### Matching the beginning of input using a ^ control character
@@ -285,10 +285,10 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 ### Lookbehind assertion
 
 ```js
-const oranges = ["ripe orange A ", "green orange B", "ripe orange C"];
+const oranges = ["ripe orange A", "green orange B", "ripe orange C"];
 
-const ripeOranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
-console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]
+const ripeOranges = oranges.filter((fruit) => /(?<=ripe )orange/.test(fruit));
+console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 ```
 
 ## See also

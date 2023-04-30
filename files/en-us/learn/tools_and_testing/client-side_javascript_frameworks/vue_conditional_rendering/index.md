@@ -195,7 +195,7 @@ methods: {
   }
 ```
 
-## Conditionally displaying components via v:if and v:else
+## Conditionally displaying components via v-if and v-else
 
 Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 

@@ -490,7 +490,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Will it CORS?](https://httptoolkit.tech/will-it-cors/) - an interactive CORS explainer & generator
+- [Will it CORS?](https://httptoolkit.com/will-it-cors/) - an interactive CORS explainer & generator
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):

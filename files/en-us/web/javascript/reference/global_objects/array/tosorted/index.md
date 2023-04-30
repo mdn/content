@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.toSorted
 
 {{JSRef}}
 
-The **`toSorted()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
+The **`toSorted()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
 
 ## Syntax
 

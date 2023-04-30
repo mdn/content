@@ -48,6 +48,8 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 In a supporting browser, the items have more blue, and therefore less white, as a higher percentage of `#34c9eb` is mixed in. When no value is given, the percentage defaults to 50%.
 
+#### HTML
+
 ```html
 <ul>
   <li>0%</li>
@@ -58,6 +60,8 @@ In a supporting browser, the items have more blue, and therefore less white, as 
   <li></li>
 </ul>
 ```
+
+#### CSS
 
 ```css hidden
 ul {
@@ -105,6 +109,8 @@ li:nth-child(6) {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Mixing two colors','100%', 150)}}
 
 ### Using hue interpolation methods
@@ -114,12 +120,16 @@ For `shorter` the result will be the shortest distance between the two angles (t
 
 For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
 
+#### HTML
+
 ```html
 <div id="shorter">shorter</div>
 <div id="longer">longer</div>
 <div id="increasing">increasing</div>
 <div id="decreasing">decreasing</div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -168,6 +178,8 @@ div {
   );
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using hue interpolation methods','100%', 150)}}
 

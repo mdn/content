@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setMonth
 
 {{JSRef}}
 
-The **`setMonth()`** method of a {{jsxref("Date")}} instance changes the month and/or day of the month for this date according to local time.
+The **`setMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
