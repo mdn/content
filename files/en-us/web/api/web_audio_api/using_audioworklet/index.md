@@ -256,7 +256,7 @@ process(inputList, outputList, parameters) {
   const output = outputList[0];
   const gain = parameters.gain;
 
-  for (let channelNum = 0; channelNum < input.length; channel++) {
+  for (let channelNum = 0; channelNum < input.length; channelNum++) {
     const inputChannel = input[channelNum];
     const outputChannel = output[channelNum];
 
