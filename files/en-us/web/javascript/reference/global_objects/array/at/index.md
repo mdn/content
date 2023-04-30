@@ -89,8 +89,12 @@ const arrayLike = {
   length: 2,
   0: "a",
   1: "b",
+  2: "c"
 };
-console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
+const fn = Array.prototype.at.bind(arrayLike);
+console.log(fn(0)); // "a"
+console.log(fn(1)); // "b"
+console.log(fn(2)); // undefined -- length=2, so highest index is 1
 ```
 
 ## Specifications

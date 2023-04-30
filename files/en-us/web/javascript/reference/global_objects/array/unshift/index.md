@@ -87,7 +87,7 @@ arr.unshift([-7, -6], [-5]); // the new array length is 8
 
 ### Calling unshift() on non-array objects
 
-The `unshift()` method reads the `length` property of `this`. It then shifts all properties in the range `0` to `length - 1` right by the number of arguments and sets each index starting at `0` with the arguments passed to `unshift()`. Finally, it sets the `length` to the previous length plus the number of prepended elements.
+The `unshift()` method reads the `length` property of `this`. It then shifts all properties having keys in the range `0` to `length - 1` right by the number of arguments (incrementing their values by this number) and creates properties having keys equal to the 0-based index of each argument passed to `unshift()` and values equal to the arguments themselves. Finally, it sets `length` to the previous length plus the number of prepended elements.
 
 ```js
 const arrayLike = {

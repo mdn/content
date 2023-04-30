@@ -140,7 +140,7 @@ console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [
 
 ### Calling group() on non-array objects
 
-The `group()` method reads the `length` property of `this` and then accesses each integer index.
+The `group()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {

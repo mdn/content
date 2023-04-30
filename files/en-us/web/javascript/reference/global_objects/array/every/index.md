@@ -148,7 +148,7 @@ arr.every((elem, index, arr) => {
 
 ### Calling every() on non-array objects
 
-The `every()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `false`.
+The `every()` method reads the `length` property of `this` and then accesses each property with a nonnegative integer key less than `length` until they all have been accessed or `callbackFn` returns `false`.
 
 ```js
 const arrayLike = {
@@ -156,10 +156,11 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: 345 // ignored by every() since length = 3
 };
 console.log(
   Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
-); // true
+); // true: The key 3 is equal to the value of length, so it is not considered
 ```
 
 ## Specifications

@@ -130,7 +130,7 @@ console.log([1, , 3].groupToMap((x) => x));
 
 ### Calling groupToMap() on non-array objects
 
-The `groupToMap()` method reads the `length` property of `this` and then accesses each integer index.
+The `groupToMap()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {

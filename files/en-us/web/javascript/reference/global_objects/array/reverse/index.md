@@ -81,17 +81,19 @@ console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 
 ### Calling reverse() on non-array objects
 
-The `reverse()` method reads the `length` property of `this`. It then visits each index between `0` and `length / 2`, and swaps the two corresponding indices on both ends, [deleting](/en-US/docs/Web/JavaScript/Reference/Operators/delete) properties if needed.
+The `reverse()` method reads the `length` property of `this`. It then visits each property having an integer key between `0` and `length / 2`, and swaps the two corresponding indices on both ends, [deleting](/en-US/docs/Web/JavaScript/Reference/Operators/delete) any destination property for which the source property did not exist.
 
 ```js
 const arrayLike = {
   length: 3,
   unrelated: "foo",
   2: 4,
+  3: 33
 };
 console.log(Array.prototype.reverse.call(arrayLike));
-// { '0': 4, length: 3, unrelated: 'foo' }
-// The '2' index is deleted because the '0' index was not present originally
+// { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
+// The property with a key of '2' is deleted because there was no property with a key of '0' present originally
+// The property with a key of '3' is unchanged since the value of length is 3
 ```
 
 ## Specifications

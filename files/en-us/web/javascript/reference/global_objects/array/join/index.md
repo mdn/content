@@ -72,7 +72,7 @@ console.log([1, undefined, 3].join()); // '1,,3'
 
 ### Calling join() on non-array objects
 
-The `join()` method reads the `length` property of `this` and then accesses each integer index.
+The `join()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -80,6 +80,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5
 };
 console.log(Array.prototype.join.call(arrayLike));
 // 2,3,4
