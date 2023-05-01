@@ -220,7 +220,7 @@ See our [Toast popover example](https://mdn.github.io/dom-examples/popover-api/t
 
 There is an exception to the rule about not displaying multiple auto popovers at once — when they are nested inside one another. In such cases, multiple popovers are allowed to both be open at the same time, due to their relationship with each other. This pattern is supported to enable use cases such as nested popover menus.
 
-See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content , either in an SPA or multi-page website, some of all of these may not be necessary, but they have bene included in this demo for illustrative purposes.
+See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content , either in an SPA or multi-page website, some of all of these may not be necessary, but they have been included in this demo for illustrative purposes.
 
 ### Styling popovers
 
