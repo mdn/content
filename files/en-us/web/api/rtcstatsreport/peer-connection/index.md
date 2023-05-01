@@ -1,6 +1,6 @@
 ---
 title: peer-connection statistics
-slug: Web/API/RTCStatsReport/peer_connection_stats
+slug: Web/API/RTCStatsReport/peer-connection
 page-type: web-api-interface
 browser-compat: api.RTCStatsReport.type_peer-connection
 ---
@@ -14,6 +14,8 @@ These stats are returned in a {{domxref("RTCStatsReport")}} from {{domxref("RTCP
 
 ## Instance properties
 
+<!-- RTCPeerConnectionStats -->
+
 - `dataChannelsOpened`
   - : A positive integer value indicating the number of unique {{domxref("RTCDataChannel")}} objects that have entered the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime.
 
@@ -22,6 +24,8 @@ These stats are returned in a {{domxref("RTCStatsReport")}} from {{domxref("RTCP
     A channel will leave the open state if either end of the connection or the underlying transport is closed.
 
 The following properties are common to all statistics objects.
+
+<!-- RTCStats -->
 
 - `id`
   - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.

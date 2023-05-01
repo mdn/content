@@ -27,7 +27,8 @@ The {{domxref("RTCStats.type", "type")}} gives the name of the statistic categor
 
 The type categories are:
 
-- [peer_connection](/en-US/docs/Web/API/RTCStatsReport/peer_connection_stats)
+- [peer-connection](/en-US/docs/Web/API/RTCStatsReport/peer-connection)
+- [inbound-rtp](/en-US/docs/Web/API/RTCStatsReport/inbound-rtp)
 
 ## Specifications
 
