@@ -141,7 +141,7 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-This example illustrates the use of {{domxref("Element.matches()")}} to programmatically check whether a popover is currently showing ({{cssxref(":popover-open")}} selects only showing popovers). This is currently the only way. Alternatively, you could cut out the need for it altogether by :
+This example uses {{domxref("Element.matches()")}} to programmatically check whether a popover is currently showing. The {{cssxref(":popover-open")}} pseudo-class selects only popovers that are currently being shown. Alternatively, you could cut out the need for it altogether by:
 
 ```js
 document.addEventListener("keydown", (event) => {
