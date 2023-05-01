@@ -189,7 +189,7 @@ function makeToast(result) {
 }
 ```
 
-You can also use the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} event to perform a follow-up action when a popover shows or hides. In our example we execute a `moveToastsUp()` function to make the toasts all the move up the screen to make way each time a new toast appears:
+You can also use the {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} event to perform a follow-up action when a popover shows or hides. In our example we execute a `moveToastsUp()` function to make the toasts all move up the screen to make way each time a new toast appears:
 
 ```js
 popover.addEventListener("toggle", (event) => {
