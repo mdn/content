@@ -31,6 +31,8 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
 ## Examples
 
+### Basic example
+
 ```js
 const popover = document.getElementById("mypopover");
 

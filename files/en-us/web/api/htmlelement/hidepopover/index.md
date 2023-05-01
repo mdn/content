@@ -12,7 +12,7 @@ browser-compat: api.HTMLElement.hidePopover
 
 The **`hidePopover()`** method of the {{domxref("HTMLElement")}} interface hides a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
 
-When `hidePopover()` is called on an showing element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover being hidden, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing. If the element is already hidden, an error is thrown.
+When `hidePopover()` is called on a showing element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover being hidden, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing. If the element is already hidden, an error is thrown.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example provides functionality to toggle a popover on and off by pressing a particular key on the keyboard.
+The following example provides functionality to hide a popover by pressing a particular key on the keyboard.
 
 First, some HTML:
 
@@ -63,11 +63,7 @@ const popover = document.getElementById("mypopover");
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "h") {
-    if (popover.matches(":popover-open")) {
-      popover.hidePopover();
-    } else {
-      popover.showPopover();
-    }
+    popover.hidePopover();
   }
 });
 ```

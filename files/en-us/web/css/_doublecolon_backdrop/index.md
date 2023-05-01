@@ -7,13 +7,13 @@ browser-compat: css.selectors.backdrop
 
 {{CSSRef}}
 
-The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}} which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}. This includes:
+The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}. This includes:
 
 - Elements which have been placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) {{domxref("Element.requestFullscreen()")}} method.
 - {{HTMLElement("dialog")}} elements that have been shown in the top layer via a {{domxref("HTMLDialogElement.showModal()")}} call.
 - {{domxref("Popover API", "Popover", "", "nocode")}} elements that have been shown in the top layer via a {{domxref("HTMLElement.showPopover()")}} call.
 
-When multiple elements have been placed into the top layer, the backdrop is drawn immediately beneath the frontmost such element, and on top of the older elements.
+When multiple elements have been placed into the top layer, each one has its own `::backdrop` pseudo-element.
 
 ```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
@@ -22,7 +22,7 @@ dialog::backdrop {
 }
 ```
 
-Elements are placed in a last-in/first out (LIFO) stack in the top layer. The `::backdrop` pseudo-element makes it possible to obscure, style, or completely hide everything located below the element when it's the topmost one in the top layer.
+Elements are placed in a last-in/first out (LIFO) stack in the top layer. The `::backdrop` pseudo-element makes it possible to obscure, style, or completely hide everything located below a top layer element.
 
 `::backdrop` neither inherits from nor is inherited by any other elements. No restrictions are made on what properties apply to this pseudo-element.
 

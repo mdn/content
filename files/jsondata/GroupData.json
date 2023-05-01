@@ -1074,6 +1074,7 @@
     },
     "Popover API": {
       "overview": ["Popover API"],
+      "guides": ["/docs/Web/API/Popover_API/Using"],
       "interfaces": ["ToggleEvent"],
       "methods": [
         "HTMLElement.hidePopover()",

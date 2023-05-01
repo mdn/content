@@ -23,12 +23,15 @@ When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/
 ## Syntax
 
 ```js-nolint
-togglePopover()
+togglePopover(force)
 ```
 
 ### Parameters
 
-None.
+- `force`
+  - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}:
+    - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
+    - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
 
 ### Return value
 

@@ -32,6 +32,8 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+### Basic example
+
 ```js
 const popover = document.getElementById("mypopover");
 
@@ -44,6 +46,22 @@ popover.addEventListener("beforetoggle", (event) => {
     console.log("Popover is being hidden");
   }
 });
+```
+
+### A note on toggle event coalescing
+
+It is worth pointing out that `beforetoggle` events are coalesced, meaning that if multiple `beforetoggle` events are fired before the event loop has a chance to cycle, only a single event will be fired.
+
+For example:
+
+```js
+popover.addEventListener('beforetoggle', () => {
+  //...
+});
+
+popover.showPopover();
+popover.hidePopover();
+// `beforetoggle` only fires once
 ```
 
 ## Specifications

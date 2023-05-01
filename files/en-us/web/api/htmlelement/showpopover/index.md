@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example provides functionality to toggle a popover on and off by pressing a particular key on the keyboard.
+The following example provides functionality to show a popover by pressing a particular key on the keyboard.
 
 First, some HTML:
 
@@ -63,11 +63,7 @@ const popover = document.getElementById("mypopover");
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "h") {
-    if (popover.matches(":popover-open")) {
-      popover.hidePopover();
-    } else {
-      popover.showPopover();
-    }
+    popover.showPopover();
   }
 });
 ```
