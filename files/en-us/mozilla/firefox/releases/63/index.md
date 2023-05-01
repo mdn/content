@@ -110,7 +110,7 @@ _No changes._
 
 - The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
 - The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
-- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties {{DOMxRef("AudioListener.dopplerFactor", "dopplerFactor")}} and {{DOMxRef("AudioListener.speedOfSound", "speedOfSound")}} have been removed, along with the `PannerNode` method {{DOMxRef("PannerNode.setVelocity", "setVelocity()")}} ([Firefox bug 1148354](https://bugzil.la/1148354)).
+- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
 ### CSSOM
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaDisabled
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaDisabled`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 

@@ -3,9 +3,12 @@ title: kernelUnitLength
 slug: Web/SVG/Attribute/kernelUnitLength
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-kernelunitlength
+  - >-
+    https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength
+  - >-
+    https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength
+  - >-
+    https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-kernelunitlength
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `disabled`
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
-    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`]] (#autocomplete) attribute.
+    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`](#autocomplete) attribute.
 
 - `form`
 
