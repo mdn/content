@@ -55,8 +55,6 @@ async function numberOpenConnections (peerConnection) {
 }
 ```
 
-Note that as this you might call this code at regular intervals in a similar way to that shown in
-
 ## Specifications
 
 {{Specifications}}
