@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.getStats
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method **`getStats()`** returns a promise which resolves with data providing statistics about either the overall connection or about the specified {{domxref("MediaStreamTrack")}}.
+The {{domxref("RTCPeerConnection")}} method **`getStats()`** returns a promise which resolves with a {{domxref("RTCStatsReport")}} providing statistics about either the overall connection, including both sender and receiver statistics, or about a specified {{domxref("MediaStreamTrack")}}.
 
 ## Syntax
 
@@ -40,7 +40,9 @@ The parameters for the older form of `getStats()` are described below, to aid in
 ### Return value
 
 A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object providing connection statistics.
+
 The report's contents depend on the `selector` and other details of the connection.
+It may include statistics for both the sender and receiver, and also those related to the connection as a whole, such as the [peer_connection](/en-US/docs/Web/API/RTCStatsReport/peer_connection_stats) stats.
 
 ### Exceptions
 

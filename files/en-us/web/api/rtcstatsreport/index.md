@@ -25,6 +25,10 @@ All WebRTC statistics objects are fundamentally based on the {{domxref("RTCStats
 
 The {{domxref("RTCStats.type", "type")}} gives the name of the statistic category represented by the object, and is how you locate the specific type of data you need.
 
+The type categories are:
+
+- [peer_connection](/en-US/docs/Web/API/RTCStatsReport/peer_connection_stats)
+
 ## Specifications
 
 {{Specifications}}
