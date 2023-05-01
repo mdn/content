@@ -87,7 +87,7 @@ You can see this behavior in action in our [Multiple manual popovers example](ht
 
 ### Controlling popovers with JavaScript
 
-The popover API also has a JavaScript API for controlling popovers.
+You can also control popovers using a JavaScript API.
 
 The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute. This can be used to create a popover via JavaScript, and is also useful for feature detection. For example:
 
