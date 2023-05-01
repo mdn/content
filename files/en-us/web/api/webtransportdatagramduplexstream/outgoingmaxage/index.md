@@ -1,6 +1,7 @@
 ---
 title: WebTransportDatagramDuplexStream.outgoingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/outgoingMaxAge
+page-type: web-api-instance-property
 status:
   - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingMaxAge
