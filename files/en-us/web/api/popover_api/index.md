@@ -4,8 +4,7 @@ slug: Web/API/Popover_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat:
-  - api.HTMLElement.popover
+browser-compat: api.HTMLElement.popover
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Popover API")}}
