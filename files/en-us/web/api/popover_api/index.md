@@ -59,7 +59,7 @@ When a popover is shown, it has `display: none` removed from it and it is put in
 
 ### auto state, and "light dismiss"
 
-When a popover element is set with `popover`/`popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
+When a popover element is set with `popover` or `popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
 
 - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key.
 - Only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one.
