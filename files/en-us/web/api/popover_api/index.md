@@ -285,7 +285,7 @@ Finally, animation needs a special mention, as a lot of people are going to want
 ## CSS features
 
 - {{cssxref("::backdrop")}}
-  - : The `::backdrop` pseudo-element is a full-screen element placed directly behind showing popover elements in the {{glossary("top layer")}}, allowing effects to be added to the page content behind the popover(s) if desired (for example blurring it out).
+  - : The `::backdrop` pseudo-element is a full-screen element placed directly behind popover elements, allowing effects to be added to the page content behind the popover(s) if desired (for example blurring it out).
 - {{cssxref(":popover-open")}}
   - : The `:popover-open` pseudo-class matches a popover element only when it is in the showing state — it can be used to style popover elements when they are showing.
 
