@@ -1231,7 +1231,7 @@
 /en-US/docs/DOM/DOM_event_reference/compositionend	/en-US/docs/Web/API/Element/compositionend_event
 /en-US/docs/DOM/DOM_event_reference/compositionstart	/en-US/docs/Web/API/Element/compositionstart_event
 /en-US/docs/DOM/DOM_event_reference/compositionupdate	/en-US/docs/Web/API/Element/compositionupdate_event
-/en-US/docs/DOM/DOM_event_reference/error	/en-US/docs/Web/API/Element/error_event
+/en-US/docs/DOM/DOM_event_reference/error	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/DOM/DOM_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/DOM/DOM_event_reference/mouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/DOM/DOM_event_reference/mouseleave	/en-US/docs/Web/API/Element/mouseleave_event
@@ -1446,7 +1446,7 @@
 /en-US/docs/DOM/Mozilla_event_reference/endEvent	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/DOM/Mozilla_event_reference/ended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/DOM/Mozilla_event_reference/ended_(Web_Audio)	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/DOM/Mozilla_event_reference/error	/en-US/docs/Web/API/Element/error_event
+/en-US/docs/DOM/Mozilla_event_reference/error	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/DOM/Mozilla_event_reference/error_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/error_event
 /en-US/docs/DOM/Mozilla_event_reference/error_indexedDB	/en-US/docs/Web/API/IDBRequest/error_event
 /en-US/docs/DOM/Mozilla_event_reference/error_serversentevents	/en-US/docs/Web/API/EventSource/error_event
@@ -6258,7 +6258,7 @@
 /en-US/docs/Mozilla_event_reference/emptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Mozilla_event_reference/endEvent	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/Mozilla_event_reference/ended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Mozilla_event_reference/error	/en-US/docs/Web/API/Element/error_event
+/en-US/docs/Mozilla_event_reference/error	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/Mozilla_event_reference/error_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/error_event
 /en-US/docs/Mozilla_event_reference/error_(ProgressEvent)-redirect-1	/en-US/docs/Web/API/XMLHttpRequest/error_event
 /en-US/docs/Mozilla_event_reference/error_indexedDB	/en-US/docs/Web/API/IDBRequest/error_event
@@ -7535,10 +7535,8 @@
 /en-US/docs/Web/API/AudioDecoder/isConfigSupported	/en-US/docs/Web/API/AudioDecoder/isConfigSupported_static
 /en-US/docs/Web/API/AudioDestinationNode.maxChannelCount	/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount
 /en-US/docs/Web/API/AudioEncoder/isConfigSupported	/en-US/docs/Web/API/AudioEncoder/isConfigSupported_static
-/en-US/docs/Web/API/AudioListener.dopplerFactor	/en-US/docs/Web/API/AudioListener/dopplerFactor
 /en-US/docs/Web/API/AudioListener.setOrientation	/en-US/docs/Web/API/AudioListener/setOrientation
 /en-US/docs/Web/API/AudioListener.setPosition	/en-US/docs/Web/API/AudioListener/setPosition
-/en-US/docs/Web/API/AudioListener.speedOfSound	/en-US/docs/Web/API/AudioListener/speedOfSound
 /en-US/docs/Web/API/AudioNode.channelCount	/en-US/docs/Web/API/AudioNode/channelCount
 /en-US/docs/Web/API/AudioNode.channelCountMode	/en-US/docs/Web/API/AudioNode/channelCountMode
 /en-US/docs/Web/API/AudioNode.channelInterpretation	/en-US/docs/Web/API/AudioNode/channelInterpretation
@@ -8100,6 +8098,7 @@
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/contentvisibilityautostatechanged_event	/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event
 /en-US/docs/Web/API/Element/createShadowRoot	/en-US/docs/Web/API/Element/shadowRoot
+/en-US/docs/Web/API/Element/error_event	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/Element/msMatchesSelector	/en-US/docs/Web/API/Element/matches
@@ -9243,7 +9242,6 @@
 /en-US/docs/Web/API/PannerNode.rolloffFactor	/en-US/docs/Web/API/PannerNode/rolloffFactor
 /en-US/docs/Web/API/PannerNode.setOrientation	/en-US/docs/Web/API/PannerNode/setOrientation
 /en-US/docs/Web/API/PannerNode.setPosition	/en-US/docs/Web/API/PannerNode/setPosition
-/en-US/docs/Web/API/PannerNode.setVelocity	/en-US/docs/Web/API/PannerNode/setVelocity
 /en-US/docs/Web/API/ParentNode.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
@@ -11681,7 +11679,7 @@
 /en-US/docs/Web/Events/end_(SpeechSynthesis)	/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event
 /en-US/docs/Web/Events/ended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/Events/ended_(Web_Audio)	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Web/Events/error	/en-US/docs/Web/API/Element/error_event
+/en-US/docs/Web/Events/error	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/Web/Events/error_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/error_event
 /en-US/docs/Web/Events/error_(SpeechRecognitionError)	/en-US/docs/Web/API/SpeechRecognition/error_event
 /en-US/docs/Web/Events/error_(SpeechSynthesis)	/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event
@@ -12676,7 +12674,7 @@
 /en-US/docs/Web/Reference/Events/endEvent	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/Web/Reference/Events/ended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/Reference/Events/ended_(Web_Audio)	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Web/Reference/Events/error	/en-US/docs/Web/API/Element/error_event
+/en-US/docs/Web/Reference/Events/error	/en-US/docs/Web/API/HTMLElement/error_event
 /en-US/docs/Web/Reference/Events/error_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/error_event
 /en-US/docs/Web/Reference/Events/error_indexedDB	/en-US/docs/Web/API/IDBRequest/error_event
 /en-US/docs/Web/Reference/Events/error_serversentevents	/en-US/docs/Web/API/EventSource/error_event
