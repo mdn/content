@@ -28,7 +28,7 @@ The return value of `getMonth()` is zero-based, which is useful for indexing int
 ```js
 const valentines = new Date("1995-02-14");
 const month = valentines.getMonth();
-const monthNames = ["January", "February", "March", /* … */];
+const monthNames = ["January", "February", "March" /* , … */];
 
 console.log(monthNames[month]); // "February"
 ```

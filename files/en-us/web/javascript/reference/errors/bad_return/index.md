@@ -22,7 +22,7 @@ SyntaxError: Return statements are only valid inside functions. (Safari)
 
 ## What went wrong?
 
-A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions). Maybe there are missing curly brackets somewhere? The `return`  statement must be in a function, because it ends function execution and specifies a value to be returned to the function caller.
+A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions). Maybe there are missing curly brackets somewhere? The `return` statement must be in a function, because it ends function execution and specifies a value to be returned to the function caller.
 
 ## Examples
 

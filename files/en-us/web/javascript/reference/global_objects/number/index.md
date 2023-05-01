@@ -21,7 +21,7 @@ Numbers are most commonly expressed in literal forms like `255` or `3.14159`. Th
 255 === 255.0; // true
 255 === 0xff; // true (hexadecimal notation)
 255 === 0b11111111; // true (binary notation)
-255 === 0.255e+3; // true (decimal exponential notation)
+255 === 0.255e3; // true (decimal exponential notation)
 ```
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)
@@ -100,11 +100,11 @@ new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
 //     =      0000 0001 (mod 2^8)
 //     = 1
 // -257 = 1110 1111 1111
-//      =      1111 1111 (mod 2^8) 
+//      =      1111 1111 (mod 2^8)
 //      = -1 (as signed integer)
 
 new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
-// -257 = 1110 1111 1111 
+// -257 = 1110 1111 1111
 //      =      1111 1111 (mod 2^8)
 //      = 255 (as unsigned integer)
 ```
