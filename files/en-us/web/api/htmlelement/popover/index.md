@@ -18,10 +18,10 @@ It reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/
 
 An enumerated value; possible values are:
 
-- `"auto"`: In [auto state](/en-US/docs/Web/API/Popover_API#auto_state_and_light_dismiss):
+- `"auto"`: In [auto state](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss):
   - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key.
   - Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/en-US/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
-- `"manual"`: In manual state:
+- `"manual"`: In [manual state](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state):
   - The popover cannot be "light dismissed", although declarative show/hide/toggle buttons will still work.
   - Multiple independent popovers can be shown at a time.
 
