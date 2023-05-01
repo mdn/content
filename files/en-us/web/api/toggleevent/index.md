@@ -2,10 +2,12 @@
 title: ToggleEvent
 slug: Web/API/ToggleEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.ToggleEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{SeeCompatTable}}
 
 The **`ToggleEvent`** interface represents an event notifying the user when a popover element's state toggles between showing and hidden.
 
@@ -15,7 +17,7 @@ It is the event object for the {{domxref("HTMLElement.beforetoggle_event", "befo
 
 ## Constructor
 
-- {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}}
+- {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}} {{Experimental_Inline}}
   - : Creates an `ToggleEvent` object.
 
 ## Instance properties

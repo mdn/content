@@ -698,6 +698,7 @@ import("./modules/myModule.js").then((module) => {
 
 > **Note:** Dynamic import is permitted in the browser main thread, and in shared and dedicated workers.
 > However `import()` will throw if called in a service worker or worklet.
+
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
 Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.

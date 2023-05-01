@@ -1,7 +1,10 @@
 ---
-title: "PresentationConnectionAvailableEvent: PresentationConnectionAvailableEvent() constructor"
+title: >-
+  PresentationConnectionAvailableEvent: PresentationConnectionAvailableEvent()
+  constructor
 short-title: PresentationConnectionAvailableEvent()
-slug: Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent
+slug: >-
+  Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent
 page-type: web-api-constructor
 status:
   - experimental

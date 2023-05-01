@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setSeconds
 
 {{JSRef}}
 
-The **`setSeconds()`** method of a {{jsxref("Date")}} instance changes the seconds and/or milliseconds for this date according to local time.
+The **`setSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
 

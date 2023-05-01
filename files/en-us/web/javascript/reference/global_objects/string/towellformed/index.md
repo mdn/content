@@ -33,7 +33,7 @@ When ill-formed strings are used in certain contexts, such as {{domxref("TextEnc
 
 ```js
 const strings = [
-   // Lone high surrogate
+  // Lone high surrogate
   "ab\uD800",
   "ab\uD800c",
   // Lone low surrogate
