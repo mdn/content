@@ -575,7 +575,7 @@ urlpatterns += [
 
 Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}

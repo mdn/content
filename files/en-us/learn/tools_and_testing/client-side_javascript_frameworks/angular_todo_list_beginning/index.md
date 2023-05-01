@@ -210,9 +210,11 @@ In `app.component.html`, replace the `<h2>` with the following:
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```
 
-When the user types a new item in the `<input>` and presses **Enter**, the `addItem()` method adds the value to the `items` array.
-Pressing the **Enter** key also resets the value of `<input>` to an empty string.
-Alternatively, the user can click the **Add** button which calls the same `addItem()` method.
+In the above HTML, `#newItem` is a template variable. The template variable in this case uses the `<input>` element as its value. Template variables can be referred to anywhere in the component's template.
+
+When the user types a new item in the `<input>` field and presses **Enter**, the `addItem()` method adds the value to the `allItems` array.
+Pressing the **Enter** key also resets the value of `<input>` to an empty string. The template variable `#newItem` is used to access the value of the `<input>` element in the template.
+Instead of pressing the **Enter** key, the user can also click the **Add** button, which calls the same `addItem()` method.
 
 ## Summary
 

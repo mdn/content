@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getDay
 
 {{JSRef}}
 
-The **`getDay()`** method of a {{jsxref("Date")}} instance returns the day of the week for this date according to local time, where 0 represents Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
+The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the week for this date according to local time, where 0 represents Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
 {{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}
 
@@ -28,7 +28,7 @@ The return value of `getDay()` is zero-based, which is useful for indexing into 
 ```js
 const valentines = new Date("1995-02-14");
 const day = valentines.getDay();
-const dayNames = ["Sunday", "Monday", "Tuesday", /* … */];
+const dayNames = ["Sunday", "Monday", "Tuesday" /* , … */];
 
 console.log(dayNames[day]); // "Monday"
 ```

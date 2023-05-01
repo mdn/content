@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.isFinite
 
 {{jsSidebar("Objects")}}
 
-The global **`isFinite()`** function determines whether the
+The **`isFinite()`** function determines whether the
 passed value is a finite number. If needed, the parameter is first converted to a
 number.
 

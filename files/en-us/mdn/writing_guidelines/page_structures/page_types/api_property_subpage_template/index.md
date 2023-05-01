@@ -35,8 +35,12 @@ browser-compat: path.to.feature.NameOfTheProperty
 >     Format as _NameOfTheParentInterface_**.**_NameOfTheProperty_.
 >     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay.capabilities`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
+>
+>     If the property is static, then the slug must have a `_static` suffix, like: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. This enables us to support instance and static properties which have the same name.
+>
 > - **page-type**
 >   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
 > - **status**
