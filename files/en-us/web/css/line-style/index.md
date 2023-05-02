@@ -209,7 +209,7 @@ This example demonstrates line-style and color choice. With some `<line-style>` 
 
 #### HTML
 
-This example uses multiple `<div>`elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style).
+This example uses multiple {{HTMLElement( "div" )}} elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```html-nolint hidden
 <section>
@@ -247,7 +247,7 @@ This example uses multiple `<div>`elements, each with a different `border-color`
 
 #### CSS
 
-The four sides of each list item have a different `<line-style>` value, and each list item has a different {{cssxref("color_value", "&lt;color>")}} value. We use [generated content](/en-US/docs/Web/CSS/content) to display the CSS declared inline.
+The four sides of each `<div>` have a different `<line-style>` value, and each list item has a different {{cssxref("color_value", "&lt;color>")}} value. We use [generated content](/en-US/docs/Web/CSS/content) to display the CSS declared inline.
 
 ```css hidden
 section {
@@ -289,3 +289,4 @@ Notice that the almost-black color of `#000001` may be different from the actual
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module
 - [CSS basic user interface](/en-US/docs/Web/CSS/CSS_Basic_User_Interface) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) module
+
