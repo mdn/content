@@ -29,7 +29,7 @@ overflow-block: revert-layer;
 overflow-block: unset;
 ```
 
-The `overflow-block` property is specified as a single keyword chosen from the list of values below.
+The `overflow-block` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value:
 
 ### Values
 
@@ -42,7 +42,7 @@ The `overflow-block` property is specified as a single keyword chosen from the l
 - `scroll`
   - : Content is clipped if necessary to fit in the block dimension in the padding box. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
 - `auto`
-  - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
+  - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context.
 
 ## Formal definition
 
@@ -164,3 +164,4 @@ div {
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_Scrollbars) module
 - [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
+- [Learn CSS: overflow and how to manage it](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
