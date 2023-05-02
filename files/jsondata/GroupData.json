@@ -1127,6 +1127,21 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Remote Playback API": {
+      "overview": ["Remote Playback API"],
+      "interfaces": ["RemotePlayback"],
+      "methods": [
+        "RemotePlayback.watchAvailability()",
+        "RemotePlayback.cancelWatchAvailability()",
+        "RemotePlayback.prompt()"
+      ],
+      "properties": ["RemotePlayback.state"],
+      "events": [
+        "RemotePlayback: connecting",
+        "RemotePlayback: connect",
+        "RemotePlayback: disconnect"
+      ]
+    },
     "Reporting API": {
       "overview": ["Reporting API"],
       "guides": [],
