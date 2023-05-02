@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getMonth
 
 {{JSRef}}
 
-The **`getMonth()`** method of a {{jsxref("Date")}} instance returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
+The **`getMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
 
 {{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}
 
@@ -28,7 +28,7 @@ The return value of `getMonth()` is zero-based, which is useful for indexing int
 ```js
 const valentines = new Date("1995-02-14");
 const month = valentines.getMonth();
-const monthNames = ["January", "February", "March", /* … */];
+const monthNames = ["January", "February", "March" /* , … */];
 
 console.log(monthNames[month]); // "February"
 ```

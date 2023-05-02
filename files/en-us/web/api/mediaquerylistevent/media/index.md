@@ -33,7 +33,7 @@ mql.addEventListener("change", (event) => {
     document.body.style.backgroundColor = "blue";
   }
 
-  console.log(e.media);
+  console.log(event.media);
 });
 ```
 

@@ -124,7 +124,7 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_list.html** 
 Templates for generic views are just like any other templates (although of course the context/information passed to the template may differ).
 As with our _index_ template, we extend our base template in the first line and then replace the block named `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -151,7 +151,7 @@ We use the [`if`](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#
 If `book_list` is empty, then the `else` clause displays text explaining that there are no books to list.
 If `book_list` is not empty, then we iterate through the list of books.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -167,7 +167,7 @@ For more information about conditional operators see: [if](https://docs.djangopr
 The template uses the [for](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below.
 Each iteration populates the `book` template variable with information for the current list item.
 
-```html
+```django
 {% for book in book_list %}
   <li> <!-- code here get information from each book item --> </li>
 {% endfor %}
@@ -175,7 +175,7 @@ Each iteration populates the `book` template variable with information for the c
 
 You might also use the `{% empty %}` template tag to define what happens if the book list is empty (although our template chooses to use a conditional instead):
 
-```html
+```django
 <ul>
   {% for book in book_list %}
     <li> <!-- code here get information from each book item --> </li>
@@ -192,7 +192,7 @@ For example, you can test the `forloop.last` variable to perform conditional pro
 
 The code inside the loop creates a list item for each book that shows both the title (as a link to the yet-to-be-created detail view) and the author.
 
-```html
+```django
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
@@ -455,7 +455,7 @@ def book_detail_view(request, primary_key):
 
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -490,13 +490,13 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 >
 > - Use the `url` template tag to reverse the 'author-detail' URL (defined in the URL mapper), passing it the author instance for the book:
 >
->   ```python
+>   ```django
 >   <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
 >   ```
 >
 > - Call the author model's `get_absolute_url()` method (this performs the same reversing operation):
 >
->   ```html
+>   ```django
 >   <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
 >   ```
 >
@@ -610,13 +610,13 @@ Now that the data is paginated, we need to add support to the template to scroll
 
 Open **/locallibrary/catalog/templates/_base_generic.html_** and find the "content block" (as shown below).
 
-```python
+```django
 {% block content %}{% endblock %}
 ```
 
 Copy in the following pagination block immediately following the `{% endblock %}`. The code first checks if pagination is enabled on the current page. If so, it adds _next_ and _previous_ links as appropriate (and the current page number).
 
-```python
+```django
 {% block pagination %}
     {% if is_paginated %}
         <div class="pagination">
@@ -666,7 +666,7 @@ The code required for the URL mappers and the views should be virtually identica
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL).
 >   The recommended way to do this is to call `get_absolute_url()` on the author model as shown below.
 >
->   ```html
+>   ```django
 >   <p><strong>Author:</strong> <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a></p>
 >
 >   ```

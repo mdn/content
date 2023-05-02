@@ -35,7 +35,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("border-inline-end-color","-webkit-border-end-color")}}\*\*
 - {{CSSxRef("border-inline-end-style","-webkit-border-end-style")}}\*\*
 - {{CSSxRef("border-inline-end-width","-webkit-border-end-width")}}\*\*
-- {{CSSxRef("border-image-repeat", "-webkit-border-fit")}}
 - {{CSSxRef("-webkit-border-horizontal-spacing", "-webkit-border-horizontal-spacing")}}
 - {{CSSxRef("border-inline-start", "-webkit-border-start")}}\*\*
 - {{CSSxRef("border-inline-start-color", "-webkit-border-start-color")}}\*\*
@@ -425,7 +424,7 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 The following properties were once supported with the -webkit- prefix but are no longer supported in evergreen browsers, with or without the `-webkit-` prefix.
 
 - `-webkit-alt*`
-- {{CSSxRef("-webkit-background-composite", "-webkit-background-composite")}}
+- `-webkit-background-composite`
 - `-webkit-border-fit`
 - `-webkit-color-correction`
 - `-webkit-flow-from`
@@ -436,11 +435,11 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
-- {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
-- {{CSSxRef("-webkit-margin-after-collapse", "-webkit-margin-after-collapse")}}
-- {{CSSxRef("-webkit-margin-before-collapse", "-webkit-margin-before-collapse")}}
-- {{CSSxRef("-webkit-margin-bottom-collapse", "-webkit-margin-bottom-collapse")}}
-- {{CSSxRef("-webkit-margin-top-collapse", "-webkit-margin-top-collapse")}}
+- `-webkit-margin-collapse`
+- `-webkit-margin-after-collapse`
+- `-webkit-margin-before-collapse`
+- `-webkit-margin-bottom-collapse`
+- `-webkit-margin-top-collapse`
 - {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}
 - `-webkit-region-break-after`
 - `-webkit-region-break-before`

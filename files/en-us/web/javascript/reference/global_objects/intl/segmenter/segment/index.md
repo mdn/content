@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.segment
 
 {{JSRef}}
 
-The **`Intl.Segmenter.prototype.segment()`** method segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+The **`segment()`** method of {{jsxref("Intl.Segmenter")}} instances segments a string according to the locale and granularity of this `Intl.Segmenter` object.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
 

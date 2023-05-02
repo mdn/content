@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setMinutes
 
 {{JSRef}}
 
-The **`setMinutes()`** method of a {{jsxref("Date")}} instance changes the minutes for this date according to local time.
+The **`setMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setminutes.html")}}
 

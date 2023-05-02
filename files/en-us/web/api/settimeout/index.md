@@ -232,7 +232,7 @@ setTimeout(() => {
 }, 500);
 ```
 
-A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
+A string passed to `setTimeout()` is evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 

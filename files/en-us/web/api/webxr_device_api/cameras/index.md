@@ -118,11 +118,15 @@ Thus a matrix that looks like this:
 Is represented in array form like this:
 
 ```js-nolint
-let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
-                   a9, a10, a11, a12, a13, a14, a15, a16];
+let matrixArray = [
+  a1, a2, a3, a4,
+  a5, a6, a7, a8,
+  a9, a10, a11, a12,
+  a13, a14, a15, a16,
+];
 ```
 
-In this array, the leftmost column contains the entries _a_₁, _a_₂, _a_₃, and _a_₄. The topmost row contains the entries _a_₁, _a_₅, _a_₉, and _a_₁₃.
+In this array, the leftmost column contains the entries `a1`, `a2`, `a3`, and `a4`. The topmost row contains the entries `a1`, `a5`, `a9`, and `a13`.
 
 Keep in mind that most WebGL and WebXR programming is done using third-party libraries which expand upon the basic functionality of WebGL by adding routines that make it much easier to perform not only core matrix and other operations, but often also to simulate these standard cinematography techniques. You should strongly consider using one instead of directly using WebGL. This guide uses WebGL directly since it's useful to understand to some extent what goes on under the hood, and to aide in the development of libraries or to help you optimize code.
 
@@ -187,10 +191,10 @@ If you want to scale up by a factor of 2, you need to multiply each component by
 
 ```js-nolint
 let scaleTransform = [
-  Sx,  0,  0,  0,
-   0, Sy,  0,  0,
-   0,  0, Sz,  0,
-   0,  0,  0,  1
+  Sx, 0, 0, 0,
+  0, Sy, 0, 0,
+  0, 0, Sz, 0,
+  0, 0, 0, 1
 ];
 ```
 

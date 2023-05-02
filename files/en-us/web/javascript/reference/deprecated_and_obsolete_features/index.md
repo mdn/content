@@ -138,8 +138,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Date
 
-- `Date.prototype.toLocaleFormat()`, which used a format string in the same format expected by the
-`strftime()` function in C, is obsolete. Use [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
+- `Date.prototype.toLocaleFormat()`, which used a format string in the same format expected by the `strftime()` function in C, is obsolete. Use [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
 
 ### Array
 

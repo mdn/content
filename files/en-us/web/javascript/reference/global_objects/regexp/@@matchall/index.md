@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@matchAll
 
 {{JSRef}}
 
-The **`[@@matchAll]()`** method of a regular expression specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
+The **`[@@matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
