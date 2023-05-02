@@ -405,7 +405,7 @@ We then use generated content to generate a little down arrow, and put it in the
 }
 ```
 
-The second, slightly more major issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You can inherit font set on the parent but you won't be able to set things like spacing and colors. The same is also true of the autocomplete list that appears for the datalist.
+The second, slightly more important issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You can inherit the font set on the parent, but you won't be able to set things like spacing and colors. The same is true for the autocomplete list that appears with {{HTMLElement("datalist")}}.
 
 If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
 
