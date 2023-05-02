@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
 
 {{CSSRef}}
 
-The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand border and column-rule properties:
+The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/css_backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/CSS_Columns) properties:
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
