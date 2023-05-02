@@ -38,7 +38,7 @@ req.onload = (event) => {
   // ...
 };
 
-oReq.send();
+req.send();
 ```
 
 ## Receiving binary data in older browsers
