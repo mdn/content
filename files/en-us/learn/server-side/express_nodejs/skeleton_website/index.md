@@ -48,6 +48,7 @@ You should already have installed the generator as part of [setting up a Node de
 ```bash
 npm install express-generator -g
 ```
+or otherwise using `npx express-generator helloworld` if you have a nodejs version > 8.2.0 .
 
 The generator has a number of options, which you can view on the command line using the `--help` (or `-h`) command:
 
@@ -263,10 +264,10 @@ Because the tool isn't installed globally we can't launch it from the command li
     },
   ```
 
-- On Windows, use this command instead:
+- On Windows, use this command instead, as the string set in "serverstart":
 
   ```bash
-  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
+  "serverstart": SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
   ```
 
 We can now start the server in almost exactly the same way as previously, but using the `devstart` command.
