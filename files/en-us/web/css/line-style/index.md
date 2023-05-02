@@ -199,7 +199,7 @@ p + p {
 
 #### Result
 
-{{EmbedLiveSample("Line_styles", "500", "800")}}
+{{EmbedLiveSample("Defining_line_styles", "500", "800")}}
 
 Notice that the black border is not always black.
 
