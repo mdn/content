@@ -12,7 +12,7 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
-- {{cssxref("border-block-end")}}, {{cssxref("border-block-end-style")}
+- {{cssxref("border-block-end")}}, {{cssxref("border-block-end-style")}}
 - {{cssxref("border-block-start")}}, {{cssxref("border-block-start-style")}}
 - {{cssxref("border-bottom")}}, {{cssxref("border-bottom-style")}}
 - {{cssxref("border-inline")}}, {{cssxref("border-inline-style")}}
