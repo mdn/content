@@ -34,6 +34,8 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a promise that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string that indicates whether the connection supports unreliable transports, such as UDP, or will only run over reliable transport.
+- {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a promise that resolves if a server wants the client to gracefully close the connection.
 
 ## Instance methods
 
