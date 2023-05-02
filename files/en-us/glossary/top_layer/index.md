@@ -21,5 +21,3 @@ The following screenshot demonstrates how a shown popover element is placed in t
 - [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 - [The Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [The Popover API](/en-US/docs/Web/API/Popover_API)
-- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#creating_layers)
-- {{cssxref("@layer")}}

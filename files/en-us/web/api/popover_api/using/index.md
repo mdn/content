@@ -119,21 +119,27 @@ You also have several methods to control showing and hiding:
 
 For example, you might want to provide the ability to toggle a help popover on and off by clicking a button or pressing a particular key on the keyboard. The first one could be achieved declaratively, or you could do it using JavaScript as shown above.
 
-The second one could be achieved like so:
+For the second one, you could create an event handler that programs two separate keys — one to open the popover and one to close it again:
 
 ```js
 document.addEventListener("keydown", (event) => {
   if (event.key === "h") {
     if (popover.matches(":popover-open")) {
       popover.hidePopover();
-    } else {
+    } 
+  }
+
+  if (event.key === "s") {
+    if (!popover.matches(":popover-open")) {
       popover.showPopover();
     }
   }
 });
 ```
 
-This example uses {{domxref("Element.matches()")}} to programmatically check whether a popover is currently showing. The {{cssxref(":popover-open")}} pseudo-class selects only popovers that are currently being shown. Alternatively, you could cut out the need for it altogether by:
+This example uses {{domxref("Element.matches()")}} to programmatically check whether a popover is currently showing. The {{cssxref(":popover-open")}} pseudo-class matches only popovers that are currently being shown. This is important to avoid the errors that are thrown if you try to show an already-shown popover, or hide an already-hidden popover.
+
+Alternatively, you could program a single key to show _and_ hide the popover like this:
 
 ```js
 document.addEventListener("keydown", (event) => {

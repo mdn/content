@@ -29,7 +29,7 @@ togglePopover(force)
 ### Parameters
 
 - `force`
-  - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}:
+  - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}, except that it doesn't throw an exception if the popover is already in the target state.
     - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
     - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
 

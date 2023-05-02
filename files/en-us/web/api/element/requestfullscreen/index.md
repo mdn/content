@@ -19,8 +19,6 @@ it's now in full screen mode. If permission is denied, the promise is rejected a
 element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead. If the element has been
 detached from the original document, then the document receives these events instead.
 
-> **Note:** It is possible to put a {{domxref("Popover_API", "popover", "", "nocode")}} element (for example `<div popover>...</div>`) into fullscreen mode. However, if you try to call `requestFullscreen()` on a popover that is already being shown in the top layer (via {{domxref("HTMLElement.showPopover()")}}), the promise will reject, because the behavior doesn't make sense in that context.
-
 ## Syntax
 
 ```js-nolint
@@ -68,7 +66,7 @@ returned. The rejection handler receives one of the following exception values:_
     - The element is not permitted to use the `fullscreen` feature,
       either because of [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) configuration or other access control features.
     - The element and its document are the same node.
-    - The element is a popover that is already being shown via {{domxref("HTMLElement.showPopover()")}}.
+    - The element is a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown via {{domxref("HTMLElement.showPopover()")}}.
 
 ## Security
 

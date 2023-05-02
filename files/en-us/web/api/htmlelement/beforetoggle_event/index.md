@@ -11,8 +11,8 @@ browser-compat: api.HTMLElement.beforetoggle_event
 
 The **`beforetoggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) just before it is shown or hidden.
 
-- If the popover is currently hidden, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
-- If the popover is currently showing, then `event.oldState` will be `open` and `event.newState` will be `closed`.
+- If the popover is transitioning from hidden to showing, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
+- If the popover is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
 
 ## Syntax
 

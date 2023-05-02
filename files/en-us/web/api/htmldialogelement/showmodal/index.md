@@ -14,8 +14,6 @@ of any other dialogs that might be present. It displays in the {{glossary("top l
 {{cssxref('::backdrop')}} pseudo-element. Interaction outside the dialog is blocked and
 the content outside it is rendered inert.
 
-> **Note:** It is possible to create a {{htmlelement("dialog")}} element that is also a {{domxref("Popover_API", "popover", "", "nocode")}}, i.e. `<dialog popover>...</dialog>`. However, if you try to call `showModal()` on a popover that is already being shown in the top layer (via {{domxref("HTMLElement.showPopover()")}}), the call with fail, because the behavior doesn't make sense in that context.
-
 ## Syntax
 
 ```js-nolint
@@ -33,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element), or if the dialog is also a popover that is already being shown.
+  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element), or if the dialog is also a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown.
 
 ## Examples
 
