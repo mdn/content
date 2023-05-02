@@ -66,7 +66,7 @@ This example shows all the `<line-style>` values as values for the CSS {{cssxref
 
 #### HTML
 
-This example uses multiple {{HTMLElement( "<div>" )}} elements, each with a class representing the `<line-style>` value that is being demonstrated.
+This example uses multiple {{HTMLElement( "div" )}} elements, each with a class representing the `<line-style>` value that is being demonstrated.
 
 ```html
 <div class="<line-style>">
