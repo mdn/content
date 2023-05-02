@@ -32,6 +32,8 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to read data from the server.
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a promise that resolves when the transport is ready to use.
+- {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a string that indicates whether the connection supports unreliable transports, such as UDP, or will only run over reliable transport.
 
 ## Instance methods
 

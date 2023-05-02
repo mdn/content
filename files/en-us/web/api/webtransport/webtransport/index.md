@@ -62,9 +62,9 @@ new WebTransport(url, options)
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if `serverCertificateHashes` is specified but the transport protocol does not support this feature.
-- `SyntaxError` {{domxref("DOMException")}}
+- `SyntaxError`
   - : Thrown if the specified `url` is invalid, if the scheme is not HTTPS, or if the URL includes a fragment.
-- `TypeError` {{domxref("DOMException")}}
+- `TypeError`
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
 
 ## Examples
