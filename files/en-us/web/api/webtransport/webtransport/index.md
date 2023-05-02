@@ -10,32 +10,53 @@ browser-compat: api.WebTransport.WebTransport
 
 {{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`WebTransport()`** constructor creates a new
-{{domxref("WebTransport")}} object instance.
+The **`WebTransport()`** constructor creates a new {{domxref("WebTransport")}} object instance.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
 ```js-nolint
+new WebTransport(url)
 new WebTransport(url, options)
 ```
 
 ### Parameters
 
 - `url`
-  - : A string representing the URL of the HTTP/3 server to connect to. The scheme needs to be HTTPS, and the port number needs to be explicitly specified.
+  - : A string representing the URL of the HTTP/3 server to connect to.
+    The scheme must be HTTPS, and the port number needs to be explicitly specified.
 - `options` {{optional_inline}}
-  - : An object containing the following properties:
+  - : An object that may have the following properties:
+
+    - `allowPooling` {{optional_inline}}
+      - : A boolean value.
+        If `true`, the network connection for this {{domxref("WebTransport")}} can be shared with a pool of other HTTP/3 sessions.
+        By default the value is `false`, and the connection cannot be shared.
+    - `congestionControl` {{optional_inline}}
+      - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
+        This is a hint to the user agent.
+        The allowed values are: `default` (default), `throughput`, and `low-latency`.
+    - `requireUnreliable` {{optional_inline}}
+      - : A boolean value.
+        If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
+        By default the value is `false`.
     - `serverCertificateHashes` {{optional_inline}}
-      - : An array of `WebTransportHash` objects. If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI). This feature allows Web developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
+      - : An array of objects defining a hash value and its associated algorithm.
+        This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
-`WebTransportHash` objects contain two properties:
+        If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI).
+        This feature allows Web developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
-- `algorithm`
-  - : A string representing the algorithm to use to verify the hash. Any hash using an unknown algorithm will be ignored.
-- `value`
-  - : A `BufferSource` representing the hash value.
+        If empty the user agent uses the same certificate verification procedures it would use for normal fetch operations.
+
+        Each object in the array has the following properties:
+
+        - `algorithm`
+          - : A string representing the algorithm to use to verify the hash.
+            Any hash using an unknown algorithm will be ignored.
+        - `value`
+          - : A `BufferSource` representing the hash value.
 
 ### Exceptions
 
@@ -43,6 +64,8 @@ new WebTransport(url, options)
   - : Thrown if `serverCertificateHashes` is specified but the transport protocol does not support this feature.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the specified `url` is invalid, if the scheme is not HTTPS, or if the URL includes a fragment.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
 
 ## Examples
 
