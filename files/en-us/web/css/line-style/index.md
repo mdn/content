@@ -66,7 +66,7 @@ This example shows all the `<line-style>` values as values for the CSS {{cssxref
 
 #### HTML
 
-This example uses multiple `<div>`elements, each with a class representing the `<line-style>` value that is being demonstrated.
+This example uses multiple {{HTMLElement( "<div>" )}} elements, each with a class representing the `<line-style>` value that is being demonstrated.
 
 ```html
 <div class="<line-style>">
@@ -120,7 +120,7 @@ This example uses multiple `<div>`elements, each with a class representing the `
 
 #### CSS
 
-In the CSS for this example, the border and the column-rule for all the `<p>` elements is defined to have a width of `7px` and the style value of `double`. For each paragraph, the `double` values are then overridden by specifying a different `<line-style>` value for the `border-style` and `column-rule-style` properties.
+In the CSS for this example, the border and the column-rule for all the `<p>` elements is defined to have a width of `7px` and the style value of `double`. For each paragraph, the `double` value is then overridden by specifying a different `<line-style>` value for the `border-style` and `column-rule-style` properties.
 
 ```css hidden
 div {
@@ -289,4 +289,3 @@ Notice that the almost-black color of `#000001` may be different from the actual
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module
 - [CSS basic user interface](/en-US/docs/Web/CSS/CSS_Basic_User_Interface) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) module
-
