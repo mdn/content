@@ -45,7 +45,7 @@ Regular expression literals cannot be specified with certain non-syntax literal 
 
 Within character classes, more characters can appear literally. For more information, see the [Character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) page. For example `\.` and `[.]` both match a literal `.`.
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, the pattern is interpreted as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). This means surrogate pairs actually represent two literal characters. This causes unexpected behaviors when paired with other features:
+In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, the pattern is interpreted as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters). This means surrogate pairs actually represent two literal characters. This causes unexpected behaviors when paired with other features:
 
 ```js
 /^[😄]$/.test("😄"); // false, because the pattern is interpreted as /^[\ud83d\udc04]$/
