@@ -216,7 +216,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to codepoints
+          >, where "X" is a letter from A–Z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001F</code>). For example,
           <code>/\cM/</code> matches "\r" in "\r\n".
         </p>
