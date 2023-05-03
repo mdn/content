@@ -6,11 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
 ---
 
-{{APIRef("Storage Access API")}}
+{{APIRef("DOM")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to its client-side storage.
 
-This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+This is relevant to user agents that by default block access to client-side storage by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+> **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Syntax
 
@@ -31,6 +33,17 @@ When the promise gets resolved, the resolve handler will run as if a user gestur
 - In the former case, code can then start to call APIs that require user activation and things can move forward.
 - In the latter case, code can run to inform the user of why the request failed and what they can do to continue (for example asking them to log in, if that is a requirement).
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the current {{domxref("Document")}} is not yet active.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if:
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The document or the top-level document has a `null` origin.
+    - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+
 ## Examples
 
 ```js
@@ -43,16 +56,6 @@ document.requestStorageAccess().then(
   }
 );
 ```
-
-## Security
-
-Access to cross-site cookies is granted to iframes based on a number of prerequisites:
-
-1. The browser must be processing a user gesture ({{Glossary("transient activation")}}).
-2. The document or the top-level document must not have a null origin.
-3. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-4. If the document is sandboxed, it must have the `allow-storage-access-by-user-activation` token.
-5. The document must pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Specifications
 
