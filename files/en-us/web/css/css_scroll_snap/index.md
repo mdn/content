@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 {{CSSRef}}
 
-**CSS Scroll Snap** is a module of CSS that contains features to control panning and scrolling behavior with snap positions.
+The **CSS scroll snap** module contains features to control panning and scrolling behavior with snap positions.
 
 ## Key concepts
 
@@ -58,6 +58,13 @@ The {{cssxref("scroll-snap-align")}} property is set on every child of the scrol
 ## Guides
 
 - [Basic concepts of CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+
+## Related concepts
+
+- {{cssxref(":target")}} pseudo-class, or the target of
+- {{domxref("scrollBy()")}} method
+- {{domxref("scrollIntoView()")}} method
+- {{domxref("scrollTo()")}} method
 
 ## Specifications
 
