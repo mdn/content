@@ -1,7 +1,6 @@
 ---
 title: "Test your skills: Multimedia and embedding"
-slug: >-
-  Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
+slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
 
 {{learnsidebar}}

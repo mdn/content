@@ -3,10 +3,8 @@ title: specularExponent
 slug: Web/SVG/Attribute/specularExponent
 page-type: svg-attribute
 spec-urls:
-  - >-
-    https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent
-  - >-
-    https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-specularexponent
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-specularexponent
 ---
 
 {{SVGRef}}
