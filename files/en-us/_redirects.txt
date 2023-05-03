@@ -12306,6 +12306,7 @@
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/en-US/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode

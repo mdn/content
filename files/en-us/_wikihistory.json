@@ -105749,16 +105749,6 @@
     "modified": "2020-04-16T11:38:29.528Z",
     "contributors": ["fscholz", "SphinxKnight", "nbp"]
   },
-  "Web/JavaScript/Reference/Errors/Not_a_codepoint": {
-    "modified": "2020-04-14T12:37:35.061Z",
-    "contributors": [
-      "fscholz",
-      "jahzielv",
-      "johnjago",
-      "PatrickKettner",
-      "jimnellie"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Not_a_constructor": {
     "modified": "2020-04-16T11:02:21.167Z",
     "contributors": [
@@ -105783,6 +105773,16 @@
       "AJCastroChandri",
       "nmve",
       "otherrealm"
+    ]
+  },
+  "Web/JavaScript/Reference/Errors/Not_a_valid_code_point": {
+    "modified": "2020-04-14T12:37:35.061Z",
+    "contributors": [
+      "fscholz",
+      "jahzielv",
+      "johnjago",
+      "PatrickKettner",
+      "jimnellie"
     ]
   },
   "Web/JavaScript/Reference/Errors/Not_defined": {
