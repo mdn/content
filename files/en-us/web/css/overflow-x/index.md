@@ -125,6 +125,6 @@ If {{cssxref("overflow-y")}} is `hidden`, `scroll`, or `auto`, and the `overflow
 
 ## See also
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
-- [Learn CSS: overflow and how to manage it](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)

@@ -135,4 +135,4 @@ div {
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
-- [Learn CSS: overflow and how to manage it](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
