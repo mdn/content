@@ -5,7 +5,7 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
+In this article, we describe various web-related concepts: webpages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>
   <tbody>
@@ -34,7 +34,7 @@ As with any area of knowledge, the web comes with a lot of jargon. Don't worry. 
 
 We'll cover these terms and technologies in more detail as we explore further, but these quick definitions will be a great start for you:
 
-- web page
+- webpage
   - : A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Edge, or Apple Safari. These are also often called just "pages."
 - website
   - : A collection of web pages which are grouped together and usually connected together in various ways. Often called a "web site" or a "site."
@@ -64,9 +64,9 @@ _There is no active learning available yet. [Please, consider contributing](/en-
 
 So, let's dig deeper into how those four terms are related and why they are sometimes confused with each other.
 
-### Web page
+### Webpage
 
-A **web page** is a simple document displayable by a {{Glossary("browser")}}. Such documents are written in the {{Glossary("HTML")}} language (which we look into in more detail in [other articles](/en-US/docs/Web/HTML)). A web page can embed a variety of different types of resources such as:
+A **webpage** is a simple document displayable by a {{Glossary("browser")}}. Such documents are written in the {{Glossary("HTML")}} language (which we look into in more detail in [other articles](/en-US/docs/Web/HTML)). A web page can embed a variety of different types of resources such as:
 
 - _style information_ — controlling a page's look-and-feel
 - _scripts_ — which add interactivity to the page
@@ -78,15 +78,15 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ![Example of a web page address in the browser address bar](web-page.jpg)
 
-### Web site
+### Website
 
-A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
+A _website_ is a collection of linked webpages (plus their associated resources) that share a unique domain name. Each webpage of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
 ![Example of a web site domain name in the browser address bar](web-site.jpg)
 
-The ideas of a _web page_ and a _website_ are especially easy to confuse for a _website_ that contains only one _web page._ Such a website is sometimes called a _single-page website._
+The ideas of a _webpage_ and a _website_ are especially easy to confuse for a _website_ that contains only one _webpage._ Such a website is sometimes called a _single-page website._
 
 ### Web server
 
