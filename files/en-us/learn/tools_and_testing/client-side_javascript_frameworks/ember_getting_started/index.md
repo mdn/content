@@ -1,7 +1,6 @@
 ---
 title: Getting started with Ember
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

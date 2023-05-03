@@ -1,7 +1,6 @@
 ---
 title: "Adding a new todo form: Vue events, methods, and models"
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

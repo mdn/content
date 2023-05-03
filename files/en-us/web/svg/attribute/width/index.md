@@ -4,8 +4,7 @@ slug: Web/SVG/Attribute/width
 page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width
-  - >-
-    https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width
   - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
