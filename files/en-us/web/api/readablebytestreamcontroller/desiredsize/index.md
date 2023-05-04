@@ -38,4 +38,4 @@ While the example uses a default source, the concepts are exactly the same as fo
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
-- {{domxref("ReadableByteStreamController", "ReadableByteStreamController", "", "nocode")}}
+- {{domxref("ReadableByteStreamController")}}

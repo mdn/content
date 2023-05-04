@@ -137,5 +137,5 @@ When there is no more data in the stream, the `read()` method fulfills with an o
 
 ## See also
 
-- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()", "", "nocode")}} constructor
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

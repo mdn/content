@@ -52,5 +52,5 @@ const reader = stream.getReader({ mode: "byob" });
 
 ## See also
 
-- {{domxref("ReadableStreamBYOBReader", "ReadableStreamBYOBReader", "", "nocode")}}
+- {{domxref("ReadableStreamBYOBReader")}}
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

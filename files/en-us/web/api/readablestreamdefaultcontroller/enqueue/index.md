@@ -89,4 +89,4 @@ const stream = new ReadableStream({
 ## See also
 
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
-- {{domxref("ReadableStreamDefaultController", "ReadableStreamDefaultController", "", "nocode")}}
+- {{domxref("ReadableStreamDefaultController")}}
