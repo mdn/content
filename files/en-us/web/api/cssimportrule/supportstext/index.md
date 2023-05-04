@@ -12,7 +12,8 @@ The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} in
 
 ## Value
 
-A string, or the `null` object.
+A string, or `null`.
+
 
 ## Examples
 
