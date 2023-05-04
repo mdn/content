@@ -37,7 +37,7 @@ PWAs have the benefits of websites, including:
 - PWAs are developed using standard web platform technologies, so they can run on multiple operating systems and device classes from a single codebase.
 - PWAs can be accessed directly from the web.
 
-But like platform-specific apps:
+PWAs also have many of the benefits of platform-specific apps, including:
 
 - [**PWAs can be installed on the device**](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). This means:
 
