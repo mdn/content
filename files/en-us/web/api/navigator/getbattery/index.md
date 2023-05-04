@@ -31,6 +31,7 @@ A {{JSxRef("Promise")}} that fulfills with a {{DOMxRef("BatteryManager")}} objec
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
+
   - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 - `SecurityError`

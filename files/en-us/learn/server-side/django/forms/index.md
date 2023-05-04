@@ -400,7 +400,7 @@ def renew_book_librarian(request, pk):
 
 Create the template referenced in the view (**/catalog/templates/catalog/book_renew_librarian.html**) and copy the code below into it:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -426,7 +426,8 @@ The form code is relatively simple. First, we declare the `form` tags, specifyin
 
 > **Note:** Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
 
-All that's left is the `\{{ form }}` template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
+All that's left is the `\{{ form }}` template variable, which we passed to the template in the context dictionary.
+Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
 
 ```html
 <tr>
@@ -485,7 +486,7 @@ For more examples of how to manually render forms in templates and dynamically l
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a view showing all books on loan in the library, which is only visible to library staff.
 The view might look similar to this:
 
-```pug
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -510,7 +511,7 @@ The view might look similar to this:
 We can add a link to the book renew page next to each item by appending the following template code to the list item text above.
 Note that this template code can only run inside the `{% for %}` loop, because that is where the `bookinst` value is defined.
 
-```pug
+```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
@@ -645,7 +646,7 @@ The "create" and "update" views use the same template by default, which will be 
 
 Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -663,7 +664,7 @@ This is similar to our previous forms and renders the fields using a table. Note
 
 The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}

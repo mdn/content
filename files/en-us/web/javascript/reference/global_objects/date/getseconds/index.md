@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getSeconds
 
 {{JSRef}}
 
-The **`getSeconds()`** method of a {{jsxref("Date")}} instance returns the seconds for this date according to local time.
+The **`getSeconds()`** method of {{jsxref("Date")}} instances returns the seconds for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
 

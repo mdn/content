@@ -2,13 +2,13 @@
 title: CSS scrollbars styling
 slug: Web/CSS/CSS_Scrollbars
 page-type: css-module
-spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 browser-compat:
   - css.properties.scrollbar-color
   - css.properties.scrollbar-width
+spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **CSS scrollbars styling** module defines properties that you can use for visual styling of scrollbars. You can customize the width of the scrollbar as required. You can also customize the color of the scrollbar _track_, which is the background of the scrollbar, and the color of the scrollbar _thumb_, which is the draggable handle of the scrollbar.
 
@@ -87,7 +87,6 @@ for us to breathe.
 - {{cssxref("scroll-snap-type")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
 - {{glossary("scroll container")}} glossary term
-- {{Glossary("scrollport")}} glossary term
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 
 ## Specifications

@@ -249,7 +249,7 @@ li:nth-child(even of .noted) {
 
 #### Result
 
-Items with `class="noted"` have a think bottom border and items 3, 10 and 17 have a solid background as they are the _even_ list items with `class="noted"`.
+Items with `class="noted"` have a thick bottom border and items 3, 10 and 17 have a solid background as they are the _even_ list items with `class="noted"`.
 
 {{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 
