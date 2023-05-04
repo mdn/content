@@ -71,6 +71,20 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `name`
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
+
+- `popovertarget`
+  - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+
+- `popovertargetaction`
+  - : Specifies the the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
+
+    - `"hide"`
+      - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
+    - `"show"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
+    - `"toggle"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
+
 - `type`
 
   - : The default behavior of the button. Possible values are:

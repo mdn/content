@@ -3,8 +3,7 @@ title: operator
 slug: Web/SVG/Attribute/operator
 page-type: svg-attribute
 spec-urls:
-  - >-
-    https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
 ---
 

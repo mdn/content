@@ -1,12 +1,12 @@
 ---
 title: JavaScript typed arrays
-slug: Web/JavaScript/Typed_arrays
+slug: Web/JavaScript/Guide/Typed_arrays
 page-type: guide
 ---
 
-{{JsSidebar("Advanced")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
-**JavaScript typed arrays** are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
+JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
 
 {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/en-US/docs/Web/API/WebSockets_API), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.
 
@@ -175,3 +175,5 @@ const normalArray = Array.prototype.slice.call(typedArray);
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/)
 - [Typed Arrays: Binary Data in the Browser](https://web.dev/webgl-typed-arrays/)
 - [Endianness](/en-US/docs/Glossary/Endianness)
+
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}

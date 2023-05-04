@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.isWellFormed
 
 {{JSRef}}
 
-The **`isWellFormed()`** method of {{jsxref("String")}} values returns a boolean indicating whether this string contains any [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+The **`isWellFormed()`** method of {{jsxref("String")}} values returns a boolean indicating whether this string contains any [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Returns `true` if this string does not contain any lone surrogates, `false` othe
 
 ## Description
 
-Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _surrogate pairs_, which is introduced in detail in the [UTF-16 characters, Unicode codepoints, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) section.
+Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _surrogate pairs_, which is introduced in detail in the [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) section.
 
 `isWellFormed()` allows you to test whether a string is well-formed (i.e. does not contain any lone surrogates). Compared to a custom implementation, `isWellFormed()` is more efficient, as engines can directly access the internal representation of strings. If you need to convert a string to a well-formed string, use the {{jsxref("String/toWellFormed", "toWellFormed()")}} method. `isWellFormed()` allows you to handle ill-formed strings differently from well-formed strings, such as throwing an error or marking it as invalid.
 

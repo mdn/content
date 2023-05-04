@@ -80,7 +80,7 @@ const obj3 = new Proxy(
     },
   },
 );
-Reflect.get(obj, "foo", { foo: 3 }); // "3bar"
+Reflect.get(obj3, "foo", { foo: 3 }); // "3bar"
 ```
 
 ## Specifications

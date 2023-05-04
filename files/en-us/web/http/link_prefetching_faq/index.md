@@ -84,7 +84,7 @@ Of course, this request header is not at all standardized, and it may change in 
 
 ### Is there a preference to disable link prefetching?
 
-Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`:
+Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`):
 
 ```js
 user_pref("network.prefetch-next", false);
