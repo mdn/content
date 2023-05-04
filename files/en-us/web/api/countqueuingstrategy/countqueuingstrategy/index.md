@@ -67,4 +67,4 @@ const size = queuingStrategy.size();
 
 ## See also
 
-- {{domxref("CountQueuingStrategy", "CountQueuingStrategy", "", "nocode")}}
+- {{domxref("CountQueuingStrategy")}}
