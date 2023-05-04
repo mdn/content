@@ -43,7 +43,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
-- {{domxref("HTMLElement.popover")}}
+- {{domxref("HTMLElement.popover")}} {{Experimental_Inline}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
