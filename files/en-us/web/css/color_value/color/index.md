@@ -26,7 +26,7 @@ Functional notation: `color([colorspace] params[ / A])`
 
 - `colorspace` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;ident&gt;")}} or {{CSSXref("&lt;dashed-ident&gt;")}} denoting the color space. If this is an `<ident>` it denotes one of the predefined color spaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom color space, defined by a {{CSSXref("@color-profile")}} rule.
+  - : An {{CSSXref("&lt;ident&gt;")}} or {{CSSXref("&lt;dashed-ident&gt;")}} denoting the color space. If this is an `<ident>`, it denotes one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`. If it is a `<dashed-ident>`, it denotes a custom color space, defined by a {{CSSXref("@color-profile")}} rule.
 
 - `params`
 
