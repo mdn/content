@@ -84,7 +84,7 @@ paired statistics object.
 The `findReportEntry()` function shown below examines
 an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
 record which contains the specified `key` — _and_ for which the key
-has the specified `value`. If no match is found (or the statistics report has
+has the specified `value`. If no match is found or the statistics report has
 no record corresponding to the statistics category indicated by `key`.
 
 ```js

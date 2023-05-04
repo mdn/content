@@ -209,7 +209,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to codepoints
+          >, where "X" is a letter from A–Z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>
