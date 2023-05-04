@@ -61,8 +61,8 @@ PWAs also have many of the benefits of platform-specific apps, including:
 
 The fundamental technical features of a PWA are:
 
-- It has a [web app manifest](Web/Manifest) file, which at a minimum provides information that the browser needs in order to install the PWA, such as the app name and icon.
-- It has a [service worker](Web/API/Service_Worker_API), which at a minimum provides a basic offline experience.
+- It has a [web app manifest](Web/Manifest) file, which, at a minimum, provides information that the browser needs in order to install the PWA, such as the app name and icon.
+- It has a [service worker](Web/API/Service_Worker_API), which, at a minimum, provides a basic offline experience.
 
 #### Web app manifest
 
