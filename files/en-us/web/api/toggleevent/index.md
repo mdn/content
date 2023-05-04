@@ -26,9 +26,9 @@ It is the event object for the `HTMLElement` {{domxref("HTMLElement.beforetoggle
 
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
+- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning to.
-- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
+- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning from.
 
 ## Examples
