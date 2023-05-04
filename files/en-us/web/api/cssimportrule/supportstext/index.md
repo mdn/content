@@ -14,7 +14,6 @@ The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} in
 
 A string, or `null`.
 
-
 ## Examples
 
 The document's single stylesheet contains three {{cssxref("@import")}} rules. The first declaration imports a stylesheet if `display: flex` is supported. The second declaration imports a stylesheet if the `:has` selector is supported. The third declaration imports a stylesheet without a supports condition.
