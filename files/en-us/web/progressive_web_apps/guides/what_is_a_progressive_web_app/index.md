@@ -32,7 +32,7 @@ However, websites have some benefits over platform-specific apps, including:
 
 Progressive web apps combine the best features of traditional websites and platform-specific apps.
 
-Like websites:
+PWAs have the benefits of websites, including:
 
 - PWAs are developed using standard web platform technologies, so they can run on multiple operating systems and device classes from a single codebase.
 - PWAs can be accessed directly from the web.
