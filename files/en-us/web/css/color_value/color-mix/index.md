@@ -28,11 +28,11 @@ Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], co
 
 - `colorspace`
 
-  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, and `oklch`, specifying the color space for interpolation.
+  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, or `oklch`, specifying the color space for interpolation.
 
 - `hue-interpolation-method` {{optional_inline}}
 
-  - : One of `shorter`, `longer`, `increasing`, and `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
+  - : One of `shorter`, `longer`, `increasing`, or `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
 
     > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
 
