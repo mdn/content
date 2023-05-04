@@ -153,7 +153,7 @@ See our [Toggle help UI example](https://mdn.github.io/dom-examples/popover-api/
 
 ## Dismissing popovers automatically via a timer
 
-Anoher common pattern in JavaScript is dismissing popovers automatically after a certain amount of time. You might for example want to create a system of "toast" notifications, where you have multiple actions underway at a time (for example multiple files uploading), and want to show a notification when each one succeeds or fails. For this you'll want to use manual popovers so you can show several at the same time, and use {{domxref("setTimeout")}} to remove them. A function for handling such popovers might look like so:
+Another common pattern in JavaScript is dismissing popovers automatically after a certain amount of time. You might for example want to create a system of "toast" notifications, where you have multiple actions underway at a time (for example multiple files uploading), and want to show a notification when each one succeeds or fails. For this you'll want to use manual popovers so you can show several at the same time, and use {{domxref("setTimeout")}} to remove them. A function for handling such popovers might look like so:
 
 ```js
 function makeToast(result) {
