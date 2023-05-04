@@ -88,5 +88,5 @@ function fetchStream() {
 
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
-- {{domxref("ReadableStream", "ReadableStream", "", "nocode")}}
-- {{domxref("ReadableStreamDefaultController", "ReadableStreamDefaultController", "", "nocode")}}
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}
