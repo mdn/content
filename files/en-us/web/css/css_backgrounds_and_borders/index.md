@@ -81,6 +81,10 @@ To see the code for this sample, [view the source on Github](https://github.com/
 
 - {{cssxref("box-shadow")}}
 
+### Data types
+
+- {{cssxref("line-type")}} enumerated type
+
 ## Guides
 
 - [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
