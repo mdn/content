@@ -53,7 +53,7 @@ PWAs also have many of the benefits of platform-specific apps, including:
   - Respond to push messages from the server.
   - Display notifications using the OS notificiations system.
 
-- PWAs can [use the whole screen](Web/Progressive_web_apps/How_to/Create_a_standalone_app), rather than running in the browser UI.
+- PWAs can [use the whole screen](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), rather than running in the browser UI.
 - PWAs can be integrated into the device, registering as share targets and sources, and accessing device features.
 - PWAs can be distributed in app stores, as well as openly via the web.
 
@@ -61,20 +61,20 @@ PWAs also have many of the benefits of platform-specific apps, including:
 
 The fundamental technical features of a PWA are:
 
-- It has a [web app manifest](Web/Manifest) file, which, at a minimum, provides information that the browser needs in order to install the PWA, such as the app name and icon.
-- It has a [service worker](Web/API/Service_Worker_API), which, at a minimum, provides a basic offline experience.
+- It has a [web app manifest](/en-US/docs/Web/Manifest) file, which, at a minimum, provides information that the browser needs in order to install the PWA, such as the app name and icon.
+- It has a [service worker](/en-US/docs/Web/API/Service_Worker_API), which, at a minimum, provides a basic offline experience.
 
 #### Web app manifest
 
-A PWA must have a web app manifest, and the [manifest must include enough information for the browser to install the PWA](/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
+A PWA must have a web app manifest, and the [manifest must include enough information for the browser to install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
 
-The manifest can define many other aspects of the PWA's appearance, such as [theme color](Web/Manifest/theme_color) and [background color](Web/Manifest/background_color), and its behavior, including its ability to [act as a share target](Web/Manifest/share_target) for data from other apps or to [handle particular file types](Web/Manifest/file_handlers).
+The manifest can define many other aspects of the PWA's appearance, such as [theme color](/en-US/docs/Web/Manifest/theme_color) and [background color](/en-US/docs/Web/Manifest/background_color), and its behavior, including its ability to [act as a share target](/en-US/docs/Web/Manifest/share_target) for data from other apps or to [handle particular file types](/en-US/docs/Web/Manifest/file_handlers).
 
 #### Service worker
 
 A PWA must have a service worker, and the service worker must implement at least a minimal offline experience.
 
-Service workers encourage an architecture in which the app's pages - that is, the traditional part of a website - implement the user interface, and the service worker implements a backend which can support [offline and background operation](Web/Progressive_web_apps/Guides/Offline_and_background_operation), making the PWA behave more like an app than a website. This is because service workers can be started by the runtime when they are needed (for example, to handle a push notification).
+Service workers encourage an architecture in which the app's pages - that is, the traditional part of a website - implement the user interface, and the service worker implements a backend which can support [offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation), making the PWA behave more like an app than a website. This is because service workers can be started by the runtime when they are needed (for example, to handle a push notification).
 
 ### Progressive enhancement
 
@@ -82,4 +82,4 @@ While {{Glossary("Progressive Enhancement", "progressive enhancement")}} is a de
 
 One basic component of progressive enhancement is that, if the user visits your PWA on the web and the browser/device can install it, the user will be prompted to install it. If the browser/device can't install your PWA, the user can still interact with it like a normal website.
 
-PWAs should perform feature detection for advanced APIs and provide acceptable fallback experiences. For example, the [Background Sync API](Web/API/Background_Synchronization_API) enables a PWA to ask a service worker to make a network request as soon as the device has connectivity. A classic use case for this is messaging. Suppose the user composes a message, but when the user tries to send the message, the device is offline. The Background Sync API enables the device to send the message in the background once the device is connected. On a device that does not support Background Sync, the app should let the user know the message could not be sent, giving them the chance to try again later.
+PWAs should perform feature detection for advanced APIs and provide acceptable fallback experiences. For example, the [Background Sync API](/en-US/docs/Web/API/Background_Synchronization_API) enables a PWA to ask a service worker to make a network request as soon as the device has connectivity. A classic use case for this is messaging. Suppose the user composes a message, but when the user tries to send the message, the device is offline. The Background Sync API enables the device to send the message in the background once the device is connected. On a device that does not support Background Sync, the app should let the user know the message could not be sent, giving them the chance to try again later.
