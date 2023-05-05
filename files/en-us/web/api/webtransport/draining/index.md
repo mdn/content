@@ -23,21 +23,9 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 
 ## Examples
 
+The following asynchronous function shows how you might monitor for indication that the server wants to close the connection gracefully, and then handle the request.
+
 ```js
-const url = "https://example.com:4999/wt";
-const transport = initTransport(url);
-safelyCloseTransport(transport);
-
-async function initTransport(url) {
-  // Initialize transport connection
-  const transport = new WebTransport(url);
-
-  // The connection can be used once ready fulfills
-  await transport.ready;
-  return transport;
-  // ...
-}
-
 async function safelyCloseTransport(transport) {
   await transport.draining;
 
