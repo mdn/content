@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.resolvedOptions()`**
-method returns a new object with properties reflecting the locale and date and time
-formatting options computed during initialization of this {{jsxref("Intl.DateTimeFormat")}}
-object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getTime
 
 {{JSRef}}
 
-The **`getTime()`** method of a {{jsxref("Date")}} instance returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
+The **`getTime()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
 

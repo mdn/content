@@ -155,7 +155,7 @@ class C {
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode codepoints are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode code points are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
 
 > **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
@@ -185,7 +185,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
+Some keywords are _reserved_, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 

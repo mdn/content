@@ -37,7 +37,7 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two keywords chosen from the list of options below. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
+The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
 
 ### Values
 
@@ -124,11 +124,20 @@ The following nuances should be kept in mind while using the various keywords fo
     feel."
   </p>
 </div>
+
+<div>
+  <code>overlay</code>
+  <p class="overlay">
+    Maya Angelou: "I've learned that people will forget what you said, people
+    will forget what you did, but people will never forget how you made them
+    feel."
+  </p>
+</div>
 ```
 
 #### CSS
 
-```css
+```css hidden
 body {
   display: flex;
   flex-wrap: wrap;
@@ -141,12 +150,19 @@ div {
 }
 
 p {
-  width: 8em;
+  width: 5em;
   height: 5em;
   border: dotted;
   margin-top: 0.5em;
 }
 
+div:nth-of-type(5),
+div:nth-of-type(6) {
+  margin-top: 200px;
+}
+```
+
+```css
 p.visible {
   overflow: visible;
 }
@@ -167,11 +183,15 @@ p.scroll {
 p.auto {
   overflow: auto;
 }
+
+p.overlay {
+  overflow: overlay;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample("Demonstrating results of various overflow keywords", "600", "500")}}
+{{EmbedLiveSample("Demonstrating results of various overflow keywords", "500", "600")}}
 
 ## Accessibility concerns
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCSeconds
 
 {{JSRef}}
 
-The **`getUTCSeconds()`** method of a {{jsxref("Date")}} instance returns the seconds in the specified date according to universal time.
+The **`getUTCSeconds()`** method of {{jsxref("Date")}} instances returns the seconds in the specified date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcseconds.html", "shorter")}}
 

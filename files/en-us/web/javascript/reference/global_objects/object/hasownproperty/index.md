@@ -151,7 +151,7 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // Use another Object's hasOwnProperty
 // and call it with 'this' set to foo
-({}.hasOwnProperty.call(foo, "bar")); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Note that in the first two cases there are no newly created objects.

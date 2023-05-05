@@ -23,6 +23,8 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
   - : Returns the associated stylesheet.
+- {{domxref("CSSImportRule.supportsText")}} {{ReadOnlyInline}}
+  - : Returns the supports condition specified by the {{cssxref("@import")}} rule.
 
 ## Instance methods
 

@@ -29,14 +29,14 @@ overflow-y: revert-layer;
 overflow-y: unset;
 ```
 
-The `overflow-y` property is specified as a single keyword chosen from the list of values below.
+The `overflow-y` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value.
 
-If {{cssxref("overflow-x")}} is `hidden`, `scroll`, or `auto` and this property is `visible` (default), the value will be implicitly computed as `auto`.
+If {{cssxref("overflow-x")}} is `hidden`, `scroll`, or `auto` and the `overflow-y` property is `visible` (default), the value will be implicitly computed as `auto`.
 
 ### Values
 
 - `visible`
-  - : Overflow content is not clipped and may be visible outside the element's padding box on top and bottom edges. The element box is not a {{glossary("scroll container")}}.
+  - : Overflow content is not clipped and may be visible outside the element's padding box at the top and bottom edges. The element box is not a {{glossary("scroll container")}}.
 - `hidden`
   - : Overflow content is clipped if necessary to fit vertically in the elements' padding box. No scroll bars are provided.
 - `clip`
@@ -44,7 +44,9 @@ If {{cssxref("overflow-x")}} is `hidden`, `scroll`, or `auto` and this property 
 - `scroll`
   - : Overflow content is clipped if necessary to fit vertically inside the element's padding box. Browsers display scroll bars in the vertical direction whether or not any content is actually clipped. (This prevents scroll bars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
 - `auto`
-  - : Depends on the user agent. If content fits inside the element's padding box, it looks the same as with `visible`, but still establishes a new block-formatting context. Desktop browsers provide scroll bars if content overflows.
+  - : Overflow content is clipped at the element's padding box, and overflow content can be scrolled into view. Unlike `scroll`, user agents display scroll bars _only if_ the content is overflowing, hiding scroll bars by default. If content fits inside the element's padding box, it looks the same as with `visible`, but still establishes a new block-formatting context.
+
+> **Note:** The keyword value `overlay` is a legacy value alias for `auto`. With `overlay`, the scroll bars are drawn on top of the content instead of taking up space.
 
 ## Formal definition
 
@@ -113,10 +115,7 @@ If {{cssxref("overflow-x")}} is `hidden`, `scroll`, or `auto` and this property 
 #### CSS
 
 ```css
-#div1,
-#div2,
-#div3,
-#div4 {
+div {
   border: 1px solid black;
   width: 250px;
   height: 100px;
@@ -154,4 +153,6 @@ If {{cssxref("overflow-x")}} is `hidden`, `scroll`, or `auto` and this property 
 
 ## See also
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
+- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)

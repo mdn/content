@@ -342,6 +342,8 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`name`](#name)                     | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair        |
 | [`pattern`](#pattern)               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                            |
 | [`placeholder`](#placeholder)       | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                        |
+| [`popovertarget`](#popovertarget)       | `button`           | Designates an `<input type="button">` as a control for a popover element                        |
+| [`popovertargetaction`](#popovertargetaction)       | `button`           | Specifies the action that a popover control should perform                        |
 | [`readonly`](#readonly)             | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                    |
 | [`required`](#required)             | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
 | [`size`](#size)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
@@ -533,6 +535,19 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
 
     > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
+
+- `popovertarget`
+  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+
+- `popovertargetaction`
+  - : Specifies the the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
+
+    - `"hide"`
+      - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
+    - `"show"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
+    - `"toggle"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
 
 - `readonly`
 
