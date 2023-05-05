@@ -1,5 +1,6 @@
 ---
-title: UIEvent.sourceCapabilities
+title: "UIEvent: sourceCapabilities property"
+short-title: sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
 page-type: web-api-instance-property
 status:

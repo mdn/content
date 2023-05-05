@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.speed
+title: "GeolocationCoordinates: speed property"
+short-title: speed
 slug: Web/API/GeolocationCoordinates/speed
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.speed

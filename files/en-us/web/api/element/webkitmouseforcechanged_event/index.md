@@ -1,5 +1,6 @@
 ---
 title: "Element: webkitmouseforcechanged event"
+short-title: webkitmouseforcechanged
 slug: Web/API/Element/webkitmouseforcechanged_event
 page-type: web-api-event
 status:

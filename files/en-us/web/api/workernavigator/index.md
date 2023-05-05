@@ -21,6 +21,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
 - {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}

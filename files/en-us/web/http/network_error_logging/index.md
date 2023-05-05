@@ -1,6 +1,7 @@
 ---
 title: Network Error Logging
 slug: Web/HTTP/Network_Error_Logging
+page-type: guide
 status:
   - experimental
 browser-compat: http.headers.NEL

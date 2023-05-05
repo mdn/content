@@ -1,5 +1,6 @@
 ---
-title: AuthenticatorAttestationResponse.getTransports()
+title: "AuthenticatorAttestationResponse: getTransports() method"
+short-title: getTransports()
 slug: Web/API/AuthenticatorAttestationResponse/getTransports
 page-type: web-api-instance-method
 browser-compat: api.AuthenticatorAttestationResponse.getTransports

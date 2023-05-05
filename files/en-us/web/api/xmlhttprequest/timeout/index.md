@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.timeout
+title: "XMLHttpRequest: timeout property"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.timeout

@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.objectStore
+title: "IDBIndex: objectStore property"
+short-title: objectStore
 slug: Web/API/IDBIndex/objectStore
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.objectStore

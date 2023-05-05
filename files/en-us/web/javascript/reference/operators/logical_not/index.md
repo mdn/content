@@ -17,7 +17,7 @@ operand can be converted to `true`; otherwise, returns `true`.
 ## Syntax
 
 ```js-nolint
-!expr
+!x
 ```
 
 ## Description

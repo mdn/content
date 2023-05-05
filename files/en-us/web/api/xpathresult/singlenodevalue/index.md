@@ -1,5 +1,6 @@
 ---
-title: XPathResult.singleNodeValue
+title: "XPathResult: singleNodeValue property"
+short-title: singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
 page-type: web-api-instance-property
 browser-compat: api.XPathResult.singleNodeValue

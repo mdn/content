@@ -1,5 +1,6 @@
 ---
-title: MediaSource.activeSourceBuffers
+title: "MediaSource: activeSourceBuffers property"
+short-title: activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 page-type: web-api-instance-property
 browser-compat: api.MediaSource.activeSourceBuffers

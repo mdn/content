@@ -33,6 +33,8 @@ These properties are defined on `EvalError.prototype` and shared by all `EvalErr
 
 _Inherits instance methods from its parent {{jsxref("Error")}}_.
 
+## Examples
+
 ### Creating an EvalError
 
 ```js

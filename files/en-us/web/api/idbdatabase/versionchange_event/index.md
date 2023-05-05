@@ -1,5 +1,6 @@
 ---
 title: "IDBDatabase: versionchange event"
+short-title: versionchange
 slug: Web/API/IDBDatabase/versionchange_event
 page-type: web-api-event
 browser-compat: api.IDBDatabase.versionchange_event

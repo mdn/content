@@ -1,5 +1,6 @@
 ---
-title: MediaList.item()
+title: "MediaList: item() method"
+short-title: item()
 slug: Web/API/MediaList/item
 page-type: web-api-instance-method
 browser-compat: api.MediaList.item

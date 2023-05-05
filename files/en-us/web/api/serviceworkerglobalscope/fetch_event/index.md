@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: fetch event"
+short-title: fetch
 slug: Web/API/ServiceWorkerGlobalScope/fetch_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.fetch_event

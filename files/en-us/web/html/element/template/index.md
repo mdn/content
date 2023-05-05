@@ -1,5 +1,5 @@
 ---
-title: '<template>: The Content Template element'
+title: "<template>: The Content Template element"
 slug: Web/HTML/Element/template
 page-type: html-element
 browser-compat: html.elements.template
@@ -182,7 +182,7 @@ container.appendChild(secondClone);
           >script-supporting elements</a
         >. Also allowed as a child of a {{HTMLElement("colgroup")}}
         element that does <em>not</em> have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
+        <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>
@@ -214,5 +214,5 @@ container.appendChild(secondClone);
 
 ## See also
 
-- Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-- [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+- Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)}})
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)

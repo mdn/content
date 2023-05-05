@@ -29,8 +29,6 @@ border-inline-start-style: unset;
 
 Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-inline-end-style")}}, which define the other border styles of the element.
 
-{{cssinfo}}
-
 ### Values
 
 - `<'border-style'>`

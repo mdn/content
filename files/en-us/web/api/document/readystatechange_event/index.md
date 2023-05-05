@@ -1,5 +1,6 @@
 ---
 title: "Document: readystatechange event"
+short-title: readystatechange
 slug: Web/API/Document/readystatechange_event
 page-type: web-api-event
 browser-compat: api.Document.readystatechange_event

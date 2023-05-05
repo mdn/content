@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.close()
+title: "FileSystemSyncAccessHandle: close() method"
+short-title: close()
 slug: Web/API/FileSystemSyncAccessHandle/close
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.close

@@ -58,11 +58,11 @@ The following screenshots show default, focused, and disabled `<textarea>` eleme
 
 {{htmlelement("textarea")}} accepts three attributes to control its rendering across several lines:
 
-- {{htmlattrxref("cols","textarea")}}
+- [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols)
   - : Specifies the visible width (columns) of the text control, measured in average character widths. This is effectively the starting width, as it can be changed by resizing the `<textarea>`, and overridden using CSS. The default value if none is specified is 20.
-- {{htmlattrxref("rows","textarea")}}
+- [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows)
   - : Specifies the number of visible text rows for the control. This is effectively the starting height, as it can be changed by resizing the `<textarea>`, and overridden using CSS. The default value if none is specified is 2.
-- {{htmlattrxref("wrap","textarea")}}
+- [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap)
   - : Specifies how the control wraps text. The values are `soft` (the default value), which means the text submitted is not wrapped but the text rendered by the browser is wrapped; `hard` (the `cols` attribute must be specified when using this value), which means both the submitted and rendered texts are wrapped, and `off`, which stops wrapping.
 
 ### Controlling textarea resizability
@@ -99,7 +99,7 @@ A simple select box is created with a {{HTMLElement("select")}} element with one
 
 {{EmbedLiveSample("Basic_example", 120, 120)}}
 
-If required, the default value for the select box can be set using the {{htmlattrxref("selected","option")}} attribute on the desired {{HTMLElement("option")}} element — this option is then preselected when the page loads.
+If required, the default value for the select box can be set using the [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on the desired {{HTMLElement("option")}} element — this option is then preselected when the page loads.
 
 #### Using optgroup
 
@@ -142,7 +142,7 @@ By default, the height of the select box is enough to display a single value. Th
 
 ### Multiple choice select box
 
-By default, a select box lets a user select only one value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
+By default, a select box lets a user select only one value. By adding the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -163,13 +163,13 @@ By default, a select box lets a user select only one value. By adding the {{html
 
 > **Note:** In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional [`size`](/en-US/docs/Web/HTML/Attributes/size) attribute determining the height of the widget.
 
-> **Note:** All browsers that support the {{HTMLElement("select")}} element also support the {{htmlattrxref("multiple","select")}} attribute.
+> **Note:** All browsers that support the {{HTMLElement("select")}} element also support the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute.
 
 ### Autocomplete box
 
 You can provide suggested, automatically-completed values for form widgets using the {{HTMLElement("datalist")}} element with child {{HTMLElement("option")}} elements to specify the values to display. The `<datalist>` needs to be given an `id`.
 
-The data list is then bound to an {{htmlelement("input")}} element (e.g. a `text` or `email` input type) using the {{htmlattrxref("list","input")}} attribute, the value of which is the `id` of the data list to bind.
+The data list is then bound to an {{htmlelement("input")}} element (e.g. a `text` or `email` input type) using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, the value of which is the `id` of the data list to bind.
 
 Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible matches for what they've typed into the input.
 
@@ -229,7 +229,7 @@ If you use this fallback, ensure the data for both the `<input>` and the `<selec
 
 #### Less obvious datalist uses
 
-According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
+According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
 
 For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#adding_tick_marks).
 
@@ -249,7 +249,7 @@ Meters and progress bars are visual representations of numeric values.
 
 #### Progress
 
-A progress bar represents a value that changes over time up to a maximum value specified by the {{htmlattrxref("max","progress")}} attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
+A progress bar represents a value that changes over time up to a maximum value specified by the [`max`](/en-US/docs/Web/HTML/Element/progress#max) attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.
 
 ```html
 <progress max="100" value="75">75/100</progress>
@@ -263,19 +263,19 @@ The content inside the {{HTMLElement("progress")}} element is a fallback for bro
 
 #### Meter
 
-A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
+A meter bar represents a fixed value in a range delimited by [`max`](/en-US/docs/Web/HTML/Element/meter#max) and [`min`](/en-US/docs/Web/HTML/Element/meter#min) values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
-- The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range into the following three parts:
+- The [`low`](/en-US/docs/Web/HTML/Element/meter#low) and [`high`](/en-US/docs/Web/HTML/Element/meter#high) values divide the range into the following three parts:
 
-  - The lower part of the range is between the {{htmlattrxref("min","meter")}} and {{htmlattrxref("low","meter")}} values, inclusive.
-  - The medium part of the range is between the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values, exclusive.
-  - The higher part of the range is between the {{htmlattrxref("high","meter")}} and {{htmlattrxref("max","meter")}} values, inclusive.
+  - The lower part of the range is between the [`min`](/en-US/docs/Web/HTML/Element/meter#min) and [`low`](/en-US/docs/Web/HTML/Element/meter#low) values, inclusive.
+  - The medium part of the range is between the [`low`](/en-US/docs/Web/HTML/Element/meter#low) and [`high`](/en-US/docs/Web/HTML/Element/meter#high) values, exclusive.
+  - The higher part of the range is between the [`high`](/en-US/docs/Web/HTML/Element/meter#high) and [`max`](/en-US/docs/Web/HTML/Element/meter#max) values, inclusive.
 
-- The {{htmlattrxref("optimum","meter")}} value defines the optimum value for the {{HTMLElement("meter")}} element. In conjunction with the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} value, it defines which part of the range is preferred:
+- The [`optimum`](/en-US/docs/Web/HTML/Element/meter#optimum) value defines the optimum value for the {{HTMLElement("meter")}} element. In conjunction with the [`low`](/en-US/docs/Web/HTML/Element/meter#low) and [`high`](/en-US/docs/Web/HTML/Element/meter#high) value, it defines which part of the range is preferred:
 
-  - If the {{htmlattrxref("optimum","meter")}} value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.
-  - If the {{htmlattrxref("optimum","meter")}} value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the preferred part, and the higher range is considered to be average as well.
-  - If the {{htmlattrxref("optimum","meter")}} value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the preferred part.
+  - If the [`optimum`](/en-US/docs/Web/HTML/Element/meter#optimum) value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.
+  - If the [`optimum`](/en-US/docs/Web/HTML/Element/meter#optimum) value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the preferred part, and the higher range is considered to be average as well.
+  - If the [`optimum`](/en-US/docs/Web/HTML/Element/meter#optimum) value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the preferred part.
 
 All browsers that implement the {{HTMLElement("meter")}} element use those values to change the color of the meter bar:
 

@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: progress event"
+short-title: progress
 slug: Web/API/HTMLMediaElement/progress_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.progress_event

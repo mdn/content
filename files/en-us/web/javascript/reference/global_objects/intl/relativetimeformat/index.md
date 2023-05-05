@@ -11,8 +11,6 @@ The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative tim
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Constructor
 
 - {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
@@ -22,6 +20,15 @@ The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative tim
 
 - {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.RelativeTimeFormat.prototype` and shared by all `Intl.RelativeTimeFormat` instances.
+
+- {{jsxref("Object/constructor", "Intl.RelativeTimeFormat.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.RelativeTimeFormat` instances, the initial value is the {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor.
+- `Intl.RelativeTimeFormat.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.RelativeTimeFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

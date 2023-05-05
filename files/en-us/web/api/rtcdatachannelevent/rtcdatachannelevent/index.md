@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannelEvent()
+title: "RTCDataChannelEvent: RTCDataChannelEvent() constructor"
+short-title: RTCDataChannelEvent()
 slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 page-type: web-api-constructor
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent

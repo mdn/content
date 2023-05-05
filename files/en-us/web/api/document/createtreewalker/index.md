@@ -1,5 +1,6 @@
 ---
-title: Document.createTreeWalker()
+title: "Document: createTreeWalker() method"
+short-title: createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 page-type: web-api-instance-method
 browser-compat: api.Document.createTreeWalker

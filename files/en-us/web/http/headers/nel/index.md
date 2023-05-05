@@ -1,6 +1,7 @@
 ---
 title: NEL
 slug: Web/HTTP/Headers/NEL
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.NEL

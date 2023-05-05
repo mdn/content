@@ -7,8 +7,7 @@ browser-compat: javascript.operators.addition
 
 {{jsSidebar("Operators")}}
 
-The **addition (`+`)** operator produces the sum of numeric operands or string
-concatenation.
+The **addition (`+`)** operator produces the sum of numeric operands or string concatenation.
 
 {{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
@@ -20,7 +19,7 @@ x + y
 
 ## Description
 
-The addition operator (`+`) is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). Then, the two operands' types are tested:
+The `+` operator is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). Then, the two operands' types are tested:
 
 - If one side is a string, the other operand is also [converted to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) and they are concatenated.
 - If they are both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), BigInt addition is performed. If one side is a BigInt but the other is not, a {{jsxref("TypeError")}} is thrown.
@@ -39,7 +38,7 @@ You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web
 
 ## Examples
 
-### Numeric addition
+### Number addition
 
 ```js
 // Number + Number -> addition
@@ -50,6 +49,20 @@ true + 1; // 2
 
 // Boolean + Boolean -> addition
 false + false; // 0
+```
+
+### BigInt addition
+
+```js
+// BigInt + BigInt -> addition
+1n + 2n; // 3n
+
+// BigInt + Number -> throws TypeError
+1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+// To add a BigInt to a non-BigInt, convert either operand
+1n + BigInt(2); // 3n
+Number(1n) + 2; // 3
 ```
 
 ### String concatenation

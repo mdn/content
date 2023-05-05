@@ -1,5 +1,6 @@
 ---
-title: location.pathname
+title: "location: pathname property"
+short-title: pathname
 slug: Web/API/Location/pathname
 page-type: web-api-instance-property
 browser-compat: api.Location.pathname

@@ -1,5 +1,6 @@
 ---
-title: PannerNode.orientationX
+title: "PannerNode: orientationX property"
+short-title: orientationX
 slug: Web/API/PannerNode/orientationX
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.orientationX

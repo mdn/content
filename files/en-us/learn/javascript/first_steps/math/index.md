@@ -237,7 +237,7 @@ If you want to override operator precedence, you can put parentheses around the 
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Increment and decrement operators
 
@@ -352,7 +352,7 @@ let y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **Note:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators), but these are the basic ones you should learn now.
+> **Note:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -437,6 +437,6 @@ In this article, we have covered the fundamental information you need to know ab
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

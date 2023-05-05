@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.getSyncParameter()
+title: "WebGL2RenderingContext: getSyncParameter() method"
+short-title: getSyncParameter()
 slug: Web/API/WebGL2RenderingContext/getSyncParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getSyncParameter

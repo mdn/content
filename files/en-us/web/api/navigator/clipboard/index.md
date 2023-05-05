@@ -1,5 +1,6 @@
 ---
-title: Navigator.clipboard
+title: "Navigator: clipboard property"
+short-title: clipboard
 slug: Web/API/Navigator/clipboard
 page-type: web-api-instance-property
 browser-compat: api.Navigator.clipboard

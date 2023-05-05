@@ -1,5 +1,6 @@
 ---
 title: "MediaStream: addtrack event"
+short-title: addtrack
 slug: Web/API/MediaStream/addtrack_event
 page-type: web-api-event
 browser-compat: api.MediaStream.addtrack_event
@@ -31,7 +32,7 @@ A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- `track` {{ReadOnlyInline}}
+- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
   - : A {{domxref("MediaStreamTrack")}} object representing the track which was added to the stream.
 
 ## Examples
@@ -39,7 +40,7 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 Using `addEventListener()`:
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.addEventListener("addtrack", (event) => {
   console.log(`New ${event.track.kind} track added`);
@@ -49,7 +50,7 @@ stream.addEventListener("addtrack", (event) => {
 Using the `onaddtrack` event handler property:
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.onaddtrack = (event) => {
   console.log(`New ${event.track.kind} track added`);

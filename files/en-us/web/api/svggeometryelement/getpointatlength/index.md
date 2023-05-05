@@ -1,5 +1,6 @@
 ---
-title: SVGGeometryElement.getPointAtLength()
+title: "SVGGeometryElement: getPointAtLength() method"
+short-title: getPointAtLength()
 slug: Web/API/SVGGeometryElement/getPointAtLength
 page-type: web-api-instance-method
 browser-compat: api.SVGGeometryElement.getPointAtLength

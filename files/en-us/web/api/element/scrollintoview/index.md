@@ -1,5 +1,6 @@
 ---
-title: Element.scrollIntoView()
+title: "Element: scrollIntoView() method"
+short-title: scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 page-type: web-api-instance-method
 browser-compat: api.Element.scrollIntoView
@@ -40,8 +41,10 @@ scrollIntoView(scrollIntoViewOptions)
   - : An Object with the following properties:
 
     - `behavior` {{optional_inline}}
-      - : Defines the transition animation.
-        One of `auto` or `smooth`. Defaults to `auto`.
+      - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
+        - `smooth`: scrolling should animate smoothly
+        - `instant`: scrolling should happen instantly in a single jump
+        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
     - `block` {{optional_inline}}
       - : Defines vertical alignment.
         One of `start`, `center`, `end`, or

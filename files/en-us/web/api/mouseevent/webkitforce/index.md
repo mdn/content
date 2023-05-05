@@ -1,7 +1,10 @@
 ---
-title: MouseEvent.webkitForce
+title: "MouseEvent: webkitForce property"
+short-title: webkitForce
 slug: Web/API/MouseEvent/webkitForce
 page-type: web-api-instance-property
+status:
+  - non-standard
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_header()}}

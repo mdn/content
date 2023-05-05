@@ -1,5 +1,6 @@
 ---
-title: Gamepad.displayId
+title: "Gamepad: displayId property"
+short-title: displayId
 slug: Web/API/Gamepad/displayId
 page-type: web-api-instance-property
 status:

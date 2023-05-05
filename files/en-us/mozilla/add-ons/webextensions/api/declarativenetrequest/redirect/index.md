@@ -1,12 +1,19 @@
 ---
 title: declarativeNetRequest.Redirect
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Redirect
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Redirect
 ---
 
 {{AddonSidebar()}}
 
 Details describing how a redirect should be performed. Only valid for redirect rules.
+
+> **Note:**
+> A redirect action does not redirect the request, and the request continues as usual when:
+>
+> - the action does not change the request.
+> - the redirect URL is invalid (e.g., the value of {{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} is not a valid URL).
 
 ## Type
 

@@ -44,7 +44,7 @@ The Audio Output Devices API extends the following APIs, adding the listed featu
 Access to [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput) is subject to the following constraints:
 
 - It may only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
 - The user must explicitly grant permission to use the audio output device through a user-agent specific mechanism, or have previously granted permission.

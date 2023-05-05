@@ -46,13 +46,13 @@ There are three attributes and one nested element worth noting:
 
 2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the aspect ratio must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
 
-3. Including [`role="img"`](/en-US/docs/Web/accessibility/aria/role/img) ensures assistive technologies handle the SVG as an image.
+3. Including [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) ensures assistive technologies handle the SVG as an image.
 
 4. A [`<title>`](/en-US/docs/Web/SVG/Element/title) within an SVG provides the accessible, short-text description of the graphic. The title text is not rendered, but browsers may display it as a tooltip when the SVG is hovered. The `<title>` should be the first element after the `<svg>` opening tag.
 
 ## Best practices
 
-When an SVG is included via with {{HTMLElement('img')}}, the `alt` attribute provides alternative text making the image accessible. Inline SVG does not support the `alt` attribute. But it does support several other ways of making it accessible. With inline SVGs, the source is available in the DOM, meaning all the markup within an inline SVG file is accessible to the Accessibility Object Model, or AOM. Including the `<title>` element provides that alternative text.
+When an SVG is included via an {{HTMLElement('img')}} element, the `alt` attribute provides alternative text making the image accessible. Inline SVG does not support the `alt` attribute. But it does support several other ways of making it accessible. With inline SVGs, the source is available in the DOM, meaning all the markup within an inline SVG file is accessible to the Accessibility Object Model, or AOM. Including the `<title>` element provides that alternative text.
 
 If the image conveys more than a short title, include a longer description with the [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element. The `<desc>` element provides an accessible, long-text description. Similar to `<title>` text, the text within the `<desc>` is not rendered to the screen.
 

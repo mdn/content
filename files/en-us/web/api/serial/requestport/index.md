@@ -1,5 +1,6 @@
 ---
-title: Serial.requestPort()
+title: "Serial: requestPort() method"
+short-title: requestPort()
 slug: Web/API/Serial/requestPort
 page-type: web-api-instance-method
 status:
@@ -41,7 +42,7 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
-- `AbortError` {{domxref("DOMException")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.getSupportedConstraints()
+title: "MediaDevices: getSupportedConstraints() method"
+short-title: getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
 page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getSupportedConstraints

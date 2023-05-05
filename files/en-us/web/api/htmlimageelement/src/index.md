@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.src
+title: "HTMLImageElement: src property"
+short-title: src
 slug: Web/API/HTMLImageElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.src
@@ -8,8 +9,7 @@ browser-compat: api.HTMLImageElement.src
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
-**`src`**, which reflects the HTML {{htmlattrxref("src",
-    "img")}} attribute, specifies the image to display in the {{HTMLElement("img")}}
+**`src`**, which reflects the HTML [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute, specifies the image to display in the {{HTMLElement("img")}}
 element.
 
 ## Value
@@ -18,10 +18,10 @@ When providing only a single image, rather than a set of images from which the b
 selects the best match for the viewport size and display pixel density, the
 `src` attribute is a string specifying the URL of the
 desired image. This can be set either within the HTML itself using the
-{{htmlattrxref("src", "img")}} content attribute, or programmatically by setting the
+[`src`](/en-US/docs/Web/HTML/Element/img#src) content attribute, or programmatically by setting the
 element's `src` property.
 
-If you use the {{htmlattrxref("srcset", "img")}} content attribute to provide multiple
+If you use the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) content attribute to provide multiple
 image options for different display pixel densities, the URL specified by the
 `src` attribute is used in one of two ways:
 
@@ -32,7 +32,7 @@ image options for different display pixel densities, the URL specified by the
 
 Additionally, if you use `src` along with _both_
 {{domxref("HTMLImageElement.sizes", "sizes")}} (or the
-corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
+corresponding [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) content attribute) _and_
 `srcset` in order to choose an image based on the viewport size, the
 `src` attribute is only used as a fallback for browsers that don't support
 `sizes` and `srcset`; otherwise, it's not used at all.

@@ -1,5 +1,6 @@
 ---
-title: 'XMLHttpRequest: readystatechange event'
+title: "XMLHttpRequest: readystatechange event"
+short-title: readystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequest.readystatechange_event

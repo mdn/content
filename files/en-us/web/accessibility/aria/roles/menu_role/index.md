@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menu role"
 slug: Web/Accessibility/ARIA/Roles/menu_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menu
   - https://w3c.github.io/aria-practices/#menu
@@ -40,7 +41,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
-- {{HTMLAttrXref('tabindex')}} attribute
+- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute
   - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : Set to the ID of the focused item, if there is one.

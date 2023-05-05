@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.cancel()
+title: "ReadableStream: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStream/cancel
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.cancel

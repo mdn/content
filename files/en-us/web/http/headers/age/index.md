@@ -1,6 +1,7 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
+page-type: http-header
 browser-compat: http.headers.Age
 ---
 

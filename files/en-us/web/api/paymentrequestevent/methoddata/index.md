@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.methodData
+title: "PaymentRequestEvent: methodData property"
+short-title: methodData
 slug: Web/API/PaymentRequestEvent/methodData
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.set()
+title: "URLSearchParams: set() method"
+short-title: set()
 slug: Web/API/URLSearchParams/set
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.set

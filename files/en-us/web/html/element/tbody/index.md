@@ -79,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
@@ -94,7 +94,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 
 - `char` {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 - `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
 - `valign` {{deprecated_inline}}
@@ -264,7 +264,7 @@ The revised HTML looks like this:
 </table>
 ```
 
-Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a {{htmlattrxref("colspan", "th")}} attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
+Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a [`colspan`](#colspan) attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
 
 Then each remaining row in each major's `<tbody>` consists of two cells: the first for the student's ID and the second for their name.
 

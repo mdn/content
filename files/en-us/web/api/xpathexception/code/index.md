@@ -1,5 +1,6 @@
 ---
-title: XPathException.code
+title: "XPathException: code property"
+short-title: code
 slug: Web/API/XPathException/code
 page-type: web-api-instance-property
 browser-compat: api.XPathException.code

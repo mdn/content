@@ -1,6 +1,7 @@
 ---
 title: Sec-WebSocket-Accept
 slug: Web/HTTP/Headers/Sec-WebSocket-Accept
+page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
 

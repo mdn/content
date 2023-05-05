@@ -1,5 +1,6 @@
 ---
-title: Range.setStartAfter()
+title: "Range: setStartAfter() method"
+short-title: setStartAfter()
 slug: Web/API/Range/setStartAfter
 page-type: web-api-instance-method
 browser-compat: api.Range.setStartAfter

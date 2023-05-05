@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.columnNumber
+title: "InterventionReportBody: columnNumber property"
+short-title: columnNumber
 slug: Web/API/InterventionReportBody/columnNumber
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.mode
+title: "SourceBuffer: mode property"
+short-title: mode
 slug: Web/API/SourceBuffer/mode
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.mode

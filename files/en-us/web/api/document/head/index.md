@@ -1,5 +1,6 @@
 ---
-title: Document.head
+title: "Document: head property"
+short-title: head
 slug: Web/API/Document/head
 page-type: web-api-instance-property
 browser-compat: api.Document.head

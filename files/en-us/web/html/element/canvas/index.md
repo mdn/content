@@ -1,5 +1,5 @@
 ---
-title: '<canvas>: The Graphics Canvas element'
+title: "<canvas>: The Graphics Canvas element"
 slug: Web/HTML/Element/canvas
 page-type: html-element
 browser-compat: html.elements.canvas
@@ -40,7 +40,7 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
         descendants except for {{HTMLElement("a")}} elements,
         {{HTMLElement("button")}} elements,
         {{HTMLElement("input")}} elements whose
-        {{htmlattrxref("type", "input")}} attribute is
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
         <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
       </td>
     </tr>

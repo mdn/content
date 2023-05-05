@@ -33,13 +33,16 @@ The following example shows how to use a `WindowControlsOverlayGeometryChangeEve
 event handler on the {{domxref("Navigator.windowControlsOverlay")}} property, to listen to geometry changes of a PWA's title bar region.
 
 ```js
-if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-    if (event.visible) {
-      const rect = event.titlebarAreaRect;
-      // Do something with the coordinates of the title bar area.
+if ("windowControlsOverlay" in navigator) {
+  navigator.windowControlsOverlay.addEventListener(
+    "geometrychange",
+    (event) => {
+      if (event.visible) {
+        const rect = event.titlebarAreaRect;
+        // Do something with the coordinates of the title bar area.
+      }
     }
-  });
+  );
 }
 ```
 

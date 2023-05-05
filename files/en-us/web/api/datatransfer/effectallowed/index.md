@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.effectAllowed
+title: "DataTransfer: effectAllowed property"
+short-title: effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 page-type: web-api-instance-property
 browser-compat: api.DataTransfer.effectAllowed
