@@ -63,8 +63,6 @@ The following pages provide lists of the different special characters that fit i
   - : Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
 - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : Indicate numbers of characters or expressions to match.
-- [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
-  - : Distinguish based on unicode character properties, for example, upper- and lower-case letters, math symbols, and punctuation.
 
 If you want to look at all the special characters that can be used in regular expressions in a single table, see the following:
 
@@ -140,18 +138,6 @@ If you want to look at all the special characters that can be used in regular ex
             >Quantifiers</a
           >
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\p{<em>UnicodeProperty</em>}</code>,
-        <code>\P{<em>UnicodeProperty</em>}</code>
-      </td>
-      <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes"
-          >Unicode property escapes</a
-        >
       </td>
     </tr>
   </tbody>
@@ -394,19 +380,11 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 #### Using unicode regular expressions
 
-The "u" flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. This is mainly accomplished through the use of [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes), which are supported only within "unicode" regular expressions.
-
-For example, the following regular expression might be used to match against an arbitrary unicode "word":
+The `u` flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. An important feature that's enabled in unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
 /\p{L}*/u;
 ```
-
-There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
-
-- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
-- Curly brackets need to be escaped when not used as [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers). For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not — instead, the bracket should be escaped and `/\\{/u` should be used instead.
-- The `-` character is interpreted differently within character classes. In particular, for Unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of the character class. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/[\w-:]/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
 
 Unicode regular expressions have different execution behavior as well. [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) contains more explanation about this.
 
@@ -415,7 +393,7 @@ Unicode regular expressions have different execution behavior as well. [`RegExp.
 > **Note:** Several examples are also available in:
 >
 > - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
-> - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+> - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ### Using special characters to verify input
 
