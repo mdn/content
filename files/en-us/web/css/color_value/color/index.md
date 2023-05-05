@@ -22,15 +22,15 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-Functional notation: `color([colorspace] params[ / A])`
+Functional notation: `color(colorspace p1 p2 p3[ / A])`
 
-- `colorspace` {{optional_inline}}
+- `colorspace`
 
-  - : An {{CSSXref("&lt;ident&gt;")}} or {{CSSXref("&lt;dashed-ident&gt;")}} denoting the color space. If this is an `<ident>`, it denotes one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`. If it is a `<dashed-ident>`, it denotes a custom color space, defined by a {{CSSXref("@color-profile")}} rule.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`.
 
-- `params`
+- `p1`, `p2`, `p3`
 
-  - : One or more {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
+  - : {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
 
 - `A` {{optional_inline}}
 
