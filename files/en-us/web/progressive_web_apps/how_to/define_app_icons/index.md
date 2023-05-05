@@ -11,7 +11,9 @@ For example, on Windows, the taskbar can contain icons for both native and PWA a
 
 ![The taskbar on Windows, showing the usual Windows icons, and then icons for Firefox and Word, which are native apps, but also icons for Spotify and PWAmp, which are PWAs](./windows-taskbar.png)
 
-When creating a PWA, you can define your own set of icons to be used when the app is installed on a device. This article explains how to define your own app icons.
+When creating a PWA, you can define your own set of icons to be used when the app is installed on a device. This article explains how to define your own app icons, which icon sizes to create, and how to make your icons support masking.
+
+> **Note:** The PWA app icon is not the same as the {{glossary("favicon")}} image, which is displayed in places like the browser's address bar. PWAs can have both a favicon and an app icon. To learn more about favicons, see [Adding custom icons to your site](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site).
 
 ## Design your icon
 
@@ -19,7 +21,9 @@ The first step in defining your app icon is to design it.
 
 Most users recognize applications by their icons. Icons appear in many places through the operating system, including the home screen, taskbar, app launcher, or setting panels. Make sure your users can easily find your app by making its icon both visually appealing, and representative of your application.
 
-The image should have a transparent background so it can be displayed on a variety of backgrounds, and it should be at least 1024x1024 pixels as this is the largest size your icon may be displayed at. Designing your icon as an SVG file is a good idea, as this will allow it to be scaled to any size without loss of quality.
+The image should have a transparent background so it can be displayed on a variety of backgrounds. It should be at least 1024x1024 pixels, or scalable to that size, as this is the largest size your icon may be displayed at. You may also want to create icon versions with fewer details, to be used in places where the icon is displayed at smaller sizes.
+
+Designing your icon as an SVG file is a good idea, as this will allow it to be scaled to any size without loss of quality.
 
 ## Reference your icons in the web app manifest
 
@@ -77,7 +81,7 @@ For example, the following web app manifest defines five PNG icons, each with a 
 
 Various operating systems use different icon sizes in different places and for different device capabilities. It's important to create multiple versions of your icon so it appears correctly in all the places where it's used.
 
-For example, Windows can display your app icon as a 44x44 pixels image in the taskbar, or as a 150x150 pixels image in the start menu. Use the links below for more information about the icon sizes used by different operating systems:
+For example, Windows can display your app icon as a 44x44 pixels image in the taskbar, or as a 150x150 pixels image in the start menu. Use the links below for more information about the icon sizes used by different operating systems and tips for creating effective icons:
 
 - For Windows, see [Define icons and a theme color](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on learn.microsoft.com.
 - For Android, see [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) on developer.android.com.
@@ -85,7 +89,7 @@ For example, Windows can display your app icon as a 44x44 pixels image in the ta
 
 The sizes at which your icon is displayed depend on the operating system and may change over time. It's best to test your icon on all the devices and operating systems you want to support, and generate the sizes and image types that lead to the best results. You can also use a tool like [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) to generate the necessary icon sizes for you from a single high-definition image.
 
-Note that some operating systems support [SVG](/en-US/docs/Web/SVG) icons which can help reduce the number of images you need to create since SVG can be scaled to any size automatically. However, there may be cases where your SVG icon doesn't scale down to small sizes nicely. To support all OSs and small sizes, create PNG versions of your icon as well. Learn more about how to reference the various icon sizes in [Reference icons in the web app manifest](#reference-icons-in-the-web-app-manifest).
+Note that some operating systems support [SVG](/en-US/docs/Web/SVG) icons which can help reduce the number of images you need to create since SVG can be scaled to any size automatically. If your SVG icon doesn't scale down to small sizes nicely. creating additional icons with fewer details and less complexity may be necessary. To support all OSs and small sizes, create PNG versions of your icon as well.
 
 The following web app manifest example uses a WebP image for the small icon, an ICO image for medium size icons, and a scalable SVG image for higher resolution icons:
 
@@ -112,9 +116,11 @@ The following web app manifest example uses a WebP image for the small icon, an 
 }
 ```
 
+Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference-your-icons-in-the-web-app-manifest).
+
 ## Support masking
 
-Depending on the operating system, the device capabilities, or the user theme, a mask may be applied to your icon to match a particular shape or color. For example, on Android, app icons can have a circular mask applied to them, and can be colored according to the user's theme.
+Depending on the operating system, the device capabilities, or the user theme, a mask may be applied to your icon to match a particular shape or color. Maskable icons are adaptive icons that enable your icon to fill up the entire shape an operating system provides. For example, on Android, app icons can have a circular mask or theme color applied to them, or both. If the icon is adaptive, or maskable, the icon will fill up the circle and can be colored according to the user's theme. Otherwise, the icon will appear within a white or theme-colored circle.
 
 ![The Android 13 home screen, showing circular and color themed app icons](./android-13-home-screen.png)
 
@@ -139,7 +145,7 @@ To start making your app icon maskable, use the `purpose` property in the icon o
 }
 ```
 
-Using the `purpose` property is only the first step in making your icon maskable. You also need to make sure your icon looks well integrated with the host operating system by ensuring the important parts of the icon appear well within the mask's _safe zone_.
+Using the `purpose` property is just the last step in making your icon maskable. You need to start by making sure your icon looks well integrated with the host operating system by ensuring the important parts of the icon appear well within the mask's _safe zone_.
 
 The safe zone is the area that's guaranteed to always be visible when the mask is applied and is defined as a circle which diameter is 80% of the icon's minimum dimension.
 
