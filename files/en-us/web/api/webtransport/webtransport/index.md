@@ -27,6 +27,7 @@ new WebTransport(url, options)
   - : A string representing the URL of the HTTP/3 server to connect to.
     The scheme must be HTTPS, and the port number needs to be explicitly specified.
 - `options` {{optional_inline}}
+
   - : An object that may have the following properties:
 
     - `allowPooling` {{optional_inline}}
@@ -42,6 +43,7 @@ new WebTransport(url, options)
         If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
         By default the value is `false`.
     - `serverCertificateHashes` {{optional_inline}}
+
       - : An array of objects defining a hash value and its associated algorithm.
         This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
@@ -53,10 +55,12 @@ new WebTransport(url, options)
         Each object in the array has the following properties:
 
         - `algorithm`
-          - : A string representing the algorithm to use to verify the hash.
-            Any hash using an unknown algorithm will be ignored.
+          - : A string with the value: `sha-256` (case-insensitive).
+            Note that this string represents the algorithm to use to verify the hash, and that any hash using an unknown algorithm will be ignored.
+            Currently the only "known" algorithm in the spec is `sha-256`.
+
         - `value`
-          - : A `BufferSource` representing the hash value.
+          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{domxref("ArrayBufferView")}} containing the hash value.
 
 ### Exceptions
 
@@ -69,21 +73,30 @@ new WebTransport(url, options)
 
 ## Examples
 
-```js
-const url = "https://example.com:4999/wt";
+### Connecting with default options
 
+This example shows how you might construct a `WebTransport` using just a URL, wait for it to connect, and then monitor the transport and report when it has closed.
+
+First we define an `async` method that takes an URL and uses it to construct the `WebTransport` object.
+No constructor options are specified, so the connection uses default options: dedicated connection, support for unreliable transports is not required, default congestion control, and normal Web PKI authentication with the server.
+
+The method uses `await` for the transport to be ready, and returns the transport object promise.
+
+```js
 async function initTransport(url) {
   // Initialize transport connection
   const transport = new WebTransport(url);
 
   // The connection can be used once ready fulfills
   await transport.ready;
-
-  // ...
+  return transport;
 }
+```
 
-// ...
+The `closeTransport()` method takes a transport object as an argument.
+Within a `try...catch` block it uses `await` to wait for the `closed` promise to fulfill or reject, and then reports whether or not the connection closed intentionally or due to error.
 
+```js
 async function closeTransport(transport) {
   // Respond to connection closing
   try {
@@ -93,6 +106,49 @@ async function closeTransport(transport) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }
+```
+
+Then we define a `useTransport()` function to first construct the transport and wait for it to be ready, use the transport (not shown), and monitor for the transport to close.
+
+```js
+// Use the transport
+async function useTransport(url) {
+  const transport = await initTransport(url);
+
+  // Use the transport object to send and receive data
+  // ...
+
+  // When done, close the transport
+  await closeTransport(transport);
+}
+```
+
+Lastly we call `useTransport()`, passing in the target URL.
+
+```js
+const url = "https://example.com:4999/wt";
+useTransport(url);
+```
+
+### Connecting with server certificate hashes
+
+The example below shows the code to construct a `WebTransport` that specifies the `serverCertificateHashes` option.
+In this case the array contains two hashes, both encoded using the SHA-256 algorithm.
+Note that the `allowPooling` option must be `false` (the default).
+
+```js
+const transport = new WebTransport(url, {
+  serverCertificateHashes: [
+    {
+      algorithm: "sha-256",
+      value: "5a155927eba7996228455e4721e6fe5f739ae15db6915d765e5db302b4f8a274",
+    },
+    {
+      algorithm: "sha-256",
+      value: "7d7094e7a8d3097feff3b5ee84fa5cab58e4de78f38bcfdee5ea8b51f4bfa8fd",
+    },
+  ],
+});
 ```
 
 ## Specifications
