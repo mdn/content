@@ -57,6 +57,16 @@ PWAs also have many of the benefits of platform-specific apps, including:
 - PWAs can be integrated into the device, registering as share targets and sources, and accessing device features.
 - PWAs can be distributed in app stores, as well as openly via the web.
 
+### PWAs and the browser
+
+When you visit a website in the browser, it's obvious that the website is "running in the browser". The browser UI provides a visible frame around the website including UI features like back/forward buttons and a title for the page, and the Web APIs your website calls are implemented by the browser engine. So the browser provides a kind of virtual machine for executing the website's code.
+
+PWAs typically look like platform-specific apps, so they usually don't have the browser UI around them, but they are, as a matter of technology, still websites. This means they need a browser engine, like Chrome or Firefox, to manage and run them. With a platform-specific app, it's the platform OS that manages the app, and provides an environment in which it runs. With a PWA, it's a browser engine that performs this background role, just like it does for normal websites.
+
+![Diagram comparing the runtime environment for traditional websites, PWAs, and platform-specific apps](pwa-environment.svg)
+
+In our documentation for PWAs, we sometimes refer to the browser playing this background role. We might say, for example, "the browser starts a PWA's service worker when a push notification is received". Here, the browser's activity is entirely in the background. From the PWA's point of view, it might as well be the operating system which started it, and for some systems, such as Chromebooks, there may not even be a distinction between "the browser" and "the operating system".
+
 ### Technical features of PWAs
 
 The fundamental technical features of a PWA are:
