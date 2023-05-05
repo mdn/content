@@ -10,5 +10,5 @@ For example, the `WindowOrWorkerGlobalScope` mixin provides methods and properti
 
 ## See also
 
-- [Mix-ins](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins) in MDN's Javascript Reference
+- [Mix-ins](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins) in MDN's Javascript Reference
 - [Mixin](https://en.wikipedia.org/wiki/Mixin) on Wikipedia
