@@ -86,7 +86,10 @@ To use the Cookies API you need to request both the `"cookies"` permission and [
 Firefox provides three types of cookie store:
 
 - The default store, which stores cookies from normal browsing.
-- Private browsing mode stores, which stores cookies created during a private browsing session. These stores and any cookies they contain are removed when the related private browsing window closes.
+- Private browsing mode stores, which stores cookies created during a private browsing session. These stores and any cookies they contain are removed when the related private browsing window closes. These stores are identified by the old incognito property in
+  > **Note:**
+  > Firefox identifies these stores using the `incognito` property in {{WebExtAPIRef("cookies.CookieStore")}}. Chromium-based browsers also return private (incognito) browsing mode stores but don't support the `incognito` property, so don't explicitly identify the cookie stores as belonging to an incognito browsing window. Safari does not return cookie stores for private browsing mode windows.
+
 - Container tabs stores, which stores cookies for each contextual identity in Firefox. Contextual identities enable a user to maintain multiple identities within one browser window. This is useful if, for example, you've a company and personal email account on Gmail. With contextual identities, you can open one tab against a personal identity and a second tab against a business identity. Each tab can then sign into Google mail with a different username, and the two accounts can be used side-by-side. For more information, see [Security/Contextual Identity Project/Containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) in the Mozilla wiki.
 
 You can find out what cookie stores are available using {{WebExtAPIRef("cookies.getAllCookieStores")}}, which returns an object containing the ID of each cookie store and a list of the IDs of the tabs using each cookie store.
