@@ -9,7 +9,7 @@ A progressive web app (PWA) is an app that's built using web platform technologi
 
 ## Platform-specific apps
 
-_Platform-specific apps_ are developed for a specific operating system and/or class of device, like an iOS or Android device, generally using an {{Glossary("SDK")}} provided by the platform vendor. They are usually distributed using the vendor's app store, where the user can find and install them, and they subsequently seem to the user like a permanent extra feature of their device, expanding its capabilities in some way.
+_Platform-specific apps_ are developed for a specific operating system (OS) and/or class of device, like an iOS or Android device, generally using an {{Glossary("SDK")}} provided by the platform vendor. They are usually distributed using the vendor's app store, where the user can find and install them, and they subsequently seem to the user like a permanent extra feature of their device, expanding its capabilities in some way.
 
 The benefits of platform-specific apps include:
 
