@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`streamErrorCode`** read-only property of the {{domxref("WebTransportError")}} interface returns a number in the range 0-255 indicating the application protocol error code for this error, or `null` if one is not available.
 

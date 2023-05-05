@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportDatagramDuplexStream.readable
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`readable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to unreliably read incoming datagrams from the stream.
 

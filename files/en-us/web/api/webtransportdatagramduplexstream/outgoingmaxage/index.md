@@ -1,5 +1,5 @@
 ---
-title: WebTransportDatagramDuplexStream: outgoingMaxAge property
+title: "WebTransportDatagramDuplexStream: outgoingMaxAge property"
 short-title: outgoingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/outgoingMaxAge
 page-type: web-api-instance-property
@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingMaxAge
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`outgoingMaxAge`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the maximum age for outgoing datagrams, in milliseconds.
 

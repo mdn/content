@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
 

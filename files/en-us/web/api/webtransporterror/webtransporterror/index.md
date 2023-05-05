@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`WebTransportError()`** constructor creates a new
 {{domxref("WebTransportError")}} object instance.

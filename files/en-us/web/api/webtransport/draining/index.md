@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransport.draining
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`draining`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves if a server indicates that it wants the client to gracefully close the connection.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransportDatagramDuplexStream.incomingMaxAge
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`incomingMaxAge`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the maximum age for incoming datagrams, in milliseconds.
 

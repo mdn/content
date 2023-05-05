@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransport.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
 The **`WebTransport()`** constructor creates a new {{domxref("WebTransport")}} object instance.
 
