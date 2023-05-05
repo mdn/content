@@ -51,7 +51,7 @@ Do not rely solely on badges to inform users about the availability of new conte
 
 ### Request notification permissions for iOS and/or iPadOS
 
-While notification badges are supported on WebKit, badges will not appear until your application is granted notification permissions. To request notification permissions, call the [Notification.requestPermission()](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method, such as in the following basic example:
+While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [Notification.requestPermission()](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
 
 ```js
 Notification.requestPermission().then((result) => {
