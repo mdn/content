@@ -103,6 +103,6 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 
 ## Submitting forms and uploading files
 
-Please, read [this paragraph](/en-US/docs/Web/API/FormData).
+Please, read [FormData](/en-US/docs/Web/API/FormData).
 
 {{APIRef("XMLHttpRequest")}}
