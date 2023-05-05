@@ -31,7 +31,7 @@ justify-content: right; /* Pack items from the right */
 /* justify-content does not take baseline values */
 
 /* Normal alignment */
-justify-content: normal;
+justify-content: normal; /* Behaves as flex-start */
 
 /* Distributed alignment */
 justify-content: space-between; /* Distribute items evenly
@@ -73,15 +73,11 @@ justify-content: unset;
 - `center`
   - : The items are packed flush to each other toward the center of the alignment container along the main axis.
 - `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis (in the context of a grid container) or the main-axis (in the context of a flexbox), then this value behaves like `start`.
 - `right`
-  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis (in a grid container) or the main-axis (in a flexbox container), this value behaves like `start`.
 - `normal`
-  - : The items are packed in their default position as if no `justify-content` value was set. This value behaves as `stretch` in grid and flex containers.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+  - : The items are packed in their default position as if no `justify-content` value was set. This value behaves as `flex-start` in grid and flex containers.
 - `space-between`
   - : The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.
 - `space-around`
@@ -89,15 +85,14 @@ justify-content: unset;
 - `space-evenly`
   - : The items are evenly distributed within the alignment container along the main axis. The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.
 - `stretch`
-
   - : If the combined size of the items along the main axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-    > **Note:** `stretch` is not supported by flexible boxes (flexbox).
+    > **Note:** `stretch` is not supported by flexible boxes (flexbox). When applied on a flexbox, it behaves as `flex-start`.
 
 - `safe`
-  - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
+  - : If the item overflows the alignment container, then the item is aligned as if the alignment mode is `start`. The desired alignment will not be implemented.
 - `unsafe`
-  - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container, and regardless of whether overflow which causes data loss might happen, the given alignment value is honored.
+  - : Even if the item overflows the alignment container, the desired alignment will be implemented. Unlike `safe`, which will ignore the desired alignment in favor of preventing overflow.
 
 ## Formal definition
 
@@ -140,9 +135,6 @@ justify-content: unset;
   <option value="center">center</option>
   <option value="left">left</option>
   <option value="right">right</option>
-  <option value="baseline">baseline</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
   <option value="space-between" selected>space-between</option>
   <option value="space-around">space-around</option>
   <option value="space-evenly">space-evenly</option>
