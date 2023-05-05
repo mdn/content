@@ -33,7 +33,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a promise that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string that indicates whether the connection supports unreliable transports, such as UDP, or will only run over reliable transport.
+  - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
 - {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a promise that resolves if a server wants the client to gracefully close the connection.
 

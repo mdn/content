@@ -10,7 +10,7 @@ browser-compat: api.WebTransport.reliability
 
 {{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reliability`** read-only property of the {{domxref("WebTransport")}} interface indicates whether the connection supports unreliable transports, such as UDP, or will only run over reliable transports.
+The **`reliability`** read-only property of the {{domxref("WebTransport")}} interface indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
 
 {{AvailableInWorkers}}
 
