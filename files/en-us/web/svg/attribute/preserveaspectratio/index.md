@@ -32,6 +32,7 @@ svg {
   </defs>
 ```
 
+**`xMidYMid meet`**
 ```html
   <!-- (width>height) meet -->
   <rect x="0" y="0" width="20" height="10">
@@ -47,7 +48,7 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-
+**`xMinYMid meet`**
 ```html
   <rect x="25" y="0" width="20" height="10">
     <title>xMinYMid meet</title>
@@ -62,7 +63,7 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-
+**`xMaxYMid meet`**
 ```html
   <rect x="50" y="0" width="20" height="10">
     <title>xMaxYMid meet</title>
@@ -77,7 +78,7 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-
+**`xMidYMin slice`**
 ```html
   <!-- (width>height) slice -->
   <rect x="0" y="15" width="20" height="10">
@@ -93,7 +94,7 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-
+**`xMidYMid slice`**
 ```html
   <rect x="25" y="15" width="20" height="10">
     <title>xMidYMid slice</title>
@@ -109,6 +110,7 @@ svg {
   </svg>
 ```
 
+**`xMidYMax slice`**
 ```html
   <rect x="50" y="15" width="20" height="10">
     <title>xMidYMax slice</title>
@@ -124,6 +126,7 @@ svg {
   </svg>
 ```
 
+**`xMidYMin meet`**
 ```html
   <!-- (width<height) meet -->
   <rect x="75" y="0" width="10" height="25">
@@ -140,6 +143,7 @@ svg {
   </svg>
 ```
 
+**`xMidYMid meet`**
 ```html
   <rect x="90" y="0" width="10" height="25">
     <title>xMidYMid meet</title>
@@ -155,6 +159,7 @@ svg {
   </svg>
 ```
 
+**`xMidYMax meet`**
 ```html
   <rect x="105" y="0" width="10" height="25">
     <title>xMidYMax meet</title>
@@ -170,6 +175,7 @@ svg {
   </svg>
 ```
 
+**`xMinYMid slice`**
 ```html
   <!-- (width<height) slice -->
   <rect x="120" y="0" width="10" height="25">
@@ -185,7 +191,7 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-
+**`xMidYMid slice`**
 ```html
   <rect x="135" y="0" width="10" height="25">
     <title>xMidYMid slice</title>
@@ -201,6 +207,7 @@ svg {
   </svg>
 ```
 
+**`xMaxYMid slice`**
 ```html
   <rect x="150" y="0" width="10" height="25">
     <title>xMaxYMid slice</title>
@@ -216,6 +223,7 @@ svg {
   </svg>
 ```
 
+**`none`**
 ```html
   <!-- none -->
   <rect x="0" y="30" width="160" height="60">
