@@ -68,7 +68,7 @@ The keyword values can be grouped into six value categories.
     - `block`
       - : The element generates a block level box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
-      - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
+      - : The element generates one or more inline level boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
