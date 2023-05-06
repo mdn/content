@@ -5,7 +5,7 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-In this article, we describe various web-related concepts: webpages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
+In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>
   <tbody>
