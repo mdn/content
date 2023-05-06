@@ -74,7 +74,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [Banners and notices](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 
-      - : Sometimes, an article needs a special notice added to it. This might happen if the page covers deprecated technology or other material that shouldn't be used in production code. This article covers the most common cases and how to do handle them.
+      - : Sometimes, an article needs a special notice added to it. This might happen if the page covers deprecated technology or other material that shouldn't be used in production code. This article covers the most common cases and how to handle them.
 
     - [Specification tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
