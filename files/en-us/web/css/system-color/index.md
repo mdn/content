@@ -130,7 +130,7 @@ Firefox also supports some non-standard extensions to the system color keyword s
 - `-moz-DialogText` {{non-standard_inline}}
   - : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
 - `-moz-dragtargetzone` {{non-standard_inline}}
-  - : Specify the areas where an element can be dropped during drag and drop operations.
+  - : Highlight color for regions where an element can be dropped during a drag-and-drop operation.
 - `-moz-EvenTreeRow` {{non-standard_inline}}
   - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 - `-moz-html-CellHighlight` {{non-standard_inline}}
