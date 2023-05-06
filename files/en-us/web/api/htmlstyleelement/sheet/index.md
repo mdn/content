@@ -1,5 +1,6 @@
 ---
-title: HTMLStyleElement.sheet
+title: "HTMLStyleElement: sheet property"
+short-title: sheet
 slug: Web/API/HTMLStyleElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.HTMLStyleElement.sheet

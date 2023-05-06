@@ -31,7 +31,7 @@ The "index.html" file should contain the following:
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <script src="webgl-demo.js" type="module" defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
 
   <body>

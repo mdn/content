@@ -44,7 +44,9 @@ border-inline-style: unset;
 
 ## Examples
 
-### HTML Content
+### Setting border-inline-style
+
+#### HTML
 
 ```html
 <div>
@@ -52,7 +54,7 @@ border-inline-style: unset;
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -68,7 +70,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("Setting border-inline-style", 140, 140)}}
 
 ## Specifications
 

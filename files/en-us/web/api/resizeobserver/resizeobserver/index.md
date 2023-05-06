@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver()
+title: "ResizeObserver: ResizeObserver() constructor"
+short-title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 page-type: web-api-constructor
 browser-compat: api.ResizeObserver.ResizeObserver

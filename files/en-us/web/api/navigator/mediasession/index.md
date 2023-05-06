@@ -1,5 +1,6 @@
 ---
-title: Navigator.mediaSession
+title: "Navigator: mediaSession property"
+short-title: mediaSession
 slug: Web/API/Navigator/mediaSession
 page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaSession

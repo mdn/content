@@ -1,5 +1,6 @@
 ---
-title: FormDataEvent.formData
+title: "FormDataEvent: formData property"
+short-title: formData
 slug: Web/API/FormDataEvent/formData
 page-type: web-api-instance-property
 browser-compat: api.FormDataEvent.formData

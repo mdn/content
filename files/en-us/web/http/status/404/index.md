@@ -1,6 +1,7 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
+page-type: http-status-code
 browser-compat: http.status.404
 ---
 

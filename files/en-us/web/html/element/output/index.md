@@ -1,5 +1,5 @@
 ---
-title: '<output>: The Output element'
+title: "<output>: The Output element"
 slug: Web/HTML/Element/output
 page-type: html-element
 browser-compat: html.elements.output
@@ -37,6 +37,8 @@ In the following example, the form provides a slider whose value can range betwe
   <output name="result" for="a b">60</output>
 </form>
 ```
+
+### Result
 
 {{ EmbedLiveSample('Examples')}}
 

@@ -1,11 +1,12 @@
 ---
-title: Headers.append()
+title: "Headers: append() method"
+short-title: append()
 slug: Web/API/Headers/append
 page-type: web-api-instance-method
 browser-compat: api.Headers.append
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`append()`** method of the {{domxref("Headers")}}
 interface appends a new value onto an existing header inside a `Headers`

@@ -1,14 +1,13 @@
 ---
 title: "HTMLElement: mscandidatewindowhide event"
+short-title: mscandidatewindowhide
 slug: Web/API/HTMLElement/mscandidatewindowhide_event
 page-type: web-api-event
 status:
   - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`mscandidatewindowhide`** event is thrown after the Input Method Editor (IME) candidate window closes and is fully hidden.
 

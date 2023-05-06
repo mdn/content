@@ -1,5 +1,6 @@
 ---
-title: OES_texture_half_float_linear
+title: OES_texture_half_float_linear extension
+short-title: OES_texture_half_float_linear
 slug: Web/API/OES_texture_half_float_linear
 page-type: webgl-extension
 browser-compat: api.OES_texture_half_float_linear
@@ -11,7 +12,7 @@ The **`OES_texture_half_float_linear`** extension is part of the [WebGL API](/en
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default and the extension is not needed.
 
 ## Linear filtering
 

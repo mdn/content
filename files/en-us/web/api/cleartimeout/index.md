@@ -1,5 +1,6 @@
 ---
-title: clearTimeout()
+title: clearTimeout() global function
+short-title: clearTimeout()
 slug: Web/API/clearTimeout
 page-type: web-api-global-function
 browser-compat: api.clearTimeout

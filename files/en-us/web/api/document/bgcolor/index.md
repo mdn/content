@@ -1,5 +1,6 @@
 ---
-title: Document.bgColor
+title: "Document: bgColor property"
+short-title: bgColor
 slug: Web/API/Document/bgColor
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.createFramebuffer()
+title: "WebGLRenderingContext: createFramebuffer() method"
+short-title: createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createFramebuffer
@@ -30,8 +31,8 @@ A {{domxref("WebGLFramebuffer")}} object.
 ### Creating a frame buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 ```
 

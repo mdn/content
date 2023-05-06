@@ -1,5 +1,6 @@
 ---
-title: SVGGeometryElement.isPointInFill()
+title: "SVGGeometryElement: isPointInFill() method"
+short-title: isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
 page-type: web-api-instance-method
 browser-compat: api.SVGGeometryElement.isPointInFill

@@ -1,5 +1,6 @@
 ---
 title: "SVGAnimationElement: endEvent event"
+short-title: endEvent
 slug: Web/API/SVGAnimationElement/endEvent_event
 page-type: web-api-event
 browser-compat: api.SVGAnimationElement.endEvent_event

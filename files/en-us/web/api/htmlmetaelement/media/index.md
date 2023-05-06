@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.media
+title: "HTMLMetaElement: media property"
+short-title: media
 slug: Web/API/HTMLMetaElement/media
 page-type: web-api-instance-property
 browser-compat: api.HTMLMetaElement.media

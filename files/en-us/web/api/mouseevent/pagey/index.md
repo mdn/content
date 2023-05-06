@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.pageY
+title: "MouseEvent: pageY property"
+short-title: pageY
 slug: Web/API/MouseEvent/pageY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.pageY

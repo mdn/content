@@ -1,5 +1,6 @@
 ---
-title: ImageTrackList.ready
+title: "ImageTrackList: ready property"
+short-title: ready
 slug: Web/API/ImageTrackList/ready
 page-type: web-api-instance-property
 status:

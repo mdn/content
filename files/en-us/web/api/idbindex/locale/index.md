@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.locale
+title: "IDBIndex: locale property"
+short-title: locale
 slug: Web/API/IDBIndex/locale
 page-type: web-api-instance-property
 status:

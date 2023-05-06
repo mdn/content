@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.activeElement
+title: "ShadowRoot: activeElement property"
+short-title: activeElement
 slug: Web/API/ShadowRoot/activeElement
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.activeElement

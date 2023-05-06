@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: contentdelete event"
+short-title: contentdelete
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 page-type: web-api-event
 status:

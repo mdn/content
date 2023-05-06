@@ -1,5 +1,6 @@
 ---
-title: FormData.delete()
+title: "FormData: delete() method"
+short-title: delete()
 slug: Web/API/FormData/delete
 page-type: web-api-instance-method
 browser-compat: api.FormData.delete

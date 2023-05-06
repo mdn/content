@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.closed
+title: "WritableStreamDefaultWriter: closed property"
+short-title: closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.closed
@@ -19,19 +20,21 @@ A {{jsxref("Promise")}}.
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+const writableStream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {
+      // ...
+    },
+    close(controller) {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  write(chunk, controller) {
-    // ...
-  },
-  close(controller) {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 // ...
 
@@ -41,8 +44,8 @@ const writer = writableStream.getWriter();
 
 // check if the stream is closed
 writer.closed.then(() => {
-  console.log('writer closed');
-})
+  console.log("writer closed");
+});
 ```
 
 ## Specifications

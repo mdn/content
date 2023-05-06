@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.get()
+title: "CustomElementRegistry: get() method"
+short-title: get()
 slug: Web/API/CustomElementRegistry/get
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.get

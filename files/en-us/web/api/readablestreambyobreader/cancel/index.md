@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.cancel()
+title: "ReadableStreamBYOBReader: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.cancel

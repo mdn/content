@@ -1,5 +1,6 @@
 ---
-title: HTMLFontElement.color
+title: "HTMLFontElement: color property"
+short-title: color
 slug: Web/API/HTMLFontElement/color
 page-type: web-api-instance-property
 status:

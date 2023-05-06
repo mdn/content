@@ -1,5 +1,6 @@
 ---
-title: NavigationTransition.finished
+title: "NavigationTransition: finished property"
+short-title: finished
 slug: Web/API/NavigationTransition/finished
 page-type: web-api-instance-property
 status:

@@ -150,5 +150,4 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
-- [Resource Timing (Overview)](/en-US/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource timing (Overview)](/en-US/docs/Web/API/Performance_API/Resource_timing)

@@ -1,5 +1,6 @@
 ---
-title: HTMLFontElement.face
+title: "HTMLFontElement: face property"
+short-title: face
 slug: Web/API/HTMLFontElement/face
 page-type: web-api-instance-property
 status:

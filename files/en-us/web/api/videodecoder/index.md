@@ -21,9 +21,12 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
-  - : An integer representing the number of decode queue requests.
+  - : An integer representing the number of queued decode requests.
 - {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}}
-  - : Indicates whether the underlying codec is configured for decoding.
+  - : Indicates the current state of decoder. Possible values are:
+    - `"unconfigured"`
+    - `"configured"`
+    - `"closed"`
 
 ### Events
 
@@ -60,4 +63,5 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## See also
 
-[Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)

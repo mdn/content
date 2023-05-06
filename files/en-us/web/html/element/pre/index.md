@@ -1,5 +1,5 @@
 ---
-title: '<pre>: The Preformatted Text element'
+title: "<pre>: The Preformatted Text element"
 slug: Web/HTML/Element/pre
 page-type: html-element
 browser-compat: html.elements.pre

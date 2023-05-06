@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.renderbufferStorage()
+title: "WebGLRenderingContext: renderbufferStorage() method"
+short-title: renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.renderbufferStorage

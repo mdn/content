@@ -1,5 +1,6 @@
 ---
-title: Window.toolbar
+title: "Window: toolbar property"
+short-title: toolbar
 slug: Web/API/Window/toolbar
 page-type: web-api-instance-property
 browser-compat: api.Window.toolbar

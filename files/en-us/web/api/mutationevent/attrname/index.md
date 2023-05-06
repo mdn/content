@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.attrName
+title: "MutationEvent: attrName property"
+short-title: attrName
 slug: Web/API/MutationEvent/attrName
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: VRDisplayCapabilities.maxLayers
+title: "VRDisplayCapabilities: maxLayers property"
+short-title: maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
 page-type: web-api-instance-property
 status:

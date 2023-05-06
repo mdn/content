@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.options
+title: "HTMLSelectElement: options property"
+short-title: options
 slug: Web/API/HTMLSelectElement/options
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.options

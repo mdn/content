@@ -1,5 +1,6 @@
 ---
-title: SVGMarkerElement.markerHeight
+title: "SVGMarkerElement: markerHeight property"
+short-title: markerHeight
 slug: Web/API/SVGMarkerElement/markerHeight
 page-type: web-api-instance-property
 browser-compat: api.SVGMarkerElement.markerHeight

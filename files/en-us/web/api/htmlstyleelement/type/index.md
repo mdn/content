@@ -1,5 +1,6 @@
 ---
-title: HTMLStyleElement.type
+title: "HTMLStyleElement: type property"
+short-title: type
 slug: Web/API/HTMLStyleElement/type
 page-type: web-api-instance-property
 status:

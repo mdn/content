@@ -1,5 +1,6 @@
 ---
-title: ImageCapture.takePhoto()
+title: "ImageCapture: takePhoto() method"
+short-title: takePhoto()
 slug: Web/API/ImageCapture/takePhoto
 page-type: web-api-instance-method
 status:

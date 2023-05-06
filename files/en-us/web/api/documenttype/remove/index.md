@@ -1,5 +1,6 @@
 ---
-title: DocumentType.remove()
+title: "DocumentType: remove() method"
+short-title: remove()
 slug: Web/API/DocumentType/remove
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.remove

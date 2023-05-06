@@ -1,6 +1,7 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
+page-type: http-header
 browser-compat: http.headers.Keep-Alive
 ---
 

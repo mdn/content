@@ -1,5 +1,6 @@
 ---
-title: MediaDeviceInfo.deviceId
+title: "MediaDeviceInfo: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaDeviceInfo/deviceId
 page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.deviceId

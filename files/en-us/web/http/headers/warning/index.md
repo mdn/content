@@ -1,6 +1,7 @@
 ---
 title: Warning
 slug: Web/HTTP/Headers/Warning
+page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Warning

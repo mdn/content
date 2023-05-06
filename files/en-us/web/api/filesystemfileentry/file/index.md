@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileEntry.file()
+title: "FileSystemFileEntry: file() method"
+short-title: file()
 slug: Web/API/FileSystemFileEntry/file
 page-type: web-api-instance-method
 browser-compat: api.FileSystemFileEntry.file

@@ -1,5 +1,6 @@
 ---
-title: FontFace.load()
+title: "FontFace: load() method"
+short-title: load()
 slug: Web/API/FontFace/load
 page-type: web-api-instance-method
 browser-compat: api.FontFace.load

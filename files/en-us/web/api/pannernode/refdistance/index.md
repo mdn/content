@@ -1,5 +1,6 @@
 ---
-title: PannerNode.refDistance
+title: "PannerNode: refDistance property"
+short-title: refDistance
 slug: Web/API/PannerNode/refDistance
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.refDistance

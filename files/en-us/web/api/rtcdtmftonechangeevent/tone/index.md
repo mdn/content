@@ -1,5 +1,6 @@
 ---
-title: RTCDTMFToneChangeEvent.tone
+title: "RTCDTMFToneChangeEvent: tone property"
+short-title: tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
 page-type: web-api-instance-property
 browser-compat: api.RTCDTMFToneChangeEvent.tone

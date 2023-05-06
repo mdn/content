@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.location
+title: "WorkerGlobalScope: location property"
+short-title: location
 slug: Web/API/WorkerGlobalScope/location
 page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.location

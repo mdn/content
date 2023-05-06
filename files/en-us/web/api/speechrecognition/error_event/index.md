@@ -1,5 +1,6 @@
 ---
 title: "SpeechRecognition: error event"
+short-title: error
 slug: Web/API/SpeechRecognition/error_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.error_event

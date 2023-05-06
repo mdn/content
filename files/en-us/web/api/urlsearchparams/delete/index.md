@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.delete()
+title: "URLSearchParams: delete() method"
+short-title: delete()
 slug: Web/API/URLSearchParams/delete
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.delete
