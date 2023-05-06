@@ -66,7 +66,7 @@ So, let's dig deeper into how those four terms are related and why they are some
 
 ### Web page
 
-A **webpage** is a simple document displayable by a {{Glossary("browser")}}. Such documents are written in the {{Glossary("HTML")}} language (which we look into in more detail in [other articles](/en-US/docs/Web/HTML)). A web page can embed a variety of different types of resources such as:
+A **web page** is a simple document displayable by a {{Glossary("browser")}}. Such documents are written in the {{Glossary("HTML")}} language (which we look into in more detail in [other articles](/en-US/docs/Web/HTML)). A web page can embed a variety of different types of resources such as:
 
 - _style information_ — controlling a page's look-and-feel
 - _scripts_ — which add interactivity to the page
