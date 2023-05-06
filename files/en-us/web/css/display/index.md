@@ -66,7 +66,7 @@ The keyword values can be grouped into six value categories.
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
 
     - `block`
-      - : The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
+      - : The element generates a block level box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
       - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
