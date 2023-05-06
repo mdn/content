@@ -120,7 +120,7 @@ Firefox also supports some non-standard extensions to the system color keyword s
 - `-moz-CellHighlight` {{non-standard_inline}}
   - : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
 - `-moz-CellHighlightText` {{non-standard_inline}}
-  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
+  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight` background color. See also `-moz-html-CellHighlightText`.
 - `-moz-Combobox` {{non-standard_inline}}
   - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - `-moz-ComboboxText` {{non-standard_inline}}
