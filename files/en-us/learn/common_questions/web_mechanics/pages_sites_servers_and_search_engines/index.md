@@ -80,7 +80,7 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ### Website
 
-A _website_ is a collection of linked webpages (plus their associated resources) that share a unique domain name. Each webpage of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
+A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
