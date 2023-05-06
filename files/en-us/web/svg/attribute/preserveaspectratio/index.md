@@ -30,7 +30,9 @@ svg {
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
+```
 
+```html
   <!-- (width>height) meet -->
   <rect x="0" y="0" width="20" height="10">
     <title>xMidYMid meet</title>
@@ -44,7 +46,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="25" y="0" width="20" height="10">
     <title>xMinYMid meet</title>
   </rect>
@@ -57,7 +61,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="50" y="0" width="20" height="10">
     <title>xMaxYMid meet</title>
   </rect>
@@ -70,7 +76,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <!-- (width>height) slice -->
   <rect x="0" y="15" width="20" height="10">
     <title>xMidYMin slice</title>
@@ -84,7 +92,9 @@ svg {
     y="15">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="25" y="15" width="20" height="10">
     <title>xMidYMid slice</title>
   </rect>
@@ -97,7 +107,9 @@ svg {
     y="15">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="50" y="15" width="20" height="10">
     <title>xMidYMax slice</title>
   </rect>
@@ -110,7 +122,9 @@ svg {
     y="15">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <!-- (width<height) meet -->
   <rect x="75" y="0" width="10" height="25">
     <title>xMidYMin meet</title>
@@ -124,7 +138,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="90" y="0" width="10" height="25">
     <title>xMidYMid meet</title>
   </rect>
@@ -137,7 +153,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="105" y="0" width="10" height="25">
     <title>xMidYMax meet</title>
   </rect>
@@ -150,7 +168,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <!-- (width<height) slice -->
   <rect x="120" y="0" width="10" height="25">
     <title>xMinYMid slice</title>
@@ -164,7 +184,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="135" y="0" width="10" height="25">
     <title>xMidYMid slice</title>
   </rect>
@@ -177,7 +199,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <rect x="150" y="0" width="10" height="25">
     <title>xMaxYMid slice</title>
   </rect>
@@ -190,7 +214,9 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+```
 
+```html
   <!-- none -->
   <rect x="0" y="30" width="160" height="60">
     <title>none</title>
