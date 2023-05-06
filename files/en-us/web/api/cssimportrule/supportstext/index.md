@@ -3,6 +3,8 @@ title: "CSSImportRule: supportsText property"
 short-title: supportsText
 slug: Web/API/CSSImportRule/supportsText
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSImportRule.supportsText
 ---
 
