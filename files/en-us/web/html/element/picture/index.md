@@ -117,8 +117,17 @@ It is composed of a comma-separated list of image descriptors. Each image descri
   _OR_
 - a _pixel density descriptor_, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
 
-Here's an example on how to use `srcset` with an `<img>` tag:
+This is an example on how to use `srcset` with a `<picture>` tag:
 
+```html
+<picture>
+  <source srcset="logo-768.png, 
+                  logo-768-1.5x.png 1.5x" />
+  <img src="logo-320.png" alt="logo" />
+</picture>
+```
+
+The `srcset` attribute is not exclusive to the `<picture>` tag, we can also use it with an `<img>` tag as well.
 In this example we are using width descriptor,
 Ex: 400w
 
@@ -136,15 +145,6 @@ The `sizes` attribute is not mandatory when using srcset, but it is recommended 
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
-This is an example on how to use `srcset` with a `<picture>` tag:
-
-```html
-<picture>
-  <source srcset="logo-768.png, 
-                  logo-768-1.5x.png 1.5x" />
-  <img src="logo-320.png" alt="logo" />
-</picture>
-```
 
 ### The type attribute
 
