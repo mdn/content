@@ -141,6 +141,7 @@ Ex: 400w
             1200px"
      alt="Example Image">
 ```
+
 The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
