@@ -9,7 +9,7 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
 
-The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. The setting is used to convey to the browser on the device that the user prefers an interface that removes or replaces motion-based animations that trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations like scaling or panning large objects can cause vestibular motion triggers.
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. The setting is used to convey to the browser on the device that the user prefers an interface that removes or replaces motion-based animations that trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can cause vestibular motion triggers.
 
 ```css
 @media (prefers-reduced-motion) {
@@ -43,7 +43,7 @@ For Firefox, the `reduce` request is honoured if:
 
 ## Examples
 
-This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. In this example, if a user has enabled reduced motion in the accessibility preferences on their device, the `prefers-reduced-motion` media query will detect it and the CSS rule defined below will tone down the animation to a simple `dissolve` without causing vestibular motion triggers.
+This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. In this example, if a user has enabled a setting for reduced motion in the accessibility preferences on their device, the `prefers-reduced-motion` media query will detect it and the CSS rule defined below will tone down the [animation](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) on the box to a simple `dissolve` without causing vestibular motion triggers.
 
 ### Toning down the animation scaling
 
@@ -58,19 +58,20 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 ```css
 .animation {
   animation: pulse 1s linear infinite both;
+  background-color: purple;
 }
 
 /* Tone down the animation to avoid vestibular motion triggers. */
 @media (prefers-reduced-motion) {
   .animation {
-    animation: dissolve 2s linear infinite both;
+    animation: dissolve 4s linear infinite both;
+    background-color: green;
   }
 }
 ```
 
 ```css hidden
 .animation {
-  background-color: #306;
   color: #fff;
   font: 1.2em sans-serif;
   width: 10em;
@@ -102,7 +103,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
     opacity: 1;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -113,6 +114,8 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 #### Result
 
 {{EmbedLiveSample("Toning down the animation scaling")}}
+
+You can enable the reduce motion setting on [your device](#user_preferences) to view the change in animation scaling. The change in the box color when `pulse` animation switches to `dissolve` or vice versa is used only to convey the change in animation when the reduce motion setting is enabled or disabled.
 
 ## Specifications
 
