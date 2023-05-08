@@ -86,7 +86,7 @@ To access a website, type its domain name in your browser address bar, and the b
 
 ![Example of a web site domain name in the browser address bar](web-site.jpg)
 
-Note that it also possible to have a  a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
+Note that it also possible to have a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
 
 ### Web server
 
