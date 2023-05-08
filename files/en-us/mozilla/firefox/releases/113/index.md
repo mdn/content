@@ -79,7 +79,7 @@ This article provides information about the changes in Firefox 113 that affect d
 - Implemented the `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` commands ([Firefox bug 1585622](https://bugzil.la/1585622)).
 - Added support for the `background` parameter of the `WebDriver:Print` command ([Firefox bug 1783086](https://bugzil.la/1783086)).
 - Added support for the `orientation` parameter of the `WebDriver:Print` command ([Firefox bug 1791819](https://bugzil.la/1791819)).
-- Fixed an issue with DOMTokenList instances, which are now returned as collections instead of arbitrary objects. ([Firefox bug 1823464](https://bugzil.la/1823464)).
+- Fixed an issue with `DOMTokenList` instances, which are now returned as collections instead of arbitrary objects. ([Firefox bug 1823464](https://bugzil.la/1823464)).
 
 ## Changes for add-on developers
 
