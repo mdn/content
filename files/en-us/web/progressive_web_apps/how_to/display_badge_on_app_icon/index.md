@@ -59,6 +59,7 @@ Notification.requestPermission().then((result) => {
 });
 
 ```
+
 Optionally, you can check if a user has previously granted notification permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
 ### Use badges sparingly
