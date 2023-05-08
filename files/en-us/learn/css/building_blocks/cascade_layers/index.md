@@ -130,7 +130,8 @@ Layers can be created using any one of the following methods:
 - The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
-All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
+All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `
+`, a new anonymous (unnamed) layer is created.
 
 > **Note:** The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
 
@@ -241,7 +242,7 @@ You can import a stylesheet into a named layer, a nested named layer, or an anon
 ```css
 @import url("components-lib.css") layer(components);
 @import url("dialog.css") layer(components.dialog);
-@import url("marketing.css") layer();
+@import url("marketing.css") layer;
 ```
 
 You can import more than one CSS file into a single layer. The following declaration imports two separate files into a single `social` layer:
