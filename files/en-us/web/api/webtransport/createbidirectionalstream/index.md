@@ -10,9 +10,9 @@ browser-compat: api.WebTransport.createBidirectionalStream
 
 {{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
-The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens and returns a bidirectional stream.
+The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens and returns a bidirectional stream.
 
-The returned {{domxref("WebTransportBidirectionalStream")}} object has `readable` and `writable` properties that can be used to reliably read from and write to the server.
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportBidirectionalStream")}} object, which has `readable` and `writable` properties that can be used to reliably read from and write to the server.
 "Reliable" means that transmission and order of data are guaranteed.
 This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
@@ -25,9 +25,9 @@ Note however that even though bytes from higher send-order streams are sent firs
 
 ## Syntax
 
-```js
-createBidirectionalStream();
-createBidirectionalStream({sendOrder: "596996858"});
+```js-nolint
+createBidirectionalStream()
+createBidirectionalStream({sendOrder: "596996858"})
 ```
 
 ### Parameters

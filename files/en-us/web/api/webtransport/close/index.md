@@ -16,8 +16,8 @@ The **`close()`** method of the {{domxref("WebTransport")}} interface closes an 
 
 ## Syntax
 
-```js
-close(info);
+```js-nolint
+close(info)
 ```
 
 ### Parameters

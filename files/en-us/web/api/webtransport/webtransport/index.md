@@ -55,6 +55,7 @@ new WebTransport(url, options)
         Each object in the array has the following properties:
 
         - `algorithm`
+
           - : A string with the value: `sha-256` (case-insensitive).
             Note that this string represents the algorithm to use to verify the hash, and that any hash using an unknown algorithm will be ignored.
             Currently the only "known" algorithm in the spec is `sha-256`.
@@ -79,8 +80,9 @@ This example shows how you might construct a `WebTransport` using just a URL, wa
 
 First we define an `async` method that takes an URL and uses it to construct the `WebTransport` object.
 No constructor options are specified, so the connection uses default options: dedicated connection, support for unreliable transports is not required, default congestion control, and normal Web PKI authentication with the server.
+Note that the scheme needs to be HTTPS, and the port number needs to be explicitly specified.
 
-The method uses `await` for the transport to be ready, and returns the transport object promise.
+Once the {{domxref("WebTransport.ready")}} promise fulfills, you can start using the connection.
 
 ```js
 async function initTransport(url) {
@@ -93,7 +95,10 @@ async function initTransport(url) {
 }
 ```
 
-The `closeTransport()` method takes a transport object as an argument.
+You can respond to the connection closing by waiting for the {{domxref("WebTransport.closed")}} promise to fulfill.
+Errors returned by `WebTransport` operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
+
+The `closeTransport()` method below shows how.
 Within a `try...catch` block it uses `await` to wait for the `closed` promise to fulfill or reject, and then reports whether or not the connection closed intentionally or due to error.
 
 ```js
@@ -108,7 +113,7 @@ async function closeTransport(transport) {
 }
 ```
 
-Then we define a `useTransport()` function to first construct the transport and wait for it to be ready, use the transport (not shown), and monitor for the transport to close.
+We might call the asynchronous functions above in their own asynchronous function, as shown below.
 
 ```js
 // Use the transport
@@ -121,11 +126,7 @@ async function useTransport(url) {
   // When done, close the transport
   await closeTransport(transport);
 }
-```
 
-Lastly we call `useTransport()`, passing in the target URL.
-
-```js
 const url = "https://example.com:4999/wt";
 useTransport(url);
 ```

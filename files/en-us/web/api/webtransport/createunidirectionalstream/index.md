@@ -10,7 +10,9 @@ browser-compat: api.WebTransport.createUnidirectionalStream
 
 {{APIRef("WebTransport API")}}{{SeeCompatTable}}
 
-The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
+The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
+
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
@@ -23,9 +25,9 @@ Note however that even though bytes from higher send-order streams are sent firs
 
 ## Syntax
 
-```js
-createUnidirectionalStream();
-createUnidirectionalStream({sendOrder: "596996858"});;
+```js-nolint
+createUnidirectionalStream()
+createUnidirectionalStream({sendOrder: "596996858"})
 ```
 
 ### Parameters
