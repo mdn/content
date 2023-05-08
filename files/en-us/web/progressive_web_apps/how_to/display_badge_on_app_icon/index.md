@@ -57,7 +57,6 @@ While notification badges are supported on iOS and iPadOS, badges will not appea
 Notification.requestPermission().then((result) => {
   console.log(result);
 });
-
 ```
 
 Optionally, you can check if a user has previously granted notification permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
@@ -84,7 +83,7 @@ For example, if an email client app displays the unread messages count on the ap
 
 To display a badge on your PWA's app icon that shows a number of unread messages, use the {{domxref("Navigator.setAppBadge()")}} method:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.setAppBadge) {
   // Display the number of unread messages.
@@ -94,7 +93,7 @@ if (navigator.setAppBadge) {
 
 You can also display an empty badge using the same method by omitting the count parameter, or setting it to `0`:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.setAppBadge) {
   // Just display the badge, with no number in it.
@@ -104,7 +103,7 @@ if (navigator.setAppBadge) {
 
 To remove the badge on the app icon, use the {{domxref("Navigator.clearAppBadge()")}} method:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.clearAppBadge) {
   // Remove the badge on the app icon.
@@ -127,7 +126,7 @@ PWAs can use the following mechanisms to update in the background and display, u
 
 Here is a service worker code example showing how to listen to a server's Push messages and update the app badge to reflect an unread messages count:
 
-```javascript
+```js
 // Listen to "push" events in the service worker.
 self.addEventListener("push", (event) => {
   // Extract the unread count from the push message data.
