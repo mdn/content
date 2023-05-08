@@ -12,18 +12,23 @@ browser-compat:
 
 {{AddonSidebar}}
 
-Certain user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - are specified by your extension in essentially the same way:
+Your extension can include user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
 
-1. create an HTML file defining the structure of the UI element
-2. add a manifest.json key ([`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), or [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointing to that HTML file.
+1. creating an HTML file defining the structure of the UI element.
+2. adding a manifest.json key ([`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), or [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointing to that HTML file.
 
-One of the challenges with this approach is styling the element in such a way that it fits in with the browser's own style. To help with this, the manifest.json keys include an extra optional property: `browser_style`. If this is included and set to `true`, then your document will get one or more extra stylesheets that will help make it look consistent with the browser's UI and with other extensions that use the `browser_style` property.
+You can style these elements to match the browser's style. The manifest.json keys include an optional property to help with this: `browser_style`. If this is included and set to `true`, your document gets one or more extra stylesheets that help make it look consistent with the browser's UI and with other extensions that use the `browser_style` property.
 
-When considering using `browser_style: true`, you need to test your extension with various themes (built-in or from AMO) to make sure that the extension UI behaves the way you expect it to.
+> **Note:**
+> Support for `browser_style` in Manifest V3 has been deprecated and, from Firefox 115, `options_ui.browser_style` and `sidebar_action.browser_style` default to `false`. `page_action.browser_style`, `browser_action.browser_style`, and `action.browser_style` already defaults to `false`.
+> If your Manifest V3 extension depends on the `browser_style: true` styles, bundle this stylesheet in the extension: [extension.css](https://hg.mozilla.org/mozilla-central/raw-file/a445f1762c895000bcdabd9d95697522359d41ed/browser/components/extensions/extension.css).
+> See ([Firefox bug 1827910](https://bugzil.la/1827910)) for more information.
 
-> **Warning:** When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.
+When considering whether to use browser_style: true, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
 
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
+> **Warning:** When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
+
+> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so you need to add both keys to support them.
 
 In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 

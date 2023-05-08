@@ -59,6 +59,8 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### Removals
 
+- Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest.json keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), and [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) is deprecated for Manifest V3 extensions ([Firefox bug 1827910](https://bugzil.la/1827910)).
+
 ### Other
 
 ## Older versions

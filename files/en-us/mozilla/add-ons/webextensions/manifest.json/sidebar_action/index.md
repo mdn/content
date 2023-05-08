@@ -63,16 +63,21 @@ The `sidebar_action` key is an object that may have any of the properties listed
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}} in Manifest V3.
       </td>
       <td><code>Boolean</code></td>
       <td>
-        <p>Optional, defaulting to <code>true</code>.</p>
+        <p>Optional, defaulting to:</p>
+          <ul>
+            <li><code>true</code> in Manifest V2 and prior to Firefox 115 in Manifest V3.</li>
+            <li><code>false</code> in Manifest V3 from Firefox 115.</li>
+          </ul>
         <p>
           Use this to include a stylesheet in your popup that will make it look
           consistent with the browser's UI and with other extensions that use

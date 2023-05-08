@@ -72,12 +72,13 @@ The `action` key is an object that may have any of these properties, all optiona
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}}
       </td>
       <td><code>Boolean</code></td>
       <td>
@@ -87,7 +88,7 @@ The `action` key is an object that may have any of these properties, all optiona
           consistent with the browser's UI and with other extensions that use
           the <code>browser_style</code> property. Although this key defaults to
           <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> in order to make your popups consistent with the
+          <code>true</code> to make your popups consistent with the
           look of the rest of the browser user interface.
         </p>
         <p>
