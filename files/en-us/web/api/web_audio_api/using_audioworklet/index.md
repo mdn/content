@@ -94,7 +94,7 @@ const firstChannelByteCount = firstInputFirstChannel.length;
 const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0][0])
 ```
 
-The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of `Float32Array` objects, which contain the samples for that channel.
+The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is a `Float32Array` object, which contains the samples for that channel.
 
 How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).
 
