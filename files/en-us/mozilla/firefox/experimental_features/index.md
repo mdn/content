@@ -981,6 +981,7 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
 #### WebTransport API Core Classes
 
 This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
 
 <table>
   <thead>
@@ -1021,6 +1022,7 @@ This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTra
 #### WebTransport Datagrams
 
 This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
 
 <table>
   <thead>
