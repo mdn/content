@@ -61,7 +61,7 @@ new WebTransport(url, options)
             Currently the only "known" algorithm in the spec is `sha-256`.
 
         - `value`
-          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{domxref("ArrayBufferView")}} containing the hash value.
+          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{jsxref("TypedArray")}} containing the hash value.
 
 ### Exceptions
 
