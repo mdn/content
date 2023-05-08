@@ -237,7 +237,7 @@ a:hover {
 }
 ```
 
-In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
+In the live example below, you can play with different values for the various states of a link. We have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 1000)}}
 

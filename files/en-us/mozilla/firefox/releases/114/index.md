@@ -37,6 +37,8 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### APIs
 
+- [`Window.print()`](/en-US/docs/Web/API/Window/print) now opens a print dialog on Firefox for Android, allowing the current document to be printed ([Firefox bug 1809922](https://bugzil.la/1809922)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio

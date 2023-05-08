@@ -29,7 +29,7 @@ Safari and Firefox on desktop do not support the Badging API and do not support 
 
 ### Mobile support
 
-On mobile operating systems, badges are supported on Chromium-based browsers running on Android.
+Badges are supported on mobile operating systems, including Chromium-based browsers running on Android and in Safari on iOS and iPadOS, starting with iPadOS 16.4.
 
 ## Badge best practices
 
@@ -48,6 +48,18 @@ if (navigator.setAppBadge) {
 ```
 
 Do not rely solely on badges to inform users about the availability of new content. Browsers that support the Badging API may be installed on operating systems that do not support displaying a badge. For example, while Chrome supports the Badging API, badges will not appear on installed application icons on Linux.
+
+### Request notification permissions for iOS and/or iPadOS
+
+While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [Notification.requestPermission()](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
+
+```js
+Notification.requestPermission().then((result) => {
+  console.log(result);
+});
+
+```
+Optionally, you can check if a user has previously granted notification permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
 ### Use badges sparingly
 

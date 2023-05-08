@@ -1,7 +1,6 @@
 ---
 title: "Ember Interactivity: Footer functionality, conditional rendering"
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer
 ---
 
 {{LearnSidebar}}

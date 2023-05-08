@@ -7,9 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`mscandidatewindowhide`** event is thrown after the Input Method Editor (IME) candidate window closes and is fully hidden.
 
