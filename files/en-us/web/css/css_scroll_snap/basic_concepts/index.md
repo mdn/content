@@ -8,6 +8,12 @@ page-type: guide
 
 The [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) feature provides a way to snap the scrolling to certain points as the user scrolls through a document. This can be helpful in creating a more app-like experience on mobile or even on the desktop for some types of applications.
 
+Scroll snap defines scroll snap positions, which enforce the scroll positions that a scroll container's {{Glossary("scrollport")}} may end at after a scrolling operation has completed.
+
+To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
+
+The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. There are several {{cssxref("scroll-margin")}} properties that can be set on the snapped-to child elements to create an outset from the defined box.
+
 ## Key properties for CSS Scroll Snap
 
 The key properties for the scroll snap feature are:
