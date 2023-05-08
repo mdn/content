@@ -718,6 +718,47 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
+### prefers-reduced-transparency media feature
+
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to reduce transparency on their device.
+See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.prefers-reduced-transparency.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
