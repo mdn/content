@@ -28,8 +28,9 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 
 For Firefox, the `reduce` request is honoured if:
 
-- In GTK/GNOME: GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
+- In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
 
+  - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 
 - In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
