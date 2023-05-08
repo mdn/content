@@ -48,9 +48,14 @@ new WebTransport(url, options)
         This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
         If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI).
-        This feature allows Web developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
+        This feature allows developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
         If empty the user agent uses the same certificate verification procedures it would use for normal fetch operations.
+
+        The certificate must be an X.509v3 certificate that has a validity period of less that 2 weeks, and the current time must be within that validity period.
+        The format of the public key in the certificate depends on the implementation, but must minimally include ECDSA with the secp256r1 (NIST P-256) named group, and must not include RSA keys.
+        An ECSDA key is therefore an interoperable default public key format.
+        A user agent may add further requirements; these will be listed in the [browser compatibility](#browser_compatibility) section if known.
 
         Each object in the array has the following properties:
 
@@ -58,7 +63,7 @@ new WebTransport(url, options)
 
           - : A string with the value: `sha-256` (case-insensitive).
             Note that this string represents the algorithm to use to verify the hash, and that any hash using an unknown algorithm will be ignored.
-            Currently the only "known" algorithm in the spec is `sha-256`.
+            At time of writing, `SHA-256` is the only hash algorithm listed in the specification.
 
         - `value`
           - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{jsxref("TypedArray")}} containing the hash value.
