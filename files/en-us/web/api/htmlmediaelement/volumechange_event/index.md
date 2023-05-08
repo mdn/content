@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.volumechange_event
 
 {{APIRef("HTMLMediaElement")}}
 
-The `volumechange` event is fired when the volume has changed.
+The `volumechange` event is fired when either the volume attribute or the muted attribute has changed.
 
 This event is not cancelable and does not bubble.
 
