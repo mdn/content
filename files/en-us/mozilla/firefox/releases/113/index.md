@@ -5,15 +5,13 @@ slug: Mozilla/Firefox/Releases/113
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 09, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 was released on May 09, 2023.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -23,23 +21,9 @@ This article provides information about the changes in Firefox 113 that affect d
 - The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -48,8 +32,6 @@ This article provides information about the changes in Firefox 113 that affect d
 - The [Compression Streams API](/en-US/docs/Web/API/Compression_Streams_API) is now supported.
   The interfaces provided by this API are used to compress and decompress data using the `gzip` and `deflate` formats ([Firefox bug 1823619](https://bugzil.la/1823619)).
 
-#### DOM
-
 #### Media, WebRTC, and Web Audio
 
 - The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
@@ -57,10 +39,6 @@ This article provides information about the changes in Firefox 113 that affect d
 #### Removals
 
 - The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -85,10 +63,6 @@ This article provides information about the changes in Firefox 113 that affect d
 - When an extension registers multiple listeners for the same event, all the event listeners are called when the event page wakes up, instead of only the first one ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - Support is now provided for the {{WebExtAPIRef("declarativeNetRequest")}} API ([Firefox bug 1782685](https://bugzil.la/1782685)).
 - The `gecko_android` subkey has been added to the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This subkey enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
-
-### Removals
-
-### Other
 
 ## Older versions
 
