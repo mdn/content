@@ -8,8 +8,6 @@ browser-compat: api.SVGAElement.target
 
 {{APIRef("SVGAElement")}}
 
-{{SeeCompatTable}}
-
 The **`SVGAElement.target`** read-only property of {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
 
 This property is used when there are multiple possible targets for the ending resource, like when the parent document is a multi-frame HTML or XHTML document.
