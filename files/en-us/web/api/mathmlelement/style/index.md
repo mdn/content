@@ -1,14 +1,14 @@
 ---
-title: "SVGElement: style property"
+title: "MathMLElement: style property"
 short-title: style
-slug: Web/API/SVGElement/style
+slug: Web/API/MathMLElement/style
 page-type: web-api-instance-property
-browser-compat: api.SVGElement.style
+browser-compat: api.MathMLElement.style
 ---
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+The read-only **`style`** property of the {{domxref("MathMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 
 Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
@@ -37,25 +37,21 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 The following code snippet demonstrates how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
 
 ```html
-<svg
-  width="50"
-  height="50"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 250 250"
-  width="250"
-  height="250">
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    id="circle"
-    style="fill: red; stroke: black; stroke-width: 2px;" />
-</svg>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi class="parameter" style="color: red; border-bottom: 1px solid gray">x</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <mi>x</mi>
+  </mrow>
+</math>
 <pre id="out"></pre>
 ```
 
 ```js
-const element = document.querySelector("circle");
+const element = document.querySelector(".parameter");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
@@ -83,3 +79,4 @@ for (const prop in elementStyle) {
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("HTMLElement.style")}}
+- {{domxref("SVGElement.style")}}
