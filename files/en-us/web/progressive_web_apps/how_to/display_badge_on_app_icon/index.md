@@ -39,7 +39,7 @@ Before learning how to use badges, consider these best practices to ensure your 
 
 To ensure the Badging API is [supported](#support-for-badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
 
-```javascript
+```js
 if (navigator.setAppBadge) {
   // The API is supported, use it.
 } else {
