@@ -5,7 +5,7 @@ slug: Learn/Performance/Measuring_performance
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
-Measuring performance provides an important metric to help you asses the success of your app, site, or web service.
+Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
 For example, you can use performance metrics to determine how your app performs in comparison to a competitor, or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
 
