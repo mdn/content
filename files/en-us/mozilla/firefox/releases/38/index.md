@@ -106,9 +106,9 @@ _No change._
 
 ## Security
 
-- In Firefox, the {{htmlattrxref("autocomplete", "input")}}`=false` attribute is now ignored when dealing with a login form ([Firefox bug 1025703](https://bugzil.la/1025703)). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
-- RC4 is now disabled when using TLS, except for a few specifically whitelisted Web sites. This whitelist is an interim measure until those sites are fixed ([Firefox bug 1124039](https://bugzil.la/1124039)). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ([Firefox bug 1138882](https://bugzil.la/1138882)).
-- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ([Firefox bug 1114816](https://bugzil.la/1114816)). The whitelist can be disabled by setting `security.tls.insecure_fallback_hosts.use_static_list` to `false`.
+- In Firefox, the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete)`=false` attribute is now ignored when dealing with a login form ([Firefox bug 1025703](https://bugzil.la/1025703)). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
+- RC4 is now disabled when using TLS, except for a few specifically allowed websites. This whitelist is an interim measure until those sites are fixed ([Firefox bug 1124039](https://bugzil.la/1124039)). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ([Firefox bug 1138882](https://bugzil.la/1138882)).
+- Websites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ([Firefox bug 1114816](https://bugzil.la/1114816)). The whitelist can be disabled by setting `security.tls.insecure_fallback_hosts.use_static_list` to `false`.
 
 ## Changes for add-on and Mozilla developers
 

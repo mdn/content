@@ -1,5 +1,6 @@
 ---
-title: Document.referrer
+title: "Document: referrer property"
+short-title: referrer
 slug: Web/API/Document/referrer
 page-type: web-api-instance-property
 browser-compat: api.Document.referrer

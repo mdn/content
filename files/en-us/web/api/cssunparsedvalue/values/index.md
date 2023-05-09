@@ -1,13 +1,12 @@
 ---
-title: CSSUnparsedValue.values()
+title: "CSSUnparsedValue: values() method"
+short-title: values()
 slug: Web/API/CSSUnparsedValue/values
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSUnparsedValue.values
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.values()`** method
 returns a new _array iterator_ object that contains the

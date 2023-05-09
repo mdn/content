@@ -1,5 +1,6 @@
 ---
-title: TextTrackCue.pauseOnExit
+title: "TextTrackCue: pauseOnExit property"
+short-title: pauseOnExit
 slug: Web/API/TextTrackCue/pauseOnExit
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCue.pauseOnExit

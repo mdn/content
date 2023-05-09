@@ -1,5 +1,6 @@
 ---
-title: BlobEvent.data
+title: "BlobEvent: data property"
+short-title: data
 slug: Web/API/BlobEvent/data
 page-type: web-api-instance-property
 browser-compat: api.BlobEvent.data

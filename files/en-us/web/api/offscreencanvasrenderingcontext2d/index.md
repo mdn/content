@@ -199,7 +199,7 @@ The following methods can be used to manipulate paths of objects.
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
   - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
   - : Addition to CanvasPath that allows users to render rectangles with rounded corners.
 
 ### Transformations
@@ -263,7 +263,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only reference to an `OffscreenCanvas` object.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
-- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.reset()")}}
   - : Resets the current drawing style state to the default values.
 
 ### Filters

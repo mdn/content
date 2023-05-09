@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.blendTextureSourceAlpha
+title: "XRCompositionLayer: blendTextureSourceAlpha property"
+short-title: blendTextureSourceAlpha
 slug: Web/API/XRCompositionLayer/blendTextureSourceAlpha
 page-type: web-api-instance-property
 status:

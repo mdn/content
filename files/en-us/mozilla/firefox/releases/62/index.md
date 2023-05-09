@@ -97,7 +97,7 @@ _No changes._
 
 - The `userproximity` and `deviceproximity` events, as well as the `UserProximityEvent` and `DeviceProximityEvent` interfaces, have been disabled by default behind the `device.sensors.proximity.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
 - The `devicelight` event of type `DeviceLightEvent` has been disabled by default behind the `device.sensors.ambientLight.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
+- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
 - Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ([Firefox bug 1408301](https://bugzil.la/1408301)).
 - Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - {{domxref("window.getComputedStyle()")}} no longer returns `null` when called on a `Window` which has no presentation ([Firefox bug 1467722](https://bugzil.la/1467722)).

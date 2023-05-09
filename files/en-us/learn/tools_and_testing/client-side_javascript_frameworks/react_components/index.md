@@ -106,8 +106,7 @@ With this component imported, you can replace all of the `<li>` elements in `App
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -232,7 +231,7 @@ In `src/index.js`, make a new `const` beneath the final import, but above `React
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
@@ -267,8 +266,7 @@ Let's try replacing all the children of the `<ul>` with `taskList`:
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -280,7 +278,7 @@ This gets us some of the way towards showing all the components again, but we've
 To fix this, we need to return a `<Todo />` component from our `map()` function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:
 
 ```jsx
-  const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Look again at your app; now our tasks look more like they used to, but they're missing the names of the tasks themselves. Remember that each task we map over has the `id`, `name`, and `completed` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
@@ -301,14 +299,13 @@ Because keys should be unique, we're going to re-use the `id` of each task objec
 
 ```jsx
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **You should always pass a unique key to anything you render with iteration.** Nothing obvious will change in your browser, but if you do not use unique keys, React will log warnings to your console and your app may behave strangely!
@@ -406,13 +403,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -426,8 +422,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>

@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.keys()
+title: "FontFaceSet: keys() method"
+short-title: keys()
 slug: Web/API/FontFaceSet/keys
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.keys

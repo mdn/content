@@ -1,5 +1,6 @@
 ---
-title: TextTrack.inBandMetadataTrackDispatchType
+title: "TextTrack: inBandMetadataTrackDispatchType property"
+short-title: inBandMetadataTrackDispatchType
 slug: Web/API/TextTrack/inBandMetadataTrackDispatchType
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.label

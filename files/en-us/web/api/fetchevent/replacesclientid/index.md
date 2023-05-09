@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.replacesClientId
+title: "FetchEvent: replacesClientId property"
+short-title: replacesClientId
 slug: Web/API/FetchEvent/replacesClientId
 page-type: web-api-instance-property
 browser-compat: api.FetchEvent.replacesClientId

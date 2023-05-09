@@ -34,13 +34,16 @@ Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by
 ## Examples
 
 ```js
-if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-    if (event.visible) {
-      const rect = event.titlebarAreaRect;
-      // Do something with the coordinates of the title bar area.
+if ("windowControlsOverlay" in navigator) {
+  navigator.windowControlsOverlay.addEventListener(
+    "geometrychange",
+    (event) => {
+      if (event.visible) {
+        const rect = event.titlebarAreaRect;
+        // Do something with the coordinates of the title bar area.
+      }
     }
-  });
+  );
 }
 ```
 

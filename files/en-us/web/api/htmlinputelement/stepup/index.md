@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.stepUp()
+title: "HTMLInputElement: stepUp() method"
+short-title: stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.stepUp
@@ -11,8 +12,8 @@ The **`HTMLInputElement.stepUp()`** method increments the value
 of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute, or the
 default `step` value if the step attribute is not explicitly set. The method,
-when invoked, increments the {{htmlattrxref("value","input")}} by
-({{htmlattrxref("step","input")}} \* n), where `n` defaults to
+when invoked, increments the [`value`](/en-US/docs/Web/HTML/Element/input#value) by
+([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where `n` defaults to
 `1` if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
 default value for `step` if not specified.

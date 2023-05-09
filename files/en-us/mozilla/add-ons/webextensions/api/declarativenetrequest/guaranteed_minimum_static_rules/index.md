@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GUARANTEED_MINIMUM_STATIC_RULES
+page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES
 ---
 

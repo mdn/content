@@ -47,7 +47,7 @@ In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) we e
 
 ### Shapes from the box value
 
-Shapes can also be created around the box value. Therefor, you could create your shape on:
+Shapes can also be created around the box value. Therefore, you could create your shape on:
 
 - `border-box`
 - `padding-box`

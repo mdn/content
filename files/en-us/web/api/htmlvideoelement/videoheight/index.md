@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.videoHeight
+title: "HTMLVideoElement: videoHeight property"
+short-title: videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
 page-type: web-api-instance-property
 browser-compat: api.HTMLVideoElement.videoHeight

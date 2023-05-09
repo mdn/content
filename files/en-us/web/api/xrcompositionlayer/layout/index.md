@@ -1,5 +1,6 @@
 ---
-title: XRCompositionLayer.layout
+title: "XRCompositionLayer: layout property"
+short-title: layout
 slug: Web/API/XRCompositionLayer/layout
 page-type: web-api-instance-property
 status:

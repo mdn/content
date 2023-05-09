@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.restore()
+title: "CanvasRenderingContext2D: restore() method"
+short-title: restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.restore

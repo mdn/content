@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.httpEquiv
+title: "HTMLMetaElement: httpEquiv property"
+short-title: httpEquiv
 slug: Web/API/HTMLMetaElement/httpEquiv
 page-type: web-api-instance-property
 browser-compat: api.HTMLMetaElement.httpEquiv

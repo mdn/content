@@ -1,5 +1,6 @@
 ---
 title: "Window: load event"
+short-title: load
 slug: Web/API/Window/load_event
 page-type: web-api-event
 browser-compat: api.Window.load_event

@@ -16,15 +16,14 @@ The attribute value is a semicolon separated list of values. The interpretation 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("discard")}}
 - {{SVGElement("set")}}
 
-## animate, animateColor, animateMotion, animateTransform, set
+## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
 
 <table class="properties">
   <tbody>
@@ -145,7 +144,7 @@ The `<discard>` element itself can be discarded prior to its activation, in whic
   </tbody>
 </table>
 
-The definition of `<begin-value-list>` is the [same as for the other animation elements](#animate_animatecolor_animatemotion_animatetransform_set).
+The definition of `<begin-value-list>` is the [same as for the other animation elements](#animate_animatemotion_animatetransform_set).
 
 ## Examples
 

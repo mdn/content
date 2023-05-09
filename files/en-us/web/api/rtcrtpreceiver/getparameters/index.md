@@ -1,5 +1,6 @@
 ---
-title: RTCRtpReceiver.getParameters()
+title: "RTCRtpReceiver: getParameters() method"
+short-title: getParameters()
 slug: Web/API/RTCRtpReceiver/getParameters
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpReceiver.getParameters

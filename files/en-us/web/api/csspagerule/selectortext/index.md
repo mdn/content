@@ -1,5 +1,6 @@
 ---
-title: CSSPageRule.selectorText
+title: "CSSPageRule: selectorText property"
+short-title: selectorText
 slug: Web/API/CSSPageRule/selectorText
 page-type: web-api-instance-property
 browser-compat: api.CSSPageRule.selectorText

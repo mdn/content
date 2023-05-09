@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.entries()
+title: "FileSystemDirectoryHandle: entries() method"
+short-title: entries()
 slug: Web/API/FileSystemDirectoryHandle/entries
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.entries

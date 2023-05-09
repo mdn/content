@@ -1,13 +1,12 @@
 ---
-title: Report.type
+title: "Report: type property"
+short-title: type
 slug: Web/API/Report/type
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Report.type
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g. `deprecation` or

@@ -114,7 +114,7 @@ fetch("https://www.example.org")
 
 ### Convert async iterator to stream
 
-Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) to a readable stream:
+Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
 
 ```js
 function iteratorToStream(iterator) {

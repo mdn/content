@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.delete()
+title: "CustomStateSet: delete() method"
+short-title: delete()
 slug: Web/API/CustomStateSet/delete
 page-type: web-api-instance-method
 status:

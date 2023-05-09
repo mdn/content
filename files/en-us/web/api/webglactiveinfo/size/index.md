@@ -1,5 +1,6 @@
 ---
-title: WebGLActiveInfo.size
+title: "WebGLActiveInfo: size property"
+short-title: size
 slug: Web/API/WebGLActiveInfo/size
 page-type: web-api-instance-property
 browser-compat: api.WebGLActiveInfo.size

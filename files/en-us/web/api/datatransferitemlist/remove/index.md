@@ -1,5 +1,6 @@
 ---
-title: DataTransferItemList.remove()
+title: "DataTransferItemList: remove() method"
+short-title: remove()
 slug: Web/API/DataTransferItemList/remove
 page-type: web-api-instance-method
 browser-compat: api.DataTransferItemList.remove

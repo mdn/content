@@ -21,6 +21,8 @@ When a target is touched and held on iOS, Safari displays a callout information 
 /* Global values */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
 

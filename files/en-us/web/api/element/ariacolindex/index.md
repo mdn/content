@@ -1,5 +1,6 @@
 ---
-title: Element.ariaColIndex
+title: "Element: ariaColIndex property"
+short-title: ariaColIndex
 slug: Web/API/Element/ariaColIndex
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaColIndex

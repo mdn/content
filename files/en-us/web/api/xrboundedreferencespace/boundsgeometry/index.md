@@ -1,5 +1,6 @@
 ---
-title: XRBoundedReferenceSpace.boundsGeometry
+title: "XRBoundedReferenceSpace: boundsGeometry property"
+short-title: boundsGeometry
 slug: Web/API/XRBoundedReferenceSpace/boundsGeometry
 page-type: web-api-instance-property
 status:

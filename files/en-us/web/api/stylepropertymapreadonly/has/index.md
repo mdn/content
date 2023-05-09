@@ -1,13 +1,12 @@
 ---
-title: StylePropertyMapReadOnly.has()
+title: "StylePropertyMapReadOnly: has() method"
+short-title: has()
 slug: Web/API/StylePropertyMapReadOnly/has
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`has()`** method of the
 {{domxref("StylePropertyMapReadOnly")}} interface indicates whether the specified

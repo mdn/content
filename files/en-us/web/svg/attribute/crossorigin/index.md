@@ -1,5 +1,5 @@
 ---
-title: 'SVG attribute: crossorigin'
+title: "SVG attribute: crossorigin"
 slug: Web/SVG/Attribute/crossorigin
 page-type: svg-attribute
 browser-compat: api.SVGImageElement.crossOrigin
@@ -44,7 +44,7 @@ This table shows all possible keywords and their meaning:
   </tbody>
 </table>
 
-It follows the same processing rules as the HTML attribute {{htmlattrxref("crossorigin")}}.
+It follows the same processing rules as the HTML attribute [`crossorigin`](/en-US/docs/Web/HTML/Global_attributes#crossorigin).
 
 ## Specifications
 

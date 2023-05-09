@@ -1,6 +1,7 @@
 ---
 title: "ARIA: document role"
 slug: Web/Accessibility/ARIA/Roles/document_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document
 ---
 

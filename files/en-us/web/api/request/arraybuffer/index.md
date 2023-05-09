@@ -1,11 +1,12 @@
 ---
-title: Request.arrayBuffer()
+title: "Request: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Request/arrayBuffer
 page-type: web-api-instance-method
 browser-compat: api.Request.arrayBuffer
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with an {{jsxref("ArrayBuffer")}}.

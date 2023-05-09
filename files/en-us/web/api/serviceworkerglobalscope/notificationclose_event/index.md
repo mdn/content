@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: notificationclose event"
+short-title: notificationclose
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event

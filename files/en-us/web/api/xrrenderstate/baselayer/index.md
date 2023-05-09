@@ -1,5 +1,6 @@
 ---
-title: XRRenderState.baseLayer
+title: "XRRenderState: baseLayer property"
+short-title: baseLayer
 slug: Web/API/XRRenderState/baseLayer
 page-type: web-api-instance-property
 status:

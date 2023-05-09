@@ -1,5 +1,6 @@
 ---
-title: Navigator.permissions
+title: "Navigator: permissions property"
+short-title: permissions
 slug: Web/API/Navigator/permissions
 page-type: web-api-instance-property
 browser-compat: api.Navigator.permissions

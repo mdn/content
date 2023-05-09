@@ -1,6 +1,7 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Headers/Early-Data
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Early-Data

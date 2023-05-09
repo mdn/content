@@ -1,6 +1,7 @@
 ---
 title: "CSP: sandbox"
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.sandbox
 ---
 
@@ -8,7 +9,7 @@ browser-compat: http.headers.Content-Security-Policy.sandbox
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`sandbox`** directive enables a sandbox for the requested
-resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}}
+resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
 attribute. It applies restrictions to a page's actions including preventing popups,
 preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
@@ -90,5 +91,5 @@ Content-Security-Policy: sandbox allow-scripts;
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{htmlattrxref("sandbox", "iframe")}} attribute on {{HTMLElement("iframe")}}
+- [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}}
   elements

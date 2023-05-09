@@ -1,6 +1,7 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
+page-type: guide
 browser-compat: http.headers.Content-Security-Policy
 ---
 

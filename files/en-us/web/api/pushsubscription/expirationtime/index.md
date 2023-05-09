@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.expirationTime
+title: "PushSubscription: expirationTime property"
+short-title: expirationTime
 slug: Web/API/PushSubscription/expirationTime
 page-type: web-api-instance-property
 browser-compat: api.PushSubscription.expirationTime

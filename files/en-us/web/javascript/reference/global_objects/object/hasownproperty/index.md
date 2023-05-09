@@ -11,10 +11,10 @@ The **`hasOwnProperty()`** method returns a boolean indicating whether the
 object has the specified property as its own property (as opposed to inheriting
 it).
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
-
 > **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
+
+{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
 ## Syntax
 
@@ -151,7 +151,7 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // Use another Object's hasOwnProperty
 // and call it with 'this' set to foo
-({}.hasOwnProperty.call(foo, "bar")); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Note that in the first two cases there are no newly created objects.

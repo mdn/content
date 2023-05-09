@@ -1,5 +1,6 @@
 ---
-title: 'Window: message event'
+title: "Window: message event"
+short-title: message
 slug: Web/API/Window/message_event
 page-type: web-api-event
 browser-compat: api.Window.message_event
@@ -16,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -48,19 +49,19 @@ Suppose a script sends a message to a different browsing context, such as anothe
 
 ```js
 const targetFrame = window.top.frames[1];
-const targetOrigin = 'https://example.org';
-const windowMessageButton = document.querySelector('#window-message');
+const targetOrigin = "https://example.org";
+const windowMessageButton = document.querySelector("#window-message");
 
-windowMessageButton.addEventListener('click', () => {
-    targetFrame.postMessage('hello there', targetOrigin);
+windowMessageButton.addEventListener("click", () => {
+  targetFrame.postMessage("hello there", targetOrigin);
 });
 ```
 
 The receiver can listen for the message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) with code like this:
 
 ```js
-window.addEventListener('message', (event) => {
-    console.log(`Received message: ${event.data}`);
+window.addEventListener("message", (event) => {
+  console.log(`Received message: ${event.data}`);
 });
 ```
 
@@ -68,7 +69,7 @@ Alternatively the listener could use the `onmessage` event handler property:
 
 ```js
 window.onmessage = (event) => {
-    console.log(`Received message: ${event.data}`);
+  console.log(`Received message: ${event.data}`);
 };
 ```
 

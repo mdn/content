@@ -1,5 +1,6 @@
 ---
-title: XRRigidTransform.inverse
+title: "XRRigidTransform: inverse property"
+short-title: inverse
 slug: Web/API/XRRigidTransform/inverse
 page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.inverse

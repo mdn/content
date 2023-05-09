@@ -1,5 +1,5 @@
 ---
-title: '<p>: The Paragraph element'
+title: "<p>: The Paragraph element"
 slug: Web/HTML/Element/p
 page-type: html-element
 browser-compat: html.elements.p
@@ -69,8 +69,8 @@ Paragraphs are [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
         >
       </td>
     </tr>
@@ -91,7 +91,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -108,7 +108,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Styling paragraphs
 

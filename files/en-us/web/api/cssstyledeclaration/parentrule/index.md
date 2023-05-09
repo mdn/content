@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.parentRule
+title: "CSSStyleDeclaration: parentRule property"
+short-title: parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
 page-type: web-api-instance-property
 browser-compat: api.CSSStyleDeclaration.parentRule

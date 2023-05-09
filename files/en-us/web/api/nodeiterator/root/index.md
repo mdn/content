@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.root
+title: "NodeIterator: root property"
+short-title: root
 slug: Web/API/NodeIterator/root
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.root

@@ -1,5 +1,6 @@
 ---
-title: Element.getElementsByTagName()
+title: "Element: getElementsByTagName() method"
+short-title: getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 page-type: web-api-instance-method
 browser-compat: api.Element.getElementsByTagName

@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.state
+title: "MediaRecorder: state property"
+short-title: state
 slug: Web/API/MediaRecorder/state
 page-type: web-api-instance-property
 browser-compat: api.MediaRecorder.state

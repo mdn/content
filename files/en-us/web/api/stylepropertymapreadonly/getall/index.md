@@ -1,13 +1,12 @@
 ---
-title: StylePropertyMapReadOnly.getAll()
+title: "StylePropertyMapReadOnly: getAll() method"
+short-title: getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`getAll()`** method of the
 {{domxref("StylePropertyMapReadOnly")}} interface returns an array of

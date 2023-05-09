@@ -1,5 +1,6 @@
 ---
-title: Node.baseURI
+title: "Node: baseURI property"
+short-title: baseURI
 slug: Web/API/Node/baseURI
 page-type: web-api-instance-property
 browser-compat: api.Node.baseURI

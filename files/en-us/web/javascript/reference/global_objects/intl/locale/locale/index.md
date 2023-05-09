@@ -7,13 +7,9 @@ browser-compat: javascript.builtins.Intl.Locale.Locale
 
 {{JSRef}}
 
-The **`Intl.Locale`** constructor is a
-standard built-in property of the Intl object that represents a Unicode locale
-identifier.
+The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-locale.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

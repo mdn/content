@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.whatToShow
+title: "TreeWalker: whatToShow property"
+short-title: whatToShow
 slug: Web/API/TreeWalker/whatToShow
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.whatToShow

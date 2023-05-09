@@ -1,5 +1,6 @@
 ---
-title: GamepadEvent.gamepad
+title: "GamepadEvent: gamepad property"
+short-title: gamepad
 slug: Web/API/GamepadEvent/gamepad
 page-type: web-api-instance-property
 browser-compat: api.GamepadEvent.gamepad

@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.write()
+title: "FileSystemSyncAccessHandle: write() method"
+short-title: write()
 slug: Web/API/FileSystemSyncAccessHandle/write
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.write

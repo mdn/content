@@ -70,7 +70,7 @@ All forms start with a {{HTMLelement("form")}} element, like this:
 <form action="/my-handling-form-page" method="post">…</form>
 ```
 
-This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes:
+This element formally defines a form. It's a container element like a {{HTMLelement("section")}} or {{HTMLelement("footer")}} element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method) attributes:
 
 - The `action` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
 - The `method` attribute defines which HTTP method to send the data with (usually `get` or `post`).
@@ -259,7 +259,7 @@ Save and reload, and you'll see that your form should look much less ugly.
 ## Sending form data to your web server
 
 The last part, and perhaps the trickiest, is to handle form data on the server side.
-The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#attr-method) attributes.
+The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method) attributes.
 
 We provide a `name` attribute for each form control.
 The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
