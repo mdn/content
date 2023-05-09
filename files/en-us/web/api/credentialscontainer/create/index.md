@@ -17,7 +17,7 @@ This is used by multiple different credential-related APIs with significantly di
 
 The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
 
-> **Note:** This method is restricted to top-level contexts. Calls to it within an `<iframe>` element will resolve without effect.
+> **Note:** This method is restricted to top-level {{glossary("browsing context", "browsing contexts")}} (i.e., a document running directly inside a browser tab, and not embedded inside another document). Calls to it from within an `<iframe>` element will resolve without effect.
 
 ## General syntax
 
