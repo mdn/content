@@ -976,6 +976,90 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
   </tbody>
 </table>
 
+### WebTransport API
+
+#### WebTransport API core classes
+
+This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### WebTransport datagrams
+
+This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.datagrams.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### WebRTC and media
 
 The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).

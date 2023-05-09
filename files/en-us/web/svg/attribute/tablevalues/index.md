@@ -2,8 +2,7 @@
 title: tableValues
 slug: Web/SVG/Attribute/tableValues
 page-type: svg-attribute
-spec-urls: >-
-  https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
 ---
 
 {{SVGRef}}

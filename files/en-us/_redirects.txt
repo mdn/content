@@ -4710,7 +4710,7 @@
 /en-US/docs/JavaScript/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/JavaScript/Shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
-/en-US/docs/JavaScript/Typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
+/en-US/docs/JavaScript/Typed_arrays	/en-US/docs/Web/JavaScript/Guide/Typed_arrays
 /en-US/docs/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/JavaScript/Typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
@@ -5155,7 +5155,7 @@
 /en-US/docs/JavaScript_shells	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_technologies_overview	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
 /en-US/docs/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
-/en-US/docs/JavaScript_typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
+/en-US/docs/JavaScript_typed_arrays	/en-US/docs/Web/JavaScript/Guide/Typed_arrays
 /en-US/docs/JavaScript_typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/JavaScript_typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/JavaScript_typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
@@ -12274,6 +12274,7 @@
 /en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
@@ -12306,6 +12307,7 @@
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/en-US/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
@@ -12569,6 +12571,7 @@
 /en-US/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /en-US/docs/Web/JavaScript/Tutorials	/en-US/docs/Web/JavaScript
+/en-US/docs/Web/JavaScript/Typed_arrays	/en-US/docs/Web/JavaScript/Guide/Typed_arrays
 /en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/Web/JavaScript/Typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView

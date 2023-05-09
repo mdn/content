@@ -40,8 +40,8 @@ We've used functions built in to the browser a lot in this course.
 Every time we manipulated a text string, for example:
 
 ```js
-const myText = 'I am a string';
-const newString = myText.replace('string', 'sausage');
+const myText = "I am a string";
+const newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a source string,
 // and a target string and replaces the source string,
@@ -51,8 +51,8 @@ console.log(newString);
 Or every time we manipulated an array:
 
 ```js
-const myArray = ['I', 'love', 'chocolate', 'frogs'];
-const madeAString = myArray.join(' ');
+const myArray = ["I", "love", "chocolate", "frogs"];
+const madeAString = myArray.join(" ");
 console.log(madeAString);
 // the join() function takes an array, joins
 // all the array items together into a single
@@ -85,10 +85,10 @@ You've also seen a lot of **custom functions** in the course so far — function
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -105,7 +105,7 @@ rather than having to write all that code out again every time we want to repeat
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -117,7 +117,7 @@ You are probably clear on this by now, but just in case, to actually use a funct
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
 myFunction();
@@ -141,8 +141,8 @@ const myNumber = Math.random();
 The browser's built-in string [replace()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:
 
 ```js
-const myText = 'I am a string';
-const newString = myText.replace('string', 'sausage');
+const myText = "I am a string";
+const newString = myText.replace("string", "sausage");
 ```
 
 > **Note:** When you need to specify multiple parameters, they are separated by commas.
@@ -152,8 +152,8 @@ const newString = myText.replace('string', 'sausage');
 Sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
 ```js
-const myArray = ['I', 'love', 'chocolate', 'frogs'];
-const madeAString = myArray.join(' ');
+const myArray = ["I", "love", "chocolate", "frogs"];
+const madeAString = myArray.join(" ");
 console.log(madeAString);
 // returns 'I love chocolate frogs'
 
@@ -169,12 +169,12 @@ If no parameter is included to specify a joining/delimiting character, a comma i
 If you're writing a function and want to support optional parameters, you can specify default values by adding `=` after the name of the parameter, followed by the default value:
 
 ```js
-function hello(name = 'Chris') {
+function hello(name = "Chris") {
   console.log(`Hello ${name}!`);
 }
 
-hello('Ari'); // Hello Ari!
-hello();      // Hello Chris!
+hello("Ari"); // Hello Ari!
+hello(); // Hello Chris!
 ```
 
 ## Anonymous functions and arrow functions
@@ -183,7 +183,7 @@ So far we have just created a function like so:
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -191,8 +191,8 @@ But you can also create a function that doesn't have a name:
 
 ```js
 (function () {
-  alert('hello');
-})
+  alert("hello");
+});
 ```
 
 This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as a parameter. In this case the function parameter is often passed as an anonymous function.
@@ -213,13 +213,13 @@ function logKey(event) {
   console.log(`You pressed "${event.key}".`);
 }
 
-textBox.addEventListener('keydown', logKey);
+textBox.addEventListener("keydown", logKey);
 ```
 
 Instead of defining a separate `logKey()` function, you can pass an anonymous function into `addEventListener()`:
 
 ```js
-textBox.addEventListener('keydown', function(event) {
+textBox.addEventListener("keydown", function (event) {
   console.log(`You pressed "${event.key}".`);
 });
 ```
@@ -229,7 +229,7 @@ textBox.addEventListener('keydown', function(event) {
 If you pass an anonymous function like this, there's an alternative form you can use, called an **arrow function**. Instead of `function(event)`, you write `(event) =>`:
 
 ```js
-textBox.addEventListener('keydown', (event) => {
+textBox.addEventListener("keydown", (event) => {
   console.log(`You pressed "${event.key}".`);
 });
 ```
@@ -237,13 +237,17 @@ textBox.addEventListener('keydown', (event) => {
 If the function only has one line in the curly brackets, you omit the curly brackets:
 
 ```js
-textBox.addEventListener('keydown', (event) => console.log(`You pressed "${event.key}".`));
+textBox.addEventListener("keydown", (event) =>
+  console.log(`You pressed "${event.key}".`)
+);
 ```
 
 If the function only takes one parameter, you can also omit the brackets around the parameter:
 
 ```js
-textBox.addEventListener('keydown', event => console.log(`You pressed "${event.key}".`));
+textBox.addEventListener("keydown", (event) =>
+  console.log(`You pressed "${event.key}".`)
+);
 ```
 
 Finally, if your function needs to return a value, and contains only one line, you can also omit the `return` statement. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
@@ -287,7 +291,9 @@ The JavaScript:
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
 
-textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
 ```
 
 ```css hidden
@@ -321,7 +327,7 @@ For example, say you have an HTML file that is calling in two external JavaScrip
 
 ```js
 // first.js
-const name = 'Chris';
+const name = "Chris";
 function greeting() {
   alert(`Hello ${name}: welcome to our company.`);
 }
@@ -329,7 +335,7 @@ function greeting() {
 
 ```js
 // second.js
-const name = 'Zaptec';
+const name = "Zaptec";
 function greeting() {
   alert(`Our company is called ${name}.`);
 }

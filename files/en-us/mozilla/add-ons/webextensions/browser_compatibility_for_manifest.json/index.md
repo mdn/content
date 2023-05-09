@@ -5,9 +5,7 @@ page-type: guide
 browser-compat: webextensions.manifest
 ---
 
-{{AddonSidebar}}
-
-{{Compat}}
+{{AddonSidebar}}{{Compat}}
 
 > **Note:**
 

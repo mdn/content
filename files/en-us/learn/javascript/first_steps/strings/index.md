@@ -67,7 +67,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 1. In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
 
-   ```js
+   ```js-nolint
    const sgl = 'Single quotes.';
    const dbl = "Double quotes";
    console.log(sgl);
@@ -76,7 +76,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 2. There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const badQuotes = 'What on earth?";
    ```
 
@@ -91,7 +91,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const bigmouth = 'I've got no right to take my place…';
    ```
 
@@ -101,7 +101,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
 
-```js
+```js-nolint
 const bigmouth = 'I\'ve got no right to take my place…';
 console.log(bigmouth);
 ```

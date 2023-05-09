@@ -48,7 +48,7 @@ The `RegExp.prototype[@@split]()` base method exhibits the following behaviors:
 - If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
 - The matching proceeds by continuously calling `this.exec()`. Since the regexp is always sticky, this will move along the string, each time yielding a matching string, index, and any capturing groups.
 - For each match, the substring between the last matched string's end and the current matched string's beginning is first appended to the result array. Then, the capturing groups' values are appended one-by-one.
-- If the current match is an empty string, or if the regexp doesn't match at the current position (since it's sticky), the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+- If the current match is an empty string, or if the regexp doesn't match at the current position (since it's sticky), the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 - If the regexp doesn't match the target string, the target string is returned as-is, wrapped in an array.
 - The returned array's length will never exceed the `limit` parameter, if provided, while trying to be as close as possible. Therefore, the last match and its capturing groups may not all be present in the returned array if the array is already filled.
 
