@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set not to auto convert 'crlf'
+        run: |
+          git config --local core.autocrlf input
+
       - uses: actions/checkout@v3
 
       - name: Get changed files
