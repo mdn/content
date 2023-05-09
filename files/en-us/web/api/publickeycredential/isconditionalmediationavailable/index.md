@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or 
 
 Before invoking a conditional WebAuthn API call, check if:
 
-- The browser supports WebAuthn.
+- The browser supports the Web Authentication API.
 - The browser supports WebAuthn conditional UI.
 
 ```js
