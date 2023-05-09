@@ -100,7 +100,7 @@ If a single credential cannot be successfully created, the Promise will resolve 
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
 
 ### Examples
