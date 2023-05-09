@@ -10,7 +10,7 @@ browser-compat: api.AuthenticatorAttestationResponse.getTransports
 
 The **`getTransports()`** method of the {{domxref("AuthenticatorAttestationResponse")}} interface returns an array of strings describing the different transports which may be used by the authenticator.
 
-Such transports may be USB, NFC, BLE, internal (applicable when the authenticator is not removable from the device), or a hybrid approach. Sites should not interpret this array, but rather store it along with the rest of the credential information. In a subsequent {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call, the `transports` value(s) specified inside `publicKey.allowCredentials` should be set to the stored array value. This provides a hint to the browser as to which types of authenticators to try when making an assertion for this credential.
+Such transports may be USB, NFC, BLE, internal (applicable when the authenticator is not removable from the device), or a hybrid approach. Sites should not interpret this array but instead store it along with the rest of the credential information. In a subsequent {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call, the `transports` value(s) specified inside `publicKey.allowCredentials` should be set to the stored array value. This provides a hint to the browser as to which types of authenticators to try when making an assertion for this credential.
 
 ## Syntax
 
