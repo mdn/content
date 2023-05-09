@@ -9,12 +9,12 @@ browser-compat: webextensions.api.cookies.CookieStore
 
 The `CookieStore` type of the {{WebExtAPIRef("cookies")}} API represents a cookie store in the browser.
 
-Windows in different browsing modes may use different cookie stores. For example, a private browsing/incognito mode window, for instance, uses a separate cookie store from a non-incognito/private window.
+Windows in different browsing modes may use different cookie stores. For example, a private browsing/incognito mode window uses a separate cookie store from a non-incognito/private window. Also, a window may have several cookie stores when using [container tabs](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) in Firefox.
 
 > **Note:**
 > How cookie store details for private browsing/incognito mode windows are returned varies between browsers:
 >
-> - Chromium-based browsers return the cookie stores but don't support the `incognito` property, so don't explicitly identify the cookie stores as belonging to an incognito browsing window.
+> - Chromium-based browsers return the cookie stores for incognito mode windows but don't support the `incognito` property. However, the cookie store belonging to an incognito browsing window always returns `id` as "1".
 > - Firefox returns cookie stores for private browsing mode windows and identifies them as such with the `incognito` property.
 > - Safari does not return cookie stores for private browsing mode windows.
 
