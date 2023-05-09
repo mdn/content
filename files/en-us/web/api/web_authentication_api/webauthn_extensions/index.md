@@ -239,7 +239,7 @@ If the `create()` call is successful, the authenticator data will contain a repr
 - Processed by: User agent
 - Specification: [Large blob storage extension (largeBlob)](https://w3c.github.io/webauthn/#sctn-large-blob-extension)
 
-Allows a Relying Party to store blobs associated with a credential on the authenticator — for example it may wish to directly store certificates rather than run a centralised authentication service.
+Allows a relying party to store blobs associated with a credential on the authenticator — for example, it may wish to directly store certificates rather than run a centralized authentication service.
 
 #### Input
 
