@@ -35,10 +35,13 @@ No notable changes.
 #### Media, WebRTC, and Web Audio
 
 - The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled on Android. Hardware accelerated decoding is used if supported by the device ([Firefox bug 1672276](https://bugzil.la/1672276)).
+- The following WebRTC methods, properties, and dictionaries are now supported: [`RTCRtpSender.getCapabilities()`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities), [`RTCRtpSender.setStreams()`](/en-US/docs/Web/API/RTCRtpSender/setStreams), [`RTCSctpTransport`](/en-US/docs/Web/API/RTCSctpTransport), [`RTCPeerConnection.sctp`](/en-US/docs/Web/API/RTCPeerConnection/sctp), [`RTCMediaSourceStats`](/en-US/docs/Web/API/RTCMediaSourceStats), [`RTCPeerConnection.connectionState`](/en-US/docs/Web/API/RTCPeerConnection/connectionState), and [`RTCPeerConnectionStats`](/en-US/docs/Web/API/RTCPeerConnectionStats).
+  The corresponding bug reports are, respectively: [Firefox bug 1531460](https://bugzil.la/1531460), [Firefox bug 1510802](https://bugzil.la/1510802), [Firefox bug 1278299](https://bugzil.la/1278299), [Firefox bug 1804678](https://bugzil.la/1804678), [Firefox bug 1265827](https://bugzil.la/1265827), [Firefox bug 1531087](https://bugzil.la/1531087).
 
 #### Removals
 
 - The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
+- The deprecated and non-standard attributes `mozRTCPeerConnection`, `mozRTCIceCandidate`, and `mozRTCSessionDescription` were permanently removed ([Firefox bug 1531812](https://bugzil.la/1531812)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
