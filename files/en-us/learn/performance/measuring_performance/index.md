@@ -72,7 +72,7 @@ At the time of writing, MDN's performance report summary looks similar to the fo
 
 ![A screenshot of PageSpeed Insights report for the Mozilla homepage.](pagespeed-insight-mozilla-homepage.png)
 
-A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know it the measured values are considered good or bad.
+A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know if the measured values are considered good or bad.
 
 [webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns useful metrics.
 
