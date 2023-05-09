@@ -15,12 +15,31 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 
 ## Example
 
+<!-- ```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+}  
+```-->
+
+<!-- ```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+``` -->
+
+### xMidYMid meet (width > height)
+
 ```css hidden
 html,
 body,
 svg {
-  height: 100%;
-}
+  height: 100%; 
+} 
 ```
 
 ```html
@@ -29,10 +48,9 @@ svg {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs>
+  </defs> 
 ```
 
-**`xMidYMid meet`**
 ```html
   <!-- (width>height) meet -->
   <rect x="0" y="0" width="20" height="10">
@@ -47,8 +65,46 @@ svg {
     y="0">
     <use href="#smiley" />
   </svg>
+</svg>
 ```
-**`xMinYMid meet`**
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMid meet width height', '100%', 200)}}
+
+### xMinYMid meet
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="25" y="0" width="20" height="10">
     <title>xMinYMid meet</title>
@@ -63,7 +119,44 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-**`xMaxYMid meet`**
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMinYMid meet', '100%', 200)}}
+
+### xMaxYMid meet
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="50" y="0" width="20" height="10">
     <title>xMaxYMid meet</title>
@@ -78,7 +171,44 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-**`xMidYMin slice`**
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMaxYMid meet', '100%', 200)}}
+
+### xMidYMin slice
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <!-- (width>height) slice -->
   <rect x="0" y="15" width="20" height="10">
@@ -94,7 +224,44 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-**`xMidYMid slice`**
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMin slice', '100%', 200)}}
+
+### xMidYMid slice
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="25" y="15" width="20" height="10">
     <title>xMidYMid slice</title>
@@ -110,7 +277,43 @@ svg {
   </svg>
 ```
 
-**`xMidYMax slice`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMid slice', '100%', 200)}}
+
+### xMidYMax slice
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="50" y="15" width="20" height="10">
     <title>xMidYMax slice</title>
@@ -126,9 +329,44 @@ svg {
   </svg>
 ```
 
-**`xMidYMin meet`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMax slice', '100%', 200)}}
+
+### xMidYMin meet (height > width)
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
 ```html
-  <!-- (width<height) meet -->
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
+```html
   <rect x="75" y="0" width="10" height="25">
     <title>xMidYMin meet</title>
   </rect>
@@ -143,7 +381,43 @@ svg {
   </svg>
 ```
 
-**`xMidYMid meet`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMin meet height width', '100%', 200)}}
+
+### xMidYMid meet (height > width)
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="90" y="0" width="10" height="25">
     <title>xMidYMid meet</title>
@@ -159,7 +433,43 @@ svg {
   </svg>
 ```
 
-**`xMidYMax meet`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMid meet height width', '100%', 200)}}
+
+### xMidYMax meet
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="105" y="0" width="10" height="25">
     <title>xMidYMax meet</title>
@@ -175,7 +485,43 @@ svg {
   </svg>
 ```
 
-**`xMinYMid slice`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMax meet', '100%', 200)}}
+
+### xMinYMid slice
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <!-- (width<height) slice -->
   <rect x="120" y="0" width="10" height="25">
@@ -191,7 +537,44 @@ svg {
     <use href="#smiley" />
   </svg>
 ```
-**`xMidYMid slice`**
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMinYMid slice', '100%', 200)}}
+
+### xMidYMid slice (height > width)
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="135" y="0" width="10" height="25">
     <title>xMidYMid slice</title>
@@ -207,7 +590,43 @@ svg {
   </svg>
 ```
 
-**`xMaxYMid slice`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMidYMid slice height width', '100%', 200)}}
+
+### xMaxYMid slice
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <rect x="150" y="0" width="10" height="25">
     <title>xMaxYMid slice</title>
@@ -223,7 +642,43 @@ svg {
   </svg>
 ```
 
-**`none`**
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+```
+
+{{EmbedLiveSample('xMaxYMid slice', '100%', 200)}}
+
+### none
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
 ```html
   <!-- none -->
   <rect x="0" y="30" width="160" height="60">
@@ -257,7 +712,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('Example', '100%', 200)}}
+{{EmbedLiveSample('none ', '100%', 200)}}
 
 ## Syntax
 
