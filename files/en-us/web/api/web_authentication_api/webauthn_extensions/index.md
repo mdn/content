@@ -223,7 +223,7 @@ The available `credentialProtectionPolicy` values are as follows:
 - Additionally, if `residentKey` is `required` and `userVerification` is preferred, the protection level will be increased to `userVerificationRequired`. This ensures that physical possession of a security key does not allow sign-in to a site that doesn't require user verification. (This is not complete protection; sites should still carefully consider the security of their users.)
 - If the site requests an explicit `credProtect` level, that will override these defaults. These defaults never cause the protection level to be lower than the security key's default if that is higher.
 
-If the `enforceCredentialProtectionPolicy` value is `true`, the `create()` call will fail if the policy cannot be adhered to (for example, it requires user verification, but the authenticator does not support user verification). If it is `false`, the system will make a best attempt to create a credential that conforms to the policy, but it will still create one that conforms as closely as it can, if this is not possible.
+Suppose the `enforceCredentialProtectionPolicy` value is `true`. In that case, the `create()` call will fail if the policy cannot be adhered to (for example, it requires user verification, but the authenticator does not support user verification). If it is `false`, the system will make the best attempt to create a credential that conforms to the policy, but it will still create one that conforms as closely as it can if this is not possible.
 
 #### Output
 
