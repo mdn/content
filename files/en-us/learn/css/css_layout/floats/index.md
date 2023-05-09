@@ -401,7 +401,7 @@ body {
 
 {{EmbedLiveSample('The_problem', '100%', 600)}}
 
-Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standards method is create a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) using the {{cssxref("display")}} property. 
+Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standards method is create a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) using the {{cssxref("display")}} property.
 
 ### display: flow-root
 
