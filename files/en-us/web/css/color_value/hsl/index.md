@@ -18,42 +18,31 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 ## Syntax
 
 ```css
-/* Syntax with space-separated values */
-hsl(hue saturation lightness)
-hsl(hue saturation lightness / alpha)
-
-/* Syntax with comma-separated values */
-hsl(hue, saturation, lightness)
-hsl(hue, saturation, lightness, alpha)
-
-/* Legacy hsla() syntax */
-hsla(hue saturation lightness)
-hsla(hue saturation lightness / alpha)
-
-hsla(hue, saturation, lightness)
-hsla(hue, saturation, lightness, alpha)
+hsl(120deg 75% 25%)
+hsl(120deg 75% 25% / 0.6)
 ```
-
-The `hsl()` function accepts three space-separated values, representing respectively `hue`, `saturation`, and `lightness`. Optionally it may also be given a slash `/` followed by a fourth value, representing `alpha`.
 
 The function also accepts a legacy syntax in which all values are separated with commas.
 
 ### Values
 
-- `hue`
+Functional notation: `hsl(H S L[ / A])`
+
+- `H`
 
   - : An {{cssxref("&lt;angle&gt;")}} of the {{glossary("color wheel")}} given in one of the following units: `deg`, `rad`, `grad`, or `turn`. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn`, and so on. This color wheel helps finding the angle associated with a color: ![A color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
 
-- `saturation`
+- `S`
 
-  - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing saturation, where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
 
-- `lightness`
+- `L`
 
-  - : A {{cssxref("&lt;percentage&gt;")}} where `100%` is white, `0%` is black, and `50%` is "normal".
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing lightness, where `100%` is white, `0%` is black, and `50%` is "normal".
 
-- `alpha` {{optional_inline}}
-  - : A {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;number&gt;")}} between `0` and `1`, where the number `1` corresponds to `100%` and means full opacity, while `0` corresponds to `0%` and means fully transparent.
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
@@ -170,6 +159,5 @@ div.hsla {
 
 ## See also
 
-- The function [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla), an historical alias for this function.
 - The {{cssxref("&lt;color&gt;")}} type that represents any color.
 - [HSL Color Picker](https://hslpicker.com/)

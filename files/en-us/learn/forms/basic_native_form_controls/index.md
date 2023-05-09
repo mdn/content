@@ -198,37 +198,39 @@ The radio button isn't actually a button, despite its name; let's move on and lo
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
 
 ```html
-  <input type="submit" value="Submit this form">
-  <input type="reset" value="Reset this form">
-  <input type="button" value="Do Nothing without JavaScript">
+<input type="submit" value="Submit this form" />
+<input type="reset" value="Reset this form" />
+<input type="button" value="Do Nothing without JavaScript" />
 
-  <button type="submit">Submit this form</button>
-  <button type="reset">Reset this form</button>
-  <button type="button">Do Nothing without JavaScript</button>
+<button type="submit">Submit this form</button>
+<button type="reset">Reset this form</button>
+<button type="button">Do Nothing without JavaScript</button>
 ```
 
 ```html hidden
 <div class="buttondemo">
-<p>Using &lt;input>
-<p>
-  <input type="submit" value="Submit this form">
-  <input type="reset" value="Reset this form">
-  <input type="button" value="Do Nothing without JavaScript">
-</p>
-<p>Using &lt;button>
-<p>
-  <button type="submit">Submit this form</button>
-  <button type="reset">Reset this form</button>
-  <button type="button">Do Nothing without JavaScript</button>
-</p>
+  <p>Using &lt;input></p>
+  <p>
+    <input type="submit" value="Submit this form" />
+    <input type="reset" value="Reset this form" />
+    <input type="button" value="Do Nothing without JavaScript" />
+  </p>
+  <p>Using &lt;button></p>
+  <p>
+    <button type="submit">Submit this form</button>
+    <button type="reset">Reset this form</button>
+    <button type="button">Do Nothing without JavaScript</button>
+  </p>
 </div>
 ```
 
 ```css hidden
-button, input {
+button,
+input {
   display: none;
 }
-.buttondemo button, .buttondemo input {
+.buttondemo button,
+.buttondemo input {
   all: revert;
 }
 ```

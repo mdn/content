@@ -78,7 +78,7 @@ All web pages available on the web are reachable through a unique address. To ac
 
 ![Example of a web page address in the browser address bar](web-page.jpg)
 
-### Web site
+### Website
 
 A _website_ is a collection of linked web pages (plus their associated resources) that share a unique domain name. Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
@@ -86,7 +86,7 @@ To access a website, type its domain name in your browser address bar, and the b
 
 ![Example of a web site domain name in the browser address bar](web-site.jpg)
 
-The ideas of a _web page_ and a _website_ are especially easy to confuse for a _website_ that contains only one _web page._ Such a website is sometimes called a _single-page website._
+Note that it also possible to have a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
 
 ### Web server
 
