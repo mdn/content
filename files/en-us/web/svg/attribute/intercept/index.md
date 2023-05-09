@@ -2,8 +2,7 @@
 title: intercept
 slug: Web/SVG/Attribute/intercept
 page-type: svg-attribute
-spec-urls: >-
-  https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
 ---
 
 {{SVGRef}}

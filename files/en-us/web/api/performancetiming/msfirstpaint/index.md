@@ -7,9 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("Performance API API")}}
-
-{{Non-standard_header()}}
+{{APIRef("Performance API API")}}{{Non-standard_header}}
 
 **`msFirstPaint`** is a read-only property which gets the time
 when the document loaded by the window object began to be displayed to the user.

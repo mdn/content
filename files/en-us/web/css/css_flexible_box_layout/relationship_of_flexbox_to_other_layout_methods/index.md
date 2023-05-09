@@ -1,7 +1,6 @@
 ---
 title: Relationship of flexbox to other layout methods
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+slug: Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 page-type: guide
 ---
 

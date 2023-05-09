@@ -215,7 +215,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p>
+  </textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -342,14 +343,13 @@ A common practice is to include icons on links to provide more of an indicator a
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
-```html
+```html-nolint
 <p>
   For more information on the weather, visit our <a href="#">weather page</a>,
   look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
   out
   <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">
-    weather on National Geographic
-  </a>.
+    weather on National Geographic</a>.
 </p>
 ```
 

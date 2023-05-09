@@ -32,6 +32,12 @@ The declarative rules are defined by four fields:
   - modify headers from a network request.
   - prevent another matching rule from being applied.
 
+> **Note:**
+> A redirect action does not redirect the request, and the request continues as usual when:
+>
+> - the action does not change the request.
+> - the redirect URL is invalid (e.g., the value of {{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} is not a valid URL).
+
 This is an example rule that blocks all script requests originating from `"foo.com"` to any URL with `"abc"` as a substring:
 
 ```json

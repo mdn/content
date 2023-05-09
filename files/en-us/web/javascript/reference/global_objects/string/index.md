@@ -231,11 +231,11 @@ otherwise my code is unreadable.";
 
 Both of the above methods result in identical strings.
 
-### UTF-16 characters, Unicode codepoints, and grapheme clusters
+### UTF-16 characters, Unicode code points, and grapheme clusters
 
 Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
-However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode code point_. Each Unicode code point can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
 
 A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
 
@@ -246,7 +246,7 @@ Lone surrogates do not represent any Unicode character. Although most JavaScript
 
 On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
 
-You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode codepoints. Iterating through grapheme clusters will require some custom code.
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -317,7 +317,7 @@ These properties are own properties of each `String` instance.
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.isWellFormed()")}}
-  - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
@@ -390,7 +390,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : Returns the calling string value converted to uppercase.
 - {{jsxref("String.prototype.toWellFormed()")}}
-  - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
+  - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
 - {{jsxref("String.prototype.trim()")}}
   - : Trims whitespace from the beginning and end of the string.
 - {{jsxref("String.prototype.trimEnd()")}}

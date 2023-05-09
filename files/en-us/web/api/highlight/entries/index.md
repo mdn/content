@@ -6,8 +6,7 @@ page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.Highlight.entries
-spec-urls: >-
-  https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.entries
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.entries
 ---
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
