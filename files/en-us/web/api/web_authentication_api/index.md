@@ -70,7 +70,7 @@ To illustrate how the credential creation process works, let's describe the typi
 
 ### Authenticating a user
 
-After a user has registered with WebAuthn, they can subsequently authenticate (i.e. login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
+After a user has registered with WebAuthn, they can authenticate (i.e., login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
 
 1. Doesn't require user or relying party information
 2. Creates an assertion using the previously-generated key pair for the service, rather than the authenticator's key pair.
