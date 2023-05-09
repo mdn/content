@@ -179,12 +179,14 @@ Elements belonging to this category are:
 - {{HTMLElement("samp")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}
+- {{HTMLElement("template")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}

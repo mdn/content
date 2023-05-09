@@ -72,7 +72,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 2. Now open the file in your browser. You should see something like this:
 
-   ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)
+   ![A web page with 'title' text in the browser's page tab and 'h1' text as a page heading in the document body.](title-example.png)
 
    It should now be completely obvious where the `<h1>` content appears and where the `<title>` content appears!
 
@@ -80,13 +80,13 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 The `<title>` element contents are also used in other ways. For example, if you try bookmarking the page (_Bookmarks > Bookmark This Page_ or the star icon in the URL bar in Firefox), you will see the `<title>` contents filled in as the suggested bookmark name.
 
-![A webpage being bookmarked in Firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
+![A webpage being bookmarked in Firefox. The bookmark name has been automatically filled in with the contents of the 'title' element](bookmark-example.png)
 
 The `<title>` contents are also used in search results, as you'll see below.
 
-## Metadata: the \<meta> element
+## Metadata: the `<meta>` element
 
-Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the {{htmlelement("meta")}} element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of `<meta>` elements that can be included in your page's \<head>, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.
+Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the {{htmlelement("meta")}} element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of `<meta>` elements that can be included in your page's `<head>`, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.
 
 ### Specifying your document's character encoding
 

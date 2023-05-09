@@ -5,15 +5,13 @@ slug: Mozilla/Firefox/Releases/113
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 09, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 was released on May 09, 2023.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -23,23 +21,9 @@ This article provides information about the changes in Firefox 113 that affect d
 - The [`:nth-child of <selector>` syntax](/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax) allows you to target a group of children based upon the `An+B` rule that also matches a defined selector.
   See ([Firefox bug 1808229](https://bugzil.la/1808229)) for more details.
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -47,8 +31,6 @@ This article provides information about the changes in Firefox 113 that affect d
   ([Firefox bug 1709347](https://bugzil.la/1709347)).
 - The [Compression Streams API](/en-US/docs/Web/API/Compression_Streams_API) is now supported.
   The interfaces provided by this API are used to compress and decompress data using the `gzip` and `deflate` formats ([Firefox bug 1823619](https://bugzil.la/1823619)).
-
-#### DOM
 
 #### Media, WebRTC, and Web Audio
 
@@ -58,25 +40,29 @@ This article provides information about the changes in Firefox 113 that affect d
 
 - The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
 
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
 
+- Added support for serializing `Node` objects within a Shadow DOM and the `shadowRoot` property on `Node` objects ([Firefox bug 1802137](https://bugzil.la/1802137)).
+- Added support for cached responses for the `network.responseStarted` and `network.responseCompleted` events ([Firefox bug 1806802](https://bugzil.la/1806802) and [Firefox bug 1806794](https://bugzil.la/1806794)).
+- Fixed an issue where the `browsingContext.domContentLoaded` and `browsingContext.load` events were missing for navigations using `document.open()` and `document.close()` ([Firefox bug 1822772](https://bugzil.la/1822772)).
+- Fixed an issue where the `script.callFunction` command was throwing an `invalid argument` error if an unknown object was passed as an argument, instead of the expected `no such handle` error ([Firefox bug 1821039](https://bugzil.la/1821039)).
+
 #### Marionette
+
+- The `moz:useNonSpecCompliantPointerOrigin` capability is now deprecated and will be fully removed in Firefox 116 ([Firefox bug 1824911](https://bugzil.la/1824911)).
+- Implemented the `WebDriver:FindElementFromShadowRoot` and `WebDriver:FindElementsFromShadowRoot` commands ([Firefox bug 1700095](https://bugzil.la/1700095)).
+- Implemented the `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` commands ([Firefox bug 1585622](https://bugzil.la/1585622)).
+- Added support for the `background` parameter of the `WebDriver:Print` command ([Firefox bug 1783086](https://bugzil.la/1783086)).
+- Added support for the `orientation` parameter of the `WebDriver:Print` command ([Firefox bug 1791819](https://bugzil.la/1791819)).
+- Fixed an issue with `DOMTokenList` instances, which are now returned as collections instead of arbitrary objects ([Firefox bug 1823464](https://bugzil.la/1823464)).
 
 ## Changes for add-on developers
 
 - When an extension registers multiple listeners for the same event, all the event listeners are called when the event page wakes up, instead of only the first one ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - Support is now provided for the {{WebExtAPIRef("declarativeNetRequest")}} API ([Firefox bug 1782685](https://bugzil.la/1782685)).
 - The `gecko_android` subkey has been added to the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This subkey enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
-
-### Removals
-
-### Other
 
 ## Older versions
 

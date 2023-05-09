@@ -147,24 +147,22 @@ For example, the Django template system allows you to specify variables using a 
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
-```html
+```django
 #best/templates/best/index.html
 
 <!DOCTYPE html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
-{% endif %}
-
-</body>
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
+          <li>\{\{ team.team_name \}\}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No teams are available.</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
