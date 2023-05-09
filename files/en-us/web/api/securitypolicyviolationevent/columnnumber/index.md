@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.columnNumber
+title: "SecurityPolicyViolationEvent: columnNumber property"
+short-title: columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber

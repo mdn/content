@@ -13,7 +13,7 @@ The **`AggregateError`** object represents an error when several errors need to 
 
 ## Constructor
 
-- {{jsxref("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
+- {{jsxref("AggregateError/AggregateError", "AggregateError()")}}
   - : Creates a new `AggregateError` object.
 
 ## Instance properties
@@ -29,8 +29,8 @@ These properties are defined on `AggregateError.prototype` and shared by all `Ag
 
 These properties are own properties of each `AggregateError` instance.
 
-- `errors`
-  - : An array that essentially reflects the iterable with which the `AggregateError` was instantiated; for example, if the `AggregateError` was created using the {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} constructor, an array produced from whatever iterable was passed to the constructor as its first argument.
+- {{jsxref("AggregateError/errors", "errors")}}
+  - : An array representing the errors that were aggregated.
 
 ## Instance methods
 
@@ -41,13 +41,11 @@ _Inherits instance methods from its parent {{jsxref("Error")}}_.
 ### Catching an AggregateError
 
 ```js
-Promise.any([
-  Promise.reject(new Error("some error")),
-]).catch((e) => {
+Promise.any([Promise.reject(new Error("some error"))]).catch((e) => {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "All Promises rejected"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "All Promises rejected"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 });
 ```
 
@@ -55,14 +53,12 @@ Promise.any([
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("some error"),
-  ], 'Hello');
+  throw new AggregateError([new Error("some error")], "Hello");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Hello"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 }
 ```
 

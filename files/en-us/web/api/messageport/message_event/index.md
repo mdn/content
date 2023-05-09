@@ -1,5 +1,6 @@
 ---
 title: "MessagePort: message event"
+short-title: message
 slug: Web/API/MessagePort/message_event
 page-type: web-api-event
 browser-compat: api.MessagePort.message_event

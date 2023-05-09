@@ -86,7 +86,7 @@ In this case, the selector specificity matters. Only if the selectors had the sa
 
 ## Impact on shorthand properties
 
-Declaring a shorthand property with `!important` sets all of sub-properties as important. To two following selector style blocks are equivalent:
+Declaring a shorthand property with `!important` sets all of sub-properties as important. The two following selector style blocks are equivalent:
 
 ```css
 p {

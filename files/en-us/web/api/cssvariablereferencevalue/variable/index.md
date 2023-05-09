@@ -1,5 +1,6 @@
 ---
-title: CSSVariableReferenceValue.variable
+title: "CSSVariableReferenceValue: variable property"
+short-title: variable
 slug: Web/API/CSSVariableReferenceValue/variable
 page-type: web-api-instance-property
 browser-compat: api.CSSVariableReferenceValue.variable

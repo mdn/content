@@ -10,7 +10,7 @@ browser-compat: css.at-rules.media.-moz-device-pixel-ratio
 
 {{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
 
-The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to apply styles based on the number of device pixels per CSS pixel.
+The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to apply styles based on the number of device pixels per CSS pixel.
 
 > **Warning:** Do not use this feature. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
 

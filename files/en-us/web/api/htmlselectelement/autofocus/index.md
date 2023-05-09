@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.autofocus
+title: "HTMLSelectElement: autofocus property"
+short-title: autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.autofocus
@@ -7,7 +8,7 @@ browser-compat: api.HTMLSelectElement.autofocus
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the {{htmlattrxref("autofocus", "select")}} HTML
+The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML
 attribute, which indicates whether the associated {{HTMLElement("select")}} element
 will get input focus when the page loads, unless the user overrides it.
 

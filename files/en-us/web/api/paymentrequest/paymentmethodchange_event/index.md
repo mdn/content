@@ -1,5 +1,6 @@
 ---
 title: "PaymentRequest: paymentmethodchange event"
+short-title: paymentmethodchange
 slug: Web/API/PaymentRequest/paymentmethodchange_event
 page-type: web-api-event
 browser-compat: api.PaymentRequest.paymentmethodchange_event

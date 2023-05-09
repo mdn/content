@@ -1,6 +1,7 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
+page-type: http-status-code
 browser-compat: http.status.501
 ---
 

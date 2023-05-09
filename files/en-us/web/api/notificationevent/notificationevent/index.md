@@ -1,5 +1,6 @@
 ---
-title: NotificationEvent()
+title: "NotificationEvent: NotificationEvent() constructor"
+short-title: NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 page-type: web-api-constructor
 browser-compat: api.NotificationEvent.NotificationEvent

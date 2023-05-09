@@ -1,5 +1,6 @@
 ---
-title: CSSRotate.z
+title: "CSSRotate: z property"
+short-title: z
 slug: Web/API/CSSRotate/z
 page-type: web-api-instance-property
 browser-compat: api.CSSRotate.z

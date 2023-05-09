@@ -1,5 +1,6 @@
 ---
-title: Window.innerHeight
+title: "Window: innerHeight property"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
 page-type: web-api-instance-property
 browser-compat: api.Window.innerHeight

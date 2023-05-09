@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: "CanvasRenderingContext2D: globalCompositeOperation property"
+short-title: globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation

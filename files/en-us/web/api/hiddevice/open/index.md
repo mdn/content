@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.open()
+title: "HIDDevice: open() method"
+short-title: open()
 slug: Web/API/HIDDevice/open
 page-type: web-api-instance-method
 status:

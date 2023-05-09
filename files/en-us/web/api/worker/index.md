@@ -53,14 +53,14 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
 
 ```js
-const myWorker = new Worker('/worker.js');
-const first = document.querySelector('input#number1');
-const second = document.querySelector('input#number2');
+const myWorker = new Worker("/worker.js");
+const first = document.querySelector("input#number1");
+const second = document.querySelector("input#number2");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).

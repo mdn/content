@@ -1,6 +1,7 @@
 ---
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -124,6 +125,10 @@ The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB
 
 Protanopia is a color vision deficiency in which the eye has no red cones; sRGB can still be perceived via green cones, though darker than normal vision. Both protan (red deficient) and deutan (green deficient) deficiencies cause difficulty distinguishing _between_ red and green.
 
+Developer tools can help simulate color vision differences right in your browser. For example, Firefox's Accessibility Inspector enables simulating protanopia, deuteranopia, tritanopia, achromatopsia, and contrast loss right in the accessibility panel.
+
+![Snippet of Firefox developer tools showing the simulate popup](simulate_color_differences.jpg)
+
 ## Luminance and Contrast
 
 ### Contrast
@@ -172,7 +177,7 @@ Deep, pure blue is perceived differently than other colors as blue cones do not 
 
 ![On the left is a cone mosaic of standard vision, and on the right is that of someone with protanopia where they are missing the red cones.](conemosaics.jpg)
 
-On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [wikicommons](https://commons.wikimedia.org/wiki/file:conemosaics.jpg))
+On the left is the central cone mosaic of standard vision, and on the right is that of someone with protanopia, a form of color vision deficiency, where they are missing the red cones. (Illustration by Mark Fairchild of RIT, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ConeMosaics.jpg))
 
 The red and the green cones join together to create luminance, which we can think of as lightness/darkness without regard to hue. Separately, the red, green, and blue cones allow for standard vision to perceive millions of colors. For accessibility, it's important to know that our brain processes luminance separately from color (hue and colorfulness).
 

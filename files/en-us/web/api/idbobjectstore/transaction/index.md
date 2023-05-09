@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.transaction
+title: "IDBObjectStore: transaction property"
+short-title: transaction
 slug: Web/API/IDBObjectStore/transaction
 page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.transaction

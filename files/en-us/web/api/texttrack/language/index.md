@@ -1,5 +1,6 @@
 ---
-title: TextTrack.language
+title: "TextTrack: language property"
+short-title: language
 slug: Web/API/TextTrack/language
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.language
@@ -9,7 +10,7 @@ browser-compat: api.TextTrack.language
 
 The **`language`** read-only property of the {{domxref("TextTrack")}} interface returns the language of the text track.
 
-This uses the same values as the HTML {{htmlattrxref("lang")}} attribute. These values are documented in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+This uses the same values as the HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute. These values are documented in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
 ## Value
 

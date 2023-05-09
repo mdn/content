@@ -1,6 +1,7 @@
 ---
 title: A typical HTTP session
 slug: Web/HTTP/Session
+page-type: guide
 ---
 
 {{HTTPSidebar}}

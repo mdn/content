@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletProcessor()
+title: "AudioWorkletProcessor: AudioWorkletProcessor() constructor"
+short-title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 page-type: web-api-constructor
 browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor

@@ -1,5 +1,6 @@
 ---
-title: RTCStats.id
+title: "RTCStats: id property"
+short-title: id
 slug: Web/API/RTCStats/id
 page-type: web-api-instance-property
 browser-compat: api.RTCStats.id

@@ -1,5 +1,6 @@
 ---
-title: TimeRanges.start()
+title: "TimeRanges: start() method"
+short-title: start()
 slug: Web/API/TimeRanges/start
 page-type: web-api-instance-method
 browser-compat: api.TimeRanges.start

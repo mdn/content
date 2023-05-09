@@ -145,7 +145,7 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
 
 > **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.

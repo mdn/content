@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerGlobalScope.registration
+title: "ServiceWorkerGlobalScope: registration property"
+short-title: registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerGlobalScope.registration

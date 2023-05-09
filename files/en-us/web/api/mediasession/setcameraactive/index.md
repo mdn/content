@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setCameraActive()
+title: "MediaSession: setCameraActive() method"
+short-title: setCameraActive()
 slug: Web/API/MediaSession/setCameraActive
 page-type: web-api-instance-method
 status:

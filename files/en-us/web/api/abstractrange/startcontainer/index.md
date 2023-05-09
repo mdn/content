@@ -1,5 +1,6 @@
 ---
-title: AbstractRange.startContainer
+title: "AbstractRange: startContainer property"
+short-title: startContainer
 slug: Web/API/AbstractRange/startContainer
 page-type: web-api-instance-property
 browser-compat: api.AbstractRange.startContainer

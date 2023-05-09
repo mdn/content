@@ -1,5 +1,6 @@
 ---
-title: XRJointPose.radius
+title: "XRJointPose: radius property"
+short-title: radius
 slug: Web/API/XRJointPose/radius
 page-type: web-api-instance-property
 browser-compat: api.XRJointPose.radius

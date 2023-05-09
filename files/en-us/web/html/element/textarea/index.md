@@ -1,5 +1,5 @@
 ---
-title: '<textarea>: The Textarea element'
+title: "<textarea>: The Textarea element"
 slug: Web/HTML/Element/textarea
 page-type: html-element
 browser-compat: html.elements.textarea
@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
 
-    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -130,6 +130,8 @@ The following example shows a very simple textarea, with a set numbers of rows a
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example','600','150') }}
 
 ### Example using "minlength" and "maxlength"
@@ -141,6 +143,8 @@ This example has a minimum and maximum number of characters — of 10 and 20 res
 Write something here…
 </textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
 
@@ -158,7 +162,9 @@ This example has a placeholder set. Notice how it disappears when you start typi
   placeholder="Comment text."></textarea>
 ```
 
-{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Example using "placeholder"','600','100') }}
 
 > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
@@ -177,7 +183,9 @@ I am a read-only textarea.
 </textarea>
 ```
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Disabled_and_readonly','600','100') }}
 
 ## Technical summary
 

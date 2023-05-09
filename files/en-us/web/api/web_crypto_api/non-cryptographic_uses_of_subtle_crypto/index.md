@@ -19,7 +19,7 @@ If in doubt don't try doing it yourself, hire someone with experience and ensure
 
 This is the simplest useful thing you can do with the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API). It doesn't involve generating keys or certificates and has one single step.
 
-[Hashing](/en-US/docs/Glossary/hash) is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
+[Hashing](/en-US/docs/Glossary/Hash) is a technique where you convert a large string of bytes into a smaller string, where small changes to the long string result in large changes in the smaller string. This technique is useful for identifying two identical files without checking every byte of both files. This is very useful as you have a simple string to compare. To be clear hashing is a **one way** operation. You cannot generate the original string of bytes from the hash.
 
 If two generated hashes are the same, but the files that used to generate them are different, that is known as a _hash collision_ which is an extremely improbable thing to occur by accident and, for a secure hash function like SHA256, almost impossible to manufacture. So if the two strings are the same you can be reasonably sure the two original files are identical.
 
@@ -32,7 +32,7 @@ This technique is often used by sites that let you download executables, to ensu
 3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it separately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
-![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)
+![Examples of SHA256 from the download for the software "Blender". These look like 64 hexadecimal digits followed by a file name like "blender.zip"](blender-sha256-example.png)
 
 The [`digest()`](/en-US/docs/Web/API/SubtleCrypto/digest) method of SubtleCrypto is useful for this. To generate a checksum of a file you can do it like so:
 
@@ -54,11 +54,11 @@ Next we use the SubtleCrypto interface to process them. This works by:
 - Convert the resulting hash (another ArrayBuffer) into a string so it can be displayed
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
+const output = document.querySelector("output");
+const file = document.getElementById("file");
 
 // Run the hashing function when the user selects one or more file
-file.addEventListener('change', hashTheseFiles);
+file.addEventListener("change", hashTheseFiles);
 
 // The digest function is asynchronous, it returns a promise, we use the async/await syntax to
 // simplify the code.
@@ -67,24 +67,25 @@ async function fileHash(file) {
 
   // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
   // The resulting hash is stored in an array buffer
-  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+  const hashAsArrayBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
 
   // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
   // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
-  const hashAsString = Array.from(uint8ViewOfHash).map((b) => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
   return hashAsString;
 }
 
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   // iterate over each file in file select input
   for (const file of this.files) {
-
     // calculate it's hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }
@@ -97,7 +98,7 @@ async function hashTheseFiles(e) {
 At this point you may be thinking to yourself "_I can use this on my own website, so when users go to download a file we can ensure the hashes match to reassure the user their download is secure_". Unfortunately this has two issues that immediate spring to mind:
 
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
-- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_), which can be a pain to spot in your own code:
+- If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using), which can be a pain to spot in your own code:
 
   ```diff
   --- if (checksum === correctCheckSum) return true;
@@ -143,9 +144,9 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
 ```
 
 ```js
-const output = document.querySelector('output');
-const file = document.getElementById('file');
-file.addEventListener('change', hashTheseFiles);
+const output = document.querySelector("output");
+const file = document.getElementById("file");
+file.addEventListener("change", hashTheseFiles);
 
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
@@ -165,25 +166,27 @@ async function fileHash(file) {
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
-      type: 'text/plain'
+    type: "text/plain",
   });
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
   // Then we return it as a string to be displayed.
-  return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
+  return hashToString(await crypto.subtle.digest("SHA-1", arrayBufferToHash));
 }
 
 function hashToString(arrayBuffer) {
   const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View).map((b) => b.toString(16).padStart(2, '0')).join('');
+  return Array.from(uint8View)
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
 }
 
 // like before we iterate over the files
 async function hashTheseFiles(e) {
-  let outHTML = ''
+  let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`
+    outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
 }

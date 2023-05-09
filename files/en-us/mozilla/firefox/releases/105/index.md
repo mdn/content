@@ -29,7 +29,7 @@ No notable changes.
 - The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ([Firefox bug 1486949](https://bugzil.la/1486949)).
 
 - The [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas) API provides a canvas that can be rendered off-screen in both window and [web worker](/en-US/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) contexts.
-  This allows `<canvas>` elements to be decoupled from the DOM. The [OffscreenCanvasRenderingContext2D](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) interface provides support for this and is now enabled by default ([Firefox bug 1746110](https://bugzil.la/1746110)).
+  This allows `<canvas>` elements to be decoupled from the DOM. The [OffscreenCanvasRenderingContext2D](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) interface provides support for this and is now enabled by default ([Firefox bug 1779009](https://bugzil.la/1779009)).
 
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) can now be used in worker threads ([Firefox bug 1072107](https://bugzil.la/1072107)).
 

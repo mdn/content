@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.mode
+title: "ShadowRoot: mode property"
+short-title: mode
 slug: Web/API/ShadowRoot/mode
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.mode

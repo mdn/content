@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.initKeyEvent()
+title: "KeyboardEvent: initKeyEvent() method"
+short-title: initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 page-type: web-api-instance-method
 status:

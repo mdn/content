@@ -1,5 +1,6 @@
 ---
-title: ImageTrack.selected
+title: "ImageTrack: selected property"
+short-title: selected
 slug: Web/API/ImageTrack/selected
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.stepDown()
+title: "HTMLInputElement: stepDown() method"
+short-title: stepDown()
 slug: Web/API/HTMLInputElement/stepDown
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.stepDown
@@ -15,7 +16,7 @@ to `n` multiples of the step attribute if a number is passed as the
 parameter.
 
 The method, when invoked, decrements the
-{{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n
+[`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n
 defaults to 1 if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
 default value for `step` if not specified.
@@ -27,8 +28,8 @@ including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "m
   "number")}}, and {{HTMLElement("input/range", "range")}}.
 
 Given `<input id="myTime" type="time" max="17:00" step="900" value="17:00">`,
-invoking `myTime.step(3)` will change the value to 16:15, decrementing the
-time by `3 * 900`, or 45 minutes. `myTime.step()`, with no
+invoking `myTime.stepDown(3)` will change the value to 16:15, decrementing the
+time by `3 * 900`, or 45 minutes. `myTime.stepDown()`, with no
 parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
 
@@ -88,16 +89,16 @@ support the `step` attribute (see the list of supported input types above), or i
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
-  - : Decrements the {{htmlattrxref("value","input")}} by
-    ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws
+  - : Decrements the [`value`](/en-US/docs/Web/HTML/Element/input#value) by
+    ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws
     an `InvalidStateError` exception:
 
     - if the method is not applicable to for the current
-      {{htmlattrxref("type","input")}} value,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the
-      {{htmlattrxref("min","input")}}.
+      [`type`](/en-US/docs/Web/HTML/Element/input#type) value,
+    - if the element has no [`step`](/en-US/docs/Web/HTML/Element/input#step) value,
+    - if the [`value`](/en-US/docs/Web/HTML/Element/input#value) cannot be converted to a number,
+    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the
+      [`min`](/en-US/docs/Web/HTML/Element/input#min).
 
 ## Syntax
 

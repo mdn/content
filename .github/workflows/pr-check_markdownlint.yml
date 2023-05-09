@@ -43,3 +43,5 @@ jobs:
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           files_to_lint="${{ env.DIFF_DOCUMENTS }}"
           yarn markdownlint-cli2 ${files_to_lint}
+          echo "Linting front-matter"
+          node scripts/front-matter_linter.js ${files_to_lint}

@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
-
-It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
-This makes it possible to provide locale-aware custom formatting ranges of number strings.
+The **`formatRangeToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts. This makes it possible to provide locale-aware custom formatting ranges of number strings.
 
 ## Syntax
 

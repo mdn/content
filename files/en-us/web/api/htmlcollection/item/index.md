@@ -1,5 +1,6 @@
 ---
-title: HTMLCollection.item()
+title: "HTMLCollection: item() method"
+short-title: item()
 slug: Web/API/HTMLCollection/item
 page-type: web-api-instance-method
 browser-compat: api.HTMLCollection.item

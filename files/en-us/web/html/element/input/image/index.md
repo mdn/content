@@ -27,11 +27,11 @@ For example, if you have a graphical button that shows an image with an icon and
 
 > **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
-Functionally, the `alt` attribute of the `<input type="image">` element works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.
+Functionally, the `alt` attribute of the `<input type="image">` element works just like the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements.
 
 ### formaction
 
-A string indicating the URL to which to submit the data. This takes precedence over the {{htmlattrxref("action", "form")}} attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.
+A string indicating the URL to which to submit the data. This takes precedence over the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.
 
 This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) and {{HTMLElement("button")}} elements.
 
@@ -46,18 +46,18 @@ A string that identifies the encoding method to use when submitting the form dat
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
-If specified, the value of the `formenctype` attribute overrides the owning form's {{htmlattrxref("action", "form")}} attribute.
+If specified, the value of the `formenctype` attribute overrides the owning form's [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute.
 
 This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) and {{HTMLElement("button")}} elements.
 
 ### formmethod
 
-A string indicating the HTTP method to use when submitting the form's data; this value overrides any {{htmlattrxref("method", "form")}} attribute given on the owning form. Permitted values are:
+A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's {{htmlattrxref("enctype", "form")}} attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
 - `post`
-  - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute using an HTTP {{HTTPMethod("post")}} request. This method supports complex data and file attachments.
+  - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} request. This method supports complex data and file attachments.
 - `dialog`
   - : This method is used to indicate that the button closes the dialog with which the input is associated, and does not transmit the form data at all.
 
@@ -65,13 +65,13 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 
 ### formnovalidate
 
-A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.
+A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute on the element's owning form.
 
 This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) and {{HTMLElement("button")}} elements.
 
 ### formtarget
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute on the {{HTMLElement("form")}} that owns this input.
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 
@@ -135,7 +135,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 `<input type="image">` elements — like regular [submit buttons](/en-US/docs/Web/HTML/Element/input/submit) — can accept a number of attributes that override the default form behavior:
 
 - `formaction`
-  - : The URI of a program that processes the information submitted by the input element; overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
+  - : The URI of a program that processes the information submitted by the input element; overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
 - `formenctype`
 
   - : Specifies the type of content that is used to submit the form to the server. Possible values are:
@@ -143,7 +143,7 @@ Let's look at a basic example that includes all the essential features you'd nee
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `text/plain`.
 
-    If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
+    If this attribute is specified, it overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
 
 - `formmethod`
 
@@ -152,13 +152,13 @@ Let's look at a basic example that includes all the essential features you'd nee
     - `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side effects and contains only ASCII characters.
 
-    If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
+    If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
 
 - `formnovalidate`
-  - : A Boolean attribute specifying that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
+  - : A Boolean attribute specifying that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
 - `formtarget`
 
-  - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
+  - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the element's form owner. The following keywords have special meanings:
 
     - \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.

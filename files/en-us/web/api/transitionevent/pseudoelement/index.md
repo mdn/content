@@ -1,5 +1,6 @@
 ---
-title: TransitionEvent.pseudoElement
+title: "TransitionEvent: pseudoElement property"
+short-title: pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
 page-type: web-api-instance-property
 browser-compat: api.TransitionEvent.pseudoElement

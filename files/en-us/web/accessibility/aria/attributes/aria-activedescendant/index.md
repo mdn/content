@@ -1,6 +1,7 @@
 ---
 title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
   - https://w3c.github.io/aria-practices/#kbd_focus_activedescendant

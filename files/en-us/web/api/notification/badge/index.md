@@ -1,5 +1,6 @@
 ---
-title: Notification.badge
+title: "Notification: badge property"
+short-title: badge
 slug: Web/API/Notification/badge
 page-type: web-api-instance-property
 status:

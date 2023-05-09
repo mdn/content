@@ -37,7 +37,7 @@ browser-compat: webextensions.manifest.declarative_net_request
   </tbody>
 </table>
 
-Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}.
+Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
 
 ## Syntax
 
@@ -60,12 +60,12 @@ The `"declarative_net_request"` key is an object that must contain the `"rule_re
     <tr>
       <td><code>"enabled"</code></td>
       <td><code>Boolean</code></td>
-      <td>Whether the ruleset is enabled by default.</td>
+      <td>Whether the ruleset is enabled by default. The {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}} method can be used to enable or disable a ruleset at runtime.</td>
     </tr>
     <tr>
       <td><code>"path"</code></td>
       <td><code>String</code></td>
-      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the `declarativeNetRequest` API for information on the content of the ruleset JSON file.</td>
+      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the <code>declarativeNetRequest</code> API for information on the content of the ruleset JSON file.</td>
     </tr>
   </tbody>
 </table>

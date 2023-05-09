@@ -143,4 +143,4 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
-- HTML {{htmlattrxref("translate")}} attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute

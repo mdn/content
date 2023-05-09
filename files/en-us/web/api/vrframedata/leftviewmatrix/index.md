@@ -1,5 +1,6 @@
 ---
-title: VRFrameData.leftViewMatrix
+title: "VRFrameData: leftViewMatrix property"
+short-title: leftViewMatrix
 slug: Web/API/VRFrameData/leftViewMatrix
 page-type: web-api-instance-property
 status:

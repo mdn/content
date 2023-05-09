@@ -110,4 +110,3 @@ See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_eve
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}

@@ -1,6 +1,6 @@
 ---
 title: Comma operator (,)
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 page-type: javascript-operator
 browser-compat: javascript.operators.comma
 ---
@@ -28,7 +28,7 @@ You can use the comma operator when you want to include multiple expressions in 
 
 Because all expressions except the last are evaluated and then discarded, these expressions must have side effects to be useful. Common expressions that have side effects are assignments, function calls, and [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) and [`--`](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement) operators. Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Data_structures#type_coercion).
 
-The comma operator has the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) of all operators. If you want to incorporate a comma-joined expression into a bigger expression, you must parenthesize it.
+The comma operator has the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) of all operators. If you want to incorporate a comma-joined expression into a bigger expression, you must parenthesize it.
 
 The comma operator is completely different from commas used as syntactic separators in other locations, which include:
 
@@ -72,7 +72,7 @@ for (let i = 0, j = 9; i <= 9; i++, j--) {
 
 ### Using the comma operator to join assignments
 
-Because commas have the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) — even lower than assignment — commas can be used to join multiple assignment expressions. In the following example, `a` is set to the value of `b = 3` (which is 3). Then, the `c = 4` expression evaluates and its result becomes the return value of the entire comma expression.
+Because commas have the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) — even lower than assignment — commas can be used to join multiple assignment expressions. In the following example, `a` is set to the value of `b = 3` (which is 3). Then, the `c = 4` expression evaluates and its result becomes the return value of the entire comma expression.
 
 ```js-nolint
 let a, b, c;

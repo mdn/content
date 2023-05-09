@@ -1,5 +1,6 @@
 ---
-title: XPathResult.stringValue
+title: "XPathResult: stringValue property"
+short-title: stringValue
 slug: Web/API/XPathResult/stringValue
 page-type: web-api-instance-property
 browser-compat: api.XPathResult.stringValue

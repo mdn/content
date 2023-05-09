@@ -1,5 +1,6 @@
 ---
-title: NDEFRecord.encoding
+title: "NDEFRecord: encoding property"
+short-title: encoding
 slug: Web/API/NDEFRecord/encoding
 page-type: web-api-instance-property
 status:

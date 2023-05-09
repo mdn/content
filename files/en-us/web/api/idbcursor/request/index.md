@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.request
+title: "IDBCursor: request property"
+short-title: request
 slug: Web/API/IDBCursor/request
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.request

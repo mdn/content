@@ -1,5 +1,6 @@
 ---
-title: VTTCue.snapToLines
+title: "VTTCue: snapToLines property"
+short-title: snapToLines
 slug: Web/API/VTTCue/snapToLines
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.snapToLines

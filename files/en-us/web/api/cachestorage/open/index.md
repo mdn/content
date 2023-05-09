@@ -1,5 +1,6 @@
 ---
-title: CacheStorage.open()
+title: "CacheStorage: open() method"
+short-title: open()
 slug: Web/API/CacheStorage/open
 page-type: web-api-instance-method
 browser-compat: api.CacheStorage.open

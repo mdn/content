@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.keys()
+title: "DOMTokenList: keys() method"
+short-title: keys()
 slug: Web/API/DOMTokenList/keys
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.keys

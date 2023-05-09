@@ -1,5 +1,6 @@
 ---
-title: 'XRLightProbe: reflectionchange event'
+title: "'XRLightProbe: reflectionchange event'"
+short-title: reflectionchange
 slug: Web/API/XRLightProbe/reflectionchange_event
 page-type: web-api-event
 status:
