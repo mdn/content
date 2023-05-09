@@ -126,7 +126,7 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
 ### `publicKey` object structure
 
-`publicKey` can contain the following properties:
+The `publicKey` object can contain the following properties:
 
 - `attestation` {{optional_inline}}
 
