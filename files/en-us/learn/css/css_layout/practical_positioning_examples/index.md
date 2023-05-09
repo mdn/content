@@ -341,9 +341,9 @@ Our finished example will look like this:
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
-```html
+```html-nolint
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
+<input type="checkbox" id="toggle" />
 <aside>
 
 …

@@ -64,30 +64,36 @@ button {
 Here's the JavaScript code that implements this example:
 
 ```js
-const btn = document.querySelector('button');
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const btn = document.querySelector("button");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
-})
+});
 
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI
+    );
     ctx.fill();
   }
 }
 
-btn.addEventListener('click',draw);
+btn.addEventListener("click", draw);
 ```
 
 ### With and without a loop
@@ -97,8 +103,14 @@ You don't have to understand all the code for now, but let's look at the part of
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.arc(
+    random(canvas.width),
+    random(canvas.height),
+    random(50),
+    0,
+    2 * Math.PI
+  );
   ctx.fill();
 }
 ```
@@ -113,8 +125,14 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.arc(
+  random(canvas.width),
+  random(canvas.height),
+  random(50),
+  0,
+  2 * Math.PI
+);
 ctx.fill();
 ```
 
@@ -132,7 +150,7 @@ But there are other collections in JavaScript as well, including {{jsxref("Set")
 The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -156,7 +174,7 @@ function toUpper(string) {
   return string.toUpperCase();
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const upperCats = cats.map(toUpper);
 
@@ -174,10 +192,10 @@ You can use {{jsxref("Array.prototype.filter()","filter()")}} to test each item 
 
 ```js
 function lCat(cat) {
-  return cat.startsWith('L');
+  return cat.startsWith("L");
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const filtered = cats.filter(lCat);
 
@@ -196,9 +214,9 @@ Note that `map()` and `filter()` are both often used with _function expressions_
 Using function expressions we could rewrite the example above to be much more compact:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-const filtered = cats.filter((cat) => cat.startsWith('L'));
+const filtered = cats.filter((cat) => cat.startsWith("L"));
 console.log(filtered);
 // [ "Leopard", "Lion" ]
 ```
@@ -209,7 +227,7 @@ In the "drawing circles" example above, you don't have a collection of items to 
 In a case like that, you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
-```js
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -240,21 +258,21 @@ Let's look at a real example so we can visualize what these do more clearly.
 ```
 
 ```js
-const results = document.querySelector('#results');
+const results = document.querySelector("#results");
 
 function calculate() {
   for (let i = 1; i < 10; i++) {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\nFinished!';
+  results.textContent += "\nFinished!";
 }
 
-const calculateBtn = document.querySelector('#calculate');
-const clearBtn = document.querySelector('#clear');
+const calculateBtn = document.querySelector("#calculate");
+const clearBtn = document.querySelector("#clear");
 
-calculateBtn.addEventListener('click', calculate);
-clearBtn.addEventListener('click', () => results.textContent = '');
+calculateBtn.addEventListener("click", calculate);
+clearBtn.addEventListener("click", () => (results.textContent = ""));
 ```
 
 This gives us the following output:
@@ -283,7 +301,7 @@ You can use a `for` loop to iterate through a collection, instead of a `for...of
 Let's look again at our `for...of` example above:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -293,7 +311,7 @@ for (const cat of cats) {
 We could rewrite that code like this:
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
@@ -315,12 +333,12 @@ Sometimes you still need to use a `for` loop to iterate through an array.
 For example, in the code below we want to log a message listing our cats:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (const cat of cats) {
-  myFavoriteCats += `${cat}, `
+  myFavoriteCats += `${cat}, `;
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -341,19 +359,20 @@ My cats are called Pete, Biggles, and Jasmine.
 But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats += `and ${cats[i]}.`
+  if (i === cats.length - 1) {
+    // We are at the end of the array
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    myFavoriteCats += `${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `;
   }
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 ## Exiting loops with break
@@ -377,26 +396,32 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 Now on to the JavaScript:
 
 ```js
-const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const searchName = input.value.toLowerCase();
-  input.value = '';
+  input.value = "";
   input.focus();
-  para.textContent = '';
+  para.textContent = "";
   for (const contact of contacts) {
-    const splitContact = contact.split(':');
+    const splitContact = contact.split(":");
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
-  if (para.textContent === '') {
-   para.textContent = 'Contact not found.';
- }
+  if (para.textContent === "") {
+    para.textContent = "Contact not found.";
+  }
 });
 ```
 
@@ -434,14 +459,14 @@ The HTML is basically the same as the last example — a simple text input, and 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
 
 ```js
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
-  para.textContent = 'Output: ';
+btn.addEventListener("click", () => {
+  para.textContent = "Output: ";
   const num = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 1; i <= num; i++) {
     let sqRoot = Math.sqrt(i);
@@ -489,9 +514,9 @@ The final-expression is then run after the code inside the loop has run (an iter
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -505,7 +530,7 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
@@ -528,9 +553,9 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -544,7 +569,7 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
@@ -626,9 +651,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -636,21 +661,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -677,16 +702,16 @@ while (i >= 0) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -698,7 +723,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -713,7 +741,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -752,8 +780,8 @@ If you get really stuck, press "Show solution" to see a solution.
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>Editable code</h2>
@@ -804,9 +832,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -814,21 +842,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
@@ -855,16 +883,16 @@ admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -876,7 +904,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -891,7 +922,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
