@@ -158,7 +158,7 @@ If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of
 - {{domxref("AuthenticatorAssertionResponse")}}
   - : Provides proof to a service that an authenticator has the necessary key pair to successfully handle an authentication request initiated by a {{domxref("CredentialsContainer.get()")}} call. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `get()` {{jsxref("Promise")}} fulfills.
 - {{domxref("AuthenticatorAttestationResponse")}}
-  - : is the result of a WebAuthn credential registration (i.e. a {{domxref("CredentialsContainer.create()")}} call). It contains information about the credential that the server needs to perform WebAuthn assertions, such as its credential ID and public key. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `create()` {{jsxref("Promise")}} fulfills.
+  - : The result of a WebAuthn credential registration (i.e., a {{domxref("CredentialsContainer.create()")}} call). It contains information about the credential that the server needs to perform WebAuthn assertions, such as its credential ID and public key. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `create()` {{jsxref("Promise")}} fulfills.
 - {{domxref("AuthenticatorResponse")}}
   - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}.
 - {{domxref("PublicKeyCredential")}}
