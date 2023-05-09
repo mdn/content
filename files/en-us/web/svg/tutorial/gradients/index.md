@@ -12,7 +12,7 @@ tags:
 
 Perhaps more exciting than just fills and strokes is the fact that you can also create and apply gradients as either fills or strokes.
 
-There are two types of gradients: linear and radial. They are defined separately from where they are used, which promotes reusability. You **must** give each gradient an `id` attribute to allow other elements to reference it. Gradient definitions can be placed in a {{SVGElement('defs')}} element or an {{SVGElement('svg')}} element.
+There are two types of SVG gradients: linear and radial. They are defined separately from where they are used, which promotes reusability. You **must** give each gradient an `id` attribute to allow other elements to reference it. Gradient definitions can be placed in a {{SVGElement('defs')}} element or an {{SVGElement('svg')}} element.
 
 ## Linear Gradient
 
