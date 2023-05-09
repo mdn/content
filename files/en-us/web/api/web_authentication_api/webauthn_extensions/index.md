@@ -13,7 +13,7 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) has a s
 
 ## How to use WebAuthn extensions
 
-When invoking {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}, the `publicKey` object parameter required to initiate a WebAuthn flow can include an `extensions` property. The value of `extensions` is itself an object, the properties of which are the input values for any extensions the relying party wishes to request the use of in the method you are calling.
+When invoking {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}}, the `publicKey` object parameter required to initiate a WebAuthn flow can include an `extensions` property. The value of `extensions` is itself an object, the properties of which are the input values for any extensions the relying party wishes to request the use of in the method you call.
 
 Behind the scenes, the inputs are processed by the user agent and/or the authenticator.
 
