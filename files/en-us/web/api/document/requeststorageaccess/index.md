@@ -8,9 +8,9 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("DOM")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to its client-side storage.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to its first-party cookies.
 
-This is relevant to user agents that by default block access to client-side storage by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+This is relevant to user agents that by default block access to first-party cookies by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
@@ -26,12 +26,12 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party storage was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party cookies was granted, and rejects if access was denied.
 
-When the promise gets resolved, the resolve handler will run as if a user gesture is being processed, whether the promise was fulfilled or rejected:
+`requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}). They therefore need to be run inside some kind of user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
-- In the former case, code can then start to call APIs that require user activation and things can move forward.
-- In the latter case, code can run to inform the user of why the request failed and what they can do to continue (for example asking them to log in, if that is a requirement).
+- If the promise resolves (i.e. if permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs that require a user gesture.
+- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This is an intentional protection against abuse — it prevents scripts from calling `requestStorageAccess()` in a loop until the user accepts the prompt.
 
 ### Exceptions
 
@@ -56,6 +56,8 @@ document.requestStorageAccess().then(
   }
 );
 ```
+
+> **Note:** See [Using the Storage Access API](/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 
