@@ -83,9 +83,11 @@ const header = (
 > **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
 > ```jsx
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
@@ -93,7 +95,9 @@ const header = (
 Of course, your browser can't read JSX without help. When compiled (using a tool like [Babel](https://babeljs.io/) or [Parcel](https://parceljs.org/)), our header expression would look like this:
 
 ```jsx
-const header = React.createElement("header", null,
+const header = React.createElement(
+  "header",
+  null,
   React.createElement("h1", null, "Mozilla Developer Network")
 );
 ```
@@ -197,8 +201,8 @@ In React, a **component** is a reusable module that renders a part of our app. T
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```jsx
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -212,8 +216,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -230,8 +233,8 @@ The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```jsx
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 The first statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
@@ -259,8 +262,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -283,9 +285,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -301,13 +301,13 @@ At the very bottom of the `App.js` file, the statement `export default App` make
 Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
@@ -339,12 +339,12 @@ All of this tells React that we want to render our React application with the `A
 Your final `index.js` file should look like this:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 ```
 
@@ -371,9 +371,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -389,9 +387,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );

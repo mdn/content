@@ -87,14 +87,14 @@ If we loaded this string into a JavaScript program and parsed it into a variable
 For example:
 
 ```js
-superHeroes.homeTown
-superHeroes['active']
+superHeroes.homeTown;
+superHeroes["active"];
 ```
 
 To access data further down the hierarchy, you have to chain the required property names and array indexes together. For example, to access the third superpower of the second hero listed in the members list, you'd do this:
 
 ```js
-superHeroes['members'][1]['powers'][2]
+superHeroes["members"][1]["powers"][2];
 ```
 
 1. First, we have the variable name — `superHeroes`.
@@ -155,17 +155,17 @@ So, let's work through an example to show how we could make use of some JSON for
 To begin with, make local copies of our [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) and [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) files.
 The latter contains some simple CSS to style our page, while the former contains some very simple body HTML, plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise:
 
-```html
+```html-nolint
 <header>
-
+...
 </header>
 
 <section>
-
+...
 </section>
 
 <script>
-
+...
 </script>
 ```
 
@@ -181,8 +181,8 @@ The top-level function looks like this:
 
 ```js
 async function populate() {
-
-  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const requestURL =
+    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
   const request = new Request(requestURL);
 
   const response = await fetch(request);
@@ -190,7 +190,6 @@ async function populate() {
 
   populateHeader(superHeroes);
   populateHeroes(superHeroes);
-
 }
 ```
 
@@ -214,12 +213,12 @@ Now that we've retrieved the JSON data and converted it into a JavaScript object
 
 ```js
 function populateHeader(obj) {
-  const header = document.querySelector('header');
-  const myH1 = document.createElement('h1');
+  const header = document.querySelector("header");
+  const myH1 = document.createElement("h1");
   myH1.textContent = obj.squadName;
   header.appendChild(myH1);
 
-  const myPara = document.createElement('p');
+  const myPara = document.createElement("p");
   myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
   header.appendChild(myPara);
 }
@@ -233,25 +232,25 @@ Next, add the following function at the bottom of the code, which creates and di
 
 ```js
 function populateHeroes(obj) {
-  const section = document.querySelector('section');
+  const section = document.querySelector("section");
   const heroes = obj.members;
 
   for (const hero of heroes) {
-    const myArticle = document.createElement('article');
-    const myH2 = document.createElement('h2');
-    const myPara1 = document.createElement('p');
-    const myPara2 = document.createElement('p');
-    const myPara3 = document.createElement('p');
-    const myList = document.createElement('ul');
+    const myArticle = document.createElement("article");
+    const myH2 = document.createElement("h2");
+    const myPara1 = document.createElement("p");
+    const myPara2 = document.createElement("p");
+    const myPara3 = document.createElement("p");
+    const myList = document.createElement("ul");
 
     myH2.textContent = hero.name;
     myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
     myPara2.textContent = `Age: ${hero.age}`;
-    myPara3.textContent = 'Superpowers:';
+    myPara3.textContent = "Superpowers:";
 
     const superPowers = hero.powers;
     for (const power of superPowers) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = power;
       myList.appendChild(listItem);
     }
@@ -309,8 +308,8 @@ The key snippet of code is here:
 
 ```js
 async function populate() {
-
-  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const requestURL =
+    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
   const request = new Request(requestURL);
 
   const response = await fetch(request);
@@ -319,7 +318,6 @@ async function populate() {
   const superHeroes = JSON.parse(superHeroesText);
   populateHeader(superHeroes);
   populateHeroes(superHeroes);
-
 }
 ```
 
@@ -327,9 +325,9 @@ As you might guess, `stringify()` works the opposite way. Try entering the follo
 
 ```js
 let myObj = { name: "Chris", age: 38 };
-myObj
+myObj;
 let myString = JSON.stringify(myObj);
-myString
+myString;
 ```
 
 Here we're creating a JavaScript object, then checking what it contains, then converting it to a JSON string using `stringify()` — saving the return value in a new variable — then checking it again.

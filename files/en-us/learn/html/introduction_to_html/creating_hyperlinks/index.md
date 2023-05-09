@@ -104,13 +104,14 @@ This makes the MDN logo a link:
 Another attribute you may want to add to your links is `title`.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
-```html
+```html-nolint
 <p>
   I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+          mission and how to contribute">
+    the Mozilla homepage</a>.
 </p>
 ```
 
@@ -229,18 +230,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
-  Download Firefox
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/">Download Firefox</a></p>
 ```
 
 **Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
-  Click here
-</a>
-to download Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/firefox/">Click here</a> to download Firefox
+</p>
 ```
 
 Other tips:
