@@ -50,7 +50,7 @@ console.log("myFish before:", JSON.stringify(myFish));
 
 const shifted = myFish.shift();
 
-console.log("myFish after:", myFish);
+console.log("myFish after:", JSON.stringify(myFish));
 // myFish after: ['clown', 'mandarin', 'surgeon']
 
 console.log("Removed this element:", shifted);
