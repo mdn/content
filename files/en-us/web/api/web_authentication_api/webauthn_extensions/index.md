@@ -227,7 +227,7 @@ If the `enforceCredentialProtectionPolicy` value is `true`, the `create()` call 
 
 #### Output
 
-If the `create()` call is successfull, the authenticator data will contain a representation of the `credProtect` value representing the set policy in the following form:
+If the `create()` call is successful, the authenticator data will contain a representation of the `credProtect` value representing the set policy in the following form:
 
 ```
 { "credProtect": 0x01 }
