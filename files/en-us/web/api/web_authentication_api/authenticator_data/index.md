@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Authentication API")}}
 
-The authenticator data structure contains information from the authenticator about the processing of a credential creation or authentication request — such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator. This page explains what is contained in the data structure.
+The authenticator data structure contains information from the authenticator about the processing of a credential creation or authentication request — such as the Relying Party ID Hash (`rpIdHash`), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator. This page explains what is contained in the data structure.
 
 ## Accessing authenticator data
 
