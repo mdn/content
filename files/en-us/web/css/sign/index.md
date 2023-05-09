@@ -16,8 +16,8 @@ The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 ```css
-/* property: sign( <calc-sum> ) */
-top: sign(var(--value));
+/* property: sign( expression ) */
+top: sign(20vh - 100px);
 ```
 
 ### Parameters
