@@ -41,7 +41,7 @@ No notable changes.
 #### Removals
 
 - The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute was permanently removed. This was previously hidden behind a preference. ([Firefox bug 1294362](https://bugzil.la/1294362)).
-- The deprecated and non-standard attributes: `mozRTCPeerConnection`, `mozRTCIceCandidate`, and `mozRTCSessionDescription`, were permanently removed ([Firefox bug 1531812](https://bugzil.la/1531812)).
+- The deprecated and non-standard attributes `mozRTCPeerConnection`, `mozRTCIceCandidate`, and `mozRTCSessionDescription` were permanently removed ([Firefox bug 1531812](https://bugzil.la/1531812)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
