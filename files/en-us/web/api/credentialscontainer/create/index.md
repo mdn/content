@@ -161,7 +161,7 @@ The `publicKey` object can contain the following properties:
 
       If omitted, `requireResidentKey` defaults to `false`.
 
-    - `residentKey` {{optional_inline}} : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e. one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party is required to provide credential IDs in the `get()` `allowCredentials` value. Possible values are:
+    - `residentKey` {{optional_inline}}: A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e., one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value. Possible values are:
 
       - `"discouraged"`: The relying party prefers creation of a server-side credential, but will accept a client-side discoverable credential.
       - `"preferred"`: The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
