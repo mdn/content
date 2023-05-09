@@ -71,7 +71,7 @@ In our documentation for PWAs, we sometimes refer to the browser playing this ba
 
 Because PWAs are websites, they have the same basic features as any other website: at least one HTML page, which very probably loads some CSS and JavaScript. Like a normal website, the JavaScript loaded by the page has a global {{domxref("Window")}} object and can access all the Web APIs that are available through that object.
 
-Beyond that, a PWA have some additional features:
+Beyond that, a PWA has some additional features:
 
 - A [web app manifest](/en-US/docs/Web/Manifest) file, which, at a minimum, provides information that the browser needs to install the PWA, such as the app name and icon.
 - A [service worker](/en-US/docs/Web/API/Service_Worker_API), which, at a minimum, provides a basic offline experience.
