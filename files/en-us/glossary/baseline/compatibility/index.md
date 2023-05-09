@@ -29,7 +29,7 @@ If you have questions, feedback, or want to help update and expand the features 
 
 ## See also
 
-- [Cross browser testing](/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
 - [web-platform-dx/feature-set repository](https://github.com/web-platform-dx/feature-set)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)
