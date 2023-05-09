@@ -14,21 +14,26 @@ The **CSS scrollbars styling** module defines properties that you can use for vi
 
 ## Scrollbar styling in action
 
-This example defines a thin scrollbar with a red thumb and an orange track. To view the thumb, you will need to scroll the text. After the scrollbar is visible, hover over it to see the track.
+This example defines a scrollbar with a red thumb and an orange track.
 
 ```css hidden
 .poem {
-  width: 300px;
+  width: 200px;
   height: 100px;
   border: 1px solid;
+  overflow: scroll;
 }
 ```
 
 ```css
-.poem {
-  overflow: scroll;
-  scrollbar-color: red orange;
-  scrollbar-width: thin;
+.poem::-webkit-scrollbar {
+  width: 24px;
+  height: 24px;
+  background-color: orange;
+}
+
+.poem::-webkit-scrollbar-thumb {
+  background-color: red;
 }
 ```
 
