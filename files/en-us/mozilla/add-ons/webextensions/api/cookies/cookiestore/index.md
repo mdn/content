@@ -9,7 +9,7 @@ browser-compat: webextensions.api.cookies.CookieStore
 
 The `CookieStore` type of the {{WebExtAPIRef("cookies")}} API represents a cookie store in the browser.
 
-Windows in different browsing modes may use different cookie stores. For examole, a private browsing/incognito mode window, for instance, uses a separate cookie store from a non-incognito/private window.
+Windows in different browsing modes may use different cookie stores. For example, a private browsing/incognito mode window, for instance, uses a separate cookie store from a non-incognito/private window.
 
 > **Note:**
 > How cookie store details for private browsing/incognito mode windows are returned varies between browsers:
