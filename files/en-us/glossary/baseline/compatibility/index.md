@@ -1,6 +1,6 @@
 ---
 title: Baseline (compatibility)
-slug: Glossary/baseline/compatibility
+slug: Glossary/Baseline/Compatibility
 ---
 
 **Baseline** identifies widely-supported web platform features.
