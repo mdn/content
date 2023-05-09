@@ -12,7 +12,7 @@ There are two different types of certificates used in WebAuthn for registration 
 
 When an authenticator registers a new key pair with a service, the authenticator signs the public key with an attestation certificate. The attestation certificate is built into the authenticator during manufacturing time and is specific to a device model. That is, all "Samsung Galaxy S8" phones, manufactured at a specific time or particular manufacturing run, have the same attestation certificate.
 
-The attestation is returned through the WebAuthn API as the [AuthenticatorAttestationResponse](/en-US/docs/Web/API/AuthenticatorAttestationResponse). The attestation format contains two basic {{jsxref("ArrayBuffer")}}s:
+The attestation is returned through the WebAuthn API as the [AuthenticatorAttestationResponse](/en-US/docs/Web/API/AuthenticatorAttestationResponse). The attestation format contains two basic {{jsxref("ArrayBuffer")}} objects:
 
 - **clientDataJSON** - An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.
 - [attestationObject](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject) - Cryptographic attestation that a newly generated keypair was created by that authenticator. This contains:
