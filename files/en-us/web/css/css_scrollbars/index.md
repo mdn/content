@@ -12,6 +12,8 @@ spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
 
 The **CSS scrollbars styling** module defines properties that you can use for visual styling of scrollbars. You can customize the width of the scrollbar as required. You can also customize the color of the scrollbar _track_, which is the background of the scrollbar, and the color of the scrollbar _thumb_, which is the draggable handle of the scrollbar.
 
+Adding 'crlf' ending for testing.
+
 ## Scrollbar styling in action
 
 This example defines a thin scrollbar with a red thumb and an orange track. To view the thumb, you will need to scroll the text. After the scrollbar is visible, hover over it to see the track.

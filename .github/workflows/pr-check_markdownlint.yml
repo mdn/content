@@ -40,8 +40,24 @@ jobs:
 
       - name: Lint markdown files
         run: |
+          echo 'Checking line endings used in files...'
+          set -x
+          result=$(git ls-files --eol | (grep -P '[iw=]/?crlf' || exit 0))
+          if [ -z "$result" ]; then
+            result=$(grep -rlP --exclude-dir="node_modules" --include="*.md" '\r$' . || exit 0)
+          fi
+          if [ -n "$result" ]; then
+            echo -e "$result"
+            echo -e '\nDo not use `crlf` line endings. Change your editor settings to use `lf` line endings.'
+            echo 'Refer https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings for more info.'
+            exit 1;
+          else
+            echo 'No issues found.'
+          fi
+
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           files_to_lint="${{ env.DIFF_DOCUMENTS }}"
           yarn markdownlint-cli2 ${files_to_lint}
+
           echo "Linting front-matter"
           node scripts/front-matter_linter.js ${files_to_lint}
