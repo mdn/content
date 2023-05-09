@@ -14,7 +14,7 @@ The type of `peer-connection` uniquely identifies the type of statistics as {{do
 
 ## Value
 
-A string which with value `peer-connection`.
+A string with the value `peer-connection`.
 
 ## Specifications
 
