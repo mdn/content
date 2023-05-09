@@ -15,7 +15,7 @@ The benefits of platform-specific apps include:
 
 - **Easy for users to access**: They get their own icon on the device, making it easy for users to find and open them.
 - **Offline and background operation**: They are able to operate when the user is not interacting with them and when the device is offline. This, for example, enables a chat app to receive messages when it is not open, and display a notification to the user. It also enables a news app to update in the background so it can show fresh content even if the device is offline.
-- **Dedicated UI**: They get to implement their own distinctive, immersive UI.
+- **Dedicated UI**: They can implement their own distinctive, immersive UI.
 - **OS integration**: They can be integrated into the host OS: for example, a messaging app can register as a share target, enabling users to select an image in the photo app and send it using the messaging app. They can also access device features such as the camera, GPS or accelerometer.
 - **App store integration**: They are distributed using the app store, giving users a single place to find them and a consistent way to decide whether they want to install them.
 
