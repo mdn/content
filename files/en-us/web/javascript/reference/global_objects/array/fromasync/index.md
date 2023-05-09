@@ -88,11 +88,7 @@ Array.fromAsync(
 
 ```js
 Array.fromAsync(
-  new Set([
-    Promise.resolve(1),
-    Promise.resolve(2),
-    Promise.resolve(3),
-  ]),
+  new Set([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]),
 ).then((array) => console.log(array));
 // [1, 2, 3]
 ```
@@ -119,11 +115,7 @@ function delayedValue(v) {
 }
 
 Array.fromAsync(
-  [
-    delayedValue(1),
-    delayedValue(2),
-    delayedValue(3),
-  ],
+  [delayedValue(1), delayedValue(2), delayedValue(3)],
   (element) => delayedValue(element * 2),
 ).then((array) => console.log(array));
 // [2, 4, 6]

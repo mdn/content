@@ -17,7 +17,7 @@ A render pipeline renders graphics to {{domxref("GPUTexture")}} attachments, typ
 
 - A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
 
-A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUCommandEncoder.beginComputePass()")}} property.
+A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUCommandEncoder.beginRenderPass()")}} property.
 
 {{InheritanceDiagram}}
 

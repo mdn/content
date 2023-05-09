@@ -62,8 +62,8 @@ This example shows how you can use the `hypot()` function to calculate sizes.
 Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
 
 - `--size-1` is calculated with the hypotenuse of `--size-0` (100px). This takes the square value and, as there is no other value, returns the square root of the value, which results in 100px.
-- `--size-2` is calculated with the hypotenuse of `--size-0` (100px), twice. This takes the square of the value (100 * 100 = 10000) and adds it to the square of `--size-0` again (10000 + 10000 = 20000) and returns the square root of the sum (√20000), which results in 141.42px.
-- `--size-3` is calculated with the hypotenuse `--size-0` _ 1.5 (150px) and `--size-0` _ 2 (200). The result is the square root of the sum of their squares: The values are squared (22500 and 40000) and added together (62500), with the sum sum square-rooted (√62500) being 250px.
+- `--size-2` is calculated with the hypotenuse of `--size-0` (100px), twice. This takes the square of the value (100px * 100px = 10000px<sup>2</sup>) and adds it to the square of `--size-0` again (10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>) and returns the square root of the sum (√(20000px<sup>2</sup>)), which results in 141.42px.
+- `--size-3` is calculated with the hypotenuse `--size-0` \* 1.5 (150px) and `--size-0` \* 2 (200px). The result is the square root of the sum of their squares: The values are squared (22500px<sup>2</sup> and 40000px<sup>2</sup>) and added together (62500px<sup>2</sup>), with the sum sum square-rooted (√(62500px<sup>2</sup>)) being 250px.
 
 ```css
 :root {

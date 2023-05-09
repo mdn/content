@@ -196,7 +196,7 @@ This guideline covers situations in which functionality may have a time limit. F
         <p>
           If there is a timeout (caused by user inactivity) warn users at the
           start of a process so they will not be surprised that a timeout exists
-          (or only allow the timeout to occur after 20 hours of inactivity.
+          (or only allow the timeout to occur after 20 hours of inactivity).
         </p>
       </td>
       <td>

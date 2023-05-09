@@ -9,9 +9,10 @@ browser-compat: api.HTMLElement.beforetoggle_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`beforetoggle`** event fires when an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute is about to be opened or closed.
+The **`beforetoggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) just before it is shown or hidden.
 
-If the element is currently not open, then the `.oldState` property will be set to `closed` and the `.newState` property will be set to `open`; otherwise if the element is open, then `.oldState` will be `open` and `.newState` will be `closed`.
+- If the popover is transitioning from hidden to showing, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
+- If the popover is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
 
 ## Syntax
 
@@ -29,14 +30,39 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ToggleEvent")}}
 
-## Event properties
+## Examples
 
-_This interface inherits properties from its parent {{DOMxRef("Event")}}._
+### Basic example
 
-- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
-  - : Returns either `open` or `closed`, depending on which state the element is transitioning from.
-- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
-  - : Returns either `open` or `closed`, depending on which state the element is transitioning to.
+```js
+const popover = document.getElementById("mypopover");
+
+// ...
+
+popover.addEventListener("beforetoggle", (event) => {
+  if (event.newState === "open") {
+    console.log("Popover is being shown");
+  } else {
+    console.log("Popover is being hidden");
+  }
+});
+```
+
+### A note on toggle event coalescing
+
+It is worth pointing out that `beforetoggle` events are coalesced, meaning that if multiple `beforetoggle` events are fired before the event loop has a chance to cycle, only a single event will be fired.
+
+For example:
+
+```js
+popover.addEventListener('beforetoggle', () => {
+  //...
+});
+
+popover.showPopover();
+popover.hidePopover();
+// `beforetoggle` only fires once
+```
 
 ## Specifications
 
@@ -48,5 +74,5 @@ _This interface inherits properties from its parent {{DOMxRef("Event")}}._
 
 ## See also
 
+- [Popover API](/en-US/docs/Web/API/Popover_API)
 - Related event: [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event)
-- The [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute

@@ -3,8 +3,7 @@ title: Set.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values
-spec-urls: >-
-  https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.keys
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.keys
 ---
 
 {{JSRef}}
