@@ -32,7 +32,7 @@ create(options)
 
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
-    - "Credential type"
+    - A _credential type_
 
       - : An object defining the type of credential being requested — this can be one of one of:
 
