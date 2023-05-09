@@ -183,7 +183,7 @@ If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of
 
 ### Usage example
 
-> **Note:** For security reasons, WebAuthn calls ({{domxref("CredentialsContainer.create","create()")}} and {{domxref("CredentialsContainer.get","get()")}}) are cancelled if the browser window loses focus while the call is pending.
+> **Note:** For security reasons, the Web Authentication API calls ({{domxref("CredentialsContainer.create", "create()")}} and {{domxref("CredentialsContainer.get","get()")}}) are canceled if the browser window loses focus while the call is pending.
 
 ```js
 // sample arguments for registration
