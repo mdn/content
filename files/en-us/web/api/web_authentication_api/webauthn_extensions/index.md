@@ -255,8 +255,8 @@ extensions: {
 
 The `support` property's value is a string, which can be one of the following:
 
-- `"preferred"`: The credential will be created with an authenticator that can store blobs if possible, but it will still create one if not. The authenticator's ability to store blobs is reported by the output `supported` property.
-- `"required"`: The credential will be created with an authenticator that can store blobs. If this is not possible, the `create()` call will fail.
+- `"preferred"`: The credential will be created with an authenticator that can store blobs if possible, but it will still create one if not. The output' supported' property reports the authenticator's ability to store blobs.
+- `"required"`: The credential will be created with an authenticator to store blobs. The `create()` call will fail if this is impossible.
 
 During a `get()` call, the `publicKey`'s `extensions` property must contain a `largeBlob` property with one of two sub-properties — `read` or `write` (`get()` fails if both are present):
 
