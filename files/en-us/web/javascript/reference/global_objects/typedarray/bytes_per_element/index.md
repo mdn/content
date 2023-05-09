@@ -2,11 +2,6 @@
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
 ---
 
@@ -80,5 +75,5 @@ new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

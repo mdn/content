@@ -1,14 +1,7 @@
 ---
 title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onEnabled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onEnabled
 ---
 

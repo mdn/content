@@ -1,15 +1,10 @@
 ---
-title: HTMLMediaElement.seekToNextFrame()
+title: "HTMLMediaElement: seekToNextFrame() method"
+short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLMediaElement
-  - Method
-  - Reference
-  - Web
-  - seekToNextFrame
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
 

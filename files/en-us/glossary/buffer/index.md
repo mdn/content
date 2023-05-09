@@ -2,10 +2,6 @@
 title: Buffer
 slug: Glossary/Buffer
 page-type: glossary-definition
-tags:
-  - Buffer
-  - CodingScripting
-  - NeedsContent
 ---
 
 A buffer is a storage in physical memory used to temporarily store data while it is being transferred from one place to another.

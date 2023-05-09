@@ -2,13 +2,6 @@
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultController
 ---
 
@@ -43,6 +36,7 @@ Note that a {{domxref("ReadableStreamDefaultController")}} object is provided as
 When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -52,16 +46,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -70,7 +64,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 

@@ -1,19 +1,8 @@
 ---
-title: MediaRecorder.start()
+title: "MediaRecorder: start() method"
+short-title: start()
 slug: Web/API/MediaRecorder/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - MediaRecorder
-  - Method
-  - NeedsExample
-  - Recording Media
-  - Reference
-  - Video
-  - start
 browser-compat: api.MediaRecorder.start
 ---
 

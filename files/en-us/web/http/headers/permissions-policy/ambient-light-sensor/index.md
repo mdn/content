@@ -1,11 +1,9 @@
 ---
 title: "Permissions-Policy: ambient-light-sensor"
 slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
-tags:
-  - Ambient Light Sensor
-  - Permissions Policy
-  - HTTP
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.ambient-light-sensor
 ---
 

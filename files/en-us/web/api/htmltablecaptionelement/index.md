@@ -2,11 +2,6 @@
 title: HTMLTableCaptionElement
 slug: Web/API/HTMLTableCaptionElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLTableCaptionElement
 ---
 

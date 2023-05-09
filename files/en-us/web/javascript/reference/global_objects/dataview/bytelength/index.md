@@ -2,18 +2,12 @@
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 page-type: javascript-instance-accessor-property
-tags:
-  - DataView
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArrays
 browser-compat: javascript.builtins.DataView.byteLength
 ---
 
 {{JSRef}}
 
-The **`byteLength`** accessor property represents the length (in bytes) of the dataview.
+The **`byteLength`** accessor property of {{jsxref("DataView")}} instances returns the length (in bytes) of this view.
 
 {{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
 

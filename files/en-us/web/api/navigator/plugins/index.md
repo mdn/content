@@ -1,15 +1,10 @@
 ---
-title: Navigator.plugins
+title: "Navigator: plugins property"
+short-title: plugins
 slug: Web/API/Navigator/plugins
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Navigator
-  - Plugins
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Navigator.plugins
 ---
 
@@ -50,7 +45,7 @@ If PDF inline viewing is supported this will contain entries for the following p
 This code shows how to check if PDF files can be displayed inline:
 
 ```js
-if ('PDF Viewer' in navigator.plugins) {
+if ("PDF Viewer" in navigator.plugins) {
   // browser supports inline viewing of PDF files.
 }
 ```

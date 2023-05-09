@@ -1,13 +1,9 @@
 ---
 title: "Permissions-Policy: hid"
 slug: Web/HTTP/Headers/Permissions-Policy/hid
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.hid
 ---
 

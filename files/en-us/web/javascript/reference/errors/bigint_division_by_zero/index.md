@@ -2,11 +2,6 @@
 title: "RangeError: BigInt division by zero"
 slug: Web/JavaScript/Reference/Errors/BigInt_division_by_zero
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}

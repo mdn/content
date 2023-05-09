@@ -1,15 +1,8 @@
 ---
-title: XPathEvaluator.createExpression()
+title: "XPathEvaluator: createExpression() method"
+short-title: createExpression()
 slug: Web/API/XPathEvaluator/createExpression
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.createExpression
 ---
 

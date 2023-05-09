@@ -1,14 +1,8 @@
 ---
 title: "XMLHttpRequest: abort event"
+short-title: abort
 slug: Web/API/XMLHttpRequest/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - ProgressEvent
-  - Web
-  - XMLHttpRequest
-  - abort
 browser-compat: api.XMLHttpRequest.abort_event
 ---
 

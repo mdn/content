@@ -2,11 +2,6 @@
 title: ElementInternals
 slug: Web/API/ElementInternals
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ElementInternals
 browser-compat: api.ElementInternals
 ---
 
@@ -28,7 +23,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
-    [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+    [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 - {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 - {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
@@ -96,7 +91,7 @@ The `ElementInternals` interface includes the following properties, defined on t
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
-- {{domxref("ElementInternals.role")}} {{Experimental_Inline}}
+- {{domxref("ElementInternals.role")}}
   - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.
@@ -128,9 +123,9 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.setValidity()")}}
   - : Sets the validity of the element.
 - {{domxref("ElementInternals.checkValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 - {{domxref("ElementInternals.reportValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
 
 ## Examples
 

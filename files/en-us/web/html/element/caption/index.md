@@ -1,18 +1,7 @@
 ---
-title: '<caption>: The Table Caption element'
+title: "<caption>: The Table Caption element"
 slug: Web/HTML/Element/caption
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
 browser-compat: html.elements.caption
 ---
 
@@ -30,7 +19,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 
@@ -100,7 +89,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -109,7 +98,7 @@ td {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

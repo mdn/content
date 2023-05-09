@@ -2,12 +2,6 @@
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
 page-type: guide
-tags:
-  - CSS
-  - CSS Paint API
-  - Canvas
-  - Houdini
-  - Learn
 ---
 
 {{DefaultAPISidebar("CSS Painting API")}}
@@ -15,9 +9,9 @@ The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable 
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
-1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
+1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint) function
 2. Register the worklet
-3. Include the `{{cssxref('image/paint()','paint()')}}` CSS function
+3. Include the `{{cssxref("image/paint","paint()")}}` CSS function
 
 To elaborate over these steps, we're going to start by creating a half-highlight background, like on this header:
 
@@ -27,7 +21,7 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ## CSS paint worklet
 
-In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/PaintWorklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
+In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/API/PaintWorkletGlobalScope/registerPaint) function to name our [CSS Paint worklet](/en-US/docs/Web/API/Worklet). It takes two parameters. The first is the name we give the worklet — this is the name we will use in our CSS as the parameter of the `paint()` function when we want to apply this styling to an element. The second parameter is the class that does all the magic, defining the context options and what to paint to the two-dimensional canvas that will be our image.
 
 ```js
 registerPaint(
@@ -70,7 +64,7 @@ We tried to keep the example simple. For more options, look at the [canvas docum
 
 To use the paint worklet, we need to register it using [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) and include it in our CSS, ensuring the CSS selector matches a DOM node in our HTML
 
-The setup and design of our paint worklet took place in the external script shown above. We need to register that [worklet](/en-US/docs/Web/API/PaintWorklet) from our main script.
+The setup and design of our paint worklet took place in the external script shown above. We need to register that [worklet](/en-US/docs/Web/API/Worklet) from our main script.
 
 ```js
 CSS.paintWorklet.addModule("nameOfPaintWorkletFile.js");
@@ -211,7 +205,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an [`array`](/en-US/docs/Glossary/array) of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 

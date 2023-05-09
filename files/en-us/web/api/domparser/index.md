@@ -2,15 +2,6 @@
 title: DOMParser
 slug: Web/API/DOMParser
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - Parsing
-  - Reference
 browser-compat: api.DOMParser
 ---
 

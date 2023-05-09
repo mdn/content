@@ -2,15 +2,6 @@
 title: Console API
 slug: Web/API/Console_API
 page-type: guide
-tags:
-  - API
-  - Debugging
-  - Overview
-  - console
-  - dump
-  - log
-  - output
-  - test
 browser-compat: api.console
 ---
 

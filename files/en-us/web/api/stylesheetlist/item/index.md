@@ -1,13 +1,8 @@
 ---
-title: StyleSheetList.item()
+title: "StyleSheetList: item() method"
+short-title: item()
 slug: Web/API/StyleSheetList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - item
-  - StyleSheetList
 browser-compat: api.StyleSheetList.item
 ---
 

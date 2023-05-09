@@ -2,48 +2,43 @@
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 page-type: javascript-namespace
-tags:
-  - JavaScript
-  - Math
-  - Namespace
-  - Reference
 browser-compat: javascript.builtins.Math
 ---
 
 {{JSRef}}
 
-**`Math`** is a built-in object that has properties and methods for mathematical constants and functions. It's not a function object.
+The **`Math`** namespace object contains static properties and methods for mathematical constants and functions.
 
 `Math` works with the {{jsxref("Number")}} type. It doesn't work with {{jsxref("BigInt")}}.
 
 ## Description
 
-Unlike many other global objects, `Math` is not a constructor. All properties and methods of `Math` are static. You refer to the constant pi as `Math.PI` and you call the sine function as `Math.sin(x)`, where `x` is the method's argument. Constants are defined with the full precision of real numbers in JavaScript.
+Unlike most global objects, `Math` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Atomics` object as a function. All properties and methods of `Math` are static.
 
-> **Note:** Many `Math` functions have a precision that's _implementation-dependent._
+> **Note:** Many `Math` functions have a precision that's _implementation-dependent_.
 >
 > This means that different browsers can give a different result. Even the same JavaScript engine on a different OS or architecture can give different results!
 
 ## Static properties
 
-- `Math[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Math.E")}}
   - : Euler's number and the base of natural logarithms; approximately `2.718`.
-- {{jsxref("Math.LN2")}}
-  - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LN10")}}
   - : Natural logarithm of `10`; approximately `2.303`.
-- {{jsxref("Math.LOG2E")}}
-  - : Base-2 logarithm of `E`; approximately `1.443`.
+- {{jsxref("Math.LN2")}}
+  - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LOG10E")}}
   - : Base-10 logarithm of `E`; approximately `0.434`.
+- {{jsxref("Math.LOG2E")}}
+  - : Base-2 logarithm of `E`; approximately `1.443`.
 - {{jsxref("Math.PI")}}
   - : Ratio of a circle's circumference to its diameter; approximately `3.14159`.
 - {{jsxref("Math.SQRT1_2")}}
   - : Square root of ½; approximately `0.707`.
 - {{jsxref("Math.SQRT2")}}
   - : Square root of `2`; approximately `1.414`.
+- `Math[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 
@@ -59,10 +54,10 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
   - : Returns the hyperbolic arcsine of a number.
 - {{jsxref("Math.atan()")}}
   - : Returns the arctangent of `x`.
-- {{jsxref("Math.atanh()")}}
-  - : Returns the hyperbolic arctangent of `x`.
 - {{jsxref("Math.atan2()")}}
   - : Returns the arctangent of the quotient of its arguments.
+- {{jsxref("Math.atanh()")}}
+  - : Returns the hyperbolic arctangent of `x`.
 - {{jsxref("Math.cbrt()")}}
   - : Returns the cube root of `x`.
 - {{jsxref("Math.ceil()")}}
@@ -87,10 +82,10 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
   - : Returns the result of the 32-bit integer multiplication of `x` and `y`.
 - {{jsxref("Math.log()")}}
   - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of `x`.
-- {{jsxref("Math.log1p()")}}
-  - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Math.log10()")}}
   - : Returns the base-10 logarithm of `x`.
+- {{jsxref("Math.log1p()")}}
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Math.log2()")}}
   - : Returns the base-2 logarithm of `x`.
 - {{jsxref("Math.max()")}}
@@ -145,7 +140,7 @@ If we want to calculate the height of an equilateral triangle, and we know its s
 In JavaScript, we can do this with the following:
 
 ```js
-50 * Math.tan(degToRad(60))
+50 * Math.tan(degToRad(60));
 ```
 
 We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.

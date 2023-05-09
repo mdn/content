@@ -1,14 +1,8 @@
 ---
-title: ReadableByteStreamController.desiredSize
+title: "ReadableByteStreamController: desiredSize property"
+short-title: desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - desiredSize
 browser-compat: api.ReadableByteStreamController.desiredSize
 ---
 

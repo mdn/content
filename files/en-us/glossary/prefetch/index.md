@@ -2,10 +2,6 @@
 title: Prefetch
 slug: Glossary/Prefetch
 page-type: glossary-definition
-tags:
-  - Prefetch
-  - Reference
-  - Web Performance
 ---
 
 Prefetching is when content is downloaded in the background, this is based on the assumption that the content will likely be requested, enabling the content to load instantly if and when the user requests it. The content is downloaded and cached for anticipated future use without the user making an explicit request for it.

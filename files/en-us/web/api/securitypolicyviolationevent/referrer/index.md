@@ -1,16 +1,8 @@
 ---
-title: SecurityPolicyViolationEvent.referrer
+title: "SecurityPolicyViolationEvent: referrer property"
+short-title: referrer
 slug: Web/API/SecurityPolicyViolationEvent/referrer
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - referrer
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
 

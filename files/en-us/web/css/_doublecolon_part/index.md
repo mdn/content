@@ -1,21 +1,13 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
 page-type: css-pseudo-element
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.part
 ---
 
 {{CSSRef}}
 
-The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
+The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 ```css
 custom-element::part(foo) {
@@ -25,8 +17,10 @@ custom-element::part(foo) {
 
 ## Syntax
 
-```
-::part( <ident>+ )
+```css
+::part(<ident>+) {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -74,8 +68,7 @@ tabbed-custom-element::part(tab):hover:active {
 }
 
 tabbed-custom-element::part(tab):focus {
-  box-shadow: 0 0 0 1px #0a84ff inset, 
-    0 0 0 1px #0a84ff,
+  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff,
     0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 
@@ -93,9 +86,7 @@ globalThis.customElements.define(
   template.id,
   class extends HTMLElement {
     constructor() {
-      super()
-        .attachShadow({ mode: "open" })
-        .append(template.content);
+      super().attachShadow({ mode: "open" }).append(template.content);
     }
   }
 );
@@ -115,6 +106,6 @@ globalThis.customElements.define(
 
 ## See also
 
-- The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the `::part()` selector
-- The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
+- The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

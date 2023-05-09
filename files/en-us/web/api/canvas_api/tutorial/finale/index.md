@@ -2,10 +2,6 @@
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

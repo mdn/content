@@ -2,9 +2,6 @@
 title: <system-color>
 slug: Web/CSS/system-color
 page-type: css-type
-tags:
-  - Reference
-  - color
 browser-compat: css.types.color.system-color
 ---
 
@@ -119,11 +116,11 @@ Firefox also supports some non-standard extensions to the system color keyword s
 - `-moz-ButtonHoverFace` {{non-standard_inline}}
   - : The background color of a button that the mouse pointer is over (which would be `ThreeDFace` or `ButtonFace` when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverText` foreground color.
 - `-moz-ButtonHoverText` {{non-standard_inline}}
-  - : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace background` color.
+  - : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace` background color.
 - `-moz-CellHighlight` {{non-standard_inline}}
   - : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
 - `-moz-CellHighlightText` {{non-standard_inline}}
-  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
+  - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight` background color. See also `-moz-html-CellHighlightText`.
 - `-moz-Combobox` {{non-standard_inline}}
   - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - `-moz-ComboboxText` {{non-standard_inline}}
@@ -132,7 +129,9 @@ Firefox also supports some non-standard extensions to the system color keyword s
   - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
 - `-moz-DialogText` {{non-standard_inline}}
   - : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
-- `-moz-dragtargetzone` {{non-standard_inline}}, `-moz-EvenTreeRow` {{non-standard_inline}}
+- `-moz-dragtargetzone` {{non-standard_inline}}
+  - : Highlight color for regions where an element can be dropped during a drag-and-drop operation.
+- `-moz-EvenTreeRow` {{non-standard_inline}}
   - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 - `-moz-html-CellHighlight` {{non-standard_inline}}
   - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.

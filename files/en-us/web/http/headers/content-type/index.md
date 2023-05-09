@@ -1,12 +1,7 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - HTTP
-  - HTTP header
-  - Representation header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Content-Type
 ---
 

@@ -2,13 +2,6 @@
 title: ":link"
 slug: Web/CSS/:link
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.link
 ---
 
@@ -24,8 +17,10 @@ Styles defined by the `:link` and [`:visited`](/en-US/docs/Web/CSS/:visited) pse
 
 ## Syntax
 
-```
-:link
+```css
+:link {
+  /* ... */
+}
 ```
 
 ## Examples

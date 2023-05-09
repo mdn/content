@@ -2,12 +2,6 @@
 title: CSS Positioned Layout
 slug: Web/CSS/CSS_Positioning
 page-type: css-module
-tags:
-  - CSS
-  - CSS Positioning
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-position/
 ---
 

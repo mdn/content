@@ -1,17 +1,8 @@
 ---
-title: AudioBufferSourceNode.loopEnd
+title: "AudioBufferSourceNode: loopEnd property"
+short-title: loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - loopEnd
-  - sound
 browser-compat: api.AudioBufferSourceNode.loopEnd
 ---
 

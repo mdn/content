@@ -1,11 +1,6 @@
 ---
-title: 'Test your skills: Conditionals'
+title: "Test your skills: Conditionals"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
-tags:
-  - Beginner
-  - Conditionals
-  - JavaScript
-  - Learn
 ---
 
 {{learnsidebar}}
@@ -47,7 +42,7 @@ For this task you are given three variables:
 
 You need to create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
 
-Inside the first, you need to nest an `if...else if...else` that puts appropriate messages into the `response` variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
+Inside the first `if...else`, you need to nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
 
 - Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
 - Score of 0 to 19 — "That was a terrible score — total fail!"

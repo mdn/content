@@ -2,16 +2,6 @@
 title: RTCStats
 slug: Web/API/RTCStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - RTCStats
-  - Reference
-  - Report
-  - Statistics
-  - Stats
-  - WebRTC
-  - rtc
 spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcstats
 ---
 

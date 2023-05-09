@@ -1,13 +1,8 @@
 ---
-title: EXT_disjoint_timer_query.queryCounterEXT()
+title: "EXT_disjoint_timer_query: queryCounterEXT() method"
+short-title: queryCounterEXT()
 slug: Web/API/EXT_disjoint_timer_query/queryCounterEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.queryCounterEXT
 ---
 
@@ -38,7 +33,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const startQuery = ext.createQueryEXT();
 const endQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);

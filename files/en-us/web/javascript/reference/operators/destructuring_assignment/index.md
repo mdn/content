@@ -2,15 +2,6 @@
 title: Destructuring assignment
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 page-type: javascript-language-feature
-tags:
-  - Destructuring
-  - Destructuring_assignment
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Nested object and array destructuring
-  - Operator
 browser-compat: javascript.operators.destructuring
 ---
 
@@ -274,12 +265,11 @@ You can also ignore all returned values:
 
 #### Using a binding pattern as the rest property
 
-The rest property of array destructuring assignment can be another array or object binding pattern. This allows you to simultaneously unpack the properties and indices of arrays.
+The rest property of array destructuring assignment can be another array or object binding pattern. The inner destructuring destructures from the array created after collecting the rest elements, so you cannot access any properties present on the original iterable in this way.
 
 ```js
-const [a, b, ...{ pop, push }] = [1, 2];
-console.log(a, b); // 1 2
-console.log(pop, push); // [Function pop] [Function push]
+const [a, b, ...{ length }] = [1, 2, 3];
+console.log(a, b, length); // 1 2 1
 ```
 
 ```js
@@ -459,7 +449,7 @@ function userDisplayName({ displayName: dname }) {
   return dname;
 }
 
-console.log(userDisplayName(user)); // `jdoe`
+console.log(userDisplayName(user)); // "jdoe"
 ```
 
 Nested objects can also be unpacked.
@@ -590,7 +580,7 @@ console.log(fizzBuzz); // true
 
 ### Destructuring primitive values
 
-Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
+Object destructuring is almost equivalent to [property accessing](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). This means if you try to destruct a primitive value, the value will get wrapped into the corresponding wrapper object and the property is accessed on the wrapper object.
 
 ```js
 const { a, toFixed } = 1;
@@ -601,7 +591,7 @@ Same as accessing properties, destructuring `null` or `undefined` throws a {{jsx
 
 ```js example-bad
 const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
-const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+const { b } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
 ```
 
 This happens even when the pattern is empty.
@@ -610,9 +600,9 @@ This happens even when the pattern is empty.
 const {} = null; // TypeError: Cannot destructure 'null' as it is null.
 ```
 
-#### Combined Array and Object Destructuring
+#### Combined array and object destructuring
 
-Array and Object destructuring can be combined. Say you want the third element in the array `props` below, and then you want the `name` property in the object, you can do the following:
+Array and object destructuring can be combined. Say you want the third element in the array `props` below, and then you want the `name` property in the object, you can do the following:
 
 ```js
 const props = [
@@ -638,8 +628,9 @@ const obj = {
   },
 };
 const { self, prot } = obj;
-// self "123"
-// prot "456" (Access to the prototype chain)
+
+console.log(self); // "123"
+console.log(prot); // "456"
 ```
 
 ## Specifications

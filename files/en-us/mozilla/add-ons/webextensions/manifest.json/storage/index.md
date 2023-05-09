@@ -1,12 +1,7 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/storage
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Reference
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.storage
 ---
 

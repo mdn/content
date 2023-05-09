@@ -2,16 +2,9 @@
 title: PaymentAddress
 slug: Web/API/PaymentAddress
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - paymentAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress
 ---
 

@@ -1,14 +1,10 @@
 ---
-title: HIDInputReportEvent.data
+title: "HIDInputReportEvent: data property"
+short-title: data
 slug: Web/API/HIDInputReportEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - data
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent.data
 ---
 

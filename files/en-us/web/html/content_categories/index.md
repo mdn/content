@@ -2,12 +2,6 @@
 title: Content categories
 slug: Web/HTML/Content_categories
 page-type: guide
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web
 ---
 
 {{HTMLSidebar}}
@@ -22,7 +16,7 @@ There are three types of content categories:
 
 > **Note:** A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/HTML/Content_categories/content_categories_venn.png)
 
 ## Main content categories
 
@@ -30,7 +24,7 @@ There are three types of content categories:
 
 Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information.
 
-Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
+Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
 
 ### Flow content
 
@@ -53,7 +47,6 @@ The flow elements are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("del")}}
@@ -67,12 +60,12 @@ The flow elements are:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
-- {{HTMLElement("h1")}}
-- {{HTMLElement("h2")}}
-- {{HTMLElement("h3")}}
-- {{HTMLElement("h4")}}
-- {{HTMLElement("h5")}}
-- {{HTMLElement("h6")}}
+- {{HTMLElement("Heading_Elements", "h1")}}
+- {{HTMLElement("Heading_Elements", "h2")}}
+- {{HTMLElement("Heading_Elements", "h3")}}
+- {{HTMLElement("Heading_Elements", "h4")}}
+- {{HTMLElement("Heading_Elements", "h5")}}
+- {{HTMLElement("Heading_Elements", "h6")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
 - {{HTMLElement("hr")}}
@@ -139,7 +132,7 @@ Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElemen
 
 Heading content is a subset of flow content, which defines the title of a section, whether marked by an explicit [sectioning content](#sectioning_content) element, or implicitly defined by the heading content itself. Heading content can be used everywhere flow content is expected.
 
-Elements belonging to this category are {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} and {{HTMLElement("hgroup")}}.
+Elements belonging to this category are {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
@@ -160,7 +153,6 @@ Elements belonging to this category are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("dfn")}}
@@ -187,12 +179,14 @@ Elements belonging to this category are:
 - {{HTMLElement("samp")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}
+- {{HTMLElement("template")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}
@@ -240,11 +234,11 @@ Interactive content is a subset of flow content that includes elements that are 
 
 Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present
-- {{HTMLElement("img")}}, if the {{htmlattrxref("usemap", "img")}} attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
-- {{HTMLElement("object")}}, if the {{htmlattrxref("usemap", "object")}} attribute is present
-- {{HTMLElement("video")}}, if the {{htmlattrxref("controls", "video")}} attribute is present
+- {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) attribute is present
+- {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) attribute is present
 
 ### Palpable content
 

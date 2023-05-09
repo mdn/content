@@ -2,10 +2,8 @@
 title: XForms
 slug: Glossary/XForms
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Deprecated
-  - XForms
+status:
+  - deprecated
 ---
 
 **XForms** is a convention for building Web forms and processing form data in the {{glossary("XML")}} format.

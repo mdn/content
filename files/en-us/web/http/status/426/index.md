@@ -1,12 +1,7 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.426
 ---
 

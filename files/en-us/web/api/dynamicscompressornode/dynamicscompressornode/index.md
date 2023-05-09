@@ -1,13 +1,8 @@
 ---
-title: DynamicsCompressorNode()
+title: "DynamicsCompressorNode: DynamicsCompressorNode() constructor"
+short-title: DynamicsCompressorNode()
 slug: Web/API/DynamicsCompressorNode/DynamicsCompressorNode
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Constructor
-  - DynamicsCompressorNode
-  - Media
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode.DynamicsCompressorNode
 ---
 

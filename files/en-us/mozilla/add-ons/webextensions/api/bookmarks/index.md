@@ -1,15 +1,7 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.bookmarks
 ---
 

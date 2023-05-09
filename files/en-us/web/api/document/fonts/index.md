@@ -1,16 +1,8 @@
 ---
-title: Document.fonts
+title: "Document: fonts property"
+short-title: fonts
 slug: Web/API/Document/fonts
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Font Loading API
-  - FontFace
-  - FontFaceSet
-  - Fonts
-  - font
-  - Property
 browser-compat: api.Document.fonts
 ---
 

@@ -1,17 +1,9 @@
 ---
-title: '<center>: The Centered Text element'
+title: "<center>: The Centered Text element"
 slug: Web/HTML/Element/center
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Text
-  - Text Alignment
-  - Web
-  - alignment
-  - center
+status:
+  - deprecated
 browser-compat: html.elements.center
 ---
 

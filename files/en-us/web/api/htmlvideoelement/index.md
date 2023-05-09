@@ -2,13 +2,6 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Interface
-  - Reference
-  - Video
 browser-compat: api.HTMLVideoElement
 ---
 
@@ -25,17 +18,15 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : A string that reflects the {{htmlattrxref("height", "video")}} HTML attribute, which specifies the height of the display area, in CSS pixels.
+  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : A string that reflects the {{htmlattrxref("poster", "video")}} HTML attribute, which specifies an image to show while no video data is available.
+  - : A string that reflects the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) HTML attribute, which specifies an image to show while no video data is available.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic height of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
-  - : A string that reflects the {{htmlattrxref("width", "video")}} HTML attribute, which specifies the width of the display area, in CSS pixels.
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : The `autoPictureInPicture` attribute will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically
 

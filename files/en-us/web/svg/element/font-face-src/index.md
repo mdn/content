@@ -2,13 +2,8 @@
 title: <font-face-src>
 slug: Web/SVG/Element/font-face-src
 page-type: svg-element
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-src
 ---
 

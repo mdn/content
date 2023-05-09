@@ -1,17 +1,7 @@
 ---
 title: "Accessibility: What users can do to browse more safely"
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
-tags:
-  - color
-  - epilepsy
-  - photosensitivity
-  - prefers-reduced-motion
-  - reflex epilepsy
-  - saturation
-  - seizure disorders
-  - seizures
-  - user settings
-  - web animation
+page-type: guide
 ---
 
 <section id="Quick_links">

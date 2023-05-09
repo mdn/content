@@ -2,12 +2,8 @@
 title: CookieStoreManager
 slug: Web/API/CookieStoreManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager
 ---
 

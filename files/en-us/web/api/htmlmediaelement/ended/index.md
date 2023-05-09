@@ -1,15 +1,8 @@
 ---
-title: HTMLMediaElement.ended
+title: "HTMLMediaElement: ended property"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
-  - ended
 browser-compat: api.HTMLMediaElement.ended
 ---
 
@@ -30,7 +23,7 @@ If the source of the media is a {{domxref("MediaStream")}}, this value is
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.ended); // false
 ```
 
@@ -44,6 +37,6 @@ console.log(obj.ended); // false
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.ended` property
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStream.active")}}

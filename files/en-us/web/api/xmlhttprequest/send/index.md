@@ -1,19 +1,8 @@
 ---
-title: XMLHttpRequest.send()
+title: "XMLHttpRequest: send() method"
+short-title: send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - HTTP request
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - send
 browser-compat: api.XMLHttpRequest.send
 ---
 
@@ -93,7 +82,7 @@ xhr.send(null);
 const xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
-//Send the proper header information along with the request
+// Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = () => { // Call a function when the state changes.

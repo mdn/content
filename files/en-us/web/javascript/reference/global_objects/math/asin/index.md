@@ -2,11 +2,6 @@
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.asin
 ---
 

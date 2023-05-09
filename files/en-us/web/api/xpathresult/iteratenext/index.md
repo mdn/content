@@ -1,14 +1,8 @@
 ---
-title: XPathResult.iterateNext()
+title: "XPathResult: iterateNext() method"
+short-title: iterateNext()
 slug: Web/API/XPathResult/iterateNext
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
 

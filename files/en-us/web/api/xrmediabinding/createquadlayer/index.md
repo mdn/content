@@ -1,15 +1,10 @@
 ---
-title: XRMediaBinding.createQuadLayer()
+title: "XRMediaBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRMediaBinding/createQuadLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRMediaBinding.createQuadLayer
 ---
 

@@ -2,11 +2,6 @@
 title: Inline formatting context
 slug: Web/CSS/Inline_formatting_context
 page-type: guide
-tags:
-  - CSS
-  - Formatting context
-  - Guide
-  - Reference
 ---
 
 {{CSSRef}}

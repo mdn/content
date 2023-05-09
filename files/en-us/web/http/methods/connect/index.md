@@ -1,10 +1,7 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - Reference
-  - Request method
+page-type: http-method
 browser-compat: http.methods.CONNECT
 ---
 

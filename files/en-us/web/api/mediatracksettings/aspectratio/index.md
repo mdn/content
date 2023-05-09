@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.aspectRatio
+title: "MediaTrackSettings: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackSettings/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - aspectRatio
 browser-compat: api.MediaTrackSettings.aspectRatio
 ---
 

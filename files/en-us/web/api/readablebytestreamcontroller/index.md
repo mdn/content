@@ -2,13 +2,6 @@
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController
 ---
 

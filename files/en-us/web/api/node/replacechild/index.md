@@ -1,10 +1,8 @@
 ---
-title: Node.replaceChild()
+title: "Node: replaceChild() method"
+short-title: replaceChild()
 slug: Web/API/Node/replaceChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.replaceChild
 ---
 

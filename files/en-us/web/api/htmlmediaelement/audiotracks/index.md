@@ -1,19 +1,8 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement: audioTracks property"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Tracks
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Web
-  - audiotracks
 browser-compat: api.HTMLMediaElement.audioTracks
 ---
 
@@ -76,6 +65,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{HTMLElement("audio")}} and {{HTMLElement("video")}}
-- {{domxref("AudioTrack")}} and {{domxref("AudioTrackList")}}
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.audioTracks` property
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{domxref("AudioTrack")}}, {{domxref("AudioTrackList")}}

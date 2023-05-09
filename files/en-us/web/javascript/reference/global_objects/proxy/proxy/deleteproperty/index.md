@@ -2,11 +2,6 @@
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
 
@@ -37,7 +32,7 @@ The following parameters are passed to the `deleteProperty()` method.
 
 ### Return value
 
-The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating
+The `deleteProperty()` method must return a boolean value indicating
 whether or not the property has been successfully deleted.
 
 ## Description
@@ -78,7 +73,7 @@ const p = new Proxy(
       console.log(`property removed: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 p.a = 10;

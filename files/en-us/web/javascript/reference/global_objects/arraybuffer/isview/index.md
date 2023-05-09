@@ -2,12 +2,6 @@
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 page-type: javascript-static-method
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Reference
-  - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
 
@@ -41,15 +35,15 @@ otherwise, `false`.
 ### Using isView
 
 ```js
-ArrayBuffer.isView();                    // false
-ArrayBuffer.isView([]);                  // false
-ArrayBuffer.isView({});                  // false
-ArrayBuffer.isView(null);                // false
-ArrayBuffer.isView(undefined);           // false
+ArrayBuffer.isView(); // false
+ArrayBuffer.isView([]); // false
+ArrayBuffer.isView({}); // false
+ArrayBuffer.isView(null); // false
+ArrayBuffer.isView(undefined); // false
 ArrayBuffer.isView(new ArrayBuffer(10)); // false
 
-ArrayBuffer.isView(new Uint8Array());    // true
-ArrayBuffer.isView(new Float32Array());  // true
+ArrayBuffer.isView(new Uint8Array()); // true
+ArrayBuffer.isView(new Float32Array()); // true
 ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 
 const buffer = new ArrayBuffer(2);
@@ -67,4 +61,4 @@ ArrayBuffer.isView(dv); // true
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

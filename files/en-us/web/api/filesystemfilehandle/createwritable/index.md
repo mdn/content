@@ -1,15 +1,8 @@
 ---
-title: FileSystemFileHandle.createWritable()
+title: "FileSystemFileHandle: createWritable() method"
+short-title: createWritable()
 slug: Web/API/FileSystemFileHandle/createWritable
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - stream
-  - working with files
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
 

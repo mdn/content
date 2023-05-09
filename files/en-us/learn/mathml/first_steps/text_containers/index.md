@@ -1,10 +1,6 @@
 ---
 title: MathML Text Containers
 slug: Learn/MathML/First_steps/Text_containers
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
@@ -123,7 +119,7 @@ math {
 
 ```js hidden
 const tokenElements = Array.from(
-  document.querySelectorAll("mi, mo, mn, mtext"),
+  document.querySelectorAll("mi, mo, mn, mtext")
 );
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -137,7 +133,7 @@ tokenElements.forEach((token) => {
     token.classList.add("highlight");
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`,
+      `<p><strong>You clicked an <code>&lt;${token.tagName}&gt;</code> element.</strong></p>`
     );
   });
 });
@@ -305,10 +301,10 @@ document.getElementById("showSolution").addEventListener(
       `<ul>
       <li><strong>The <code>&lt;mi&gt;</code> elements containing the "A" and "n" variables are rendered in italic</strong>. However, the <code>&lt;mi&gt;</code> elements with multiple characters "𝔰𝔩" or whose character is "𝔽" are still rendered upright.</li>
       <li><strong>Spacing is automatically added around the <code>&lt;mo&gt;</code> elements whose text is "∀", "∊", "=" or a comma</strong>. However, some of them have no spacing added before while the parentheses still have no spacing around them.</li>
-    </ul>`,
+    </ul>`
     );
   },
-  { once: true },
+  { once: true }
 );
 ```
 
@@ -380,10 +376,10 @@ math {
 
 ```js hidden
 const tokenElements = Array.from(
-  document.querySelectorAll("mi, mo, mn, mtext"),
+  document.querySelectorAll("mi, mo, mn, mtext")
 );
 const stretchyMoElements = Array.from(
-  document.getElementsByTagName("mo"),
+  document.getElementsByTagName("mo")
 ).slice(0, 2);
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -404,7 +400,7 @@ tokenElements.forEach((token) => {
       message = `Correct, this ${tagName} element is indeed stretched to the height of its <code>&lt;mfrac&gt;</code> sibling.`;
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>${message}</strong></p>`,
+      `<p><strong>${message}</strong></p>`
     );
   });
 });

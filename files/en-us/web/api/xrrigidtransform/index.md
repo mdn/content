@@ -2,24 +2,6 @@
 title: XRRigidTransform
 slug: Web/API/XRRigidTransform
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Interface
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - XRRigidTransform
-  - augmented
-  - space
-  - transform
 browser-compat: api.XRRigidTransform
 ---
 

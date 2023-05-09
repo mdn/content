@@ -1,14 +1,8 @@
 ---
-title: URL()
+title: "URL: URL() constructor"
+short-title: URL()
 slug: Web/API/URL/URL
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.URL
 ---
 
@@ -57,7 +51,7 @@ new URL(url, base)
 
 ```js
 // Base URLs:
-let baseUrl = 'https://developer.mozilla.org';
+let baseUrl = "https://developer.mozilla.org";
 
 let A = new URL("/", baseUrl);
 // => 'https://developer.mozilla.org/'
@@ -65,37 +59,35 @@ let A = new URL("/", baseUrl);
 let B = new URL(baseUrl);
 // => 'https://developer.mozilla.org/'
 
-new URL('en-US/docs', B);
+new URL("en-US/docs", B);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-let D = new URL('/en-US/docs', B);
+let D = new URL("/en-US/docs", B);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL('/en-US/docs', D);
-// => 'https://developer.mozilla.org/en-US/docs'
- 
-new URL('/en-US/docs', A);
+new URL("/en-US/docs", D);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
+new URL("/en-US/docs", A);
 // => 'https://developer.mozilla.org/en-US/docs'
 
+new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
+// => 'https://developer.mozilla.org/en-US/docs'
 
 // Invalid URLs:
 
-new URL('/en-US/docs', '');
+new URL("/en-US/docs", "");
 // Raises a TypeError exception as '' is not a valid URL
 
-new URL('/en-US/docs');
+new URL("/en-US/docs");
 // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-
 
 // Other cases:
 
-new URL('http://www.example.com', );
+new URL("http://www.example.com");
 // => 'http://www.example.com/'
 
-new URL('http://www.example.com', B);
+new URL("http://www.example.com", B);
 // => 'http://www.example.com/'
 
 new URL("", "https://example.com/?query=1");

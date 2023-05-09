@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.appendItem()
+title: "SVGPointList: appendItem() method"
+short-title: appendItem()
 slug: Web/API/SVGPointList/appendItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - appendItem
-  - SVGPointList
 browser-compat: api.SVGPointList.appendItem
 ---
 

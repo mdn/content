@@ -2,17 +2,6 @@
 title: RTCRtpTransceiver
 slug: Web/API/RTCRtpTransceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - MediaStreamTrack
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - SDP
-  - Transceiver
-  - WebRTC
 browser-compat: api.RTCRtpTransceiver
 ---
 

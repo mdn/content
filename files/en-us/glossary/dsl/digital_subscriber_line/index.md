@@ -2,8 +2,6 @@
 title: DSL (Digital Subscriber Line)
 slug: Glossary/DSL/Digital_subscriber_line
 page-type: glossary-definition
-tags:
-  - Reference
 ---
 
 **DSL (Digital Subscriber Line)** is a type of broadband internet connection that sends wired data transmissions over telephone lines.

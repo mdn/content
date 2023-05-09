@@ -2,17 +2,6 @@
 title: column-rule-color
 slug: Web/CSS/column-rule-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - HTML Colors
-  - Reference
-  - Styles
-  - Styling HTML
-  - column-rule-color
-  - columns
-  - recipe:css-property
 browser-compat: css.properties.column-rule-color
 ---
 

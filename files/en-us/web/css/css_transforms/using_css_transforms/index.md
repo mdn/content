@@ -2,18 +2,6 @@
 title: Using CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 page-type: guide
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS Transforms
-  - Graphics
-  - Guide
-  - Rotate
-  - Scale
-  - Scaling
-  - perspective
-  - rotation
 ---
 
 {{CSSRef}}

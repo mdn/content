@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createProjectionLayer()
+title: "XRWebGLBinding: createProjectionLayer() method"
+short-title: createProjectionLayer()
 slug: Web/API/XRWebGLBinding/createProjectionLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createProjectionLayer
 ---
 
@@ -35,7 +30,7 @@ createProjectionLayer(options)
           - : The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).
             The default value is `texture`.
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -48,7 +43,7 @@ createProjectionLayer(options)
         - `gl.RGB8_ALPHA8`
           The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`

@@ -2,11 +2,6 @@
 title: radius
 slug: Web/SVG/Attribute/radius
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feMorphology.radius
 ---
 

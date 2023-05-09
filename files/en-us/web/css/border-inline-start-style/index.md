@@ -2,16 +2,6 @@
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-start
-  - border-inline-start-style
-  - border-inline-style
-  - recipe:css-property
 browser-compat: css.properties.border-inline-start-style
 ---
 
@@ -38,8 +28,6 @@ border-inline-start-style: unset;
 ```
 
 Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-inline-end-style")}}, which define the other border styles of the element.
-
-{{cssinfo}}
 
 ### Values
 

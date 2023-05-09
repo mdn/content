@@ -1,12 +1,8 @@
 ---
 title: "Window: unload event"
+short-title: unload
 slug: Web/API/Window/unload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
-  - events
 browser-compat: api.Window.unload_event
 ---
 
@@ -35,8 +31,8 @@ Please note that the unload event also follows the document tree: parent frame u
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('unload', (event) => { });
-onunload = (event) => { };
+addEventListener("unload", (event) => {});
+onunload = (event) => {};
 ```
 
 ## Event type

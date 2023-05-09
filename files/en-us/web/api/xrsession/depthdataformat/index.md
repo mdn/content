@@ -1,18 +1,10 @@
 ---
-title: XRSession.depthDataFormat
+title: "XRSession: depthDataFormat property"
+short-title: depthDataFormat
 slug: Web/API/XRSession/depthDataFormat
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
-  - XRSession
+status:
+  - experimental
 browser-compat: api.XRSession.depthDataFormat
 ---
 

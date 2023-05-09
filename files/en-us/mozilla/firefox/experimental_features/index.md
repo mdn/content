@@ -1,11 +1,6 @@
 ---
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - Experimental
-  - Firefox
-  - Preferences
-  - features
 ---
 
 {{FirefoxSidebar}}
@@ -19,53 +14,13 @@ After a feature is enabled by default in a release build, it is no longer consid
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
-> **Note:** For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using the [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) macro: `\{{bug(<em>bug-number</em>)}}`.
+> **Note:** For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using `[Firefox bug <number>](https://bugzil.la/<number>)`.
 
 ## HTML
 
-### inert attribute
-
-The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}. When present, it may make the browser "ignore" the element from assistive technologies, page search, and text selection. For more details on the status of this feature, see {{bug(1655722)}}.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>html5.inert.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details.)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
 
 <table>
   <thead>
@@ -105,7 +60,7 @@ Layout for `input type="search"` has been updated. This causes a search field to
 
 ### Toggle password display
 
-HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ({{bug(502258)}}).
+HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
 
 <table>
   <thead>
@@ -147,7 +102,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 ### Hex boxes to display stray control characters
 
-This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See {{bug(1099557)}} for more details.)
+This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
 
 <table>
   <thead>
@@ -190,7 +145,7 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
 
 ### initial-letter property
 
-The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)
+The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See [Firefox bug 1223880](https://bugzil.la/1223880) for more details.)
 
 <table>
   <thead>
@@ -228,9 +183,54 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
   </tbody>
 </table>
 
+### content-visibility: auto value
+
+The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_Containment#relevant_to_the_user).
+(See [Firefox bug 1798485](https://bugzil.la/1798485) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.content-visibility.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_Containment#skips_its_contents).
+(See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+
 ### Single numbers as aspect ratio in media queries
 
-Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/Media_Queries). (See {{bug(1565562)}} for more details.)
+Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/Media_Queries). (See [Firefox bug 1565562](https://bugzil.la/1565562) for more details.)
 
 <table>
   <thead>
@@ -270,7 +270,7 @@ Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when 
 
 ### backdrop-filter property
 
-The {{cssxref("backdrop-filter")}} property applies filter effects to the area behind an element. (See {{bug(1178765)}} for more details.)
+The {{cssxref("backdrop-filter")}} property applies filter effects to the area behind an element. (See [Firefox bug 1178765](https://bugzil.la/1178765) for more details.)
 
 <table>
   <thead>
@@ -310,7 +310,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
 
 ### Masonry grid layout
 
-Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.
+Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
 
 <table>
   <thead>
@@ -352,7 +352,7 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
 
 ### math-style property
 
-The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
+The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See [Firefox bug 1665975](https://bugzil.la/1665975) for more details.)
 
 <table>
   <thead>
@@ -392,7 +392,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
 
 ### fit-content() function
 
-The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
+The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
 
 <table>
   <thead>
@@ -430,14 +430,14 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
   </tbody>
 </table>
 
-### Scroll-linked animations
+### Scroll-driven animations
 
-A scroll-linked animation is one in which the animation depends on the scroll position of a scrollbar instead of time, or some other dimension.
-The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-linked animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value that was set in `scroll-timeline-name`.
+Earlier called "scroll-linked animations", a scroll-driven animation depends on the scroll position of a scrollbar instead of time or some other dimension.
+The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
-For more information, see {{bug(1676791)}}, {{bug(1754897)}}, and {{bug(1737918)}}.
+For more information, see [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
 <table>
   <thead>
@@ -475,10 +475,48 @@ For more information, see {{bug(1676791)}}, {{bug(1754897)}}, and {{bug(1737918)
   </tbody>
 </table>
 
+When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}. The longhand and shorthand properties are now available behind the preference `layout.css.scroll-driven-animations.enabled`. For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), and [Firefox bug 1809005](https://bugzil.la/1809005).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>110</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.scroll-driven-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### :has() pseudo-class
 
 The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
-(See {{bug(1771896)}} for more details.)
+(See [Firefox bug 1771896](https://bugzil.la/1771896) for more details.)
 
 <table>
   <thead>
@@ -516,51 +554,10 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   </tbody>
 </table>
 
-### linear() easing function
-
-The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
-(See {{bug(1764126)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>104</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### animation-composition property
 
 The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
-(See {{bug(1293490)}} for more details.)
+(See [Firefox bug 1293490](https://bugzil.la/1293490) for more details.)
 
 <table>
   <thead>
@@ -601,7 +598,7 @@ The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) propert
 ### @font-face src feature checking
 
 The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
-See {{bug(1715546)}} for more details.
+See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
 
 <table>
   <thead>
@@ -642,7 +639,7 @@ See {{bug(1715546)}} for more details.
 ### round() math function
 
 The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
-See {{bug(1764850)}} for more details.
+See [Firefox bug 1764850](https://bugzil.la/1764850) for more details.
 
 <table>
   <thead>
@@ -683,7 +680,7 @@ See {{bug(1764850)}} for more details.
 ### font-variant-emoji
 
 The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
-See ({{bug(1461589)}}) for more details.
+See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
 
 <table>
   <thead>
@@ -727,7 +724,7 @@ See ({{bug(1461589)}}) for more details.
 
 The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
 This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
-(See {{bug(1388931)}} for more details.)
+(See [Firefox bug 1388931](https://bugzil.la/1388931) for more details.)
 
 <table>
   <thead>
@@ -771,7 +768,7 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 The {{jsxref("Array.prototype.group()")}} and {{jsxref("Array.prototype.groupToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
 The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
-(See {{bug(1739648)}} for more details.)
+(See [Firefox bug 1739648](https://bugzil.la/1739648) for more details.)
 
 <table>
   <thead>
@@ -809,49 +806,49 @@ The `groupBy` method should be used when strings can be used to represent elemen
   </tbody>
 </table>
 
-## APIs
+#### Static module import in workers
 
-### Graphics: Canvas, WebGL, and WebGPU
-
-#### Interface: OffscreenCanvas
-
-The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered offscreen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts. (See {{bug(1390089)}} for more details.)
+[Workers](/en-US/docs/Web/API/Web_Workers_API) can now [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1247687](https://bugzil.la/1247687)).
 
 <table>
   <thead>
     <tr>
       <th>Release channel</th>
-      <th>Version added</th>
+      <th>Version removed</th>
       <th>Enabled by default?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>44</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>44</td>
+      <td>111</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>44</td>
+      <td>111</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>44</td>
+      <td>111</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>gfx.offscreencanvas.enabled</code></td>
+      <td colspan="2"><code>dom.workers.modules.enabled</code></td>
     </tr>
   </tbody>
 </table>
+
+## APIs
+
+### Graphics: Canvas, WebGL, and WebGPU
 
 #### Hit regions
 
@@ -899,7 +896,7 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-This new API provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See {{bug(1602129)}} for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
 <table>
   <thead>
@@ -912,8 +909,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>73</td>
-      <td>No</td>
+      <td>113</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -941,7 +938,7 @@ This new API provides low-level support for performing computation and graphics 
 
 #### MediaDevices.selectAudioOutput()
 
-{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt from which users can select their desired audio output. See {{bug(1699026)}}.
+{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt on desktop systems, from which users can select their desired audio output. See [Firefox bug 1699026](https://bugzil.la/1699026).
 
 <table>
   <thead>
@@ -954,8 +951,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>88</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -979,13 +976,97 @@ This new API provides low-level support for performing computation and graphics 
   </tbody>
 </table>
 
+### WebTransport API
+
+#### WebTransport API core classes
+
+This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### WebTransport datagrams
+
+This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.datagrams.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### WebRTC and media
 
 The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
 
 #### Asynchronous SourceBuffer add and remove
 
-This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See {{bug(1280613)}} and {{bug(778617)}} for more information.
+This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See [Firefox bug 1280613](https://bugzil.la/1280613) and [Firefox bug 778617](https://bugzil.la/778617) for more information.
 
 <table>
   <thead>
@@ -1070,49 +1151,12 @@ Permitted values are:
   </tbody>
 </table>
 
-#### AV1 support for Firefox on Android
-
-This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web/Media/Formats/Video_codecs#av1). This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">—</td>
-    </tr>
-  </tbody>
-</table>
-
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details.
+Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
+See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
 <table>
   <thead>
@@ -1130,13 +1174,13 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1154,7 +1198,7 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
 
 This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
 This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
-See {{bug(1740530)}} for more details.
+See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
 
 <table>
   <thead>
@@ -1240,7 +1284,7 @@ Preloading occurs in parallel with worker bootup, reducing the total time from s
 #### WebVR API (Disabled)
 
 The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
-It is disabled by default on all builds {{bug(1750902)}}.
+It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/1750902).
 
 <table>
   <thead>
@@ -1282,7 +1326,7 @@ It is disabled by default on all builds {{bug(1750902)}}.
 
 #### HTMLMediaElement method: setSinkId()
 
-{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See {{bug(934425)}} for more details.
+{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See [Firefox bug 934425](https://bugzil.la/934425) for more details.
 
 <table>
   <thead>
@@ -1322,7 +1366,7 @@ It is disabled by default on all builds {{bug(1750902)}}.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks
 
-Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} properties to all HTML media elements. However, because Firefox doesn't currently support multiple audio and video tracks, the most common use cases for these properties don't work, so they're both disabled by default. See {{bug(1057233)}} for more details.
+Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} properties to all HTML media elements. However, because Firefox doesn't currently support multiple audio and video tracks, the most common use cases for these properties don't work, so they're both disabled by default. See [Firefox bug 1057233](https://bugzil.la/1057233) for more details.
 
 <table>
   <thead>
@@ -1362,7 +1406,7 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See {{bug('1619947')}} for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
 
 <table>
   <thead>
@@ -1402,7 +1446,7 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
 
 #### ClipboardRead
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See {{bug(1701512)}} for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See [Firefox bug 1701512](https://bugzil.la/1701512) for more details.)
 
 <table>
   <thead>
@@ -1442,7 +1486,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
 
 <table>
   <thead>
@@ -1480,92 +1524,9 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
   </tbody>
 </table>
 
-#### Navigator method: getAutoplayPolicy()
-
-The {{domxref("navigator.getAutoplayPolicy()")}} method returns a string value indicating how the browser handles requests to automatically play media for either media elements or audio contexts.
-The possible values are: `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time).
-The value can change over time for all items of a particular type, or for a particular item, depending on what the user is doing, their preferences, and the state of the browser in general.
-See {{bug(1773551)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>110</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>110</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.autoplay-policy-detection.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### GeometryUtils methods: convertPointFromNode(), convertRectFromNode(), and convertQuadFromNode()
 
-The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` map the given point, rectangle, or quadruple from the {{domxref("Node")}} on which they're called to another node. (See {{bug(918189)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>31</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>31</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### GeometryUtils method: getBoxQuads()
-
-The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref("Node")}} relative to any other node or viewport. (See {{bug(917755)}} for more details.)
+The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` map the given point, rectangle, or quadruple from the {{domxref("Node")}} on which they're called to another node. (See [Firefox bug 918189](https://bugzil.la/918189) for more details.)
 
 <table>
   <thead>
@@ -1603,6 +1564,46 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
+#### GeometryUtils method: getBoxQuads()
+
+The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref("Node")}} relative to any other node or viewport. (See [Firefox bug 917755](https://bugzil.la/917755) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>31</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>31</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>31</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>31</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 #### ElementInternals: Form associated custom element methods and properties
 
 New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
@@ -1612,7 +1613,7 @@ New {{domxref("ElementInternals")}} properties and methods that allow custom ele
 - The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
 - The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
 
-See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
+See these bugs for details: [Firefox bug 1556362](https://bugzil.la/1556362), [Firefox bug 1556373](https://bugzil.la/1556373), [Firefox bug 1556365](https://bugzil.la/1556365), [Firefox bug 1556449](https://bugzil.la/1556449).
 
 <table>
   <thead>
@@ -1654,7 +1655,7 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
 
 #### Primary payment handling
 
-The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides support for handling web-based payments within web content or apps. Due to a bug that came up during testing of the user interface, we have decided to postpone shipping this API while discussions over potential changes to the API are held. Work is ongoing. (See {{bug(1318984)}} for more details.)
+The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides support for handling web-based payments within web content or apps. Due to a bug that came up during testing of the user interface, we have decided to postpone shipping this API while discussions over potential changes to the API are held. Work is ongoing. (See [Firefox bug 1318984](https://bugzil.la/1318984) for more details.)
 
 <table>
   <thead>
@@ -1743,9 +1744,7 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 
 The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
 Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See {{bug(1697647)}} for more details.
-
-Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
+See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
 <table>
   <thead>
@@ -1758,8 +1757,8 @@ Note that since locking the screen orientation isn't typically supported on desk
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1783,50 +1782,6 @@ Note that since locking the screen orientation isn't typically supported on desk
   </tbody>
 </table>
 
-### File System Access API
-
-#### StorageManager.getDirectory()
-
-The {{domxref("StorageManager.getDirectory()")}} method, obtained using `navigator.storage.getDirectory()` in a worker or the main thread, provides access to files stored in the [origin private file system](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system).
-This data is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
-See {{bug(1785123)}} for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>110</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>97</td>
-      <td>No.</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.fs.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
@@ -1838,7 +1793,7 @@ No preference is provided to allow it to be enabled in other releases.
 
 ### Block plain text requests from Flash on encrypted pages
 
-In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See {{bug(1190623)}} for more details.
+In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
 
 <table>
   <thead>
@@ -1880,7 +1835,7 @@ In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash conte
 
 ### Insecure page labeling
 
-These two preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). See {{bug(1335970)}} for more details.
+These two preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). See [Firefox bug 1335970](https://bugzil.la/1335970) for more details.
 
 <table>
   <thead>
@@ -1925,7 +1880,7 @@ These two preferences add a "Not secure" text label in the address bar next to t
 
 ### Upgrading mixed display content
 
-When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. (See {{bug(1435733)}} for more details.)
+When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. (See [Firefox bug 1435733](https://bugzil.la/1435733) for more details.)
 
 This also changes the console warning; if the upgrade succeeds, the message indicates that the request was upgraded, instead of showing a warning.
 
@@ -2014,7 +1969,7 @@ Note that this is implemented in Firefox as "**Feature Policy**, the name used i
 
 The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
 
-> **Note:** This was originally enabled by default, but put behind a preference in version 94 ({{bug(1729291)}}).
+> **Note:** This was originally enabled by default, but put behind a preference in version 94 ([Firefox bug 1729291](https://bugzil.la/1729291)).
 
 <table>
   <thead>
@@ -2054,13 +2009,98 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
+## HTTP
+
+### SameSite=Lax by default
+
+[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.cookie.sameSite.laxByDefault</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### HTTP Status 103
+
+The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start preloading resources while the server is still preparing the full response.
+For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>102</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.early-hints.enabled</code> and <code>network.early-hints.preconnect.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Developer tools
 
 Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.
 
 ### Execution context selector
 
-This feature displays a button on the console's command line that lets you change the context in which the expression you enter will be executed. (See {{bug(1605154)}} and {{bug(1605153)}} for more details.)
+This feature displays a button on the console's command line that lets you change the context in which the expression you enter will be executed. (See [Firefox bug 1605154](https://bugzil.la/1605154) and [Firefox bug 1605153](https://bugzil.la/1605153) for more details.)
 
 <table>
   <thead>
@@ -2100,7 +2140,7 @@ This feature displays a button on the console's command line that lets you chang
 
 ### Mobile gesture support in Responsive Design Mode
 
-Mouse gestures are used to simulate mobile gestures like swiping/scrolling, double-tap and pinch-zooming and long-press to select/open the context menu. (See {{bug(1621781)}}, {{bug(1245183)}}, and {{bug(1401304)}} for more details.)
+Mouse gestures are used to simulate mobile gestures like swiping/scrolling, double-tap and pinch-zooming and long-press to select/open the context menu. (See [Firefox bug 1621781](https://bugzil.la/1621781), [Firefox bug 1245183](https://bugzil.la/1245183), and [Firefox bug 1401304](https://bugzil.la/1401304) for more details.)
 
 <table>
   <thead>
@@ -2142,7 +2182,7 @@ Mouse gestures are used to simulate mobile gestures like swiping/scrolling, doub
 
 ### Server-sent events in Network Monitor
 
-The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/Server-sent_events) events. (See {{bug(1405706)}} for more details.)
+The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/Server-sent_events) events. (See [Firefox bug 1405706](https://bugzil.la/1405706) for more details.)
 
 <table>
   <thead>
@@ -2230,7 +2270,7 @@ The CSS Rules View can display browser compatibility tooltips next to any CSS pr
 
 ### Desktop zooming
 
-This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. (See {{bug(1245183)}} and {{bug(1620055)}} for more details.)
+This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. (See [Firefox bug 1245183](https://bugzil.la/1245183) and [Firefox bug 1620055](https://bugzil.la/1620055) for more details.)
 
 <table>
   <thead>

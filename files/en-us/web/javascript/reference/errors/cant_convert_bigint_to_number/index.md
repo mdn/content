@@ -2,11 +2,6 @@
 title: "TypeError: can't convert BigInt to number"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_BigInt_to_number
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{jsSidebar("Errors")}}

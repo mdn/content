@@ -1,16 +1,8 @@
 ---
-title: SVGImageElement.decoding
+title: "SVGImageElement: decoding property"
+short-title: decoding
 slug: Web/API/SVGImageElement/decoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - decoding
 browser-compat: api.SVGImageElement.decoding
 ---
 
@@ -33,8 +25,8 @@ A string representing the decoding hint. Possible values are:
 
 ```js
 const img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.svg';
+img.decoding = "sync";
+img.src = "img/logo.svg";
 ```
 
 ## Specifications

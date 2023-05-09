@@ -2,19 +2,8 @@
 title: MerchantValidationEvent
 slug: Web/API/MerchantValidationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Merchant
-  - Merchant Validation
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Payments
-  - Reference
-  - Secure context
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent
 ---
 

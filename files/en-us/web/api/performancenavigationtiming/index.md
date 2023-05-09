@@ -2,13 +2,6 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation Timing API
-  - Performance Timeline API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming
 ---
 

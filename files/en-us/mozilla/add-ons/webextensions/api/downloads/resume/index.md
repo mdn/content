@@ -1,16 +1,7 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - resume
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.resume
 ---
 

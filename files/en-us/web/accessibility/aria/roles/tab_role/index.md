@@ -1,12 +1,7 @@
 ---
 title: "ARIA: tab role"
 slug: Web/Accessibility/ARIA/Roles/tab_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Tab
-  - ARIA widget
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tab
   - https://w3c.github.io/aria-practices/#tabpanel
@@ -56,7 +51,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- {{htmlattrxref("id")}}
+- [id](/en-US/docs/Web/HTML/Global_attributes#id)
   - : content
 
 ### Keyboard interaction
@@ -177,16 +172,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   tabList.addEventListener("keydown", (e) => {
     // Move right
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
       tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.key === 'ArrowRight') {
+      if (e.key === "ArrowRight") {
         tabFocus++;
         // If we're at the end, go to the start
         if (tabFocus >= tabs.length) {
           tabFocus = 0;
         }
         // Move left
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === "ArrowLeft") {
         tabFocus--;
         // If we're at the start, move to the end
         if (tabFocus < 0) {

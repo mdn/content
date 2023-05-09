@@ -2,11 +2,6 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.floor
 ---
 
@@ -70,7 +65,7 @@ function decimalAdjust(type, value, exp) {
   type = String(type);
   if (!["round", "floor", "ceil"].includes(type)) {
     throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.",
     );
   }
   exp = Number(exp);

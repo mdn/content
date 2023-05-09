@@ -2,9 +2,6 @@
 title: <symbol>
 slug: Web/SVG/Element/symbol
 page-type: svg-element
-tags:
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.symbol
 ---
 

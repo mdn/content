@@ -1,15 +1,10 @@
 ---
-title: XRMediaBinding.createCylinderLayer()
+title: "XRMediaBinding: createCylinderLayer() method"
+short-title: createCylinderLayer()
 slug: Web/API/XRMediaBinding/createCylinderLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRMediaBinding.createCylinderLayer
 ---
 

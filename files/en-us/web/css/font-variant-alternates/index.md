@@ -2,12 +2,6 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
 
@@ -84,8 +78,8 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p> A Fancy Swash</p>
-<p class="variant"> A Fancy Swash</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS

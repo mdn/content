@@ -2,16 +2,9 @@
 title: Meta programming
 slug: Web/JavaScript/Guide/Meta_programming
 page-type: guide
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-  - "l10n:priority"
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
 The {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allow you to intercept and define custom behavior for fundamental language operations (e.g. property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript.
 
@@ -467,4 +460,4 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}

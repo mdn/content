@@ -1,14 +1,8 @@
 ---
-title: LockManager.query()
+title: "LockManager: query() method"
+short-title: query()
 slug: Web/API/LockManager/query
 page-type: web-api-instance-method
-tags:
-  - API
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - query()
 browser-compat: api.LockManager.query
 ---
 
@@ -31,8 +25,8 @@ None.
 A {{jsxref('Promise')}} that resolves with an object containing a snapshot of the {{domxref("LockManager")}} state.
 The object has the following properties:
 
-- `held`: An array of {{domxref('Lock')}} objects for held locks.
-- `pending`: An array of {{domxref('Lock')}} objects for pending lock requests.
+- `held`: An array of {{domxref('LockInfo')}} objects for held locks.
+- `pending`: An array of {{domxref('LockInfo')}} objects for pending lock requests.
 
 ### Exceptions
 

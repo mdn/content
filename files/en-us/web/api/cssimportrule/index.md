@@ -2,11 +2,6 @@
 title: CSSImportRule
 slug: Web/API/CSSImportRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSImportRule
 ---
 
@@ -28,6 +23,8 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
   - : Returns the associated stylesheet.
+- {{domxref("CSSImportRule.supportsText")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the supports condition specified by the {{cssxref("@import")}} rule.
 
 ## Instance methods
 

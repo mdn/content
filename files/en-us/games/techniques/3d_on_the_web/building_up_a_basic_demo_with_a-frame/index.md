@@ -1,13 +1,6 @@
 ---
 title: Building up a basic demo with A-Frame
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
-tags:
-  - 3D
-  - A-Frame
-  - VR
-  - Virtual Reality
-  - Web
-  - WebGL
 ---
 
 {{GamesSidebar}}

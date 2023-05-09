@@ -1,14 +1,10 @@
 ---
-title: Window.scrollByLines()
+title: "Window: scrollByLines() method"
+short-title: scrollByLines()
 slug: Web/API/Window/scrollByLines
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.scrollByLines
 ---
 

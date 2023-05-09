@@ -1,16 +1,7 @@
 ---
 title: runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformArch
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformArch
 ---
 

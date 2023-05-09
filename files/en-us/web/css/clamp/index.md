@@ -2,16 +2,6 @@
 title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - clamp
 browser-compat: css.types.clamp
 ---
 
@@ -27,9 +17,9 @@ Note that using `clamp()` for font sizes, as in these examples, allows you to se
 
 ```css
 /* Static values */
-width: clamp(200px, 40%,  400px);
+width: clamp(200px, 40%, 400px);
 width: clamp(20rem, 30vw, 70rem);
-width: clamp(10vw,  20em, 100vw);
+width: clamp(10vw, 20em, 100vw);
 
 /* Calculated values */
 width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));
@@ -74,17 +64,30 @@ Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;
 
 ## Examples
 
-### min, max, and clamp comparison
+### min(), max(), and clamp() comparison
 
-In this example we have a simple responsive example that makes use of {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} for some of the sizes.
+In this example we have a web page that uses {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} to set sizes responsively.
 
-The [`<body>`](/en-US/docs/Web/HTML/Element/body) element's [`width`](/en-US/docs/Web/CSS/width) is set as `min(1000px, calc(70% + 100px))`. This means that the width will be set at `1000px`, unless the result of `calc(70% + 100px)` is less than `1000px`, in which case it will be set to that value instead. `min()` allows you set a maximum value.
+The example adjusts the sizes of page elements in three ways:
 
-The [`<p>`](/en-US/docs/Web/HTML/Element/p) element's [`font-size`](/en-US/docs/Web/CSS/font-size) is set as `max(1.2rem, 1.2vw)`. This means that the `font-size` will be set at `1.2rem`, unless the computed value of `1.2vw` is greater than that of `1.2rem`, in which case it will be set to that value instead. `max()` allows you set a minimum value, which in cases like this is useful for accessibility purposes.
+- the lengths of the lines of text
+- the font size of paragraph text
+- the font size of heading text
 
-The [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element's `font-size` is set as `clamp(1.8rem, 2.5vw, 2.8rem)`. This means that the `font-size` will be set at `1.8rem`, until the computed value of `2.5vw` becomes greater than that of `1.8rem`. At this point, `font-size` will be set at `2.5vw`, until `2.5vw`'s computed value becomes greater than that of `2.8rem`. At this point, the `font-size` will be set at `2.8rem`. `clamp()` allows you to set a minimum and maximum value.
+In all three cases, the page uses a combination of a viewport-relative units ([`vw`](/en-US/docs/Web/CSS/length#vw) and [`<percentage>`](/en-US/docs/Web/CSS/percentage)), to set a size that varies with the viewport width, and a value that is not viewport relative ([`rem`](/en-US/docs/Web/CSS/length#rem) and [`px`](/en-US/docs/Web/CSS/length#px)) to implement minimum and/or maximum sizes.
 
-You find this [example live on GitHub](https://mdn.github.io/css-examples/min-max-clamp/), if you want to play around with it.
+The example is at <https://mdn.github.io/css-examples/min-max-clamp/>. Open it in a new window and try adjusting the window width.
+
+The **line length** (controlled by the [`width`](/en-US/docs/Web/CSS/width) of the [`<body>`](/en-US/docs/Web/HTML/Element/body) element) will increase as the window width increases, but only up to a certain point (`1000px`), and beyond that point, it won't increase anymore. We're using `min()` to set a **maximum line length**: it can go under `1000px`, but won't go over. This is helpful because long lines are harder to read, so we often want to limit how long a line can be. To achieve this we use `min(1000px, calc(70% + 100px))`: when the result of the percentage-based calculation goes above `1000px`, we switch to the fixed `1000px` value.
+
+The **size of the paragraph text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<p>`](/en-US/docs/Web/HTML/Element/p) element, decreases as the window gets narrower, but only up to a certain point, and beyond that point (the point where `1.2vw` is less than `1.2rem`) it doesn't get any smaller: it stays at `1.2rem`. We're using `max()` to set a **minimum font size**: the font can grow above `1.2rem` but will never go below it. This is helpful because really small text is hard to read. To achieve this we use `max(1.2rem, 1.2vw)`. This means that the `font-size` will be set at `1.2rem`, unless the computed value of `1.2vw` is greater than that of `1.2rem`, in which case it will be set to `1.2vw` instead.
+
+The **size of the heading text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element, has a viewport-relative value with both a maximum and a minimum threshold. To achieve this we use `clamp(1.8rem, 2.5vw, 2.8rem)`. The viewport-relative value is `2.5vw` but it is clamped between `1.8rem` and `2.8rem`, so:
+
+- if the calculated value of `2.5vw` is less than `1.8rem`, then `1.8rem` will be used
+- if the calculated value of `2.5vw` is greater than `2.8rem`, then `2.8rem` will be used.
+
+This prevents the heading text from getting too small in a very narrow window, or too big in a very wide window.
 
 #### HTML
 

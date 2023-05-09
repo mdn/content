@@ -1,14 +1,8 @@
 ---
-title: Document.append()
+title: "Document: append() method"
+short-title: append()
 slug: Web/API/Document/append
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
 browser-compat: api.Document.append
 ---
 

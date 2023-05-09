@@ -1,12 +1,7 @@
 ---
-title: '<ul>: The Unordered List element'
+title: "<ul>: The Unordered List element"
 slug: Web/HTML/Element/ul
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.ul
 ---
 
@@ -20,13 +15,13 @@ The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `compact` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
 
@@ -58,9 +53,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Simple_example", 400, 120)}}
 
 ### Nesting a list
 
@@ -91,9 +86,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Nesting_a_list", 400, 220)}}
+{{EmbedLiveSample("Nesting_a_list", 400, 340)}}
 
 ### Ordered list inside unordered list
 
@@ -114,9 +109,9 @@ The above HTML will output:
 </ul>
 ```
 
-The above HTML will output:
+#### Result
 
-{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}
+{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 190)}}
 
 ## Technical summary
 
@@ -124,16 +119,16 @@ The above HTML will output:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;ul></code> element's children include at least
         one {{HTMLElement("li")}} element,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -154,7 +149,7 @@ The above HTML will output:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -202,5 +197,5 @@ The above HTML will output:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists.
-  - the {{CSSxRef("line-height")}} property, to simulate the deprecated {{HTMLAttrxRef("compact", "ul")}} attribute.
+  - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute.
   - the {{CSSxRef("margin")}} property, to control the list indentation.

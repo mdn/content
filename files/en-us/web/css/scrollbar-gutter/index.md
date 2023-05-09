@@ -2,11 +2,6 @@
 title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - scrollbar-gutter
 browser-compat: css.properties.scrollbar-gutter
 ---
 

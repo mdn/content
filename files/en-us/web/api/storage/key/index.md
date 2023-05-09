@@ -1,13 +1,8 @@
 ---
-title: Storage.key()
+title: "Storage: key() method"
+short-title: key()
 slug: Web/API/Storage/key
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.key
 ---
 

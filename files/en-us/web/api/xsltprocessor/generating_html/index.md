@@ -4,6 +4,8 @@ slug: Web/API/XSLTProcessor/Generating_HTML
 page-type: guide
 ---
 
+{{APIRef("XSLT")}}
+
 One common application of XSLT in the browser is transforming XML into HTML on the client. This example will transform the input document (example2.xml), which contains information about an article, into an HTML document.
 
 The `<body>` element of the article now contains HTML elements (a `<b>` and `<u>` tag). The XML document contains both HTML elements and XML elements, but only one namespace is needed, namely for the XML elements. Since there is no HTML namespace, and using the XHTML namespace would force the XSL to create an XML document that would not behave like an HTML document, the `xsl:output` in the XSL Stylesheet will make sure the resulting document will be handled as HTML. For the XML elements, our own namespace is needed, `http://devedge.netscape.com/2002/de`, and it is given the prefix myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.

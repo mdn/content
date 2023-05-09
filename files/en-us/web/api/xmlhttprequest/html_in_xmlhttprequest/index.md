@@ -2,15 +2,6 @@
 title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 page-type: guide
-tags:
-  - API
-  - Guide
-  - HTML
-  - HTML with XMLHttpRequest
-  - Loading HTML
-  - Parsing HTML
-  - Web
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
 

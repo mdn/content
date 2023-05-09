@@ -1,16 +1,7 @@
 ---
 title: tabs.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.detectLanguage
 ---
 
@@ -38,7 +29,7 @@ let detecting = browser.tabs.detectLanguage(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string representing an ISO language code such as `en` or `fr`. For a complete list of languages supported by this method, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). For an unknown language, `"und"` will be returned (but see [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string representing an ISO language code such as `en` or `fr`. For a complete list of languages supported by this method, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). For an unknown language, `"und"` will be returned (but see [bug 1288263](https://bugzil.la/1288263)). If any error occurs the promise will be rejected with an error message.
 
 ## Examples
 

@@ -1,11 +1,14 @@
 ---
-title: PresentationRequest.getAvailability()
+title: "PresentationRequest: getAvailability() method"
+short-title: getAvailability()
 slug: Web/API/PresentationRequest/getAvailability
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PresentationRequest.getAvailability
 ---
 
-{{DefaultAPISidebar("Presentation API")}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}
 
 When the `getAvailability()` method is called, the user agent _MUST_ run the following steps:
 

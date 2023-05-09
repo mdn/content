@@ -2,9 +2,6 @@
 title: href
 slug: Web/SVG/Attribute/href
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.href
 ---
 

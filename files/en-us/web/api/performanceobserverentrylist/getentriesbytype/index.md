@@ -1,13 +1,8 @@
 ---
-title: PerformanceObserverEntryList.getEntriesByType()
+title: "PerformanceObserverEntryList: getEntriesByType() method"
+short-title: getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceObserverEntryList
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntriesByType
 ---
 
@@ -41,25 +36,25 @@ const observer = new PerformanceObserver((list, obs) => {
   // Log all entries
   let perfEntries = list.getEntries();
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s duration: ${entry.duration}`)
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   });
 
   // Log entries named "debugging" with type "measure"
   perfEntries = list.getEntriesByName("debugging", "measure");
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s duration: ${entry.duration}`)
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   });
 
   // Log entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s startTime: ${entry.startTime}`)
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
   });
 });
 
 // Subscribe to various performance event types
 observer.observe({
-  entryTypes: ['mark', 'measure', 'navigation', 'resource']
+  entryTypes: ["mark", "measure", "navigation", "resource"],
 });
 ```
 

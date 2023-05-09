@@ -2,12 +2,6 @@
 title: CSS Transforms
 slug: Web/CSS/CSS_Transforms
 page-type: css-module
-tags:
-  - CSS
-  - CSS Transforms
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-transforms/
 ---
 

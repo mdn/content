@@ -1,13 +1,8 @@
 ---
-title: Storage.removeItem()
+title: "Storage: removeItem() method"
+short-title: removeItem()
 slug: Web/API/Storage/removeItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.removeItem
 ---
 
@@ -43,11 +38,11 @@ The following function creates three data items inside local storage, then remov
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
@@ -55,11 +50,11 @@ We can do the same for the session storage.
 
 ```js
 function populateStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
-  sessionStorage.setItem('image', 'myCat.png');
+  sessionStorage.setItem("bgcolor", "red");
+  sessionStorage.setItem("font", "Helvetica");
+  sessionStorage.setItem("image", "myCat.png");
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem("image");
 }
 ```
 

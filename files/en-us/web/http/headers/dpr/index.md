@@ -1,14 +1,10 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.DPR
 ---
 
@@ -32,7 +28,7 @@ The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request he
   </tbody>
 </table>
 
-The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#attr-srcset) attribute to allow user agents to select a preferred image.
+The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute to allow user agents to select a preferred image.
 
 If a server uses the `DPR` hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in `Content-DPR` for layout if it differs from the value in the request's `DPR` header.
 
@@ -91,4 +87,4 @@ Content-DPR: 2.0
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

@@ -1,14 +1,8 @@
 ---
 title: WebTransportDatagramDuplexStream.outgoingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/outgoingMaxAge
-tags:
-  - API
-  - Experimental
-  - outgoingMaxAge
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingMaxAge
 ---
 
@@ -25,7 +19,7 @@ A number, or `null` if no maximum age has been set.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection

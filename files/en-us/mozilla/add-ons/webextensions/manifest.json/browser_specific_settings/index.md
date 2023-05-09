@@ -1,11 +1,7 @@
 ---
 title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-tags:
-  - Add-ons
-  - WebExtensions
-  - browser_specific_settings
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
 ---
 
@@ -53,16 +49,28 @@ The `browser_specific_settings` key contains keys that are specific to a particu
 
 ### Firefox (Gecko) properties
 
-Firefox stores its browser specific settings in the `gecko` subkey, which has the following properties:
+Firefox stores browser-specific settings in these sub-keys:
+
+- `gecko` for the desktop version of Firefox.
+- `gecko_android` for the Android version of Firefox.
+
+The `gecko` subkey supports these properties:
 
 - `id`
-  - : The extension ID. For extensions submitted to [addons.mozilla.org](https://addons.mozilla.org/) (AMO), see [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when you need to specify the ID. When required by AMO, this property must contain 80 characters or less. For extensions not submitted to AMO, if the extension is unsigned (and not loaded using `about:debugging`) an ID is required; otherwise, ID is optional.
+  - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
 - `strict_min_version`
-  - : Minimum version of Gecko to support. Versions containing a "\*" are not valid in this field. Defaults to "42a1".
+  - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
 - `strict_max_version`
-  - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, then the extension will be disabled, or not permitted to be installed. Defaults to "\*", which disables checking for a maximum version.
+  - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
 - `update_url`
-  - : Is a link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).
+  - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e., not through AMO).
+
+The `gecko_android` subkey supports these properties:
+
+- `strict_min_version`
+  - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
+- `strict_max_version`
+  - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
@@ -85,24 +93,9 @@ For example:
 "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
 ```
 
-### Microsoft Edge properties
-
-> **Warning:** Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
-
-Microsoft Edge stores its browser specific settings in the `edge` subkey, which has the following properties:
-
-- `browser_action_next_to_addressbar`
-
-  - : Boolean property which controls the placement of the [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions).
-
-    - `true` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `navbar`.
-    - `false` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `menupanel`.
-
 ### Safari properties
 
-> **Warning:** Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
-
-Safari stores its browser specific settings in the `safari` subkey, which has the following properties:
+Safari stores its browser-specific settings in the `safari` subkey, which has these properties:
 
 - `strict_min_version`
   - : Minimum version of Safari to support.
@@ -111,7 +104,7 @@ Safari stores its browser specific settings in the `safari` subkey, which has th
 
 ## Examples
 
-Example with all possible keys. Note that most extensions will omit `strict_max_version` and `update_url`.
+Example with all possible keys. Note that most extensions omit `strict_max_version` and `update_url`.
 
 ```json
 "browser_specific_settings": {

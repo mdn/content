@@ -2,10 +2,6 @@
 title: Learn forum
 slug: MDN/Community/Learn_forum
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

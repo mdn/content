@@ -2,18 +2,6 @@
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
 page-type: guide
-tags:
-  - API
-  - Apple Pay
-  - Commerce
-  - Guide
-  - Intermediate
-  - Payee
-  - Payer
-  - Payment Handler
-  - Payment Method
-  - Payment Request API
-  - Payments
 spec-urls:
   - https://w3c.github.io/payment-request/
   - https://w3c.github.io/payment-method-id/
@@ -70,14 +58,14 @@ A {{Glossary("user agent")}} may provide built-in support for certain types of p
 
 ## Merchant validation
 
-Some payment handlers use **merchant validation**, which is the process of validating the identity of a merchant in some way, usually using some form of cryptographic challenge. If the merchant doesn't successfully validate, it's not allowed to use the payment handler.
+Some payment handlers use _merchant validation_, which is the process of validating the identity of a merchant in some way, usually using some form of cryptographic challenge. If the merchant doesn't successfully validate, it's not allowed to use the payment handler.
 
 The exact validation technology depends on the payment handler, and merchant validation is entirely optional. In the end, the only thing that the web site or app is responsible for is fetching the merchant's validation key and passing it into the event's {{domxref("MerchantValidationEvent.complete", "complete()")}} method.
 
 ```js
 paymentRequest.onmerchantvalidation = (event) => {
   event.complete(fetchValidationData(event.validationURL));
-}
+};
 ```
 
 In this example, `fetchValidationData()` is a function which loads the payment handler specific identifying information from the address given by `validationURL`. Note this function must go through the merchant server, because a client typically does not access the validation URL itself.
@@ -94,6 +82,5 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)

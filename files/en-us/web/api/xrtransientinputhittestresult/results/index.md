@@ -1,17 +1,10 @@
 ---
-title: XRTransientInputHitTestResult.results
+title: "XRTransientInputHitTestResult: results property"
+short-title: results
 slug: Web/API/XRTransientInputHitTestResult/results
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestResult.results
 ---
 

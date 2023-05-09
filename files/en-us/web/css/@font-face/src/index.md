@@ -2,14 +2,6 @@
 title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - CSS Property
-  - Reference
 browser-compat: css.at-rules.font-face.src
 ---
 
@@ -30,7 +22,7 @@ src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
 src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
 src: local("font"); /* Quoted name */
-src: local('some font'); /* Single-quoted name containing a space */
+src: local("some font"); /* Quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
 src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
@@ -64,6 +56,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
 - `local(<font-face-name>)`
+
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 
@@ -154,18 +147,17 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```
-<url> [ format(<font-format>)]? [ tech( <font-tech>#)]? | local(<font-face-name>)
+```plain
+<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
+local( <family-name> )
 
-<font-format>= [<string> | collection | embedded-opentype | opentype
- | svg | truetype | woff | woff2 ]
+<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
 
-<font-tech>= [<font-feature-tech> | <color-font-tech>
- | variations | palettes | incremental ]
+<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
 
-<font-feature-tech>= [feature-opentype | feature-aat | feature-graphite]
+<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
 
-<color-font-tech>= [color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
+<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
 ```
 
 ## Examples

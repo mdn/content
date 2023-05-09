@@ -2,17 +2,6 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - WebRTC
 browser-compat: api.MediaStreamTrack
 ---
 
@@ -48,7 +37,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 
 - {{domxref("MediaStreamTrack.readyState")}} {{ReadOnlyInline}}
 
-  - : Returns an enumerated value giving the status of the track. This will be one of the following values:
+  - : Returns an enumerated string giving the status of the track. This will be one of the following values:
 
     - `"live"` which indicates that an input is connected and does its best-effort in providing real-time data. In that case, the output of data can be switched on or off using the {{domxref("MediaStreamTrack.enabled", "enabled")}} attribute.
     - `"ended"` which indicates that the input is not giving any more data and will never provide new data.

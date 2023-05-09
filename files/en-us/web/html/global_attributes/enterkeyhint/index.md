@@ -2,10 +2,6 @@
 title: enterkeyhint
 slug: Web/HTML/Global_attributes/enterkeyhint
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.enterkeyhint
 ---
 

@@ -1,18 +1,12 @@
 ---
-title: Request.integrity
+title: "Request: integrity property"
+short-title: integrity
 slug: Web/API/Request/integrity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - integrity
-  - request
 browser-compat: api.Request.integrity
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
@@ -27,7 +21,7 @@ If an integrity has not been specified, the property returns `''`.
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `integrity` value in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myIntegrity = myRequest.integrity;
 ```
 

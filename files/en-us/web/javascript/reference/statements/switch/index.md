@@ -2,18 +2,12 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - Web
 browser-compat: javascript.statements.switch
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
+The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
@@ -22,22 +16,14 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 ```js-nolint
 switch (expression) {
   case value1:
-    //Statements executed when the
-    //result of expression matches value1
-    [break;]
+    statements
   case value2:
-    //Statements executed when the
-    //result of expression matches value2
-    [break;]
-  ...
+    statements
+  // …
   case valueN:
-    //Statements executed when the
-    //result of expression matches valueN
-    [break;]
-  [default:
-    //Statements executed when none of
-    //the values match the value of the expression
-    [break;]]
+    statements
+  default:
+    statements
 }
 ```
 
@@ -50,7 +36,7 @@ switch (expression) {
 
 ## Description
 
-A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators), `===`) and transfers control to that clause, executing all statements following that clause.
+A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) comparison) and transfers control to that clause, executing all statements following that clause.
 
 The clause values are only evaluated when necessary — if a match is already found, subsequent `case` clause values will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
 
@@ -91,7 +77,7 @@ switch (foo) {
 // Logs 0 and 1
 ```
 
-You can use other control-flow statements to replace `break`, such as a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement.
+In the appropriate context, other control-flow statements also have the effect of breaking out of the `switch` statement. For example, if the `switch` statement is contained in a function, then a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement terminates the execution of the function body and therefore the `switch` statement. If the `switch` statement is contained in a loop, then a [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement stops the `switch` statement and jumps to the next iteration of the loop.
 
 ### Lexical scoping
 

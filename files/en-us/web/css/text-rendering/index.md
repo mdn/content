@@ -2,18 +2,6 @@
 title: text-rendering
 slug: Web/CSS/text-rendering
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Legibility
-  - Ligatures
-  - Precision
-  - Reference
-  - SVG
-  - Text
-  - Text Features
-  - Text Rendering
-  - recipe:css-property
 browser-compat: css.properties.text-rendering
 ---
 

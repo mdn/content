@@ -1,9 +1,6 @@
 ---
 title: How to write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

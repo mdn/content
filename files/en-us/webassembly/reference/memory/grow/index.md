@@ -1,11 +1,6 @@
 ---
 title: Grow
 slug: WebAssembly/Reference/Memory/Grow
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Memory
 ---
 
 {{WebAssemblySidebar}}

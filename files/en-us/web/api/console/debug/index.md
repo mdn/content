@@ -1,19 +1,8 @@
 ---
-title: console.debug()
+title: "console: debug() method"
+short-title: debug()
 slug: Web/API/console/debug
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debug
-  - Debugging
-  - Developer Tools
-  - Logging
-  - Method
-  - Reference
-  - console
-  - log
-  - output
-  - print
 browser-compat: api.console.debug
 ---
 

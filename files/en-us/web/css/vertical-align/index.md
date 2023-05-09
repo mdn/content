@@ -2,11 +2,6 @@
 title: vertical-align
 slug: Web/CSS/vertical-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.vertical-align
 ---
 

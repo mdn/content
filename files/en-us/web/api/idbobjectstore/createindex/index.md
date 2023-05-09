@@ -1,16 +1,8 @@
 ---
-title: IDBObjectStore.createIndex()
+title: "IDBObjectStore: createIndex() method"
+short-title: createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - createIndex
 browser-compat: api.IDBObjectStore.createIndex
 ---
 
@@ -51,11 +43,10 @@ createIndex(indexName, keyPath, options)
   - : An object which can include the following
     properties:
     - `unique`
-      - : If true, the index will not allow duplicate values for a single key.
+      - : If `true`, the index will not allow duplicate values for a single key. Defaults to `false`.
     - `multiEntry`
-      - : If `true`, the index will add an entry in the index for each
-        array element when the `keyPath` resolves to an array.
-        If `false`, it will add one single entry containing the array.
+      - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
+        If `false`, it will add one single entry containing the array. Defaults to `false`.
     - `locale` {{non-standard_inline}}
       - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
@@ -88,7 +79,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     belongs to is not active (e.g. has been deleted or removed.) In Firefox
     previous to version 41, an `InvalidStateError` was raised in
     this case as well, which was misleading; this has now been fixed (see
-    {{Bug("1176165")}}.)
+    [Webkit bug 1176165](https://bugzil.la/1176165).)
 
 ## Examples
 
@@ -106,11 +97,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below.
@@ -129,11 +120,13 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

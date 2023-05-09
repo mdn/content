@@ -1,17 +1,10 @@
 ---
-title: 'XRQuadLayer: redraw event'
+title: "XRQuadLayer: redraw event"
+short-title: redraw
 slug: Web/API/XRQuadLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.redraw_event
 ---
 

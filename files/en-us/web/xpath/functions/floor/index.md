@@ -1,9 +1,6 @@
 ---
 title: floor
 slug: Web/XPath/Functions/floor
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

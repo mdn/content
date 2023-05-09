@@ -1,13 +1,8 @@
 ---
-title: HTMLMetaElement.media
+title: "HTMLMetaElement: media property"
+short-title: media
 slug: Web/API/HTMLMetaElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.media
 ---
 

@@ -2,11 +2,6 @@
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
 
@@ -69,11 +64,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
 browser-compat: css.types.filter-function.drop-shadow
 ---
 

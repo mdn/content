@@ -2,12 +2,6 @@
 title: justify-content
 slug: Web/CSS/justify-content
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.justify-content
 ---
 
@@ -25,13 +19,13 @@ The alignment is done after the lengths and auto margins are applied, meaning th
 
 ```css
 /* Positional alignment */
-justify-content: center;     /* Pack items around the center */
-justify-content: start;      /* Pack items from the start */
-justify-content: end;        /* Pack items from the end */
+justify-content: center; /* Pack items around the center */
+justify-content: start; /* Pack items from the start */
+justify-content: end; /* Pack items from the end */
 justify-content: flex-start; /* Pack flex items from the start */
-justify-content: flex-end;   /* Pack flex items from the end */
-justify-content: left;       /* Pack items from the left */
-justify-content: right;      /* Pack items from the right */
+justify-content: flex-end; /* Pack flex items from the end */
+justify-content: left; /* Pack items from the left */
+justify-content: right; /* Pack items from the right */
 
 /* Baseline alignment */
 /* justify-content does not take baseline values */
@@ -43,12 +37,12 @@ justify-content: normal;
 justify-content: space-between; /* Distribute items evenly
                                    The first item is flush with the start,
                                    the last is flush with the end */
-justify-content: space-around;  /* Distribute items evenly
+justify-content: space-around; /* Distribute items evenly
                                    Items have a half-size space
                                    on either end */
-justify-content: space-evenly;  /* Distribute items evenly
+justify-content: space-evenly; /* Distribute items evenly
                                    Items have equal space around them */
-justify-content: stretch;       /* Distribute items evenly
+justify-content: stretch; /* Distribute items evenly
                                    Stretch 'auto'-sized items to fit
                                    the container */
 

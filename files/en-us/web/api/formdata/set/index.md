@@ -1,13 +1,8 @@
 ---
-title: FormData.set()
+title: "FormData: set() method"
+short-title: set()
 slug: Web/API/FormData/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.set
 ---
 
@@ -44,20 +39,20 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-formData.set('username', 'Chris');
+formData.set("username", "Chris");
 ```
 
 When the value is a {{domxref("Blob")}} (or a {{domxref("File")}}), you can specify its name with the `filename` parameter:
 
 ```js
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 If the value is not a string or a `Blob`, `set()` will convert it to a string automatically:
 
 ```js
-formData.set('name', 72);
-formData.get('name'); // "72"
+formData.set("name", 72);
+formData.get("name"); // "72"
 ```
 
 ## Specifications

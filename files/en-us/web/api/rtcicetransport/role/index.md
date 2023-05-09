@@ -1,23 +1,8 @@
 ---
-title: RTCIceTransport.role
+title: "RTCIceTransport: role property"
+short-title: role
 slug: Web/API/RTCIceTransport/role
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Candidates
-  - ICE
-  - Media
-  - Negotiation
-  - Property
-  - RTCIceTransport
-  - Read-only
-  - Reference
-  - Role
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceTransport.role
 ---
 

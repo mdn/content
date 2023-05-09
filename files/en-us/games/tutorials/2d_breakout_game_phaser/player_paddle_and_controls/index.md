@@ -1,14 +1,6 @@
 ---
 title: Player paddle and controls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
 ---
 
 {{GamesSidebar}}

@@ -1,14 +1,8 @@
 ---
-title: ReadableStreamDefaultReader.cancel()
+title: "ReadableStreamDefaultReader: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - cancel
 browser-compat: api.ReadableStreamDefaultReader.cancel
 ---
 
@@ -82,7 +76,7 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 

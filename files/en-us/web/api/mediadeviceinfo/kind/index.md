@@ -1,13 +1,8 @@
 ---
-title: MediaDeviceInfo.kind
+title: "MediaDeviceInfo: kind property"
+short-title: kind
 slug: Web/API/MediaDeviceInfo/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - kind
 browser-compat: api.MediaDeviceInfo.kind
 ---
 

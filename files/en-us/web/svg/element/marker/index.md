@@ -2,20 +2,72 @@
 title: <marker>
 slug: Web/SVG/Element/marker
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.marker
 ---
 
 {{SVGRef}}
 
-The **`<marker>`** element defines the graphic that is to be used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
+The **`<marker>`** element defines a graphic used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
 
-Markers are attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}} properties.
+Markers can be attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}} properties.
 
-## Example
+## Examples
+
+### Drawing arrowheads
+
+The following example shows how to draw an arrowhead on a line and on a curved path.
+For the curved path, an arrowhead is drawn at each point with a {{SVGAttr("marker-mid")}} marker.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- A marker to be used as an arrowhead -->
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+
+  <!-- A line with a marker -->
+  <line
+    x1="10"
+    y1="10"
+    x2="90"
+    y2="90"
+    stroke="black"
+    marker-end="url(#arrow)" />
+
+  <!-- A curved path with markers -->
+  <path
+    d="M 110 10
+       C 120 20, 130 20, 140 10
+       C 150 0, 160 0, 170 10
+       C 180 20, 190 20, 200 10"
+    stroke="black"
+    fill="none"
+    marker-start="url(#arrow)"
+    marker-mid="url(#arrow)"
+    marker-end="url(#arrow)" />
+</svg>
+```
+
+{{EmbedLiveSample('Drawing_arrowheads', 200, 200)}}
+
+### Drawing polymarkers
 
 ```css hidden
 html,
@@ -28,7 +80,7 @@ svg {
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- arrowhead marker definition -->
+    <!-- Arrowhead marker definition -->
     <marker
       id="arrow"
       viewBox="0 0 10 10"
@@ -40,7 +92,7 @@ svg {
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
 
-    <!-- simple dot marker definition -->
+    <!-- Dot marker definition -->
     <marker
       id="dot"
       viewBox="0 0 10 10"
@@ -71,7 +123,46 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 200, 200)}}
+{{EmbedLiveSample('Drawing_polymarkers', 200, 200)}}
+
+### Using context fill and stroke
+
+The following example shows how to use the `context-fill` and `context-stroke` values to make a marker use the same fill and stroke as the shape it is attached to.
+
+```html
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <marker
+    id="circle"
+    markerWidth="6"
+    markerHeight="6"
+    refX="3"
+    refY="3"
+    markerUnits="strokeWidth">
+    <circle cx="3" cy="3" r="2" stroke="context-stroke" fill="context-fill" />
+  </marker>
+
+  <style>
+    path {
+      marker: url(#circle);
+    }
+  </style>
+
+  <path d="M 10,10 30,10 h 10" stroke="black" />
+  <path d="M 10,20 30,20 h 10" stroke="blue" fill="red" />
+  <path d="M 10,30 30,30 h 10" stroke="red" fill="none" />
+  <path d="M 10,40 30,40 h 10" stroke="gray" fill="blue" stroke-width="1.5" />
+</svg>
+```
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+{{EmbedLiveSample('Using_context_fill_and_stroke', 200, 200)}}
 
 ## Attributes
 

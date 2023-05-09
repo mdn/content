@@ -2,12 +2,6 @@
 title: CSS Custom Properties for Cascading Variables
 slug: Web/CSS/CSS_Variables
 page-type: css-module
-tags:
-  - CSS
-  - CSS Variables
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-variables/
 ---
 

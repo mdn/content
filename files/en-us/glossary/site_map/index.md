@@ -2,10 +2,6 @@
 title: Site map
 slug: Glossary/Site_map
 page-type: glossary-definition
-tags:
-  - Accessibility
-  - Search
-  - Site map
 ---
 
 A **site map** or **sitemap** is a list of pages of a web site.

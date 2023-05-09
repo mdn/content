@@ -1,20 +1,14 @@
 ---
-title: AnalyserNode.frequencyBinCount
+title: "AnalyserNode: frequencyBinCount property"
+short-title: frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequencyBinCount
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
 
 {{APIRef("Web Audio API")}}
 
-The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.
+The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface contains the total number of data points available to {{domxref("AudioContext")}} {{domxref("BaseAudioContext.sampleRate", "sampleRate")}}. This is half of the `value` of the {{domxref("AnalyserNode.fftSize")}}. The two methods' indices have a linear relationship with the frequencies they represent, between 0 and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency).
 
 ## Value
 

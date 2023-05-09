@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.getViewSubImage()
+title: "XRWebGLBinding: getViewSubImage() method"
+short-title: getViewSubImage()
 slug: Web/API/XRWebGLBinding/getViewSubImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getViewSubImage
 ---
 

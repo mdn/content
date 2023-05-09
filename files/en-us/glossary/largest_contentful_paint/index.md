@@ -2,10 +2,6 @@
 title: Largest contentful paint
 slug: Glossary/Largest_contentful_paint
 page-type: glossary-definition
-tags:
-  - Performance
-  - Reference
-  - Web Performance
 ---
 
 The **Largest Contentful Paint** (LCP) performance metric provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.

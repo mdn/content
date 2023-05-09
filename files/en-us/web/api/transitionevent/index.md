@@ -2,12 +2,6 @@
 title: TransitionEvent
 slug: Web/API/TransitionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Reference
 browser-compat: api.TransitionEvent
 ---
 

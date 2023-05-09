@@ -1,21 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
-  - basics
-  - cell
-  - col
-  - colgroup
-  - colspan
-  - header
-  - row
-  - rowspan
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -62,7 +47,9 @@ The point of a table is that it is rigid. Information is easily interpreted by m
 <table>
   <caption>
     Data about the planets of our solar system (Planetary facts taken from
-    <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).
+    <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      >Nasa's Planetary Fact Sheet - Metric</a
+    >).
   </caption>
   <thead>
     <tr>
@@ -193,7 +180,10 @@ The point of a table is that it is rigid. Information is easily interpreted by m
       <td>5</td>
       <td>
         Declassified as a planet in 2006, but this
-        <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.
+        <a
+          href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+          >remains controversial</a
+        >.
       </td>
     </tr>
   </tbody>
@@ -556,9 +546,3 @@ See how you get on with the example. If you get stuck, or want to check your wor
 That just about wraps up the basics of HTML tables. In the next article, we'll look at some slightly more [advanced table features](/en-US/docs/Learn/HTML/Tables/Advanced), and start to think how accessible they are for visually impaired people.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

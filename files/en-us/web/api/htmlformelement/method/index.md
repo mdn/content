@@ -1,14 +1,8 @@
 ---
-title: HTMLFormElement.method
+title: "HTMLFormElement: method property"
+short-title: method
 slug: Web/API/HTMLFormElement/method
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.HTMLFormElement.method
 ---
 
@@ -26,7 +20,7 @@ A string.
 ## Examples
 
 ```js
-document.forms['myform'].method = 'post';
+document.forms["myform"].method = "post";
 
 const formElement = document.createElement("form"); // Create a form
 document.body.appendChild(formElement);

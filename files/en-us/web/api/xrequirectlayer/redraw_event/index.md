@@ -1,17 +1,10 @@
 ---
-title: 'XREquirectLayer: redraw event'
+title: "XREquirectLayer: redraw event"
+short-title: redraw
 slug: Web/API/XREquirectLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.redraw_event
 ---
 

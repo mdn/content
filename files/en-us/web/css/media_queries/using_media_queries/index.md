@@ -2,14 +2,6 @@
 title: Using media queries
 slug: Web/CSS/Media_Queries/Using_media_queries
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Media
-  - Media Queries
-  - Responsive Design
-  - Web
 ---
 
 {{CSSRef}}
@@ -17,9 +9,9 @@ tags:
 **Media queries** allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser {{glossary("viewport")}} width.
 Media queries are used for the following:
 
-- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules.](/en-US/docs/Web/CSS/At-rule)
+- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/At-rule).
 - To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` attribute.
-- To [test and monitor media states](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("MediaQueryList.addListener()")}} [JavaScript](/en-US/docs/Web/JavaScript) methods.
+- To [test and monitor media states](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
 
 > **Note:** The examples on this page use CSS's `@media` for illustrative purposes, but the basic syntax remains the same for all types of media queries.
 

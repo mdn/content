@@ -1,13 +1,8 @@
 ---
-title: TrustedTypePolicy.createScript()
+title: "TrustedTypePolicy: createScript() method"
+short-title: createScript()
 slug: Web/API/TrustedTypePolicy/createScript
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createScript
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
 

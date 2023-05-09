@@ -1,13 +1,10 @@
 ---
-title: FontData.blob()
+title: "FontData: blob() method"
+short-title: blob()
 slug: Web/API/FontData/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - blob
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.blob
 ---
 
@@ -37,7 +34,7 @@ The `blob()` method provides access to low-level [SFNT](https://en.wikipedia.org
 async function computeOutlineFormat() {
   try {
     const availableFonts = await window.queryLocalFonts({
-      postscriptNames: ['ComicSansMS'],
+      postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
       // `blob()` returns a Blob containing valid and complete
@@ -48,18 +45,18 @@ async function computeOutlineFormat() {
       // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
-      let outlineFormat = 'UNKNOWN';
+      let outlineFormat = "UNKNOWN";
       switch (sfntVersion) {
-        case '\x00\x01\x00\x00':
-        case 'true':
-        case 'typ1':
-          outlineFormat = 'truetype';
+        case "\x00\x01\x00\x00":
+        case "true":
+        case "typ1":
+          outlineFormat = "truetype";
           break;
-        case 'OTTO':
-          outlineFormat = 'cff';
+        case "OTTO":
+          outlineFormat = "cff";
           break;
       }
-      console.log('Outline format:', outlineFormat);
+      console.log("Outline format:", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);

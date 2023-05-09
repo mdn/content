@@ -1,9 +1,8 @@
 ---
-title: 'MessagePort: message event'
+title: "MessagePort: message event"
+short-title: message
 slug: Web/API/MessagePort/message_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.MessagePort.message_event
 ---
 
@@ -18,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -52,41 +51,41 @@ Suppose a script creates a [`MessageChannel`](/en-US/docs/Web/API/MessageChannel
 const channel = new MessageChannel();
 const myPort = channel.port1;
 const targetFrame = window.top.frames[1];
-const targetOrigin = 'https://example.org';
+const targetOrigin = "https://example.org";
 
-const messageControl = document.querySelector('#message');
-const channelMessageButton = document.querySelector('#channel-message');
+const messageControl = document.querySelector("#message");
+const channelMessageButton = document.querySelector("#channel-message");
 
-channelMessageButton.addEventListener('click', () => {
-    myPort.postMessage(messageControl.value);
-})
+channelMessageButton.addEventListener("click", () => {
+  myPort.postMessage(messageControl.value);
+});
 
-targetFrame.postMessage('init', targetOrigin, [channel.port2]);
+targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
 The target can receive the port and start listening for messages on it using code like this:
 
 ```js
-window.addEventListener('message', (event) => {
-    const myPort = event.ports[0];
+window.addEventListener("message", (event) => {
+  const myPort = event.ports[0];
 
-    myPort.addEventListener('message', (event) => {
-        received.textContent = event.data;
-    });
+  myPort.addEventListener("message", (event) => {
+    received.textContent = event.data;
+  });
 
-    myPort.start();
+  myPort.start();
 });
 ```
 
 Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly:
 
 ```js
-window.addEventListener('message', (event) => {
-    const myPort = event.ports[0];
+window.addEventListener("message", (event) => {
+  const myPort = event.ports[0];
 
-    myPort.onmessage = (event) => {
-        received.textContent = event.data;
-    };
+  myPort.onmessage = (event) => {
+    received.textContent = event.data;
+  };
 });
 ```
 

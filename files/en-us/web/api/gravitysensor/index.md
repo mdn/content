@@ -2,17 +2,6 @@
 title: GravitySensor
 slug: Web/API/GravitySensor
 page-type: web-api-interface
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - GravitySensor
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.GravitySensor
 ---
 
@@ -46,7 +35,7 @@ _`GravitySensor` doesn't have own events. However, it inherits events from its p
 Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let gravitySensor = new GravitySensor({frequency: 60});
+let gravitySensor = new GravitySensor({ frequency: 60 });
 
 gravitySensor.addEventListener("reading", (e) => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);

@@ -1,16 +1,7 @@
 ---
-title: '<script type="importmap">'
+title: <script type="importmap">
 slug: Web/HTML/Element/script/type/importmap
 page-type: html-attribute-value
-tags:
-  - Reference
-  - Element
-  - JSON
-  - Reference
-  - Element
-  - Attribute
-  - Attribute value
-  - Script
 browser-compat: html.elements.script.type.importmap
 ---
 
@@ -22,6 +13,7 @@ An import map is a JSON object that allows developers to control how the browser
 It provides a mapping between the text used as the module specifier in an [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and the corresponding value that will replace the text when resolving the specifier.
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
 
+An import map is used to resolve module specifiers in static and dynamic imports, and therefore must be declared and processed before any `<script>` elements that import modules using specifiers declared in the map.
 Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
 
 For more information, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
@@ -37,7 +29,6 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
 Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed (are ignored).
 
 ### Exceptions
 
@@ -45,6 +36,9 @@ An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script e
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
+
+An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed.
+This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
 
@@ -167,7 +161,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
       - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
-        The modifier specifier map JSON object has the following requirements:
+        The module specifier map JSON object has the following requirements:
 
         - None of the keys may be empty.
         - All of the values must be strings, defining either a valid absolute URL or a valid URL string that starts with `/`, `./`, or `../`.
@@ -182,7 +176,7 @@ The import map must be a valid JSON object that can define at most two optional 
     The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
 
     If the URL of a script importing a module matches a `<scope key>` path, then the `<module specifier map>` value associated with the key is checked for matching specifiers first.
-    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching modifier specifiers first.
+    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching module specifiers first.
     The fallback module specifier map in `imports` is used if there are no matching module specifier keys in any of the matching scoped module specifier maps.
 
     Note that the scope does not change how an address is resolved; relative addresses are always resolved to the import map base URL.
@@ -198,6 +192,6 @@ The import map must be a valid JSON object that can define at most two optional 
 ## See also
 
 - [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#attr-type)
+- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#type)
 - [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import)

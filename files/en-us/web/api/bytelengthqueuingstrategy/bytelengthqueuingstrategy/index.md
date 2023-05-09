@@ -1,13 +1,8 @@
 ---
-title: ByteLengthQueuingStrategy()
+title: "ByteLengthQueuingStrategy: ByteLengthQueuingStrategy() constructor"
+short-title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 page-type: web-api-constructor
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Constructor
-  - Reference
-  - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
 
@@ -44,7 +39,9 @@ None.
 ## Examples
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 * 1024 });
+const queuingStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1 * 1024,
+});
 
 const readableStream = new ReadableStream(
   {

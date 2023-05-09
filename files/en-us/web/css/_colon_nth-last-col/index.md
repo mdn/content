@@ -22,8 +22,10 @@ The `nth-last-col()` pseudo-class is specified with a single argument, which rep
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-last-col(An+B)
+```css
+:nth-last-col(An + B) {
+  /* ... */
+}
 ```
 
 ## Examples

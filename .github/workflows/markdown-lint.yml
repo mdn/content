@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - .markdownlint-cli2.jsonc
+      - .nvmrc
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml
@@ -21,14 +22,14 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           yarn lint:md
+          yarn lint:fm

@@ -1,12 +1,8 @@
 ---
-title: Element.lastElementChild
+title: "Element: lastElementChild property"
+short-title: lastElementChild
 slug: Web/API/Element/lastElementChild
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
 browser-compat: api.Element.lastElementChild
 ---
 

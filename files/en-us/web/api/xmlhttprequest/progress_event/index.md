@@ -1,15 +1,8 @@
 ---
 title: "XMLHttpRequest: progress event"
+short-title: progress
 slug: Web/API/XMLHttpRequest/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - ProgressEvent
-  - Reference
-  - Web
-  - XMLHttpRequest
-  - progress
 browser-compat: api.XMLHttpRequest.progress_event
 ---
 

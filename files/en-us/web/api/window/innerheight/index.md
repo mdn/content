@@ -1,19 +1,8 @@
 ---
-title: Window.innerHeight
+title: "Window: innerHeight property"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - HTML DOM
-  - NeedsInteractiveExample
-  - Property
-  - Reference
-  - View
-  - Window
-  - height
-  - innerHeight
 browser-compat: api.Window.innerHeight
 ---
 

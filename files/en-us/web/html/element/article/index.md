@@ -1,13 +1,7 @@
 ---
-title: '<article>: The Article Contents element'
+title: "<article>: The Article Contents element"
 slug: Web/HTML/Element/article
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
 browser-compat: html.elements.article
 ---
 
@@ -23,19 +17,19 @@ A given document can have multiple articles in it; for example, on a blog that s
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
           >sectioning content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >
       </td>
@@ -43,7 +37,7 @@ A given document can have multiple articles in it; for example, on a blog that s
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -56,7 +50,7 @@ A given document can have multiple articles in it; for example, on a blog that s
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that an <code>&#x3C;article></code> element must not be a
         descendant of an {{HTMLElement("address")}} element.
@@ -97,7 +91,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
 - When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
 - Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
-- The publication date and time of an `<article>` element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element.
+- The publication date and time of an `<article>` element can be described using the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) attribute of a {{HTMLElement("time")}} element.
 
 ## Examples
 
@@ -143,6 +137,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </article>
 ```
 
+## Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Specifications
 
 {{Specifications}}
@@ -153,5 +151,5 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)

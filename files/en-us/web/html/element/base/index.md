@@ -1,13 +1,7 @@
 ---
-title: '<base>: The Document Base URL element'
+title: "<base>: The Document Base URL element"
 slug: Web/HTML/Element/base
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
 browser-compat: html.elements.base
 ---
 
@@ -21,7 +15,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -67,9 +61,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 > **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}'s `href` attribute.
 
-- {{htmlattrdef("href")}}
+- `href`
   - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
 

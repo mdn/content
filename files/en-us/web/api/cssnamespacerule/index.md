@@ -2,11 +2,6 @@
 title: CSSNamespaceRule
 slug: Web/API/CSSNamespaceRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSNamespaceRule
 ---
 

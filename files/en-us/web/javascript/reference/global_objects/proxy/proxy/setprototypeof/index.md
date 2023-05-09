@@ -2,12 +2,6 @@
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
 

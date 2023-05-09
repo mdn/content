@@ -2,12 +2,6 @@
 title: scale
 slug: Web/CSS/scale
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
 browser-compat: css.properties.scale
 ---
 

@@ -1,15 +1,10 @@
 ---
-title: 'NetworkInformation: change event'
+title: "NetworkInformation: change event"
+short-title: change
 slug: Web/API/NetworkInformation/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Event
-  - Reference
+status:
+  - experimental
 browser-compat: api.NetworkInformation.change_event
 ---
 
@@ -23,9 +18,9 @@ is received by the {{domxref("NetworkInformation")}} object.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', (event) => { });
+addEventListener("change", (event) => {});
 
-onchange = (event) => { };
+onchange = (event) => {};
 ```
 
 ## Event type
@@ -39,7 +34,7 @@ A generic {{domxref("Event")}}.
 const type = navigator.connection.type;
 
 function changeHandler(e) {
-   // Handle change of connection type here.
+  // Handle change of connection type here.
 }
 
 // Register for event changes:

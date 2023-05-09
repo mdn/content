@@ -2,10 +2,6 @@
 title: "SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions"
 slug: Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized
 page-type: javascript-error
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -26,7 +22,7 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 
 ## What went wrong?
 
-The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) chain looks like this:
+The [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) chain looks like this:
 
 ```
 |   >   &&   >   ||   >   =
@@ -80,4 +76,4 @@ function getId(user, fallback) {
 
 - [Original discussion of nullish coalescing precedence](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
 - [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

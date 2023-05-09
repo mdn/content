@@ -1,14 +1,7 @@
 ---
-title: '<output>: The Output element'
+title: "<output>: The Output element"
 slug: Web/HTML/Element/output
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML:Flow content
-  - Reference
-  - Web
 browser-compat: html.elements.output
 ---
 
@@ -20,15 +13,15 @@ The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element i
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("for")}}
-  - : A space-separated list of other elements' {{htmlattrxref("id")}}s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
-- {{htmlattrdef("form")}}
+- `for`
+  - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes#id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
+- `form`
 
-  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<output>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.
 
 The `<output>` value, name, and contents are NOT submitted during form submission.
@@ -45,6 +38,8 @@ In the following example, the form provides a slider whose value can range betwe
 </form>
 ```
 
+### Result
+
 {{ EmbedLiveSample('Examples')}}
 
 ## Accessibility Concerns
@@ -57,28 +52,28 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated element</a
         >, palpable content.
       </td>
@@ -86,7 +81,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -99,7 +94,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

@@ -2,11 +2,9 @@
 title: Paths
 slug: Web/SVG/Tutorial/Paths
 page-type: guide
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 

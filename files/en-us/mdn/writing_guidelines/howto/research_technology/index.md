@@ -1,9 +1,6 @@
 ---
 title: How to research a technology
 slug: MDN/Writing_guidelines/Howto/Research_technology
-tags:
-  - meta
-  - writing-guide
 page-type: mdn-writing-guide
 ---
 

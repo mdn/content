@@ -1,10 +1,7 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.502
 ---
 

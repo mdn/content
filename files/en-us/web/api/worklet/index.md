@@ -2,12 +2,6 @@
 title: Worklet
 slug: Web/API/Worklet
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Worklet
-  - Worklets
 browser-compat: api.Worklet
 ---
 
@@ -31,23 +25,6 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{domxref("PaintWorklet")}}</td>
-      <td>
-        For programmatically generating an image where a CSS property expects a
-        file. Access this interface through
-        {{DOMxRef("CSS.paintWorklet")}}.
-      </td>
-      <td>
-        <strong>Chrome:</strong> Main thread, <strong>Gecko:</strong> Paint
-        thread
-      </td>
-      <td>
-        <a href="https://drafts.css-houdini.org/css-paint-api-1/#paint-worklet"
-          >CSS Painting API</a
-        >
-      </td>
-    </tr>
     <tr>
       <td>{{domxref("AudioWorklet")}}</td>
       <td>For audio processing with custom AudioNodes.</td>
@@ -85,7 +62,9 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
   </tbody>
 </table>
 
-For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use Worklets. Instead, you write Vertex Shaders and Fragment Shaders using GLSL code, and those shaders will then run on the graphics card.
+> **Note:** Paint worklets, defined by the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API), don't subclass {{domxref("Worklet")}}. They are accessed through a regular `Worklet` object obtained using {{DOMxRef("CSS.paintWorklet")}}.
+
+For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use worklets. Instead, you write vertex shaders and fragment shaders using GLSL code, and those shaders will then run on the graphics card.
 
 ## Instance properties
 

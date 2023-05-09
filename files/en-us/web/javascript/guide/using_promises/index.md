@@ -2,17 +2,9 @@
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - "l10n:priority"
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
 
@@ -426,7 +418,7 @@ Lastly, we will look into the more technical details, about when the registered 
 
 In the callback-based API, when and how the callback gets called depends on the API implementor. For example, the callback may be called synchronously or asynchronously:
 
-```js
+```js example-bad
 function doSomething(callback) {
   if (Math.random() > 0.5) {
     callback();
@@ -436,7 +428,7 @@ function doSomething(callback) {
 }
 ```
 
-This leads to [the state of Zalgo](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), because it makes side effects hard to analyze:
+The above design is strongly discouraged because it leads to the so-called "state of Zalgo". In the context of designing asynchronous APIs, this means a callback is called synchronously in some cases but asynchronously in other cases, creating ambiguity for the caller. For further background, see the article [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), where the term was first formally presented. This API design makes side effects hard to analyze:
 
 ```js
 let value = 1;
@@ -448,7 +440,7 @@ console.log(value); // 1 or 2?
 
 On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
 
-- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion) of the JavaScript event loop.
+- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Event_loop#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
 - Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
 
@@ -518,4 +510,4 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}

@@ -2,12 +2,6 @@
 title: container
 slug: Web/CSS/container
 page-type: css-shorthand-property
-tags:
-  - container
-  - CSS
-  - CSS Containment
-  - Reference
-  - Property
 browser-compat: css.properties.container
 ---
 
@@ -23,19 +17,20 @@ container: <container-name> / <container-type>;
 
 ### Values
 
-- `<container-name>`: A case-sensitive name for the containment context.
-  More details on the syntax are covered in the {{cssxref("container-name")}} property page.
-- `<container-type>`: The type of containment context.
-  More details on the syntax are covered in the {{cssxref("container-type")}} property page.
+- `<container-name>`
+  - : A case-sensitive name for the containment context.
+    More details on the syntax are covered in the {{cssxref("container-name")}} property page.
+- `<container-type>`
+  - : The type of containment context.
+    More details on the syntax are covered in the {{cssxref("container-type")}} property page.
 
 ## Example
 
 Given the following HTML example which is a card component with an image, a title, and some text:
 
 ```html
-<div class="container">
+<div class="post">
   <div class="card">
-    <img src="image.png" alt="An awesome picture of a cat" />
     <h2>Card title</h2>
     <p>Card content</p>
   </div>
@@ -45,7 +40,7 @@ Given the following HTML example which is a card component with an image, a titl
 The explicit way to create a container context is to declare a `container-type` with an optional `container-name`:
 
 ```css
-.container {
+.post {
   container-type: inline-size;
   container-name: sidebar;
 }
@@ -54,7 +49,7 @@ The explicit way to create a container context is to declare a `container-type` 
 The `container` shorthand is intended to make this simpler to define in a single declaration:
 
 ```css
-.container {
+.post {
   container: sidebar / inline-size;
 }
 ```

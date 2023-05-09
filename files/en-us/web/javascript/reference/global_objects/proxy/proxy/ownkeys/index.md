@@ -2,11 +2,6 @@
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
 
@@ -76,7 +71,7 @@ const p = new Proxy(
       console.log("called");
       return ["a", "b", "c"];
     },
-  }
+  },
 );
 
 console.log(Object.getOwnPropertyNames(p));

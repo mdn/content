@@ -1,13 +1,10 @@
 ---
-title: Window.getDefaultComputedStyle()
+title: "Window: getDefaultComputedStyle() method"
+short-title: getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Window.getDefaultComputedStyle
 ---
 

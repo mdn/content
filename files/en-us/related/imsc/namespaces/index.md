@@ -1,11 +1,6 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
-tags:
-  - IMSC
-  - Namespaces
-  - TTML
-  - XML
 ---
 
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.

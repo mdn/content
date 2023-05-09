@@ -2,12 +2,6 @@
 title: text-decoration
 slug: Web/CSS/text-decoration
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
 
@@ -116,7 +110,9 @@ The `text-decoration` property is specified as one or more space-separated value
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+#### Result
+
+{{EmbedLiveSample('Examples','auto','520')}}
 
 ## Specifications
 

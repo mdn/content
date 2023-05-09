@@ -2,12 +2,6 @@
 title: transition-property
 slug: Web/CSS/transition-property
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-property
 ---
 
@@ -16,8 +10,6 @@ browser-compat: css.properties.transition-property
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) should be applied.
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
-
-> **Note:** The [set of properties that can be animated](/en-US/docs/Web/CSS/CSS_animated_properties) is subject to change. As such, you should avoid including any properties in the list that don't currently animate, as someday they might, causing unexpected results.
 
 If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.
 

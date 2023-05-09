@@ -1,11 +1,6 @@
 ---
 title: <xsl:if>
 slug: Web/XSLT/Element/if
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - if
 ---
 
 {{ XsltRef() }}

@@ -2,13 +2,6 @@
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - RTCDataChannelEvent
-  - Reference
-  - WebRTC
-  - datachannel
 browser-compat: api.RTCDataChannelEvent
 ---
 
@@ -41,7 +34,7 @@ pc.ondatachannel = (event) => {
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 See [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample) for another, more complete, example of how to use data channels.

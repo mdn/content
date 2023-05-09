@@ -2,13 +2,8 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Reporting
-  - Secure context
+status:
+  - experimental
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
 

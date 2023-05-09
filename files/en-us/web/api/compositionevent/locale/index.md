@@ -1,15 +1,11 @@
 ---
-title: CompositionEvent.locale
+title: "CompositionEvent: locale property"
+short-title: locale
 slug: Web/API/CompositionEvent/locale
 page-type: web-api-instance-property
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Locale
-  - Property
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CompositionEvent.locale
 ---
 

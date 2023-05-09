@@ -2,13 +2,8 @@
 title: revert-layer
 slug: Web/CSS/revert-layer
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Value
-  - Keyword
-  - Reference
-  - revert-layer
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.global_keywords.revert-layer
 ---
 
@@ -159,8 +154,8 @@ The style for all `<li>` elements rolls back to the defaults in the user-agent o
 
 ## See also
 
-- Use the {{cssxref("initial")}} keyword to set a property to its initial value.
-- Use the {{cssxref("inherit")}} keyword to make an element's property the same as its parent.
-- Use the {{cssxref("revert")}} keyword to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
-- Use the {{cssxref("unset")}} keyword to set a property to its inherited value if it inherits or to its initial value if not.
-- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.
+- {{cssxref("initial")}}: Sets a property to its initial value
+- {{cssxref("inherit")}}: Sets an element's property the same as its parent
+- {{cssxref("revert")}}: Resets a property to the value established by the user-agent stylesheet (or user styles if any exist)
+- {{cssxref("unset")}}: Sets a property to its inherited value if the property inherits or to its initial value if the property does not inherit
+- {{cssxref("all")}}: Resets all properties to their initial, inherited, reverted, or unset state at once

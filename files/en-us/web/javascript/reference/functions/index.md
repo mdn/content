@@ -2,13 +2,6 @@
 title: Functions
 slug: Web/JavaScript/Reference/Functions
 page-type: guide
-tags:
-  - Function
-  - Functions
-  - Guide
-  - JavaScript
-  - Parameter
-  - parameters
 browser-compat: javascript.functions
 ---
 
@@ -205,7 +198,7 @@ doSomething(
 );
 ```
 
-On the other hand, a function expression may also be turned into a function declaration. An expression statement cannot begin with the `function` or `async function` keywords, which is a common mistake when implementing [IIFEs](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expressions).
+On the other hand, a function expression may also be turned into a function declaration. An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the `function` or `async function` keywords, which is a common mistake when implementing [IIFEs](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expressions).
 
 ```js example-bad
 function () { // SyntaxError: Function statements require a function name
@@ -253,7 +246,7 @@ function myFunc({ a, b }, c = 1, ...rest) {
 
 There are some consequences if one of the above non-simple parameter syntaxes is used:
 
-- You cannot apply `"use strict"` to the function body — this causes a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+- You cannot apply `"use strict"` to the function body — this causes a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 - Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, and [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed.
 
 ### The arguments object
@@ -381,16 +374,8 @@ Note that in the `if` test, a reference to `noFunc` is used — there are no bra
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Function")}}
-- {{jsxref("GeneratorFunction")}}
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [The `arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

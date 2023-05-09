@@ -2,18 +2,8 @@
 title: Navigation API
 slug: Web/API/Navigation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - History
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Overview
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat:
   - api.Navigation
   - api.NavigateEvent
@@ -56,11 +46,16 @@ As the user navigates through your application, each new location navigated to r
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
-- {{domxref("Navigation.navigate", "navigate()")}} navigates to a new URL, creating a new navigation history entry.
-- {{domxref("Navigation.reload", "reload()")}} reloads the current navigation history entry.
-- {{domxref("Navigation.back", "back()")}} navigates to the previous navigation history entry, if that is possible.
-- {{domxref("Navigation.forward", "forward()")}} navigates to the next navigation history entry, if that is possible.
-- {{domxref("Navigation.traverseTo", "traverseTo()")}} navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
+- {{domxref("Navigation.navigate", "navigate()")}} {{Experimental_Inline}}
+  - : Navigates to a new URL, creating a new navigation history entry.
+- {{domxref("Navigation.reload", "reload()")}} {{Experimental_Inline}}
+  - : Reloads the current navigation history entry.
+- {{domxref("Navigation.back", "back()")}} {{Experimental_Inline}}
+  - : Navigates to the previous navigation history entry, if that is possible.
+- {{domxref("Navigation.forward", "forward()")}} {{Experimental_Inline}}
+  - : Navigates to the next navigation history entry, if that is possible.
+- {{domxref("Navigation.traverseTo", "traverseTo()")}} {{Experimental_Inline}}
+  - : Navigates to a specific navigation history entry identified by its key value, which is obtained via the relevant entry's {{domxref("NavigationHistoryEntry.key")}} property.
 
 Each one of the above methods returns an object containing two promises — `{ committed, finished }`. This allows the invoking function to wait on taking further action until:
 
@@ -113,8 +108,8 @@ There are a few perceived limitations with the Navigation API:
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', (event) => {
-  // Exit early if this navigation shouldn't be intercepted, 
+navigation.addEventListener("navigate", (event) => {
+  // Exit early if this navigation shouldn't be intercepted,
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(event)) {
     return;
@@ -122,7 +117,7 @@ navigation.addEventListener('navigate', (event) => {
 
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
@@ -143,13 +138,13 @@ navigation.addEventListener('navigate', (event) => {
 In this example of intercepting a navigation, the `handler()` function starts by fetching and rendering some article content, but then fetches and renders some secondary content afterwards. It makes sense to scroll the page to the main article content as soon as it is available so the user can interact with it, rather than waiting until the secondary content is also rendered. To achieve this, we have added a {{domxref("NavigateEvent.scroll", "scroll()")}} call between the two.
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   if (shouldNotIntercept(event)) {
     return;
-  } 
+  }
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         const articleContent = await getArticleContent(url.pathname);
@@ -170,29 +165,29 @@ navigation.addEventListener('navigate', (event) => {
 ```js
 // On JS startup, get the key of the first loaded page
 // so the user can always go back there.
-const {key} = navigation.currentEntry;
+const { key } = navigation.currentEntry;
 backToHomeButton.onclick = () => navigation.traverseTo(key);
 
 // Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+await navigation.navigate("/another_url").finished;
 ```
 
 ### Updating state
 
 ```js
-navigation.navigate(url, {state: newState});
+navigation.navigate(url, { state: newState });
 ```
 
 Or
 
 ```js
-navigation.reload({state: newState});
+navigation.reload({ state: newState });
 ```
 
 Or if the state is independent from a navigation or reload:
 
 ```js
-navigation.updateCurrentEntry({state: newState});
+navigation.updateCurrentEntry({ state: newState });
 ```
 
 ## Specifications

@@ -2,12 +2,8 @@
 title: InputDeviceCapabilities
 slug: Web/API/InputDeviceCapabilities
 page-type: web-api-interface
-tags:
-  - API
-  - InputDeviceCapabilities
-  - Interface
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.InputDeviceCapabilities
 ---
 

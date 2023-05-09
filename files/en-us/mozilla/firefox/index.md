@@ -1,10 +1,6 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
 ---
 
 {{FirefoxSidebar}}

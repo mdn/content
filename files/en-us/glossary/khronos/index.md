@@ -2,8 +2,6 @@
 title: The Khronos Group
 slug: Glossary/Khronos
 page-type: glossary-definition
-tags:
-  - Khronos
 ---
 
 **The Khronos Group** is an open, non-profit, member-driven consortium of over 150 industry-leading companies. Their purpose is to create advanced, royalty-free interoperability standards for 3D graphics, augmented and virtual reality, parallel programming, vision acceleration, and machine learning.

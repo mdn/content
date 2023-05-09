@@ -1,17 +1,8 @@
 ---
 title: "XMLHttpRequest: loadstart event"
+short-title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - ProgressEvent
-  - Web
-  - XMLHttpRequest
-  - events
-  - loadstart
 browser-compat: api.XMLHttpRequest.loadstart_event
 ---
 

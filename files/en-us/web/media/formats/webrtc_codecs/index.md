@@ -1,15 +1,6 @@
 ---
 title: Codecs used by WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Audio
-  - Codecs
-  - Guide
-  - Intermediate
-  - Media
-  - Video
-  - WebRTC
-  - WebRTC API
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -297,7 +288,8 @@ There are a couple of ways you can do this. The most efficient way is to use the
 codecList = RTCRtpSender.getCapabilities("video").codecs;
 ```
 
-Now `codecList` is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).
+Now `codecList` is an array [`codec`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities#codecs) objects, each describing one codec configuration.
+Also present in the list will be entries for [retransmission](/en-US/docs/Web/API/RTCRtpSender/getCapabilities#rtx_retransmission) (RTX), [redundant coding](/en-US/docs/Web/API/RTCRtpSender/getCapabilities#red_redundant_audio_data) (RED), and [forward error correction](/en-US/docs/Web/API/RTCRtpSender/getCapabilities#fec_forward_error_correction) (FEC).
 
 If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.
 
@@ -322,7 +314,8 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 
 The event handler for `icegatheringstatechange` is established; in it, we look to see if the ICE gathering state is `complete`, indicating that no further candidates will be collected. The method {{domxref("RTCPeerConnection.getSenders()")}} is called to get a list of all the {{domxref("RTCRtpSender")}} objects used by the connection.
 
-With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.track", "track")}}'s {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media. We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and, from the returned {{domxref("RTCRtpSendParameters")}} object, we set `codecList` to the {{domxref("RTCRtpParameters.codecs", "codecs")}} property and return to the caller.
+With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
+We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and set `codecList` to the `codecs` property in the returned object, and then return to the caller.
 
 If no video track is found, we set `codecList` to `null`.
 

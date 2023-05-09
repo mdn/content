@@ -2,15 +2,6 @@
 title: width
 slug: Web/CSS/width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - dimensions
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.width
 ---
 
@@ -138,8 +129,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }

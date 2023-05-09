@@ -1,14 +1,6 @@
 ---
 title: GLSL Shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - Beginner
-  - GLSL
-  - OpenGL
-  - Shader
-  - texture shader
-  - three.js
-  - vertex shader
 ---
 
 {{GamesSidebar}}

@@ -2,13 +2,8 @@
 title: WebTransportDatagramDuplexStream
 slug: Web/API/WebTransportDatagramDuplexStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportDatagramDuplexStream
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream
 ---
 
@@ -63,7 +58,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} propert
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

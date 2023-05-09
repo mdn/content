@@ -2,19 +2,6 @@
 title: background-color
 slug: Web/CSS/background-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Graphics
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styles
-  - Styling HTML
-  - background-color
-  - recipe:css-property
 browser-compat: css.properties.background-color
 ---
 

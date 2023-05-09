@@ -2,13 +2,6 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 page-type: javascript-instance-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.lastIndexOf
 ---
 
@@ -133,5 +126,10 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

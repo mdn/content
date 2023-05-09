@@ -1,8 +1,7 @@
 ---
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -19,9 +18,9 @@ The manifest can also contain pointers to several other types of files:
   - : Scripts that respond to browser events.
 - Icons
   - : For the extension and any buttons it might define.
-- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
+- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages_2)
   - : HTML documents that provide content for various user interface components.
-- [Content scripts](#content_scripts)
+- [Content scripts](#content_scripts_2)
   - : JavaScript included with your extension, that you will inject into web pages.
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.

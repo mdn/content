@@ -1,16 +1,7 @@
 ---
-title: '<aside>: The Aside element'
+title: "<aside>: The Aside element"
 slug: Web/HTML/Element/aside
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning content
-  - Reference
-  - Web
 browser-compat: html.elements.aside
 ---
 
@@ -47,6 +38,8 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 </article>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Using_aside")}}
 
 ## Technical summary
@@ -55,19 +48,19 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
           >sectioning content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -75,7 +68,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -88,7 +81,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that an <code>&#x3C;aside></code> element must not be a
         descendant of an {{HTMLElement("address")}} element.
@@ -129,6 +122,6 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)

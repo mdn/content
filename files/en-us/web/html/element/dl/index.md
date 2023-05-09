@@ -1,17 +1,7 @@
 ---
-title: '<dl>: The Description List element'
+title: "<dl>: The Description List element"
 slug: Web/HTML/Element/dl
 page-type: html-element
-tags:
-  - Definition List
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
 browser-compat: html.elements.dl
 ---
 
@@ -25,12 +15,12 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;dl></code> element's children include one
         name-value group, palpable content.
@@ -60,7 +50,7 @@ The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description lis
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -111,6 +101,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </dl>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Single_term_and_description")}}
 
 ### Multiple terms, single description
@@ -128,6 +120,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Multiple_terms_single_description")}}
 
@@ -148,6 +142,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Single_term_multiple_descriptions")}}
 
@@ -171,6 +167,10 @@ Description lists are useful for displaying metadata as a list of key-value pair
   <dd>Green</dd>
 </dl>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Metadata')}}
 
 Tip: It can be handy to define a key-value separator in the CSS, such as:
 
@@ -204,6 +204,10 @@ dt::after {
   </div>
 </dl>
 ```
+
+#### Result
+
+{{EmbedLiveSample('Wrapping name-value groups in `div` elements')}}
 
 ## Notes
 

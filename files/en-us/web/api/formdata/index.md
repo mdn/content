@@ -2,18 +2,12 @@
 title: FormData
 slug: Web/API/FormData
 page-type: web-api-interface
-tags:
-  - API
-  - FormData
-  - Interface
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-The **`FormData`** interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
+The **`FormData`** interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the {{domxref("fetch()")}}, {{domxref("XMLHttpRequest.send()")}} or {{domxref("navigator.sendBeacon()")}} methods. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
 
 You can also pass it directly to the {{domxref("URLSearchParams")}} constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple `GET` submission.
 

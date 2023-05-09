@@ -2,14 +2,6 @@
 title: cos()
 slug: Web/CSS/cos
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - cos
 browser-compat: css.types.cos
 ---
 

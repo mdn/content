@@ -1,15 +1,10 @@
 ---
-title: WebTransport.createBidirectionalStream()
+title: "WebTransport: createBidirectionalStream() method"
+short-title: createBidirectionalStream()
 slug: Web/API/WebTransport/createBidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createBidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
@@ -24,7 +19,7 @@ The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} 
 ## Syntax
 
 ```js
-createBidirectionalStream()
+createBidirectionalStream();
 ```
 
 ### Parameters
@@ -63,7 +58,7 @@ Reading from the `ReadableStream` can then be done as follows:
 async function readData(readable) {
   const reader = readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

@@ -2,14 +2,6 @@
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-border-repeat
 ---
 

@@ -2,9 +2,6 @@
 title: fy
 slug: Web/SVG/Attribute/fy
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.radialGradient.fy
 ---
 

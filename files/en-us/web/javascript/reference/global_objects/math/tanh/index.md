@@ -2,13 +2,6 @@
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.tanh
 ---
 

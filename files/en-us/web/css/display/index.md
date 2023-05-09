@@ -2,13 +2,6 @@
 title: display
 slug: Web/CSS/display
 page-type: css-property
-tags:
-  - CSS
-  - CSS Display
-  - CSS Property
-  - Reference
-  - display
-  - recipe:css-property
 browser-compat: css.properties.display
 ---
 
@@ -39,7 +32,7 @@ display: flow-root;
 display: none;
 display: contents;
 
-/* two-value syntax */
+/* multi-keyword syntax */
 display: block flow;
 display: inline flow;
 display: inline flow-root;
@@ -77,7 +70,7 @@ The keyword values can be grouped into six value categories.
     - `inline`
       - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** Browsers that support the two-value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
+> **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 
 ### Inside
@@ -105,7 +98,7 @@ The keyword values can be grouped into six value categories.
     - `ruby` {{Experimental_Inline}}
       - : The element behaves like an inline element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** Browsers that support the two-value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
+> **Note:** Browsers that support the multi-keyword syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
 > This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
 
 ### List Item
@@ -118,7 +111,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
 `list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keywords.
 
-> **Note:** In browsers that support the two-value syntax, if no inner value is specified, it will default to `flow`.
+> **Note:** In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
 > If no outer value is specified, the principal box will have an outer display type of `block`.
 
 ### Internal
@@ -161,7 +154,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `contents`
 
-      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
+      - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://w3c.github.io/csswg-drafts/css-display/#unbox) for more details.
 
     - `none`
       - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the element did not exist). All descendant elements also have their display turned off.
@@ -217,7 +210,7 @@ This can currently be specified using a single value.
 }
 ```
 
-For more information on these changes to the specification, see the article [Adapting to the new two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display).
+For more information on these changes to the specification, see the article [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display).
 
 ### Global
 
@@ -232,7 +225,7 @@ display: unset;
 
 The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.
 
-- [Adapting to the new two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
+- [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 
 ### CSS Flow Layout (display: block, display: inline)
 
@@ -283,7 +276,7 @@ Current implementations in some browsers will remove from the [accessibility tre
 
 ### Tables
 
-Changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
+In some browsers, changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
@@ -306,7 +299,7 @@ In this example we have two block-level container elements, each one with three 
 
 We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.
 
-> **Note:** We've not included any of the modern two-value syntax, as support for that is still fairly limited.
+> **Note:** We've not included any of the modern multi-keyword syntax, as support for that is still fairly limited.
 
 #### HTML
 
@@ -374,8 +367,8 @@ div {
 #### JavaScript
 
 ```js
-const articles = document.querySelectorAll('.container');
-const select = document.querySelector('select');
+const articles = document.querySelectorAll(".container");
+const select = document.querySelector("select");
 
 function updateDisplay() {
   articles.forEach((article) => {
@@ -383,7 +376,7 @@ function updateDisplay() {
   });
 }
 
-select.addEventListener('change', updateDisplay);
+select.addEventListener("change", updateDisplay);
 
 updateDisplay();
 ```

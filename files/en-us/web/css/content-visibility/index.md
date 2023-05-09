@@ -2,24 +2,16 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Layout
-  - Paint
-  - Reference
-  - Style
-  - Visibility
-  - Web
+status:
+  - experimental
 browser-compat: css.properties.content-visibility
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
-> **Note:** The {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
+> **Note:** The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
 ## Syntax
 
@@ -49,6 +41,10 @@ content-visibility: unset;
 ## Formal definition
 
 {{cssinfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Accessibility concerns
 
@@ -99,13 +95,13 @@ Using `content-visibility: hidden;` instead of `display: none;` preserves the re
 
 ```html
 <div class="hidden">
-  <button class="toggle">Click me</button>
+  <button class="toggle">Show</button>
   <p>
     This content is initially hidden and can be shown by clicking the button.
   </p>
 </div>
 <div class="visible">
-  <button class="toggle">Click me</button>
+  <button class="toggle">Hide</button>
   <p>
     This content is initially visible and can be hidden by clicking the button.
   </p>
@@ -114,7 +110,7 @@ Using `content-visibility: hidden;` instead of `display: none;` preserves the re
 
 #### CSS
 
-The `content-visibility` property is set on the paragraph in the containing `div` element. This means that the content in the paragraphs will be either hidden or visible depending on the class of the parent `div` element.
+The `content-visibility` property is set on paragraphs that are direct children of elements with the `visible` and `hidden` classes. In our example, we can show and hide content in paragraphs depending on the CSS class of parent div elements.
 
 The `contain-intrinsic-size` property is included to represent the content size. This helps to reduce layout shift when content is hidden.
 
@@ -133,7 +129,7 @@ p {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const handleClick = (event) => {
@@ -165,5 +161,5 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 - [CSS Containment](/en-US/docs/Web/CSS/CSS_Containment)
 - [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size)
-- {{domxref("element/contentvisibilityautostatechanged_event", "contentvisibilityautostatechanged")}}
+- {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)

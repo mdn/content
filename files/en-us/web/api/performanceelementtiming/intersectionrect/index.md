@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.intersectionRect
+title: "PerformanceElementTiming: intersectionRect property"
+short-title: intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - intersectionRect
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.intersectionRect
 ---
 

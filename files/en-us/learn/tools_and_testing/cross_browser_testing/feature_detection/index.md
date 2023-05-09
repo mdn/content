@@ -1,18 +1,6 @@
 ---
 title: Implementing feature detection
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Modernizr
-  - Testing
-  - Tools
-  - cross browser
-  - feature detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -52,7 +40,7 @@ Let's recap and look at the example we touched on in our [Handling common JavaSc
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // show the location on a map, such as the Google Maps API
   });
 } else {
@@ -77,8 +65,8 @@ A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_La
 Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
 
 ```html
-<link href="basic-styling.css" rel="stylesheet">
-<link class="conditional" href="grid-layout.css" rel="stylesheet">
+<link href="basic-styling.css" rel="stylesheet" />
+<link class="conditional" href="grid-layout.css" rel="stylesheet" />
 ```
 
 Here, `basic-styling.css` handles all the styling that we want to give to every browser. We have two additional CSS files, `grid-layout.css` and `subgrid-layout.css`, which contain the CSS we want to selectively apply to browsers depending on their support levels.
@@ -87,12 +75,12 @@ We use JavaScript to test the support for the subgrid value, then update the `hr
 
 We can add a `<script></script>` to our document, filled with the following JavaScript
 
-   ```js
-   const conditional = document.querySelector('.conditional');
-   if (CSS.supports("grid-template-columns", "subgrid")) {
-     conditional.setAttribute('href', 'subgrid-layout.css.css');
-   }
-   ```
+```js
+const conditional = document.querySelector(".conditional");
+if (CSS.supports("grid-template-columns", "subgrid")) {
+  conditional.setAttribute("href", "subgrid-layout.css.css");
+}
+```
 
 In our conditional statement, we test to see if the{{cssxref("grid-template-columns")}} property supports the `subgrid` value using [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports).
 
@@ -122,7 +110,6 @@ For example, we could rewrite our previous example to use `@supports`:
     grid-column: 3 / 6;
     grid-row: 1 / 3;
   }
-
 }
 ```
 
@@ -140,83 +127,47 @@ This is more convenient than the previous example — we can do all of our featu
 
 ### JavaScript
 
-We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of the following common patterns:
-
-<table class="standard-table">
-  <caption>
-    Summary of JavaScript feature detection techniques
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Feature detection type</th>
-      <th scope="col">Explanation</th>
-      <th scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>If member in object</em></td>
-      <td>
-        Check whether a certain method or property (typically an entry point
-        into using the API or other feature you are detecting for) exists in its
-        parent Object.
-      </td>
-      <td>
-        <p><code>if ("geolocation" in navigator) { }</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><em>Property on element</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}} and then check if a
-        property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support.
-      </td>
-      <td>
-        <code
-          >function supports_canvas() {<br />return
-          !!document.createElement('canvas').getContext;<br />}<br /><br />if (supports_canvas())
-          { }</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><em>Method on element return value</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}} and then check if a
-        method exists on it. If it does, check what value it returns.
-      </td>
-      <td>
-        See
-        <a href="https://diveinto.html5doctor.com/detect.html#video-formats"
-          >Dive into HTML Video Format detection</a
-        >
-        test.
-      </td>
-    </tr>
-    <tr>
-      <td><em>Property on element retains value</em></td>
-      <td>
-        Create an element in memory using
-        {{domxref("Document.createElement()")}}, set a property to
-        a certain value, then check to see if the value is retained.
-      </td>
-      <td>
-        See
-        <a href="https://diveinto.html5doctor.com/detect.html#input-types"
-          >Dive into HTML <code>&#x3C;input></code> type detection</a
-        >
-        test.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-> **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
 
 Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) from 2016.
+
+Common patterns for detectable features include:
+
+- Members of an object
+  - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
+
+    Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
+
+    ```js
+    if ("geolocation" in navigator) {
+      // Access navigator.geolocation APIs
+    }
+    ```
+
+- Properties of an element
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
+
+    This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
+
+    ```js
+    function supports_canvas() {
+      return !!document.createElement('canvas').getContext;
+    }
+
+    if (supports_canvas()) {
+      // Create and draw on canvas elements
+    }
+    ```
+
+    > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+
+- Specific return values of a method on an element
+
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
+
+- Retention of assigned property value by an element
+
+  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
 #### matchMedia
 
@@ -231,7 +182,10 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```html
-<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
+<link
+  href="dist/brick.css"
+  rel="stylesheet"
+  media="all and (max-width: 480px)" />
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
@@ -276,14 +230,18 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
    ```html
-   <html lang="en-us" class="no-js">…</html>
+   <html lang="en-us" class="no-js">
+     …
+   </html>
    ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
 
 ```html
 <html
-  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">…</html>
+  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">
+  …
+</html>
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support grid at all, `<html>` would be given a class name of `no-cssgrid`. If you search through the class list, you'll also see others relating to grid, like:
@@ -308,11 +266,11 @@ main {
 }
 /* Properties for browsers with subgrid */
 .csssubgrid .item {
-    grid-template-columns: subgrid;
+  grid-template-columns: subgrid;
 }
 .csssubgrid .subitem {
-   grid-column: 3 / 6;
-   grid-row: 1 / 3;
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
 }
 /* Fallbacks for browsers that don't support subgrid */
 .no-csssubgrid .subitem {
@@ -348,22 +306,25 @@ Let's look at an example to show how you'd use those properties.
 
    ```js
    if (Modernizr.geolocation) {
-
-     navigator.geolocation.getCurrentPosition(function(position) {
-
-       let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+     navigator.geolocation.getCurrentPosition(function (position) {
+       let latlng = new google.maps.LatLng(
+         position.coords.latitude,
+         position.coords.longitude
+       );
        let myOptions = {
          zoom: 8,
          center: latlng,
          mapTypeId: google.maps.MapTypeId.TERRAIN,
-         disableDefaultUI: true
-       }
-       let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+         disableDefaultUI: true,
+       };
+       let map = new google.maps.Map(
+         document.getElementById("map_canvas"),
+         myOptions
+       );
      });
-
    } else {
-     const para = document.createElement('p');
-     para.textContent = 'Argh, no geolocation!';
+     const para = document.createElement("p");
+     para.textContent = "Argh, no geolocation!";
      document.body.appendChild(para);
    }
    ```
@@ -377,14 +338,3 @@ This article covered feature detection in a reasonable amount of detail, going t
 Next up, we'll start looking at automated testing.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

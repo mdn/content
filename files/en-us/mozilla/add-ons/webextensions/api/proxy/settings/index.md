@@ -1,15 +1,7 @@
 ---
 title: proxy.settings
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Proxy
-  - Reference
-  - Settings
-  - WebExtensions
+page-type: webextension-api-property
 browser-compat: webextensions.api.proxy.settings
 ---
 

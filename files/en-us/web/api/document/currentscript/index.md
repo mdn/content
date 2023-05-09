@@ -1,13 +1,8 @@
 ---
-title: Document.currentScript
+title: "Document: currentScript property"
+short-title: currentScript
 slug: Web/API/Document/currentScript
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.currentScript
 ---
 

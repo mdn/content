@@ -1,17 +1,10 @@
 ---
-title: XRQuadLayer.transform
+title: "XRQuadLayer: transform property"
+short-title: transform
 slug: Web/API/XRQuadLayer/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.transform
 ---
 

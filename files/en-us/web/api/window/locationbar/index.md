@@ -1,15 +1,8 @@
 ---
-title: Window.locationbar
+title: "Window: locationbar property"
+short-title: locationbar
 slug: Web/API/Window/locationbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.locationbar
 ---
 

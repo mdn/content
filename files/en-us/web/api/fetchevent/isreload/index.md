@@ -1,18 +1,11 @@
 ---
-title: FetchEvent.isReload
+title: "FetchEvent: isReload property"
+short-title: isReload
 slug: Web/API/FetchEvent/isReload
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Property
-  - Reference
-  - Service
-  - Service Workers
-  - Workers
-  - isReload
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FetchEvent.isReload
 ---
 
@@ -31,7 +24,7 @@ A boolean value.
 ## Examples
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(async () => {
     if (event.isReload) {
       //Return something

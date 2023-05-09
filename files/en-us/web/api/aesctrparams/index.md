@@ -2,12 +2,6 @@
 title: AesCtrParams
 slug: Web/API/AesCtrParams
 page-type: web-api-interface
-tags:
-  - API
-  - AesCtrParams
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
 

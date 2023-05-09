@@ -2,18 +2,6 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - "l10n:priority"
-  - programming
 ---
 
 {{JsSidebar}}
@@ -117,6 +105,8 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Control abstraction objects
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncGeneratorFunction")}}
@@ -132,15 +122,16 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 ### Internationalization
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.DurationFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
 
 ## Statements
 
@@ -282,7 +273,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Conditional (ternary) operator
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Assignment operators
 
@@ -315,7 +306,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ### Comma operator
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Functions
 

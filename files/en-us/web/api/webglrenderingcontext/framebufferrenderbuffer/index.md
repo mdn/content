@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.framebufferRenderbuffer()
+title: "WebGLRenderingContext: framebufferRenderbuffer() method"
+short-title: framebufferRenderbuffer()
 slug: Web/API/WebGLRenderingContext/framebufferRenderbuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferRenderbuffer
 ---
 

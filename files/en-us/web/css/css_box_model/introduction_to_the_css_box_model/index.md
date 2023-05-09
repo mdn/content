@@ -2,11 +2,6 @@
 title: Introduction to the CSS basic box model
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Layout
 spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 
@@ -58,7 +53,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)

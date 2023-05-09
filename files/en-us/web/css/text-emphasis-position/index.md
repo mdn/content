@@ -2,12 +2,6 @@
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-emphasis-position
 ---
 

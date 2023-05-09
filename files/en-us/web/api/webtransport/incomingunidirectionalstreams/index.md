@@ -1,15 +1,10 @@
 ---
-title: WebTransport.incomingUnidirectionalStreams
+title: "WebTransport: incomingUnidirectionalStreams property"
+short-title: incomingUnidirectionalStreams
 slug: Web/API/WebTransport/incomingUnidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingUnidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.incomingUnidirectionalStreams
 ---
 
@@ -34,7 +29,7 @@ async function receiveUnidirectional() {
   const uds = transport.incomingUnidirectionalStreams;
   const reader = uds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -46,7 +41,7 @@ async function receiveUnidirectional() {
 async function readData(receiveStream) {
   const reader = receiveStream.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }

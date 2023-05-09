@@ -1,13 +1,7 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 page-type: css-pseudo-element
-tags:
-  - '::placeholder'
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.placeholder
 ---
 
@@ -23,8 +17,10 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 ## Syntax
 
-```
-::placeholder
+```css
+::placeholder {
+  /* ... */
+}
 ```
 
 ## Accessibility concerns
@@ -65,15 +61,12 @@ With this implementation, the hint content is available even if information is e
 
 ### Windows High Contrast Mode
 
-Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](/en-US/docs/Web/CSS/@media/-ms-high-contrast). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
-
-- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/posts/2017/how-to-use-ms-high-contrast/)
+Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/)). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
 
 ### Labels
 
-Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the {{htmlattrxref("for", "label")}} and {{htmlattrxref("id")}} attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
+Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Element/label#for) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
 
-- [MDN Basic form hints](/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Examples

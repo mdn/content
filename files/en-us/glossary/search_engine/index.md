@@ -2,16 +2,6 @@
 title: Search engine
 slug: Glossary/Search_engine
 page-type: glossary-definition
-tags:
-  - Definition
-  - Indexing
-  - Search Engine
-  - Searching
-  - Web Crawling
-  - WebMechanics
-  - World Wide Web
-  - details
-  - google
 ---
 
 A search engine is a software system that collects information from the {{Glossary("World Wide Web")}} and presents it to users who are looking for specific information.

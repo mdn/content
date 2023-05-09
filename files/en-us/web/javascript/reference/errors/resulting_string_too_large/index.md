@@ -2,11 +2,6 @@
 title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
 ---
 
 {{jsSidebar("Errors")}}

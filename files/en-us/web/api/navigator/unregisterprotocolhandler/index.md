@@ -1,15 +1,8 @@
 ---
-title: Navigator.unregisterProtocolHandler()
+title: "Navigator: unregisterProtocolHandler() method"
+short-title: unregisterProtocolHandler()
 slug: Web/API/Navigator/unregisterProtocolHandler
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Navigator
-  - Reference
-  - Web-Based Protocol Handlers
-  - unregisterProtocolHandler
 browser-compat: api.Navigator.unregisterProtocolHandler
 ---
 
@@ -94,8 +87,10 @@ Otherwise, the scheme must be one of the following:
 If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you can unregister the handler for it like so:
 
 ```js
-navigator.unregisterProtocolHandler("web+burger",
-                                    "https://burgers.example.com/?burger=%s");
+navigator.unregisterProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s"
+);
 ```
 
 This script must be run from the same origin as the handler URL (so any page at `https://burgers.example.com`), and the handler URL must be `http` or `https`.

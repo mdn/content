@@ -1,15 +1,10 @@
 ---
-title: ContactsManager.select()
+title: "ContactsManager: select() method"
+short-title: select()
 slug: Web/API/ContactsManager/select
 page-type: web-api-instance-method
-tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsPicker
-  - Method
-  - PWA
-  - contact picker
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactsManager.select
 ---
 

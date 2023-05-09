@@ -1,14 +1,10 @@
 ---
-title: PaymentRequestEvent.methodData
+title: "PaymentRequestEvent: methodData property"
+short-title: methodData
 slug: Web/API/PaymentRequestEvent/methodData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.methodData
 ---
 
@@ -32,7 +28,7 @@ An array of `PaymentMethodData` objects. Each object contains the following prop
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.methodData);
 });
 ```

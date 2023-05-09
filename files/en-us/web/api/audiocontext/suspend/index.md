@@ -1,15 +1,8 @@
 ---
-title: AudioContext.suspend()
+title: "AudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/AudioContext/suspend
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - suspend
 browser-compat: api.AudioContext.suspend
 ---
 

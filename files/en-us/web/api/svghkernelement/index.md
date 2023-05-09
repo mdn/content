@@ -2,12 +2,8 @@
 title: SVGHKernElement
 slug: Web/API/SVGHKernElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGHKernElement
 ---
 

@@ -1,14 +1,10 @@
 ---
-title: WebTransport()
+title: "WebTransport: WebTransport() constructor"
+short-title: WebTransport()
 slug: Web/API/WebTransport/WebTransport
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - WebTransport
-  - WebTransport API
+status:
+  - experimental
 browser-compat: api.WebTransport.WebTransport
 ---
 
@@ -51,7 +47,7 @@ new WebTransport(url, options)
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -66,11 +62,11 @@ async function initTransport(url) {
 // ...
 
 async function closeTransport(transport) {
-    // Respond to connection closing
+  // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
+  } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }

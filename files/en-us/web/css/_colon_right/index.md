@@ -2,14 +2,6 @@
 title: ":right"
 slug: Web/CSS/:right
 page-type: css-pseudo-class
-tags:
-  - "@page"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.right
 ---
 
@@ -30,8 +22,10 @@ Whether a given page is "left" or "right" is determined by the major writing dir
 
 ## Syntax
 
-```
-:right
+```css
+:right {
+  /* ... */
+}
 ```
 
 ## Examples

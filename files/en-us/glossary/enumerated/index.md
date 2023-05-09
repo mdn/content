@@ -2,12 +2,6 @@
 title: Enumerated
 slug: Glossary/Enumerated
 page-type: glossary-definition
-tags:
-  - Enumerated
-  - CodingScripting
-  - CSS
-  - Programming Languages
-  - data types
 ---
 
 In computer science, an **enumerated** type is a data type consisting of a limited set of named values.

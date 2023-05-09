@@ -1,12 +1,7 @@
 ---
-title: 'TypeError: "x" is not a non-null object'
+title: "TypeError: \"x\" is not a non-null object"
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
 
 {{JSSidebar("Errors")}}
@@ -58,9 +53,9 @@ A valid property descriptor object might look like this:
 Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
-### WeakMap and WeakSet objects require object keys
+### WeakMap and WeakSet objects require object or symbol keys
 
-{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object keys. You can't
+{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object or symbol keys. You can't
 use other types as keys.
 
 ```js example-bad

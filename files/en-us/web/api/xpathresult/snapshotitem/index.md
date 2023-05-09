@@ -1,14 +1,8 @@
 ---
-title: XPathResult.snapshotItem()
+title: "XPathResult: snapshotItem() method"
+short-title: snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
 

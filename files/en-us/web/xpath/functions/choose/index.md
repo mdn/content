@@ -1,10 +1,6 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
-tags:
-  - Function
-  - XPath
-  - XSLT
 ---
 
 {{ XsltRef() }}

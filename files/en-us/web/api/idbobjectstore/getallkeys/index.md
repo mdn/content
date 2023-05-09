@@ -1,14 +1,8 @@
 ---
-title: IDBObjectStore.getAllKeys()
+title: "IDBObjectStore: getAllKeys() method"
+short-title: getAllKeys()
 slug: Web/API/IDBObjectStore/getAllKeys
 page-type: web-api-instance-method
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBObjectStore.getAllKeys
 ---
 

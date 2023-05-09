@@ -1,14 +1,8 @@
 ---
-title: PerformanceServerTiming.toJSON()
+title: "PerformanceServerTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceServerTiming
-  - Reference
-  - ServerTiming
-  - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
 

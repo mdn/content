@@ -1,18 +1,8 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() method"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
 

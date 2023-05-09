@@ -2,11 +2,6 @@
 title: Transferable objects
 slug: Web/API/Web_Workers_API/Transferable_objects
 page-type: guide
-tags:
-  - Transferable
-  - Serializable
-  - Structured clone
-  - Workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

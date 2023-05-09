@@ -2,9 +2,6 @@
 title: Namespace
 slug: Glossary/Namespace
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Operating System
 ---
 
 Namespace is a context for identifiers, a logical grouping of names used in a program. Within the same context and same scope, an identifier must uniquely identify an entity.

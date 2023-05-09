@@ -2,13 +2,6 @@
 title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
 page-type: svg-element
-tags:
-  - Element
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feMergeNode
 ---
 
@@ -68,7 +61,7 @@ The `feMergeNode` takes the result of another filter to be processed by its pare
 
 ## DOM Interface
 
-This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/DOM/SVGFEMergeNodeElement) interface.
+This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/Web/API/SVGFEMergeNodeElement) interface.
 
 ## Specifications
 

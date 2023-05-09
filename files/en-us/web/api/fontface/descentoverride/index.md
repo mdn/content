@@ -1,13 +1,8 @@
 ---
-title: FontFace.descentOverride
+title: "FontFace: descentOverride property"
+short-title: descentOverride
 slug: Web/API/FontFace/descentOverride
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - descentOverride
-  - FontFace
 browser-compat: api.FontFace.descentOverride
 ---
 

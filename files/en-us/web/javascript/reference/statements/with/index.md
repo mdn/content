@@ -2,11 +2,8 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 page-type: javascript-statement
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
+status:
+  - deprecated
 browser-compat: javascript.statements.with
 ---
 
@@ -123,6 +120,18 @@ const r = 10;
   a = PI * r * r;
   x = r * cos(PI);
   y = r * sin(PI / 2);
+}
+```
+
+### Avoiding the with statement by using an IIFE
+
+If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you can wrap the expression in an [IIFE](/en-US/docs/Glossary/IIFE) and provide the long name as an argument.
+
+```js
+const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
+
+if (((o) => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+  // This branch runs.
 }
 ```
 

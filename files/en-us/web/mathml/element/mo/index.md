@@ -1,11 +1,7 @@
 ---
 title: <mo>
 slug: Web/MathML/Element/mo
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+page-type: mathml-element
 browser-compat: mathml.elements.mo
 ---
 
@@ -44,7 +40,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 
 ## Examples
 
-```html
+```html-nolint
 <math display="block">
   <mrow>
     <mn>5</mn>

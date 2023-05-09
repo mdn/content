@@ -2,14 +2,6 @@
 title: XRJointPose
 slug: Web/API/XRJointPose
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRJointPose
 ---
 

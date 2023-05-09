@@ -1,27 +1,10 @@
 ---
-title: XRWebGLLayer()
+title: "XRWebGLLayer: XRWebGLLayer() constructor"
+short-title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Context
-  - Create
-  - Initialize
-  - Layer
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - new
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
 

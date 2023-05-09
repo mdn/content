@@ -1,14 +1,10 @@
 ---
-title: LargestContentfulPaint.id
+title: "LargestContentfulPaint: id property"
+short-title: id
 slug: Web/API/LargestContentfulPaint/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.id
 ---
 

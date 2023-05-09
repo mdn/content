@@ -2,12 +2,6 @@
 title: Notification
 slug: Web/API/Notification
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Notifications
-  - Notifications API
-  - Reference
 browser-compat: api.Notification
 ---
 

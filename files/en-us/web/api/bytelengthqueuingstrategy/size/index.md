@@ -1,14 +1,8 @@
 ---
-title: ByteLengthQueuingStrategy.size()
+title: "ByteLengthQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/ByteLengthQueuingStrategy/size
 page-type: web-api-instance-method
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Method
-  - Reference
-  - Streams
-  - size
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
 
