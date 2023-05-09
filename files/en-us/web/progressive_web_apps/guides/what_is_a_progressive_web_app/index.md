@@ -59,9 +59,9 @@ PWAs also have many of the benefits of platform-specific apps, including:
 
 ### PWAs and the browser
 
-When you visit a website in the browser, it's obvious that the website is "running in the browser". The browser UI provides a visible frame around the website, including UI features like back/forward buttons and a title for the page. The Web APIs your website calls are implemented by the browser engine. The browser provides a kind of virtual machine for executing the website's code.
+When you visit a website in the browser, it's visually apparent that the website is "running in the browser". The browser UI provides a visible frame around the website, including UI features like back/forward buttons and a title for the page. The Web APIs your website calls are implemented by the browser engine.
 
-PWAs typically look like platform-specific apps－usually displayed without the browser UI around them － but they are, as a matter of technology, still websites. This means they need a browser engine, like Chrome or Firefox, to manage and run them. With a platform-specific app, the platform OS manages the app, providing the environment in which it runs. With a PWA, a browser engine performs this background role, just like it does for normal websites.
+PWAs typically look like platform-specific apps － they are usually displayed without the browser UI around them － but they are, as a matter of technology, still websites. This means they need a browser engine, like the ones in Chrome or Firefox, to manage and run them. With a platform-specific app, the platform OS manages the app, providing the environment in which it runs. With a PWA, a browser engine performs this background role, just like it does for normal websites.
 
 ![Diagram comparing the runtime environment for traditional websites, PWAs, and platform-specific apps](pwa-environment.svg)
 
