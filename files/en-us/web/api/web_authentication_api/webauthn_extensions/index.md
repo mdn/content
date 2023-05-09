@@ -62,7 +62,7 @@ navigator.credentials
 
     const authData = publicKeyCred.response.getAuthenticatorData();
     // authData will contain authenticator data, which will include
-    // authenticator extension processing results, i.e. minPinLength
+    // authenticator extension processing results, i.e., minPinLength
   })
   .catch((err) => {
     console.error(err);
