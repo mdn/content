@@ -135,4 +135,4 @@ reader.releaseLock();
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - {{domxref("ReadableStream")}}
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

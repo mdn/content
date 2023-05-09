@@ -71,4 +71,4 @@ const size = queuingStrategy.size(chunk);
 
 ## See also
 
-- {{domxref("ByteLengthQueuingStrategy")}}
+- {{domxref("ByteLengthQueuingStrategy")}} interface
