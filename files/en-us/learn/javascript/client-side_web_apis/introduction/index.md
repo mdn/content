@@ -135,9 +135,9 @@ const audioCtx = new AudioContext();
 Next, we create constants that store references to our `<audio>`, `<button>`, and `<input>` elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a `MediaElementAudioSourceNode` representing the source of our audio — the `<audio>` element will be played from:
 
 ```js
-const audioElement = document.querySelector('audio');
-const playBtn = document.querySelector('button');
-const volumeSlider = document.querySelector('.volume');
+const audioElement = document.querySelector("audio");
+const playBtn = document.querySelector("button");
+const volumeSlider = document.querySelector(".volume");
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 ```
@@ -146,29 +146,29 @@ Next up we include a couple of event handlers that serve to toggle between play 
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 
@@ -180,7 +180,7 @@ Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioC
 // volume
 const gainNode = audioCtx.createGain();
 
-volumeSlider.addEventListener('input', () => {
+volumeSlider.addEventListener("input", () => {
   gainNode.gain.value = volumeSlider.value;
 });
 ```
@@ -200,23 +200,23 @@ When using an API, you should make sure you know where the entry point is for th
 The Document Object Model (DOM) API also has a simple entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:
 
 ```js
-const em = document.createElement('em'); // create a new em element
-const para = document.querySelector('p'); // reference an existing p element
-em.textContent = 'Hello there!'; // give em some text content
+const em = document.createElement("em"); // create a new em element
+const para = document.querySelector("p"); // reference an existing p element
+em.textContent = "Hello there!"; // give em some text content
 para.appendChild(em); // embed em inside para
 ```
 
 The [Canvas API](/en-US/docs/Web/API/Canvas_API) also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Anything that we want to do to the canvas is then achieved by calling properties and methods of the context object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -236,29 +236,29 @@ We already saw a number of event handlers in use in our Web Audio API example ab
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 

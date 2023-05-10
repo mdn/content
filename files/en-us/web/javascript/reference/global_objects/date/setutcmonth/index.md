@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setUTCMonth
 
 {{JSRef}}
 
-The **`setUTCMonth()`** method of a {{jsxref("Date")}} instance changes the month and/or day of the month for this date according to universal time.
+The **`setUTCMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
 

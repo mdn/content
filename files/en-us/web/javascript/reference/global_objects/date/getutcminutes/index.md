@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCMinutes
 
 {{JSRef}}
 
-The **`getUTCMinutes()`** method of a {{jsxref("Date")}} instance returns the minutes for this date according to universal time.
+The **`getUTCMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}
 

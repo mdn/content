@@ -94,19 +94,19 @@ To start learning about DOM manipulation, let's begin with a practical example.
 3. To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
 
    ```js
-   const link = document.querySelector('a');
+   const link = document.querySelector("a");
    ```
 
 4. Now we have the element reference stored in a variable, we can start to manipulate it using properties and methods available to it (these are defined on interfaces like {{domxref("HTMLAnchorElement")}} in the case of {{htmlelement("a")}} element, its more general parent interface {{domxref("HTMLElement")}}, and {{domxref("Node")}} — which represents all nodes in a DOM). First of all, let's change the text inside the link by updating the value of the {{domxref("Node.textContent")}} property. Add the following line below the previous one:
 
    ```js
-   link.textContent = 'Mozilla Developer Network';
+   link.textContent = "Mozilla Developer Network";
    ```
 
 5. We should also change the URL the link is pointing to, so that it doesn't go to the wrong place when it is clicked on. Add the following line, again at the bottom:
 
    ```js
-   link.href = 'https://developer.mozilla.org';
+   link.href = "https://developer.mozilla.org";
    ```
 
 Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach. It is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
@@ -125,14 +125,14 @@ The above has given you a little taste of what you can do, but let's go further 
 1. Going back to the current example, let's start by grabbing a reference to our {{htmlelement("section")}} element — add the following code at the bottom of your existing script (do the same with the other lines too):
 
    ```js
-   const sect = document.querySelector('section');
+   const sect = document.querySelector("section");
    ```
 
 2. Now let's create a new paragraph using {{domxref("Document.createElement()")}} and give it some text content in the same way as before:
 
    ```js
-   const para = document.createElement('p');
-   para.textContent = 'We hope you enjoyed the ride.';
+   const para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
    ```
 
 3. You can now append the new paragraph at the end of the section using {{domxref("Node.appendChild()")}}:
@@ -144,13 +144,15 @@ The above has given you a little taste of what you can do, but let's go further 
 4. Finally for this part, let's add a text node to the paragraph the link sits inside, to round off the sentence nicely. First we will create the text node using {{domxref("Document.createTextNode()")}}:
 
    ```js
-   const text = document.createTextNode(' — the premier source for web development knowledge.');
+   const text = document.createTextNode(
+     " — the premier source for web development knowledge."
+   );
    ```
 
 5. Now we'll grab a reference to the paragraph the link is inside, and append the text node to it:
 
    ```js
-   const linkPara = document.querySelector('p');
+   const linkPara = document.querySelector("p");
    linkPara.appendChild(text);
    ```
 
@@ -199,11 +201,11 @@ The first way is to add inline styles directly onto elements you want to dynamic
 1. As an example, try adding these lines to our ongoing example:
 
    ```js
-   para.style.color = 'white';
-   para.style.backgroundColor = 'black';
-   para.style.padding = '10px';
-   para.style.width = '250px';
-   para.style.textAlign = 'center';
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
    ```
 
 2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you'll see that these lines are indeed adding inline styles to the document:
@@ -237,7 +239,7 @@ There is another common way to dynamically manipulate styles on your document, w
 3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
 
    ```js
-   para.setAttribute('class', 'highlight');
+   para.setAttribute("class", "highlight");
    ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.

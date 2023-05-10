@@ -111,10 +111,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -122,37 +122,37 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<em>This is my text.</em>';
+const htmlSolution = "<em>This is my text.</em>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -165,7 +165,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -179,7 +182,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -242,7 +245,8 @@ Not all elements follow the pattern of an opening tag, content, and a closing ta
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" />
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+  alt="Firefox icon" />
 ```
 
 This would output the following:
@@ -329,10 +333,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -340,30 +344,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+const htmlSolution =
+  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -371,7 +376,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -384,7 +389,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -398,7 +406,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -456,7 +464,7 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 
 In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
-```html
+```html-nolint
 <a href='https://www.example.com'>A link to my example.</a>
 
 <a href="https://www.example.com">A link to my example.</a>
@@ -471,7 +479,9 @@ Make sure you don't mix single quotes and double quotes. This example (below) sh
 However, if you use one type of quote, you can include the other type of quote _inside_ your attribute values:
 
 ```html
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="Isn't this fun?">
+  A link to my example.
+</a>
 ```
 
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
@@ -482,8 +492,8 @@ To use quote marks inside other quote marks of the same type (single quote or do
 
 Instead, you need to do this:
 
-```html
-<a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>
+```html-nolint
+<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
@@ -593,10 +603,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -604,30 +614,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
+const htmlSolution =
+  '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -635,7 +646,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -648,7 +659,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -661,7 +675,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -680,8 +694,7 @@ In the examples above, you may have noticed that a lot of whitespace is included
 ```html
 <p>Dogs are silly.</p>
 
-<p>Dogs        are
-         silly.</p>
+<p>Dogs are silly.</p>
 ```
 
 No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
@@ -706,7 +719,7 @@ The character reference equivalent could be easily remembered because the text i
 
 In the example below, there are two paragraphs:
 
-```html
+```html-nolint
 <p>In HTML, you define a paragraph using the <p> element.</p>
 
 <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>

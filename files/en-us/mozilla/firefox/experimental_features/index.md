@@ -199,8 +199,8 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>109</td>
-      <td>No</td>
+      <td>113</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -554,47 +554,6 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   </tbody>
 </table>
 
-### linear() easing function
-
-The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
-(See [Firefox bug 1764126](https://bugzil.la/1764126) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>104</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### animation-composition property
 
 The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
@@ -891,46 +850,6 @@ The `groupBy` method should be used when strings can be used to represent elemen
 
 ### Graphics: Canvas, WebGL, and WebGPU
 
-#### Interface: OffscreenCanvas
-
-The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered offscreen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts. (See [Firefox bug 1390089](https://bugzil.la/1390089) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>gfx.offscreencanvas.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### Hit regions
 
 Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
@@ -1053,6 +972,90 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>media.setsinkid.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### WebTransport API
+
+#### WebTransport API core classes
+
+This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### WebTransport datagrams
+
+This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.datagrams.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1743,8 +1746,6 @@ The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked 
 Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
 See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
-Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
-
 <table>
   <thead>
     <tr>
@@ -1756,8 +1757,8 @@ Note that since locking the screen orientation isn't typically supported on desk
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>

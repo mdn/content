@@ -75,7 +75,7 @@ In it, every new value is exactly 1 times its old value, with nothing else added
 
 ### Specific attributes
 
-- {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPain`, `StrokePaint`, or a reference to another filter primitive.
+- {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPaint`, `StrokePaint`, or a reference to another filter primitive.
 - {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`.
 - {{SVGAttr("values")}}: The value for the matrix type set in the `type` attribute.
 

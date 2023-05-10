@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@search
 
 {{JSRef}}
 
-The **`[@@search]()`** method of a regular expression specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
+The **`[@@search]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}
 

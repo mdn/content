@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCFullYear
 
 {{JSRef}}
 
-The **`getUTCFullYear()`** method of a {{jsxref("Date")}} instance returns the year for this date according to universal time.
+The **`getUTCFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
 

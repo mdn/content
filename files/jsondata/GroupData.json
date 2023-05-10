@@ -1072,6 +1072,24 @@
       "properties": ["Document.pointerLockElement"],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
     },
+    "Popover API": {
+      "overview": ["Popover API"],
+      "guides": ["/docs/Web/API/Popover_API/Using"],
+      "interfaces": ["ToggleEvent"],
+      "methods": [
+        "HTMLElement.hidePopover()",
+        "HTMLElement.showPopover()",
+        "HTMLElement.togglePopover()"
+      ],
+      "properties": [
+        "HTMLButtonElement.popoverTargetAction",
+        "HTMLButtonElement.popoverTargetElement",
+        "HTMLElement.popover",
+        "HTMLInputElement.popoverTargetAction",
+        "HTMLInputElement.popoverTargetElement"
+      ],
+      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
+    },
     "Presentation API": {
       "overview": ["Presentation API"],
       "interfaces": [
@@ -1321,7 +1339,6 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
-        "SVGDocument",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1639,22 +1656,22 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
       "overview": ["Web components"],
