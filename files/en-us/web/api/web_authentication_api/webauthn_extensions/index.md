@@ -222,6 +222,7 @@ The available `credentialProtectionPolicy` values are as follows:
 
 > **Note:**
 > Chromium will default to `userVerificationOptionalWithCredentialIDList` or `userVerificationRequired`, depending on the type of request:
+>
 > - Chromium will request a protection level of `userVerificationOptionalWithCredentialIDList` when creating a credential if `residentKey` is set to `preferred` or `required`. (Setting `requireResidentKey` is treated the same as required.) This ensures that simple physical possession of a security key does not allow the presence of a discoverable credential for a given `rpId` to be queried.
 > - Additionally, if `residentKey` is `required` and `userVerification` is preferred, the protection level will be increased to `userVerificationRequired`. This ensures that physical possession of a security key does not allow sign-in to a site that doesn't require user verification. (This is not complete protection; sites should still carefully consider the security of their users.)
 > - If the site requests an explicit `credProtect` level, that will override these defaults. These defaults never cause the protection level to be lower than the security key's default if that is higher.
