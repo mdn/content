@@ -7,7 +7,9 @@ browser-compat: api.PublicKeyCredential
 
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure multi-authentication (MFA) without SMS texts.
+The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
+
+[Passkeys](https://developers.google.com/identity/passkeys) are a significant use case for WebAuthn; see [Create a passkey for passwordless logins](https://web.dev/passkey-registration/) and [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for implementation details
 
 ## WebAuthn concepts and usage
 
