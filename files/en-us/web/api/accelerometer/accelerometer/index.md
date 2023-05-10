@@ -1,5 +1,6 @@
 ---
-title: Accelerometer()
+title: "Accelerometer: Accelerometer() constructor"
+short-title: Accelerometer()
 slug: Web/API/Accelerometer/Accelerometer
 page-type: web-api-constructor
 status:

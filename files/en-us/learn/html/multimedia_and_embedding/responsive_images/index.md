@@ -179,26 +179,6 @@ This code allows us to display a suitable image on both wide screen and narrow s
 
 When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like `srcset`. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.
 
-### Use modern image formats boldly
-
-New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
-
-`<picture>` lets us continue catering to older browsers. You can supply MIME types inside `type` attributes so the browser can immediately reject unsupported file types:
-
-```html
-<picture>
-  <source type="image/svg+xml" srcset="pyramid.svg" />
-  <source type="image/webp" srcset="pyramid.webp" />
-  <img
-    src="pyramid.png"
-    alt="regular pyramid built from four equilateral triangles" />
-</picture>
-```
-
-- Do _not_ use the `media` attribute, unless you also need art direction.
-- In a `<source>` element, you can only refer to images of the type declared in `type`.
-- Use comma-separated lists with `srcset` and `sizes`, as needed.
-
 ## Active learning: Implementing your own responsive images
 
 For this active learning, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.

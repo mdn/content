@@ -1,5 +1,6 @@
 ---
 title: "Document: selectionchange event"
+short-title: selectionchange
 slug: Web/API/Document/selectionchange_event
 page-type: web-api-event
 browser-compat: api.Document.selectionchange_event

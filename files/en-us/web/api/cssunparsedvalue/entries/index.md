@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue.entries()
+title: "CSSUnparsedValue: entries() method"
+short-title: entries()
 slug: Web/API/CSSUnparsedValue/entries
 page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.entries

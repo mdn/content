@@ -1,5 +1,6 @@
 ---
-title: CSSCounterStyleRule.prefix
+title: "CSSCounterStyleRule: prefix property"
+short-title: prefix
 slug: Web/API/CSSCounterStyleRule/prefix
 page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.prefix

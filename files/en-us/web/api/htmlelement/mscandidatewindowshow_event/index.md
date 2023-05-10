@@ -1,14 +1,13 @@
 ---
 title: "HTMLElement: mscandidatewindowshow event"
+short-title: mscandidatewindowshow
 slug: Web/API/HTMLElement/mscandidatewindowshow_event
 page-type: web-api-event
 status:
   - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`mscandidatewindowshow`** event is thrown immediately after the Input Method Editor (IME) candidate window is set to appear, but before it renders.
 

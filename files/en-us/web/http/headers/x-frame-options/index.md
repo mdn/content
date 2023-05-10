@@ -1,6 +1,7 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
+page-type: http-header
 browser-compat: http.headers.X-Frame-Options
 ---
 

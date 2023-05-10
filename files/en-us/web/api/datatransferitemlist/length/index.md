@@ -1,5 +1,6 @@
 ---
-title: DataTransferItemList.length
+title: "DataTransferItemList: length property"
+short-title: length
 slug: Web/API/DataTransferItemList/length
 page-type: web-api-instance-property
 browser-compat: api.DataTransferItemList.length

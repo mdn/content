@@ -1,5 +1,5 @@
 ---
-title: The "codecs" parameter in common media types
+title: Codecs in common media types
 slug: Web/Media/Formats/codecs_parameter
 ---
 

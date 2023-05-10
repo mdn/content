@@ -40,7 +40,7 @@ Let's recap and look at the example we touched on in our [Handling common JavaSc
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // show the location on a map, such as the Google Maps API
   });
 } else {
@@ -65,8 +65,8 @@ A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_La
 Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
 
 ```html
-<link href="basic-styling.css" rel="stylesheet">
-<link class="conditional" href="grid-layout.css" rel="stylesheet">
+<link href="basic-styling.css" rel="stylesheet" />
+<link class="conditional" href="grid-layout.css" rel="stylesheet" />
 ```
 
 Here, `basic-styling.css` handles all the styling that we want to give to every browser. We have two additional CSS files, `grid-layout.css` and `subgrid-layout.css`, which contain the CSS we want to selectively apply to browsers depending on their support levels.
@@ -75,12 +75,12 @@ We use JavaScript to test the support for the subgrid value, then update the `hr
 
 We can add a `<script></script>` to our document, filled with the following JavaScript
 
-   ```js
-   const conditional = document.querySelector('.conditional');
-   if (CSS.supports("grid-template-columns", "subgrid")) {
-     conditional.setAttribute('href', 'subgrid-layout.css.css');
-   }
-   ```
+```js
+const conditional = document.querySelector(".conditional");
+if (CSS.supports("grid-template-columns", "subgrid")) {
+  conditional.setAttribute("href", "subgrid-layout.css.css");
+}
+```
 
 In our conditional statement, we test to see if the{{cssxref("grid-template-columns")}} property supports the `subgrid` value using [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports).
 
@@ -110,7 +110,6 @@ For example, we could rewrite our previous example to use `@supports`:
     grid-column: 3 / 6;
     grid-row: 1 / 3;
   }
-
 }
 ```
 
@@ -183,7 +182,10 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```html
-<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
+<link
+  href="dist/brick.css"
+  rel="stylesheet"
+  media="all and (max-width: 480px)" />
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
@@ -228,14 +230,18 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
    ```html
-   <html lang="en-us" class="no-js">…</html>
+   <html lang="en-us" class="no-js">
+     …
+   </html>
    ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated the `class` attribute of your `<html>` element like so:
 
 ```html
 <html
-  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">…</html>
+  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">
+  …
+</html>
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support grid at all, `<html>` would be given a class name of `no-cssgrid`. If you search through the class list, you'll also see others relating to grid, like:
@@ -260,11 +266,11 @@ main {
 }
 /* Properties for browsers with subgrid */
 .csssubgrid .item {
-    grid-template-columns: subgrid;
+  grid-template-columns: subgrid;
 }
 .csssubgrid .subitem {
-   grid-column: 3 / 6;
-   grid-row: 1 / 3;
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
 }
 /* Fallbacks for browsers that don't support subgrid */
 .no-csssubgrid .subitem {
@@ -300,22 +306,25 @@ Let's look at an example to show how you'd use those properties.
 
    ```js
    if (Modernizr.geolocation) {
-
-     navigator.geolocation.getCurrentPosition(function(position) {
-
-       let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+     navigator.geolocation.getCurrentPosition(function (position) {
+       let latlng = new google.maps.LatLng(
+         position.coords.latitude,
+         position.coords.longitude
+       );
        let myOptions = {
          zoom: 8,
          center: latlng,
          mapTypeId: google.maps.MapTypeId.TERRAIN,
-         disableDefaultUI: true
-       }
-       let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+         disableDefaultUI: true,
+       };
+       let map = new google.maps.Map(
+         document.getElementById("map_canvas"),
+         myOptions
+       );
      });
-
    } else {
-     const para = document.createElement('p');
-     para.textContent = 'Argh, no geolocation!';
+     const para = document.createElement("p");
+     para.textContent = "Argh, no geolocation!";
      document.body.appendChild(para);
    }
    ```

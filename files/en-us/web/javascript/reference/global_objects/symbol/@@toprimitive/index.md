@@ -1,5 +1,5 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
+title: Symbol.prototype[@@toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.@@toPrimitive

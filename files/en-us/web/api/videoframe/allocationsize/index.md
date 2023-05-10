@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.allocationSize()
+title: "VideoFrame: allocationSize() method"
+short-title: allocationSize()
 slug: Web/API/VideoFrame/allocationSize
 page-type: web-api-instance-method
 browser-compat: api.VideoFrame.allocationSize

@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.startTime
+title: "PerformanceEntry: startTime property"
+short-title: startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.startTime
@@ -24,6 +25,8 @@ The meaning of this property depends on the value of this performance entry's {{
   - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
 - `largest-contentful-paint`
   - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
+- `layout-shift`
+  - : The time when the layout shift started.
 - `longtask`
   - : The time when the task started.
 - `mark`

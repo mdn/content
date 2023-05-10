@@ -1,5 +1,6 @@
 ---
-title: USBDevice.deviceClass
+title: "USBDevice: deviceClass property"
+short-title: deviceClass
 slug: Web/API/USBDevice/deviceClass
 page-type: web-api-instance-property
 status:

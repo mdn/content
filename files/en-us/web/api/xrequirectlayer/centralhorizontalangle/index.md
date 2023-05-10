@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.centralHorizontalAngle
+title: "XREquirectLayer: centralHorizontalAngle property"
+short-title: centralHorizontalAngle
 slug: Web/API/XREquirectLayer/centralHorizontalAngle
 page-type: web-api-instance-property
 status:

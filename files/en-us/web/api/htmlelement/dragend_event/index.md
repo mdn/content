@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragend event"
+short-title: dragend
 slug: Web/API/HTMLElement/dragend_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragend_event

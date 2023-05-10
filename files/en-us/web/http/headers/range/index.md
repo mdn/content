@@ -1,6 +1,7 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
+page-type: http-header
 browser-compat: http.headers.Range
 ---
 

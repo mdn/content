@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.pipeTo()
+title: "ReadableStream: pipeTo() method"
+short-title: pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeTo
@@ -83,3 +84,8 @@ The same example, but using {{jsxref("Operators/await", "await")}}:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Pipe chains](/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains)

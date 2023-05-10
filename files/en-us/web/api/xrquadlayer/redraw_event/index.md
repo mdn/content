@@ -1,5 +1,6 @@
 ---
-title: 'XRQuadLayer: redraw event'
+title: "XRQuadLayer: redraw event"
+short-title: redraw
 slug: Web/API/XRQuadLayer/redraw_event
 page-type: web-api-event
 status:

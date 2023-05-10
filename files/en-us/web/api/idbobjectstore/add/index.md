@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.add()
+title: "IDBObjectStore: add() method"
+short-title: add()
 slug: Web/API/IDBObjectStore/add
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.add

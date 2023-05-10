@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Rule
 ---
 

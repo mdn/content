@@ -9,4 +9,4 @@ page-type: glossary-definition
 ## See also
 
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- [NAT](https://en.wikipedia.org/wiki/NAT) on Wikipedia
+- [Network address translation](https://en.wikipedia.org/wiki/Network_address_translation) on Wikipedia

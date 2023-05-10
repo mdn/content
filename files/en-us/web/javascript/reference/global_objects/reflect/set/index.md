@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.set
 
 {{JSRef}}
 
-The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
+The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-set.html")}}
 
@@ -40,7 +40,7 @@ A {{jsxref("Boolean")}} indicating whether or not setting the property was succe
 
 ## Description
 
-`Reflect.set()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). That is, `Reflect.set(target, propertyKey, value, receiver)` is semantically equivalent to:
+`Reflect.set()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). That is, `Reflect.set(target, propertyKey, value, receiver)` is semantically equivalent to:
 
 ```js
 target[propertyKey] = value;
@@ -113,5 +113,5 @@ Reflect.set(target, "a", 2, receiver); // true
 
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`Proxy`'s `set` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

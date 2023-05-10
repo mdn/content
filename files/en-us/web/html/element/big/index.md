@@ -1,5 +1,5 @@
 ---
-title: '<big>: The Bigger Text element'
+title: "<big>: The Bigger Text element"
 slug: Web/HTML/Element/big
 page-type: html-element
 status:

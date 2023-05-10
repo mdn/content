@@ -1,5 +1,6 @@
 ---
-title: PerformanceElementTiming.naturalWidth
+title: "PerformanceElementTiming: naturalWidth property"
+short-title: naturalWidth
 slug: Web/API/PerformanceElementTiming/naturalWidth
 page-type: web-api-instance-property
 status:

@@ -164,7 +164,7 @@ Let's look at an example — a simple box styled with CSS, which has some stylin
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 
-> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
 The button has a number of declarations that style, but the two we are most interested in are as follows:
 

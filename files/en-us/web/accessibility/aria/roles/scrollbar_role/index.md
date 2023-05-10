@@ -1,6 +1,7 @@
 ---
 title: "ARIA: scrollbar role"
 slug: Web/Accessibility/ARIA/Roles/scrollbar_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#scrollbar
 ---
 

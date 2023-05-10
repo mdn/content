@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.entryType
+title: "PerformanceEntry: entryType property"
+short-title: entryType
 slug: Web/API/PerformanceEntry/entryType
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.entryType
@@ -38,6 +39,12 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
   - : Reports the largest paint an element triggered on screen.
 
     The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
+
+- `layout-shift`
+
+  - : Reports layout stability of web pages based on movements of the elements on the page.
+
+    The entry instance will be a {{domxref("LayoutShift")}} object.
 
 - `longtask`
 

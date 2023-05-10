@@ -1,5 +1,6 @@
 ---
-title: Document.preferredStyleSheetSet
+title: "Document: preferredStyleSheetSet property"
+short-title: preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 page-type: web-api-instance-property
 status:

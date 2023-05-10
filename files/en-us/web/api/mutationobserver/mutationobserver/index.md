@@ -1,5 +1,6 @@
 ---
-title: MutationObserver()
+title: "MutationObserver: MutationObserver() constructor"
+short-title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 page-type: web-api-constructor
 browser-compat: api.MutationObserver.MutationObserver

@@ -1,5 +1,6 @@
 ---
-title: FormDataEvent()
+title: "FormDataEvent: FormDataEvent() constructor"
+short-title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
 page-type: web-api-constructor
 browser-compat: api.FormDataEvent.FormDataEvent

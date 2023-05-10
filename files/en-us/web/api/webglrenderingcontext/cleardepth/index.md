@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.clearDepth()
+title: "WebGLRenderingContext: clearDepth() method"
+short-title: clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.clearDepth

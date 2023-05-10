@@ -1,5 +1,6 @@
 ---
-title: CSSValue.cssText
+title: "CSSValue: cssText property"
+short-title: cssText
 slug: Web/API/CSSValue/cssText
 page-type: web-api-instance-property
 status:

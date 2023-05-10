@@ -1,5 +1,6 @@
 ---
-title: AudioTrackList.getTrackById()
+title: "AudioTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.AudioTrackList.getTrackById

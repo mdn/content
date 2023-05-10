@@ -1,5 +1,6 @@
 ---
-title: Node.nodeType
+title: "Node: nodeType property"
+short-title: nodeType
 slug: Web/API/Node/nodeType
 page-type: web-api-instance-property
 browser-compat: api.Node.nodeType

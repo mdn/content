@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: error event"
+short-title: error
 slug: Web/API/RTCDataChannel/error_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.error_event

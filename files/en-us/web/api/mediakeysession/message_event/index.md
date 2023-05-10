@@ -1,5 +1,6 @@
 ---
 title: "MediaKeySession: message event"
+short-title: message
 slug: Web/API/MediaKeySession/message_event
 page-type: web-api-event
 browser-compat: api.MediaKeySession.message_event

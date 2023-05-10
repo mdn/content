@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.channel
+title: "XMLHttpRequest: channel property"
+short-title: channel
 slug: Web/API/XMLHttpRequest/channel
 page-type: web-api-instance-property
 status:

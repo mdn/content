@@ -1,5 +1,6 @@
 ---
-title: Cache.put()
+title: "Cache: put() method"
+short-title: put()
 slug: Web/API/Cache/put
 page-type: web-api-instance-method
 browser-compat: api.Cache.put

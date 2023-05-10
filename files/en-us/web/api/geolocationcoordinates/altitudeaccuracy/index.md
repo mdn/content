@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.altitudeAccuracy
+title: "GeolocationCoordinates: altitudeAccuracy property"
+short-title: altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy

@@ -1,5 +1,6 @@
 ---
-title: Navigator.unregisterProtocolHandler()
+title: "Navigator: unregisterProtocolHandler() method"
+short-title: unregisterProtocolHandler()
 slug: Web/API/Navigator/unregisterProtocolHandler
 page-type: web-api-instance-method
 browser-compat: api.Navigator.unregisterProtocolHandler

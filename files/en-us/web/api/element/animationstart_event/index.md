@@ -1,8 +1,9 @@
 ---
 title: "Element: animationstart event"
+short-title: animationstart
 slug: Web/API/Element/animationstart_event
-browser-compat: api.Element.animationstart_event
 page-type: web-api-event
+browser-compat: api.Element.animationstart_event
 ---
 
 {{APIRef}}

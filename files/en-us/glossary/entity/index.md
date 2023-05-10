@@ -20,6 +20,17 @@ To display these characters as text, replace them with their corresponding chara
 | <         | `&lt;`   | Interpreted as the beginning of a {{Glossary('tag')}}                         |
 | >         | `&gt;`   | Interpreted as the ending of a {{Glossary('tag')}}                            |
 | "         | `&quot;` | Interpreted as the beginning and end of an {{Glossary('attribute')}}'s value. |
+|           | `&nbsp;` | Interpreted as the non breaking space.                                        |
+| –         | `&ndash;`| Interpreted as the en dash (half the width of an em unit).                    |
+| —         | `&mdash;`| Interpreted as the em dash (equal to width of an "m" character).              |
+| ©         | `&copy;` | Interpreted as the copyright sign.                                            |
+| ®         | `&reg;`  | Interpreted as the registered sign.                                           |
+| ™         | `&trade;`| Interpreted as the trademark sign.                                            |
+| ≈         | `&asymp;`| Interpreted as almost equal to sign.                                          |
+| ≠         | `&ne;`   | Interpreted as not equal to sign.                                             |
+| £         | `&pound;`| Interpreted as the pound symbol.                                              |
+| €         | `&euro;` | Interpreted as the euro symbol.                                               |
+| °         | `&deg;`  | Interpreted as the degree symbol.                                             |
 
 ## See also
 

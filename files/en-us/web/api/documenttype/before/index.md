@@ -1,5 +1,6 @@
 ---
-title: DocumentType.before()
+title: "DocumentType: before() method"
+short-title: before()
 slug: Web/API/DocumentType/before
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.before

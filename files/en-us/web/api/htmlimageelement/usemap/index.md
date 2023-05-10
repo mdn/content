@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.useMap
+title: "HTMLImageElement: useMap property"
+short-title: useMap
 slug: Web/API/HTMLImageElement/useMap
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.useMap

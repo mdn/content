@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.preloadResponse
+title: "FetchEvent: preloadResponse property"
+short-title: preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
 page-type: web-api-instance-property
 browser-compat: api.FetchEvent.preloadResponse

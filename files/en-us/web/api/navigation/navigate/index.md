@@ -1,5 +1,6 @@
 ---
-title: Navigation.navigate()
+title: "Navigation: navigate() method"
+short-title: navigate()
 slug: Web/API/Navigation/navigate
 page-type: web-api-instance-method
 status:
@@ -55,8 +56,6 @@ Either one of these promises rejects if the navigation has failed for some reaso
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the `history` option is set to `push`, and any of the following special circumstances are true:
     - The browser is currently showing the initial `about:blank` document.
-    - The current {{domxref("Document")}} is not yet loaded.
-    - The `url` parameter is set to the current URL.
     - The `url`'s scheme is `javascript`.
 
 ## Examples

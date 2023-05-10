@@ -1,5 +1,6 @@
 ---
-title: FetchEvent()
+title: "FetchEvent: FetchEvent() constructor"
+short-title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
 page-type: web-api-constructor
 browser-compat: api.FetchEvent.FetchEvent

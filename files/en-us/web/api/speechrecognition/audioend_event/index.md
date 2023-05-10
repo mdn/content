@@ -1,5 +1,6 @@
 ---
 title: "SpeechRecognition: audioend event"
+short-title: audioend
 slug: Web/API/SpeechRecognition/audioend_event
 page-type: web-api-event
 browser-compat: api.SpeechRecognition.audioend_event

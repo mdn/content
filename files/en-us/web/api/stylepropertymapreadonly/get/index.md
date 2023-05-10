@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.get()
+title: "StylePropertyMapReadOnly: get() method"
+short-title: get()
 slug: Web/API/StylePropertyMapReadOnly/get
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.get

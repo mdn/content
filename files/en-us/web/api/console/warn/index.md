@@ -1,5 +1,6 @@
 ---
-title: console.warn()
+title: "console: warn() method"
+short-title: warn()
 slug: Web/API/console/warn
 page-type: web-api-instance-method
 browser-compat: api.console.warn

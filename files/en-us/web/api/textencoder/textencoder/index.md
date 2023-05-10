@@ -1,5 +1,6 @@
 ---
-title: TextEncoder()
+title: "TextEncoder: TextEncoder() constructor"
+short-title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 page-type: web-api-constructor
 browser-compat: api.TextEncoder.TextEncoder

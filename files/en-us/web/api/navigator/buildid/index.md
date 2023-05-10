@@ -1,5 +1,6 @@
 ---
-title: Navigator.buildID
+title: "Navigator: buildID property"
+short-title: buildID
 slug: Web/API/Navigator/buildID
 page-type: web-api-instance-property
 status:

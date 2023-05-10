@@ -52,7 +52,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
+  - : Returns a {{domxref("MediaKeys")}} object, that is a set of keys that the element can use for decryption of media data during playback. If no key is available, it can be `null`.
 - {{domxref("HTMLMediaElement.muted")}}
   - : A boolean that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
 - {{domxref("HTMLMediaElement.networkState")}} {{ReadOnlyInline}}
@@ -212,5 +212,5 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these 
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning area: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Media type and format guide](/en-US/docs/Web/Media/Formats)
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)

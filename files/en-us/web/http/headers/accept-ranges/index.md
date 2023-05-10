@@ -1,6 +1,7 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
+page-type: http-header
 browser-compat: http.headers.Accept-Ranges
 ---
 

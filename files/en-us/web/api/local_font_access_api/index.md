@@ -4,8 +4,7 @@ slug: Web/API/Local_Font_Access_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat:
-  - api.Window.queryLocalFonts
+browser-compat: api.Window.queryLocalFonts
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}

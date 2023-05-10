@@ -1,6 +1,7 @@
 ---
 title: Resource URLs
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+page-type: guide
 ---
 
 {{HTTPSidebar}}{{non-standard_header}}

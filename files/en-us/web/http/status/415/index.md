@@ -1,6 +1,7 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 ---
 

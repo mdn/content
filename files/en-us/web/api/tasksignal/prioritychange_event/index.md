@@ -1,5 +1,6 @@
 ---
 title: "TaskSignal: prioritychange event"
+short-title: prioritychange
 slug: Web/API/TaskSignal/prioritychange_event
 page-type: web-api-event
 browser-compat: api.TaskSignal.prioritychange_event

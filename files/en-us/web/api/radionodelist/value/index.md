@@ -1,5 +1,6 @@
 ---
-title: RadioNodeList.value
+title: "RadioNodeList: value property"
+short-title: value
 slug: Web/API/RadioNodeList/value
 page-type: web-api-instance-property
 browser-compat: api.RadioNodeList.value

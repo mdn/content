@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.captureStream()
+title: "HTMLCanvasElement: captureStream() method"
+short-title: captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 page-type: web-api-instance-method
 browser-compat: api.HTMLCanvasElement.captureStream

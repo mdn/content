@@ -1,5 +1,6 @@
 ---
-title: PannerNode.positionX
+title: "PannerNode: positionX property"
+short-title: positionX
 slug: Web/API/PannerNode/positionX
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.positionX

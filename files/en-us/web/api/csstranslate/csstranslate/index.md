@@ -1,5 +1,6 @@
 ---
-title: CSSTranslate()
+title: "CSSTranslate: CSSTranslate() constructor"
+short-title: CSSTranslate()
 slug: Web/API/CSSTranslate/CSSTranslate
 page-type: web-api-constructor
 browser-compat: api.CSSTranslate.CSSTranslate

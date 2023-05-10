@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.lineWidth()
+title: "WebGLRenderingContext: lineWidth() method"
+short-title: lineWidth()
 slug: Web/API/WebGLRenderingContext/lineWidth
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.lineWidth

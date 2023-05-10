@@ -1,5 +1,6 @@
 ---
-title: console.error()
+title: "console: error() method"
+short-title: error()
 slug: Web/API/console/error
 page-type: web-api-instance-method
 browser-compat: api.console.error

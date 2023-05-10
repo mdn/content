@@ -1,5 +1,6 @@
 ---
 title: "VisualViewport: scroll event"
+short-title: scroll
 slug: Web/API/VisualViewport/scroll_event
 page-type: web-api-event
 browser-compat: api.VisualViewport.scroll_event

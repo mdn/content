@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncManager.register()
+title: "PeriodicSyncManager: register() method"
+short-title: register()
 slug: Web/API/PeriodicSyncManager/register
 page-type: web-api-instance-method
 status:

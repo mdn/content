@@ -28,7 +28,7 @@ _No changes._
 
 ### JavaScript
 
-- Top-level [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level-await) is now enabled by default ([Firefox bug 1681046](https://bugzil.la/1681046)).
+- Top-level [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) is now enabled by default ([Firefox bug 1681046](https://bugzil.la/1681046)).
 - [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)s can now be created with a length greater than 2GB-1 (up to 8GB) on 64-bit systems ([Firefox bug 1703505](https://bugzil.la/1703505)).
 
 ### HTTP
