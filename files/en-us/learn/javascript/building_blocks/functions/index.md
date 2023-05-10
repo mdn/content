@@ -281,7 +281,7 @@ Here's a complete working example of the "keydown" example we discussed above:
 The HTML:
 
 ```html
-<input id="textBox" type="text">
+<input id="textBox" type="text" />
 <div id="output"></div>
 ```
 

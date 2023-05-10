@@ -176,12 +176,12 @@ On success the desired data is returned and then used in the response.
 ```js
 router.get("/about", (req, res, next) => {
   About.find({}).exec((err, queryResults) => {
-      if (err) {
-        return next(err);
-      }
-      //Successful, so render
-      res.render("about_view", { title: "About", list: queryResults });
-    });
+    if (err) {
+      return next(err);
+    }
+    //Successful, so render
+    res.render("about_view", { title: "About", list: queryResults });
+  });
 });
 ```
 
@@ -216,12 +216,15 @@ The same example is now very simple, because we only need to write code for the 
 
 ```js
 // Import the module
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
-exports.get("/about", asyncHandler(async (req, res, next) => {
-  const successfulResult = await About.find({}).exec();
-  res.render("about_view", { title: "About", list: successfulResult });
-}));
+exports.get(
+  "/about",
+  asyncHandler(async (req, res, next) => {
+    const successfulResult = await About.find({}).exec();
+    res.render("about_view", { title: "About", list: successfulResult });
+  })
+);
 ```
 
 ## Routes needed for the LocalLibrary
@@ -270,7 +273,7 @@ Open the **/controllers/authorController.js** file and type in the following cod
 
 ```js
 const Author = require("../models/author");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all Authors.
 exports.author_list = asyncHandler(async (req, res, next) => {
@@ -330,7 +333,7 @@ Open the **/controllers/bookinstanceController.js** file and copy in the followi
 
 ```js
 const BookInstance = require("../models/bookinstance");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all BookInstances.
 exports.bookinstance_list = asyncHandler(async (req, res, next) => {
@@ -379,7 +382,7 @@ Open the **/controllers/genreController.js** file and copy in the following text
 
 ```js
 const Genre = require("../models/genre");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 // Display list of all Genre.
 exports.genre_list = asyncHandler(async (req, res, next) => {
@@ -429,7 +432,7 @@ This follows the same pattern as the other controller modules, but additionally 
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");

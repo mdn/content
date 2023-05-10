@@ -30,7 +30,7 @@ Functional notation: `hwb(H W B[ / A])`
 
   - : {{CSSXref("&lt;percentage&gt;")}} representing whiteness and blackness, respectively, that specifies the amount of white and black to mix in, from 0% (no whiteness or blackness) to 100% (full whiteness or blackness).
 
-      If `W + B = 100%`, it defines some shade of gray. If `W + B > 100%`, `W` and `B` are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+    If `W + B = 100%`, it defines some shade of gray. If `W + B > 100%`, `W` and `B` are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
 
 - `A` {{optional_inline}}
 
