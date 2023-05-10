@@ -664,10 +664,11 @@ textarea.onkeyup = () => {
 
 In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:
 
-```html
+```html-nolint
 <p>Dogs are silly.</p>
 
-<p>Dogs are silly.</p>
+<p>Dogs        are
+         silly.</p>
 ```
 
 No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
