@@ -9,11 +9,9 @@ browser-compat:
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
-The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would normally only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first party contex as the origin's _first-party_ storage).
+The **Storage Access API** provides a way for embedded, cross-origin content to gain unrestricted access to the cookies that it would typically only have access to in a first-party context (We refer to storage and cookies that an origin has access to when being in a first-party context as the origin's _first-party_ storage).
 
-> **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API, not just cookies. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache).
-In its latest version the Storage Access API can only be used to gain access to first-party cookies. Firefox adopts this behavior starting from version 109 and keeps (non-cookie) storage permanently partitioned.
+> **Note:** The [browser compatibility section](#browser_compatibility) provides an overview about the support staus of the Storage Access API.
 
 The API provides methods that allow embedded resources to check whether they currently have access to their first-party cookies, and to request access to them from the user agent.
 
@@ -23,7 +21,7 @@ Most browsers implement a number of storage access policies that restrict access
 
 The semantics around third-party cookie blocking policies in particular differ from browser to browser, but the core functionality is similar: cross-origin resources embedded in a third-party context are not given access to the same cookies and site storage that they would have access to when loaded in a first-party context.
 
-These cookie blocking policies are known to break embedded cross-origin content that requires access to its first-party storage. As an example, federated logins often require access to authentication cookies available in a first-party context, and will require the user to sign in on each site separately (or completely break) if those cookies are not available. In the case of breakage, site owners have often encouraged users to add their site as an exception or to disable the policy entirely. As a consequence, users who wish to continue to interact with embedded content are forced to greatly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
+These cookie-blocking policies are known to break embedded cross-origin content that requires access to its first-party storage. As an example, federated logins often require access to authentication cookies available in a first-party context, and will require the user to sign in on each site separately (or altogether break) if those cookies are not available. In the case of breakage, site owners have often encouraged users to add their site as an exception or to disable the policy entirely. Consequently, users who wish to continue interacting with embedded content must relax significantly their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
 The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to first-party cookies on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 

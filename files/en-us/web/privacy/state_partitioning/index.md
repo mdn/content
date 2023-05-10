@@ -85,12 +85,12 @@ efforts as the Work Item is standardized.
     ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
 
-### Static Partitioning
+### Static partitioning
 
-#### Storage Partitioning
+#### Storage partitioning
 
-To prevent JavaScript accessible storage APIs being used for cross-site
-tracking, Firefox partitions accessible storage by top-level site. This
+To prevent JavaScript-accessible storage APIs from being used for cross-site
+tracking, accessible storage is partitioned by top-level site. This
 mechanism means that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
@@ -139,8 +139,8 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 ### Dynamic Partitioning
 
-Generally Firefox partitions accessible storage by top-level site. However, this boundary is dynamic for cookies and access
-to a third-party's unpartitioned cookies can be granted:
+Generally, if accessible storage is partitioned by top-level site, access to a third-parties unpartitioned cookies
+can still be granted if the Storage Access API is supported:
 
 - using the [Storage Access API](#storage_access_api).
 - automatically, such as for third-parties providing federated login.
@@ -148,11 +148,11 @@ to a third-party's unpartitioned cookies can be granted:
 Details about automatic grants are provided in the
 [Storage Access Heuristics](#storage_access_heuristics) section.
 
-#### Dynamically Partitioned APIs
+#### Dynamically-partitioned APIs
 
 - [Cookies](/en-US/docs/Web/API/Document/cookie)
 
-#### Storage Access Heuristics
+#### Storage Access heuristics
 
 To improve web compatibility, Firefox currently includes some heuristics to
 grant unpartitioned access to cookies automatically to third parties that
@@ -216,13 +216,13 @@ with storage in a third-party context. In the following examples,
 `a.example` is the top-level site which embeds the third-party frame
 `b.example`.
 
-| Reason                                                                                                  | Console Message                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
-| Access to unpartitioned cookies is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
+| Reason                                                                                                                   | Console Message                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage of a third-party frame is partitioned                                                                            | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
+| Access to unpartitioned cookies is granted through [Storage access heuristics](#storage_access_heuristics)               | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
 | Access to unpartitioned cookies is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
 
-#### Clear Third-Party Storage-Access
+#### Clear third-party storage-access
 
 If a third-party iframe is granted storage access to the parent context,
 Firefox sets a permission. To revoke access you can clear the permission via

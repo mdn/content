@@ -8,12 +8,11 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}}. If that promise resolves the requesting origin will have unrestricted access to its first-party cookies. If the access is denied though, the promise rejects.
-
-> **Note:** Previously, embedded, cross-origin content could gain access to its entire first-party storage via the Storage Access API, not just cookies. This included access to APIs such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [DOM Cache](/en-US/docs/Web/API/Cache).
-In its latest version the Storage Access API can only be used to gain access to first-party cookies. Firefox adopts this behavior starting from version 109 and keeps (non-cookie) storage permanently partitioned.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}}. If that promise resolves, the requesting origin will have unrestricted access to its first-party cookies. If the access is denied, though, the promise rejects.
 
 This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+> **Note:** The [browser compatibility section](#browser_compatibility) provides an overview about the support staus of the Storage Access API.
 
 ## Syntax
 
