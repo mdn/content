@@ -245,7 +245,7 @@ textBox.addEventListener("keydown", (event) =>
 If the function only takes one parameter, you can also omit the brackets around the parameter:
 
 ```js
-textBox.addEventListener("keydown", (event) =>
+textBox.addEventListener("keydown", event =>
   console.log(`You pressed "${event.key}".`)
 );
 ```
