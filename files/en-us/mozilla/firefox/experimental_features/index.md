@@ -752,6 +752,10 @@ See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
       <td>111</td>
       <td>No</td>
     </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.page-orientation.enabled</code></td>
+    </tr>
   </tbody>
 </table>
 
