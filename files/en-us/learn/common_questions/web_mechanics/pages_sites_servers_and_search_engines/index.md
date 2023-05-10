@@ -37,7 +37,7 @@ We'll cover these terms and technologies in more detail as we explore further, b
 - web page
   - : A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Edge, or Apple Safari. These are also often called just "pages."
 - website
-  - : A collection of web pages which are grouped together and usually connected together in various ways. Often called a "web site" or a "site."
+  - : A collection of web pages which are grouped together and usually connected together in various ways. Often called a "website" or a "site."
 - web server
   - : A computer that hosts a website on the Internet.
 - search engine
@@ -84,7 +84,7 @@ A _website_ is a collection of linked web pages (plus their associated resources
 
 To access a website, type its domain name in your browser address bar, and the browser will display the website's main web page, or _homepage_ (casually referred as "the home"):
 
-![Example of a web site domain name in the browser address bar](web-site.jpg)
+![Example of a website domain name in the browser address bar](web-site.jpg)
 
 Note that it also possible to have a _single-page website_: a site that consists of a single web page which is dynamically updated with new content when needed.
 
