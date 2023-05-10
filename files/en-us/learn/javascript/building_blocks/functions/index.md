@@ -245,9 +245,9 @@ textBox.addEventListener("keydown", (event) =>
 If the function only takes one parameter, you can also omit the brackets around the parameter:
 
 ```js-nolint
-textBox.addEventListener("keydown", event =>
-  console.log(`You pressed "${event.key}".`)
-);
+textBox.addEventListener("keydown", event => {
+  console.log(`You pressed "${event.key}".`);
+});
 ```
 
 Finally, if your function needs to return a value, and contains only one line, you can also omit the `return` statement. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
