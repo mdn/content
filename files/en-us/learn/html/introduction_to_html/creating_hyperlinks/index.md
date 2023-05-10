@@ -70,7 +70,9 @@ If you want to make a heading element a link then wrap it in an anchor (`<a>`) e
 <a href="https://developer.mozilla.org/en-US/">
   <h1>MDN Web Docs</h1>
 </a>
-<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+<p>
+  Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+</p>
 ```
 
 This turns the heading into a link:

@@ -3,6 +3,7 @@
 
 build/
 /files/en-us/_githistory.json
+/tests/front-matter_test_files
 
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:

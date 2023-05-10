@@ -41,7 +41,9 @@ The following code snippet demonstrates how the `style` attribute is translated 
   <mrow>
     <mi>f</mi>
     <mo stretchy="false">(</mo>
-    <mi class="parameter" style="color: red; border-bottom: 1px solid gray">x</mi>
+    <mi class="parameter" style="color: red; border-bottom: 1px solid gray"
+      >x</mi
+    >
     <mo stretchy="false">)</mo>
     <mo>=</mo>
     <mi>x</mi>
