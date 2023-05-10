@@ -9,7 +9,9 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
 
-The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. The setting is used to convey to the browser on the device that the user prefers an interface that removes or replaces motion-based animations that trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can cause vestibular motion triggers.
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. The setting is used to convey to the browser on the device that the user prefers an interface that removes, reduces, or replaces motion-based animations.
+
+Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
 
 ```css
 @media (prefers-reduced-motion) {
@@ -20,9 +22,9 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 ## Syntax
 
 - `no-preference`
-  - : Indicates that a user has made no preference known on the device.
+  - : Indicates that a user has made no preference known on the device. This keyword value evaluates as false.
 - `reduce`
-  - : Indicates that a user has enabled the setting on their device for reduced motion.
+  - : Indicates that a user has enabled the setting on their device for reduced motion. This keyword value evaluates as true.
 
 ## User preferences
 
@@ -43,7 +45,7 @@ For Firefox, the `reduce` request is honoured if:
 
 ## Examples
 
-This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. In this example, if a user has enabled a setting for reduced motion in the accessibility preferences on their device, the `prefers-reduced-motion` media query will detect it and the CSS rule defined below will tone down the [animation](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) on the box to a simple `dissolve` without causing vestibular motion triggers.
+This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
 
 ### Toning down the animation scaling
 
@@ -66,6 +68,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
   .animation {
     animation: dissolve 4s linear infinite both;
     background-color: green;
+    text-decoration: overline;
   }
 }
 ```
@@ -115,7 +118,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 
 {{EmbedLiveSample("Toning down the animation scaling")}}
 
-You can enable the reduce motion setting on [your device](#user_preferences) to view the change in animation scaling. The change in the box color when `pulse` animation switches to `dissolve` or vice versa is used only to convey the change in animation when the reduce motion setting is enabled or disabled.
+You can enable the setting for reducing motion on [your device](#user_preferences) to view the change in animation scaling. This example uses the box color and the line over the text to visually highlight when the animations switch in response to the setting being enabled or disabled.
 
 ## Specifications
 
