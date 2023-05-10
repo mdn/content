@@ -9,7 +9,6 @@ build/
 /files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-/files/en-us/web/svg/**/*.md
 /files/en-us/web/web_components/**/*.md
 
 # The /web/api folder is so large, it has been divided into multiple parts
