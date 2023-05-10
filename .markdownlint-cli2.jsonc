@@ -192,8 +192,8 @@
         {
           "name": "incorrect-spelling",
           "message": "Incorrect spelling",
-          "searchPattern": ["/e-mail/ig", "/(web) (site)/ig"],
-          "replace": ["email", "$1$2"],
+          "searchPattern": ["/e-mail/ig", "/(w)eb site/ig"],
+          "replace": ["email", "$1ebsite"],
           "skipCode": false
         },
         {
