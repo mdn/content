@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.RuleAction
 
 {{AddonSidebar()}}
 
-Details of the action to take if a rule is matched.
+Details of the action to take if a rule is matched, as the `action` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 
 ## Type
 
@@ -16,11 +16,11 @@ Values of this type are objects. They contain these properties:
 - `redirect` {{optional_inline}}
   - : {{WebExtAPIRef("declarativeNetRequest.Redirect")}}. Describes how the redirect should be performed. Only valid for redirect rules.
 - `requestHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The request headers to modify for the request. Only valid if `RuleActionType` is `"modifyHeaders"`.
+  - : {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The request headers to modify for the request. Only valid if `type` is `"modifyHeaders"`.
 - `responseHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The response headers to modify for the request. Only valid if `RuleActionType` is `"modifyHeaders"`.
-- `type` {{optional_inline}}
-  - : A `string`. The type of action to perform. Possible values are `"block"`, `"redirect"`, `"allow"`, `"upgradeScheme"`, `"modifyHeaders"`, and `"allowAllRequests"`. The use of the `"redirect"` and `"modifyHeaders"` actions require [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the request and request initiator. The "block" and "upgradeScheme" actions also require host permissions unless the "declarativeNetRequest" permission is specified. Without these permissions, matching rules are ignored. See [Permissions at declarativeNetRequest](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions). for more information.
+  - : {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The response headers to modify for the request. Only valid if `type` is `"modifyHeaders"`.
+- `type`
+  - : A `string`. The type of action to perform. Possible values are `"block"`, `"redirect"`, `"allow"`, `"upgradeScheme"`, `"modifyHeaders"`, and `"allowAllRequests"`. The use of the `"redirect"` and `"modifyHeaders"` actions require [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the request and request initiator. The "block" and "upgradeScheme" actions also require host permissions unless the "declarativeNetRequest" permission is specified. Without these permissions, matching rules are ignored. See [Permissions at declarativeNetRequest](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions) for more information. More details about the effects of rule actions are provided in [Matching precedents](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents).
 
 ## Browser compatibility
 

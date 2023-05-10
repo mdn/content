@@ -86,7 +86,7 @@ Make things like type-ahead a progressive enhancement: use CSS to display input 
 
 ### Make task initiators appear more interactive
 
-Making a content request on `keydown` rather than waiting for `keyup` can shave 200ms off the perceived load of the content. Adding an interesting but unobtrusive 200ms animation to that `keyup` event can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.
+Making a content request on `keydown` rather than waiting for `keyup` can reduce the perceived load time of the content by 200ms. Adding an interesting but unobtrusive 200ms animation to that `keyup` event can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.
 
 ## Conclusion
 

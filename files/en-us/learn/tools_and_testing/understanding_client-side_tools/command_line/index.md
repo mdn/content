@@ -81,7 +81,7 @@ As with some other programming tools, using the terminal (or command line) on Wi
 
 Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
-Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
+Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
@@ -108,8 +108,8 @@ Enough talk — let's start looking at some terminal commands! Out of the box, h
   - Move around your directory structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
-  - Copy files: `cp`
-  - Move files: `mv`
+  - Copy files or directories: `cp`
+  - Move files or directories: `mv`
   - Delete files or directories: `rm`
 
 - Download files found at specific URLs: `curl`

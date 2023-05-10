@@ -42,8 +42,11 @@ In this article we'll add a counter that displays the number of completed todo i
 
 The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5". While it might be tempting to do something like this:
 
-```html
-<h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
+```vue
+<h2>
+  \{{ToDoItems.filter(item =&gt; item.done).length}} out of
+  \{{ToDoItems.length}} items completed
+</h2>
 ```
 
 It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.
@@ -69,11 +72,14 @@ Now we can add `\{{listSummary}}` directly to our template; we'll add this insid
 
 Add the described `<h2>` and update the `<ul>` inside your `App`'s template as follows:
 
-```html
+```vue
 <h2 id="list-summary">\{{listSummary}}</h2>
 <ul aria-labelledby="list-summary" class="stack-large">
   <li v-for="item in ToDoItems" :key="item.id">
-    <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+    <to-do-item
+      :label="item.label"
+      :done="item.done"
+      :id="item.id"></to-do-item>
   </li>
 </ul>
 ```
@@ -88,9 +94,13 @@ Since we're not relying on a button press to trigger the change, we can attach a
 
 Update the `<input>` element in `ToDoItem.vue` to look like this.
 
-```html
-<input type="checkbox" class="checkbox" :id="id" :checked="isDone"
-       @change="$emit('checkbox-changed')" />
+```vue
+<input
+  type="checkbox"
+  class="checkbox"
+  :id="id"
+  :checked="isDone"
+  @change="$emit('checkbox-changed')" />
 ```
 
 Since all we need to do is emit that the checkbox was checked, we can include the `$emit()` inline.
@@ -106,9 +116,12 @@ updateDoneStatus(toDoId) {
 
 We want to run this method whenever a `ToDoItem` emits a `checkbox-changed` event, and pass in its `item.id` as the parameter. Update your `<to-do-item></to-do-item>` call as follows:
 
-```html
-<to-do-item :label="item.label" :done="item.done" :id="item.id"
-            @checkbox-changed="updateDoneStatus(item.id)">
+```vue
+<to-do-item
+  :label="item.label"
+  :done="item.done"
+  :id="item.id"
+  @checkbox-changed="updateDoneStatus(item.id)">
 </to-do-item>
 ```
 

@@ -41,14 +41,14 @@ Let's look at a simple example:
 ```
 
 ```js
-const buttonA = document.querySelector('#button_A');
-const headingA = document.querySelector('#heading_A');
+const buttonA = document.querySelector("#button_A");
+const headingA = document.querySelector("#heading_A");
 
 buttonA.onclick = () => {
-  const name = prompt('What is your name?');
+  const name = prompt("What is your name?");
   alert(`Hello ${name}, nice to see you!`);
   headingA.textContent = `Welcome ${name}`;
-}
+};
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
@@ -65,13 +65,13 @@ To understand why this is so useful, let's think about how we'd write this examp
 ```
 
 ```js example-bad
-const buttonB = document.querySelector('#button_B');
-const headingB = document.querySelector('#heading_B');
+const buttonB = document.querySelector("#button_B");
+const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-    alert(`Hello ${prompt('What is your name?')}, nice to see you!`);
-    headingB.textContent = `Welcome ${prompt('What is your name?')}`;
-}
+  alert(`Hello ${prompt("What is your name?")}, nice to see you!`);
+  headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+};
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
@@ -119,7 +119,7 @@ scoobyDoo;
 Once you've declared a variable, you can initialize it with a value. You do this by typing the variable name, followed by an equals sign (`=`), followed by the value you want to give it. For example:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -133,7 +133,7 @@ myAge;
 You can declare and initialize a variable at the same time, like this:
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.
@@ -154,7 +154,7 @@ A couple of simple differences are explained below. We won't go into all the dif
 For a start, if you write a multiline JavaScript program that declares and initializes a variable, you can actually declare a variable with `var` after you initialize it and it will still work. For example:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -174,22 +174,22 @@ Hoisting no longer works with `let`. If we changed `var` to `let` in the above e
 Secondly, when you use `var`, you can declare the same variable as many times as you like, but with `let` you can't. The following would work:
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 But the following would throw an error on the second line:
 
 ```js example-bad
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 You'd have to do this instead:
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
@@ -213,7 +213,7 @@ For these reasons and more, we recommend that you use `let` in your code, rather
 Once a variable has been initialized with a value, you can change (or update) that value by giving it a different value. Try entering the following lines into your console:
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -278,7 +278,7 @@ let myAge = 17;
 Strings are pieces of text. When you give a variable a string value, you need to wrap it in single or double quote marks; otherwise, JavaScript tries to interpret it as another variable name.
 
 ```js
-let dolphinGoodbye = 'So long and thanks for all the fish';
+let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### Booleans
@@ -302,7 +302,7 @@ This is using the "less than" operator (`<`) to test whether 6 is less than 3. A
 An array is a single object that contains multiple values enclosed in square brackets and separated by commas. Try entering the following lines into your console:
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNameArray = ["Chris", "Bob", "Jim"];
 let myNumberArray = [10, 15, 40];
 ```
 
@@ -324,13 +324,13 @@ In programming, an object is a structure of code that models a real-life object.
 Try entering the following line into your console:
 
 ```js
-let dog = { name : 'Spot', breed : 'Dalmatian' };
+let dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 To retrieve the information stored in the object, you can use the following syntax:
 
 ```js
-dog.name
+dog.name;
 ```
 
 We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
@@ -342,13 +342,13 @@ JavaScript is a "dynamically typed language", which means that, unlike some othe
 For example, if you declare a variable and give it a value enclosed in quotes, the browser treats the variable as a string:
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 Even if the value enclosed in quotes is just digits, it is still a string — not a number — so be careful:
 
 ```js
-let myNumber = '500'; // oops, this is still a string
+let myNumber = "500"; // oops, this is still a string
 typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber;
@@ -392,15 +392,15 @@ count = 2;
 Note that although a constant in JavaScript must always name the same value, you can change the content of the value that it names. This isn't a useful distinction for simple types like numbers or booleans, but consider an object:
 
 ```js
-const bird = { species : 'Kestrel'};
-console.log(bird.species);  // "Kestrel"
+const bird = { species: "Kestrel" };
+console.log(bird.species); // "Kestrel"
 ```
 
 You can update, add, or remove properties of an object declared using `const`, because even though the content of the object has changed, the constant is still pointing to the same object:
 
 ```js
-bird.species = 'Striated Caracara';
-console.log(bird.species);  // "Striated Caracara"
+bird.species = "Striated Caracara";
+console.log(bird.species); // "Striated Caracara"
 ```
 
 ## When to use const and when to use let

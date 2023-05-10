@@ -9,7 +9,7 @@ browser-compat: svg.elements.font-face.v-ideographic
 
 {{SVGRef}}{{Deprecated_Header}}
 
-The **`v-ideographic`** attribute indicates the alignment coordinate for {{Glossary("glyphs")}} to achieve ideographic {{Glossary("baseline")}} alignment for vertically oriented glyph layouts. The value is an offset in the font coordinate system relative to the glyph-specific {{SVGAttr("vert-origin-x")}} attribute.
+The **`v-ideographic`** attribute indicates the alignment coordinate for {{Glossary("glyphs")}} to achieve ideographic {{Glossary("baseline/typography", "baseline")}} alignment for vertically oriented glyph layouts. The value is an offset in the font coordinate system relative to the glyph-specific {{SVGAttr("vert-origin-x")}} attribute.
 
 You can use this attribute with the following SVG elements:
 

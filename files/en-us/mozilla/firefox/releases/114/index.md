@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/114
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [June 06, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 06, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 

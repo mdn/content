@@ -58,11 +58,11 @@ To get the footer working, we need to implement the following three areas of fun
 2. Next, go and find the newly-created `todomvc/app/components/footer.js` file and update it to the following:
 
    ```js
-   import Component from '@glimmer/component';
-   import { inject as service } from '@ember/service';
+   import Component from "@glimmer/component";
+   import { inject as service } from "@ember/service";
 
    export default class FooterComponent extends Component {
-     @service('todo-data') todos;
+     @service("todo-data") todos;
    }
    ```
 
@@ -92,25 +92,25 @@ To get the footer working, we need to implement the following three areas of fun
 5. Finally, we need to make use of this new functionality in our `footer.hbs` template. Go to this file now.
 6. First of all, replace this line:
 
-   ```html
+   ```hbs
    <strong>0</strong> todos left
    ```
 
    With this, which populates the incomplete number with the length of the `incomplete` array:
 
-   ```html
+   ```hbs
    <strong>\{{this.todos.incomplete.length}}</strong> todos left
    ```
 
 7. Next, replace this:
 
-   ```html
+   ```hbs
    <button type="button" class="clear-completed">
    ```
 
    With this:
 
-   ```html
+   ```hbs
    <button type="button" class="clear-completed" \{{on 'click' this.todos.clearCompleted}}>
    ```
 
@@ -124,27 +124,23 @@ The above is fine, but we have another small issue to contend with. The "todos l
 To fix this, we need to update this part of the template to include some conditional rendering. In Ember, you can conditionally render parts of the template using [conditional content](https://guides.emberjs.com/v3.18.0/components/conditional-content/); a simple block example looks something like this:
 
 ```hbs
-\{{#if this.thingIsTrue}}
-  Content for the block form of "if"
+\{{#if this.thingIsTrue}} Content for the block form of "if"
 \{{/if}}
 ```
 
 So let's try replacing this part of `footer.hbs`:
 
-```html
+```hbs
 <strong>\{{this.todos.incomplete.length}}</strong> todos left
 ```
 
 with the following:
 
-```html
+```hbs
 <strong>\{{this.todos.incomplete.length}}</strong>
-  \{{#if this.todos.incomplete.length === 1}}
-    todo
-  \{{else}}
-    todos
-  \{{/if}}
-    left
+\{{#if this.todos.incomplete.length === 1}} todo
+\{{else}} todos
+\{{/if}} left
 ```
 
 This will give us an error, however — in Ember, these simple if statements can currently only test for a truthy/falsy value, not a more complex expression such as a comparison. To fix this, we'll have to add a getter to `todo-data.js` to return the result of `this.incomplete.length === 1`, and then call that in our template.
@@ -159,14 +155,9 @@ get todoCountIsOne() {
 
 Then go back over to `footer.hbs` and update the previous template section we edited to the following:
 
-```html
+```hbs
 <strong>\{{this.todos.incomplete.length}}</strong>
-  \{{#if this.todos.todoCountIsOne}}
-    todo
-  \{{else}}
-    todos
-  \{{/if}}
-    left
+\{{#if this.todos.todoCountIsOne}}todo\{{else}}todos\{{/if}} left
 ```
 
 Now save and test, and you'll see the correct pluralization used when you only have one todo item present!
@@ -192,11 +183,11 @@ As with the other components, we need a class to access the service.
 2. Now go to the newly-created `todomvc/app/components/todo.js` file and update the contents to look like so, to give the todo component access to the service:
 
    ```js
-   import Component from '@glimmer/component';
-   import { inject as service } from '@ember/service';
+   import Component from "@glimmer/component";
+   import { inject as service } from "@ember/service";
 
    export default class TodoComponent extends Component {
-     @service('todo-data') todos;
+     @service("todo-data") todos;
    }
    ```
 
@@ -215,19 +206,19 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
 1. In `todo.hbs`, first find the following line:
 
-   ```html
+   ```hbs
    <li>
    ```
 
    And replace it with this — you'll notice that here we're using some more conditional content to add the class value if appropriate:
 
-   ```html
+   ```hbs
    <li class="\{{ if @todo.isCompleted 'completed' }}">
    ```
 
 2. Next, find the following line:
 
-   ```html
+   ```hbs-nolint
    <input
      aria-label="Toggle the completion of this todo"
      class="toggle"
@@ -237,7 +228,7 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
    And replace it with this:
 
-   ```html
+   ```hbs
    <input
      class="toggle"
      type="checkbox"
