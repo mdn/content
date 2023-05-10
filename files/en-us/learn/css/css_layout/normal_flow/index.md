@@ -39,7 +39,7 @@ Before digging deeper into different layout methods, it's worth revisiting some 
 
 The process begins as the boxes of individual elements are laid out in such a way that any padding, border, or margin they happen to have is added to their content. This is what we call the **box model**.
 
-By default, a [block-level element](/en-US/docs/Glossary/Block-level_content)'s content fills the available inline space of the parent element containing it, growing along the block dimension to accommodate its content. The size of [inline-level elements](/en-US/docs/Glossary/Inline-level_content) is just the size of their content. You can set {{cssxref("width")}} or {{cssxref("height")}} on some elements that have a default {{cssxref("display")}} property value of `inline`, like {{HTMLElement("img")}}, but `display` value will still remain `inline`. 
+By default, a [block-level element](/en-US/docs/Glossary/Block-level_content)'s content fills the available inline space of the parent element containing it, growing along the block dimension to accommodate its content. The size of [inline-level elements](/en-US/docs/Glossary/Inline-level_content) is just the size of their content. You can set {{cssxref("width")}} or {{cssxref("height")}} on some elements that have a default {{cssxref("display")}} property value of `inline`, like {{HTMLElement("img")}}, but `display` value will still remain `inline`.
 
 If you want to control the `display` property of an inline-level element in this manner, use CSS to set it to behave like a block-level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
