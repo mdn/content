@@ -18,7 +18,7 @@ In inline layout, a mixed stream of text, [replaced elements](/en-US/docs/Web/CS
 <p>
   This span is an <span class="highlight">inline-level element</span>; its
   background has been colored to display both the beginning and end of the
-  inline element's influence. Input elements, like <input type="radio" /> and
+  element's influence. Input elements, like <input type="radio" /> and
   <input type="checkbox" />, are also inline-level content.
 </p>
 ```
