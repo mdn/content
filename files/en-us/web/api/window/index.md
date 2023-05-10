@@ -138,8 +138,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- `Window.content` and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
