@@ -9,7 +9,7 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
 
-The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system either minimize the amount of non-essential motion used or remove animations altogether, depending on available user preference setting.
 
 ```css
 @media (prefers-reduced-motion) {
@@ -22,7 +22,7 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 - `no-preference`
   - : Indicates that the user has made no preference known to the system.
 - `reduce`
-  - : Indicates that user has notified the system that they prefer an interface that removes or replaces the types of motion-based animation that trigger discomfort for those with vestibular motion disorders.
+  - : Indicates that the user has notified the system that they prefer an interface that removes or replaces the types of motion-based animation.
 
 ## User preferences
 
@@ -43,7 +43,7 @@ For Firefox, the `reduce` request is honoured if:
 
 ## Examples
 
-This example has a scaling animation by default. If Reduce Motion is enabled in your accessibility preferences, the animation is toned down to a simple dissolve without vestibular motion triggers.
+This example has a scaling animation by default. If Reduce Motion or Remove Animations is enabled in your accessibility preferences, the animation is toned down to a simple dissolve without vestibular motion triggers.
 
 ### HTML
 

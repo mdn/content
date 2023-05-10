@@ -7,11 +7,11 @@ browser-compat: webextensions.api.declarativeNetRequest
 
 {{AddonSidebar}}
 
-This API enables extensions to obtain information about and modify declarative rules that block or modify network requests. The use of declarative rules means that extensions don't intercept and view the content of requests, providing more privacy.
+This API enables extensions to specify conditions and actions that describe how network requests should be handled. These declarative rules enable the browser to evaluate and modify network requests without notifying extensions about individual network requests.
 
 ## Permissions
 
-To use this API, an extension must request the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, an extension must request the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 The `"declarativeNetRequest"` permission allows extensions to block and upgrade requests without any [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Host permissions are required if the extension wants to redirect requests or modify headers on requests or when the `"declarativeNetRequestWithHostAccess"` permission is used instead of the `"declarativeNetRequest"` permission. To act on requests in these cases, host permissions are required for the request URL. For all requests, except for navigation requests (i.e., resource type `main_frame` and `sub_frame`), host permissions are also required for the request's initiator. The initiator of a request is usually the document or worker that triggered the request.
 
@@ -48,7 +48,7 @@ This is an example rule that blocks all script requests originating from `"foo.c
   "condition" : 
   {
     "urlFilter" : "abc",
-    "domains" : ["foo.com"],
+    "initiatorDomains" : ["foo.com"],
     "resourceTypes" : ["script"]
   }
 }
@@ -104,7 +104,7 @@ Rules are organized into rulesets:
 An extension can:
 
 - specify static rulesets as part of the [`"declarative_net_request"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}}.
-- enable static rulesets up to at least the value of {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}}, and the number of enabled static rulesets must not exceed the value of [{{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}. In addition, the number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value and should instead use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
+- enable static rulesets up to at least the value of {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}}, and the number of enabled static rulesets must not exceed the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}. In addition, the number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value and should instead use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
 
 ### Dynamic and session-scoped rules
 
@@ -141,7 +141,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 ## Testing
 
-{{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getmatchedrules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
+{{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}, {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getMatchedRules")}}, and {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} are available to assist with testing rules and rulesets. These APIs require the `"declarativeNetRequestFeedback"` [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). In addition:
 
 - in Chrome, these APIs are only available to unpacked extensions.
 - in Firefox, these APIs are only available after setting the `extensions.dnr.feedback` preference to `true`. Set this preference using `about:config` or the [`--pref` flag of the `web-ext` CLI tool](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#pref).

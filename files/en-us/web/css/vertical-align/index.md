@@ -13,10 +13,10 @@ The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical align
 
 The vertical-align property can be used in two contexts:
 
-- To vertically align an inline element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
+- To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
 - To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
 
-Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
+Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Glossary/Block-level_content).
 
 ## Syntax
 
