@@ -213,7 +213,7 @@ extensions: {
 
 The available `credentialProtectionPolicy` values are as follows:
 
-- `"userVerificationOptional"`: User verification is optional. The equivalent `credProtect` value sent to the authenticator for processing is `0x01`.
+- `"userVerificationOptional"`: User verification is optional. The equivalent `credProtect` value sent to the authenticator for processing is `0x01`. {{Experimental_Inline}}
 - `"userVerificationOptionalWithCredentialIDList"`: User verification is optional only if the credential is discoverable (i.e., it is client-side discoverable). The equivalent `credProtect` value sent to the authenticator for processing is `0x02`.
 - `"userVerificationRequired"`: User verification is always required. The equivalent `credProtect` value sent to the authenticator for processing is `0x03`.
 
