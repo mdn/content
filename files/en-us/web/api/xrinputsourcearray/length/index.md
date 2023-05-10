@@ -32,7 +32,7 @@ if (sources.length === 0) {
   showAlertDialog(
     "You need to have at least one controller to play Super Duper Shark Jump Fest 9000.",
     [
-      { label: "Shop Now", url: "https://www.amazon.com/s?k=vr+controllers" },
+      { label: "Shop Now", url: "https://www.example.com/shop/controllers" },
       { label: "Quit", handler: quitGame },
     ]
   );
