@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-site documents to verify whether they have access to their first-party cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
 
 ## Usage notes
 
-The Storage Access API is designed to allow embedded content to request access to first-party cookies — most modern browsers block such access by default to protect user privacy. Since embedded content won't know what a browser's behavior is going to be in this regard, it's best to always check whether the embedded {{htmlelement("iframe")}} has storage access before attempting to read or write a cookie. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookies are blocked.
+The Storage Access API is designed to allow embedded content to request access to cookies — most modern browsers block such access by default to protect user privacy. Since embedded content won't know what a browser's behavior is going to be in this regard, it's best to always check whether the embedded {{htmlelement("iframe")}} has storage access before attempting to read or write a cookie. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookie access is blocked.
 
-In the example below, we show how an embedded cross-site {{htmlelement("iframe")}} can access a user's cookies under a storage access policy that blocks third-party cookies.
+In the example below, we show how an embedded cross-site {{htmlelement("iframe")}} can access a user's cookies under a storage access policy that blocks third-party cookie access.
 
 ## Allowing a sandboxed \<iframe> to use the API
 
@@ -30,47 +30,46 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 
 Now on to the code executed inside the embedded document. In this code:
 
-1. We first use feature detection (`if (document.hasStorageAccess === null) {}`) to check whether the API is supported. If not, we run our code that uses first-party cookie access anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
-2. If the API is supported, we call {{domxref("Permissions.query()")}} to check whether permission to use the Storage Access API has already been granted. If so, we can just call `requestStorageAccess()` without a user interaction to opt in to access to first-party cookies and it will resolve automatically, saving the user some time.
-3. If storage access has not been granted, we call {{domxref("Document.hasStorageAccess()")}}.
-4. If that call returns `true`, it means that the embedded code already has access, so we can run our code that uses first-party cookie access right away.
-5. If that call returns `false`, we can then call {{domxref("Document.requestStorageAccess()")}} in a user interaction, returning the result so that then we can chain it onto the previous promise call. In the final `then`, we'll have first-party cookie access.
+1. We first use feature detection (`if (document.hasStorageAccess === null) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
+2. If the API is supported, we call `document.hasStorageAccess()`.
+   3. If that call returns `true`, it means this {{domxref("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
+   4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access cookies has already been granted (i.e. to another same-site embed).
+      5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
+      6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after a user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
+      7. If the permission state is `"denied"`, then the user has denied our requests to access cookies, so our code cannot make use of them.
 
 ```js
-function doThingsWithFirstPartyStorageAccess() {
-  // Let's access an item from the first-party cookie jar
+function doThingsWithCookies() {
   document.cookie = "foo=bar"; // set a cookie
 }
 
 if (document.hasStorageAccess === null) {
   // This browser doesn't support the Storage Access API
   // so let's just hope we have access!
-  doThingsWithFirstPartyStorageAccess();
+  doThingsWithCookies();
 } else {
-  // First use permissions.query() to check whether storage access
-  // has already been granted
-  navigator.permissions.query({ name: "storage-access" }).then((result) => {
-    if (result.state === "granted") {
-      // If so, you can just call requestStorageAccess() without a user interaction,
-      // and it will resolve automatically.
-      document
-        .requestStorageAccess()
-        .then(() => {
-          doThingsWithFirstPartyStorageAccess();
-        })
+  document.hasStorageAccess().then((hasAccess) => {
+    if (hasAccess) {
+      // We have access to cookies, so let's go
+      doThingsWithCookies();
     } else {
-      document.hasStorageAccess().then((hasAccess) => {
-        if (hasAccess) {
-          // We already have access, so let's do things right away!
-          doThingsWithFirstPartyStorageAccess();
-        } else {
-          // As we don't have access, we need to request it. This request has
-          // to happen within an event handler for a user interaction (e.g., clicking)
+      // Check whether cookie access has been granted to another same-site embed
+      navigator.permissions.query({ name: "storage-access" }).then((result) => {
+        if (result.state === "granted") {
+          // If so, you can just call requestStorageAccess() without a user interaction,
+          // and it will resolve automatically.
+          document
+            .requestStorageAccess()
+            .then(() => {
+              doThingsWithCookies();
+            })
+        } else if (result.state === "prompt") {
+          // Need to call requestStorageAccess() after a user interaction
           btn.addEventListener("click", () => {
             document
               .requestStorageAccess()
               .then(() => {
-                doThingsWithFirstPartyStorageAccess();
+                doThingsWithCookies();
               })
               .catch((err) => {
                 // If there is an error obtaining storage access.
@@ -78,6 +77,8 @@ if (document.hasStorageAccess === null) {
                                Please sign in.`);
               });
           });
+        } else if (result.state === "denied") {
+          // User has denied cookie access, so we'll need to do something else
         }
       });
     }
@@ -85,4 +86,4 @@ if (document.hasStorageAccess === null) {
 }
 ```
 
-> **Note:** `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}). They therefore need to be run inside some kind of user gesture-based event handler, as shown above
+> **Note:** `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or if permission was already granted previously. If permission was not previously granted, they need to be run inside some kind of user gesture-based event handler, as shown above.
