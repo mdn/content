@@ -9,8 +9,3 @@ build/
 /files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-
-# The /web/api folder is so large, it has been divided into multiple parts
-/files/en-us/web/api/**/*.md
-# Alphabetically 'allow' this range incrementally
-!/files/en-us/web/api/[a-w]*/**/*.md
