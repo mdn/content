@@ -212,10 +212,6 @@ The following is an example of the _wrong_ way to do nesting:
 
 The **tags have to open and close in a way that they are inside or outside one another**. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
 
-### Element content categories
-
-Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more [**Content categories**](/en-US/docs/Web/HTML/Content_categories) — these categories group elements that share common characteristics. This is a loose grouping; it doesn't create a relationship among elements of these categories. These groupings help define and describe the categories' shared behavior and associated rules, especially when you encounter their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
-
 ### Void elements
 
 Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called {{glossary("void element", "void elements")}}. For example, the {{htmlelement("img")}} element embeds an image file onto a page:
