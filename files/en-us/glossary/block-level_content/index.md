@@ -11,7 +11,7 @@ A block-level element always starts on a new line. In horizontal writing modes, 
 
 > **Note:** The above behaviour of block layout changes if the containing block's [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) is set to value other than [the default value](/en-US/docs/Web/CSS/writing-mode#formal_definition).
 
-> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. As a presentational characteristic, this is now specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline" elements. As a presentational characteristic, this is now specified by CSS.
 
 ## Examples
 

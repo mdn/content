@@ -10,7 +10,7 @@ In inline layout, a mixed stream of text, [replaced elements](/en-US/docs/Web/CS
 
 ![inline layout](inline_layout.png)
 
-> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline-level" elements. As a presentational characteristic, this is now specified by CSS.
+> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline" elements. As a presentational characteristic, this is now specified by CSS.
 
 ## Examples
 
