@@ -2,8 +2,7 @@
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 page-type: web-api-overview
-browser-compat:
-  - api.PublicKeyCredential
+browser-compat: api.PublicKeyCredential
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
