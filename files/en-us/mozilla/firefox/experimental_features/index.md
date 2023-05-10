@@ -740,7 +740,7 @@ See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
     <tr>
       <th>Developer Edition</th>
       <td>111</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
