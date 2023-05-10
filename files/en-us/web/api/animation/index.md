@@ -35,7 +35,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.ready")}} {{ReadOnlyInline}}
   - : Returns the current ready Promise for this animation.
 - {{domxref("Animation.replaceState")}} {{ReadOnlyInline}}
-  - : Returns the replace state of the animation. This will be `removed` if the animation has been replaced and removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
+  - : Indicates whether the animation is active, has been automatically removed after being replaced by another animation, or has been explicitly persisted by a call to {{domxref("Animation.persist()")}}.
 - {{domxref("Animation.startTime")}}
   - : Gets or sets the scheduled time when an animation's playback should begin.
 - {{domxref("Animation.timeline")}}
@@ -51,8 +51,8 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Seeks either end of an animation, depending on whether the animation is playing or reversing.
 - {{domxref("Animation.pause()")}}
   - : Suspends playing of an animation.
-- {{domxref("animation.persist()")}}
-  - : Explicitly persists an animation, preventing it from being [automatically removed](#automatically_removing_filling_animations) when another animation replaces it.
+- {{domxref("Animation.persist()")}}
+  - : Explicitly persists an animation, preventing it from being [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) when another animation replaces it.
 - {{domxref("Animation.play()")}}
   - : Starts or resumes playing of an animation, or begins the animation again if it previously finished.
 - {{domxref("Animation.reverse()")}}
@@ -68,26 +68,6 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
   - : Fires when the animation is [automatically removed](#automatically_removing_filling_animations) by the browser.
-
-## Automatically removing filling animations
-
-It is possible to trigger a large number of animations on the same element. If they are indefinite (i.e., forwards-filling), this can result in a huge animations list, which could create a memory leak. For this reason, browsers automatically remove filling animations after they are replaced by newer animations, unless the developer explicitly specifies to keep them.
-
-Animations are removed when all of the following are true:
-
-- The animation is filling (its `fill` is `forwards` if it is playing forwards, `backwards` if it is playing backwards, or `both`).
-- The animation is finished. (Note that because of the `fill` it will still be in effect.)
-- The animation's timeline is monotonically increasing. (This is always true for {{domxref("DocumentTimeline")}}; other timelines such as {{cssxref("scroll-timeline")}} can run backwards.)
-- The animation is not being controlled by declarative markup such as CSS.
-- Every styling effect of the animation's {{domxref("AnimationEffect")}} is being overridden by another animation that also satisfies all the conditions above. (Typically, when two animations would set the same style property of the same element, the one created last overrides the other.)
-
-The first four conditions ensure that, without intervention by JavaScript code, the animation's effect will never change or end. The last condition ensures that the animation will never actually affect the style of any element: it has been entirely replaced.
-
-The related JavaScript features are:
-
-- The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into the `removed` replace state).
-- {{domxref("animation.persist()")}} for when you explicitly want an animation to be retained.
-- {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `removed` if the animation has been removed, or `persisted` if {{domxref("Animation.persist", "persist()")}} has been invoked.
 
 ## Accessibility concerns
 
