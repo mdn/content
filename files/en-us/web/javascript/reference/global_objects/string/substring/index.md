@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.substring
 
 {{JSRef}}
 
-The **`substring()`** method returns the part of the `string` from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+The **`substring()`** method returns the part of the `string` from the start index up to end excluding the end index, or to the end of the string if no end index is supplied.
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 
