@@ -49,10 +49,9 @@ This example uses a plain `<dfn>` element to identify the location of a term wit
 
 ```html
 <p>
-  The <strong>HTML Definition element</strong> (<strong
-    ><dfn>&lt;dfn&gt;</dfn></strong
-  >) is used to indicate the term being defined within the context of a
-  definition phrase or sentence.
+  The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used
+  to indicate the term being defined within the context of a definition phrase
+  or sentence.
 </p>
 ```
 
@@ -68,29 +67,18 @@ To add links to the definitions, you create the link the same way you always do,
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  The <strong>HTML Definition element</strong> (<strong
-    ><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong
-  >) is used to indicate the term being defined within the context of a
-  definition phrase or sentence.
+  The
+  <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong>
+  is used to indicate the term being defined within the context of a definition
+  phrase or sentence.
 </p>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
   voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
   Scrupulum, inquam, abeunti;
-</p>
-
-<p>
-  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
-  Quid de Pythagora? In schola desinis.
-</p>
-
-<p>
-  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
-  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
-  nihil remittunt. Quid enim possumus hoc agere divinius?
 </p>
 
 <p>
@@ -138,25 +126,18 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >, but no {{HTMLElement("dfn")}} element must be a descendant.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
+        but no {{HTMLElement("dfn")}} element must be a descendant.
       </td>
     </tr>
     <tr>
@@ -167,9 +148,7 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>

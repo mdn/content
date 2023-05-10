@@ -66,8 +66,8 @@ This example opens a modal dialog when the "Show the dialog" button is activated
 <dialog id="favDialog">
   <form>
     <p>
-      <label
-        >Favorite animal:
+      <label>
+        Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -136,25 +136,17 @@ It is important to provide a closing mechanism within every `dialog` element. Th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >sectioning root</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>
       </td>
     </tr>
     <tr>
@@ -165,17 +157,13 @@ It is important to provide a closing mechanism within every `dialog` element. Th
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"
-          >dialog</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
       </td>
     </tr>
     <tr>
