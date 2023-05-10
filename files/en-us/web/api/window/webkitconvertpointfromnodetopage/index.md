@@ -8,9 +8,7 @@ status:
 browser-compat: api.Window.convertPointFromNodeToPage
 ---
 
-{{APIRef}}
-
-{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
 Given a {{domxref("WebKitPoint")}} specified in a particular DOM {{domxref("Node")}}'s
 coordinate system, the {{domxref("Window")}} method

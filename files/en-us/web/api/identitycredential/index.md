@@ -11,6 +11,8 @@ browser-compat: api.IdentityCredential
 
 The **`IdentityCredential`** interface of the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) represents a user identity credential arising from a successful federated sign-in.
 
+A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an `IdentityCredential` instance.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -40,7 +42,11 @@ async function signIn() {
 }
 ```
 
-A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an `IdentityCredential` instance.
+If successful, this call will fulfill with an `IdentityCredential` instance. From this, you could return the {{domxref("IdentityCredential.token")}} value, for example:
+
+```js
+console.log(identityCredential.token);
+```
 
 Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
 

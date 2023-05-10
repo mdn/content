@@ -72,7 +72,7 @@ function getCircularReplacer() {
     ancestors.push(value);
     return value;
   };
-};
+}
 
 JSON.stringify(circularReference, getCircularReplacer());
 // {"otherData":123,"myself":"[Circular]"}

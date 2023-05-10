@@ -36,13 +36,14 @@ A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.
 ### Creating an anchor
 
 ```js
-frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
-
-  // Do stuff with the anchor (assign objects that will be relative to this anchor)
-
-}, (error) => {
-  console.error(`Could not create anchor: ${error}`);
-});
+frame.createAnchor(anchorPose, referenceSpace).then(
+  (anchor) => {
+    // Do stuff with the anchor (assign objects that will be relative to this anchor)
+  },
+  (error) => {
+    console.error(`Could not create anchor: ${error}`);
+  }
+);
 ```
 
 ## Specifications

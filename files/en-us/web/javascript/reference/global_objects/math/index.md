@@ -23,14 +23,14 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
 
 - {{jsxref("Math.E")}}
   - : Euler's number and the base of natural logarithms; approximately `2.718`.
-- {{jsxref("Math.LN2")}}
-  - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LN10")}}
   - : Natural logarithm of `10`; approximately `2.303`.
-- {{jsxref("Math.LOG2E")}}
-  - : Base-2 logarithm of `E`; approximately `1.443`.
+- {{jsxref("Math.LN2")}}
+  - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LOG10E")}}
   - : Base-10 logarithm of `E`; approximately `0.434`.
+- {{jsxref("Math.LOG2E")}}
+  - : Base-2 logarithm of `E`; approximately `1.443`.
 - {{jsxref("Math.PI")}}
   - : Ratio of a circle's circumference to its diameter; approximately `3.14159`.
 - {{jsxref("Math.SQRT1_2")}}
@@ -54,10 +54,10 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
   - : Returns the hyperbolic arcsine of a number.
 - {{jsxref("Math.atan()")}}
   - : Returns the arctangent of `x`.
-- {{jsxref("Math.atanh()")}}
-  - : Returns the hyperbolic arctangent of `x`.
 - {{jsxref("Math.atan2()")}}
   - : Returns the arctangent of the quotient of its arguments.
+- {{jsxref("Math.atanh()")}}
+  - : Returns the hyperbolic arctangent of `x`.
 - {{jsxref("Math.cbrt()")}}
   - : Returns the cube root of `x`.
 - {{jsxref("Math.ceil()")}}
@@ -82,10 +82,10 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
   - : Returns the result of the 32-bit integer multiplication of `x` and `y`.
 - {{jsxref("Math.log()")}}
   - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of `x`.
-- {{jsxref("Math.log1p()")}}
-  - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Math.log10()")}}
   - : Returns the base-10 logarithm of `x`.
+- {{jsxref("Math.log1p()")}}
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Math.log2()")}}
   - : Returns the base-2 logarithm of `x`.
 - {{jsxref("Math.max()")}}

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setUTCFullYear
 
 {{JSRef}}
 
-The **`setUTCFullYear()`** method of a {{jsxref("Date")}} instance changes the year for this date according to universal time.
+The **`setUTCFullYear()`** method of {{jsxref("Date")}} instances changes the year for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
 

@@ -22,13 +22,19 @@ color(display-p3 1 0.5 0 / .5);
 
 ### Values
 
-- Functional notation: `color( [ [<ident> | <dashed-ident>]? [ <number-percentage>+ ] [ / <alpha-value> ]? ] )`
+Functional notation: `color(colorspace p1 p2 p3[ / A])`
 
-  - : `[<ident> | <dashed-ident>]` is an optional {{cssxref("ident")}} or {{cssxref("dashed-ident")}} denoting the colorspace. If this is an `<ident>` it denotes one of the predefined colorspaces (such as display-p3); if it is a `<dashed-ident>` it denotes a custom colorspace, defined by a [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
+- `colorspace`
 
-    `[ <number-percentage>+ ]` is one or more {{cssxref("number")}} or {{cssxref("percentage")}} values providing the parameter values that the colorspace takes.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, and `xyz-d65`.
 
-    `/ <alpha-value>` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- `p1`, `p2`, `p3`
+
+  - : {{CSSXref("number")}} or {{CSSXref("percentage")}} values providing the parameter values that the color space takes.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 
@@ -40,6 +46,8 @@ color(display-p3 1 0.5 0 / .5);
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `color()` function.
 
+#### HTML
+
 ```html
 <div data-color="red-a98-rgb"></div>
 <div data-color="red-prophoto-rgb"></div>
@@ -48,6 +56,8 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="blue-rec2020"></div>
 <div data-color="blue-srgb"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -81,17 +91,23 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Using_predefined_colorspaces_with_color')}}
 
 ### Using xyz colorspaces with color()
 
 The following example shows how to use `xyz` colorspaces to specify a color.
 
+#### HTML
+
 ```html
 <div data-color="red"></div>
 <div data-color="green"></div>
 <div data-color="blue"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -118,17 +134,23 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Using_xyz_colorspaces_with_color')}}
 
 ### Using color-gamut media queries with color()
 
 This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular colorspace and use that colorspace to specify a color.
 
+#### HTML
+
 ```html
 <div></div>
 <div></div>
 <div></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -160,6 +182,8 @@ div {
   }
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using_color-gamut_media_queries_with_color')}}
 

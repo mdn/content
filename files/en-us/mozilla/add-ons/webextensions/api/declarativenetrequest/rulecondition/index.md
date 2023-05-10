@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.RuleCondition
 
 {{AddonSidebar()}}
 
-Details of the condition that determines whether a rule matches a request.
+Details of the condition that determines whether a rule matches a request, as the `condition` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 
 ## Type
 
@@ -48,13 +48,14 @@ Values of this type are objects. They contain these properties:
   - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
 - `urlFilter` {{optional_inline}}
   - : A `string`. The pattern that is matched against the network request URL. Supported constructs:
-    - '*' : Wildcard: Matches any number of characters.
-    - '|' : Left or right anchor: If used at either end of the pattern, specifies the beginning or end of the URL respectively.
-    - '||' : Domain name anchor: If used at the beginning of the pattern, specifies the start of a (sub-)domain of the URL.
-    - '^' : Separator character: This matches anything except a letter, a digit. or one of _, -, ., or %. The last `^` may also match the end of the URL instead of a separator character.
+    - `*` : Wildcard: Matches any number of characters.
+    - `|` : Left or right anchor: If used at either end of the pattern, specifies the beginning or end of the URL respectively.
+    - `||` : Domain name anchor: If used at the beginning of the pattern, specifies the start of a (sub-)domain of the URL.
+    - `^` : Separator character: This matches anything except a letter, a digit, or one of `_`, `-`, `.`, or `%`. The last `^` may also match the end of the URL instead of a separator character.
+
     `urlFilter` is composed of the following parts: (optional left/domain name anchor) + pattern + (optional right anchor).
     If omitted, all URLs are matched. An empty string is not allowed.
-    A pattern beginning with ||* is not allowed. Use * instead.
+    A pattern beginning with `||*` is not allowed. Use `*` instead.
     Note that:
     - Only one of `urlFilter` or [`regexFilter`](#regexfilter) can be specified.
     - The `urlFilter` must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ASCII characters are URL encoded in utf-8. For example, when the request URL is `http://abc.рф?q=ф`, the `urlFilter` is matched against the URL `http://abc.xn--p1ai/?q=%D1%84`.
