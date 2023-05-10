@@ -68,8 +68,8 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : Elements in HTML have **attributes**. These are additional values that configure the elements or adjust their behavior in various ways.
 - [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
   - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
-- [Inline elements](/en-US/docs/Glossary/Inline-level_content) and [block-level elements](/en-US/docs/Glossary/Block-level_content)
-  - : HTML elements are usually "inline" or "block-level" elements. An inline element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block".
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content) and [block-level elements](/en-US/docs/Glossary/Block-level_content)
+  - : HTML elements are usually "inline" or "block-level" elements. An inline-level element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block".
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 - [HTML content categories](/en-US/docs/Web/HTML/Content_categories)
