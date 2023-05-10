@@ -26,10 +26,10 @@ You can create popovers in two different ways:
 
 - Declaratively, via a set of new HTML attributes. A simple popover with a toggle button can be created using the following code:
 
-   ```html
-   <button popovertarget="mypopover">Toggle the popover</button>
-   <div id="mypopover" popover>Popover content</div>
-   ```
+  ```html
+  <button popovertarget="mypopover">Toggle the popover</button>
+  <div id="mypopover" popover>Popover content</div>
+  ```
 
 - Via a JavaScript API. For example, {{domxref("HTMLElement.togglePopover()")}} can be used to toggle a popover between shown and hidden.
 

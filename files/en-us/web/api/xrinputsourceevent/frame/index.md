@@ -46,8 +46,10 @@ at anything when the select was triggered.
 
 ```js
 xrSession.onselectstart = (event) => {
-  let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                            myRefSpace);
+  let targetRayPose = event.frame.getPose(
+    event.inputSource.targetRaySpace,
+    myRefSpace
+  );
   if (targetRayPose) {
     checkAndHandleHit(targetRayPose.transform);
   }

@@ -35,7 +35,7 @@ The {{cssxref("float")}} property was introduced to allow web developers to impl
 
 But web developers quickly realized that you can float anything, not just images, so the use of float broadened, for example, to fun layout effects such as [drop-caps](https://css-tricks.com/snippets/css/drop-caps/).
 
-Floats have commonly been used to create entire web site layouts featuring multiple columns of information floated so they sit alongside one another (the default behavior would be for the columns to sit below one another in the same order as they appear in the source). There are newer, better layout techniques available. Using floats in this way should be regarded as a [legacy technique](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+Floats have commonly been used to create entire website layouts featuring multiple columns of information floated so they sit alongside one another (the default behavior would be for the columns to sit below one another in the same order as they appear in the source). There are newer, better layout techniques available. Using floats in this way should be regarded as a [legacy technique](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 In this article we'll just concentrate on the proper uses of floats.
 

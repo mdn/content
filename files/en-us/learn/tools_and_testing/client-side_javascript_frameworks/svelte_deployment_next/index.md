@@ -157,7 +157,7 @@ There are [many plugins for rollup](https://github.com/rollup/awesome) that allo
 
 From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.
 
-> **Note:** the following section could be applied to any client-side static web site requiring a build step, not just Svelte apps.
+> **Note:** the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
 
 ### Deploying with Vercel
 
@@ -198,7 +198,7 @@ You can also [import a Svelte git project](https://vercel.com/import/svelte) int
 
 ### Automatic deployment to GitLab pages
 
-For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every `git push`, and takes care of building and deploying your web site.
+For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every `git push`, and takes care of building and deploying your website.
 
 To demonstrate this, we will deploy our todos app to [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/).
 
@@ -334,7 +334,7 @@ There are a number of different ways to get support and interact with the Svelte
 Congratulations! You have completed the Svelte tutorial. In the previous articles we went from zero knowledge about Svelte to building and deploying a complete application.
 
 - We learned about Svelte philosophy and what sets it apart from other front-end frameworks.
-- We saw how to add dynamic behavior to our web site, how to organize our app in components and different ways to share information among them.
+- We saw how to add dynamic behavior to our website, how to organize our app in components and different ways to share information among them.
 - We took advantage of the Svelte reactivity system and learned how to avoid common pitfalls.
 - We also saw some advanced concepts and techniques to interact with DOM elements and to programmatically extend HTML element capabilities using the `use` directive.
 - Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.

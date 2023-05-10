@@ -134,6 +134,7 @@ Bear in mind though that some features, however, are known to be undetectable â€
 Common patterns for detectable features include:
 
 - Members of an object
+
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
     Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
@@ -145,13 +146,14 @@ Common patterns for detectable features include:
     ```
 
 - Properties of an element
+
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
     This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
 
     ```js
     function supports_canvas() {
-      return !!document.createElement('canvas').getContext;
+      return !!document.createElement("canvas").getContext;
     }
 
     if (supports_canvas()) {

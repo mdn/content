@@ -336,7 +336,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           You should provide at least two general navigation mechanisms to find
-          pages on your web site, for example navigation menu, breadcrumb trail,
+          pages on your website, for example navigation menu, breadcrumb trail,
           site search, site map, list of related links, etc.
         </p>
         <p>
