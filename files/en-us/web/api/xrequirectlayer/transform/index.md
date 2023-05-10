@@ -26,10 +26,10 @@ This example code positions the layer two meters away from the origin of `xrRefe
 const equirectLayer = xrGlBinding.createEquirectLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
-equirectLayer.transform = new XRRigidTransform({z: -2});
+equirectLayer.transform = new XRRigidTransform({ z: -2 });
 ```
 
 ## Specifications

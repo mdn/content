@@ -204,12 +204,7 @@ If the same scaling factor is to be applied in every direction, you can create a
 
 ```js-nolint
 function createScalingMatrix(f) {
-  return [
-    f, 0, 0, 0,
-    0, f, 0, 0,
-    0, 0, f, 0,
-    0, 0, 0, 1
-  ];
+  return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
 ```
 
@@ -217,12 +212,7 @@ With the transform matrix in hand, we apply the transform `scaleTransform` to th
 
 ```js-nolint
 let myVector = [2, 1, -3];
-let scaleTransform = [
-  2, 0, 0, 0,
-  0, 2, 0, 0,
-  0, 0, 2, 0,
-  0, 0, 0, 1
-];
+let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);
 ```
 
