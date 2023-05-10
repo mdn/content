@@ -123,7 +123,7 @@ Here is a list of common features controllable with HTTP:
   The server can instruct proxies and clients about what to cache and for how long.
   The client can instruct intermediate cache proxies to ignore the stored document.
 - _Relaxing the origin constraint_:
-  To prevent snooping and other privacy invasions, Web browsers enforce strict separation between Web sites.
+  To prevent snooping and other privacy invasions, Web browsers enforce strict separation between websites.
   Only pages from the **same origin** can access all the information of a Web page.
   Though such a constraint is a burden to the server, HTTP headers can relax this strict separation on the server side, allowing a document to become a patchwork of information sourced from different domains; there could even be security-related reasons to do so.
 - _Authentication_:

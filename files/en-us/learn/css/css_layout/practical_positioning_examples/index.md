@@ -262,7 +262,7 @@ As a starting point, you can use your completed example from the first section o
 
 ### HTML additions
 
-First of all, we need some additional HTML to represent the web site main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
+First of all, we need some additional HTML to represent the website main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
 
 ```html
 <section class="fake-content">

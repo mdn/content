@@ -282,7 +282,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ### ASP.NET
 
-[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
+[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create websites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
 
 One of the differentiators for ASP.NET is that it is built on the [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.
 

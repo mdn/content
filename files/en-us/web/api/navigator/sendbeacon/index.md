@@ -73,7 +73,7 @@ The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
 
 ### Sending analytics at the end of a session
 
-Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
+Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js

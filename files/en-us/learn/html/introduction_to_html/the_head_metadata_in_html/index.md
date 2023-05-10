@@ -127,7 +127,7 @@ Two such meta elements that are useful to include on your page define the author
   name="description"
   content="The MDN Web Docs Learning Area aims to provide
 complete beginners to the Web with all they need to know to get
-started with developing web sites and applications." />
+started with developing websites and applications." />
 ```
 
 Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page, if you have any questions about the content and you would like to contact them. Some content management systems have facilities to automatically extract page author information and make it available for such purposes.
@@ -147,7 +147,7 @@ The description is also used on search engine result pages. Let's go through an 
      name="description"
      content="The MDN Web Docs site
      provides information about Open Web technologies
-     including HTML, CSS, and APIs for both Web sites and
+     including HTML, CSS, and APIs for both websites and
      progressive web apps." />
    ```
 
@@ -172,7 +172,7 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides
-information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+information about Open Web technologies including HTML, CSS, and APIs for both websites
 and HTML Apps." />
 <meta property="og:title" content="Mozilla Developer Network" />
 ```
