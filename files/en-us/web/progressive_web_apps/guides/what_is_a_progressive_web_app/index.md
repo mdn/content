@@ -88,6 +88,14 @@ A PWA must have a service worker, and the service worker must implement at least
 
 Service workers encourage an architecture in which the app's pages - that is, the traditional part of a website - implement the user interface, and the service worker implements a backend which can support [offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation), making the PWA behave more like an app than a website. This is because service workers can be started by the browser in the background when they are needed (for example, to handle a push notification).
 
+### PWAs and single-page apps
+
+Traditionally a website is built as a collection of interlinked pages. When the user clicks a link from one page in the site to another page in the same site, the browser loads the new page as a completely new entity, including the HTML and the subresources that the HTML loads, like CSS and JavaScript. In a {{Glossary("SPA", "single-page app")}}, the site consists of a single HTML page, and when the user clicks internal links, this is handled by JavaScript fetching new content from the server and updating the relevant parts of the page.
+
+Single-page apps can provide a user experience that is closer to platform-specific apps, so PWAs are often implemented as single-page apps. In particular, single-page apps make it easier to achieve a seamless user interface, in which the user is presented with a single, consistent page, and only the relevant parts of the page are updated as the user interacts with the app.
+
+However, PWAs don't have to be single-page apps, and single-page apps don't have to be PWAs.
+
 ### Progressive enhancement
 
 While {{Glossary("Progressive Enhancement", "progressive enhancement")}} is a desirable attribute for most websites, it is especially important for PWAs, which expect to run on a wide range of devices and often use advanced Web APIs which may not be supported by all browsers.
