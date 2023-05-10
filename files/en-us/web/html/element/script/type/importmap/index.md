@@ -95,7 +95,7 @@ Note that in this case the property and mapped path must both have a trailing fo
 We could then import a circle module as shown.
 
 ```js
-import { name as squareName, draw } from "shapes/circle.js";
+import { name as circleName } from "shapes/circle.js";
 ```
 
 ### Paths in the module specifier map key

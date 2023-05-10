@@ -9,7 +9,7 @@ slug: Mozilla/Firefox/Releases/2
 
 Firefox 2 introduces a vast array of new features and capabilities. This article provides links to articles covering the new features.
 
-### For web site and application developers
+### For website and application developers
 
 - [Microsummaries](https://wiki.mozilla.org/Microsummaries)
   - : Microsummaries are regularly-updated succinct compilations of the most important information on web pages. Site and third-party developers can both provide them, and users can choose to display microsummaries instead of static titles when they bookmark pages with microsummaries.
@@ -75,7 +75,7 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 
 ### Security and privacy
 
-- **Phishing Protection** to warn users when the web site you're looking at appears to be a forgery.
+- **Phishing Protection** to warn users when the website you're looking at appears to be a forgery.
 
 ## See also
 

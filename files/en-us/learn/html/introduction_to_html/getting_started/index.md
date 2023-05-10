@@ -212,33 +212,6 @@ The following is an example of the _wrong_ way to do nesting:
 
 The **tags have to open and close in a way that they are inside or outside one another**. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
 
-### Block versus inline elements
-
-There are two important categories of elements to know in HTML: block-level elements and inline elements.
-
-- Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
-- Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an {{htmlelement("a")}} element creates a hyperlink, and elements such as {{htmlelement("em")}} or {{htmlelement("strong")}} create emphasis.
-
-Consider the following example:
-
-```html
-<em>first</em><em>second</em><em>third</em>
-
-<p>fourth</p>
-<p>fifth</p>
-<p>sixth</p>
-```
-
-{{htmlelement("em")}} is an inline element. As you see below, the first three elements sit on the same line, with no space in between. On the other hand, {{htmlelement("p")}} is a block-level element. Each _p_ element appears on a new line, with space above and below. (The spacing is due to default [CSS styling](/en-US/docs/Learn/CSS/First_steps) that the browser applies to paragraphs.)
-
-{{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
-
-> **Note:** HTML5 redefined the element categories: see [Element content categories](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). While these definitions are more accurate and less ambiguous than their predecessors, the new definitions are a lot more complicated to understand than _block_ and _inline._ This article will stay with these two terms.
-
-> **Note:** The terms _block_ and _inline_, as used in this article, should not be confused with [the types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) that have the same names. While the names correlate by default, changing the CSS display type doesn't change the category of the element, and doesn't affect which elements it can contain and which elements it can be contained in. One reason HTML5 dropped these terms was to prevent this rather common confusion.
-
-> **Note:** Find useful reference pages that include lists of block and inline elements. See [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
-
 ### Void elements
 
 Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called {{glossary("void element", "void elements")}}. For example, the {{htmlelement("img")}} element embeds an image file onto a page:

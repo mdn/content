@@ -35,11 +35,14 @@ function onSessionStarted(xrSession) {
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
-    xrSession.requestReferenceSpace("bounded-floor").then((refSpace) => {
-      refSpaceCreated(refSpace);
-    }).catch(() => {
-      session.requestReferenceSpace("local-floor").then(refSpaceCreated);
-    });
+    xrSession
+      .requestReferenceSpace("bounded-floor")
+      .then((refSpace) => {
+        refSpaceCreated(refSpace);
+      })
+      .catch(() => {
+        session.requestReferenceSpace("local-floor").then(refSpaceCreated);
+      });
   } else {
     session.requestReferenceSpace("viewer").then(refSpaceCreated);
   }
