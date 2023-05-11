@@ -1,5 +1,5 @@
 ---
-title: '<head>: The Document Metadata (Header) element'
+title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Element/head
 page-type: html-element
 browser-compat: html.elements.head

@@ -29,7 +29,7 @@ A new string representing the provided string encoded as a URI.
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uri` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Thrown if `uri` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Description
 
@@ -103,7 +103,7 @@ function encodeRFC3986URI(str) {
     .replace(/%5D/g, "]")
     .replace(
       /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
     );
 }
 ```

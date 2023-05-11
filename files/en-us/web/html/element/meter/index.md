@@ -1,5 +1,5 @@
 ---
-title: '<meter>: The HTML Meter element'
+title: "<meter>: The HTML Meter element"
 slug: Web/HTML/Element/meter
 page-type: html-element
 browser-compat: html.elements.meter

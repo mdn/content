@@ -2,8 +2,8 @@
 title: "Element: animationcancel event"
 short-title: animationcancel
 slug: Web/API/Element/animationcancel_event
-browser-compat: api.Element.animationcancel_event
 page-type: web-api-event
+browser-compat: api.Element.animationcancel_event
 ---
 
 {{APIRef}}

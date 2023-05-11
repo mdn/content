@@ -1,6 +1,7 @@
 ---
 title: aria-owns
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
 

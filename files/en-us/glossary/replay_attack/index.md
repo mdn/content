@@ -1,8 +1,6 @@
 ---
 title: Replay attack
 slug: Glossary/Replay_attack
-tags:
-  - Security
 ---
 
 In web security, a _replay attack_ happens when an attacker intercepts a previously-sent message and resends it later to get the same credentials as the original message, potentially with a different payload or instruction.

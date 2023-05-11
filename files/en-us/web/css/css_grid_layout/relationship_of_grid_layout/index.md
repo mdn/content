@@ -318,7 +318,7 @@ This isn't quite the same as flexbox. In the flexbox example, the items are larg
 
 {{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}
 
-We now have the ability to create a grid with a flexible number of flexible tracks, but see items laid out on the grid aligned by rows and columns at the same time.
+With grid layout, we can create a grid with a dynamic number of flexible tracks and have the items laid out on the grid aligned by rows and columns.
 
 ## Grid and absolutely positioned elements
 

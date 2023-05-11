@@ -42,7 +42,7 @@ This simple snippet calls the constructor to create a new reference space event 
 ```js
 let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
   referenceSpace: myRefSpace,
-  transform: myTransform
+  transform: myTransform,
 });
 ```
 

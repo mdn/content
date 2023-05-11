@@ -111,7 +111,7 @@ _No changes._
 ### CSS
 
 - The proprietary {{cssxref("-moz-user-input")}} property's `enabled` and `disabled` values are no longer available ([Firefox bug 1405087](https://bugzil.la/1405087)).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been removed from the platform completely ([Firefox bug 1429723](https://bugzil.la/1429723)).
+- The proprietary `-moz-border-top-colors`, `-moz-border-right-colors`, `-moz-border-bottom-colors`, and `-moz-border-left-colors` properties have been removed from the platform completely ([Firefox bug 1429723](https://bugzil.la/1429723)).
 
 ### JavaScript
 

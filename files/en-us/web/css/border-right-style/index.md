@@ -36,7 +36,7 @@ border-right-style: revert-layer;
 border-right-style: unset;
 ```
 
-The `border-right-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+The `border-right-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

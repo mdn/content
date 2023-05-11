@@ -3,7 +3,7 @@ title: "XSLTProcessor: getParameter() method"
 short-title: getParameter()
 slug: Web/API/XSLTProcessor/getParameter
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.getParameter 
+browser-compat: api.XSLTProcessor.getParameter
 ---
 
 {{APIRef("XSLT")}}
@@ -26,6 +26,7 @@ getParameter(namespaceURI, localName)
 ### Return value
 
 An object that is the value associated with the parameter. It can be of any type.
+
 > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.
 
 ## Examples

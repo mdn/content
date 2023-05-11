@@ -99,8 +99,12 @@ if (XR) {
 
         for (const xrView of viewer.views) {
           const xrViewport = xrWebGLLayer.getViewport(xrView);
-          gl.viewport(xrViewport.x, xrViewport.y,
-                      xrViewport.width, xrViewport.height);
+          gl.viewport(
+            xrViewport.x,
+            xrViewport.y,
+            xrViewport.width,
+            xrViewport.height
+          );
         }
       });
     });

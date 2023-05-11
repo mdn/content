@@ -1,5 +1,5 @@
 ---
-title: '<audio>: The Embed Audio element'
+title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Element/audio
 page-type: html-element
 browser-compat: html.elements.audio
