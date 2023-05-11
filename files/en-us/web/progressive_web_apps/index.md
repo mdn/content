@@ -11,7 +11,7 @@ Like a website, a PWA can run on multiple platforms and devices from a single co
 
 ## Guides
 
-These guides introduce some of the main aspects of PWAs, and include pointers to more detailed reference and how-to documentation.
+These guides give conceptual explanations of different aspects of PWAs. They're intended to help you understand what kinds of things are possible with PWAs, and to provide enough pointers to help you understand how to achieve them.
 
 - [What is a progressive web app?](/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app)
   - : An introduction to PWAs, comparing them with traditional websites and with platform-specific apps, and outlining their main features.
