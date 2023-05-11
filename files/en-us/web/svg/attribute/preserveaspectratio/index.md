@@ -53,13 +53,13 @@ svg {
 
 ```html
   <!-- (width>height) meet -->
-  <rect x="0" y="0" width="20" height="10">
+  <rect x="0" y="0" width="60" height="30">
     <title>xMidYMid meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
+    width="60"
+    height="30"
     preserveAspectRatio="xMidYMid meet"
     x="0"
     y="0">
@@ -86,7 +86,7 @@ rect:active {
 
 {{EmbedLiveSample('xMidYMid meet width height', '100%', 200)}}
 
-### xMinYMid meet
+### xMinYMid meet (width > height)
 
 ```css hidden
 html,
@@ -106,13 +106,13 @@ svg {
 ```
 
 ```html
-  <rect x="25" y="0" width="20" height="10">
+  <rect x="25" y="0" width="60" height="30">
     <title>xMinYMid meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
+    width="60"
+    height="30"
     preserveAspectRatio="xMinYMid meet"
     x="25"
     y="0">
@@ -136,9 +136,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMinYMid meet', '100%', 200)}}
+{{EmbedLiveSample('xMinYMid meet width height', '100%', 200)}}
 
-### xMaxYMid meet
+### xMaxYMid meet (width > height)
 
 ```css hidden
 html,
@@ -158,14 +158,14 @@ svg {
 ```
 
 ```html
-  <rect x="50" y="0" width="20" height="10">
+  <rect x="50" y="0" width="60" height="30">
     <title>xMaxYMid meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
-    preserveAspectRatio="xMaxYMid meet"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMaxYMid meet width height"
     x="50"
     y="0">
     <use href="#smiley" />
@@ -188,9 +188,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMaxYMid meet', '100%', 200)}}
+{{EmbedLiveSample('xMaxYMid meet width height', '100%', 200)}}
 
-### xMidYMin slice
+### xMidYMin slice (width > height)
 
 ```css hidden
 html,
@@ -211,13 +211,13 @@ svg {
 
 ```html
   <!-- (width>height) slice -->
-  <rect x="0" y="15" width="20" height="10">
+  <rect x="0" y="15" width="60" height="30">
     <title>xMidYMin slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
+    width="60"
+    height="30"
     preserveAspectRatio="xMidYMin slice"
     x="0"
     y="15">
@@ -241,9 +241,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMin slice', '100%', 200)}}
+{{EmbedLiveSample('xMidYMin slice width height', '100%', 200)}}
 
-### xMidYMid slice
+### xMidYMid slice (width > height)
 
 ```css hidden
 html,
@@ -263,13 +263,13 @@ svg {
 ```
 
 ```html
-  <rect x="25" y="15" width="20" height="10">
+  <rect x="25" y="15" width="60" height="30">
     <title>xMidYMid slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
+    width="60"
+    height="30"
     preserveAspectRatio="xMidYMid slice"
     x="25"
     y="15">
@@ -293,9 +293,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMid slice', '100%', 200)}}
+{{EmbedLiveSample('xMidYMid slice width height', '100%', 200)}}
 
-### xMidYMax slice
+### xMidYMax slice (width > height)
 
 ```css hidden
 html,
@@ -315,13 +315,13 @@ svg {
 ```
 
 ```html
-  <rect x="50" y="15" width="20" height="10">
+  <rect x="50" y="15" width="60" height="30">
     <title>xMidYMax slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="20"
-    height="10"
+    width="60"
+    height="30"
     preserveAspectRatio="xMidYMax slice"
     x="50"
     y="15">
@@ -345,7 +345,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMax slice', '100%', 200)}}
+{{EmbedLiveSample('xMidYMax slice width height', '100%', 200)}}
 
 ### xMidYMin meet (height > width)
 
@@ -358,7 +358,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -367,13 +367,13 @@ svg {
 ```
 
 ```html
-  <rect x="75" y="0" width="10" height="25">
+  <rect x="75" y="0" width="30" height="75">
     <title>xMidYMin meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMidYMin meet"
     x="75"
     y="0">
@@ -410,7 +410,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -419,13 +419,13 @@ svg {
 ```
 
 ```html
-  <rect x="90" y="0" width="10" height="25">
+  <rect x="90" y="0" width="30" height="75">
     <title>xMidYMid meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMidYMid meet"
     x="90"
     y="0">
@@ -451,7 +451,7 @@ rect:active {
 
 {{EmbedLiveSample('xMidYMid meet height width', '100%', 200)}}
 
-### xMidYMax meet
+### xMidYMax meet (height > width)
 
 ```css hidden
 html,
@@ -462,7 +462,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -471,13 +471,13 @@ svg {
 ```
 
 ```html
-  <rect x="105" y="0" width="10" height="25">
+  <rect x="105" y="0" width="30" height="75">
     <title>xMidYMax meet</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMidYMax meet"
     x="105"
     y="0">
@@ -501,9 +501,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMax meet', '100%', 200)}}
+{{EmbedLiveSample('xMidYMax meet height width', '100%', 200)}}
 
-### xMinYMid slice
+### xMinYMid slice (height > width)
 
 ```css hidden
 html,
@@ -514,7 +514,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -524,13 +524,13 @@ svg {
 
 ```html
   <!-- (width<height) slice -->
-  <rect x="120" y="0" width="10" height="25">
+  <rect x="120" y="0" width="30" height="75">
     <title>xMinYMid slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMinYMid slice"
     x="120"
     y="0">
@@ -567,7 +567,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -576,13 +576,13 @@ svg {
 ```
 
 ```html
-  <rect x="135" y="0" width="10" height="25">
+  <rect x="135" y="0" width="30" height="75">
     <title>xMidYMid slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMidYMid slice"
     x="135"
     y="0">
@@ -608,7 +608,7 @@ rect:active {
 
 {{EmbedLiveSample('xMidYMid slice height width', '100%', 200)}}
 
-### xMaxYMid slice
+### xMaxYMid slice (height > width)
 
 ```css hidden
 html,
@@ -619,7 +619,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -628,13 +628,13 @@ svg {
 ```
 
 ```html
-  <rect x="150" y="0" width="10" height="25">
+  <rect x="150" y="0" width="30" height="75">
     <title>xMaxYMid slice</title>
   </rect>
   <svg
     viewBox="0 0 100 100"
-    width="10"
-    height="25"
+    width="30"
+    height="75"
     preserveAspectRatio="xMaxYMid slice"
     x="150"
     y="0">
@@ -658,7 +658,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMaxYMid slice', '100%', 200)}}
+{{EmbedLiveSample('xMaxYMid slice height width', '100%', 200)}}
 
 ### none
 
