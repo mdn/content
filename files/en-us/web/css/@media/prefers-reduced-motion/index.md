@@ -118,7 +118,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 
 {{EmbedLiveSample("Toning down the animation scaling")}}
 
-You can enable the setting for reducing motion on [your device](#user_preferences) to view the change in animation scaling. This example uses the box color and the line over the text to visually highlight when the animations switch in response to the setting being enabled or disabled.
+You can enable the setting for reducing motion on [your device](#user_preferences) to view the change in animation scaling. This example uses the background color and the line over the text to visually highlight when the keyframe animation switches in response to the setting being enabled or disabled.
 
 ## Specifications
 
