@@ -7,7 +7,7 @@ browser-compat: css.properties.display
 
 {{CSSRef}}
 
-The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline level](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
 Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
@@ -66,9 +66,9 @@ The keyword values can be grouped into six value categories.
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
 
     - `block`
-      - : The element generates a block level box, generating line breaks both before and after the element when in the normal flow.
+      - : The element generates a block box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
-      - : The element generates one or more inline level boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
+      - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
 > This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
@@ -88,7 +88,7 @@ The keyword values can be grouped into six value categories.
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : The element generates a block level box that establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
+      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
@@ -168,7 +168,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `inline-block`
 
-      - : The element generates a block level box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
+      - : The element generates a block box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
 
         It is equivalent to `inline flow-root`.
 
