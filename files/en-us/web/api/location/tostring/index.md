@@ -29,9 +29,8 @@ A string representing the object's URL.
 ## Examples
 
 ```js
-// Let's imagine an <a id="myAnchor" href="/en-US/docs/Location/toString"> element is in the document
-const anchor = document.getElementById("myAnchor");
-const result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+// Let's imagine this code is executed on https://example.com/path?search#hash
+const result = window.location.toString(); // Returns: 'https://example.com/path?search#hash'
 ```
 
 ## Specifications
