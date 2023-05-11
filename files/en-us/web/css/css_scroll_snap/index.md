@@ -15,7 +15,7 @@ This module includes the scroll container scroll-padding properties to adjust th
 
 To view scroll snapping in the box below, scroll up-and-down and left-and-right through the grid of 45 numbered boxes in the scrollable viewport.
 
-{{EmbedGHLiveSample("css-examples/modules/animation.html", '100%', 650)}}
+{{EmbedGHLiveSample("css-examples/modules/scroll_snap.html", '100%', 250)}}
 
 With scroll snap, one of the numbered boxes, the one you scrolled to, will snap into place. The hard-coded CSS makes the numbered box snap into the center of the viewport. Use the sliders to switch the block and inline snap position.
 
@@ -63,30 +63,20 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" bo
 
 ## Guides
 
-- [Basic concepts of CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+  - : An overview and examples of CSS scroll snap features.
 
 ## Related concepts
 
-- {{cssxref(":target")}} pseudo-class, or the target of
+- {{cssxref(":target")}} pseudo-class
 - {{cssxref("overflow")}} CSS property
 - Element {{domxref("Element.scroll", "scroll()")}} method
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method
 - Element {{domxref("Element.scrollTo", "scrollTo()")}} method
-- Element {{domxref("Element.scrollTop", "scrollTop")}} property
-- Element {{domxref("Element.scrollLeft", "scrollLeft")}} property
-- Element {{domxref("Element.scrollWidth", "scrollWidth")}} property
-- Element {{domxref("Element.scrollHeight", "scrollHeight")}} property
 - Document {{domxref("Document.scroll_event", "scroll")}} event
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 - {{Glossary("Scroll container")}} glossary term
-- {{Glossary("Ink overflow")}} glossary term
-
-- overflow
-scroll position
-scroll-behavior
-scrollable overflow area
-scrollport
 
 ## Specifications
 
@@ -94,7 +84,6 @@ scrollport
 
 ## See also
 
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_Scrollbars) module
 - [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

@@ -6,20 +6,22 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) feature provides a way to snap the scrolling to certain points as the user scrolls through a document. This can be helpful in creating a more app-like experience on mobile or even on the desktop for some types of applications.
+The [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) feature provides a way to snap the scrolling to certain points as the user scrolls through a document. This can help create a more app-like experience on mobile or even on the desktop for some types of applications.
 
-Scroll snap defines scroll snap positions, which enforce the scroll positions that a scroll container's {{Glossary("scrollport")}} may end at after a scrolling operation has completed.
-
-To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
-
-The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. There are several {{cssxref("scroll-margin")}} properties that can be set on the snapped-to child elements to create an outset from the defined box.
+Scroll snap defines scroll snap positions, which enforce the scroll positions that a scroll container's {{Glossary("scrollport")}} may end at, or "snap to," after a scrolling operation has completed.
 
 ## Key properties for CSS Scroll Snap
 
+To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
+
+The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. Several {{cssxref("scroll-margin")}} properties can be set on the snapped-to-child elements to create an outset from the defined box.
+
 The key properties for the scroll snap feature are:
 
-- {{CSSxRef("scroll-snap-type")}}: This property is used on the [scroll container](/en-US/docs/Glossary/Scroll_container) to specify the type, direction, and optionality of scrolling.
-- {{CSSxRef("scroll-snap-align")}}: This property is used on child elements to specify the scroll snap position.
+- {{CSSxRef("scroll-snap-type")}}
+  - : Set on the [scroll container](/en-US/docs/Glossary/Scroll_container) to specify the type, direction, and optionality of scrolling.
+- {{CSSxRef("scroll-snap-align")}}: This property is used
+  - : Set on child elements to specify the scroll snap position.
 
 The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` is used on all the `<section>` element children dictating the point where the scrolling of each child should stop.
 
@@ -59,21 +61,21 @@ In the example below, `scroll-padding` is set to `40px`. When the content snaps 
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", '100%', 700)}}
 
-This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element, for example a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve a space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
+This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element, for example, a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve a space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", '100%', 700)}}
 
 ## Using scroll-margin
 
-The {{CSSxRef("scroll-margin")}} property or the longhand scroll margin values can be set on child elements, essentially defining an outset from the defined box. This allows for different amounts of space for different child elements and can be used in conjunction with `scroll-padding` on the parent. Try this in the example below.
+The {{CSSxRef("scroll-margin")}} property or the longhand scroll margin values can be set on child elements, defining an outset from the defined box. This allows for different amounts of space for different child elements and can be used in conjunction with `scroll-padding` on the parent. Try this in the example below.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-margin.html", '100%', 700)}}
 
 ## Using scroll-snap-stop
 
-The {{CSSxRef("scroll-snap-stop")}} property tells the browser whether it should snap to each defined snap point — meaning that in our examples above we would stop at the start of each section — or be able to skip past sections.
+The {{CSSxRef("scroll-snap-stop")}} property tells the browser whether it must snap to defined snap points — meaning that in our examples above we would stop at the start of each section — or be able to skip past sections.
 
-It could be helpful in ensuring users see each section of the scroller and don't accidentally zip past them. However, it could be problematic in making the scrolling experience slower if the user is looking for a particular section.
+It can help ensure users see each section of the scroller and don't accidentally scroll past them. However, it can negatively affect user experience by preventing the user from quickly scrolling to their desired content.
 
 ## See also
 
