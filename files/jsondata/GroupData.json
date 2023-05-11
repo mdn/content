@@ -1656,22 +1656,22 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
       "overview": ["Web components"],

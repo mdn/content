@@ -103,7 +103,7 @@ This solution is more efficient, but slightly less flexible, as only one etag ca
 
 ### Avoiding the lost update problem with optimistic locking
 
-A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows to store remote resources needs such a mechanism. Common Web sites, like wikis and other CMS, have such a need.
+A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows to store remote resources needs such a mechanism. Common websites, like wikis and other CMS, have such a need.
 
 With the {{HTTPMethod("PUT")}} method you are able to implement this. The client first reads the original files, modifies them, and finally pushes them to the server:
 

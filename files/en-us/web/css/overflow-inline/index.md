@@ -83,7 +83,8 @@ The `overflow-inline` property is specified as a single {{CSSXref("overflow_valu
   </li>
 
   <li>
-    <code>overflow-inline: clip</code> (hides the text outside the box beyond the overflow clip edge)
+    <code>overflow-inline: clip</code> (hides the text outside the box beyond
+    the overflow clip edge)
     <code>clip</code>
     <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>

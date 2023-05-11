@@ -143,22 +143,22 @@ So far, we have styled elements based on their HTML element names. This works as
 
 1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
 
-    ```html
-    <ul>
-      <li>Item one</li>
-      <li class="special">Item two</li>
-      <li>Item <em>three</em></li>
-    </ul>
-    ```
+   ```html
+   <ul>
+     <li>Item one</li>
+     <li class="special">Item two</li>
+     <li>Item <em>three</em></li>
+   </ul>
+   ```
 
 2. In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
 
-    ```css
-    .special {
-      color: orange;
-      font-weight: bold;
-    }
-    ```
+   ```css
+   .special {
+     color: orange;
+     font-weight: bold;
+   }
+   ```
 
 3. Save and refresh to see what the result is.
 

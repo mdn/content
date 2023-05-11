@@ -11,7 +11,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`upgrade-insecure-requests`** directive instructs user
 agents to treat all of a site's insecure URLs (those served over HTTP) as though they
 have been replaced with secure URLs (those served over HTTPS). This directive is
-intended for web sites with large numbers of insecure legacy URLs that need to be
+intended for websites with large numbers of insecure legacy URLs that need to be
 rewritten.
 
 > **Note:** The `upgrade-insecure-requests` directive is evaluated before
