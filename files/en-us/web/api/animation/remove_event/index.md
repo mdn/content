@@ -38,7 +38,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Removing replaced animations
 
-In this example we have a `<button id="start">` element, and an event listener that runs whenever the mouse moves. The {{domxref("Element.mousemove_event","mousemove")}} event handler sets up an animation that animates the `<button>` to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove forward filling animations that are overridden by other animations.
+In this example we have a `<button id="start">` element, and an event listener that runs whenever the mouse moves. The {{domxref("Element.mousemove_event","mousemove")}} event handler sets up an animation that animates the `<button>` to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove forwards-filling animations that are overridden by other animations.
 
 The number of animations created is displayed. A `remove` event listener is used to count and display the number of animations removed as well.
 
