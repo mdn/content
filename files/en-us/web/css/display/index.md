@@ -92,11 +92,11 @@ The keyword values can be grouped into six value categories.
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
-      - : The element behaves like a block level and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+      - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
     - `grid`
       - : The element behaves like a block level and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
     - `ruby` {{Experimental_Inline}}
-      - : The element behaves like an inline level and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
+      - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **Note:** Browsers that support the multi-keyword syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
 > This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
@@ -180,13 +180,13 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
     - `inline-flex`
 
-      - : The element behaves like an inline level and lays out its content according to the flexbox model.
+      - : The element behaves like an inline-level element and lays out its content according to the flexbox model.
 
         It is equivalent to `inline flex`.
 
     - `inline-grid`
 
-      - : The element behaves like an inline level and lays out its content according to the grid model.
+      - : The element behaves like an inline-level element and lays out its content according to the grid model.
 
         It is equivalent to `inline grid`.
 
