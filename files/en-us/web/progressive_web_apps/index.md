@@ -16,9 +16,9 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
 - [What is a progressive web app?](/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app)
   - : An introduction to PWAs, comparing them with traditional websites and with platform-specific apps, and outlining their main features.
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-  - : What's required for a PWA to be installable, how the installation process works, and what an installed PWA looks like.
+  - : One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app. In this guide we'll explore what "installable" means, what a PWA needs to provide for it to be installable, and how you can customize the install experience.
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
-  - : A tour of the APIs that enable a PWA to work when the device is offline and to update content in the background.
+  - : In this guide, we'll introduce a set of technologies that enable a PWA to provide a good user experience even when the device has intermittent network connectivity and to perform operations in the background, even when the main app is not running.
 
 ## How to
 
