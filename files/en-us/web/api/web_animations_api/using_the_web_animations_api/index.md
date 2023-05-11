@@ -260,7 +260,7 @@ When the animation is automatically removed, the animation's {{domxref("animatio
 
 To prevent the browser from automatically removing animations, call the animation's {{domxref("Animation.persist", "persist()")}} method.
 
-The animation's {{domxref("animation.replaceState")}} property will be `removed` iof the animation has been removed, `persisted` if you have called {{domxref("Animation.persist", "persist()")}} on the animation, or `active` otherwise.
+The animation's {{domxref("animation.replaceState")}} property will be `removed` if the animation has been removed, `persisted` if you have called {{domxref("Animation.persist", "persist()")}} on the animation, or `active` otherwise.
 
 ## Getting information out of animations
 
