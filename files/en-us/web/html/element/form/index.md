@@ -94,8 +94,8 @@ The following attributes control behavior during form submission.
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
-  <label
-    >Name:
+  <label>
+    Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
@@ -103,8 +103,8 @@ The following attributes control behavior during form submission.
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label
-    >Name:
+  <label>
+    Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
@@ -130,25 +130,17 @@ The following attributes control behavior during form submission.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
-          >palpable content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but not containing <code>&#x3C;form></code> elements
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, but not containing <code>&#x3C;form></code> elements
       </td>
     </tr>
     <tr>
@@ -159,35 +151,23 @@ The following attributes control behavior during form submission.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role"
-            >form</a
-          ></code
-        > if the form has an
-        <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name"
-          >accessible name</a
-        >, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code> if the form has an
+        <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">accessible name</a>, otherwise
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"
-            >search</a
-          ></code
-        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+         or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

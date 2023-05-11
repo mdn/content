@@ -18,11 +18,11 @@ The example below shows the source for a set of elements marked up with `itempro
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span
-    >Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span
-  >
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -142,8 +142,8 @@ Properties can also be groups of name-value pairs, by putting the itemscope attr
     Band:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
-    >
+      (<span itemprop="size">12</span> players)
+    </span>
   </p>
 </div>
 ```
@@ -191,8 +191,8 @@ An element introducing a property can also introduce multiple properties at once
   <span
     itemprop="favorite-color
     favorite-fruit"
-    >orange</span
-  >
+    >orange
+  </span>
 </div>
 ```
 
