@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A string representing the object's URL.
 
 ## Examples
 
