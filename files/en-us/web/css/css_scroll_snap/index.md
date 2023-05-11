@@ -13,6 +13,16 @@ This module includes the scroll container scroll-padding properties to adjust th
 
 ## Scroll snap in action
 
+To view scroll snapping in the box below, scroll up-and-down and left-and-right through the grid of 45 numbered boxes in the scrollable viewport.
+
+{{EmbedGHLiveSample("css-examples/modules/animation.html", '100%', 650)}}
+
+With scroll snap, one of the numbered boxes, the one you scrolled to, will snap into place. The hard-coded CSS makes the numbered box snap into the center of the viewport. Use the sliders to switch the block and inline snap position.
+
+Snap properties enable allowing or blocking a user from scrolling past element. Check the "Stop on all boxes" to force all scrolling actions to be limited to scrolling to the next box.
+
+To compare scroll snapping to regular scrolling, check the "disable snapping" box and try scrolling again.
+
 ## Reference
 
 ### Properties on containers
@@ -58,11 +68,21 @@ This module includes the scroll container scroll-padding properties to adjust th
 ## Related concepts
 
 - {{cssxref(":target")}} pseudo-class, or the target of
-- {{domxref("scrollBy()")}} method
-- {{domxref("scrollIntoView()")}} method
-- {{domxref("scrollTo()")}} method
+- {{cssxref("overflow")}} CSS property
+- Element {{domxref("Element.scroll", "scroll()")}} method
+- Element {{domxref("Element.scrollBy", "scrollBy()")}} method
+- Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method
+- Element {{domxref("Element.scrollTo", "scrollTo()")}} method
+- Element {{domxref("Element.scrollTop", "scrollTop")}} property
+- Element {{domxref("Element.scrollLeft", "scrollLeft")}} property
+- Element {{domxref("Element.scrollWidth", "scrollWidth")}} property
+- Element {{domxref("Element.scrollHeight", "scrollHeight")}} property
+- Document {{domxref("Document.scroll_event", "scroll")}} event
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- {{Glossary("Scroll container")}} glossary term
+- {{Glossary("Ink overflow")}} glossary term
+
 - overflow
-scroll container
 scroll position
 scroll-behavior
 scrollable overflow area
