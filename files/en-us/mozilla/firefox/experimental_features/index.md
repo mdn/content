@@ -776,7 +776,7 @@ See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
     <tr>
       <th>Nightly</th>
       <td>113</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
