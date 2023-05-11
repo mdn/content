@@ -94,7 +94,7 @@ The keyword values can be grouped into six value categories.
     - `flex`
       - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
     - `grid`
-      - : The element behaves like a block level and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+      - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
     - `ruby` {{Experimental_Inline}}
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
