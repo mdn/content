@@ -36,7 +36,7 @@ In this example we have two buttons, labeled "Commit styles" and "Fill forwards"
 
 The difference, though, is that "Fill forwards" only uses `fill: "forwards"` to persist the animation's final state: this means that the browser has to maintain the animation's state indefinitely, or until it can be automatically removed.
 
-However, "Commit styles" button waits for the animation to finish, then calls `commitStyles()`, then cancels the animation, so the finished style is captured as the value of the `style` attribute, rather than as the animation state.
+However, the "Commit styles" button waits for the animation to finish, then calls `commitStyles()`, then cancels the animation, so the finished style is captured as the value of the `style` attribute, rather than as the animation state.
 
 #### HTML
 
