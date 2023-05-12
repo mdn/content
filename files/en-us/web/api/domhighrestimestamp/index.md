@@ -6,7 +6,7 @@ browser-compat: api.DOMHighResTimestamp
 
 {{APIRef("Performance API")}}
 
-The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time value in milliseconds.
+The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time value in milliseconds. It represents the number of milliseconds from the Unix epoch to a moment.
 
 This type can be used to describe a discrete point in time or a time interval (the difference in time between two discrete points in time). The starting time can be either a specific time determined by the script for a site or app, or the [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
