@@ -257,7 +257,7 @@ These properties are defined on `Object.prototype` and shared by all `Object` in
 
 ### Constructing empty objects
 
-The following examples store an empty `Object` object in `o`:
+The following example creates empty objects using the `new` keyword with different arguments:
 
 ```js
 const o1 = new Object();
