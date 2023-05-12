@@ -2035,6 +2035,7 @@
         "RTCRemoteOutboundRtpStreamStats",
         "RTCRtpContributingSourceStats",
         "RTCPeerConnectionStats",
+        "RTCAudioSourceStats",
         "RTCMediaStreamStats",
         "RTCMediaHandlerStats",
         "RTCVideoHandlerStats",
