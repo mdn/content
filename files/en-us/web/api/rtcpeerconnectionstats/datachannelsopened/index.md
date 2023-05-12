@@ -3,7 +3,7 @@ title: "RTCPeerConnectionStats: dataChannelsOpened property"
 short-title: dataChannelsOpened
 slug: Web/API/RTCPeerConnectionStats/dataChannelsOpened
 page-type: web-api-instance-property
-browser-compat: api.RTCPeerConnectionStats.dataChannelsOpened
+browser-compat: api.RTCStatsReport.type_peer-connection.dataChannelsOpened
 ---
 
 {{APIRef("WebRTC")}}

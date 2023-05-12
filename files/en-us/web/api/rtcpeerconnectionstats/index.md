@@ -2,7 +2,7 @@
 title: RTCPeerConnectionStats
 slug: Web/API/RTCPeerConnectionStats
 page-type: web-api-interface
-browser-compat: api.RTCPeerConnectionStats
+browser-compat: api.RTCStatsReport.type_peer-connection
 ---
 
 {{APIRef("WebRTC")}}

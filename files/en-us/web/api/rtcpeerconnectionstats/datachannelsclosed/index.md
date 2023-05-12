@@ -3,7 +3,7 @@ title: "RTCPeerConnectionStats: dataChannelsClosed property"
 short-title: dataChannelsClosed
 slug: Web/API/RTCPeerConnectionStats/dataChannelsClosed
 page-type: web-api-instance-property
-browser-compat: api.RTCPeerConnectionStats.dataChannelsClosed
+browser-compat: api.RTCStatsReport.type_peer-connection.dataChannelsClosed
 ---
 
 {{APIRef("WebRTC")}}

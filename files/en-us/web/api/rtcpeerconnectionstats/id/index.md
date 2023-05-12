@@ -3,7 +3,7 @@ title: "RTCPeerConnectionStats: id property"
 short-title: id
 slug: Web/API/RTCPeerConnectionStats/id
 page-type: web-api-instance-property
-browser-compat: api.RTCPeerConnectionStats.id
+browser-compat: api.RTCStatsReport.type_peer-connection.id
 ---
 
 {{APIRef("WebRTC")}}

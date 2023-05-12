@@ -3,7 +3,7 @@ title: "RTCPeerConnectionStats: type property"
 short-title: type
 slug: Web/API/RTCPeerConnectionStats/type
 page-type: web-api-instance-property
-browser-compat: api.RTCPeerConnectionStats.type
+browser-compat: api.RTCStatsReport.type_peer-connection.type
 ---
 
 {{APIRef("WebRTC")}}

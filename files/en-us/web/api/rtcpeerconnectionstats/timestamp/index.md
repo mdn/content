@@ -3,7 +3,7 @@ title: "RTCPeerConnectionStats: timestamp property"
 short-title: timestamp
 slug: Web/API/RTCPeerConnectionStats/timestamp
 page-type: web-api-instance-property
-browser-compat: api.RTCPeerConnectionStats.timestamp
+browser-compat: api.RTCStatsReport.type_peer-connection.timestamp
 ---
 
 {{APIRef("WebRTC")}}
