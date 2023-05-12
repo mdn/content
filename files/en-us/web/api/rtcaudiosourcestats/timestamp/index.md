@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: timestamp property"
 short-title: timestamp
 slug: Web/API/RTCAudioSourceStats/timestamp
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.timestamp
+browser-compat: api.RTCStatsReport.type_media-source.timestamp
 ---
 
 {{APIRef("WebRTC")}}

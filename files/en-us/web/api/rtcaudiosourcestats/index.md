@@ -2,7 +2,7 @@
 title: RTCAudioSourceStats
 slug: Web/API/RTCAudioSourceStats
 page-type: web-api-interface
-browser-compat: api.RTCAudioSourceStats
+browser-compat: api.RTCStatsReport.type_media-source
 ---
 
 {{APIRef("WebRTC")}}

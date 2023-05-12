@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: totalSamplesDuration property"
 short-title: totalSamplesDuration
 slug: Web/API/RTCAudioSourceStats/totalSamplesDuration
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.totalSamplesDuration
+browser-compat: api.RTCStatsReport.type_media-source.totalSamplesDuration
 ---
 
 {{APIRef("WebRTC")}}

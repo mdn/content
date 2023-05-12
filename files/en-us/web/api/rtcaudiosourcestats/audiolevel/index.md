@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: audioLevel property"
 short-title: audioLevel
 slug: Web/API/RTCAudioSourceStats/audioLevel
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.audioLevel
+browser-compat: api.RTCStatsReport.type_media-source.audioLevel
 ---
 
 {{APIRef("WebRTC")}}

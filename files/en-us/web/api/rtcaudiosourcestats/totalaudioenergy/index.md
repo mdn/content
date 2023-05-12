@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: totalAudioEnergy property"
 short-title: totalAudioEnergy
 slug: Web/API/RTCAudioSourceStats/totalAudioEnergy
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.totalAudioEnergy
+browser-compat: api.RTCStatsReport.type_media-source.totalAudioEnergy
 ---
 
 {{APIRef("WebRTC")}}

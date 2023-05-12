@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: trackIdentifier property"
 short-title: trackIdentifier
 slug: Web/API/RTCAudioSourceStats/trackIdentifier
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.trackIdentifier
+browser-compat: api.RTCStatsReport.type_media-source.trackIdentifier
 ---
 
 {{APIRef("WebRTC")}}

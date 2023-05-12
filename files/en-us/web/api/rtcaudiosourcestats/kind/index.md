@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: kind property"
 short-title: kind
 slug: Web/API/RTCAudioSourceStats/kind
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.kind
+browser-compat: api.RTCStatsReport.type_media-source.kind
 ---
 
 {{APIRef("WebRTC")}}

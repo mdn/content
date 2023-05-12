@@ -3,7 +3,7 @@ title: "RTCAudioSourceStats: id property"
 short-title: id
 slug: Web/API/RTCAudioSourceStats/id
 page-type: web-api-instance-property
-browser-compat: api.RTCAudioSourceStats.id
+browser-compat: api.RTCStatsReport.type_media-source.id
 ---
 
 {{APIRef("WebRTC")}}
