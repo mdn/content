@@ -38,7 +38,7 @@ The following properties are common to all statistics objects. <!-- RTCStats -->
 - {{domxref("RTCAudioSourceStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCAudioSourceStats.type", "type")}}
-  - : A string with the value `media-source"`, indicating that the object contains either {{domxref("RTCAudioSourceStats")}} or {{domxref("RTCVideoSourceStats")}}.
+  - : A string with the value `"media-source"`, indicating that the object is an instance of either {{domxref("RTCAudioSourceStats")}} or {{domxref("RTCVideoSourceStats")}}.
 
 ## Description
 
