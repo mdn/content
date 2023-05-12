@@ -595,16 +595,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.57.tgz#8aa713ed5bdf2686b72775623ef14ffb58c2c0f4"
   integrity sha512-ED1+lSPglyGjBVPubg44h7nIzZK/Oc3lUI/rEZ+xDWmSY/LRKFINdJKYdGnViy/R7LXa3EGDKFSC9jXG6mfaiQ==
 
-"@mdn/yari@2.20.0":
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.20.0.tgz#14b7b428425da0563d7e5bd47217fdfd09329520"
-  integrity sha512-xYzza8mAo7LgSQRJdW5tUhm3LAYE+/7gwfFqoNwz1vZjQGlfKLNCYq2G2rh15AvXAIkEIKspZkqGjzFnKGWN3w==
+"@mdn/yari@2.20.3":
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.20.3.tgz#1e9b35680535f0c73cd4c039f9a3979c36bf518a"
+  integrity sha512-BD30P75neRNl/8LWDUoo078piMbSyVhRYjfXze/7i3ZoPdVxwlQB2/wGQlMyQMFi+cJ+anCr480i084h8ReuJA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
     "@mdn/bcd-utils-api" "^0.0.4"
     "@mdn/browser-compat-data" "^5.2.57"
-    "@mozilla/glean" "1.3.0"
+    "@mozilla/glean" "1.4.0"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.2"
     "@webref/css" "^5.4.4"
@@ -668,10 +668,10 @@
     web-features "^0.4.1"
     web-specs "^2.57.0"
 
-"@mozilla/glean@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/@mozilla/glean/-/glean-1.3.0.tgz"
-  integrity sha512-2bEhpV8Tf4U/KEAJvaesVhe8SXk089jeDCHicEiBbznsRiIElHZVku7t7QHJI16oTqJEf/wHqjTDSQI9Wl3p3A==
+"@mozilla/glean@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-1.4.0.tgz#a29cb3bde7e52de4d100c1e539298aa3a7ec28f8"
+  integrity sha512-16YgRBPexUtgGD13dnAYYmHeeEzatQ2wSFuwopNvXuy4CeJw3xpJ+N4fVjnMJtQffpp89l2f4BvKva+eAmmBPg==
   dependencies:
     fflate "^0.7.1"
     jose "^4.0.4"
