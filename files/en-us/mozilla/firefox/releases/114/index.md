@@ -17,6 +17,8 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### CSS
 
+- Handling of `infinity` and `NaN` data types within the [`calc()`](/en-US/docs/Web/CSS/calc) function is now supported ([Firefox bug 1830759](https://bugzil.la/1830759)).
+
 #### Removals
 
 ### JavaScript
