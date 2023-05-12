@@ -50,7 +50,10 @@ The code below sets up handlers for primary action events in order to determine 
 
 ```js
 xrSession.addEventListener("select", (event) => {
-  let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
+  let targetRayPose = event.frame.getPose(
+    event.inputSource.targetRaySpace,
+    myRefSpace
+  );
 
   if (targetRayPose) {
     let hit = myHitTest(targetRayPose.transform);

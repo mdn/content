@@ -55,3 +55,9 @@ const size = queueingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor
+- [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)

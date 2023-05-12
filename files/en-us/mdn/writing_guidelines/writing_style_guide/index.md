@@ -613,15 +613,10 @@ Keep the following guidelines in mind when writing titles:
 
 ## Further reading
 
-### Preferred style guides
+### Other style guides
 
 If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
-
-### Preferred dictionary
-
-For questions about spelling, refer to [Dictionary.com](https://www.dictionary.com/).
-The spelling checker for this site uses American English.
 
 ### Language, grammar, and spelling
 

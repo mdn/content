@@ -99,19 +99,19 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 
-   ```html
+   ```svelte
    <h1>Svelte to-do list</h1>
    ```
 
 3. Change the `title` element in `public/index.html` to contain the text _Svelte to-do list_:
 
-   ```html
+   ```svelte
    <title>Svelte to-do list</title>
    ```
 
 4. Open `src/App.svelte` and replace its contents with the following:
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
    </script>
@@ -139,7 +139,7 @@ Now if you check your testing server URL you'll see our `Todos.svelte` component
 
 For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our `Todos.svelte` component file, replacing the existing content:
 
-```html
+```svelte
 <!-- Todos.svelte -->
 <div class="todoapp stack-large">
   <!-- NewTodo -->
@@ -280,7 +280,7 @@ In subsequent articles we'll get all these features working, and more besides.
 
 You may notice some unusual attributes here. For example:
 
-```html
+```svelte
 <button class="btn toggle-btn" aria-pressed="true">
   <span class="visually-hidden">Show</span>
   <span>All</span>
@@ -294,7 +294,7 @@ The class `visually-hidden` has no effect yet, because we have not included any 
 
 Further down, you can find the following `<ul>` element:
 
-```html
+```svelte
 <ul
   role="list"
   className="todo-list stack-large"
@@ -315,7 +315,7 @@ Accessibility (shortened to a11y) isn't always easy to get right, but Svelte wil
 
 For example, if we add an `<img>` element to our `todos.svelte` component without its corresponding `alt` prop:
 
-```html
+```svelte
 <h1>Svelte To-Do list</h1>
 
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
@@ -341,7 +341,7 @@ Moreover, our editor can display this warning even before calling the compiler:
 
 You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs#Comments) beginning with `svelte-ignore`, like this:
 
-```html
+```svelte
 <!-- svelte-ignore a11y-missing-attribute -->
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
