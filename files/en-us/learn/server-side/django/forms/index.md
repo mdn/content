@@ -499,7 +499,7 @@ The view might look similar to this:
     {% if bookinstance_list %}
     <ul>
 
-      {% for bookinst in bookinstance_list %} 
+      {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
         <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }}) {% if user.is_staff %}- \{{ bookinst.borrower }}{% endif %}
       </li>

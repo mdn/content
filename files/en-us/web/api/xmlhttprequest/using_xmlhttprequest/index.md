@@ -9,7 +9,7 @@ browser-compat: api.XMLHttpRequest
 
 In this guide, we'll take a look at how to use
 {{domxref("XMLHttpRequest")}} to issue [HTTP](/en-US/docs/Web/HTTP)
-requests in order to exchange data between the web site and a server.
+requests in order to exchange data between the website and a server.
 
 Examples of both common and more obscure use cases for `XMLHttpRequest` are included.
 

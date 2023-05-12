@@ -38,7 +38,7 @@ Open **/controllers/bookController.js**. Near the top of the file you should see
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
@@ -86,7 +86,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 });
 ```
 
-We use the [`countDocuments()`](https://mongoosejs.com/docs/api/model.html#Model.countDocuments()) method to get the number of instances of each model.
+We use the [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method to get the number of instances of each model.
 This method is called on a model, with an optional set of conditions to match against, and returns a `Query` object.
 The query can be executed by calling [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec), which returns a `Promise` that is either fulfilled with a result, or rejected if there is a database error.
 

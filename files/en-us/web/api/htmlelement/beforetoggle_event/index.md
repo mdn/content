@@ -55,7 +55,7 @@ It is worth pointing out that `beforetoggle` events are coalesced, meaning that 
 For example:
 
 ```js
-popover.addEventListener('beforetoggle', () => {
+popover.addEventListener("beforetoggle", () => {
   //...
 });
 

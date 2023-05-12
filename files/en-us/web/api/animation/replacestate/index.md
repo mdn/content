@@ -8,7 +8,7 @@ browser-compat: api.Animation.replaceState
 
 {{ APIRef("Web Animations") }}
 
-The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) indicates whether the animation has been automatically removed after being replaced by another animation.
+The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) indicates whether the animation has been [removed by the browser automatically](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) after being replaced by another animation.
 
 ## Value
 
@@ -19,7 +19,7 @@ A string that represents the replace state of the animation. The value can be on
 - `persisted`
   - : The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
 - `removed`
-  - : The animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+  - : The animation has been removed by the browser automatically.
 
 ## Specifications
 
