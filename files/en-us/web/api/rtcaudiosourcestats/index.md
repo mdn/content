@@ -128,7 +128,7 @@ stats.forEach((report) => {
   }
 });
 
-const audioLevel = audioSourceStats.audioLevel;
+const audioLevel = audioSourceStats?.audioLevel;
 ```
 
 ## Specifications
