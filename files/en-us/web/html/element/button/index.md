@@ -72,12 +72,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
 - `name`
+
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 
 - `popovertarget`
+
   - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
 
 - `popovertargetaction`
+
   - : Specifies the the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
 
     - `"hide"`
