@@ -12,7 +12,7 @@ The {{domxref("RTCAudioSourceStats")}} dictionary's property **`trackIdentifier`
 
 ## Value
 
-A string containing the value of the associated [`MediaStreamTrack.id`](/en-US/docs/Web/API/MediaStreamTrack/id)
+A string containing the value of the associated [`MediaStreamTrack.id`](/en-US/docs/Web/API/MediaStreamTrack/id).
 
 ## Specifications
 

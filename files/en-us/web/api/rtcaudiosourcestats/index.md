@@ -25,9 +25,9 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 The following properties are present in both `RTCAudioSourceStats` and {{domxref("RTCVideoSourceStats")}}: <!-- RTCMediaSourceStats  -->
 
 - {{domxref("RTCAudioSourceStats.trackIdentifier", "trackIdentifier")}}
-  - : A string that contains the id value of the `MediaStreamTrack` associated with audio source.
+  - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the audio source.
 - {{domxref("RTCAudioSourceStats.kind", "kind")}}
-  - : A string indicating the kind of media source, which in this case will be `audio`.
+  - : A string indicating whether this object represents stats for a video source or a media source. For an `RTCAudioSourceStats` this will always be `audio`.
 
 ### Common instance properties
 
@@ -122,7 +122,7 @@ const stats = await sender.getStats();
 let audioSourceStats = null;
 
 stats.forEach((report) => {
-  if (report.type === "media-source" && report.kind="audio") {
+  if (report.type === "media-source" && report.kind==="audio") {
     audioSourceStats = report;
     break;
   }
