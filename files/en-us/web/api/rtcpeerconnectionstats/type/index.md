@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_peer-connection.type
 
 The {{domxref("RTCPeerConnectionStats")}} dictionary's property **`type`** is a string with value `peer-connection`.
 
-The type of `peer-connection` uniquely identifies the type of statistics as {{domxref("RTCPeerConnectionStats")}} when iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}}.
+The type of `peer-connection` identifies the type of statistics as {{domxref("RTCPeerConnectionStats")}} when iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}}.
 
 ## Value
 
