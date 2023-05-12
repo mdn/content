@@ -10,7 +10,7 @@ browser-compat: api.RTCAudioSourceStats.audioLevel
 
 The {{domxref("RTCAudioSourceStats")}} dictionary's **`audioLevel`** property represents the audio level of the media source.
 
-The level is averaged over some small implementation-dependent interval
+The level is averaged over some small implementation-dependent interval.
 
 > **Note:** For audio levels of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.audioLevel")}}.
 

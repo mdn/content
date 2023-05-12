@@ -11,7 +11,7 @@ browser-compat: api.RTCAudioSourceStats.id
 The **`id`** property of the {{domxref("RTCAudioSourceStats")}} dictionary is a string which uniquely identifies the object
 for which this object provides statistics.
 
-Using the `id`, you can correlate this statics object with others, in order to monitor statistics over time for a given WebRTC object, such as an {{domxref("RTCPeerConnection")}}, or an {{domxref("RTCDataChannel")}}.
+Using the `id`, you can correlate this statistics object with others, in order to monitor statistics over time for a given WebRTC object, such as an {{domxref("RTCPeerConnection")}}, or an {{domxref("RTCDataChannel")}}.
 
 ## Value
 
