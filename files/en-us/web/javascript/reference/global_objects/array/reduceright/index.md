@@ -27,7 +27,7 @@ reduceRight(callbackFn, initialValue)
 - `callbackFn`
   - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the last element's value.
+      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the array's last element's value.
     - `currentValue`
       - : The current element being processed in the array.
     - `index`
