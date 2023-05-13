@@ -67,7 +67,7 @@ Once you have found a font, there are two main ways of using it:
 1. Add a reference in your code to load the font from Google's servers.
 2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
 
-Note that the first of these options may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/), because requesting fonts will expose the user's IP address. If you think this would be a problem for you, you should choose the second option.
+> **Note:** Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/) as the font service exposes the user's IP address. If this is a potential problem for you, choose the second option.
 
 Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
 
