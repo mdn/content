@@ -58,11 +58,6 @@ To see the code for this example, [view the source on Github](https://github.com
   - {{cssxref("scroll-margin-block-end")}}
 - {{cssxref("scroll-snap-stop")}}
 
-### Glossary terms
-
-- {{Glossary("scroll container")}}
-- {{Glossary("scrollport")}}
-
 ## Guides
 
 - [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
