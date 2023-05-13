@@ -325,7 +325,7 @@ date.toLocaleTimeString(); // 6:50:21 PM
 ### To get Date, Month and Year or Time
 
 ```js
-const date = new Date('Jan 17, 2000 16:45:30');
+const date = new Date("2000-01-17");
 const [month, day, year] = [
   date.getMonth(),
   date.getDate(),
