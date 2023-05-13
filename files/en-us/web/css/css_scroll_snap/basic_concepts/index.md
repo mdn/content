@@ -6,24 +6,20 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) feature provides a way to snap the scrolling to certain points as the user scrolls through a document. This can help create a more app-like experience on mobile or even on the desktop for some types of applications.
+The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document. By defining the snap behavior of scrolling, you can create a more app-like experience on mobile or even for some applications on the desktop.
 
-Scroll snap defines scroll snap positions, which enforce the scroll positions that a scroll container's {{Glossary("scrollport")}} may end at, or "snap to," after a scrolling operation has completed.
+The scroll snap feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
 
-## Key properties for CSS Scroll Snap
+## Key properties for CSS scroll snap
 
-To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
+Before you can define scroll snapping, you need to enable scrolling on a scroll container. You can do this by ensuring that the scroll container has a defined size and that it has {{cssxref("overflow")}} enabled. (Optional {{cssxref("scroll-padding")}} properties can be set on the scroll container to create a snapping offset.)
 
-The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. Several {{cssxref("scroll-margin")}} properties can be set on the snapped-to-child elements to create an outset from the defined box.
+You can then define scroll snapping on the scroll container by using the following two key properties:
+- {{cssxref("scroll-snap-type")}}: Using this property, you can define whether or not the scrollable viewport can be snapped to, whether snapping is required or optional, and the axis on which the snapping should occur.
+- {{cssxref("scroll-snap-align")}}: This property is set on every child of the scroll container and you can use it to define each child's snap position or lack thereof. (Using the {{cssxref("scroll-snap-stop")}} property, you can ensure that a child is snapped to during scrolling and not passed over. You can also set several {{cssxref("scroll-margin")}} properties on child elements that are snapped to during scrolling to create an outset from the defined box.)
 
-The key properties for the scroll snap feature are:
 
-- {{CSSxRef("scroll-snap-type")}}
-  - : Set on the [scroll container](/en-US/docs/Glossary/Scroll_container) to specify the type, direction, and optionality of scrolling.
-- {{CSSxRef("scroll-snap-align")}}: This property is used
-  - : Set on child elements to specify the scroll snap position.
-
-The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` is used on all the `<section>` element children dictating the point where the scrolling of each child should stop.
+The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` applies on all the children of the `<section>` element, dictating the point where the scrolling of each child should stop.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", '100%', 700)}}
 
@@ -61,7 +57,7 @@ In the example below, `scroll-padding` is set to `40px`. When the content snaps 
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", '100%', 700)}}
 
-This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element, for example, a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve a space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
+This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element such as a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve a space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", '100%', 700)}}
 
@@ -73,9 +69,9 @@ The {{CSSxRef("scroll-margin")}} property or the longhand scroll margin values c
 
 ## Using scroll-snap-stop
 
-The {{CSSxRef("scroll-snap-stop")}} property tells the browser whether it must snap to defined snap points — meaning that in our examples above we would stop at the start of each section — or be able to skip past sections.
+Using the {{CSSxRef("scroll-snap-stop")}} property, you can specify whether the scrolling must snap to the defined snap points. In the above examples, this would mean that the scrolling would stop at the start of each section or be able to skip past sections.
 
-It can help ensure users see each section of the scroller and don't accidentally scroll past them. However, it can negatively affect user experience by preventing the user from quickly scrolling to their desired content.
+With this property definition, you can ensure that users see each section of the scroller and don't accidentally scroll past them. However, this setting can also negatively affect user experience by preventing the user from quickly scrolling to their desired content.
 
 ## See also
 

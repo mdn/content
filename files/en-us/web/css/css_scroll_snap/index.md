@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 {{CSSRef}}
 
-The **CSS scroll snap** module contains features to control panning and scrolling behavior with snap positions. Scroll snap properties can be used to define the location of a scroll container's scrollport as users scroll thru content. Content can be snapped into position as the user scrolls overflowing content within a {{Glossary("scroll container")}}, providing paging and scroll positioning.
+The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Scroll snap properties can be used to define the location of a {{Glossary("scroll container")}}'s scrollport as users scroll through content. Content can be snapped into position as the user scrolls overflowing content within a scroll container, providing paging and scroll positioning.
 
 This module includes the scroll container scroll-padding properties to adjust the optimal viewing region of paging during scroll-into-view operations. It also includes scroll-margin and scroll-alignment properties, set on the scroll container's children, to adjust the children's visual area when that child is scrolled into view.
 
@@ -17,11 +17,13 @@ To view scroll snapping in the box below, scroll up-and-down and left-and-right 
 
 {{EmbedGHLiveSample("css-examples/modules/scroll_snap.html", '100%', 250)}}
 
-With scroll snap, one of the numbered boxes, the one you scrolled to, will snap into place. The hard-coded CSS makes the numbered box snap into the center of the viewport. Use the sliders to switch the block and inline snap position.
+With scroll snap, one of the numbered boxes that you scroll to will snap into place. The hard-coded CSS makes the numbered box snap into the center of the viewport. Use the sliders to change the block and inline snap positions.
 
-Snap properties enable allowing or blocking a user from scrolling past element. Check the "Stop on all boxes" to force all scrolling actions to be limited to scrolling to the next box.
+Using snap properties, you can allow or block the scrolling past an element, a numbered box in this case. Select the "Prevent scrolling past boxes" checkbox to force all scrolling actions to be limited to scrolling to the next box.
 
-To compare scroll snapping to regular scrolling, check the "disable snapping" box and try scrolling again.
+To compare scroll snapping to regular scrolling, check the "disable snapping" checkbox and try scrolling again.
+
+To see the code for this example, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
 
 ## Reference
 
@@ -86,8 +88,8 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" bo
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
 - [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_Scrollbars) module
-- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
-- [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/)
-- [CSS Scroll Snap](https://12daysofweb.dev/2022/css-scroll-snap/)
-- [Scroll snap examples on Codepen](https://codepen.io/collection/KpqBGW)
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (November 28, 2022)
+- [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen (September 7, 2022)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (August 13, 2021)
+- [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (June 18, 2020)
+- [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (December 7, 2019)
