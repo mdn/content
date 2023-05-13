@@ -242,7 +242,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()`
 - `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
 - `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
-- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
+- {{domxref("Window.load_event", "Window.onload")}}
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 
 ## Examples
