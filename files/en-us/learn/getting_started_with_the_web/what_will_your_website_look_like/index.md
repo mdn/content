@@ -65,7 +65,7 @@ As with images, many fonts are protected by licenses, meaning you cannot freely 
 Once you have found a font, there are two main ways of using it:
 
 1. Add a reference in your code to load the font from Google's servers.
-2. Download the font file to your own system, host the font yourself, and setup a reference to your hosted copy in your website's code.
+2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
 
 Note that the first of these options may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/), because requesting fonts will expose the user's IP address. If you think this would be a problem for you, you should choose the second option.
 
