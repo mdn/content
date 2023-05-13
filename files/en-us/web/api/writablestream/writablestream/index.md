@@ -23,7 +23,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 - `underlyingSink` {{optional_inline}}
 
   - : An object containing methods and properties that define how the constructed stream
-    instance will behave.  The `controller` parameter passed to this object's methods is a {{domxref("WritableStreamDefaultController")}} that provides abort and error signaling. `underlyingSink` can contain the following:
+    instance will behave. The `controller` parameter passed to this object's methods is a {{domxref("WritableStreamDefaultController")}} that provides abort and error signaling. `underlyingSink` can contain the following:
 
     - `start(controller)` {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
