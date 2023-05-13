@@ -98,7 +98,7 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 
 // "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener('click', () => {
-    favDialog.showModal();
+  favDialog.showModal();
 });
 
 // "Favorite animal" input sets the value of the submit button
