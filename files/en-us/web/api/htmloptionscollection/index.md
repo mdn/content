@@ -26,10 +26,10 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 -`remove`
   - : Removes the item with index index from collection.
 
-- `item`
+-`item`
   - : This method retrieves a node specified by ordinal index. Nodes are numbered in tree order (depth-first traversal order).
 
-- `namedItem`
+-`namedItem`
   - : This method retrieves a Node using a name. It first searches for a Node with a matching id attribute. If it doesn't find one, it then searches for a Node with a matching name attribute, but only on those elements that are allowed a name attribute. This method is case insensitive in HTML documents and case sensitive in XHTML documents.
 
 ## Specifications
