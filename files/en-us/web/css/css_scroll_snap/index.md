@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 {{CSSRef}}
 
-The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Scroll snap properties can be used to define the location of a {{Glossary("scroll container")}}'s scrollport as users scroll through content. Content can be snapped into position as the user scrolls overflowing content within a scroll container, providing paging and scroll positioning.
+The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Content can be snapped into position as the user scrolls overflowing content within a {{Glossary("scroll container")}}, providing paging and scroll positioning.
 
-This module includes the scroll container scroll-padding properties to adjust the optimal viewing region of paging during scroll-into-view operations. It also includes scroll-margin and scroll-alignment properties, set on the scroll container's children, to adjust the children's visual area when that child is scrolled into view.
+This module includes the scroll container scroll-padding properties to adjust the optimal viewing region of paging during scroll-into-view operations. It also includes scroll-margin and scroll-alignment, set on the scroll container's children, to adjust the children's visual area when that child is scrolled into view, as well as a property to force scrolling to stop on individual children.
 
 ## Scroll snap in action
 
@@ -17,9 +17,9 @@ To view scroll snapping in the box below, scroll up-and-down and left-and-right 
 
 {{EmbedGHLiveSample("css-examples/modules/scroll_snap.html", '100%', 250)}}
 
-With scroll snap, one of the numbered boxes that you scroll to will snap into place. The hard-coded CSS makes the numbered box snap into the center of the viewport. Use the sliders to change the block and inline snap positions.
+With scroll snap, one of the numbered boxes that you scroll to will snap into place. The initial CSS makes the numbered box snap into the center of the viewport. Use the sliders to change the block and inline snap positions.
 
-Using snap properties, you can allow or block the scrolling past an element, a numbered box in this case. Select the "Prevent scrolling past boxes" checkbox to force all scrolling actions to be limited to scrolling to the next box.
+Using snap properties, you can allow or block the scrolling past an element, a numbered box in this case. Select the "Prevent scrolling past boxes" checkbox to force all scrolling actions to be limited to scrolling to an adjacent box.
 
 To compare scroll snapping to regular scrolling, check the "disable snapping" checkbox and try scrolling again.
 
