@@ -29,7 +29,7 @@ Safari and Firefox on desktop do not support the Badging API and do not support 
 
 ### Mobile support
 
-On mobile operating systems, badges are supported on Chromium-based browsers running on Android.
+Badges are supported on mobile operating systems, including Chromium-based browsers running on Android and in Safari on iOS and iPadOS, starting with iPadOS 16.4.
 
 ## Badge best practices
 
@@ -39,7 +39,7 @@ Before learning how to use badges, consider these best practices to ensure your 
 
 To ensure the Badging API is [supported](#support-for-badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
 
-```javascript
+```js
 if (navigator.setAppBadge) {
   // The API is supported, use it.
 } else {
@@ -48,6 +48,18 @@ if (navigator.setAppBadge) {
 ```
 
 Do not rely solely on badges to inform users about the availability of new content. Browsers that support the Badging API may be installed on operating systems that do not support displaying a badge. For example, while Chrome supports the Badging API, badges will not appear on installed application icons on Linux.
+
+### Request notification permissions for iOS and/or iPadOS
+
+While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [Notification.requestPermission()](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
+
+```js
+Notification.requestPermission().then((result) => {
+  console.log(result);
+});
+```
+
+Optionally, you can check if a user has previously granted notification permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
 ### Use badges sparingly
 
@@ -71,7 +83,7 @@ For example, if an email client app displays the unread messages count on the ap
 
 To display a badge on your PWA's app icon that shows a number of unread messages, use the {{domxref("Navigator.setAppBadge()")}} method:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.setAppBadge) {
   // Display the number of unread messages.
@@ -81,7 +93,7 @@ if (navigator.setAppBadge) {
 
 You can also display an empty badge using the same method by omitting the count parameter, or setting it to `0`:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.setAppBadge) {
   // Just display the badge, with no number in it.
@@ -91,7 +103,7 @@ if (navigator.setAppBadge) {
 
 To remove the badge on the app icon, use the {{domxref("Navigator.clearAppBadge()")}} method:
 
-```javascript
+```js
 // Check for support first.
 if (navigator.clearAppBadge) {
   // Remove the badge on the app icon.
@@ -114,7 +126,7 @@ PWAs can use the following mechanisms to update in the background and display, u
 
 Here is a service worker code example showing how to listen to a server's Push messages and update the app badge to reflect an unread messages count:
 
-```javascript
+```js
 // Listen to "push" events in the service worker.
 self.addEventListener("push", (event) => {
   // Extract the unread count from the push message data.

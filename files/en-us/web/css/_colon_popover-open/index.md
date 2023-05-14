@@ -46,7 +46,7 @@ To override the default styles and get the popover to appear somewhere else on y
   height: 100px;
   position: absolute;
   inset: unset;
-  top: 5px;
+  bottom: 5px;
   right: 5px;
   margin: 0;
 }

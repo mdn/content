@@ -15,9 +15,9 @@ The `abort` event is fired at {{domxref("XMLHttpRequestUpload")}} when a request
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', (event) => { })
+addEventListener("abort", (event) => {});
 
-onabort = (event) => { }
+onabort = (event) => {};
 ```
 
 ## Event type

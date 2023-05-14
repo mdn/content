@@ -8,7 +8,7 @@ browser-compat: api.Animation.remove_event
 
 {{ APIRef("Web Animations") }}
 
-The **`remove`** event of the {{domxref("Animation")}} interface fires when the animation is [automatically removed](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) by the browser.
+The **`remove`** event of the {{domxref("Animation")}} interface fires when the animation is [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) by the browser.
 
 ## Syntax
 
@@ -38,10 +38,45 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Removing replaced animations
 
-#### Javascript
+In this example we have a `<button id="start">` element, and an event listener that runs whenever the mouse moves. The {{domxref("Element.mousemove_event","mousemove")}} event handler sets up an animation that animates the `<button>` to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove forwards-filling animations that are overridden by other animations.
+
+The number of animations created is displayed. A `remove` event listener is used to count and display the number of animations removed as well.
+
+All but one of the animations should eventually be removed.
+
+#### HTML
+
+```html
+<button id="start">Click to drag</button>
+<br />
+<button id="reset">Reset example</button>
+<p>
+  Click the button to start the animation (disabled by default to protect those
+  who suffer migraines when experiencing such animations).
+</p>
+<p>Animations created: <span id="count-created">0</span></p>
+<p>Animations removed: <span id="count-removed">0</span></p>
+```
+
+#### CSS
+
+```css
+:root,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+button {
+  margin: 0.5rem 0;
+}
+```
+
+#### JavaScript
 
 ```js
-const button = document.querySelector("button");
+const button = document.querySelector("#start");
 let created = 0;
 let removed = 0;
 
@@ -70,40 +105,16 @@ function showCounts() {
   document.getElementById("count-created").textContent = created;
   document.getElementById("count-removed").textContent = removed;
 }
-```
 
-#### HTML
-
-```html
-<button>Click to drag</button>
-<p>
-  Click the button to start the animation (disabled by default to protect those
-  who suffer migraines when experiencing such animations).
-</p>
-<p>Animations created: <span id="count-created">0</span></p>
-<p>Animations removed: <span id="count-removed">0</span></p>
-```
-
-#### CSS
-
-```css
-:root,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
 ```
 
 #### Result
 
 {{embedlivesample("Removing_replaced_animations","",250)}}
-
-Here we have a `<button>` element, and an event listener that runs whenever the mouse moves. The {{domxref("Element.mousemove_event","mousemove")}} event handler sets up an animation that animates the `<button>` to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove forward filling animations that are overridden by other animations.
-
-The number of animations created is displayed. A `remove` event listener is used to count and display the number of animations removed as well.
-
-All but one of the animations should eventually be removed.
 
 ## Specifications
 

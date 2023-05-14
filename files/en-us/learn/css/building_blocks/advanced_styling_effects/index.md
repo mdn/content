@@ -97,7 +97,7 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 </article>
 ```
 
-```css
+```css-nolint
 p {
   margin: 0;
 }

@@ -57,4 +57,6 @@ const size = queueingStrategy.size(chunk);
 
 ## See also
 
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor
