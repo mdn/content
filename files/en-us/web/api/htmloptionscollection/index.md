@@ -37,6 +37,8 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 
 - : This method retrieves a Node using a name. It first searches for a Node with a matching id attribute. If it doesn't find one, it then searches for a Node with a matching name attribute, but only on those elements that are allowed a name attribute. This method is case insensitive in HTML documents and case sensitive in XHTML documents.
 
+_This interface inherits the methods of its parent, [`HTMLCollection`](/en-US/docs/Web/API/HTMLCollection)._
+
 ## Specifications
 
 {{Specifications}}
