@@ -15,7 +15,6 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 
 - `length`
   - : `unsigned long`. Returns the number of elements in collection. Mozilla allows this, while other implementations could potentially throw a [DOMException](/en-US/docs/Web/API/DOMException).
-
 - `selectedIndex`
   - : Returns the index of the first selected item, if any, or −1 if there is no selected item.
 
@@ -23,12 +22,7 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 
 -`add`
 - : Inserts element before the node given by before. The before argument can be a number, in which case element is inserted before the item with that number, or an element from collection, in which case element is inserted before that element. If before is omitted, null, or a number out of range, then element will be added at the end of the list. Throws a "HierarchyRequestError" DOMException if element is an ancestor of the element into which it is to be inserted.
-- : Has 4 overloads
-    i. add(element : HTMLOptionElement, [before : HTMLElement]) : undefined
-    ii. add(element : HTMLOptionElement, [before : Number]) : undefined
-    iii. add(element : HTMLOptGroupElement, [before : HTMLElement]) : undefined
-    iv. add(element : HTMLOptGroupElement, [before : Number]) : undefined
-    
+
 -`remove`
 - : Removes the item with index index from collection.
   
