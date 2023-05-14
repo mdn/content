@@ -312,9 +312,7 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 With this:
 
 ```jsx
-{
-  filterList;
-}
+{filterList}
 ```
 
 This won't work yet. We've got a bit more work to do first.
