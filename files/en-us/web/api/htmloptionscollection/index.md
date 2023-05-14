@@ -15,7 +15,7 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 
 - `length`
   - : `unsigned long`. Returns the number of elements in collection. Mozilla allows this, while other implementations could potentially throw a [DOMException](/en-US/docs/Web/API/DOMException).
- 
+  
 - `selectedIndex`
   - : Returns the index of the first selected item, if any, or −1 if there is no selected item.
 
