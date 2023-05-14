@@ -11,7 +11,7 @@ The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/We
 
 ## Description
 
-Nearly all [objects](/en-US/docs/Web/JavaScript/Data_structures#objects) in JavaScript are instances of {{jsxref("Object")}}; a typical object inherits properties (including methods) from `Object.prototype`, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inherit from `Object.prototype` are those with [`null` prototype](#null-prototype_objects), or descended from other `null` prototype objects.
+Nearly all [objects](/en-US/docs/Web/JavaScript/Data_structures#objects) in JavaScript are instances of `Object`; a typical object inherits properties (including methods) from `Object.prototype`, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inherit from `Object.prototype` are those with [`null` prototype](#null-prototype_objects), or descended from other `null` prototype objects.
 
 Changes to the `Object.prototype` object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior. To make it more secure, `Object.prototype` is the only object in the core JavaScript language that has [immutable prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — the prototype of `Object.prototype` is always `null` and not changeable.
 
