@@ -22,15 +22,19 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 ## Instance methods
 
 -`add`
+
   - : Inserts element before the node given by before. The before argument can be a number, in which case element is inserted before the item with that number, or an element from collection, in which case element is inserted before that element. If before is omitted, null, or a number out of range, then element will be added at the end of the list. Throws a "HierarchyRequestError" DOMException if element is an ancestor of the element into which it is to be inserted.
 
 -`remove`
+
   - : Removes the item with index index from collection.
 
 -`item`
+
   - : This method retrieves a node specified by ordinal index. Nodes are numbered in tree order (depth-first traversal order).
 
 -`namedItem`
+
   - : This method retrieves a Node using a name. It first searches for a Node with a matching id attribute. If it doesn't find one, it then searches for a Node with a matching name attribute, but only on those elements that are allowed a name attribute. This method is case insensitive in HTML documents and case sensitive in XHTML documents.
 
 ## Specifications
