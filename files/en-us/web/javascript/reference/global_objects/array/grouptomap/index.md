@@ -138,6 +138,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by groupToMap() since length is 3
 };
 console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
 // Map { 0 => [2, 4], 1 => [3] }

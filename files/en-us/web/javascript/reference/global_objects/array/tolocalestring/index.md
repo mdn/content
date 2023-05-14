@@ -84,7 +84,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
-  3: 4
+  3: 4, // ignored by toLocaleString() since length is 3
 };
 console.log(Array.prototype.toLocaleString.call(arrayLike));
 // 1,2,3

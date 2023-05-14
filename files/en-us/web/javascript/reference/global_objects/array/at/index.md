@@ -89,12 +89,10 @@ const arrayLike = {
   length: 2,
   0: "a",
   1: "b",
-  2: "c",
-  at: Array.prototype.at,
+  2: "c", // ignored by at() since length is 2
 };
-console.log(arrayLike.at(0)); // "a"
-console.log(arrayLike.at(1)); // "b"
-console.log(arrayLike.at(2)); // undefined -- length=2, so highest index is 1
+console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
+console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ```
 
 ## Specifications

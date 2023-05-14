@@ -148,6 +148,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by group() since length is 3
 };
 console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
 // { 0: [2, 4], 1: [3] }

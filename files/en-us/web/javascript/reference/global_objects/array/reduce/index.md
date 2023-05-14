@@ -395,7 +395,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 99
+  3: 99, // ignored by reduce() since length is 3
 };
 console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 // 9

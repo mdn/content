@@ -80,7 +80,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5
+  3: 5, // ignored by join() since length is 3
 };
 console.log(Array.prototype.join.call(arrayLike));
 // 2,3,4

@@ -255,7 +255,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 99
+  3: 99, // ignored by reduceRight() since length is 3
 };
 console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 // -1, which is 4 - 3 - 2

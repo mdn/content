@@ -255,7 +255,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5
+  3: 5, // ignored by forEach() since length is 3
 };
 Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 // 2

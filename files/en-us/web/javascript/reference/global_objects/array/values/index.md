@@ -137,7 +137,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
-  3: "d"
+  3: "d", // ignored by values() since length is 3
 };
 for (const entry of Array.prototype.values.call(arrayLike)) {
   console.log(entry);

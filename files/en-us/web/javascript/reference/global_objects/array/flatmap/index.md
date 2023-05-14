@@ -146,7 +146,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
-  3: 4
+  3: 4, // ignored by flatMap() since length is 3
 };
 console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
 // [1, 2, 2, 4, 3, 6]

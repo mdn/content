@@ -159,7 +159,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
-  3: "a" // ignored by filter() since length = 3
+  3: "a", // ignored by filter() since length is 3
 };
 console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 // [ 'a', 'b' ]

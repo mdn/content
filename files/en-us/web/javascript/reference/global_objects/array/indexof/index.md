@@ -116,7 +116,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5
+  3: 5, // ignored by indexOf() since length is 3
 };
 console.log(Array.prototype.indexOf.call(arrayLike, 2));
 // 0

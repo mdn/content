@@ -156,7 +156,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
-  3: 345 // ignored by every() since length = 3
+  3: 345, // ignored by every() since length is 3
 };
 console.log(
   Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),

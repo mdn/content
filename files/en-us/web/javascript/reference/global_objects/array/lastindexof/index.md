@@ -108,7 +108,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 2,
-  3: 5
+  3: 5, // ignored by lastIndexOf() since length is 3
 };
 console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
 // 2

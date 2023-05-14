@@ -132,7 +132,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
-  3: 3
+  3: 3, // ignored by some() since length is 3
 };
 console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 // false

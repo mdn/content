@@ -174,7 +174,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
-  3: 3
+  3: 3, // ignored by findLast() since length is 3
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),

@@ -88,7 +88,7 @@ const arrayLike = {
   length: 3,
   unrelated: "foo",
   2: 4,
-  3: 33
+  3: 33, // ignored by reverse() since length is 3
 };
 console.log(Array.prototype.reverse.call(arrayLike));
 // { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
