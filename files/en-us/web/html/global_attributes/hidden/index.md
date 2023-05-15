@@ -53,7 +53,7 @@ Elements that are descendants of a hidden element are still active, which means 
 
 The _hidden_ state indicates that the element is not currently relevant to the page, or that it is being used to declare content for reuse by other parts of the page and should not be directly presented to the user. The browser will not render elements that are in the _hidden_ state.
 
-Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout. This also means that changing the value of the CSS {{cssxref("display")}} property on an element in the _hidden_ state will overrides the state. For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
+Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout. This also means that changing the value of the CSS {{cssxref("display")}} property on an element in the _hidden_ state will override the state. For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
 
 ### The hidden until found state
 
