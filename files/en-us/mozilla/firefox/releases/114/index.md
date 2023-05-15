@@ -44,6 +44,8 @@ This article provides information about the changes in Firefox 114 that affect d
 
 - [`Window.print()`](/en-US/docs/Web/API/Window/print) now opens a print dialog on Firefox for Android, allowing the current document to be printed ([Firefox bug 1809922](https://bugzil.la/1809922)).
 
+- [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) is now supported for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
