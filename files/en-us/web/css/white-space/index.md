@@ -14,7 +14,7 @@ The **`white-space`** CSS property sets how {{Glossary("whitespace", "white spac
 The property specifies two things:
 
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
-- Whether lines may wrap at soft-wrap opportunities.
+- Whether and how lines will wrap.
 
 > **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
@@ -29,6 +29,10 @@ white-space: pre-wrap;
 white-space: pre-line;
 white-space: break-spaces;
 
+/* Shorthand values */
+white-space: collapse balance;
+white-space: preserve nowrap;
+
 /* Global values */
 white-space: inherit;
 white-space: initial;
@@ -37,7 +41,7 @@ white-space: revert-layer;
 white-space: unset;
 ```
 
-The `white-space` property is specified as a single keyword chosen from the list of values below.
+The `white-space` property is specified as a single keyword chosen from the list of values below or shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
 
 ### Values
 
@@ -56,10 +60,10 @@ The `white-space` property is specified as a single keyword chosen from the list
   - : The behavior is identical to that of `pre-wrap`, except that:
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
-    - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
+    - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
 
-The following table summarizes the behavior of the various `white-space` values:
+The following table summarizes the behavior of the various `white-space` keyword values:
 
 <table class="standard-table">
   <thead>
@@ -165,8 +169,6 @@ pre {
 
 ### In action
 
-#### HTML
-
 ```html hidden
 <div id="css-code" class="box">
   p { white-space:
@@ -177,6 +179,7 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
+    <option>preserve nowrap</option>
   </select>
   }
 </div>
@@ -196,7 +199,6 @@ pre {
 .box {
   width: 300px;
   padding: 16px;
-  border-radius: 10px;
 }
 
 #css-code {
@@ -212,7 +214,6 @@ pre {
 #results {
   background-color: rgb(230, 230, 230);
   overflow-x: scroll;
-  height: 400px;
   white-space: normal;
   font-size: 14px;
 }
@@ -226,20 +227,7 @@ select.addEventListener("change", (e) => {
 });
 ```
 
-```html-nolint
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-```
-
-#### Result
-
-{{EmbedLiveSample("In_action", "100%", 500)}}
+{{EmbedLiveSample("In_action", "100%", 350)}}
 
 ## Specifications
 
