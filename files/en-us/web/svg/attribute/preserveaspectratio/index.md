@@ -17,7 +17,7 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 
 ### Meet (width > height)
 
-This example shows the use of **`meet`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMid`**, **`xMinYMid`**, and **`xMaxYMid`**.
+This example shows the use of **`meet`** when the element's **`width`** is greater than its **`height`**. It presents three variations, with three different alignment values: **`xMidYMid`**, **`xMinYMid`**, and **`xMaxYMid`**.
 
 ```css hidden
 html,
@@ -104,7 +104,7 @@ rect:active {
 
 ### Slice (width > height)
 
-This example shows the use of **`slice`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
+This example shows the use of **`slice`** when the element's **`width`** is greater than its **`height`**. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
 
 ```css hidden
 html,
@@ -189,7 +189,7 @@ rect:active {
 
 ### Meet (height > width)
 
-This example shows the use of **`meet`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
+This example shows the use of **`meet`** when the element's **`height`** is greater than its **`width`**. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
 
 ```css hidden
 html,
@@ -274,7 +274,7 @@ rect:active {
 
 ### Slice (height > width)
 
-This example shows the use of **`slice`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMinYMid`**, **`xMidYMid`**, and **`xMaxYMid`**.
+This example shows the use of **`slice`** when the element's **`height`** is greater than its **`width`**. It presents three variations, with three different alignment values: **`xMinYMid`**, **`xMidYMid`**, and **`xMaxYMid`**.
 
 ```css hidden
 html,
