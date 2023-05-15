@@ -46,9 +46,9 @@ There are four algorithms to determine which arc is used:
 
     Examples:
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                       | `θ1 = -225deg`, `θ2 = 45deg`                                       |
-    | :---------------------------------------------------------------: | :----------------------------------------------------------------: |
-    | [shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | [shorter with θ1 = -225deg and θ2 = 45deg](shorter_decreasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = -225deg`, `θ2 = 45deg`                                        |
+    | ------------------------------------------------------------------ | ------------------------------------------------------------------- |
+    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = -225deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
   - : Use the longer arc. When the two radii coincide:
@@ -63,9 +63,9 @@ There are four algorithms to determine which arc is used:
 
     Examples:
 
-    | `θ1 = 45deg`, `θ2 = -225deg`                                     | `θ1 = 135deg`, `θ2 = 45deg`                                     |
-    | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
-    | [longer with θ1 = 45deg and θ2 = -225deg](longer_decreasing.png) | [longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | `θ1 = 45deg`, `θ2 = -225deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
+    | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
+    | ![longer with θ1 = 45deg and θ2 = -225deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
   - : Use the clockwise arc. When the two radii coincide:
@@ -75,9 +75,9 @@ There are four algorithms to determine which arc is used:
 
     Examples:
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 495deg`, `θ2 = 45deg`                                         |
-    | :------------------------------------------------------------------: | :-----------------------------------------------------------------: |
-    | [increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | [increasing with θ1 = 495deg and θ2 = 45deg](longer_increasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 495deg`, `θ2 = 45deg`                                          |
+    | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
+    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 495deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
   - : Use the counterclockwise arc. When the two radii coincide:
@@ -87,9 +87,9 @@ There are four algorithms to determine which arc is used:
 
     Examples:
 
-    | `θ1 = 45deg`, `θ2 = 495deg`                                         | `θ1 = 135deg`, `θ2 = 45deg`                                          |
-    | :-----------------------------------------------------------------: | :------------------------------------------------------------------: |
-    | [decreasing with θ1 = 45deg and θ2 = 495deg](longer_decreasing.png) | [decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | `θ1 = 45deg`, `θ2 = 495deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
+    | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+    | ![decreasing with θ1 = 45deg and θ2 = 495deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
 ### Formal syntax
 
