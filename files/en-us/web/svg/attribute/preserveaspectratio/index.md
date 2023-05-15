@@ -15,24 +15,9 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 
 ## Example
 
-<!-- ```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-}  
-```-->
+### Meet (width > height)
 
-<!-- ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-``` -->
-
-### xMidYMid meet (width > height)
+This example shows the use of **`meet`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMid`**, **`xMinYMid`**, and **`xMaxYMid`**.
 
 ```css hidden
 html,
@@ -43,7 +28,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 202 56" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -52,7 +37,6 @@ svg {
 ```
 
 ```html
-  <!-- (width>height) meet -->
   <rect x="0" y="0" width="60" height="30">
     <title>xMidYMid meet</title>
   </rect>
@@ -63,6 +47,123 @@ svg {
     preserveAspectRatio="xMidYMid meet"
     x="0"
     y="0">
+    <use href="#smiley" />
+  </svg>
+```
+
+```html
+  <rect x="70" y="0" width="60" height="30">
+    <title>xMinYMid meet</title>
+  </rect>
+  <svg
+    viewBox="0 0 100 100"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMinYMid meet"
+    x="70"
+    y="0">
+    <use href="#smiley" />
+  </svg>
+```
+
+```html
+  <rect x="140" y="0" width="60" height="30">
+    <title>xMaxYMid meet</title>
+  </rect>
+  <svg
+    viewBox="0 0 100 100"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMaxYMid meet"
+    x="140"
+    y="0">
+    <use href="#smiley" />
+  </svg>
+</svg>
+```
+
+```css
+path {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+rect:hover,
+rect:active {
+  outline: 1px solid red;
+}
+
+
+```
+
+{{EmbedLiveSample('meet width height', '100%', 200)}}
+
+### Slice (width > height)
+
+This example shows the use of **`slice`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%; 
+} 
+```
+
+```html
+<svg viewBox="-1 -1 202 57" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="smiley"
+      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs> 
+```
+
+```html
+  <rect x="0" y="15" width="60" height="30">
+    <title>xMidYMin slice</title>
+  </rect>
+  <svg
+    viewBox="0 0 100 100"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMidYMin slice"
+    x="0"
+    y="15">
+    <use href="#smiley" />
+  </svg>
+```
+
+```html
+  <rect x="70" y="15" width="60" height="30">
+    <title>xMidYMid slice</title>
+  </rect>
+  <svg
+    viewBox="0 0 100 100"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMidYMid slice"
+    x="70"
+    y="15">
+    <use href="#smiley" />
+  </svg>
+```
+
+```html
+  <rect x="140" y="15" width="60" height="30">
+    <title>xMidYMax slice</title>
+  </rect>
+  <svg
+    viewBox="0 0 100 100"
+    width="60"
+    height="30"
+    preserveAspectRatio="xMidYMax slice"
+    x="140"
+    y="15">
     <use href="#smiley" />
   </svg>
 </svg>
@@ -84,61 +185,11 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMid meet width height', '100%', 200)}}
+{{EmbedLiveSample('Slice width height', '100%', 200)}}
 
-### xMinYMid meet (width > height)
+### Meet (height > width)
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
-```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="25" y="0" width="60" height="30">
-    <title>xMinYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMinYMid meet"
-    x="25"
-    y="0">
-    <use href="#smiley" />
-  </svg>
-```
-
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMinYMid meet width height', '100%', 200)}}
-
-### xMaxYMid meet (width > height)
+This example shows the use of **`meet`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
 
 ```css hidden
 html,
@@ -149,216 +200,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="50" y="0" width="60" height="30">
-    <title>xMaxYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMaxYMid meet width height"
-    x="50"
-    y="0">
-    <use href="#smiley" />
-  </svg>
-```
-
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMaxYMid meet width height', '100%', 200)}}
-
-### xMidYMin slice (width > height)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
-```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <!-- (width>height) slice -->
-  <rect x="0" y="15" width="60" height="30">
-    <title>xMidYMin slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMin slice"
-    x="0"
-    y="15">
-    <use href="#smiley" />
-  </svg>
-```
-
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMin slice width height', '100%', 200)}}
-
-### xMidYMid slice (width > height)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
-```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="25" y="15" width="60" height="30">
-    <title>xMidYMid slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMid slice"
-    x="25"
-    y="15">
-    <use href="#smiley" />
-  </svg>
-```
-
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMid slice width height', '100%', 200)}}
-
-### xMidYMax slice (width > height)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
-```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="50" y="15" width="60" height="30">
-    <title>xMidYMax slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMax slice"
-    x="50"
-    y="15">
-    <use href="#smiley" />
-  </svg>
-```
-
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMax slice width height', '100%', 200)}}
-
-### xMidYMin meet (height > width)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
-```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 202 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -381,45 +223,8 @@ svg {
   </svg>
 ```
 
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMin meet height width', '100%', 200)}}
-
-### xMidYMid meet (height > width)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
 ```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="90" y="0" width="30" height="75">
+  <rect x="115" y="0" width="30" height="75">
     <title>xMidYMid meet</title>
   </rect>
   <svg
@@ -427,51 +232,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMid meet"
-    x="90"
+    x="115"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMid meet height width', '100%', 200)}}
-
-### xMidYMax meet (height > width)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
 ```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="105" y="0" width="30" height="75">
+  <rect x="155" y="0" width="30" height="75">
     <title>xMidYMax meet</title>
   </rect>
   <svg
@@ -479,10 +247,11 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMax meet"
-    x="105"
+    x="155"
     y="0">
     <use href="#smiley" />
   </svg>
+</svg>
 ```
 
 ```css
@@ -501,9 +270,11 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMidYMax meet height width', '100%', 200)}}
+{{EmbedLiveSample('meet height width', '100%', 200)}}
 
-### xMinYMid slice (height > width)
+### Slice (height > width)
+
+This example shows the use of **`slice`** when the element's width is greater than its height. It presents three variations, with three different alignment values: **`xMinYMid`**, **`xMidYMid`**, and **`xMaxYMid`**.
 
 ```css hidden
 html,
@@ -514,7 +285,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 202 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -523,8 +294,7 @@ svg {
 ```
 
 ```html
-  <!-- (width<height) slice -->
-  <rect x="120" y="0" width="30" height="75">
+  <rect x="80" y="0" width="30" height="75">
     <title>xMinYMid slice</title>
   </rect>
   <svg
@@ -532,51 +302,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMinYMid slice"
-    x="120"
+    x="80"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMinYMid slice', '100%', 200)}}
-
-### xMidYMid slice (height > width)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
 ```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="135" y="0" width="30" height="75">
+  <rect x="120" y="0" width="30" height="75">
     <title>xMidYMid slice</title>
   </rect>
   <svg
@@ -584,51 +317,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMid slice"
-    x="135"
+    x="120"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
-```css
-path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-rect:hover,
-rect:active {
-  outline: 1px solid red;
-}
-```
-
-{{EmbedLiveSample('xMidYMid slice height width', '100%', 200)}}
-
-### xMaxYMid slice (height > width)
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%; 
-} 
-```
-
 ```html
-<svg viewBox="-1 -1 192 92" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
-```
-
-```html
-  <rect x="150" y="0" width="30" height="75">
+  <rect x="160" y="0" width="30" height="75">
     <title>xMaxYMid slice</title>
   </rect>
   <svg
@@ -636,10 +332,11 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMaxYMid slice"
-    x="150"
+    x="160"
     y="0">
     <use href="#smiley" />
   </svg>
+</svg>
 ```
 
 ```css
@@ -658,9 +355,11 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('xMaxYMid slice height width', '100%', 200)}}
+{{EmbedLiveSample('slice height width', '100%', 200)}}
 
 ### none
+
+This example shows an element with the **`preserveAspectRatio`** alignment value set to **`none`**.
 
 ```css hidden
 html,
@@ -671,7 +370,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 202 92" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
