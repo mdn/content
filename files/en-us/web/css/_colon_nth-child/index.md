@@ -47,7 +47,8 @@ The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three list items which have a `class="important"` set.
 
 ```css
-:nth-child(-n+3 of li.important);
+:nth-child(-n + 3 of li.important) {
+}
 ```
 
 This is different from moving the selector outside of the function, like:

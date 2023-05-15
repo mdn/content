@@ -759,6 +759,47 @@ See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
   </tbody>
 </table>
 
+### prefers-reduced-transparency media feature
+
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.prefers-reduced-transparency.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -843,46 +884,6 @@ The `groupBy` method should be used when strings can be used to represent elemen
     <tr>
       <th>Preference name</th>
       <td colspan="2">None</td>
-    </tr>
-  </tbody>
-</table>
-
-#### Static module import in workers
-
-[Workers](/en-US/docs/Web/API/Web_Workers_API) can now [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1247687](https://bugzil.la/1247687)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.workers.modules.enabled</code></td>
     </tr>
   </tbody>
 </table>

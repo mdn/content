@@ -12073,6 +12073,7 @@
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
+/en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories

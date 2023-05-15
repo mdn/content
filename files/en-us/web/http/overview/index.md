@@ -55,7 +55,7 @@ The browser translates these directions into HTTP requests, and further interpre
 ### The Web server
 
 On the opposite side of the communication channel is the server, which _serves_ the document as requested by the client.
-A server appears as only a single machine virtually; but it may actually be a collection of servers sharing the load (load balancing), or a complex piece of software interrogating other computers (like cache, a DB server, or e-commerce servers), totally or partially generating the document on demand.
+A server appears as only a single machine virtually; but it may actually be a collection of servers sharing the load (load balancing), or other software (such as caches, a database server, or e-commerce servers), totally or partially generating the document on demand.
 
 A server is not necessarily a single machine, but several server software instances can be hosted on the same machine.
 With HTTP/1.1 and the {{HTTPHeader("Host")}} header, they may even share the same IP address.
