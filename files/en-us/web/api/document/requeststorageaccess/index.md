@@ -8,9 +8,9 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("DOM")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to cookies.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies.
 
-This is relevant to user agents that by default block access to cookies by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+This is relevant to user agents that by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
@@ -26,12 +26,12 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to cookies was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to unpartitioned cookies was granted, and rejects if access was denied.
 
 `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside some kind of user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
 - If the promise resolves (i.e. if permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs that require a user gesture.
-- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This is an intentional protection against abuse — it prevents scripts from calling `requestStorageAccess()` in a loop until the user accepts the prompt.
+- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This is intentional protection against abuse — it prevents scripts from calling `requestStorageAccess()` in a loop until the user accepts the prompt.
 
 ### Exceptions
 

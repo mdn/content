@@ -8,7 +8,7 @@ browser-compat: api.Document.hasStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to cookies.
+The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 
 This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
@@ -24,12 +24,12 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to cookies — `true` if it does, and `false` if not.
+A {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies — `true` if it does, and `false` if not.
 
 The result returned by this method can be inaccurate in a couple of circumstances:
 
-1. The user may have browser settings active that block cookies entirely — in this case `true` may be returned even though cookies are still inaccessible. To handle such a situation, you are advised to gracefully handle any errors resulting in cookie values being unretrievable, for example by telling the user that unfortunately access to their personalized settings was blocked, and inviting them to sign-in again to make use of them.
-2. The browser might not block third-party cookie access by default — in this case `false` may be returned even though cookies are accessible, and storage access wouldn't need to be requested (i.e. via {{domxref("Document.requestStorageAccess()")}}). This situation is not too hard to handle, as a `Document.requestStorageAccess()` call will resolve successfully when third-party cookies are not blocked, and your code can continue to run.
+1. The user may have browser settings active that block unpartitioned cookies entirely — in this case `true` may be returned even though unpartitioned cookies are still inaccessible. To handle such a situation, you are advised to gracefully handle any errors resulting in cookie values being unretrievable, for example by telling the user that unfortunately access to their personalized settings was blocked, and inviting them to sign in again to make use of them.
+2. The browser might not block third-party cookie access by default — in this case `false` may be returned even though unpartitioned cookies are accessible, and storage access wouldn't need to be requested (i.e. via {{domxref("Document.requestStorageAccess()")}}). To get around this issue, you could query {{domxref("Document.cookie")}} to find out whether your cookies are accessible, and call {{domxref("Document.requestStorageAccess()")}} if they are not.
 
 > **Note:** If the promise gets resolved and a user gesture event was being processed when the function was originally called, the resolve handler will run as if a user gesture was being processed, so it will be able to call APIs that require user activation.
 
