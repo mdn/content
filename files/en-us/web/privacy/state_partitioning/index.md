@@ -45,7 +45,7 @@ when loaded in a third-party context. Our current
 [default cookie policy](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy) blocks access in a third-party context only for domains classified as
 trackers.
 
-## State Partitioning
+## State partitioning
 
 State Partitioning is a different approach to preventing cross-site tracking.
 Rather than block access to certain stateful APIs in a third-party context,
@@ -104,7 +104,7 @@ cannot access data stored under another top-level site.
 - [Shared Workers](/en-US/docs/Web/API/SharedWorker)
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 
-#### Network Partitioning
+#### Network partitioning
 
 Networking-related APIs are not intended to be used for websites to store
 data, but they can be
@@ -137,7 +137,7 @@ for cross-site tracking. As such, the following network APIs and caches are
 - [CORS-preflight](/en-US/docs/Glossary/Preflight_request) Cache
 - WebRTC deviceID
 
-### Dynamic Partitioning
+### Dynamic partitioning
 
 Generally, if accessible storage is partitioned by top-level site, access to a third-parties unpartitioned cookies
 can still be granted if the Storage Access API is supported:
@@ -152,7 +152,7 @@ Details about automatic grants are provided in the
 
 - [Cookies](/en-US/docs/Web/API/Document/cookie)
 
-#### Storage Access heuristics
+#### Storage access heuristics
 
 To improve web compatibility, Firefox currently includes some heuristics to
 grant unpartitioned access to cookies automatically to third parties that
