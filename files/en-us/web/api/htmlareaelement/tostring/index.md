@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A string containing the element's complete URL.
 
 ## Examples
 

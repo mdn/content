@@ -401,7 +401,7 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 1. Click _Start a new manual session_.
 2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.![Sauce test running](sauce-test-running.png)
+4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
    - Stop the session
@@ -709,7 +709,7 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.
    ![Test Choices](screen_shot_2019-04-19_at_14.55.33.png)
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.
+4. When loading has finished, you can then start to remotely test the website running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
 
    - Stop the session

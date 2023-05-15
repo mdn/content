@@ -22,7 +22,7 @@ However, creating view transitions on the web has historically been difficult. T
 - Stop accidental user interactions with the old content from causing problems.
 - Remove the old content once the transition is complete.
 
-There is also the major issue of accessibility issues caused by having the new and old content both present in the DOM at once, such as loss of reading position, focus confusion, and strange live region announcement behavior. And cross-document view transitions (i.e. across different pages in regular web sites) are impossible.
+There is also the major issue of accessibility issues caused by having the new and old content both present in the DOM at once, such as loss of reading position, focus confusion, and strange live region announcement behavior. And cross-document view transitions (i.e. across different pages in regular websites) are impossible.
 
 The View Transitions API provides a much easier way of handling the required DOM changes and transition animations.
 

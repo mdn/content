@@ -19,9 +19,9 @@ For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeeze', (event) => { })
+addEventListener("squeeze", (event) => {});
 
-onsqueeze = (event) => { }
+onsqueeze = (event) => {};
 ```
 
 ## Event type
@@ -62,8 +62,10 @@ This code treats the squeeze as an instantaneous action that doesn't involve tra
 ```js
 xrSession.addEventListener("squeeze", (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace
+    );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);
     }
@@ -76,8 +78,10 @@ You can also set up a handler for `squeeze` events by setting the {{domxref("XRS
 ```js
 xrSession.onsqueeze = (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace
+    );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);
     }

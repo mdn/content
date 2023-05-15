@@ -645,7 +645,7 @@ window.addEventListener("load", () => {
     // Each time a user uses their keyboard on a focused control, we update the value accordingly
     select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
-      // When the user hits the Escape key, deactivate the custom control 
+      // When the user hits the Escape key, deactivate the custom control
       if (event.key === "Escape") {
         deactivateSelect(select);
       }

@@ -8,7 +8,7 @@ browser-compat: api.Animation.persist
 
 {{APIRef("Web Animations")}}
 
-The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, preventing it from being [automatically removed](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) when it is replaced by another animation.
+The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, preventing it from being [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) when it is replaced by another animation.
 
 ## Syntax
 
@@ -27,6 +27,46 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ### Using `persist()`
+
+In this example, we have three buttons:
+
+- "Add persistent animation" and "Add transient animation" each add a new transform animation to the red square. The animations alternate direction: so the first is left to right, the second is right to left, and so on. "Add persistent animation" calls `persist()` on the animation it creates.
+
+- The third button, "Cancel an animation", cancels the most recently added animation.
+
+The example displays a list of all animations that have not been canceled, in the order they were added, along with each animation's `replaceState`.
+
+#### HTML
+
+```html
+<div id="animation-target"></div>
+<button id="start-persistent">Add persistent animation</button>
+<button id="start-transient">Add transient animation</button>
+<button id="cancel">Cancel an animation</button>
+<ol id="stack"></ol>
+```
+
+```html hidden
+<template id="list-item-template">
+  <li>
+    <span class="replaceState"></span>,
+    <span class="description"></span>
+  </li>
+</template>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: translate(100px);
+}
+```
+
+#### JavaScript
 
 ```js
 const target = document.getElementById("animation-target");
@@ -84,44 +124,13 @@ function show(animation, offset) {
 }
 ```
 
-#### HTML
-
-```html
-<div id="animation-target"></div>
-<button id="start-persistent">Add persistent animation</button>
-<button id="start-transient">Add transient animation></button>
-<button id="cancel">Cancel an animation</button>
-<ol id="stack"></ol>
-```
-
-```html hidden
-<template id="list-item-template">
-  <li>
-    <span class="replaceState"></span>,
-    <span class="description"></span>
-  </li>
-</template>
-```
-
-#### CSS
-
-```css
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transform: translate(100px);
-}
-```
-
 #### Result
 
+Note that adding a new transient animation will replace any previously added transient animation. Those animations will be automatically removed, and their `replaceState` will be `"removed"`. However, persistent animations will not be removed.
+
+Also note that removed animations don't affect the display; the position of the {{htmlelement("div")}} is determined by the most recent active or persisted animation.
+
 {{EmbedLiveSample("using_persist","",300)}}
-
-Things to notice:
-
-- `persisted` animations are not `removed` when replaced, while `active` animations are.
-- `removed` animations don't affect the display; the position of the {{htmlelement("div")}} is determined by the most recent `active` or `persisted` animation.
 
 ## Specifications
 
