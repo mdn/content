@@ -1,7 +1,6 @@
 ---
 title: API property subpage template
-slug: >-
-  MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 page-type: mdn-writing-guide
 browser-compat: path.to.feature.NameOfTheProperty
 ---

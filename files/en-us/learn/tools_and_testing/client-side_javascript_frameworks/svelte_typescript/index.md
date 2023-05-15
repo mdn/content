@@ -222,10 +222,10 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
    ```ts
    export type TodoType = {
-     id: number
-     name: string
-     completed: boolean
-   }
+     id: number;
+     name: string;
+     completed: boolean;
+   };
    ```
 
    > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
@@ -385,9 +385,9 @@ Now we'll take care of the `FilterButton` component.
 
    ```ts
    export enum Filter {
-     ALL = 'all',
-     ACTIVE = 'active',
-     COMPLETED = 'completed',
+     ALL = "all",
+     ACTIVE = "active",
+     COMPLETED = "completed",
    }
    ```
 
@@ -470,65 +470,72 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
    Update your `<script>` section to look like this:
 
    ```ts
-   import FilterButton from './FilterButton.svelte'
-   import Todo from './Todo.svelte'
-   import MoreActions from './MoreActions.svelte'
-   import NewTodo from './NewTodo.svelte'
-   import TodosStatus from './TodosStatus.svelte'
-   import { alert } from '../stores'
+   import FilterButton from "./FilterButton.svelte";
+   import Todo from "./Todo.svelte";
+   import MoreActions from "./MoreActions.svelte";
+   import NewTodo from "./NewTodo.svelte";
+   import TodosStatus from "./TodosStatus.svelte";
+   import { alert } from "../stores";
 
-   import { Filter } from '../types/filter.enum'
+   import { Filter } from "../types/filter.enum";
 
-   import type { TodoType } from '../types/todo.type'
+   import type { TodoType } from "../types/todo.type";
 
-   export let todos: TodoType[] = []
+   export let todos: TodoType[] = [];
 
-   let todosStatus: TodosStatus                   // reference to TodosStatus instance
+   let todosStatus: TodosStatus; // reference to TodosStatus instance
 
-   $: newTodoId = todos.length > 0 ? Math.max(...todos.map((t) => t.id)) + 1 : 1
+   $: newTodoId =
+     todos.length > 0 ? Math.max(...todos.map((t) => t.id)) + 1 : 1;
 
    function addTodo(name: string) {
-     todos = [...todos, { id: newTodoId, name, completed: false }]
-     $alert = `Todo '${name}' has been added`
+     todos = [...todos, { id: newTodoId, name, completed: false }];
+     $alert = `Todo '${name}' has been added`;
    }
 
    function removeTodo(todo: TodoType) {
-     todos = todos.filter((t) => t.id !== todo.id)
-     todosStatus.focus()             // give focus to status heading
-     $alert = `Todo '${todo.name}' has been deleted`
+     todos = todos.filter((t) => t.id !== todo.id);
+     todosStatus.focus(); // give focus to status heading
+     $alert = `Todo '${todo.name}' has been deleted`;
    }
 
    function updateTodo(todo: TodoType) {
-     const i = todos.findIndex((t) => t.id === todo.id)
-     if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
-     if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
-     todos[i] = { ...todos[i], ...todo }
+     const i = todos.findIndex((t) => t.id === todo.id);
+     if (todos[i].name !== todo.name)
+       $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`;
+     if (todos[i].completed !== todo.completed)
+       $alert = `todo '${todos[i].name}' marked as ${
+         todo.completed ? "completed" : "active"
+       }`;
+     todos[i] = { ...todos[i], ...todo };
    }
 
-   let filter: Filter = Filter.ALL
+   let filter: Filter = Filter.ALL;
    const filterTodos = (filter: Filter, todos: TodoType[]) =>
-     filter === Filter.ACTIVE ? todos.filter((t) => !t.completed) :
-     filter === Filter.COMPLETED ? todos.filter((t) => t.completed) :
-     todos
+     filter === Filter.ACTIVE
+       ? todos.filter((t) => !t.completed)
+       : filter === Filter.COMPLETED
+       ? todos.filter((t) => t.completed)
+       : todos;
 
    $: {
      if (filter === Filter.ALL) {
-       $alert = 'Browsing all todos';
+       $alert = "Browsing all todos";
      } else if (filter === Filter.ACTIVE) {
-       $alert = 'Browsing active todos';
+       $alert = "Browsing active todos";
      } else if (filter === Filter.COMPLETED) {
-       $alert = 'Browsing completed todos';
+       $alert = "Browsing completed todos";
      }
    }
 
    const checkAllTodos = (completed: boolean) => {
-     todos = todos.map((t) => ({...t, completed}))
-     $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
-   }
+     todos = todos.map((t) => ({ ...t, completed }));
+     $alert = `${completed ? "Checked" : "Unchecked"} ${todos.length} todos`;
+   };
    const removeCompletedTodos = () => {
-     $alert = `Removed ${todos.filter((t) => t.completed).length} todos`
-     todos = todos.filter((t) => !t.completed)
-   }
+     $alert = `Removed ${todos.filter((t) => t.completed).length} todos`;
+     todos = todos.filter((t) => !t.completed);
+   };
    ```
 
 ### TodosStatus.svelte
@@ -813,13 +820,13 @@ Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` 
 
 ```ts
 export class Stack {
-  private elements = []
+  private elements = [];
 
-  push = (element) => this.elements.push(element)
+  push = (element) => this.elements.push(element);
 
   pop() {
-    if (this.elements.length === 0) throw new Error('The stack is empty!')
-    return this.elements.pop()
+    if (this.elements.length === 0) throw new Error("The stack is empty!");
+    return this.elements.pop();
   }
 }
 ```
@@ -837,13 +844,13 @@ But what if we wanted to have a `Stack` that would only work with type `string`?
 
 ```ts
 export class StringStack {
-  private elements: string[] = []
+  private elements: string[] = [];
 
-  push = (element: string) => this.elements.push(element)
+  push = (element: string) => this.elements.push(element);
 
   pop(): string {
-    if (this.elements.length === 0) throw new Error('The stack is empty!')
-    return this.elements.pop()
+    if (this.elements.length === 0) throw new Error("The stack is empty!");
+    return this.elements.pop();
   }
 }
 ```
@@ -856,13 +863,13 @@ This is our `Stack` class reimplemented using generics:
 
 ```ts
 export class Stack<T> {
-  private elements: T[] = []
+  private elements: T[] = [];
 
-  push = (element: T): number => this.elements.push(element)
+  push = (element: T): number => this.elements.push(element);
 
   pop(): T {
-    if (this.elements.length === 0) throw new Error('The stack is empty!')
-    return this.elements.pop()
+    if (this.elements.length === 0) throw new Error("The stack is empty!");
+    return this.elements.pop();
   }
 }
 ```
@@ -872,8 +879,8 @@ We define a generic type `T` and then use it like we would normally use a specif
 This is how we would use our generic `Stack`:
 
 ```ts
-const numberStack = new Stack<number>()
-numberStack.push(1)
+const numberStack = new Stack<number>();
+numberStack.push(1);
 ```
 
 Now TypeScript knows that our stack can only accept numbers, and will issue an error if we try to push anything else:
@@ -916,32 +923,34 @@ Our `localStore.ts` file will end up like this — try the new code now in your 
 
 ```ts
 // localStore.ts
-import { writable } from 'svelte/store'
+import { writable } from "svelte/store";
 
-import type { JsonValue } from './types/json.type'
+import type { JsonValue } from "./types/json.type";
 
-export const localStore = <T extends JsonValue>(key: string, initial: T) => {          // receives the key of the local storage and an initial value
+export const localStore = <T extends JsonValue>(key: string, initial: T) => {
+  // receives the key of the local storage and an initial value
 
-  const toString = (value: T) => JSON.stringify(value, null, 2)           // helper function
-  const toObj = JSON.parse                                                // helper function
+  const toString = (value: T) => JSON.stringify(value, null, 2); // helper function
+  const toObj = JSON.parse; // helper function
 
-  if (localStorage.getItem(key) === null) {                               // item not present in local storage
-    localStorage.setItem(key, toString(initial))                          // initialize local storage with initial value
+  if (localStorage.getItem(key) === null) {
+    // item not present in local storage
+    localStorage.setItem(key, toString(initial)); // initialize local storage with initial value
   }
 
-  const saved = toObj(localStorage.getItem(key))                          // convert to object
+  const saved = toObj(localStorage.getItem(key)); // convert to object
 
-  const { subscribe, set, update } = writable<T>(saved)                   // create the underlying writable store
+  const { subscribe, set, update } = writable<T>(saved); // create the underlying writable store
 
   return {
     subscribe,
     set: (value: T) => {
-      localStorage.setItem(key, toString(value))                          // save also to local storage as a string
-      return set(value)
+      localStorage.setItem(key, toString(value)); // save also to local storage as a string
+      return set(value);
     },
-    update
-  }
-}
+    update,
+  };
+};
 ```
 
 And thanks to generic type inference, TypeScript already knows that our `$todos` store should contain an array of `TodoType`:
@@ -952,11 +961,11 @@ Once again, if we wanted to be explicit about it, we could do so in the `stores.
 
 ```ts
 const initialTodos: TodoType[] = [
-  { id: 1, name: 'Visit MDN web docs', completed: true },
-  { id: 2, name: 'Complete the Svelte Tutorial', completed: false },
-]
+  { id: 1, name: "Visit MDN web docs", completed: true },
+  { id: 2, name: "Complete the Svelte Tutorial", completed: false },
+];
 
-export const todos = localStore<TodoType[]>('mdn-svelte-todo', initialTodos)
+export const todos = localStore<TodoType[]>("mdn-svelte-todo", initialTodos);
 ```
 
 That will do for our brief tour of TypeScript Generics.

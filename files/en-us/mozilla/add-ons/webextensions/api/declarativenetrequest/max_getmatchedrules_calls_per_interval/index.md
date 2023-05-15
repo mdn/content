@@ -1,7 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL
 ---

@@ -90,10 +90,10 @@ function onXRSessionStarted(xrSession) {
   const cubeLayer = xrGlBinding.createCubeLayer({
     space: xrReferenceSpace,
     viewPixelHeight: 512,
-    viewPixelWidth: 512
+    viewPixelWidth: 512,
   });
   xrSession.updateRenderState({
-    layers: [cubeLayer]
+    layers: [cubeLayer],
   });
 }
 ```

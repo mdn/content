@@ -1,7 +1,6 @@
 ---
 title: Getting browser microphone permission
-slug: >-
-  Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
 page-type: guide
 ---
 

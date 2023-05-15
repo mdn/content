@@ -89,15 +89,15 @@ One of the best accessibility aids a screen reader user can have is an excellent
 <h2>My subheading</h2>
 
 <p>
-  This is the first subsection of my document.
-  I'd love people to be able to find this content!
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
 </p>
 
 <h2>My 2nd subheading</h2>
 
 <p>
-  This is the second subsection of my content,
-  which I think is more interesting than the last one.
+  This is the second subsection of my content, which I think is more interesting
+  than the last one.
 </p>
 ```
 
@@ -111,8 +111,7 @@ We've prepared a version with longer text for you to try out with a screen reade
 People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
 ```html example-bad
-<span style="font-size: 3em">My heading</span>
-<br /><br />
+<span style="font-size: 3em">My heading</span> <br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
@@ -125,13 +124,13 @@ I'll add another paragraph here too.
 <br /><br />
 <span style="font-size: 2.5em">My subheading</span>
 <br /><br />
-This is the first subsection of my document.
-I'd love people to be able to find this content!
+This is the first subsection of my document. I'd love people to be able to find
+this content!
 <br /><br />
 <span style="font-size: 2.5em">My 2nd subheading</span>
 <br /><br />
-This is the second subsection of my content.
-I think is more interesting than the last one.
+This is the second subsection of my content. I think is more interesting than
+the last one.
 ```
 
 If you try our longer version out with a screen reader (see [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), you'll not have a very good experience — the screen reader hasn't got anything to use as signposts, so you can't retrieve a useful table of contents, and the whole page is seen as a single giant block, so it is just read out in one go, all at once.

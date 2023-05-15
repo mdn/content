@@ -1,7 +1,6 @@
 ---
 title: Bounding volume collision detection with THREE.js
-slug: >-
-  Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
+slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 ---
 
 {{GamesSidebar}}

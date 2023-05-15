@@ -440,7 +440,9 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
       value="2016-11-08"
       required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -463,7 +465,9 @@ If you were to enter an invalid date, you'd additionally get a list of the error
       value="2015-11-08"
       required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -495,7 +499,7 @@ The view might look similar to this:
     {% if bookinstance_list %}
     <ul>
 
-      {% for bookinst in bookinstance_list %} 
+      {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
         <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }}) {% if user.is_staff %}- \{{ bookinst.borrower }}{% endif %}
       </li>
@@ -650,13 +654,13 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
+<form action="" method="post">
+  {% csrf_token %}
+  <table>
     \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" />
-  </form>
+  </table>
+  <input type="submit" value="Submit" />
+</form>
 {% endblock %}
 ```
 

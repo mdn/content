@@ -2,8 +2,7 @@
 title: "Function: prototype"
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 page-type: javascript-instance-data-property
-spec-urls: >-
-  https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
+spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
 
 {{JSRef}}

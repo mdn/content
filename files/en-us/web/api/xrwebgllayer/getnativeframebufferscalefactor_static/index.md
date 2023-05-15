@@ -103,11 +103,11 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
   return gl.makeXRCompatible().then(() => {
     let scaleFactor = XRWebGLLayer.getNativeFramebufferScaleFactor(xrSession);
     let glLayer = new XRWebGLLayer(xrSession, gl, {
-                    framebufferScaleFactor: scaleFactor
+      framebufferScaleFactor: scaleFactor,
     });
     xrSession.updateRenderState({ baseLayer: glLayer });
   });
-};
+}
 ```
 
 This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",

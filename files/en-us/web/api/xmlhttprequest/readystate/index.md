@@ -33,17 +33,17 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
 xhr.onprogress = () => {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
 xhr.onload = () => {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);

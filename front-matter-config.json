@@ -1,5 +1,5 @@
 {
-  "lineWidth": 80,
+  "lineWidth": -1,
   "schema": {
     "title": "Front matter schema",
     "type": "object",

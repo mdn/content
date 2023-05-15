@@ -12,5 +12,5 @@ In the Internet Age, the ITU's role of establishing standards for video and audi
 
 ## See also
 
-- [ITU web site](https://www.itu.int/)
+- [ITU website](https://www.itu.int/)
 - [ITU history portal](https://www.itu.int/en/history/Pages/ITUsHistory.aspx)

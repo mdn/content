@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.toWellFormed
 
 {{JSRef}}
 
-The **`toWellFormed()`** method of {{jsxref("String")}} values returns a string where all [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
+The **`toWellFormed()`** method of {{jsxref("String")}} values returns a string where all [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ A new string that is a copy of this string, with all lone surrogates replaced wi
 
 ## Description
 
-Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _surrogate pairs_, which is introduced in detail in the [UTF-16 characters, Unicode codepoints, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) section.
+Strings in JavaScript are UTF-16 encoded. UTF-16 encoding has the concept of _surrogate pairs_, which is introduced in detail in the [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) section.
 
 `toWellFormed()` iterates through the code units of this string, and replaces any lone surrogates with the [Unicode replacement character](<https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character>) U+FFFD `�`. This ensures that the returned string is well-formed and can be used in functions that expect well-formed strings, such as {{jsxref("encodeURI")}}. Compared to a custom implementation, `toWellFormed()` is more efficient, as engines can directly access the internal representation of strings.
 
