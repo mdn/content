@@ -19,15 +19,23 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 ### Values
 
-- Functional notation: `lab(L a b [/ A])`
+Functional notation: `lab(L a b[ / A])`
 
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `100` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+- `L`
 
-  - `a` is a {{cssxref("&lt;number&gt;")}} between `-125` and `125` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `a` axis in the Lab colorspace, that is how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
 
-  - `b` is a {{cssxref("&lt;number&gt;")}} between `-125` and `125` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `b` axis in the Lab colorspace, that is how blue/yellow the color is.
+- `a`
 
-  - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `a` axis in the Lab colorspace, that is how green/red the color is.
+
+- `b`
+
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `b` axis in the Lab colorspace, that is how blue/yellow the color is.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
 > This case is notable where `100%` is equal to the number `100` for the `L` value and `125` for the `a` and `b` values.
@@ -153,4 +161,4 @@ div {
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
-- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lab()` and {{cssxref("color_value/lch",'lch()')}} colors.
+- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lab()` and {{cssxref("color_value/lch",'lch()')}} colors

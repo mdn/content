@@ -29,7 +29,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Description
 

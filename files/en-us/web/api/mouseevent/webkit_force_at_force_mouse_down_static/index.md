@@ -7,7 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("UI Events")}}{{Non-standard_header()}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
 **`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`** is a proprietary, WebKit-specific, static numeric property whose value is the minimum force necessary for a force click.
 

@@ -690,6 +690,6 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
 - CSS properties that may be especially useful to style the `<table>` element:
 
   - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules, and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.

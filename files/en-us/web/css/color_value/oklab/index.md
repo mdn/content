@@ -20,23 +20,30 @@ The function `oklab()` can represent any color from the Oklab color space that i
 ## Syntax
 
 ```css
-/* oklab(lightness a-axis b-axis) */
 oklab(40.1% 0.1143 0.045);
 oklab(59.69% 0.1007 0.1191);
-
-/* oklab(lightness a-axis b-axis / alpha) */
 oklab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
-> **Note:** The oklab() function does **not** support commas to separate its values as some other color functions do, and the optional alpha value needs to be preceded with a forward slash (`/`) when specified.
-
 ### Values
 
-- Functional notation: `oklab(L a b [/ A])`
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
-  - `a` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green or red the color is.
-  - `b` is a {{cssxref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{cssxref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue or yellow the color is.
-  - `A` is a {{cssxref("&lt;number&gt;")}} between `0` and `1` or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). `A` represents the transparency (or alpha channel) of the color.
+Functional notation: `oklab(L a b[ / A])`
+
+- `L`
+
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
+
+- `a`
+
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green or red the color is.
+
+- `b`
+
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue or yellow the color is.
+
+- `A` {{optional_inline}}
+
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ### Formal syntax
 

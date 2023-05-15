@@ -231,6 +231,37 @@ class MyDate extends Date {
 }
 ```
 
+### Extending `Object`
+
+All JavaScript objects inherit from `Object.prototype` by default, so writing `extends Object` at first glance seems redundant. The only difference from not writing `extends` at all is that the constructor itself inherits static methods from `Object`, such as {{jsxref("Object.keys()")}}. However, because no `Object` static method uses the `this` value, there's still no value in inheriting these static methods.
+
+The {{jsxref("Object/Object", "Object()")}} constructor special-cases the subclassing scenario. If it's implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), it always initializes a new object with `new.target.prototype` as its prototype. Any value passed to `super()` is ignored.
+
+```js
+class C extends Object {
+  constructor(v) {
+    super(v);
+  }
+}
+
+console.log(new C(1) instanceof Number); // false
+console.log(C.keys({ a: 1, b: 2 })); // [ 'a', 'b' ]
+```
+
+Compare this behavior with a custom wrapper that does not special-case subclassing:
+
+```js
+function MyObject(v) {
+  return new Object(v);
+}
+class D extends MyObject {
+  constructor(v) {
+    super(v);
+  }
+}
+console.log(new D(1) instanceof Number); // true
+```
+
 ### Species
 
 You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. The species pattern lets you override default constructors.

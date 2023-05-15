@@ -39,9 +39,9 @@ With our component plan worked out, it's now time to start updating our app from
 If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
 
 ```jsx
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   alert("hi!");
 });
 ```
@@ -49,10 +49,7 @@ btn.addEventListener('click', () => {
 In React, we write event handlers directly on the elements in our JSX, like this:
 
 ```jsx
-<button
-  type="button"
-  onClick={() => alert("hi!")}
->
+<button type="button" onClick={() => alert("hi!")}>
   Say hi!
 </button>
 ```
@@ -75,7 +72,7 @@ At the top of the `Form()` component function, create a function named `handleSu
 ```jsx
 function handleSubmit(e) {
   e.preventDefault();
-  alert('Hello, world!');
+  alert("Hello, world!");
 }
 ```
 
@@ -145,7 +142,7 @@ This is a lot to take in at once, so let's try it out. We're going to make ourse
 Write the following above your `handleSubmit()` function, inside `Form()`:
 
 ```jsx
-const [name, setName] = useState('Use hooks!');
+const [name, setName] = useState("Use hooks!");
 ```
 
 What's going on in this line of code?
@@ -172,7 +169,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
 
 ```jsx
-const [name, setName] = useState('');
+const [name, setName] = useState("");
 ```
 
 ### Reading user input
@@ -194,7 +191,7 @@ function handleChange(e) {
   autoComplete="off"
   value={name}
   onChange={handleChange}
-/>
+/>;
 ```
 
 Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
@@ -365,7 +362,7 @@ const headingText = `${taskList.length} tasks remaining`;
 This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
 ```jsx
-const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
 ```
 
@@ -389,7 +386,7 @@ Add this just above your `taskList` constant declaration:
 
 ```jsx
 function toggleTaskCompleted(id) {
-  console.log(tasks[0])
+  console.log(tasks[0]);
 }
 ```
 
@@ -398,11 +395,11 @@ Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component 
 ```jsx
 const taskList = tasks.map((task) => (
   <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-      toggleTaskCompleted={toggleTaskCompleted}
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
   />
 ));
 ```
@@ -439,7 +436,7 @@ function toggleTaskCompleted(id) {
     if (id === task.id) {
       // use object spread to make a new object
       // whose `completed` prop has been inverted
-      return {...task, completed: !task.completed}
+      return { ...task, completed: !task.completed };
     }
     return task;
   });
@@ -461,7 +458,7 @@ Here we'll start by writing a `deleteTask()` function in your `App` component. L
 
 ```jsx
 function deleteTask(id) {
-  console.log(id)
+  console.log(id);
 }
 ```
 
@@ -488,8 +485,7 @@ Update the "Delete" button inside `Todo.js`, like so:
 <button
   type="button"
   className="btn btn__danger"
-  onClick={() => props.deleteTask(props.id)}
->
+  onClick={() => props.deleteTask(props.id)}>
   Delete <span className="visually-hidden">{props.name}</span>
 </button>
 ```

@@ -40,9 +40,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A {{domxref("HTMLMenuElement")}} representing the menu element to be displayed if the button is clicked and is of `type="menu"`.
 - {{domxref("HTMLButtonElement.name")}}
   - : A string representing the name of the object when submitted with a form. If specified, it must not be the empty string.
-- {{domxref("HTMLButtonElement.popoverTargetAction")}}
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} {{Experimental_Inline}}
   - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
-- {{domxref("HTMLButtonElement.popoverTargetElement")}}
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} {{Experimental_Inline}}
   - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.tabIndex")}}
   - : A `long` that represents this element's position in the tabbing order.

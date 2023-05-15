@@ -126,7 +126,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "h") {
     if (popover.matches(":popover-open")) {
       popover.hidePopover();
-    } 
+    }
   }
 
   if (event.key === "s") {
@@ -153,7 +153,7 @@ See our [Toggle help UI example](https://mdn.github.io/dom-examples/popover-api/
 
 ## Dismissing popovers automatically via a timer
 
-Anoher common pattern in JavaScript is dismissing popovers automatically after a certain amount of time. You might for example want to create a system of "toast" notifications, where you have multiple actions underway at a time (for example multiple files uploading), and want to show a notification when each one succeeds or fails. For this you'll want to use manual popovers so you can show several at the same time, and use {{domxref("setTimeout")}} to remove them. A function for handling such popovers might look like so:
+Another common pattern in JavaScript is dismissing popovers automatically after a certain amount of time. You might for example want to create a system of "toast" notifications, where you have multiple actions underway at a time (for example multiple files uploading), and want to show a notification when each one succeeds or fails. For this you'll want to use manual popovers so you can show several at the same time, and use {{domxref("setTimeout")}} to remove them. A function for handling such popovers might look like so:
 
 ```js
 function makeToast(result) {
@@ -225,7 +225,8 @@ There are three different ways to create nested popovers:
 1. Direct DOM descendants:
 
    ```html
-   <div popover>Parent
+   <div popover>
+     Parent
      <div popover>Child</div>
    </div>
    ```
@@ -233,7 +234,8 @@ There are three different ways to create nested popovers:
 2. Via invoking/control elements:
 
    ```html
-   <div popover> Parent
+   <div popover>
+     Parent
      <button popovertarget="foo">Click me</button>
    </div>
 
@@ -243,7 +245,7 @@ There are three different ways to create nested popovers:
 3. Via the `anchor` attribute:
 
    ```html
-   <div popover id="foo"> Parent </div>
+   <div popover id="foo">Parent</div>
 
    <div popover anchor="foo">Child</div>
    ```
@@ -281,7 +283,7 @@ To override the default styles and get the popover to appear somewhere else on y
   height: 100px;
   position: absolute;
   inset: unset;
-  top: 5px;
+  bottom: 5px;
   right: 5px;
   margin: 0;
 }
