@@ -8,8 +8,6 @@ browser-compat: api.AnimationEvent.pseudoElement
 
 {{APIRef("Web Animations")}}
 
-## Summary
-
 The **`AnimationEvent.pseudoElement`** read-only property is a
 string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
 If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
