@@ -39,7 +39,6 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
     author_books: allBooksByAuthor,
   });
 });
-
 ```
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).

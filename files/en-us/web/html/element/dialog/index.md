@@ -106,7 +106,7 @@ selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
 
-// "Confirm" button triggers "close" on dialog because of [method="dialog"]
+// "Confirm" button triggers "close" on dialog because of [formmethod="dialog"]
 favDialog.addEventListener('close', (e) => {
   outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });

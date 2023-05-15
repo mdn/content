@@ -948,7 +948,7 @@ For example, each coding tree unit (CTU)—similar to the macroblock used in pre
 
 An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
-HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!
+HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
 
 <table class="standard-table">
   <tbody>
@@ -1240,7 +1240,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
 
 **MPEG-1 Part 2 Video** was unveiled at the beginning of the 1990s. Unlike the later MPEG video standards, MPEG-1 was created solely by MPEG, without the {{Glossary("ITU", "ITU's")}} involvement.
 
-Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wide variety of software and hardware devices. There are no active patents remaining in relation to MPEG-1 video, so it may be used free of any licensing concerns. However, few web browsers support MPEG-1 video without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-1 a poor choice for use in web sites and web applications.
+Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wide variety of software and hardware devices. There are no active patents remaining in relation to MPEG-1 video, so it may be used free of any licensing concerns. However, few web browsers support MPEG-1 video without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-1 a poor choice for use in websites and web applications.
 
 <table class="standard-table">
   <tbody>
@@ -1350,7 +1350,7 @@ The goal was to allow MPEG-2 to compress standard definition television, so inte
 
 MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers support for larger frame dimensions and bit rates. For example, the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.
 
-However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in web sites and web applications.
+However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in websites and web applications.
 
 <table class="standard-table">
   <tbody>
@@ -1955,7 +1955,7 @@ If you are only able to offer a single version of each video, you can choose the
 
 ### Recommendations for everyday videos
 
-First, let's look at the best options for videos presented on a typical web site such as a blog, informational site, small business web site where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
+First, let's look at the best options for videos presented on a typical website such as a blog, informational site, small business website where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
@@ -2001,7 +2001,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 
 #### Preparing video externally
 
-To prepare video for archival purposes from outside your web site or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
+To prepare video for archival purposes from outside your website or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
 ```bash
 x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile

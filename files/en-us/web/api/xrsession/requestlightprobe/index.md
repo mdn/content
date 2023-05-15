@@ -49,7 +49,7 @@ The default format is `srgb8`, however, some rendering engines may use other (hi
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
-  reflectionFormat: xrSession.preferredReflectionFormat
+  reflectionFormat: xrSession.preferredReflectionFormat,
 });
 ```
 

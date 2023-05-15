@@ -346,6 +346,6 @@ In this article, we've given you a simple guide to using JSON in your programs, 
 - [Fetch API overview](/en-US/docs/Web/API/Fetch_API)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
-- [Official JSON web site with link to ECMA standard](https://json.org)
+- [Official JSON website with link to ECMA standard](https://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
