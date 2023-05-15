@@ -139,6 +139,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
+    > **Note:** A [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1647077) in Firefox requires that the **`loading` attribute must be placed before the `src` attribute**, otherwise it has no effect.
+
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:
