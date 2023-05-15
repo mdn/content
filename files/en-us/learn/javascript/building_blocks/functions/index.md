@@ -234,23 +234,15 @@ textBox.addEventListener("keydown", (event) => {
 });
 ```
 
-If the function only has one line in the curly brackets, you omit the curly brackets:
+If the function only takes one parameter, you can omit the brackets around the parameter:
 
-```js
-textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
-);
+```js-nolint
+textBox.addEventListener("keydown", event => {
+  console.log(`You pressed "${event.key}".`);
+});
 ```
 
-If the function only takes one parameter, you can also omit the brackets around the parameter:
-
-```js
-textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
-);
-```
-
-Finally, if your function needs to return a value, and contains only one line, you can also omit the `return` statement. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
+Finally, if your function contains only one line that's a `return` statement, you can also omit the braces and the `return` keyword, and implicitly return the expression. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
 
 ```js
 const originals = [1, 2, 3];
@@ -269,6 +261,16 @@ function doubleItem(item) {
   return item * 2;
 }
 ```
+
+You can use the same concise syntax to rewrite the `addEventListener` example.
+
+```js
+textBox.addEventListener("keydown", (event) =>
+  console.log(`You pressed "${event.key}".`)
+);
+```
+
+In this case, the value of `console.log()`, which is `undefined`, is implicitly returned from the callback function.
 
 We recommend that you use arrow functions, as they can make your code shorter and more readable. To learn more, see the [section on arrow functions in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions), and our [reference page on arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 

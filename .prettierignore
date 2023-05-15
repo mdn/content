@@ -10,4 +10,3 @@ build/
 /files/en-us/mozilla/add-ons/**/*.md
 /files/en-us/web/html/**/*.md
 /files/en-us/web/javascript/**/*.md
-/files/en-us/web/web_components/**/*.md

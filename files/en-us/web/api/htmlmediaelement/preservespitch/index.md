@@ -46,19 +46,23 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-
-const rate = document.querySelector("#rate");
-rate.addEventListener("input", () => (audio.playbackRate = rate.value));
-
-const pitch = document.querySelector("#pitch");
-pitch.addEventListener("change", () => {
-  if ("preservesPitch" in audio) {
-    audio.preservesPitch = pitch.checked;
-  } else if ("mozPreservesPitch" in audio) {
-    // deprecated
-    audio.mozPreservesPitch = pitch.checked;
-  }
-});
+// When the audio starts playing...
+audio.addEventListener(
+  "play",
+  () => {
+    // Handle page visibility change:
+    // - If the page is hidden, pause the video
+    // - If the page is shown, play the video
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    });
+  },
+  { once: true }
+);
 ```
 
 {{EmbedLiveSample("Setting the preservesPitch property")}}
