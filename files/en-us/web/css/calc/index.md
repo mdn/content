@@ -40,12 +40,12 @@ The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax v
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
 - The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
 
-Calculations inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few special cases:
+Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding constants like `infinity` and `NaN`:
 
-- Dividing by zero will return positive or negative infinity depending on the sign of the numerator.
+- Dividing by zero will return positive or negative `infinity` depending on the sign of the numerator.
 - Adding, subtracting or multiplying `infinity` to anything will return `infinity` unless it produces `NaN` (see below).
 - Any operation with at least one `NaN` argument will return `NaN`.
-  Dividing zero by zero, dividing infinity by infinity, multiplying zero by infinity, adding infinity to negative infinity, or subtracting infinity from infinity will return `NaN`.
+  This means `0 / 0`, `infinity / infinity`, `0 * infinity`, `infinity + (-infinity)`, and `infinity - infinity` will all return `NaN`.
 
 - Positive and negative zero are possible values (`0⁺` and `0⁻`).
   This has the following effects:
@@ -54,8 +54,10 @@ Calculations inside `calc()` follows the IEEE-754 standard for floating point ma
     All other additions or subtractions that would produce a zero will return `0⁺`.
   - Multiplying or dividing `0⁻` with a positive number (including `0⁺`) will return a negative result (either `0⁻` or `-infinity`), while multiplying or dividing `0⁻` with a negative number will return a positive result.
 
-> **Note:** It's rare to need to use `infinity` as an argument to `calc()`, but it can be useful for avoiding hardcoding "magic numbers" or for making sure a certain value is always larger than another value.
-> It may be useful in cases where you need to make it obvious that a property has "the largest possible value" for that data type.
+Examples of how these rules apply are shown in the [Infinity, NaN, and division by zero](#infinity_nan_and_division_by_zero) section.
+
+> **Note:** It's rare to need to use `infinity` as an argument in `calc()`, but it can be used to avoid hardcoded "magic numbers" or making sure a certain value is always larger than another value.
+> It may be useful if you need to make it obvious that a property has "the largest possible value" for that data type.
 
 ### Formal syntax
 
@@ -183,10 +185,10 @@ const div = document.getElementById("div");
 console.log(div.offsetWidth); // 17895698 (infinity - the largest possible value)
 
 // division by zero
-div.style.width = "calc(1px / -0)";
-console.log(div.style.width); // calc(-infinity * 1px)
 div.style.width = "calc(1px / 0)";
 console.log(div.style.width); // calc(infinity * 1px)
+div.style.width = "calc(-1px / 0)"; // or "calc(1px / -0)"
+console.log(div.style.width); // calc(-infinity * 1px)
 
 // infinity
 div.style.width = "calc(1px * -infinity * -infinity)";
@@ -195,7 +197,7 @@ div.style.width = "calc(1px * -infinity * infinity)";
 console.log(div.style.width); // calc(-infinity * 1px)
 
 // NaN
-div.style.width = "calc(1px * infinity / infinity)";
+div.style.width = "calc(1px * infinity - infinity)";
 console.log(div.style.width); // calc(NaN * 1px)
 div.style.width = "calc(2rem * 10% * infinity)";
 console.log(div.style.width); // calc(NaN * 1px)
