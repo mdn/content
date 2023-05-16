@@ -7,33 +7,45 @@ browser-compat: css.at-rules.media.inverted-colors
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.
+The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to test if the {{glossary("user agent")}} or the underlying operating system has inverted all colors. Inversion of colors can unpleasant side effects, such as shadows turning into highlights, which can reduce the readability of the content. You can detect if inversion is happening by using this media feature and style the content.
 
 ## Syntax
 
-The `inverted-colors` feature is specified as a keyword value chosen from the list below.
+```css
+/* Keyword value */
+@media (inverted-colors: inverted) {
+  /* styles to apply if inversion of colors is detected */
+}
+```
+
+The `inverted-colors` feature is specified as one of the following keyword values:
 
 - `none`
-  - : Colors are displayed normally.
+  - : Indicates that the colors are displayed normally and no inversion of colors has happened. This keyword value evaluates as false.
 - `inverted`
-  - : All pixels within the displayed area have been inverted.
+  - : Indicates that all pixels within the displayed area have been inverted. This keyword value evaluates as true.
 
 ## Examples
 
-### HTML
+### Applying styles if color inversion is detected
+
+The example below shows the effects with both the keyword values of the `inverted-colors` media feature and also when the `inverted-colors` media feature is not supported.
+
+#### HTML
 
 ```html
 <p>
-  If you're using inverted colors, this text should be blue on white (the
-  inverse of yellow on black). If you're not, it should be red on light gray.
+  If color inversion is detected, this text will appear blue on white (the
+  inverse of yellow on black). If no color inversion is happening, the text
+  will appear red on light gray.
 </p>
 <p>
-  If the text is gray, your browser doesn't support the `inverted-colors` media
-  feature.
+  If the text is gray, then it means that your browser doesn't support the
+  <code>inverted-colors</code> media feature.
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -55,9 +67,9 @@ p {
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Applying styles if color inversion is detected")}}
 
 ## Specifications
 
@@ -69,5 +81,5 @@ p {
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
