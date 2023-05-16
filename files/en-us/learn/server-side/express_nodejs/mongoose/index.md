@@ -149,7 +149,7 @@ It rejects when any of the input's promises rejects, with this first rejection r
 
 The code below shows how this works.
 First we have two functions that return promises.
-We `await` on both of them to compete using the promise returned by `Promise.all()`.
+We `await` on both of them to complete using the promise returned by `Promise.all()`.
 Once they both complete `await` returns and the results array is populated.
 The function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
