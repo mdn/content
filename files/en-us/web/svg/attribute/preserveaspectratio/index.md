@@ -109,7 +109,7 @@ rect:active {
 
 ### slice (width > height)
 
-This example shows the use of `slice` when the element's **`width`** is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
+This example shows the use of `slice` when the element's `width` is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
 
 ```css hidden
 html,
