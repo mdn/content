@@ -122,18 +122,18 @@ When the browser evaluates how to handle requests, it checks each extension's ru
    3. "block" cancels the request.
    4. "upgradeScheme" upgrades the scheme of the request.
    5. "redirect" redirects the request.
-   6. "modifyHeaders" rewrites request and/or response headers.
+   6. "modifyHeaders" rewrites request or response headers or both.
 
-> **Note:** When there are multiple matching rules with the same rule priority and rule action type, a problem occurs when the matched action support additional properties. These can result in different outcomes that cannot be combined. For example:
+> **Note:** When matching rules have the same rule priority and rule action type, a problem occurs when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
 >
 > - The "block" action does not support additional properties, so there is no problem: all matching "block" actions would result in the same outcome.
-> - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. Note that it is still possible to redirect repeatedly, but only if the new request associated with the redirect is matched again by a rule condition.
+> - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. It is still possible to redirect repeatedly when the redirected request matches another rule condition.
 > - Multiple "modifyHeaders" action are allowed, until they touch the same header as explained at {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The evaluation order of "modifyHeaders" is therefore important.
 >
-> To control the order of applying actions, assign distinct `priority` values to rules whose order of precedence is important.
+> To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
 
 > **Note:** After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
-> This cannot be relied upon across browsers yet, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
+> This cannot be relied upon across browsers, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:
 
