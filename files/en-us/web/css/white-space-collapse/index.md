@@ -41,19 +41,22 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 - `discard`
   - : All white space in the element is removed.
 - `preserve`
-  - : Sequences of white space and carriage returns and other line break characters are preserved.
+  - : Sequences of white space and line break characters (such as line feeds) are preserved.
 - `preserve-breaks`
-  - : Sequences of white space are collapsed, while carriage returns and other line break characters are preserved.
+  - : Sequences of white space are collapsed, while line break characters (such as line feeds) are preserved.
 - `preserve-spaces`
-  - : Sequences of white space are preserved, while tabs and carriage returns and other line break characters are converted to spaces.
+  - : Sequences of white space are preserved, while tabs and line break characters (such as line feeds) are converted to spaces.
 - `break-spaces`
   - : The behavior is identical to that of `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
-    - A line breaking opportunity exists after every preserved white space character, including between white space characters.
+    - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
 
 ## Collapsing of white space
 
 The CSS Text specification contains a [Phase I: Collapsing and Transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+
+Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-4/#line-break-transform) for information on how white space collapsing is handled in CSS.
 
 ## Formal definition
 
