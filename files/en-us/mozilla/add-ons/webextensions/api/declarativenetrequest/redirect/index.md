@@ -28,6 +28,8 @@ Values of this type are objects. They contain these properties:
 - `url` {{optional_inline}}
   - : A `string`. The redirect URL. Redirects to JavaScript URLs are not allowed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
