@@ -11,7 +11,7 @@ The `listbox` role is used for lists from which a user may select one or more it
 
 ## Description
 
-The `listbox` role is used to identify an element that creates a list from which a user may select one or more static itemsi, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
+The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
 
 It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.
 
