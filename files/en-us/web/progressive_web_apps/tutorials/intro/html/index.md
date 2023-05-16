@@ -3,19 +3,13 @@ title: Basic PWA page template
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML
 ---
 
-We will create a website that shows a date picture and displays an installation button, using HTML, CSS, and JavaScript. In the rest of the tutorial steps, we will progressively enhance this page to be installable and available offline.
+PWAs are progressively enhanced web applications. Like most web applications, PWAs are built with HTML, CSS, and JavaScript. To build our PWA, we need to start with a fully-functioning web application. In this section, we will create a basic web application by coding the HTML markup for a static web page and enhancing the appearance of the static content with CSS. Once we have the static content, we will add JavaScript functionality to create a basic web application, then we'll progessively enhance the application to make it a PWA.
 
-PWAs are progressively enhanced web applications. Like most web applications, PWAs are built with HTML, CSS, and JavaScript.
+## HTML static web content
 
-To build our PWA, we need to start with a fully-functioning web application. In this section, we will create a basic web application by:
+The first step in this [first PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro) is to write the HTML and CSS for our first PWA. In the following sections, we'll convert that static page into a basic web application and then into a PWA.
 
-1. create HTML markup for a static web page
-2. enhance the appearance of the static content with CSS
-3. add JavaScript functionality to create a basic web application
-
-The first step in this [first PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro) is to create the HTML, CSS and basic JavaScript for the menstrual cycle progressive web application. In the following sections we'll convert that basic web application into a PWA.
-
-## HTML template
+Our project is to create a menstrual cycle tracker. In this section, we use HTML to create a static web page with a form. We then add an external CSS stylesheet to improve the page's appearance. In the rest of the tutorial steps, we will progressively enhance this page to create a functional web application that can be installed and usable offline.
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web/), an introduction to web development series.
 
@@ -229,6 +223,6 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ### Up next
 
-A PWA is a progressive web application. At it's core, it is a web application that is progressively enhanced to work offline. Before adding the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker), we have to make this application work.
+A PWA is a progressive web application. At its core, it is a web application that is progressively enhanced to work offline. Before adding the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker), we have to make this application work.
 
 Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
