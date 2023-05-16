@@ -79,16 +79,13 @@ The `page_action` key is an object that may have any of three properties, all op
       <td>
         <p>Optional. Defaults to <code>false</code>.</p>
         <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> to make your popups consistent with the
-          look of the rest of the browser user interface.
+          Use this to include a stylesheet in your popup that makes it look
+          consistent with the browser's UI and other extensions that use
+          the <code>browser_style</code> property.
         </p>
         <p>
           In Firefox, the stylesheet can be seen at
-          <code>chrome://browser/content/extension.css</code>, or
+          <code>chrome://browser/content/extension.css</code> or
           <code>chrome://browser/content/extension-mac.css</code> on macOS.
         </p>
         <p>
@@ -96,7 +93,7 @@ The `page_action` key is an object that may have any of three properties, all op
           <a href="https://firefoxux.github.io/StyleGuide/#/controls"
             >Firefox Style Guide</a
           >
-          describes the classes you can apply to elements in the popup in order
+          describes the classes you can apply to elements in the popup
           to get particular styles.
         </p>
         <p>

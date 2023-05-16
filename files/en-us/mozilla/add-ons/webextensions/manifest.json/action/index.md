@@ -84,18 +84,15 @@ The `action` key is an object that may have any of these properties, all optiona
       <td>
         <p>Optional, defaulting to <code>false</code>.</p>
         <p>
-          Use this to include a stylesheet in your popup that will make its look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> to make your popups consistent with the
-          look of the rest of the browser user interface.
+          Use this to include a stylesheet in your popup that makes it look
+          consistent with the browser's UI and other extensions that use
+          the <code>browser_style</code> property.
         </p>
         <p>
           In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
+          chrome://browser/content/extension.css or
           chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet currently sets
+          dimensions, be aware that this style sheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
@@ -103,8 +100,8 @@ The `action` key is an object that may have any of these properties, all optiona
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
             >Browser styles</a
-          > describes the classes you can apply to elements in the popup in
-          order to get particular styles.
+          > describes the classes you can apply to elements in the popup
+          to get particular styles.
         </p>
         <p>
           The
@@ -119,12 +116,12 @@ The `action` key is an object that may have any of these properties, all optiona
             <strong>Note:</strong> Setting <code>browser_style</code> to
             <code>true</code> prevents users from selecting text in an
             extension's popup or sidebar content. This is normal behavior. You
-            can't select parts of the UI in the browser. However, You can work
+            can't select parts of the UI in the browser. However, you can work
             around this limitation to allow your users to select text in two
             ways:
           </p>
           <ol>
-            <li>Set <code>browser_style</code> to <code>false</code></li>
+            <li>Set <code>browser_style</code> to <code>false</code>.</li>
             <li>
               Use CSS styling on the body of your sidebar or popup's HTML to
               allow text selection by adding the rule

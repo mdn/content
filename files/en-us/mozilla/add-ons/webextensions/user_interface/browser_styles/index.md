@@ -12,7 +12,7 @@ browser-compat:
 
 {{AddonSidebar}}
 
-Your extension can include user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
+Your extension can include user interface elements - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
 
 1. creating an HTML file defining the structure of the UI element.
 2. adding a manifest.json key ([`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), or [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointing to that HTML file.
@@ -24,11 +24,11 @@ You can style these elements to match the browser's style. The manifest.json key
 > If your Manifest V3 extension depends on the `browser_style: true` styles, bundle this stylesheet in the extension: [extension.css](https://hg.mozilla.org/mozilla-central/raw-file/a445f1762c895000bcdabd9d95697522359d41ed/browser/components/extensions/extension.css).
 > See ([Firefox bug 1827910](https://bugzil.la/1827910)) for more information.
 
-When considering whether to use browser_style: true, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
+When considering whether to use `browser_style: true`, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
 
 > **Warning:** When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
 
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so you need to add both keys to support them.
+> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
 
 In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 
@@ -114,15 +114,21 @@ Most styles are automatically applied, but some elements require you to add the 
 
 > **Note:** See [Firefox bug 1465256](https://bugzil.la/1465256) for removal of this unnecessary requirement.
 
-## Browser compatibility
+## Manifest V3 migration
 
-{{Compat}}
+As `browser_style` is a deprecated in Manifest V3 you may want to remove support when you migrate your Manifest V2 extensions. Using `options_ui`, as an example, you would you take these steps to remove support for `browser_style`:
 
-## Firefox Panel Components
+- Set `options_ui/browser_style` to `false`.
+- Does the appearance of your extensions UI change?
+  - If the appearance doesn't change, remove the key.
+  - If the appearance changes, experiment to determine what dependency exist and add the relevant properties in the extension's stylesheet. The styles are most likely to cause layout changes are `box-sizing:`, `border-box`, and `display: flex`.
+    If you cannot identify the dependencies, includ the content of [extension.css](https://hg.mozilla.org/mozilla-central/raw-file/a445f1762c895000bcdabd9d95697522359d41ed/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use `browser-style` class.
+
+## Firefox panel components (legacy)
 
 > **Note:** This feature is non-standard and only works in Firefox.
 
-The `chrome://browser/content/extension.css` stylesheet also contains the styles for the Firefox Panel Components.
+The `chrome://browser/content/extension.css` stylesheet also contains the styles for the legacy Firefox panel components (navigation components).
 
 The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/navigation) documents proper usage.
 
@@ -493,3 +499,7 @@ html > body {
 #### Result
 
 {{EmbedLiveSample("Example","640","360")}}
+
+## Browser compatibility
+
+{{Compat}}

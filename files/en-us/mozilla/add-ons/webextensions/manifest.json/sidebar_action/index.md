@@ -79,15 +79,15 @@ The `sidebar_action` key is an object that may have any of the properties listed
             <li><code>false</code> in Manifest V3 from Firefox 115.</li>
           </ul>
         <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
+          Use this to include a stylesheet in your popup that makes it look
+          consistent with the browser's UI and other extensions that use
           the <code>browser_style</code> property.
         </p>
         <p>
           In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
+          chrome://browser/content/extension.css or
           chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet currently sets
+          dimensions, be aware that this style sheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
@@ -98,8 +98,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
             href="https://firefoxux.github.io/StyleGuide/#/controls"
             >Firefox Style Guide</a
           >
-          describes the classes you can apply to elements in the sidebar in
-          order to get particular styles.
+          describes the classes you can apply to elements in the sidebar
+          to get particular styles.
         </p>
       </td>
     </tr>
