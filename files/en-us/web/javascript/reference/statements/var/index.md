@@ -225,7 +225,7 @@ line, `x === undefined && y === 'A'`, hence the result.
 ```js-nolint
 var x = 0;
 function f() {
-  var x = y = 1; // Declares x locally; declares y globally.
+  var x = y = 1; // Declares x globally; declares y locally.
 }
 f();
 
