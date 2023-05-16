@@ -5,7 +5,7 @@ page-type: css-media-feature
 browser-compat: css.at-rules.media.inverted-colors
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.
 
