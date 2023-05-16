@@ -11,13 +11,13 @@ spec-urls:
 
 The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio.
 
-Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the `preserveAspectRatio` attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
+Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the **`preserveAspectRatio`** attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
 
 ## Example
 
-### Meet (width > height)
+### meet (width > height)
 
-This example shows the use of **`meet`** when the element's **`width`** is greater than its **`height`**. It presents three variations, with three different alignment values: **`xMidYMid`**, **`xMinYMid`**, and **`xMaxYMid`**.
+This example shows the use of `meet` when the element's `width` is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMid`, `xMinYMid`, and `xMaxYMid`.
 
 ```css hidden
 html,
@@ -25,10 +25,15 @@ body,
 svg {
   height: 100%; 
 } 
+
+/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+body {
+  display: flex;
+}
 ```
 
 ```html
-<svg viewBox="-1 -1 202 56" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 202 40" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -102,9 +107,9 @@ rect:active {
 
 {{EmbedLiveSample('meet width height', '100%', 200)}}
 
-### Slice (width > height)
+### slice (width > height)
 
-This example shows the use of **`slice`** when the element's **`width`** is greater than its **`height`**. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
+This example shows the use of `slice` when the element's **`width`** is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
 
 ```css hidden
 html,
@@ -112,6 +117,11 @@ body,
 svg {
   height: 100%; 
 } 
+
+/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+body {
+  display: flex;
+}
 ```
 
 ```html
@@ -185,11 +195,11 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('Slice width height', '100%', 200)}}
+{{EmbedLiveSample('slice width height', '100%', 200)}}
 
-### Meet (height > width)
+### meet (height > width)
 
-This example shows the use of **`meet`** when the element's **`height`** is greater than its **`width`**. It presents three variations, with three different alignment values: **`xMidYMin`**, **`xMidYMid`**, and **`xMidYMax`**.
+This example shows the use of `meet` when the element's `height` is greater than its `width`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
 
 ```css hidden
 html,
@@ -197,6 +207,11 @@ body,
 svg {
   height: 100%; 
 } 
+
+/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+body {
+  display: flex;
+}
 ```
 
 ```html
@@ -209,7 +224,7 @@ svg {
 ```
 
 ```html
-  <rect x="75" y="0" width="30" height="75">
+  <rect x=0" y="0" width="30" height="75">
     <title>xMidYMin meet</title>
   </rect>
   <svg
@@ -217,14 +232,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMin meet"
-    x="75"
+    x="0"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
 ```html
-  <rect x="115" y="0" width="30" height="75">
+  <rect x="35" y="0" width="30" height="75">
     <title>xMidYMid meet</title>
   </rect>
   <svg
@@ -232,14 +247,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMid meet"
-    x="115"
+    x="35"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
 ```html
-  <rect x="155" y="0" width="30" height="75">
+  <rect x="70" y="0" width="30" height="75">
     <title>xMidYMax meet</title>
   </rect>
   <svg
@@ -247,7 +262,7 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMax meet"
-    x="155"
+    x="70"
     y="0">
     <use href="#smiley" />
   </svg>
@@ -272,9 +287,9 @@ rect:active {
 
 {{EmbedLiveSample('meet height width', '100%', 200)}}
 
-### Slice (height > width)
+### slice (height > width)
 
-This example shows the use of **`slice`** when the element's **`height`** is greater than its **`width`**. It presents three variations, with three different alignment values: **`xMinYMid`**, **`xMidYMid`**, and **`xMaxYMid`**.
+This example shows the use of `slice` when the element's `height` is greater than its `width`. It presents three variations, with three different alignment values: `xMinYMid`, `xMidYMid`, and `xMaxYMid`.
 
 ```css hidden
 html,
@@ -282,6 +297,11 @@ body,
 svg {
   height: 100%; 
 } 
+
+/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+body {
+  display: flex;
+}
 ```
 
 ```html
@@ -294,7 +314,7 @@ svg {
 ```
 
 ```html
-  <rect x="80" y="0" width="30" height="75">
+  <rect x="0" y="0" width="30" height="75">
     <title>xMinYMid slice</title>
   </rect>
   <svg
@@ -302,14 +322,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMinYMid slice"
-    x="80"
+    x="0"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
 ```html
-  <rect x="120" y="0" width="30" height="75">
+  <rect x="35" y="0" width="30" height="75">
     <title>xMidYMid slice</title>
   </rect>
   <svg
@@ -317,14 +337,14 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMidYMid slice"
-    x="120"
+    x="35"
     y="0">
     <use href="#smiley" />
   </svg>
 ```
 
 ```html
-  <rect x="160" y="0" width="30" height="75">
+  <rect x="70" y="0" width="30" height="75">
     <title>xMaxYMid slice</title>
   </rect>
   <svg
@@ -332,7 +352,7 @@ svg {
     width="30"
     height="75"
     preserveAspectRatio="xMaxYMid slice"
-    x="160"
+    x="70"
     y="0">
     <use href="#smiley" />
   </svg>
@@ -359,7 +379,7 @@ rect:active {
 
 ### none
 
-This example shows an element with the **`preserveAspectRatio`** alignment value set to **`none`**.
+This example shows an element with the alignment value set to `none`.
 
 ```css hidden
 html,
@@ -367,10 +387,15 @@ body,
 svg {
   height: 100%; 
 } 
+
+/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+body {
+  display: flex;
+}
 ```
 
 ```html
-<svg viewBox="-1 -1 202 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 192 62" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
@@ -380,7 +405,7 @@ svg {
 
 ```html
   <!-- none -->
-  <rect x="0" y="30" width="160" height="60">
+  <rect x="0" y="0" width="160" height="60">
     <title>none</title>
   </rect>
   <svg
@@ -389,7 +414,7 @@ svg {
     height="60"
     preserveAspectRatio="none"
     x="0"
-    y="30">
+    y="0">
     <use href="#smiley" />
   </svg>
 </svg>
