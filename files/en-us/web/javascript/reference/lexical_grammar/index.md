@@ -431,11 +431,12 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
+A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
-- U+005C \ (backslash),
-- U+000D \<CR>,
-- and U+000A \<LF>.
+- U+005C \ (backslash)
+- U+000D \<CR>
+- U+000A \<LF>
+- The same kind of quote that begins the string literal
 
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
@@ -443,6 +444,48 @@ Any code points may appear in the form of an escape sequence. String literals ev
 'foo'
 "bar"
 ```
+
+The following subsections describe various escape sequences (`\` followed by one or more characters) available in string literals. Any escape sequence not listed below becomes an "identity escape" that becomes the code point itself. For example, `\z` is the same as `z`. There's a deprecated octal escape sequence syntax described in the [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) page. Many of these escape sequences are also valid in regular expressions — see [Character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
+
+#### Escape sequences
+
+Special characters can be encoded using escape sequences:
+
+| Escape sequence                                        | Unicode code point                           |
+| ------------------------------------------------------ | -------------------------------------------- |
+| `\0`                                                   | null character (U+0000 NULL)                 |
+| `\'`                                                   | single quote (U+0027 APOSTROPHE)             |
+| `\"`                                                   | double quote (U+0022 QUOTATION MARK)         |
+| `\\`                                                   | backslash (U+005C REVERSE SOLIDUS)           |
+| `\n`                                                   | newline (U+000A LINE FEED; LF)               |
+| `\r`                                                   | carriage return (U+000D CARRIAGE RETURN; CR) |
+| `\v`                                                   | vertical tab (U+000B LINE TABULATION)        |
+| `\t`                                                   | tab (U+0009 CHARACTER TABULATION)            |
+| `\b`                                                   | backspace (U+0008 BACKSPACE)                 |
+| `\f`                                                   | form feed (U+000C FORM FEED)                 |
+| `\` followed by a [line terminator](#line_terminators) | empty string                                 |
+
+The last escape sequence, `\` followed by a line terminator, is useful for splitting a string literal across multiple lines without changing its meaning.
+
+```js
+const longString =
+  "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+```
+
+Make sure there is no space or any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
+
+You can also use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator to append multiple strings together, like this:
+
+```js
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
+```
+
+Both of the above methods result in identical strings.
 
 #### Hexadecimal escape sequences
 

@@ -106,7 +106,7 @@ const bigmouth = 'I\'ve got no right to take my place…';
 console.log(bigmouth);
 ```
 
-This works fine. You can escape other characters in the same way, e.g. `\"`, and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more details.
+This works fine. You can escape other characters in the same way, e.g. `\"`, and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more details.
 
 ## Concatenating strings
 
