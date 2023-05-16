@@ -57,7 +57,7 @@ In addition, we have provided an [event output page](https://mdn.github.io/dom-e
 
 ## Private Browsing / Incognito modes
 
-Private windows, incognito mode, or similar named privacy browsing options don't store data like history and cookies, treating `localStorage` like `sessionStorage`. The storage APIs are still available and fully functional, but all stored data is deleted when the browser or browser tab is closed. For these browsers there are still different interpretations of what should be done with existing stored data (from a regular browsing session).
+Private windows, incognito mode, and similarly named privacy browsing options, don't store data like history and cookies. In private mode, `localStorage` is treated like `sessionStorage`. The storage APIs are still available and fully functional, but all stored data is deleted when the browser or browser tab is closed.
 
 ## See also
 
