@@ -124,11 +124,11 @@ When the browser evaluates how to handle requests, it checks each extension's ru
    5. "redirect" redirects the request.
    6. "modifyHeaders" rewrites request or response headers or both.
 
-> **Note:** When matching rules have the same rule priority and rule action type, a problem occurs when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
+> **Note:** When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
 >
-> - The "block" action does not support additional properties, so there is no problem: all matching "block" actions would result in the same outcome.
+> - The "block" action does not support additional properties, and therefore there is no ambiguity: all matching "block" actions would result in the same outcome.
 > - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. It is still possible to redirect repeatedly when the redirected request matches another rule condition.
-> - Multiple "modifyHeaders" action are allowed, until they touch the same header as explained at {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}. The evaluation order of "modifyHeaders" is therefore important.
+> - Multiple "modifyHeaders" actions can be applied independently when they touch different headers. The result is ambiguous when they touch the same header, because some combination of operations are not allowed (as explained at ("declarativeNetRequest.ModifyHeaderInfo")}}). The evaluation order of "modifyHeaders" actions is therefore important.
 >
 > To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
 
