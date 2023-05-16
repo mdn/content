@@ -47,8 +47,10 @@ You will be installing node.js, MAMP, or another local server to create a local 
 
 The steps include:
 
-- [Basic site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
-  - : We will create a website with a date picker and an installation button, using HTML, CSS, and JavaScript.
+- [Basic HTML and CSS site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
+  - : We will create a website with a date picker, using HTML and CSS.
+- [Basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
+  - : A PWA is an online application that also works offline. We will write the basic JavaScript functionality to make this period tracker work as an online web application, so we have a functioning application that can be progressively enhanced into a PWA.
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure)
