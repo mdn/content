@@ -228,6 +228,4 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ### Up next
 
-A PWA is a progressive web application. At its core, it is a web application that is progressively enhanced to work offline. Before adding the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker), we have to make this application work.
-
-Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
+Before converting a web app into a progressive web app — before adding the [manifest file](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
