@@ -11,7 +11,7 @@ The maximum number of static rulesets an extension can specify as part of the [`
 
 Its value is `50`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
