@@ -37,16 +37,23 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 
 ## Example
 
+In this example we listen for the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event. When it fires, we cancel the default behavior, which prevents the browser's built-in install prompt from showing. Next we show the app's custom install UI, and when the user clicks this UI, we call `prompt()` on the `BeforeInstallPromptEvent` that was passed into the `beforeinstallprompt` listener.
+
 ```js
-window.addEventListener("beforeinstallprompt", (e) => {
-  // log the platforms provided as options in an install prompt
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then((choiceResult) => {
-    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
-  }, handleError);
+window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
+  // Prevent browser's own prompt display
+  beforeInstallPromptEvent.preventDefault();
+  // Show the app's custom install button
+  const customInstallButton = document.querySelector("#install");
+  customInstallButton.hidden = false;
+  // Prompt the user to install when they press the custom install button
+  customInstallButton.addEventListener("click", async () => {
+    const result = await beforeInstallPromptEvent.prompt();
+    console.log(`Outcome: ${result.outcome}`);
+  });
 });
-```
 
 ## Browser compatibility
 
 {{Compat}}
+```
