@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getDate
 
 {{JSRef}}
 
-The **`getDate()`** method of a {{jsxref("Date")}} instance returns the day of the month for this date according to local time.
+The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getdate.html","shorter")}}
 

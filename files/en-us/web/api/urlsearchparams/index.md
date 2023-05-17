@@ -25,6 +25,11 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
   - : Returns a `URLSearchParams` object instance.
 
+## Instance properties
+
+- {{domxref("URLSearchParams.size", 'size')}}
+  - : Indicates the total number of search parameter entries.
+
 ## Instance methods
 
 - {{domxref("URLSearchParams.append()")}}

@@ -175,7 +175,7 @@ The functions are defined as below:
   });
   ```
 
-  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Validation Result API](https://express-validator.github.io/docs/validation-result-api.html) for more information.
+  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started#handling-validation-errors) for more information.
 
 The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.
 

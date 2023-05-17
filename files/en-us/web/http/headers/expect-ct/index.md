@@ -5,8 +5,7 @@ page-type: http-header
 browser-compat: http.headers.Expect-CT
 ---
 
-{{HTTPSidebar}}
-{{Deprecated_Header}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements. Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
 

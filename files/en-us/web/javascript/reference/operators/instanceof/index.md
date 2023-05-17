@@ -182,7 +182,7 @@ const nullObject = Object.create(null);
 nullObject.name = "My object";
 
 literalObject instanceof Object; // true, every object literal has Object.prototype as prototype
-({} instanceof Object); // true, same case as above
+({}) instanceof Object; // true, same case as above
 nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 

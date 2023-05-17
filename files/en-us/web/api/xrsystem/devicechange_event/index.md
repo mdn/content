@@ -19,9 +19,9 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object wheneve
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', (event) => { })
+addEventListener("devicechange", (event) => {});
 
-ondevicechange = (event) => { }
+ondevicechange = (event) => {};
 ```
 
 If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
@@ -47,8 +47,7 @@ The example shown here handles the `devicechange` event by toggling the availabi
 ```js
 if (navigator.xr) {
   navigator.xr.addEventListener("devicechange", (event) => {
-    navigator.xr.isSessionSupported("immersive-vr")
-    .then((immersiveOK) => {
+    navigator.xr.isSessionSupported("immersive-vr").then((immersiveOK) => {
       enableXRButton.disabled = !immersiveOK;
     });
   });
