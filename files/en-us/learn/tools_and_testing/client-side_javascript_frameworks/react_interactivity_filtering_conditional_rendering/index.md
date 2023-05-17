@@ -312,9 +312,7 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 With this:
 
 ```jsx
-{
-  filterList;
-}
+{filterList}
 ```
 
 This won't work yet. We've got a bit more work to do first.
@@ -345,10 +343,10 @@ In the same way as we did earlier with our `<Todo />` component, we now have to 
 - Set the value of `aria-pressed` to `{props.isPressed}`.
 - Add an `onClick` handler that calls `props.setFilter()` with the filter's name.
 
-With all of that done, your `FilterButton()` function should read like this:
+With all of that done, your `FilterButtons()` function should read like this:
 
 ```jsx
-function FilterButton(props) {
+function FilterButtons(props) {
   return (
     <button
       type="button"
