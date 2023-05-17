@@ -54,7 +54,9 @@ A new {{jsxref("TypedArray")}} instance.
 
 ## Description
 
-See {{jsxref("Array.from()")}} for more details. There are some subtle distinctions between {{jsxref("Array.from()")}} and `TypedArray.from()` (note: the `this` value mentioned below is the `this` value that `TypedArray.from()` was called with, not the `thisArg` argument used to invoke `mapFn`):
+See {{jsxref("Array.from()")}} for more details.
+
+There are some subtle distinctions between {{jsxref("Array.from()")}} and `TypedArray.from()` (note: the `this` value mentioned below is the `this` value that `TypedArray.from()` was called with, not the `thisArg` argument used to invoke `mapFn`):
 
 - If the `this` value of `TypedArray.from()` is not a constructor, `TypedArray.from()` will throw a {{jsxref("TypeError")}}, while `Array.from()` defaults to creating a new {{jsxref("Array")}}.
 - The object constructed by `this` must be a `TypedArray` instance, while `Array.from()` allows its `this` value to be constructed to any object.
