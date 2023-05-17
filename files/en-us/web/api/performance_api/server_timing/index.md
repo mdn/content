@@ -45,6 +45,14 @@ Once you have calculated your desired metrics, the server needs to send the `Ser
 
 The server timing metrics usually appear in the developer tools of the browser, but they are also stored as {{domxref("PerformanceServerTiming")}} performance entries that you can access like other [performance data](/en-US/docs/Web/API/Performance_API/Performance_data). However, there are no `"server-timing"` entries on their own. The `PerformanceServerTiming` objects are observable from `"navigation"` and `"resource"` performance entries. You access the server metrics from the {{domxref("PerformanceResourceTiming.serverTiming")}} property, which is an array of `PerformanceServerTiming` objects.
 
+Given a {{HTTPHeader("Server-Timing")}} like this:
+
+```
+Server-Timing: cache;desc="Cache Read";dur=23.2,db;dur=53,app;dur=47.2
+```
+
+A `PerformanceObserver` can log the entries on the client side with the following code:
+
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
