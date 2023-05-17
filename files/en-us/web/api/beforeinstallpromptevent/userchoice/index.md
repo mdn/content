@@ -1,7 +1,7 @@
 ---
 title: "BeforeInstallPromptEvent: userChoice property"
 short-title: userChoice
-slug: Web/API/BeforeInstallPromptEvent/userchoice
+slug: Web/API/BeforeInstallPromptEvent/userChoice
 page-type: web-api-instance-property
 status:
   - experimental
