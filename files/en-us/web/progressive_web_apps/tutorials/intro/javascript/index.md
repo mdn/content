@@ -34,7 +34,7 @@ The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/
         <button type="submit">Add Period</button>
       </p>
     </form>
-    <div id="past-periods"></div>
+    <section id="past-periods"></section>
     <script src="app.js" defer></script>
   </body>
 </html>
