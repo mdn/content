@@ -148,10 +148,10 @@ This returned promise fulfills when all of the input's promises fulfill, with an
 It rejects when any of the input's promises rejects, with this first rejection reason.
 
 The code below shows how this works.
-First we have two functions that return promises.
+First, we have two functions that return promises.
 We `await` on both of them to complete using the promise returned by `Promise.all()`.
-Once they both complete `await` returns and the results array is populated.
-The function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+Once they both complete `await` returns and the results array is populated,
+the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
