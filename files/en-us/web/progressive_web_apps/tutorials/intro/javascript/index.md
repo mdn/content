@@ -3,15 +3,15 @@ title: JavaScript web functionality
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript
 ---
 
-In the previous section, we wrote [CSS](style.css) and [HTML](step1.html) to create a [static application template](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML). In this section, we will create the JavaScript required to convert the static HTML into a basic web application.
+In the previous section, we wrote the [CSS](style.css) and [HTML](step1.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functionalweb application.
 
-The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML), explained in the previous section, is:
+The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML) is:
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" />applicat
     <meta name="viewport" content="width=device-width" />
     <title>Cycle Tracker</title>
     <link rel="stylesheet" href="style.css" />
@@ -40,17 +40,17 @@ The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/
 </html>
 ```
 
-Copy this HTML and save it in a file called `index.html`.
+If you haven't already created the file, copy this HTML and save it in a file called `index.html`.
 
-Note the last line in the body links to the `app.js` script. This is the script we are creating in this section. The section that is commented out, the "past periods", is the content we will be creating in this section.
+Note the last line in the body links to the `app.js` script. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past periods section.
+
+At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create an fully installable PWA that works even when the user is offline.
 
 ## Javascript task
 
-The page contains a {{HTMLelement("form")}} with two date pickers where the user can select the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Attributes/id) of `start-date` and `start-date` respectively.
+The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Attributes/id) of `start-date` and `start-date` respectively.
 
-When a user visits the page, we have to check if they have existing data.
-
-The first time the user selects two dates and submits the form, we need to:
+When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 
 1) Create a "`<h2>Past periods</h2>`" header
 2) Create an {{HTMLelement("ul")}}
@@ -64,20 +64,18 @@ For each subsequent form submission, we need to:
 3) Repopulate the `<ul>` with the new list, one `<li>` per cycle
 4) Append the data to our saved local storage
 
-Existing users will have existing data in local storage.
-
-When a user comes back to our webpage with the same browser on the same device, we need to:
+Existing users will have existing data in local storage. When a user comes back to our webpage with the same browser on the same device, we need to:
 
 1) Retrieve the data from local storage
 2) Create a "`<h2>Past periods</h2>`" header
 3) Create an {{HTMLelement("ul")}}
 4) Populate the `<ul>` with an {{HTMLelement("li")}} for every menstrual cycle saved in local storage.
 
-This is a beginner-level demonstration application teaching the basics of converting a web application to a PWA. This application does not contain necessary features like form validation, error checking, deleting or correcting previous entries, etc. We invite you to fork this repo and expand on the features that are covered.
+This is a beginner-level demonstration application. The goal is to teach the basics of converting a web application to a PWA. This application does not contain necessary features like form validation, error checking, edit or delete functionality, etc. You are welcome to expand on the features that are covered and tailor the lesson and applications to your learning goals and application needs.
 
 ### Form submission
 
-The form has no method or action; instead, when the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this cycle along with previous ones, and then reset the form.
+The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this cycle along with previous ones, and then reset the form.
 
 ```js
 const newPeriodFormEl = document.getElementsByTagName("form")[0];
@@ -111,12 +109,12 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 });
 ```
 
-After preventing the form being submitted, we:
+After preventing the form submission with [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), we:
 
-1. [Validate user input](#validate-user-input); exiting if invalid
-2. Store the new cycle by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage.
-3. [Render form data](#render-data-to-screen) and the data of past menstrual cycles, along with a header.
-4. Reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
+1. [Validate user input](#validate-user-input); exiting if invalid,
+2. store the new cycle by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage,
+3. [render the form data](#render-data-to-screen) along with the data of past menstrual cycles and a section header, and
+4. reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
 
 #### Validate user input
 
@@ -143,24 +141,20 @@ In a more robust version of this app, we would, at minimum, include error messag
 
 #### Retrieve, append, sort, and re-store data
 
-We store each start and end date pair using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) by using [window.localStorage](/en-US/docs/Web/API/Window/localStorage).
+We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
-[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. For more robust applications, consider other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options including [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) and, discussed later, service workers.
+[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) and, discussed later, service workers, have better performance.
 
-Limitations include:
+Limitations of `localStorage` include:
 
-- Limited data storage
-  - : Storage is limited to 5MB of data per origin. Our app will store less than 1KB of data.
-- Stores stings only
-  - : Local storage stores data as string key and string value pairs. Our start and end dates will be stored and parsed as a string. For more complex data, use a more robust storage mechanism such as IDB.
-- Can cause poor performance
-- : Getting and setting local storage is done synchronously and on the main thread. When the main thread is occupied, the entire app will appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
-- Only available to the main thread
-  - : In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the period data.
+- Limited data storage: `localStorage` is limited to 5MB of data per origin. Our storage needs are much less than that.
+- Stores stings only: `localStorage` stores data as string key and string value pairs. Our start and end dates will be stored as a JSON object parsed as a string. For more complex data, a more robust storage mechanism like IDB would be required.
+- Can cause poor performance: Getting and setting from and to local storage is done synchronously on the main thread. When the main thread is occupied, apps are not responsive and appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
+- Only available to the main thread: In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the local storage data.
 
-Because we're using localStorage, which comprises of a single string, we retrieve the JSON string of data from local storage, parse the JSON data (if any), push the new pair of dates to the array, sort the dates, then save the new string, parsed as JSON, back to localStorage.
+Because we're using localStorage, which comprises of a single string, we retrieve the JSON string of data from local storage, parse the JSON data (if any), push the new pair of dates to the existing array, sort the dates, parse the JSON object back into a string, and save that string back to `localStorage`.
 
-Because we need to retrieve data from localStorage when we check if there is data, when we render data on subseqent visits, and when the user adds a cycle, we create a few functions.
+This process requires the creation of a few functions:
 
 ```javascript
 // Add the storage key as an app-wide constant
@@ -339,4 +333,4 @@ renderPastPeriods();
 
 A PWA is a progressive web application. At it's core, it is a web application that is progressively enhanced to work offline. Before adding the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
-Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
+Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
