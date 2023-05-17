@@ -20,11 +20,11 @@
     <form id="new-period">
       <p>
         <label for="start-date">Start date</label>
-        <input type="date" id="start-date" />
+        <input type="date" id="start-date" required />
       </p>
       <p>
         <label for="end-date">End date</label>
-        <input type="date" id="end-date" />
+        <input type="date" id="end-date" required />
       </p>
       <p>
         <button type="submit">Add Period</button>
@@ -34,7 +34,7 @@
     <button>Install</button>
 
     <!-- The list of past periods will be displayed here. -->
-    <ul id="past-periods"></ul>
+    <section id="past-periods"></section>
 
     <!-- Load the app's main script. -->
     <script src="app.js"></script>
