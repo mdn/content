@@ -1,5 +1,5 @@
 ---
-title: '<canvas>: The Graphics Canvas element'
+title: "<canvas>: The Graphics Canvas element"
 slug: Web/HTML/Element/canvas
 page-type: html-element
 browser-compat: html.elements.canvas

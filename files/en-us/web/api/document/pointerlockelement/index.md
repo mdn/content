@@ -1,5 +1,6 @@
 ---
-title: Document.pointerLockElement
+title: "Document: pointerLockElement property"
+short-title: pointerLockElement
 slug: Web/API/Document/pointerLockElement
 page-type: web-api-instance-property
 browser-compat: api.Document.pointerLockElement

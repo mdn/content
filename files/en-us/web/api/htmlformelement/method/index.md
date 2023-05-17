@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.method
+title: "HTMLFormElement: method property"
+short-title: method
 slug: Web/API/HTMLFormElement/method
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.method

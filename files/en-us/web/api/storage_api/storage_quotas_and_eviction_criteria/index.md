@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage")}}
 
-There are a number of web technologies that developers can use in their websites or apps to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
+Web developers can use a number of technologies to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
 
 The amount of data browsers allow websites to store and the mechanisms they use to delete data when that limit is reached differs between browsers.
 
@@ -93,7 +93,7 @@ Origins for which persistent storage has been granted can store up to 50% of the
 For example, if the device has a 500 GiB hard drive, Firefox will allow an origin to store up to:
 
 - In best-effort mode: 10 GiB of data, which is the eTLD+1 group limit.
-- In persistent modeL: 250 GiB, which is 50% of the total disk size.
+- In persistent mode: 250 GiB, which is 50% of the total disk size.
 
 Note that it might not actually be possible for the origin to reach its quota because it is calculated based on the hard drive **total** size, not the currently available disk space. This is done for security reasons, to avoid {{Glossary("fingerprinting")}}.
 
@@ -149,7 +149,7 @@ When this happens, the browser starts evicting best-effort origins as described 
 
 ### Proactive eviction
 
-Currently, Safari is the only browser that proactively evicts data. The data from any origin that hasn't been accessed by the user over the last seven days is deleted.
+Safari proactively evicts data when cross-site tracking prevention is turned on. If an origin has no user interaction, such as click or tap, in the last seven days of browser use, its data created from script will be deleted. Cookies set by server are exempt from this eviction.
 
 ## How is data evicted?
 

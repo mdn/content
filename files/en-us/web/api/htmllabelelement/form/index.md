@@ -1,5 +1,6 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form property"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
 page-type: web-api-instance-property
 browser-compat: api.HTMLLabelElement.form

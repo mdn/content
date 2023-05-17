@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.color
 
 {{CSSRef}}
 
-The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
+The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
 
 ## Syntax
 

@@ -1,5 +1,6 @@
 ---
-title: CSSUnparsedValue.keys()
+title: "CSSUnparsedValue: keys() method"
+short-title: keys()
 slug: Web/API/CSSUnparsedValue/keys
 page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.keys

@@ -1,5 +1,6 @@
 ---
-title: RTCError.sentAlert
+title: "RTCError: sentAlert property"
+short-title: sentAlert
 slug: Web/API/RTCError/sentAlert
 page-type: web-api-instance-property
 browser-compat: api.RTCError.sentAlert

@@ -14,6 +14,7 @@ While using {{Glossary("HTML")}} it can be very handy to have an easy way to rem
 An "element" is a single part of a webpage. Some elements are large and hold smaller elements like containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements" appear next to one another in a webpage. They take up only as much width as they need in a page and fit together horizontally like words in a sentence or books shelved side-by-side in a row. All inline elements can be placed within the `<body>` element.
 
 <table class="standard-table">
+  <caption>Inline elements: usage and examples</caption>
   <thead>
     <tr>
       <th scope="col">Usage</th>

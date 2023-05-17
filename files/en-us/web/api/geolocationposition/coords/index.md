@@ -1,5 +1,6 @@
 ---
-title: GeolocationPosition.coords
+title: "GeolocationPosition: coords property"
+short-title: coords
 slug: Web/API/GeolocationPosition/coords
 page-type: web-api-instance-property
 browser-compat: api.GeolocationPosition.coords

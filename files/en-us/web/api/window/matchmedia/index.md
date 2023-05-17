@@ -1,5 +1,6 @@
 ---
-title: Window.matchMedia()
+title: "Window: matchMedia() method"
+short-title: matchMedia()
 slug: Web/API/Window/matchMedia
 page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia

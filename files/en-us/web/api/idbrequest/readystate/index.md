@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.readyState
+title: "IDBRequest: readyState property"
+short-title: readyState
 slug: Web/API/IDBRequest/readyState
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.readyState

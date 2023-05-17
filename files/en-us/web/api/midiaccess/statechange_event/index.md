@@ -1,5 +1,6 @@
 ---
 title: "MIDIAccess: statechange event"
+short-title: statechange
 slug: Web/API/MIDIAccess/statechange_event
 page-type: web-api-event
 browser-compat: api.MIDIAccess.statechange_event

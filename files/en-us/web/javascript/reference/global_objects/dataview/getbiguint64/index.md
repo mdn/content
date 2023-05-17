@@ -22,10 +22,10 @@ getBigUint64(byteOffset, littleEndian)
 
 ### Parameters
 
-- byteOffset
+- `byteOffset`
   - : The offset, in bytes, from the start of the view to read the data from.
-- littleEndian
-  - : {{optional_inline}} Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
     `false` or `undefined`, a big-endian value is read.
 
 ### Return value

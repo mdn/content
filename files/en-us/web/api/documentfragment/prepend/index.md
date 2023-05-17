@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.prepend()
+title: "DocumentFragment: prepend() method"
+short-title: prepend()
 slug: Web/API/DocumentFragment/prepend
 page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.prepend

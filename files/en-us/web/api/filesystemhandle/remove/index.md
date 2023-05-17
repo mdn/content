@@ -1,5 +1,6 @@
 ---
-title: FileSystemHandle.remove()
+title: "FileSystemHandle: remove() method"
+short-title: remove()
 slug: Web/API/FileSystemHandle/remove
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: XRTransientInputHitTestResult.inputSource
+title: "XRTransientInputHitTestResult: inputSource property"
+short-title: inputSource
 slug: Web/API/XRTransientInputHitTestResult/inputSource
 page-type: web-api-instance-property
 status:
@@ -24,14 +25,16 @@ The `inputSource` property allows you to filter hit test results by input source
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
   });
- }
+}
 ```
 
 ## Specifications

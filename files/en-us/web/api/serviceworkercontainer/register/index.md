@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.register()
+title: "ServiceWorkerContainer: register() method"
+short-title: register()
 slug: Web/API/ServiceWorkerContainer/register
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.register

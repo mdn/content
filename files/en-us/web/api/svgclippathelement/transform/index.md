@@ -1,5 +1,6 @@
 ---
-title: SVGClipPathElement.transform
+title: "SVGClipPathElement: transform property"
+short-title: transform
 slug: Web/API/SVGClipPathElement/transform
 page-type: web-api-instance-property
 browser-compat: api.SVGClipPathElement.transform

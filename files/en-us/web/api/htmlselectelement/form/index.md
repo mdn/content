@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.form
+title: "HTMLSelectElement: form property"
+short-title: form
 slug: Web/API/HTMLSelectElement/form
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.form

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.drawingBufferColorSpace
+title: "WebGLRenderingContext: drawingBufferColorSpace property"
+short-title: drawingBufferColorSpace
 slug: Web/API/WebGLRenderingContext/drawingBufferColorSpace
 page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.drawingBufferColorSpace

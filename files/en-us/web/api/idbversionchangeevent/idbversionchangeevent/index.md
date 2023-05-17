@@ -1,5 +1,6 @@
 ---
-title: IDBVersionChangeEvent()
+title: "IDBVersionChangeEvent: IDBVersionChangeEvent() constructor"
+short-title: IDBVersionChangeEvent()
 slug: Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent
 page-type: web-api-constructor
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent

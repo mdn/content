@@ -1,5 +1,6 @@
 ---
-title: Screen.height
+title: "Screen: height property"
+short-title: height
 slug: Web/API/Screen/height
 page-type: web-api-instance-property
 browser-compat: api.Screen.height

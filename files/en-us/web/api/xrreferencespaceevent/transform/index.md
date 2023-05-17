@@ -1,5 +1,6 @@
 ---
-title: XRReferenceSpaceEvent.transform
+title: "XRReferenceSpaceEvent: transform property"
+short-title: transform
 slug: Web/API/XRReferenceSpaceEvent/transform
 page-type: web-api-instance-property
 browser-compat: api.XRReferenceSpaceEvent.transform

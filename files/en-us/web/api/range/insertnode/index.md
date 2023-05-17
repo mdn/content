@@ -1,5 +1,6 @@
 ---
-title: Range.insertNode()
+title: "Range: insertNode() method"
+short-title: insertNode()
 slug: Web/API/Range/insertNode
 page-type: web-api-instance-method
 browser-compat: api.Range.insertNode

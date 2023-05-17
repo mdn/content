@@ -1,11 +1,12 @@
 ---
-title: ElementInternals.ariaPressed
+title: "ElementInternals: ariaPressed property"
+short-title: ariaPressed
 slug: Web/API/ElementInternals/ariaPressed
 page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaPressed
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaPressed`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 

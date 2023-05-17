@@ -1,5 +1,6 @@
 ---
-title: FontFaceSetLoadEvent.fontfaces
+title: "FontFaceSetLoadEvent: fontfaces property"
+short-title: fontfaces
 slug: Web/API/FontFaceSetLoadEvent/fontfaces
 page-type: web-api-instance-property
 browser-compat: api.FontFaceSetLoadEvent.fontfaces

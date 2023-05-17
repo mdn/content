@@ -1,5 +1,6 @@
 ---
-title: Window.devicePixelRatio
+title: "Window: devicePixelRatio property"
+short-title: devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 page-type: web-api-instance-property
 browser-compat: api.Window.devicePixelRatio
@@ -104,9 +105,9 @@ const updatePixelRatio = () => {
   }
   let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
   let media = matchMedia(mqString);
-  media.addListener(updatePixelRatio);
+  media.addEventListener("change", updatePixelRatio);
   remove = function () {
-    media.removeListener(updatePixelRatio);
+    media.removeEventListener("change", updatePixelRatio);
   };
 
   console.log("devicePixelRatio: " + window.devicePixelRatio);

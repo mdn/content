@@ -1,5 +1,6 @@
 ---
-title: Client.postMessage()
+title: "Client: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Client/postMessage
 page-type: web-api-instance-method
 browser-compat: api.Client.postMessage

@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRecord.responseReady
+title: "BackgroundFetchRecord: responseReady property"
+short-title: responseReady
 slug: Web/API/BackgroundFetchRecord/responseReady
 page-type: web-api-instance-property
 status:

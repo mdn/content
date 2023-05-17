@@ -1,5 +1,6 @@
 ---
-title: Window.print()
+title: "Window: print() method"
+short-title: print()
 slug: Web/API/Window/print
 page-type: web-api-instance-method
 browser-compat: api.Window.print

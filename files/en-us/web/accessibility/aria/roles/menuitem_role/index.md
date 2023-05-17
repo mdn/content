@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menuitem role"
 slug: Web/Accessibility/ARIA/Roles/menuitem_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
   - https://w3c.github.io/aria-practices/#menu

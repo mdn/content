@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigation.redirectCount
+title: "PerformanceNavigation: redirectCount property"
+short-title: redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
 page-type: web-api-instance-property
 status:

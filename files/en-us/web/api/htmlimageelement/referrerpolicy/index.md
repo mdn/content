@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.referrerPolicy
+title: "HTMLImageElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.referrerPolicy

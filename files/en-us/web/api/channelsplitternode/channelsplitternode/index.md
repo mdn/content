@@ -1,5 +1,6 @@
 ---
-title: ChannelSplitterNode()
+title: "ChannelSplitterNode: ChannelSplitterNode() constructor"
+short-title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 page-type: web-api-constructor
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
@@ -24,7 +25,7 @@ new ChannelSplitterNode(context, options)
 
   - : An object defining the properties you want the `ChannelSplitterNode` to have:
     - `numberOfOutputs` {{optional_inline}}
-      - : A number defining the number of inputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.
+      - : A number defining the number of outputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.
     - `channelCount` {{optional_inline}}
       - : An integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
         (See {{domxref("AudioNode.channelCount")}} for more information.)

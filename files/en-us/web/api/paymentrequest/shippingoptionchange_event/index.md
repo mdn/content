@@ -1,5 +1,6 @@
 ---
 title: "PaymentRequest: shippingoptionchange event"
+short-title: shippingoptionchange
 slug: Web/API/PaymentRequest/shippingoptionchange_event
 page-type: web-api-event
 status:

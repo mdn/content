@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.letterSpacing
+title: "CanvasRenderingContext2D: letterSpacing property"
+short-title: letterSpacing
 slug: Web/API/CanvasRenderingContext2D/letterSpacing
 page-type: web-api-instance-property
 status:

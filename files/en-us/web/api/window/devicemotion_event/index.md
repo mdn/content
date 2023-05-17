@@ -1,5 +1,6 @@
 ---
 title: "Window: devicemotion event"
+short-title: devicemotion
 slug: Web/API/Window/devicemotion_event
 page-type: web-api-event
 browser-compat: api.Window.devicemotion_event

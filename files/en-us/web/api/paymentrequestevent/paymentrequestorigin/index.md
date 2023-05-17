@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.paymentRequestOrigin
+title: "PaymentRequestEvent: paymentRequestOrigin property"
+short-title: paymentRequestOrigin
 slug: Web/API/PaymentRequestEvent/paymentRequestOrigin
 page-type: web-api-instance-property
 status:

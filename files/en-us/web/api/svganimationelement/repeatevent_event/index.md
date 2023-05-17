@@ -1,5 +1,6 @@
 ---
 title: "SVGAnimationElement: repeatEvent event"
+short-title: repeatEvent
 slug: Web/API/SVGAnimationElement/repeatEvent_event
 page-type: web-api-event
 browser-compat: api.SVGAnimationElement.repeatEvent_event

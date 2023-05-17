@@ -1,5 +1,6 @@
 ---
-title: CSSPropertyRule.syntax
+title: "CSSPropertyRule: syntax property"
+short-title: syntax
 slug: Web/API/CSSPropertyRule/syntax
 page-type: web-api-instance-property
 browser-compat: api.CSSPropertyRule.syntax

@@ -1,5 +1,6 @@
 ---
-title: Navigator.ink
+title: "Navigator: ink property"
+short-title: ink
 slug: Web/API/Navigator/ink
 page-type: web-api-instance-property
 status:

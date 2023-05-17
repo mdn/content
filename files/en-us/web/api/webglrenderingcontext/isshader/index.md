@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.isShader()
+title: "WebGLRenderingContext: isShader() method"
+short-title: isShader()
 slug: Web/API/WebGLRenderingContext/isShader
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isShader

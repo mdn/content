@@ -1,5 +1,6 @@
 ---
-title: CSSRotate()
+title: "CSSRotate: CSSRotate() constructor"
+short-title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
 page-type: web-api-constructor
 browser-compat: api.CSSRotate.CSSRotate

@@ -1,5 +1,6 @@
 ---
 title: "Navigation: navigatesuccess event"
+short-title: navigatesuccess
 slug: Web/API/Navigation/navigatesuccess_event
 page-type: web-api-event
 status:

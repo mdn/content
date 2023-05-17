@@ -1,5 +1,6 @@
 ---
-title: HTMLScriptElement.referrerPolicy
+title: "HTMLScriptElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.HTMLScriptElement.referrerPolicy

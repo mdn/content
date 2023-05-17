@@ -1,5 +1,6 @@
 ---
 title: "Element: wheel event"
+short-title: wheel
 slug: Web/API/Element/wheel_event
 page-type: web-api-event
 browser-compat: api.Element.wheel_event

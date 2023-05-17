@@ -1,5 +1,6 @@
 ---
 title: "Window: pageshow event"
+short-title: pageshow
 slug: Web/API/Window/pageshow_event
 page-type: web-api-event
 browser-compat: api.Window.pageshow_event

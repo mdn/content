@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.set()
+title: "HighlightRegistry: set() method"
+short-title: set()
 slug: Web/API/HighlightRegistry/set
 page-type: web-api-instance-method
 status:

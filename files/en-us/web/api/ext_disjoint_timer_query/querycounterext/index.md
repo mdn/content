@@ -1,5 +1,6 @@
 ---
-title: EXT_disjoint_timer_query.queryCounterEXT()
+title: "EXT_disjoint_timer_query: queryCounterEXT() method"
+short-title: queryCounterEXT()
 slug: Web/API/EXT_disjoint_timer_query/queryCounterEXT
 page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.queryCounterEXT

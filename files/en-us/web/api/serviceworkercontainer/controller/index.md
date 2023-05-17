@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.controller
+title: "ServiceWorkerContainer: controller property"
+short-title: controller
 slug: Web/API/ServiceWorkerContainer/controller
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerContainer.controller

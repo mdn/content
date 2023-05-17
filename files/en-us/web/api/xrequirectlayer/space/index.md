@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.space
+title: "XREquirectLayer: space property"
+short-title: space
 slug: Web/API/XREquirectLayer/space
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,7 @@ The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equire
 const equirectLayer = xrGlBinding.createEquirectLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 equirectLayer.space = someOtherSpace;

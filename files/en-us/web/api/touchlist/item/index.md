@@ -1,5 +1,6 @@
 ---
-title: TouchList.item()
+title: "TouchList: item() method"
+short-title: item()
 slug: Web/API/TouchList/item
 page-type: web-api-instance-method
 browser-compat: api.TouchList.item

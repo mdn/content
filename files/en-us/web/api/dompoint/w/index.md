@@ -1,5 +1,6 @@
 ---
-title: DOMPoint.w
+title: "DOMPoint: w property"
+short-title: w
 slug: Web/API/DOMPoint/w
 page-type: web-api-instance-property
 browser-compat: api.DOMPoint.w

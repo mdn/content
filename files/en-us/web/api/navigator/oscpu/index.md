@@ -1,5 +1,6 @@
 ---
-title: Navigator.oscpu
+title: "Navigator: oscpu property"
+short-title: oscpu
 slug: Web/API/Navigator/oscpu
 page-type: web-api-instance-property
 status:

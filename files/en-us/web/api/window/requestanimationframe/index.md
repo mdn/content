@@ -1,5 +1,6 @@
 ---
-title: Window.requestAnimationFrame()
+title: "Window: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
@@ -9,7 +10,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
+specified function to update an animation right before the next repaint. The method takes a
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
@@ -49,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 

@@ -1,5 +1,6 @@
 ---
-title: Element.after()
+title: "Element: after() method"
+short-title: after()
 slug: Web/API/Element/after
 page-type: web-api-instance-method
 browser-compat: api.Element.after

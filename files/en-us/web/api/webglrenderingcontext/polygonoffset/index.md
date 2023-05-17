@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.polygonOffset()
+title: "WebGLRenderingContext: polygonOffset() method"
+short-title: polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.polygonOffset

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.depthMask()
+title: "WebGLRenderingContext: depthMask() method"
+short-title: depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.depthMask

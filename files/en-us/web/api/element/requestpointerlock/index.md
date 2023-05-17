@@ -1,5 +1,6 @@
 ---
-title: Element.requestPointerLock()
+title: "Element: requestPointerLock() method"
+short-title: requestPointerLock()
 slug: Web/API/Element/requestPointerLock
 page-type: web-api-instance-method
 browser-compat: api.Element.requestPointerLock

@@ -1,5 +1,6 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
 page-type: web-api-instance-method
 browser-compat: api.Element.replaceChildren

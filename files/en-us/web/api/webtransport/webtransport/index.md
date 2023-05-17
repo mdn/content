@@ -1,5 +1,6 @@
 ---
-title: WebTransport()
+title: "WebTransport: WebTransport() constructor"
+short-title: WebTransport()
 slug: Web/API/WebTransport/WebTransport
 page-type: web-api-constructor
 status:

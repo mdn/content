@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.loading
+title: "HTMLImageElement: loading property"
+short-title: loading
 slug: Web/API/HTMLImageElement/loading
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.loading

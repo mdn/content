@@ -1,5 +1,6 @@
 ---
-title: OES_vertex_array_object.isVertexArrayOES()
+title: "OES_vertex_array_object: isVertexArrayOES() method"
+short-title: isVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/isVertexArrayOES
 page-type: webgl-extension-method
 browser-compat: api.OES_vertex_array_object.isVertexArrayOES

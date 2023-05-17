@@ -1,5 +1,6 @@
 ---
-title: MediaRecorderErrorEvent()
+title: "MediaRecorderErrorEvent: MediaRecorderErrorEvent() constructor"
+short-title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
 page-type: web-api-constructor
 status:
