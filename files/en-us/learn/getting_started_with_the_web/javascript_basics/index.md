@@ -190,7 +190,6 @@ If your comment contains no line breaks, it's an option to put it behind two sla
 
 An `{{Glossary("operator")}}` is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
 
-<!-- markdownlint-disable MD037 -->
 <table class="standard-table">
   <thead>
     <tr>

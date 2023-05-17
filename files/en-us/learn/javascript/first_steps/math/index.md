@@ -115,7 +115,6 @@ The result is then 77, as initially expected.
 
 Arithmetic operators are the basic operators that we use to do sums in JavaScript:
 
-<!-- markdownlint-disable MD037 -->
 <table class="standard-table">
   <thead>
     <tr>

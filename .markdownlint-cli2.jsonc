@@ -101,6 +101,7 @@
       ]
     },
     "MD034": false,
+    "MD037": false,
     "MD040": false,
     // See https://github.com/mdn/content/pull/20026, as macros currently break this
     "MD042": false,
