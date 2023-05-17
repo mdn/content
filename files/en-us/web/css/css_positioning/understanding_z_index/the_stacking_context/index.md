@@ -90,7 +90,7 @@ In our example (sorted according to the final rendering order):
   <h1>Division Element #1</h1>
   <code>
     position: relative;<br />
-    z-index: 5;
+    z-index: 3;
   </code>
 </div>
 
@@ -98,7 +98,7 @@ In our example (sorted according to the final rendering order):
   <h1>Division Element #2</h1>
   <code>
     position: relative;<br />
-    z-index: 2;
+    z-index: 1;
   </code>
 </div>
 
@@ -114,14 +114,14 @@ In our example (sorted according to the final rendering order):
   <h1>Division Element #3</h1>
   <code>
     position: absolute;<br />
-    z-index: 4;
+    z-index: 2;
   </code>
 
   <div id="div5">
     <h1>Division Element #5</h1>
     <code>
       position: relative;<br />
-      z-index: 1;
+      z-index: 4;
     </code>
   </div>
 
@@ -129,7 +129,7 @@ In our example (sorted according to the final rendering order):
     <h1>Division Element #6</h1>
     <code>
       position: absolute;<br />
-      z-index: 3;
+      z-index: 5;
     </code>
   </div>
 </div>
@@ -160,14 +160,14 @@ h1 {
   background-color: #cfc;
 }
 #div1 {
-  z-index: 5;
+  z-index: 3;
   margin-bottom: 190px;
 }
 #div2 {
-  z-index: 2;
+  z-index: 1;
 }
 #div3 {
-  z-index: 4;
+  z-index: 2;
   opacity: 1;
   position: absolute;
   top: 40px;
@@ -183,17 +183,17 @@ h1 {
   background-color: #ffc;
 }
 #div4 {
-  z-index: 6;
+  z-index: 5;
   margin-bottom: 15px;
   padding: 25px 10px 5px;
 }
 #div5 {
-  z-index: 1;
+  z-index: 4;
   margin-top: 15px;
   padding: 5px 10px;
 }
 #div6 {
-  z-index: 3;
+  z-index: 6;
   position: absolute;
   top: 20px;
   left: 180px;
