@@ -43,7 +43,6 @@ scrollIntoView(scrollIntoViewOptions)
     - `behavior` {{optional_inline}}
       - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
         - `smooth`: scrolling should animate smoothly
-        - `instant`: scrolling should happen instantly in a single jump
         - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
     - `block` {{optional_inline}}
       - : Defines vertical alignment.
