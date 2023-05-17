@@ -51,19 +51,15 @@ q::after {
 
 #### Result
 
-{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}
+{{EmbedLiveSample('Adding_quotation_marks', '500', '50')}}
 
 ### Decorative example
 
 We can style text or images in the {{cssxref("content")}} property almost any way we want.
 
-#### HTML
-
 ```html
 <span class="ribbon">Notice where the orange box is.</span>
 ```
-
-#### CSS
 
 ```css
 .ribbon {
@@ -78,15 +74,11 @@ We can style text or images in the {{cssxref("content")}} property almost any wa
 }
 ```
 
-#### Result
-
 {{EmbedLiveSample('Decorative_example', 450, 60)}}
 
 ### To-do list
 
 In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
-
-#### HTML
 
 ```html
 <ul>
@@ -98,8 +90,6 @@ In this example we will create a simple to-do list using pseudo-elements. This m
   <li>Relax</li>
 </ul>
 ```
-
-#### CSS
 
 ```css
 li {
@@ -130,8 +120,6 @@ li.done::before {
 }
 ```
 
-#### JavaScript
-
 ```js
 const list = document.querySelector("ul");
 list.addEventListener(
@@ -147,15 +135,11 @@ list.addEventListener(
 
 Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
 
-#### Result
-
 {{EmbedLiveSample('To-do_list', 400, 300)}}
 
 ### Special characters
 
 As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicode escape sequence, consisting of a backslash followed by the hexadecimal unicode value.
-
-#### HTML
 
 ```html
 <ol>
@@ -169,8 +153,6 @@ As this is CSS; not HTML, you can **not** use markup entities in content values.
   <li>serve with your favorite topping</li>
 </ol>
 ```
-
-#### CSS
 
 ```css
 li {
@@ -186,8 +168,6 @@ li[aria-current="step"]::after {
   display: inline;
 }
 ```
-
-#### Result
 
 {{EmbedLiveSample('Special_characters', 400, 200)}}
 
