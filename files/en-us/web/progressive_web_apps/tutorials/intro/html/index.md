@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/HTML
 
 PWAs are progressively enhanced web applications. To build our PWA, we need to start with a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
-In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/javascript) to create a functional web application. In subsequent sections, we progressively enhance the application to make a PWA that is installable and works offline.
+In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) to create a functional web application. In subsequent sections, we progressively enhance the application to make a PWA that is installable and works offline.
 
 ## HTML static web content
 
@@ -51,7 +51,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ### HTML content explained
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](#Placeholder_text) and [`styles.css`](#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/javascript) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](#Placeholder_text) and [`styles.css`](#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -142,7 +142,7 @@ We include a {{HTMLelement("button")}} element which submits the form and label 
 
 We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
 
-When creating an [offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
+When creating an [offline experience](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
 
 ### Placeholder and placeholder text
 
@@ -228,4 +228,4 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 ### Up next
 
-Before converting a web app into a progressive web app — before adding the [manifest file](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
+Before converting a web app into a progressive web app — before adding the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.

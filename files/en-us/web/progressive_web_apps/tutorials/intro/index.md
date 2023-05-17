@@ -46,29 +46,29 @@ You will be installing node.js, MAMP, or another local server to create a local 
 
 The steps include:
 
-- [Basic HTML and CSS site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
+- [Basic HTML and CSS site](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/html)
   - : We will create a website with a date picker, using HTML and CSS.
 
-- [Basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
+- [Basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/html)
   - : A PWA is an online application that also works offline. We will write the basic JavaScript functionality to make this period tracker work as an online web application, so we have a functioning application that can be progressively enhanced into a PWA.
 
-- [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest)
+- [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 
-- [Secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure)
+- [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
   - : While no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
 
-- [Service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker)
+- [Service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
 
-- [Offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline)
+- [Offline experience](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/offline)
   - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
 
-- [Session storage](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/storage)
+- [Session storage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 
 ## See Also
 
 Possible other introductory level tutorial topics:
 
-- [Splash page](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/splash)
+- [Splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash)
