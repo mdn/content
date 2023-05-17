@@ -203,7 +203,7 @@ td {
 }
 ```
 
-{{EmbedLiveSample("How_does_a_table_work", 100, 530)}}
+{{EmbedLiveSample("How_does_a_table_work", 100, 560)}}
 
 When implemented correctly, HTML tables are handled well by accessibility tools such as screen readers, so a successful HTML table should enhance the experience of sighted and visually impaired users alike.
 
