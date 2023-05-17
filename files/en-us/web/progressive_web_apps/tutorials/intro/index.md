@@ -12,7 +12,7 @@ PWAs are a way of progressively enhancing websites to make them available on a u
 Using the languages of the web, we can create fully functioning applications that work both online and offline, both in the browsers and on the user's operating systems (OS). PWAs don't require any additional programming language knowledge or proprietary SDK. Like regular websites, PWA are hosted on and downloadable from web servers. They don't require any packaging. They can be seamlessly installed on any operating system without the need of app stores (nor app store approval and fees).
 
 - Use open web technologies you already know
-- : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies: HTML, CSS, and JavaScript.
+  - : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs solve this problem: they use a single code base, written using regular open web technologies: HTML, CSS, and JavaScript.
 
 - No compiling required
   - : Historically, in most cases, the application code had to be compiled and packaged into an installable format, like .exe, .dmg, .elf, and .apk, or other installable files. Depending on the language, compiling and packaging required the OS's {{glossary("SDK")}}. PWAs solve this problem. Yes, developer teams can have complex build systems, but a PWA can be built out of just HTML and JavaScript.
@@ -28,12 +28,11 @@ Using the languages of the web, we can create fully functioning applications tha
 Once installed, PWAs can be made to appear and act similarly to other applications installed on the user's device:
 
 - Application window
-
   - : Similar to other installed applications, depending on PWA settings defined by the developer and set with user preferences, the PWA can be made to open in its own application window.
 
 - Application icon
   - : PWAs display an application icon in the same location as other installed applications installed on the users' operating system: this can be an icon on the homescreen, in the toolbar, in the application's folder, or wherever the device displays application icons.
-  -
+
 - Works offline
   - : Internet access is initially required to download the application and is also required when syncing data with the server or other users. This is required of all applications, not just PWAs. When [service workers] are set to create an offline experience, the application will keep working should the user lose or not have internet access. As the user makes changes while offline, the application can update local and session storage, and service workers can then sync the data once connectivity is restored. The user doesn't need to be actively engaging with the PWA, in fact, the PWA doesn't even need to be open, for it to send and retrieve server data.
 
@@ -49,16 +48,22 @@ The steps include:
 
 - [Basic HTML and CSS site](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
   - : We will create a website with a date picker, using HTML and CSS.
+
 - [Basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/html)
   - : A PWA is an online application that also works offline. We will write the basic JavaScript functionality to make this period tracker work as an online web application, so we have a functioning application that can be progressively enhanced into a PWA.
+
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
+
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/secure)
   - : While no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
+
 - [Service worker](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/service_worker)
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
+
 - [Offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline)
   - : With JavaScript, we will determine whether the user is online or offline. When offline, they will be shown an offline experience that informs the user they are offline. When online, the experience will be similar to the website, but the installation button will not be visible.
+
 - [Session storage](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
 
