@@ -28,17 +28,17 @@ Our static site HTML, with placeholder links for a stylesheet and JavaScript fil
     <form id="new-period">
       <p>
         <label for="start-date">Start date</label>
-        <input type="date" id="start-date" />
+        <input type="date" id="start-date" required />
       </p>
       <p>
         <label for="end-date">End date</label>
-        <input type="date" id="end-date" />
+        <input type="date" id="end-date" required />
       </p>
       <p>
         <button type="submit">Add Period</button>
       </p>
     </form>
-    <button>Install</button>
+    <div id="past-periods"></div>
     <script src="app.js" defer></script>
   </body>
 </html>
@@ -118,12 +118,12 @@ Within the `<body>`, we include the name of the PWA as a level-1 heading using {
 
 Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLelement("legend")}} labeling the purpose of that section of the form. Within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}), each with a date picker along with their associated {{HTMLelement("label")}} for the start and end dates of each menstrual cycle.
 
-The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}}. {{HTMLelement("")}} {{HTMLelement("")}}
+The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}}. We prevent submitting the form without values by including the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
 
 To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}} which provides the `<input>` with an accessible name.
 
 ```html
-<label for="start-date">Start date</label> <input type="date" id="start-date" />
+<label for="start-date">Start date</label> <input type="date" id="start-date" required />
 ```
 
 We include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags.
@@ -134,11 +134,11 @@ We include a {{HTMLelement("button")}} element which submits the form and label 
     <legend>Enter your period start and end date</legend>
     <p>
       <label for="start-date">Start date</label>
-      <input type="date" id="start-date" />
+      <input type="date" id="start-date" required />
     </p>
     <p>
       <label for="end-date">End date</label>
-      <input type="date" id="end-date" />
+      <input type="date" id="end-date" required />
     </p>
   </fieldset>
   <p>
@@ -151,16 +151,24 @@ If this HTML is new to you, [learn more about making accessible web forms](/en-U
 
 When creating an [offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
 
-### Placeholder text
+### Placeholder and placeholder text
 
-When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for that list. You can hardcode placeholder content to test out the CSS and then remove it.
+We then include an empty {{HTMLElement("div")}} with an `id` which will be populated with past period data and a header using JavaScript.
 
 ```html
-<h2>Past periods</h2>
-<ul>
-  <li>From 01/01/2024 to 01/06/2024</li>
-  <li>From 01/29/2024 to 03/04/2024</li>
-</ul>
+<div id="past-periods"></div>
+```
+
+When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for that list. You can hardcode placeholder content within the placeholder `<div>` to test out the CSS; removing it once you're satisfied with the presentation.
+
+```html
+<div id="past-periods">
+  <h2>Past periods</h2>
+  <ul>
+    <li>From 01/01/2024 to 01/06/2024</li>
+    <li>From 01/29/2024 to 03/04/2024</li>
+  </ul>
+</div>
 ```
 
 ### JavaScript placeholder
@@ -212,13 +220,15 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the placeholder text:
 
 ```html
-<!--
-<h2>Past periods</h2>
-<ul>
-  <li>From 01/01/2024 to 01/06/2024</li>
-  <li>From 01/29/2024 to 03/04/2024</li>
-</ul>
--->
+<div id="past-periods">
+  <!--
+  <h2>Past periods</h2>
+  <ul>
+    <li>From 01/01/2024 to 01/06/2024</li>
+    <li>From 01/29/2024 to 03/04/2024</li>
+  </ul>
+  -->
+</div>
 ```
 
 ### Up next
