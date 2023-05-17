@@ -155,3 +155,5 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}
+
+- [How :not() chains multiple selectors](/en-US/blog/css-not-pseudo-multiple-selectors/) on MDN blog (May 5, 2023)
