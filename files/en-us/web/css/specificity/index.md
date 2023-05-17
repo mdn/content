@@ -460,3 +460,4 @@ A few things to remember about specificity:
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [How :not() chains multiple selectors](/en-US/blog/css-not-pseudo-multiple-selectors/) on the MDN blog (2023)
