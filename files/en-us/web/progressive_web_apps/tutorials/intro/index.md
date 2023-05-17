@@ -3,7 +3,7 @@ title: Creating your first PWA
 slug: Web/Progressive_web_apps/Tutorials/Intro
 ---
 
-Progressive web applications, known as PWAs, are a way to build applications for all devices using the web technologies we all know and love: HTML, CSS, and JavaScript.
+Progressive web applications, known as PWAs, are apps designed to work on all devices built using the web technologies we all know and love: HTML, CSS, and JavaScript.
 
 PWAs are a way of progressively enhancing websites to make them available on a user's device, even offline. By default, PWAs are regular websites. They use the same technologies as regular websites. They are also linkable, discoverable via search engines, and visible in a browser, just like regular websites. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
 
