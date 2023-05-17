@@ -3,9 +3,9 @@ title: JavaScript web functionality
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript
 ---
 
-In the first step, we wrote [CSS](style.css) and [HTML](step1.html) to create a [static application template](/en-US/Docs/Web/Progressive_web_apps/tutorials//html). In this section, we will create the JavaScript required to convert the static HTML into a basic web application.
+In the previous section, we wrote [CSS](style.css) and [HTML](step1.html) to create a [static application template](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML). In this section, we will create the JavaScript required to convert the static HTML into a basic web application.
 
-The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/tutorials//html), explained in the previous section, is:
+The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML), explained in the previous section, is:
 
 ```html
 <!DOCTYPE html>
@@ -339,4 +339,4 @@ renderPastPeriods();
 
 A PWA is a progressive web application. At it's core, it is a web application that is progressively enhanced to work offline. Before adding the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
-Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/html) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
+Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML) by writing `app.js` to include the basic JavaScript functionality, so we have a functioning application that can be progressively enhanced into a PWA.
