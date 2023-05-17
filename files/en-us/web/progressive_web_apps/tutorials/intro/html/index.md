@@ -3,17 +3,19 @@ title: Basic PWA page template
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML
 ---
 
-PWAs are progressively enhanced web applications. Like most web applications, PWAs are built with HTML, CSS, and JavaScript. To build our PWA, we need to start with a fully-functioning web application. In this section, we will create a basic web application by coding the HTML markup for a static web page and enhancing the appearance of the static content with CSS. Once we have the static content, we will add JavaScript functionality to create a basic web application, then we'll progessively enhance the application to make it a PWA.
+PWAs are progressively enhanced web applications. To build our PWA, we need to start with a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
+
+In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/javascript) to create a functional web application. In subsequent sections, we progressively enhance the application to make a PWA that is installable and works offline.
 
 ## HTML static web content
 
-The first step in this [first PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro) is to write the HTML and CSS for our first PWA. In the following sections, we'll convert that static page into a basic web application and then into a PWA.
+Our project is to create a menstrual cycle tracker. The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/) is to write the HTML and CSS.
 
-Our project is to create a menstrual cycle tracker. In this section, we use HTML to create a static web page with a form. We then add an external CSS stylesheet to improve the page's appearance. In the rest of the tutorial steps, we will progressively enhance this page to create a functional web application that can be installed and usable offline.
+We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web/), an introduction to web development series.
 
-Our static site HTML, with placeholder links for a stylesheet and JavaScript file, is:
+Our static site HTML, with placeholders for yet to be created external CSS and JavaScript files, is:
 
 ```html
 <!DOCTYPE html>
@@ -25,7 +27,8 @@ Our static site HTML, with placeholder links for a stylesheet and JavaScript fil
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form id="new-period">
+    <fieldset>
+      <legend>Enter your period start and end date</legend>
       <p>
         <label for="start-date">Start date</label>
         <input type="date" id="start-date" required />
@@ -34,11 +37,11 @@ Our static site HTML, with placeholder links for a stylesheet and JavaScript fil
         <label for="end-date">End date</label>
         <input type="date" id="end-date" required />
       </p>
-      <p>
-        <button type="submit">Add Period</button>
-      </p>
-    </form>
-    <div id="past-periods"></div>
+    </fieldset>
+    <p>
+      <button type="submit">Add Period</button>
+    </p>
+    <section id="past-periods"></section>
     <script src="app.js" defer></script>
   </body>
 </html>
@@ -46,11 +49,11 @@ Our static site HTML, with placeholder links for a stylesheet and JavaScript fil
 
 Copy this HTML and save it in a file called `index.html`.
 
-Before we add some [hard-coded fake menstrual cycles](#Placeholder_text) to enable styling our form, let's discuss this HTML content.
+### HTML content explained
 
-### The HTML, explained
+Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](#Placeholder_text) and [`styles.css`](#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/javascript) that makes this web page function.
 
-We include a doctype HTML preamble, ensuring the content behaves correctly.
+The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
 ```html
 <!DOCTYPE html>
@@ -66,7 +69,9 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 ### Document head
 
-The {{HTMLelement("head")}} includes all the [meta data,](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) including the character set definition which defines the [character encoding](/en-US/docs/Glossary/Character_encoding) and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag which ensures the page renders at the width of viewport and isn't shrunken down when loaded on very small screens.
+The {{HTMLelement("head")}} contains machine-readable information about the web application that, with the exception of the `<title>` contents which may be displayed as the heading of the browser tab, is not visible to the user.
+
+The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML), including the character set definition which defines the [character encoding](/en-US/docs/Glossary/Character_encoding) and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
   <head>
@@ -75,38 +80,25 @@ The {{HTMLelement("head")}} includes all the [meta data,](/en-US/docs/Learn/HTML
   </head>
 ```
 
-We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. The title appears in the browser tab when the page is loaded, in search engine results, and as the title when the user bookmarks the page. While this is a menstrual cycle tracking application, the shortened title is more discreet.
+We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. The title appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page. While this is a menstrual cycle tracking application, the shortened title is more discreet.
 
 ```html
 <title>Cycle Tracker</title>
 ```
 
-We are starting by including a {{HTMLelement("link")}} element to our yet-to-be-written stylesheet.
+We include a {{HTMLelement("link")}} element for our yet-to-be-written stylesheet.
 
 ```html
 <link rel="stylesheet" href="style.css" />
 ```
 
-The HTML {{HTMLelement("link")}} element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the `rel` attribute – and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet. We will [create the `style.css` file](#CSS_file) after discussing the rest of the HTML.
-
-The `<head>` currently contains the following HTML:
-
-```html
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Cycle Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-```
-
-The `<head>` contains meta content which is not visible to the user, with the exception of the `<title>` contents, which may be displayed as the heading of the browser tab.
+The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute – and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
 ### Document contents
 
-The {{HTMLelement("body")}} element contains all the content we want to display to our users when they visit the site on the Internet.
+The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the PWA as a level-1 heading using {{HTMLelement("h1")}} and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using {{HTMLelement("h1")}} and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -116,17 +108,18 @@ Within the `<body>`, we include the name of the PWA as a level-1 heading using {
 </body>
 ```
 
-Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLelement("legend")}} labeling the purpose of that section of the form. Within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}), each with a date picker along with their associated {{HTMLelement("label")}} for the start and end dates of each menstrual cycle.
+Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLelement("legend")}} labeling the purpose of that set of form fields. Within the `<fieldset>`, we include two paragraphs ({{HTMLelement("p")}}), each with a date picker for the start and end dates of each menstrual cycle, along with their associated {{HTMLelement("label")}}.
 
-The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}}. We prevent submitting the form without values by including the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
+The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidetally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}} which provides the `<input>` with an accessible name.
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an accessible name.
 
 ```html
-<label for="start-date">Start date</label> <input type="date" id="start-date" required />
+<label for="start-date">Start date</label>
+<input type="date" id="start-date" required />
 ```
 
-We include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags.
+We include a {{HTMLelement("button")}} element which submits the form and label the button "Add period" by including that text between the opening and closing tags. The `type="submit"` is optional, as `submit` is the default type for `<button>`.
 
 ```html
 <form>
@@ -147,39 +140,41 @@ We include a {{HTMLelement("button")}} element which submits the form and label 
 </form>
 ```
 
-If this HTML is new to you, [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
+We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
 
 When creating an [offline experience](/en-US/Docs/Web/Progressive_web_apps/tutorials/intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
 
 ### Placeholder and placeholder text
 
-We then include an empty {{HTMLElement("div")}} with an `id` which will be populated with past period data and a header using JavaScript.
+We then include an empty {{HTMLElement("section")}}. This container will be populated using JavaScript.
 
 ```html
-<div id="past-periods"></div>
+<section id="past-periods"></section>
 ```
 
-When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for that list. You can hardcode placeholder content within the placeholder `<div>` to test out the CSS; removing it once you're satisfied with the presentation.
+When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for the section.
+
+We temporarily hardcode placeholder content within the placeholder `<section>` to have something to style as we write the page's CSS. Remove or comment out the temporary content once you are satisfied with the content's appearance.
 
 ```html
-<div id="past-periods">
+<section id="past-periods">
   <h2>Past periods</h2>
   <ul>
     <li>From 01/01/2024 to 01/06/2024</li>
     <li>From 01/29/2024 to 03/04/2024</li>
   </ul>
-</div>
+</section>
 ```
 
 ### JavaScript placeholder
 
-Before closing the `</body>`, we include a link to the `app.js` JavaScript file. We defer the loading of this script with the `defer` attribute.
+Before closing the `</body>`, we include a link to the `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_and_defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-The `app.js` file will include all the workings of our application, including the event handlers for the submit button, saving the data submitted to local storage, and displaying cycled within the content of the body.
+The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
 
 The [HTML file for this step](step.html) is complete.
 
@@ -220,7 +215,7 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the placeholder text:
 
 ```html
-<div id="past-periods">
+<section id="past-periods">
   <!--
   <h2>Past periods</h2>
   <ul>
@@ -228,7 +223,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
     <li>From 01/29/2024 to 03/04/2024</li>
   </ul>
   -->
-</div>
+</section>
 ```
 
 ### Up next
