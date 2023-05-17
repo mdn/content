@@ -26,7 +26,7 @@ reload()
 
 None.
 
-> **Note:** Firefox supports a non-standard [`forceGet` boolean parameter](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) for `location.reload()`, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a `location.reload()` call will be ignored and have no effect of any kind.
+> **Note:** Firefox supports a non-standard [`forceGet` boolean parameter](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#544) for `location.reload()`, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a `location.reload()` call will be ignored and have no effect of any kind.
 
 You may, though, come across instances of `location.reload(true)` in existing code that was written with the assumption the force-reload effect occurs in all browsers. A GitHub "`location.reload(true)`" search returns [several hundred thousand results](https://github.com/search?q=%22location.reload%28true%29%22&type=code). So there's a lot of existing code which has it.
 
