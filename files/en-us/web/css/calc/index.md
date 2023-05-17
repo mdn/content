@@ -33,31 +33,17 @@ The operands in the expression may be any {{cssxref("&lt;length&gt;")}} syntax v
 
 ### Notes
 
+Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
+For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
+
+In addition, the following notes apply:
+
 - The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `calc()` functions, in which case the inner ones are treated as simple parentheses.
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
 - The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
-
-Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding constants like `infinity` and `NaN`:
-
-- Dividing by zero will return positive or negative `infinity` depending on the sign of the numerator.
-- Adding, subtracting or multiplying `infinity` to anything will return `infinity` unless it produces `NaN` (see below).
-- Any operation with at least one `NaN` argument will return `NaN`.
-  This means `0 / 0`, `infinity / infinity`, `0 * infinity`, `infinity + (-infinity)`, and `infinity - infinity` will all return `NaN`.
-
-- Positive and negative zero are possible values (`0⁺` and `0⁻`).
-  This has the following effects:
-  - Multiplication or division that produces zero with exactly one negative argument (`-5 * 0` or `1 / (-infinity)`) or negative result from combinations in the other math functions will return `0⁻`.
-  - `0⁻ + 0⁻` or `0⁻ - 0` will return `0⁻`.
-    All other additions or subtractions that would produce a zero will return `0⁺`.
-  - Multiplying or dividing `0⁻` with a positive number (including `0⁺`) will return a negative result (either `0⁻` or `-infinity`), while multiplying or dividing `0⁻` with a negative number will return a positive result.
-
-Examples of how these rules apply are shown in the [Infinity, NaN, and division by zero](#infinity_nan_and_division_by_zero) section.
-
-> **Note:** It's rare to need to use `infinity` as an argument in `calc()`, but it can be used to avoid hardcoded "magic numbers" or making sure a certain value is always larger than another value.
-> It may be useful if you need to make it obvious that a property has "the largest possible value" for that data type.
 
 ### Formal syntax
 
@@ -164,50 +150,6 @@ You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_Variables
 
 After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`, then when it's assigned to `.foo`'s width property, all inner `calc()`s (no matter how deeply nested) will be flattened to just parentheses, so the `width` property's value will be eventually `calc((100px / 2) / 2)`, i.e. `25px`. In short: a `calc()` inside of a `calc()` is identical to just parentheses.
 
-### Infinity, NaN, and division by zero
-
-The following example shows the computed value of the `width` property when dividing by zero, followed by how serialization with different `calc()` constants looks like:
-
-```html
-<div id="div"></div>
-```
-
-```css
-div {
-  height: 50px;
-  background-color: red;
-  width: calc(1px / 0);
-}
-```
-
-```js
-const div = document.getElementById("div");
-console.log(div.offsetWidth); // 17895698 (infinity - the largest possible value)
-
-// division by zero
-div.style.width = "calc(1px / 0)";
-console.log(div.style.width); // calc(infinity * 1px)
-div.style.width = "calc(-1px / 0)"; // or "calc(1px / -0)"
-console.log(div.style.width); // calc(-infinity * 1px)
-
-// infinity
-div.style.width = "calc(1px * -infinity * -infinity)";
-console.log(div.style.width); // calc(infinity * 1px)
-div.style.width = "calc(1px * -infinity * infinity)";
-console.log(div.style.width); // calc(-infinity * 1px)
-
-// NaN
-div.style.width = "calc(1px * infinity - infinity)";
-console.log(div.style.width); // calc(NaN * 1px)
-div.style.width = "calc(2rem * 10% * infinity)";
-console.log(div.style.width); // calc(NaN * 1px)
-
-// reset
-div.style.width = "50px";
-```
-
-{{EmbedLiveSample('Infinity_NaN_and_division_by_zero', 'auto', '100')}}
-
 ## Specifications
 
 {{Specifications}}
@@ -218,5 +160,6 @@ div.style.width = "50px";
 
 ## See also
 
+- {{CSSxRef("&lt;calc-constant&gt;")}}
 - [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)
