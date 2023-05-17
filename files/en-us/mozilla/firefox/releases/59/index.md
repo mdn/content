@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### HTML
 
-- The {{HTMLElement("textarea")}} element's {{htmlattrxref("autocomplete", "textarea")}} attribute has been implemented. This lets you enable or disable form auto-fill for the element.
+- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
 
 ### CSS
 
@@ -106,12 +106,12 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
 
 ### CSS
 
 - The proprietary `mozmm` {{cssxref("&lt;length&gt;")}} unit has been removed ([Firefox bug 1416564](https://bugzil.la/1416564)).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been limited to usage in chrome code only ([Firefox bug 1417200](https://bugzil.la/1417200)).
+- The proprietary `-moz-border-top-colors`, `-moz-border-right-colors`, `-moz-border-bottom-colors`, and `-moz-border-left-colors` properties have been limited to usage in chrome code only ([Firefox bug 1417200](https://bugzil.la/1417200)).
 
 ### JavaScript
 

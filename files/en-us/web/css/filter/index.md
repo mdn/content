@@ -174,7 +174,7 @@ img:nth-of-type(2) {
 
 ```html
 <img src="pencil.jpg" alt="Original image is sharp" />
-<img src="pencil.jpg" alt="The mage and border are blurred and muted" />
+<img src="pencil.jpg" alt="The image and border are blurred and muted" />
 ```
 
 {{EmbedLiveSample('Applying_filter_functions','100%','229px')}}
@@ -211,7 +211,7 @@ Filter functions are applied in order of appearance. The same filter function ca
 
 {{EmbedLiveSample('Repeating_filter_functions','100%','229px')}}
 
-The filters are applied in order. This is why the drop shadows are not the same color: the first drop shadow's hue is altered by the `hue-ration()` function but the second one is not.
+The filters are applied in order. This is why the drop shadows are not the same color: the first drop shadow's hue is altered by the `hue-rotate()` function but the second one is not.
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: Notification.actions
+title: "Notification: actions property"
+short-title: actions
 slug: Web/API/Notification/actions
 page-type: web-api-instance-property
 status:

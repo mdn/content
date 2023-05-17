@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.deleteRow()
+title: "HTMLTableElement: deleteRow() method"
+short-title: deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteRow

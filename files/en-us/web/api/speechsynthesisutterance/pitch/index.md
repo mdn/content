@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.pitch
+title: "SpeechSynthesisUtterance: pitch property"
+short-title: pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.pitch

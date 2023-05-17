@@ -1089,11 +1089,6 @@
     "url": "https://wicg.github.io/largest-contentful-paint/",
     "status": "ED"
   },
-  "Layout Instability": {
-    "name": "Layout Instability API",
-    "url": "https://wicg.github.io/layout-instability/",
-    "status": "ED"
-  },
   "Legacy RegExp features": {
     "name": "Legacy RegExp features in JavaScript",
     "url": "https://github.com/tc39/proposal-regexp-legacy-features/",

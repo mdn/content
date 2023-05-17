@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.getData()
+title: "DataTransfer: getData() method"
+short-title: getData()
 slug: Web/API/DataTransfer/getData
 page-type: web-api-instance-method
 browser-compat: api.DataTransfer.getData

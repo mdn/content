@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.options
+title: "PushSubscription: options property"
+short-title: options
 slug: Web/API/PushSubscription/options
 page-type: web-api-instance-property
 browser-compat: api.PushSubscription.options

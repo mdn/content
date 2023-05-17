@@ -1,5 +1,6 @@
 ---
-title: Blob.text()
+title: "Blob: text() method"
+short-title: text()
 slug: Web/API/Blob/text
 page-type: web-api-instance-method
 browser-compat: api.Blob.text

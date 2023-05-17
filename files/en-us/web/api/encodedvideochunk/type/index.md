@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk.type
+title: "EncodedVideoChunk: type property"
+short-title: type
 slug: Web/API/EncodedVideoChunk/type
 page-type: web-api-instance-property
 browser-compat: api.EncodedVideoChunk.type

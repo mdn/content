@@ -1,5 +1,6 @@
 ---
-title: PushMessageData.blob()
+title: "PushMessageData: blob() method"
+short-title: blob()
 slug: Web/API/PushMessageData/blob
 page-type: web-api-instance-method
 browser-compat: api.PushMessageData.blob

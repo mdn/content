@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.hash
+title: "HTMLAreaElement: hash property"
+short-title: hash
 slug: Web/API/HTMLAreaElement/hash
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.hash

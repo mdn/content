@@ -14,7 +14,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.
 - The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
 - The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.
-- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the {{ HTMLAttrXref("size", "input") }} attribute to set the maximum width of input fields.
+- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute to set the maximum width of input fields.
 - The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
 - The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
 - Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Global_attributes#data-) (`data-*`) has been added. The DOM {{ domxref("element.dataset") }} property allows to access them.
@@ -37,7 +37,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 #### Other changes
 
-- The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+- The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 - The {{ cssxref("azimuth") }} CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
@@ -102,7 +102,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 <!---->
 
 - Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
-- The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.
+- The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some websites**, so authors should check their code.
 - The [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling `nsIHttpChannelInternal.HTTPUpgrade()`.
 
 ### Other changes

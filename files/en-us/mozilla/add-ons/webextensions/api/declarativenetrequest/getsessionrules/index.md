@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.getSessionRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getSessionRules
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
 ---
 

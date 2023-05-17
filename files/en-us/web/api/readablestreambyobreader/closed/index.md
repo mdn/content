@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.closed
+title: "ReadableStreamBYOBReader: closed property"
+short-title: closed
 slug: Web/API/ReadableStreamBYOBReader/closed
 page-type: web-api-instance-property
 browser-compat: api.ReadableStreamBYOBReader.closed
@@ -37,3 +38,8 @@ reader.closed
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

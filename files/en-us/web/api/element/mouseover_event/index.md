@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseover event"
+short-title: mouseover
 slug: Web/API/Element/mouseover_event
 page-type: web-api-event
 browser-compat: api.Element.mouseover_event

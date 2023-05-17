@@ -1,5 +1,6 @@
 ---
-title: VRPose.linearAcceleration
+title: "VRPose: linearAcceleration property"
+short-title: linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
 page-type: web-api-instance-property
 status:

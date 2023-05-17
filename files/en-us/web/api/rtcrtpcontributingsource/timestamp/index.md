@@ -1,5 +1,6 @@
 ---
-title: RTCRtpContributingSource.timestamp
+title: "RTCRtpContributingSource: timestamp property"
+short-title: timestamp
 slug: Web/API/RTCRtpContributingSource/timestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.timestamp

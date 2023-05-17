@@ -1,5 +1,6 @@
 ---
-title: Navigator.mediaCapabilities
+title: "Navigator: mediaCapabilities property"
+short-title: mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaCapabilities

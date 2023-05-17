@@ -28,7 +28,7 @@ if (-Infinity)
 
 ### The logical AND operator, &&
 
-If the first object is truthy, the [logical AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) returns the second operand:
+If the first operand is truthy, the [logical AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) returns the second operand:
 
 ```js
 true && "dog"

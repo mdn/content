@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.permissions
+title: "WorkerNavigator: permissions property"
+short-title: permissions
 slug: Web/API/WorkerNavigator/permissions
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.permissions
@@ -18,11 +19,11 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'notifications'}).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "notifications" }).then((result) => {
+  if (result.state === "granted") {
     showNotification();
-  } else if (result.state === 'prompt') {
-    requestNotificationPermission()
+  } else if (result.state === "prompt") {
+    requestNotificationPermission();
   }
 });
 ```

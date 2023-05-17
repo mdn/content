@@ -1,5 +1,6 @@
 ---
-title: CSSVariableReferenceValue.fallback
+title: "CSSVariableReferenceValue: fallback property"
+short-title: fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
 page-type: web-api-instance-property
 browser-compat: api.CSSVariableReferenceValue.fallback

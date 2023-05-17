@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.getSettings()
+title: "MediaStreamTrack: getSettings() method"
+short-title: getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.getSettings

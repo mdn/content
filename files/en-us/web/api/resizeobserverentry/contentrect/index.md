@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.contentRect
+title: "ResizeObserverEntry: contentRect property"
+short-title: contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.contentRect

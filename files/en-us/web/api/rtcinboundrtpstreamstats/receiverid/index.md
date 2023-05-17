@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.receiverId
+title: "RTCInboundRtpStreamStats: receiverId property"
+short-title: receiverId
 slug: Web/API/RTCInboundRtpStreamStats/receiverId
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.receiverId

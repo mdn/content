@@ -1,5 +1,6 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() method"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
 browser-compat: api.Element.requestFullscreen
@@ -65,6 +66,7 @@ returned. The rejection handler receives one of the following exception values:_
     - The element is not permitted to use the `fullscreen` feature,
       either because of [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) configuration or other access control features.
     - The element and its document are the same node.
+    - The element is a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown via {{domxref("HTMLElement.showPopover()")}}.
 
 ## Security
 
@@ -81,7 +83,7 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}}
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute applied to it.
 
 Additionally, any set Permissions Policies must allow the use of this feature.
@@ -170,4 +172,4 @@ message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- {{HTMLAttrxRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

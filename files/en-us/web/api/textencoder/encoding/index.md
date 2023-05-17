@@ -1,5 +1,6 @@
 ---
-title: TextEncoder.encoding
+title: "TextEncoder: encoding property"
+short-title: encoding
 slug: Web/API/TextEncoder/encoding
 page-type: web-api-instance-property
 browser-compat: api.TextEncoder.encoding

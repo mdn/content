@@ -1,5 +1,6 @@
 ---
-title: PerformanceNavigationTiming.unloadEventStart
+title: "PerformanceNavigationTiming: unloadEventStart property"
+short-title: unloadEventStart
 slug: Web/API/PerformanceNavigationTiming/unloadEventStart
 page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.unloadEventStart

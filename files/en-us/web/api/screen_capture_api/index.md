@@ -74,7 +74,7 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ## Permissions Policy validation
 
-{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow)) can specify a desire to use the Screen Capture API using the directive `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>

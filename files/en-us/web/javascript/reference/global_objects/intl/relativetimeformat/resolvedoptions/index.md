@@ -1,18 +1,15 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
 ---
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and relative time formatting options computed during initialization of this {{jsxref("Intl.RelativeTimeFormat")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns a new object with properties reflecting the locale and relative time formatting options computed during initialization of this `Intl.RelativeTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

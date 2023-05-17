@@ -1,5 +1,6 @@
 ---
-title: Blob.stream()
+title: "Blob: stream() method"
+short-title: stream()
 slug: Web/API/Blob/stream
 page-type: web-api-instance-method
 browser-compat: api.Blob.stream

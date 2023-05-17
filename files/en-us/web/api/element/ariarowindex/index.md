@@ -1,5 +1,6 @@
 ---
-title: Element.ariaRowIndex
+title: "Element: ariaRowIndex property"
+short-title: ariaRowIndex
 slug: Web/API/Element/ariaRowIndex
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaRowIndex

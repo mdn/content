@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.volume
+title: "SpeechSynthesisUtterance: volume property"
+short-title: volume
 slug: Web/API/SpeechSynthesisUtterance/volume
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.volume

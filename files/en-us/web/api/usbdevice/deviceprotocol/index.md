@@ -1,5 +1,6 @@
 ---
-title: USBDevice.deviceProtocol
+title: "USBDevice: deviceProtocol property"
+short-title: deviceProtocol
 slug: Web/API/USBDevice/deviceProtocol
 page-type: web-api-instance-property
 status:

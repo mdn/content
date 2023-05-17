@@ -1,5 +1,5 @@
 ---
-title: '<object>: The External Object element'
+title: "<object>: The External Object element"
 slug: Web/HTML/Element/object
 page-type: html-element
 browser-compat: html.elements.object
@@ -40,23 +40,27 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `type`
   - : The [content type](/en-US/docs/Glossary/MIME_type) of the resource specified by **data**. At least one of **data** and **type** must be defined.
 - `usemap`
-  - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a {{htmlattrxref("name", "map")}} of a map element.
+  - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a [`name`](/en-US/docs/Web/HTML/Element/map#name) of a map element.
 - `width`
   - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## Examples
 
-### Embed a YouTube Video
+### Embed a video
+
+#### HTML
 
 ```html
 <object
   type="video/mp4"
-  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-  width="1280"
-  height="720"></object>
+  data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+  width="600"
+  height="140"></object>
 ```
 
-Note that a `type` field is normally specified, but is not needed for YouTube videos.
+#### Result
+
+{{EmbedLiveSample}}
 
 ## Technical summary
 
@@ -70,7 +74,7 @@ Note that a `type` field is normally specified, but is not needed for YouTube vi
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="/en-US/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
         <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
         <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.

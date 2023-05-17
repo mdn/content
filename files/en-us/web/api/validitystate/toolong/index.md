@@ -1,5 +1,6 @@
 ---
-title: validityState.tooLong
+title: "validityState: tooLong property"
+short-title: tooLong
 slug: Web/API/ValidityState/tooLong
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.tooLong

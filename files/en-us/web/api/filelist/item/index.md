@@ -1,5 +1,6 @@
 ---
-title: FileList.item()
+title: "FileList: item() method"
+short-title: item()
 slug: Web/API/FileList/item
 page-type: web-api-instance-method
 browser-compat: api.FileList.item

@@ -1,5 +1,6 @@
 ---
-title: Document.links
+title: "Document: links property"
+short-title: links
 slug: Web/API/Document/links
 page-type: web-api-instance-property
 browser-compat: api.Document.links

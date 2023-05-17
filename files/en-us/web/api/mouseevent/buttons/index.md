@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.buttons
+title: "MouseEvent: buttons property"
+short-title: buttons
 slug: Web/API/MouseEvent/buttons
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.buttons

@@ -1,5 +1,6 @@
 ---
-title: PerformanceServerTiming.description
+title: "PerformanceServerTiming: description property"
+short-title: description
 slug: Web/API/PerformanceServerTiming/description
 page-type: web-api-instance-property
 browser-compat: api.PerformanceServerTiming.description

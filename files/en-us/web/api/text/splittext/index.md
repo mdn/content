@@ -1,5 +1,6 @@
 ---
-title: Text.splitText()
+title: "Text: splitText() method"
+short-title: splitText()
 slug: Web/API/Text/splitText
 page-type: web-api-instance-method
 browser-compat: api.Text.splitText

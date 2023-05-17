@@ -1,5 +1,6 @@
 ---
-title: CookieStoreManager.subscribe()
+title: "CookieStoreManager: subscribe() method"
+short-title: subscribe()
 slug: Web/API/CookieStoreManager/subscribe
 page-type: web-api-instance-method
 status:

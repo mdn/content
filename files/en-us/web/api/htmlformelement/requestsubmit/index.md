@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.requestSubmit()
+title: "HTMLFormElement: requestSubmit() method"
+short-title: requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
 page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.requestSubmit
@@ -21,13 +22,13 @@ requestSubmit(submitter)
 
 - `submitter` {{optional_inline}}
 
-  - : The submit button whose attributes describe the method by which the form is to be
-    submitted. This may be either an {{HTMLElement("input")}} or
-    {{HTMLElement("button")}} element whose `type` attribute
-    is `submit`.
+  - : A {{Glossary("submit button")}} that is a member of the form.
 
-    If you omit the `submitter` parameter, the form element
-    itself is used as the submitter.
+    If the `submitter` specifies `form*` attributes, they [will override](/en-US/docs/Glossary/Submit_button#overriding_the_forms_behavior) the form's submission behavior (e.g. `formmethod="POST"`).
+
+    If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#form_data_entries) in the form submission (e.g. `btnName=btnValue`).
+
+    If you omit the `submitter` parameter, the form element itself is used as the submitter.
 
 ### Return value
 
@@ -36,11 +37,11 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the specified `submitter` is not a submit button.
+  - : Thrown if the specified `submitter` is not a {{Glossary("submit button")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
-    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
+    descendant of the form element or must have a [`form`](/en-US/docs/Web/HTML/Element/input#form)
     attribute referring to the form.
 
 ## Usage notes

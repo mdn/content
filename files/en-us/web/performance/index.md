@@ -97,7 +97,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('RAIL')}}
 - {{glossary('Real User Monitoring')}}
 - {{glossary('Resource Timing')}}
-- {{glossary('Round Trip Time (RTT)')}}
+- {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
 - {{glossary('Server Timing')}}
 - {{glossary('Speculative parsing')}}
 - {{glossary('Speed index')}}

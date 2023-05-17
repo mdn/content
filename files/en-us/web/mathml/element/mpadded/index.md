@@ -1,6 +1,7 @@
 ---
 title: <mpadded>
 slug: Web/MathML/Element/mpadded
+page-type: mathml-element
 browser-compat: mathml.elements.mpadded
 ---
 

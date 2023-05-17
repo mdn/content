@@ -1,5 +1,5 @@
 ---
-title: '<i>: The Idiomatic Text element'
+title: "<i>: The Idiomatic Text element"
 slug: Web/HTML/Element/i
 page-type: html-element
 browser-compat: html.elements.i
@@ -21,7 +21,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
   - Alternative voice or mood
   - Taxonomic designations (such as the genus and species "_Homo sapiens_")
-  - Idiomatic terms from another language (such as "_et cetera_"); these should include the {{htmlattrxref("lang")}} attribute to identify the language
+  - Idiomatic terms from another language (such as "_et cetera_"); these should include the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute to identify the language
   - Technical terms
   - Transliterations
   - Thoughts (such as "She wondered, _What is this writer talking about, anyway?_")

@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.states
+title: "ElementInternals: states property"
+short-title: states
 slug: Web/API/ElementInternals/states
 page-type: web-api-instance-property
 status:

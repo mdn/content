@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.MatchedRule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MatchedRule
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.MatchedRule
 ---
 
@@ -21,6 +22,8 @@ Values of this type are objects. They contain these properties:
     - For a rule originating from the set of static rules, the value specified in the "id" key of the ruleset in the [`declarative_net_request.rule_resources` manifest key](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request).
     - For a rule originating from the set of dynamic rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}}, i.e., `"_dynamic"`.
     - For a rule originating from the set of session rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}, i.e., `"_session"`.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

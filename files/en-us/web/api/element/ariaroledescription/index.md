@@ -1,5 +1,6 @@
 ---
-title: Element.ariaRoleDescription
+title: "Element: ariaRoleDescription property"
+short-title: ariaRoleDescription
 slug: Web/API/Element/ariaRoleDescription
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaRoleDescription

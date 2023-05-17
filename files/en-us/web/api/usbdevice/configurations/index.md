@@ -1,5 +1,6 @@
 ---
-title: USBDevice.configurations
+title: "USBDevice: configurations property"
+short-title: configurations
 slug: Web/API/USBDevice/configurations
 page-type: web-api-instance-property
 status:

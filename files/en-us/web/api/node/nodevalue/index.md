@@ -1,5 +1,6 @@
 ---
-title: Node.nodeValue
+title: "Node: nodeValue property"
+short-title: nodeValue
 slug: Web/API/Node/nodeValue
 page-type: web-api-instance-property
 browser-compat: api.Node.nodeValue

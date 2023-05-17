@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.disabled
+title: "HTMLSelectElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLSelectElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.disabled

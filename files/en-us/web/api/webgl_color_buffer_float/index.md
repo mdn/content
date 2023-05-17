@@ -1,5 +1,6 @@
 ---
-title: WEBGL_color_buffer_float
+title: WEBGL_color_buffer_float extension
+short-title: WEBGL_color_buffer_float
 slug: Web/API/WEBGL_color_buffer_float
 page-type: webgl-extension
 browser-compat: api.WEBGL_color_buffer_float
@@ -35,7 +36,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_color_buffer_float');
+const ext = gl.getExtension("WEBGL_color_buffer_float");
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA32F_EXT, 256, 256);
 ```

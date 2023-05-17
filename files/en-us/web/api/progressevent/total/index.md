@@ -1,5 +1,6 @@
 ---
-title: ProgressEvent.total
+title: "ProgressEvent: total property"
+short-title: total
 slug: Web/API/ProgressEvent/total
 page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.total

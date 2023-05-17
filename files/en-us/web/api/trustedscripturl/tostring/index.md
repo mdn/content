@@ -1,5 +1,6 @@
 ---
-title: TrustedScriptURL.toString()
+title: "TrustedScriptURL: toString() method"
+short-title: toString()
 slug: Web/API/TrustedScriptURL/toString
 page-type: web-api-instance-method
 browser-compat: api.TrustedScriptURL.toString

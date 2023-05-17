@@ -1,5 +1,6 @@
 ---
-title: InputEvent.inputType
+title: "InputEvent: inputType property"
+short-title: inputType
 slug: Web/API/InputEvent/inputType
 page-type: web-api-instance-property
 browser-compat: api.InputEvent.inputType

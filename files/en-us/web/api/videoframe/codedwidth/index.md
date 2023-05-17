@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.codedWidth
+title: "VideoFrame: codedWidth property"
+short-title: codedWidth
 slug: Web/API/VideoFrame/codedWidth
 page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedWidth

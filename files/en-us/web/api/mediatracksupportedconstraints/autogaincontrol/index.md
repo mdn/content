@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.autoGainControl
+title: "MediaTrackSupportedConstraints: autoGainControl property"
+short-title: autoGainControl
 slug: Web/API/MediaTrackSupportedConstraints/autoGainControl
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.autoGainControl

@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.read()
+title: "ReadableStreamBYOBReader: read() method"
+short-title: read()
 slug: Web/API/ReadableStreamBYOBReader/read
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.read
@@ -136,4 +137,5 @@ When there is no more data in the stream, the `read()` method fulfills with an o
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

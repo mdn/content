@@ -1,5 +1,6 @@
 ---
-title: navigator.platform
+title: "navigator: platform property"
+short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
 status:

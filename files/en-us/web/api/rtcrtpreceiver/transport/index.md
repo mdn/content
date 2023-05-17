@@ -1,5 +1,6 @@
 ---
-title: RTCRtpReceiver.transport
+title: "RTCRtpReceiver: transport property"
+short-title: transport
 slug: Web/API/RTCRtpReceiver/transport
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpReceiver.transport

@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.testMatchOutcome
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/testMatchOutcome
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
 ---
 

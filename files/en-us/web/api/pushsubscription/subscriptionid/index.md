@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.subscriptionId
+title: "PushSubscription: subscriptionId property"
+short-title: subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
 page-type: web-api-instance-property
 status:

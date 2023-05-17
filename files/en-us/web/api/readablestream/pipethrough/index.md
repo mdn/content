@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.pipeThrough()
+title: "ReadableStream: pipeThrough() method"
+short-title: pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeThrough
@@ -89,3 +90,8 @@ fetch("png-logo.png")
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Pipe chains](/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains)

@@ -1,5 +1,6 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
+short-title: beforeunload
 slug: Web/API/Window/beforeunload_event
 page-type: web-api-event
 browser-compat: api.Window.beforeunload_event
@@ -20,8 +21,8 @@ The HTML specification states that calls to {{domxref("window.alert()")}}, {{dom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeunload', (event) => { });
-onbeforeunload = (event) => { };
+addEventListener("beforeunload", (event) => {});
+onbeforeunload = (event) => {};
 ```
 
 ## Event type
@@ -38,7 +39,8 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Sticky activation](/en-US/docs/Glossary/Sticky_activation) is required.
+The user has to have interacted with the page in order for this feature to work.
 
 ## Usage notes
 
@@ -65,16 +67,18 @@ In this example a page listens for changes to a [text `input`](/en-US/docs/Web/H
 ```js
 const beforeUnloadListener = (event) => {
   event.preventDefault();
-  return event.returnValue = '';
+  return (event.returnValue = "");
 };
 
 const nameInput = document.querySelector("#name");
 
 nameInput.addEventListener("input", (event) => {
   if (event.target.value !== "") {
-    addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    addEventListener("beforeunload", beforeUnloadListener, { capture: true });
   } else {
-    removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    removeEventListener("beforeunload", beforeUnloadListener, {
+      capture: true,
+    });
   }
 });
 ```

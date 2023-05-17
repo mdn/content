@@ -1,5 +1,6 @@
 ---
-title: ImageData.colorSpace
+title: "ImageData: colorSpace property"
+short-title: colorSpace
 slug: Web/API/ImageData/colorSpace
 page-type: web-api-instance-property
 browser-compat: api.ImageData.colorSpace

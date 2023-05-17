@@ -93,7 +93,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
 3. So the loop ends.
 
-But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
+But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
 Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) and [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint and JSHint — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 

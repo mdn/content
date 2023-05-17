@@ -1,13 +1,14 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
-web site administrators to control resources the user agent is allowed to load for a
+website administrators to control resources the user agent is allowed to load for a
 given page. With a few exceptions, policies mostly involve specifying server origins and
 script endpoints. This helps guard against cross-site scripting attacks
 ({{Glossary("Cross-site_scripting")}}).
@@ -80,7 +81,7 @@ where `<policy-directive>` consists of:
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
   - : Specifies valid sources for JavaScript and WebAssembly resources.
@@ -109,7 +110,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
 
 ### Navigation directives
 
