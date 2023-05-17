@@ -57,8 +57,8 @@ A new {{jsxref("TypedArray")}} instance.
 See {{jsxref("Array.from()")}} for more details. There are some subtle distinctions between {{jsxref("Array.from()")}} and `TypedArray.from()` (note: the `this` value mentioned below is the `this` value that `TypedArray.from()` was called with, not the `thisArg` argument used to invoke `mapFn`):
 
 - If the `this` value of `TypedArray.from()` is not a constructor, `TypedArray.from()` will throw a {{jsxref("TypeError")}}, while `Array.from()` defaults to creating a new {{jsxref("Array")}}.
-- The object constructed by `this` must be a `TypedArray` instance, while `Array.from()` allows its `this` value to construct any object.
-- When the `source` parameter is an iterator, the `TypedArray.from()` first collects all the values from the iterator, then creates an instance of `this` using the count, then sets the values on the instance. `Array.from()` sets each value as it receives them from the iterator, then sets its `length` at the end.
+- The object constructed by `this` must be a `TypedArray` instance, while `Array.from()` allows its `this` value to be constructed to any object.
+- When the `source` parameter is an iterator, `TypedArray.from()` first collects all the values from the iterator, then creates an instance of `this` using the count, and finally sets the values on the instance. `Array.from()` sets each value as it receives them from the iterator, then sets its `length` at the end.
 - `TypedArray.from()` uses `[[Set]]` while `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
 - When `Array.from()` gets an array-like which isn't an iterator, it respects holes. `TypedArray.from()` will ensure the result is dense.
 
