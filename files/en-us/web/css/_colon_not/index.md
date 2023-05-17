@@ -18,8 +18,9 @@ The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected result
 The `:not()` pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements).
 
 ```css-nolint
-:not(<complex-selector-list>) {
-  /* ... */
+<selector>:not(<complex-selector-list>) {
+  /* CSS styles */
+  /* <property>: <value> */
 }
 ```
 
@@ -37,7 +38,9 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 
 ## Examples
 
-### Basic set of :not() examples
+### Using :not() with valid selectors
+
+This example shows some simple cases of using `:not()`.
 
 #### HTML
 
@@ -86,9 +89,9 @@ h2 :not(span.foo) {
 
 #### Result
 
-{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}
+{{EmbedLiveSample('Using_not_with_valid_selectors', '100%', 320)}}
 
-### :not() with invalid selectors
+### Using :not() with invalid selectors
 
 This example shows the use of `:not()` with invalid selectors and how to prevent invalidation.
 
@@ -132,7 +135,7 @@ div:not(:is(.foo, .bar)) {
 
 #### Result
 
-{{EmbedLiveSample('not_with_invalid_selectors', '100%', 320)}}
+{{EmbedLiveSample('Using_not_with_invalid_selectors', '100%', 320)}}
 
 The `p:not(.foo, :invalid-pseudo-class)` rule is invalid because it contains an invalid selector. The `:is()` pseudo-class accepts a forgiving selector list, so the `:is(.foo, :invalid-pseudo-class)` rule is valid and equivalent to `:is(.foo)`. Thus, the `p:not(:is(.foo, :invalid-pseudo-class))` rule is valid and equivalent to `p:not(.foo)`.
 
