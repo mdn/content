@@ -41,7 +41,7 @@ height: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the height as an absolute value.
+  - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Defines the height as a percentage of the containing block's height.
 - `auto`
