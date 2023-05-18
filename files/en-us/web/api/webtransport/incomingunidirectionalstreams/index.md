@@ -3,12 +3,10 @@ title: "WebTransport: incomingUnidirectionalStreams property"
 short-title: incomingUnidirectionalStreams
 slug: Web/API/WebTransport/incomingUnidirectionalStreams
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransport.incomingUnidirectionalStreams
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`incomingUnidirectionalStreams`** read-only property of the {{domxref("WebTransport")}} interface represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to reliably read data from the server.
 
