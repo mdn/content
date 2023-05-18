@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### CSS
 
-- The [-webkit-text-security](/en-US/Web/CSS/-webkit-text-security) support has been successfully addressed in [Firefox bug 1826629](https://bugzil.la/1826629). Users can now utilize the `-webkit-text-security` CSS property to control the rendering of text security features.
+- The [-webkit-text-security](/en-US/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property. ([Firefox bug 1826629](https://bugzil.la/1826629)). 
 
 #### Removals
 
