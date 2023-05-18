@@ -52,8 +52,13 @@ window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
     console.log(`Outcome: ${result.outcome}`);
   });
 });
+```
 
 ## Browser compatibility
 
 {{Compat}}
-```
+
+## See also
+
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_pwas_installable)
+- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)
