@@ -29,7 +29,7 @@ The `inverted-colors` feature is specified as one of the following keyword value
 
 ### Applying styles if color inversion is detected
 
-The example below shows the effects with both the keyword values of the `inverted-colors` media feature and also when the `inverted-colors` media feature is not supported.
+This example demonstrates the effects of both `inverted-colors` media feature keyword values and when the `inverted-colors` media feature is not supported.
 
 #### HTML
 
