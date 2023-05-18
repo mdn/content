@@ -5,7 +5,7 @@ page-type: css-module
 browser-compat:
   - css.properties.scrollbar-color
   - css.properties.scrollbar-width
-spec-urls: https://w3c.github.io/csswg-drafts/css-scrollbars/
+spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
 
 {{CSSRef}}
