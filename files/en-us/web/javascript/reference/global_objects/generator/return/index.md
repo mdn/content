@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Generator.return
 
 {{JSRef}}
 
-The **`return()`** method of a generator acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
+The **`return()`** method of {{jsxref("Generator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
 
 ## Syntax
 

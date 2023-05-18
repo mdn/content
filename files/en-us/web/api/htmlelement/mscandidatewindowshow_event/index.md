@@ -7,9 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("HTML DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 The **`mscandidatewindowshow`** event is thrown immediately after the Input Method Editor (IME) candidate window is set to appear, but before it renders.
 

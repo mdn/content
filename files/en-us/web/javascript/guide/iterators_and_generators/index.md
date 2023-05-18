@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
 
 Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.
 
@@ -232,4 +232,4 @@ If the exception is not caught from within the generator, it will propagate up t
 
 Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
 
-{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}

@@ -3,12 +3,10 @@ title: "WebTransport: closed property"
 short-title: closed
 slug: Web/API/WebTransport/closed
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransport.closed
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`closed`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is closed.
 

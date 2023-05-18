@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getMinutes
 
 {{JSRef}}
 
-The **`getMinutes()`** method of a {{jsxref("Date")}} instance returns the minutes for this date according to local time.
+The **`getMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
 

@@ -62,7 +62,7 @@ client.onreadystatechange = () => {
       client.abort();
     }
   }
-}
+};
 ```
 
 ## Specifications
