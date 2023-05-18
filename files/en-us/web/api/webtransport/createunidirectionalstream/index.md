@@ -3,12 +3,10 @@ title: "WebTransport: createUnidirectionalStream() method"
 short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
 

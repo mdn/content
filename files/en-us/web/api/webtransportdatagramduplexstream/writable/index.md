@@ -3,12 +3,10 @@ title: "WebTransportDatagramDuplexStream: writable property"
 short-title: writable
 slug: Web/API/WebTransportDatagramDuplexStream/writable
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to unreliably write outgoing datagrams to the stream.
 
