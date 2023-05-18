@@ -311,7 +311,7 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 
 With this:
 
-```jsx
+```jsx-nolint
 {filterList}
 ```
 
