@@ -22,7 +22,7 @@ Several tools and browser extensions are available to help developers support Fi
 
 Some of the new features in Firefox 1.5:
 
-### Web site and application developers
+### Website and application developers
 
 - SVG is supported in XHTML
   - : SVG can be used in XHTML pages. JavaScript and CSS can be used to manipulate the picture in the same way you would script regular XHTML. See [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) to learn about the status and known problems of SVG implementation in Firefox.
@@ -63,7 +63,7 @@ Some of the new features in Firefox 1.5:
 - **Answers.com is added to the search engine list** for dictionary lookup.
 - **Improvements to product usability** including descriptive error pages, redesigned options menu, RSS discovery, and "Safe Mode" experience.
 - **Better accessibility support** including DHTML accessibility.
-- **Report a broken Web site wizard** to report Web sites that are not working in Firefox.
+- **Report a broken website wizard** to report websites that are not working in Firefox.
 - **Better support for Mac OS X** (10.2 and greater) including profile migration from Safari and Mac Internet Explorer.
 
 ### Security and Privacy

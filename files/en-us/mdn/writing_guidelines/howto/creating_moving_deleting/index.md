@@ -161,7 +161,7 @@ Removing content from MDN Web Docs will inevitably result in updating the existi
 
 ## Editing existing pages
 
-To edit a page, you need to find the page source in our [content](https://github.com/mdn/content) repository. The easiest way to find it is to navigate to the page you want to edit, go to the bottom of the page, and click on the "Source on GitHub" link.
+To edit a page, you need to find the page source in our [content](https://github.com/mdn/content) repository. The easiest way to find it is to navigate to the page you want to edit, go to the bottom of the page, and click on the "View the source on GitHub" link.
 
 ### Preview changes
 

@@ -120,7 +120,7 @@ canvas.toBlob(
 
 ### Save toBlob to disk with OS.File (Chrome/add-on context only)
 
-> **Note:** This technique saves it to the desktop and is only useful in Firefox chrome context or add-on code, as OS APIs are not present on web sites.
+> **Note:** This technique saves it to the desktop and is only useful in Firefox chrome context or add-on code, as OS APIs are not present on websites.
 
 ```js
 const canvas = document.getElementById("canvas");

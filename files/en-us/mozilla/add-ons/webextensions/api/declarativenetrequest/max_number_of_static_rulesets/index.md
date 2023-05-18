@@ -1,7 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_STATIC_RULESETS
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_STATIC_RULESETS
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS
 ---
@@ -12,7 +11,7 @@ The maximum number of static rulesets an extension can specify as part of the [`
 
 Its value is `50`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

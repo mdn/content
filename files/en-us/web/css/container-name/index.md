@@ -13,8 +13,19 @@ When a containment context is given a name, it can be specifically targeted usin
 
 ## Syntax
 
-```plain
-container-name: <container-name>;
+```css
+/* A single name */
+container-name: myLayout;
+
+/* Multiple names */
+container-name: myPageLayout myComponentLibrary;
+
+/* Global Values */
+container-name: inherit;
+container-name: initial;
+container-name: revert;
+container-name: revert-layer;
+container-name: unset;
 ```
 
 ### Values
@@ -29,6 +40,14 @@ container-name: <container-name>;
     - The name value must not be in quotes.
     - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
     - A list of multiple names separated by a space is allowed.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.addIceCandidate
 
 {{APIRef("WebRTC")}}
 
-When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
+When a website or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
 
 If the `candidate` parameter is missing or a value of `null` is given when calling `addIceCandidate()`, the added ICE candidate is an "end-of-candidates" indicator.

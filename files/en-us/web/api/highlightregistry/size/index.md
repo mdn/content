@@ -6,8 +6,7 @@ page-type: web-api-instance-property
 status:
   - experimental
 browser-compat: api.HighlightRegistry.size
-spec-urls: >-
-  https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map.prototype.size
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map.prototype.size
 ---
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
