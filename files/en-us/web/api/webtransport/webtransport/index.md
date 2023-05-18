@@ -3,12 +3,10 @@ title: "WebTransport: WebTransport() constructor"
 short-title: WebTransport()
 slug: Web/API/WebTransport/WebTransport
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.WebTransport.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`WebTransport()`** constructor creates a new
 {{domxref("WebTransport")}} object instance.

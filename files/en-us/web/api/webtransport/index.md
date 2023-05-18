@@ -2,12 +2,10 @@
 title: WebTransport
 slug: Web/API/WebTransport
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} provides functionality to enable a user agent to connect to an HTTP/3 server, initiate reliable and unreliable transport in either or both directions, and close the connection once it is no longer needed.
 
@@ -17,29 +15,29 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 
 ## Constructor
 
-- {{domxref("WebTransport.WebTransport", "WebTransport()")}} {{Experimental_Inline}}
+- {{domxref("WebTransport.WebTransport", "WebTransport()")}}
   - : Creates a new `WebTransport` object instance.
 
 ## Instance properties
 
-- {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
   - : Returns a promise that resolves when the transport is closed.
-- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams.
-- {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
   - : Represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to read data from the server and write data back to it.
-- {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}}
   - : Represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to read data from the server.
-- {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
   - : Returns a promise that resolves when the transport is ready to use.
 
 ## Instance methods
 
-- {{domxref("WebTransport.close", "close()")}} {{Experimental_Inline}}
+- {{domxref("WebTransport.close", "close()")}}
   - : Closes an ongoing WebTransport session.
-- {{domxref("WebTransport.createBidirectionalStream", "createBidirectionalStream()")}} {{Experimental_Inline}}
+- {{domxref("WebTransport.createBidirectionalStream", "createBidirectionalStream()")}}
   - : Opens a bidirectional stream; returns a {{domxref("WebTransportBidirectionalStream")}} object containing `readable` and `writable` properties, which can be used to read from and write to the server.
-- {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}} {{Experimental_Inline}}
+- {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : Opens a unidirectional stream; returns a {{domxref("WritableStream")}} object that can be used to write to the server.
 
 ## Examples

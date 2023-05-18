@@ -22,6 +22,8 @@ Values of this type are objects. They contain these properties:
 - `type`
   - : A `string`. The type of action to perform. Possible values are `"block"`, `"redirect"`, `"allow"`, `"upgradeScheme"`, `"modifyHeaders"`, and `"allowAllRequests"`. The use of the `"redirect"` and `"modifyHeaders"` actions require [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the request and request initiator. The "block" and "upgradeScheme" actions also require host permissions unless the "declarativeNetRequest" permission is specified. Without these permissions, matching rules are ignored. See [Permissions at declarativeNetRequest](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions) for more information. More details about the effects of rule actions are provided in [Matching precedents](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents).
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
