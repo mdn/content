@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
 
 By default, if the user visits your website, and the browser determines that the site is [installable as a PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability), then the browser will display some built-in UI — an icon in the URL bar, for example — to install the site. If the user clicks the icon, then the browser shows an install prompt containing the app's [name](/en-US/docs/Web/Manifest/name) and [icon](/en-US/docs/Web/Manifest/icons). If the user agrees to install the app, then it will be installed.
 
-However, you can implement your own in-app UI to ask the user if they want to install your app, which will trigger the install prompt. The benefit of this is that you can provide more context about your app, explaining to the user why they might want to install your site as a PWA.
+However, you can implement your own in-app UI to ask the user if they want to install your app, which will trigger the install prompt. The benefit of this is that you can provide more context about your app, explaining to the user why they might want to install it as a PWA.
 
 ## Adding an in-app install UI
 
