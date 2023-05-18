@@ -47,7 +47,7 @@ decodeAudioData(arrayBuffer, successCallback, errorCallback)
 
 ### Return value
 
-If a callback is used, ({{jsxref("undefined")}}), else a {{jsxref("Promise") }} object that 
+If a callback is used, ({{jsxref("undefined")}}), else a {{jsxref("Promise") }} object that
 fulfills with the _decodedData_.
 
 ## Examples
