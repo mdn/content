@@ -53,7 +53,7 @@ self.addEventListener("activate", (event) => {
 You can also set up the event handler using the `onactivate` property:
 
 ```js
-sekf.onactivate = (event) => {
+self.onactivate = (event) => {
   // ...
 };
 ```
