@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.inverted-colors
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to test if the {{glossary("user agent")}} or the underlying operating system has inverted all colors. Inversion of colors can unpleasant side effects, such as shadows turning into highlights, which can reduce the readability of the content. You can detect if inversion is happening by using this media feature and style the content.
+The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to test if the {{glossary("user agent")}} or the underlying operating system has inverted all colors. Inversion of colors can have unpleasant side effects, such as shadows turning into highlights, which can reduce the readability of the content. Using this media feature, you can detect if inversion is happening and style the content accordingly.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ This example demonstrates the effects of both `inverted-colors` media feature ke
   will appear red on light gray.
 </p>
 <p>
-  If the text is gray, then it means that your browser doesn't support the
+  If the text is gray, it means your browser doesn't support the
   <code>inverted-colors</code> media feature.
 </p>
 ```
