@@ -22,7 +22,7 @@ A string containing the prefix of the namespace the attribute belongs too. If no
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -39,7 +39,7 @@ A string containing the prefix of the namespace the attribute belongs too. If no
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");
