@@ -132,7 +132,7 @@ Note that the template values for the data are the keys that were specified when
 
 ## What does it look like?
 
-At this point we should have created everything needed to display the index page. Run the application and open your browser to `http://localhost:3000/`. If everything is set up correctly, your site should look something like the following screenshot.
+At this point we should have created everything needed to display the index page. Comment out the line of code that requires the express-validator module for now. Run the application and open your browser to `http://localhost:3000/`. If everything is set up correctly, your site should look something like the following screenshot.
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
