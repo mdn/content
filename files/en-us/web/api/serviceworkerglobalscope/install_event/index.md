@@ -37,7 +37,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
 ```js
-this.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open("v1")
@@ -62,7 +62,7 @@ this.addEventListener("install", (event) => {
 You can also set up the event handler using the `oninstall` property:
 
 ```js
-globalScope.oninstall = (event) => {
+self.oninstall = (event) => {
   // ...
 };
 ```
