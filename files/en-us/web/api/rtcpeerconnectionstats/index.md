@@ -19,7 +19,7 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - {{domxref("RTCPeerConnectionStats.dataChannelsOpened", "dataChannelsOpened")}}
   - : A positive integer value indicating the number of unique {{domxref("RTCDataChannel")}} objects that have entered the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime.
 - {{domxref("RTCPeerConnectionStats.dataChannelsClosed", "dataChannelsClosed")}}
-  - : A positive integer value indicating the number of unique {{domxref("RTCDataChannel")}} objects that have left the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime (channels that transition to "closing" or "closed" without ever being "open" are not counted in this number).
+  - : A positive integer value indicating the number of unique {{domxref("RTCDataChannel")}} objects that have left the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime (channels that transition to [`closing`](/en-US/docs/Web/API/RTCDataChannel/readyState#closing) or [`closed`](/en-US/docs/Web/API/RTCDataChannel/readyState#closed) without ever being `open` are not counted in this number).
     A channel will leave the `open` state if either end of the connection or the underlying transport is closed.
 
 ### Common instance properties
