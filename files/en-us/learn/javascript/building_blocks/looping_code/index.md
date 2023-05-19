@@ -450,7 +450,7 @@ The HTML is basically the same as the last example — a simple text input, and 
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text" />
+<input id="number" type="number" />
 <button>Generate integer squares</button>
 
 <p>Output:</p>
