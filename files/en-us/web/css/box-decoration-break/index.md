@@ -92,13 +92,13 @@ This one results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-You can [try the two inline examples above](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html) in your browser.
+You can [try the two inline examples above](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html) in your browser.
 
 Here's an example of an inline element using a large `border-radius` value. The second `"iM"` has a line-break between the `"i"` and the `"M"`. For comparison, the first `"iM"` is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.
 
 ![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 
-[Try the above example](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html) in your browser.
+[Try the above example](https://mdn.dev/archives/media/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html) in your browser.
 
 ### Block box fragments
 
@@ -118,7 +118,7 @@ Now, the same example but styled with `box-decoration-break: clone` results in:
 
 Note here that each fragment has an identical replicated border, box-shadow, and background.
 
-You can [try the block examples above](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html) in your browser.
+You can [try the block examples above](https://mdn.dev/archives/media/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html) in your browser.
 
 ## Specifications
 
