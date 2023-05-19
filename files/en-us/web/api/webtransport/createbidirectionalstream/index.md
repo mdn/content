@@ -3,12 +3,10 @@ title: "WebTransport: createBidirectionalStream() method"
 short-title: createBidirectionalStream()
 slug: Web/API/WebTransport/createBidirectionalStream
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}
 
 The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens and returns a bidirectional stream.
 

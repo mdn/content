@@ -3,12 +3,10 @@ title: "WebTransport: close() method"
 short-title: close()
 slug: Web/API/WebTransport/close
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.close
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}
 
 The **`close()`** method of the {{domxref("WebTransport")}} interface closes an ongoing WebTransport session.
 

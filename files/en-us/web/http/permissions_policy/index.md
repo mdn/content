@@ -7,7 +7,7 @@ browser-compat: http.headers.Permissions-Policy
 
 {{HTTPSidebar}}
 
-**Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a web site. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
+**Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
 
 Permissions Policy is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.
 

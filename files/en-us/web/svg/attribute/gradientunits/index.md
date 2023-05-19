@@ -3,10 +3,8 @@ title: gradientUnits
 slug: Web/SVG/Attribute/gradientUnits
 page-type: svg-attribute
 spec-urls:
-  - >-
-    https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute
-  - >-
-    https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute
+  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute
 ---
 
 {{SVGRef}}

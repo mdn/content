@@ -4,8 +4,7 @@ slug: Web/SVG/Attribute/height
 page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
-  - >-
-    https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
   - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
