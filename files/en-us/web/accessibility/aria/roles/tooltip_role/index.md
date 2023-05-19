@@ -13,7 +13,7 @@ A `tooltip` is a contextual text bubble that displays a description for an eleme
 
 Tooltips provide contextual information about an element when that owning element receives focus or is hovered over, but is otherwise not visible on the page. The tooltip is displayed automatically, after a brief delay; the user does not request it. While a tooltip can be placed on any content, they generally are tips for tools or controls, such as providing additional content for icons that have brief labels (or no labels at all, which is not accessible!).
 
-A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It should also close when the user presses the <kbd>Escape</kbd> key.
+A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It must stay open when the mouse moves over the tooltip itself, and should also close when the user presses the <kbd>Escape</kbd> key.
 
 Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip can not contain interactive elements like links, inputs, or buttons.
 
@@ -41,7 +41,7 @@ Tooltips provide additional information, generally with no direct interaction on
 - <kbd>Escape</kbd>
   - : Closes the tooltip
 
-The tooltip should appear on focus or when the element is hovered on, without additional interaction. It should disappear automatically when the focus on the owning element is lost or the mouse is moved. While the tooltip does not receive focus, the <kbd>Escape</kbd> should close it if it is open.
+The tooltip should appear on focus or when the element is hovered on, without additional interaction. It should disappear automatically when the focus on the owning element is lost or the mouse is moved outside the owning element and the tooltip. While the tooltip does not receive focus, the <kbd>Escape</kbd> should close it if it is open.
 
 ### Required JavaScript features
 
@@ -50,6 +50,8 @@ The tooltip should appear on focus or when the element is hovered on, without ad
 - The tooltip never receives focus. Focus stays on the owning element.
 
 - The tooltip can be hidden with the <kbd>Escape</kbd> key
+
+- The tooltip stays open when hovered
 
 - The tooltip is only hidden via JavaScript and CSS selectors. If JavaScript is not available the tooltip is shown.
 
@@ -99,7 +101,7 @@ The above hides the tooltip with CSS in the default state or if the hidetooltip 
 
 If the information is important enough for a tooltip, isn't it important enough to always be visible?
 
-As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content made visible should be persistent, meaning it should not disappear without user action. Tooltips fail this criterion.
+The tooltip must stay open when hovered, even if that technically means the mouse moves out of the owning element. As content which appears on hover can be difficult or impossible to perceive if a user is required to keep their mouse pointer over the trigger, [WCAG 1.4.13](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that content made visible should be persistent, meaning it should not disappear without user action.
 
 ## Best Practices
 
@@ -114,6 +116,7 @@ Instead of using tooltips and hiding important information, consider writing cle
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
+- [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)
 
 <section id="Quick_links">
 

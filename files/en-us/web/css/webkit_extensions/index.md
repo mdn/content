@@ -324,7 +324,7 @@ The following properties are supported in at least one browser without a prefix,
 
 The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard](#formerly_proprietary_properties_that_are_now_standard) above.
 
-> **Note:** Due to the legacy code in a multitude of web sites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
+> **Note:** Due to the legacy code in a multitude of websites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
 
 ### A
 

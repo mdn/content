@@ -48,7 +48,7 @@ The example below demonstrates the use of the `HTMLImageElement` properties
 
 ### HTML
 
-In this example, we see a table showing information about users of a web site,
+In this example, we see a table showing information about users of a website,
 including their user ID, their full name, and their avatar image.
 
 ```html

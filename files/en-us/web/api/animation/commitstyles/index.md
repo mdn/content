@@ -8,7 +8,11 @@ browser-compat: api.Animation.commitStyles
 
 {{APIRef("Web Animations")}}
 
-The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/computed_value) of the animation's current styles into its target element's {{htmlattrxref("style")}} attribute. `commitStyles()` works even if the animation has been [automatically removed](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations).
+The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/computed_value) of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute. `commitStyles()` works even if the animation has been [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations).
+
+`commitStyles()` can be used in combination with `fill` to cause the final state of an animation to persist after the animation ends. The same effect could be achieved with `fill` alone, but [using indefinitely filling animations is discouraged](https://w3c.github.io/csswg-drafts/web-animations-1/#fill-behavior). Animations [take precedence over all static styles](/en-US/docs/Web/CSS/Cascade#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
+
+Using `commitStyles()` writes the styling state into the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute, where they can be modified and replaced as normal.
 
 ## Syntax
 
@@ -28,40 +32,59 @@ None ({{jsxref("undefined")}}).
 
 ### Committing the final state of an animation
 
-`commitStyles()` can be used in combination with `fill` to cause the final state of an animation to persist after the animation ends.
+In this example we have two buttons, labeled "Commit styles" and "Fill forwards". Both buttons animate when you click them, and both buttons persist the final state of the animation.
 
-> **Note:**
-> The same effect could be achieved with `fill` alone, but [using indefinitely filling animations is discouraged](https://w3c.github.io/csswg-drafts/web-animations-1/#fill-behavior). Animations [take precedence over all static styles](/en-US/docs/Web/CSS/Cascade#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
->
-> Using `commitStyles()` writes the styling state into the element's {{htmlattrxref("style")}} attribute, where they can be modified and replaced as normal.
+The difference, though, is that "Fill forwards" only uses `fill: "forwards"` to persist the animation's final state: this means that the browser has to maintain the animation's state indefinitely, or until it can be automatically removed.
 
-#### Javascript
+However, the "Commit styles" button waits for the animation to finish, then calls `commitStyles()`, then cancels the animation, so the finished style is captured as the value of the `style` attribute, rather than as the animation state.
+
+#### HTML
+
+```html
+<button class="commit-styles">Commit styles</button>
+<br />
+<button class="fill-forwards">Fill forwards</button>
+```
+
+```css hidden
+button {
+  margin: 0.5rem;
+}
+```
+
+#### JavaScript
 
 ```js
-const button = document.querySelector("button");
-let offset = 0;
+const commitStyles = document.querySelector(".commit-styles");
+let offset1 = 0;
 
-button.addEventListener("click", async (event) => {
+commitStyles.addEventListener("click", async (event) => {
   // Start the animation
-  offset = 100 - offset;
-  const animation = button.animate(
-    { transform: `translate(${offset}px)` },
+  offset1 = 100 - offset1;
+  const animation = commitStyles.animate(
+    { transform: `translate(${offset1}px)` },
     { duration: 500, fill: "forwards" }
   );
 
   // Wait for the animation to finish
   await animation.finished;
-  // Commit animation state to style attr
+  // Commit animation state to style attribute
   animation.commitStyles();
   // Cancel the animation
   animation.cancel();
 });
-```
 
-#### HTML
+const fillForwards = document.querySelector(".fill-forwards");
+let offset2 = 0;
 
-```html
-<button>Animate</button>
+fillForwards.addEventListener("click", async (event) => {
+  // Start the animation
+  offset2 = 100 - offset2;
+  const animation = fillForwards.animate(
+    { transform: `translate(${offset2}px)` },
+    { duration: 500, fill: "forwards" }
+  );
+});
 ```
 
 #### Result

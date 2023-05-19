@@ -130,13 +130,14 @@ As with our _index_ template, we extend our base template in the first line and 
 {% block content %}
   <h1>Book List</h1>
   {% if book_list %}
-  <ul>
-    {% for book in book_list %}
+    <ul>
+      {% for book in book_list %}
       <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+        (\{{book.author}})
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
@@ -169,7 +170,7 @@ Each iteration populates the `book` template variable with information for the c
 
 ```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -178,7 +179,7 @@ You might also use the `{% empty %}` template tag to define what happens if the 
 ```django
 <ul>
   {% for book in book_list %}
-    <li> <!-- code here get information from each book item --> </li>
+    <li><!-- code here get information from each book item --></li>
   {% empty %}
     <p>There are no books in the library.</p>
   {% endfor %}
@@ -206,7 +207,7 @@ We can also call _functions_ in the model from within our template — in this c
 
 Open the base template (**/locallibrary/catalog/templates/_base_generic.html_**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
 
-```python
+```django
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'books' %}">All books</a></li>
 <li><a href="">All authors</a></li>
@@ -461,7 +462,8 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 {% block content %}
   <h1>Title: \{{ book.title }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+  <!-- author detail link not yet defined -->
   <p><strong>Summary:</strong> \{{ book.summary }}</p>
   <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
   <p><strong>Language:</strong> \{{ book.language }}</p>
@@ -471,8 +473,9 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}
-      <hr>
-      <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+      <hr />
+      <p
+        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
         \{{ copy.get_status_display }}
       </p>
       {% if copy.status != 'a' %}
@@ -511,7 +514,7 @@ Though a little larger, almost everything in this template has been described pr
 
 The first interesting thing we haven't seen before is the function `book.bookinstance_set.all()`. This method is "automagically" constructed by Django in order to return the set of `BookInstance` records associated with a particular `Book`.
 
-```python
+```django
 {% for copy in book.bookinstance_set.all %}
   <!-- code to iterate across each copy/instance of a book -->
 {% endfor %}
@@ -563,7 +566,7 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
 Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
-```python
+```django
  <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
  \{{ copy.get_status_display }} </p>
 ```
@@ -667,8 +670,10 @@ The code required for the URL mappers and the views should be virtually identica
 >   The recommended way to do this is to call `get_absolute_url()` on the author model as shown below.
 >
 >   ```django
->   <p><strong>Author:</strong> <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a></p>
->
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.
