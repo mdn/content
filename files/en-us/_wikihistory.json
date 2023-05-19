@@ -126754,10 +126754,6 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Element/discard": {
-    "modified": "2020-10-15T21:49:16.314Z",
-    "contributors": ["Tigt", "fscholz", "Sebastianz"]
-  },
   "Web/SVG/Element/ellipse": {
     "modified": "2020-10-15T21:11:04.607Z",
     "contributors": [
