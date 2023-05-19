@@ -218,9 +218,9 @@ The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables
 
     The value can be one of the following:
 
-    - `"discouraged"`: The relying party requires user verification, and the operation will fail if it does not occur.
+    - `"required"`: The relying party requires user verification, and the operation will fail if it does not occur.
     - `"preferred"`: The relying party prefers user verification if possible, but the operation will not fail if it does not occur.
-    - `"required"`: The relying party does not want user verification, in the interests of making user interaction as smooth as possible.
+    - `"discouraged"`: The relying party does not want user verification, in the interests of making user interaction as smooth as possible.
 
     If `userVerification` is omitted, it will default to `"preferred"`.
 

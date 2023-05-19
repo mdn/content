@@ -977,7 +977,8 @@
         "/docs/Web/API/Performance_API/High_precision_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
-        "/docs/Web/API/Performance_API/User_timing"
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
