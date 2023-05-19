@@ -48,7 +48,6 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
 - {{domxref("WebTransport.getStats", "getStats()")}}
   - : Asynchronously returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.
 
-
 ## Examples
 
 The example code below shows how you'd connect to an HTTP/3 server by passing its URL to the {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor.
