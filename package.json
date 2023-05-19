@@ -30,7 +30,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.2",
-    "@mdn/yari": "2.18.1",
+    "@mdn/yari": "2.22.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "async": "^3.2.4",

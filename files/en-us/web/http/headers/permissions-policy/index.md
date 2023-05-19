@@ -157,9 +157,13 @@ You can specify
 
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 
+- {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
+
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
 - {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{Experimental_Inline}}
 
@@ -172,6 +176,10 @@ You can specify
 - {{httpheader("Permissions-Policy/speaker-selection", "speaker-selection")}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) to list and select speakers.
+
+- {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
+
+  - : Controls whether a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 

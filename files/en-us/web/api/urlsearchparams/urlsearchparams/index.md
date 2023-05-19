@@ -38,7 +38,7 @@ The following example shows how to create a {{domxref("URLSearchParams")}} objec
 various inputs.
 
 ```js
-// Retrieve params via url.search, passed into ctor
+// Retrieve params via url.search, passed into constructor
 const url = new URL("https://example.com?foo=1&bar=2");
 const params1 = new URLSearchParams(url.search);
 

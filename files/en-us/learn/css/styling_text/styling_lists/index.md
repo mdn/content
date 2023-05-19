@@ -349,7 +349,8 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul>
+  </textarea>
 
   <h2>CSS Input</h2>
   <textarea

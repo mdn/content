@@ -2,8 +2,7 @@
 title: Expression statement
 slug: Web/JavaScript/Reference/Statements/Expression_statement
 page-type: javascript-statement
-spec-urls: >-
-  https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-expression-statement
+spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-expression-statement
 ---
 
 {{jsSidebar("Statements")}}

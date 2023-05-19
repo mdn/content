@@ -63,7 +63,7 @@ This is demonstrated below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-sheet.replaceSync("p { color: green; }");
+extraSheet.replaceSync("p { color: green; }");
 
 // Combine the existing sheets and new one
 document.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];

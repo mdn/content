@@ -14,7 +14,7 @@ In an HTTP URL, the first substring that follows the initial `http://` or `https
 
 A server isn't necessarily a physical machine: several servers can reside on the same physical machine. Or, one server can be handled by several machines, cooperating to produce the answer or balancing the load of the requests between them. The key point is that semantically _one domain name represents one single server_.
 
-## So, do I have to choose one or the other for my web site?
+## So, do I have to choose one or the other for my website?
 
 - **Yes**, you need to choose one and stick with it. The choice of which one to have as your canonical location is yours, but if you choose one, stick with it. It will make your website appear more consistent to your users and to search engines. This includes always linking to the chosen domain (which shouldn't be hard if you're using relative URLs in your website) and always sharing links (by email/social networks, etc.) to the same domain.
 - **No**, you can have two. What is important is that you are coherent and consistent with which one is the official domain. **This official domain is called the _canonical_ name.** All your absolute links should use it. But even so, you can still have the other domain working: HTTP allows two techniques so that it is clear for your users, or search engines, which domain is the canonical one, while still allowing the non-canonical domain to work and provide the expected pages.

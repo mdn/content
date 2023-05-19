@@ -1,7 +1,6 @@
 ---
 title: declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_REGEX_RULES
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_REGEX_RULES
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
 ---
@@ -16,7 +15,7 @@ In Firefox, this limit is evaluated separately per ruleset.
 
 In Safari, there is no separate limit on the number of `regexFilter` rules.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

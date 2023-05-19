@@ -9,13 +9,9 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
 - The {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
-
-#### Removals
 
 ### CSS
 
@@ -26,23 +22,9 @@ This article provides information about the changes in Firefox 112 that affect d
 - The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) is now supported.
   This defines easing functions that interpolate linearly between a set of points and is useful for approximating complex animations ([Firefox bug 1819447](https://bugzil.la/1819447), [Firefox bug 1764126](https://bugzil.la/1764126)).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -52,19 +34,11 @@ This article provides information about the changes in Firefox 112 that affect d
   See [Firefox bug 1756175](https://bugzil.la/1756175) for more details.
 - The deprecated and non-standard `CanvasRenderingContext2D.mozTextStyle` attribute is now disabled by default ([Firefox bug 1818409](https://bugzil.la/1818409)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
 #### Removals
 
 - Removes support for `IDBMutableFile`, `IDBFileRequest`, `IDBFileHandle`, and `IDBDatabase.createMutableFile()`.
   These interfaces are not present in any specification, have been behind a preference since version 102, and have been removed from the other main browser engines for some years.
   ([Firefox bug 1500343](https://bugzil.la/1500343).)
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -84,10 +58,6 @@ This article provides information about the changes in Firefox 112 that affect d
 
 - The properties `usedDelegatedCredentials`, `usedEch`, `usedOcsp`, and `usedPrivateDns` have been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. These properties provide information about the security of the connection used for a web request ([Firefox bug 1804460](https://bugzil.la/1804460)).
 - The property `"type"` is supported in the [`"background"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background). Setting this key to `"module"` loads background scripts specified with `"scripts"` as ES modules, avoiding the need to switch to background pages to use ES modules ([Firefox bug 1811443](https://bugzil.la/1811443)).
-
-### Removals
-
-### Other
 
 ## Older versions
 
