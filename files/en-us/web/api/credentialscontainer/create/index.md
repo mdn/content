@@ -36,7 +36,7 @@ create(options)
 
       - : An object defining the type of credential being requested — this can be one of one of:
 
-        - `federated`: An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supercedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+        - `federated`: An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
         - `password`: An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
         - `publicKey`: An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
