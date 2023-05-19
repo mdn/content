@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_peer-connection.dataChannelsOpened
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnectionStats")}} dictionary's **`dataChannelsOpened`** property indicates the number of unique {{domxref("RTCDataChannel")}} objects that have entered the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime.
+The **`dataChannelsOpened`** property of the {{domxref("RTCPeerConnectionStats")}} dictionary indicates the number of unique {{domxref("RTCDataChannel")}} objects that have entered the [`open`](/en-US/docs/Web/API/RTCDataChannel/readyState#open) state during their lifetime.
 
 ## Value
 

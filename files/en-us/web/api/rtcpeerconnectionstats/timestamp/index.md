@@ -10,8 +10,6 @@ browser-compat: api.RTCStatsReport.type_peer-connection.timestamp
 
 The **`timestamp`** property of the {{domxref("RTCPeerConnectionStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object specifying the time at which the data in the object was sampled.
 
-The time is given in milliseconds elapsed since the first moment of January 1, 1970, UTC (also known as [Unix time](/en-US/docs/Glossary/Unix_time)).
-
 ## Value
 
 A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the activity described by the statistics in this object was recorded, in milliseconds elapsed since the beginning of January 1, 1970, UTC.
