@@ -38,19 +38,15 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 ## Creating your first PWA
 
-In this tutorial, we will create a period tracker; a basic progressive web application in which the user can track the beginning and end of their menstrual cycle.
-
-To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
-
-You will be installing node.js, MAMP, or another local server to create a local secure connection. While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
+In this tutorial, we will create a period tracker; a basic progressive web application in which the user can track the beginning and end of their menstrual cycles.
 
 The steps include:
 
-- [Basic HTML and CSS site](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML)
-  - : We will create a website with a date picker, using HTML and CSS.
+- [App HTML and CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML)
+  - : Line by line explanation of HTML for the static components head and body of the website along with the CSS to style it.
 
-- [Basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
-  - : A PWA is an online application that also works offline. We will write the basic JavaScript functionality to make this period tracker work as an online web application, so we have a functioning application that can be progressively enhanced into a PWA.
+- [JavaScript for app functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
+  - : A line by line explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA.
 
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
@@ -66,6 +62,10 @@ The steps include:
 
 - [Session storage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Storage)
   - : Will take a look at service workers and session storage, using JavaScript to enhance the PWA.
+
+To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
+
+You will be installing node.js, MAMP, or another local server to create a local secure connection. While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
 ## See Also
 
