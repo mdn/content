@@ -84,9 +84,7 @@ The `action` key is an object that may have any of these properties, all optiona
       <td>
         <p>Optional, defaulting to <code>false</code>.</p>
         <p>
-          Use this to include a stylesheet in your popup that makes it look
-          consistent with the browser's UI and other extensions that use
-          the <code>browser_style</code> property.
+          Do not set `browser_style` to true. See [Manifest v3 migration for `browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration).
         </p>
         <p>
           In Firefox, the stylesheet can be seen at
