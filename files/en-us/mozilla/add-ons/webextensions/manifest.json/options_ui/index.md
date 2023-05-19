@@ -75,16 +75,16 @@ The `options_ui` key is an object with the following contents:
             <li><code>true</code> in Manifest V2 and prior to Firefox 115 in Manifest V3.</li>
             <li><code>false</code> in Manifest V3 from Firefox 115.</li>
           </ul>
-        <p>
-          Use this to include a stylesheet in your page that makes it look
-          consistent with the browser's UI and other extensions that use
-          the <code>browser_style</code> property.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
           <code>chrome://browser/content/extension.css</code> or
           <code>chrome://browser/content/extension-mac.css</code> on macOS. When
-          setting dimensions, be aware that this style sheet sets
+          setting dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>

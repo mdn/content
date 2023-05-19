@@ -78,11 +78,11 @@ The `page_action` key is an object that may have any of three properties, all op
       <td><code>Boolean</code></td>
       <td>
         <p>Optional. Defaults to <code>false</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that makes it look
-          consistent with the browser's UI and other extensions that use
-          the <code>browser_style</code> property.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
           <code>chrome://browser/content/extension.css</code> or

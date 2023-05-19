@@ -78,16 +78,16 @@ The `sidebar_action` key is an object that may have any of the properties listed
             <li><code>true</code> in Manifest V2 and prior to Firefox 115 in Manifest V3.</li>
             <li><code>false</code> in Manifest V3 from Firefox 115.</li>
           </ul>
-        <p>
-          Use this to include a stylesheet in your popup that makes it look
-          consistent with the browser's UI and other extensions that use
-          the <code>browser_style</code> property.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
           chrome://browser/content/extension.css or
           chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet sets
+          dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
@@ -227,8 +227,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
 "sidebar_action": {
   "default_icon": "sidebar.svg",
   "default_title": "My sidebar!",
-  "default_panel": "sidebar.html",
-  "browser_style": true
+  "default_panel": "sidebar.html"
 }
 ```
 
