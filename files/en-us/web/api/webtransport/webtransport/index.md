@@ -42,13 +42,19 @@ new WebTransport(url, options)
         By default the value is `false`.
     - `serverCertificateHashes` {{optional_inline}}
 
-      - : An array of objects defining a hash value and its associated algorithm.
+      - : An array of objects, each defining the hash value of a server certificate along with the name of the algorithm that was used to generate it.
         This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
-        If specified, it allows the website to connect to a server by authenticating the certificate against the expected certificate hash instead of using the Web public key infrastructure (PKI).
+        If specified, the browser will attempt to authenticate the certificate provided by the server against the provided certificate hash(es) in order to connect, instead of using the Web public key infrastructure (PKI).
+        If any hashes match, the browser knows that the server has possession of a trusted certificate and will connect as normal.
+        If empty the user agent uses the same PKI certificate verification procedures it would use for a normal fetch operation.
+
         This feature allows developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
-        If empty the user agent uses the same certificate verification procedures it would use for normal fetch operations.
+        > **Note:** The web application might typically fetch the hashes from a trusted intermediary.
+        > For example, you might use a cloud provider to provision VMs that run your WebTransport servers.
+        > The provider has trusted access to the server and can request its certificate, generate hashes, and provide these to the application via an API (which is mediated via PKI), or a cloud console.
+        > The web application can now connect directly to the VM-hosted server using the supplied hashes, even though the VM itself does not have a long-lived TLS certificate.
 
         The certificate must be an X.509v3 certificate that has a validity period of less that 2 weeks, and the current time must be within that validity period.
         The format of the public key in the certificate depends on the implementation, but must minimally include ECDSA with the secp256r1 (NIST P-256) named group, and must not include RSA keys.
