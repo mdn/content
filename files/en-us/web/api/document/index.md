@@ -132,7 +132,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a list of all of the anchors in the document.
 - {{DOMxRef("Document.applets")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns an ordered list of the applets within a document.
+  - : Returns an empty {{domxref("HTMLCollection")}}. Legacy property that used to return the list of applets within a document.
 - {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the background color of the current document.
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
