@@ -25,7 +25,6 @@ new BeforeInstallPromptEvent(type, eventInitDict)
 - `type`
   - : A string with the name of the event, set to `beforeinstallpromptevent`.
 - `eventInitDict` {{optional_inline}}
-
   - : An object with a single optional property `platforms`, which is an array of strings, listing the platforms on which the event will be dispatched.
 
 ## Specifications
