@@ -1,15 +1,16 @@
 ---
-title: Basic PWA page template
+title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML
 ---
 
-PWAs are progressively enhanced web applications. To build our PWA, we need to start with a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
+To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
-In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) to create a functional web application. In subsequent sections, we progressively enhance the application to make a PWA that is installable and works offline.
+In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) to convert this static content into a functional web application. Only then can we progressively enhance the application to make the app a PWA that is installable and works offline.
 
 ## HTML static web content
 
-Our project is to create a menstrual cycle tracker. The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/) is to write the HTML and CSS.
+Our project is to create a menstrual cycle tracker.
+The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
 
 We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
@@ -161,7 +162,7 @@ We temporarily hardcode placeholder content within the placeholder `<section>` t
   <h2>Past periods</h2>
   <ul>
     <li>From 01/01/2024 to 01/06/2024</li>
-    <li>From 01/29/2024 to 03/04/2024</li>
+    <li>From 01/29/2024 to 02/04/2024</li>
   </ul>
 </section>
 ```
@@ -220,7 +221,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
   <h2>Past periods</h2>
   <ul>
     <li>From 01/01/2024 to 01/06/2024</li>
-    <li>From 01/29/2024 to 03/04/2024</li>
+    <li>From 01/29/2024 to 02/04/2024</li>
   </ul>
   -->
 </section>
@@ -229,3 +230,5 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 ### Up next
 
 Before converting a web app into a progressive web app — before adding the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
+
+Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript).
