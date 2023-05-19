@@ -160,7 +160,7 @@ _No change._
 
 ### SVG
 
-- Removed support for the deprecated {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} and {{SVGElement('altGlyphItem')}} elements ([Firefox bug 1260032](https://bugzil.la/1260032)).
+- Removed support for the deprecated `<altGlyph>`, `<altGlyphDef>` and `<altGlyphItem>` elements ([Firefox bug 1260032](https://bugzil.la/1260032)).
 
 ### Audio/Video
 
