@@ -109,7 +109,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ### The srcset attribute
 
-The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer list of possible images _based on size_.
+The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer a list of possible images _based on size_.
 
 It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either_:
 
@@ -117,29 +117,26 @@ It is composed of a comma-separated list of image descriptors. Each image descri
   _OR_
 - a _pixel density descriptor_, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
 
-This is an example on how to use `srcset` with a `<picture>` tag:
+The following example illustrates the usage of `srcset` attribute with the `<source>` element to specify a high-density and standard-resolution image:
 
 ```html
 <picture>
-  <source srcset="logo-768.png, 
-                  logo-768-1.5x.png 1.5x" />
-  <img src="logo-320.png" alt="logo" />
+  <source srcset="logo.png, 
+                  logo-1.5x.png 1.5x" />
+  <img src="logo.png" alt="MDN Web Docs logo" height="320" width="320" />
 </picture>
 ```
 
-The `srcset` attribute is not exclusive to the `<picture>` tag, we can also use it with an `<img>` tag as well.
-In this example we are using width descriptor,
-Ex: 400w
+As mentioned earlier, the `srcset` attribute can also be used on the `<img>` element without needing the `<picture>` element. The following example demonstrates how to use the `srcset` attribute to specify a high-density and standard-resolution image:
 
 ```html
-<img src="logo.jpg"
-     srcset="logo-400w.jpg 400w,
-             logo-800w.jpg 800w,
-             logo-1200w.jpg 1200w"
-     sizes="(max-width: 600px) 400px,
-            (max-width: 1000px) 800px,
-            1200px"
-     alt="Example Image">
+<img
+  srcset="logo.png, logo-2x.png 2x"
+  src="logo.png"
+  height="320"
+  width="320"
+  alt="MDN Web Docs logo"
+/>
 ```
 
 The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
