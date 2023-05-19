@@ -5,17 +5,27 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 {{PWASidebar}}
 
-[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can be installed on devices and used as traditional websites in web browsers. This means that PWAs need to be able to adapt to different environments, and to different user expectations.
+[Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can be installed on devices and used as traditional websites in web browsers. This means that PWAs need to be able to adapt to different environments and to different user expectations.
 
 This article provides a list of best practices to help you make sure your PWA is as good as it can be.
 
-## Adapt to all browsers, devices, form-factors, and input types
+## Adapt to all browsers
 
-PWAs allow you to develop an app that works on all devices from one codebase. This app can run in a browser, or be installed on a device and run as a standalone app. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers, operating systems, and devices.
+Your PWA is based on Web technologies which means that, on top of being installable on devices, it can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers and operating systems.
 
-Considering the diverse range of devices and browsers your users may use, it's important to cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
+Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
 
-[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure that content is accessible on any screen size. Users should be able to access all features and content regardless of the viewport size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
+Feature detection also helps with {{Glossary("Progressive Enhancement")}}, a design philosophy that makes it possible to deliver a great experience to as many users as possible.
+
+With Progressive Enhancement, you focus on making the core functionalities of your app work universally first, by using the simplest technology for them, and then enhance the experience on supporting devices.
+
+For example, handling form submissions with the {{htmlelement("form", "HTML form element")}} means that the form will work on all browsers, including those that don't support JavaScript. You can then progressively enhance the form by adding client-side validation and JavaScript-based submission for a better experience on compatible devices.
+
+## Adapt to all devices
+
+Similar to how testing your app across various browsers is important, testing across devices also ensures that your app is accessible to the broadest audience.
+
+[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure that content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
 
 Finally, ensure users can switch between input methods in your application. Support keyboard and mouse, as well as touch or stylus. Make sure all features of your application can be accessed through any input method. Use [semantic HTML elements](/en-US/docs/Glossary/Semantics#semantics_in_html) instead of recreating your own buttons or form elements since they already support all input methods out of the box.
 
@@ -36,24 +46,6 @@ To go further and provide an app-like experience, you can make your PWA work off
 Consider the following scenario: the user composes a long email, presses "Send", and then loses network connectivity. If your app is offline-ready, the email will be saved locally and sent automatically when the user is back online.
 
 Learn more about offline operation in [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
-
-## Make it installable
-
-Users can more easily return to and engage with apps that are permanently installed on their device.
-
-Making your PWA installable makes it behave more like a platform-specific app, with its own icon, standalone window, and own entry in the places where users expect to find apps on their device. It's a great way to increase user engagement and retention.
-
-Making your app installable also allows you to distribute it through app stores.
-
-To learn more, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
-
-## Progressively enhance to available capabilities
-
-{{Glossary("Progressive Enhancement")}} is a strategy for web development that has great benefits when building PWAs.
-
-Focus on making the core functionalities of your app work universally first, by using the simplest technology for them, and then enhance the experience on supporting devices.
-
-For example, handling form submissions with the {{htmlelement("form", "HTML form element")}} means that the form will work on all browsers, including those that don't support JavaScript. You can then progressively enhance the form by adding client-side validation and JavaScript-based submission for a better experience on compatible devices.
 
 ## Support deep links
 
