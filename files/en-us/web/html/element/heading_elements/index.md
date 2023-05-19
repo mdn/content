@@ -213,7 +213,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 </footer>
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Sectioning_content_examples')}}
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
