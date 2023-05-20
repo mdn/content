@@ -1,13 +1,9 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-value
 ---
 
@@ -20,7 +16,9 @@ The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/
 ## Syntax
 
 ```css
-::-webkit-progress-value
+::-webkit-progress-value {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -71,4 +69,3 @@ Not part of any standard.
   - {{ cssxref("::-webkit-progress-inner-element") }}
 
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}

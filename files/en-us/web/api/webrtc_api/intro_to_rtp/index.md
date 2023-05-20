@@ -2,17 +2,6 @@
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
 page-type: guide
-tags:
-  - API
-  - Connectivity
-  - Guide
-  - Intermediate
-  - Protocols
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

@@ -2,9 +2,6 @@
 title: clipPathUnits
 slug: Web/SVG/Attribute/clipPathUnits
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/css-masking-1/#element-attrdef-clippath-clippathunits
 ---
 

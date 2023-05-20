@@ -2,11 +2,6 @@
 title: Syntax
 slug: Web/CSS/Syntax
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Web
 ---
 
 {{CSSRef}}
@@ -38,7 +33,7 @@ A CSS declaration block is visualized in the diagram below.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **Note:** The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
+> **Note:** The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 
 ## CSS rulesets
 
@@ -78,10 +73,10 @@ There is another group of statements – the **nested statements**. These are st
 ## See also
 
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - **CSS syntax**
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

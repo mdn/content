@@ -1,18 +1,11 @@
 ---
-title: Window.applicationCache
+title: "Window: applicationCache property"
+short-title: applicationCache
 slug: Web/API/Window/applicationCache
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
 

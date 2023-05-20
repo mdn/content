@@ -1,24 +1,8 @@
 ---
-title: RTCRemoteOutboundRtpStreamStats.localId
+title: "RTCRemoteOutboundRtpStreamStats: localId property"
+short-title: localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Outbound
-  - Property
-  - RTCRemoteOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - id
-  - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
 
@@ -100,7 +84,7 @@ paired statistics object.
 The `findReportEntry()` function shown below examines
 an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
 record which contains the specified `key` — _and_ for which the key
-has the specified `value`. If no match is found (or the statistics report has
+has the specified `value`. If no match is found or the statistics report has
 no record corresponding to the statistics category indicated by `key`.
 
 ```js
@@ -144,13 +128,26 @@ async function networkTestStop(pc) {
         const startRemoteOutbound = startReport.get(endRemoteOutbound.id);
 
         if (startRemoteOutbound) {
-          const startInboundStats = findReportEntry(startReport, "remoteId", startRemoteOutbound.id);
-          const endInboundStats = findReportEntry(endReport, "remoteId", endRemoteOutbound.id);
-
-          const elapsedTime = (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) / 1000;    /* in seconds */
-          const packetsSent = endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
-          const bytesSent = endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
-          const framesDecoded = endInboundStats.framesDecoded - startInboundStats.framesDecoded;
+          const startInboundStats = findReportEntry(
+            startReport,
+            "remoteId",
+            startRemoteOutbound.id
+          );
+          const endInboundStats = findReportEntry(
+            endReport,
+            "remoteId",
+            endRemoteOutbound.id
+          );
+          // Elapsed time in seconds
+          const elapsedTime =
+            (endRemoteOutbound.timestamp - startRemoteOutbound.timestamp) /
+            1000;
+          const packetsSent =
+            endRemoteOutbound.packetsSent - startRemoteOutbound.packetsSent;
+          const bytesSent =
+            endRemoteOutbound.bytesSent - startRemoteOutbound.bytesSent;
+          const framesDecoded =
+            endInboundStats.framesDecoded - startInboundStats.framesDecoded;
           const frameRate = framesDecoded / elapsedTime;
 
           let timeString = "";
@@ -160,13 +157,16 @@ async function networkTestStop(pc) {
 
           let frameString = "";
           if (!isNaN(framesDecoded)) {
-            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
+            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(
+              2
+            )} FPS.<br>`;
           }
 
-          const logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
-                         `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
-                         `${frameString}` +
-                         `Data size: ${bytesSent} bytes.</div>`;
+          const logEntry =
+            `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+            `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
+            `${frameString}` +
+            `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
           statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`;

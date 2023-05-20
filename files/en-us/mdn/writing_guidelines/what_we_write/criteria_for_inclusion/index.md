@@ -2,9 +2,6 @@
 title: Criteria for inclusion on MDN Web Docs
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

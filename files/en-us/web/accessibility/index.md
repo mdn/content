@@ -1,9 +1,7 @@
 ---
 title: Accessibility
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Landing
+page-type: landing-page
 ---
 
 <section id="Quick_links">

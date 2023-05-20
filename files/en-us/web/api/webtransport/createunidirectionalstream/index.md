@@ -1,39 +1,47 @@
 ---
-title: WebTransport.createUnidirectionalStream()
+title: "WebTransport: createUnidirectionalStream() method"
+short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createUnidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
-The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
+The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
+
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
+
+The relative order in which queued bytes are emptied from created streams can be specified using the send-order option.
+If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
+If the order number is not set then the order in which bytes are sent is implementation dependent.
+Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
-```js
+```js-nolint
 createUnidirectionalStream()
+createUnidirectionalStream({sendOrder: "596996858"})
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+
+  - : An object that may have the following properties:
+
+    - `sendOrder` {{optional_inline}}
+      - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
+        Queued bytes are sent first for streams that have a higher value.
+        If not set, the send order depends on the implementation.
 
 ### Return value
 
-A {{domxref("WritableStream")}} object.
+A {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object.
 
 ### Exceptions
 
@@ -57,7 +65,7 @@ async function writeData() {
 
   try {
     await writer.close();
-    console.log('All data has been sent.');
+    console.log("All data has been sent.");
   } catch (error) {
     console.error(`An error occurred: ${error}`);
   }

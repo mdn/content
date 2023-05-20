@@ -2,12 +2,6 @@
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLStyleElement
 ---
 

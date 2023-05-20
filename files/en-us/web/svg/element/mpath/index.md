@@ -2,12 +2,6 @@
 title: <mpath>
 slug: Web/SVG/Element/mpath
 page-type: svg-element
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Animation
 browser-compat: svg.elements.mpath
 ---
 

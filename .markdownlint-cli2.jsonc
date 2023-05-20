@@ -100,6 +100,7 @@
         "var"
       ]
     },
+    "MD034": false,
     // Pending https://github.com/mdn/content/pull/20115
     "MD037": false,
     "MD040": false,
@@ -187,10 +188,24 @@
           "search": "](https://developer.mozilla.org/",
           "replace": "](/",
           "skipCode": true
+        },
+        {
+          "name": "incorrect-spelling",
+          "message": "Incorrect spelling",
+          "searchPattern": ["/e-mail/ig", "/(w)eb site/ig"],
+          "replace": ["email", "$1ebsite"],
+          "skipCode": false
+        },
+        {
+          "name": "localhost-links",
+          "message": "Don't use localhost for links",
+          "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+          "replace": "](/",
+          "skipCode": true
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", ".github"]
+  "ignores": ["node_modules", ".github", "tests"]
 }

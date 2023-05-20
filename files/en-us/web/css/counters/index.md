@@ -2,12 +2,6 @@
 title: counters()
 slug: Web/CSS/counters
 page-type: css-function
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Function
-  - Function
-  - Reference
 browser-compat: css.types.counters
 ---
 

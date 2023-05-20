@@ -1,14 +1,10 @@
 ---
-title: Navigator.appVersion
+title: "Navigator: appVersion property"
+short-title: appVersion
 slug: Web/API/Navigator/appVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Navigator
-  - Property
-  - Reference
-  - appVersion
+status:
+  - deprecated
 browser-compat: api.Navigator.appVersion
 ---
 

@@ -2,18 +2,6 @@
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 page-type: guide
-tags:
-  - Advanced
-  - Audio
-  - Constraints
-  - Example
-  - Guide
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Settings
-  - Video
-  - WebRTC
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
@@ -23,7 +11,7 @@ This article discusses the twin concepts of **constraints** and **capabilities**
 
 Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.
 
-Capabilities and constraints let the browser and Web site or app exchange information about what **constrainable properties** the browser's implementation supports and what values it supports for each one.
+Capabilities and constraints let the browser and website or app exchange information about what **constrainable properties** the browser's implementation supports and what values it supports for each.
 
 ## Overview
 
@@ -118,9 +106,9 @@ So-called advanced constraints are created by adding an `advanced` property to t
 
 ## Checking capabilities
 
-You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent*.* This function returns a {{domxref("MediaTrackCapabilities")}} object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
+You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent*.* This function returns an object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
 
-> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox {{bug(1179084)}}, for example.
+> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox [Firefox bug 1179084](https://bugzil.la/1179084), for example.
 
 ## Applying constraints
 
@@ -359,7 +347,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### Updating the settings display
 
-To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.
+To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/HTML/Element/textarea#value).
 
 ```js
 function getCurrentSettings() {

@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaRowIndex
+title: "ElementInternals: ariaRowIndex property"
+short-title: ariaRowIndex
 slug: Web/API/ElementInternals/ariaRowIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowIndex
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaRowIndex
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaRowIndex`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 

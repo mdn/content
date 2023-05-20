@@ -2,14 +2,6 @@
 title: font-language-override
 slug: Web/CSS/font-language-override
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - font-language-override
-  - l10n
-  - recipe:css-property
 browser-compat: css.properties.font-language-override
 ---
 

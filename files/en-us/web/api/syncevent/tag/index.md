@@ -1,16 +1,10 @@
 ---
-title: SyncEvent.tag
+title: "SyncEvent: tag property"
+short-title: tag
 slug: Web/API/SyncEvent/tag
 page-type: web-api-instance-property
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - tag
+status:
+  - experimental
 browser-compat: api.SyncEvent.tag
 ---
 

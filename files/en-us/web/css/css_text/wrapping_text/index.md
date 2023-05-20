@@ -2,13 +2,6 @@
 title: Wrapping and breaking text
 slug: Web/CSS/CSS_Text/Wrapping_Text
 page-type: guide
-tags:
-  - CSS
-  - CSS Text
-  - Guide
-  - overflow
-  - overflow-wrap
-  - word-break
 ---
 
 {{CSSRef}}

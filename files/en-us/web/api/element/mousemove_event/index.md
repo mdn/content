@@ -1,18 +1,8 @@
 ---
-title: 'Element: mousemove event'
+title: "Element: mousemove event"
+short-title: mousemove
 slug: Web/API/Element/mousemove_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mousemove
-  - move
-  - pointer
 browser-compat: api.Element.mousemove_event
 ---
 
@@ -25,9 +15,9 @@ The `mousemove` event is fired at an element when a pointing device (usually a m
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mousemove', (event) => {});
+addEventListener("mousemove", (event) => {});
 
-onmousemove = (event) => { };
+onmousemove = (event) => {};
 ```
 
 ## Event type
@@ -130,19 +120,19 @@ let isDrawing = false;
 let x = 0;
 let y = 0;
 
-const myPics = document.getElementById('myPics');
-const context = myPics.getContext('2d');
+const myPics = document.getElementById("myPics");
+const context = myPics.getContext("2d");
 
 // event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
 
 // Add the event listeners for mousedown, mousemove, and mouseup
-myPics.addEventListener('mousedown', (e) => {
+myPics.addEventListener("mousedown", (e) => {
   x = e.offsetX;
   y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', (e) => {
+myPics.addEventListener("mousemove", (e) => {
   if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = e.offsetX;
@@ -150,7 +140,7 @@ myPics.addEventListener('mousemove', (e) => {
   }
 });
 
-window.addEventListener('mouseup', (e) => {
+window.addEventListener("mouseup", (e) => {
   if (isDrawing) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
@@ -161,7 +151,7 @@ window.addEventListener('mouseup', (e) => {
 
 function drawLine(context, x1, y1, x2, y2) {
   context.beginPath();
-  context.strokeStyle = 'black';
+  context.strokeStyle = "black";
   context.lineWidth = 1;
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);

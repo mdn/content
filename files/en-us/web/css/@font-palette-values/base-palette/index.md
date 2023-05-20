@@ -2,19 +2,12 @@
 title: base-palette
 slug: Web/CSS/@font-palette-values/base-palette
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - CSS Descriptor
-  - CSS Property
-  - Reference
 browser-compat: css.at-rules.font-palette-values.base-palette
 ---
 
 {{CSSRef}}
 
-The **`base-palette`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
+The **`base-palette`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to specify the name or index of a pre-defined palette to be used for creating a new palette. If the specified `base-palette` does not exist, then the palette defined at index 0 will be used.
 
 ## Syntax
 
@@ -24,7 +17,7 @@ The **`base-palette`** CSS [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) i
 }
 ```
 
-The `base-palette` [descriptor](/en-US/docs/Glossary/Descriptor_(CSS)) is specified using a zero-based index of the font-maker created palettes.
+The `base-palette` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is specified using a zero-based index of the font-maker created palettes.
 
 ### Values
 
@@ -57,21 +50,21 @@ Using the [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), t
 
 ```css
 @font-face {
-  font-family: 'Rocher';
-  src: url('[path-to-font]/RocherColorGX.woff2') format('woff2'); 
+  font-family: "Rocher";
+  src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
 }
 
 h2 {
-  font-family: 'Rocher';
+  font-family: "Rocher";
 }
 
 @font-palette-values --two {
-  font-family: 'Rocher';
+  font-family: "Rocher";
   base-palette: 2;
 }
 
 @font-palette-values --five {
-  font-family: 'Rocher';
+  font-family: "Rocher";
   base-palette: 5;
 }
 
@@ -102,3 +95,4 @@ h2 {
 - {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
 - {{cssxref("font-palette/", "font-palette")}} property
+- {{domxref("CSSFontPaletteValuesRule.basePalette")}}

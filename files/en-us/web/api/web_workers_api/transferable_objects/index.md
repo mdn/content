@@ -2,11 +2,6 @@
 title: Transferable objects
 slug: Web/API/Web_Workers_API/Transferable_objects
 page-type: guide
-tags:
-  - Transferable
-  - Serializable
-  - Structured clone
-  - Workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}
@@ -83,6 +78,7 @@ The items that various specifications indicate can be _transferred_ are:
 - {{domxref("ReadableStream")}}
 - {{domxref("WritableStream")}}
 - {{domxref("TransformStream")}}
+- {{domxref("WebTransportReceiveStream")}}
 - {{domxref("AudioData")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("VideoFrame")}}

@@ -2,46 +2,33 @@
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setDate
 ---
 
 {{JSRef}}
 
-The **`setDate()`** method changes the day of the month of a given {{jsxref("Date")}} instance, based on local time.
-
-To instead change the day of the month for a given {{jsxref("Date")}} instance based on UTC time, use the {{jsxref("Date.prototype.setUTCDate()", "setUTCDate()")}} method.
+The **`setDate()`** method of {{jsxref("Date")}} instances changes the day of the month for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setdate.html")}}
 
 ## Syntax
 
 ```js-nolint
-setDate(dayValue)
+setDate(dateValue)
 ```
 
 ### Parameters
 
-- `dayValue`
+- `dateValue`
   - : An integer representing the day of the month.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date (the
-{{jsxref("Date")}} object is also changed in place).
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `dateValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
-If the `dayValue` is outside of the range of date values for the month, `setDate()` will update the {{jsxref("Date")}} object accordingly.
-
-For example, if 0 is provided for `dayValue`, the date will be set to the last day of the previous month. If you use 40 for `dayValue`, and the month stored in the {{jsxref("Date")}} object is June, the day will be changed to 10 and the month will be incremented to July.
-
-If a negative number is provided for `dayValue`, the date will be set counting backwards from the last day of the previous month. -1 would result in the date being set to 1 day before the last day of the previous month.
+If you specify a number outside the expected range, the date information in the {{jsxref("Date")}} object is updated accordingly. For example, if the `Date` object holds June 1st, a `dateValue` of 40 changes the date to July 10th, while a `dateValue` of 0 changes the date to the last day of the previous month, May 31st.
 
 ## Examples
 
@@ -67,6 +54,6 @@ const theBigDay7 = new Date(theBigDay).setDate(-50); // 1962-05-11 (11th of May 
 
 ## See also
 
-- {{jsxref("Date.Date()", "Date()")}}
+- {{jsxref("Date/Date", "Date()")}}
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.setUTCDate()")}}

@@ -1,16 +1,13 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
+page-type: mathml-element
 browser-compat: mathml.elements.math
 ---
 
 {{MathMLRef}}
 
-The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) is permitted.
+The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Content_categories#flow_content) is permitted.
 
 > **Note:** See the [Authoring MathML page](/en-US/docs/Web/MathML/Authoring#using_mathml) for tips to properly integrate MathML formulas in your web pages and the [Examples](/en-US/docs/Web/MathML/Examples) page for more demos.
 
@@ -65,8 +62,8 @@ This example contains two MathML formula. The first one is rendered in its own c
         <mn>2</mn>
       </msup>
       <mn>6</mn>
-    </mfrac>
-  </math>.
+    </mfrac></math
+  >.
 </p>
 ```
 

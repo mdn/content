@@ -2,18 +2,6 @@
 title: RTCRtpStreamStats
 slug: Web/API/RTCRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCRtpStreamStats
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: Character classes
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - character classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}
@@ -76,7 +69,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           <p>
             <strong>Note:</strong> The ^ character may also indicate the
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
               >beginning of input</a
             >.
           </p>
@@ -198,7 +191,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
         Matches a backspace. If you're looking for the word-boundary character
         (<code>\b</code>), see
         <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+          href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
           >Assertions</a
         >.
       </td>
@@ -216,7 +209,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to codepoints
+          >, where "X" is a letter from A–Z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>
@@ -260,7 +253,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <td>
         Matches a character based on its
         <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes"
+          href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape"
           >Unicode character properties</a
         >
         (to match just, for example, emoji characters, or Japanese
@@ -314,7 +307,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
+            <strong>Note:</strong> A disjunction is another way to specify "a set of choices", but it's not a character class. Disjunctions are not atoms — you need to use a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">group</a> to make it part of a bigger pattern. <code>[abc]</code> is functionally equivalent to <code>(?:a|b|c)</code>.
           </p>
         </div>
       </td>
@@ -377,12 +370,11 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

@@ -1,20 +1,10 @@
 ---
-title: NavigationHistoryEntry.index
+title: "NavigationHistoryEntry: index property"
+short-title: index
 slug: Web/API/NavigationHistoryEntry/index
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - index
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.index
 ---
 

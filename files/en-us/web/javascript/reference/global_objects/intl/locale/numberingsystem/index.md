@@ -2,27 +2,18 @@
 title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 page-type: javascript-instance-accessor-property
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.numberingSystem`** accessor property returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for the locale.
+The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 
 ## Description
 
 A numeral system is a system for expressing numbers. The `numberingSystem` property's value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-For a list of supported numbering system types, see [`Intl.Locale.prototype.numberingSystems`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems#supported_numbering_system_types).
+For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
 
 ## Examples
 
@@ -57,5 +48,5 @@ console.log(locale.numberingSystem); // "latn"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [`Intl.Locale.prototype.numberingSystems`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems)
+- [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems)
 - [Details on the standard Unicode numeral systems](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

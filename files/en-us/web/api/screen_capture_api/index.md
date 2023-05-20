@@ -2,16 +2,6 @@
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
 page-type: web-api-overview
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - Overview
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - getDisplayMedia
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 
@@ -26,7 +16,9 @@ The Screen Capture API is relatively simple to use. Its sole method is {{domxref
 To start capturing video from the screen, you call `getDisplayMedia()` on `navigator.mediaDevices`:
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream = await navigator.mediaDevices.getDisplayMedia(
+  displayMediaOptions
+);
 ```
 
 The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
@@ -82,7 +74,7 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ## Permissions Policy validation
 
-{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow)) can specify a desire to use the Screen Capture API using the directive `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>

@@ -2,12 +2,6 @@
 title: Function
 slug: Glossary/Function
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - IIFE
-  - Immediately Invoked Function Expressions (IIFE)
-  - Intro
-  - JavaScript
 ---
 
 A **function** is a code snippet that can be called by other code or by itself, or a {{Glossary("variable")}} that refers to the function. When a function is called, {{Glossary("Argument", "arguments")}} are passed to the function as input, and the function can optionally return a value. A function in {{glossary("JavaScript")}} is also an {{glossary("object")}}.

@@ -1,18 +1,12 @@
 ---
-title: Response.ok
+title: "Response: ok property"
+short-title: ok
 slug: Web/API/Response/ok
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - ok
 browser-compat: api.Response.ok
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`ok`** read-only property of the {{domxref("Response")}} interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
 
@@ -29,9 +23,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 > **Note:** at the top of the `fetch()` block we log the response `ok` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.ok); // returns true if the response returned successfully

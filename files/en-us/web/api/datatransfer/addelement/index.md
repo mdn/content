@@ -1,14 +1,11 @@
 ---
-title: DataTransfer.addElement()
+title: "DataTransfer: addElement() method"
+short-title: addElement()
 slug: Web/API/DataTransfer/addElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.DataTransfer.addElement
 ---
 
@@ -41,8 +38,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the `addElement()` method
 
 ```js
-function change_drag_node(event, node)
-{
+function change_drag_node(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }

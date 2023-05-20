@@ -1,15 +1,6 @@
 ---
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
-  - Web frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
@@ -146,7 +137,7 @@ def youngest(request):
 
 ### Rendering data
 
-Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of document.
+Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of documents.
 
 Web frameworks often provide a mechanism to make it easy to generate other formats from stored data, including {{glossary("JSON")}} and {{glossary("XML")}}.
 
@@ -156,24 +147,22 @@ For example, the Django template system allows you to specify variables using a 
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
-```html
+```django
 #best/templates/best/index.html
 
 <!DOCTYPE html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
-{% endif %}
-
-</body>
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
+          <li>\{\{ team.team_name \}\}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No teams are available.</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
@@ -293,7 +282,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ### ASP.NET
 
-[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
+[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create websites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
 
 One of the differentiators for ASP.NET is that it is built on the [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.
 
@@ -329,10 +318,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

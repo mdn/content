@@ -1,13 +1,6 @@
 ---
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - Canvas
-  - Device Orientation API
-  - Game Development
-  - HTML
-  - Phaser
-  - Vibration API
 ---
 
 {{GamesSidebar}}

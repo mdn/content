@@ -2,14 +2,6 @@
 title: Fetch basic concepts
 slug: Web/API/Fetch_API/Basic_concepts
 page-type: guide
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - XMLHttpRequest
-  - concepts
-  - guard
-  - request
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

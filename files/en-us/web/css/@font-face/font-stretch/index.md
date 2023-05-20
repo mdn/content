@@ -2,13 +2,6 @@
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - font-stretch
 browser-compat: css.at-rules.font-face.font-stretch
 ---
 

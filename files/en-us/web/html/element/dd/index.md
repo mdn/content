@@ -1,18 +1,7 @@
 ---
-title: '<dd>: The Description Details element'
+title: "<dd>: The Description Details element"
 slug: Web/HTML/Element/dd
 page-type: html-element
-tags:
-  - Definition
-  - Description Details
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-  - dd
-  - details
 browser-compat: html.elements.dd
 ---
 
@@ -26,7 +15,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}} {{Deprecated_Inline}}
+- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
   - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
 
 ## Examples
@@ -39,7 +28,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -48,7 +37,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

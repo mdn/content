@@ -2,88 +2,50 @@
 title: SVGAnimatedEnumeration
 slug: Web/API/SVGAnimatedEnumeration
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedEnumeration
 ---
 
 {{APIRef("SVG")}}
 
-## SVG animated enumeration interface
-
-The `SVGAnimatedEnumeration` interface is used for attributes whose value must be a constant from a particular enumeration and which can be animated.
-
-### Interface overview
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="row">Also implement</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Methods</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Properties</th>
-      <td>
-        <ul>
-          <li>unsigned short <code>baseVal</code></li>
-          <li>readonly unsigned short <code>animVal</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedEnumeration"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+The **`SVGAnimatedEnumeration`** interface describes attribute values which are constants from a particular enumeration and which can be animated.
 
 ## Instance properties
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>baseVal</code></td>
-      <td>unsigned short</td>
-      <td>
-        The base value of the given attribute before applying any animations.
-      </td>
-    </tr>
-    <tr>
-      <td><code>animVal</code></td>
-      <td>unsigned short</td>
-      <td>
-        If the given attribute or property is being animated, contains the
-        current animated value of the attribute or property. If the given
-        attribute or property is not currently being animated, contains the same
-        value as <code>baseVal</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
+  - : An integer that is the base value of the given attribute before applying any animations.
+- {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}
+  - : If the given attribute or property is being animated, it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as `baseVal`.
 
 ## Instance methods
 
 The `SVGAnimatedEnumeration` interface do not provide any specific methods.
+
+## Examples
+
+Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
+
+```html
+<svg viewBox="0 0 100 100" width="200" height="200">
+  <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
+    <circle cx="50" cy="50" r="35" />
+  </clipPath>
+
+  <!-- Some reference rect to materialized to clip path -->
+  <rect id="r1" x="0" y="0" width="45" height="45" />
+</svg>
+```
+
+This snippet gets the element, and logs the `baseVal` and `animVal`of the {{domxref("SVGClipPathElement.clipPathUnits")}} property. As no animation is happening, they have the same value.
+
+```js
+const clipPathElt = document.getElementById("clip1");
+console.log(clipPathElt.clipPathUnits.baseVal); // Logs 1 that correspond to userSpaceOnUse
+console.log(clipPathElt.clipPathUnits.animVal); // Logs 1 that correspond to userSpaceOnUse
+```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

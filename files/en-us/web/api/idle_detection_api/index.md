@@ -2,12 +2,8 @@
 title: Idle Detection API
 slug: Web/API/Idle_Detection_API
 page-type: web-api-overview
-tags:
-  - API
-  - IdleDetector
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector
 ---
 
@@ -34,15 +30,15 @@ requesting permission.
 const controller = new AbortController();
 const signal = controller.signal;
 
-startButton.addEventListener('click', async () => {
-  if (await IdleDetector.requestPermission() !== "granted") {
+startButton.addEventListener("click", async () => {
+  if ((await IdleDetector.requestPermission()) !== "granted") {
     console.error("Idle detection permission denied.");
     return;
   }
 
   try {
     const idleDetector = new IdleDetector();
-    idleDetector.addEventListener('change', () => {
+    idleDetector.addEventListener("change", () => {
       const userState = idleDetector.userState;
       const screenState = idleDetector.screenState;
       console.log(`Idle change: ${userState}, ${screenState}.`);
@@ -52,7 +48,7 @@ startButton.addEventListener('click', async () => {
       threshold: 60_000,
       signal,
     });
-    console.log('IdleDetector is active.');
+    console.log("IdleDetector is active.");
   } catch (err) {
     // Deal with initialization errors like permission denied,
     // running outside of top-level frame, etc.
@@ -60,9 +56,9 @@ startButton.addEventListener('click', async () => {
   }
 });
 
-stopButton.addEventListener('click', () => {
+stopButton.addEventListener("click", () => {
   controller.abort();
-  console.log('IdleDetector is stopped.');
+  console.log("IdleDetector is stopped.");
 });
 ```
 

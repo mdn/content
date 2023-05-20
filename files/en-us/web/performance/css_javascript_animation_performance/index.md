@@ -1,14 +1,6 @@
 ---
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
-tags:
-  - Animation
-  - Animations
-  - CSS
-  - FPS
-  - JavaScript
-  - Performance
-  - Transitions
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

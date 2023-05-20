@@ -1,11 +1,6 @@
 ---
 title: <xsl:choose>
 slug: Web/XSLT/Element/choose
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - choose
 ---
 
 {{ XsltRef() }}

@@ -2,16 +2,6 @@
 title: IDBVersionChangeEvent
 slug: Web/API/IDBVersionChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Database
-  - IDBVersionChangeEvent
-  - IndexedDB
-  - Interface
-  - JavaScript
-  - Reference
-  - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
 
@@ -53,11 +43,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
   const db = DBOpenRequest.result;

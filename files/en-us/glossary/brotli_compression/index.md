@@ -2,11 +2,6 @@
 title: Brotli
 slug: Glossary/Brotli_compression
 page-type: glossary-definition
-tags:
-  - Brotli
-  - Reference
-  - Web Performance
-  - compression
 ---
 
 **Brotli** is a general-purpose lossless compression algorithm.

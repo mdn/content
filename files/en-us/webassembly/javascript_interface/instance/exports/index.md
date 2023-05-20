@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-tags:
-  - API
-  - JavaScript
-  - Property
-  - Reference
-  - WebAssembly
-  - exports
-  - instance
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
 

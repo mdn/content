@@ -1,15 +1,7 @@
 ---
 title: browserSettings.openUrlbarResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - openUrlbarResultsInNewTabs
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.openUrlbarResultsInNewTabs
 ---
 

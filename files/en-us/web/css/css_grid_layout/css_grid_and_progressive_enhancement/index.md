@@ -2,11 +2,6 @@
 title: CSS Grid Layout and progressive enhancement
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Design
-  - Guide
 ---
 
 {{CSSRef}}
@@ -15,36 +10,11 @@ In Spring of 2017, we saw for the first time a major specification like Grid bei
 
 ## The supporting browsers
 
-Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera, Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
-
-## The Internet Explorer and Edge situation
-
-It should be remembered that the original implementation of CSS Grid Layout happened in Internet Explorer 10. This early specification did not contain all of the properties and values that the up-to-date specification has. There are also substantial differences between what shipped in IE10 and the current specification, even where the properties and values appear the same. This early implementation is also the version of Grid Layout implemented in Edge up to version 15.
-
-The IE/Edge (≤15) version of the specification is prefixed with an `-ms` prefix and the properties implemented in IE/Edge (≤15) are as follows:
-
-- {{cssxref("grid-template-columns")}} as `-ms-grid-columns`
-- {{cssxref("grid-template-rows")}} as `-ms-grid-rows`
-- {{cssxref("grid-row-start")}} as `-ms-grid-row`
-- {{cssxref("grid-column-start")}} as `-ms-grid-column`
-- {{cssxref("align-self")}} as `-ms-grid-row-align`
-- {{cssxref("justify-self")}} as `-ms-grid-column-align`
-
-The IE version has additional properties not required in the new specification of `-ms-grid-column-span` and `-ms-grid-row-span`. This version does not include auto-placement capability, or grid template areas. Some simple grid layouts could be implemented for IE10, through to Edge 15, using the `-ms` properties. As these properties are vendor prefixed, they will not effect any browser supporting the up to date and unprefixed specification.
-
-### Autoprefixer grid layout support
-
-If you are still supporting Internet Explorer, the popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
-
-```js
-autoprefixer({ grid: 'autoplace' })
-```
-
-Grid prefixes are disabled by default because some properties can't be prefixed.
+CSS Grid Layout is unprefixed in all modern browsers. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
 
 ## Is it safe to use CSS grids for my layout?
 
-Yes. As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using. If your site serves a market sector that is tied to older browsers, you may consider the above `-ms-` fallback for IE.
+Yes. As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using.
 
 ## Starting to use Grid in production
 
@@ -57,36 +27,38 @@ It is worth noting that you do not have to use grid in an _all or nothing_ way. 
 The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 .media {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    max-width: 400px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "img content";
-    margin-bottom: 1em;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
 .media::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 .media .text {
-    padding: 10px;
-    align-self: end;
+  padding: 10px;
+  align-self: end;
 }
 
 /* old code we can't remove */
 .media .image {
-    float: left;
-    width: 150px;
-    margin-right: 20px;
+  float: left;
+  width: 150px;
+  margin-right: 20px;
 }
 ```
 
@@ -416,6 +388,4 @@ You can also use multiple column layout as your legacy browser plan, as the `col
 ## Further reading
 
 - For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
-- A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering _autoprefixer_ support, take a look at: _[Should I try to use the IE implementation of CSS Grid Layout? (2016)](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
-- [Autoprefixer and Grid Autoplacement support in IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
 - [CSS Grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)

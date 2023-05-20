@@ -2,9 +2,6 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 browser-compat: path.to.feature.NameOfTheElement
 ---
 
@@ -24,14 +21,10 @@ browser-compat: path.to.feature.NameOfTheElement
 > title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
 > page-type: html-element
-> tags:
->   - NameOfTheElement
->   - HTML
->   - Element
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---
 > ```
@@ -46,16 +39,8 @@ browser-compat: path.to.feature.NameOfTheElement
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **page-type**
 >   - : Always `html-element`.
-> - **tags**
->
->   - : Always include the following tags: **HTML**, **Element**, **Reference**, the _NameOfTheElement_ (e.g. **video**).
->
->     Include the following tags as appropriate:
->
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->     - Any other tags that represent possible search terms for the element.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
->
+> - **status**
+>   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -74,7 +59,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   If it isn't, then you can remove the macro call.
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
@@ -97,9 +82,9 @@ Further information — at this point, include a few more paragraphs explaining 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("attribute1")}} {{Deprecated_inline}} {{experimental_inline}}
+- `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
-- {{htmlattrdef("attribute2")}}
+- `attribute2`
   - : etc.
 
 ## Events
@@ -160,7 +145,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -183,7 +168,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
       <td>
         What parent elements can the element be a child of? For example "Any
         element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >."
       </td>
@@ -215,6 +200,7 @@ Optionally, warn of any potential accessibility concerns that exist with using t
 
 ## See also
 
-- Include list of
-- other links related to
-- this Element that might be useful
+Include links to reference pages and guides related to the current element. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

@@ -1,11 +1,7 @@
 ---
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -143,8 +139,8 @@ True if and only if there is no domain name in the hostname (no dots).
 #### Examples
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`
@@ -393,7 +389,7 @@ Only the first parameter is mandatory. Either the second, the third, or both may
 
 If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
+If both **wd1** and **wd2** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
 > **Warning:** _The order of the days matters_.
 > Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
@@ -712,4 +708,4 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).

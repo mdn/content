@@ -1,16 +1,10 @@
 ---
-title: XRFrame.createAnchor()
+title: "XRFrame: createAnchor() method"
+short-title: createAnchor()
 slug: Web/API/XRFrame/createAnchor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.createAnchor
 ---
 
@@ -42,13 +36,14 @@ A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.
 ### Creating an anchor
 
 ```js
-frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
-
-  // Do stuff with the anchor (assign objects that will be relative to this anchor)
-
-}, (error) => {
-  console.error(`Could not create anchor: ${error}`);
-});
+frame.createAnchor(anchorPose, referenceSpace).then(
+  (anchor) => {
+    // Do stuff with the anchor (assign objects that will be relative to this anchor)
+  },
+  (error) => {
+    console.error(`Could not create anchor: ${error}`);
+  }
+);
 ```
 
 ## Specifications

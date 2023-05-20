@@ -1,19 +1,8 @@
 ---
-title: Document.exitFullscreen()
+title: "Document: exitFullscreen() method"
+short-title: exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Full
-  - Fullscreen
-  - Fullscreen API
-  - Method
-  - Reference
-  - exitFullscreen
-  - fullscreen
-  - screen
 browser-compat: api.Document.exitFullscreen
 ---
 
@@ -49,13 +38,14 @@ presentation whenever the mouse button is clicked within it.
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
 > **Note:** For a more complete example, see the
@@ -76,5 +66,5 @@ document.onclick = (event) => {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute

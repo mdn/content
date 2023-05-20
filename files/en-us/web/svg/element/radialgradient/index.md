@@ -2,10 +2,6 @@
 title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Gradient
 browser-compat: svg.elements.radialGradient
 ---
 

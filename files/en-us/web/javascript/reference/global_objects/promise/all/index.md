@@ -2,11 +2,6 @@
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
 browser-compat: javascript.builtins.Promise.all
 ---
 
@@ -197,7 +192,7 @@ async function getPrice() {
 }
 ```
 
-However, note that the execution of `promptForChoice` and `fetchPrices` don't depend on the result of each other. While the user is choosing their dish, it's fine for the prices to be fetched in the background, but in the code above, the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator causes the async function to pause until the choice is made, and then again until the prices are fetched. We can use `Promise.all` to run them concurrently, so that the user doesn't have to wait for the prices to be fetched before the result is given:
+However, note that the execution of `promptForDishChoice` and `fetchPrices` don't depend on the result of each other. While the user is choosing their dish, it's fine for the prices to be fetched in the background, but in the code above, the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator causes the async function to pause until the choice is made, and then again until the prices are fetched. We can use `Promise.all` to run them concurrently, so that the user doesn't have to wait for the prices to be fetched before the result is given:
 
 ```js example-good
 async function getPrice() {
@@ -273,7 +268,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
   (values) => {
     console.log(values[0]); // "p1_delayed_resolution"
     console.error(values[1]); // "Error: p2_immediate_rejection"
-  }
+  },
 );
 ```
 

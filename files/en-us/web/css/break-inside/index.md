@@ -2,14 +2,6 @@
 title: break-inside
 slug: Web/CSS/break-inside
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.break-inside
 ---
 
@@ -100,7 +92,7 @@ By default, it is possible for you to get a break between the image and its capt
 
   <figure>
     <img
-      src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
+      src="https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
     <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
   </figure>
 

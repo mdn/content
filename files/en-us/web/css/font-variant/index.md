@@ -2,12 +2,6 @@
 title: font-variant
 slug: Web/CSS/font-variant
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.font-variant
 ---
 

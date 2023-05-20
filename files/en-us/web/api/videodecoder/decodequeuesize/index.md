@@ -1,18 +1,12 @@
 ---
-title: VideoDecoder.decodeQueueSize
+title: "VideoDecoder: decodeQueueSize property"
+short-title: decodeQueueSize
 slug: Web/API/VideoDecoder/decodeQueueSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - decodeQueueSize
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.decodeQueueSize
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`decodeQueueSize`** read-only property of the {{domxref("VideoDecoder")}} interface returns the number of pending decode requests in the queue.
 

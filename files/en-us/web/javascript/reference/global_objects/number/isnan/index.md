@@ -2,13 +2,6 @@
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - isNaN
-  - Polyfill
 browser-compat: javascript.builtins.Number.isNaN
 ---
 

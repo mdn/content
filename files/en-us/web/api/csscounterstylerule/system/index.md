@@ -1,13 +1,8 @@
 ---
-title: CSSCounterStyleRule.system
+title: "CSSCounterStyleRule: system property"
+short-title: system
 slug: Web/API/CSSCounterStyleRule/system
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - system
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.system
 ---
 

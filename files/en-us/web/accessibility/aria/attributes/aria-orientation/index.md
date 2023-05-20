@@ -1,13 +1,7 @@
 ---
 title: aria-orientation
 slug: Web/Accessibility/ARIA/Attributes/aria-orientation
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-orientation
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
 

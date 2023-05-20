@@ -2,15 +2,12 @@
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
 page-type: web-api-interface
-tags:
-  - NDEF
-  - Reference
-  - Experimental
-  - Web NFC
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFReadingEvent`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 

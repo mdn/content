@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.miterLimit
+title: "CanvasRenderingContext2D: miterLimit property"
+short-title: miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.miterLimit
 ---
 
@@ -39,7 +34,8 @@ ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();
+</textarea>
 ```
 
 ```js hidden

@@ -1,15 +1,10 @@
 ---
-title: Document.fgColor
+title: "Document: fgColor property"
+short-title: fgColor
 slug: Web/API/Document/fgColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.fgColor
 ---
 

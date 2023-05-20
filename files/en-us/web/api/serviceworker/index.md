@@ -2,14 +2,6 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
 browser-compat: api.ServiceWorker
 ---
 
@@ -20,6 +12,9 @@ The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/AP
 A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
+
+Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
 
 {{InheritanceDiagram}}
 
@@ -36,10 +31,17 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
+- {{domxref("ServiceWorker.postMessage()")}}
+  - : Sends a message — consisting of any [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) JavaScript object — to the service worker. The message is transmitted to the service worker using a {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
+
 ## Events
 
-- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{ReadOnlyInline}}
-  - : Fires anytime the {{domxref("ServiceWorker.state")}} changes.
+- {{domxref("ServiceWorker.statechange_event", "statechange")}}
+
+  - : Fired when {{domxref("ServiceWorker.state")}} changes.
+
+- {{domxref("ServiceWorker.error_event", "error")}}
+  - : Fired when an error happens inside the `ServiceWorker` object.
 
 ## Examples
 

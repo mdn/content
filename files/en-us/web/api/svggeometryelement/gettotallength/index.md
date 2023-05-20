@@ -1,15 +1,8 @@
 ---
-title: SVGGeometryElement.getTotalLength()
+title: "SVGGeometryElement: getTotalLength() method"
+short-title: getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGeometryElement.getTotalLength
 ---
 

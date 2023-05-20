@@ -2,15 +2,6 @@
 title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Indent
-  - Layout
-  - Reference
-  - recipe:css-property
-  - text-indent
 browser-compat: css.properties.text-indent
 ---
 

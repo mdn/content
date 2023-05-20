@@ -1,18 +1,8 @@
 ---
-title: HTMLImageElement.height
+title: "HTMLImageElement: height property"
+short-title: height
 slug: Web/API/HTMLImageElement/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - dimensions
-  - height
-  - size
 browser-compat: api.HTMLImageElement.height
 ---
 
@@ -38,8 +28,8 @@ defined depends on whether the image is being rendered to a visual medium or not
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
-{{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
-wide. Further, the {{htmlattrxref("sizes", "img")}} attribute is provided to specify the
+[`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. One is 200px wide and the other is 400px
+wide. Further, the [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is provided to specify the
 width at which the image should be drawn given the viewport's width.
 
 ### HTML
@@ -68,7 +58,9 @@ image given the width at which it's currently drawn.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = (event) => { output.innerText = clockImage.height; };
+const updateHeight = (event) => {
+  output.innerText = clockImage.height;
+};
 
 window.addEventListener("load", updateHeight);
 window.addEventListener("resize", updateHeight);

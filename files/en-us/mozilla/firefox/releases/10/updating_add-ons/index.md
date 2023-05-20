@@ -1,12 +1,6 @@
 ---
 title: Updating add-ons for Firefox 10
 slug: Mozilla/Firefox/Releases/10/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Firefox 10
-  - Gecko 10
 ---
 
 {{FirefoxSidebar}}

@@ -1,14 +1,8 @@
 ---
-title: atob()
+title: atob() global function
+short-title: atob()
 slug: Web/API/atob
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - atob
 browser-compat: api.atob
 ---
 

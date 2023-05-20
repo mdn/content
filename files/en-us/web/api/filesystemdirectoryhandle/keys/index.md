@@ -1,14 +1,8 @@
 ---
-title: FileSystemDirectoryHandle.keys()
+title: "FileSystemDirectoryHandle: keys() method"
+short-title: keys()
 slug: Web/API/FileSystemDirectoryHandle/keys
 page-type: web-api-instance-method
-tags:
-  - Directories
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Files
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
 

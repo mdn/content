@@ -1,19 +1,12 @@
 ---
-title: WebTransport.ready
+title: "WebTransport: ready property"
+short-title: ready
 slug: Web/API/WebTransport/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - ready
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.ready
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`ready`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is ready to use.
 
@@ -26,7 +19,7 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -41,11 +34,11 @@ async function initTransport(url) {
 // ...
 
 async function closeTransport(transport) {
-    // Respond to connection closing
+  // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
+  } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }

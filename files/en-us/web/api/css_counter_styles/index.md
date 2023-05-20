@@ -2,10 +2,6 @@
 title: CSS Counter Styles
 slug: Web/API/CSS_Counter_Styles
 page-type: web-api-overview
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Overview
 browser-compat: api.CSSCounterStyleRule
 ---
 

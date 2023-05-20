@@ -2,10 +2,6 @@
 title: spacing
 slug: Web/SVG/Attribute/spacing
 page-type: svg-attribute
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.textPath.spacing
 ---
 

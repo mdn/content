@@ -2,12 +2,6 @@
 title: opacity
 slug: Web/CSS/opacity
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Opacity
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.opacity
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Strict-Transport-Security
 ---
 
@@ -64,7 +59,7 @@ The HTTP Strict Transport Security header informs the browser that it should nev
 You log into a free Wi-Fi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
 Unfortunately, the access point you're using is actually a hacker's laptop, and they're intercepting your original HTTP request and redirecting you to a clone of your bank's site instead of the real thing. Now your private data is exposed to the hacker.
 
-Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's web site uses Strict Transport Security, your
+Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's website uses Strict Transport Security, your
 browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.
 
 ### How the browser handles it
@@ -95,7 +90,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-If a `max-age` of 1 year is acceptable for a domain, however, two years is the recommended value as explained on <https://hstspreload.org>.
+Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on <https://hstspreload.org>.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 

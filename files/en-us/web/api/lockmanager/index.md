@@ -2,13 +2,6 @@
 title: LockManager
 slug: Web/API/LockManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - LockManager
-  - Reference
-  - Web Locks API
-  - lock
 browser-compat: api.LockManager
 ---
 

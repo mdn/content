@@ -1,15 +1,6 @@
 ---
 title: Web forms — Working with user data
 slug: Learn/Forms
-tags:
-  - Beginner
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - Landing
-  - Learn
-  - Web
 ---
 
 {{LearnSidebar}}

@@ -1,14 +1,10 @@
 ---
-title: Ink.requestPresenter()
+title: "Ink: requestPresenter() method"
+short-title: requestPresenter()
 slug: Web/API/Ink/requestPresenter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Method
+status:
+  - experimental
 browser-compat: api.Ink.requestPresenter
 ---
 
@@ -43,10 +39,9 @@ A {{jsxref("Promise")}} that resolves to an {{domxref("InkPresenter")}} object i
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
 
   //...
-
 }
 ```
 

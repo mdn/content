@@ -2,12 +2,6 @@
 title: padding
 slug: Web/CSS/padding
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.padding
 ---
 
@@ -107,21 +101,21 @@ h3 {
 ### Setting padding with pixels and percentages
 
 ```css
-padding: 5%;                /* All sides: 5% padding */
+padding: 5%; /* All sides: 5% padding */
 
-padding: 10px;              /* All sides: 10px padding */
+padding: 10px; /* All sides: 10px padding */
 
-padding: 10px 20px;         /* top and bottom: 10px padding */
-                            /* left and right: 20px padding */
+padding: 10px 20px; /* top and bottom: 10px padding */
+/* left and right: 20px padding */
 
-padding: 10px 3% 20px;      /* top:            10px padding */
-                            /* left and right: 3% padding   */
-                            /* bottom:         20px padding */
+padding: 10px 3% 20px; /* top:            10px padding */
+/* left and right: 3% padding   */
+/* bottom:         20px padding */
 
-padding: 1em 3px 30px 5px;  /* top:    1em padding  */
-                            /* right:  3px padding  */
-                            /* bottom: 30px padding */
-                            /* left:   5px padding  */
+padding: 1em 3px 30px 5px; /* top:    1em padding  */
+/* right:  3px padding  */
+/* bottom: 30px padding */
+/* left:   5px padding  */
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: font-synthesis
 slug: Web/CSS/font-synthesis
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-synthesis
 ---
 

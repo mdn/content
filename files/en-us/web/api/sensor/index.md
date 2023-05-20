@@ -2,14 +2,6 @@
 title: Sensor
 slug: Web/API/Sensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.Sensor
 ---
 

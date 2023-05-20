@@ -2,17 +2,10 @@
 title: inherits
 slug: Web/CSS/@property/inherits
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
 browser-compat: css.at-rules.property.inherits
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and controls whether the custom property registration specified by `@property` inherits by default.
 

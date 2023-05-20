@@ -2,11 +2,6 @@
 title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -59,10 +54,10 @@ const foo = "Tom's bar";
 const foo = 'Tom\'s bar';
 ```
 
-### Declaring properties with var
+### Declaring properties with keyword
 
 You **cannot** declare properties of an object or array with a
-`var` declaration.
+`let`, `const`, or `var` declaration.
 
 ```js example-bad
 const obj = {};
@@ -72,7 +67,7 @@ const array = [];
 const array[0] = "there"; // SyntaxError missing ; before statement
 ```
 
-Instead, omit the `var` keyword:
+Instead, omit the keyword:
 
 ```js example-good
 const obj = {};

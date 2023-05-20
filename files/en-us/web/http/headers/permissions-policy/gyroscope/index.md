@@ -1,12 +1,9 @@
 ---
 title: "Permissions-Policy: gyroscope"
 slug: Web/HTTP/Headers/Permissions-Policy/gyroscope
-tags:
-  - Permissions Policy
-  - gyroscope
-  - HTTP
-  - header
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.gyroscope
 ---
 

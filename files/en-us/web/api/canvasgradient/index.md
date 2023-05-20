@@ -2,13 +2,6 @@
 title: CanvasGradient
 slug: Web/API/CanvasGradient
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Gradients
-  - Interface
-  - Reference
 browser-compat: api.CanvasGradient
 ---
 

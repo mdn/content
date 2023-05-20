@@ -1,19 +1,12 @@
 ---
-title: WebTransport.closed
+title: "WebTransport: closed property"
+short-title: closed
 slug: Web/API/WebTransport/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - closed
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.closed
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`closed`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is closed.
 
@@ -31,7 +24,7 @@ A {{jsxref("Promise")}} that resolves to an object containing the following prop
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -46,11 +39,11 @@ async function initTransport(url) {
 // ...
 
 async function closeTransport(transport) {
-    // Respond to connection closing
+  // Respond to connection closing
   try {
     await transport.closed;
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
-  } catch(error) {
+  } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
   }
 }

@@ -2,13 +2,8 @@
 title: NetworkInformation
 slug: Web/API/NetworkInformation
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Network Information API
-  - NetworkInformation
-  - Reference
+status:
+  - experimental
 browser-compat: api.NetworkInformation
 ---
 

@@ -2,13 +2,8 @@
 title: CanMakePaymentEvent
 slug: Web/API/CanMakePaymentEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Landing
-  - CanMakePaymentEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanMakePaymentEvent
 ---
 
@@ -31,12 +26,18 @@ The **`CanMakePaymentEvent`** interface of the {{domxref("Payment Handler API", 
 ## Examples
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  );
 });
 ```
 

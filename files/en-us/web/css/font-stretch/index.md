@@ -2,12 +2,6 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-stretch
 ---
 
@@ -89,13 +83,15 @@ The table below demonstrates the effect of supplying various different percentag
 ```css hidden
 @font-face {
   font-family: "Inconsolata";
-  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+    format("woff2");
   font-stretch: 50% 200%;
 }
 
 @font-face {
   font-family: "Anek Malayalam";
-  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+    format("woff2");
   font-stretch: 75% 125%;
 }
 
@@ -108,33 +104,42 @@ td {
   font: 90px Inconsolata, sans-serif;
 }
 #anek-malayalam td {
-  font: 90px 'Anek Malayalam';
+  font: 90px "Anek Malayalam";
 }
-#inconsolata td:nth-child(2), #anek-malayalam td:nth-child(2) {
+#inconsolata td:nth-child(2),
+#anek-malayalam td:nth-child(2) {
   font-stretch: 50%;
 }
-#inconsolata td:nth-child(3), #anek-malayalam td:nth-child(3) {
+#inconsolata td:nth-child(3),
+#anek-malayalam td:nth-child(3) {
   font-stretch: 62.5%;
 }
-#inconsolata td:nth-child(4), #anek-malayalam td:nth-child(4) {
+#inconsolata td:nth-child(4),
+#anek-malayalam td:nth-child(4) {
   font-stretch: 75%;
 }
-#inconsolata td:nth-child(5), #anek-malayalam td:nth-child(5) {
+#inconsolata td:nth-child(5),
+#anek-malayalam td:nth-child(5) {
   font-stretch: 87.5%;
 }
-#inconsolata td:nth-child(6), #anek-malayalam td:nth-child(6) {
+#inconsolata td:nth-child(6),
+#anek-malayalam td:nth-child(6) {
   font-stretch: 100%;
 }
-#inconsolata td:nth-child(7), #anek-malayalam td:nth-child(7) {
+#inconsolata td:nth-child(7),
+#anek-malayalam td:nth-child(7) {
   font-stretch: 112.5%;
 }
-#inconsolata td:nth-child(8), #anek-malayalam td:nth-child(8) {
+#inconsolata td:nth-child(8),
+#anek-malayalam td:nth-child(8) {
   font-stretch: 125%;
 }
-#inconsolata td:nth-child(9), #anek-malayalam td:nth-child(9) {
+#inconsolata td:nth-child(9),
+#anek-malayalam td:nth-child(9) {
   font-stretch: 150%;
 }
-#inconsolata td:nth-child(10), #anek-malayalam td:nth-child(10) {
+#inconsolata td:nth-child(10),
+#anek-malayalam td:nth-child(10) {
   font-stretch: 200%;
 }
 ```

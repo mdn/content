@@ -1,17 +1,11 @@
 ---
 title: The building blocks of responsive design
 slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
-tags:
-  - Apps
-  - CSS
-  - HTML
-  - Mobile
-  - Responsive Design
 ---
 
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
 
-For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
+For Web developers, it is now fairly common to be called upon to create a website or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
 
 It is usually much better to create a single version of your code which doesn't care about what browser or platform is accessing the site, but instead uses feature tests to find out what code features the browser supports or what the values of certain browser features are, and then adjusts the code appropriately.
 
@@ -439,7 +433,7 @@ This all sounds good. But those solutions are definitely not ready for productio
 
 For some image requirements (not photographs, but icons and user interface elements are a good fit), a good solution is to use vector graphics. Because vector images are calculated based on mathematical algorithms rather than containing separate data on every pixel in the image, they tend to be smaller in file size, and are infinitely scalable when zoomed or viewed on high resolution devices (at least, in theory). Some ideas follow, which also help to keep the number of HTTP requests down — another key factor in mobile app performance:
 
-- You should try to use [CSS](/en-US/docs/Web/CSS/) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
+- You should try to use [CSS](/en-US/docs/Web/CSS\) features to programmatically generate graphical effects where possible, rather than relying on image files. These include rounded corners, gradients, and drop shadows. These scale as the resolution changes or the browser zooms.
 - You could also try using [SVG](/en-US/docs/Web/SVG) to create interface elements. SVG produces vector graphics and is supported well across modern browsers, with polyfills available for older browser support.
 - Using [Web fonts](/en-US/docs/Web/CSS/@font-face) for displaying icons is an effective technique for keeping file size and HTTP requests down, and this is supported well across modern and older browsers.
 

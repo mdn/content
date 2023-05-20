@@ -1,16 +1,8 @@
 ---
-title: IDBObjectStore.getAll()
+title: "IDBObjectStore: getAll() method"
+short-title: getAll()
 slug: Web/API/IDBObjectStore/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
 

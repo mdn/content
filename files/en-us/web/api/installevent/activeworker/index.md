@@ -1,17 +1,11 @@
 ---
-title: InstallEvent.activeWorker
+title: "InstallEvent: activeWorker property"
+short-title: activeWorker
 slug: Web/API/InstallEvent/activeWorker
 page-type: web-api-instance-property
-tags:
-  - API
-  - InstallEvent
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - activeWorker
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent.activeWorker
 ---
 
@@ -28,7 +22,7 @@ A {{domxref("ServiceWorker")}} object.
 ## Examples
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const myActiveWorker = event.activeWorker;
 });
 ```

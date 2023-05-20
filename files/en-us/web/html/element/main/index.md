@@ -2,12 +2,6 @@
 title: <main>
 slug: Web/HTML/Element/main
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - main
 browser-compat: html.elements.main
 ---
 
@@ -17,18 +11,18 @@ The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant co
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-A document mustn't have more than one `<main>` element that doesn't have the {{htmlattrxref("hidden")}} attribute specified.
+A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute specified.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -36,7 +30,7 @@ A document mustn't have more than one `<main>` element that doesn't have the {{h
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -49,7 +43,7 @@ A document mustn't have more than one `<main>` element that doesn't have the {{h
       <th scope="row">Permitted parents</th>
       <td>
         Where
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
         is expected, but only if it is a
@@ -88,9 +82,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The content of a `<main>` element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page.
 
-`<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
+`<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("Heading_Elements", "h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
-## Example
+## Examples
 
 ```html
 <!-- other content -->
@@ -119,6 +113,10 @@ The content of a `<main>` element should be unique to the document. Content that
 <!-- other content -->
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Accessibility concerns
 
 ### Landmark
@@ -129,7 +127,7 @@ The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibil
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
 
-Adding an {{htmlattrxref("id")}} attribute to the `<main>` element lets it be a target of a skip navigation link.
+Adding an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the `<main>` element lets it be a target of a skip navigation link.
 
 ```html
 <body>

@@ -2,22 +2,16 @@
 title: GestureEvent
 slug: Web/API/GestureEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.GestureEvent
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_header}}
 
-{{Non-standard_Header}}
-
 The **`GestureEvent`** is a proprietary interface specific to WebKit which gives information regarding multi-touch gestures. Events using this interface include {{domxref("Element/gesturestart_event", "gesturestart")}}, {{domxref("Element/gesturechange_event", "gesturechange")}}, and {{domxref("Element/gestureend_event", "gestureend")}}.
 
-`GestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
+{{InheritanceDiagram}}
 
 ## Instance properties
 
@@ -48,13 +42,3 @@ _Not part of any specification._ Apple has [a description at the Safari Develope
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("MSGestureEvent")}}
-- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
-- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
-- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
-- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
-- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
-- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}

@@ -1,20 +1,8 @@
 ---
-title: 'Element: mouseup event'
+title: "Element: mouseup event"
+short-title: mouseup
 slug: Web/API/Element/mouseup_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - Release
-  - UI
-  - Up
-  - button
-  - mouse
-  - mouseup
 browser-compat: api.Element.mouseup_event
 ---
 
@@ -29,9 +17,9 @@ The **`mouseup`** event is fired at an {{domxref("Element")}} when a button on a
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mouseup', (event) => {});
+addEventListener("mouseup", (event) => {});
 
-onmouseup = (event) => { };
+onmouseup = (event) => {};
 ```
 
 ## Event type

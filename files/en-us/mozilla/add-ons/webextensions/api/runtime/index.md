@@ -1,14 +1,7 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
-  - runtime
+page-type: webextension-api
 browser-compat: webextensions.api.runtime
 ---
 

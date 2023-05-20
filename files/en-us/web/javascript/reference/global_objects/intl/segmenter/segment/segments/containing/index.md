@@ -1,20 +1,13 @@
 ---
 title: Segments.prototype.containing()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
 
 {{JSRef}}
 
-The **`containing()`** method of a `Segments` object returns an object describing the segment in the string that includes the code unit at the specified index.
+The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
 
@@ -49,7 +42,7 @@ An object describing the segment of the original string with the following prope
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
 const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 
 let current = segments.containing();

@@ -2,9 +2,6 @@
 title: The page-type front matter key
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -25,8 +22,6 @@ browser-compat: api.Geolocation.getCurrentPosition
 
 Each main area of the site — JavaScript, CSS, and so on — has a set of domain-specific `page-type` values, and there is also a set of generic values that can appear in any area of the site.
 
-This project is a work in progress: so far we have only defined `page-type` values for [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web API](/en-US/docs/Web/API).
-
 ## Generic page types
 
 These page types are not specific to a particular MDN technology area:
@@ -37,6 +32,13 @@ These page types are not specific to a particular MDN technology area:
 ## Domain-specific page types
 
 This section lists page types that are specific to a single area of MDN.
+
+### Accessibility page types
+
+This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role).
+- `aria-attribute`: an ARIA [attribute](eb/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
 
 ### CSS page types
 
@@ -71,6 +73,17 @@ This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web
 - `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
 - `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
 
+### HTTP page types
+
+This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+- `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed).
+- `http-permissions-policy-directive`: a [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) directive, like [`accelerometer`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer).
+- `http-header`: an [HTTP header](/en-US/docs/Web/HTTP/Headers), like [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer).
+- `http-method`: an [HTTP request method](/en-US/docs/Web/HTTP/Methods) like [`GET`](/en-US/docs/Web/HTTP/Methods/GET).
+- `http-status-code`: an [HTTP response status code](/en-US/docs/Web/HTTP/Status), like [`404`](/en-US/docs/Web/HTTP/Status/404).
+
 ### JavaScript page types
 
 This section lists `page-type` values for pages under [Web/JavaScript](/en-US/docs/Web/JavaScript). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
@@ -90,6 +103,13 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 - `javascript-static-accessor-property`: a static accessor property, like [`RegExp.lastMatch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch).
 - `javascript-static-data-property`: a static data property, like [`Math.E`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E).
 - `javascript-static-method`: a static method, like [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+### MathML page types
+
+This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Global_attributes/mathcolor).
+- `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Element/msqrt).
 
 ### SVG page types
 
@@ -114,3 +134,14 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
+
+### WebExtensions page types
+
+This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `webextension-api`: a WebExtension API, like [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms).
+- `webextension-api-event`: a WebExtension API event, like [`action.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/onClicked).
+- `webextension-api-function`: a WebExtension function, like [`action.setBadgeText()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action/setBadgeText).
+- `webextension-api-property`: a WebExtension property, like [`browserSettings.openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs).
+- `webextension-api-type`: a WebExtension type, like [`contextualIdentities.ContextualIdentity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity).
+- `webextension-manifest-key`: a WebExtension manifest key, like [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).

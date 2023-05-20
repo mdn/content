@@ -2,17 +2,6 @@
 title: Using DTMF with WebRTC
 slug: Web/API/WebRTC_API/Using_DTMF
 page-type: guide
-tags:
-  - API
-  - DTMF
-  - Example
-  - Guide
-  - Media
-  - RTCDTMFSender
-  - RTCPeerConnection
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

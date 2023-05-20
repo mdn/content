@@ -2,8 +2,6 @@
 title: ARIA
 slug: Glossary/ARIA
 page-type: glossary-definition
-tags:
-  - Accessibility
 ---
 
 **ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) is a {{Glossary("W3C")}} specification for adding semantics and other metadata to {{Glossary("HTML")}} to cater to users of assistive technology.

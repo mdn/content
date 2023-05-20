@@ -2,18 +2,8 @@
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
 page-type: web-api-interface
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Performance
-  - PerformanceNavigation
-  - Reference
-  - Timing
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceNavigation
 ---
 

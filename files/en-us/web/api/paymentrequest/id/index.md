@@ -1,15 +1,8 @@
 ---
-title: PaymentRequest.id
+title: "PaymentRequest: id property"
+short-title: id
 slug: Web/API/PaymentRequest/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - id
 browser-compat: api.PaymentRequest.id
 ---
 
@@ -48,7 +41,7 @@ console.log(response.requestId === request.id);
 
 // And in serialized form too
 const json = response.toJSON();
-console.log(json.requestId,response.requestId, request.id);
+console.log(json.requestId, response.requestId, request.id);
 ```
 
 ## Value

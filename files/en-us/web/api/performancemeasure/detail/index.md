@@ -1,12 +1,8 @@
 ---
-title: PerformanceMeasure.detail
+title: "PerformanceMeasure: detail property"
+short-title: detail
 slug: Web/API/PerformanceMeasure/detail
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMeasure.detail
 ---
 

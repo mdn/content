@@ -2,12 +2,6 @@
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
-tags:
-  - Array
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
 
@@ -31,7 +25,7 @@ toLocaleString(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object with configuration properties. For numbers, see {{jsxref("Number.prototype.toLocaleString()")}}; for dates, see {{jsxref("Date.prototype.toLocaleString()")}}.
 
@@ -105,8 +99,12 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
 - {{jsxref("Intl")}}
+- {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}

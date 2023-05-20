@@ -1,13 +1,7 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
-  - Web
+page-type: http-header
 browser-compat: http.headers.Connection
 ---
 
@@ -25,13 +19,12 @@ subsequent requests to the same server to be done.
 > Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
 > spec requirements and does not load any response that contains them.
 
-Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
+All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression) used by the message - including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
 {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
 {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
-{{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any
-hop-by-hop headers used by the message must be listed in the `Connection`
+{{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) - must be listed in the `Connection`
 header, so that the first proxy knows it has to consume them and not forward them
-further. Standard hop-by-hop headers are also required to be listed.
+further.
 
 <table class="properties">
   <tbody>

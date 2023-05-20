@@ -1,15 +1,7 @@
 ---
 title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - close
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.openPopup
 ---
 

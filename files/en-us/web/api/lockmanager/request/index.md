@@ -1,14 +1,8 @@
 ---
-title: LockManager.request()
+title: "LockManager: request() method"
+short-title: request()
 slug: Web/API/LockManager/request
 page-type: web-api-instance-method
-tags:
-  - API
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - request()
 browser-compat: api.LockManager.request
 ---
 
@@ -101,7 +95,7 @@ The following example shows the basic use of the `request()` method with an asyn
 Once the callback is invoked, no other running code on this origin can hold `my_resource` until the callback returns.
 
 ```js
-await navigator.locks.request('my_resource', async (lock) => {
+await navigator.locks.request("my_resource", async (lock) => {
   // The lock was granted.
 });
 ```
@@ -115,9 +109,13 @@ The `do_read()` requests a lock in `'shared'` mode meaning that multiple calls m
 
 ```js
 async function do_read() {
-  await navigator.locks.request('my_resource', {mode: 'shared'}, async (lock) => {
-    // Read code here.
-  });
+  await navigator.locks.request(
+    "my_resource",
+    { mode: "shared" },
+    async (lock) => {
+      // Read code here.
+    }
+  );
 }
 ```
 
@@ -126,9 +124,13 @@ This applies across event handlers, tabs, or workers.
 
 ```js
 async function do_write() {
-  await navigator.locks.request('my_resource', {mode: 'exclusive'}, async (lock) => {
-    // Write code here.
-  });
+  await navigator.locks.request(
+    "my_resource",
+    { mode: "exclusive" },
+    async (lock) => {
+      // Write code here.
+    }
+  );
 }
 ```
 
@@ -139,15 +141,19 @@ In this function `await` means the method will not return until the callback is 
 Since the lock is only granted if it was available, this call avoids needing to wait on the lock being released elsewhere.
 
 ```js
-await navigator.locks.request('my_resource', {ifAvailable: true}, async (lock) => {
-  if (!lock) {
-    // The lock was not granted - get out fast.
-    return;
-  }
+await navigator.locks.request(
+  "my_resource",
+  { ifAvailable: true },
+  async (lock) => {
+    if (!lock) {
+      // The lock was not granted - get out fast.
+      return;
+    }
 
-  // The lock was granted, and no other running code in this origin is holding
-  // the 'my_res_lock' lock until this returns.
-});
+    // The lock was granted, and no other running code in this origin is holding
+    // the 'my_res_lock' lock until this returns.
+  }
+);
 ```
 
 ### signal Example
@@ -160,11 +166,15 @@ const controller = new AbortController();
 setTimeout(() => controller.abort(), 200);
 
 try {
-  await navigator.locks.request('my_resource', {signal: controller.signal}, async (lock) => {
-    // The lock was acquired!
-  });
+  await navigator.locks.request(
+    "my_resource",
+    { signal: controller.signal },
+    async (lock) => {
+      // The lock was acquired!
+    }
+  );
 } catch (ex) {
-  if (ex.name === 'AbortError') {
+  if (ex.name === "AbortError") {
     // The request aborted before it could be granted.
   }
 }

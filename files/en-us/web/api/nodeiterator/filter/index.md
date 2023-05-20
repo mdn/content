@@ -1,19 +1,15 @@
 ---
-title: NodeIterator.filter
+title: "NodeIterator: filter property"
+short-title: filter
 slug: Web/API/NodeIterator/filter
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.filter
 ---
 
 {{APIRef("DOM")}}
 
-The **`NodeIterator.filter`** read-only method returns a
-{{domxref("NodeFilter")}} object, that is an object implement an
+The **`NodeIterator.filter`** read-only property returns a
+{{domxref("NodeFilter")}} object, that is an object which implements an
 `acceptNode(node)` method, used to screen nodes.
 
 When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the
@@ -31,9 +27,13 @@ A {{domxref("NodeFilter")}} object.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 nodeFilter = nodeIterator.filter;
 ```

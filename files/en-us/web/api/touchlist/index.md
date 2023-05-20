@@ -2,15 +2,6 @@
 title: TouchList
 slug: Web/API/TouchList
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Reference
-  - Touch Event
-  - TouchList
-  - touch
 browser-compat: api.TouchList
 ---
 

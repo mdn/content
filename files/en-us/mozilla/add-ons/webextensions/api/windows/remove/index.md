@@ -1,17 +1,7 @@
 ---
 title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - close
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.remove
 ---
 

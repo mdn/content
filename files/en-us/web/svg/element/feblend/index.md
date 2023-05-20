@@ -2,10 +2,6 @@
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 browser-compat: svg.elements.feBlend
 ---
 

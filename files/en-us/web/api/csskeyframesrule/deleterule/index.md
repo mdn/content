@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframesRule.deleteRule()
+title: "CSSKeyframesRule: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.deleteRule
 ---
 
@@ -59,7 +53,7 @@ After deleting a rule with `deleteRule()` the `cssRules` property returns a {{do
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.deleteRule('to');
+keyframes.deleteRule("to");
 console.log(keyframes.cssRules); // a CSSRuleList object with one rule
 ```
 

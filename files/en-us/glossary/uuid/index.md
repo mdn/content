@@ -2,8 +2,6 @@
 title: UUID
 slug: Glossary/UUID
 page-type: glossary-definition
-tags:
-  - Infrastructure
 ---
 
 A **Universally Unique Identifier** (**UUID**) is a label used to uniquely identify a resource among all other resources of that type.

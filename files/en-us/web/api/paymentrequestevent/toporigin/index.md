@@ -1,16 +1,10 @@
 ---
-title: PaymentRequestEvent.topOrigin
+title: "PaymentRequestEvent: topOrigin property"
+short-title: topOrigin
 slug: Web/API/PaymentRequestEvent/topOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequestEvent
-  - Property
-  - Reference
-  - payment
-  - topOrigin
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.topOrigin
 ---
 
@@ -27,7 +21,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.topOrigin);
 });
 ```

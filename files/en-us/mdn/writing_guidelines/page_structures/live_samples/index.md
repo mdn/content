@@ -2,9 +2,6 @@
 title: Live examples
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

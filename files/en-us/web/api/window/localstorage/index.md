@@ -1,17 +1,8 @@
 ---
-title: Window.localStorage
+title: "Window: localStorage property"
+short-title: localStorage
 slug: Web/API/Window/localStorage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - localStorage
 browser-compat: api.Window.localStorage
 ---
 
@@ -51,19 +42,19 @@ In all current browsers, `localStorage` seems to return a different object for e
 The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 The syntax for reading the `localStorage` item is as follows:
 
 ```js
-const cat = localStorage.getItem('myCat');
+const cat = localStorage.getItem("myCat");
 ```
 
 The syntax for removing the `localStorage` item is as follows:
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 The syntax for removing all the `localStorage` items is as follows:

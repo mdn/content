@@ -2,17 +2,10 @@
 title: WebTransportDatagramDuplexStream
 slug: Web/API/WebTransportDatagramDuplexStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportDatagramDuplexStream
 browser-compat: api.WebTransportDatagramDuplexStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`WebTransportDatagramDuplexStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a duplex stream that can be used for unreliable transport of datagrams between client and server. Provides access to a {{domxref("ReadableStream")}} for reading incoming datagrams, a {{domxref("WritableStream")}} for writing outgoing datagrams, and various settings and statistics related to the stream.
 
@@ -26,19 +19,19 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
 
 ## Instance properties
 
-- {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.incomingHighWaterMark", "incomingHighWaterMark")}}
   - : Gets or sets the high water mark for incoming chunks of data — this is the maximum size, in chunks, that the incoming {{domxref("ReadableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
-- {{domxref("WebTransportDatagramDuplexStream.incomingMaxAge", "incomingMaxAge")}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.incomingMaxAge", "incomingMaxAge")}}
   - : Gets or sets the maximum age for incoming datagrams, in milliseconds. Returns `null` if no maximum age has been set.
-- {{domxref("WebTransportDatagramDuplexStream.maxDatagramSize", "maxDatagramSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.maxDatagramSize", "maxDatagramSize")}} {{ReadOnlyInline}}
   - : Returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}}.
-- {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}}
   - : Gets or sets the high water mark for outgoing chunks of data — this is the maximum size, in chunks, that the outgoing {{domxref("WritableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
-- {{domxref("WebTransportDatagramDuplexStream.outgoingMaxAge", "outgoingMaxAge")}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.outgoingMaxAge", "outgoingMaxAge")}}
   - : Gets or sets the maximum age for outgoing datagrams, in milliseconds. Returns `null` if no maximum age has been set.
-- {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming datagrams from the stream.
-- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing datagrams to the stream.
 
 ## Examples
@@ -63,7 +56,7 @@ The {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} propert
 async function readData() {
   const reader = transport.datagrams.readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

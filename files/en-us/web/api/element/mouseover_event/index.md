@@ -1,19 +1,8 @@
 ---
-title: 'Element: mouseover event'
+title: "Element: mouseover event"
+short-title: mouseover
 slug: Web/API/Element/mouseover_event
 page-type: web-api-event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseover
-  - move
-  - pointer
 browser-compat: api.Element.mouseover_event
 ---
 
@@ -26,9 +15,9 @@ The **`mouseover`** event is fired at an {{domxref("Element")}} when a pointing 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mouseover', (event) => {});
+addEventListener("mouseover", (event) => {});
 
-onmouseover = (event) => { };
+onmouseover = (event) => {};
 ```
 
 ## Event type
@@ -113,27 +102,35 @@ const test = document.getElementById("test");
 
 // This handler will be executed only once when the cursor
 // moves over the unordered list
-test.addEventListener("mouseenter", (event) => {
-  // highlight the mouseenter target
-  event.target.style.color = "purple";
+test.addEventListener(
+  "mouseenter",
+  (event) => {
+    // highlight the mouseenter target
+    event.target.style.color = "purple";
 
-  // reset the color after a short delay
-  setTimeout(() => {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // reset the color after a short delay
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false
+);
 
 // This handler will be executed every time the cursor
 // is moved over a different list item
-test.addEventListener("mouseover", (event) => {
-  // highlight the mouseover target
-  event.target.style.color = "orange";
+test.addEventListener(
+  "mouseover",
+  (event) => {
+    // highlight the mouseover target
+    event.target.style.color = "orange";
 
-  // reset the color after a short delay
-  setTimeout(() => {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // reset the color after a short delay
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false
+);
 ```
 
 ### Result

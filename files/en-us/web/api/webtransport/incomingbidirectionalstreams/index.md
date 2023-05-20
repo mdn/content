@@ -1,19 +1,12 @@
 ---
-title: WebTransport.incomingBidirectionalStreams
+title: "WebTransport: incomingBidirectionalStreams property"
+short-title: incomingBidirectionalStreams
 slug: Web/API/WebTransport/incomingBidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingBidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.incomingBidirectionalStreams
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`incomingBidirectionalStreams`** read-only property of the {{domxref("WebTransport")}} interface represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to reliably read data from the server and write data back to it.
 
@@ -34,7 +27,7 @@ async function receiveBidirectional() {
   const bds = transport.incomingBidirectionalStreams;
   const reader = bds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -47,7 +40,7 @@ async function receiveBidirectional() {
 async function readData(readable) {
   const reader = readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }

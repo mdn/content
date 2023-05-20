@@ -2,12 +2,8 @@
 title: ContactAddress
 slug: Web/API/ContactAddress
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ContactAddress
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactAddress
 ---
 

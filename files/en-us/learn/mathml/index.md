@@ -1,13 +1,6 @@
 ---
 title: Writing mathematics with MathML
 slug: Learn/MathML
-tags:
-  - Beginner
-  - Guide
-  - MathML
-  - Intro
-  - Learn
-  - Topic
 ---
 
 {{LearnSidebar}}

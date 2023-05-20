@@ -2,12 +2,6 @@
 title: Distributed Denial of Service
 slug: Glossary/Distributed_Denial_of_Service
 page-type: glossary-definition
-tags:
-  - Attack
-  - DDoS
-  - Denial of Service
-  - Intro
-  - Security
 ---
 
 A Distributed Denial-of-Service (DDoS) is an attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.

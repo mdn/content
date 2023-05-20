@@ -1,17 +1,10 @@
 ---
-title: USBDevice.selectAlternateInterface()
+title: "USBDevice: selectAlternateInterface() method"
+short-title: selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - selectAlternateInterface
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
 

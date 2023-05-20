@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.depthFar
+title: "VRDisplay: depthFar property"
+short-title: depthFar
 slug: Web/API/VRDisplay/depthFar
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - depthFar
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.depthFar
 ---
 

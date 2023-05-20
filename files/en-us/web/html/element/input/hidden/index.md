@@ -2,15 +2,6 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - hidden
 browser-compat: html.elements.input.type_hidden
 ---
 
@@ -22,7 +13,7 @@ browser-compat: html.elements.input.type_hidden
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute holds a string that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
+The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute holds a string that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
 
 > **Warning:** While the value isn't displayed to the user in the page's content, it is visible—and can be edited—using any browser's developer tools or "View Source" functionality. Do not rely on `hidden` inputs as a form of security.
 
@@ -32,7 +23,7 @@ In addition to the attributes common to all {{HTMLElement("input")}} elements, `
 
 ### name
 
-This is actually one of the common attributes, but it has a special meaning available for hidden inputs. Normally, the {{htmlattrxref("name", "input")}} attribute functions on hidden inputs just like on any other input. However, when the form is submitted, a hidden input whose `name` is set to `_charset_` will automatically be reported with the value set to the character encoding used to submit the form.
+This is actually one of the common attributes, but it has a special meaning available for hidden inputs. Normally, the [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute functions on hidden inputs just like on any other input. However, when the form is submitted, a hidden input whose `name` is set to `_charset_` will automatically be reported with the value set to the character encoding used to submit the form.
 
 ## Using hidden inputs
 
@@ -154,7 +145,7 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>

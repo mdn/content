@@ -2,17 +2,6 @@
 title: WebRTC Statistics API
 slug: Web/API/WebRTC_Statistics_API
 page-type: web-api-overview
-tags:
-  - API
-  - Draft
-  - Identifiers
-  - Identifiers for WebRTC Statistics API
-  - Landing
-  - RTP
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC Statistics API
 browser-compat: api.RTCStatsReport
 ---
 

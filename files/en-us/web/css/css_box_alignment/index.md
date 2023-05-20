@@ -2,15 +2,6 @@
 title: CSS Box Alignment
 slug: Web/CSS/CSS_Box_Alignment
 page-type: css-module
-tags:
-  - CSS
-  - CSS Box Alignment
-  - Grid Layout
-  - Guide
-  - alignment
-  - box alignment
-  - flexbox
-  - multi-column
 ---
 
 {{CSSRef}}

@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.deleteVertexArray()
+title: "WebGL2RenderingContext: deleteVertexArray() method"
+short-title: deleteVertexArray()
 slug: Web/API/WebGL2RenderingContext/deleteVertexArray
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteVertexArray
 ---
 

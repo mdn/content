@@ -2,16 +2,6 @@
 title: MutationRecord
 slug: Web/API/MutationRecord
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Interface
-  - MutationRecord
-  - NeedsContent
-  - NeedsUpdate
-  - Reference
-  - mutation
 browser-compat: api.MutationRecord
 ---
 

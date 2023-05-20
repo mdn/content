@@ -2,10 +2,8 @@
 title: vert-adv-y
 slug: Web/SVG/Attribute/vert-adv-y
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.vert-adv-y
 ---
 

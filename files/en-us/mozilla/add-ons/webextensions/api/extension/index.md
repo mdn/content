@@ -1,14 +1,7 @@
 ---
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.extension
 ---
 

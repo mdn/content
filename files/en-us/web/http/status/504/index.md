@@ -1,10 +1,7 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.504
 ---
 
@@ -30,5 +27,5 @@ The HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** server error re
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.504)
 - {{HTTPStatus(502)}}

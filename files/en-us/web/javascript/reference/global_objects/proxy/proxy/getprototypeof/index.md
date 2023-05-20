@@ -2,11 +2,6 @@
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 ---
 
@@ -94,7 +89,7 @@ console.log(
   Reflect.getPrototypeOf(p) === Array.prototype, // true
   p.__proto__ === Array.prototype, // true
   Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array // true
+  p instanceof Array, // true
 );
 ```
 

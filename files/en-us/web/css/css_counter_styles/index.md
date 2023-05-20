@@ -2,13 +2,6 @@
 title: CSS Counter Styles
 slug: Web/CSS/CSS_Counter_Styles
 page-type: css-module
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Guide
-  - NeedsContent
-  - Overview
-  - Reference
 browser-compat:
   - css.at-rules.counter-style
   - css.properties.counter-increment

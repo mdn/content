@@ -2,12 +2,8 @@
 title: MimeTypeArray
 slug: Web/API/MimeTypeArray
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - mimeType
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MimeTypeArray
 ---
 
@@ -35,7 +31,7 @@ The following example tests whether a plugin is available for the 'application/p
 
 ```js
 const mimeTypes = navigator.mimeTypes;
-const pdf = mimeTypes.namedItem('application/pdf');
+const pdf = mimeTypes.namedItem("application/pdf");
 
 if (pdf) {
   console.log(pdf.description);

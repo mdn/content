@@ -1,15 +1,8 @@
 ---
-title: OfflineAudioContext.suspend()
+title: "OfflineAudioContext: suspend() method"
+short-title: suspend()
 slug: Web/API/OfflineAudioContext/suspend
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsExample
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
-  - suspend
 browser-compat: api.OfflineAudioContext.suspend
 ---
 
@@ -36,7 +29,7 @@ suspend(suspendTime)
 ### Parameters
 
 - `suspendTime`
-  - : A {{jsxref("double")}} specifying the suspend time, in seconds.
+  - : A floating-point number specifying the suspend time, in seconds.
 
 ### Return value
 

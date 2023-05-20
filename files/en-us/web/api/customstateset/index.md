@@ -2,12 +2,8 @@
 title: CustomStateSet
 slug: Web/API/CustomStateSet
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CustomStateSet
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CustomStateSet
 ---
 
@@ -63,19 +59,23 @@ The state of the element can be accessed from CSS using the custom state pseudo-
 class MyCustomElement extends HTMLElement {
   set checked(flag) {
     if (flag) {
-      this._internals.states.add('--checked');
+      this._internals.states.add("--checked");
     } else {
-      this._internals.states.delete('--checked');
+      this._internals.states.delete("--checked");
     }
 
-    console.log(this._internals.states.has('--checked'));
+    console.log(this._internals.states.has("--checked"));
   }
 }
 ```
 
 ```css
-labeled-checkbox { border: dashed red; }
-labeled-checkbox:--checked { border: solid; }
+labeled-checkbox {
+  border: dashed red;
+}
+labeled-checkbox:--checked {
+  border: solid;
+}
 ```
 
 ## Specifications

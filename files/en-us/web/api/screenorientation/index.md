@@ -2,13 +2,6 @@
 title: ScreenOrientation
 slug: Web/API/ScreenOrientation
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - screen
 browser-compat: api.ScreenOrientation
 ---
 

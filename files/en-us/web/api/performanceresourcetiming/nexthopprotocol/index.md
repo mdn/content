@@ -1,13 +1,8 @@
 ---
-title: PerformanceResourceTiming.nextHopProtocol
+title: "PerformanceResourceTiming: nextHopProtocol property"
+short-title: nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resource Timing API
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
 

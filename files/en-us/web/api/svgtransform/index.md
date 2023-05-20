@@ -2,11 +2,6 @@
 title: SVGTransform
 slug: Web/API/SVGTransform
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTransform
 ---
 
@@ -32,7 +27,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
         <ul>
           <li>
             <code
-              >void setMatrix(in {{ domxref("SVGMatrix") }}
+              >void setMatrix(in {{ domxref("DOMMatrix") }}
               matrix)</code
             >
           </li>
@@ -55,7 +50,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
           <li>readonly unsigned short <code>type</code></li>
           <li>readonly float <code>angle</code></li>
           <li>
-            readonly {{ domxref("SVGMatrix") }} <code>matrix</code>
+            readonly {{ domxref("DOMMatrix") }} <code>matrix</code>
           </li>
         </ul>
       </td>
@@ -169,7 +164,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     </tr>
     <tr>
       <td><code>matrix</code></td>
-      <td>{{ domxref("SVGMatrix") }}</td>
+      <td>{{ domxref("DOMMatrix") }}</td>
       <td>
         <p>
           The matrix that represents this transformation. The matrix object is
@@ -225,7 +220,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     <tr>
       <td>
         <code
-          ><strong>setMatrix</strong>(in {{ domxref("SVGMatrix") }}
+          ><strong>setMatrix</strong>(in {{ domxref("DOMMatrix") }}
           <em>matrix</em>)</code
         >
       </td>

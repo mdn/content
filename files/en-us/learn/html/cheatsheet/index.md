@@ -1,11 +1,6 @@
 ---
 title: HTML Cheat Sheet
 slug: Learn/HTML/Cheatsheet
-tags:
-  - Beginner
-  - Draft
-  - Guide
-  - HTML
 ---
 
 {{LearnSidebar}}
@@ -19,6 +14,7 @@ While using {{Glossary("HTML")}} it can be very handy to have an easy way to rem
 An "element" is a single part of a webpage. Some elements are large and hold smaller elements like containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements" appear next to one another in a webpage. They take up only as much width as they need in a page and fit together horizontally like words in a sentence or books shelved side-by-side in a row. All inline elements can be placed within the `<body>` element.
 
 <table class="standard-table">
+  <caption>Inline elements: usage and examples</caption>
   <thead>
     <tr>
       <th scope="col">Usage</th>
@@ -42,7 +38,7 @@ A link to example.org&#x3C;/a>.</pre
       <td>An image</td>
       <td>{{HTMLElement("img")}}</td>
       <td id="img-example">
-        <pre class="brush: html">&#x3C;img src="beast.png" width="25" /></pre>
+        <pre class="brush: html">&#x3C;img src="beast.png" width="50" /></pre>
         {{EmbedLiveSample("img-example", 100, 60)}}
       </td>
     </tr>
@@ -213,11 +209,10 @@ format&#x3C;/code>.</pre
       <td>{{HTMLElement("audio")}}</td>
       <td id="audio-example">
         <pre class="brush: html">
-&#x3C;audio controls="controls">
-  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
-  &#x3C;a href="t-rex-roar.mp3">Download MP3&#x3C;/a>
-&#x3C;/audio></pre
-        >
+&#x3C;audio controls>
+  &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+&#x3C;/audio>
+        </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
       </td>
     </tr>

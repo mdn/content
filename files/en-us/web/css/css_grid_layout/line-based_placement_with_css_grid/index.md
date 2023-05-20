@@ -2,10 +2,6 @@
 title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}

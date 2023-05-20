@@ -1,16 +1,7 @@
 ---
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClosed
+page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClosed
 ---
 

@@ -2,21 +2,12 @@
 title: Intl.NumberFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
+The **`formatRange()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a range of numbers according to the locale and formatting options of this `Intl.NumberFormat` object.
 
 ## Syntax
 

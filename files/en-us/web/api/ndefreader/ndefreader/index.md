@@ -1,13 +1,10 @@
 ---
-title: NDEFReader()
+title: "NDEFReader: NDEFReader() constructor"
+short-title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
 page-type: web-api-constructor
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Constructor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.NDEFReader
 ---
 

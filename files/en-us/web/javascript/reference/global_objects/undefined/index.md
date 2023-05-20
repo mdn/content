@@ -2,16 +2,12 @@
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 page-type: javascript-global-property
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.builtins.undefined
 ---
 
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
+The **`undefined`** global property represents the primitive
 value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
@@ -91,13 +87,12 @@ error if the variable has not been declared.
 ```js
 // x has not been declared before
 // evaluates to true without errors
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // these statements execute
 }
 
 // Throws a ReferenceError
 if (x === undefined) {
-
 }
 ```
 

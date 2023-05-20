@@ -1,14 +1,8 @@
 ---
-title: 'HTMLDialogElement: cancel event'
+title: "HTMLDialogElement: cancel event"
+short-title: cancel
 slug: Web/API/HTMLDialogElement/cancel_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - HTMLDialogElement
-  - NeedsExample
-  - cancel
 browser-compat: api.HTMLDialogElement.cancel_event
 ---
 
@@ -25,9 +19,9 @@ When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` an
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cancel', (event) => {});
+addEventListener("cancel", (event) => {});
 
-oncancel = (event) => { };
+oncancel = (event) => {};
 ```
 
 ## Event type
@@ -60,27 +54,27 @@ div {
 #### JavaScript
 
 ```js
-const result = document.querySelector('.result');
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog');
+const dialog = document.querySelector(".example-dialog");
 
-dialog.addEventListener('cancel', (event) => {
-  result.textContent = 'dialog was canceled';
+dialog.addEventListener("cancel", (event) => {
+  result.textContent = "dialog was canceled";
 });
 
-const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
-      dialog.showModal();
-      result.textContent = '';
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
+  if (typeof dialog.showModal === "function") {
+    dialog.showModal();
+    result.textContent = "";
   } else {
-      result.textContent = 'The dialog API is not supported by this browser';
+    result.textContent = "The dialog API is not supported by this browser";
   }
 });
 
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-    dialog.close();
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 

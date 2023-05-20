@@ -1,17 +1,10 @@
 ---
-title: USBConfiguration.interfaces
+title: "USBConfiguration: interfaces property"
+short-title: interfaces
 slug: Web/API/USBConfiguration/interfaces
 page-type: web-api-instance-property
-tags:
-  - API
-  - Interfaces
-  - Property
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConfiguration.interfaces
 ---
 

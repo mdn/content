@@ -1,19 +1,8 @@
 ---
-title: HTMLMediaElement.load()
+title: "HTMLMediaElement: load() method"
+short-title: load()
 slug: Web/API/HTMLMediaElement/load
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Element
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - Video
-  - load
-  - reset
 browser-compat: api.HTMLMediaElement.load
 ---
 
@@ -25,12 +14,11 @@ begins the process of selecting a media source and loading the media in preparat
 for playback to begin at the beginning.
 
 The amount of media data that is
-prefetched is determined by the value of the element's {{htmlattrxref("preload",
-  "video")}} attribute.
+prefetched is determined by the value of the element's [`preload`](/en-US/docs/Web/HTML/Element/video#preload) attribute.
 
 This method is generally only useful when you've made dynamic changes to the set of
 sources available for the media element, either by changing the element's
-{{htmlattrxref("src", "video")}} attribute or by adding or removing
+[`src`](/en-US/docs/Web/HTML/Element/video#src) attribute or by adding or removing
 {{HTMLElement("source")}} elements nested within the media element itself.
 `load()` will reset the element and rescan the available sources, thereby
 causing the changes to take effect.
@@ -54,7 +42,7 @@ None ({{jsxref("undefined")}}).
 Calling `load()` aborts all ongoing operations involving this media element,
 then begins the process of selecting and loading an appropriate media resource given the
 options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element
-and its {{htmlattrxref("src", "video")}} attribute or child {{HTMLElement("source")}}
+and its [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute or child {{HTMLElement("source")}}
 element(s). This is described in more detail in the
 [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#using_multiple_source_formats_to_improve_compatibility) page.
 

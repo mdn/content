@@ -1,16 +1,8 @@
 ---
-title: IDBIndex.openKeyCursor()
+title: "IDBIndex: openKeyCursor() method"
+short-title: openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - openKeyCursor
 browser-compat: api.IDBIndex.openKeyCursor
 ---
 

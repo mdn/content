@@ -2,12 +2,6 @@
 title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JSON
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

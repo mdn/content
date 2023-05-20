@@ -1,17 +1,8 @@
 ---
-title: HTMLImageElement.width
+title: "HTMLImageElement: width property"
+short-title: width
 slug: Web/API/HTMLImageElement/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - size
-  - width
 browser-compat: api.HTMLImageElement.width
 ---
 
@@ -38,8 +29,8 @@ screen or printer:
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
-{{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px
-wide. The {{htmlattrxref("sizes", "img")}} attribute is used to specify the width at
+[`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. One is 200px wide and the other is 400px
+wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is used to specify the width at
 which the image should be drawn given the viewport's width.
 
 ### HTML
@@ -70,7 +61,9 @@ current width information is always available.
 const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateWidth = (event) => { output.innerText = clockImage.width; };
+const updateWidth = (event) => {
+  output.innerText = clockImage.width;
+};
 
 window.addEventListener("load", updateWidth);
 window.addEventListener("resize", updateWidth);

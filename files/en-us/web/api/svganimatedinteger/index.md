@@ -2,13 +2,6 @@
 title: SVGAnimatedInteger
 slug: Web/API/SVGAnimatedInteger
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
 

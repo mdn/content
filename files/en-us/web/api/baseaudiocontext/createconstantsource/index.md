@@ -1,16 +1,8 @@
 ---
-title: BaseAudioContext.createConstantSource()
+title: "BaseAudioContext: createConstantSource() method"
+short-title: createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - ConstantSourceNode
-  - Media
-  - Method
-  - createConstantSource
 browser-compat: api.BaseAudioContext.createConstantSource
 ---
 

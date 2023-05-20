@@ -2,11 +2,6 @@
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
 
@@ -70,7 +65,7 @@ const p = new Proxy(
       Object.preventExtensions(target);
       return true;
     },
-  }
+  },
 );
 
 console.log(Object.preventExtensions(p));
@@ -87,7 +82,7 @@ const p = new Proxy(
     preventExtensions(target) {
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p); // TypeError is thrown

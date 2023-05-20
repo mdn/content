@@ -1,14 +1,8 @@
 ---
-title: Screen.orientation
+title: "Screen: orientation property"
+short-title: orientation
 slug: Web/API/Screen/orientation
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Screen Orientation
-  - screen
 browser-compat: api.Screen.orientation
 ---
 

@@ -1,19 +1,8 @@
 ---
-title: HTMLVideoElement.disablePictureInPicture
+title: "HTMLVideoElement: disablePictureInPicture property"
+short-title: disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Reference
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
 

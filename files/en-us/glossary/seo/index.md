@@ -2,11 +2,6 @@
 title: SEO
 slug: Glossary/SEO
 page-type: glossary-definition
-tags:
-  - Intro
-  - SEO
-  - Search
-  - WebMechanic
 ---
 
 **SEO** (Search Engine Optimization) is the process of making a website more visible in search results, also termed improving search rankings.

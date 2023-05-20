@@ -1,14 +1,8 @@
 ---
-title: HTMLDialogElement.showModal()
+title: "HTMLDialogElement: showModal() method"
+short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - showModal
 browser-compat: api.HTMLDialogElement.showModal
 ---
 
@@ -16,7 +10,7 @@ browser-compat: api.HTMLDialogElement.showModal
 
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
-of any other dialogs that might be present. It displays into the top layer, along with a
+of any other dialogs that might be present. It displays in the {{glossary("top layer")}}, along with a
 {{cssxref('::backdrop')}} pseudo-element. Interaction outside the dialog is blocked and
 the content outside it is rendered inert.
 
@@ -37,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
+  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element), or if the dialog is also a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown.
 
 ## Examples
 

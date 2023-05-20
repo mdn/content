@@ -1,13 +1,10 @@
 ---
-title: PaymentManager.userHint
+title: "PaymentManager: userHint property"
+short-title: userHint
 slug: Web/API/PaymentManager/userHint
 page-type: web-api-instance-property
-tags:
-  - API
-  - userHint
-  - Experimental
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentManager.userHint
 ---
 
@@ -22,18 +19,17 @@ A string.
 ## Examples
 
 ```js
-navigator.serviceWorker.register("serviceworker.js")
-  .then(registration => {
-    registration.paymentManager.userHint = "Card number should be 16 digits";
+navigator.serviceWorker.register("serviceworker.js").then((registration) => {
+  registration.paymentManager.userHint = "Card number should be 16 digits";
 
-    registration.paymentManager.enableDelegations(['shippingAddress', 'payerName']) 
-      .then(() => {
-          // ...
-      });
+  registration.paymentManager
+    .enableDelegations(["shippingAddress", "payerName"])
+    .then(() => {
+      // ...
+    });
 
-    // ...
-
-  });
+  // ...
+});
 ```
 
 ## Specifications

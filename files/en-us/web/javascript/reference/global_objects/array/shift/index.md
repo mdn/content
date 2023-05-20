@@ -2,12 +2,6 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Array.shift
 ---
 
@@ -51,7 +45,7 @@ first element. It also displays the removed element:
 ```js
 const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log("myFish before:", JSON.stringify(myFish));
+console.log("myFish before:", myFish);
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();
@@ -109,7 +103,10 @@ console.log(plainObj);
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.unshift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

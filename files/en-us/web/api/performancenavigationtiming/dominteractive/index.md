@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.domInteractive
+title: "PerformanceNavigationTiming: domInteractive property"
+short-title: domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domInteractive
 ---
 

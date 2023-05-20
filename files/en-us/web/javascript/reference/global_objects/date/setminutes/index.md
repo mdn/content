@@ -2,19 +2,12 @@
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setMinutes
 ---
 
 {{JSRef}}
 
-The **`setMinutes()`** method sets the minutes for a specified
-date according to local time.
+The **`setMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to local time.
 
 {{EmbedInteractiveExample("pages/js/date-setminutes.html")}}
 
@@ -29,32 +22,21 @@ setMinutes(minutesValue, secondsValue, msValue)
 ### Parameters
 
 - `minutesValue`
-  - : An integer between 0 and 59, representing the minutes.
-- `secondsValue`
-  - : Optional. An integer between 0 and 59, representing the seconds. If you specify the
-    `secondsValue` parameter, you must also specify the
-    `minutesValue`.
-- `msValue`
-  - : Optional. A number between 0 and 999, representing the milliseconds. If you specify
-    the `msValue` parameter, you must also specify the
-    `minutesValue` and `secondsValue`.
+  - : An integer between 0 and 59 representing the minutes.
+- `secondsValue` {{optional_inline}}
+  - : An integer between 0 and 59 representing the seconds. If you specify `secondsValue`, you must also specify `minutesValue`.
+- `msValue` {{optional_inline}}
+  - : An integer between 0 and 999 representing the milliseconds. If you specify `msValue`, you must also specify `minutesValue` and `secondsValue`.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
-If you do not specify the `secondsValue` and
-`msValue` parameters, the values returned from
-{{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} and
-{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} methods are used.
+If you do not specify the `secondsValue` and `msValue` parameters, the same values as what are returned by {{jsxref("Date/getSeconds", "getSeconds()")}} and {{jsxref("Date/getMilliseconds", "getMilliseconds()")}} are used.
 
-If a parameter you specify is outside of the expected range, `setMinutes()`
-attempts to update the date information in the {{jsxref("Date")}} object accordingly.
-For example, if you use 100 for `secondsValue`, the minutes will
-be incremented by 1 (`minutesValue + 1`), and 40 will be used for
-seconds.
+If a parameter you specify is outside of the expected range, other parameters and the date information in the {{jsxref("Date")}} object are updated accordingly. For example, if you specify 100 for `secondsValue`, the minutes is incremented by 1 (`minutesValue + 1`), and 40 is used for seconds.
 
 ## Examples
 

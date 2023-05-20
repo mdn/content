@@ -2,13 +2,6 @@
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-element
-  - Reference
-  - Selectors
 spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 
@@ -97,15 +90,6 @@ T
       <th>Browser</th>
       <th>Lowest Version</th>
       <th>Support of</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
     </tr>
     <tr>
       <td rowspan="2">Firefox (Gecko)</td>

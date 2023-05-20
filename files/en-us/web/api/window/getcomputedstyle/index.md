@@ -1,14 +1,8 @@
 ---
-title: Window.getComputedStyle()
+title: "Window: getComputedStyle() method"
+short-title: getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-  - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
 
@@ -84,10 +78,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height"
+  )}.`;
 ```
 
 ### Result

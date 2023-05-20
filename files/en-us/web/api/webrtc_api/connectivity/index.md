@@ -2,15 +2,6 @@
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -29,7 +20,7 @@ Peer A who will be the initiator of the connection, will create an Offer. They w
 
 ### Session descriptions
 
-The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(2327)}}.
+The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(8866)}}.
 
 When a user starts a WebRTC call to another user, a special description is created called an **offer**. This description includes all the information about the caller's proposed configuration for the call. The recipient then responds with an **answer**, which is a description of their end of the call. In this way, both devices share with one another the information needed in order to exchange media data. This exchange is handled using Interactive Connectivity Establishment ({{Glossary("ICE")}}), a protocol which lets two devices use an intermediary to exchange offers and answers even if the two devices are separated by Network Address Translation ({{Glossary("NAT")}}).
 

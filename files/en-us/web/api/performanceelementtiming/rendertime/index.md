@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.renderTime
+title: "PerformanceElementTiming: renderTime property"
+short-title: renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - renderTime
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
 

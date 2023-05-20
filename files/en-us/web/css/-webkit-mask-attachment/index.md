@@ -2,14 +2,8 @@
 title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Non-standard
-  - Reference
-  - Web
-  - recipe:css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-attachment
 ---
 
@@ -30,6 +24,8 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 /* Global values */
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
+-webkit-mask-attachment: revert;
+-webkit-mask-attachment: revert-layer;
 -webkit-mask-attachment: unset;
 ```
 

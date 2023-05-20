@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.url
+title: "PerformanceElementTiming: url property"
+short-title: url
 slug: Web/API/PerformanceElementTiming/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - url
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.url
 ---
 

@@ -1,15 +1,10 @@
 ---
-title: InkPresenter.presentationArea
+title: "InkPresenter: presentationArea property"
+short-title: presentationArea
 slug: Web/API/InkPresenter/presentationArea
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Property
-  - presentationArea
+status:
+  - experimental
 browser-compat: api.InkPresenter.presentationArea
 ---
 
@@ -30,11 +25,10 @@ An {{domxref("Element")}}.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
   console.log(presenter.presentationArea);
 
   //...
-
 }
 ```
 

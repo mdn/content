@@ -1,22 +1,8 @@
 ---
-title: RTCIceCandidatePairStats.remoteCandidateId
+title: "RTCIceCandidatePairStats: remoteCandidateId property"
+short-title: remoteCandidateId
 slug: Web/API/RTCIceCandidatePairStats/remoteCandidateId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
 browser-compat: api.RTCIceCandidatePairStats.remoteCandidateId
 ---
 

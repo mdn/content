@@ -1,15 +1,8 @@
 ---
-title: IDBIndex.get()
+title: "IDBIndex: get() method"
+short-title: get()
 slug: Web/API/IDBIndex/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex.get
 ---
 

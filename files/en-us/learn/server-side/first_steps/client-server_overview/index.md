@@ -1,14 +1,6 @@
 ---
 title: Client-Server Overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Learn
-  - Server
-  - Server-side programming
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -37,7 +29,7 @@ There is no real code in the discussion because we haven't yet chosen a web fram
 
 ## Web servers and HTTP (a primer)
 
-Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
+Web browsers communicate with [web servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/en-US/docs/Web/HTTP)). When you click a link on a web page, submit a form, or run a search, the browser sends an _HTTP Request_ to the server.
 
 This request includes:
 
@@ -307,9 +299,3 @@ At this point you should have a good overview of the operations that server-side
 In a following module we'll help you choose the best Web Framework for your first site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)

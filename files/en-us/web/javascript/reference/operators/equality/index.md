@@ -2,11 +2,6 @@
 title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.equality
 ---
 

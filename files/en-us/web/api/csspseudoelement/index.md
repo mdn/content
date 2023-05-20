@@ -2,13 +2,8 @@
 title: CSSPseudoElement
 slug: Web/API/CSSPseudoElement
 page-type: web-api-interface
-tags:
-  - API
-  - CSSPseudoElement
-  - Element
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement
 ---
 
@@ -43,8 +38,8 @@ _`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the follo
 Using pseudo-elements, most modern browsers will automatically add quotation marks around text inside a {{HTMLElement('q')}} element. (A style rule may be needed to add quotation marks in older browsers.) The example below demonstrates the basic properties of the `CSSPseudoElement` object representing the opening quotation mark.
 
 ```js
-const element = document.querySelector('q');
-const cssPseudoElement = element.pseudo('::before');
+const element = document.querySelector("q");
+const cssPseudoElement = element.pseudo("::before");
 console.log(cssPseudoElement.element); // Outputs [object HTMLQuoteElement]
 console.log(cssPseudoElement.type); // Outputs '::before'
 ```

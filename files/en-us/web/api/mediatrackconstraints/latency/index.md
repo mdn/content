@@ -1,19 +1,8 @@
 ---
-title: MediaTrackConstraints.latency
+title: "MediaTrackConstraints: latency property"
+short-title: latency
 slug: Web/API/MediaTrackConstraints/latency
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - getusermedia
-  - latency
 browser-compat: api.MediaTrackConstraints.latency
 ---
 

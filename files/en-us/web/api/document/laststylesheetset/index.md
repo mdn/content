@@ -1,18 +1,11 @@
 ---
-title: Document.lastStyleSheetSet
+title: "Document: lastStyleSheetSet property"
+short-title: lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - Stylesheets
-  - lastStyleSheetSet
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.lastStyleSheetSet
 ---
 
@@ -35,9 +28,8 @@ The style sheet set that was most recently set. If the current style sheet set h
 let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
-  lastSheetSet = 'Style sheet not yet changed';
-}
-else {
+  lastSheetSet = "Style sheet not yet changed";
+} else {
   console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```

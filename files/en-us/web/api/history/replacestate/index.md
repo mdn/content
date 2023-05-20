@@ -1,14 +1,8 @@
 ---
-title: History.replaceState()
+title: "History: replaceState() method"
+short-title: replaceState()
 slug: Web/API/History/replaceState
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
 browser-compat: api.History.replaceState
 ---
 
@@ -20,18 +14,20 @@ URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
 to some user action.
 
+This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
+
 ## Syntax
 
 ```js-nolint
-replaceState(stateObj, unused)
-replaceState(stateObj, unused, url)
+replaceState(state, unused)
+replaceState(state, unused, url)
 ```
 
 ### Parameters
 
-- `stateObj`
-  - : The state object is a JavaScript object which is associated with the history entry
-    passed to the `replaceState` method. The state object can be
+- `state`
+  - : An object which is associated with the history entry
+    passed to the `replaceState()` method. The state object can be
     `null`.
 - `unused`
   - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is traditional, and safe against future changes to the method.
@@ -48,8 +44,8 @@ None ({{jsxref("undefined")}}).
 Suppose `https://www.mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-const stateObj = { foo: 'bar' };
-history.pushState(stateObj, '', 'bar.html');
+const stateObj = { foo: "bar" };
+history.pushState(stateObj, "", "bar.html");
 ```
 
 On the next page you could then use `history.state` to access the `stateObj` that was just added.
@@ -59,7 +55,7 @@ The explanation of these two lines above can be found in the [Example of `pushSt
 JavaScript:
 
 ```js
-history.replaceState(stateObj, '', 'bar2.html');
+history.replaceState(stateObj, "", "bar2.html");
 ```
 
 This will cause the URL bar to display

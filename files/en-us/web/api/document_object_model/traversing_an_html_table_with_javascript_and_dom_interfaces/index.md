@@ -1,14 +1,7 @@
 ---
 title: Traversing an HTML table with JavaScript and DOM Interfaces
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 page-type: guide
-tags:
-  - API
-  - DOM
-  - Guide
-  - HTML
-  - JavaScript
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -232,7 +225,7 @@ After testing this sample, note that the words hello and world are together: hel
 
 ![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
 
-> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words hello and world. Another important note is that the `appendChild` method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world, you will need to use `insertBefore` instead of `appendChild`.
+> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
 
 ### Creating New Elements with the document object and the createElement(..) method
 
@@ -338,7 +331,7 @@ This example introduces two new DOM attributes. First it uses the `childNodes` a
 
 The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `getElementsByTagName()` returns descendants at any level, not just immediate children.
 
-Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myCellText the text node of the second cell in the second row of the table.
+Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
 
 Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
 

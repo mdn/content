@@ -1,17 +1,10 @@
 ---
-title: XRDepthInformation.width
+title: "XRDepthInformation: width property"
+short-title: width
 slug: Web/API/XRDepthInformation/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRDepthInformation.width
 ---
 

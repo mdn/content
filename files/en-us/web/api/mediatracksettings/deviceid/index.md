@@ -1,18 +1,8 @@
 ---
-title: MediaTrackSettings.deviceId
+title: "MediaTrackSettings: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSettings/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - deviceId
 browser-compat: api.MediaTrackSettings.deviceId
 ---
 

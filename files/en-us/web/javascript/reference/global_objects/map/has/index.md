@@ -2,13 +2,6 @@
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Map.has
 ---
 

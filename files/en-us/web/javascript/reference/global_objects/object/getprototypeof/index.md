@@ -2,12 +2,6 @@
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
 
@@ -51,9 +45,9 @@ parameter isn't an object. In ES2015, the parameter will be coerced to an
 {{jsxref("Object")}}.
 
 ```js
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // String.prototype                  (ES2015 code)
 ```
 

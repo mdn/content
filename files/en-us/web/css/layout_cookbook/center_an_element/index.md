@@ -2,15 +2,6 @@
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Recipe
-  - box alignment
-  - centering
-  - cookbook
-  - flexbox
 browser-compat:
   - css.properties.align-items
   - css.properties.justify-content
