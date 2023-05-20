@@ -3667,7 +3667,6 @@
 /en-US/docs/HTML/Element/acronym-redirect-1	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/acronym2	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML/Element/applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML/Element/area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/area-redirect-1	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/article	/en-US/docs/Web/HTML/Element/article
@@ -3939,7 +3938,6 @@
 /en-US/docs/HTML:Element:abbr	/en-US/docs/Web/HTML/Element/abbr
 /en-US/docs/HTML:Element:acronym	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML:Element:address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML:Element:applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
