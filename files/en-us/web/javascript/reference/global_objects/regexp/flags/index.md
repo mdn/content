@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.flags
 
 {{JSRef}}
 
-The **`flags`** accessor property represents the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) of the current regular expression object.
+The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) of this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
 

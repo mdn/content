@@ -1,6 +1,7 @@
 ---
 title: "ARIA: heading role"
 slug: Web/Accessibility/ARIA/Roles/heading_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#heading
   - https://w3c.github.io/aria-practices/#heading

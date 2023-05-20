@@ -3,7 +3,7 @@ title: "XSLTProcessor: setParameter() method"
 short-title: setParameter()
 slug: Web/API/XSLTProcessor/setParameter
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.setParameter 
+browser-compat: api.XSLTProcessor.setParameter
 ---
 
 {{APIRef("XSLT")}}
@@ -24,7 +24,7 @@ setParameter(namespaceURI, localName, value)
   - : The name of the parameter in the associated namespace.
 - `value`
   - : The value of the parameter.
-  > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.
+    > **Note:** Firefox supports any kind of parameter. Chrome, Edge and Safari only support string parameters.
 
 ### Return value
 

@@ -64,7 +64,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
-    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://w3c.github.io/csswg-drafts/css-fonts-3/#font-family-casing).
+    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://drafts.csswg.org/css-fonts-3/#font-family-casing).
 
 > **Note:** The {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} can be used to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
 
@@ -147,18 +147,17 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```
-<url> [ format(<font-format>)]? [ tech( <font-tech>#)]? | local(<font-face-name>)
+```plain
+<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
+local( <family-name> )
 
-<font-format>= [<string> | collection | embedded-opentype | opentype
- | svg | truetype | woff | woff2 ]
+<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
 
-<font-tech>= [<font-feature-tech> | <color-font-tech>
- | variations | palettes | incremental ]
+<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
 
-<font-feature-tech>= [feature-opentype | feature-aat | feature-graphite]
+<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
 
-<color-font-tech>= [color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
+<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
 ```
 
 ## Examples

@@ -24,23 +24,25 @@ The `isFirstPersonObserver` property then allows you to check which secondary vi
 
 ```js
 // Make sure to enable "secondary-view"
-navigator.xr.requestSession("immersive-ar", {
-  optionalFeatures: ["secondary-views"]
-}).then((session) => {
-  // …
+navigator.xr
+  .requestSession("immersive-ar", {
+    optionalFeatures: ["secondary-views"],
+  })
+  .then((session) => {
+    // …
 
-  session.requestAnimationFrame((frame) => {
-    const views = frame.getViewerPose(space);
-    // Make sure to iterate over all views
-    for (const view of views) {
-      if (view.isFirstPersonObserver) {
-        renderFPO();
-      } else {
-        render();
+    session.requestAnimationFrame((frame) => {
+      const views = frame.getViewerPose(space);
+      // Make sure to iterate over all views
+      for (const view of views) {
+        if (view.isFirstPersonObserver) {
+          renderFPO();
+        } else {
+          render();
+        }
       }
-    }
+    });
   });
-});
 ```
 
 ## Specifications

@@ -227,10 +227,10 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
     <tr>
       <th scope="row">Strict equality</th>
       <td>
-        This performs a test to see if two values are equal. It returns a
+        This performs a test to see if two values are equal and of the same data type. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
       </td>
-      <td><code>===</code></td>
+      <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"><code>===</code></a></td>
       <td>
         <code>let myVariable = 3;<br />myVariable === 4;</code>
       </td>

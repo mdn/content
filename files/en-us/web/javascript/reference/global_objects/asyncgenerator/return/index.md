@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncGenerator.return
 
 {{JSRef}}
 
-The **`return()`** method of an async generator acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
+The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
 
 ## Syntax
 
@@ -57,9 +57,9 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res));        // { value: 1, done: false }
-asyncGen.return('foo').then((res) => console.log(res)); // { value: "foo", done: true }
-asyncGen.next().then((res) => console.log(res));        // { value: undefined, done: true }
+asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
+asyncGen.return("foo").then((res) => console.log(res)); // { value: "foo", done: true }
+asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: true }
 ```
 
 ### Using return() once a generator is complete
@@ -75,11 +75,11 @@ async function* createAsyncGenerator() {
   yield await Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res));    // { value: 1, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 2, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 3, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 2, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 3, done: false }
 // value is returned undefined, as no value is passed and generator is 'done'
-asyncGen.return().then((res) => console.log(res));  // { value: undefined, done: true }
+asyncGen.return().then((res) => console.log(res)); // { value: undefined, done: true }
 // we can still return a value once the generator is complete
 asyncGen.return(1).then((res) => console.log(res)); // { value: 1, done: true }
 ```

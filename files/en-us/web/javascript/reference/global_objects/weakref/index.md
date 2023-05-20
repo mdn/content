@@ -47,7 +47,7 @@ Here are some specific points that the authors of the WeakRef proposal included 
 
 These properties are defined on `WeakRef.prototype` and shared by all `WeakRef` instances.
 
-- {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{optional_inline}}
+- {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{Optional_Inline}}
 
   - : The constructor function that created the instance object. For `WeakRef` instances, the initial value is the {{jsxref("WeakRef/WeakRef", "WeakRef")}} constructor.
 

@@ -1,6 +1,6 @@
 ---
 title: "SVGImageElement: y property"
-short-title: y
+short-title: "y"
 slug: Web/API/SVGImageElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.y
