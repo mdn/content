@@ -51,31 +51,7 @@ text-combine-upright: unset;
 
 ## Examples
 
-### Example using "digits"
-
-The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.
-
-#### HTML
-
-```html
-<p lang="ja" class="exampleText">平成20年4月16日に</p>
-```
-
-#### CSS
-
-```css
-.exampleText {
-  writing-mode: vertical-lr;
-  text-combine-upright: digits 2;
-  font: 36px serif;
-}
-```
-
-#### Results
-
-{{EmbedLiveSample('Example using "digits"', 100, 350, "tate-chu-yoko.png")}}
-
-### Example using "all"
+### Using 'all' with horizontal text
 
 The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.
 
@@ -104,7 +80,7 @@ html {
 
 #### Results
 
-{{EmbedLiveSample('Example using "all"', 250, 300, "text-combine-upright-all.png")}}
+{{EmbedLiveSample('Example using "all"', 250, 200)}}
 
 ## Specifications
 

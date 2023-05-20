@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.close
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`close()`** method of the {{domxref("WebTransport")}} interface closes an ongoing WebTransport session.
 
@@ -14,8 +14,8 @@ The **`close()`** method of the {{domxref("WebTransport")}} interface closes an 
 
 ## Syntax
 
-```js
-close(info);
+```js-nolint
+close(info)
 ```
 
 ### Parameters
