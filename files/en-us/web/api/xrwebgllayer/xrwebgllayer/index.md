@@ -77,13 +77,13 @@ In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR sessio
 ```js
 xrSession.updateRenderState({
   baseLayer: new XRWebGLLayer(xrSession, gl, {
-     alpha: false,
-     antialias: false,
-     depth: false,
-     framebufferScaleFactor: 0.5,
-     ignoreDepthValues: true,
-     stencil: false
-  })
+    alpha: false,
+    antialias: false,
+    depth: false,
+    framebufferScaleFactor: 0.5,
+    ignoreDepthValues: true,
+    stencil: false,
+  }),
 });
 ```
 

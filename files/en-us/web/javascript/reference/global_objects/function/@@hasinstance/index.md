@@ -11,7 +11,7 @@ The **`[@@hasInstance]()`** method of {{jsxref("Function")}} instances specifies
 
 ## Syntax
 
-```js
+```js-nolint
 func[Symbol.hasInstance](value)
 ```
 

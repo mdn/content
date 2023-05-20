@@ -8,11 +8,13 @@ browser-compat: api.SVGElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+
+Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
 This property is read-only, meaning it is not possible to assign a {{domxref("CSSStyleDeclaration")}} object to it. Nevertheless, it is possible to set an inline style by assigning a _string_ directly to the `style` property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using `style` in this manner will completely overwrite all inline styles on the element.
 
-Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, `element.style.backgroundColor = "red"`.
+Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, you can write `element.style.backgroundColor = "red"`.
 
 A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
@@ -32,7 +34,7 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 
 ### Getting style information
 
-The following code snippet show how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
+The following code snippet demonstrates how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
 
 ```html
 <svg

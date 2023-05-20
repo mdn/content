@@ -17,7 +17,7 @@ The input UI generally varies from browser to browser; see [Browser compatibilit
 
 ## Value
 
-A string representing the date entered in the input. The date is formatted according to ISO8601, described in [Date strings format](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings).
+A string representing the date entered in the input. The date is formatted according to [Date strings format](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings).
 
 You can set a default value for the input with a date inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 

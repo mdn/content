@@ -96,7 +96,7 @@ The server now can respond if it will accept a request under these circumstances
   - : The above permissions may be cached for 86,400 seconds (1 day).
 
 ```http
-HTTP/1.1 200 No Content
+HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 Access-Control-Allow-Origin: https://foo.example
