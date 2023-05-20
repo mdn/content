@@ -1066,21 +1066,31 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
               <td>18</td>
               <td>No</td>
               <td>11</td>
-              <td>No</td>
+              <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
-        <p>
-          Internet Explorer, Chrome, and Edge only supports HEVC on devices with a
-          hardware codec.
+        <p>Chrome support HEVC for devices with hardware support on Windows 8+, Linux and ChromeOS, for all devices on macOS Big Sur 11+ and Android 5.0+.</p>
+        <p>Edge (Chromium) supports HEVC for devices with hardware support on Windows 10 1709+ when
+          <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC video extensions from the Microsoft Store</a>
+          is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
+        <p>Internet Explorer only supports HEVC for devices with a hardware decoder.</p>
+        <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
+        <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
+          >ISOBMFF</a
+        >, MPEG-TS,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+      </td>
     </tr>
     <tr>
       <th scope="row">
