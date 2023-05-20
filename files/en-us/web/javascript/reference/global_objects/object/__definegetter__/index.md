@@ -1,13 +1,9 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.defineGetter
 ---
 
@@ -100,6 +96,6 @@ console.log(o.gimmeFive); // 5
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox bug 647423](https://bugzil.la/647423)

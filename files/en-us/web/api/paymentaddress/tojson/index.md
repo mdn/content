@@ -1,18 +1,11 @@
 ---
-title: PaymentAddress.toJSON()
+title: "PaymentAddress: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PaymentAddress/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - paymentAddress
-  - toJSON
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.toJSON
 ---
 

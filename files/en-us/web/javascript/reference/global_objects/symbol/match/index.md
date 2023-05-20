@@ -1,22 +1,21 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match
 ---
 
 {{JSRef}}
 
-The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.
+The **`Symbol.match`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@match`. The {{jsxref("String.prototype.match()")}} method looks up this symbol on its first argument for the method used to match an input string against the current object. This symbol is also used to determine if an object should be [treated as a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
-For more information, see {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}} and {{jsxref("String.prototype.match()")}}.
+For more information, see [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) and {{jsxref("String.prototype.match()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+
+## Value
+
+The well-known symbol `@@match`.
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -57,7 +56,9 @@ re[Symbol.match] = false;
 ## See also
 
 - [Polyfill of `Symbol.match` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}
+- {{jsxref("String.prototype.match()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)

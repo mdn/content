@@ -1,18 +1,6 @@
 ---
 title: What went wrong? Troubleshooting JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Debugging
-  - Developer Tools
-  - Error
-  - JavaScript
-  - Learn
-  - Tutorial
-  - console.log
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
@@ -60,16 +48,18 @@ At this point, let's consult the developer console to see if it reports any synt
 
 ## Fixing syntax errors
 
-Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
+Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
 
 1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:86:3)".](not-a-function.png)
-2. This is a pretty easy error to track down, and the browser gives you several useful bits of information to help you out (the screenshot above is from Firefox, but other browsers provide similar information). From left to right, we've got:
+2. The first line of the error message is:
 
-   - A red "x" to indicate that this is an error.
-   - An error message to indicate what's gone wrong: "TypeError: guessSubmit.addeventListener is not a function"
-   - A "Learn More" link that links through to an MDN page that explains what this error means in greater detail.
-   - The name of the JavaScript file, which links through to the Debugger tab of the developer tools. If you follow this link, you'll see the exact line where the error is highlighted.
-   - The line number where the error is, and the character number in that line where the error is first seen. In this case, we've got line 86, character number 3.
+   ```plain
+   Uncaught TypeError: guessSubmit.addeventListener is not a function
+   number-game-errors.html:86:15
+   ```
+
+   - The first part, `Uncaught TypeError: guessSubmit.addeventListener is not a function`, is telling us something about what went wrong.
+   - The second part, `number-game-errors.html:86:15`, is telling us where in the code the error came from: line 86, character 15 of the file "number-game-errors.html".
 
 3. If we look at line 86 in our code editor, we'll find this line:
 
@@ -82,7 +72,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    ```
 
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
-5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
+5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
 
 > **Note:** See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
@@ -90,33 +80,44 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 1. Save your page and refresh, and you should see the error has gone.
 2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
-3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
+3. This time the error being reported is:
 
-   > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
+   ```plain
+   Uncaught TypeError: can't access property "textContent", lowOrHi is null
+   ```
+
+   Depending on the browser you are using, you might see a different message here. The message above is what Firefox will show you, but Chrome, for example, will show you this:
+
+   ```plain
+   Uncaught TypeError: Cannot set properties of null (setting 'textContent')
+   ```
+
+   It's the same error, but different browsers describe it in a different way.
 
    > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
-4. Have a look at line 78, and you'll see the following code:
+4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
 
    ```js
    lowOrHi.textContent = "Last guess was too high!";
    ```
 
-5. This line is trying to set the `textContent` property of the `lowOrHi` constant to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find in the JavaScript is on line 49:
+5. This line is trying to set the `textContent` property of the `lowOrHi` variable to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find is on line 49:
 
    ```js
    const lowOrHi = document.querySelector("lowOrHi");
    ```
 
-6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is `null` after this line has been run. Add the following code on line 50:
+6. At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's see what the variable contains after this line has been run. Add the following code on line 50:
 
    ```js
    console.log(lowOrHi);
    ```
 
-   > **Note:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 49.
+   This code will print the value of `lowOrHi` to the console after we tried to set it in line 49. See {{domxref("console.log()")}} for more information.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 49.
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 49. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
+
 8. Let's think about what the problem could be. Line 49 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
    ```html
@@ -136,7 +137,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 ## A logic error
 
-At this point, the game should play through fine, however after playing through a few times you'll undoubtedly notice that the "random" number you've got to guess is always 1. Definitely not quite how we want the game to play out!
+At this point, the game should play through fine, however after playing through a few times you'll undoubtedly notice that the game always chooses 1 as the "random" number you've got to guess. Definitely not quite how we want the game to play out!
 
 There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
 
@@ -267,18 +268,6 @@ So there we have it, the basics of figuring out errors in simple JavaScript prog
 ## See also
 
 - There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
-- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
+- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [communication channels](/en-US/docs/MDN/Community/Communication_channels). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

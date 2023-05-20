@@ -1,13 +1,10 @@
 ---
 title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-  - arguments
-  - Non-standard
+page-type: javascript-instance-accessor-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: javascript.builtins.Function.arguments
 ---
 
@@ -15,7 +12,7 @@ browser-compat: javascript.builtins.Function.arguments
 
 > **Note:** The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.
 
-The **`arguments`** accessor property represents the arguments passed to a {{jsxref("Function")}} object. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `arguments` property throws an exception.
+The **`arguments`** accessor property of {{jsxref("Function")}} instances returns the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}.
 
 ## Description
 
@@ -32,17 +29,17 @@ Note that the only behavior specified by the ECMAScript specification is that `F
   if (Object.hasOwn(f, "arguments")) {
     console.log(
       "arguments is an own property with descriptor",
-      Object.getOwnPropertyDescriptor(f, "arguments")
+      Object.getOwnPropertyDescriptor(f, "arguments"),
     );
   } else {
     console.log(
-      "f doesn't have an own property named arguments. Trying to get f.[[Prototype]].arguments"
+      "f doesn't have an own property named arguments. Trying to get f.[[Prototype]].arguments",
     );
     console.log(
       Object.getOwnPropertyDescriptor(
         Object.getPrototypeOf(f),
-        "arguments"
-      ).get.call(f)
+        "arguments",
+      ).get.call(f),
     );
   }
 })();

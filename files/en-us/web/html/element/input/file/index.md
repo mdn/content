@@ -1,17 +1,7 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
-tags:
-  - Directory Picker
-  - File
-  - File Picker
-  - Files
-  - Form input
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Type
+page-type: html-element
 browser-compat: html.elements.input.type_file
 ---
 
@@ -21,54 +11,9 @@ browser-compat: html.elements.input.type_file
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the path to the selected
-        file.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>{{htmlattrxref("required", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Additional Attributes</strong></td>
-      <td>
-        <a href="#accept" aria-current="page"><code>accept</code></a>,
-        <a href="#capture" aria-current="page"><code>capture</code></a>,
-        <a href="#multiple" aria-current="page"><code>multiple</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>files</code> and <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-A file input's {{htmlattrxref("value", "input")}} attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
+A file input's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
 > **Note:** The value is [always the file's name prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), which isn't the real path of the file. This is to prevent malicious software from guessing the user's file structure.
 
@@ -86,7 +31,7 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 <input
   type="file"
   id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### capture
@@ -155,7 +100,7 @@ This produces the following output:
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
-Including the {{htmlattrxref("multiple", "input/file")}} attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
+Including the [`multiple`](#multiple) attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd> and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
 
 ### Getting information on selected files
 
@@ -174,15 +119,15 @@ Each `File` object contains the following information:
 - `type`
   - : The file's [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
-  - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). _This is non-standard and should be used with caution._
+  - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 
-> **Note:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
+> **Note:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
 Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}.
 
-Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
+Acceptable file types can be specified with the [`accept`](#accept) attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
 - `accept="image/png"` or `accept=".png"` — Accepts PNG files.
 - `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
@@ -355,7 +300,7 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If it is, we:
 
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
-  - Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its {{htmlattrxref("src", "img")}} to the thumbnail.
+  - Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
 
 - If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
 
@@ -434,6 +379,57 @@ function returnFileSize(number) {
 The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the path to the selected
+        file.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Additional Attributes</strong></td>
+      <td>
+        <a href="#accept" aria-current="page"><code>accept</code></a>,
+        <a href="#capture" aria-current="page"><code>capture</code></a>,
+        <a href="#multiple" aria-current="page"><code>multiple</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>files</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -1,10 +1,7 @@
 ---
 title: Void element
 slug: Glossary/Void_element
-tags:
-  - CodingScripting
-  - HTML
-  - Intermediate
+page-type: glossary-definition
 ---
 
 A **void element** is an {{Glossary("element")}} in HTML that **cannot** have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements.
@@ -25,17 +22,17 @@ The void elements in HTML are as follows:
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 Draft removed)
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
-- {{HTMLElement("param")}}
+- {{HTMLElement("param")}} {{deprecated_inline}}
 - {{HTMLElement("source")}}
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}
 
 ## Self-closing tags
 
-_Self-closing tags (`<tag />`) do not exist in HTML._\
+_Self-closing tags (`<tag />`) do not exist in HTML._
 
 If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. This is important to remember when an element such as {{HTMLElement('script')}} or {{HTMLElement('ul')}} does require a closing tag. In this case, adding a trailing slash in the start tag does not close the element.
 

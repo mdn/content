@@ -2,15 +2,6 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - margin-block
-  - margin-block-start
-  - recipe:css-property
 browser-compat: css.properties.margin-block-start
 ---
 
@@ -24,9 +15,9 @@ The **`margin-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the log
 
 ```css
 /* <length> values */
-margin-block-start: 10px;  /* An absolute length */
-margin-block-start: 1em;   /* relative to the text size */
-margin-block-start: 5%;    /* relative to the nearest block container's width */
+margin-block-start: 10px; /* An absolute length */
+margin-block-start: 1em; /* relative to the text size */
+margin-block-start: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-block-start: auto;

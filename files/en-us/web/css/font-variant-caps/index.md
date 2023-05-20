@@ -2,12 +2,6 @@
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-caps
 ---
 
@@ -119,10 +113,12 @@ Large sections of text set with a `font-variant` value of `all-small-caps` or `a
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/en-US/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)

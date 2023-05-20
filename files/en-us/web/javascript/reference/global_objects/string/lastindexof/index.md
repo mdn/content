@@ -1,19 +1,13 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - lastIndexOf
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.lastIndexOf
 ---
 
 {{JSRef}}
 
-The **`lastIndexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
+The **`lastIndexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 
 {{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
 
@@ -28,9 +22,7 @@ lastIndexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
-
-    If the method is called with no arguments, `searchString` is coerced to `"undefined"`. Therefore,`"undefined".lastIndexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `"undefine".lastIndexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
+  - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `indexOf()` to search for the string `"undefined"`, which is rarely what you want.
 
 - `position` {{optional_inline}}
 

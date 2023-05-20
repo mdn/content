@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.drawArrays()
+title: "WebGLRenderingContext: drawArrays() method"
+short-title: drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
 

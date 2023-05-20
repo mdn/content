@@ -1,18 +1,8 @@
 ---
-title: MediaTrackSettings.deviceId
+title: "MediaTrackSettings: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSettings/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - deviceId
 browser-compat: api.MediaTrackSettings.deviceId
 ---
 
@@ -58,8 +48,7 @@ constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

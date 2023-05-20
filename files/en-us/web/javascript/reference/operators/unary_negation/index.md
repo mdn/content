@@ -1,11 +1,7 @@
 ---
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.unary_negation
 ---
 
@@ -21,6 +17,10 @@ The **unary negation (`-`)** operator precedes its operand and negates it.
 -x
 ```
 
+## Description
+
+The `-` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt negation if the operand becomes a BigInt; otherwise, it performs number negation.
+
 ## Examples
 
 ### Negating numbers
@@ -28,20 +28,27 @@ The **unary negation (`-`)** operator precedes its operand and negates it.
 ```js
 const x = 3;
 const y = -x;
-
-// y = -3
-// x = 3
+// y is -3; x is 3
 ```
 
 ### Negating non-numbers
 
-The unary negation operator can [convert a non-number into a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
+The unary negation operator can convert a non-number into a number.
 
 ```js
 const x = "4";
 const y = -x;
 
-// y = -4
+// y is -4
+```
+
+BigInts can be negated using the unary negation operator.
+
+```js
+const x = 4n;
+const y = -x;
+
+// y is -4n
 ```
 
 ## Specifications

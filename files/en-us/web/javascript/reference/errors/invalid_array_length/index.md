@@ -1,11 +1,7 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -53,29 +49,29 @@ using it as argument of the constructor.
 ### Invalid cases
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32)) // 32-bit system
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32)); // 32-bit system
+new ArrayBuffer(-1);
 
 const a = [];
-a.length = a.length - 1;         // set the length property to -1
+a.length = a.length - 1; // set the length property to -1
 
 const b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // set the length property to 2^32
-b.length = 2.5;                  // set the length property to a floating-point number
+b.length = b.length + 1; // set the length property to 2^32
+b.length = 2.5; // set the length property to a floating-point number
 
-const c = new Array(2.5);          // pass a floating-point number
+const c = new Array(2.5); // pass a floating-point number
 ```
 
 ### Valid cases
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(Math.pow(2, 33))  // 64-bit systems after Firefox 89
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
+new ArrayBuffer(0);
 
 const a = [];
 a.length = Math.max(0, a.length - 1);

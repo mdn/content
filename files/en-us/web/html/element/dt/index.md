@@ -1,18 +1,7 @@
 ---
-title: '<dt>: The Description Term element'
+title: "<dt>: The Description Term element"
 slug: Web/HTML/Element/dt
-tags:
-  - Definition
-  - Description list
-  - Definition Term
-  - Description Term
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Term
-  - Web
-  - dt
+page-type: html-element
 browser-compat: html.elements.dt
 ---
 
@@ -24,11 +13,21 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -37,7 +36,7 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, but with no {{HTMLElement("header")}},
         {{HTMLElement("footer")}}, sectioning content or heading content
@@ -66,7 +65,7 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
@@ -88,14 +87,6 @@ The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web/HTML/Element/dl#examples).
 
 ## Specifications
 

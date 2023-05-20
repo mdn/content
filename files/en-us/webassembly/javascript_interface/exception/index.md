@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-tags:
-  - API
-  - Class
-  - Exception
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 

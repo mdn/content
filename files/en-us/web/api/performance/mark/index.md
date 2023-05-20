@@ -1,12 +1,8 @@
 ---
-title: performance.mark()
+title: "Performance: mark() method"
+short-title: mark()
 slug: Web/API/Performance/mark
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.mark
 ---
 
@@ -28,7 +24,7 @@ mark(name, markOptions)
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
     - `detail` {{optional_inline}}
-      - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+      - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     - `startTime` {{optional_inline}}
       - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
 
@@ -62,11 +58,11 @@ The performance mark is configurable using the `markOptions` object where you ca
 
 ```js
 performance.mark("login-started", {
-  detail: "Login started using the login button in the top menu."
+  detail: "Login started using the login button in the top menu.",
 });
 
 performance.mark("login-started", {
-  detail: { htmlElement: myElement.id }
+  detail: { htmlElement: myElement.id },
 });
 ```
 
@@ -76,11 +72,11 @@ The default timestamp of the `mark()` method is {{domxref("performance.now()")}}
 
 ```js
 performance.mark("start-checkout", {
-  startTime: 20.0
+  startTime: 20.0,
 });
 
 performance.mark("login-button-pressed", {
-  startTime: myEvent.timeStamp
+  startTime: myEvent.timeStamp,
 });
 ```
 
@@ -89,9 +85,9 @@ performance.mark("login-button-pressed", {
 Note in order to maintain backwards compatibility, names that are part of the deprecated {{domxref("PerformanceTiming")}} interface can't be used. The following example throws:
 
 ```js example-bad
-performance.mark("navigationStart"); 
-// SyntaxError: "navigationStart" is part of 
-// the PerformanceTiming interface, 
+performance.mark("navigationStart");
+// SyntaxError: "navigationStart" is part of
+// the PerformanceTiming interface,
 // and cannot be used as a mark name
 ```
 

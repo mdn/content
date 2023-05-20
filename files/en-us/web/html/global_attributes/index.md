@@ -1,11 +1,7 @@
 ---
 title: Global attributes
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - Web
+page-type: landing-page
 browser-compat: html.global_attributes
 ---
 
@@ -17,7 +13,7 @@ Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/E
 
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
-- {{HTMLAttrDef("xml:lang")}} and {{HTMLAttrDef("xml:base")}} — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
+- `xml:lang` and `xml:base` — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
 - The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) states and properties, used for ensuring accessibility.
 - The [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`.
 
@@ -37,7 +33,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
 
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
@@ -75,9 +71,9 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
   - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
-  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
+  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 > **Note:** The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
 
@@ -92,15 +88,17 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#attr-xml:lang) has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#xml:lang) has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
+  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e. a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
-  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
@@ -126,6 +124,12 @@ In addition to the basic HTML global attributes, the following global attributes
 
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
+
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
+
+    - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
+    - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
 
 ## Specifications
 

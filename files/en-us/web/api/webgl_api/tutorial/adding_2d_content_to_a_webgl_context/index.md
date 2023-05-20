@@ -2,17 +2,6 @@
 title: Adding 2D content to a WebGL context
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 page-type: guide
-tags:
-  - 2D Graphics
-  - 3D
-  - 3D Graphics
-  - Drawing
-  - Graphics
-  - Intermediate
-  - Shaders
-  - Tutorial
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
@@ -39,7 +28,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
       crossorigin="anonymous"
       defer></script>
-    <script src="webgl-demo.js" type="module" defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
 
   <body>

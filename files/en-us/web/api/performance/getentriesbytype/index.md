@@ -1,12 +1,8 @@
 ---
-title: performance.getEntriesByType()
+title: "Performance: getEntriesByType() method"
+short-title: getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.getEntriesByType
 ---
 
@@ -18,6 +14,16 @@ If you are interested in performance entries of certain name, see {{domxref("Per
 
 > **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
 > To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
+
+The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
+
+- `"element"` ({{domxref("PerformanceElementTiming")}})
+- `"event"` ({{domxref("PerformanceEventTiming")}})
+- `"largest-contentful-paint"` ({{domxref("LargestContentfulPaint")}})
+- `"layout-shift"` ({{domxref("LayoutShift")}})
+- `"longtask"` ({{domxref("PerformanceLongTaskTiming")}})
+
+To access entries of these types, you must use a {{domxref("PerformanceObserver")}} instead.
 
 ## Syntax
 

@@ -2,12 +2,6 @@
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.text-decoration-line
 ---
 
@@ -30,8 +24,8 @@ text-decoration-line: line-through;
 text-decoration-line: blink;
 
 /* Multiple keywords */
-text-decoration-line: underline overline;               /* Two decoration lines */
-text-decoration-line: overline underline line-through;  /* Multiple decoration lines */
+text-decoration-line: underline overline; /* Two decoration lines */
+text-decoration-line: overline underline line-through; /* Multiple decoration lines */
 
 /* Global values */
 text-decoration-line: inherit;
@@ -85,7 +79,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

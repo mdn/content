@@ -1,13 +1,7 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Cache-Control
 ---
 
@@ -251,15 +245,15 @@ If no request happened during that period, the cache became [stale](/en-US/docs/
 
 #### `stale-if-error`
 
-The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) when an origin server responds with an error (500, 502, 503, or 504).
+The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) when an upstream server generates an error, or when the error is generated locally. Here, an error is considered any response with a status code of 500, 502, 503, or 504.
 
 ```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
-In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for 7 days (604800s). After 7 days it becomes [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), but it can be used for an extra 1 day (86400s) if the server responds with an error.
+In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for 7 days (604800s). Afterwards, it becomes [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), but can be used for an extra 1 day (86400s) when an error is encountered.
 
-After a period of time, the stored response became [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) normally. This means that the client will receive an error response as-is if the origin server sends it.
+After the stale-if-error period passes, the client will receive any error generated.
 
 ### Request Directives
 
@@ -343,7 +337,7 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 #### `only-if-cached`
 
-The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it's reused.
+The client indicates that an already-cached response should be returned. If a cache has a stored response, even a stale one, it will be returned. If no cached response is available, a [504 Gateway Timeout](/en-US/docs/Web/HTTP/Status/504) response will be returned.
 
 ## Use Cases
 

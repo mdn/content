@@ -1,21 +1,12 @@
 ---
 title: Allowing cross-origin use of images and canvas
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - CORS
-  - Canvas
-  - HTML
-  - Image
-  - Reference
-  - Security
-  - Storage
-  - data
+page-type: guide
 ---
 
 {{HTMLSidebar}}
 
-HTML provides a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
+HTML provides a [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
 See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details on how the `crossorigin` attribute is used.
 
@@ -63,7 +54,7 @@ In short, this configures the server to allow graphic files (those with the exte
 
 Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to [local storage](/en-US/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
+The key is to use the [`crossorigin`](/en-US/docs/Web/HTML/Element/image#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when downloading the image data.
 
 #### Starting the download
 
@@ -75,7 +66,7 @@ function startDownload() {
   let imageDescription = "The Mozilla logo";
 
   downloadedImg = new Image();
-  downloadedImg.crossOrigin = "Anonymous";
+  downloadedImg.crossOrigin = "anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;

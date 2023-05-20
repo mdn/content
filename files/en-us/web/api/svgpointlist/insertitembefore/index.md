@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.insertItemBefore()
+title: "SVGPointList: insertItemBefore() method"
+short-title: insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - insertItemBefore
-  - SVGPointList
 browser-compat: api.SVGPointList.insertItemBefore
 ---
 
@@ -56,7 +51,7 @@ let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.insertItemBefore(svgpoint,2));
+console.log(example.points.insertItemBefore(svgpoint, 2));
 ```
 
 ## Specifications

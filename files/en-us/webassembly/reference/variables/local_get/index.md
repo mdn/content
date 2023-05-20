@@ -1,11 +1,6 @@
 ---
 title: Local get
 slug: WebAssembly/Reference/Variables/Local_get
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
 ---
 
 {{WebAssemblySidebar}}

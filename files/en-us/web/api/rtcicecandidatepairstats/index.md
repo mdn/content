@@ -2,24 +2,6 @@
 title: RTCIceCandidatePairStats
 slug: Web/API/RTCIceCandidatePairStats
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Candidate Pair
-  - Connection
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Media
-  - Networking
-  - Pair
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - candidate-pair
-  - rtc
 browser-compat: api.RTCIceCandidatePairStats
 ---
 
@@ -41,8 +23,6 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
   - : The total number of payload bytes received (that is, the total number of bytes received minus any headers, padding, or other administrative overhead) on this candidate pair so far.
 - {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} {{optional_inline}}
   - : The total number of payload bytes sent (that is, the total number of bytes sent minus any headers, padding, or other administrative overhead) so far on this candidate pair.
-- {{domxref("RTCIceCandidatePairStats.consentRequestsSent", "consentRequestsSent")}} {{optional_inline}}
-  - : The total number of consent requests that have been sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.currentRoundTripTime", "currentRoundTripTime")}} {{optional_inline}}
   - : A floating-point value indicating the total time, in seconds, that elapsed between the most recently-sent STUN request and the response being received. This may be based upon requests that were involved in confirming permission to open the connection.
 - {{domxref("RTCIceCandidatePairStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}} {{optional_inline}}
@@ -53,10 +33,6 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
   - : The unique ID string corresponding to the {{domxref("RTCIceCandidate")}} from the data included in the {{domxref("RTCIceCandidateStats")}} object providing statistics for the candidate pair's local candidate.
 - {{domxref("RTCIceCandidatePairStats.nominated", "nominated")}} {{optional_inline}}
   - : A Boolean value which, if `true`, indicates that the candidate pair described by this object is one which has been proposed for use, and will be (or was) used if its priority is the highest among the nominated candidate pairs. See {{RFC(5245, "", "7.1.3.2.4")}} for details.
-- {{domxref("RTCIceCandidatePairStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
-  - : The total number of packets received on this candidate pair.
-- {{domxref("RTCIceCandidatePairStats.packetsSent", "packetsSent")}} {{optional_inline}}
-  - : The total number of packets sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.remoteCandidateId", "remoteCandidateId")}} {{optional_inline}}
   - : The unique ID string corresponding to the remote candidate from which data was taken to construct the `RTCIceCandidateStats` object describing the remote end of the connection.
 - {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} {{optional_inline}}
@@ -94,7 +70,7 @@ The following properties have been removed from the specification and should no 
 
 The currently-active ICE candidate pair—if any—can be obtained by calling the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}, which returns an {{domxref("RTCIceCandidatePair")}} object, or `null` if there isn't a pair selected. The active candidate pair describes the current configuration of the two ends of the {{domxref("RTCPeerConnection")}}.
 
-Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again. For more information, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again. For more information, see [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 ## Example
 
@@ -102,8 +78,9 @@ This example computes the average time elapsed between connectivity checks if th
 
 ```js
 if (rtcStats && rtcStats.type === "candidate-pair") {
-  let elapsed = (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp)
-                  / rtcStats.requestsSent;
+  let elapsed =
+    (rtcStats.lastRequestTimestamp - rtcStats.firstRequestTimestamp) /
+    rtcStats.requestsSent;
 
   log(`Average time between ICE connectivity checks: ${elapsed} ms.`);
 }

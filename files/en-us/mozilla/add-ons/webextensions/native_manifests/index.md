@@ -1,9 +1,7 @@
 ---
 title: Native manifests
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-tags:
-  - Extensions
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -183,7 +181,7 @@ The managed storage manifest contains a single JSON object with the following pr
           <code
             ><a
               href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-              >applications</a
+              >browser_specific_settings</a
             ></code
           >
           key.
@@ -193,7 +191,7 @@ The managed storage manifest contains a single JSON object with the following pr
     <tr>
       <td><code>description</code></td>
       <td>String</td>
-      <td>Human readable description, ignored by Firefox.</td>
+      <td>Human-readable description, ignored by Firefox.</td>
     </tr>
     <tr>
       <td><code>type</code></td>
@@ -321,7 +319,7 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
             <code
               ><a
                 href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-                >applications</a
+                >browser_specific_settings</a
               ></code
             >
             key in your extension's <code>manifest.json</code> file, so you can

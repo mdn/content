@@ -1,13 +1,8 @@
 ---
-title: StyleSheet.ownerNode
+title: "StyleSheet: ownerNode property"
+short-title: ownerNode
 slug: Web/API/StyleSheet/ownerNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.ownerNode
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - onAlarm
+page-type: webextension-api-event
 browser-compat: webextensions.api.alarms.onAlarm
 ---
 

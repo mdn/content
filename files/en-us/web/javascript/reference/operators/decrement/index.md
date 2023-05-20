@@ -1,11 +1,7 @@
 ---
 title: Decrement (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decrement
-  - JavaScript
-  - Language feature
-  - Operator
+page-type: javascript-operator
 browser-compat: javascript.operators.decrement
 ---
 
@@ -24,6 +20,8 @@ x--
 
 ## Description
 
+The `--` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt decrement if the operand becomes a BigInt; otherwise, it performs number decrement.
+
 If used postfix, with operator after operand (for example, `x--`), the decrement operator decrements and returns the value before decrementing.
 
 If used prefix, with operator before operand (for example, `--x`), the decrement operator decrements and returns the value after decrementing.
@@ -41,9 +39,11 @@ The decrement operator can only be applied on operands that are references (vari
 ```js
 let x = 3;
 const y = x--;
+// x is 2; y is 3
 
-// x = 2
-// y = 3
+let x2 = 3n;
+const y2 = x2--;
+// x2 is 2n; y2 is 3n
 ```
 
 ### Prefix decrement
@@ -51,9 +51,11 @@ const y = x--;
 ```js
 let x = 3;
 const y = --x;
+// x is 2; y = 2
 
-// x = 2
-// y = 2
+let x2 = 3n;
+const y2 = --x2;
+// x2 is 2n; y2 is 2n
 ```
 
 ## Specifications

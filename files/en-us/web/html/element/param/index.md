@@ -1,12 +1,9 @@
 ---
-title: '<param>: The Object Parameter element'
+title: "<param>: The Object Parameter element"
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - Deprecated
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.param
 ---
 
@@ -14,11 +11,31 @@ browser-compat: html.elements.param
 
 The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an {{HTMLElement("object")}} element.
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `name` {{deprecated_inline}}
+  - : Name of the parameter.
+- `value` {{deprecated_inline}}
+  - : Specifies the value of the parameter.
+- `type` {{deprecated_inline}}
+  - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
+- `valuetype` {{deprecated_inline}}
+
+  - : Specifies the type of the `value` attribute. Possible values are:
+
+    - `data`: Default value. The value is passed to the object's implementation as a string.
+    - `ref`: The value is a URI to a resource where run-time values are stored.
+    - `object`: An ID of another {{HTMLElement("object")}} in the same document.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -39,7 +56,7 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
       <th scope="row">Permitted parents</th>
       <td>
         An {{HTMLElement("object")}} before any
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -62,24 +79,6 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : Name of the parameter.
-- {{htmlattrdef("value")}} {{deprecated_inline}}
-  - : Specifies the value of the parameter.
-- {{htmlattrdef("type")}} {{deprecated_inline}}
-  - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
-
-  - : Specifies the type of the `value` attribute. Possible values are:
-
-    - `data`: Default value. The value is passed to the object's implementation as a string.
-    - `ref`: The value is a URI to a resource where run-time values are stored.
-    - `object`: An ID of another {{HTMLElement("object")}} in the same document.
 
 ## Specifications
 

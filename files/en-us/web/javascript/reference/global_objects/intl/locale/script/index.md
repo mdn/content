@@ -1,21 +1,13 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.script
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.script`** property is an accessor property which returns the script used for writing the particular language used in the locale.
+The **`script`** accessor property of {{jsxref("Intl.Locale")}} instances returns the script used for writing the particular language used in this locale.
 
 ## Description
 

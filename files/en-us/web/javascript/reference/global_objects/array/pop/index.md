@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop
 ---
 
@@ -120,6 +115,8 @@ console.log(collection.length); // 2
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

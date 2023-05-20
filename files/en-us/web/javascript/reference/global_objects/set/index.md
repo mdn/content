@@ -1,15 +1,7 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - Class
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - Reference
-  - set
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Set
 ---
 
@@ -19,7 +11,7 @@ The **`Set`** object lets you store unique values of any type, whether {{Glossar
 
 ## Description
 
-`Set` objects are collections of values. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection. You can iterate through the elements of a set in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the set by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the set when `add()` was called).
+`Set` objects are collections of values. A value in the set **may only occur once**; it is unique in the set's collection. You can iterate through the elements of a set in insertion order. The _insertion order_ corresponds to the order in which each element was inserted into the set by the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) method successfully (that is, there wasn't an identical element already in the set when `add()` was called).
 
 The specification requires sets to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
@@ -29,7 +21,7 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 ### Performance
 
-The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object's `size`.
+The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
 ## Constructor
 
@@ -38,15 +30,19 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Static properties
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/@@species", "Set[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
 ## Instance properties
 
-- `Set.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+These properties are defined on `Set.prototype` and shared by all `Set` instances.
+
+- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Set` instances, the initial value is the {{jsxref("Set/Set", "Set")}} constructor.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
+- `Set.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -56,61 +52,57 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.prototype.has()")}}
-  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values()")}}
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
-  - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
-  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order.
-
-    This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
-
+  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order. This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 - {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
+- {{jsxref("Set.prototype.has()")}}
+  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
+- {{jsxref("Set.prototype.keys()")}}
+  - : An alias for {{jsxref("Set.prototype.values()")}}.
+- {{jsxref("Set.prototype.values()")}}
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
+- [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 
 ## Examples
 
 ### Using the Set object
 
 ```js
-const mySet1 = new Set()
+const mySet1 = new Set();
 
-mySet1.add(1)           // Set(1) { 1 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add('some text') // Set(3) { 1, 5, 'some text' }
-const o = {a: 1, b: 2}
-mySet1.add(o)
+mySet1.add(1); // Set(1) { 1 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add("some text"); // Set(3) { 1, 5, 'some text' }
+const o = { a: 1, b: 2 };
+mySet1.add(o);
 
-mySet1.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
+mySet1.add({ a: 1, b: 2 }); // o is referencing a different object, so this is okay
 
-mySet1.has(1)              // true
-mySet1.has(3)              // false, since 3 has not been added to the set
-mySet1.has(5)              // true
-mySet1.has(Math.sqrt(25))  // true
-mySet1.has('Some Text'.toLowerCase()) // true
-mySet1.has(o)       // true
+mySet1.has(1); // true
+mySet1.has(3); // false, since 3 has not been added to the set
+mySet1.has(5); // true
+mySet1.has(Math.sqrt(25)); // true
+mySet1.has("Some Text".toLowerCase()); // true
+mySet1.has(o); // true
 
-mySet1.size         // 5
+mySet1.size; // 5
 
-mySet1.delete(5)    // removes 5 from the set
-mySet1.has(5)       // false, 5 has been removed
+mySet1.delete(5); // removes 5 from the set
+mySet1.has(5); // false, 5 has been removed
 
-mySet1.size         // 4, since we just removed one value
+mySet1.size; // 4, since we just removed one value
 
-mySet1.add(5)       // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
+mySet1.add(5); // Set(5) { 1, 'some text', {...}, {...}, 5 } - a previously deleted item will be added as a new item, it will not retain its original position before deletion
 
-console.log(mySet1) // Set(5) { 1, "some text", {…}, {…}, 5 }
+console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
-### Iterating Sets
+### Iterating sets
 
-Iteration of sets visits elements in insertion order.
+The iteration over a set visits elements in insertion order.
 
 ```js
 for (const item of mySet1) {
@@ -135,11 +127,11 @@ for (const [key, value] of mySet1.entries()) {
 // 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 // Convert Set object to an Array object, with Array.from
-const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
+const myArr = Array.from(mySet1); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // the following will also work if run in an HTML document
-mySet1.add(document.body)
-mySet1.has(document.querySelector('body')) // true
+mySet1.add(document.body);
+mySet1.has(document.querySelector("body")); // true
 
 // converting between Set and Array
 const mySet2 = new Set([1, 2, 3, 4]);
@@ -213,62 +205,60 @@ function difference(setA, setB) {
 }
 
 // Examples
-const setA = new Set([1, 2, 3, 4])
-const setB = new Set([2, 3])
-const setC = new Set([3, 4, 5, 6])
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([2, 3]);
+const setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB)          // returns true
-union(setA, setC)               // returns Set {1, 2, 3, 4, 5, 6}
-intersection(setA, setC)        // returns Set {3, 4}
-symmetricDifference(setA, setC) // returns Set {1, 2, 5, 6}
-difference(setA, setC)          // returns Set {1, 2}
+isSuperset(setA, setB); // returns true
+union(setA, setC); // returns Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC); // returns Set {3, 4}
+symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
+difference(setA, setC); // returns Set {1, 2}
 ```
 
-### Relation with Array objects
+### Relation to arrays
 
 ```js
-const myArray = ['value1', 'value2', 'value3'];
+const myArray = ["value1", "value2", "value3"];
 
 // Use the regular Set constructor to transform an Array into a Set
 const mySet = new Set(myArray);
 
-mySet.has('value1')     // returns true
+mySet.has("value1"); // returns true
 
 // Use the spread syntax to transform a set into an Array.
 console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```
 
-### Remove duplicate elements from the array
+### Remove duplicate elements from an array
 
 ```js
-// Use to remove duplicate elements from the array
+// Use to remove duplicate elements from an array
 
-const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
 
-console.log([...new Set(numbers)])
+console.log([...new Set(numbers)]);
 
 // [2, 3, 4, 5, 6, 7, 32]
 ```
 
-### Relation with Strings
+### Relation to strings
 
 ```js
-const text = 'India';
+const text = "India";
 
-const mySet = new Set(text);  // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size  // 5
+const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
+mySet.size; // 5
 
-//case sensitive & duplicate omission
-new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
+// case sensitive & duplicate omission
+new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Use Set to ensure the uniqueness of a list of values
+### Use a set to ensure the uniqueness of a list of values
 
 ```js
-const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map((e) => e.id);
+const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
 
 const set = new Set(array);
 console.assert(set.size === array.length);

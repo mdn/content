@@ -1,15 +1,8 @@
 ---
-title: AudioParam.linearRampToValueAtTime()
+title: "AudioParam: linearRampToValueAtTime() method"
+short-title: linearRampToValueAtTime()
 slug: Web/API/AudioParam/linearRampToValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - linearRampToValueAtTime
 browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
 

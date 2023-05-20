@@ -1,15 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - CSS Selectors
-  - DOM
-  - JXON
-  - Landing
-  - Path
-  - XML
-  - XPath
-  - XSLT
 ---
 
 <section id="Quick_links">

@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: Sizing'
+title: "Test your skills: Sizing"
 slug: Learn/CSS/Building_blocks/Sizing_tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Sizing
-  - test your skills
 ---
 
 {{LearnSidebar}}

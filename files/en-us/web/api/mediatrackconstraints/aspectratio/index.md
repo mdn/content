@@ -1,19 +1,8 @@
 ---
-title: MediaTrackConstraints.aspectRatio
+title: "MediaTrackConstraints: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - aspectRatio
-  - getusermedia
 browser-compat: api.MediaTrackConstraints.aspectRatio
 ---
 
@@ -44,8 +33,7 @@ best-possible value.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

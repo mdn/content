@@ -1,21 +1,8 @@
 ---
-title: MediaDevices.getUserMedia()
+title: "MediaDevices: getUserMedia() method"
+short-title: getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Capture
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Photos
-  - Reference
-  - Video
-  - WebRTC
-  - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
 
@@ -48,7 +35,8 @@ async function getMedia(constraints) {
 Similarly, using the raw promises directly, the code looks like this:
 
 ```js
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((stream) => {
     /* use the stream */
   })
@@ -86,8 +74,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: true
-    })
+      video: true,
+    });
     ```
 
     If `true` is specified for a media type, the resulting stream is
@@ -102,8 +90,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: { width: 1280, height: 720 }
-    })
+      video: { width: 1280, height: 720 },
+    });
     ```
 
     The browser will try to honour this, but may return other
@@ -118,9 +106,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { min: 1280 },
-        height: { min: 720 }
-      }
-    })
+        height: { min: 720 },
+      },
+    });
     ```
 
     If no camera exists with this resolution or higher, then the returned promise will
@@ -136,9 +124,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { min: 1024, ideal: 1280, max: 1920 },
-        height: { min: 576, ideal: 720, max: 1080 }
-      }
-    })
+        height: { min: 576, ideal: 720, max: 1080 },
+      },
+    });
     ```
 
     An `ideal` value, when used, has gravity, which means that the browser
@@ -153,9 +141,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { ideal: 1280 },
-        height: { ideal: 720 }
-      }
-    })
+        height: { ideal: 720 },
+      },
+    });
     ```
 
     Not all constraints are numbers. For example, on mobile devices, the following will
@@ -164,8 +152,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: { facingMode: "user" }
-    })
+      video: { facingMode: "user" },
+    });
     ```
 
     To _require_ the rear camera, use:
@@ -174,9 +162,9 @@ getUserMedia(constraints)
     getUserMedia({
       audio: true,
       video: {
-        facingMode: { exact: "environment" }
-      }
-    })
+        facingMode: { exact: "environment" },
+      },
+    });
     ```
 
     Another non-number constraint is the `deviceId` constraint. If you have
@@ -186,9 +174,9 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       video: {
-        deviceId: myPreferredCameraDeviceId
-      }
-    })
+        deviceId: myPreferredCameraDeviceId,
+      },
+    });
     ```
 
     The above will return the camera you requested, or a different camera if that
@@ -199,10 +187,10 @@ getUserMedia(constraints)
     getUserMedia({
       video: {
         deviceId: {
-          exact: myExactCameraOrBustDeviceId
-        }
-      }
-    })
+          exact: myExactCameraOrBustDeviceId,
+        },
+      },
+    });
     ```
 
 ### Return value
@@ -213,9 +201,11 @@ object when the requested media has successfully been obtained.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
+
   - : Although the user and operating system both granted access to the hardware device,
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
+
 - `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
@@ -223,8 +213,8 @@ object when the requested media has successfully been obtained.
     rather than HTTPS). It also happens if the user has specified that the current
     browsing instance is not permitted access to the device, the user has denied access
     for the current session, or the user has denied all access to user media devices
-    globally. On browsers that support managing media permissions with [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), this error is
-    returned if Feature Policy is not configured to allow access to the input source(s).
+    globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), this error is
+    returned if Permissions Policy is not configured to allow access to the input source(s).
 
     > **Note:** Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
@@ -245,7 +235,7 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
-    > fingerprinting surface.
+    > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
@@ -264,7 +254,7 @@ As an API that may involve significant privacy concerns, `getUserMedia()`'s
 specification lays out a wide array of privacy and security requirements that browsers
 are obligated to meet.
 
-`getUserMedia()` is a powerful feature which can only be used in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts); in insecure
+`getUserMedia()` is a powerful feature that can only be used in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts); in insecure
 contexts, `navigator.mediaDevices` is `undefined`, preventing
 access to `getUserMedia()`. A secure context is, in short, a page loaded
 using HTTPS or the `file:///` URL scheme, or a page loaded from
@@ -273,7 +263,7 @@ using HTTPS or the `file:///` URL scheme, or a page loaded from
 In addition, user permission is always required to access the user's audio and video
 inputs. Only a window's top-level document context for a valid origin can even request
 permission to use `getUserMedia()`, unless the top-level context expressly
-grants permission for a given {{HTMLElement("iframe")}} to do so using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). Otherwise, the user
+grants permission for a given {{HTMLElement("iframe")}} to do so using [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). Otherwise, the user
 will never even be asked for permission to use the input devices.
 
 For additional details on these requirements and rules, how they are reflected in the
@@ -309,40 +299,24 @@ is over.
 There are a number of ways security management and controls in a {{Glossary("user
   agent")}} can cause `getUserMedia()` to return a security-related error.
 
-> **Note:** The security model for `getUserMedia()` is still
-> somewhat in flux. The originally-designed security mechanism is in the process of
-> being replaced with Feature Policy, so various browsers have different levels of
-> security support, using different mechanisms. You should test your code carefully on a
-> variety of devices and browsers to be sure it is as broadly compatible as possible
+#### Permissions Policy
 
-#### Feature Policy
-
-The [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) security
-management feature of {{Glossary("HTTP")}} is in the process of being introduced into
-browsers, with support available to some extent in many browsers (though not always
-enabled by default, as in Firefox). `getUserMedia()` is one method which will
-require the use of Feature Policy, and your code needs to be prepared to deal with this.
-For example, you may need to use the {{htmlattrxref("allow", "iframe")}} attribute on
-any {{HTMLElement("iframe")}} that uses `getUserMedia()`, and pages that use
-`getUserMedia()` will eventually need to supply the
-{{HTTPHeader("Feature-Policy")}} header.
-
-The two permissions that apply to `getUserMedia()` are `camera`
+The two [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
 and `microphone`.
 
-For example, this line in the HTTP headers will enable use of a camera for the document
+For example, this HTTP header will enable use of a camera by the document
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
 ```http
-Feature-Policy: camera 'self'
+Permissions-Policy: camera=(self)
 ```
 
 This will request access to the microphone for the current origin and the specific
 origin `https://developer.mozilla.org`:
 
 ```http
-Feature-Policy: microphone 'self' https://developer.mozilla.org
+Permissions-Policy: microphone=(self "https://developer.mozilla.org")
 ```
 
 If you're using `getUserMedia()` within an `<iframe>`, you
@@ -351,11 +325,9 @@ a more general permission. Here, indicate we need the ability to use both camera
 microphone:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="camera;microphone">
+<iframe src="https://mycode.example.net/etc" allow="camera; microphone">
 </iframe>
 ```
-
-Read our guide, [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
 
 #### Encryption based security
 
@@ -378,13 +350,13 @@ situations in which `getUserMedia()` is not permitted to be called:
 
 - A document loaded into a sandboxed {{HTMLElement("iframe")}} element cannot call
   `getUserMedia()` unless the `<iframe>` has its
-  {{htmlattrxref("sandbox", "iframe")}} attribute set to `allow-same-origin`.
+  [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute set to `allow-same-origin`.
 - A document loaded using a `data://` or `blob://` URL which has
   no origin (such as when one of these URLs is typed by the user into the address bar)
   cannot call `getUserMedia()`. These kinds of URLs loaded from JavaScript
   code inherit the script's permissions.
 - Any other situation in which there is no origin, such as when the
-  {{htmlattrxref("srcdoc", "iframe")}} attribute is used to specify the contents of a
+  [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#srcdoc) attribute is used to specify the contents of a
   frame.
 
 ## Examples
@@ -398,12 +370,13 @@ This example gives a preference for camera resolution, and assigns the resulting
 // Prefer camera resolution nearest to 1280x720.
 const constraints = {
   audio: true,
-  video: { width: 1280, height: 720 }
+  video: { width: 1280, height: 720 },
 };
 
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((mediaStream) => {
-    const video = document.querySelector('video');
+    const video = document.querySelector("video");
     video.srcObject = mediaStream;
     video.onloadedmetadata = () => {
       video.play();
@@ -422,7 +395,7 @@ bandwidth restrictions.
 
 ```js
 const constraints = {
-  video: { frameRate: { ideal: 10, max: 15 } }
+  video: { frameRate: { ideal: 10, max: 15 } },
 };
 ```
 
@@ -437,7 +410,7 @@ document.getElementById("flip-button").onclick = () => {
 };
 
 const constraints = {
-  video: { facingMode: front ? "user" : "environment" }
+  video: { facingMode: front ? "user" : "environment" },
 };
 ```
 

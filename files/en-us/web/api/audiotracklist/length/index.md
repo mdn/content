@@ -1,19 +1,8 @@
 ---
-title: AudioTrackList.length
+title: "AudioTrackList: length property"
+short-title: length
 slug: Web/API/AudioTrackList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - length
-  - list
-  - track
 browser-compat: api.AudioTrackList.length
 ---
 

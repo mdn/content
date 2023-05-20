@@ -1,14 +1,10 @@
 ---
-title: IdleDetector.start()
+title: "IdleDetector: start() method"
+short-title: start()
 slug: Web/API/IdleDetector/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - start
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.start
 ---
 
@@ -41,6 +37,11 @@ start(options)
 
 A {{jsxref("Promise")}}.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example shows how to start idle detection using the `options` argument. It retrieves an instance of `AbortSignal` from an instance of {{domxref("AbortController")}}.
@@ -53,7 +54,7 @@ await idleDetector.start({
   threshold: 60_000,
   signal,
 });
-console.log('IdleDetector is active.');
+console.log("IdleDetector is active.");
 ```
 
 ## Specifications

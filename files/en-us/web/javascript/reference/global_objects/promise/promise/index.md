@@ -1,18 +1,13 @@
 ---
 title: Promise() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-tags:
-  - Constructor
-  - JavaScript
-  - Promise
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Promise.Promise
 ---
 
 {{JSRef}}
 
-The **`Promise()`** constructor is primarily used to wrap functions that do not already support promises.
+The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is primarily used to wrap callback-based APIs that do not already support promises.
 
 {{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
 
@@ -224,4 +219,4 @@ const rejectedResolved2 = new Promise((resolve) => {
 ## See also
 
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Using Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)

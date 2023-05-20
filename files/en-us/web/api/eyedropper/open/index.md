@@ -1,14 +1,10 @@
 ---
-title: EyeDropper.open()
+title: "EyeDropper: open() method"
+short-title: open()
 slug: Web/API/EyeDropper/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - EyeDropper
-  - open
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EyeDropper.open
 ---
 

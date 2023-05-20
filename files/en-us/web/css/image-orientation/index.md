@@ -2,12 +2,6 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - image-orientation
-  - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
 
@@ -38,6 +32,8 @@ image-orientation: unset;
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`
   - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
+
+> **Warning:** `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
 
 ## Description
 
@@ -97,7 +93,7 @@ label {
 ```
 
 ```js hidden
-document.addEventListener('change', (evt) => {
+document.addEventListener("change", (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```

@@ -2,17 +2,6 @@
 title: column-rule-color
 slug: Web/CSS/column-rule-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - HTML Colors
-  - Reference
-  - Styles
-  - Styling HTML
-  - column-rule-color
-  - columns
-  - recipe:css-property
 browser-compat: css.properties.column-rule-color
 ---
 
@@ -27,9 +16,9 @@ The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color o
 ```css
 /* <color> values */
 column-rule-color: red;
-column-rule-color: rgb(192, 56, 78);
+column-rule-color: rgb(192 56 78);
 column-rule-color: transparent;
-column-rule-color: hsla(0, 100%, 50%, 0.6);
+column-rule-color: hsl(0 100% 50% / 0.6);
 
 /* Global values */
 column-rule-color: inherit;

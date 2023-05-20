@@ -1,19 +1,13 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.WeakMap
 ---
 
 {{JSRef}}
 
-A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
 `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
@@ -21,7 +15,7 @@ You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaS
 
 ## Description
 
-Keys of WeakMaps are of the type `Object` only. {{Glossary("Primitive", "Primitive data types")}} as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a `WeakMap` key).
+Keys of WeakMaps must be garbage-collectable. Most {{Glossary("Primitive", "primitive data types")}} can be arbitrarily created and don't have a lifetime, so they cannot be used as keys. Objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) can be used as keys because they are garbage-collectable.
 
 ### Why WeakMap?
 
@@ -48,6 +42,10 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 
 ## Instance properties
 
+These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` instances.
+
+- {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakMap` instances, the initial value is the {{jsxref("WeakMap/WeakMap", "WeakMap")}} constructor.
 - `WeakMap.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
@@ -75,7 +73,7 @@ const o2 = function () {};
 const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!
@@ -138,19 +136,19 @@ let Thing;
   const privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -177,7 +175,7 @@ class Thing {
   static #counter = 0;
   #hidden;
   constructor() {
-    this.someProperty = 'foo';
+    this.someProperty = "foo";
     this.#hidden = ++Thing.#counter;
   }
   showPublic() {
@@ -230,7 +228,7 @@ const buttons = document.querySelectorAll(".button");
 const clicked = new WeakMap();
 buttons.forEach((button) => {
   clicked.set(button, false);
-  buttons.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     clicked.set(button, true);
     const currentButtons = [...document.querySelectorAll(".button")];
     if (currentButtons.every((button) => clicked.get(button))) {
@@ -258,7 +256,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_Management#weakrefs_and_finalizationregistry) example for more details.
+This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) example for more details.
 
 ## Specifications
 

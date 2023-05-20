@@ -1,19 +1,13 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-  - Time
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.now
 ---
 
 {{JSRef}}
 
-The static **`Date.now()`** method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
+The **`Date.now()`** static method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
 {{EmbedInteractiveExample("pages/js/date-now.html")}}
 
@@ -31,7 +25,7 @@ A number representing the number of milliseconds elapsed since the [epoch](/en-U
 
 ### Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
 `Date.now()` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.

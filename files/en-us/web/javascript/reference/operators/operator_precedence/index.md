@@ -1,10 +1,7 @@
 ---
 title: Operator precedence
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - Guide
-  - JavaScript
-  - precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
+page-type: guide
 ---
 
 {{jsSidebar("Operators")}}
@@ -28,11 +25,11 @@ The combination above has two possible interpretations:
 a OP1 (b OP2 c)
 ```
 
-Which one the language decides to adopt depends on the identity of `OP1` ad `OP2`.
+Which one the language decides to adopt depends on the identity of `OP1` and `OP2`.
 
 If `OP1` and `OP2` have different precedence levels (see the table below), the operator with the higher _precedence_ goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
 
-```js
+```js-nolint
 console.log(3 + 10 * 2); // 23
 console.log(3 + (10 * 2)); // 23, because parentheses here are superfluous
 console.log((3 + 10) * 2); // 26, because the parentheses change the order
@@ -48,7 +45,7 @@ with the expected result that `a` and `b` get the value 5. This is because the a
 
 As another example, the unique exponentiation operator has right-associativity, whereas other arithmetic operators have left-associativity.
 
-```js
+```js-nolint
 const a = 4 ** 3 ** 2; // Same as 4 ** (3 ** 2); evaluates to 262144
 const b = 4 / 3 / 2; // Same as (4 / 3) / 2; evaluates to 0.6666...
 ```
@@ -110,7 +107,7 @@ a++++; // SyntaxError: Invalid left-hand side in postfix operation.
 
 Operator precedence will be handled _recursively_. For example, consider this expression:
 
-```js
+```js-nolint
 1 + 2 ** 3 * 4 / 5 >> 6
 ```
 
@@ -120,7 +117,7 @@ First, we group operators with different precedence by decreasing levels of prec
 2. Looking around the `**` expression, it has `*` on the right and `+` on the left. `*` has higher precedence, so it's grouped first. `*` and `/` have the same precedence, so we group them together for now.
 3. Looking around the `*`/`/` expression grouped in 2, because `+` has higher precedence than `>>`, the former is grouped.
 
-```js
+```js-nolint
    (1 + ( (2 ** 3) * 4 / 5) ) >> 6
 // │    │ └─ 1. ─┘        │ │
 // │    └────── 2. ───────┘ │
@@ -129,7 +126,7 @@ First, we group operators with different precedence by decreasing levels of prec
 
 Within the `*`/`/` group, because they are both left-associative, the left operand would be grouped.
 
-```js
+```js-nolint
    (1 + ( ( (2 ** 3) * 4 ) / 5) ) >> 6
 // │    │ │ └─ 1. ─┘     │    │ │
 // │    └─│─────── 2. ───│────┘ │
@@ -139,7 +136,7 @@ Within the `*`/`/` group, because they are both left-associative, the left opera
 
 Note that operator precedence and associativity only affect the order of evaluation of _operators_ (the implicit grouping), but not the order of evaluation of _operands_. The operands are always evaluated from left-to-right. The higher-precedence expressions are always evaluated first, and their results are then composed according to the order of operator precedence.
 
-```js
+```js-nolint
 function echo(name, num) {
   console.log(`Evaluating the ${name} side`);
   return num;
@@ -180,7 +177,7 @@ In the previous section, we said "the higher-precedence expressions are always e
 
 Short-circuiting is jargon for conditional evaluation. For example, in the expression `a && (b + c)`, if `a` is {{Glossary("falsy")}}, then the sub-expression `(b + c)` will not even get evaluated, even if it is grouped and therefore has higher precedence than `&&`. We could say that the logical AND operator (`&&`) is "short-circuited". Along with logical AND, other short-circuited operators include logical OR (`||`), nullish coalescing (`??`), and optional chaining (`?.`).
 
-```js
+```js-nolint
 a || (b * c); // evaluate `a` first, then produce `a` if `a` is "truthy"
 a && (b < c); // evaluate `a` first, then produce `a` if `a` is "falsy"
 a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
@@ -195,21 +192,23 @@ The previous model of a post-order traversal still stands. However, after the le
 
 Consider this case:
 
-```js
+```js-nolint
 function A() { console.log('called A'); return false; }
 function B() { console.log('called B'); return false; }
 function C() { console.log('called C'); return true; }
 
 console.log(C() || B() && A());
 
+// Logs:
 // called C
 // true
 ```
 
 Only `C()` is evaluated, despite `&&` having higher precedence. This does not mean that `||` has higher precedence in this case — it's exactly _because_ `(B() && A())` has higher precedence that causes it to be neglected as a whole. If it's re-arranged as:
 
-```js
+```js-nolint
 console.log(A() && C() || B());
+// Logs:
 // called A
 // called B
 // false
@@ -228,7 +227,7 @@ The following table lists operators in order from highest precedence (18) to low
 Several notes about the table:
 
 1. Not all syntax included here are "operators" in the strict sense. For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
-2. The operand of unary operators (precedence 14; excluding prefix increment/decrement) cannot be an exponentiation `**` (precedence 13) without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is technically unambiguous, the language requires you to use `(-1) ** 2` instead.
+2. The left operand of an exponentiation `**` (precedence 13) cannot be one of the unary operators with precedence 14 without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is technically unambiguous, the language requires you to use `(-1) ** 2` instead.
 3. The operands of nullish coalescing `??` (precedence 3) cannot be a logical OR `||` (precedence 3) or logical AND `&&` (precedence 4). That means you have to write `(a ?? b) || c` or `a ?? (b || c)`, instead of `a ?? b || c`.
 4. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 2) must be an arguments list or a single identifier instead of some random expression.
 5. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
@@ -252,33 +251,11 @@ Several notes about the table:
     <tr>
       <td rowspan="5">17</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
+        {{jsxref("Operators/Property_accessors", "Member Access", "#Dot_notation",
                 1)}}
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… . …</code></td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member
-                Access","#Bracket_notation", 1)}}
-      </td>
-      <td>n/a</td>
-      <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
-      <td>n/a</td>
-      <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
-      </td>
-      <td>n/a</td>
-      <td>
-        <code>… ( … )</code>
-      </td>
     </tr>
     <tr>
       <td>
@@ -287,8 +264,27 @@ Several notes about the table:
           >Optional chaining</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?. …</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Operators/Property_accessors", "Computed Member
+                Access","#Bracket_notation", 1)}}
+      </td>
+      <td rowspan="3">n/a</td>
+      <td><code>… [ … ]</code></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
+      <td><code>new … ( … )</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
+      </td>
+      <td>
+        <code>… ( … )</code>
+      </td>
     </tr>
     <tr>
       <td>16</td>
@@ -585,7 +581,7 @@ Several notes about the table:
           >Logical OR (||)</a
         >
       </td>
-      <td>left-to-right</td>
+      <td rowspan="2">left-to-right</td>
       <td><code>… || …</code></td>
     </tr>
     <tr>
@@ -595,7 +591,6 @@ Several notes about the table:
           >Nullish coalescing operator (??)</a
         >
       </td>
-      <td>left-to-right</td>
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
@@ -657,7 +652,7 @@ Several notes about the table:
     <tr>
       <td>
         <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >Conditional (ternary) operator</a
         >
       </td>
@@ -671,11 +666,12 @@ Several notes about the table:
           >Arrow (=>)</a
         >
       </td>
-      <td rowspan="4">n/a</td>
+      <td>right-to-left</td>
       <td><code>… => …</code></td>
     </tr>
     <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
+      <td rowspan="3">n/a</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
@@ -693,7 +689,7 @@ Several notes about the table:
     <tr>
       <td >1</td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >Comma / Sequence</a
         >
       </td>

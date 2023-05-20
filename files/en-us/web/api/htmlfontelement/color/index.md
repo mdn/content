@@ -1,14 +1,10 @@
 ---
-title: HTMLFontElement.color
+title: "HTMLFontElement: color property"
+short-title: color
 slug: Web/API/HTMLFontElement/color
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.color
 ---
 
@@ -16,8 +12,7 @@ browser-compat: api.HTMLFontElement.color
 
 The obsolete
 **`HTMLFontElement.color`**
-property is a string that reflects the {{htmlattrxref("color",
-    "font")}} HTML attribute, containing either a named color or a color specified in the
+property is a string that reflects the [`color`](/en-US/docs/Web/HTML/Element/font#color) HTML attribute, containing either a named color or a color specified in the
 hexadecimal #RRGGBB format.
 
 The format of the string must follow one of the following HTML microsyntaxes:

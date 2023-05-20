@@ -2,20 +2,12 @@
 title: animation
 slug: Web/CSS/animation
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.animation
 ---
 
 {{CSSRef}}
 
 The **`animation`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.
-
-A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_animated_properties) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
@@ -212,11 +204,9 @@ position and color are independent.
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  /* multiple animations are separated by commas */
-  animation:
-    4s linear 0s infinite alternate rise,
-    /* animation parameters are set independently */
-    24s linear 0s infinite psychedelic;
+  /* multiple animations are separated by commas, each animation's parameters are set independently */
+  animation: 4s linear 0s infinite alternate rise, 24s linear 0s infinite
+      psychedelic;
 }
 
 @keyframes rise {
@@ -268,11 +258,9 @@ is 'overwritten' by the bounce animation.
     animations declared later in the cascade will override the
     properties of previously declared animations
   */
-  animation:
-    4s linear 0s infinite alternate rise,
-    /* bounce 'overwrites' the transform set by rise */
-    4s linear 0s infinite alternate bounce;
-    /* hence the sun only moves horizontally */
+  /* bounce 'overwrites' the transform set by rise, hence the sun only moves horizontally */
+  animation: 4s linear 0s infinite alternate rise, 4s linear 0s infinite
+      alternate bounce;
 }
 
 @keyframes rise {

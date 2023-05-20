@@ -1,13 +1,7 @@
 ---
 title: aria-rowindextext
 slug: Web/Accessibility/ARIA/Attributes/aria-rowindextext
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-rowindextext
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindextext
 ---
 
@@ -15,7 +9,7 @@ The `aria-rowindextext` attribute defines a human-readable text alternative of `
 
 ## Description
 
-When you have a very long table or when you purposefully want to display just a section of a table, not all rows may be present in the DOM. When this happens, we use the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) with an integer value to define how many rows the table (or grid) would have if all the rows were present and add the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) property on each row and spanning cell to provide information on the row index within that larger table. When the value of `aria-rowindex` is not meaningful or does not reflect the displayed index, we can also add the `aria-rowindextext` to provide a human readable text alternative to the `aria-rowindex` integer value.
+When you have a very long table or when you purposefully want to display just a section of a table, not all rows may be present in the DOM. When this happens, we use the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) with an integer value to define how many rows the table (or grid) would have if all the rows were present and add the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) property on each row and spanning cell to provide information on the row index within that larger table. When the value of `aria-rowindex` is not meaningful or does not reflect the displayed index, we can also add the `aria-rowindextext` to provide a human-readable text alternative to the `aria-rowindex` integer value.
 
 The `aria-rowindextext` should only be included **in addition to**, not as a replacement of, the `aria-rowindex`. Some assistive technologies use the numeric row index for the purpose of keeping track of the user's position or providing alternative table navigation. The `aria-rowindextext` is useful if that integer value isn't meaningful or does not reflect the displayed index, such as a game of Chess or Battleship.
 
@@ -24,14 +18,7 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 ## Values
 
 - `<string>`
-  - The human readable text alternative of the numeric [`aria-spanindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-spanindex)
-
-## ARIAMixin API
-
-- {{domxref("Element.ariaRowIndexText")}}
-  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
-- {{domxref("ElementInternals.ariaRowIndexText")}}
-  - : The [`ariaRowIndexText`](/en-US/docs/Web/API/ElementInternals/ariaRowIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowindextext` attribute.
+  - The human-readable text alternative of the numeric [`aria-spanindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-spanindex)
 
 ## Associated roles
 

@@ -2,27 +2,6 @@
 title: XRPose
 slug: Web/API/XRPose
 page-type: web-api-interface
-tags:
-  - 3DoF
-  - 6DoF
-  - API
-  - AR
-  - Interface
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - augmented
-  - pose
-  - space
-  - transform
 browser-compat: api.XRPose
 ---
 

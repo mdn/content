@@ -1,17 +1,13 @@
 ---
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}
 
-The **`Date()`** constructor can create a {{jsxref("Date")}} instance or return a string representing the current time.
+The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 
@@ -41,22 +37,17 @@ There are five basic forms for the `Date()` constructor:
 
 #### No parameters
 
-When no parameters are provided, the newly-created `Date` object represents the current date and time as of the time of instantiation.
+When no parameters are provided, the newly-created `Date` object represents the current date and time as of the time of instantiation. The returned date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) is the same as the number returned by {{jsxref("Date.now()")}}.
 
 #### Time value or timestamp number
 
 - `value`
-  - : An integer value representing the number of milliseconds since January 1, 1970, 00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap seconds ignored. Keep in mind that most [UNIX Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
+  - : An integer value representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (the number of milliseconds since midnight at the beginning of January 1, 1970, UTC — a.k.a. the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date)).
 
 #### Date string
 
 - `dateString`
-
-  - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. (The ECMA262 spec specifies a [simplified version of ISO 8601](https://tc39.es/ecma262/#sec-date-time-string-format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14).)
-
-    > **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the ISO 8601 format (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) format strings is by convention only. A library can help if many different formats are to be accommodated.
-    >
-    > Date-only strings (e.g. `"1970-01-01"`) are treated as UTC, while date-time strings (e.g. `"1970-01-01T12:00"`) are treated as local. You are therefore also advised to make sure the input format is consistent between the two types.
+  - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. The only specified format is the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14). See [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) for caveats on using different formats.
 
 #### Date object
 
@@ -67,7 +58,7 @@ When one parameter is passed to the `Date()` constructor, `Date` instances are s
 
 #### Individual date and time component values
 
-Given at least a year and month, this form of `Date()` returns a `Date` object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (`1` for `day` and `0` for every other component). The parameter values are all evaluated against the local time zone, rather than UTC.
+Given at least a year and month, this form of `Date()` returns a `Date` object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (`1` for `day` and `0` for every other component). The parameter values are all evaluated against the local time zone, rather than UTC. {{jsxref("Date.UTC()")}} accepts similar parameters but interprets the components as UTC and returns a timestamp.
 
 If any parameter overflows its defined bounds, it "carries over". For example, if a `monthIndex` greater than `11` is passed in, those months will cause the year to increment; if a `minutes` greater than `59` is passed in, `hours` will increment accordingly, etc. Therefore, `new Date(1990, 12, 1)` will return January 1st, 1991; `new Date(2020, 5, 19, 25, 65)` will return 2:05 A.M. June 20th, 2020.
 
@@ -90,7 +81,7 @@ Similarly, if any parameter underflows, it "borrows" from the higher positions. 
 
 ### Return value
 
-Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, or if the date to be constructed will have a UNIX timestamp less than `-8,640,000,000,000,000` or greater than `8,640,000,000,000,000` milliseconds, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
+Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, or if the date to be constructed will have a timestamp less than `-8,640,000,000,000,000` or greater than `8,640,000,000,000,000` milliseconds, it returns an [invalid date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (a `Date` object whose {{jsxref("Date/toString", "toString()")}} method returns `"Invalid Date"` and {{jsxref("Date/valueOf", "valueOf()")}} method returns `NaN`).
 
 Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called with any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 

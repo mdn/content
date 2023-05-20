@@ -1,13 +1,10 @@
 ---
-title: NDEFReadingEvent()
+title: "NDEFReadingEvent: NDEFReadingEvent() constructor"
+short-title: NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - NDEFReadingEvent
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
 

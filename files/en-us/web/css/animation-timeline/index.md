@@ -2,13 +2,8 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
-  - Experimental
+status:
+  - experimental
 browser-compat: css.properties.animation-timeline
 ---
 
@@ -66,9 +61,11 @@ animation-timeline: unset;
 - `auto`
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 - `scroll()` {{Experimental_Inline}}
+
   - : The "anonymous" timeline is provided by some ancestor of the current element.
 
-      See {{cssxref("animation-timeline/scroll", "scroll()")}} for additional information.
+    See {{cssxref("animation-timeline/scroll", "scroll()")}} for additional information.
+
 - `<timeline-name>`
   - : A {{cssxref('custom-ident')}} or string identifying the named scroll timeline, declared with the {{cssxref('scroll-timeline-name')}} property (or {{cssxref('scroll-timeline')}} shorthand property).
     If two or more scroll timelines share the same name, the last declared within the cascade will be used.

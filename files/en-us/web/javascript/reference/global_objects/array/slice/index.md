@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.slice
 ---
 
@@ -160,6 +155,12 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 
 ## See also
 
+- [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("TypedArray.prototype.slice()")}}
+- {{jsxref("String.prototype.slice()")}}

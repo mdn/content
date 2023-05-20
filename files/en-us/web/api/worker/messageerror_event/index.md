@@ -1,13 +1,8 @@
 ---
-title: 'Worker: messageerror event'
+title: "Worker: messageerror event"
+short-title: messageerror
 slug: Web/API/Worker/messageerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Worker
-  - Event
-  - Reference
-  - messageerror
 browser-compat: api.Worker.messageerror_event
 ---
 
@@ -22,9 +17,9 @@ This event is not cancellable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## Event type
@@ -58,11 +53,11 @@ Create a worker, and listen for `message` and `messageerror` events using [`addE
 const worker = new Worker("static/scripts/worker.js");
 
 worker.addEventListener("message", (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 });
 
 worker.addEventListener("messageerror", (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 });
 ```
 
@@ -74,11 +69,11 @@ The same, but using the `onmessageerror` event handler property:
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 };
 
 worker.onmessageerror = (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 };
 ```
 

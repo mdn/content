@@ -1,11 +1,7 @@
 ---
 title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.strict_equality
 ---
 
@@ -68,6 +64,7 @@ null === null; // true
 "3" === 3; // false
 true === 1; // false
 null === undefined; // false
+3 === new Number(3); // false
 ```
 
 ### Comparing objects

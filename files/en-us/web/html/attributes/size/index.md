@@ -1,12 +1,7 @@
 ---
-title: 'HTML attribute: size'
+title: "HTML attribute: size"
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
+page-type: html-attribute
 browser-compat: html.elements.attribute.size
 ---
 

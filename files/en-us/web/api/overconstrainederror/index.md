@@ -2,16 +2,6 @@
 title: OverconstrainedError
 slug: Web/API/OverconstrainedError
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - OverconstrainedError
-  - Reference
-  - Video
 browser-compat: api.OverconstrainedError
 ---
 

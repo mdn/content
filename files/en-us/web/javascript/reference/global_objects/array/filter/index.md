@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
 ---
 
@@ -21,37 +14,20 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 ## Syntax
 
 ```js-nolint
-// Arrow function
-filter((element) => { /* … */ })
-filter((element, index) => { /* … */ })
-filter((element, index, array) => { /* … */ })
-
-// Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// Inline callback function
-filter(function (element) { /* … */ })
-filter(function (element, index) { /* … */ })
-filter(function (element, index, array) { /* … */ })
-filter(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to keep the element in the resulting array, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `filter()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -142,7 +118,7 @@ console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("Number of Invalid Entries = ", invalidEntries);
+console.log("Number of Invalid Entries =", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 
@@ -239,8 +215,11 @@ console.log(deleteWords);
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}

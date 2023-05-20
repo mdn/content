@@ -1,12 +1,7 @@
 ---
 title: Inheritance and the prototype chain
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Advanced
-  - Guide
-  - Inheritance
-  - JavaScript
-  - OOP
+page-type: guide
 ---
 
 {{jsSidebar("Advanced")}}
@@ -77,7 +72,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
+Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 Similarly, you can create longer prototype chains, and a property will be sought on all of them.
 
@@ -112,7 +107,7 @@ const parent = {
   value: 2,
   method() {
     return this.value + 1;
-  }
+  },
 };
 
 console.log(parent.method()); // 3
@@ -140,9 +135,9 @@ console.log(child.method()); // 5
 
 ## Constructors
 
-The power of prototypes is that we can reuse a set of properties if they should be present on every instance — especially for methods. Suppose we are to create a series of boxes, where each box is an object that contains a value which can be accessed through a `getValue` function. A naïve implementation would be:
+The power of prototypes is that we can reuse a set of properties if they should be present on every instance — especially for methods. Suppose we are to create a series of boxes, where each box is an object that contains a value which can be accessed through a `getValue` function. A naive implementation would be:
 
-```js
+```js-nolint
 const boxes = [
   { value: 1, getValue() { return this.value; } },
   { value: 2, getValue() { return this.value; } },
@@ -154,7 +149,9 @@ This is subpar, because each instance has its own function property that does th
 
 ```js
 const boxPrototype = {
-  getValue() { return this.value; },
+  getValue() {
+    return this.value;
+  },
 };
 
 const boxes = [
@@ -178,11 +175,7 @@ Box.prototype.getValue = function () {
   return this.value;
 };
 
-const boxes = [
-  new Box(1),
-  new Box(2),
-  new Box(3),
-];
+const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
 We say that `new Box(1)` is an _instance_ created from the `Box` constructor function. `Box.prototype` is not much different from the `boxPrototype` object we created previously — it's just a plain object. Every instance created from a constructor function will automatically have the constructor's [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property as its `[[Prototype]]` — that is, `Object.getPrototypeOf(new Box()) === Box.prototype`. `Constructor.prototype` by default has one own property: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), which references the constructor function itself — that is, `Box.prototype.constructor === Box`. This allows one to access the original constructor from any instance.
@@ -268,17 +261,17 @@ For example, "array methods" like [`map()`](/en-US/docs/Web/JavaScript/Reference
 It may be interesting to note that due to historical reasons, some built-in constructors' `prototype` property are instances themselves. For example, `Number.prototype` is a number 0, `Array.prototype` is an empty array, and `RegExp.prototype` is `/(?:)/`.
 
 ```js
-Number.prototype + 1 // 1
-Array.prototype.map((x) => x + 1) // []
-String.prototype + "a" // "a"
-RegExp.prototype.source // "(?:)"
-Function.prototype() // Function.prototype is a no-op function by itself
+Number.prototype + 1; // 1
+Array.prototype.map((x) => x + 1); // []
+String.prototype + "a"; // "a"
+RegExp.prototype.source; // "(?:)"
+Function.prototype(); // Function.prototype is a no-op function by itself
 ```
 
 However, this is not the case for user-defined constructors, nor for modern constructors like `Map`.
 
 ```js
-Map.prototype.get(1)
+Map.prototype.get(1);
 // Uncaught TypeError: get method called on incompatible Map.prototype
 ```
 
@@ -300,10 +293,7 @@ function Base() {}
 function Derived() {}
 // Set the `[[Prototype]]` of `Derived.prototype`
 // to `Base.prototype`
-Object.setPrototypeOf(
-  Derived.prototype,
-  Base.prototype,
-);
+Object.setPrototypeOf(Derived.prototype, Base.prototype);
 
 const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
@@ -370,7 +360,7 @@ We can add properties to the prototype of `doSomething()`, as shown below.
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar';
+doSomething.prototype.foo = "bar";
 console.log(doSomething.prototype);
 ```
 
@@ -398,9 +388,9 @@ Try the following code:
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar'; // add a property onto the prototype
+doSomething.prototype.foo = "bar"; // add a property onto the prototype
 const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = 'some value'; // add a property onto the object
+doSomeInstancing.prop = "some value"; // add a property onto the object
 console.log(doSomeInstancing);
 ```
 
@@ -437,15 +427,15 @@ Let's try entering some more code into the console:
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar';
+doSomething.prototype.foo = "bar";
 const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = 'some value';
-console.log('doSomeInstancing.prop:     ', doSomeInstancing.prop);
-console.log('doSomeInstancing.foo:      ', doSomeInstancing.foo);
-console.log('doSomething.prop:          ', doSomething.prop);
-console.log('doSomething.foo:           ', doSomething.foo);
-console.log('doSomething.prototype.prop:', doSomething.prototype.prop);
-console.log('doSomething.prototype.foo: ', doSomething.prototype.foo);
+doSomeInstancing.prop = "some value";
+console.log("doSomeInstancing.prop:     ", doSomeInstancing.prop);
+console.log("doSomeInstancing.foo:      ", doSomeInstancing.foo);
+console.log("doSomething.prop:          ", doSomething.prop);
+console.log("doSomething.foo:           ", doSomething.foo);
+console.log("doSomething.prototype.prop:", doSomething.prototype.prop);
+console.log("doSomething.prototype.foo: ", doSomething.prototype.foo);
 ```
 
 This results in the following:
@@ -471,7 +461,7 @@ const o = { a: 1 };
 // Object.prototype has null as its prototype.
 // o ---> Object.prototype ---> null
 
-const b = ['yo', 'whadup', '?'];
+const b = ["yo", "whadup", "?"];
 // Arrays inherit from Array.prototype
 // (which has methods indexOf, forEach, etc.)
 // The prototype chain looks like:
@@ -531,7 +521,7 @@ function Graph() {
 
 Graph.prototype.addVertex = function (v) {
   this.vertices.push(v);
-}
+};
 
 const g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
@@ -721,8 +711,8 @@ All objects inherit the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScrip
 ```js
 const obj = {};
 // DON'T USE THIS: for example only.
-obj.__proto__ = { barProp: 'bar val' };
-obj.__proto__.__proto__ = { fooProp: 'foo val' };
+obj.__proto__ = { barProp: "bar val" };
+obj.__proto__.__proto__ = { fooProp: "foo val" };
 console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
@@ -765,26 +755,28 @@ The lookup time for properties that are high up on the prototype chain can have 
 Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects, except those with `null` as `[[Prototype]]`, inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype` — unless it has been overridden further down the prototype chain. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
-console.log(g.hasOwnProperty('vertices'));
-// true
+function Graph() {
+  this.vertices = [];
+  this.edges = [];
+}
 
-console.log(Object.hasOwn(g, 'vertices'));
-// true
+Graph.prototype.addVertex = function (v) {
+  this.vertices.push(v);
+};
 
-console.log(g.hasOwnProperty('nope'));
-// false
+const g = new Graph();
+// g ---> Graph.prototype ---> Object.prototype ---> null
 
-console.log(Object.hasOwn(g, 'nope'));
-// false
+g.hasOwnProperty("vertices"); // true
+Object.hasOwn(g, "vertices"); // true
 
-console.log(g.hasOwnProperty('addVertex'));
-// false
+g.hasOwnProperty("nope"); // false
+Object.hasOwn(g, "nope"); // false
 
-console.log(Object.hasOwn(g, 'addVertex'));
-// false
+g.hasOwnProperty("addVertex"); // false
+Object.hasOwn(g, "addVertex"); // false
 
-console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
-// true
+Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 ```
 
 Note: It is **not** enough to check whether a property is [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). The property might very well exist, but its value just happens to be set to `undefined`.

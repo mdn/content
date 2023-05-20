@@ -1,12 +1,7 @@
 ---
 title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.spread
 ---
 
@@ -39,7 +34,7 @@ Although the syntax looks the same, they come with slightly different semantics.
 Only [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) objects, like {{jsxref("Array")}}, can be spread in array and function parameters. Many objects are not iterable, including all [plain objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that lack a [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method:
 
 ```js example-bad
-const obj = { key1: 'value1' };
+const obj = { key1: "value1" };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
 
@@ -89,7 +84,7 @@ myFunction(-1, ...args, 2, ...[3]);
 When calling a constructor with {{jsxref("Operators/new", "new")}}, it's not possible to **directly** use an array and `apply()`, because `apply()` _calls_ the target function instead of _constructing_ it, which means, among other things, that [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) will be `undefined`. However, an array can be easily used with `new` thanks to spread syntax:
 
 ```js
-const dateFields = [1970, 0, 1];  // 1 Jan 1970
+const dateFields = [1970, 0, 1]; // 1 Jan 1970
 const d = new Date(...dateFields);
 ```
 
@@ -103,8 +98,8 @@ instead using a combination of {{jsxref("Array.prototype.push", "push()")}},
 {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:
 
 ```js
-const parts = ['shoulders', 'knees'];
-const lyrics = ['head', ...parts, 'and', 'toes'];
+const parts = ["shoulders", "knees"];
+const lyrics = ["head", ...parts, "and", "toes"];
 //  ["head", "shoulders", "knees", "and", "toes"]
 ```
 
@@ -188,8 +183,8 @@ console.log(arr1); // [3, 4, 5, 0, 1, 2]
 Shallow-cloning (excluding prototype) or merging of objects is possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
 
 const clonedObj = { ...obj1 };
 // { foo: "bar", x: 42 }
@@ -201,7 +196,7 @@ const mergedObj = { ...obj1, ...obj2 };
 Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas spread syntax can't.
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
+const obj1 = { foo: "bar", x: 42 };
 Object.assign(obj1, { x: 1337 });
 console.log(obj1); // { foo: "bar", x: 1337 }
 ```
@@ -209,18 +204,30 @@ console.log(obj1); // { foo: "bar", x: 1337 }
 In addition, {{jsxref("Object.assign()")}} triggers setters on the target object, whereas spread syntax does not.
 
 ```js
-const objectAssign = Object.assign({ set foo(val) { console.log(val); } }, { foo: 1 });
+const objectAssign = Object.assign(
+  {
+    set foo(val) {
+      console.log(val);
+    },
+  },
+  { foo: 1 },
+);
 // Logs "1"; objectAssign.foo is still the original setter
 
-const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
+const spread = {
+  set foo(val) {
+    console.log(val);
+  },
+  ...{ foo: 1 },
+};
 // Nothing is logged; spread.foo is 1
 ```
 
 You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spreading:
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
 const merge = (...objects) => ({ ...objects });
 
 const mergedObj1 = merge(obj1, obj2);
@@ -233,9 +240,10 @@ const mergedObj2 = merge({}, obj1, obj2);
 In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread syntax, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
 
 ```js
-const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
-const merge = (...objects) => objects.reduce((acc, cur) => ({ ...acc, ...cur }));
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
+const merge = (...objects) =>
+  objects.reduce((acc, cur) => ({ ...acc, ...cur }));
 
 const mergedObj1 = merge(obj1, obj2);
 // { foo: 'baz', x: 42, y: 13 }

@@ -1,26 +1,15 @@
 ---
 title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
-tags:
-  - Collator
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
 
 {{JSRef}}
 
-The **`Intl.Collator()`** constructor creates
-{{jsxref("Intl/Collator", "Intl.Collator")}} objects that enable language-sensitive string
-comparison.
+The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -40,7 +29,7 @@ Intl.Collator(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
 
@@ -52,19 +41,19 @@ Intl.Collator(locales, options)
 
       - : Variant collations for certain locales. Possible values include:
 
-        - `big5han` (Chinese; not available in Chrome or Edge)
+        - `big5han` (Chinese; do not use; not available in Firefox, Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
         - `direct` (deprecated, do not use)
         - `ducet` (not available, do not use)
         - `emoji` (root)
         - `eor` (root)
-        - `gb2312` (Chinese; not available in Chrome or Edge)
+        - `gb2312` (Chinese; do not use; not available in Chrome or Edge)
         - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
-        - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
-        - `searchjl` (Korean; do not use for sorting)
+        - `reformed` (formerly Swedish; do not specify explicitly as this was the old name for the default for Swedish)
+        - `searchjl` (Korean; do not use as this is for searching rather than sorting, and the API covers only sorting)
         - `stroke` (Chinese)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
@@ -125,49 +114,43 @@ Intl.Collator(locales, options)
       - : Whether numeric collation should be used, such that "1" < "2" <
         "10". Possible values are `true` and `false`; the
         default is `false`.
-
-        > **Note:** This option can also be set through the `kn` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `kn` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `caseFirst`
 
       - : Whether upper case or lower case should sort first. Possible values are
-        `"upper"`, `"lower"`, or `"false"` (use
-        the locale's default). This option can be set through an
-        `options` property or through a Unicode extension
-        key; if both are provided, the `options` property
-        takes precedence.
-
-        > **Note:** This option can also be set through the `kf` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        `"upper"`, `"lower"`, or `"false"` (use the locale's default).
+        This option can also be set through the `kf` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
     - `collation`
 
       - : Variant collations for certain locales. Possible values include:
 
-        - `big5han` (Chinese; not available in Chrome or Edge)
+        - `big5han` (Chinese; do not use; not available in Firefox, Chrome or Edge)
         - `compat` (Arabic)
         - `dict` (Sinhala)
         - `direct` (deprecated, do not use)
         - `ducet` (not available, do not use)
         - `emoji` (root)
         - `eor` (root)
-        - `gb2312` (Chinese; not available in Chrome or Edge)
+        - `gb2312` (Chinese; do not use; not available in Chrome or Edge)
         - `phonebk` (German)
         - `phonetic` (Lingala)
         - `pinyin` (Chinese)
-        - `reformed` (Swedish; do not specify explicitly as this is the default for Swedish)
-        - `searchjl` (Korean; do not use for sorting)
+        - `reformed` (formerly Swedish; do not specify explicitly as this was the old name for the default for Swedish)
+        - `searchjl` (Korean; do not use as this is for searching rather than sorting, and the API covers only sorting)
         - `stroke` (Chinese)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
 
-        > **Note:** This option can also be set through the `co` Unicode
-        > extension key; if both are provided, this `options`
-        > property takes precedence.
+        This option can also be set through the `co` Unicode
+        extension key; if both are provided, this `options`
+        property takes precedence.
 
 ## Examples
 

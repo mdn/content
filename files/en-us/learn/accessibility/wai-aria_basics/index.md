@@ -1,18 +1,6 @@
 ---
 title: WAI-ARIA basics
 slug: Learn/Accessibility/WAI-ARIA_basics
-tags:
-  - ARIA
-  - Accessibility
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - JavaScript
-  - Learn
-  - WAI-ARIA
-  - semantics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
@@ -65,7 +53,7 @@ As another example, apps started to feature complex controls like date pickers f
 <input type="date" /> <input type="range" />
 ```
 
-These were originally not well-supported and it was, and still is to a lesser extent, difficult to style them, leading designers and developer to opt for custom solutions. Instead of using these native features, some developers rely on JavaScript libraries that generate such controls as a series of nested {{htmlelement("div")}}s which are then styled using CSS and controlled using JavaScript.
+These were originally not well-supported and it was, and still is to a lesser extent, difficult to style them, leading designers and developers to opt for custom solutions. Instead of using these native features, some developers rely on JavaScript libraries that generate such controls as a series of nested {{htmlelement("div")}}s which are then styled using CSS and controlled using JavaScript.
 
 The problem here is that visually they work, but screen readers can't make any sense of what they are at all, and their users just get told that they can see a jumble of elements with no semantics to describe what they mean.
 
@@ -88,7 +76,7 @@ An important point about WAI-ARIA attributes is that they don't affect anything 
 This is not an easy question to answer. It is difficult to find a conclusive resource that states what features of WAI-ARIA are supported, and where, because:
 
 1. There are a lot of features in the WAI-ARIA spec.
-2. There are many combinations of operating system, browser, and screen reader to consider.
+2. There are many combinations of operating systems, browsers, and screen readers to consider.
 
 This last point is key — To use a screen reader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screen readers need to do their job. Most popular OSes have one or two browsers in place that screen readers can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see [Rough Guide: browsers, operating systems and screen reader support updated](https://www.tpgi.com/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
@@ -229,7 +217,7 @@ const intervalID = setInterval(showQuote, 10000);
 
 This works OK, but it is not good for accessibility — the content update is not detected by screen readers, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
 
-WAI-ARIA fortunately provides a useful mechanism to provide these alerts — the [`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live) property. Applying this to an element causes screen readers to read out the content that is updated. How urgently the content is read out depends on the attribute value:
+WAI-ARIA, fortunately, provides a useful mechanism to provide these alerts — the [`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live) property. Applying this to an element causes screen readers to read out the content that is updated. How urgently the content is read out depends on the attribute value:
 
 - `off:` The default. Updates should not be announced.
 - `polite`: Updates should be announced only if the user is idle.
@@ -243,7 +231,7 @@ We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learn
 
 This will cause a screen reader to read out the content as it is updated.
 
-> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example [using GitHub](/en-US/docs/Learn/Common_questions/Using_Github_pages), or a local web server like [Python's SimpleHTTPServer](https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/).
+> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example [using GitHub](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages), or a local web server like [Python's SimpleHTTPServer](https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
@@ -259,7 +247,7 @@ The `aria-atomic="true"` attribute tells screen readers to read out the entire e
 
 ### Enhancing keyboard accessibility
 
-As discussed in a few other places in the module, one of the key strengths of HTML with respect to accessibility is the built-in keyboard accessibility of features such as buttons, form controls, and links. Generally, you are able to use the tab key to move between controls, the Enter/Return key to select or activate controls, and occasionally other controls as needed (for example the up and down cursor to move between options in a `<select>` box).
+As discussed in a few other places in the module, one of the key strengths of HTML with respect to accessibility is the built-in keyboard accessibility of features such as buttons, form controls, and links. Generally, you can use the tab key to move between controls, the Enter/Return key to select or activate controls, and occasionally other controls as needed (for example the up and down cursor to move between options in a `<select>` box).
 
 However, sometimes you will end up having to write code that either uses non-semantic elements as buttons (or other types of control), or uses focusable controls for not quite the right purpose. You might be trying to fix some bad code you've inherited, or you might be building some kind of complex widget that requires it.
 
@@ -276,7 +264,7 @@ This follows on from the previous section — when a series of nested `<div>`s a
 
 #### Form validation and error alerts
 
-First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
+First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -325,9 +313,9 @@ Always include a {{HTMLelement('label')}} for every input. While some screen rea
 
 WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) property to provide a label where we don't want the label to be visible to sighted users (see the [Signposts/Landmarks](#signpostslandmarks) section, above). Some other labeling techniques use other properties such as [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if you want to designate a non-`<label>` element as a label or label multiple form inputs with the same label, and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby), if you want to associate other information with a form input and have it read out as well. See [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced) for more details.
 
-There are many other useful properties and states too, for indicating the status of form elements. For example, `aria-disabled="true"` can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screen readers, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screen reader know that a disabled input is in fact disabled.
+There are many other useful properties and states too, for indicating the status of form elements. For example, `aria-disabled="true"` can be used to indicate that a form field is disabled. Many browsers will skip past disabled form fields which leads to them not being read out by screen readers. In some cases, a disabled element will be perceived, so it is a good idea to include this attribute to let the screen reader know that a disabled form control is in fact disabled.
 
-If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) demo there is a checkbox that when checked, enables another form input to allow further information to be entered. We've set up a hidden live region:
+If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) demo, there is a checkbox that when checked, enables another form input to allow further information to be entered. We've set up a hidden live region:
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
@@ -368,7 +356,7 @@ We can fix this using a WAI-ARIA role. Make a local copy of [fake-div-buttons.ht
 </div>
 ```
 
-Now when you try this using a screen reader, you'll have buttons be reported using phrases like "Click me!, button". While this is much better, you still have to add in all the native button features users expect, like handling <kbd>enter</kbd> and click events, as explained in the [`button` role documentation](/en-US/docs/Web/Accessibility/ARIA/Roles/button).
+Now when you try this using a screen reader, you'll have buttons be reported using phrases like "Click me!, button". While this is much better, you still have to add in all the native button features users expect, like handling <kbd>enter</kbd> and click events, as explained in the [`button` role documentation](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
 
 > **Note:** Don't forget however that using the correct semantic element where possible is always better. If you want to create a button, and can use a {{htmlelement("button")}} element, you should use a {{htmlelement("button")}} element!
 
@@ -442,20 +430,10 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 ## See also
 
-- [Definition of Roles](/en-US/docs/Web/Accessibility/ARIA/Roles/) — ARIA roles reference.
-- [Definitions of States and Properties (all aria-\* attributes)](/en-US/docs/Web/Accessibility/ARIA/Attributes/) — properties and states reference.
-- [Deque university code library](https://dequeuniversity.com/library/) — a library of really useful practical examples showing complex UI controls made accessible using WAI-ARIA features.
-- [WAI-ARIA Authoring Practices](https://w3c.github.io/aria-practices/) — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
+- [Aria states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes): All aria-\* attributes
+- [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles): Categories of ARIA roles and the roles covered on MDN
+- [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
+- [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://w3c.github.io/aria-practices/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

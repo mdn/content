@@ -2,11 +2,6 @@
 title: ResizeObserverSize
 slug: Web/API/ResizeObserverSize
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ResizeObserverSize
 browser-compat: api.ResizeObserverSize
 ---
 

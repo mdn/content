@@ -1,15 +1,7 @@
 ---
 title: "ARIA: listitem role"
 slug: Web/Accessibility/ARIA/Roles/listitem_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA listitem
-  - Accessibility
-  - Reference
-  - Role
-  - listitem
-  - document structure role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#listitem
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: SpeechRecognitionResultList.length
+title: "SpeechRecognitionResultList: length property"
+short-title: length
 slug: Web/API/SpeechRecognitionResultList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionResultList
-  - Web Speech API
-  - length
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResultList.length
 ---
 
@@ -46,7 +38,7 @@ recognition.onresult = (event) => {
   bg.style.backgroundColor = color;
 
   console.log(event.results.length);
-}
+};
 ```
 
 ## Specifications

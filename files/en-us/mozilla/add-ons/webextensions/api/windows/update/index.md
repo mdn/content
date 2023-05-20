@@ -1,16 +1,7 @@
 ---
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - Windows
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
 ---
 

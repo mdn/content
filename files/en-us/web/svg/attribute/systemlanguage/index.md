@@ -2,9 +2,6 @@
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.conditional_processing.systemLanguage
 ---
 
@@ -17,7 +14,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("a")}}
 - {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("audio")}}
@@ -26,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}

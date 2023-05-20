@@ -1,19 +1,6 @@
 ---
 title: Handling common accessibility problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - Accessibility
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - Testing
-  - Tools
-  - cross browser
-  - keyboard
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -80,7 +67,7 @@ Semantic HTML (where the elements are used for their correct purpose) is accessi
 
 The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:
 
-```html example-bad
+```html-nolint example-bad
 <font size="7">My heading</font>
 <br /><br />
 This is the first section of my document.
@@ -218,7 +205,7 @@ If you instead look at our `punk-bands-complete.html` example ([live](https://md
 
 CSS tends to provide a lot fewer fundamental accessibility features than HTML, but it can still do just as much damage to accessibility if used incorrectly. We have already mentioned a couple of accessibility tips involving CSS:
 
-- Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use {{cssxref("font-size")}}, not an {{htmlelement("h1")}} element.
+- Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use {{cssxref("font-size")}}, not an {{htmlelement("Heading_Elements", "h1")}} element.
 - Make sure your source order makes sense without CSS; you can always use CSS to style the page any way you want afterward.
 - You should make sure interactive elements like buttons and links have appropriate focus/hover/active states set, to give the user visual clues as to their function. If you remove the defaults for stylistic reasons, make sure you include some replacement styles.
 
@@ -467,7 +454,7 @@ This seems like a lot of commands, but it isn't so bad when you get used to it, 
 
 NVDA is Windows-only, and you'll need to install it.
 
-1. Download it from [nvaccess.org](https://www.nvaccess.org/). You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.
+1. Download it from [nvaccess.org](https://www.nvaccess.org/). You can choose whether to make a donation or download it for free; you'll also need to give them your email address before you can download it.
 2. Once downloaded, install it — you double-click the installer, accept the license and follow the prompts.
 3. To start NVDA, double-click on the program file/shortcut, or use the keyboard shortcut Ctrl + Alt + N. You'll see the NVDA welcome dialog when you start it. Here you can choose from a couple of options, then press the _OK_ button to get going.
 
@@ -625,14 +612,3 @@ Hopefully this article has given you a good grounding in the main accessibility 
 In the next article we'll look at feature detection in more detail.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

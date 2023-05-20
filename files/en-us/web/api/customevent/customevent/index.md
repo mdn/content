@@ -1,10 +1,8 @@
 ---
-title: CustomEvent()
+title: "CustomEvent: CustomEvent() constructor"
+short-title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.CustomEvent.CustomEvent
 ---
 
@@ -22,8 +20,7 @@ new CustomEvent(type, options)
 ### Parameters
 
 - `type`
-  - : A string with the name of the event.
-    It is case-sensitive and browsers always set it to `customevent`.
+  - : A string providing the name of the event. Event names are case-sensitive.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `detail` {{optional_inline}}
@@ -38,19 +35,19 @@ A new {{domxref("CustomEvent")}} object.
 
 ```js
 // create custom events
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 
 // add an appropriate event listener
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // dispatch the events
 obj.dispatchEvent(catFound);

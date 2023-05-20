@@ -1,27 +1,25 @@
 ---
-title: String length
+title: "String: length"
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - String
-  - String Length
-  - length
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.String.length
 ---
 
 {{JSRef}}
 
-The **`length`** read-only property of a string contains the length of the string in UTF-16 code units.
-
-{{js_property_attributes(0, 0, 0)}}
+The **`length`** data property of a {{jsxref("String")}} value contains the length of the string in UTF-16 code units.
 
 {{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
 
+## Value
+
+A non-negative integer.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## Description
 
-This property returns the number of code units in the string. JavaScript uses [UTF-16](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) encoding, where each Unicode character may be encoded as one or two code units, so it's possible for the value returned by `length` to not match the actual number of Unicode characters in the string. For common scripts like Latin, Cyrillic, wellknown CJK characters, etc., this should not be an issue, but if you are working with certain scripts, such as emojis, [mathematical symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols), or obscure Chinese characters, you may need to account for the difference between code units and characters.
+This property returns the number of code units in the string. JavaScript uses [UTF-16](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) encoding, where each Unicode character may be encoded as one or two code units, so it's possible for the value returned by `length` to not match the actual number of Unicode characters in the string. For common scripts like Latin, Cyrillic, wellknown CJK characters, etc., this should not be an issue, but if you are working with certain scripts, such as emojis, [mathematical symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols), or obscure Chinese characters, you may need to account for the difference between code units and characters.
 
 The language specification requires strings to have a maximum length of 2<sup>53</sup> - 1 elements, which is the upper limit for [precise integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). However, a string with this length needs 16384TiB of storage, which cannot fit in any reasonable device's memory, so implementations tend to lower the threshold, which allows the string's length to be conveniently stored in a 32-bit integer.
 

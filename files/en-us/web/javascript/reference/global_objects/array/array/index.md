@@ -1,24 +1,26 @@
 ---
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - Array
-  - Constructor
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Array.Array
 ---
 
 {{JSRef}}
 
-The **`Array()`** constructor is used to create {{jsxref("Array")}} objects.
+The **`Array()`** constructor creates {{jsxref("Array")}} objects.
 
 ## Syntax
 
 ```js-nolint
+new Array()
+new Array(element0)
+new Array(element0, element1)
 new Array(element0, element1, /* … ,*/ elementN)
 new Array(arrayLength)
 
+Array()
+Array(element0)
+Array(element0, element1)
 Array(element0, element1, /* … ,*/ elementN)
 Array(arrayLength)
 ```
@@ -43,13 +45,13 @@ Array(arrayLength)
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if there's only one argument (`arrayLength`) and its value is not between 0 and 2<sup>32</sup> - 1 (inclusive).
+  - : Thrown if there's only one argument (`arrayLength`) that is a number, but its value is not an integer or not between 0 and 2<sup>32</sup> - 1 (inclusive).
 
 ## Examples
 
 ### Array literal notation
 
-Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#array_literals)
+Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
 notation:
 
 ```js
@@ -61,15 +63,24 @@ console.log(fruits[0]); // "Apple"
 
 ### Array constructor with a single parameter
 
-Arrays can be created using a constructor with a single number parameter. An array with
-its `length` property set to that number and the array elements are empty
+Arrays can be created using a constructor with a single number parameter. An array is created with
+its `length` property set to that number, and the array elements are empty
 slots.
 
 ```js
-const fruits = new Array(2);
+const arrayEmpty = new Array(2);
 
-console.log(fruits.length); // 2
-console.log(fruits[0]); // undefined
+console.log(arrayEmpty.length); // 2
+console.log(arrayEmpty[0]); // undefined; actually, it is an empty slot
+console.log(0 in arrayEmpty); // false
+console.log(1 in arrayEmpty); // false
+```
+
+```js
+const arrayOfOne = new Array("2"); // Not the number 2 but the string "2"
+
+console.log(arrayOfOne.length); // 1
+console.log(arrayOfOne[0]); // "2"
 ```
 
 ### Array constructor with multiple parameters
@@ -94,4 +105,5 @@ console.log(fruits[0]); // "Apple"
 
 ## See also
 
-- {{jsxref("Array")}} class
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}

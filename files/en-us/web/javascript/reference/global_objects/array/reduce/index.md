@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-tags:
-  - Array
-  - Array method
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reduce
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
 ---
 
@@ -32,37 +23,14 @@ The reducer walks through the array element-by-element, at each step adding the 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduce((accumulator, currentValue) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })
-
-reduce((accumulator, currentValue) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// Inline callback function
-reduce(function (accumulator, currentValue) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ })
-
-reduce(function (accumulator, currentValue) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
       - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
@@ -71,7 +39,6 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
       - : The index position of `currentValue` in the array. On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`
       - : The array `reduce()` was called upon.
-
 - `initialValue` {{optional_inline}}
   - : A value to which `accumulator` is initialized the first time the callback is called.
     If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`.
@@ -84,8 +51,7 @@ The value that results from running the "reducer" callback function to completio
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
-  - : The array contains no elements and `initialValue` is not provided.
+  - : Thrown if the array contains no elements and `initialValue` is not provided.
 
 ## Description
 
@@ -318,7 +284,7 @@ console.log(myArrayWithNoDuplicates);
 
 Using {{jsxref("Array/filter", "filter()")}} then {{jsxref("Array/map", "map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array/reduce", "reduce()")}}, thereby being more efficient. (If you like `for` loops, you
+`reduce()`, thereby being more efficient. (If you like `for` loops, you
 can filter and map while traversing once with {{jsxref("Array/forEach", "forEach()")}}.)
 
 ```js
@@ -343,8 +309,8 @@ console.log(doubledPositiveNumbers); // [12, 4]
  *
  * @param {array} arr - A list of promise handlers, each one receiving the
  * resolved result of the previous handler and returning another promise.
- * @param {*} input The initial value to start the promise chain
- * @return {Object} Final promise with a chain of handlers attached
+ * @param {*} input - The initial value to start the promise chain
+ * @return {Object} - Final promise with a chain of handlers attached
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
@@ -445,4 +411,12 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxref("TypedArray.prototype.reduce()")}}

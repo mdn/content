@@ -1,17 +1,8 @@
 ---
-title: HTMLElement.focus()
+title: "HTMLElement: focus() method"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
 browser-compat: api.HTMLElement.focus
 ---
 
@@ -106,9 +97,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -146,12 +139,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 
@@ -169,7 +161,7 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Notes
 
 - If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019).
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
   See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility

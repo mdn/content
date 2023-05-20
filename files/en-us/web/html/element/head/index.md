@@ -1,13 +1,7 @@
 ---
-title: '<head>: The Document Metadata (Header) element'
+title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.head
 ---
 
@@ -17,11 +11,33 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
 
 > **Note:** `<head>` primarily holds information for machine processing, not human-readability. For human-visible information, like top-level headings and listed authors, see the {{HTMLElement("header")}} element.
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `profile` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
+
+## Examples
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document title</title>
+  </head>
+</html>
+```
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -32,7 +48,7 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
       <td>
         <p>
           If the document is an {{HTMLElement("iframe")}}
-          {{htmlattrxref("srcdoc", "iframe")}} document, or if title
+          <a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> document, or if title
           information is available from a higher level protocol (like the
           subject line in HTML email), zero or more elements of metadata
           content.
@@ -74,30 +90,6 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("profile")}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
-
-## Example
-
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Document title</title>
-  </head>
-</html>
-```
-
-## Notes
-
-HTML5-compliant browsers automatically create a `<head>` element if its tags are omitted in the markup. [This auto-creation is not guaranteed in ancient browsers](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
 
 ## Specifications
 

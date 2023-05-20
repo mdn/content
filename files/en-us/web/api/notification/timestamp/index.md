@@ -1,16 +1,10 @@
 ---
-title: Notification.timestamp
+title: "Notification: timestamp property"
+short-title: timestamp
 slug: Web/API/Notification/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - timeStamp
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Notification.timestamp
 ---
 
@@ -41,13 +35,13 @@ constructor.
 const dts = Math.floor(Date.now());
 
 const options = {
-  body: 'Do you like my body?',
-  timestamp: dts
-}
+  body: "Your code submission has received 3 new review comments.",
+  timestamp: dts,
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.timestamp) // should log original timestamp
+console.log(n.timestamp); // Logs the timestamp
 ```
 
 ## Specifications

@@ -1,18 +1,11 @@
 ---
-title: SpeechRecognitionEvent.emma
+title: "SpeechRecognitionEvent: emma property"
+short-title: emma
 slug: Web/API/SpeechRecognitionEvent/emma
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - emma
-  - recognition
-  - speech
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechRecognitionEvent.emma
 ---
 
@@ -40,7 +33,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.emma);
-}
+};
 ```
 
 ## Browser compatibility

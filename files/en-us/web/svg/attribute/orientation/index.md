@@ -2,10 +2,8 @@
 title: orientation
 slug: Web/SVG/Attribute/orientation
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.glyph.orientation
 ---
 

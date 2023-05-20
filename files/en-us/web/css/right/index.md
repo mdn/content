@@ -2,14 +2,6 @@
 title: right
 slug: Web/CSS/right
 page-type: css-property
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.right
 ---
 

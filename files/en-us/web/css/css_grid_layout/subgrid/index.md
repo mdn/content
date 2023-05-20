@@ -2,12 +2,6 @@
 title: Subgrid
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
 page-type: guide
-tags:
-  - CSS
-  - CSS Display
-  - CSS Grid
-  - Guide
-  - subgrid
 browser-compat: css.properties.grid-template-columns.subgrid
 ---
 

@@ -1,13 +1,7 @@
 ---
-title: ShadowRoot.adoptedStyleSheets
+title: "ShadowRoot: adoptedStyleSheets property"
+short-title: adoptedStyleSheets
 slug: Web/API/ShadowRoot/adoptedStyleSheets
-tags:
-  - API
-  - ShadowRoot
-  - Property
-  - Reference
-  - Stylesheets
-  - adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.adoptedStyleSheets
 ---
@@ -43,15 +37,15 @@ The code below first shows a stylesheet being constructed, and then {{domxref("C
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 ```
 
 We then create a {{domxref("ShadowRoot")}} and pass the sheet object to `adoptedStyleSheets` inside an array.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
 //Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
@@ -61,8 +55,8 @@ We can still modify the stylesheets after they have been added to the array.
 Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
- sheet.insertRule("* { background-color: blue; }");
- // The document will now have blue background.
+sheet.insertRule("* { background-color: blue; }");
+// The document will now have blue background.
 ```
 
 ### Append a new stylesheet
@@ -72,7 +66,7 @@ This is demonstrated for our shadow root object below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-sheet.replaceSync('p { color: green; }');
+extraSheet.replaceSync("p { color: green; }");
 
 // Combine the existing sheets and new one
 shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
@@ -89,7 +83,7 @@ shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{domxref("CSSStyleSheet.replace()")}}

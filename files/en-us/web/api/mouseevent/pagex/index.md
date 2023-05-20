@@ -1,19 +1,8 @@
 ---
-title: MouseEvent.pageX
+title: "MouseEvent: pageX property"
+short-title: pageX
 slug: Web/API/MouseEvent/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Mouse Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-  - events
-  - pageX
 browser-compat: api.MouseEvent.pageX
 ---
 
@@ -29,7 +18,7 @@ Originally, this property was defined as a `long` integer. The [CSSOM View Modul
 `double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.
+See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#page) for additional information about coordinates specified in this fashion.
 
 ## Value
 

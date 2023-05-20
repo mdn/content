@@ -2,13 +2,6 @@
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.inset-inline-end
 ---
 

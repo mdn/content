@@ -1,16 +1,7 @@
 ---
 title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getChildren
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getChildren
 ---
 

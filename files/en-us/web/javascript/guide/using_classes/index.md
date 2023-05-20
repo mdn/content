@@ -1,14 +1,10 @@
 ---
 title: Using classes
-slug: Web/JavaScript/Guide/Using_Classes
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Object
+slug: Web/JavaScript/Guide/Using_classes
+page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages such as Java. In this section, we will demonstrate how objects can be created from classes.
 
@@ -438,7 +434,7 @@ class BadIdeas {
 
 Methods, [getters, and setters](#accessor_fields) can be private as well. They're useful when you have something complex that the class needs to do internally but no other part of the code should be allowed to call.
 
-For example, imagine creating [HTML custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
+For example, imagine creating [HTML custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that should do something somewhat complicated when clicked/tapped/otherwise activated. Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.
 
 ```js
 class Counter extends HTMLElement {
@@ -547,7 +543,7 @@ With the `Date` example, we have also encountered the [`Date.now()`](/en-US/docs
 - Static fields
 - Static getters and setters
 
-Everything also have private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
+Everything also has private counterparts. For example, for our `Color` class, we can create a static method that checks whether a given triplet is a valid RGB value:
 
 ```js
 class Color {
@@ -700,7 +696,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+A class can only extend from one class. This prevents problems in multiple inheritance like the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). However, due to the dynamic nature of JavaScript, it's still possible to achieve the effect of multiple inheritance through class composition and [mixins](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 Instances of derived classes are also [instances of](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) the base class.
 
@@ -766,4 +762,4 @@ In general, you should consider using classes when you want to create objects th
 
 JavaScript offers the mechanism to organize your code in a canonical object-oriented way, but whether and how to use it is entirely up to the programmer's discretion.
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}

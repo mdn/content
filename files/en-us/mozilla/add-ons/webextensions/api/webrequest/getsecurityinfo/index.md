@@ -1,15 +1,7 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getSecurityInfo
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
 

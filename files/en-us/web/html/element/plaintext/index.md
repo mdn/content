@@ -1,14 +1,9 @@
 ---
-title: '<plaintext>: The Plain Text element (Deprecated)'
+title: "<plaintext>: The Plain Text element (Deprecated)"
 slug: Web/HTML/Element/plaintext
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Plain text
-  - Reference
-  - Web
-  - plaintext
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.plaintext
 ---
 
@@ -32,6 +27,8 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
+<!-- ## Technical summary -->
+
 ## Specifications
 
 {{Specifications}}
@@ -43,4 +40,4 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## See also
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements, which should be used instead.
-- The {{HTMLElement("listing")}} and {{HTMLElement("xmp")}} elements, which are both obsolete elements similar to {{HTMLElement("plaintext")}}.
+- The {{HTMLElement("xmp")}} element, also obsolete, similar to {{HTMLElement("plaintext")}}.

@@ -1,17 +1,8 @@
 ---
-title: RTCRtpTransceiver.stop()
+title: "RTCRtpTransceiver: stop() method"
+short-title: stop()
 slug: Web/API/RTCRtpTransceiver/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Stopping a Transceiver
-  - WebRTC
-  - stop
 browser-compat: api.RTCRtpTransceiver.stop
 ---
 

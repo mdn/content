@@ -2,18 +2,6 @@
 title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Horizontal
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - min-width
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.min-width
 ---
 

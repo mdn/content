@@ -1,11 +1,7 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
 ---
 
@@ -60,17 +56,15 @@ console.log([1, , 3].toString()); // '1,,3'
 
 ### Calling toString() on non-array objects
 
-Same as `join()`, `toString()` is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods) and only reads the `length` property of `this` and then accesses each integer index.
+`toString()` is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It expects `this` to have a `join()` method; or, failing that, uses `Object.prototype.toString()` instead.
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: 1,
-  1: 2,
-  2: 3,
-};
-console.log(Array.prototype.toString.call(arrayLike));
-// 1,2,3
+console.log(Array.prototype.toString.call({ join: () => 1 }));
+// 1; a number
+console.log(Array.prototype.toString.call({ join: () => undefined }));
+// undefined
+console.log(Array.prototype.toString.call({ join: "not function" }));
+// "[object Object]"
 ```
 
 ## Specifications
@@ -83,4 +77,9 @@ console.log(Array.prototype.toString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
+- {{jsxref("String.prototype.toString()")}}

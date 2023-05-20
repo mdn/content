@@ -1,16 +1,7 @@
 ---
-title: '<div>: The Content Division element'
+title: "<div>: The Content Division element"
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
+page-type: html-element
 browser-compat: html.elements.div
 ---
 
@@ -20,67 +11,7 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes, marking a section of a document as being written in a different language (using the {{htmlattrxref("lang")}} attribute), and so on.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >.<br />Or (in {{glossary("WHATWG")}} HTML): If the parent is a
-        {{HTMLElement("dl")}} element: one or more
-        {{HTMLElement("dt")}} elements followed by one or more
-        {{HTMLElement("dd")}} elements, optionally intermixed with
-        {{HTMLElement("script")}} and
-        {{HTMLElement("template")}} elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.<br />Or (in {{glossary("WHATWG")}} HTML):
-        {{HTMLElement("dl")}} element.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDivElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) or [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute), and so on.
 
 ## Attributes
 
@@ -108,13 +39,13 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 </div>
 ```
 
-The result looks like this:
+#### Result
 
 {{EmbedLiveSample("A_simple_example", 650, 60)}}
 
 ### A styled example
 
-This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the {{htmlattrxref("class")}} attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
+This example creates a shadowed box by applying a style to the `<div>` using CSS. Note the use of the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute on the `<div>` to apply the style named `"shadowbox"` to the element.
 
 #### HTML
 
@@ -139,6 +70,68 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 #### Result
 
 {{EmbedLiveSample("A_styled_example", 650, 120)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.<br />Or (in {{glossary("WHATWG")}} HTML): If the parent is a
+        {{HTMLElement("dl")}} element: one or more
+        {{HTMLElement("dt")}} elements followed by one or more
+        {{HTMLElement("dd")}} elements, optionally intermixed with
+        {{HTMLElement("script")}} and
+        {{HTMLElement("template")}} elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.<br />Or (in {{glossary("WHATWG")}} HTML):
+        {{HTMLElement("dl")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDivElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

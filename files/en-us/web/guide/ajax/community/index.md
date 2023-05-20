@@ -1,8 +1,6 @@
 ---
 title: Community
 slug: Web/Guide/AJAX/Community
-tags:
-  - AJAX
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}

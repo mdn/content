@@ -1,16 +1,9 @@
 ---
-title: '<rtc>: The Ruby Text Container element'
+title: "<rtc>: The Ruby Text Container element"
 slug: Web/HTML/Element/rtc
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - NeedsContent
-  - Reference
-  - Ruby Text
-  - Text
-  - Web
-  - rtc
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.rtc
 ---
 
@@ -20,11 +13,43 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
 
 {{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+```html
+<div class="info">
+  <ruby>
+    <rtc>
+      <rb>旧</rb><rt>jiù</rt>
+      <rb>金</rb><rt>jīn</rt>
+      <rb>山</rb><rt>shān</rt>
+    </rtc>
+    <rtc>San Francisco</rtc>
+  </ruby>
+</div>
+```
+
+```css hidden
+.info {
+  padding-top: 10px;
+  font-size: 36px;
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Examples", 600, 120)}}
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -33,7 +58,7 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         or {{HTMLElement("rt")}} elements.
@@ -62,34 +87,6 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-```html
-<div class="info">
-  <ruby>
-    <rtc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
-    </rtc>
-    <rtc>San Francisco</rtc>
-  </ruby>
-</div>
-```
-
-```css hidden
-.info {
-  padding-top: 10px;
-  font-size: 36px;
-}
-```
-
-{{EmbedLiveSample("Examples", 600, 120)}}
 
 ## Specifications
 

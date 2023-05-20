@@ -1,11 +1,7 @@
 ---
 title: Domain
 slug: Glossary/Domain
-tags:
-  - Browser
-  - Domain
-  - Infrastructure
-  - Networking
+page-type: glossary-definition
 ---
 
 A domain is an authority within the internet that controls its own resources. Its "domain name" is a way to address this authority as part of the hierarchy in a {{Glossary("URL")}} - usually the most memorable part of it, for instance a brand name.

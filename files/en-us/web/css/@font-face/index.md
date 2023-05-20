@@ -2,15 +2,6 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 page-type: css-at-rule
-tags:
-  - "@font-face"
-  - At-rule
-  - CSS
-  - CSS Fonts
-  - Fonts
-  - Nick Names
-  - Reference
-  - typography
 browser-compat: css.at-rules.font-face
 ---
 
@@ -49,7 +40,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 
     > **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
 
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.
@@ -58,53 +49,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font size.
 - {{cssxref("@font-face/src", "src")}}
-
-  - : Specifies font resources. A comma-separated list representing the resource fallback order, each resource specified by a `url()` or `local()`. If the previous resource is loaded successfully, the latter resources will not be used. The `url()` can be followed by `format()` and `tech()`, like this:
-
-    ```css
-    src: local("Trickster"),
-      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-        format("opentype"), url("trickster-outline.woff") format("woff");
-    ```
-
-    `url()`: Specifies the URL of a font file, like any other `url()` in CSS. If the font file is a container for multiple fonts, a fragment identifier is included to indicate which sub-font should be used, as follows:
-
-    ```css
-    src: url(collection.otc#WhichFont); /* WhichFont is the PostScript name of a font in the font file */
-    src: url(fonts.svg#WhichFont); /* WhichFont is the element id of a font in the SVG Font file */
-    ```
-
-    `local()`: Specifies the font name should the font be available on the user's device. Quoting the font name is optional.
-
-    `format()`: **Optional**. Specifies the font format. If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth. If omitted, the browser will always download the resource and then detect the format. The preferred value type is a _keyword_, which can also be given as a _string_ (within quotes) for backward compatibility reasons.
-
-    The following table shows the valid values and their corresponding font formats. There are a few other possible values, see next paragraph.
-
-    | Keyword             | Font Format           | Common extensions |
-    | ------------------- | --------------------- | ----------------- |
-    | `woff2`             | WOFF 2.0              | .woff2            |
-    | `woff`              | WOFF 1.0              | .woff             |
-    | `opentype`          | OpenType              | .otf, .ttf        |
-    | `truetype`          | TrueType              | .ttf              |
-    | `collection`        | OpenType Collection   | .otc, .ttc        |
-    | `embedded-opentype` | Embedded OpenType     | .eot              |
-    | `svg`               | SVG Font (deprecated) | .svg, .svgz       |
-
-    > **Note:** The values `opentype` and `truetype` are completely equivalent, regardless of whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
-
-    `tech()`: **Optional**. {{Experimental_inline}} Value is a one of the following _keywords_: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
-
-    The following table shows several old unnormalized `format()` values and their new equivalent syntax:
-
-    | Old syntax                      | Equivalent syntax                   |
-    | ------------------------------- | ----------------------------------- |
-    | `format("woff2-variations")`    | `format(woff2) tech(variations)`    |
-    | `format("woff-variations")`     | `format(woff) tech(variations)`     |
-    | `format("opentype-variations")` | `format(opentype) tech(variations)` |
-    | `format("truetype-variations")` | `format(truetype) tech(variations)` |
-
-    > **Note:** `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
-
+  - : Specifies references to font resources including hints about the font format and technology. It is required for the @font-face rule to be valid.
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : The range of Unicode code points to be used from the font.
 
@@ -114,9 +59,12 @@ It's common to use both `url()` and `local()` together, so that the user's insta
 
 If the `local()` function is provided, specifying a font name to look for on the user's device, and if the {{Glossary("user agent")}} finds a match, that local font is used. Otherwise, the font resource specified using the `url()` function is downloaded and used.
 
-Resources are attempted to be loaded in order, so usually `local()` should be written before `url()`. Also, `local()` is not just a helper for `url()`, they are equal and both are optional, a rule block containing only one or more `local()` without `url()` is possible.
+Browsers attempt to load resources in their list declaration order, so usually `local()` should be written before `url()`. Both functions are optional, so a rule block containing only one or more `local()` without `url()` is possible.
+If a more specific fonts with `format()` or `tech()` values are desired, these should be listed _before_ versions that don't have these values, as the less-specific variant would otherwise be tried and used first.
 
-By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an Internet connection.
+By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an internet connection.
+
+> **Note:** Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/@font-face/src#fallbacks_for_older_browsers).
 
 The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
@@ -185,7 +133,7 @@ The output of this example code looks like so:
 
 ### Specifying local font alternatives
 
-In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (two different names are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:
+In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (both the full font name and the Postscript name are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:
 
 ```css
 @font-face {

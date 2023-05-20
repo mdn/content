@@ -1,9 +1,7 @@
 ---
 title: Literal
 slug: Glossary/Literal
-tags:
-  - Literal
-  - JavaScript
+page-type: glossary-definition
 ---
 
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.

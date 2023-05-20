@@ -1,22 +1,13 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.keys
 ---
 
 {{JSRef}}
 
-The **`keys()`** method returns a new **Array
-Iterator** object that contains the keys for each index in the array.
+The **`keys()`** method returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
@@ -28,7 +19,7 @@ keys()
 
 ### Return value
 
-A new {{jsxref("Array")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Description
 
@@ -77,7 +68,10 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.values()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.values()")}}
+- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.keys()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

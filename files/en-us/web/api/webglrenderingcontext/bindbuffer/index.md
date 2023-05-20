@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.bindBuffer()
+title: "WebGLRenderingContext: bindBuffer() method"
+short-title: bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindBuffer
 ---
 
@@ -32,22 +27,22 @@ bindBuffer(target, buffer)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
-        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
-        to another.
-      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object
-        to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
-        operations.
-      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
-        operations.
-      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
-        operations.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+
+    - `gl.COPY_READ_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.COPY_WRITE_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+      - : Buffer for transform feedback operations.
+    - `gl.UNIFORM_BUFFER`
+      - : Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
+    - `gl.PIXEL_UNPACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
 
 - `buffer`
   - : A {{domxref("WebGLBuffer")}} to bind.
@@ -72,8 +67,8 @@ and the current binding will remain untouched.
 ### Binding a buffer to a target
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);

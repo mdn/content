@@ -1,18 +1,11 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
-tags:
-  - Advanced
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
 ---
 
 {{LearnSidebar}}
 
-There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
+There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element, or if you want to provide custom behaviors, you may consider building your own controls.
 
 In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
@@ -73,7 +66,8 @@ Another fun example: what will happen if the user hits the up or down arrow keys
 
 We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same functionality as the existing native {{htmlelement('select')}}, it should behave the exact same way as the select for all users, from keyboard to mouse to touch to screen reader, and any other input device.
 
-In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore which nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
+In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore
+nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
 
 Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do.
 
@@ -87,11 +81,11 @@ It is best not to invent new user interactions. For any interaction you do add, 
 
 ## Defining the HTML structure and (some) semantics
 
-Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and to give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:
+Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:
 
 ```html
 <!-- This is our main container for our control.
-     The tabindex attribute is what allows the user to focus the control.
+     The tabindex attribute is what allows the user to focus on the control.
      We'll see later that it's better to set it through JavaScript. -->
 <div class="select" tabindex="0">
   <!-- This container will be used to display the current value of the control -->
@@ -151,7 +145,7 @@ We need an extra class `active` to define the look and feel of our control when 
 Now, let's handle the list of options:
 
 ```css
-/* The .select selector here helps to make we only select
+/* The .select selector here helps to make sure we only select
    element inside our control. */
 .select .optList {
   /* This will make sure our list of options will be displayed below the value
@@ -331,8 +325,8 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The user has turned off JavaScript: This is unusual; very few people turn off JavaScript nowadays.
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
-- The script is in conflict with a third party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
@@ -443,18 +437,17 @@ The groundwork is done. We can now start to define all the functions that will b
 // It takes one parameter
 // select : the DOM node with the `select` class to deactivate
 function deactivateSelect(select) {
-
   // If the control is not active there is nothing to do
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // We need to get the list of options for the custom control
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
   // We close the list of option
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // and we deactivate the custom control itself
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // This function will be used each time the user wants to activate the control
@@ -463,9 +456,8 @@ function deactivateSelect(select) {
 // select : the DOM node with the `select` class to activate
 // selectList : the list of all the DOM nodes with the `select` class
 function activeSelect(select, selectList) {
-
   // If the control is already active there is nothing to do
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // We have to turn off the active state on all custom controls
   // Because the deactivateSelect function fulfills all the requirements of the
@@ -474,7 +466,7 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // And we turn on the active state for this specific control
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // This function will be used each time the user wants to open/closed the list of options
@@ -482,10 +474,10 @@ function activeSelect(select, selectList) {
 // select : the DOM node with the list to toggle
 function toggleOptList(select) {
   // The list is kept from the control
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
   // We change the class of the list to show/hide it
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // This function will be used each time we need to highlight an option
@@ -494,36 +486,35 @@ function toggleOptList(select) {
 // option : the DOM node with the `option` class to highlight
 function highlightOption(select, option) {
   // We get the list of all option available for our custom select element
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   // We remove the highlight from all options
   optionList.forEach((other) => {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // We highlight the right option
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
-You need these in order to handle the various states of the custom control.
+You need these to handle the various states of custom control.
 
 Next, we bind these functions to the appropriate events:
 
 ```js
 // We handle the event binding when the document is loaded.
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   // Each custom control needs to be initialized
   selectList.forEach((select) => {
-
     // as well as all its `option` elements
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
 
     // Each time a user hovers their mouse over an option, we highlight the given option
     optionList.forEach((option) => {
-      option.addEventListener('mouseover', () => {
+      option.addEventListener("mouseover", () => {
         // Note: the `select` and `option` variable are closures
         // available in the scope of our function call.
         highlightOption(select, option);
@@ -531,7 +522,7 @@ window.addEventListener('load', () => {
     });
 
     // Each times the user clicks on or taps a custom select element
-    select.addEventListener('click', (event) => {
+    select.addEventListener("click", (event) => {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -542,7 +533,7 @@ window.addEventListener('load', () => {
     // In case the control gains focus
     // The control gains the focus each time the user clicks on it or each time
     // they use the tabulation key to access the control
-    select.addEventListener('focus', (event) => {
+    select.addEventListener("focus", (event) => {
       // Note: the `select` and `selectList` variable are closures
       // available in the scope of our function call.
 
@@ -551,7 +542,7 @@ window.addEventListener('load', () => {
     });
 
     // In case the control loses focus
-    select.addEventListener('blur', (event) => {
+    select.addEventListener("blur", (event) => {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -560,14 +551,13 @@ window.addEventListener('load', () => {
     });
 
     // Loose focus if the user hits `esc`
-    select.addEventListener('keyup', (event) => {
-
+    select.addEventListener("keyup", (event) => {
       // deactivate on keyup of `esc`
       if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });
-});
+  });
 });
 ```
 
@@ -597,10 +587,10 @@ function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
 
   // We also need to get the value placeholder of our custom control
-  const value = select.querySelector('.value');
+  const value = select.querySelector(".value");
 
   // And we need the whole list of options
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   // We set the selected index to the index of our choice
   nativeWidget.selectedIndex = index;
@@ -610,7 +600,7 @@ function updateValue(select, index) {
 
   // And we highlight the corresponding option of our custom control
   highlightOption(select, optionList[index]);
-};
+}
 
 // This function returns the current selected index in the native control
 // It takes one parameter:
@@ -621,19 +611,19 @@ function getIndex(select) {
   const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 With these two functions, we can bind the native controls to the custom ones:
 
 ```js
 // We handle event binding when the document is loaded.
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   // Each custom control needs to be initialized
   selectList.forEach((select) => {
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
     const selectedIndex = getIndex(select);
 
     // We make our custom control focusable
@@ -647,14 +637,18 @@ window.addEventListener('load', () => {
 
     // Each time a user clicks on an option, we update the value accordingly
     optionList.forEach((option, index) => {
-      option.addEventListener('click', (event) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
     // Each time a user uses their keyboard on a focused control, we update the value accordingly
-    select.addEventListener('keyup', (event) => {
+    select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
+      // When the user hits the Escape key, deactivate the custom control
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
 
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
@@ -687,7 +681,7 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
+Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states, and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
 
 ### The `role` attribute
 
@@ -713,7 +707,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 </div>
 ```
 
-> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS .
+> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -724,21 +718,21 @@ The `aria-selected` attribute is used to mark which option is currently selected
 ```js
 function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector('.value');
+  const value = select.querySelector(".value");
   const optionList = select.querySelectorAll('[role="option"]');
 
   // We make sure that all the options are not selected
   optionList.forEach((other) => {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // We make sure the chosen option is selected
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
@@ -825,7 +819,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 ```
 
-With no JavaScript, and just a little bit of CSS, we are able to style the list of radio buttons to display only the checked item. When the focus is within the `<ul>` in the `<fieldset>`, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:
+With no JavaScript, and just a little bit of CSS, we can style the list of radio buttons to display only the checked item. When the focus is within the `<ul>` in the `<fieldset>`, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:
 
 {{EmbedLiveSample("An_alternative_approach_Using_radio_buttons",200,240)}}
 

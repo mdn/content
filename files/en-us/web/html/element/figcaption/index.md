@@ -1,11 +1,7 @@
 ---
-title: '<figcaption>: The Figure Caption element'
+title: "<figcaption>: The Figure Caption element"
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
+page-type: html-element
 browser-compat: html.elements.figcaption
 ---
 
@@ -15,11 +11,21 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -28,7 +34,7 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -55,8 +61,8 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -65,14 +71,6 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
 
 ## Specifications
 

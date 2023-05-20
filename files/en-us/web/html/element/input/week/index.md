@@ -1,20 +1,7 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Element
-  - Input Type
-  - Input Types
-  - Reference
-  - Week
-  - Weeks
+page-type: html-element
 browser-compat: html.elements.input.type_week
 ---
 
@@ -26,66 +13,13 @@ browser-compat: html.elements.input.type_week
 
 The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
-In Chrome/Opera the `week` control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.
-
 ![An input reading 'week 01, 2017'. The background of the 2017 is the same blue as the focus ring. There are 3 icons in the input: x or clear, a spinner with small up and down arrows, and a larger down arrow. A calendar is a pop-up below the input set to January 2017. The first column of the calendar is the week: 52, 1, 2, 3, 4, 5. the full month calendar is to the right of that. The row with Week 1 and January 2 to 8 is highlighted. On the same line as the month, there are buttons to move right and left for the next and previous months.](week-control-chrome.png)
-
-The Edge `week` control is somewhat more elaborate, opening up week and year pickers with sliding reels.
-
-![An input reading 'week 01, 2017'. A popup is open below with two columns. The left column has a list of weeks, from week 48 to Week 52, continuing with week 01 to week 05. The right side has years, from 2012 to 2022. Week 01 and 2017 are in the middle, highlighted with a blue background. At the bottom, there is a row with a checkbox and an X; likely buttons.](week-control-edge.png)
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing a week and year, or
-        empty
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported common attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, and <code>list</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
-A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings).
 
-You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
+You can set a default value for the input by including a value inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
 <label for="week">What week would you like to start?</label>
@@ -109,13 +43,13 @@ In addition to the attributes common to {{HTMLElement("input")}} elements, week 
 
 ### max
 
-The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
+The latest (time-wise) year and week number, in the string format discussed in the [Value](#value) section above, to accept. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
 
 This value must be greater than or equal to the year and week specified by the `min` attribute.
 
 ### min
 
-The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
+The earliest year and week to accept. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
 
 This value must be less than or equal to the value of the `max` attribute.
 
@@ -127,7 +61,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -158,11 +92,11 @@ The simplest use of `<input type="week">` involves a basic `<input>` and {{htmle
 
 ### Controlling input size
 
-`<input type="week">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
+`<input type="week">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
 ### Using the step attribute
 
-You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of weeks jumped whenever they are incremented or decremented, however it doesn't seem to have any effect on supporting browsers.
+You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of weeks jumped whenever they are incremented or decremented, however it doesn't seem to have any effect on supporting browsers.
 
 ## Validation
 
@@ -170,7 +104,7 @@ By default, `<input type="week">` does not apply any validation to entered value
 
 ### Setting maximum and minimum weeks
 
-You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the valid weeks that can be chosen by the user. In the following example we are setting a minimum value of `Week 01, 2017` and a maximum value of `Week 52, 2017`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the valid weeks that can be chosen by the user. In the following example we are setting a minimum value of `Week 01, 2017` and a maximum value of `Week 52, 2017`:
 
 ```html
 <form>
@@ -215,7 +149,7 @@ The result here is that only weeks between W01 and W52 in 2017 will be seen as v
 
 ### Making week values required
 
-In addition you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the week mandatory. As a result, supporting browsers will display an error if you try to submit an empty week field.
+In addition you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the week mandatory. As a result, supporting browsers will display an error if you try to submit an empty week field.
 
 Let's look at an example; here we've set minimum and maximum weeks, and also made the field required:
 
@@ -382,6 +316,59 @@ function populateWeeks() {
 ```
 
 > **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing a week and year, or
+        empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>, and <code>list</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

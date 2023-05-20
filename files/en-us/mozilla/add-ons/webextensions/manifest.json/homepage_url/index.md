@@ -1,10 +1,7 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.homepage_url
 ---
 

@@ -1,21 +1,21 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.toStringTag
 ---
 
 {{JSRef}}
 
-The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.
+The **`Symbol.toStringTag`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@toStringTag`. {{jsxref("Object.prototype.toString()")}} looks up this symbol on the `this` value for the property containing a string that represents the type of the object.
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}
+
+## Value
+
+The well-known symbol `@@toStringTag`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
@@ -24,12 +24,12 @@ The **`Symbol.toStringTag`** well-known symbol is a string valued property that 
 Some values do not have `Symbol.toStringTag`, but have special `toString()` representations. For a complete list, see {{jsxref("Object.prototype.toString()")}}.
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... and more
 ```
 
@@ -38,7 +38,7 @@ Object.prototype.toString.call(null);      // "[object Null]"
 Most built-in objects provide their own `@@toStringTag` property. All built-in objects' `@@toStringTag` property is not writable, not enumerable, and configurable.
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
@@ -59,7 +59,7 @@ Now, with the help of `toStringTag`, you are able to set your own custom tag:
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
@@ -71,9 +71,9 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 Due to a [WebIDL spec change](https://github.com/whatwg/webidl/pull/357) in mid-2020, browsers are adding a `Symbol.toStringTag` property to all DOM prototype objects. For example, to access the `Symbol.toStringTag` property on {{domxref("HTMLButtonElement")}}:
 
 ```js
-const test = document.createElement('button');
-test.toString(); // Returns [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Returns HTMLButtonElement
+const test = document.createElement("button");
+test.toString(); // "[object HTMLButtonElement]"
+test[Symbol.toStringTag]; // "HTMLButtonElement"
 ```
 
 ## Specifications

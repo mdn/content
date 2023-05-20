@@ -1,13 +1,7 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.for_of
 ---
 

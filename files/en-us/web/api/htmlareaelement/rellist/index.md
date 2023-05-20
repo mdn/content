@@ -1,23 +1,14 @@
 ---
-title: HTMLAreaElement.relList
+title: "HTMLAreaElement: relList property"
+short-title: relList
 slug: Web/API/HTMLAreaElement/relList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLAreaElement.relList`** read-only property reflects
-the {{htmlattrxref("rel", "area")}} attribute. It is a live {{domxref("DOMTokenList")}}
-containing the set of [link types](/en-US/docs/Web/HTML/Link_types)
-indicating the relationship between the resource represented by the
-{{HTMLElement("area")}} element and the current document.
+The **`HTMLAreaElement.relList`** read-only property reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document.
 
 The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be

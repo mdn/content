@@ -1,13 +1,8 @@
 ---
-title: URLSearchParams.keys()
+title: "URLSearchParams: keys() method"
+short-title: keys()
 slug: Web/API/URLSearchParams/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.keys
 ---
 

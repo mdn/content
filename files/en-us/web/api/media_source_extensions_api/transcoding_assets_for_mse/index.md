@@ -2,13 +2,6 @@
 title: Transcoding assets for Media Source Extensions
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
 page-type: guide
-tags:
-  - DASH
-  - Dynamic Adaptive Streaming over HTTP
-  - Encoding
-  - MSE
-  - Media Source Extensions
-  - adaptive
 ---
 
 {{DefaultAPISidebar("Media Source Extensions")}}
@@ -48,8 +41,8 @@ As specified in [section 1.1 of the MSE spec: Goals](https://www.w3.org/TR/media
 To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported")}} method:
 
 ```js
-MediaSource.isTypeSupported('audio/mp3'); // false
-MediaSource.isTypeSupported('video/mp4'); // true
+MediaSource.isTypeSupported("audio/mp3"); // false
+MediaSource.isTypeSupported("video/mp4"); // true
 MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true
 ```
 

@@ -1,10 +1,7 @@
 ---
 title: Tag
 slug: Glossary/Tag
-tags:
-  - CodingScripting
-  - HTML
-  - Intro
+page-type: glossary-definition
 ---
 
 In {{Glossary("HTML")}}, a **tag** is used for creating an {{Glossary("element")}}.

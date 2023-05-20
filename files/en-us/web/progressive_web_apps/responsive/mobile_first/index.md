@@ -1,16 +1,6 @@
 ---
 title: Mobile first
 slug: Web/Progressive_web_apps/Responsive/Mobile_first
-tags:
-  - Apps
-  - CSS
-  - Development
-  - HTML
-  - Java
-  - JavaScript
-  - Mobile
-  - Mobile Development
-  - Mobile first
 ---
 
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.
@@ -287,7 +277,7 @@ When these are present, we can serve alternative styling rules to provide sensib
 
 This is not hugely pretty, but it does make the main content area more readable on browsers that don't support either or both of these features.
 
-Modernizr also puts its feature detect results in a JavaScript `Modenizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
+Modernizr also puts its feature detect results in a JavaScript `Modernizr` object too, so that you can run JavaScript code selectively depending on feature support. For example, you could do this:
 
 ```js
 if (Modernizr.rgba) {

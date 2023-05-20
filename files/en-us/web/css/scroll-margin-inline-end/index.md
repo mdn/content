@@ -2,14 +2,6 @@
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-inline
-  - scroll-margin-inline-end
 browser-compat: css.properties.scroll-margin-inline-end
 ---
 
@@ -70,7 +62,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {

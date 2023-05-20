@@ -1,17 +1,10 @@
 ---
-title: Magnetometer()
+title: "Magnetometer: Magnetometer() constructor"
+short-title: Magnetometer()
 slug: Web/API/Magnetometer/Magnetometer
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Generic Sensor API
-  - Magnetometer
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
 
@@ -20,11 +13,6 @@ browser-compat: api.Magnetometer.Magnetometer
 The **`Magnetometer()`** constructor
 creates a new {{domxref("Magnetometer")}} object which returns information about the
 magnetic field as detected by a device's primary magnetometer sensor.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent
-with the policies set on your server. This is not something that would ever be shown to
-a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-instructions.
 
 ## Syntax
 
@@ -48,6 +36,11 @@ new Magnetometer(options)
     - `referenceFrame`
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

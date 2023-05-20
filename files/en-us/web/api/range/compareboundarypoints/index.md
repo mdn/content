@@ -1,12 +1,8 @@
 ---
-title: Range.compareBoundaryPoints()
+title: "Range: compareBoundaryPoints() method"
+short-title: compareBoundaryPoints()
 slug: Web/API/Range/compareBoundaryPoints
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.compareBoundaryPoints
 ---
 

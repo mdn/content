@@ -1,14 +1,7 @@
 ---
 title: "ARIA: region role"
 slug: Web/Accessibility/ARIA/Roles/region_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - Reference
-  - landmark role
-  - region role
-  - ARIA region
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#region
   - https://w3c.github.io/aria-practices/#aria_lh_region
@@ -24,7 +17,7 @@ The **`region`** role is used to identify document areas the author deems signif
 
 ## Description
 
-The `region` role is an [ARIA landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role.
+The `region` role is an [ARIA landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role.
 The `region` role should be reserved for sections of content sufficiently important that users will likely want to navigate to the section easily and to have it listed in a summary of the page. A region role is a more generic term, and should only be used if the section needing to be identified is not accurately described by one of the other landmark roles, such as [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role), [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role).
 
 Every element with a `region` role should include a label that describes the purpose of the content in the region, preferably with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) referencing a visible header. If no visible appropriate header is present, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used.
@@ -51,9 +44,9 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 ## Accessibility concerns
 
-Use sparingly[! Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+Use sparingly[! Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
-Only use the `region` role if no other relevant [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning) element or [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) applies. If multiple regions exist on a page, it may be worth reinvestigating the page's overall structure.
+Only use the `region` role if no other relevant [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning) element or [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) applies. If multiple regions exist on a page, it may be worth reinvestigating the page's overall structure.
 
 ## Best practices
 
@@ -87,7 +80,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 ### SVG
 
-`role="region"` can be declared on areas of {{HTMLElement('svg')}} along with an `aria-label` to allow individual sections of the SVG to be described.
+`role="region"` can be declared on areas of {{SVGElement('svg')}} along with an `aria-label` to allow individual sections of the SVG to be described.
 
 ## Specifications
 

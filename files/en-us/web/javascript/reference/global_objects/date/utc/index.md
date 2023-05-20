@@ -1,17 +1,13 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.UTC
 ---
 
 {{JSRef}}
 
-The **`Date.UTC()`** method accepts parameters similar to the
+The **`Date.UTC()`** static method accepts parameters similar to the
 {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of
 milliseconds since January 1, 1970, 00:00:00 UTC.
 
@@ -113,7 +109,7 @@ const utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 
 When providing less than two arguments to `Date.UTC()`, ECMAScript 2017
 requires that {{jsxref("NaN")}} is returned. Engines that weren't supporting this
-behavior have been updated (see [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755),
+behavior have been updated (see [bug 1050755](https://bugzil.la/1050755),
 [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
 
 ```js

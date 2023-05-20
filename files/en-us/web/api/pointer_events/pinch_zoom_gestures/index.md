@@ -2,10 +2,6 @@
 title: Pinch zoom gestures
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
 page-type: guide
-tags:
-  - Guide
-  - PointerEvent
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -44,7 +40,7 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 ```js
 // Global vars to cache event state
 const evCache = [];
-const prevDiff = -1;
+let prevDiff = -1;
 ```
 
 ### Register event handlers
@@ -100,7 +96,9 @@ function pointermoveHandler(ev) {
   ev.target.style.border = "dashed";
 
   // Find this event in the cache and update its record with this event
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache[index] = ev;
 
   // If two pointers are down, check for pinch gestures
@@ -110,13 +108,13 @@ function pointermoveHandler(ev) {
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
-         // The distance between the two pointers has increased
-         log("Pinch moving OUT -> Zoom in", ev);
-         ev.target.style.background = "pink";
+        // The distance between the two pointers has increased
+        log("Pinch moving OUT -> Zoom in", ev);
+        ev.target.style.background = "pink";
       }
       if (curDiff < prevDiff) {
         // The distance between the two pointers has decreased
-        log("Pinch moving IN -> Zoom out",ev);
+        log("Pinch moving IN -> Zoom out", ev);
         ev.target.style.background = "lightblue";
       }
     }
@@ -138,7 +136,7 @@ function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
-  remove_event(ev);
+  removeEvent(ev);
   ev.target.style.background = "white";
   ev.target.style.border = "1px solid black";
 
@@ -181,7 +179,9 @@ This function helps manage the global event caches `evCache`.
 ```js
 function removeEvent(ev) {
   // Remove this event from the target's cache
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -201,16 +201,17 @@ function enableLog(ev) {
 
 function log(prefix, ev) {
   if (!logEvents) return;
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${prefix}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

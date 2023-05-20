@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
 ---
 
@@ -32,7 +24,7 @@ at(index)
 
 ### Return value
 
-The element in the array matching the given index. Always returns {{jsxref('undefined')}} if `index < -array.length` or `index >= array.length` without attempting to access the corresponding property.
+The element in the array matching the given index. Always returns {{jsxref("undefined")}} if `index < -array.length` or `index >= array.length` without attempting to access the corresponding property.
 
 ## Description
 
@@ -69,7 +61,7 @@ console.log(item2); // 'orange'
 
 ### Comparing methods
 
-This example compares different ways to select the penultimate (last but one) item of an {{jsxref('Array')}}. While all the methods shown below are valid, this example highlights the succinctness and readability of the `at()` method.
+This example compares different ways to select the penultimate (last but one) item of an {{jsxref("Array")}}. While all the methods shown below are valid, this example highlights the succinctness and readability of the `at()` method.
 
 ```js
 // Our array with items
@@ -112,7 +104,9 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 ## See also
 
 - [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
-- [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("Array.prototype.find()")}} – return a value based on a given test.
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.
-- {{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.at()")}}
+- {{jsxref("String.prototype.at()")}}

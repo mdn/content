@@ -1,15 +1,7 @@
 ---
 title: "ARIA: list role"
 slug: Web/Accessibility/ARIA/Roles/list_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA list
-  - Accessibility
-  - Reference
-  - Role
-  - document structure role
-  - list role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#list
 ---
 

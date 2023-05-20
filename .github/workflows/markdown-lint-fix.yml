@@ -16,22 +16,22 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
         env:
           HUSKY: 0
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint markdown files
         run: |
           yarn fix:md
+          yarn fix:fm
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "chore: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup
@@ -39,10 +39,11 @@ jobs:
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "chore: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup
@@ -51,3 +52,4 @@ jobs:
           body: |
             Auto-fix was run, but additional issues found.
             Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}
+          token: ${{ secrets.AUTOMERGE_TOKEN }}

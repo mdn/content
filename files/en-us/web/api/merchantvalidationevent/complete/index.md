@@ -1,20 +1,10 @@
 ---
-title: MerchantValidationEvent.complete()
+title: "MerchantValidationEvent: complete() method"
+short-title: complete()
 slug: Web/API/MerchantValidationEvent/complete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Merchant
-  - Merchant Validation
-  - MerchantValidationEvent
-  - Method
-  - Payment Request
-  - Payment Request API
-  - Payments
-  - Reference
-  - complete
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.complete
 ---
 
@@ -55,7 +45,7 @@ In this example, we see the client-side code needed to support merchant validati
 payRequest.onmerchantvalidation = (event) => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
-}
+};
 
 function getValidationData(url) {
   // Retrieve the validation data from the URL

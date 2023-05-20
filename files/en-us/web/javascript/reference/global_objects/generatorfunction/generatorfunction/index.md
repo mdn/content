@@ -1,16 +1,13 @@
 ---
 title: GeneratorFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
 ---
 
 {{JSRef}}
 
-The **`GeneratorFunction()`** constructor creates a new {{jsxref("GeneratorFunction")}} object. In JavaScript, every [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*) is actually a `GeneratorFunction` object.
+The **`GeneratorFunction()`** constructor creates {{jsxref("GeneratorFunction")}} objects.
 
 Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
@@ -64,5 +61,5 @@ console.log(iterator.next().value); // 20
 - [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 - {{jsxref("Functions", "Functions", "", 1)}}

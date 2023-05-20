@@ -1,15 +1,7 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - Advanced
-  - Intermediate
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.padStart
 ---
 
@@ -33,7 +25,7 @@ padStart(targetLength, padString)
 
 - `targetLength`
   - : The length of the resulting string once the current `str` has
-    been padded. If the value is less than `str.length`, then
+    been padded. If the value is less than or equal to `str.length`, then
     `str` is returned as-is.
 - `padString` {{optional_inline}}
   - : The string to pad the current `str` with. If
@@ -64,7 +56,7 @@ A {{jsxref("String")}} of the specified `targetLength` with
 // JavaScript version of: (unsigned)
 // printf "%0*d" width num
 function leftFillNum(num, targetLength) {
-  return num.toString().padStart(targetLength, 0);
+  return num.toString().padStart(targetLength, "0");
 }
 
 const num = 123;
@@ -83,4 +75,3 @@ console.log(leftFillNum(num, 5)); // "00123"
 
 - [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

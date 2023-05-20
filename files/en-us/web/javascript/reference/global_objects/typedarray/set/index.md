@@ -1,13 +1,7 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.set
 ---
 
@@ -78,6 +72,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.error
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.error
 ---
 

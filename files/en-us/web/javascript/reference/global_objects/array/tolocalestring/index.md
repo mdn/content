@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
 
@@ -30,7 +25,7 @@ toLocaleString(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object with configuration properties. For numbers, see {{jsxref("Number.prototype.toLocaleString()")}}; for dates, see {{jsxref("Date.prototype.toLocaleString()")}}.
 
@@ -40,7 +35,7 @@ A string representing the elements of the array.
 
 ## Description
 
-The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with a implementation-defined separator (such as a comma ","). Note that the method itself does not consume the two parameters — it only passes them to the `toLocaleString()` of each element. The choice of the separator string depends on the host's current locale, not the `locales` parameter.
+The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ","). Note that the method itself does not consume the two parameters — it only passes them to the `toLocaleString()` of each element. The choice of the separator string depends on the host's current locale, not the `locales` parameter.
 
 If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
@@ -104,8 +99,12 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
 - {{jsxref("Intl")}}
+- {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}

@@ -1,10 +1,7 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-tags:
-  - Infrastructure
-  - JavaScript
-  - node.js
+page-type: glossary-definition
 ---
 
 Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that allows developers to build server-side and network applications with JavaScript.

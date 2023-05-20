@@ -2,16 +2,6 @@
 title: ":root"
 slug: Web/CSS/:root
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Element
-  - Layout
-  - Node
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - root
 browser-compat: css.selectors.root
 ---
 
@@ -29,8 +19,10 @@ The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```
-:root
+```css
+:root {
+  /* ... */
+}
 ```
 
 ## Examples

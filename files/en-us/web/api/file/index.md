@@ -2,12 +2,6 @@
 title: File
 slug: Web/API/File
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Interface
-  - Reference
-  - Web
 browser-compat: api.File
 ---
 
@@ -71,4 +65,3 @@ _The `File` interface doesn't define any methods, but inherits methods from the 
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{DOMxRef("FileReader")}}
-- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (for privileged code running in Gecko, such as Firefox add-ons)

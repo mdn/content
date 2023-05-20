@@ -1,19 +1,8 @@
 ---
-title: setInterval()
+title: setInterval() global function
+short-title: setInterval()
 slug: Web/API/setInterval
 page-type: web-api-global-function
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Timers
-  - setInterval
-  - Polyfill
 browser-compat: api.setInterval
 ---
 
@@ -82,14 +71,13 @@ avoid confusion when maintaining your code.
 The following example demonstrates `setInterval()`'s basic syntax.
 
 ```js
-const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // Your code here
- // Parameters are purely optional.
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // Your code here
+  // Parameters are purely optional.
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -157,7 +145,7 @@ See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 When you pass a method to `setInterval()` or any other function, it is
 invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
-value. This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+value. This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
 ### Explanation
 
@@ -170,7 +158,7 @@ function that called `setTimeout`. See the following example (which uses
 is the same for both timers):
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
@@ -221,8 +209,7 @@ Browsers may enforce even more stringent minimum values for the interval under s
 circumstances, although these should not be common. Note also that the actual amount of
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
-{{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
- delays longer than specified")}} for examples.
+[Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 
@@ -238,10 +225,10 @@ In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
 (function loop() {
-   setTimeout(() => {
-      // Your logic here
+  setTimeout(() => {
+    // Your logic here
 
-      loop();
+    loop();
   }, delay);
 })();
 ```

@@ -1,17 +1,6 @@
 ---
-title: 'Vue conditional rendering: editing existing todos'
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - conditional rendering
-  - v-else
-  - v-if
-  - Vue
+title: "Vue conditional rendering: editing existing todos"
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -58,7 +47,11 @@ We can start by creating a separate component to handle the editing functionalit
   <form class="stack-small" @submit.prevent="onSubmit">
     <div>
       <label class="edit-label">Edit Name for &quot;\{{label}}&quot;</label>
-      <input :id="id" type="text" autocomplete="off" v-model.lazy.trim="newLabel" />
+      <input
+        :id="id"
+        type="text"
+        autocomplete="off"
+        v-model.lazy.trim="newLabel" />
     </div>
     <div class="btn-group">
       <button type="button" class="btn" @click="onCancel">
@@ -148,12 +141,16 @@ Update your `ToDoItem`'s template as shown below.
 <template>
   <div class="stack-small">
     <div class="custom-checkbox">
-      <input type="checkbox" class="checkbox" :id="id" :checked="isDone"
-             @change="$emit('checkbox-changed')" />
+      <input
+        type="checkbox"
+        class="checkbox"
+        :id="id"
+        :checked="isDone"
+        @change="$emit('checkbox-changed')" />
       <label :for="id" class="checkbox-label">\{{label}}</label>
     </div>
     <div class="btn-group">
-      <button type="button" class="btn"  @click="toggleToItemEditForm">
+      <button type="button" class="btn" @click="toggleToItemEditForm">
         Edit <span class="visually-hidden">\{{label}}</span>
       </button>
       <button type="button" class="btn btn__danger" @click="deleteToDo">
@@ -197,11 +194,11 @@ methods: {
   }
 ```
 
-## Conditionally displaying components via v:if and v:else
+## Conditionally displaying components via v-if and v-else
 
-Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://v2.vuejs.org/v2/api/#v-if).
+Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 
-The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://v2.vuejs.org/v2/api/#v-else-if) and [`v-else`](https://v2.vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
+The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) and [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
 
@@ -210,7 +207,7 @@ Lastly, you can use a `v-if` + `v-else` at the root of your component to display
 First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
 
 ```html
-<div class="stack-small" v-if="!isEditing">
+<div class="stack-small" v-if="!isEditing"></div>
 ```
 
 Next, below that `<div>`'s closing tag add the following line:
@@ -265,9 +262,12 @@ Last for this section, we'll add event handlers for the events emitted by the `T
 Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
 
 ```html
-<to-do-item-edit-form v-else :id="id" :label="label"
-                      @item-edited="itemEdited"
-                      @edit-cancelled="editCancelled">
+<to-do-item-edit-form
+  v-else
+  :id="id"
+  :label="label"
+  @item-edited="itemEdited"
+  @edit-cancelled="editCancelled">
 </to-do-item-edit-form>
 ```
 
@@ -296,10 +296,13 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
 ```html
-<to-do-item :label="item.label" :done="item.done" :id="item.id"
-            @checkbox-changed="updateDoneStatus(item.id)"
-            @item-deleted="deleteToDo(item.id)"
-            @item-edited="editToDo(item.id, $event)">
+<to-do-item
+  :label="item.label"
+  :done="item.done"
+  :id="item.id"
+  @checkbox-changed="updateDoneStatus(item.id)"
+  @item-deleted="deleteToDo(item.id)"
+  @item-edited="editToDo(item.id, $event)">
 </to-do-item>
 ```
 
@@ -315,9 +318,9 @@ This is great so far, but we've actually introduced a bug by adding in the edit 
 
 Note the state of the checkbox after you cancel — not only has the app forgotten the state of the checkbox, but the done status of that todo item is now out of whack. If you try checking (or unchecking) it again, the completed count will change in the opposite way to what you'd expect. This is because the `isDone` inside `data` is only given the value `this.done` on component load.
 
-Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://v2.vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
+Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://vuejs.org/guide/essentials/reactivity-fundamentals.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
 
-So, let's implement the fix:
+So, let's implement the fix in `ToDoItem.vue`:
 
 1. Remove the following line from inside our `data()` property:
 
@@ -393,58 +396,3 @@ The `<input>` of `type="checkbox"` listens for `change` events.
 This article has been fairly intense, and we covered a lot here. We've now got edit and delete functionality in our app, which is fairly exciting. We are nearing the end of our Vue series now. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

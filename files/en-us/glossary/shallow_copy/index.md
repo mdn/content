@@ -1,13 +1,12 @@
 ---
 title: Shallow copy
 slug: Glossary/Shallow_copy
-tags:
-  - Shallow copy
+page-type: glossary-definition
 ---
 
 {{MDNSidebar}}
 
-A **shallow copy** of an object is a copy whose properties share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too — and so, you may end up unintentionally causing changes to the source or copy that you don't expect. That behavior contrasts with the behavior of a [deep copy](/en-US/docs/Glossary/Deep_copy), in which the source and copy are completely independent.
+A **shallow copy** of an object is a copy whose properties share the same [references](/en-US/docs/Glossary/Object_reference) (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too — and so, you may end up unintentionally causing changes to the source or copy that you don't expect. That behavior contrasts with the behavior of a [deep copy](/en-US/docs/Glossary/Deep_copy), in which the source and copy are completely independent.
 
 For shallow copies, it's important to understand that selectively changing the value of a shared property of an existing element in an object is different from assigning a completely new value to an existing element.
 

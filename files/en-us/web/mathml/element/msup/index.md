@@ -1,11 +1,7 @@
 ---
 title: <msup>
 slug: Web/MathML/Element/msup
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.msup
 ---
 
@@ -25,13 +21,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 > **Note:** For the `superscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
-
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
 
 ```html
 <math display="block">

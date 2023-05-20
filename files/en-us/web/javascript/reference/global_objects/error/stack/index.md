@@ -1,18 +1,26 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
+page-type: javascript-instance-data-property
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.stack
 ---
 
 {{JSRef}} {{non-standard_header}}
 
-The non-standard **`stack`** property of {{jsxref("Error")}} objects offer a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
+The non-standard **`stack`** property of an {{jsxref("Error")}} instance offers a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
+
+## Value
+
+A string.
+
+Because the `stack` property is non-standard, implementations differ about where it's installed.
+
+- In Firefox, it's an accessor property on `Error.prototype`.
+- In Chrome and Safari, it's a data property on each `Error` instance, with the descriptor:
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 

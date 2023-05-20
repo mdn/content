@@ -1,12 +1,6 @@
 ---
 title: IMSC basics
 slug: Related/IMSC/Basics
-tags:
-  - Guide
-  - IMSC
-  - basics
-  - captions
-  - subtitles
 ---
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
@@ -22,7 +16,7 @@ If you are not already familiar with XML or HTML, read up on them first and then
 - [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
 - [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-> **Note:** If you want to know what you can do with IMSC in real world scenarios have a look at the expanded example at the end of this tutorial.
+> **Note:** If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
 
 ## Minimal IMSC document
 

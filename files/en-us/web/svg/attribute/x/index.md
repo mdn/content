@@ -2,9 +2,6 @@
 title: x
 slug: Web/SVG/Attribute/x
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x

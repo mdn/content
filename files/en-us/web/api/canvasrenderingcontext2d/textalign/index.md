@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.textAlign
+title: "CanvasRenderingContext2D: textAlign property"
+short-title: textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.textAlign
 ---
 
@@ -58,9 +53,9 @@ property: `"left"`, `"center"`, and `"right"`.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 canvas.width = 350;
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 const x = canvas.width / 2;
 
 ctx.beginPath();
@@ -68,16 +63,16 @@ ctx.moveTo(x, 0);
 ctx.lineTo(x, canvas.height);
 ctx.stroke();
 
-ctx.font = '30px serif';
+ctx.font = "30px serif";
 
-ctx.textAlign = 'left';
-ctx.fillText('left-aligned', x, 40);
+ctx.textAlign = "left";
+ctx.fillText("left-aligned", x, 40);
 
-ctx.textAlign = 'center';
-ctx.fillText('center-aligned', x, 85);
+ctx.textAlign = "center";
+ctx.fillText("center-aligned", x, 85);
 
-ctx.textAlign = 'right';
-ctx.fillText('right-aligned', x, 130);
+ctx.textAlign = "right";
+ctx.fillText("right-aligned", x, 130);
 ```
 
 #### Result
@@ -101,17 +96,17 @@ text.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '30px serif';
-ctx.direction = 'ltr';
+ctx.font = "30px serif";
+ctx.direction = "ltr";
 
-ctx.textAlign = 'start';
-ctx.fillText('Start-aligned', 0, 50);
+ctx.textAlign = "start";
+ctx.fillText("Start-aligned", 0, 50);
 
-ctx.textAlign = 'end';
-ctx.fillText('End-aligned', canvas.width, 120);
+ctx.textAlign = "end";
+ctx.fillText("End-aligned", canvas.width, 120);
 ```
 
 #### Result

@@ -1,13 +1,7 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.lastIndexOf
 ---
 
@@ -42,7 +36,7 @@ The last index of the element in the array; **-1** if not found.
 
 ## Description
 
-The `lastIndexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator).
+The `lastIndexOf()` method compares `searchElement` to elements of the array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same algorithm used by the `===` operator). [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) values are never compared as equal, so `lastIndexOf()` always returns `-1` when `searchElement` is `NaN`.
 
 The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
@@ -52,7 +46,7 @@ The `lastIndexOf()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Glo
 
 ### Using lastIndexOf()
 
-The following example uses `lastIndexOf` to locate values in an array.
+The following example uses `lastIndexOf()` to locate values in an array.
 
 ```js
 const numbers = [2, 5, 9, 2];
@@ -62,6 +56,13 @@ numbers.lastIndexOf(2, 3); // 3
 numbers.lastIndexOf(2, 2); // 0
 numbers.lastIndexOf(2, -2); // 0
 numbers.lastIndexOf(2, -1); // 3
+```
+
+You cannot use `lastIndexOf()` to search for `NaN`.
+
+```js
+const array = [NaN];
+array.lastIndexOf(NaN); // -1
 ```
 
 ### Finding all the occurrences of an element
@@ -125,5 +126,10 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

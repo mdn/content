@@ -1,15 +1,8 @@
 ---
-title: FileSystemFileHandle.createSyncAccessHandle()
+title: "FileSystemFileHandle: createSyncAccessHandle() method"
+short-title: createSyncAccessHandle()
 slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - createSyncAccessHandle
-  - working with files
 browser-compat: api.FileSystemFileHandle.createSyncAccessHandle
 ---
 
@@ -56,15 +49,15 @@ onmessage = async (e) => {
 
   // Get handle to draft file
   const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle('draft.txt', { create: true });
+  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // Get sync access handle
   const accessHandle = await draftHandle.createSyncAccessHandle();
 
-// …
+  // …
 
   // Always close FileSystemSyncAccessHandle if done.
   accessHandle.close();
-}
+};
 ```
 
 ## Specifications

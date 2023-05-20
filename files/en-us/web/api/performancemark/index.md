@@ -2,12 +2,6 @@
 title: PerformanceMark
 slug: Web/API/PerformanceMark
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timing API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMark
 ---
 

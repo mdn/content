@@ -1,21 +1,13 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
+page-type: javascript-statement
 browser-compat: javascript.statements.import
 ---
 
 {{jsSidebar("Statements")}}
 
-The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be modified by the importing module.
+The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
 In order to use the `import` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the {{HTMLElement("script")}} tag. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
@@ -65,7 +57,7 @@ Below are examples to clarify the syntax.
 
 ### Named import
 
-Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from 'another.js'`) or explicitly using the {{JSxRef("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
+Given a value named `myExport` which has been exported from the module `my-module` either implicitly as `export * from "another.js"` or explicitly using the {{jsxref("Statements/export", "export")}} statement, this inserts `myExport` into the current scope.
 
 ```js
 import { myExport } from "/modules/my-module.js";
@@ -140,7 +132,7 @@ Here, `myModule` represents a _namespace_ object which contains all exports as p
 myModule.doAllTheAmazingThings();
 ```
 
-`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`.
+`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 > **Note:** JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
 
@@ -191,7 +183,9 @@ console.log(getPrimes(10)); // [2, 3, 5, 7]
 
 ### Imported values can only be modified by the exporter
 
-The identifier being imported is a _live binding_, because the module exporting it may mutate it and the imported value would change. However, the module importing it cannot re-assign it.
+The identifier being imported is a _live binding_, because the module exporting it may re-assign it and the imported value would change. However, the module importing it cannot re-assign it. Still, any module holding an exported object can mutate the object, and the mutated value can be observed by all other modules importing the same value.
+
+You can also observe the new value through the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 ```js
 // my-module.js
@@ -204,9 +198,13 @@ setTimeout(() => {
 ```js
 // main.js
 import { myValue } from "/modules/my-module.js";
+import * as myModule from "/modules/my-module.js";
+
 console.log(myValue); // 1
+console.log(myModule.myValue); // 1
 setTimeout(() => {
   console.log(myValue); // 2; my-module has updated its value
+  console.log(myModule.myValue); // 2
   myValue = 3; // TypeError: Assignment to constant variable.
   // The importing module can only read the value but can't re-assign it.
 }, 1000);

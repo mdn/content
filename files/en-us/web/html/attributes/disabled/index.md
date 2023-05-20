@@ -1,12 +1,7 @@
 ---
 title: "HTML attribute: disabled"
 slug: Web/HTML/Attributes/disabled
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
+page-type: html-attribute
 browser-compat:
   - html.elements.button.disabled
   - html.elements.fieldset.disabled
@@ -27,7 +22,7 @@ The Boolean **`disabled`** attribute, when present, makes the element not mutabl
 
 If the `disabled` attribute is specified on a form control, the element and its form control descendants do not participate in constraint validation. Often browsers grey out such controls and it won't receive any browsing events, like mouse clicks or focus-related ones.
 
-The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }} and {{ HTMLElement("input")}}.
+The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }} and {{ HTMLElement("input")}}.
 
 This Boolean disabled attribute indicates that the user cannot interact with the control or its descendant controls. If this attribute is not specified, the control inherits its setting from the containing element, for example `fieldset`; if there is no containing element with the `disabled` attribute set, and the control itself does not have the attribute, then the control is enabled. If declared on an {{ HTMLElement("optgroup") }}, the select is still interactive (unless otherwise disabled), but none of the items in the option group are selectable.
 

@@ -2,12 +2,6 @@
 title: SVGFETurbulenceElement
 slug: Web/API/SVGFETurbulenceElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFETurbulenceElement
 ---
 

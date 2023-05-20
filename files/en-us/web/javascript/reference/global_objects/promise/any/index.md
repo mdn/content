@@ -1,18 +1,13 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
-tags:
-  - JavaScript
-  - Method
-  - Promise
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.any
 ---
 
 {{JSRef}}
 
-The **`Promise.any()`** method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
+The **`Promise.any()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
@@ -93,9 +88,9 @@ In this example, we have a function that fetches an image and returns a blob. We
 async function fetchAndDecode(url, description) {
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error! status: ${res.status}`);
   }
-  const data = await response.blob();
+  const data = await res.blob();
   return [data, description];
 }
 

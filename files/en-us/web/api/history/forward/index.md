@@ -1,14 +1,8 @@
 ---
-title: History.forward()
+title: "History: forward() method"
+short-title: forward()
 slug: Web/API/History/forward
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
 browser-compat: api.History.forward
 ---
 
@@ -18,8 +12,7 @@ The **`History.forward()`** method causes the browser to move
 forward one page in the session history. It has the same effect as calling
 {{domxref("History.go", "history.go(1)")}}.
 
-This method is {{glossary("asynchronous")}}. Add a listener for the
-{{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
+This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
 
 ## Syntax
 
@@ -49,9 +42,9 @@ history.
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', (e) => {
-  window.history.forward();
-})
+document.getElementById("go-forward").addEventListener("click", (e) => {
+  history.forward();
+});
 ```
 
 ## Specifications
@@ -65,4 +58,5 @@ document.getElementById('go-forward').addEventListener('click', (e) => {
 ## See also
 
 - {{domxref("History")}}
+- {{domxref("Window/popstate_event", "popstate")}}
 - [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

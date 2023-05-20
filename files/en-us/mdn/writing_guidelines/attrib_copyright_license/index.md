@@ -2,9 +2,6 @@
 title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -21,7 +18,7 @@ This section covers the types of content we provide and the copyrights and licen
 
 Your reuse of the content here is published under the same license as the original content—CC-BY-SA v2.5 or any later version. When reusing the content on MDN Web Docs, you need to ensure that attribution is given to the original content as well as to "Mozilla Contributors". Include a hyperlink (online) or URL (in print) to the specific page of the content being sourced. For example, to provide attribution for _this_ article, you can write:
 
-> [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
+> [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/Community/Roles_teams#contributor) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
 
 In the above example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/wiki/Marking/Users) for further explanation.
 
@@ -41,7 +38,7 @@ If you wish to contribute to MDN Web Docs, you agree that your documentation is 
 
 **Copyright for contributed materials remains with the author unless the author assigns it to someone else.**
 
-If you have any questions or concerns about anything discussed here, please contact the [MDN Web Docs team](https://github.com/mdn/mdn-community/discussions).
+If you have any questions or concerns about anything discussed here, please contact the [MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels).
 
 ### Logos, trademarks, service marks, and wordmarks
 

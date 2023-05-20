@@ -2,10 +2,6 @@
 title: Community guidelines
 slug: MDN/Community
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
@@ -61,9 +57,9 @@ This is the list of guides and pages in this section.
 
   - : This section covers our guidelines for submitting pull requests and what you should expect from the review process.
 
-- [Users and teams](/en-US/docs/MDN/Community/Users_teams)
+- [Roles and teams](/en-US/docs/MDN/Community/Roles_teams)
 
-  - : This section provides an overview of the users and teams that are part of the MDN Wen Docs project and details what it means to be part of a team.
+  - : This section provides an overview of the users and teams that are part of the MDN Web Docs project and details what it means to be part of a team.
 
 ## Code of conduct
 
@@ -71,9 +67,9 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Get in touch
 
-You can communicate with the MDN Web Docs team and community through our [Matrix channel](https://chat.mozilla.org/#/room/#mdn:mozilla.org), forums on [Discourse](https://discourse.mozilla.org/c/mdn/236), and discussions on [GitHub](https://github.com/mdn/mdn-community/discussions).
+You can communicate with the MDN Web Docs team and community using the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-> If you are learning web development and are stuck on a coding problem, we have [active forums](https://discourse.mozilla.org/c/mdn/learn/250) where you can ask questions and get help.
+> If you are learning web development and are stuck on a coding problem, we have [active forums](/en-US/docs/MDN/Community/Communication_channels#forums) where you can ask questions and get help.
 
 ### General support questions
 

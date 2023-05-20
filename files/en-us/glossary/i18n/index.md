@@ -1,12 +1,7 @@
 ---
 title: I18N
 slug: Glossary/I18N
-tags:
-  - Beginner
-  - Credibility
-  - Internationalization
-  - OpenPractices
-  - i18n
+page-type: glossary-definition
 ---
 
 i18n (from "internationalization", a 20-letter word) is the best practice that enables products or services to be readily adapted to any target culture.

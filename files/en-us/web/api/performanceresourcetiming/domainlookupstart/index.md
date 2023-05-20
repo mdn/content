@@ -1,12 +1,8 @@
 ---
-title: PerformanceResourceTiming.domainLookupStart
+title: "PerformanceResourceTiming: domainLookupStart property"
+short-title: domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.domainLookupStart
 ---
 

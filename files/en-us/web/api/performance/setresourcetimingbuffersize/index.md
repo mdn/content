@@ -1,12 +1,8 @@
 ---
-title: performance.setResourceTimingBufferSize()
+title: "Performance: setResourceTimingBufferSize() method"
+short-title: setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
 

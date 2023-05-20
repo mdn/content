@@ -1,12 +1,7 @@
 ---
 title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Opener-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
 
@@ -16,7 +11,7 @@ The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to e
 
 COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
-If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`. This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Link_types/noopener), which only affects outgoing navigations.
+If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`. This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which only affects outgoing navigations.
 
 <table class="properties">
   <tbody>
@@ -52,22 +47,26 @@ Cross-Origin-Opener-Policy: same-origin
 
 ### Certain features depend on cross-origin isolation
 
-Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` value set.
+Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` set.
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
+See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set to `require-corp` or `credentialless` as well.
 
 To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
+const myWorker = new Worker("worker.js");
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 

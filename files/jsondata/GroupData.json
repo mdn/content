@@ -1,5 +1,14 @@
 [
   {
+    "Audio Output Devices API": {
+      "overview": ["Audio Output Devices API"],
+      "methods": [
+        "MediaDevices.selectAudioOutput",
+        "HTMLMediaElement.setSinkId"
+      ],
+      "properties": ["HTMLMediaElement.sinkId"],
+      "events": []
+    },
     "Background Fetch API": {
       "overview": ["Background Fetch API"],
       "interfaces": [
@@ -147,10 +156,6 @@
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
-      "methods": [
-        "ContactsManager.select()",
-        "ContactsManager.getProperties()"
-      ],
       "properties": ["Navigator.contacts"],
       "events": []
     },
@@ -162,10 +167,17 @@
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "CSS Containment": {
-      "interfaces": ["ContentVisibilityAutoStateChangedEvent"],
+      "interfaces": ["ContentVisibilityAutoStateChangeEvent"],
       "methods": [],
       "properties": [],
-      "events": ["Element: contentvisibilityautostatechanged"]
+      "events": ["Element: contentvisibilityautostatechange"]
+    },
+    "CSS Custom Highlight API": {
+      "overview": ["CSS Custom Highlight API"],
+      "interfaces": ["Highlight", "HighlightRegistry"],
+      "methods": [],
+      "properties": ["CSS.highlights"],
+      "events": []
     },
     "Console API": {
       "overview": ["Console API"],
@@ -221,7 +233,6 @@
       "overview": ["CSS Painting API"],
       "guides": ["/docs/Web/API/CSS_Painting_API/Guide"],
       "interfaces": [
-        "PaintWorklet",
         "PaintWorkletGlobalScope",
         "PaintRenderingContext2D",
         "PaintSize"
@@ -263,27 +274,32 @@
         "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
       ],
       "interfaces": [
-        "AnimationEvent",
         "CaretPosition",
         "CSS",
         "CSSConditionRule",
         "CSSGroupingRule",
+        "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
+        "CSSLayerBlockRule",
+        "CSSLayerStatementRule",
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSFontFeatureValuesRule",
+        "CSSFontPaletteValuesRule",
+        "CSSPropertyRule",
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
+        "MediaList",
         "MediaQueryList",
         "Screen",
         "StyleSheet",
-        "StyleSheetList",
-        "TransitionEvent"
+        "StyleSheetList"
       ],
       "dictionaries": ["ScrollToOptions"],
       "methods": [],
@@ -356,6 +372,7 @@
         "EventTarget",
         "HTMLCollection",
         "MutationObserver",
+        "MutationRecord",
         "NamedNodeMap",
         "Node",
         "NodeIterator",
@@ -396,6 +413,7 @@
     "Encrypted Media Extensions": {
       "overview": ["Encrypted Media Extensions API"],
       "interfaces": [
+        "MediaEncryptedEvent",
         "MediaKeyMessageEvent",
         "MediaKeys",
         "MediaKeySession",
@@ -413,6 +431,13 @@
       "overview": ["EyeDropper API"],
       "interfaces": ["EyeDropper"],
       "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "FedCM API": {
+      "overview": ["FedCM API"],
+      "interfaces": ["IdentityCredential"],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },
@@ -533,10 +558,10 @@
     "History API": {
       "overview": ["History API"],
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
-      "interfaces": ["History"],
+      "interfaces": ["History", "PopStateEvent"],
       "methods": [],
       "properties": [],
-      "events": []
+      "events": ["Window: popstate"]
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
@@ -554,7 +579,6 @@
         "HTMLBRElement",
         "HTMLButtonElement",
         "HTMLCanvasElement",
-        "HTMLContentElement",
         "HTMLDataElement",
         "HTMLDataListElement",
         "HTMLDialogElement",
@@ -574,7 +598,6 @@
         "HTMLIFrameElement",
         "HTMLImageElement",
         "HTMLInputElement",
-        "HTMLKeygenElement",
         "HTMLLabelElement",
         "HTMLLegendElement",
         "HTMLLIElement",
@@ -597,7 +620,6 @@
         "HTMLQuoteElement",
         "HTMLScriptElement",
         "HTMLSelectElement",
-        "HTMLShadowElement",
         "HTMLSourceElement",
         "HTMLSpanElement",
         "HTMLStyleElement",
@@ -624,12 +646,12 @@
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
-        "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
         "UserActivation",
         "ValidityState",
-        "Window"
+        "Window",
+        "WorkletGlobalScope"
       ],
       "methods": [],
       "properties": [],
@@ -684,7 +706,6 @@
         "Window: online",
         "Window: pagehide",
         "Window: pageshow",
-        "Window: popstate",
         "Window: rejectionhandled",
         "Window: storage",
         "Window: unload",
@@ -763,6 +784,13 @@
       "properties": ["indexedDB"],
       "events": []
     },
+    "Ink API": {
+      "overview": ["Ink API"],
+      "interfaces": ["Ink", "InkPresenter"],
+      "methods": [],
+      "properties": ["Navigator.ink"],
+      "events": []
+    },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
       "guides": [
@@ -778,10 +806,17 @@
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
       "methods": ["Navigator.keyboard"]
     },
-    "Layout Instability API": {
-      "overview": ["Layout Instability API"],
-      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
+    "Launch Handler API": {
+      "overview": ["Launch Handler API"],
+      "interfaces": ["LaunchParams", "LaunchQueue"],
       "methods": [],
+      "properties": ["Window.launchQueue"],
+      "events": []
+    },
+    "Local Font Access API": {
+      "overview": ["Local Font Access API"],
+      "interfaces": ["FontData"],
+      "methods": ["Window.queryLocalFonts()"],
       "properties": [],
       "events": []
     },
@@ -811,7 +846,6 @@
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
-        "MediaTrackCapabilities",
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
@@ -893,6 +927,20 @@
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
     },
+    "Payment Handler API": {
+      "overview": ["Payment Handler API"],
+      "interfaces": [
+        "CanMakePaymentEvent",
+        "PaymentManager",
+        "PaymentRequestEvent"
+      ],
+      "methods": [],
+      "properties": ["ServiceWorkerRegistration.paymentManager"],
+      "events": [
+        "ServiceWorkerGlobalScope: canmakepayment",
+        "ServiceWorkerGlobalScope: paymentrequest"
+      ]
+    },
     "Payment Request API": {
       "overview": ["Payment Request API"],
       "guides": [
@@ -925,22 +973,18 @@
     "Performance API": {
       "overview": ["Performance API"],
       "guides": [
-        "/docs/Web/API/Performance_API/Using_the_Performance_API",
-        "/docs/Web/API/Long_Tasks_API",
-        "/docs/Web/API/Navigation_timing_API",
-        "/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing",
-        "/docs/Web/API/Performance_Timeline",
-        "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline",
-        "/docs/Web/API/Resource_Timing_API",
-        "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
-        "/docs/Web/API/User_timing_API",
-        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API",
-        "/docs/Web/API/Element_timing_API",
-        "/docs/Web/API/Largest_Contentful_Paint_API"
+        "/docs/Web/API/Performance_API/Performance_data",
+        "/docs/Web/API/Performance_API/High_precision_timing",
+        "/docs/Web/API/Performance_API/Resource_timing",
+        "/docs/Web/API/Performance_API/Navigation_timing",
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
+        "LayoutShift",
+        "LayoutShiftAttribution",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
@@ -966,10 +1010,7 @@
       "overview": ["Web Periodic Background Synchronization API"],
       "interfaces": ["PeriodicSyncEvent", "PeriodicSyncManager"],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.periodicSync",
-        "ServiceWorkerGlobalScope.onperiodicsync"
-      ],
+      "properties": ["ServiceWorkerRegistration.periodicSync"],
       "events": ["ServiceWorkerGlobalScope: periodicsync"]
     },
     "Permissions API": {
@@ -989,7 +1030,6 @@
         "Document.exitPictureInPicture()"
       ],
       "properties": [
-        "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
         "Document.pictureInPictureElement"
@@ -1032,6 +1072,24 @@
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
       "properties": ["Document.pointerLockElement"],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+    },
+    "Popover API": {
+      "overview": ["Popover API"],
+      "guides": ["/docs/Web/API/Popover_API/Using"],
+      "interfaces": ["ToggleEvent"],
+      "methods": [
+        "HTMLElement.hidePopover()",
+        "HTMLElement.showPopover()",
+        "HTMLElement.togglePopover()"
+      ],
+      "properties": [
+        "HTMLButtonElement.popoverTargetAction",
+        "HTMLButtonElement.popoverTargetElement",
+        "HTMLElement.popover",
+        "HTMLInputElement.popoverTargetAction",
+        "HTMLInputElement.popoverTargetElement"
+      ],
+      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1088,10 +1146,10 @@
       ]
     },
     "Reporting API": {
-      "overview": ["Reporting_API"],
+      "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
-        "CrashReportBody",
+        "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
         "Report",
@@ -1113,19 +1171,20 @@
     "Screen Capture API": {
       "overview": ["Screen Capture API"],
       "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
-      "interfaces": [],
+      "interfaces": ["CaptureController"],
       "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
-        "MediaTrackConstraints.cursor",
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
+        "MediaTrackConstraints.suppressLocalAudioPlayback",
         "MediaTrackSettings.cursor",
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
-        "MediaTrackSupportedConstraints.cursor",
+        "MediaTrackSettings.suppressLocalAudioPlayback",
         "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface"
+        "MediaTrackSupportedConstraints.logicalSurface",
+        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
       "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
@@ -1207,6 +1266,9 @@
     },
     "Storage": {
       "overview": ["Storage API"],
+      "guides": [
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+      ],
       "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
@@ -1264,7 +1326,6 @@
         "SVGAnimatedLengthList",
         "SVGAnimatedNumber",
         "SVGAnimatedNumberList",
-        "SVGAnimatedPathData",
         "SVGAnimatedPreserveAspectRatio",
         "SVGAnimatedRect",
         "SVGAnimatedString",
@@ -1279,7 +1340,6 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
-        "SVGDocument",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1329,34 +1389,12 @@
         "SVGLinearGradientElement",
         "SVGLineElement",
         "SVGMaskElement",
-        "SVGMatrix",
         "SVGMetadataElement",
         "SVGMissingGlyphElement",
         "SVGMPathElement",
         "SVGNumber",
         "SVGNumberList",
         "SVGPathElement",
-        "SVGPathSeg",
-        "SVGPathSegClosePath",
-        "SVGPathSegMovetoAbs",
-        "SVGPathSegMovetoRel",
-        "SVGPathSegLinetoAbs",
-        "SVGPathSegLinetoRel",
-        "SVGPathSegCurvetoCubicAbs",
-        "SVGPathSegCurvetoCubicRel",
-        "SVGPathSegCurvetoQuadraticAbs",
-        "SVGPathSegCurvetoQuadraticRel",
-        "SVGPathSegArcAbs",
-        "SVGPathSegArcRel",
-        "SVGPathSegLinetoHorizontalAbs",
-        "SVGPathSegLinetoHorizontalRel",
-        "SVGPathSegLinetoVerticalAbs",
-        "SVGPathSegLinetoVerticalRel",
-        "SVGPathSegCurvetoCubicSmoothAbs",
-        "SVGPathSegCurvetoCubicSmoothRel",
-        "SVGPathSegCurvetoQuadraticSmoothAbs",
-        "SVGPathSegCurvetoQuadraticSmoothRel",
-        "SVGPathSegList",
         "SVGPatternElement",
         "SVGPoint",
         "SVGPointList",
@@ -1514,6 +1552,20 @@
       "properties": [],
       "events": []
     },
+    "View Transitions API": {
+      "overview": ["View Transitions API"],
+      "interfaces": ["ViewTransition"],
+      "methods": ["Document.startViewTransition()"],
+      "properties": [],
+      "events": []
+    },
+    "VirtualKeyboard API": {
+      "overview": ["VirtualKeyboard API"],
+      "interfaces": ["VirtualKeyboard"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Visual Viewport": {
       "overview": ["Visual Viewport API"],
       "interfaces": ["VisualViewport"],
@@ -1537,7 +1589,11 @@
         "DocumentTimeline",
         "KeyframeEffect"
       ],
-      "methods": ["Document.getAnimations()", "Element.animate()"],
+      "methods": [
+        "Document.getAnimations()",
+        "Element.animate()",
+        "Element.getAnimations()"
+      ],
       "properties": ["Document.timeline"],
       "events": []
     },
@@ -1568,6 +1624,7 @@
         "AudioParam",
         "AudioProcessingEvent",
         "AudioScheduledSourceNode",
+        "AudioSinkInfo",
         "AudioWorklet",
         "AudioWorkletGlobalScope",
         "AudioWorkletNode",
@@ -1600,24 +1657,25 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
+      "overview": ["Web components"],
       "guides": [
         "/docs/Web/Web_Components/Using_custom_elements",
         "/docs/Web/Web_Components/Using_shadow_DOM",
@@ -1793,7 +1851,8 @@
         "OES_vertex_array_object",
         "ANGLE_instanced_arrays",
         "EXT_blend_minmax",
-        "EXT_disjoint_timer_query"
+        "EXT_disjoint_timer_query",
+        "OES_draw_buffers_indexed"
       ],
       "methods": [],
       "properties": [],
@@ -1802,6 +1861,49 @@
         "HTMLCanvasElement: webglcontextrestored",
         "HTMLCanvasElement: webglcontextcreationerror"
       ]
+    },
+    "WebGPU API": {
+      "overview": ["WebGPU API"],
+      "interfaces": [
+        "GPU",
+        "GPUAdapter",
+        "GPUAdapterInfo",
+        "GPUBindGroup",
+        "GPUBindGroupLayout",
+        "GPUBuffer",
+        "GPUCanvasContext",
+        "GPUCommandBuffer",
+        "GPUCommandEncoder",
+        "GPUCompilationInfo",
+        "GPUCompilationMessage",
+        "GPUComputePassEncoder",
+        "GPUComputePipeline",
+        "GPUDevice",
+        "GPUDeviceLostInfo",
+        "GPUError",
+        "GPUExternalTexture",
+        "GPUInternalError",
+        "GPUOutOfMemoryError",
+        "GPUPipelineError",
+        "GPUPipelineLayout",
+        "GPUQuerySet",
+        "GPUQueue",
+        "GPURenderBundle",
+        "GPURenderBundleEncoder",
+        "GPURenderPassEncoder",
+        "GPURenderPipeline",
+        "GPUSampler",
+        "GPUShaderModule",
+        "GPUSupportedFeatures",
+        "GPUSupportedLimits",
+        "GPUTexture",
+        "GPUTextureView",
+        "GPUUncapturedErrorEvent",
+        "GPUValidationError"
+      ],
+      "methods": ["HTMLCanvasElement.getContext()"],
+      "properties": ["Navigator.gpu", "WorkerNavigator.gpu"],
+      "events": ["GPUDevice: uncapturederror"]
     },
     "WebHID API": {
       "overview": ["WebHID API"],
@@ -1861,6 +1963,7 @@
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
         "/docs/Web/API/WebRTC_API/Connectivity",
+        "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
         "/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
         "/docs/Web/API/WebRTC_API/Using_data_channels",
@@ -1933,6 +2036,7 @@
         "RTCRemoteOutboundRtpStreamStats",
         "RTCRtpContributingSourceStats",
         "RTCPeerConnectionStats",
+        "RTCAudioSourceStats",
         "RTCMediaStreamStats",
         "RTCMediaHandlerStats",
         "RTCVideoHandlerStats",
@@ -2033,12 +2137,27 @@
       "properties": ["Window.sessionStorage", "Window.localStorage"],
       "events": ["Window: storage"]
     },
+    "WebTransport API": {
+      "overview": ["WebTransport API"],
+      "guides": [],
+      "interfaces": [
+        "WebTransport",
+        "WebTransportBidirectionalStream",
+        "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
+        "WebTransportError"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Web Workers API": {
       "overview": ["Web Workers API"],
       "guides": [
         "/docs/Web/API/Web_Workers_API/Using_web_workers",
         "/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers",
-        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"
+        "/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+        "/docs/Web/API/Web_Workers_API/Transferable_objects"
       ],
       "interfaces": [
         "DedicatedWorkerGlobalScope",
@@ -2181,9 +2300,7 @@
       "overview": ["XMLHttpRequest"],
       "guides": [
         "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6",
-        "/docs/XMLHttpRequest_changes_for_Gecko1.8"
+        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest"
       ],
       "interfaces": [
         "FormData",
@@ -2195,6 +2312,9 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "XSLT": {
+      "interfaces": ["XSLTProcessor"]
     }
   }
 ]

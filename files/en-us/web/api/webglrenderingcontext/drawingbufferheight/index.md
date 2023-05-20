@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.drawingBufferHeight
+title: "WebGLRenderingContext: drawingBufferHeight property"
+short-title: drawingBufferHeight
 slug: Web/API/WebGLRenderingContext/drawingBufferHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawingBufferHeight
 ---
 
@@ -35,8 +29,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the height of the drawing buffer with the following lines:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 gl.drawingBufferHeight; // 150
 ```
 

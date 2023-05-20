@@ -1,12 +1,7 @@
 ---
 title: Data URLs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-tags:
-  - Base64
-  - Guide
-  - HTTP
-  - Intermediate
-  - URL
+page-type: guide
 browser-compat: http.data-url
 ---
 
@@ -26,14 +21,14 @@ data:[<mediatype>][;base64],<data>
 
 The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
-If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](/en-US/docs/Glossary/percent-encoding) (_aka_ "URL-encoded").
+If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [URL encoded](https://en.wikipedia.org/wiki/URL_encoding) (_aka_ "URL encoded").
 
 If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 A few examples:
 
 - `data:,Hello%2C%20World%21`
-  - : The text/plain data `Hello, World!`. Note how the comma is [percent-encoded](/en-US/docs/Glossary/percent-encoding) as `%2C`, and the space character as `%20`.
+  - : The text/plain data `Hello, World!`. Note how the comma is [URl encoded](https://en.wikipedia.org/wiki/URL_encoding) as `%2C`, and the space character as `%20`.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -47,7 +42,7 @@ Base64 is a group of binary-to-text encoding schemes that represent binary data 
 
 ### Encoding in JavaScript
 
-The Web APIs have native methods to encode or decode to base64: [Base64 encoding and decoding](/en-US/docs/Glossary/Base64).
+The Web APIs have native methods to encode or decode to base64: [Base64](/en-US/docs/Glossary/Base64).
 
 ### Encoding on a Unix system
 
@@ -99,7 +94,7 @@ lots of text…
 - Syntax
   - : The format for `data` URLs is very simple, but it's easy to forget to put a comma before the "data" segment, or to incorrectly encode the data into base64 format.
 - Formatting in HTML
-  - : A `data` URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formattable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
+  - : A `data` URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formattable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](https://bugzil.la/73026#c12).
 - Length limitations
   - : Browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits `data` URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain `data:`, without specifying a MIME type). Firefox version 97 and newer supports `data` URLs of up to 32MB (before 97 the limit was close to 256MB). Chromium objects to URLs over 512MB, and Webkit (Safari) to URLs over 2048MB.
 - Lack of error handling
@@ -119,8 +114,8 @@ lots of text…
 
 ## See also
 
-- [Base64 encoding and decoding](/en-US/docs/Glossary/Base64)
-- [Percent encoding](/en-US/docs/Glossary/percent-encoding)
+- [Base64](/en-US/docs/Glossary/Base64)
+- [URL encoding](https://en.wikipedia.org/wiki/URL_encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
 - [CSS `url()`](/en-US/docs/Web/CSS/url)

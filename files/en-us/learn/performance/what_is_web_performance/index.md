@@ -1,14 +1,6 @@
 ---
 title: What is web performance?
 slug: Learn/Performance/What_is_web_performance
-tags:
-  - Beginner
-  - Introduction
-  - Learn
-  - Performance
-  - Reference
-  - Tutorial
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
@@ -45,7 +37,7 @@ _\* versus subjective, [perceived performance](/en-US/docs/Learn/Performance/Per
 
 Web performance is the objective measurement and perceived user experience of a website or application. This includes the following major areas:
 
-- **Reducing overall load time**: How long does it take the files required to render the website to download on to the user's computer? This tends to be affected by [latency](/en-US/docs/Web/Performance/Understanding_latency), how big your files are, how many files there are, and other factors besides. A general strategy is to make your files as small as possible, reduce the number of HTTP requests made as much as possible, and employ clever loading techniques (such as [preload](/en-US/docs/Web/HTML/Link_types/preload)) to make files available sooner.
+- **Reducing overall load time**: How long does it take the files required to render the website to download on to the user's computer? This tends to be affected by [latency](/en-US/docs/Web/Performance/Understanding_latency), how big your files are, how many files there are, and other factors besides. A general strategy is to make your files as small as possible, reduce the number of HTTP requests made as much as possible, and employ clever loading techniques (such as [preload](/en-US/docs/Web/HTML/Attributes/rel/preload)) to make files available sooner.
 - **Making the site usable as soon as possible**: This basically means loading your website assets in a sensible order so that the user can start to actually use it really quickly. Any other assets can continue to load in the background while the user gets on with primary tasks, and sometimes we only load assets when they are actually needed (this is called [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)). The measurement of how long it takes the site to get to a usable start after it has started loading is called [time to interactive](/en-US/docs/Glossary/Time_to_interactive).
 - **Smoothness and interactivity**: Does the application feel reliable and pleasurable to use? Is the scrolling smooth? Are buttons clickable? Are pop-ups quick to open up, and do they animate smoothly as they do so? There are a lot of best practices to consider in making apps feel smooth, for example using CSS animations rather than JavaScript for animation, and minimizing the number of repaints the UI requires due to changes in the DOM.
 - **[Perceived performance](/en-US/docs/Learn/Performance/Perceived_performance)**: How fast a website seems to the user has a greater impact on user experience than how fast the website actually is. How a user perceives your performance is as important, or perhaps more important, than any objective statistic, but it's subjective, and not as readily measurable. Perceived performance is user perspective, not a metric. Even if an operation is going to take a long time (because of latency or whatever), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
@@ -79,19 +71,3 @@ To effectively understand web performance, the issues behind it, and the major t
 That's it for now; we hope our brief overview of the web performance topic helped you to get an idea of what it is all about, and made you excited to learn more. Next up we'll look at perceived performance, and how you can use some clever techniques to make some unavoidable performance hits appear less severe to the user, or disguise them completely.
 
 {{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

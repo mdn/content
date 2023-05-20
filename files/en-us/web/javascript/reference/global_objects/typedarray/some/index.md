@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.some
 ---
 
@@ -24,39 +17,22 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 ## Syntax
 
 ```js-nolint
-// Arrow function
-some((element) => { /* ... */ } )
-some((element, index) => { /* ... */ } )
-some((element, index, array) => { /* ... */ } )
-
-// Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
-
-// Inline callback function
-some(function(element) { /* ... */ })
-some(function(element, index) { /* ... */ })
-some(function(element, index, array){ /* ... */ })
-some(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function to test for each element.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
-      - : The typed array `some` was called upon.
-
-- `thisArg`
-  - : Optional. Value to use as `this` when executing `callback`.
+      - : The typed array `some()` was called upon.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

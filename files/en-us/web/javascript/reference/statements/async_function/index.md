@@ -1,12 +1,7 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - Function
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.async_function
 ---
 
@@ -59,7 +54,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 
 > **Note:** The purpose of `async`/`await` is to simplify the syntax
 > necessary to consume promise-based APIs. The behavior
-> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) and
+> of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) and
 > promises.
 
 Async functions always return a promise. If the return value of an async function is
@@ -155,10 +150,10 @@ function `foo` in three stages.
 ```js
 async function foo() {
   const result1 = await new Promise((resolve) =>
-    setTimeout(() => resolve("1"))
+    setTimeout(() => resolve("1")),
   );
   const result2 = await new Promise((resolve) =>
-    setTimeout(() => resolve("2"))
+    setTimeout(() => resolve("2")),
   );
 }
 foo();
@@ -237,7 +232,7 @@ function concurrentPromise() {
     (messages) => {
       console.log(messages[0]); // slow
       console.log(messages[1]); // fast
-    }
+    },
   );
 }
 

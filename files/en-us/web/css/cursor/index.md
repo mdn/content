@@ -2,17 +2,6 @@
 title: cursor
 slug: Web/CSS/cursor
 page-type: css-property
-tags:
-  - Arrow
-  - CSS
-  - CSS Property
-  - Cursor
-  - Custom Cursor
-  - Reference
-  - UI
-  - mouse
-  - pointer
-  - recipe:css-property
 browser-compat: css.properties.cursor
 ---
 
@@ -183,15 +172,10 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         <tr style="cursor: no-drop">
           <td><code>no-drop</code></td>
           <td>
-            <img
-              alt="pointer icon and a not allowed icon"
-              class="lwrap"
-              src="no-drop.gif"
-              style="float: left"
-            />
+            <img src="no-drop.gif" alt="pointer icon and a not allowed icon" />
           </td>
           <td>
-            An item may not be dropped at the current location.<br />{{bug("275173")}}:
+            An item may not be dropped at the current location.<br />[Firefox bug 275173](https://bugzil.la/275173):
             On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
@@ -217,7 +201,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>all-scroll</code></td>
           <td><img alt="icon of a medium size dot with four triangles around it." src="all-scroll.gif" /></td>
           <td>
-            Something can be scrolled in any direction (panned).<br />{{bug("275174")}}:
+            Something can be scrolled in any direction (panned).<br />[Firefox bug 275174](https://bugzil.la/275174):
             On Windows, <code>all-scroll</code> is the same as <code>move</code>.
           </td>
         </tr>
@@ -231,7 +215,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: row-resize">
           <td><code>row-resize</code></td>
-          <td><img src="row-resize.gif" "alt="Two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
+          <td><img src="row-resize.gif" alt="two narrow parallel horizontal lines with a small arrow pointing up and another pointing down" /></td>
           <td>
             The item/row can be resized vertically.
             Often rendered as arrows pointing up and down with a horizontal bar separating them.
@@ -369,6 +353,10 @@ Desktop browsers also broadly support the `.cur` file format.
 
 The specification further indicates that user agents _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
 User agents _may_ support both static and animated SVG images that do not contain a natural size.
+
+### iPadOS
+
+iPadOS supports pointer devices like trackpads and mouses. By default, the iPad cursor is displayed as a circle, and the only supported value that will change an appearance of the pointer is `text`.
 
 ### Other notes
 

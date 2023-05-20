@@ -1,11 +1,7 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-  - while
+page-type: javascript-statement
 browser-compat: javascript.statements.while
 ---
 
@@ -71,11 +67,8 @@ In some cases, it can make sense to use an assignment as a condition — but whe
 
 Consider the following example, which iterates over a document's comments, logging them to the console.
 
-```js example-bad
-const iterator = document.createNodeIterator(
-  document,
-  NodeFilter.SHOW_COMMENT,
-);
+```js-nolint example-bad
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while (currentNode = iterator.nextNode()) {
   console.log(currentNode.textContent.trim());
@@ -100,7 +93,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
 3. So the loop ends.
 
-But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
+But although the code _works_ as expected, the problem with that particular line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
 Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) and [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint and JSHint — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 
@@ -109,8 +102,7 @@ Therefore, in cases like that one, some [IDEs](https://en.wikipedia.org/wiki/Int
 But there's a best-practice way to avoid that warning: Make the code more-explicitly indicate it intends the condition to be whether the value of the `currentNode = iterator.nextNode()` assignment is truthy. And you do that minimally by putting additional parentheses as a [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) around the assignment:
 
 ```js
-const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while ((currentNode = iterator.nextNode())) {
   console.log(currentNode.textContent.trim());
@@ -120,8 +112,7 @@ while ((currentNode = iterator.nextNode())) {
 But the real best practice is to go a step further and make the code even more clear — by adding a comparison operator to turn the condition into an explicit comparison:
 
 ```js example-good
-const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
 let currentNode;
 while ((currentNode = iterator.nextNode()) !== null) {
   console.log(currentNode.textContent.trim());

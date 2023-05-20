@@ -1,12 +1,7 @@
 ---
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.logical_or
 ---
 
@@ -24,13 +19,13 @@ non-Boolean value.
 ## Syntax
 
 ```js-nolint
-expr1 || expr2
+x || y
 ```
 
 ## Description
 
-If `expr1` can be converted to `true`, returns
-`expr1`; else, returns `expr2`.
+If `x` can be converted to `true`, returns
+`x`; else, returns `y`.
 
 If a value can be converted to `true`, the value is so-called
 {{Glossary("truthy")}}. If a value can be converted to `false`, the value is
@@ -68,11 +63,11 @@ the first operand. See example:
 
 ```js
 function A() {
-  console.log('called A');
+  console.log("called A");
   return false;
 }
 function B() {
-  console.log('called B');
+  console.log("called B");
   return true;
 }
 
@@ -85,11 +80,11 @@ console.log(B() || A());
 
 The following expressions might seem equivalent, but they are not, because the
 `&&` operator is executed before the `||` operator
-(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
-true || false && false      // returns true, because && is executed first
-(true || false) && false    // returns false, because grouping has the highest precedence
+true || false && false; // returns true, because && is executed first
+(true || false) && false; // returns false, because grouping has the highest precedence
 ```
 
 ## Examples
@@ -99,16 +94,16 @@ true || false && false      // returns true, because && is executed first
 The following code shows examples of the `||` (logical OR) operator.
 
 ```js
-o1 = true  || true       // t || t returns true
-o2 = false || true       // f || t returns true
-o3 = true  || false      // t || f returns true
-o4 = false || (3 === 4)  // f || f returns false
-o5 = 'Cat' || 'Dog'      // t || t returns "Cat"
-o6 = false || 'Cat'      // f || t returns "Cat"
-o7 = 'Cat' || false      // t || f returns "Cat"
-o8 = ''    || false      // f || f returns false
-o9 = false || ''         // f || f returns ""
-o10 = false || varObject // f || object returns varObject
+true || true; // t || t returns true
+false || true; // f || t returns true
+true || false; // t || f returns true
+false || 3 === 4; // f || f returns false
+"Cat" || "Dog"; // t || t returns "Cat"
+false || "Cat"; // f || t returns "Cat"
+"Cat" || false; // t || f returns "Cat"
+"" || false; // f || f returns false
+false || ""; // f || f returns ""
+false || varObject; // f || object returns varObject
 ```
 
 > **Note:** If you use this operator to provide a default value to some
@@ -122,13 +117,13 @@ o10 = false || varObject // f || object returns varObject
 
 The following operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 && bCondition2
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 !(!bCondition1 || !bCondition2)
 ```
 
@@ -136,13 +131,13 @@ is always equal to:
 
 The following operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 || bCondition2
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 !(!bCondition1 && !bCondition2)
 ```
 
@@ -153,13 +148,13 @@ parentheses from a complex expression following some rules.
 
 The following composite operation involving **booleans**:
 
-```js
+```js-nolint
 bCondition1 && (bCondition2 || bCondition3)
 ```
 
 is always equal to:
 
-```js
+```js-nolint
 !(!bCondition1 || !bCondition2 && !bCondition3)
 ```
 

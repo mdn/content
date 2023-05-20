@@ -2,10 +2,6 @@
 title: Learn forum
 slug: MDN/Community/Learn_forum
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
@@ -61,7 +57,7 @@ After you are set up:
       2. If the person did great except for a few nitpicks, tell them the nitpicks, but give them lots of praise too.
       3. If the person was nearly there but it wasn't quite right, tell them they did great, but then share the fixes they'd need to make it work, and perhaps even link to the marking guide so they can see what we did.
       4. If the person is not really anywhere near a working solution, be kind and encouraging and try to give them a few clues as to what direction they should go in. Give them another chance to try to do it better.
-      5. If you need assistance with anything, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+      5. If you need assistance with anything, ask for help in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 > **Note:** Important: Above all, be patient, be friendly, be kind. Remember — most of these folks are beginners.
 

@@ -1,17 +1,13 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
 
 {{JSRef}}
 
-The **`handler.apply()`** method is a trap for a function call.
+The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
@@ -41,8 +37,6 @@ The `apply()` method can return any value.
 
 ## Description
 
-The **`handler.apply()`** method is a trap for a function call.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -70,11 +64,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## Specifications

@@ -1,10 +1,7 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.style
 ---
 

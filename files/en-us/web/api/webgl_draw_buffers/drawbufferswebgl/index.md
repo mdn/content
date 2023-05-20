@@ -1,12 +1,8 @@
 ---
-title: WEBGL_draw_buffers.drawBuffersWEBGL()
+title: "WEBGL_draw_buffers: drawBuffersWEBGL() method"
+short-title: drawBuffersWEBGL()
 slug: Web/API/WEBGL_draw_buffers/drawBuffersWEBGL
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL
 ---
 
@@ -68,7 +64,7 @@ ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
-  ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
+  ext.COLOR_ATTACHMENT3_WEBGL, // gl_FragData[3]
 ]);
 ```
 

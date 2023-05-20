@@ -1,12 +1,8 @@
 ---
-title: performance.toJSON()
+title: "Performance: toJSON() method"
+short-title: toJSON()
 slug: Web/API/Performance/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance
-  - Reference
 browser-compat: api.Performance.toJSON
 ---
 

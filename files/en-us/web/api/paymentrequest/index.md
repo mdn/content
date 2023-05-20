@@ -2,18 +2,6 @@
 title: PaymentRequest
 slug: Web/API/PaymentRequest
 page-type: web-api-interface
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Merchants
-  - Money
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
 browser-compat: api.PaymentRequest
 ---
 

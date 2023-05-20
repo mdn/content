@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.texStorage3D()
+title: "WebGL2RenderingContext: texStorage3D() method"
+short-title: texStorage3D()
 slug: Web/API/WebGL2RenderingContext/texStorage3D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texStorage3D
 ---
 

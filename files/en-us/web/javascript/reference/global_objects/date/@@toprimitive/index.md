@@ -1,12 +1,7 @@
 ---
-title: Date.prototype[@@toPrimitive]
+title: Date.prototype[@@toPrimitive]()
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
 

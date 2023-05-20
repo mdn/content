@@ -1,11 +1,7 @@
 ---
 title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
+page-type: javascript-operator
 browser-compat: javascript.operators.grouping
 ---
 
@@ -24,11 +20,11 @@ The **grouping `( )`** operator controls the precedence of evaluation in express
 ### Parameters
 
 - `expression`
-  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) expressions.
+  - : Any [expression](/en-US/docs/Web/JavaScript/Reference/Operators) to be evaluated, including [comma-joined](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) expressions.
 
 ## Description
 
-The grouping operator consists of a pair of parentheses around an expression that groups the contents. The operator overrides the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) operator) can be evaluated before an operator with higher precedence.
+The grouping operator consists of a pair of parentheses around an expression that groups the contents. The operator overrides the normal [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), so that operators with lower precedence (as low as the [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) operator) can be evaluated before an operator with higher precedence.
 
 ## Examples
 
@@ -36,7 +32,7 @@ The grouping operator consists of a pair of parentheses around an expression tha
 
 Evaluating addition and subtraction before multiplication and division.
 
-```js
+```js-nolint
 const a = 1;
 const b = 2;
 const c = 3;
@@ -60,11 +56,11 @@ Notice in these examples that the order in which the _operators_ evaluate has ch
 a() * (b() + c());
 ```
 
-The function `a` will be called before the function `b`, which will be called before the function `c`. For more on operator precedence, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+The function `a` will be called before the function `b`, which will be called before the function `c`. For more on operator precedence, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ### Using the grouping operator to eliminate parsing ambiguity
 
-An expression statement (a [statement](/en-US/docs/Web/JavaScript/Reference/Statements) consisted of a single expression) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
+An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
 
 ```js example-bad
 function () {
@@ -88,7 +84,7 @@ In an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_func
 const f = () => ({ a: 1 });
 ```
 
-If a property is accessed on a number literal, the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) dot `.` may be ambiguous with a decimal point, unless the number already has a decimal point. You can wrap integer literals in parentheses to eliminate this ambiguity.
+If a property is accessed on a number literal, the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) dot `.` may be ambiguous with a decimal point, unless the number already has a decimal point. You can wrap integer literals in parentheses to eliminate this ambiguity.
 
 ```js
 (1).toString(); // "1"
@@ -149,6 +145,6 @@ For more advice on working with ASI, see its [reference section](/en-US/docs/Web
 
 ## See also
 
-- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

@@ -1,10 +1,6 @@
 ---
 title: math:lowest()
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

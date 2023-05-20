@@ -1,20 +1,16 @@
 ---
-title: VideoEncoder.configure()
+title: "VideoEncoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoEncoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoEncoder
-  - Experimental
 browser-compat: api.VideoEncoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
+The **`configure()`** method of the {{domxref("VideoEncoder")}} interface changes the {{domxref("VideoEncoder.state", "state")}} of the encoder to "configured" and asynchronously prepares the encoder to accept {{domxref("VideoEncoder")}}s for encoding with the specified parameters. If the encoder doesn't support the specified parameters or can't be initialized for other reasons an error will be reported via the error callback provided to the {{domxref("VideoEncoder")}} constructor.
+
+If the {{domxref("VideoEncoder")}} has been previously configured, the new configuration will not be applied until all previous tasks have completed.
 
 ## Syntax
 
@@ -27,7 +23,7 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `width` {{optional_inline}}
       - : An integer representing the width of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
     - `height` {{optional_inline}}
@@ -82,11 +78,11 @@ const init = {
   output: handleChunk,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   width: 640,
   height: 480,
   bitrate: 2_000_000, // 2 Mbps

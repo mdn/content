@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createEquirectLayer()
+title: "XRWebGLBinding: createEquirectLayer() method"
+short-title: createEquirectLayer()
 slug: Web/API/XRWebGLBinding/createEquirectLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createEquirectLayer
 ---
 
@@ -30,7 +25,7 @@ createEquirectLayer(options)
     - `centralHorizontalAngle` {{optional_inline}}
       - : A number indicating the central horizontal angle in radians of the sphere. Default value: `6.28318` (2π).
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -52,7 +47,7 @@ createEquirectLayer(options)
         - `All` of the formats the extension supports.
           The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data, or else `0` to indicate that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data, or else `0` to indicate that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`
@@ -121,11 +116,11 @@ function onXRSessionStarted(xrSession) {
     centralHorizontalAngle: 2 * Math.PI,
     upperVerticalAngle: Math.PI / 2.0,
     lowerVerticalAngle: -Math.PI / 2.0,
-    radius: 0
+    radius: 0,
   });
 
   xrSession.updateRenderState({
-    layers: [equirectLayer]
+    layers: [equirectLayer],
   });
 }
 ```

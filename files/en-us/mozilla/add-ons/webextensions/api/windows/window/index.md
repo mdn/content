@@ -1,16 +1,7 @@
 ---
 title: windows.Window
 slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - Window
-  - Windows
+page-type: webextension-api-type
 browser-compat: webextensions.api.windows.Window
 ---
 

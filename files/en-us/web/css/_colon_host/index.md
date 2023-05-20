@@ -2,24 +2,12 @@
 title: ":host"
 slug: Web/CSS/:host
 page-type: css-pseudo-class
-tags:
-  - ":host"
-  - CSS
-  - DOM
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - Web Components
-  - shadow
-  - shadow dom
 browser-compat: css.selectors.host
 ---
 
 {{CSSRef}}
 
-The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
+The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
@@ -32,8 +20,10 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-```
-:host
+```css
+:host {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -82,6 +72,6 @@ The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all i
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}

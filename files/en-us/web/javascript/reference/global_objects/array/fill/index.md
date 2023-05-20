@@ -1,13 +1,7 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.fill
 ---
 
@@ -125,5 +119,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

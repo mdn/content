@@ -1,13 +1,7 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-tags:
-  - JavaScript
-  - Language feature
-  - Loop
-  - Reference
-  - Statement
-  - for
+page-type: javascript-statement
 browser-compat: javascript.statements.for
 ---
 
@@ -58,14 +52,14 @@ for (let i = 0; i < 9; i++) {
 
 The initialization block accepts both expressions and variable declarations. However, expressions cannot use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator unparenthesized, because that is ambiguous with a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = "start" in window ? window.start : 0; i < 9; i++) {
   console.log(i);
 }
 // SyntaxError: 'for-in' loop variable declaration may not have an initializer.
 ```
 
-```js example-good
+```js-nolint example-good
 // Parenthesize the whole initializer
 for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);
@@ -234,7 +228,7 @@ Note that the semicolon after the `for` statement is mandatory, because it stand
 
 ### Using for with two iterating variables
 
-You can create two counters that are updated simultaneously in a for loop using the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator). Multiple `let` and `var` declarations can also be joined with commas.
+You can create two counters that are updated simultaneously in a for loop using the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator). Multiple `let` and `var` declarations can also be joined with commas.
 
 ```js
 const arr = [1, 2, 3, 4, 5, 6];

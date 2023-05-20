@@ -1,12 +1,7 @@
 ---
 title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setFloat64
 ---
 
@@ -31,8 +26,8 @@ setFloat64(byteOffset, value, littleEndian)
   - : The offset, in byte, from the start of the view where to store the data.
 - `value`
   - : The value to set.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 64-bit float is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 64-bit float is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is written.
 

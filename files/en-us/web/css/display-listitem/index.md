@@ -2,14 +2,6 @@
 title: <display-listitem>
 slug: Web/CSS/display-listitem
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-listitem
-  - list-item
 browser-compat: css.properties.display.list-item
 ---
 

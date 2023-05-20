@@ -2,14 +2,6 @@
 title: ":read-write"
 slug: Web/CSS/:read-write
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - read-write
 browser-compat: css.selectors.read-write
 ---
 
@@ -21,8 +13,10 @@ The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 ## Syntax
 
-```
-:read-write
+```css
+:read-write {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -56,7 +50,7 @@ You can find the full source code at [readonly-confirmation.html](https://github
 
 ### Styling read-write non-form controls
 
-This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select _any_ element that can be edited by the user, such as a {{htmlelement("p")}} element with {{htmlattrxref("contenteditable")}} set on it.
+This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select _any_ element that can be edited by the user, such as a {{htmlelement("p")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) set on it.
 
 ```html
 <p contenteditable>This paragraph is editable; it is read-write.</p>
@@ -94,4 +88,4 @@ p:read-write {
 ## See also
 
 - {{cssxref(":read-only")}}
-- HTML {{htmlattrxref("contenteditable")}} attribute
+- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute

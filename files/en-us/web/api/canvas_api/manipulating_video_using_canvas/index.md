@@ -2,15 +2,6 @@
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 page-type: guide
-tags:
-  - API
-  - Canvas
-  - Chroma-Key
-  - Editing
-  - Guide
-  - Manipulating
-  - Video
-  - effects
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

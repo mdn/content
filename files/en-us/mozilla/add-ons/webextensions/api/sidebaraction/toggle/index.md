@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.toggle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sidebarAction
-  - toggle
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
 

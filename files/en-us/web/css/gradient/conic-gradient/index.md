@@ -2,16 +2,6 @@
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
 browser-compat: css.types.image.gradient.conic-gradient
 ---
 
@@ -52,7 +42,7 @@ background: conic-gradient(
 - {{CSSxRef("&lt;angle&gt;")}}
   - : Preceded by the `from` keyterm, and taking an angle as its value, defines the gradient rotation in clockwise direction.
 - `<position>`
-  - : Using the same length, order and keyterm values as the [background-position](/en-US/docs/Web/CSS/background-position) property, the position defines center of the gradient. If omitted, the default value is `center`, meaning the gradient will be centered, .
+  - : Using the same length, order, and keyterm values as the [`background-position`](/en-US/docs/Web/CSS/background-position) property, the `position` value defines center of the gradient. If not specified, the value used for `position` by default is `center`, meaning the gradient will be centered.
 - `<angular-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (an {{CSSxRef("&lt;angle&gt;")}} along the gradient's circumference axis).
 - `<color-hint>`
@@ -84,7 +74,7 @@ The gradient arc is the circumference of the gradient. The _starting point_ of t
 
 #### Customizing gradients
 
-By adding more angled color-stop points on the gradient arc, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using an {{CSSxRef("&lt;angle&gt;")}}. If you don't specify the location of a color stop, it is placed halfway between the one that precedes it and the one that follows it. If you don't specify an angle for the first or last color stop, their values are 0deg and 360deg respectively. The following two gradients are equivalent
+By adding more angled color-stop points on the gradient arc, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using an {{CSSxRef("&lt;angle&gt;")}}. If you don't specify the location of a color stop, it is placed halfway between the one that precedes it and the one that follows it. If you don't specify an angle for the first or last color stop, their values are 0deg and 360deg respectively. The following two gradients are equivalent:
 
 ```css
 conic-gradient(red, orange, yellow, green, blue);
@@ -104,7 +94,7 @@ conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 
 conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);
 ```
 
-Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 30% mark, and then transitions from yellow to blue over 35% of the gradient
+Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 30% mark, and then transitions from yellow to blue over 35% of the gradient:
 
 ```css
 conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
@@ -127,7 +117,7 @@ And, yes, you can mix and match different angle units, but don't. The above is h
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Examples

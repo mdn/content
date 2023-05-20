@@ -1,14 +1,10 @@
 ---
-title: BackgroundFetchRegistration.matchAll()
+title: "BackgroundFetchRegistration: matchAll() method"
+short-title: matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - matchAll
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
 

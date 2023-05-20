@@ -2,13 +2,6 @@
 title: IIRFilterNode
 slug: Web/API/IIRFilterNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.IIRFilterNode
 ---
 

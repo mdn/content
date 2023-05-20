@@ -1,22 +1,13 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - Beginner
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.@@iterator
 ---
 
 {{JSRef}}
 
-The **`@@iterator`** method of an `Array` object implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows arrays to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops. It returns an iterator that yields the value of each index in the array.
+The **`[@@iterator]()`** method of {{jsxref("Array")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows arrays to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns an [array iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the value of each index in the array.
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Array.prototype.values")}} property.
 
@@ -28,7 +19,7 @@ array[Symbol.iterator]()
 
 ### Return value
 
-The same return value as {{jsxref("Array.prototype.values()")}}: a new iterable iterator object that yields the value of each index in the array.
+The same return value as {{jsxref("Array.prototype.values()")}}: a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the value of each index in the array.
 
 ## Examples
 
@@ -115,9 +106,12 @@ logIterable(123);
 ## See also
 
 - [Polyfill of `Array.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.values()")}}
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Symbol.iterator")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,14 +1,10 @@
 ---
-title: HIDInputReportEvent.device
+title: "HIDInputReportEvent: device property"
+short-title: device
 slug: Web/API/HIDInputReportEvent/device
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - device
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent.device
 ---
 

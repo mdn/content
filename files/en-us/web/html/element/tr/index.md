@@ -1,16 +1,7 @@
 ---
-title: '<tr>: The Table Row element'
+title: "<tr>: The Table Row element"
 slug: Web/HTML/Element/tr
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-  - tag
-  - tr
-  - tr tag
+page-type: html-element
 browser-compat: html.elements.tr
 ---
 
@@ -20,7 +11,7 @@ The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a 
 
 {{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
 
-To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the {{htmlattrxref("colspan", "td")}} attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the {{htmlattrxref("rowspan", "td")}} attribute on cells to indicate they should span more than one table row.
+To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on cells to indicate they should span more than one table row.
 
 This can take a little practice to get right when building your tables. We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
 
@@ -32,7 +23,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.
 
-- {{HTMLAttrDef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : A string which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
 
@@ -45,31 +36,31 @@ The following attributes may still be implemented in browsers but are no longer 
     - `justify`
       - : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
     - `char`
-      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
+      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the [`char`](#char) and [`charoff`](#charoff) to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
 
     If no value is expressly set for `align`, the parent node's value is inherited.
 
     > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
 
-- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
 
-  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/named-color). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
     > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the CSS property {{CSSxRef("background-color")}}.
 
-- {{HTMLAttrDef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
 
-  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : A string that sets the character to align the cells in each row's columns (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
-    > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
+    > **Note:** This attribute is obsolete and rarely implemented anyway. To achieve the same effect as the [`char`](#char) attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
 
-- {{HTMLAttrDef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
 
   - : A string indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
 
     > **Note:** This attribute is obsolete, and was never widely supported anyway.
 
-- {{HTMLAttrDef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
 
@@ -158,8 +149,8 @@ Let's actually look at the output first this time:
 
 Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
 
-- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
-- Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
+- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the [`rowspan`](#rowspan) attribute, making them each two rows tall.
+- Having the first row's "Membership Dates" heading cell span two columns using the [`colspan`](#colspan) attribute, which causes this heading actually to be two columns wide.
 - Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
 
 #### HTML
@@ -519,7 +510,7 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

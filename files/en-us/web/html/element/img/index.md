@@ -1,24 +1,7 @@
 ---
 title: "<img>: The Image Embed element"
 slug: Web/HTML/Element/img
-tags:
-  - Content
-  - Element
-  - Graphics
-  - HTML
-  - HTML Graphics
-  - HTML Images
-  - HTML Photos
-  - HTML Pictures
-  - HTML embedded content
-  - Image
-  - Image Element
-  - Media
-  - Multimedia
-  - Photos
-  - Pictures
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.img
 ---
 
@@ -35,9 +18,9 @@ The above example shows usage of the `<img>` element:
 
 There are many other attributes to achieve various purposes:
 
-- [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see {{htmlattrxref("crossorigin", "img")}} and {{htmlattrxref("referrerpolicy", "img")}}.
-- Use both {{htmlattrxref("width", "img")}} and {{htmlattrxref("height", "img")}} to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with {{htmlattrxref("sizes", "img")}} and {{htmlattrxref("srcset", "img")}} (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
+- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
 
 ## Supported image formats
 
@@ -56,13 +39,13 @@ The image file formats that are most commonly used on the web are:
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 
-Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Safari.
+Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Edge.
 
 SVG remains the recommended format for images that must be drawn accurately at different sizes.
 
 ## Image loading errors
 
-If an error occurs while loading or rendering an image, and an {{htmlattrxref("onerror")}} event handler has been set on the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
 - The `src` attribute is empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
@@ -74,7 +57,7 @@ If an error occurs while loading or rendering an image, and an {{htmlattrxref("o
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("alt")}}
+- `alt`
 
   - : Defines an alternative text description of the image.
 
@@ -90,7 +73,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
 
@@ -107,7 +90,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     If the attribute has an invalid value, browsers handle it as if the `anonymous` value was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- {{htmlattrdef("decoding")}}
+- `decoding`
 
   - : Provides an image decoding hint to the browser. Allowed values:
 
@@ -118,7 +101,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
-- {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
+- `elementtiming`
+
+  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
+
+- `fetchpriority` {{experimental_inline}}
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 
@@ -129,19 +116,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: Signals automatic determination of fetch priority relative to other images.
 
-- {{htmlattrdef("height")}}
+- `height`
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#attr-width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
-- {{htmlattrdef("ismap")}}
+- `ismap`
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
 
-    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.
+    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute. This gives users without pointing devices a fallback destination.
 
-- {{htmlattrdef("loading")}}
+- `loading`
 
   - : Indicates how the browser should load the image:
 
@@ -152,20 +139,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
@@ -176,9 +163,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : One or more strings separated by commas, indicating possible image sources for the {{glossary("user agent")}} to use. Each string is composed of:
 
@@ -196,9 +183,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
 
-- {{htmlattrdef("width")}}
+- `width`
   - : The intrinsic width of the image in pixels. Must be an integer without a unit.
-- {{htmlattrdef("usemap")}}
+- `usemap`
 
   - : The partial {{glossary("URL")}} (starting with `#`) of an [image map](/en-US/docs/Web/HTML/Element/map) associated with the element.
 
@@ -206,7 +193,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : Aligns the image with its surrounding context. Use the {{cssxref('float')}} and/or {{cssxref('vertical-align')}} {{glossary("CSS")}} properties instead of this attribute. Allowed values:
 
@@ -221,19 +208,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `right`
       - : Equivalent to `float: right`
 
-- {{htmlattrdef("border")}} {{deprecated_inline}}
+- `border` {{deprecated_inline}}
   - : The width of a border around the image. Use the {{cssxref('border')}} {{glossary("CSS")}} property instead.
-- {{htmlattrdef("hspace")}} {{deprecated_inline}}
+- `hspace` {{deprecated_inline}}
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
-- {{htmlattrdef("longdesc")}} {{deprecated_inline}}
+- `longdesc` {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Global_attributes#id).
 
     > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
-- {{htmlattrdef("vspace")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
+  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute instead.
+- `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
 ## Styling with CSS
@@ -328,7 +315,7 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />
@@ -336,7 +323,7 @@ Due to a [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364), VoiceO
 
 ### The title attribute
 
-The {{htmlattrxref("title")}} attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
 
@@ -350,21 +337,21 @@ The value of the `title` attribute is usually presented to the user as a tooltip
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
           >embedded content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
           >palpable content</a
         >. If the element has a <code>usemap</code> attribute, it also is a part
         of the interactive content category.
@@ -427,15 +414,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("link")}}</li>
-              <li>{{ARIARole("menuitem")}}</li>
-              <li>{{ARIARole("menuitemcheckbox")}}</li>
-              <li>{{ARIARole("menuitemradio")}}</li>
-              <li>{{ARIARole("option")}}</li>
-              <li>{{ARIARole("progressbar")}}</li>
-              <li>{{ARIARole("scrollbar")}}</li>
-              <li>{{ARIARole("separator")}}</li>
-              <li>{{ARIARole("slider")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -451,12 +438,12 @@ The value of the `title` attribute is usually presented to the user as a tooltip
                   ></code
                 >
               </li>
-              <li>{{ARIARole("treeitem")}}</li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, {{ARIARole("none")}}
-            or {{ARIARole("presentation")}}
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

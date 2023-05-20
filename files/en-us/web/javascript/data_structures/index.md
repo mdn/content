@@ -1,18 +1,14 @@
 ---
 title: JavaScript data types and data structures
 slug: Web/JavaScript/Data_structures
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - Types
+page-type: guide
 ---
 
 {{jsSidebar("More")}}
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures.
 
-The [language overview](/en-US/docs/Web/JavaScript/Language_Overview) offers a similar summary of the common data types, but with more comparisons to other languages.
+The [language overview](/en-US/docs/Web/JavaScript/Language_overview) offers a similar summary of the common data types, but with more comparisons to other languages.
 
 ## Dynamic and weak typing
 
@@ -77,7 +73,7 @@ Conceptually, `undefined` indicates the absence of a _value_, while `null` indic
 
 The {{jsxref("Boolean")}} type represents a logical entity and is inhabited by two values: `true` and `false`.
 
-Boolean values are usually used for conditional operations, including [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
+Boolean values are usually used for conditional operations, including [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator), [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
 ### Number type
 
@@ -101,7 +97,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**ot **a** **N**umber") is a special kind of number value that's typically encountered when the result of an arithmetic operation cannot be expressed as a number. It is also the only value in JavaScript that is not equal to itself.
 
-Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
+Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
 
 > **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
@@ -130,7 +126,7 @@ BigInt values are neither always more precise nor always less precise than numbe
 
 ### String type
 
-The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) reference page for more details.
+The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) reference page for more details.
 
 JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it. String methods create new strings based on the content of the current string — for example:
 
@@ -207,7 +203,7 @@ When representing dates, the best choice is to use the built-in [`Date`](/en-US/
 
 Additionally, arrays inherit from `Array.prototype`, which provides a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) searches a value in the array and [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) appends an element to the array. This makes Arrays a perfect candidate to represent ordered lists.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
+[Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 
@@ -217,7 +213,7 @@ You could implement `Map`s and `Set`s yourself. However, since objects cannot be
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 
-`WeakMap` and `WeakSet` only allow object keys, and the keys are allowed to be garbage collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
+`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management).
 
 ### Structured data: JSON
 
@@ -247,13 +243,13 @@ The `[@@toPrimitive]()` method, if present, must return a primitive — returnin
 console.log({} + []); // "[object Object]"
 ```
 
-Neither `{}` nor `[]` has a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
+Neither `{}` nor `[]` have a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
 
-The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`]((/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)) ignores the hint and always returns a symbol.
+The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) ignores the hint and always returns a symbol.
 
 ### Numeric coercion
 
-There are two numeric types: [number](#number_type) and [BigInt](#bigint_type). Sometimes the language specifically expects a number or a BigInt (such as {{jsxref("Array.prototype.slice()")}}, where the index must be a number); other times, it may tolerate either and perform different operations depending on the operand's type. For strict coercion processes that do not allow implicit conversion from the other type, see [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
+There are two numeric types: [Number](#number_type) and [BigInt](#bigint_type). Sometimes the language specifically expects a number or a BigInt (such as {{jsxref("Array.prototype.slice()")}}, where the index must be a number); other times, it may tolerate either and perform different operations depending on the operand's type. For strict coercion processes that do not allow implicit conversion from the other type, see [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion).
 
 Numeric coercion is nearly the same as [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that BigInts are returned as-is instead of causing a {{jsxref("TypeError")}}. Numeric coercion is used by all arithmetic operators, since they are overloaded for both numbers and BigInts. The only exception is [unary plus](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus), which always does number coercion.
 

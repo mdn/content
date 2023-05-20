@@ -1,12 +1,7 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Accept-Ranges
 ---
 

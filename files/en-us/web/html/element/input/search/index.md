@@ -1,14 +1,7 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-tags:
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Search
+page-type: html-element
 browser-compat: html.elements.input.type_search
 ---
 
@@ -18,57 +11,9 @@ browser-compat: html.elements.input.type_search
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the value contained in
-        the search field.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported Common Attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}}.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a string representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
 
 ```js
 searchTerms = mySearch.value;
@@ -82,27 +27,27 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### maxlength
 
 The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
 
 ### minlength
 
 The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the search input has no minimum length.
 
-The search field will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
+The search field will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
 ### pattern
 
-The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See the section [Specifying a pattern](#specifying_a_pattern) for details and an example.
 
@@ -112,7 +57,7 @@ The `placeholder` attribute is a string that provides a brief hint to the user a
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
-> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
 
 ### readonly
 
@@ -166,7 +111,7 @@ The `search` event is rate-limited so that it is not sent more frequently than a
 
 A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} global attribute instead.
+This attribute has been deprecated: use the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) global attribute instead.
 
 ### results
 
@@ -195,7 +140,7 @@ This renders like so:
 
 `q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
 
-> **Note:** You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.
+> **Note:** You must remember to set a [`name`](/en-US/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.
 
 ### Differences between search and text types
 
@@ -209,7 +154,7 @@ In addition, modern browsers also tend to automatically store search terms previ
 
 ### Setting placeholders
 
-You can provide a useful placeholder inside your search input that could give a hint on what to do using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:
+You can provide a useful placeholder inside your search input that could give a hint on what to do using the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute. Look at the following example:
 
 ```html
 <form>
@@ -263,7 +208,7 @@ There is no visual difference from the previous example, but screen reader users
 
 ### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
 
 ```html
 <form>
@@ -311,7 +256,7 @@ The technique also requires a {{htmlelement("span")}} element to be placed after
 
 ### Making input required
 
-You can use the {{htmlattrxref("required", "input")}} attribute as an easy way of making entering a value required before form submission is allowed:
+You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute as an easy way of making entering a value required before form submission is allowed:
 
 ```html
 <form>
@@ -358,7 +303,7 @@ Different messages will be shown when you try to submit the form with different 
 
 ### Input value length
 
-You can specify a minimum length, in characters, for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value.
+You can specify a minimum length, in characters, for the entered value using the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered value.
 
 The example below requires that the entered value be 4–8 characters in length.
 
@@ -407,7 +352,7 @@ If you try to submit the form with less than 4 characters, you'll be given an ap
 
 ### Specifying a pattern
 
-You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must follow to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course).
 
 Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:
 
@@ -454,6 +399,61 @@ This renders like so:
 ## Examples
 
 You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the value contained in
+        the search field.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
+      </td>
+    </tr>
+     <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

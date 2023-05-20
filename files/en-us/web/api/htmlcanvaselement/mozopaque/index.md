@@ -1,22 +1,18 @@
 ---
-title: HTMLCanvasElement.mozOpaque
+title: "HTMLCanvasElement: mozOpaque property"
+short-title: mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - Deprecated
-  - HTMLCanvasElement
-  - Non-standard
-  - Property
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
 
 {{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
 The non-standard **`HTMLCanvasElement.mozOpaque`** property is
-a boolean value reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML
+a boolean value reflecting the [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque) HTML
 attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or
 not translucency will be a factor. If the canvas knows there's no translucency, painting
 performance can be optimized.
@@ -43,7 +39,7 @@ conditionally set it to `true` if `mimeType === 'image/jpeg'`, or
 similar, to gain performance in your application when translucency is not needed.
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 console.log(canvas.mozOpaque); // true
 // deactivate it
 canvas.mozOpaque = false;
@@ -59,7 +55,6 @@ Not part of any standard.
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
-  {{HTMLElement("canvas")}} element.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.mozOpaque` property
+- [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque): HTML attribute of the {{HTMLElement("canvas")}} element
 - [Optimizing your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

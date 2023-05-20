@@ -2,18 +2,8 @@
 title: Navigation
 slug: Web/API/Navigation
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation
 ---
 
@@ -83,22 +73,22 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ```js
 async function backHandler() {
-  if(navigation.canGoBack) {
+  if (navigation.canGoBack) {
     await navigation.back().finished;
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
 async function forwardHandler() {
-  if(navigation.canGoForward) {
+  if (navigation.canGoForward) {
     await navigation.forward().finished;
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```
@@ -108,29 +98,29 @@ async function forwardHandler() {
 ```js
 // On JS startup, get the key of the first loaded page
 // so the user can always go back there.
-const {key} = navigation.currentEntry;
+const { key } = navigation.currentEntry;
 backToHomeButton.onclick = () => navigation.traverseTo(key);
 
 // Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+await navigation.navigate("/another_url").finished;
 ```
 
 ### Navigating and updating state
 
 ```js
-navigation.navigate(url, {state: newState});
+navigation.navigate(url, { state: newState });
 ```
 
 Or
 
 ```js
-navigation.reload({state: newState});
+navigation.reload({ state: newState });
 ```
 
 Or if the state is independent from a navigation or reload:
 
 ```js
-navigation.updateCurrentEntry({state: newState});
+navigation.updateCurrentEntry({ state: newState });
 ```
 
 ## Specifications

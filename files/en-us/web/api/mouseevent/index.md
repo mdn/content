@@ -2,15 +2,6 @@
 title: MouseEvent
 slug: Web/API/MouseEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Interface
-  - MouseEvent
-  - Reference
-  - events
-  - mouse
 browser-compat: api.MouseEvent
 ---
 

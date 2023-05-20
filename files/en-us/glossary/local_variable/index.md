@@ -1,9 +1,7 @@
 ---
 title: Local variable
 slug: Glossary/Local_variable
-tags:
-  - CodingScripting
-  - NeedsContent
+page-type: glossary-definition
 ---
 
 A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only within a {{Glossary("local scope")}}.

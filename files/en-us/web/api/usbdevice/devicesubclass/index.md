@@ -1,17 +1,10 @@
 ---
-title: USBDevice.deviceSubclass
+title: "USBDevice: deviceSubclass property"
+short-title: deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceSubclass
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceSubclass
 ---
 

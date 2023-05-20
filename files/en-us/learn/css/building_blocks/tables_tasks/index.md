@@ -1,12 +1,6 @@
 ---
-title: 'Test your skills: Tables'
+title: "Test your skills: Tables"
 slug: Learn/CSS/Building_blocks/Tables_tasks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Tables
-  - test your skills
 ---
 
 {{LearnSidebar}}

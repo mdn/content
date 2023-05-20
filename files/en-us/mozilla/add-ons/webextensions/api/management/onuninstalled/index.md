@@ -1,14 +1,7 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onUninstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onUninstalled
 ---
 

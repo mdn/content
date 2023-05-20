@@ -1,12 +1,8 @@
 ---
-title: PerformanceResourceTiming.fetchStart
+title: "PerformanceResourceTiming: fetchStart property"
+short-title: fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.fetchStart
 ---
 

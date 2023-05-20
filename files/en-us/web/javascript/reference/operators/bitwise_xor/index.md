@@ -1,49 +1,31 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_xor
 ---
 
 {{jsSidebar("Operators")}}
 
-The **bitwise XOR (`^`)** operator returns a `1` in each bit position
-for which the corresponding bits of either but not both operands are `1`s.
+The **bitwise XOR (`^`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of either but not both operands are `1`.
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
-a ^ b
+x ^ y
 ```
 
 ## Description
 
-The operands are converted to 32-bit integers and expressed by a series of bits (zeroes
-and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer with more than 32 bits will be converted to a 32-bit
-integer:
+The `^` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt XOR if both operands becomes BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise XOR. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
-```
-Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001
-```
-
-Each bit in the first operand is paired with the corresponding bit in the second
-operand: _first bit_ to _first bit_, _second bit_ to _second
-bit_, and so on.
-
-The operator is applied to each pair of bits, and the result is constructed bitwise.
+The operator operates on the operands' bit representations in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). Each bit in the first operand is paired with the corresponding bit in the second operand: _first bit_ to _first bit_, _second bit_ to _second bit_, and so on. The operator is applied to each pair of bits, and the result is constructed bitwise.
 
 The truth table for the XOR operation is:
 
-| a   | b   | a XOR b |
+| x   | y   | x XOR y |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 1       |
@@ -57,8 +39,16 @@ The truth table for the XOR operation is:
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 ```
 
-Bitwise XORing any number `x` with `0` yields
-`x`.
+Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
+
+```plain
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
+
+For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
+
+Bitwise XORing any number `x` with `0` returns `x` converted to a 32-bit integer. Do not use `^ 0` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 ## Examples
 
@@ -70,6 +60,8 @@ Bitwise XORing any number `x` with `0` yields
 
 14 ^ 9;
 // 7  (00000000000000000000000000000111)
+
+14n ^ 9n; // 7n
 ```
 
 ## Specifications
@@ -82,5 +74,5 @@ Bitwise XORing any number `x` with `0` yields
 
 ## See also
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
 - [Bitwise XOR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

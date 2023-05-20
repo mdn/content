@@ -2,11 +2,6 @@
 title: Descendant combinator
 slug: Web/CSS/Descendant_combinator
 page-type: css-combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.descendant
 ---
 

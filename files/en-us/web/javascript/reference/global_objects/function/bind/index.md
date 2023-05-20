@@ -1,13 +1,7 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Function
-  - JavaScript
-  - Method
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.bind
 ---
 
@@ -159,7 +153,7 @@ console.log(leadingThirtySevenList()); // [37]
 console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
 console.log(addThirtySeven(5)); // 42
 console.log(addThirtySeven(5, 10)); // 42
-// (the second argument is ignored)
+// (the last argument 10 is ignored)
 ```
 
 ### With setTimeout()

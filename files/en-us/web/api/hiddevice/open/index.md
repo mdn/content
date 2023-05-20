@@ -1,14 +1,10 @@
 ---
-title: HIDDevice.open()
+title: "HIDDevice: open() method"
+short-title: open()
 slug: Web/API/HIDDevice/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.open
 ---
 

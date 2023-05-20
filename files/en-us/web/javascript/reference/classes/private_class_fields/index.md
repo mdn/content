@@ -1,17 +1,13 @@
 ---
 title: Private class features
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Classes
-  - Private
-  - JavaScript
-  - Language feature
+page-type: javascript-language-feature
 browser-compat: javascript.classes.private_class_fields
 ---
 
 {{JsSidebar("Classes")}}
 
-Class fields are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default, but private class members can be created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
+Class fields are [public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) by default, but **private class members** can be created by using a hash `#` prefix. The privacy encapsulation of these class features is enforced by JavaScript itself.
 
 Private members are not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
 
@@ -35,6 +31,11 @@ class ClassWithPrivate {
 }
 ```
 
+There are some additional syntax restrictions:
+
+- All private identifiers declared within a class must be unique. The namespace is shared between static and instance properties. The only exception is when the two declarations define a getter-setter pair.
+- The private identifier cannot be `#constructor`.
+
 ## Description
 
 Most class features have their private counterparts:
@@ -50,7 +51,7 @@ Most class features have their private counterparts:
 
 These features are collectively called _private properties_. However, [constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) cannot be private in JavaScript. To prevent classes from being constructed outside of the class, you have to [use a private flag](#simulating_private_constructors).
 
-Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation).
+Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
 
 It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
@@ -92,6 +93,8 @@ Note a corollary of private names being always pre-declared and non-deletable: i
 
 Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class.
 
+For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
+
 ## Examples
 
 ### Private fields
@@ -120,8 +123,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass();
-// SubClass {#subPrivateField: 23}
+new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
@@ -275,7 +277,7 @@ class C {
 }
 
 console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
+console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
 ```
 
 #### Private static methods
@@ -341,12 +343,13 @@ class PrivateConstructor {
     if (!PrivateConstructor.#isInternalConstructing) {
       throw new TypeError("PrivateConstructor is not constructable");
     }
+    PrivateConstructor.#isInternalConstructing = false;
+    // More initialization logic
   }
 
   static create() {
     PrivateConstructor.#isInternalConstructing = true;
     const instance = new PrivateConstructor();
-    PrivateConstructor.#isInternalConstructing = false;
     return instance;
   }
 }
@@ -365,8 +368,10 @@ PrivateConstructor.create(); // PrivateConstructor {}
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- {{jsxref("Statements/class", "class")}}
 - [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
-- [Public and private class fields](https://v8.dev/features/class-fields) article at the v8.dev site
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)

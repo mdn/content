@@ -1,16 +1,7 @@
 ---
 title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hide
-  - pageAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.hide
 ---
 

@@ -1,14 +1,9 @@
 ---
 title: RegExp.$1, …, RegExp.$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - Deprecated
-  - JavaScript
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.n
 ---
 

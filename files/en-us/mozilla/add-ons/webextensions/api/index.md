@@ -1,8 +1,7 @@
 ---
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - WebExtensions
+page-type: landing-page
 ---
 
 {{AddonSidebar}}

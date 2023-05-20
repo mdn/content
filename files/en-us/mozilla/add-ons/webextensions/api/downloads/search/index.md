@@ -1,16 +1,7 @@
 ---
 title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.search
 ---
 

@@ -1,17 +1,13 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.parse
 ---
 
 {{JSRef}}
 
-The **`Date.parse()`** method parses a string representation of
+The **`Date.parse()`** static method parses a string representation of
 a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC or
 `NaN` if the string is unrecognized or, in some cases, contains illegal date
 values (e.g. 2015-02-31).
@@ -103,7 +99,7 @@ new Date("2014-25-23").toISOString();
 
 SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
 The string `"10 06 2014"` is an example of a non-conforming ISO format and
-thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on
+thus falls back to a custom routine. See also this [rough outline](https://bugzil.la/1023155#c6) on
 how the parsing works.
 
 ```js
@@ -217,12 +213,11 @@ provided.
 
 ### Compatibility notes
 
-- Firefox 49 changed the parsing of 2-digit years to be aligned with the Google Chrome
-  browser instead of Internet Explorer. Now, 2-digit years that are less than
-  `50` are parsed as 21st century years. For example,
-  `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
+- Firefox 49 changed the parsing of 2-digit years to be aligned with Google Chrome.
+  Now, 2-digit years that are less than `50` are parsed as 21st century years. For
+  example, `04/16/17`, previously parsed as April 16, 1917, will be April 16, 2017
   now. To avoid any interoperability issues or ambiguous years, it is recommended to use
-  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)).
+  the ISO 8601 format like `"2017-04-16"` ([bug 1265136](https://bugzil.la/1265136)).
 - Google Chrome will accept a numerical string as a valid
   `dateString` parameter. This means that, for instance, while
   `!!Date.parse("42")` evaluates to `false` in Firefox, it

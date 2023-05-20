@@ -2,13 +2,6 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 page-type: css-property
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Reference
-  - image-rendering
-  - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
 
@@ -45,9 +38,9 @@ image-rendering: unset;
 - `high-quality` {{Experimental_Inline}}
   - : Identical to `smooth`, but with a preference for higher-quality scaling. If system resources are constrained, images with `high-quality` should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
 - `crisp-edges`
-  - : The image is scaled with the nearest-neighbor algorithm.
+  - : The image is scaled with an algorithm that preserves contrast and edges in the image. Generally intended for images such as pixel art or line drawings, no blurring or color smoothing occurs.
 - `pixelated`
-  - : Using the nearest-neighbor algorithm, the image is scaled up to the next integer multiple that is greater than or equal to its original size, then scaled down to the target size, as for `smooth`. When scaling up to integer multiples of the original size, this will have the same effect as `crisp-edges`.
+  - : The image is scaled with the "nearest neighbor" or similar algorithm, preserving a "pixelated" look as the image changes in size.
 
 > **Note:** The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
 
@@ -117,7 +110,7 @@ img {
 
 {{Compat}}
 
-> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) do so. [In Firefox](https://searchfox.org/mozilla-central/rev/1061fae5e225a99ef5e43dbdf560a91a0c0d00d1/gfx/wr/webrender/src/resource_cache.rs#1356), `crisp-edges` is interpreted as nearest-neighbor, `pixelated` is not supported, and `auto` is interpolated as trilinear or linear.
+> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) do so. [In Firefox](https://searchfox.org/mozilla-central/rev/1061fae5e225a99ef5e43dbdf560a91a0c0d00d1/gfx/wr/webrender/src/resource_cache.rs#1356), `crisp-edges` or `pixelated` is interpreted as nearest-neighbor, and `auto` is interpolated as trilinear or linear.
 >
 > For behavior on Chromium and Safari (WebKit), see the [`GetInterpolationQuality`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/style/computed_style.cc;l=1160) function and [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/WebKit/blob/9b26fc6081e0db8a1304cf4b4f8f1c67efb9bc0c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4045) respectively.
 

@@ -1,17 +1,12 @@
 ---
-title: VideoFrame()
+title: "VideoFrame: VideoFrame() constructor"
+short-title: VideoFrame()
 slug: Web/API/VideoFrame/VideoFrame
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoFrame
-  - Experimental
 browser-compat: api.VideoFrame.VideoFrame
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}
 
 The **`VideoFrame()`** constructor creates a new {{domxref("VideoFrame")}} object representing a frame of a video.
 
@@ -122,7 +117,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
 The following examples are from the article [Video processing with WebCodecs](https://web.dev/webcodecs/). In this first example, a `VideoFrame` is created from a canvas.
 
 ```js
-const cnv = document.createElement('canvas');
+const cnv = document.createElement("canvas");
 // draw something on the canvas
 // ...
 let frame_from_canvas = new VideoFrame(cnv, { timestamp: 0 });
@@ -132,15 +127,20 @@ In the following example a `VideoFrame` is created from a {{jsxref("TypedArray")
 
 ```js
 const pixelSize = 4;
-const init = {timestamp: 0, codedWidth: 320, codedHeight: 200, format: 'RGBA'};
+const init = {
+  timestamp: 0,
+  codedWidth: 320,
+  codedHeight: 200,
+  format: "RGBA",
+};
 let data = new Uint8Array(init.codedWidth * init.codedHeight * pixelSize);
 for (let x = 0; x < init.codedWidth; x++) {
   for (let y = 0; y < init.codedHeight; y++) {
     let offset = (y * init.codedWidth + x) * pixelSize;
-    data[offset] = 0x7F;      // Red
-    data[offset + 1] = 0xFF;  // Green
-    data[offset + 2] = 0xD4;  // Blue
-    data[offset + 3] = 0x0FF; // Alpha
+    data[offset] = 0x7f; // Red
+    data[offset + 1] = 0xff; // Green
+    data[offset + 2] = 0xd4; // Blue
+    data[offset + 3] = 0x0ff; // Alpha
   }
 }
 let frame = new VideoFrame(data, init);

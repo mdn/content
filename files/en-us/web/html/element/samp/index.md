@@ -1,15 +1,7 @@
 ---
-title: '<samp>: The Sample Output element'
+title: "<samp>: The Sample Output element"
 slug: Web/HTML/Element/samp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Sample
-  - Reference
-  - Sample Output
-  - Sample Text
-  - Web
+page-type: html-element
 browser-compat: html.elements.samp
 ---
 
@@ -18,63 +10,6 @@ browser-compat: html.elements.samp
 The **`<samp>`** [HTML](/en-US/docs/Web/HTML) element is used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as [Courier](<https://en.wikipedia.org/wiki/Courier_(typeface)>) or Lucida Console).
 
 {{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -108,7 +43,7 @@ In this simple example, a paragraph includes an example of the output of a progr
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 100)}}
 
@@ -153,6 +88,65 @@ This gives the prompt and cursor fairly subtle colorization and emboldens the ke
 The resulting output is this:
 
 {{EmbedLiveSample("Sample_output_including_user_input", 650, 120)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

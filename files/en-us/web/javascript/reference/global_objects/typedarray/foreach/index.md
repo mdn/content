@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.forEach
 ---
 
@@ -20,42 +12,27 @@ per array element. This method has the same algorithm as
 {{jsxref("Array.prototype.forEach()")}}. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
+{{EmbedInteractiveExample("pages/js/typedarray-foreach.html")}}
+
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((element) => { /* ... */ } )
-forEach((element, index) => { /* ... */ } )
-forEach((element, index, array) => { /* ... */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function(element) { /* ... */ })
-forEach(function(element, index) { /* ... */ })
-forEach(function(element, index, array){ /* ... */ })
-forEach(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function that produces an element of the new typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. Its return value is discarded. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
-      - : The index of the current element being processed in the array.
+      - : The index of the current element being processed in the typed array.
     - `array`
-      - : The array `forEach()` was called upon.
-
+      - : The typed array `forEach()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

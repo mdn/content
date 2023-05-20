@@ -1,12 +1,7 @@
 ---
 title: "ARIA: feed role"
 slug: Web/Accessibility/ARIA/Roles/feed_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - feed
-  - document structure role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 
@@ -24,13 +19,13 @@ A `feed` is a dynamic scrollable `list` of `articles` in which articles are adde
 
 ## Description
 
-A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for a scrollable of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
+A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for scrollable [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an e-commerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
 
 Unlike the document structure elements that represent static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
 
 If the number of articles is known, set [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.
 
-Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside of an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
+Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
 
 The feed pattern enables reliable assistive technology reading mode interaction by establishing the following interoperability agreement between the web page and assistive technologies:
 

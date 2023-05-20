@@ -1,10 +1,7 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-tags:
-  - CodingScripting
-  - Layout
-  - viewport
+page-type: glossary-definition
 ---
 
 A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed. In web browser terms, it refers to the part of the document you're viewing which is currently visible in its window (or the screen, if the document is being viewed in full screen mode). Content outside the viewport is not visible onscreen until scrolled into view.

@@ -1,11 +1,7 @@
 ---
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - Beginner
-  - Guide
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -45,25 +41,27 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html" // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 The extension can now run code in the inspected window using [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) or by injecting a content script via the background script by passing a message. You can find more details on how to do this in [Extending the developer tools.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
 
 ## Developer panel design
 
-For details on how to design your developer panel's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to design your developer panel's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Icons
 
-For details on how to create icons to use with your developer tools panel, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 

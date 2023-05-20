@@ -1,17 +1,13 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
+page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
 ---
 
 {{JSRef}}
 
-The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
+The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
 ## Description
 
@@ -149,8 +145,10 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
+
+> **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
 
 ## Static methods
 
@@ -327,7 +325,7 @@ const view = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 const item1 = document.getElementById("item-1");
@@ -356,7 +354,7 @@ The `products` proxy object evaluates the passed value and converts it to an arr
 ```js
 const products = new Proxy(
   {
-    browsers: ["Internet Explorer", "Netscape"],
+    browsers: ["Firefox", "Chrome"],
   },
   {
     get(obj, prop) {
@@ -386,25 +384,25 @@ const products = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
-
-console.log(products.browsers);
-//  ['Internet Explorer', 'Netscape']
-
-products.browsers = "Firefox";
-//  pass a string (by mistake)
-
-console.log(products.browsers);
-//  ['Firefox'] <- no problem, the value is an array
-
-products.latestBrowser = "Chrome";
 
 console.log(products.browsers);
 //  ['Firefox', 'Chrome']
 
+products.browsers = "Safari";
+//  pass a string (by mistake)
+
+console.log(products.browsers);
+//  ['Safari'] <- no problem, the value is an array
+
+products.latestBrowser = "Edge";
+
+console.log(products.browsers);
+//  ['Safari', 'Edge']
+
 console.log(products.latestBrowser);
-//  'Chrome'
+//  'Edge'
 ```
 
 ### Finding an array item object by its property
@@ -461,7 +459,7 @@ const products = new Proxy(
 
       return undefined;
     },
-  }
+  },
 );
 
 console.log(products[0]); // { name: 'Firefox', type: 'browser' }

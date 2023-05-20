@@ -1,18 +1,8 @@
 ---
-title: RTCRtpTransceiver.currentDirection
+title: "RTCRtpTransceiver: currentDirection property"
+short-title: currentDirection
 slug: Web/API/RTCRtpTransceiver/currentDirection
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Read-only
-  - Reference
-  - Transceiver
-  - WebRTC
-  - currentDirection
 browser-compat: api.RTCRtpTransceiver.currentDirection
 ---
 

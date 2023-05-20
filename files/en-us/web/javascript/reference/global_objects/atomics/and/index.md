@@ -1,17 +1,13 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.and
 ---
 
 {{JSRef}}
 
-The static **`Atomics.and()`**
+The **`Atomics.and()`** static
 method computes a bitwise AND with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
@@ -43,10 +39,10 @@ The old value at the given position
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
-  of the allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Description
 
@@ -80,7 +76,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## Specifications

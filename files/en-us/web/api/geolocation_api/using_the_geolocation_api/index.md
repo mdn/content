@@ -2,10 +2,6 @@
 title: Using the Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 page-type: guide
-tags:
-  - Geolocation API
-  - Guide
-  - Tutorial
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -19,7 +15,7 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation) is available through the 
 If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:
 
 ```js
-if ('geolocation' in navigator) {
+if ("geolocation" in navigator) {
   /* geolocation is available */
 } else {
   /* geolocation IS NOT available */
@@ -72,13 +68,13 @@ function success(position) {
 }
 
 function error() {
-  alert('Sorry, no position available.');
+  alert("Sorry, no position available.");
 }
 
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -94,7 +90,7 @@ The `GeolocationCoordinates` instance contains a number of properties, but the t
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // Do something with your latitude and longitude
@@ -112,7 +108,7 @@ You could use it like so:
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## Examples
@@ -142,36 +138,34 @@ button {
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
   }
 
   function error() {
-    status.textContent = 'Unable to retrieve your location';
+    status.textContent = "Unable to retrieve your location";
   }
 
   if (!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
+    status.textContent = "Geolocation is not supported by your browser";
   } else {
-    status.textContent = 'Locating…';
+    status.textContent = "Locating…";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### Result

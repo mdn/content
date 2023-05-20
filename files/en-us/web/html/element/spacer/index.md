@@ -1,12 +1,9 @@
 ---
 title: <spacer>
 slug: Web/HTML/Element/spacer
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.spacer
 ---
 
@@ -20,15 +17,15 @@ Firefox, which is the descendant of Netscape's browsers, removed support for `<s
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{ htmlattrdef("type") }}
+- `type`
   - : This attribute determines type of spacer. Possible values are `horizontal`, `vertical` and `block`.
-- {{ htmlattrdef("size") }}
+- `size`
   - : This attribute can be used for defining size of spacer in pixels when type is `horizontal` or `vertical`.
-- {{ htmlattrdef("width") }}
+- `width`
   - : This attribute can be used for defining width of spacer in pixels when type is `block`.
-- {{ htmlattrdef("height") }}
+- `height`
   - : This attribute can be used for defining height of spacer in pixels when type is `block`.
-- {{ htmlattrdef("align") }}
+- `align`
   - : This attribute determines alignment of spacer. Possible values are `left`, `right` and `center`.
 
 ## Example

@@ -1,21 +1,13 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test
 ---
 
 {{JSRef}}
 
-The **`test()`** method executes a search for a match between a
-regular expression and a specified string. Returns `true` or
-`false`.
+The **`test()`** method executes a search for a match between a regular expression and a specified string. Returns `true` if there is a match; `false` otherwise.
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
 the {{jsxref("RegExp/global", "global")}} or {{jsxref("RegExp/sticky", "sticky")}} flags
@@ -35,7 +27,7 @@ test(str)
 ### Parameters
 
 - `str`
-  - : The string against which to match the regular expression.
+  - : The string against which to match the regular expression. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `test()` to search for the string `"undefined"`, which is rarely what you want.
 
 ### Returns
 
@@ -137,6 +129,6 @@ regex.test("foobarfoo"); // false
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the
   [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

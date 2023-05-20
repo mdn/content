@@ -1,24 +1,7 @@
 ---
-title: '<bdo>: The Bidirectional Text Override element'
+title: "<bdo>: The Bidirectional Text Override element"
 slug: Web/HTML/Element/bdo
-tags:
-  - BiDi
-  - Bidirectional Text
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Left to Right
-  - Reference
-  - Right to Left
-  - Text
-  - Text Direction
-  - Text Rendering
-  - Web
-  - ltr
-  - rtl
+page-type: html-element
 browser-compat: html.elements.bdo
 ---
 
@@ -30,19 +13,48 @@ The **`<bdo>`** [HTML](/en-US/docs/Web/HTML) element overrides the current direc
 
 The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
 
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `dir`
+
+  - : The direction in which text should be rendered in this element's contents. Possible values are:
+
+    - `ltr`: Indicates that the text should go in a left-to-right direction.
+    - `rtl`: Indicates that the text should go in a right-to-left direction.
+
+## Examples
+
+```html
+<!-- Switch text direction -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
+## Notes
+
+The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -50,7 +62,7 @@ The text's characters are drawn from the starting point in the given direction; 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -63,7 +75,7 @@ The text's characters are drawn from the starting point in the given direction; 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -95,33 +107,6 @@ The text's characters are drawn from the starting point in the given direction; 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("dir")}}
-
-  - : The direction in which text should be rendered in this element's contents. Possible values are:
-
-    - `ltr`: Indicates that the text should go in a left-to-right direction.
-    - `rtl`: Indicates that the text should go in a right-to-left direction.
-
-## Examples
-
-```html
-<!-- Switch text direction -->
-<p>This text will go left to right.</p>
-<p><bdo dir="rtl">This text will go right to left.</bdo></p>
-```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
-
-## Notes
-
-The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
 
 ## Specifications
 

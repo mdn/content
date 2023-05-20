@@ -1,15 +1,7 @@
 ---
 title: scripting.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/executeScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - executeScript
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.executeScript
 ---
 
@@ -19,9 +11,9 @@ Injects a script into a target context. The script is run at `document_idle` by 
 
 > **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, and PDF viewer pages.
 
-In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([Issue 1325114](https://bugs.chromium.org/p/chromium/issues/detail?id=1325114))).
+In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening (see [Issue 1325114](https://crbug.com/1325114)).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
@@ -41,16 +33,18 @@ let results = await browser.scripting.executeScript(
 
   - : An object describing the script to inject. It contains these properties:
 
-    - `args`
+    - `args` {{optional_inline}}
       - : An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
-    - `files`
+    - `files` {{optional_inline}}
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
-    - `func`
+    - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
+    - `world` {{optional_inline}}
+      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 
@@ -67,6 +61,8 @@ Each `InjectionResult` object has these properties:
 - `error` {{optional_inline}}
   - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
 
+    Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.
+
 The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
@@ -75,7 +71,7 @@ let foo='my result'; foo;
 
 Here the results array contains the string "`my result`" as an element.
 
-The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
 ## Examples
 

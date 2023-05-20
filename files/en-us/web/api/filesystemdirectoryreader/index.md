@@ -2,14 +2,6 @@
 title: FileSystemDirectoryReader
 slug: Web/API/FileSystemDirectoryReader
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryReader
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemDirectoryReader
 ---
 

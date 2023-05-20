@@ -1,17 +1,9 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActiveChanged
-  - tabs
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.onActiveChanged
 ---
 

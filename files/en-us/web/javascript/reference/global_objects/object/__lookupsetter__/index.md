@@ -1,13 +1,9 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Object.lookupSetter
 ---
 
@@ -108,4 +104,4 @@ console.log(findSetter(obj2, "foo")); // [Function: set foo]
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)

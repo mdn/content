@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaChecked
+title: "ElementInternals: ariaChecked property"
+short-title: ariaChecked
 slug: Web/API/ElementInternals/ariaChecked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaChecked
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaChecked
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaChecked`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
 

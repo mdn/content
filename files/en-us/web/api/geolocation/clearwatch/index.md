@@ -1,15 +1,8 @@
 ---
-title: Geolocation.clearWatch()
+title: "Geolocation: clearWatch() method"
+short-title: clearWatch()
 slug: Web/API/Geolocation/clearWatch
 page-type: web-api-instance-method
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - NeedsExample
-  - Reference
-  - Secure context
 browser-compat: api.Geolocation.clearWatch
 ---
 
@@ -46,24 +39,24 @@ function success(pos) {
   const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulations, you\'ve reached the target!');
+    console.log("Congratulations, you've reached the target!");
     navigator.geolocation.clearWatch(id);
   }
-};
+}
 
 function error(err) {
   console.error(`ERROR(${err.code}): ${err.message}`);
-};
+}
 
 target = {
-  latitude : 0,
+  latitude: 0,
   longitude: 0,
-}
+};
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);

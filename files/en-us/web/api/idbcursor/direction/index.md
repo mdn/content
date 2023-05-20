@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.direction
+title: "IDBCursor: direction property"
+short-title: direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - direction
 browser-compat: api.IDBCursor.direction
 ---
 
@@ -31,7 +23,7 @@ Possible values are:
 
 - `next`
   - : This direction causes the cursor to be opened at the start of the source.
-- `nextunique``
+- `nextunique`
   - : This direction causes the cursor to be opened at the start of the source.
     For every key with duplicate values, only the first record is yielded.
 - `prev`
@@ -61,24 +53,24 @@ working example, see our [IDBCursor example](https://github.com/mdn/dom-examples
 
 ```js
 function backwards() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readonly');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor(null,'prev').onsuccess = (event) => {
+  objectStore.openCursor(null, "prev").onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
+      list.appendChild(listItem);
 
-        console.log(cursor.direction);
-        cursor.continue();
-      } else {
-        console.log('Entries displayed backwards.');
-      }
+      console.log(cursor.direction);
+      cursor.continue();
+    } else {
+      console.log("Entries displayed backwards.");
+    }
   };
-};
+}
 ```
 
 ## Specifications

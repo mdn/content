@@ -1,10 +1,7 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.debugger
 ---
 

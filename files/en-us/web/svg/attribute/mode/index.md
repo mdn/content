@@ -2,10 +2,6 @@
 title: mode
 slug: Web/SVG/Attribute/mode
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feBlend.mode
 ---
 

@@ -2,12 +2,6 @@
 title: counter-set
 slug: Web/CSS/counter-set
 page-type: css-property
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
 browser-compat: css.properties.counter-set
 ---
 

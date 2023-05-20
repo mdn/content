@@ -1,15 +1,10 @@
 ---
-title: Gamepad.hand
+title: "Gamepad: hand property"
+short-title: hand
 slug: Web/API/Gamepad/hand
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - Property
-  - Reference
-  - hand
+status:
+  - experimental
 browser-compat: api.Gamepad.hand
 ---
 

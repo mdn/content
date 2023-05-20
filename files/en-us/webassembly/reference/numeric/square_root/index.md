@@ -1,12 +1,6 @@
 ---
 title: Square root
 slug: WebAssembly/Reference/Numeric/Square_root
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

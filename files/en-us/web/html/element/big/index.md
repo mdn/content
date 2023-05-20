@@ -1,12 +1,9 @@
 ---
-title: '<big>: The Bigger Text element'
+title: "<big>: The Bigger Text element"
 slug: Web/HTML/Element/big
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.big
 ---
 
@@ -69,6 +66,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 ## DOM interface
 
 This element implements the {{domxref('HTMLElement')}} interface.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 

@@ -2,13 +2,8 @@
 title: SVGPoint
 slug: Web/API/SVGPoint
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - NeedsContent
-  - SVG
+status:
   - deprecated
-  - Deprecated
 browser-compat: api.SVGPoint
 ---
 

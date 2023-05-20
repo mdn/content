@@ -1,22 +1,14 @@
 ---
 title: CORS
 slug: Glossary/CORS
-tags:
-  - Infrastructure
-  - Security
+page-type: glossary-definition
 ---
 
 **CORS** (Cross-Origin Resource Sharing) is a system, consisting of transmitting {{Glossary("HTTP_header", "HTTP headers")}}, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
 
 The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
-## See also
-
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
-- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
-- [Fetch specification](https://fetch.spec.whatwg.org)
-
-### CORS headers
+## CORS headers
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indicates whether the response can be shared.
@@ -36,3 +28,11 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
   - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
 - {{HTTPHeader("Origin")}}
   - : Indicates where a fetch originates from.
+- {{HTTPHeader("Timing-Allow-Origin")}}
+  - : Specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing), which would otherwise be reported as zero due to cross-origin restrictions.
+
+## See also
+
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
+- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
+- [Fetch specification](https://fetch.spec.whatwg.org)

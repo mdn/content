@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - package.json
       - yarn.lock
       - .github/workflows/pr-check_scripts.yml
@@ -19,12 +20,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - run: yarn up-to-date-check
 
@@ -37,12 +37,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: yarn start
         run: yarn start > /tmp/stdout.log 2> /tmp/stderr.log &
@@ -75,12 +74,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - run: yarn filecheck --help
 
@@ -93,12 +91,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - run: yarn content --help
 
@@ -111,11 +108,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: yarn install
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - run: yarn build --help

@@ -2,13 +2,6 @@
 title: Geolocation
 slug: Web/API/Geolocation
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
 browser-compat: api.Geolocation
 ---
 

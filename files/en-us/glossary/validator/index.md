@@ -1,9 +1,7 @@
 ---
 title: Validator
 slug: Glossary/Validator
-tags:
-  - Beginner
-  - Security
+page-type: glossary-definition
 ---
 
 A validator is a program that checks for syntax errors in code. Validators can be created for any format or language, but in our context we speak of tools that check {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("XML")}}.

@@ -1,17 +1,10 @@
 ---
-title: KeyboardLayoutMap.values
+title: "KeyboardLayoutMap: values property"
+short-title: values
 slug: Web/API/KeyboardLayoutMap/values
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Property
-  - Reference
-  - keyboard
-  - values
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.values
 ---
 

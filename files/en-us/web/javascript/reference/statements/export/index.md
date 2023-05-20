@@ -1,14 +1,7 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - export
+page-type: javascript-statement
 browser-compat: javascript.statements.export
 ---
 
@@ -51,6 +44,7 @@ export * as name1 from "module-name";
 export { name1, /* …, */ nameN } from "module-name";
 export { import1 as name1, import2 as name2, /* …, */ nameN } from "module-name";
 export { default, /* …, */ } from "module-name";
+export { default as name1 } from "module-name";
 ```
 
 - `nameN`
@@ -69,7 +63,9 @@ export { myFunction2, myVariable2 };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { /* ... */ };
+export function myFunction() {
+  // …
+}
 ```
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
@@ -132,17 +128,14 @@ export default k;
 
 ```js
 // some other file
-import m from './test'; // note that we have the freedom to use import m instead of import k, because k was default export
-console.log(m);        // will log 12
+import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+console.log(m); // 12
 ```
 
 You can also rename named exports to avoid naming conflicts:
 
 ```js
-export {
-  myFunction as function1,
-  myVariable as variable,
-};
+export { myFunction as function1, myVariable as variable };
 ```
 
 You can rename a name to something that's not a valid identifier by using a string literal. For example:
@@ -158,16 +151,13 @@ A module can also "relay" values exported from other modules without the hassle 
 This can be achieved with the "export from" syntax:
 
 ```js
-export {
-  default as function1,
-  function2,
-} from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 Which is comparable to a combination of import and export, except that `function1` and `function2` do not become available inside the current module:
 
 ```js
-import { default as function1, function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
@@ -207,19 +197,19 @@ import { a } from "./barrel.js";
 The following is syntactically invalid despite its import equivalent:
 
 ```js example-bad
-export DefaultExport from 'bar.js'; // Invalid
+export DefaultExport from "bar.js"; // Invalid
 ```
 
 The correct way of doing this is to rename the export:
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 The "export from" syntax allows the `as` token to be omitted, which makes the default export still re-exported as default export.
 
 ```js
-export { default, function2 } from 'bar.js';
+export { default, function2 } from "bar.js";
 ```
 
 ## Examples
@@ -238,12 +228,12 @@ const foo = Math.PI + Math.SQRT2;
 
 const graph = {
   options: {
-    color: 'white',
-    thickness: '2px',
+    color: "white",
+    thickness: "2px",
   },
   draw() {
-    console.log('From graph draw function');
-  }
+    console.log("From graph draw function");
+  },
 };
 
 export { cube, foo, graph };
@@ -252,16 +242,16 @@ export { cube, foo, graph };
 Then in the top-level module included in your HTML page, we could have:
 
 ```js
-import { cube, foo, graph } from './my-module.js';
+import { cube, foo, graph } from "./my-module.js";
 
 graph.options = {
-  color: 'blue',
-  thickness: '3px',
+  color: "blue",
+  thickness: "3px",
 };
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 It is important to note the following:
@@ -284,7 +274,7 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from './my-module.js';
+import cube from "./my-module.js";
 console.log(cube(3)); // 27
 ```
 
@@ -323,15 +313,15 @@ export { MyClass };
 // In parentModule.js
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
-export { myFunction, myVariable } from 'childModule1.js';
-export { MyClass } from 'childModule2.js';
+export { myFunction, myVariable } from "childModule1.js";
+export { MyClass } from "childModule2.js";
 ```
 
 ```js
 // In top-level module
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, MyClass } from 'parentModule.js'
+import { myFunction, myVariable, MyClass } from "parentModule.js";
 ```
 
 ## Specifications

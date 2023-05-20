@@ -1,10 +1,7 @@
 ---
 title: Callback function
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - Callback function
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.

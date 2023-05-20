@@ -1,14 +1,7 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.codePointAt
 ---
 

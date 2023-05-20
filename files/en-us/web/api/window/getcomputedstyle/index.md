@@ -1,14 +1,8 @@
 ---
-title: Window.getComputedStyle()
+title: "Window: getComputedStyle() method"
+short-title: getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-  - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
 
@@ -53,7 +47,7 @@ object, which updates automatically when the element's styles are changed.
     > **Note:** Valid pseudo-element selector refers to syntactic
     > validity, e.g. `::unsupported` is considered valid, even though the
     > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
+    > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
 
 ## Examples
 
@@ -84,10 +78,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height"
+  )}.`;
 ```
 
 ### Result

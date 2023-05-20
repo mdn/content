@@ -1,13 +1,7 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.endsWith
 ---
 
@@ -27,18 +21,18 @@ endsWith(searchString, endPosition)
 ### Parameters
 
 - `searchString`
-  - : The characters to be searched for at the end of `str`. Cannot be a regex.
+  - : The characters to be searched for at the end of `str`. Cannot [be a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes). All values that are not regexes are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `endsWith()` to search for the string `"undefined"`, which is rarely what you want.
 - `endPosition` {{optional_inline}}
   - : The end position at which `searchString` is expected to be found (the index of `searchString`'s last character plus 1). Defaults to `str.length`.
 
 ### Return value
 
-**`true`** if the given characters are found at the end of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the end of the string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
+  - : Thrown if `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 

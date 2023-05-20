@@ -1,13 +1,7 @@
 ---
-title: "aria-valuemax"
+title: aria-valuemax
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemax
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuemax
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemax
 ---
 

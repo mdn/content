@@ -1,16 +1,8 @@
 ---
-title: DataTransferItem.kind
+title: "DataTransferItem: kind property"
+short-title: kind
 slug: Web/API/DataTransferItem/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Property
-  - Reference
-  - drag and drop
-  - kind
 browser-compat: api.DataTransferItem.kind
 ---
 
@@ -36,27 +28,24 @@ This example shows the use of the `kind` property.
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- const data = event.dataTransfer.items;
- for (let i = 0; i < data.length; i += 1) {
-   if ((data[i].kind === 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // This item is the target node
-     data[i].getAsString((s) => {
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind === 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // Drag data item is HTML
-     console.log("… Drop: HTML");
-   } else if ((data[i].kind === 'file') &&
-              (data[i].type.match('^image/'))) {
-     // Drag data item is an image file
-     const f = data[i].getAsFile();
-     console.log("… Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  const data = event.dataTransfer.items;
+  for (let i = 0; i < data.length; i += 1) {
+    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+      // This item is the target node
+      data[i].getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+      // Drag data item is HTML
+      console.log("… Drop: HTML");
+    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+      // Drag data item is an image file
+      const f = data[i].getAsFile();
+      console.log("… Drop: File ");
+    }
+  }
 }
 ```
 

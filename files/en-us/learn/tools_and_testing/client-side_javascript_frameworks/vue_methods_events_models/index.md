@@ -1,18 +1,6 @@
 ---
-title: 'Adding a new todo form: Vue events, methods, and models'
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
-tags:
-  - Beginner
-  - Forms
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Methods
-  - client-side
-  - events
-  - models
-  - Vue
+title: "Adding a new todo form: Vue events, methods, and models"
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -89,15 +77,14 @@ We now have an app that displays a list of to-do items. However, we can't update
 4. Let's load this component into our app. Go back to `App.vue` and add the following `import` statement just below the previous one, inside your `<script>` element:
 
    ```js
-   import ToDoForm from './components/ToDoForm';
+   import ToDoForm from "./components/ToDoForm";
    ```
 
 5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
 
    ```js
    components: {
-     ToDoItem,
-     ToDoForm
+     ToDoItem, ToDoForm;
    }
    ```
 
@@ -136,15 +123,15 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 
    ```js
    export default {
-      methods: {
-          onSubmit() {
-             console.log('form submitted')
-          }
-      }
-   }
+     methods: {
+       onSubmit() {
+         console.log("form submitted");
+       },
+     },
+   };
    ```
 
-2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://v2.vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://v2.vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
+2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://vuejs.org/api/built-in-directives.html#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
 
    We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
 
@@ -190,17 +177,17 @@ The first thing we need is a `data` property in our form to track the value of t
      methods: {
        onSubmit() {
          console.log("form submitted");
-       }
+       },
      },
      data() {
        return {
-         label: ""
+         label: "",
        };
-     }
+     },
    };
    ```
 
-2. We now need some way to attach the value of the `new-todo-input` element's field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including checkboxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+2. We now need some way to attach the value of the `new-todo-input` element's field to the `label` field. Vue has a special directive for this: [`v-model`](https://vuejs.org/api/built-in-directives.html#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including checkboxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
 
    So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
@@ -259,26 +246,30 @@ In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` even
 
    ```js
    export default {
-     name: 'app',
+     name: "app",
      components: {
        ToDoItem,
-       ToDoForm
+       ToDoForm,
      },
-    data() {
+     data() {
        return {
          ToDoItems: [
-           { id:uniqueId('todo-'), label: 'Learn Vue', done: false },
-           { id:uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-           { id:uniqueId('todo-'), label: 'Have fun', done: true },
-           { id:uniqueId('todo-'), label: 'Create a to-do list', done: false }
-         ]
+           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           {
+             id: uniqueId("todo-"),
+             label: "Create a Vue project with the CLI",
+             done: true,
+           },
+           { id: uniqueId("todo-"), label: "Have fun", done: true },
+           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+         ],
        };
      },
      methods: {
        addToDo() {
-         console.log('To-do added');
-       }
-     }
+         console.log("To-do added");
+       },
+     },
    };
    ```
 
@@ -367,58 +358,3 @@ Now when you click the "Add" button, the "new-todo-input" will clear itself.
 Excellent. We can now add todo items to our form! Our app is now starting to feel interactive, but one issue is that we've completely ignored its look and feel up to now. In the next article, we'll concentrate on fixing this, looking at the different ways Vue provides to style components.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

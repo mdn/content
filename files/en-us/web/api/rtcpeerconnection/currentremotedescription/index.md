@@ -1,17 +1,8 @@
 ---
-title: RTCPeerConnection.currentRemoteDescription
+title: "RTCPeerConnection: currentRemoteDescription property"
+short-title: currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentRemoteDescription
 browser-compat: api.RTCPeerConnection.currentRemoteDescription
 ---
 
@@ -30,8 +21,7 @@ To change the `currentRemoteDescription`, call
 {{domxref("RTCPeerConnection.setRemoteDescription()")}}, which triggers a series of
 events which leads to this value being set. For details on what exactly happens and why
 the change isn't necessarily instantaneous, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}}.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 > **Note:** Unlike {{domxref("RTCPeerConnection.remoteDescription")}}, this value represents the
 > actual current state of the local end of the connection;
@@ -55,8 +45,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.currentRemoteDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No local session yet.");
 }
 ```

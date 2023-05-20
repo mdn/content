@@ -1,11 +1,7 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.hgroup
 ---
 
@@ -14,62 +10,6 @@ browser-compat: html.elements.hgroup
 The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, heading content, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Zero or more {{HTMLElement("p")}} elements, followed by one
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, or {{HTMLElement("h6")}} element,
-        followed by zero or more {{HTMLElement("p")}} elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -101,9 +41,71 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 </body>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Accessibility concerns
 
 The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, heading content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Zero or more {{HTMLElement("p")}} elements, followed by one
+        {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, or {{HTMLElement("Heading_Elements", "h6")}} element,
+        followed by zero or more {{HTMLElement("p")}} elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
@@ -115,5 +117,5 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
 
 ## See also
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

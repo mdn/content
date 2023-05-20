@@ -1,14 +1,10 @@
 ---
-title: CookieStoreManager.getSubscriptions()
+title: "CookieStoreManager: getSubscriptions() method"
+short-title: getSubscriptions()
 slug: Web/API/CookieStoreManager/getSubscriptions
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getSubscriptions
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.getSubscriptions
 ---
 

@@ -1,25 +1,15 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this `Intl.NumberFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -65,18 +55,18 @@ Only one of the following two groups of properties is included:
 ### Using the `resolvedOptions` method
 
 ```js
-const de = new Intl.NumberFormat('de-DE');
+const de = new Intl.NumberFormat("de-DE");
 const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOptions.notation;              // "standard"
-usedOptions.signDisplay;           // "auto"
-usedOptions.style;                 // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOptions.notation; // "standard"
+usedOptions.signDisplay; // "auto"
+usedOptions.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## Specifications

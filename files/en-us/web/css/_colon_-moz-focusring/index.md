@@ -1,14 +1,9 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focusring
 ---
 
@@ -22,12 +17,14 @@ If `:-moz-focusring` matches, then `:focus` also matches, but the converse is no
 
 The working group previously [intended to add this feature to CSS Selectors 4 or 5](https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html) as `:focus-ring`, and has since [decided to rename it](https://lists.w3.org/Archives/Public/www-style/2017Dec/0018.html) to {{cssxref(":focus-visible")}} and added it to CSS Selectors 4.
 
-> **Note:** Developers tend to use `:-moz-focusring` to differentiate between the `focus` state when the user focuses an element via a **mouse click** versus **keyboard tabbing**. It is also potentially useful if you are creating a [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) and you want to change its style based on its behavior.
+> **Note:** Developers tend to use `:-moz-focusring` to differentiate between the `focus` state when the user focuses an element via a **mouse click** versus **keyboard tabbing**. It is also potentially useful if you are creating a [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) and you want to change its style based on its behavior.
 
 ## Syntax
 
 ```css
-:-moz-focusring
+:-moz-focusring {
+  /* ... */
+}
 ```
 
 ## Example
@@ -66,4 +63,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":focus-visible")}}
-- {{bug("418521")}}
+- [Firefox bug 418521](https://bugzil.la/418521)

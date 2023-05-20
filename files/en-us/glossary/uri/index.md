@@ -1,11 +1,7 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - HTTP
-  - Search
-  - URI
-  - URL
+page-type: glossary-definition
 ---
 
 A **URI** _(Uniform Resource Identifier)_ is a string that refers to a resource.

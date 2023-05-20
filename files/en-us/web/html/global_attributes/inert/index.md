@@ -1,16 +1,7 @@
 ---
 title: inert
 slug: Web/HTML/Global_attributes/inert
-tags:
-  - Attribute
-  - Global attributes
-  - HTML
-  - Input
-  - Reference
-  - Text
-  - Web
-  - global
-  - inert
+page-type: html-attribute
 browser-compat: html.global_attributes.inert
 ---
 
@@ -53,5 +44,6 @@ While providing visual and non-visual cues about content inertness, also remembe
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
+- {{domxref("HTMLElement.inert")}} HTML DOM property
 - [Introducing inert](https://developer.chrome.com/articles/inert/)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

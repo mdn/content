@@ -1,16 +1,8 @@
 ---
-title: PaymentMethodChangeEvent()
+title: "PaymentMethodChangeEvent: PaymentMethodChangeEvent() constructor"
+short-title: PaymentMethodChangeEvent()
 slug: Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Payment Method
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - Reference
-  - payment
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 ---
 

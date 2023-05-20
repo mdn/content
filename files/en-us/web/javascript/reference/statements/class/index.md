@@ -1,14 +1,7 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Classes
-  - Declaration
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.class
 ---
 
@@ -17,10 +10,10 @@ browser-compat: javascript.statements.class
 The **`class`** declaration creates a new class
 with a given name using prototype-based inheritance.
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
-
 You can also define a class using a {{jsxref("Operators/class", "class expression",
     "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
+
+{{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 ## Syntax
 
@@ -83,6 +76,8 @@ expression.
 let Foo = class {};
 class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
+
+If you're experimenting in a REPL, such as the Firefox web console (**Tools** > **Web Developer** > **Web Console**), and you run two class declarations with the same name in two separate inputs, you may get the same re-declaration error. See further discussion of this issue in [Firefox bug 1580891](https://bugzil.la/1580891). The Chrome console allows class re-declarations between different REPL inputs.
 
 ## Specifications
 

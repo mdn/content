@@ -1,25 +1,14 @@
 ---
-title: RTCPeerConnection.addIceCandidate()
+title: "RTCPeerConnection: addIceCandidate() method"
+short-title: addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - Web
-  - WebRTC
-  - WebRTC API
-  - addIceCandidate
 browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
 
 {{APIRef("WebRTC")}}
 
-When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
+When a website or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
 
 If the `candidate` parameter is missing or a value of `null` is given when calling `addIceCandidate()`, the added ICE candidate is an "end-of-candidates" indicator.
@@ -35,7 +24,8 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ```js-nolint
 addIceCandidate(candidate)
-addIceCandidate(candidate, successCallback)
+
+addIceCandidate(candidate, successCallback) // deprecated
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 ```
 
@@ -117,7 +107,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`addIceCandidate()` instead. The parameters for this form of
+`addIceCandidate()` instead. The parameters for the older form of
 `addIceCandidate()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}
@@ -190,7 +180,7 @@ signalingChannel.onmessage = (receivedString) => {
   } else {
     // handle other things you might be signaling, like sdp
   }
-}
+};
 ```
 
 The last candidate to be signaled this way by the remote peer will be a special
@@ -198,7 +188,7 @@ candidate denoting end-of-candidates. Out of interest, end-of-candidates may be
 manually indicated as follows:
 
 ```js
-pc.addIceCandidate({candidate:''});
+pc.addIceCandidate({ candidate: "" });
 ```
 
 However, in most cases you won't need to look for this explicitly, since the events

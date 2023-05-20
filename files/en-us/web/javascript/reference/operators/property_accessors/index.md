@@ -1,11 +1,7 @@
 ---
 title: Property accessors
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+slug: Web/JavaScript/Reference/Operators/Property_accessors
+page-type: javascript-operator
 browser-compat: javascript.operators.property_accessors
 ---
 
@@ -24,7 +20,7 @@ object[expression]
 
 ## Description
 
-One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/property/JavaScript).
+One can think of an object as an _associative array_ (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). The _keys_ in this array are the names of the object's [properties](/en-US/docs/Glossary/Property/JavaScript).
 
 There are two ways to access properties: _dot notation_ and _bracket notation_.
 
@@ -108,7 +104,7 @@ However, beware of using square brackets to access properties whose names are gi
 
 ### Property names
 
-Property names are string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Any other value, including a number, is coerced to a string. This outputs `'value'`, since `1` is coerced into `'1'`.
+Each property name is a string or a [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Any other value, including a number, is coerced to a string. This outputs `'value'`, since `1` is coerced into `'1'`.
 
 ```js
 const object = {};
@@ -116,7 +112,7 @@ object["1"] = "value";
 console.log(object[1]);
 ```
 
-This also outputs `'value'`, since both `foo` and `bar` are converted to the same string.
+This also outputs `'value'`, since both `foo` and `bar` are converted to the same string (`"[object Object]"`).
 
 ```js
 const foo = { uniqueProp: 1 };
