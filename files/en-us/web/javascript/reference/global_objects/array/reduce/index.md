@@ -284,7 +284,7 @@ console.log(myArrayWithNoDuplicates);
 
 Using {{jsxref("Array/filter", "filter()")}} then {{jsxref("Array/map", "map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array/reduce", "reduce()")}}, thereby being more efficient. (If you like `for` loops, you
+`reduce()`, thereby being more efficient. (If you like `for` loops, you
 can filter and map while traversing once with {{jsxref("Array/forEach", "forEach()")}}.)
 
 ```js
