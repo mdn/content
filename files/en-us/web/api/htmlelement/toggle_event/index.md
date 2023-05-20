@@ -57,7 +57,7 @@ It is worth pointing out that `toggle` events are coalesced, meaning that if mul
 For example:
 
 ```js
-popover.addEventListener('toggle', () => {
+popover.addEventListener("toggle", () => {
   //...
 });
 

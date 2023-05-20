@@ -307,7 +307,7 @@ const doc = html`<!DOCTYPE html>
 
 ### Tagged templates and escape sequences
 
-In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
+In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
 
 - `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07` (which is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences))
 - `\x` followed by fewer than two hex digits (including none); for example `\xz`

@@ -18,7 +18,7 @@ In this article we will look at JavaScript from a high level, answering question
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with what JavaScript is, what it can do, and how it
-        fits into a web site.
+        fits into a website.
       </td>
     </tr>
   </tbody>

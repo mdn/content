@@ -40,6 +40,7 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 - [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
 - [ARIA: `region` role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (May 15, 2023)
 
 <section id="Quick_links">
 

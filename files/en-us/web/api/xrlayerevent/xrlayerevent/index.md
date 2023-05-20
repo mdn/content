@@ -41,7 +41,7 @@ In this example, a new `redraw` event is created for an {{domxref("XRQuadLayer")
 
 ```js
 const redrawEvent = new XRLayerEvent("redraw", {
-  layer: quadLayer
+  layer: quadLayer,
 });
 
 quadLayer.dispatchEvent();
