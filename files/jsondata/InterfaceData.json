@@ -3052,10 +3052,6 @@
       "inh": "SVGElement",
       "impl": []
     },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
-      "impl": []
-    },
     "SVGElement": {
       "inh": "Element",
       "impl": []

@@ -27,6 +27,15 @@ None.
 
 A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
 
+### Exceptions
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : The promise is rejected with this exception if none of the windows in the app's origin have [transient activation](/en-US/docs/Web/Security/User_activation).
+
+## Security requirements
+
+- At least one window in the app's origin must have [transient activation](/en-US/docs/Web/Security/User_activation).
+
 ## Examples
 
 ```js
