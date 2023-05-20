@@ -22,17 +22,19 @@ the temporary file when the writable filestream is closed.
 
 ```js-nolint
 createWritable()
+createWritable(options)
 ```
 
 ### Parameters
 
-- FileSystemCreateWritableOptions
+- `options` {{optional_inline}}
 
-  - : An object representing options to pass into the method. Options are:
+  - : An object with the following properties:
 
-    - `keepExistingData`: If `false` or not specified, the
-      temporary file starts out empty, otherwise the existing file is first copied to
-      this temporary file.
+    - `keepExistingData`
+      - : A {{jsxref('Boolean')}}. Default `false`. When
+        set to `true` if the file exists, the existing file is first copied to
+        the temporary file. Otherwise the temporary file starts out empty.
 
 ### Return value
 

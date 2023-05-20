@@ -9,7 +9,7 @@ browser-compat: svg.elements.svg
 
 The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_. It is unnecessary for inner `svg` elements or inside HTML documents.
+> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
 
 ## Example
 
