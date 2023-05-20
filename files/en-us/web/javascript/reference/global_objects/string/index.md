@@ -40,7 +40,7 @@ See "[String primitives and String objects](#string_primitives_and_string_object
 
 String literals can be specified using single or double quotes, which are treated
 identically, or using the backtick character <kbd>`</kbd>. This last form specifies a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals):
-with this form you can interpolate expressions.
+with this form you can interpolate expressions. For more information on the syntax of string literals, see [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals).
 
 ### Character access
 
@@ -180,56 +180,6 @@ There are several ways to achieve nearly the same effect in JavaScript.
 - Using the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition): `"" + x` coerces its operand to a _primitive_ instead of a _string_, and, for some objects, has entirely different behaviors from normal string coercion. See its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) for more details.
 
 Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in behavior) or `String(x)` (to handle symbol values without throwing an error), but you should not use `"" + x`.
-
-### Escape sequences
-
-Special characters can be encoded using escape sequences:
-
-| Escape sequence                                                                                                                                      | Unicode code point                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                                                                 | null character (U+0000 NULL)                                                                                               |
-| `\'`                                                                                                                                                 | single quote (U+0027 APOSTROPHE)                                                                                           |
-| `\"`                                                                                                                                                 | double quote (U+0022 QUOTATION MARK)                                                                                       |
-| `\\`                                                                                                                                                 | backslash (U+005C REVERSE SOLIDUS)                                                                                         |
-| `\n`                                                                                                                                                 | newline (U+000A LINE FEED; LF)                                                                                             |
-| `\r`                                                                                                                                                 | carriage return (U+000D CARRIAGE RETURN; CR)                                                                               |
-| `\v`                                                                                                                                                 | vertical tab (U+000B LINE TABULATION)                                                                                      |
-| `\t`                                                                                                                                                 | tab (U+0009 CHARACTER TABULATION)                                                                                          |
-| `\b`                                                                                                                                                 | backspace (U+0008 BACKSPACE)                                                                                               |
-| `\f`                                                                                                                                                 | form feed (U+000C FORM FEED)                                                                                               |
-| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
-| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
-| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
-
-### Long literal strings
-
-Sometimes, your code will include strings which are very long. Rather than having lines
-that go on endlessly, or wrap at the whim of your editor, you may wish to specifically
-break the string into multiple lines in the source code without affecting the actual
-string contents.
-
-You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-operator to append multiple strings together, like this:
-
-```js
-const longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
-```
-
-Or you can use the backslash character (`\`) at the end of each line to
-indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
-
-```js
-const longString =
-  "This is a very long string which needs \
-to wrap across multiple lines because \
-otherwise my code is unreadable.";
-```
-
-Both of the above methods result in identical strings.
 
 ### UTF-16 characters, Unicode code points, and grapheme clusters
 
