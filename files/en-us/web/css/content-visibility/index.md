@@ -129,7 +129,7 @@ p {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const handleClick = (event) => {

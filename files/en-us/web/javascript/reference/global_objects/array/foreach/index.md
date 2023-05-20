@@ -273,11 +273,13 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## See also
 
 - [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.filter()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

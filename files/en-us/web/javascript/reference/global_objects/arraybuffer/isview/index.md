@@ -61,4 +61,4 @@ ArrayBuffer.isView(dv); // true
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

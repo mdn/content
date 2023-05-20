@@ -396,7 +396,7 @@ After your content has finished altering styles, it may find itself in a situati
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

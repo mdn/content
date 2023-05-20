@@ -183,7 +183,12 @@ console.log(arrayLike);
 
 ## See also
 
-- {{jsxref("Array.prototype.push()")}} / {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}} / {{jsxref("Array.prototype.shift()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.slice()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.unshift()")}}

@@ -12,7 +12,7 @@ The **`CustomElementRegistry`** interface provides methods for registering custo
 ## Instance methods
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).
+  - : Defines a new [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 - {{domxref("CustomElementRegistry.get()")}}
   - : Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.
 - {{domxref("CustomElementRegistry.upgrade()")}}

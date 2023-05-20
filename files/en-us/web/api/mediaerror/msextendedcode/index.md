@@ -5,9 +5,7 @@ slug: Web/API/MediaError/msExtendedCode
 page-type: web-api-instance-property
 ---
 
-{{APIRef("DOM")}}
-
-{{Non-standard_header()}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 In the event of an error, the media element's error event will be fired. The element's error property will then contain an **`msExtendedCode`** read-only property with platform-specific error code information.
 

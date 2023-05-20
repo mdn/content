@@ -26,10 +26,10 @@ This example code positions the layer two meters away from the origin of `xrRefe
 const quadLayer = xrGlBinding.createQuadLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
-quadLayer.transform = new XRRigidTransform({z: -2});
+quadLayer.transform = new XRRigidTransform({ z: -2 });
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
 ```

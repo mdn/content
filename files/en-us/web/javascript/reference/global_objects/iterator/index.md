@@ -12,7 +12,9 @@ An **`Iterator`** object is an object that conforms to the [iterator protocol](/
 Note that `Iterator` is _not_ a global object, although it will be in the future with the [iterator helpers proposal](https://github.com/tc39/proposal-iterator-helpers). The `Iterator.prototype` object shared by all built-in iterators can be obtained with the following code:
 
 ```js
-const IteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf([].values()));
+const IteratorPrototype = Object.getPrototypeOf(
+  Object.getPrototypeOf([].values()),
+);
 ```
 
 ## Description

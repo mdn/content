@@ -7,7 +7,7 @@ browser-compat: css.selectors.host-context
 
 {{CSSRef}}
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
 
 In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
 
@@ -91,6 +91,6 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host_function", ":host()")}}

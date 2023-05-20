@@ -435,7 +435,7 @@ console.log(`${someString}`); // "hi"
 
 ## See also
 
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Symbol.iterator")}}
 - {{jsxref("Iterator")}}

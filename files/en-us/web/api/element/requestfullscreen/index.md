@@ -66,6 +66,7 @@ returned. The rejection handler receives one of the following exception values:_
     - The element is not permitted to use the `fullscreen` feature,
       either because of [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) configuration or other access control features.
     - The element and its document are the same node.
+    - The element is a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown via {{domxref("HTMLElement.showPopover()")}}.
 
 ## Security
 

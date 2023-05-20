@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.RegExp
 
 The **`RegExp`** object is used for matching text with a pattern.
 
-For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+For an introduction to regular expressions, read the [Regular expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the JavaScript guide. For detailed information of regular expression syntax, read the [regular expression reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions).
 
 ## Description
 
@@ -99,9 +99,7 @@ Note that several of the {{jsxref("RegExp")}} properties have both long and shor
 
 ## Static properties
 
-- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
-  - : The constructor function that is used to create derived objects.
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
   - : Static read-only properties that contain parenthesized substring matches.
 - {{jsxref("RegExp.input", "RegExp.input ($_)")}} {{Deprecated_Inline}}
   - : A static property that contains the last string against which a regular expression was successfully matched.
@@ -113,6 +111,8 @@ Note that several of the {{jsxref("RegExp")}} properties have both long and shor
   - : A static read-only property that contains the substring preceding the most recent match.
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring following the most recent match.
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+  - : The constructor function that is used to create derived objects.
 
 ## Instance properties
 
@@ -263,7 +263,7 @@ console.log(regex.lastIndex); // 15
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
 ### Extracting subdomain name from URL
 
@@ -315,7 +315,8 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.split()")}}

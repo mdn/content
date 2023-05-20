@@ -1,7 +1,6 @@
 ---
 title: "Vue conditional rendering: editing existing todos"
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -195,7 +194,7 @@ methods: {
   }
 ```
 
-## Conditionally displaying components via v:if and v:else
+## Conditionally displaying components via v-if and v-else
 
 Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 

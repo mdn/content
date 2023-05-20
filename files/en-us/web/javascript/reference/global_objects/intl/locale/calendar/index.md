@@ -13,7 +13,7 @@ The **`calendar`** accessor property of {{jsxref("Intl.Locale")}} instances retu
 
 While most of the world uses the Gregorian calendar, there are several regional calendar eras used around the world. The `calendar` property's value is set at construction time, either through the `ca` key of the locale identifier or through the `calendar` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-For a list of supported calendar types, see [`Intl.Locale.prototype.calendars`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars#supported_calendar_types).
+For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types).
 
 The set accessor of `calendar` is `undefined`. You cannot change this property directly.
 
@@ -50,5 +50,5 @@ console.log(locale.calendar); // "buddhist"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [`Intl.Locale.prototype.calendars`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars)
+- [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars)
 - [Unicode Calendar Identifiers](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)

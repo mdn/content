@@ -22,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}
