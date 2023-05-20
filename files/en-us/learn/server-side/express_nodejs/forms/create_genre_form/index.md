@@ -157,7 +157,7 @@ The code below shows the controller code for rendering the template in both case
 // Render the GET route
 res.render("genre_form", { title: "Create Genre" });
 
-// Render the POST route 
+// Render the POST route
 res.render("genre_form", {
   title: "Create Genre",
   genre,

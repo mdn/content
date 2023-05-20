@@ -129,6 +129,6 @@ Some people who use screen readers deliberately disable announcing content that 
 
 ## See also
 
-- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on websites anymore.
+- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element, is obsolete and should not be used on websites anymore.
 - The {{HTMLElement("del")}} element is to be used instead if the data has been _deleted_.
 - The CSS {{cssxref("text-decoration-line")}} property is to be used to achieve the former visual aspect of the {{HTMLElement("s")}} element.

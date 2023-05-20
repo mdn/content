@@ -28,7 +28,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 ## Static methods
 
 - {{domxref("RTCRtpSender.getCapabilities()")}}
-  - : Returns an {{domxref("RTCRtpCapabilities")}} object describing the system's capabilities for sending a specified kind of media data.
+  - : Returns an object describing the system's capabilities for sending a specified kind of media data.
 
 ## Instance methods
 

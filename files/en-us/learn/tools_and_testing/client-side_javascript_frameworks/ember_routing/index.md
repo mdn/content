@@ -59,17 +59,17 @@ ember generate route active
 The second and third commands should have not only generated new files, but also updated an existing file, `app/router.js`. It contains the following contents:
 
 ```js
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "./config/environment";
 
 export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
 
-Router.map(function() {
-  this.route('completed');
-  this.route('active');
+Router.map(function () {
+  this.route("completed");
+  this.route("active");
 });
 ```
 
@@ -132,11 +132,11 @@ Now we need to add models to our route JavaScript files to allow us to easily re
 First of all, update `todomvc/app/routes/index.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class IndexRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -144,8 +144,8 @@ export default class IndexRoute extends Route {
     return {
       get allTodos() {
         return todos.all;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -160,7 +160,7 @@ In this file, change
 
 To
 
-```hbs
+```hbs-nolint
 <TodoList @todos=\{{ @model.allTodos }} />
 ```
 
@@ -169,11 +169,11 @@ To
 Now update `todomvc/app/routes/completed.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class CompletedRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -181,8 +181,8 @@ export default class CompletedRoute extends Route {
     return {
       get completedTodos() {
         return todos.completed;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -197,7 +197,7 @@ In this file, change
 
 To
 
-```hbs
+```hbs-nolint
 <TodoList @todos=\{{ @model.completedTodos }} />
 ```
 
@@ -206,11 +206,11 @@ To
 Finally for the routes, let's sort out our active route. Start by updating `todomvc/app/routes/active.js` so it looks as follows:
 
 ```js
-import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class ActiveRoute extends Route {
-  @service('todo-data') todos;
+  @service("todo-data") todos;
 
   model() {
     let todos = this.todos;
@@ -218,8 +218,8 @@ export default class ActiveRoute extends Route {
     return {
       get activeTodos() {
         return todos.incomplete;
-      }
-    }
+      },
+    };
   }
 }
 ```
@@ -228,13 +228,13 @@ We can now update the `todomvc/app/templates/active.hbs` file so that when it in
 
 In this file, change
 
-```html
+```hbs
 <TodoList />
 ```
 
 To
 
-```html
+```hbs-nolint
 <TodoList @todos=\{{ @model.activeTodos }} />
 ```
 
@@ -246,7 +246,7 @@ So our route functionality is now all in place, but we can't access them from ou
 
 Go back to `todomvc/app/components/footer.hbs`, and find the following bit of markup:
 
-```html
+```hbs
 <a href="#">All</a>
 <a href="#">Active</a>
 <a href="#">Completed</a>
@@ -254,7 +254,7 @@ Go back to `todomvc/app/components/footer.hbs`, and find the following bit of ma
 
 Update it to
 
-```html
+```hbs
 <LinkTo @route="index">All</LinkTo>
 <LinkTo @route="active">Active</LinkTo>
 <LinkTo @route="completed">Completed</LinkTo>

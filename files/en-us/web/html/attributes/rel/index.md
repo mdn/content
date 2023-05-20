@@ -175,7 +175,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation. The [Link Prefetch FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) has details on which links can be prefetched and on alternative methods.
 - `preload`
   - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
-- `prerender` {{Experimental_Inline}}
+- `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future, for example by fetching its subresources or performing some rendering.
 - `prev`
 
