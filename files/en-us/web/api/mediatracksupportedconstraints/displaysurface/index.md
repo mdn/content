@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.displaySurface
+title: "MediaTrackSupportedConstraints: displaySurface property"
+short-title: displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
@@ -29,7 +30,7 @@ async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
     video: {},
-    audio: false
+    audio: false,
   };
 
   if (supportedConstraints.displaySurface) {
@@ -37,7 +38,9 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
+      displayMediaOptions
+    );
   } catch (err) {
     /* handle the error */
   }

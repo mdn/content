@@ -74,7 +74,7 @@ range2.setEnd(parentNode, 60);
 const highlight = new Highlight(range1, range2);
 
 // Register the ranges in the HighlightRegistry.
-CSS.highlights.set('my-custom-highlight', highlight);
+CSS.highlights.set("my-custom-highlight", highlight);
 ```
 
 The following CSS code snippet demonstrates how to style the registered custom highlight by using the {{cssxref("::highlight")}} pseudo-element:

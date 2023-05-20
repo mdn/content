@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.decode()
+title: "AudioDecoder: decode() method"
+short-title: decode()
 slug: Web/API/AudioDecoder/decode
 page-type: web-api-instance-method
 status:

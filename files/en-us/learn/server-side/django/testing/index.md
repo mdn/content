@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 10: Testing a Django web application'
+title: "Django Tutorial Part 10: Testing a Django web application"
 slug: Learn/Server-side/Django/Testing
-tags:
-  - Beginner
-  - CodingScripting
-  - Django Testing
-  - Testing
-  - Tutorial
-  - django
-  - server-side
-  - tests
-  - unit tests
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}

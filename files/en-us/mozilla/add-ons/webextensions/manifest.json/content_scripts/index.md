@@ -2,10 +2,6 @@
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.content_scripts
 ---
 

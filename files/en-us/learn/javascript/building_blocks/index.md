@@ -1,21 +1,6 @@
 ---
 title: JavaScript building blocks
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Article
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Functions
-  - Guide
-  - Introduction
-  - JavaScript
-  - Landing
-  - Loops
-  - Module
-  - events
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}

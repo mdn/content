@@ -1,12 +1,6 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
-tags:
-  - Example
-  - Snippets
-  - XML
-  - XPath
-  - XSLT
 ---
 
 <section id="Quick_links">

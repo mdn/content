@@ -1,13 +1,7 @@
 ---
 title: "ARIA: tabpanel role"
 slug: Web/Accessibility/ARIA/Roles/tabpanel_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Tab
-  - ARIA Tabpanel
-  - ARIA widget
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tabpanel
   - https://w3c.github.io/aria-practices/#tabpanel
@@ -33,7 +27,7 @@ When keyboard focus is on a `tablist`, or a `tab` within the `tablist`, the <kbd
 
 Each `tab` in a `tablist` can serve as the label for its corresponding `tabpanel`. Include the `id` of each `tab` as the value for each `tabpanel`'s [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute.
 
-You can also optionally associate each `tabpanel` with its associated `tab` by including the {{HTMLAttrXRef('id')}} of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute.
+You can also optionally associate each `tabpanel` with its associated `tab` by including the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute.
 
 When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programmatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
 

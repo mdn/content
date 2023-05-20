@@ -1,11 +1,6 @@
 ---
 title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - copy-of
 ---
 
 {{ XsltRef() }}

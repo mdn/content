@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Table() constructor
 slug: WebAssembly/JavaScript_interface/Table/Table
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
 

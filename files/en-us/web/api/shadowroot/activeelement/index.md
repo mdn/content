@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.activeElement
+title: "ShadowRoot: activeElement property"
+short-title: activeElement
 slug: Web/API/ShadowRoot/activeElement
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.activeElement
@@ -17,7 +18,7 @@ The {{domxref('Element')}} which currently has focus, or `null` if there is no f
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let focusedElem = shadow.activeElement;
 ```

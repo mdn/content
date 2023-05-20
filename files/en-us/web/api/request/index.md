@@ -69,7 +69,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 In the following snippet, we create a new request using the `Request()` constructor (for an image file in the same directory as the script), then return some property values of the request:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const url = request.url;
 const method = request.method;
@@ -89,7 +89,10 @@ fetch(request)
 In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which need a body payload:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const url = request.url;
 const method = request.method;
@@ -107,13 +110,14 @@ fetch(request)
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on API server!');
+      throw new Error("Something went wrong on API server!");
     }
   })
   .then((response) => {
     console.debug(response);
     // …
-  }).catch((error) => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```

@@ -412,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangedEvent": {
+    "ContentVisibilityAutoStateChangeEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -682,6 +682,10 @@
     },
     "CSSScale": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSScopeRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSSkew": {
@@ -3048,10 +3052,6 @@
       "inh": "SVGElement",
       "impl": []
     },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
-      "impl": []
-    },
     "SVGElement": {
       "inh": "Element",
       "impl": []
@@ -3801,7 +3801,7 @@
       "impl": []
     },
     "WebTransport": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "WebTransportBidirectionalStream": {
@@ -3814,6 +3814,10 @@
     },
     "WebTransportError": {
       "inh": "DOMException",
+      "impl": []
+    },
+    "WebTransportRateControlFeedback": {
+      "inh": "",
       "impl": []
     },
     "WebTransportReceiveStream": {

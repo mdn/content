@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.setSelectionRange()
+title: "HTMLInputElement: setSelectionRange() method"
+short-title: setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.setSelectionRange
@@ -77,7 +78,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.setSelectionRange(2, 5);
 }

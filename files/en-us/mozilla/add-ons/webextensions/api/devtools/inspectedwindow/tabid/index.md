@@ -2,15 +2,6 @@
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Property
-  - WebExtensions
-  - devtools.inspectedWindow
-  - tabId
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
 

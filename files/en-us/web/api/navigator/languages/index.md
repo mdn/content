@@ -1,5 +1,6 @@
 ---
-title: Navigator.languages
+title: "Navigator: languages property"
+short-title: languages
 slug: Web/API/Navigator/languages
 page-type: web-api-instance-property
 browser-compat: api.Navigator.languages
@@ -30,8 +31,8 @@ A string.
 ## Examples
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

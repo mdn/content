@@ -1,11 +1,6 @@
 ---
 title: Use JavaScript within a webpage
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-tags:
-  - Beginner
-  - HTML
-  - JavaScript
-  - OpenPractices
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

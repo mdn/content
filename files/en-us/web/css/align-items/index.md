@@ -27,6 +27,8 @@ align-items: start; /* Pack items from the start */
 align-items: end; /* Pack items from the end */
 align-items: flex-start; /* Pack flex items from the start */
 align-items: flex-end; /* Pack flex items from the end */
+align-items: self-start; /* Pack flex items from the start */
+align-items: self-end; /* Pack flex items from the end */
 
 /* Baseline alignment */
 align-items: baseline;
@@ -66,9 +68,9 @@ align-items: unset;
 - `end`
   - : The items are packed flush to each other toward the end edge of the alignment container in the appropriate axis.
 - `self-start`
-  - : The items are packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+  - : The items are packed flush to the edge of the alignment container's start side of the item, in the appropriate axis.
 - `self-end`
-  - : The items are packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+  - : The items are packed flush to the edge of the alignment container's end side of the item, in the appropriate axis.
 - `baseline`, `first baseline`, `last baseline`
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 - `stretch`

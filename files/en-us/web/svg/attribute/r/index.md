@@ -2,9 +2,6 @@
 title: r
 slug: Web/SVG/Attribute/r
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#R
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute

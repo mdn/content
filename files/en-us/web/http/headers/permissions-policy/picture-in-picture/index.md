@@ -1,13 +1,9 @@
 ---
 title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
-tags:
-  - Directive
-  - Permissions-Policy
-  - HTTP
-  - Picture in picture
-  - Reference
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.picture-in-picture
 ---
 

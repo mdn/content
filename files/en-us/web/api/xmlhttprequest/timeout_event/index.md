@@ -1,5 +1,6 @@
 ---
-title: 'XMLHttpRequest: timeout event'
+title: "XMLHttpRequest: timeout event"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequest.timeout_event
@@ -14,9 +15,9 @@ The **`timeout`** event is fired when progression is terminated due to preset ti
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeout', (event) => { })
+addEventListener("timeout", (event) => {});
 
-ontimeout = (event) => { }
+ontimeout = (event) => {};
 ```
 
 ## Event type
@@ -40,9 +41,9 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```js
 const client = new XMLHttpRequest();
-client.open('GET', 'http://www.example.org/example.txt');
+client.open("GET", "http://www.example.org/example.txt");
 client.ontimeout = () => {
-    console.error('Timeout!!')
+  console.error("Timeout!!");
 };
 
 client.send();
@@ -51,8 +52,8 @@ client.send();
 You could also set up the event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-client.addEventListener('timeout', () => {
-    console.error("Timeout!!");
+client.addEventListener("timeout", () => {
+  console.error("Timeout!!");
 });
 ```
 

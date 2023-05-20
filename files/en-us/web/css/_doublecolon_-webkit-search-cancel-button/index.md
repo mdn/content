@@ -29,5 +29,4 @@ Not part of any standard.
 
 ## See also
 
-- {{cssxref('::-ms-clear')}}
 - {{cssxref('::-webkit-search-results-button')}}

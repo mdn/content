@@ -2,11 +2,6 @@
 title: Intercept HTTP requests
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 page-type: guide
-tags:
-  - Add-ons
-  - Extensions
-  - How-to
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.allowsFeature()
+title: "FeaturePolicy: allowsFeature() method"
+short-title: allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
 status:
@@ -50,15 +51,15 @@ Permissions API, if the user did not grant the corresponding permission yet.
 
 ```js
 // First, get the Feature Policy object
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Then query feature for specific
-const allowed = featurePolicy.allowsFeature("camera")
+const allowed = featurePolicy.allowsFeature("camera");
 
-if (allowed){
-  console.log("FP allows camera.")
+if (allowed) {
+  console.log("FP allows camera.");
 } else {
-  console.log("FP does not allows camera.")
+  console.log("FP does not allows camera.");
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: Gamepad.displayId
+title: "Gamepad: displayId property"
+short-title: displayId
 slug: Web/API/Gamepad/displayId
 page-type: web-api-instance-property
 status:
@@ -27,9 +28,11 @@ A number representing the associated {{domxref("VRDisplay.displayId")}}. If the 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   if (!e.gamepad.displayId) {
-    console.log('Gamepad connected');
+    console.log("Gamepad connected");
   } else {
-    console.log(`Gamepad connected, associated with VR display ${e.gamepad.displayId}`);
+    console.log(
+      `Gamepad connected, associated with VR display ${e.gamepad.displayId}`
+    );
   }
 });
 ```

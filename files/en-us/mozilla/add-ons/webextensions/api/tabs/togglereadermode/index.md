@@ -2,15 +2,6 @@
 title: tabs.toggleReaderMode()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - tabs
-  - toggleReaderMode
 browser-compat: webextensions.api.tabs.toggleReaderMode
 ---
 

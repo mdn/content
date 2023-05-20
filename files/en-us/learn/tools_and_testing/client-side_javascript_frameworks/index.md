@@ -1,12 +1,6 @@
 ---
 title: Understanding client-side JavaScript frameworks
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
 ---
 
 {{LearnSidebar}}

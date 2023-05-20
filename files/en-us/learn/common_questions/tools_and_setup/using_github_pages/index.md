@@ -1,14 +1,6 @@
 ---
 title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Tools_and_setup/Using_Github_pages
-tags:
-  - Beginner
-  - GitHub
-  - Guide
-  - Web
-  - gh-pages
-  - git
-  - publish
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

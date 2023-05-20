@@ -1,14 +1,9 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Save-Data
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Save-Data
 ---
 
@@ -122,7 +117,7 @@ Content-Type: image/jpeg
 
 - [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/optimizing-content-efficiency-save-data/)
-- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses))
+- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary))
 - CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{domxref("NetworkInformation.saveData")}}

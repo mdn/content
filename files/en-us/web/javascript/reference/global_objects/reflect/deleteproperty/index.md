@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Reflect.deleteProperty
 
 {{JSRef}}
 
-The **`Reflect.deleteProperty()`** static
-method allows to delete properties. It is like the
-[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
-as a function.
+The **`Reflect.deleteProperty()`** static method is like the {{jsxref("Operators/delete", "delete")}} operator, but as a function. It deletes a property from an object.
 
 {{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
@@ -29,20 +26,24 @@ Reflect.deleteProperty(target, propertyKey)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the property was successfully
-deleted.
+A boolean indicating whether or not the property was successfully deleted.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
 
 ## Description
 
-The `Reflect.deleteProperty` method allows you to delete a property on an
-object. It returns a {{jsxref("Boolean")}} indicating whether or not the property was
-successfully deleted. It is almost identical to the non-strict
-[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+`Reflect.deleteProperty()` provides the reflective semantic of the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator. That is, `Reflect.deleteProperty(target, propertyKey)` is semantically equivalent to:
+
+```js
+delete target.propertyKey;
+```
+
+At the very low level, deleting a property returns a boolean (as is the case with [the proxy handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)). `Reflect.deleteProperty()` directly returns the status, while `delete` would throw a {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the status is `false`. In non-strict mode, `delete` and `Reflect.deleteProperty()` have the same behavior.
+
+`Reflect.deleteProperty()` invokes the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -76,4 +77,5 @@ Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 
 - [Polyfill of `Reflect.deleteProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`Proxy`'s `deleteProperty` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)

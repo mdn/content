@@ -2,10 +2,6 @@
 title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
 page-type: guide
-tags:
-  - Beginner
-  - Extensions
-  - WebExtension
 ---
 
 {{AddonSidebar}}

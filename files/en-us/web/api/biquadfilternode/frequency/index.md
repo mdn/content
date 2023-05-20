@@ -1,5 +1,6 @@
 ---
-title: BiquadFilterNode.frequency
+title: "BiquadFilterNode: frequency property"
+short-title: frequency
 slug: Web/API/BiquadFilterNode/frequency
 page-type: web-api-instance-property
 browser-compat: api.BiquadFilterNode.frequency

@@ -1,5 +1,6 @@
 ---
-title: InputEvent.inputType
+title: "InputEvent: inputType property"
+short-title: inputType
 slug: Web/API/InputEvent/inputType
 page-type: web-api-instance-property
 browser-compat: api.InputEvent.inputType
@@ -47,9 +48,9 @@ This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLEle
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
-const editable = document.querySelector('div[contenteditable]');
-editable.addEventListener('input', logInputType);
+const log = document.getElementById("log");
+const editable = document.querySelector("div[contenteditable]");
+editable.addEventListener("input", logInputType);
 
 function logInputType(event) {
   log.textContent = `Input type: ${event.inputType}`;

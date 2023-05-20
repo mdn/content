@@ -2,12 +2,6 @@
 title: Content categories
 slug: Web/HTML/Content_categories
 page-type: guide
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +24,7 @@ There are three types of content categories:
 
 Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information.
 
-Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
+Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
 
 ### Flow content
 
@@ -53,7 +47,6 @@ The flow elements are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("del")}}
@@ -160,7 +153,6 @@ Elements belonging to this category are:
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("cite")}}
 - {{HTMLElement("code")}}
-- {{HTMLElement("command")}} {{deprecated_inline}}
 - {{HTMLElement("data")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("dfn")}}
@@ -187,12 +179,14 @@ Elements belonging to this category are:
 - {{HTMLElement("samp")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
 - {{HTMLElement("small")}}
 - {{HTMLElement("span")}}
 - {{HTMLElement("strong")}}
 - {{HTMLElement("sub")}}
 - {{HTMLElement("sup")}}
 - {{SVGElement("svg")}}
+- {{HTMLElement("template")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("time")}}
 - {{HTMLElement("u")}}
@@ -240,11 +234,11 @@ Interactive content is a subset of flow content that includes elements that are 
 
 Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("audio")}}, if the {{htmlattrxref("controls", "audio")}} attribute is present
-- {{HTMLElement("img")}}, if the {{htmlattrxref("usemap", "img")}} attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
-- {{HTMLElement("object")}}, if the {{htmlattrxref("usemap", "object")}} attribute is present
-- {{HTMLElement("video")}}, if the {{htmlattrxref("controls", "video")}} attribute is present
+- {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) attribute is present
+- {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) attribute is present
 
 ### Palpable content
 

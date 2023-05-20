@@ -2,11 +2,6 @@
 title: strikethrough-thickness
 slug: Web/SVG/Attribute/strikethrough-thickness
 page-type: svg-attribute
-tags:
-  - Attribute
-  - Reference
-  - SVG
-  - font
 ---
 
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)

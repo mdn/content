@@ -1,12 +1,7 @@
 ---
-title: '<figcaption>: The Figure Caption element'
+title: "<figcaption>: The Figure Caption element"
 slug: Web/HTML/Element/figcaption
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.figcaption
 ---
 
@@ -30,7 +25,7 @@ Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -39,7 +34,7 @@ Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

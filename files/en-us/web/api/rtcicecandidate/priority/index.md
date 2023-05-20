@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.priority
+title: "RTCIceCandidate: priority property"
+short-title: priority
 slug: Web/API/RTCIceCandidate/priority
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.priority
@@ -45,7 +46,7 @@ let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,
-  priority: 0
+  priority: 0,
 };
 
 function handleCandidate(candidateString) {

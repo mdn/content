@@ -1,12 +1,6 @@
 ---
-title: "Fundamental layout comprehension"
+title: Fundamental layout comprehension
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
 ---
 
 {{LearnSidebar}}

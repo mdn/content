@@ -73,4 +73,3 @@ Not part of any standard.
   - {{cssxref("::-webkit-progress-value")}}
 
 - {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}

@@ -1,17 +1,6 @@
 ---
 title: Creating an item component
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Events
-  - Data
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -79,8 +68,11 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
 ```html
 <div class="item">
-
-  <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
+  <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
   <div class="btn-wrapper" *ngIf="!editable">
@@ -90,14 +82,20 @@ Add markup for managing items by replacing the placeholder content in `item.comp
 
   <!-- This section shows only if user clicks Edit button -->
   <div *ngIf="editable">
-    <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+    <input
+      class="sm-text-input"
+      placeholder="edit item"
+      [value]="item.description"
+      #editedItem
+      (keyup.enter)="saveItem(editedItem.value)" />
 
     <div class="btn-wrapper">
       <button class="btn" (click)="editable = !editable">Cancel</button>
-      <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+      <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+        Save
+      </button>
     </div>
   </div>
-
 </div>
 ```
 
@@ -127,11 +125,18 @@ In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<
 ```html
 <!-- This section shows only if user clicks Edit button -->
 <div *ngIf="editable">
-  <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+  <input
+    class="sm-text-input"
+    placeholder="edit item"
+    [value]="item.description"
+    #editedItem
+    (keyup.enter)="saveItem(editedItem.value)" />
 
   <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Cancel</button>
-    <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
+    <button class="btn btn-save" (click)="saveItem(editedItem.value)">
+      Save
+    </button>
   </div>
 </div>
 ```
@@ -194,7 +199,6 @@ export class ItemComponent {
   editable = false;
 
   @Input() item!: Item;
-  @Input() newItem!: string;
   @Output() remove = new EventEmitter<Item>();
 
   saveItem(description: string) {
@@ -213,7 +217,7 @@ When you use a property in the template, you must also declare it in the class.
 An `@Input()` serves as a doorway for data to come into the component, and an `@Output()` acts as a doorway for data to go out of the component.
 An `@Output()` has to be of type `EventEmitter`, so that a component can raise an event when there's data ready to share with another component.
 
-> **Note**: The `!` in the class's property declaration is called a [definite assignment assertion](https://www.typescriptlang.org/docs/handbook/2/classes.html#--strictpropertyinitialization). This operator tells Typescript that the `item` and `newItem` inputs are always initialized and not `undefined`, even when TypeScript cannot tell from the constructor's definition. If this operator is not included in your code and you have strict TypeScript compilation settings, the app will fail to compile.
+> **Note**: The `!` in the class's property declaration is called a [definite assignment assertion](https://www.typescriptlang.org/docs/handbook/2/classes.html#--strictpropertyinitialization). This operator tells Typescript that the `item` field is always initialized and not `undefined`, even when TypeScript cannot tell from the constructor's definition. If this operator is not included in your code and you have strict TypeScript compilation settings, the app will fail to compile.
 
 Use `@Input()` to specify that the value of a property can come from outside of the component.
 Use `@Output()` in conjunction with `EventEmitter` to specify that the value of a property can leave the component so that another component can receive that data.
@@ -251,8 +255,11 @@ To use the `ItemComponent` selector within the `AppComponent`, you add the eleme
 Replace the current unordered list in `app.component.html` with the following updated version:
 
 ```html
-<h2>\{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
-<ng-template #elseBlock>items</ng-template></h2>
+<h2>
+  \{{items.length}}
+  <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template>
+</h2>
 
 <ul>
   <li *ngFor="let i of items">

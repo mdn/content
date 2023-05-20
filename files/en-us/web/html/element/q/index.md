@@ -1,19 +1,7 @@
 ---
-title: '<q>: The Inline Quotation element'
+title: "<q>: The Inline Quotation element"
 slug: Web/HTML/Element/q
 page-type: html-element
-tags:
-  - Citation
-  - Cite
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Q
-  - Quotation
-  - Quotation Marks
-  - Reference
-  - Web
-  - quote
 browser-compat: html.elements.q
 ---
 
@@ -27,10 +15,10 @@ The **`<q>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed t
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
-## Example
+## Examples
 
 ```html
 <p>
@@ -38,6 +26,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q>
 </p>
 ```
+
+### Result
 
 {{EmbedLiveSample('Example')}}
 
@@ -47,15 +37,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -63,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -76,7 +66,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

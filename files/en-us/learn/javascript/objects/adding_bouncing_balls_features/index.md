@@ -1,16 +1,6 @@
 ---
 title: Adding features to our bouncing balls demo
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - OOJS
-  - Object-Oriented
-  - Objects
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

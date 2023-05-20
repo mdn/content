@@ -1,9 +1,6 @@
 ---
 title: Object prototypes
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}

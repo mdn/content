@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.withCredentials
+title: "XMLHttpRequest: withCredentials property"
+short-title: withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.withCredentials
@@ -23,7 +24,7 @@ A boolean.
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```

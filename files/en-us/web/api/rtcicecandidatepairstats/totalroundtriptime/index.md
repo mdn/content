@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidatePairStats.totalRoundTripTime
+title: "RTCIceCandidatePairStats: totalRoundTripTime property"
+short-title: totalRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/totalRoundTripTime
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime
@@ -26,8 +27,9 @@ of the {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceive
 property:
 
 ```js
-rtt = rtcIceCandidatePairStats.totalRoundTripTime /
-        rtcIceCandidatePairStats.responsesReceived;
+rtt =
+  rtcIceCandidatePairStats.totalRoundTripTime /
+  rtcIceCandidatePairStats.responsesReceived;
 ```
 
 ## Specifications

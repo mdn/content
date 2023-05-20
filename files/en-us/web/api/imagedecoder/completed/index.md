@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.completed
+title: "ImageDecoder: completed property"
+short-title: completed
 slug: Web/API/ImageDecoder/completed
 page-type: web-api-instance-property
 status:

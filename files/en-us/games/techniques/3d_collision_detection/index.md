@@ -1,12 +1,6 @@
 ---
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
-tags:
-  - 3D
-  - Games
-  - JavaScript
-  - bounding boxes
-  - collision detection
 ---
 
 {{GamesSidebar}}

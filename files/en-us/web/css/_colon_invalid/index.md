@@ -7,7 +7,7 @@ browser-compat: css.selectors.invalid
 
 {{CSSRef}}
 
-The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Constraint_validation).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
 

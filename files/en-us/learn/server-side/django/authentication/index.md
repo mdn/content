@@ -1,20 +1,6 @@
 ---
-title: 'Django Tutorial Part 8: User authentication and permissions'
+title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Article
-  - Authentication
-  - Beginner
-  - Forms
-  - Learn
-  - Permissions
-  - Python
-  - Server
-  - Tutorial
-  - django
-  - django authentication
-  - server-side
-  - sessions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
@@ -218,7 +204,7 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -279,7 +265,7 @@ If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) the
 
 Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -302,7 +288,7 @@ The following templates can be used as a starting point.
 
 This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -321,7 +307,7 @@ This is the form used to get the user's email address (for sending the password 
 
 This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -333,7 +319,7 @@ This form is displayed after your email address has been collected. Create **/lo
 
 This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -342,7 +328,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -378,7 +364,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -418,7 +404,7 @@ Typically you will first test against the `\{{ user.is_authenticated }}` templat
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
-```html
+```django
   <ul class="sidebar-nav">
 
     …
@@ -589,7 +575,7 @@ urlpatterns += [
 
 Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -622,7 +608,7 @@ The very last step is to add a link for this new page into the sidebar. We'll pu
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
 
-```python
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
@@ -670,7 +656,7 @@ Open the **catalog/models.py**, and add the permission as shown above. You will 
 
 The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
 
-```python
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->

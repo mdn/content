@@ -2,9 +2,6 @@
 title: Guidelines for styling CSS code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -77,7 +74,7 @@ Where quotes can or should be included, use them, and use double quotes. For exa
 
 ## Longhand vs. shorthand rules
 
-Usually when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless of course you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why recommend writing longhand rules.
+Usually, when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless, of course, you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why writing with longhand rules is recommended.
 
 - It is often harder to understand what the shorthand is doing. In the example below, it takes a while to pick apart exactly what the {{cssxref("font")}} syntax is doing.
 

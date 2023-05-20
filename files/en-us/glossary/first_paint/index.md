@@ -11,4 +11,4 @@ page-type: glossary-definition
 - [First contentful paint](/en-US/docs/Glossary/First_contentful_paint)
 - [`PerformancePaintTiming`](/en-US/docs/Web/API/PerformancePaintTiming)
 - [Largest Contentful Paint](/en-US/docs/Glossary/Largest_contentful_paint)
-- [First meaningful paint](/en-US/docs/Glossary/first_meaningful_paint)
+- [First meaningful paint](/en-US/docs/Glossary/First_meaningful_paint)

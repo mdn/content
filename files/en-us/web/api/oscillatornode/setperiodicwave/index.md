@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode.setPeriodicWave()
+title: "OscillatorNode: setPeriodicWave() method"
+short-title: setPeriodicWave()
 slug: Web/API/OscillatorNode/setPeriodicWave
 page-type: web-api-instance-method
 browser-compat: api.OscillatorNode.setPeriodicWave

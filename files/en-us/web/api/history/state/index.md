@@ -1,5 +1,6 @@
 ---
-title: History.state
+title: "History: state property"
+short-title: state
 slug: Web/API/History/state
 page-type: web-api-instance-property
 browser-compat: api.History.state
@@ -29,10 +30,10 @@ The next line logs the value to the console again, showing that
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
-history.pushState({name: 'Example'}, "pushState example", 'page3.html');
+history.pushState({ name: "Example" }, "pushState example", "page3.html");
 
 // Now state has a value.
-console.log('History.state after pushState: ', history.state);
+console.log("History.state after pushState: ", history.state);
 ```
 
 ## Specifications
@@ -48,3 +49,4 @@ console.log('History.state after pushState: ', history.state);
 - [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [`History.pushState()`](/en-US/docs/Web/API/History/pushState)
 - [`History.replaceState()`](/en-US/docs/Web/API/History/replaceState)
+- [`PopStateEvent.state`](/en-US/docs/Web/API/PopStateEvent/state)

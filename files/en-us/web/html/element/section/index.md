@@ -1,14 +1,7 @@
 ---
-title: '<section>: The Generic Section element'
+title: "<section>: The Generic Section element"
 slug: Web/HTML/Element/section
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Section
-  - Web
 browser-compat: html.elements.section
 ---
 
@@ -48,6 +41,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
 </div>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Before')}}
+
 #### After
 
 ```html
@@ -56,6 +53,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
   <p>Bunch of awesome content</p>
 </section>
 ```
+
+##### Result
+
+{{EmbedLiveSample('After')}}
 
 ### Using a section without a heading
 
@@ -91,6 +92,10 @@ Make sure to use some assistive technology and screen-reader-friendly CSS to hid
 }
 ```
 
+#### Result
+
+{{EmbedLiveSample('Using a section without a heading')}}
+
 Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
 
 ## Technical summary
@@ -99,24 +104,24 @@ Depending on the content, including a heading could also be good for SEO, so it 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
           >Sectioning content</a
-        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
+        >, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -129,7 +134,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that a <code>&#x3C;section></code> element must not be a
         descendant of an {{HTMLElement("address")}} element.

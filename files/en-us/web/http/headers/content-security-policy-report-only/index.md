@@ -1,13 +1,7 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - HTTP
-  - HTTPS
-  - Reference
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy-Report-Only
 ---
 

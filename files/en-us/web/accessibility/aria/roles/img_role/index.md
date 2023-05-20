@@ -1,15 +1,7 @@
 ---
 title: "ARIA: img role"
 slug: Web/Accessibility/ARIA/Roles/img_role
-tags:
-  - ARIA
-  - ARIA Img
-  - ARIA Role
-  - Accessibility
-  - Reference
-  - document structure role
-  - Role
-  - figure
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#img
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "DedicatedWorkerGlobalScope: message event"
+short-title: message
 slug: Web/API/DedicatedWorkerGlobalScope/message_event
 page-type: web-api-event
 browser-compat: api.DedicatedWorkerGlobalScope.message_event

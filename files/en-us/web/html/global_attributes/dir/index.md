@@ -2,11 +2,6 @@
 title: dir
 slug: Web/HTML/Global_attributes/dir
 page-type: html-attribute
-tags:
-  - BiDi
-  - Global attributes
-  - HTML
-  - Reference
 browser-compat: html.global_attributes.dir
 ---
 
@@ -29,7 +24,7 @@ It can have the following values:
 > - As the directionality of the text is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible. That way, the text will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.
 > - The `auto` value should be used for data with an unknown directionality, like data coming from user input, eventually stored in a database.
 
-> **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the **`dir`** attribute value.
+> **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Legacy Edge uses the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the **`dir`** attribute value.
 
 ## Specifications
 

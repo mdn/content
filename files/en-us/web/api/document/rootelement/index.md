@@ -1,5 +1,6 @@
 ---
-title: Document.rootElement
+title: "Document: rootElement property"
+short-title: rootElement
 slug: Web/API/Document/rootElement
 page-type: web-api-instance-property
 status:

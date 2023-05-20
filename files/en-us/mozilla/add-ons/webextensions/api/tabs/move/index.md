@@ -2,16 +2,6 @@
 title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
-  - tabs
 browser-compat: webextensions.api.tabs.move
 ---
 

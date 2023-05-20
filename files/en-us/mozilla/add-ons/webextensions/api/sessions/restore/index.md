@@ -2,15 +2,6 @@
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - WebExtensions
-  - restore
-  - sessions
 browser-compat: webextensions.api.sessions.restore
 ---
 
@@ -107,4 +98,4 @@ browser.browserAction.onClicked.addListener(() => {
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzil.la/1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

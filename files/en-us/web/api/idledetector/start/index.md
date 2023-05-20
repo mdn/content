@@ -1,5 +1,6 @@
 ---
-title: IdleDetector.start()
+title: "IdleDetector: start() method"
+short-title: start()
 slug: Web/API/IdleDetector/start
 page-type: web-api-instance-method
 status:
@@ -53,7 +54,7 @@ await idleDetector.start({
   threshold: 60_000,
   signal,
 });
-console.log('IdleDetector is active.');
+console.log("IdleDetector is active.");
 ```
 
 ## Specifications

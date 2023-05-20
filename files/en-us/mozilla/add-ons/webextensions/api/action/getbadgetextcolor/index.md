@@ -2,15 +2,6 @@
 title: action.getBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeTextColor
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - action
-  - getBadgeTextColor
 browser-compat: webextensions.api.action.getBadgeTextColor
 ---
 

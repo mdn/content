@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.title
+title: "HTMLElement: title property"
+short-title: title
 slug: Web/API/HTMLElement/title
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.title
@@ -18,10 +19,10 @@ A string.
 ## Examples
 
 ```js
-const link = document.createElement('a');
-link.innerText = 'grapes';
-link.href = 'https://en.wikipedia.org/wiki/Grape';
-link.title = 'Wikipedia page on grapes';
+const link = document.createElement("a");
+link.innerText = "grapes";
+link.href = "https://en.wikipedia.org/wiki/Grape";
+link.title = "Wikipedia page on grapes";
 ```
 
 ## Specifications

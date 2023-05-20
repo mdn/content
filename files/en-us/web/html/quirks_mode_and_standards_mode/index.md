@@ -2,14 +2,6 @@
 title: Quirks Mode
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 page-type: guide
-tags:
-  - Gecko
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web Development
-  - Web Standards
-  - XHTML
 ---
 
 {{HTMLSidebar}}

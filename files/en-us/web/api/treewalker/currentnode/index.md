@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.currentNode
+title: "TreeWalker: currentNode property"
+short-title: currentNode
 slug: Web/API/TreeWalker/currentNode
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.currentNode
@@ -18,10 +19,14 @@ A {{domxref("Node")}}.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false
 );
 root = treeWalker.currentNode; // the root element as it is the first element!
 ```

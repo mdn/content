@@ -1,16 +1,7 @@
 ---
-title: '<samp>: The Sample Output element'
+title: "<samp>: The Sample Output element"
 slug: Web/HTML/Element/samp
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Sample
-  - Reference
-  - Sample Output
-  - Sample Text
-  - Web
 browser-compat: html.elements.samp
 ---
 
@@ -52,7 +43,7 @@ In this simple example, a paragraph includes an example of the output of a progr
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 100)}}
 
@@ -104,15 +95,15 @@ The resulting output is this:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -120,7 +111,7 @@ The resulting output is this:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -133,7 +124,7 @@ The resulting output is this:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

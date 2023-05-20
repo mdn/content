@@ -1,9 +1,6 @@
 ---
 title: number
 slug: Web/XPath/Functions/number
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

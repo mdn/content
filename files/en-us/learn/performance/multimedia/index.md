@@ -1,12 +1,6 @@
 ---
-title: 'Multimedia: Images'
+title: "Multimedia: Images"
 slug: Learn/Performance/Multimedia
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
@@ -87,7 +81,6 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
   > **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
 
 - [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
-- **JPEG-XR** — created by Microsoft and was only available in Internet Explorer and EdgeHTML-based Edge. It didn't support progressive display, and the image decoding was not hardware accelerated and, therefore, resource-intensive on the browser's main thread. Progressive JPEG above the fold is rendered progressively (hence the name), meaning the user saw a low-resolution version that gained clarity as the image downloaded, rather than the image loading at full resolution top-to-bottom or even rendering once completely downloaded.
 - **JPEG2000** — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
@@ -106,7 +99,7 @@ And finally, should you want to include animated images into your page, then kno
 
 #### Serving the optimal size
 
-In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#attr-media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#attr-sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 

@@ -1,13 +1,7 @@
 ---
 title: aria-readonly
 slug: Web/Accessibility/ARIA/Attributes/aria-readonly
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-readonly
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 

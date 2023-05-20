@@ -562,7 +562,7 @@ svg text.em {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
 
 ### Complete example
 

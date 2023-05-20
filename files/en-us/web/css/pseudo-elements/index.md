@@ -92,15 +92,6 @@ T
       <th>Support of</th>
     </tr>
     <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
       <td rowspan="2">Firefox (Gecko)</td>
       <td>1.0 (1.0)</td>
       <td><code>:pseudo-element</code></td>

@@ -1,5 +1,6 @@
 ---
-title: ElementInternals.ariaRelevant
+title: "ElementInternals: ariaRelevant property"
+short-title: ariaRelevant
 slug: Web/API/ElementInternals/ariaRelevant
 page-type: web-api-instance-property
 status:

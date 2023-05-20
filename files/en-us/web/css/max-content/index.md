@@ -20,13 +20,6 @@ block-size: max-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr max-content;
-
-/* Global values */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: revert-layer;
-max-content: unset;
 ```
 
 ## Examples

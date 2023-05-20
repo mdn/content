@@ -1,5 +1,6 @@
 ---
-title: ValidityState.badInput
+title: "ValidityState: badInput property"
+short-title: badInput
 slug: Web/API/ValidityState/badInput
 page-type: web-api-instance-property
 browser-compat: api.ValidityState.badInput
@@ -38,5 +39,5 @@ if (input.validity.badInput) {
 
 ## See also
 
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Tutorial: Form data validation](/en-US/docs/Learn/Forms/Form_validation)

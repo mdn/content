@@ -1,19 +1,6 @@
 ---
 title: Handling common accessibility problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - Accessibility
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - Testing
-  - Tools
-  - cross browser
-  - keyboard
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -80,7 +67,7 @@ Semantic HTML (where the elements are used for their correct purpose) is accessi
 
 The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:
 
-```html example-bad
+```html-nolint example-bad
 <font size="7">My heading</font>
 <br /><br />
 This is the first section of my document.

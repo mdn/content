@@ -1,10 +1,6 @@
 ---
 title: Three famous mathematical formulas
 slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}

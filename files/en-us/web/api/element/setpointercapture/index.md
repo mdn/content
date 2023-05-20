@@ -1,5 +1,6 @@
 ---
-title: Element.setPointerCapture()
+title: "Element: setPointerCapture() method"
+short-title: setPointerCapture()
 slug: Web/API/Element/setPointerCapture
 page-type: web-api-instance-method
 browser-compat: api.Element.setPointerCapture
@@ -88,7 +89,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

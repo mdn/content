@@ -1,12 +1,7 @@
 ---
-title: '<li>: The List Item element'
+title: "<li>: The List Item element"
 slug: Web/HTML/Element/li
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
 browser-compat: html.elements.li
 ---
 
@@ -20,9 +15,9 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This character attribute indicates the numbering type:
 
@@ -50,6 +45,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list")}}
 
 ### Ordered list with a custom value
@@ -61,6 +58,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <li>fifth item</li>
 </ol>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
 
@@ -74,6 +73,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ul>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Unordered_list")}}
 
 ## Technical summary
@@ -82,7 +83,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -91,7 +92,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

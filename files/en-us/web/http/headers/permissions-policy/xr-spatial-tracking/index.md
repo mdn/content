@@ -1,14 +1,9 @@
 ---
 title: "Permissions-Policy: xr-spatial-tracking"
 slug: Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - xr-spatial-tracking
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.xr-spatial-tracking
 ---
 

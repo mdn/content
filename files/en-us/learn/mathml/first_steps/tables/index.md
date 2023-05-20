@@ -1,10 +1,6 @@
 ---
 title: MathML tables
 slug: Learn/MathML/First_steps/Tables
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}

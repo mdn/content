@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createWaveShaper()
+title: "BaseAudioContext: createWaveShaper() method"
+short-title: createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createWaveShaper

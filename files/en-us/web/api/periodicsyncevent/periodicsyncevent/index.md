@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncEvent()
+title: "PeriodicSyncEvent: PeriodicSyncEvent() constructor"
+short-title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
 page-type: web-api-constructor
 status:
@@ -40,7 +41,7 @@ This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js
-const psEvent = new ExtendableEvent('periodicsync', {tag : 'unique-tag'});
+const psEvent = new ExtendableEvent("periodicsync", { tag: "unique-tag" });
 ```
 
 ## Specifications

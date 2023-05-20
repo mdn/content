@@ -1,5 +1,6 @@
 ---
-title: URL.searchParams
+title: "URL: searchParams property"
+short-title: searchParams
 slug: Web/API/URL/searchParams
 page-type: web-api-instance-property
 browser-compat: api.URL.searchParams
@@ -24,9 +25,9 @@ If the URL of your page is
 the `name` and `age` parameters using:
 
 ```js
-let params = (new URL(document.location)).searchParams;
-let name = params.get('name'); // is the string "Jonathan Smith".
-let age = parseInt(params.get('age')); // is the number 18
+let params = new URL(document.location).searchParams;
+let name = params.get("name"); // is the string "Jonathan Smith".
+let age = parseInt(params.get("age")); // is the number 18
 ```
 
 ## Specifications

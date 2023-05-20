@@ -1,9 +1,7 @@
 ---
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - WCAG
-  - Web Content Accessibility Guidelines
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages}}
@@ -25,7 +23,7 @@ Each of the links below will take you to pages that further expand on these area
 
 ## Should I use WCAG 2.0 or 2.1?
 
-WCAG 2.1 is the most recent and relevant accessibility standard. Use WCAG 2.1 to help more people with disabilities and reduce the future legal risk for web site owners. Target WCAG 2.0 first when allocating resources. Then step up to WCAG 2.1.
+WCAG 2.1 is the most recent and relevant accessibility standard. Use WCAG 2.1 to help more people with disabilities and reduce the future legal risk for website owners. Target WCAG 2.0 first when allocating resources. Then step up to WCAG 2.1.
 
 ### What is WCAG 2.1?
 

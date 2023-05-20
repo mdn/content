@@ -21,8 +21,8 @@ The opposite of LTR, {{Glossary("RTL")}} (Right To Left) is used in other common
 
 - [HTML global attributes](/en-US/docs/Web/HTML/Global_attributes)
 
-  - {{htmlattrxref("dir")}}
-  - {{htmlattrxref("lang")}}
+  - [dir](/en-US/docs/Web/HTML/Global_attributes#dir)
+  - [lang](/en-US/docs/Web/HTML/Global_attributes#lang)
 
 - [CSS](/en-US/docs/Web/CSS)
 

@@ -1,5 +1,6 @@
 ---
-title: EyeDropper.open()
+title: "EyeDropper: open() method"
+short-title: open()
 slug: Web/API/EyeDropper/open
 page-type: web-api-instance-method
 status:

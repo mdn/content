@@ -1,5 +1,6 @@
 ---
-title: FileReader.readAsText()
+title: "FileReader: readAsText() method"
+short-title: readAsText()
 slug: Web/API/FileReader/readAsText
 page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsText
@@ -46,14 +47,18 @@ None ({{jsxref("undefined")}}).
 
 ```js
 function previewFile() {
-  const content = document.querySelector('.content');
-  const [file] = document.querySelector('input[type=file]').files;
+  const content = document.querySelector(".content");
+  const [file] = document.querySelector("input[type=file]").files;
   const reader = new FileReader();
 
-  reader.addEventListener("load", () => {
-    // this will then display a text file
-    content.innerText = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // this will then display a text file
+      content.innerText = reader.result;
+    },
+    false
+  );
 
   if (file) {
     reader.readAsText(file);

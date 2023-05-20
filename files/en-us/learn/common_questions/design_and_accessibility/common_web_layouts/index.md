@@ -1,12 +1,6 @@
 ---
 title: What do common web layouts contain?
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - HTML
-  - NeedsActiveLearning
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

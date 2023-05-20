@@ -2,14 +2,6 @@
 title: proxy.onError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onProxyError
 browser-compat: webextensions.api.proxy.onError
 ---
 

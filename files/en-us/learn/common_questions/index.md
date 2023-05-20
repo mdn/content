@@ -1,12 +1,6 @@
 ---
 title: Common questions
 slug: Learn/Common_questions
-tags:
-  - CodingScripting
-  - Infrastructure
-  - Learn
-  - Web
-  - WebMechanics
 ---
 
 {{LearnSidebar}}

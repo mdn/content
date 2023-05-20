@@ -1,11 +1,6 @@
 ---
 title: Developer guides
 slug: Web/Guide
-tags:
-  - API
-  - Guide
-  - Landing
-  - Web
 ---
 
 <section id="Quick_links">

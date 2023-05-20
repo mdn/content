@@ -1,13 +1,6 @@
 ---
 title: Structuring planet data
 slug: Learn/HTML/Tables/Structuring_planet_data
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Learn
-  - Tables
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

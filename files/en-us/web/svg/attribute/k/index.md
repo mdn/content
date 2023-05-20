@@ -2,10 +2,8 @@
 title: k
 slug: Web/SVG/Attribute/k
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.k
 ---
 

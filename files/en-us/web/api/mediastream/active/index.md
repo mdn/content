@@ -1,5 +1,6 @@
 ---
-title: MediaStream.active
+title: "MediaStream: active property"
+short-title: active
 slug: Web/API/MediaStream/active
 page-type: web-api-instance-property
 browser-compat: api.MediaStream.active
@@ -30,11 +31,11 @@ a button on the page is updated based on whether or not the stream is currently 
 ```js
 const promise = navigator.mediaDevices.getUserMedia({
   audio: true,
-  video: true
+  video: true,
 });
 
 promise.then((stream) => {
-  const startBtn = document.querySelector('#startBtn');
+  const startBtn = document.querySelector("#startBtn");
   startBtn.disabled = stream.active;
 });
 ```

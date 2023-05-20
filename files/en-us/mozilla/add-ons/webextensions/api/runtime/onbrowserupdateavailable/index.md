@@ -2,17 +2,8 @@
 title: runtime.onBrowserUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBrowserUpdateAvailable
-  - runtime
+status:
+  - deprecated
 browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
 ---
 

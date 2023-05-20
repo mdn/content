@@ -1,5 +1,6 @@
 ---
-title: HIDConnectionEvent.device
+title: "HIDConnectionEvent: device property"
+short-title: device
 slug: Web/API/HIDConnectionEvent/device
 page-type: web-api-instance-property
 status:
@@ -20,11 +21,11 @@ A {{domxref("HIDDevice")}}.
 The following example registers event listeners for `connect` and `disconnect` events, then prints the {{domxref("HIDDevice.productName")}} to the console.
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
+navigator.hid.addEventListener("connect", ({ device }) => {
   console.log(`HID connected: ${device.productName}`);
 });
 
-navigator.hid.addEventListener('disconnect', ({device}) => {
+navigator.hid.addEventListener("disconnect", ({ device }) => {
   console.log(`HID disconnected: ${device.productName}`);
 });
 ```

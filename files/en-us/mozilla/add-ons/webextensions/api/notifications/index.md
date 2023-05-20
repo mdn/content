@@ -2,12 +2,6 @@
 title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Notifications
-  - WebExtensions
 browser-compat: webextensions.api.notifications
 ---
 

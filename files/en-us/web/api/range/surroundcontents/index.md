@@ -1,5 +1,6 @@
 ---
-title: Range.surroundContents()
+title: "Range: surroundContents() method"
+short-title: surroundContents()
 slug: Web/API/Range/surroundContents
 page-type: web-api-instance-method
 browser-compat: api.Range.surroundContents
@@ -48,9 +49,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const range = document.createRange();
-const newParent = document.createElement('h1');
+const newParent = document.createElement("h1");
 
-range.selectNode(document.querySelector('.header-text'));
+range.selectNode(document.querySelector(".header-text"));
 range.surroundContents(newParent);
 ```
 

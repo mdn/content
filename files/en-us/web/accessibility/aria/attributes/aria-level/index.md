@@ -1,13 +1,7 @@
 ---
-title: "aria-level"
+title: aria-level
 slug: Web/Accessibility/ARIA/Attributes/aria-level
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-level
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 
@@ -55,7 +49,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 
 Used in roles:
 
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)

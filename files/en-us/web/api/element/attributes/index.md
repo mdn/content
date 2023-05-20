@@ -1,5 +1,6 @@
 ---
-title: Element.attributes
+title: "Element: attributes property"
+short-title: attributes
 slug: Web/API/Element/attributes
 page-type: web-api-instance-property
 browser-compat: api.Element.attributes

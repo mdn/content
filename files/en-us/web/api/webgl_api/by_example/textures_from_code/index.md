@@ -83,7 +83,7 @@ window.addEventListener("load", setupWebGL, false);
 let gl;
 let program;
 
-function setupWebGL (evt) {
+function setupWebGL(evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
   if (!(gl = getRenderingContext())) return;
 
@@ -92,7 +92,7 @@ function setupWebGL (evt) {
   gl.shaderSource(vertexShader, source);
   gl.compileShader(vertexShader);
 
-  source = document.querySelector("#fragment-shader").innerHTML
+  source = document.querySelector("#fragment-shader").innerHTML;
   const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader, source);
   gl.compileShader(fragmentShader);
@@ -108,7 +108,9 @@ function setupWebGL (evt) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
-    document.querySelector("p").textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
+    document.querySelector(
+      "p"
+    ).textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
   initializeAttributes();
@@ -142,10 +144,12 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  const gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
+    paragraph.textContent =
+      "Failed. Your browser or device may not support WebGL.";
     return null;
   }
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);

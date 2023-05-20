@@ -1,5 +1,6 @@
 ---
-title: HIDInputReportEvent.reportId
+title: "HIDInputReportEvent: reportId property"
+short-title: reportId
 slug: Web/API/HIDInputReportEvent/reportId
 page-type: web-api-instance-property
 status:

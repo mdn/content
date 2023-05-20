@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode()
+title: "OscillatorNode: OscillatorNode() constructor"
+short-title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
 page-type: web-api-constructor
 browser-compat: api.OscillatorNode.OscillatorNode

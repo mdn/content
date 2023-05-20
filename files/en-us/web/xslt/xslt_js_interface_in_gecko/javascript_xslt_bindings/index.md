@@ -1,11 +1,6 @@
 ---
 title: JavaScript/XSLT Bindings
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
-tags:
-  - DOM
-  - JavaScript
-  - XML
-  - XSLT
 ---
 
 ## JavaScript/XSLT Bindings

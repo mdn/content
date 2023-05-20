@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.href
+title: "HTMLAnchorElement: href property"
+short-title: href
 slug: Web/API/HTMLAnchorElement/href
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.href

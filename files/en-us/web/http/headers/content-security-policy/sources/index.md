@@ -1,14 +1,7 @@
 ---
-title: "CSP source values"
+title: CSP source values
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - source
+page-type: http-csp-directive
 ---
 
 {{HTTPSidebar}}

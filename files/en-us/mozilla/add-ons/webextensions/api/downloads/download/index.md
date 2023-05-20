@@ -2,16 +2,6 @@
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
 browser-compat: webextensions.api.downloads.download
 ---
 

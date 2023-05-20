@@ -1,20 +1,7 @@
 ---
-title: '<iframe>: The Inline Frame element'
+title: "<iframe>: The Inline Frame element"
 slug: Web/HTML/Element/iframe
 page-type: html-element
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
 browser-compat: html.elements.iframe
 ---
 
@@ -32,44 +19,44 @@ Each embedded browsing context has its own [session history](/en-US/docs/Web/API
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("allow")}}
+- `allow`
 
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
       > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
-- {{htmlattrdef("allowfullscreen")}}
+- `allowfullscreen`
 
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- {{htmlattrdef("allowpaymentrequest")}} {{Experimental_Inline}}
+- `allowpaymentrequest` {{Experimental_Inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
-- {{htmlattrdef("credentialless")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
 
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 
-- {{htmlattrdef("csp")}} {{experimental_inline}}
+- `csp` {{experimental_inline}}
 
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The height of the frame in CSS pixels. Default is `150`.
-- {{htmlattrdef("loading")}} {{experimental_inline}}
+- `loading`
 
   - : Indicates how the browser should load the iframe:
 
     - `eager`: Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
     - `lazy`: Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method.
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
 
@@ -82,11 +69,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{htmlattrdef("sandbox")}}
+- `sandbox`
 
-  - : Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
+  - : Controls the restrictions applied to the content embedded in the `<iframe>`. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
 
-    - `allow-downloads`: Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#attr-download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
+    - `allow-downloads`: Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
     - `allow-downloads-without-user-activation` {{experimental_inline}}: Allows for downloads to occur without a gesture from the user.
     - `allow-forms`: Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
     - `allow-modals`: Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
@@ -97,7 +84,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-presentation`: Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
     - `allow-scripts`: Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
-    - `allow-storage-access-by-user-activation` {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+    - `allow-storage-access-by-user-activation` {{experimental_inline}}: Allows a document loaded in the `<iframe>` to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
     - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
     - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
     - `allow-top-navigation-to-custom-protocols`: Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
@@ -107,28 +94,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
-- {{htmlattrdef("srcdoc")}}
+- `srcdoc`
   - : Inline HTML to embed, overriding the `src` attribute. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
-- {{htmlattrdef("width")}}
+- `width`
   - : The width of the frame in CSS pixels. Default is `300`.
 
 ### Deprecated attributes
 
 These attributes are deprecated and may no longer be supported by all user agents. You should not use them in new content, and try to remove them from existing content.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : The alignment of this element with respect to the surrounding context.
-- {{htmlattrdef("frameborder")}} {{deprecated_inline}}
+- `frameborder` {{deprecated_inline}}
   - : The value `1` (the default) draws a border around this frame. The value `0` removes the border around this frame, but you should instead use the CSS property {{cssxref("border")}} to control `<iframe>` borders.
-- {{htmlattrdef("longdesc")}} {{deprecated_inline}}
+- `longdesc` {{deprecated_inline}}
   - : A URL of a long description of the frame's content. Due to widespread misuse, this is not helpful for non-visual browsers.
-- {{htmlattrdef("marginheight")}} {{deprecated_inline}}
+- `marginheight` {{deprecated_inline}}
   - : The amount of space in pixels between the frame's content and its top and bottom borders.
-- {{htmlattrdef("marginwidth")}} {{deprecated_inline}}
+- `marginwidth` {{deprecated_inline}}
   - : The amount of space in pixels between the frame's content and its left and right borders.
-- {{htmlattrdef("scrolling")}} {{deprecated_inline}}
+- `scrolling` {{deprecated_inline}}
 
   - : Indicates when the browser should provide a scrollbar for the frame:
 
@@ -189,15 +176,15 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, embedded content, interactive content, palpable content.
       </td>

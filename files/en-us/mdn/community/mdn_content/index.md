@@ -2,11 +2,6 @@
 title: Contributing to MDN Web Docs content
 slug: MDN/Community/MDN_content
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-  - mdn-content
 ---
 
 {{MDNSidebar}}

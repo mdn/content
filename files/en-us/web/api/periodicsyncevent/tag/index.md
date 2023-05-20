@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncEvent.tag
+title: "PeriodicSyncEvent: tag property"
+short-title: tag
 slug: Web/API/PeriodicSyncEvent/tag
 page-type: web-api-instance-property
 status:
@@ -26,7 +27,7 @@ The following example demonstrates listening for a periodic sync event in the se
 worker, and accessing the `tag` property.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
+self.addEventListener("periodicsync", (event) => {
   console.log(event.tag); // logs the events tag
 });
 ```

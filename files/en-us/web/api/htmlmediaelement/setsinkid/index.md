@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.setSinkId()
+title: "HTMLMediaElement: setSinkId() method"
+short-title: setSinkId()
 slug: Web/API/HTMLMediaElement/setSinkId
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setSinkId
@@ -39,14 +40,14 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 Access to the API is subject to the following constraints:
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
-const audioDevice = devices.find((device) => device.kind === 'audiooutput');
-const audio = document.createElement('audio');
+const audioDevice = devices.find((device) => device.kind === "audiooutput");
+const audio = document.createElement("audio");
 await audio.setSinkId(audioDevice.deviceId);
 console.log(`Audio is being played on ${audio.sinkId}`);
 ```

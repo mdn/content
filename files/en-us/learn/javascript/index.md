@@ -1,15 +1,6 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - JavaScripting beginner
-  - Landing
-  - Module
-  - Topic
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}
@@ -63,11 +54,11 @@ This topic contains the following modules, in a suggested order for working thro
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - : In this module we take a look at asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
+  - : When writing client-side JavaScript for websites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other websites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 ## Solving common JavaScript problems
 
-[Use JavaScript to solve common problems](/en-US/docs/Learn/JavaScript/Howto) provides links to sections of content explaining how to use JavaScript to solve very common problems when creating a webpage.
+[Solve common problems in your JavaScript code](/en-US/docs/Learn/JavaScript/Howto) provides a little advice on how to avoid common beginner JavaScript programming mistakes, along with many helpful links to topics that show how to solve common JavaScript programming problems.
 
 ## See also
 

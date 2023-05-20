@@ -1,5 +1,6 @@
 ---
-title: Option()
+title: "HTMLOptionElement: Option() constructor"
+short-title: Option()
 slug: Web/API/HTMLOptionElement/Option
 page-type: web-api-constructor
 browser-compat: api.HTMLOptionElement.Option
@@ -33,7 +34,7 @@ new Option(text, value, defaultSelected, selected)
     value, e.g. for the associated {{htmlelement("select")}} element's value when the form
     is submitted to the server.
 - `defaultSelected` {{optional_inline}}
-  - : A value of either `true` or `false` that sets the {{htmlattrxref("selected", "option")}}
+  - : A value of either `true` or `false` that sets the [`selected`](/en-US/docs/Web/HTML/Element/option#selected)
     attribute value, i.e. so that this {{htmlelement("option")}} will be the default value
     selected in the {{htmlelement("select")}} element when the page is first loaded. If
     this is not specified, a default value of false is used. Note that a value of true
@@ -48,17 +49,17 @@ new Option(text, value, defaultSelected, selected)
 ### Just add new options
 
 ```js
- /* assuming we have the following HTML
+/* assuming we have the following HTML
 <select id='s'>
 
 </select>
 */
 
-const s = document.getElementById('s');
+const s = document.getElementById("s");
 const options = [Four, Five, Six];
 
-options.forEach((element,key) => {
-    s[key] = new Option(element,key);
+options.forEach((element, key) => {
+  s[key] = new Option(element, key);
 });
 ```
 
@@ -73,17 +74,17 @@ options.forEach((element,key) => {
 </select>
 */
 
-const s = document.getElementById('s');
-const options = [ 'zero', 'one', 'two' ];
+const s = document.getElementById("s");
+const options = ["zero", "one", "two"];
 
 options.forEach((element, key) => {
-  if (element === 'zero') {
+  if (element === "zero") {
     s[key] = new Option(element, s.options.length, false, false);
   }
-  if (element === 'one') {
+  if (element === "one") {
     s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
-  if (element === 'two') {
+  if (element === "two") {
     s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });

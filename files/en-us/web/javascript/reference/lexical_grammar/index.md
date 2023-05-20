@@ -3,6 +3,7 @@ title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
+spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
 ---
 
 {{JsSidebar("More")}}
@@ -39,13 +40,13 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as [identifier](#ident
 
 > **Note:** Of those [characters with the "White_Space" property but are not in the "Space_Separator" general category](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D), U+0009, U+000B, and U+000C are still treated as white space in JavaScript; U+0085 NEXT LINE has no special role; others become the set of [line terminators](#line_terminators).
 
-> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) changed from `0` to `1`.
+> **Note:** Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of [`"\u180E".trim().length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim) changed from `0` to `1`.
 
 ## Line terminators
 
 In addition to [white space](#white_space) characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of [automatic semicolon insertion](#automatic_semicolon_insertion).
 
-Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) in regular expressions matches all white space and line terminators.
+Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) in regular expressions matches all white space and line terminators.
 
 Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
 
@@ -154,7 +155,7 @@ class C {
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode codepoints are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode code points are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
 
 > **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
@@ -184,7 +185,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
+Some keywords are _reserved_, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -430,11 +431,12 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
+A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
-- U+005C \ (backslash),
-- U+000D \<CR>,
-- and U+000A \<LF>.
+- U+005C \ (backslash)
+- U+000D \<CR>
+- U+000A \<LF>
+- The same kind of quote that begins the string literal
 
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
@@ -442,6 +444,48 @@ Any code points may appear in the form of an escape sequence. String literals ev
 'foo'
 "bar"
 ```
+
+The following subsections describe various escape sequences (`\` followed by one or more characters) available in string literals. Any escape sequence not listed below becomes an "identity escape" that becomes the code point itself. For example, `\z` is the same as `z`. There's a deprecated octal escape sequence syntax described in the [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) page. Many of these escape sequences are also valid in regular expressions — see [Character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
+
+#### Escape sequences
+
+Special characters can be encoded using escape sequences:
+
+| Escape sequence                                        | Unicode code point                           |
+| ------------------------------------------------------ | -------------------------------------------- |
+| `\0`                                                   | null character (U+0000 NULL)                 |
+| `\'`                                                   | single quote (U+0027 APOSTROPHE)             |
+| `\"`                                                   | double quote (U+0022 QUOTATION MARK)         |
+| `\\`                                                   | backslash (U+005C REVERSE SOLIDUS)           |
+| `\n`                                                   | newline (U+000A LINE FEED; LF)               |
+| `\r`                                                   | carriage return (U+000D CARRIAGE RETURN; CR) |
+| `\v`                                                   | vertical tab (U+000B LINE TABULATION)        |
+| `\t`                                                   | tab (U+0009 CHARACTER TABULATION)            |
+| `\b`                                                   | backspace (U+0008 BACKSPACE)                 |
+| `\f`                                                   | form feed (U+000C FORM FEED)                 |
+| `\` followed by a [line terminator](#line_terminators) | empty string                                 |
+
+The last escape sequence, `\` followed by a line terminator, is useful for splitting a string literal across multiple lines without changing its meaning.
+
+```js
+const longString =
+  "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+```
+
+Make sure there is no space or any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
+
+You can also use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator to append multiple strings together, like this:
+
+```js
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
+```
+
+Both of the above methods result in identical strings.
 
 #### Hexadecimal escape sequences
 
@@ -623,7 +667,7 @@ const a = 1(1).toString();
 const b = 1[1, 2, 3].forEach(console.log);
 ```
 
-This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
+This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
 
 Within classes, class fields and generator methods can be a pitfall as well.
 
@@ -647,12 +691,138 @@ And therefore will be a syntax error around `{`.
 There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
 
 - Write postfix `++` and `--` on the same line as their operands.
+
+  ```js-nolint example-bad
+  const a = b
+  ++
+  console.log(a) // ReferenceError: Invalid left-hand side expression in prefix operation
+  ```
+
+  ```js-nolint example-good
+  const a = b++
+  console.log(a)
+  ```
+
 - The expressions after `return`, `throw`, or `yield` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  function foo() {
+    return
+      1 + 1 // Returns undefined; 1 + 1 is ignored
+  }
+  ```
+
+  ```js-nolint example-good
+  function foo() {
+    return 1 + 1
+  }
+
+  function foo() {
+    return (
+      1 + 1
+    )
+  }
+  ```
+
 - Similarly, the label identifier after `break` or `continue` should be on the same line as the keyword.
+
+  ```js-nolint example-bad
+  outerBlock: {
+    innerBlock: {
+      break
+        outerBlock // SyntaxError: Illegal break statement
+    }
+  }
+  ```
+
+  ```js-nolint example-good
+  outerBlock: {
+    innerBlock: {
+      break outerBlock
+    }
+  }
+  ```
+
 - The `=>` of an arrow function should be on the same line as the end of its parameters.
+
+  ```js-nolint example-bad
+  const foo = (a, b)
+    => a + b
+  ```
+
+  ```js-nolint example-good
+  const foo = (a, b) =>
+    a + b
+  ```
+
 - The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
+
+  ```js-nolint example-bad
+  async
+  function foo() {}
+  ```
+
+  ```js-nolint example-good
+  async function
+  foo() {}
+  ```
+
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
+
+  ```js-nolint example-bad
+  // The () may be merged with the previous line as a function call
+  (() => {
+    // ...
+  })()
+
+  // The [ may be merged with the previous line as a property access
+  [1, 2, 3].forEach(console.log)
+
+  // The ` may be merged with the previous line as a tagged template literal
+  `string text ${data}`.match(pattern).forEach(console.log)
+
+  // The + may be merged with the previous line as a binary + expression
+  +a.toString()
+
+  // The - may be merged with the previous line as a binary - expression
+  -a.toString()
+
+  // The / may be merged with the previous line as a division expression
+  /pattern/.exec(str).forEach(console.log)
+  ```
+
+  ```js-nolint example-good
+  ;(() => {
+    // ...
+  })()
+  ;[1, 2, 3].forEach(console.log)
+  ;`string text ${data}`.match(pattern).forEach(console.log)
+  ;+a.toString()
+  ;-a.toString()
+  ;/pattern/.exec(str).forEach(console.log)
+  ```
+
 - Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
+
+  ```js-nolint example-bad
+  class A {
+    a = 1
+    [b] = 2
+    *gen() {} // Seen as a = 1[b] = 2 * gen() {}
+  }
+  ```
+
+  ```js-nolint example-good
+  class A {
+    a = 1;
+    [b] = 2;
+    *gen() {}
+  }
+  ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -660,10 +830,6 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 
 ## See also
 
-- [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
-- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
-- [string](/en-US/docs/Web/JavaScript/Data_structures#string_type)
-- {{jsxref("RegExp")}}
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (August 12, 2013)
+- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (December 21, 2011)

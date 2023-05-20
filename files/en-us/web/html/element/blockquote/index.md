@@ -1,18 +1,7 @@
 ---
-title: '<blockquote>: The Block Quotation element'
+title: "<blockquote>: The Block Quotation element"
 slug: Web/HTML/Element/blockquote
 page-type: html-element
-tags:
-  - Blockquote
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning root
-  - Quotations
-  - Reference
-  - Web
 browser-compat: html.elements.blockquote
 ---
 
@@ -26,7 +15,7 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
 ## Usage notes
@@ -63,12 +52,12 @@ The output from this HTML snippet looks like this:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, sectioning root, palpable content.
       </td>
@@ -76,7 +65,7 @@ The output from this HTML snippet looks like this:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -89,7 +78,7 @@ The output from this HTML snippet looks like this:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

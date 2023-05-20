@@ -1,14 +1,6 @@
 ---
 title: Setting up a Django development environment
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Beginner
-  - Development environment
-  - Installing
-  - Intro
-  - Learn
-  - Python
-  - django
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -42,7 +34,7 @@ The development environment is an installation of Django on your local computer 
 
 The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
 
-There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
+There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
 
 ### What are the Django setup options?
 

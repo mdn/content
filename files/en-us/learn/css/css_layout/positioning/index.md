@@ -1,17 +1,6 @@
 ---
 title: Positioning
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Positioning
-  - absolute
-  - fixed
-  - relative
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

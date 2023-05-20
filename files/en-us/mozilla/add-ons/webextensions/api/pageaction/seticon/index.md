@@ -2,16 +2,6 @@
 title: pageAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setIcon
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setIcon
 browser-compat: webextensions.api.pageAction.setIcon
 ---
 

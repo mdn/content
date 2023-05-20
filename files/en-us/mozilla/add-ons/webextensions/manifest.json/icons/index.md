@@ -2,10 +2,6 @@
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.icons
 ---
 
@@ -85,7 +81,7 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
    }
    ```
 
-> **Note:** Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://bugs.chromium.org/p/chromium/issues/detail?id=29683).
+> **Note:** Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
 
 > **Note:** Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
 

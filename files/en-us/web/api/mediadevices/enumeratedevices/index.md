@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.enumerateDevices()
+title: "MediaDevices: enumerateDevices() method"
+short-title: enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
 page-type: web-api-instance-method
 browser-compat: api.MediaDevices.enumerateDevices
@@ -48,7 +49,8 @@ if (!navigator.mediaDevices?.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
-  navigator.mediaDevices.enumerateDevices()
+  navigator.mediaDevices
+    .enumerateDevices()
     .then((devices) => {
       devices.forEach((device) => {
         console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);

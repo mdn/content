@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.scripting
 
 {{CSSRef}}
 
-The **`scripting`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether scripting (such as JavaScript) is available.
+The **`scripting`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether scripting (such as JavaScript) is available.
 
 ## Syntax
 

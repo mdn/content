@@ -1,15 +1,7 @@
 ---
-title: '<dialog>: The Dialog element'
+title: "<dialog>: The Dialog element"
 slug: Web/HTML/Element/dialog
 page-type: html-element
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
 browser-compat: html.elements.dialog
 ---
 
@@ -23,7 +15,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
     It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it will be non-modal.
 
@@ -57,20 +49,22 @@ The following will render a non-modal, or modal-less, dialog. The "OK" button al
 </dialog>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Simple_example", "100%", 200)}}
 
 Because this dialog was opened via the `open` attribute, it is non-modal. In this example, when the dialog is dismissed, no method is provided to re-open it. Opening dialogs via {{domxref("HTMLDialogElement.show()")}} is preferred over the toggling of the boolean `open` attribute.
 
 ### Advanced example
 
-This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form. Updating the value of the {{HTMLElement('select')}} updates the value of the "confirm" button.
+This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements which default to `type="submit"`. Updating the value of the `<select>` updates the value of the "confirm" button. This value is the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElement/returnValue). If the dialog is closed with the <kbd>Esc</kbd> key, there is no return value. When the dialog is closed, the return value is displayed under the "Show the dialog" button.
 
 #### HTML
 
 ```html
 <!-- A modal dialog containing a form -->
 <dialog id="favDialog">
-  <form method="dialog">
+  <form>
     <p>
       <label>Favorite animal:
         <select>
@@ -82,8 +76,8 @@ This example opens a modal dialog when the "Show the dialog" button is activated
       </label>
     </p>
     <div>
-      <button value="cancel">Cancel</button>
-      <button id="confirmBtn" value="default">Confirm</button>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirmBtn" value="default">Submit</button>
     </div>
   </form>
 </dialog>
@@ -102,17 +96,23 @@ const outputBox = document.querySelector('output');
 const selectEl = favDialog.querySelector('select');
 const confirmBtn = favDialog.querySelector('#confirmBtn');
 
-// "Update details" button opens the <dialog> modally
+// "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener('click', () => {
     favDialog.showModal();
 });
+
 // "Favorite animal" input sets the value of the submit button
 selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
-// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', () => {
-  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+
+// "Confirm" button triggers "close" on dialog because of [formmethod="dialog"]
+favDialog.addEventListener('close', (e) => {
+  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
 });
 ```
 
@@ -120,9 +120,11 @@ favDialog.addEventListener('close', () => {
 
 {{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
-Note the JavaScript did not include the {{domxref("HTMLDialogElement.close()")}} method. When a form in a dialog is submitted, if the method is `dialog`, the current state of the form is saved, not submitted, and the dialog gets closed.
+This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Submit" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
+The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed.
+Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 
-It is important to provide a mechanism to close a dialog within the `dialog` element. For instance, the <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
+It is important to provide a closing mechanism within every `dialog` element. The <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
 
 ## Technical summary
 
@@ -130,12 +132,12 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
@@ -146,7 +148,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -159,7 +161,7 @@ It is important to provide a mechanism to close a dialog within the `dialog` ele
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >
       </td>

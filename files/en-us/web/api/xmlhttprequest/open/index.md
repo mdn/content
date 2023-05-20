@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.open()
+title: "XMLHttpRequest: open() method"
+short-title: open()
 slug: Web/API/XMLHttpRequest/open
 page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.open

@@ -2,14 +2,6 @@
 title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Permissions
-  - Reference
-  - WebExtensions
-  - onAdded
 browser-compat: webextensions.api.permissions.onAdded
 ---
 

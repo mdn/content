@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestLightProbe()
+title: "XRSession: requestLightProbe() method"
+short-title: requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
 page-type: web-api-instance-method
 status:
@@ -48,7 +49,7 @@ The default format is `srgb8`, however, some rendering engines may use other (hi
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
-  reflectionFormat: xrSession.preferredReflectionFormat
+  reflectionFormat: xrSession.preferredReflectionFormat,
 });
 ```
 

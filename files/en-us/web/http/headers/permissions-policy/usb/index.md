@@ -1,14 +1,9 @@
 ---
 title: "Permissions-Policy: usb"
 slug: Web/HTTP/Headers/Permissions-Policy/usb
-tags:
-  - Directive
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - Vibration API
-  - Web USB
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.usb
 ---
 

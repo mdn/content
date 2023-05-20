@@ -1,11 +1,6 @@
 ---
 title: Anatomy of a video game
 slug: Games/Anatomy
-tags:
-  - Games
-  - JavaScript
-  - Main Loop
-  - requestAnimationFrame
 ---
 
 {{GamesSidebar}}
