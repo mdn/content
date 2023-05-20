@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.size
+title: "HighlightRegistry: size property"
+short-title: size
 slug: Web/API/HighlightRegistry/size
 page-type: web-api-instance-property
 status:

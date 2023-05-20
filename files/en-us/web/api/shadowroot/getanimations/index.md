@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.getAnimations()
+title: "ShadowRoot: getAnimations() method"
+short-title: getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
 page-type: web-api-instance-method
 browser-compat: api.ShadowRoot.getAnimations

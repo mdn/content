@@ -1,5 +1,6 @@
 ---
-title: Image()
+title: "HTMLImageElement: Image() constructor"
+short-title: Image()
 slug: Web/API/HTMLImageElement/Image
 page-type: web-api-constructor
 browser-compat: api.HTMLImageElement.Image
@@ -25,10 +26,10 @@ new Image(width, height)
 ### Parameters
 
 - `width` {{optional_inline}}
-  - : The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
+  - : The width of the image (i.e., the value for the [`width`](/en-US/docs/Web/HTML/Element/img#width)
     attribute).
 - `height` {{optional_inline}}
-  - : The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
+  - : The height of the image (i.e., the value for the [`height`](/en-US/docs/Web/HTML/Element/img#height)
     attribute).
 
 ## Usage note

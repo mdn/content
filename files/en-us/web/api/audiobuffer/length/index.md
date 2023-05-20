@@ -1,5 +1,6 @@
 ---
-title: AudioBuffer.length
+title: "AudioBuffer: length property"
+short-title: length
 slug: Web/API/AudioBuffer/length
 page-type: web-api-instance-property
 browser-compat: api.AudioBuffer.length

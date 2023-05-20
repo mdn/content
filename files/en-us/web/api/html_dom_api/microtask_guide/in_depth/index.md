@@ -93,7 +93,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 Each agent is driven by an **event loop**, which collects any user and other events, enqueuing tasks to handle each callback. It then runs any pending JavaScript tasks, then any pending microtasks, then performs any needed rendering and painting before looping again to check for pending tasks.
 
-Your web site or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
+Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
 The event loop, then, drives everything that happens in the browser as it pertains to the interaction with the user, but more importantly for our purposes here, it is responsible for the scheduling and execution of every piece of code that runs within its thread.
 
@@ -133,7 +133,7 @@ When multiple programs and multiple code objects within those programs start to 
 
 ### Solutions
 
-The use of [web workers](/en-US/docs/Web/API/Web_Workers_API), which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed web site or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.
+The use of [web workers](/en-US/docs/Web/API/Web_Workers_API), which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed website or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.
 
 This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) techniques such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.
 

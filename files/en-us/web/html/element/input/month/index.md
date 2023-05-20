@@ -31,7 +31,7 @@ The format of the month string used by this input type is described in [Month st
 
 ### Setting a default value
 
-You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:
+You can set a default value for the input control by including a month and year inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
 <label for="bday-month">What month were you born in?</label>
@@ -68,13 +68,13 @@ In addition to the attributes common to {{HTMLElement("input")}} elements, month
 
 The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document.
 The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input.
-Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options.
+Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options.
 The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### max
 
 The latest year and month, in the string format discussed in the [Value](#value) section above, to accept.
-If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
+If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
 
 This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
@@ -82,7 +82,7 @@ This value must specify a year-month pairing later than or equal to the one spec
 ### min
 
 The earliest year and month to accept, in the same "`yyyy-MM`" format described above.
-If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
+If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 
 This value must be a year-month pairing which is earlier than or equal to the one specified by the `max` attribute.
@@ -97,7 +97,7 @@ Its `value` can, however, still be changed from JavaScript code that directly se
 ### step
 
 The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below.
-Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -128,7 +128,7 @@ The simplest use of `<input type="month">` involves a basic {{HTMLElement("input
 
 ### Setting maximum and minimum dates
 
-You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the range of dates that the user can choose.
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the range of dates that the user can choose.
 In the following example we specify a minimum month of `1900-01` and a maximum month of `2013-12`:
 
 ```html
@@ -152,7 +152,7 @@ The result here is that:
 
 ### Controlling input size
 
-`<input type="month">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}.
+`<input type="month">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size).
 You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
 ## Validation
@@ -160,7 +160,7 @@ You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 By default, `<input type="month">` does not apply any validation to entered values.
 The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still submit the form with the `month` input empty, or enter an invalid date (e.g. the 32nd of April).
 
-To help avoid this, you can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory.
+To help avoid this, you can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and in addition use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory.
 As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
 Let's look at an example; here we've set minimum and maximum dates, and also made the field required:
@@ -252,7 +252,7 @@ For example:
 - `Month yyyy` (July 2022)
 - and so forth…
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input.
+One way around this is to put a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute on your `month` input.
 Even though the `month` input doesn't use it, if the browser falls back to treating it like a `text` input, the pattern will be used.
 For example, try viewing the following demo in a browser that doesn't support `month` inputs:
 
@@ -476,10 +476,10 @@ function populateYears() {
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}}, and
-        {{htmlattrxref("step", "input")}}.
+        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>.
       </td>
     </tr>
     <tr>

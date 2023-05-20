@@ -2,16 +2,6 @@
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
 browser-compat: webextensions.api.windows.create
 ---
 

@@ -1,8 +1,10 @@
 ---
-title: ViewTransition.ready
+title: "ViewTransition: ready property"
+short-title: ready
 slug: Web/API/ViewTransition/ready
 page-type: web-api-instance-property
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition.ready
 ---
 
@@ -19,12 +21,12 @@ A promise.
 
 ## Examples
 
-In the following example, `ready` is used to trigger a custom circular reveal view transition eminating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
+In the following example, `ready` is used to trigger a custom circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
 ```js
 // Store the last click event
 let lastClick;
-addEventListener('click', event => (lastClick = event));
+addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
   // Fallback for browsers that don’t support this API:
@@ -59,9 +61,9 @@ function spaNavigate(data) {
       },
       {
         duration: 500,
-        easing: 'ease-in',
+        easing: "ease-in",
         // Specify which pseudo-element to animate
-        pseudoElement: '::view-transition-new(root)',
+        pseudoElement: "::view-transition-new(root)",
       }
     );
   });

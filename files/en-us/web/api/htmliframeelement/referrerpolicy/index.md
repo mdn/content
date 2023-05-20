@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.referrerPolicy
@@ -9,7 +10,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 
 The
 **`HTMLIFrameElement.referrerPolicy`**
-property reflects the HTML {{htmlattrxref("referrerpolicy","iframe")}} attribute of the
+property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) attribute of the
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 

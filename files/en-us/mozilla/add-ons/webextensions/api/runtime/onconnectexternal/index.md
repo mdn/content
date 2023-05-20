@@ -2,16 +2,6 @@
 title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onConnectExternal
-  - runtime
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
 

@@ -1,13 +1,12 @@
 ---
-title: KeyframeEffect.iterationComposite
+title: "KeyframeEffect: iterationComposite property"
+short-title: iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.KeyframeEffect.iterationComposite
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.
 

@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.key
+title: "NavigationDestination: key property"
+short-title: key
 slug: Web/API/NavigationDestination/key
 page-type: web-api-instance-property
 status:

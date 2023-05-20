@@ -1,5 +1,6 @@
 ---
-title: Animation.playbackRate
+title: "Animation: playbackRate property"
+short-title: playbackRate
 slug: Web/API/Animation/playbackRate
 page-type: web-api-instance-property
 browser-compat: api.Animation.playbackRate

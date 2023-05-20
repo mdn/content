@@ -37,7 +37,7 @@ _No changes._
 
 - ECMAScript 2015 modules have been enabled by default in ([Firefox bug 1438139](https://bugzil.la/1438139)). See [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) and [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) for more information, or consult MDN reference docs:
 
-  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Element/script#attr-type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Element/script#attr-nomodule)
+  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Element/script#type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Element/script#nomodule)
   - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements.
 
 - The {{jsxref("Array.prototype.values()")}} method has been added again ([Firefox bug 1420101](https://bugzil.la/1420101)). Make sure your code doesn't have any custom implementation of this method.
@@ -111,7 +111,7 @@ _No changes._
 ### CSS
 
 - The proprietary {{cssxref("-moz-user-input")}} property's `enabled` and `disabled` values are no longer available ([Firefox bug 1405087](https://bugzil.la/1405087)).
-- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been removed from the platform completely ([Firefox bug 1429723](https://bugzil.la/1429723)).
+- The proprietary `-moz-border-top-colors`, `-moz-border-right-colors`, `-moz-border-bottom-colors`, and `-moz-border-left-colors` properties have been removed from the platform completely ([Firefox bug 1429723](https://bugzil.la/1429723)).
 
 ### JavaScript
 

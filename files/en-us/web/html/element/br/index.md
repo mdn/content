@@ -1,5 +1,5 @@
 ---
-title: '<br>: The Line Break element'
+title: "<br>: The Line Break element"
 slug: Web/HTML/Element/br
 page-type: html-element
 browser-compat: html.elements.br
@@ -44,9 +44,9 @@ Mountain View, CA<br />
 USA<br />
 ```
 
-The result looks like so:
+#### Result
 
-{{ EmbedLiveSample('Simple_br', '100%', '90') }}
+{{ EmbedLiveSample('Simple_br', 640, 120) }}
 
 ## Accessibility concerns
 

@@ -45,7 +45,7 @@ The C in CSS stands for "Cascading". It is the method by which styles cascade to
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
 4. **Layers:** Within each of the six origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
 5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
-6. **Proximity:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared selector with the highest specificity wins.
+6. **Order of appearance:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared selector with the highest specificity wins.
 
 For each step, only the declarations "still in the running" move on to "compete" in the next step. If only one declaration is in the running, it "wins", and the subsequent steps are moot.
 
@@ -76,7 +76,7 @@ The "competing" selector in the user-agent stylesheet at the time of this writin
 
 Origin precedence always wins over selector specificity. If an element property is styled with a normal style declaration in multiple origins, the author style sheet will always override the redundant normal properties declared in a user or user-agent stylesheet. If the style is important, the user-agent stylesheet will always win over author and user styles. Cascade origin precedence ensures specificity conflicts between origins never happen.
 
-One last thing to note before moving on: order of appearance, or _proximity_, becomes relevant only when competing declarations in the origin of precedence have the same specificity.
+One last thing to note before moving on: order of appearance becomes relevant only when competing declarations in the origin of precedence have the same specificity.
 
 ## Overview of cascade layers
 
@@ -206,7 +206,7 @@ In the above CSS, we created five layers: `layout`, `<anonymous(01)>`, `theme`, 
 
 We assigned some styles to the layer named `layout`. If a named layer doesn't already exist, then specifying the name in an `@layer` at-rule, with or without assigning styles to the layer, creates the layer; this adds the layer to the end of the series of existing layer names. If the named layer already exists, all styles within the named block get appended to styles in the previously existing layer – specifying styles in a block by reusing an existing layer name does not create a new layer.
 
-Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of it's creation.
+Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of its creation.
 
 > **Note:** Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append styles to a previously existing unnamed layer.
 
@@ -338,7 +338,7 @@ Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Gl
 
 Animating styles have higher precedence than all normal styles, including inline normal styles.
 
-Important styles—property values that include the `!important` flag—take precedence over any styles previously mentioned on our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared. layers.
+Important styles, that is, property values that include the `!important` flag, take precedence over any styles previously mentioned in our list. They are sorted in reverse order of normal styles. Any important styles declared outside of a layer have less precedence than those declared within a layer. Important styles found within layers are also sorted in order of layer creation. For important styles, the last created layer has the lowest precedence, and the first created layer has the highest precedence among declared layers.
 
 Inline important styles again have higher precedence than important styles declared elsewhere.
 
@@ -362,11 +362,11 @@ We included that first line for two reasons: first, so you could easily edit the
 
 To summarize:
 
-- The order of layers is the order in which the layers are created.
+- The order of precedence of layers is the order in which the layers are created.
 - Once created, there is no way to change the layer order.
-- Layer precedence or normal styles is the order in which the layers are created.
+- Layer precedence for normal styles is the order in which the layers are created.
 - Unlayered normal styles have precedence over normal layered styles.
-- Layer precedence or important styles is reversed, with earlier created layers having precedence.
+- Layer precedence for important styles is reversed, with earlier created layers having precedence.
 - All layered important styles have precedence over unlayered important (and normal) styles.
 - Normal inline styles take precedence over all normal styles, layered or not.
 - Important inline styles take precedence over all other styles, with the exception of styles being transitioned.

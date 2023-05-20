@@ -1,5 +1,5 @@
 ---
-title: '<tr>: The Table Row element'
+title: "<tr>: The Table Row element"
 slug: Web/HTML/Element/tr
 page-type: html-element
 browser-compat: html.elements.tr
@@ -11,7 +11,7 @@ The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a 
 
 {{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
 
-To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the {{htmlattrxref("colspan", "td")}} attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the {{htmlattrxref("rowspan", "td")}} attribute on cells to indicate they should span more than one table row.
+To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on cells to indicate they should span more than one table row.
 
 This can take a little practice to get right when building your tables. We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
 
@@ -36,7 +36,7 @@ The following attributes may still be implemented in browsers but are no longer 
     - `justify`
       - : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
     - `char`
-      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
+      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the [`char`](#char) and [`charoff`](#charoff) to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
 
     If no value is expressly set for `align`, the parent node's value is inherited.
 
@@ -50,9 +50,9 @@ The following attributes may still be implemented in browsers but are no longer 
 
 - `char` {{deprecated_inline}}
 
-  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : A string that sets the character to align the cells in each row's columns (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
-    > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
+    > **Note:** This attribute is obsolete and rarely implemented anyway. To achieve the same effect as the [`char`](#char) attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
 
 - `charoff` {{deprecated_inline}}
 
@@ -149,8 +149,8 @@ Let's actually look at the output first this time:
 
 Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
 
-- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
-- Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
+- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the [`rowspan`](#rowspan) attribute, making them each two rows tall.
+- Having the first row's "Membership Dates" heading cell span two columns using the [`colspan`](#colspan) attribute, which causes this heading actually to be two columns wide.
 - Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
 
 #### HTML

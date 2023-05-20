@@ -169,4 +169,4 @@ However, in the rare case you find yourself wanting to do something like that, t
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

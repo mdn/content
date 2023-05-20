@@ -1,5 +1,6 @@
 ---
-title: XRSubImage.viewport
+title: "XRSubImage: viewport property"
+short-title: viewport
 slug: Web/API/XRSubImage/viewport
 page-type: web-api-instance-property
 status:

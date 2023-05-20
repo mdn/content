@@ -1,5 +1,6 @@
 ---
-title: Navigation.reload()
+title: "Navigation: reload() method"
+short-title: reload()
 slug: Web/API/Navigation/reload
 page-type: web-api-instance-method
 status:

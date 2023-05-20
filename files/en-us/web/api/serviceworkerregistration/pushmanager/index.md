@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.pushManager
+title: "ServiceWorkerRegistration: pushManager property"
+short-title: pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.pushManager

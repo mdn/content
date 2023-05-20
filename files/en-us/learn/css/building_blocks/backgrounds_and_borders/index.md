@@ -263,7 +263,7 @@ And for the longhands:
 
 > **Note:** These top, right, bottom, and left border properties also have mapped _logical_ properties that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-**There are a variety of styles that you can use for borders. In the example below we have used a different border style for the four sides of my box. Play with the border style, width, and color to see how borders work.**
+There are a variety of styles that you can use for borders. In the example below, we have used two different border styles for the box and two different border styles for the heading. Play with the border style, width, and color to see how borders work.
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
 

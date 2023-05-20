@@ -2,9 +2,9 @@
 title: View Transitions API
 slug: Web/API/View_Transitions_API
 page-type: web-api-overview
-status: experimental
-browser-compat:
-  - api.Document.startViewTransitions()
+status:
+  - experimental
+browser-compat: api.Document.startViewTransition
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
@@ -22,7 +22,7 @@ However, creating view transitions on the web has historically been difficult. T
 - Stop accidental user interactions with the old content from causing problems.
 - Remove the old content once the transition is complete.
 
-There is also the major issue of accessibility issues caused by having the new and old content both present in the DOM at once, such as loss of reading position, focus confusion, and strange live region announcement behavior. And cross-document view transitions (i.e. across different pages in regular web sites) are impossible.
+There is also the major issue of accessibility issues caused by having the new and old content both present in the DOM at once, such as loss of reading position, focus confusion, and strange live region announcement behavior. And cross-document view transitions (i.e. across different pages in regular websites) are impossible.
 
 The View Transitions API provides a much easier way of handling the required DOM changes and transition animations.
 
@@ -30,17 +30,12 @@ The View Transitions API provides a much easier way of handling the required DOM
 
 ### Creating a basic view transition
 
-An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
+An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
 
 ```js
 function updateView(event) {
   // Handle the difference in whether the event is fired on the <a> or the <img>
-  let targetIdentifier;
-  if (event.target.firstChild === null) {
-    targetIdentifier = event.target;
-  } else {
-    targetIdentifier = event.target.firstChild;
-  }
+  const targetIdentifier = event.target.firstChild || event.target;
 
   const displayNewImage = () => {
     const mainSrc = `${targetIdentifier.src.split("_th.jpg")[0]}.jpg`;
@@ -71,6 +66,7 @@ Let's walk through how this works:
 2. Next, the callback passed to `startViewTransition()` is invoked, in this case `displayNewImage`, which causes the DOM to change.
 
    When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
+
 3. The API captures the new state of the page as a live representation.
 4. The API constructs a pseudo-element tree with the following structure:
 
@@ -86,6 +82,7 @@ Let's walk through how this works:
    - {{cssxref("::view-transition-old")}} is the screenshot of the old page view, and {{cssxref("::view-transition-new")}} is the live representation of the new page view. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
    When the transition animation is about to run, the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
+
 5. The old page view animates from {{cssxref("opacity")}} 1 to 0, while the new view animates from `opacity` 0 to 1, which is what creates the default cross-fade.
 6. When the transition animation has reached its end state, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
 
@@ -138,13 +135,21 @@ Let's look at something more interesting — a custom animation for the `<figcap
 
 ```css
 @keyframes grow-x {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes shrink-x {
-  from { transform: scaleX(1); }
-  to { transform: scaleX(0); }
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
 }
 
 ::view-transition-old(figure-caption),
@@ -161,7 +166,7 @@ Let's look at something more interesting — a custom animation for the `<figcap
 
 ::view-transition-new(figure-caption) {
   animation: 0.25s 0.25s linear both grow-x;
-} 
+}
 ```
 
 Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements, plus we've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
@@ -187,12 +192,12 @@ This works because by default, `::view-transition-group` transitions width and h
 
 The {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns a {{domxref("ViewTransition")}} object instance, which contains several promise members allowing you to run JavaScript in response to different states of the transition being reached. For example, {{domxref("ViewTransition.ready")}} fulfills once the pseudo-element tree is created and the animation is about to start, whereas {{domxref("ViewTransition.finished")}} fulfills once the the animation is finished, and the new page view is visible and interactive to the user.
 
-For example, the following JavaScript could be used to create a circular reveal view transition eminating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
+For example, the following JavaScript could be used to create a circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
 ```js
 // Store the last click event
 let lastClick;
-addEventListener('click', event => (lastClick = event));
+addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
   // Fallback for browsers that don’t support this API:
@@ -227,9 +232,9 @@ function spaNavigate(data) {
       },
       {
         duration: 500,
-        easing: 'ease-in',
+        easing: "ease-in",
         // Specify which pseudo-element to animate
-        pseudoElement: '::view-transition-new(root)',
+        pseudoElement: "::view-transition-new(root)",
       }
     );
   });
@@ -283,7 +288,7 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## Examples
 
-- [Basic View Transitions demo](https://basic-view-transitions-api.glitch.me/): A basic image gallery demo with separate transitions between old and new images, and old and new captions.
+- [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/): A basic image gallery demo with separate transitions between old and new images, and old and new captions.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A more sophisticated video player demo app that features a number of different view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 
 ## Specifications

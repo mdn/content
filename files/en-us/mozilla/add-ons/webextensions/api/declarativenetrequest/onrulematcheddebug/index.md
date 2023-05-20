@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.onRuleMatchedDebug
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/onRuleMatchedDebug
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Event
-  - declarativeNetRequest
-  - onRuleMatchedDebug
+page-type: webextension-api-event
 browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
 ---
 
@@ -73,7 +65,7 @@ Events have three functions:
     - `rule`
       - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule", "MatchedRule")}}. Details of a matched rule.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

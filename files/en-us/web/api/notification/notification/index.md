@@ -1,5 +1,6 @@
 ---
-title: Notification()
+title: "Notification: Notification() constructor"
+short-title: Notification()
 slug: Web/API/Notification/Notification
 page-type: web-api-constructor
 browser-compat: api.Notification.Notification

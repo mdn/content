@@ -2,11 +2,6 @@
 title: Implement a settings page
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Web
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

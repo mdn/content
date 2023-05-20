@@ -2,12 +2,10 @@
 title: CSSMathProduct
 slug: Web/API/CSSMathProduct
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSMathProduct
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
@@ -20,7 +18,7 @@ The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Instance properties
 
-- {{domxref('CSSMathProduct.values')}} {{Experimental_Inline}}
+- {{domxref('CSSMathProduct.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods

@@ -1,5 +1,6 @@
 ---
-title: PositionSensorVRDevice.getState()
+title: "PositionSensorVRDevice: getState() method"
+short-title: getState()
 slug: Web/API/PositionSensorVRDevice/getState
 page-type: web-api-instance-method
 status:

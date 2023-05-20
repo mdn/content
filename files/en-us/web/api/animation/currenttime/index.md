@@ -1,5 +1,6 @@
 ---
-title: Animation.currentTime
+title: "Animation: currentTime property"
+short-title: currentTime
 slug: Web/API/Animation/currentTime
 page-type: web-api-instance-property
 browser-compat: api.Animation.currentTime
@@ -34,7 +35,7 @@ animation.currentTime =
 ## Reduced time precision
 
 To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 microseconds in Firefox 59; in 60 it will be 2 milliseconds.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

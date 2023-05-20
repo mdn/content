@@ -2,17 +2,6 @@
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - ContextType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - menus
 browser-compat: webextensions.api.menus.ContextType
 ---
 

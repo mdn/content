@@ -1,5 +1,6 @@
 ---
-title: URLPattern.test()
+title: "URLPattern: test() method"
+short-title: test()
 slug: Web/API/URLPattern/test
 page-type: web-api-instance-method
 status:

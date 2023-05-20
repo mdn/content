@@ -2,16 +2,6 @@
 title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - DangerType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 browser-compat: webextensions.api.downloads.DangerType
 ---
 

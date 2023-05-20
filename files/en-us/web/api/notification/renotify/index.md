@@ -1,5 +1,6 @@
 ---
-title: Notification.renotify
+title: "Notification: renotify property"
+short-title: renotify
 slug: Web/API/Notification/renotify
 page-type: web-api-instance-property
 status:

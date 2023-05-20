@@ -2,14 +2,8 @@
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Manifest
-  - Options
-  - WebExtensions
-  - options_page
+status:
+  - deprecated
 browser-compat: webextensions.manifest.options_page
 ---
 

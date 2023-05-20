@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.submit()
+title: "HTMLFormElement: submit() method"
+short-title: submit()
 slug: Web/API/HTMLFormElement/submit
 page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.submit
@@ -19,8 +20,7 @@ This method is similar, but not identical to, activating a form's submit
 The {{domxref("HTMLFormElement.requestSubmit()")}} method is identical to activating a
 form's submit {{HtmlElement("button")}} and does not have these differences.
 
-If a form control (such as a submit button) has a `name` or `id`
-of `submit`, this method will mask the form's submit method.
+A form control (such as a submit button) with a `name` or `id` of `submit` will mask the form's `submit` method. Trying to call `myForm.submit();` throws an error "submit is not a function" because in this case `submit` refers to the form control which has a `name` or `id` of `submit`.
 
 {{HtmlElement("input")}} with attribute type="submit" will not be submitted with the
 form when using **`HTMLFormElement.submit()`**, but it would be

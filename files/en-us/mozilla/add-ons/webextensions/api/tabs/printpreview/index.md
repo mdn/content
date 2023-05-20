@@ -2,15 +2,6 @@
 title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - printPreview
-  - tabs
 browser-compat: webextensions.api.tabs.printPreview
 ---
 

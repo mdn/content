@@ -2,14 +2,6 @@
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 browser-compat: webextensions.api.captivePortal.onStateChanged
 ---
 

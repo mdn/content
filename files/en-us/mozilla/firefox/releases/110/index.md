@@ -19,6 +19,7 @@ No notable changes.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) documentation ([Firefox bug 1809720](https://bugzil.la/1809720)).
 - The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ([Firefox bug 1422237](https://bugzil.la/1422237)).
 - The [`list`](/en-US/docs/Web/HTML/Element/datalist#color_type) attribute is supported in `<input>` elements with `type="color"` on Windows and Linux ([Firefox bug 960984](https://bugzil.la/960984)).
+- The [`@page`](/en-US/docs/Web/CSS/@page) at-rule now supports named pages, which allows a user to create page breaks for specific selectors using the [`page`](/en-US/docs/Web/CSS/page) property ([Firefox bug 1787947](https://bugzil.la/1787947))
 
 ### JavaScript
 
@@ -38,6 +39,15 @@ No notable changes.
   (See [Firefox bug 1676855](https://bugzil.la/1676855) for more details.)
 
 - WebRTC methods {{domxref("RTCRtpSender.getParameters()")}}, {{domxref("RTCRtpSender.setParameters()")}}, and {{domxref("RTCRtpReceiver.getParameters()")}} are now compliant with the specification ([Firefox bug 1401592](https://bugzil.la/1401592)).
+
+#### DOM
+
+- {{domxref("CSSContainerRule")}} is supported, allowing JavaScript to access the name and query used in an {{cssxref("@container")}} at-rule definition ([Firefox bug 1787173](https://bugzil.la/1787173)).
+
+- Elements now lose focus if a style is applied that makes them ineligible to hold focus, such as `hidden`, and the [`blur` event](/en-US/docs/Web/API/Element/blur_event) is fired.
+  Focus then moves to the viewport.
+  Previously focus would remain with the element.
+  (See [Firefox bug 1810077](https://bugzil.la/1810077) for more details.)
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

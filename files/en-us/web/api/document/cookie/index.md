@@ -1,5 +1,6 @@
 ---
-title: Document.cookie
+title: "Document: cookie property"
+short-title: cookie
 slug: Web/API/Document/cookie
 page-type: web-api-instance-property
 browser-compat: api.Document.cookie

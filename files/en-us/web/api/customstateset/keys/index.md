@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.keys()
+title: "CustomStateSet: keys() method"
+short-title: keys()
 slug: Web/API/CustomStateSet/keys
 page-type: web-api-instance-method
 status:

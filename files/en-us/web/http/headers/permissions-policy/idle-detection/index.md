@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: idle-detection"
 slug: Web/HTTP/Headers/Permissions-Policy/idle-detection
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.idle-detection

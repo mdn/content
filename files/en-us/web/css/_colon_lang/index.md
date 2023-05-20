@@ -11,7 +11,7 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
-> **Note:** In HTML, the language is determined by a combination of the {{htmlattrxref("lang")}} attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+> **Note:** In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 
@@ -75,6 +75,6 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ## See also
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML {{htmlattrxref("lang")}} attribute
-- HTML {{htmlattrxref("translate")}} attribute
+- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

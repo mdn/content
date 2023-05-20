@@ -1,16 +1,14 @@
 ---
-title: WebTransportError()
+title: "WebTransportError: WebTransportError() constructor"
+short-title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
-The **`WebTransportError()`** constructor creates a new
-{{domxref("WebTransportError")}} object instance.
+The **`WebTransportError()`** constructor creates a new {{domxref("WebTransportError")}} object instance.
 
 {{AvailableInWorkers}}
 
@@ -37,7 +35,6 @@ A developer would not use this constructor manually. A new `WebTransportError` o
 const url = "notaurl";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -46,11 +43,11 @@ async function initTransport(url) {
     await transport.ready;
 
     // ...
-  } catch(error) {
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }

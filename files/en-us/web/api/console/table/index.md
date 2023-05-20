@@ -1,5 +1,6 @@
 ---
-title: console.table()
+title: "console: table() method"
+short-title: table()
 slug: Web/API/console/table
 page-type: web-api-instance-method
 browser-compat: api.console.table

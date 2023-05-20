@@ -11,7 +11,7 @@ browser-compat: css.at-rules.media.device-width
 
 > **Note:** To query for the width of the viewport, developers should use the [`width`](/en-US/docs/Web/CSS/@media/width) media feature instead.
 
-The **`device-width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the width of an output device's rendering surface.
+The **`device-width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the width of an output device's rendering surface.
 
 ## Syntax
 

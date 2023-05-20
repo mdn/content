@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.id
+title: "PaymentRequest: id property"
+short-title: id
 slug: Web/API/PaymentRequest/id
 page-type: web-api-instance-property
 browser-compat: api.PaymentRequest.id

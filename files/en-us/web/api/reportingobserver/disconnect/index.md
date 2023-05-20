@@ -1,13 +1,12 @@
 ---
-title: ReportingObserver.disconnect()
+title: "ReportingObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/ReportingObserver/disconnect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ReportingObserver.disconnect
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}
 
 The **`disconnect()`** method of the
 {{domxref("ReportingObserver")}} interface stops a reporting observer that had

@@ -1,5 +1,6 @@
 ---
-title: GainNode.gain
+title: "GainNode: gain property"
+short-title: gain
 slug: Web/API/GainNode/gain
 page-type: web-api-instance-property
 browser-compat: api.GainNode.gain

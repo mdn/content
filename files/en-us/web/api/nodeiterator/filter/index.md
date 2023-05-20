@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.filter
+title: "NodeIterator: filter property"
+short-title: filter
 slug: Web/API/NodeIterator/filter
 page-type: web-api-instance-property
 browser-compat: api.NodeIterator.filter

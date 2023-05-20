@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.lang
+title: "SpeechSynthesisUtterance: lang property"
+short-title: lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.lang
@@ -9,7 +10,7 @@ browser-compat: api.SpeechSynthesisUtterance.lang
 
 The **`lang`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the language of the utterance.
 
-If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.
+If unset, the app's (i.e. the {{htmlelement("html")}} [`lang`](/en-US/docs/Web/HTML/Element/html#lang) value) lang will be used, or the user-agent default if that is unset too.
 
 ## Value
 

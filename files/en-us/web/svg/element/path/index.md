@@ -2,11 +2,6 @@
 title: <path>
 slug: Web/SVG/Element/path
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
 browser-compat: svg.elements.path
 ---
 
@@ -17,7 +12,11 @@ The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to de
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

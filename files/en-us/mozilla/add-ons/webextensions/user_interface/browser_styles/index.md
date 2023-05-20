@@ -2,13 +2,6 @@
 title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 page-type: guide
-tags:
-  - Add-ons
-  - Browser style
-  - Example
-  - Extensions
-  - Guide
-  - WebExtensions
 browser-compat:
   - webextensions.manifest.action
   - webextensions.manifest.browser_action

@@ -72,5 +72,5 @@ Not part of any standard.
 ## See also
 
 - {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-modify")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-modify", "-moz-user-modify")}}
+- {{CSSxRef("user-select", "-moz-user-select")}}

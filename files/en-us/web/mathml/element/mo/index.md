@@ -1,11 +1,7 @@
 ---
 title: <mo>
 slug: Web/MathML/Element/mo
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+page-type: mathml-element
 browser-compat: mathml.elements.mo
 ---
 

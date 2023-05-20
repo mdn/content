@@ -2,14 +2,6 @@
 title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.network
 browser-compat: webextensions.api.devtools.network.onNavigated
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: TaskController.setPriority()
+title: "TaskController: setPriority() method"
+short-title: setPriority()
 slug: Web/API/TaskController/setPriority
 page-type: web-api-instance-method
 browser-compat: api.TaskController.setPriority

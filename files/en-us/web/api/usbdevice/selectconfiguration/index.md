@@ -1,5 +1,6 @@
 ---
-title: USBDevice.selectConfiguration()
+title: "USBDevice: selectConfiguration() method"
+short-title: selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
 page-type: web-api-instance-method
 status:

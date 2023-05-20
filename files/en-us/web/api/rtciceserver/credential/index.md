@@ -1,5 +1,6 @@
 ---
-title: RTCIceServer.credential
+title: "RTCIceServer: credential property"
+short-title: credential
 slug: Web/API/RTCIceServer/credential
 page-type: web-api-instance-property
 browser-compat: api.RTCIceServer.credential

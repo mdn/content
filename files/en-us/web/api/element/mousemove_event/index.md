@@ -1,5 +1,6 @@
 ---
 title: "Element: mousemove event"
+short-title: mousemove
 slug: Web/API/Element/mousemove_event
 page-type: web-api-event
 browser-compat: api.Element.mousemove_event

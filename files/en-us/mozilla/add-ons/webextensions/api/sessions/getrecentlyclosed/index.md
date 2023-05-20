@@ -2,16 +2,6 @@
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecentlyClosed
-  - sessions
 browser-compat: webextensions.api.sessions.getRecentlyClosed
 ---
 

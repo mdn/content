@@ -1,5 +1,6 @@
 ---
 title: "NetworkInformation: change event"
+short-title: change
 slug: Web/API/NetworkInformation/change_event
 page-type: web-api-event
 status:

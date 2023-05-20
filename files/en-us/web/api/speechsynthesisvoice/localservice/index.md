@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisVoice.localService
+title: "SpeechSynthesisVoice: localService property"
+short-title: localService
 slug: Web/API/SpeechSynthesisVoice/localService
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisVoice.localService

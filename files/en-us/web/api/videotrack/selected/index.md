@@ -1,5 +1,6 @@
 ---
-title: VideoTrack.selected
+title: "VideoTrack: selected property"
+short-title: selected
 slug: Web/API/VideoTrack/selected
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.selected

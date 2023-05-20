@@ -2,16 +2,6 @@
 title: action.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/action/disable
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - disable
 browser-compat: webextensions.api.action.disable
 ---
 

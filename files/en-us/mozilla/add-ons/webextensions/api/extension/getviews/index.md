@@ -2,16 +2,6 @@
 title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getViews
 browser-compat: webextensions.api.extension.getViews
 ---
 

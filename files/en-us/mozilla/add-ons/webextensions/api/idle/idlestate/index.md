@@ -2,16 +2,6 @@
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - IdleState
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.idle.IdleState
 ---
 

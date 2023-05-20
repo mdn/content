@@ -2,10 +2,6 @@
 title: <marker>
 slug: Web/SVG/Element/marker
 page-type: svg-element
-tags:
-  - Element
-  - SVG
-  - SVG Container
 browser-compat: svg.elements.marker
 ---
 

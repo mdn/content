@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Type
-  - declarativeNetRequest
-  - ResourceType
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 ---
 
@@ -30,7 +22,7 @@ Values of this type are strings. Possible values are:
 - `image`
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
-  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's {{htmlattrxref("srcset", "img")}} attribute.
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute.
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
@@ -45,7 +37,7 @@ Values of this type are strings. Possible values are:
   - : Requests sent by plugins.
 - `ping`
 
-  - : Requests sent to the URL given in a hyperlink's {{htmlattrxref("ping", "a")}} attribute, when the hyperlink is followed.
+  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
@@ -73,6 +65,8 @@ Values of this type are strings. Possible values are:
   - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
 - `other`
   - : Resources that aren't covered by any other available type.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

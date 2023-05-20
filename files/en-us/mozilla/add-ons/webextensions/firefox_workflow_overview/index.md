@@ -2,17 +2,6 @@
 title: Firefox workflow overview
 slug: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
 page-type: guide
-tags:
-  - Add-ons
-  - Code
-  - Extensions
-  - Firefox
-  - WebExtensions
-  - enhance
-  - prepare
-  - publish
-  - retire
-  - workflow
 ---
 
 {{AddonSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: Document.location
+title: "Document: location property"
+short-title: location
 slug: Web/API/Document/location
 page-type: web-api-instance-property
 browser-compat: api.Document.location

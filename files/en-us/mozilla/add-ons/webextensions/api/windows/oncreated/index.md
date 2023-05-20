@@ -2,16 +2,6 @@
 title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - onCreated
 browser-compat: webextensions.api.windows.onCreated
 ---
 

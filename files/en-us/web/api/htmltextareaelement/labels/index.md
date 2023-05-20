@@ -1,5 +1,6 @@
 ---
-title: HTMLTextAreaElement.labels
+title: "HTMLTextAreaElement: labels property"
+short-title: labels
 slug: Web/API/HTMLTextAreaElement/labels
 page-type: web-api-instance-property
 browser-compat: api.HTMLTextAreaElement.labels

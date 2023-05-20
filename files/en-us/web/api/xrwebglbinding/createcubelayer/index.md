@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createCubeLayer()
+title: "XRWebGLBinding: createCubeLayer() method"
+short-title: createCubeLayer()
 slug: Web/API/XRWebGLBinding/createCubeLayer
 page-type: web-api-instance-method
 status:
@@ -89,10 +90,10 @@ function onXRSessionStarted(xrSession) {
   const cubeLayer = xrGlBinding.createCubeLayer({
     space: xrReferenceSpace,
     viewPixelHeight: 512,
-    viewPixelWidth: 512
+    viewPixelWidth: 512,
   });
   xrSession.updateRenderState({
-    layers: [cubeLayer]
+    layers: [cubeLayer],
   });
 }
 ```

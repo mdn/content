@@ -2,16 +2,6 @@
 title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteRange
 browser-compat: webextensions.api.history.deleteRange
 ---
 

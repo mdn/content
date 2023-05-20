@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.enumerateDevices()
+title: "MediaDevices: enumerateDevices() method"
+short-title: enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
 page-type: web-api-instance-method
 browser-compat: api.MediaDevices.enumerateDevices

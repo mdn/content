@@ -1,5 +1,6 @@
 ---
-title: Client.url
+title: "Client: url property"
+short-title: url
 slug: Web/API/Client/url
 page-type: web-api-instance-property
 browser-compat: api.Client.url

@@ -102,7 +102,9 @@ console.log(Array.prototype.flat.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}

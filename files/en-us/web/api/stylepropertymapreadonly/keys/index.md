@@ -1,13 +1,12 @@
 ---
-title: StylePropertyMapReadOnly.keys()
+title: "StylePropertyMapReadOnly: keys() method"
+short-title: keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMapReadOnly.keys()`** method returns a new
 _array iterator_ containing the keys for each item

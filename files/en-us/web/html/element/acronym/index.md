@@ -23,7 +23,7 @@ This element only has [global attributes](/en-US/docs/Web/HTML/Global_attributes
 
 This element implements the {{domxref('HTMLElement')}} interface.
 
-## Example
+## Examples
 
 ```html
 <p>
@@ -31,6 +31,10 @@ This element implements the {{domxref('HTMLElement')}} interface.
   Internet.
 </p>
 ```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
 
 ## Default styling
 

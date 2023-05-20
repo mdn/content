@@ -1,18 +1,7 @@
 ---
 title: onSelectionChanged
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - devtools.panelsElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
 

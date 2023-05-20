@@ -1,6 +1,7 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
+page-type: http-status-code
 browser-compat: http.status.301
 ---
 

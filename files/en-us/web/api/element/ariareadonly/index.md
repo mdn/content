@@ -1,5 +1,6 @@
 ---
-title: Element.ariaReadOnly
+title: "Element: ariaReadOnly property"
+short-title: ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaReadOnly

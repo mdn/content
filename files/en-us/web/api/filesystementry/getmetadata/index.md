@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.getMetadata()
+title: "FileSystemEntry: getMetadata() method"
+short-title: getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpTransceiver.stopped
+title: "RTCRtpTransceiver: stopped property"
+short-title: stopped
 slug: Web/API/RTCRtpTransceiver/stopped
 page-type: web-api-instance-property
 status:

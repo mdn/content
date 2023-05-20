@@ -1,5 +1,6 @@
 ---
 title: "USB: disconnect event"
+short-title: disconnect
 slug: Web/API/USB/disconnect_event
 page-type: web-api-event
 status:

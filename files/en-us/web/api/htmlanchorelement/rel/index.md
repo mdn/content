@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.rel
+title: "HTMLAnchorElement: rel property"
+short-title: rel
 slug: Web/API/HTMLAnchorElement/rel
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.rel

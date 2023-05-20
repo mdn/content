@@ -2,10 +2,6 @@
 title: User actions
 slug: Mozilla/Add-ons/WebExtensions/User_actions
 page-type: guide
-tags:
-  - Add-ons
-  - Guide
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

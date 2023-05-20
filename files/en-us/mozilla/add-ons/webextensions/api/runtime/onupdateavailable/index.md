@@ -2,16 +2,6 @@
 title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdateAvailable
-  - runtime
 browser-compat: webextensions.api.runtime.onUpdateAvailable
 ---
 

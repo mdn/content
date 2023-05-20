@@ -1,5 +1,6 @@
 ---
 title: "TextTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/TextTrackList/addtrack_event
 page-type: web-api-event
 browser-compat: api.TextTrackList.addtrack_event
