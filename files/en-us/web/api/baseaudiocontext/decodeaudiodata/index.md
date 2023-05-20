@@ -72,12 +72,12 @@ fetchAudio("viper").then((buf) => {
 async function fetchAudio(name) {
   try {
     let rsvp = await fetch(`${name}.mp3`);
-    buffer   = await context.decodeAudioData(await rsvp.arrayBuffer());
+    buffer = await context.decodeAudioData(await rsvp.arrayBuffer());
     return buffer; // returns a Promise, buffer is arg for .then((arg) => {})
-  }
-  catch(err) {
-    console.log(`Unable to fetch the audio file: ${name}\n\
-                 error: ${err.message}`);
+  } catch (err) {
+    console.log(
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`
+    );
   }
 }
 ```
