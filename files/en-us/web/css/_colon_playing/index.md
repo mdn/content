@@ -7,9 +7,9 @@ browser-compat: css.selectors.playing
 
 {{CSSRef}}
 
-The **`:playing`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "playing".
+The **`:playing`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when that element is "playing".
 
-A resource is playing even if in buffering state or paused for any reason other than a user interaction to cause it to be paused.
+A resource is considered to be playing if the user explicitly initiates playback. It is also considered playing when the element is explicitly in a playing state but temporarily paused due to reasons unrelated to user intent. In such cases, the playback will automatically resume once the underlying reason, such as a "buffering" or "stalled" state, is resolved.
 
 ## Syntax
 

@@ -608,7 +608,7 @@ The very last step is to add a link for this new page into the sidebar. We'll pu
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
 
-```python
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
@@ -656,7 +656,7 @@ Open the **catalog/models.py**, and add the permission as shown above. You will 
 
 The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
 
-```python
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->

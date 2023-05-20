@@ -19,8 +19,6 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ## Examples
 
-## Basic example
-
 The following will render a button which will open a popover element.
 
 ```html

@@ -3667,7 +3667,6 @@
 /en-US/docs/HTML/Element/acronym-redirect-1	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/acronym2	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML/Element/applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML/Element/area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/area-redirect-1	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/article	/en-US/docs/Web/HTML/Element/article
@@ -3939,7 +3938,6 @@
 /en-US/docs/HTML:Element:abbr	/en-US/docs/Web/HTML/Element/abbr
 /en-US/docs/HTML:Element:acronym	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML:Element:address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML:Element:applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
@@ -11854,6 +11852,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
+/en-US/docs/Web/Guide/API/DOM/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
@@ -12073,6 +12072,7 @@
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
+/en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories

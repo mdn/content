@@ -224,7 +224,7 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
+- [ARIA Best Practices – Listbox](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 
 <section id="Quick_links">
