@@ -7,15 +7,23 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 
 {{CSSRef}}
 
-**CSS Scroll Snap** is a module of CSS that contains features to control panning and scrolling behavior with snap positions.
+The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Content can be snapped into position as the user scrolls overflowing content within a {{Glossary("scroll container")}}, providing paging and scroll positioning.
 
-## Key concepts
+This module includes the scroll container scroll-padding properties to adjust the optimal viewing region of paging during scroll-into-view operations. It also includes scroll-margin and scroll-alignment, set on the scroll container's children, to adjust the children's visual area when that child is scrolled into view, as well as a property to force scrolling to stop on individual children.
 
-CSS scroll snap enables snapping content as the user scrolls overflowing content within a {{Glossary("scroll container")}}. Scroll snap introduces scroll snap positions, which enforce the scroll positions that a scroll container's {{Glossary("scrollport")}} may end at after a scrolling operation has completed.
+## Scroll snap in action
 
-To enable scroll snapping, the scrolling behavior is defined on the scroll container. The container's {{cssxref("scroll-snap-type")}} property defines whether the scrollable viewport can be snapped to, the axis upon which the snapping occurs, and whether snapping is required or optional. To enable scrolling, the container should have a defined size and {{cssxref("overflow")}} must be enabled. There are optional {{cssxref("scroll-padding")}} properties that can be set on the scroll container to create a snapping offset.
+To view scroll snapping in the box below, scroll up-and-down and left-and-right through the grid of 45 numbered boxes in the scrollable viewport.
 
-The {{cssxref("scroll-snap-align")}} property is set on every child of the scroll container, defining each child's snap position or lack thereof. The {{cssxref("scroll-snap-stop")}} property enables requiring that child is snapped to during scrolling and not passed over. There are several {{cssxref("scroll-margin")}} properties that can be set on the snapped-to child elements to create an outset from the defined box.
+{{EmbedGHLiveSample("css-examples/modules/scroll_snap.html", '100%', 250)}}
+
+With scroll snap, one of the numbered boxes that you scroll to will snap into place. The initial CSS makes the numbered box snap into the center of the viewport. Use the sliders to change the block and inline snap positions.
+
+Using snap properties, you can allow or block the scrolling past an element, a numbered box in this case. Select the "Prevent scrolling past boxes" checkbox to force all scrolling actions to be limited to scrolling to an adjacent box.
+
+To compare scroll snapping to regular scrolling, check the "disable snapping" checkbox and try scrolling again.
+
+To see the code for this example, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
 
 ## Reference
 
@@ -50,14 +58,22 @@ The {{cssxref("scroll-snap-align")}} property is set on every child of the scrol
   - {{cssxref("scroll-margin-block-end")}}
 - {{cssxref("scroll-snap-stop")}}
 
-### Glossary terms
-
-- {{Glossary("scroll container")}}
-- {{Glossary("scrollport")}}
-
 ## Guides
 
-- [Basic concepts of CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+  - : An overview and examples of CSS scroll snap features.
+
+## Related concepts
+
+- {{cssxref(":target")}} pseudo-class
+- {{cssxref("overflow")}} CSS property
+- Element {{domxref("Element.scroll", "scroll()")}} method
+- Element {{domxref("Element.scrollBy", "scrollBy()")}} method
+- Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method
+- Element {{domxref("Element.scrollTo", "scrollTo()")}} method
+- Document {{domxref("Document.scroll_event", "scroll")}} event
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- {{Glossary("Scroll container")}} glossary term
 
 ## Specifications
 
@@ -65,7 +81,10 @@ The {{cssxref("scroll-snap-align")}} property is set on every child of the scrol
 
 ## See also
 
-- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
-- [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/)
-- [CSS Scroll Snap](https://12daysofweb.dev/2022/css-scroll-snap/)
-- [Scroll snap examples on Codepen](https://codepen.io/collection/KpqBGW)
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
+- [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_Scrollbars) module
+- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (November 28, 2022)
+- [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen (September 7, 2022)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (August 13, 2021)
+- [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (June 18, 2020)
+- [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (December 7, 2019)

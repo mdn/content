@@ -297,19 +297,6 @@
       "attributes": ["coreAttributes", "'class'", "'style'"],
       "interfaces": ["SVGDescElement"]
     },
-    "discard": {
-      "categories": ["animationElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;script&gt;"]
-      },
-      "attributes": [
-        "conditionalProcessingAttributes",
-        "coreAttributes",
-        "'begin'",
-        "'href'"
-      ]
-    },
     "ellipse": {
       "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
       "content": {
