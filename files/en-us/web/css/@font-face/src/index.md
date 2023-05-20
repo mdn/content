@@ -64,7 +64,7 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
-    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://w3c.github.io/csswg-drafts/css-fonts-3/#font-family-casing).
+    The name can optionally be enclosed in quotes. The font face name [is not case-sensitive](https://drafts.csswg.org/css-fonts-3/#font-family-casing).
 
 > **Note:** The {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} can be used to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
 
