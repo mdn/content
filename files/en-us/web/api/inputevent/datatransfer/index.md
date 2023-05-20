@@ -1,5 +1,6 @@
 ---
-title: InputEvent.dataTransfer
+title: "InputEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 page-type: web-api-instance-property
 browser-compat: api.InputEvent.dataTransfer

@@ -29,7 +29,7 @@ The object `obj` has two properties. The first one has `"a"` as the key and `1` 
 
 In the context of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), properties can be divided into _instance properties_, which are owned by each instance, and _static properties_, which are owned by the class and hold data common to all instances. In the context of [inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain), properties can also be divided into _own properties_, which are owned by the object itself, and _inherited properties_, which are owned by objects in the prototype chain of the object.
 
-For more information about reading and writing properties, see [working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+For more information about reading and writing properties, see [working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects).
 
 ## See also
 

@@ -1,5 +1,6 @@
 ---
-title: Navigator.deviceMemory
+title: "Navigator: deviceMemory property"
+short-title: deviceMemory
 slug: Web/API/Navigator/deviceMemory
 page-type: web-api-instance-property
 status:

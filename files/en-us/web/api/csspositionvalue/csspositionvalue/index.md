@@ -1,5 +1,6 @@
 ---
-title: CSSPositionValue()
+title: "CSSPositionValue: CSSPositionValue() constructor"
+short-title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
 page-type: web-api-constructor
 status:

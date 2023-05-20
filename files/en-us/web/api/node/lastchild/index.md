@@ -1,5 +1,6 @@
 ---
-title: Node.lastChild
+title: "Node: lastChild property"
+short-title: lastChild
 slug: Web/API/Node/lastChild
 page-type: web-api-instance-property
 browser-compat: api.Node.lastChild

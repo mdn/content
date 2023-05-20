@@ -1,5 +1,6 @@
 ---
-title: TextDecoder.decode()
+title: "TextDecoder: decode() method"
+short-title: decode()
 slug: Web/API/TextDecoder/decode
 page-type: web-api-instance-method
 browser-compat: api.TextDecoder.decode

@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.tFoot
+title: "HTMLTableElement: tFoot property"
+short-title: tFoot
 slug: Web/API/HTMLTableElement/tFoot
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.tFoot

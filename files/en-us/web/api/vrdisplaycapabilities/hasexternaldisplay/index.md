@@ -1,5 +1,6 @@
 ---
-title: VRDisplayCapabilities.hasExternalDisplay
+title: "VRDisplayCapabilities: hasExternalDisplay property"
+short-title: hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 page-type: web-api-instance-property
 status:

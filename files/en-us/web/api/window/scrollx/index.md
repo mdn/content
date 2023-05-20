@@ -1,5 +1,6 @@
 ---
-title: Window.scrollX
+title: "Window: scrollX property"
+short-title: scrollX
 slug: Web/API/Window/scrollX
 page-type: web-api-instance-property
 browser-compat: api.Window.scrollX

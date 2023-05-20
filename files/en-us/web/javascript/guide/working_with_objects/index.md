@@ -1,10 +1,10 @@
 ---
 title: Working with objects
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
@@ -55,7 +55,7 @@ const myHonda = {
 };
 ```
 
-Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#creating_a_regular_expression).
+Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression).
 
 ### Using a constructor function
 
@@ -140,7 +140,7 @@ car1.color = "black";
 
 adds a property `color` to `car1`, and assigns it a value of `"black"`. However, this does not affect any other objects. To add the new property to all objects of the same type, you have to add the property to the definition of the `Car` object type.
 
-You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ### Using the Object.create() method
 
@@ -184,7 +184,7 @@ Like JavaScript variables, property names are case sensitive. Property names can
 
 ### Accessing properties
 
-You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
+You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
 
 ```js
 // Dot notation
@@ -515,4 +515,4 @@ For more information about comparison operators, see [equality operators](/en-US
 - To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

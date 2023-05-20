@@ -1,5 +1,6 @@
 ---
-title: Window.screenLeft
+title: "Window: screenLeft property"
+short-title: screenLeft
 slug: Web/API/Window/screenLeft
 page-type: web-api-instance-property
 browser-compat: api.Window.screenLeft

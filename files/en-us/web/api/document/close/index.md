@@ -1,5 +1,6 @@
 ---
-title: Document.close()
+title: "Document: close() method"
+short-title: close()
 slug: Web/API/Document/close
 page-type: web-api-instance-method
 browser-compat: api.Document.close

@@ -1,6 +1,7 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Device-Memory
@@ -80,4 +81,4 @@ Device-Memory: 1
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

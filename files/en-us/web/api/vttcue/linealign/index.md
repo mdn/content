@@ -1,5 +1,6 @@
 ---
-title: VTTCue.lineAlign
+title: "VTTCue: lineAlign property"
+short-title: lineAlign
 slug: Web/API/VTTCue/lineAlign
 page-type: web-api-instance-property
 browser-compat: api.VTTCue.lineAlign

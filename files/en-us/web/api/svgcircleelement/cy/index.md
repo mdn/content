@@ -1,5 +1,6 @@
 ---
-title: SVGCircleElement.cy
+title: "SVGCircleElement: cy property"
+short-title: cy
 slug: Web/API/SVGCircleElement/cy
 page-type: web-api-instance-property
 browser-compat: api.SVGCircleElement.cy

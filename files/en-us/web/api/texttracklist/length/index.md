@@ -1,5 +1,6 @@
 ---
-title: TextTrackList.length
+title: "TextTrackList: length property"
+short-title: length
 slug: Web/API/TextTrackList/length
 page-type: web-api-instance-property
 browser-compat: api.TextTrackList.length

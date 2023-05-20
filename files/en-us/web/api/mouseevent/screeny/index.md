@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.screenY
+title: "MouseEvent: screenY property"
+short-title: screenY
 slug: Web/API/MouseEvent/screenY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenY

@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultReader()
+title: "ReadableStreamDefaultReader: ReadableStreamDefaultReader() constructor"
+short-title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 page-type: web-api-constructor
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
@@ -82,3 +83,10 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}

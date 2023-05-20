@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: change event"
+short-title: change
 slug: Web/API/HTMLElement/change_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.change_event
@@ -71,9 +72,9 @@ select {
 
 ```js
 const selectElement = document.querySelector(".ice-cream");
+const result = document.querySelector(".result");
 
 selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
   result.textContent = `You like ${event.target.value}`;
 });
 ```

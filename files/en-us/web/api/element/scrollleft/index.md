@@ -1,5 +1,6 @@
 ---
-title: Element.scrollLeft
+title: "Element: scrollLeft property"
+short-title: scrollLeft
 slug: Web/API/Element/scrollLeft
 page-type: web-api-instance-property
 browser-compat: api.Element.scrollLeft

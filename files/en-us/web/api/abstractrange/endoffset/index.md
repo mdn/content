@@ -1,5 +1,6 @@
 ---
-title: AbstractRange.endOffset
+title: "AbstractRange: endOffset property"
+short-title: endOffset
 slug: Web/API/AbstractRange/endOffset
 page-type: web-api-instance-property
 browser-compat: api.AbstractRange.endOffset

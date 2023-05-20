@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.setSinkId()
+title: "HTMLMediaElement: setSinkId() method"
+short-title: setSinkId()
 slug: Web/API/HTMLMediaElement/setSinkId
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setSinkId

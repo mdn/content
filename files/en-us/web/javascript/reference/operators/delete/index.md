@@ -40,7 +40,7 @@ delete object[property]
 
 ## Description
 
-The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
+The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
 ```js example-bad
 delete identifier;
@@ -56,7 +56,7 @@ delete console.log(1);
 // Logs 1, returns true, but nothing deleted
 ```
 
-The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
+The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Memory_management) page for more details.
 
 It is important to consider the following scenarios:
 

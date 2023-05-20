@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
+title: "HTMLSelectElement: setCustomValidity() method"
+short-title: setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLSelectElement.setCustomValidity

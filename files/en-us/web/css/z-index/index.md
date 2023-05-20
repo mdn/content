@@ -104,7 +104,7 @@ The `z-index` property is specified as either the keyword `auto` or an `<integer
 
 #### Result
 
-{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
+{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
 
 ## Specifications
 

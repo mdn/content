@@ -80,7 +80,7 @@ The following creates a red wavy underline:
 
 #### Results
 
-{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
+{{EmbedLiveSample('Setting_a_wavy_underline')}}
 
 ## Specifications
 

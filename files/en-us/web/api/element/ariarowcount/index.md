@@ -1,5 +1,6 @@
 ---
-title: Element.ariaRowCount
+title: "Element: ariaRowCount property"
+short-title: ariaRowCount
 slug: Web/API/Element/ariaRowCount
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaRowCount

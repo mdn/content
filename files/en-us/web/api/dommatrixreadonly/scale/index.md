@@ -1,5 +1,6 @@
 ---
-title: DOMMatrixReadOnly.scale()
+title: "DOMMatrixReadOnly: scale() method"
+short-title: scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.scale
@@ -101,7 +102,7 @@ document
   .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250', 'screen_shot_2019-02-18_at_13.23.31.png') }}
+{{EmbedLiveSample('Examples', '250', '250')}}
 
 ## Specifications
 

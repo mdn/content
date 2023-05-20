@@ -1,5 +1,6 @@
 ---
-title: VirtualKeyboard.hide()
+title: "VirtualKeyboard: hide() method"
+short-title: hide()
 slug: Web/API/VirtualKeyboard/hide
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLTrackElement.src
+title: "HTMLTrackElement: src property"
+short-title: src
 slug: Web/API/HTMLTrackElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLTrackElement.src

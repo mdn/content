@@ -1,5 +1,6 @@
 ---
-title: XRTransientInputHitTestSource.cancel()
+title: "XRTransientInputHitTestSource: cancel() method"
+short-title: cancel()
 slug: Web/API/XRTransientInputHitTestSource/cancel
 page-type: web-api-instance-method
 status:

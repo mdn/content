@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.autofocus
+title: "HTMLSelectElement: autofocus property"
+short-title: autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.autofocus

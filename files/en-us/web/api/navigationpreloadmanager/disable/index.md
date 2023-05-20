@@ -1,5 +1,6 @@
 ---
-title: NavigationPreloadManager.disable()
+title: "NavigationPreloadManager: disable() method"
+short-title: disable()
 slug: Web/API/NavigationPreloadManager/disable
 page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.disable

@@ -1,5 +1,6 @@
 ---
-title: SerialPort.getInfo()
+title: "SerialPort: getInfo() method"
+short-title: getInfo()
 slug: Web/API/SerialPort/getInfo
 page-type: web-api-instance-method
 status:

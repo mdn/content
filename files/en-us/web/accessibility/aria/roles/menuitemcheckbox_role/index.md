@@ -1,6 +1,7 @@
 ---
 title: "ARIA: menuitemcheckbox role"
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
   - https://w3c.github.io/aria-practices/#menu

@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.currentSrc
+title: "HTMLImageElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.currentSrc

@@ -1,5 +1,6 @@
 ---
-title: VRLayerInit.leftBounds
+title: "VRLayerInit: leftBounds property"
+short-title: leftBounds
 slug: Web/API/VRLayerInit/leftBounds
 page-type: web-api-instance-property
 status:

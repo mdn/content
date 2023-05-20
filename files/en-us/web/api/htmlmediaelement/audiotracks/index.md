@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement: audioTracks property"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.audioTracks

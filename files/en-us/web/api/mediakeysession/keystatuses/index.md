@@ -1,5 +1,6 @@
 ---
-title: MediaKeySession.keyStatuses
+title: "MediaKeySession: keyStatuses property"
+short-title: keyStatuses
 slug: Web/API/MediaKeySession/keyStatuses
 page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.keyStatuses

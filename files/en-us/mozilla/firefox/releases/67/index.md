@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 67 that will affe
 
 #### Removals
 
-- Use of the proprietary {{cssxref("-moz-binding")}} property is now restricted to chrome and UA-stylesheets ([Firefox bug 1523712](https://bugzil.la/1523712)).
+- Use of the proprietary `-moz-binding` property is now restricted to chrome and UA-stylesheets ([Firefox bug 1523712](https://bugzil.la/1523712)).
 
 ### SVG
 

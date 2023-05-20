@@ -1,5 +1,6 @@
 ---
-title: BarcodeDetector()
+title: "BarcodeDetector: BarcodeDetector() constructor"
+short-title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
 page-type: web-api-constructor
 status:

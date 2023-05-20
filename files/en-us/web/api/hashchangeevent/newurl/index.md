@@ -1,5 +1,6 @@
 ---
-title: HashChangeEvent.newURL
+title: "HashChangeEvent: newURL property"
+short-title: newURL
 slug: Web/API/HashChangeEvent/newURL
 page-type: web-api-instance-property
 browser-compat: api.HashChangeEvent.newURL

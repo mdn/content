@@ -27,11 +27,11 @@ For both numbers and BigInts, `0` raised to a positive power returns `0`, and `0
 
 For BigInt exponentiation, a {{jsxref("RangeError")}} is thrown if the exponent `y` is negative. This is because any negative exponent would likely result in a value between 0 and 1 (unless the base is `1`, `-1`, or `0`), which is rounded to zero, and is likely a developer mistake.
 
-The exponentiation operator is [right-associative](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence): `a ** b ** c` is equal to `a ** (b ** c)`.
+The exponentiation operator is [right-associative](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence): `a ** b ** c` is equal to `a ** (b ** c)`.
 
 In most languages, such as PHP, Python, and others that have an exponentiation operator (`**`), the exponentiation operator is defined to have a higher precedence than unary operators, such as unary `+` and unary `-`, but there are a few exceptions. For example, in Bash, the `**` operator is defined to have a lower precedence than unary operators.
 
-In JavaScript, it is impossible to write an ambiguous exponentiation expression. That is, you cannot put a unary operator (with [precedence 14](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table), including `+`/`-`/`~`/`!`/`++`/`--`/`delete`/`void`/`typeof`/`await`) immediately before the base number; [doing so will cause a SyntaxError](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
+In JavaScript, it is impossible to write an ambiguous exponentiation expression. That is, you cannot put a unary operator (with [precedence 14](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including `+`/`-`/`~`/`!`/`++`/`--`/`delete`/`void`/`typeof`/`await`) immediately before the base number; [doing so will cause a SyntaxError](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
 
 For example, `-2 ** 2` is 4 in Bash, but is -4 in other languages (such as Python). This is invalid in JavaScript, as the operation is ambiguous. You have to parenthesize either side — for example, as `-(2 ** 2)` — to make the intention unambiguous.
 

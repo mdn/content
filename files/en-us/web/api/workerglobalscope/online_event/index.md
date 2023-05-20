@@ -1,7 +1,8 @@
 ---
 title: "WorkerGlobalScope: online event"
+short-title: online
 slug: Web/API/WorkerGlobalScope/online_event
-page-type: web-api-instance-event
+page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.online_event
 ---
 

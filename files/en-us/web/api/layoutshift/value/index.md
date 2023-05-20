@@ -1,10 +1,11 @@
 ---
-title: LayoutShift.value
+title: "LayoutShift: value property"
+short-title: value
 slug: Web/API/LayoutShift/value
 page-type: web-api-instance-property
-browser-compat: api.LayoutShift.value
 status:
   - experimental
+browser-compat: api.LayoutShift.value
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}

@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.nextNode()
+title: "NodeIterator: nextNode() method"
+short-title: nextNode()
 slug: Web/API/NodeIterator/nextNode
 page-type: web-api-instance-method
 browser-compat: api.NodeIterator.nextNode
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("Node")}} representing the node after the current node in the set represented by this `NodeIterator`, or `null` if the current node is the last node in the set.
 
 ## Examples
 

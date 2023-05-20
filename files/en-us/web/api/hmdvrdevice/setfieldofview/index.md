@@ -1,5 +1,6 @@
 ---
-title: HMDVRDevice.setFieldOfView()
+title: "HMDVRDevice: setFieldOfView() method"
+short-title: setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
 page-type: web-api-instance-method
 status:

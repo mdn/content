@@ -12,10 +12,6 @@ browser-compat: html.manifest.description
       <th scope="row">Type</th>
       <td><code>String</code></td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

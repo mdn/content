@@ -1,5 +1,6 @@
 ---
-title: CSSSkew.ax
+title: "CSSSkew: ax property"
+short-title: ax
 slug: Web/API/CSSSkew/ax
 page-type: web-api-instance-property
 browser-compat: api.CSSSkew.ax

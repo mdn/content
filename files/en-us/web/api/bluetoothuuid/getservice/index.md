@@ -1,5 +1,6 @@
 ---
-title: BluetoothUUID.getService()
+title: "BluetoothUUID: getService() method"
+short-title: getService()
 slug: Web/API/BluetoothUUID/getService
 page-type: web-api-instance-method
 status:

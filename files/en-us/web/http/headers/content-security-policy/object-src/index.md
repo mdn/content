@@ -1,6 +1,7 @@
 ---
 title: "CSP: object-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src
 ---
 
@@ -8,11 +9,9 @@ browser-compat: http.headers.Content-Security-Policy.object-src
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the
-{{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
-elements.
+{{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-To set allowed types for {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
-{{HTMLElement("applet")}} elements, use the {{CSP("plugin-types")}} directive.
+To set allowed types for {{HTMLElement("object")}} and {{HTMLElement("embed")}}, use the {{CSP("plugin-types")}} directive.
 
 > **Note:** Elements controlled by `object-src` are perhaps coincidentally
 > considered legacy HTML elements and aren't receiving new standardized features (such as
@@ -65,13 +64,11 @@ Given this CSP header:
 Content-Security-Policy: object-src https://example.com/
 ```
 
-The following {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
-{{HTMLElement("applet")}} elements are blocked and won't load:
+The following {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements are blocked and won't load:
 
 ```html
 <embed src="https://not-example.com/flash"></embed>
 <object data="https://not-example.com/plugin"></object>
-<applet archive="https://not-example.com/java"></applet>
 ```
 
 ## Specifications
@@ -85,5 +82,5 @@ The following {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
+- {{HTMLElement("object")}} and {{HTMLElement("embed")}}
 - {{CSP("plugin-types")}}

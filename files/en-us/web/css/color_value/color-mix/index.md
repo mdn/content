@@ -2,12 +2,10 @@
 title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.color.color-mix
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`color-mix()`** functional notation takes two {{cssxref("color_value","&lt;color>")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
@@ -22,23 +20,39 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-- Functional notation: `color-mix( <color-interpolation-method> , [ [<color>](/en-US/docs/Web/CSS/color_value) && [<percentage [0,100]>](/en-US/docs/Web/CSS/percentage)? ]#{2} )`
+Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ p1], color[ p2])`
 
-  - `<color-interpolation-method>` is the keyword `in` (for interpolation) followed by either:
+- `in`
 
-    - `<rectangular-color-space>` or
-    - `<polar-color-space>` and an optional `<hue-interpolation-method>`.
+  - : A literal token as a component of the syntax.
 
-  - `<rectangular-color-space>` is one of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`.
+- `colorspace`
 
-  - `<polar-color-space>` is one of `hsl`, `hwb`, `lch`, `oklch`.
+  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, or `oklch`, specifying the color space for interpolation.
 
-  - `<hue-interpolation-method>` is one of `shorter`, `longer`, `increasing`, `decreasing` followed by the keyword `hue`.
+- `hue-interpolation-method` {{optional_inline}}
 
-  - `<color>` is any valid {{cssxref("color_value","color")}}
+  - : One of `shorter`, `longer`, `increasing`, or `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
 
-  - `<percentage>` is a number between 0 and 100 with an optional `%` sign.
-    If no percentage is specified, the default is 50%.
+    > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
+
+- `hue`
+
+  - : A literal token as a component of the syntax.
+
+- `color`
+
+  - : Any valid {{CSSXref("&lt;color&gt;")}}.
+
+- `p1`, `p2` {{optional_inline}}
+
+  - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
+
+    - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
+    - If `p1` is omitted, then `p1 = 100% - p2`.
+    - If `p2` is omitted, then `p2 = 100% - p1`.
+    - If `p1 = p2 = 0%`, the function is invalid.
+    - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
 
 ### Formal syntax
 
@@ -50,6 +64,8 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 In a supporting browser, the items have more blue, and therefore less white, as a higher percentage of `#34c9eb` is mixed in. When no value is given, the percentage defaults to 50%.
 
+#### HTML
+
 ```html
 <ul>
   <li>0%</li>
@@ -60,6 +76,8 @@ In a supporting browser, the items have more blue, and therefore less white, as 
   <li></li>
 </ul>
 ```
+
+#### CSS
 
 ```css hidden
 ul {
@@ -107,6 +125,8 @@ li:nth-child(6) {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Mixing two colors','100%', 150)}}
 
 ### Using hue interpolation methods
@@ -116,12 +136,16 @@ For `shorter` the result will be the shortest distance between the two angles (t
 
 For `increasing`, the result will be the angle between 0 and 360 degrees and for `decreasing` the result will be the angle between -360 and 0 degrees.
 
+#### HTML
+
 ```html
 <div id="shorter">shorter</div>
 <div id="longer">longer</div>
 <div id="increasing">increasing</div>
 <div id="decreasing">decreasing</div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -170,6 +194,8 @@ div {
   );
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Using hue interpolation methods','100%', 150)}}
 

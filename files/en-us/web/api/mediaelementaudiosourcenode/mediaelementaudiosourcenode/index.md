@@ -1,5 +1,6 @@
 ---
-title: MediaElementAudioSourceNode()
+title: "MediaElementAudioSourceNode: MediaElementAudioSourceNode() constructor"
+short-title: MediaElementAudioSourceNode()
 slug: Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode
 page-type: web-api-constructor
 browser-compat: api.MediaElementAudioSourceNode.MediaElementAudioSourceNode

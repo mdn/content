@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 
 {{JSRef}}
 
-The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
+The **`selectRange()`** method of {{jsxref("Intl.PluralRules")}} instances receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 

@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.changePaymentMethod()
+title: "PaymentRequestEvent: changePaymentMethod() method"
+short-title: changePaymentMethod()
 slug: Web/API/PaymentRequestEvent/changePaymentMethod
 page-type: web-api-instance-method
 status:

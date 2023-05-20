@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.closed
+title: "WritableStreamDefaultWriter: closed property"
+short-title: closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.closed

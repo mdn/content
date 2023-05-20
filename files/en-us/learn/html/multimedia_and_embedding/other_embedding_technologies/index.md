@@ -201,7 +201,7 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 
 Before diving into using `<iframe>` elements, there are some security concerns to be aware of.
 Say you wanted to include the MDN glossary on one of your web pages using the {{htmlelement("iframe")}} element, you might try something like the next code example.
-If you were to do add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
+If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
 <head>
@@ -245,8 +245,6 @@ The example includes the bare essentials needed to use an `<iframe>`:
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
-- Fallback content
-  - : In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing `<iframe></iframe>` tags that will appear if the browser doesn't support the `<iframe>`. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support `<iframe>`s these days.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
   - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
@@ -334,7 +332,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br />><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
          <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>

@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: end event"
+short-title: end
 slug: Web/API/SpeechSynthesisUtterance/end_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.end_event

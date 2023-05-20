@@ -52,7 +52,7 @@ Make sure that the opening paragraph(s) before the first heading adequately summ
 
 In a guide or tutorial, the introductory paragraph(s) should inform the reader about the topics that will be covered as well as the prerequisite knowledge the reader is expected to have, if any. The opening paragraph should mention the technologies and/or APIs that are being documented or discussed, with links to the related information, and it should offer hints to situations in which the article's contents might be useful.
 
-- **Example of short introduction** This example of an introduction is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
+- **Example of short introduction**: This example of an introduction is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
   > **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
@@ -613,15 +613,10 @@ Keep the following guidelines in mind when writing titles:
 
 ## Further reading
 
-### Preferred style guides
+### Other style guides
 
 If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
-
-### Preferred dictionary
-
-For questions about spelling, refer to [Dictionary.com](https://www.dictionary.com/).
-The spelling checker for this site uses American English.
 
 ### Language, grammar, and spelling
 

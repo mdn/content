@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.depthRange()
+title: "WebGLRenderingContext: depthRange() method"
+short-title: depthRange()
 slug: Web/API/WebGLRenderingContext/depthRange
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.depthRange

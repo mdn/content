@@ -8,7 +8,7 @@ browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
+spec-urls: https://drafts.csswg.org/css-highlight-api-1/
 ---
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}{{SeeCompatTable}}
