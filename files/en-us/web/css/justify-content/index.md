@@ -31,7 +31,7 @@ justify-content: right; /* Pack items from the right */
 /* justify-content does not take baseline values */
 
 /* Normal alignment */
-justify-content: normal; /* Behaves as flex-start */
+justify-content: normal;
 
 /* Distributed alignment */
 justify-content: space-between; /* Distribute items evenly
