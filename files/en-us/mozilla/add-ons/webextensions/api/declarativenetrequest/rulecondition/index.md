@@ -72,6 +72,8 @@ Domains specified in `initiatorDomains`, `excludedInitiatorDomains`, `requestDom
 
 To programmatically generate the canonical domain for a URL, use the [URL API](/docs/Web/API/URL) and read its `hostname` property, i.e., `new URL(url).hostname`.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
