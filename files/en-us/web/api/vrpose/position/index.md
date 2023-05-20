@@ -1,5 +1,6 @@
 ---
-title: VRPose.position
+title: "VRPose: position property"
+short-title: position
 slug: Web/API/VRPose/position
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.send()
+title: "RTCDataChannel: send() method"
+short-title: send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
 browser-compat: api.RTCDataChannel.send
@@ -68,9 +69,9 @@ const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
   const obj = {
-    "message": msg,
-    "timestamp": new Date()
-  }
+    message: msg,
+    timestamp: new Date(),
+  };
   dc.send(JSON.stringify(obj));
 }
 ```

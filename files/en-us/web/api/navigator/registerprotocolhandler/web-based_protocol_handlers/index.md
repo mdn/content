@@ -21,9 +21,11 @@ Web-based protocol handlers allow web-based applications to participate in the p
 Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) to register itself with the browser as a potential handler for a given protocol. For example:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler"
+);
 ```
 
 Where the parameters are:

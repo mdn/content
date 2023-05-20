@@ -1,5 +1,6 @@
 ---
-title: PerformanceServerTiming.name
+title: "PerformanceServerTiming: name property"
+short-title: name
 slug: Web/API/PerformanceServerTiming/name
 page-type: web-api-instance-property
 browser-compat: api.PerformanceServerTiming.name

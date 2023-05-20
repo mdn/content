@@ -1,5 +1,6 @@
 ---
-title: Window.setImmediate()
+title: "Window: setImmediate() method"
+short-title: setImmediate()
 slug: Web/API/Window/setImmediate
 page-type: web-api-instance-method
 browser-compat: api.Window.setImmediate
@@ -12,7 +13,7 @@ immediately after the browser has completed other operations such as events and 
 updates.
 
 > **Note:** This method is not expected to become standard, and is nowadays only implemented
-> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and [Chromium/WebKit](https://bugs.chromium.org/p/chromium/issues/detail?id=146172) (Chrome/Safari).
+> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 
@@ -69,5 +70,6 @@ specification is no longer being worked on.
 ## See also
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
-- {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
+- {{DOMxRef("Window.clearImmediate()")}}
+- {{DOMxRef("Window.requestIdleCallback()")}}

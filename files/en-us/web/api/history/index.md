@@ -9,6 +9,10 @@ browser-compat: api.History
 
 The **`History`** interface allows manipulation of the browser _session history_, that is the pages visited in the tab or frame that the current page is loaded in.
 
+There is only one instance of `history` (It is a _singleton_.) accessible via the global object {{domxref("Window.history", "history")}}.
+
+> **Note:** This interface is only available on the main thread ({{domxref("Window")}}). It cannot be accessed in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+
 ## Instance properties
 
 _The `History` interface doesn't inherit any property._
@@ -53,4 +57,4 @@ _The `History`_ _interface doesn't inherit any methods._
 
 ## See also
 
-- The {{domxref("Window.history")}} property returning the history of the current session.
+- {{domxref("Window.history", "history")}} global object

@@ -1,5 +1,6 @@
 ---
-title: ContentVisibilityAutoStateChangeEvent()
+title: "ContentVisibilityAutoStateChangeEvent: ContentVisibilityAutoStateChangeEvent() constructor"
+short-title: ContentVisibilityAutoStateChangeEvent()
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 page-type: web-api-constructor
 browser-compat: api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent

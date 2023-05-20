@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.methodName
+title: "PaymentResponse: methodName property"
+short-title: methodName
 slug: Web/API/PaymentResponse/methodName
 page-type: web-api-instance-property
 browser-compat: api.PaymentResponse.methodName
@@ -36,7 +37,7 @@ payment.show().then((paymentResponse) => {
     // payment details as you requested
     details: paymentResponse.details,
     // shipping address information
-    address: toDict(paymentResponse.shippingAddress)
+    address: toDict(paymentResponse.shippingAddress),
   };
   // Send information to the server
 });

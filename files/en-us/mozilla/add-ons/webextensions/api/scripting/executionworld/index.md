@@ -1,15 +1,6 @@
 ---
 title: scripting.ExecutionWorld
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/ExecutionWorld
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ExecutionWorld
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
 browser-compat: webextensions.api.scripting.ExecutionWorld
 ---
 

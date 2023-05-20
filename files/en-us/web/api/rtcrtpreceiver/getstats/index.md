@@ -1,5 +1,6 @@
 ---
-title: RTCRtpReceiver.getStats()
+title: "RTCRtpReceiver: getStats() method"
+short-title: getStats()
 slug: Web/API/RTCRtpReceiver/getStats
 page-type: web-api-instance-method
 browser-compat: api.RTCRtpReceiver.getStats

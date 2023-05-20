@@ -395,7 +395,7 @@ A number of formats (particularly three-channel formats) are emulated. For examp
 
 ## Avoid alpha:false, which can be expensive
 
-Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://bugs.chromium.org/p/chromium/issues/detail?id=1045643) that all of these techniques have approximately equal performance impact on affected platforms.
+Specifying `alpha:false` during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. [It has been found](https://crbug.com/1045643) that all of these techniques have approximately equal performance impact on affected platforms.
 
 Most applications, even those requiring alpha blending, can be structured to produce `1.0` for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using `alpha:false`.
 

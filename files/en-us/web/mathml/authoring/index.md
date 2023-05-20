@@ -1,15 +1,10 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
+page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
 
@@ -114,7 +109,7 @@ In this section, we review some tools to convert MathML from a [lightweight mark
 
 With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
+A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
 <!DOCTYPE html>

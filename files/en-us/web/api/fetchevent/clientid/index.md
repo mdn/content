@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.clientId
+title: "FetchEvent: clientId property"
+short-title: clientId
 slug: Web/API/FetchEvent/clientId
 page-type: web-api-instance-property
 browser-compat: api.FetchEvent.clientId

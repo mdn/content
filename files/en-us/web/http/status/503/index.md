@@ -1,11 +1,7 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - 503 error
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.503
 ---
 

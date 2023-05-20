@@ -1,11 +1,7 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
-tags:
-  - HTTP
-  - Performance
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Server-Timing
 ---
 
@@ -29,6 +25,11 @@ The **`Server-Timing`** header communicates one or more metrics and descriptions
 ## Syntax
 
 The syntax of the `Server-Timing` header allows you to communicate metrics in different ways: server metric name only, metric with value, metric with value and description, and metric with description.
+
+This header can contain one or more metrics, separated by commas. Each metric has a name, an optional duration, and an optional description. These components are separated by semi-colons.
+
+The duration component consists of the string `"dur"`, followed by `"="`, followed by the value, like `"dur=23.2"`.
+The description component consists of the string `"desc"`, followed by `"="`, followed by the value, like `"desc=DB lookup"`.
 
 The specification advises that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
@@ -58,6 +59,12 @@ The `Server-Timing` header may expose potentially sensitive application and infr
 ## PerformanceServerTiming interface
 
 In addition to having `Server-Timing` header metrics appear in the developer tools of the browser, the {{domxref("PerformanceServerTiming")}} interface enables tools to automatically collect and process metrics from JavaScript. This interface is restricted to the same origin, but you can use the {{HTTPHeader("Timing-Allow-Origin")}} header to specify the domains that are allowed to access the server metrics. The interface is only available in secure contexts (HTTPS) in some browsers.
+
+The components of the `Server-Timing` header map to the {{domxref("PerformanceServerTiming")}} properties like this:
+
+- `"name"` -> {{domxref("PerformanceServerTiming.name")}}
+- `"dur"` -> {{domxref("PerformanceServerTiming.duration")}}
+- `"desc"` -> {{domxref("PerformanceServerTiming.description")}}
 
 ## Specifications
 

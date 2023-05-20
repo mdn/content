@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.getUserMedia()
+title: "MediaDevices: getUserMedia() method"
+short-title: getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getUserMedia
@@ -34,7 +35,8 @@ async function getMedia(constraints) {
 Similarly, using the raw promises directly, the code looks like this:
 
 ```js
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((stream) => {
     /* use the stream */
   })
@@ -72,8 +74,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: true
-    })
+      video: true,
+    });
     ```
 
     If `true` is specified for a media type, the resulting stream is
@@ -88,8 +90,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: { width: 1280, height: 720 }
-    })
+      video: { width: 1280, height: 720 },
+    });
     ```
 
     The browser will try to honour this, but may return other
@@ -104,9 +106,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { min: 1280 },
-        height: { min: 720 }
-      }
-    })
+        height: { min: 720 },
+      },
+    });
     ```
 
     If no camera exists with this resolution or higher, then the returned promise will
@@ -122,9 +124,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { min: 1024, ideal: 1280, max: 1920 },
-        height: { min: 576, ideal: 720, max: 1080 }
-      }
-    })
+        height: { min: 576, ideal: 720, max: 1080 },
+      },
+    });
     ```
 
     An `ideal` value, when used, has gravity, which means that the browser
@@ -139,9 +141,9 @@ getUserMedia(constraints)
       audio: true,
       video: {
         width: { ideal: 1280 },
-        height: { ideal: 720 }
-      }
-    })
+        height: { ideal: 720 },
+      },
+    });
     ```
 
     Not all constraints are numbers. For example, on mobile devices, the following will
@@ -150,8 +152,8 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       audio: true,
-      video: { facingMode: "user" }
-    })
+      video: { facingMode: "user" },
+    });
     ```
 
     To _require_ the rear camera, use:
@@ -160,9 +162,9 @@ getUserMedia(constraints)
     getUserMedia({
       audio: true,
       video: {
-        facingMode: { exact: "environment" }
-      }
-    })
+        facingMode: { exact: "environment" },
+      },
+    });
     ```
 
     Another non-number constraint is the `deviceId` constraint. If you have
@@ -172,9 +174,9 @@ getUserMedia(constraints)
     ```js
     getUserMedia({
       video: {
-        deviceId: myPreferredCameraDeviceId
-      }
-    })
+        deviceId: myPreferredCameraDeviceId,
+      },
+    });
     ```
 
     The above will return the camera you requested, or a different camera if that
@@ -185,10 +187,10 @@ getUserMedia(constraints)
     getUserMedia({
       video: {
         deviceId: {
-          exact: myExactCameraOrBustDeviceId
-        }
-      }
-    })
+          exact: myExactCameraOrBustDeviceId,
+        },
+      },
+    });
     ```
 
 ### Return value
@@ -199,6 +201,7 @@ object when the requested media has successfully been obtained.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
+
   - : Although the user and operating system both granted access to the hardware device,
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
@@ -232,7 +235,7 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
-    > fingerprinting surface.
+    > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
@@ -347,13 +350,13 @@ situations in which `getUserMedia()` is not permitted to be called:
 
 - A document loaded into a sandboxed {{HTMLElement("iframe")}} element cannot call
   `getUserMedia()` unless the `<iframe>` has its
-  {{htmlattrxref("sandbox", "iframe")}} attribute set to `allow-same-origin`.
+  [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute set to `allow-same-origin`.
 - A document loaded using a `data://` or `blob://` URL which has
   no origin (such as when one of these URLs is typed by the user into the address bar)
   cannot call `getUserMedia()`. These kinds of URLs loaded from JavaScript
   code inherit the script's permissions.
 - Any other situation in which there is no origin, such as when the
-  {{htmlattrxref("srcdoc", "iframe")}} attribute is used to specify the contents of a
+  [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#srcdoc) attribute is used to specify the contents of a
   frame.
 
 ## Examples
@@ -367,12 +370,13 @@ This example gives a preference for camera resolution, and assigns the resulting
 // Prefer camera resolution nearest to 1280x720.
 const constraints = {
   audio: true,
-  video: { width: 1280, height: 720 }
+  video: { width: 1280, height: 720 },
 };
 
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices
+  .getUserMedia(constraints)
   .then((mediaStream) => {
-    const video = document.querySelector('video');
+    const video = document.querySelector("video");
     video.srcObject = mediaStream;
     video.onloadedmetadata = () => {
       video.play();
@@ -391,7 +395,7 @@ bandwidth restrictions.
 
 ```js
 const constraints = {
-  video: { frameRate: { ideal: 10, max: 15 } }
+  video: { frameRate: { ideal: 10, max: 15 } },
 };
 ```
 
@@ -406,7 +410,7 @@ document.getElementById("flip-button").onclick = () => {
 };
 
 const constraints = {
-  video: { facingMode: front ? "user" : "environment" }
+  video: { facingMode: front ? "user" : "environment" },
 };
 ```
 

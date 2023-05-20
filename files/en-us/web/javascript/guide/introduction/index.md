@@ -73,17 +73,23 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 ## Getting started with JavaScript
 
-Getting started with JavaScript is easy: all you need is a modern Web browser. This guide includes some JavaScript features which are only currently available in the latest versions of Firefox, so using the most recent version of Firefox is recommended.
+To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.mozilla.org/en-CA/firefox/new/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
 
-The _Web Console_ tool built into Firefox is useful for experimenting with JavaScript; you can use it in two modes: single-line input mode, and multi-line input mode.
+A very useful tool for exploring JavaScript is the JavaScript Console (sometimes called the Web Console, or just the console): this is a tool which enables you to enter JavaScript and run it in the current page.
 
-### Single-line input in the Web Console
+The screenshots here show the [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/), but all modern browsers ship with a console that works in a similar way.
 
-The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) shows you information about the currently loaded Web page, and also includes a JavaScript interpreter that you can use to execute JavaScript expressions in the current page.
+### Opening the console
 
-To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Windows and Linux or <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> on Mac), open the **Tools** menu in Firefox, and select "**Developer ▶ Web Console**".
+The exact instructions for opening the console vary from one browser to another:
 
-The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
+- [Opening the console in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
+- [Opening the console in Chrome](https://developer.chrome.com/docs/devtools/open)
+- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/)
+
+### Entering and running JavaScript
+
+The console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:
 
 ![A browser window with the web console open at the bottom, containing two lines of input and output. Text can be entered below that.](2019-04-04_00-15-29.png)
 
@@ -93,13 +99,15 @@ The console works the exact same way as `eval`: the last expression entered is r
 console.log(eval("3 + 5"));
 ```
 
-### Multi-line input in the Web Console
+### Multi-line input in the console
 
-The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line input mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode).
+By default, if you press <kbd>Return</kbd> after entering a line of code, then the string you typed is executed. To enter multi-line input:
 
-### Hello world
+- If the string you typed was incomplete (for example, you typed `function foo() {`) then the console will treat <kbd>Return</kbd> as a line break, and let you type another line.
+- If you hold down <kbd>Shift</kbd> while pressing <kbd>Return</kbd>, then the console will treat this as a line break, and let you type another line.
+- In Firefox only, you can activate [multi-line input mode](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode), in which you can enter multiple lines in a mini-editor, then run the whole thing when you are ready.
 
-To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
+To get started with writing JavaScript, open the console, copy the following code, and paste it in at the prompt:
 
 ```js
 (function () {
@@ -114,7 +122,9 @@ To get started with writing JavaScript, open the Web Console in multi-line mode,
 })();
 ```
 
-Press <kbd>Cmd</kbd>+<kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or click the **Run** button) to watch it unfold in your browser!
+Press <kbd>Return</kbd> to watch it unfold in your browser!
+
+## What's next
 
 In the following pages, this guide introduces you to the JavaScript syntax and language features, so that you will be able to write more complex applications.
 

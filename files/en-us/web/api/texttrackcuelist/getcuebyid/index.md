@@ -1,5 +1,6 @@
 ---
-title: TextTrackCueList.getCueById()
+title: "TextTrackCueList: getCueById() method"
+short-title: getCueById()
 slug: Web/API/TextTrackCueList/getCueById
 page-type: web-api-instance-method
 browser-compat: api.TextTrackCueList.getCueById
@@ -43,8 +44,8 @@ How are you?
 ```js
 const video = document.getElementById("video");
 video.onplay = () => {
-  console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
-}
+  console.log(video.textTracks[0].cues.getCueById("second")); // a VTTCue object;
+};
 ```
 
 ## Specifications

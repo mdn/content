@@ -1,13 +1,12 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() method"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Element.computedStyleMap
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`computedStyleMap()`** method of
 the {{domxref("Element")}} interface returns a {{domxref("StylePropertyMapReadOnly")}}

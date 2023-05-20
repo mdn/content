@@ -1,5 +1,6 @@
 ---
 title: "AudioTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/AudioTrackList/addtrack_event
 page-type: web-api-event
 browser-compat: api.AudioTrackList.addtrack_event

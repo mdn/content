@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.respondWith()
+title: "FetchEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
 browser-compat: api.FetchEvent.respondWith
@@ -42,7 +43,7 @@ This means, for example, if a service worker intercepts a stylesheet or worker s
 then the provided {{domxref("Response.url")}} will be used to resolve any relative
 {{cssxref("@import")}} or
 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
-({{bug(1222008)}}).
+([Firefox bug 1222008](https://bugzil.la/1222008)).
 
 For most types of network request this change has no impact because you can't observe
 the final URL. There are a few, though, where it does matter:

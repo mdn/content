@@ -2,15 +2,6 @@
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Network
-  - Privacy
-  - Property
-  - Reference
-  - WebExtensions
 browser-compat: webextensions.api.privacy.network
 ---
 

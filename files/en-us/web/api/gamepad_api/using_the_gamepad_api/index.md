@@ -15,7 +15,7 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the 
 
 When a new gamepad is connected to the computer, the focused page first receives a {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event. If a gamepad is already connected when the page loaded, the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event is dispatched to the focused page when the user presses a button or moves an axis.
 
-> **Note:** In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads being used for fingerprinting the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
+> **Note:** In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads from being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
 
 You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} like this:
 
@@ -233,12 +233,12 @@ function addgamepad(gamepad) {
   t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
-  const b = document.createElement("div");
+  const b = document.createElement("ul");
   b.className = "buttons";
   gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("span");
+    const e = document.createElement("li");
     e.className = "button";
-    e.textContent = i;
+    e.textContent = `Button ${i}`;
     b.appendChild(e);
   });
 
@@ -283,7 +283,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  controllers.forEach((controller, i) => {
+  Object.entries(controllers).forEach(([i, controller]) => {
     const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
@@ -299,22 +299,28 @@ function updateStatus() {
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
+      b.textContent = pressed ? `Button ${i} [PRESSED]` : `Button ${i}`;
+      b.style.color = pressed ? "#42f593" : "#2e2d33";
       b.className = pressed ? "button pressed" : "button";
     });
 
     const axes = d.getElementsByClassName("axis");
     controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
-      a.setAttribute("value", controller.axis + 1);
+      a.textContent = `${i}: ${axis.toFixed(4)}`;
+      a.setAttribute("value", axis + 1);
     });
-  });
+  }
 
   requestAnimationFrame(updateStatus);
 }
 
 function scangamepads() {
   const gamepads = navigator.getGamepads();
+  document.querySelector("#noDevices").style.display = gamepads.filter(Boolean)
+    .length
+    ? "none"
+    : "block";
   for (const gamepad of gamepads) {
     if (gamepad) {
       // Can be null if disconnected during the session

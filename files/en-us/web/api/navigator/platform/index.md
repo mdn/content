@@ -1,5 +1,6 @@
 ---
-title: navigator.platform
+title: "navigator: platform property"
+short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
 status:
@@ -23,8 +24,11 @@ A string identifying the platform on which the user's browser is running; for ex
 
 ```js
 let modifierKeyPrefix = "^"; // control key
-if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") {
-    modifierKeyPrefix = "⌘"; // command key
+if (
+  navigator.platform.indexOf("Mac") === 0 ||
+  navigator.platform === "iPhone"
+) {
+  modifierKeyPrefix = "⌘"; // command key
 }
 ```
 

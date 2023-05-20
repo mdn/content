@@ -53,4 +53,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
-- {{bug("11011")}}
+- [Firefox bug 11011](https://bugzil.la/11011)

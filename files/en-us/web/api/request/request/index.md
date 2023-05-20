@@ -1,5 +1,6 @@
 ---
-title: Request()
+title: "Request: Request() constructor"
+short-title: Request()
 slug: Web/API/Request/Request
 page-type: web-api-constructor
 browser-compat: api.Request.Request
@@ -76,7 +77,7 @@ new Request(input, options)
     - `keepalive`
       - : A boolean that indicates whether to make a persistent connection for multiple requests/responses.
     - `signal`
-      - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
+      - : An [AbortSignal](/en-US/docs/Web/API/AbortSignal) object which can be used to communicate with/abort a request.
     - `priority`
       - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
         - `high`: A high priority fetch request relative to other requests of the same type.

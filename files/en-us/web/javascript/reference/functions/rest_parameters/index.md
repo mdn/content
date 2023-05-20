@@ -198,7 +198,9 @@ function fn(...args) {
 
 ## See also
 
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also '`...`')
-- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-- [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Array")}}

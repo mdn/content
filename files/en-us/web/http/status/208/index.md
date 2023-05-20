@@ -1,10 +1,7 @@
 ---
 title: 208 Already Reported
 slug: Web/HTTP/Status/208
-tags:
-  - HTTP
-  - Status code
-  - Reported
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc5842.html#section-7.1
 ---
 

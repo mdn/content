@@ -2,14 +2,6 @@
 title: sidebarAction.open()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - open
-  - sidebarAction
 browser-compat: webextensions.api.sidebarAction.open
 ---
 

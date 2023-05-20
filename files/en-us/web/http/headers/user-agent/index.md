@@ -1,11 +1,7 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - User-agent
+page-type: http-header
 browser-compat: http.headers.User-Agent
 ---
 

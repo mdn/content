@@ -1,11 +1,12 @@
 ---
-title: DocumentTimeline()
+title: "DocumentTimeline: DocumentTimeline() constructor"
+short-title: DocumentTimeline()
 slug: Web/API/DocumentTimeline/DocumentTimeline
 page-type: web-api-constructor
 browser-compat: api.DocumentTimeline.DocumentTimeline
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) creates a new instance of the {{domxref("DocumentTimeline")}} object associated with the active document of the current browsing context.
 
@@ -42,16 +43,14 @@ from {{domxref("Document.timeline")}} by that amount:
 
 ```js
 const offsetTimeline = new DocumentTimeline({ originTime: 500 });
-console.log(
-  document.timeline.currentTime - offsetTimeline.currentTime
-); // 500
+console.log(document.timeline.currentTime - offsetTimeline.currentTime); // 500
 ```
 
 A {{domxref("DocumentTimeline")}} relative to the current moment can be constructed with:
 
 ```js
 const nowTimeline = new DocumentTimeline({
-  originTime: document.timeline.currentTime
+  originTime: document.timeline.currentTime,
 });
 console.log(nowTimeline.currentTime); // 0
 ```

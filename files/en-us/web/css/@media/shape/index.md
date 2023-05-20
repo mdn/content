@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
+The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
 
 ## Syntax
 

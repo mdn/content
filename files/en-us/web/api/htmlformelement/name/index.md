@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.name
+title: "HTMLFormElement: name property"
+short-title: name
 slug: Web/API/HTMLFormElement/name
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.name
@@ -20,7 +21,7 @@ A string.
 ## Examples
 
 ```js
-const form1name = document.getElementById('form1').name;
+const form1name = document.getElementById("form1").name;
 
 if (form1name !== document.form.form1) {
   // Browser doesn't support this form of reference

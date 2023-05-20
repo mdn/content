@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.connection
+title: "WorkerNavigator: connection property"
+short-title: connection
 slug: Web/API/WorkerNavigator/connection
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.connection

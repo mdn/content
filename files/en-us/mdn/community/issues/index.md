@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-As a contributor, you can [report](#Guidelines_for_reporting_an_issue) and [work](#guidelines_for_working_on_an_issue) on issues.
+As a contributor, you can [report](#guidelines_for_reporting_an_issue) and [work](#guidelines_for_working_on_an_issue) on issues.
 
 After you report an issue, the issue gets triaged. Issue [triaging](#guidelines_for_triaging_issues) is typically done by people assigned the role of a maintainer or an owner.
 
@@ -98,7 +98,7 @@ Remember that if you take on an issue, the expectation is for the work to be com
 
 These are the general steps for working on an issue:
 
-1. **Find an issue:** If you're looking to contribute, search for issues with [`good first issue`, `help wanted`](#Set_other_labels) or [`p3`](#Set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#Set_other_labels) that get applied during the issue triage process.
+1. **Find an issue:** If you're looking to contribute, search for issues with [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
 
    > **Note:** An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
@@ -128,7 +128,7 @@ Wait for the issue to be triaged, so that the MDN Web Docs team can verify that 
 > **Note:** If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
 > After the issue is triaged, assign the issue to yourself.
 
-Using the [guidelines on working on an issue](#Guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
+Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
 - The MDN Web Docs content (in English) in the [content](https://github.com/mdn/content) repository
 - The MDN Web Docs translated content in the [translated-content](https://github.com/mdn/translated-content) repository

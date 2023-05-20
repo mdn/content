@@ -157,17 +157,16 @@ btn.removeEventListener("click", changeBackground);
 Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
 For example, to add an event handler that we can remove with an `AbortSignal`:
 
-```js
+```js-nolint
 const controller = new AbortController();
 
-btn.addEventListener(
-  "click",
+btn.addEventListener("click",
   () => {
     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
-  { signal: controller.signal }
-); // pass an AbortSignal to this handler
+  { signal: controller.signal } // pass an AbortSignal to this handler
+);
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -344,10 +343,9 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener(
-  "keydown",
-  (event) => (output.textContent = `You pressed "${event.key}".`)
-);
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
 ```
 
 ```css hidden
@@ -651,7 +649,7 @@ An alternative form of event propagation is _event capture_. This is like event 
 
 Event capture is disabled by default. To enable it you have to pass the `capture` option in `addEventListener()`.
 
-This example is just like the [bubbling example](#Bubbling_example) we saw earlier, except that we have used the `capture` option:
+This example is just like the [bubbling example](#bubbling_example) we saw earlier, except that we have used the `capture` option:
 
 ```html
 <body>
@@ -743,10 +741,9 @@ function bgChange() {
 
 const container = document.querySelector("#container");
 
-container.addEventListener(
-  "click",
-  (event) => (event.target.style.backgroundColor = bgChange())
-);
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
 ```
 
 The output is as follows (try clicking around on it):

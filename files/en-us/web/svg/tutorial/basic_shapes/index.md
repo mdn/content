@@ -2,11 +2,9 @@
 title: Basic shapes
 slug: Web/SVG/Tutorial/Basic_Shapes
 page-type: guide
-tags:
-  - Beginner
-  - SVG
-  - SVG:Tutorial
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 

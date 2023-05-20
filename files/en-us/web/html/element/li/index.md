@@ -1,5 +1,5 @@
 ---
-title: '<li>: The List Item element'
+title: "<li>: The List Item element"
 slug: Web/HTML/Element/li
 page-type: html-element
 browser-compat: html.elements.li
@@ -15,9 +15,9 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This character attribute indicates the numbering type:
 
@@ -45,6 +45,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list")}}
 
 ### Ordered list with a custom value
@@ -57,6 +59,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
 
 ### Unordered list
@@ -68,6 +72,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <li>third item</li>
 </ul>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Unordered_list")}}
 

@@ -63,14 +63,14 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
 
 ```css
 .theme-a {
-    background: #dca;
-    color: #731;
+  background: #dca;
+  color: #731;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
-      background: #753;
-      color: #dcb;
-      outline: 5px dashed #000;
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
   }
 }
 ```
@@ -79,14 +79,14 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
 
 ```css
 .theme-b {
-    background: #447;
-    color: #bbd;
+  background: #447;
+  color: #bbd;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
-      background: #bcd;
-      color: #334;
-      outline: 5px dotted #000;
+    background: #bcd;
+    color: #334;
+    outline: 5px dotted #000;
   }
 }
 ```

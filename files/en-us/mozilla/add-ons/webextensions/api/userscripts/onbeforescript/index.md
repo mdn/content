@@ -2,18 +2,6 @@
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 page-type: webextension-api-event
-tags:
-  - Add-ons
-  - Addons
-  - Customization
-  - Event
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - User Scripts API
-  - WebExtensions
-  - userScripts
 browser-compat: webextensions.api.userScripts.onBeforeScript
 ---
 

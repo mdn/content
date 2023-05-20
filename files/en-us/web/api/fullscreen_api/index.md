@@ -7,7 +7,7 @@ browser-compat:
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
-  - api.Document.fullscreen 
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -129,4 +129,4 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

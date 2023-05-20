@@ -1,10 +1,7 @@
 ---
 title: HTTP caching
 slug: Web/HTTP/Caching
-tags:
-  - Caching
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -260,11 +257,11 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** When evaluating how to use `ETag` and `Last-Modified`, consider the following:
-> During cache revalidation, if both `ETag` and `Last-Modified` are present, `ETag` takes precedence.
-> Therefore, if you are only considering caching, you may think that `Last-Modified` is unnecessary.
-> However, `Last-Modified` is not just useful for caching; instead, it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
-> So considering the overall HTTP ecosystem, it is preferable to provide both `ETag` and `Last-Modified`.
+> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
+> If you are only considering caching, you may think that `Last-Modified` is unnecessary.
+> However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
+> So considering the overall HTTP ecosystem, it is better to provide both `ETag` and `Last-Modified`.
 
 ### Force Revalidation
 

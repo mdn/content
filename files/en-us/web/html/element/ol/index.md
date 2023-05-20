@@ -1,5 +1,5 @@
 ---
-title: '<ol>: The Ordered List element'
+title: "<ol>: The Ordered List element"
 slug: Web/HTML/Element/ol
 page-type: html-element
 browser-compat: html.elements.ol
@@ -15,11 +15,11 @@ The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list o
 
 This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
-- {{HTMLAttrDef("start")}}
+- `start`
   - : An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering `type` is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use `start="4"`.
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : Sets the numbering type:
 
@@ -29,7 +29,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_at
     - `I` for uppercase Roman numerals
     - `1` for numbers (default)
 
-    The specified type is used for the entire list unless a different {{HTMLAttrxRef("type", "li")}} attribute is used on an enclosed {{HTMLElement("li")}} element.
+    The specified type is used for the entire list unless a different [`type`](/en-US/docs/Web/HTML/Element/li#type) attribute is used on an enclosed {{HTMLElement("li")}} element.
 
     > **Note:** Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
 
@@ -60,7 +60,7 @@ To determine which list to use, try changing the order of the list items; if the
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Simple_example", 400, 100)}}
 
@@ -74,7 +74,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
 
@@ -90,7 +90,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
 
@@ -113,7 +113,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Nesting_lists", 400, 150)}}
 
@@ -136,7 +136,7 @@ The above HTML will output:
 </ol>
 ```
 
-The above HTML will output:
+#### Result
 
 {{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
 
@@ -224,5 +224,5 @@ The above HTML will output:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
   - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists
-  - the {{CSSxRef("line-height")}} property, to simulate the deprecated {{HTMLAttrxRef("compact", "ol")}} attribute
+  - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute
   - the {{CSSxRef("margin")}} property, to control the list indentation

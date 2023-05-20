@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: The Bidirectional Text Override element'
+title: "<bdo>: The Bidirectional Text Override element"
 slug: Web/HTML/Element/bdo
 page-type: html-element
 browser-compat: html.elements.bdo
@@ -17,7 +17,7 @@ The text's characters are drawn from the starting point in the given direction; 
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : The direction in which text should be rendered in this element's contents. Possible values are:
 

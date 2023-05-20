@@ -76,17 +76,17 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute lets you specify that the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the `autofocus` attribute, which is a Boolean.
-- {{HTMLAttrDef("challenge")}}
+- `challenge`
   - : A challenge string that is submitted along with the public key. Defaults to an empty string if not specified.
-- {{HTMLAttrDef("disabled")}}
+- `disabled`
   - : This Boolean attribute indicates that the form control is not available for interaction.
-- {{HTMLAttrDef("form")}}
+- `form`
   - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen>` elements anywhere within a document, not just as descendants of their form elements.
-- {{HTMLAttrDef("keytype")}}
+- `keytype`
   - : The type of key generated. The default value is `RSA`.
-- {{HTMLAttrDef("name")}}
+- `name`
   - : The name of the control, which is submitted with the form data.
 
 The element is written as follows:

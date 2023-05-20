@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addStream()
+title: "RTCPeerConnection: addStream() method"
+short-title: addStream()
 slug: Web/API/RTCPeerConnection/addStream
 page-type: web-api-instance-method
 status:
@@ -45,13 +46,10 @@ This simple example adds the audio and video stream coming from the user's camer
 the connection.
 
 ```js
-navigator.mediaDevices.getUserMedia(
-  { video: true, audio: true },
-  (stream) => {
-    const pc = new RTCPeerConnection();
-    pc.addStream(stream);
-  }
-);
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
+  pc.addStream(stream);
+});
 ```
 
 ## Migrating to addTrack()

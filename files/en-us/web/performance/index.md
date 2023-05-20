@@ -64,7 +64,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 - {{glossary('Beacon')}}
 - {{glossary('Brotli compression')}}
-- {{glossary('Client hints')}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting')}}
 - {{glossary('CSSOM')}}
 - {{glossary('Domain sharding')}}
@@ -97,7 +97,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('RAIL')}}
 - {{glossary('Real User Monitoring')}}
 - {{glossary('Resource Timing')}}
-- {{glossary('Round Trip Time (RTT)')}}
+- {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
 - {{glossary('Server Timing')}}
 - {{glossary('Speculative parsing')}}
 - {{glossary('Speed index')}}

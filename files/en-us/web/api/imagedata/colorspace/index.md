@@ -1,5 +1,6 @@
 ---
-title: ImageData.colorSpace
+title: "ImageData: colorSpace property"
+short-title: colorSpace
 slug: Web/API/ImageData/colorSpace
 page-type: web-api-instance-property
 browser-compat: api.ImageData.colorSpace
@@ -31,10 +32,10 @@ context.fillStyle = "color(display-p3 0.5 0 0)";
 context.fillRect(0, 0, 10, 10);
 
 const p3ImageData = context.getImageData(0, 0, 1, 1);
-console.log(p3ImageData.colorSpace);  // "display-p3"
+console.log(p3ImageData.colorSpace); // "display-p3"
 
 const srgbImageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
-console.log(srgbImageData.colorSpace);  // "srgb"
+console.log(srgbImageData.colorSpace); // "srgb"
 ```
 
 ## Specifications

@@ -1,13 +1,12 @@
 ---
-title: VideoEncoder.encodeQueueSize
+title: "VideoEncoder: encodeQueueSize property"
+short-title: encodeQueueSize
 slug: Web/API/VideoEncoder/encodeQueueSize
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.VideoEncoder.encodeQueueSize
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`encodeQueueSize`** read-only property of the {{domxref("VideoEncoder")}} interface returns the number of pending encode requests in the queue.
 

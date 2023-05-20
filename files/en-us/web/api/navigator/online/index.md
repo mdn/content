@@ -1,5 +1,6 @@
 ---
-title: Navigator.onLine
+title: "Navigator: onLine property"
+short-title: onLine
 slug: Web/API/Navigator/onLine
 page-type: web-api-instance-property
 browser-compat: api.Navigator.onLine
@@ -45,9 +46,9 @@ following example:
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -62,9 +63,13 @@ listen for the events on `window.online` and `window.offline`, as
 in the following example:
 
 ```js
-window.addEventListener('offline', (e) => { console.log('offline'); });
+window.addEventListener("offline", (e) => {
+  console.log("offline");
+});
 
-window.addEventListener('online', (e) => { console.log('online'); });
+window.addEventListener("online", (e) => {
+  console.log("online");
+});
 ```
 
 ## Specifications

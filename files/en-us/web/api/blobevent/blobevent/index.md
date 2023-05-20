@@ -1,5 +1,6 @@
 ---
-title: BlobEvent()
+title: "BlobEvent: BlobEvent() constructor"
+short-title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
 page-type: web-api-constructor
 browser-compat: api.BlobEvent.BlobEvent

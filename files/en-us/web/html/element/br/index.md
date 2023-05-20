@@ -1,5 +1,5 @@
 ---
-title: '<br>: The Line Break element'
+title: "<br>: The Line Break element"
 slug: Web/HTML/Element/br
 page-type: html-element
 browser-compat: html.elements.br
@@ -21,7 +21,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
+- `clear` {{Deprecated_Inline}}
   - : Indicates where to begin the next line after the break.
 
 ## Styling with CSS
@@ -44,9 +44,9 @@ Mountain View, CA<br />
 USA<br />
 ```
 
-The result looks like so:
+#### Result
 
-{{ EmbedLiveSample('Simple_br', '100%', '90') }}
+{{ EmbedLiveSample('Simple_br', 640, 120) }}
 
 ## Accessibility concerns
 

@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.audioWorklet
+title: "BaseAudioContext: audioWorklet property"
+short-title: audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.audioWorklet

@@ -1,5 +1,6 @@
 ---
-title: console.dirxml()
+title: "console: dirxml() method"
+short-title: dirxml()
 slug: Web/API/console/dirxml
 page-type: web-api-instance-method
 browser-compat: api.console.dirxml

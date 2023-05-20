@@ -15,7 +15,7 @@ They are used to improve user experience and enforce brand consistency. When a f
 ## See also
 
 - [Favicon](https://en.wikipedia.org/wiki/Favicon) on Wikipedia
-- The [link rel="icon"](/en-US/docs/Web/HTML/Attributes/rel#attr-icon) element documentation, used to add a favicon to a page.
+- The [link rel="icon"](/en-US/docs/Web/HTML/Attributes/rel#icon) element documentation, used to add a favicon to a page.
 - Tools
 
   - [Free favicon generator](https://favicon.io/)

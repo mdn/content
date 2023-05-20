@@ -2,16 +2,6 @@
 title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - DownloadQuery
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 browser-compat: webextensions.api.downloads.DownloadQuery
 ---
 

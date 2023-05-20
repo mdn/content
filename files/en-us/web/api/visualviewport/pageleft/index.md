@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.pageLeft
+title: "VisualViewport: pageLeft property"
+short-title: pageLeft
 slug: Web/API/VisualViewport/pageLeft
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.pageLeft

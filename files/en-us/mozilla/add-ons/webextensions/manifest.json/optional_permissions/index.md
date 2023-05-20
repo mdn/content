@@ -2,11 +2,6 @@
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
 browser-compat: webextensions.manifest.optional_permissions
 ---
 
@@ -56,7 +51,7 @@ These are the same as the host permissions you can specify in the [`permissions`
 > **Note:** When using Manifest V3 or higher:
 >
 > - in Chrome, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
-> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzilla.mozilla.org/show_bug.cgi?id=1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
+> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzil.la/1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
 
 ## API permissions
 
@@ -72,6 +67,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequestFeedback`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -83,7 +79,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `notifications`
 - `pageCapture`
 - `privacy`
-- `scripting` (Manifest V3 or higher)
+- `scripting`
 - `tabHide`
 - `tabs`
 - `topSites`

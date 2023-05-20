@@ -2,16 +2,6 @@
 title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
 browser-compat: webextensions.manifest.theme_experiment
 ---
 

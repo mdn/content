@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.decode()
+title: "HTMLImageElement: decode() method"
+short-title: decode()
 slug: Web/API/HTMLImageElement/decode
 page-type: web-api-instance-method
 browser-compat: api.HTMLImageElement.decode
@@ -58,14 +59,15 @@ handling the error in the {{domxref("Element/error_event", "error")}} event's ha
 
 ```js
 const img = new Image();
-img.src = 'nebula.jpg';
-img.decode()
-.then(() => {
-  document.body.appendChild(img);
-})
-.catch((encodingError) => {
-  // Do something with the error.
-})
+img.src = "nebula.jpg";
+img
+  .decode()
+  .then(() => {
+    document.body.appendChild(img);
+  })
+  .catch((encodingError) => {
+    // Do something with the error.
+  });
 ```
 
 ## Specifications

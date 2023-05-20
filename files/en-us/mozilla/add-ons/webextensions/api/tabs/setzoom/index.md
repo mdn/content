@@ -2,16 +2,6 @@
 title: tabs.setZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setZoom
-  - tabs
 browser-compat: webextensions.api.tabs.setZoom
 ---
 

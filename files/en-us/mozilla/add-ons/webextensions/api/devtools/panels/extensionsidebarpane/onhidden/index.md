@@ -1,18 +1,7 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onHidden
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - ExtensionSidebarPane
-  - Extensions
-  - Event
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onHidden
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
 

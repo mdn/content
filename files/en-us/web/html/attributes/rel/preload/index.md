@@ -7,7 +7,7 @@ browser-compat: html.elements.link.rel.preload
 
 {{HTMLSidebar}}
 
-The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute lets you declare fetch requests in the
+The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute lets you declare fetch requests in the
 HTML's {{htmlelement("head")}}, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,
 before browsers' main rendering machinery kicks in. This ensures they are available earlier and are less likely to block the page's render, improving performance. Even though the name contains the term _load_, it doesn't load and execute the script but only schedules it to be downloaded and cached with a higher priority.
 
@@ -21,8 +21,8 @@ You most commonly use `<link>` to load a CSS file to style your page with:
 
 Here however, we will use a `rel` value of `preload`, which turns `<link>` into a preloader for any resource we want. You will also need to specify:
 
-- The path to the resource in the {{htmlattrxref("href", "link")}} attribute.
-- The type of resource in the {{htmlattrxref("as", "link")}} attribute.
+- The path to the resource in the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute.
+- The type of resource in the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute.
 
 A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
 
@@ -81,7 +81,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 
 ## Including a MIME type
 
-`<link>` elements can accept a {{htmlattrxref("type", "link")}} attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
+`<link>` elements can accept a [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
 You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
 
@@ -114,7 +114,7 @@ However, the lack of preloading doesn't prevent the `video/webm` video from actu
 
 ## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -149,7 +149,7 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept {{htmlattrxref("media", "link")}} attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), allowing you to do responsive preloading!
 
 Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 

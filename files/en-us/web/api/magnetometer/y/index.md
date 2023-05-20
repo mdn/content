@@ -1,5 +1,6 @@
 ---
-title: Magnetometer.y
+title: "Magnetometer: y property"
+short-title: "y"
 slug: Web/API/Magnetometer/y
 page-type: web-api-instance-property
 status:
@@ -23,9 +24,9 @@ The magnetometer is typically read in the {{domxref('Sensor.reading_event', 'rea
 callback. In the example below this occurs sixty times a second.
 
 ```js
-let magSensor = new Magnetometer({frequency: 60});
+let magSensor = new Magnetometer({ frequency: 60 });
 
-magSensor.addEventListener('reading', (e) => {
+magSensor.addEventListener("reading", (e) => {
   console.log(`Magnetic field along the X-axis ${magSensor.x}`);
   console.log(`Magnetic field along the Y-axis ${magSensor.y}`);
   console.log(`Magnetic field along the Z-axis ${magSensor.z}`);

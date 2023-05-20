@@ -1,11 +1,9 @@
 ---
 title: "Permissions-Policy: battery"
 slug: Web/HTTP/Headers/Permissions-Policy/battery
-tags:
-  - Battery
-  - Permissions Policy
-  - HTTP
-  - Experimental
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.battery
 ---
 

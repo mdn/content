@@ -58,8 +58,8 @@ If a box has an outer display type of `inline`, then:
 
 - The box will not break onto a new line.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
+- Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -199,7 +199,7 @@ In the example below, you can see two boxes. Both have a class of `.box`, which 
 
 ### Use browser DevTools to view the box model
 
-Your [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
+Your [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
 ![Inspecting the box model of an element using Firefox DevTools](box-model-devtools.png)
 
@@ -299,7 +299,7 @@ In the example below, you can change the values for padding on the class `.box` 
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The horizontal padding, margins, and borders move other content away from the box.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
 

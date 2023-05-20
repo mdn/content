@@ -52,27 +52,27 @@ In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/W
 ```js
 let accelerometer = null;
 try {
-    accelerometer = new Accelerometer({ referenceFrame: 'device' });
-    accelerometer.addEventListener('error', (event) => {
-        // Handle runtime errors.
-        if (event.error.name === 'NotAllowedError') {
-            // Branch to code for requesting permission.
-        } else if (event.error.name === 'NotReadableError' ) {
-            console.log('Cannot connect to the sensor.');
-        }
-    });
-    accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
-    accelerometer.start();
-} catch (error) {
-    // Handle construction errors.
-    if (error.name === 'SecurityError') {
-        // See the note above about permissions policy.
-        console.log('Sensor construction was blocked by a permissions policy.');
-    } else if (error.name === 'ReferenceError') {
-        console.log('Sensor is not supported by the User Agent.');
-    } else {
-        throw error;
+  accelerometer = new Accelerometer({ referenceFrame: "device" });
+  accelerometer.addEventListener("error", (event) => {
+    // Handle runtime errors.
+    if (event.error.name === "NotAllowedError") {
+      // Branch to code for requesting permission.
+    } else if (event.error.name === "NotReadableError") {
+      console.log("Cannot connect to the sensor.");
     }
+  });
+  accelerometer.addEventListener("reading", () => reloadOnShake(accelerometer));
+  accelerometer.start();
+} catch (error) {
+  // Handle construction errors.
+  if (error.name === "SecurityError") {
+    // See the note above about permissions policy.
+    console.log("Sensor construction was blocked by a permissions policy.");
+  } else if (error.name === "ReferenceError") {
+    console.log("Sensor is not supported by the User Agent.");
+  } else {
+    throw error;
+  }
 }
 ```
 
@@ -105,7 +105,7 @@ sensor.addEventListener("error", (error) => {
 
 The following table describes for each sensor type, the name required for the Permissions API, the {{HTMLElement('iframe')}} element's `allow` attribute and the {{httpheader('Permissions-Policy')}} directive.
 
-| Sensor                      | Permission Policy Name                         |
+| Sensor                      | Permission Policy Name                                 |
 | --------------------------- | ------------------------------------------------------ |
 | `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, and `'magnetometer'` |
 | `Accelerometer`             | `'accelerometer'`                                      |

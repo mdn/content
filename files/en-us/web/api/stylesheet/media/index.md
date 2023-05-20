@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.media
+title: "StyleSheet: media property"
+short-title: media
 slug: Web/API/StyleSheet/media
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.media

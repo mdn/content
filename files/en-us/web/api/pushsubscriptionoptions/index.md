@@ -29,7 +29,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
-  })
+  });
 });
 ```
 

@@ -1,15 +1,7 @@
 ---
 title: declarativeNetRequest.updateEnabledRulesets
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateEnabledRulesets
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - Method
-  - declarativeNetRequest
-  - updateEnabledRulesets
+page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
 ---
 

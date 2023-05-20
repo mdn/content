@@ -1,6 +1,7 @@
 ---
 title: WAI-ARIA Roles
 slug: Web/Accessibility/ARIA/Roles
+page-type: landing-page
 ---
 
 ARIA roles provide semantic meaning to content, allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. <abbr>ARIA</abbr> roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support.
@@ -34,7 +35,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}})
 - [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}})
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use `{{HTMLElement('th', '&lt;th scope="col">')}}`)
-- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}}
+- [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}})
 - [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
 - [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) (use {{HTMLElement('figure')}} instead)

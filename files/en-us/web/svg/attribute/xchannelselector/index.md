@@ -2,11 +2,6 @@
 title: xChannelSelector
 slug: Web/SVG/Attribute/xChannelSelector
 page-type: svg-attribute
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.xChannelSelector
 ---
 

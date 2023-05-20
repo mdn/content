@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.organization
+title: "PaymentAddress: organization property"
+short-title: organization
 slug: Web/API/PaymentAddress/organization
 page-type: web-api-instance-property
 status:

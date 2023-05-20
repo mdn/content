@@ -49,7 +49,7 @@ img {
 
 ### Result
 
-{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}
+{{EmbedLiveSample('Examples','125','125')}}
 
 > **Note:** Unless the image has a specified height and width the broken image icon will not be displayed but the alt attribute will also be hidden if `-moz-force-broken-image-icon` is set to `1`.
 
@@ -68,4 +68,4 @@ Not part of any standard.
 
 ## See also
 
-- {{ Bug(58646) }}
+- [Webkit bug 58646](https://bugzil.la/58646)

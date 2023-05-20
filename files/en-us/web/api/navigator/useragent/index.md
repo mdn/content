@@ -1,5 +1,6 @@
 ---
-title: Navigator.userAgent
+title: "Navigator: userAgent property"
+short-title: userAgent
 slug: Web/API/Navigator/userAgent
 page-type: web-api-instance-property
 browser-compat: api.Navigator.userAgent
@@ -50,7 +51,7 @@ Application-Name Application-Name-version
 ## Examples
 
 ```js
-alert(window.navigator.userAgent)
+alert(window.navigator.userAgent);
 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
 ```
 

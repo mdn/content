@@ -2,15 +2,6 @@
 title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 page-type: webextension-api-property
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - openSearchResultsInNewTabs
 browser-compat: webextensions.api.browserSettings.openSearchResultsInNewTabs
 ---
 

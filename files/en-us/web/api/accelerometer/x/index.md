@@ -1,5 +1,6 @@
 ---
-title: Accelerometer.x
+title: "Accelerometer: x property"
+short-title: x
 slug: Web/API/Accelerometer/x
 page-type: web-api-instance-property
 status:

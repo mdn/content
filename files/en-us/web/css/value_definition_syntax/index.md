@@ -158,7 +158,7 @@ But not:
 
 A multiplier is a sign that indicates how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.
 
-Note that multipliers cannot be added and have all precedence over combinators.
+Note that multipliers cannot be added and have precedence over all combinators.
 
 ### Asterisk (`*`)
 
@@ -253,7 +253,7 @@ This example matches the following values:
 But not:
 
 - `bold`, as `smaller` must appear at least one time.
-- `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
+- `bold smaller smaller smaller`, as the different occurrences of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
 The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
@@ -360,7 +360,7 @@ But not:
     <tr>
       <td></td>
       <td>No multiplier</td>
-      <td>Exactly 1 times</td>
+      <td>Exactly 1 time</td>
       <td><code>solid</code></td>
     </tr>
     <tr>
@@ -415,7 +415,7 @@ But not:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

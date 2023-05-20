@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.offsetleft
+title: "VisualViewport: offsetleft property"
+short-title: offsetleft
 slug: Web/API/VisualViewport/offsetleft
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.offsetLeft

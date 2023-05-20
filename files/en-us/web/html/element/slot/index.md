@@ -1,5 +1,5 @@
 ---
-title: '<slot>: The Web Component Slot element'
+title: "<slot>: The Web Component Slot element"
 slug: Web/HTML/Element/slot
 page-type: html-element
 browser-compat: html.elements.slot
@@ -7,13 +7,13 @@ browser-compat: html.elements.slot
 
 {{HTMLSidebar}}
 
-The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
+The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/API/Web_components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : The slot's name.
 
@@ -63,7 +63,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </template>
 ```
 
-> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
+> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Technical summary
 

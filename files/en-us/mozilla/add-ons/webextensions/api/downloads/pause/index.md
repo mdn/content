@@ -2,16 +2,6 @@
 title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - pause
 browser-compat: webextensions.api.downloads.pause
 ---
 

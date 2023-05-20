@@ -1,13 +1,12 @@
 ---
-title: EncodedVideoChunk()
+title: "EncodedVideoChunk: EncodedVideoChunk() constructor"
+short-title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 

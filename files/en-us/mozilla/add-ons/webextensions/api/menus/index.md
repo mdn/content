@@ -2,16 +2,6 @@
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
 browser-compat: webextensions.api.menus
 ---
 

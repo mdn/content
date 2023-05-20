@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.controls
+title: "HTMLMediaElement: controls property"
+short-title: controls
 slug: Web/API/HTMLMediaElement/controls
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.controls
@@ -8,7 +9,7 @@ browser-compat: api.HTMLMediaElement.controls
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.controls`** property reflects the
-{{htmlattrxref("controls", "video")}} HTML attribute, which controls whether user
+[`controls`](/en-US/docs/Web/HTML/Element/video#controls) HTML attribute, which controls whether user
 interface controls for playing the media item will be displayed.
 
 ## Value
@@ -19,7 +20,7 @@ displayed.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.controls = true;
 ```
 
@@ -33,4 +34,4 @@ obj.controls = true;
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.controls` property

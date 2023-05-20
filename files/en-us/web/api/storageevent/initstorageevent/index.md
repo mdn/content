@@ -1,5 +1,6 @@
 ---
-title: StorageEvent.initStorageEvent()
+title: "StorageEvent: initStorageEvent() method"
+short-title: initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
 page-type: web-api-instance-method
 status:

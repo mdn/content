@@ -90,4 +90,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- The HTML {{htmlattrxref("dir")}} global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute

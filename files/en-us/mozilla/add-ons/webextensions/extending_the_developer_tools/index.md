@@ -2,13 +2,6 @@
 title: Extending the developer tools
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 page-type: guide
-tags:
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Guide
-  - Needs Privileges
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

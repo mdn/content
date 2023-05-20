@@ -1,13 +1,7 @@
 ---
 title: "Permissions-Policy: camera"
 slug: Web/HTTP/Headers/Permissions-Policy/camera
-tags:
-  - Directive
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - camera
+page-type: http-permissions-policy-directive
 browser-compat: http.headers.Permissions-Policy.camera
 ---
 

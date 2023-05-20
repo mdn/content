@@ -23,7 +23,9 @@ The value of a **TrustedScriptURL** object is set when the object is created and
 The constant `sanitized` is an object created via a Trusted Types policy.
 
 ```js
-const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+const sanitized = scriptPolicy.createScriptURL(
+  "https://example.com/my-script.js"
+);
 console.log(sanitized); /* a TrustedScriptURL object */
 ```
 

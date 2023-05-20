@@ -1,5 +1,6 @@
 ---
-title: Element.shadowRoot
+title: "Element: shadowRoot property"
+short-title: shadowRoot
 slug: Web/API/Element/shadowRoot
 page-type: web-api-instance-property
 browser-compat: api.Element.shadowRoot
@@ -75,7 +76,3 @@ function updateStyle(elem) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

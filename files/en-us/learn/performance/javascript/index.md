@@ -44,7 +44,7 @@ Performance optimizations should include:
 - **Reducing the amount of JavaScript that is needed.** Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?
 - **Remove unused code.**
 - **Split the JavaScript into smaller files.** Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.
-- **Optimize these smaller files.** [Minification](/en-US/docs/Glossary/minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further, and should be used even if you don't minify. [Brotli](/en-US/docs/Glossary/brotli_compression) is similar to Gzip, generally outperforming Gzip's compression.
+- **Optimize these smaller files.** [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further, and should be used even if you don't minify. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, generally outperforming Gzip's compression.
 
 ## Render impact
 

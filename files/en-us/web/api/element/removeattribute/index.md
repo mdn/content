@@ -1,5 +1,6 @@
 ---
-title: Element.removeAttribute()
+title: "Element: removeAttribute() method"
+short-title: removeAttribute()
 slug: Web/API/Element/removeAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.removeAttribute

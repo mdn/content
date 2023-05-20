@@ -1,5 +1,6 @@
 ---
-title: VisualViewport.height
+title: "VisualViewport: height property"
+short-title: height
 slug: Web/API/VisualViewport/height
 page-type: web-api-instance-property
 browser-compat: api.VisualViewport.height

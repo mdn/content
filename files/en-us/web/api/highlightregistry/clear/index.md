@@ -1,5 +1,6 @@
 ---
-title: HighlightRegistry.clear()
+title: "HighlightRegistry: clear() method"
+short-title: clear()
 slug: Web/API/HighlightRegistry/clear
 page-type: web-api-instance-method
 status:
@@ -32,8 +33,8 @@ The code snippet below registers two highlight objects in the registry and then 
 const customHighlight1 = new Highlight(range1, range2);
 const customHighlight2 = new Highlight(range3, range4, range5);
 
-CSS.highlights.set('custom-highlight-1', customHighlight1);
-CSS.highlights.set('custom-highlight-2', customHighlight2);
+CSS.highlights.set("custom-highlight-1", customHighlight1);
+CSS.highlights.set("custom-highlight-2", customHighlight2);
 
 console.log(CSS.highlights.size); // 2
 

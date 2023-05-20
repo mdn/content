@@ -1,5 +1,6 @@
 ---
-title: Screen.height
+title: "Screen: height property"
+short-title: height
 slug: Web/API/Screen/height
 page-type: web-api-instance-property
 browser-compat: api.Screen.height
@@ -18,7 +19,7 @@ A number.
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-   // Something is occupying some screen real estate!
+  // Something is occupying some screen real estate!
 }
 ```
 

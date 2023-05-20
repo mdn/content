@@ -118,7 +118,7 @@ Elements either participate in the formatting context of their containing block 
 
 The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap round the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
 
-{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 720)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 720)}}
 
 ### Block boxes
 
@@ -142,7 +142,7 @@ A block box is a block-level box that is also a block container. As described in
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - **Visual formatting models**

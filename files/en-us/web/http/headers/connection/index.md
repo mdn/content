@@ -1,13 +1,7 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
-  - Web
+page-type: http-header
 browser-compat: http.headers.Connection
 ---
 

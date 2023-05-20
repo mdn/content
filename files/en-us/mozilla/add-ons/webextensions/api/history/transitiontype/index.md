@@ -2,16 +2,6 @@
 title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - TransitionType
-  - Type
-  - WebExtensions
 browser-compat: webextensions.api.history.TransitionType
 ---
 

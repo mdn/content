@@ -2,10 +2,6 @@
 title: onclick
 slug: Web/SVG/Attribute/onclick
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
-  - events
 browser-compat: svg.attributes.events.global.onclick
 ---
 

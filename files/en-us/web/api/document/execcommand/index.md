@@ -1,5 +1,6 @@
 ---
-title: Document.execCommand()
+title: "Document: execCommand() method"
+short-title: execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
 status:
@@ -53,11 +54,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
-      - : Enables or disables the grabber that allows absolutely-positioned elements to be moved around. The grabber is disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the grabber that allows absolutely-positioned elements to be moved around. The grabber is disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `enableInlineTableEditing`
-      - : Enables or disables the table row/column insertion and deletion controls. The controls are disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the table row/column insertion and deletion controls. The controls are disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `enableObjectResizing`
-      - : Enables or disables the resize handles on images, tables, and absolutely-positioned elements and other resizable objects. The handles are disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the resize handles on images, tables, and absolutely-positioned elements and other resizable objects. The handles are disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `fontName`
       - : Changes the font name for the selection or at the insertion point. This requires a font name string (like `"Arial"`) as a value argument.
     - `fontSize`
@@ -153,7 +154,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the {{htmlattrxref("contenteditable")}} attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 

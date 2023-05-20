@@ -28,11 +28,11 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // Add event.device to the UI.
 });
 
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // Remove event.device from the UI.
 });
 ```

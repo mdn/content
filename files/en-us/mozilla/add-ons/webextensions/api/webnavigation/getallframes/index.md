@@ -2,16 +2,6 @@
 title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllFrames
-  - webNavigation
 browser-compat: webextensions.api.webNavigation.getAllFrames
 ---
 

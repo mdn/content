@@ -1,5 +1,6 @@
 ---
-title: RTCStats.type
+title: "RTCStats: type property"
+short-title: type
 slug: Web/API/RTCStats/type
 page-type: web-api-instance-property
 browser-compat: api.RTCStats.type

@@ -36,6 +36,7 @@ Note that a {{domxref("ReadableStreamDefaultController")}} object is provided as
 When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -45,16 +46,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -63,7 +64,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -74,3 +75,11 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

@@ -101,4 +101,3 @@ The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/o
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contextMenu")}}

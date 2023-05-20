@@ -149,4 +149,4 @@ Not part of any standard. Apple has [a description in the Safari CSS Reference](
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
-- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla
+- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzil.la/390936) on the Firefox issue tracker Bugzilla

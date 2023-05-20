@@ -1,5 +1,6 @@
 ---
-title: TouchList.item()
+title: "TouchList: item() method"
+short-title: item()
 slug: Web/API/TouchList/item
 page-type: web-api-instance-method
 browser-compat: api.TouchList.item
@@ -37,15 +38,19 @@ This code example illustrates the use of the {{domxref("TouchList")}} interface'
 ```js
 const target = document.getElementById("target");
 
-target.addEventListener("touchstart", (ev) => {
-  // If this touchstart event started on element target,
-  // set touch to the first item in the targetTouches list;
-  // otherwise set touch to the first item in the touches list
-  const touch =
-    ev.targetTouches.length >= 1
-      ? ev.targetTouches.item(0)
-      : ev.touches.item(0);
-}, false);
+target.addEventListener(
+  "touchstart",
+  (ev) => {
+    // If this touchstart event started on element target,
+    // set touch to the first item in the targetTouches list;
+    // otherwise set touch to the first item in the touches list
+    const touch =
+      ev.targetTouches.length >= 1
+        ? ev.targetTouches.item(0)
+        : ev.touches.item(0);
+  },
+  false
+);
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addIceCandidate()
+title: "RTCPeerConnection: addIceCandidate() method"
+short-title: addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addIceCandidate
@@ -7,7 +8,7 @@ browser-compat: api.RTCPeerConnection.addIceCandidate
 
 {{APIRef("WebRTC")}}
 
-When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
+When a website or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
 
 If the `candidate` parameter is missing or a value of `null` is given when calling `addIceCandidate()`, the added ICE candidate is an "end-of-candidates" indicator.
@@ -179,7 +180,7 @@ signalingChannel.onmessage = (receivedString) => {
   } else {
     // handle other things you might be signaling, like sdp
   }
-}
+};
 ```
 
 The last candidate to be signaled this way by the remote peer will be a special
@@ -187,7 +188,7 @@ candidate denoting end-of-candidates. Out of interest, end-of-candidates may be
 manually indicated as follows:
 
 ```js
-pc.addIceCandidate({candidate:''});
+pc.addIceCandidate({ candidate: "" });
 ```
 
 However, in most cases you won't need to look for this explicitly, since the events

@@ -2,16 +2,6 @@
 title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - set
 browser-compat: webextensions.api.cookies.set
 ---
 

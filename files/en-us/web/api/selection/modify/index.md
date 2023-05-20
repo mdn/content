@@ -1,5 +1,6 @@
 ---
-title: Selection.modify()
+title: "Selection: modify() method"
+short-title: modify()
 slug: Web/API/Selection/modify
 page-type: web-api-instance-method
 browser-compat: api.Selection.modify
@@ -88,14 +89,14 @@ click the button to expand the selection.
 ### JavaScript
 
 ```js
-let select = document.querySelector('select');
-let button = document.querySelector('button');
+let select = document.querySelector("select");
+let button = document.querySelector("button");
 
-button.addEventListener('click', modify);
+button.addEventListener("click", modify);
 
 function modify() {
   let selection = window.getSelection();
-  selection.modify('extend', 'forward', select.value);
+  selection.modify("extend", "forward", select.value);
 }
 ```
 

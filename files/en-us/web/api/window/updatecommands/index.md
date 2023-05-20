@@ -1,5 +1,6 @@
 ---
-title: Window.updateCommands()
+title: "Window: updateCommands() method"
+short-title: updateCommands()
 slug: Web/API/Window/updateCommands
 page-type: web-api-instance-method
 status:

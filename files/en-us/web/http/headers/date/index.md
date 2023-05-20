@@ -1,12 +1,7 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Date
 ---
 
@@ -74,11 +69,6 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ```http
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-```
-
-```js
-new Date().toUTCString();
-// "Mon, 09 Mar 2020 08:13:24 GMT"
 ```
 
 ## Specifications

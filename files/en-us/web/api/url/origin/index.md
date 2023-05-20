@@ -1,5 +1,6 @@
 ---
-title: URL.origin
+title: "URL: origin property"
+short-title: origin
 slug: Web/API/URL/origin
 page-type: web-api-instance-property
 browser-compat: api.URL.origin
@@ -31,13 +32,13 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/")
+const url = new URL("blob:https://mozilla.org:443/");
 console.log(url.origin); // Logs 'https://mozilla.org'
 
-const url = new URL("http://localhost:80/")
+const url = new URL("http://localhost:80/");
 console.log(url.origin); // Logs 'http://localhost'
 
-const url = new URL("https://mozilla.org:8080/")
+const url = new URL("https://mozilla.org:8080/");
 console.log(url.origin); // Logs 'https://mozilla.org:8080'
 ```
 

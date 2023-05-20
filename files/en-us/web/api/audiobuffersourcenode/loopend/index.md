@@ -1,5 +1,6 @@
 ---
-title: AudioBufferSourceNode.loopEnd
+title: "AudioBufferSourceNode: loopEnd property"
+short-title: loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
 page-type: web-api-instance-property
 browser-compat: api.AudioBufferSourceNode.loopEnd

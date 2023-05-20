@@ -92,7 +92,7 @@ There are five targets to consider:
         some reason other than an anonymous boundary crossing, this will be set
         to the target before the retargeting occurs. For example, mouse events
         are retargeted to their parent node when they happen over text nodes
-        ({{ Bug("185889") }}), and in that case <code>.target</code> will
+        ([Webkit bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will
         show the parent and <code>.explicitOriginalTarget</code> will show the
         text node.<br />Unlike <code>.originalTarget</code>,
         <code>.explicitOriginalTarget</code> will never contain anonymous

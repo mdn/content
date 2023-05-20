@@ -1,5 +1,6 @@
 ---
-title: CSSValue.cssValueType
+title: "CSSValue: cssValueType property"
+short-title: cssValueType
 slug: Web/API/CSSValue/cssValueType
 page-type: web-api-instance-property
 status:

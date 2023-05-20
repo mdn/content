@@ -29,7 +29,7 @@ The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("Tex
 const video = document.getElementById("video");
 video.onplay = () => {
   console.log(video.textTracks[0].cues);
-}
+};
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.ctrlKey
+title: "MouseEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.ctrlKey
@@ -29,8 +30,8 @@ This example logs the `ctrlKey` property when you trigger a {{domxref("Element/c
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The ctrl key is pressed: ${e.ctrlKey}`;

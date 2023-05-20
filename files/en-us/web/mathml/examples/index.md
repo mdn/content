@@ -1,16 +1,10 @@
 ---
 title: Examples
 slug: Web/MathML/Examples
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - MathML
+page-type: landing-page
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 Below you'll find some examples you can look at to help you to understand how to use MathML.
 
@@ -32,7 +26,7 @@ The following demos display increasingly complex mathematical concepts in Web co
 The following demos mix MathML with other Web technologies to produce advanced content.
 
 - [`<la-tex>` custom element](https://fred-wang.github.io/TeXZilla/examples/customElement.html)
-  - : A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) that accepts [LaTeX](https://en.wikipedia.org/wiki/LaTeX) content.
+  - : A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) that accepts [LaTeX](https://en.wikipedia.org/wiki/LaTeX) content.
 - [Magnetic field demo](https://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html)
   - : A 3D representation of a magnetic field, using [SVG](/en-US/docs/Web/SVG) and [WebGL](/en-US/docs/Web/API/WebGL_API).
 - [Συνάρτηση ζήτα Ρήμαν (el)](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)

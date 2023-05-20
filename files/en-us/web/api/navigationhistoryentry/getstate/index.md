@@ -1,5 +1,6 @@
 ---
-title: NavigationHistoryEntry.getState()
+title: "NavigationHistoryEntry: getState() method"
+short-title: getState()
 slug: Web/API/NavigationHistoryEntry/getState
 page-type: web-api-instance-method
 status:
@@ -37,7 +38,9 @@ None.
 ```js
 async function handleReload() {
   // Update existing state via reload()
-  await navigation.reload({ state: { ...navigation.currentEntry.getState(), newState: 3 } });
+  await navigation.reload({
+    state: { ...navigation.currentEntry.getState(), newState: 3 },
+  });
 
   // Print current state to the console
   const current = navigation.currentEntry;

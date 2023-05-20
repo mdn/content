@@ -2,16 +2,6 @@
 title: webRequest.HttpHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - HttpHeaders
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.HttpHeaders
 ---
 

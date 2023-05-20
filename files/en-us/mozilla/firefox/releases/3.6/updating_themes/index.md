@@ -25,7 +25,7 @@ The tabbed browser implementation no longer has a Mac-specific `tabs-closebutton
 
 ## Full Screen toolbar button
 
-There's a new [Full Screen toolbar button](https://bugzilla.mozilla.org/show_bug.cgi?id=206544) available from the Customize Toolbar dialog.
+There's a new [Full Screen toolbar button](https://bugzil.la/206544) available from the Customize Toolbar dialog.
 
 ## See also
 

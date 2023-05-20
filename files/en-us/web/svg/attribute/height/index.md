@@ -2,9 +2,6 @@
 title: height
 slug: Web/SVG/Attribute/height
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height

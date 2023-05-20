@@ -69,7 +69,7 @@ Following that, the code set the value of the `myHeading` variable's {{domxref("
 
 To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!
 
-> **Warning:** In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> **Warning:** In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -227,10 +227,10 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
     <tr>
       <th scope="row">Strict equality</th>
       <td>
-        This performs a test to see if two values are equal. It returns a
+        This performs a test to see if two values are equal and of the same data type. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
       </td>
-      <td><code>===</code></td>
+      <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality"><code>===</code></a></td>
       <td>
         <code>let myVariable = 3;<br />myVariable === 4;</code>
       </td>

@@ -1,5 +1,5 @@
 ---
-title: '<blockquote>: The Block Quotation element'
+title: "<blockquote>: The Block Quotation element"
 slug: Web/HTML/Element/blockquote
 page-type: html-element
 browser-compat: html.elements.blockquote
@@ -15,7 +15,7 @@ The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the e
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
 ## Usage notes

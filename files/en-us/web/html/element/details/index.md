@@ -1,5 +1,5 @@
 ---
-title: '<details>: The Details disclosure element'
+title: "<details>: The Details disclosure element"
 slug: Web/HTML/Element/details
 page-type: html-element
 browser-compat: html.elements.details
@@ -17,7 +17,7 @@ A `<details>` widget can be in one of two states. The default _closed_ state dis
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
 
-You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute. Unfortunately, at this time there's no built-in way to animate the transition between open and closed.
+You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute. Unfortunately, at this time, there's no built-in way to animate the transition between open and closed.
 
 By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
@@ -27,7 +27,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
 
   - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
@@ -66,7 +66,7 @@ This example shows a simple `<details>` element with a `<summary>`.
 </details>
 ```
 
-The result of this HTML is:
+#### Result
 
 {{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
@@ -85,7 +85,7 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 </details>
 ```
 
-This results in:
+#### Result
 
 {{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
