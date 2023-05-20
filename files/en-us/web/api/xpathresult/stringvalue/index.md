@@ -41,7 +41,13 @@ The following example shows the use of the `stringValue` property.
 
 ```js
 const xpath = "//div/text()";
-const result = document.evaluate(xpath, document, null, XPathResult.STRING_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.STRING_TYPE,
+  null
+);
 document.querySelector("output").textContent = result.stringValue;
 ```
 

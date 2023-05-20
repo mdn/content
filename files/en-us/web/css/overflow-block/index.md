@@ -81,8 +81,8 @@ The `overflow-block` property is specified as a single {{CSSXref("overflow_value
   </li>
 
   <li>
-    <code>overflow-block: clip</code> (hides the text outside the box beyond 
-    the overflow clip edge)
+    <code>overflow-block: clip</code> (hides the text outside the box beyond the
+    overflow clip edge)
     <div id="clip">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

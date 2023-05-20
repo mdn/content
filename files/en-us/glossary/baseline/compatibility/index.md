@@ -11,9 +11,11 @@ A Baseline feature - such as an API, a set of CSS properties, or a JavaScript sy
 ## Badges
 
 <!-- TODO: Show Baseline indicator itself, once it has been merged -->
+
 🟢 If you see the green Baseline badge, then you can trust that the feature will work in the browsers' latest and previous major releases.
 
 <!-- TODO: Show the non-Baseline indicator itself, once it has been merged -->
+
 🟡 If you see a yellow badge showing that a feature is not yet Baseline, then do more research and testing with your site's users before relying on that feature, or wait for it to become Baseline.
 
 ## Extra considerations

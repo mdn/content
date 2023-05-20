@@ -122,14 +122,18 @@ When the browser evaluates how to handle requests, it checks each extension's ru
    3. "block" cancels the request.
    4. "upgradeScheme" upgrades the scheme of the request.
    5. "redirect" redirects the request.
-   6. "modifyHeaders" rewrites request and response headers.
-   If this doesn't result in one rule to apply:
-3. the ruleset the rule belongs to, in this order of precedence:
-   1. session
-   2. dynamic
-   3. static
-   If this doesn't result in one rule to apply:
-4. the order of the rule in the ruleset, determined as the lowest value rule ID.
+   6. "modifyHeaders" rewrites request or response headers or both.
+
+> **Note:** When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
+>
+> - The "block" action does not support additional properties, and therefore there is no ambiguity: all matching "block" actions would result in the same outcome.
+> - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. It is still possible to redirect repeatedly when the redirected request matches another rule condition.
+> - Multiple "modifyHeaders" actions can be applied independently when they touch different headers. The result is ambiguous when they touch the same header, because some combination of operations are not allowed (as explained at ("declarativeNetRequest.ModifyHeaderInfo")}}). The evaluation order of "modifyHeaders" actions is therefore important.
+>
+> To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
+
+> **Note:** After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
+> This cannot be relied upon across browsers, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:
 

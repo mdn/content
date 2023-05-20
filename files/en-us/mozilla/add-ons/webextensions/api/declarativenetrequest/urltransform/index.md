@@ -30,7 +30,7 @@ Values of this type are objects. They contain these properties:
   - : An object describing how to add, remove, or replace query key-value pairs. Cannot be specified if 'query' is specified.
     - `addOrReplaceParams` {{optional_inline}}
 
-      - : An object describing the list of query key-value pairs to be added or replaced.
+      - : An array of objects describing the list of query key-value pairs to be added or replaced.
         - `key`
           - : A `string`. The key value.
         - `replaceOnly` {{optional_inline}}
@@ -39,7 +39,7 @@ Values of this type are objects. They contain these properties:
           - : A `string`. The value value.
 
     - `removeParams` {{optional_inline}}
-      - : A `string`. The list of query keys to be removed.
+      - : An array of `string`. The list of query keys to be removed.
 
 - `scheme` {{optional_inline}}
   - : A `string`. The new scheme for the request. Allowed values are `"http"`, `"https"`, and the scheme of the extension, for example, "moz-extension" in Firefox or "chrome-extension" in Chrome. When the extension scheme is used, the `host` must be specified to generate a meaningful redirection target.

@@ -3,12 +3,10 @@ title: "WebTransport: ready property"
 short-title: ready
 slug: Web/API/WebTransport/ready
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransport.ready
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`ready`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is ready to use.
 

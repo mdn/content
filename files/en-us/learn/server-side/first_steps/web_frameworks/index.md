@@ -137,7 +137,7 @@ def youngest(request):
 
 ### Rendering data
 
-Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of document.
+Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of documents.
 
 Web frameworks often provide a mechanism to make it easy to generate other formats from stored data, including {{glossary("JSON")}} and {{glossary("XML")}}.
 
@@ -282,7 +282,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ### ASP.NET
 
-[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
+[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create websites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
 
 One of the differentiators for ASP.NET is that it is built on the [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.
 

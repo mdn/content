@@ -11,6 +11,9 @@ The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web
 
 With Worklets, you can run JavaScript and [WebAssembly](/en-US/docs/WebAssembly) code to do graphics rendering or audio processing where high performance is required.
 
+Worklets allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
+
 ## Worklet types
 
 Worklets are restricted to specific use cases; they cannot be used for arbitrary computations like Web Workers. The `Worklet` interface abstracts properties and methods common to all kind of worklets, and cannot be created directly. Instead, you can use one of the following classes:
