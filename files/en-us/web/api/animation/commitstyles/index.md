@@ -10,7 +10,7 @@ browser-compat: api.Animation.commitStyles
 
 The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface writes the [computed values](/en-US/docs/Web/CSS/computed_value) of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute. `commitStyles()` works even if the animation has been [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations).
 
-`commitStyles()` can be used in combination with `fill` to cause the final state of an animation to persist after the animation ends. The same effect could be achieved with `fill` alone, but [using indefinitely filling animations is discouraged](https://w3c.github.io/csswg-drafts/web-animations-1/#fill-behavior). Animations [take precedence over all static styles](/en-US/docs/Web/CSS/Cascade#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
+`commitStyles()` can be used in combination with `fill` to cause the final state of an animation to persist after the animation ends. The same effect could be achieved with `fill` alone, but [using indefinitely filling animations is discouraged](https://drafts.csswg.org/web-animations-1/#fill-behavior). Animations [take precedence over all static styles](/en-US/docs/Web/CSS/Cascade#cascading_order), so an indefinite filling animation can prevent the target element from ever being styled normally.
 
 Using `commitStyles()` writes the styling state into the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute, where they can be modified and replaced as normal.
 
