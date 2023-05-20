@@ -297,7 +297,6 @@ console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 
   - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
   - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

@@ -192,17 +192,16 @@ You create a component with a `@Component()` decorator that has metadata that te
 A typical component is as follows:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-item',
-    // the following metadata specifies the location of the other parts of the component
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  selector: "app-item",
+  // the following metadata specifies the location of the other parts of the component
+  templateUrl: "./item.component.html",
+  styleUrls: ["./item.component.css"],
 })
-
 export class ItemComponent {
-// your code goes here
+  // your code goes here
 }
 ```
 
@@ -226,11 +225,11 @@ To refer to an external HTML file, use the `templateUrl` property:
 
 ```js
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
 })
-
 export class AppComponent {
+  // code goes here
 }
 ```
 
@@ -238,11 +237,11 @@ To write inline HTML, use the `template` property and write your HTML within bac
 
 ```js
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-
 export class AppComponent {
+  // code goes here
 }
 ```
 
@@ -258,16 +257,15 @@ The double curly braces instruct Angular to interpolate the contents within them
 The value for `title` comes from the component class:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component ({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-    title = 'To do application';
+  title = "To do application";
 }
 ```
 

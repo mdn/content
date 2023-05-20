@@ -100,7 +100,7 @@ _No change._
 ## Security and Networking
 
 - SSLv3 is now disabled by default ([Firefox bug 1030963](https://bugzil.la/1030963)).
-- A warning is sent to the console when a Web site use the CSS `reflected-xss` directive ([Firefox bug 1045902](https://bugzil.la/1045902)).
+- A warning is sent to the console when a website use the CSS `reflected-xss` directive ([Firefox bug 1045902](https://bugzil.la/1045902)).
 
 ## Changes for add-on and Mozilla developers
 

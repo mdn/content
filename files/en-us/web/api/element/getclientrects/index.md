@@ -12,7 +12,7 @@ The **`getClientRects()`** method of the {{domxref("Element")}}
 interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
 bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) in a client.
 
-Most elements only have one border box each, but a multiline [inline element](/en-US/docs/Web/HTML/Inline_elements) (such as a multiline
+Most elements only have one border box each, but a multiline [inline-level element](/en-US/docs/Glossary/Inline-level_content) (such as a multiline
 {{HTMLElement("span")}} element, by default) has a border box around each line.
 
 ## Syntax

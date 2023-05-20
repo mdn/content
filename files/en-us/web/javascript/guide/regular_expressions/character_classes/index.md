@@ -253,7 +253,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <td>
         Matches a character based on its
         <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes"
+          href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape"
           >Unicode character properties</a
         >
         (to match just, for example, emoji characters, or Japanese
@@ -374,7 +374,6 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
   - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
   - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

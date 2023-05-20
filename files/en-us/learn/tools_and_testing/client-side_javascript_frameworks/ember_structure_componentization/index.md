@@ -47,7 +47,7 @@ In the last article we set up a new Ember project, then added and configured our
 
 The landing page HTML of our application is defined in `app/templates/application.hbs`. This already exists, and its contents currently look like so:
 
-```html
+```hbs
 \{{!-- The following component displays Ember's default welcome message. --}}
 <WelcomePage />
 \{{!-- Feel free to remove this! --}}
@@ -278,14 +278,13 @@ Now that we have all of our component structure files, we can cut and paste the 
 
 5. Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
 
-   ```html
+   ```hbs
    <section class="todoapp">
      <h1>todos</h1>
 
      <Header />
      <TodoList />
      <Footer />
-
    </section>
    ```
 

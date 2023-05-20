@@ -126,7 +126,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "h") {
     if (popover.matches(":popover-open")) {
       popover.hidePopover();
-    } 
+    }
   }
 
   if (event.key === "s") {
@@ -225,7 +225,8 @@ There are three different ways to create nested popovers:
 1. Direct DOM descendants:
 
    ```html
-   <div popover>Parent
+   <div popover>
+     Parent
      <div popover>Child</div>
    </div>
    ```
@@ -233,7 +234,8 @@ There are three different ways to create nested popovers:
 2. Via invoking/control elements:
 
    ```html
-   <div popover> Parent
+   <div popover>
+     Parent
      <button popovertarget="foo">Click me</button>
    </div>
 
@@ -243,7 +245,7 @@ There are three different ways to create nested popovers:
 3. Via the `anchor` attribute:
 
    ```html
-   <div popover id="foo"> Parent </div>
+   <div popover id="foo">Parent</div>
 
    <div popover anchor="foo">Child</div>
    ```
@@ -281,7 +283,7 @@ To override the default styles and get the popover to appear somewhere else on y
   height: 100px;
   position: absolute;
   inset: unset;
-  top: 5px;
+  bottom: 5px;
   right: 5px;
   margin: 0;
 }
