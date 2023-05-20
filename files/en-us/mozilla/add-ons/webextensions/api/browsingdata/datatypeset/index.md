@@ -1,15 +1,7 @@
 ---
 title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
-tags:
-  - API
-  - Add-ons
-  - DataTypeSet
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - browsingData
+page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.DataTypeSet
 ---
 

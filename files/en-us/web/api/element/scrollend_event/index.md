@@ -1,12 +1,12 @@
 ---
 title: "Element: scrollend event"
+short-title: scrollend
 slug: Web/API/Element/scrollend_event
 page-type: web-api-event
 browser-compat: api.Element.scrollend_event
 ---
 
 {{APIRef}}
-{{SeeCompatTable}}
 
 The **`scrollend`** event fires when element scrolling has completed.
 Scrolling is considered completed when the scroll position has no more pending updates and the user has completed their gesture.
@@ -37,13 +37,39 @@ A generic {{domxref("Event")}}.
 
 The following example shows how to use the `scrollend` event to detect when the user has stopped scrolling:
 
+```css hidden
+#scroll-box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  overflow: scroll;
+  outline: 4px dotted;
+  margin: 4px;
+}
+
+#scroll-box-title {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+}
+
+#large-element {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
+```
+
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p id="scroll-box-title">Scroll me!</p>
+  <p id="large-element"></p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
 ```
 
 ```js
@@ -59,19 +85,45 @@ element.addEventListener("scrollend", (event) => {
 });
 ```
 
-{{EmbedLiveSample("Using_scrollend_with_an_event_listener", "100%", 120)}}
+{{EmbedLiveSample("Using_scrollend_with_an_event_listener", "100%", 130)}}
 
 ### Using `onscrollend` event handler property
 
 The following example shows how to use the `onscrollend` event handler property to detect when the user has stopped scrolling:
 
+```css hidden
+#scroll-box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  overflow: scroll;
+  outline: 4px dotted;
+  margin: 4px;
+}
+
+#scroll-box-title {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+}
+
+#large-element {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
+```
+
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p id="scroll-box-title">Scroll me!</p>
+  <p id="large-element"></p>
 </div>
-<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
 ```
 
 ```js
@@ -87,7 +139,7 @@ element.onscrollend = (event) => {
 };
 ```
 
-{{EmbedLiveSample("Using_onscrollend_event_handler_property", "100%", 120)}}
+{{EmbedLiveSample("Using_onscrollend_event_handler_property", "100%", 130)}}
 
 ## Specifications
 

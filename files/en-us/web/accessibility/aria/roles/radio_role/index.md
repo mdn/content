@@ -1,19 +1,14 @@
 ---
 title: "ARIA: radio role"
 slug: Web/Accessibility/ARIA/Roles/radio_role
-tags:
-  - ARIA
-  - Accessibility
-  - Role
-  - ARIA widget
-  - Reference
+page-type: aria-role
 ---
 
 The `radio` role is one of a group of checkable radio buttons, in a `radiogroup`, where no more than a single radio button can be checked at a time.
 
 ## Description
 
-A radio button is a checkable input that when associated with other radio buttons, only one of which can be checked at a time. The radio buttons must be grouped together in a ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) to indicate which ones affect the same value.
+A radio button is a checkable input that when associated with other radio buttons, only one of which can be checked at a time. The radio buttons must be grouped together in a [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) to indicate which ones affect the same value.
 
 ```html
 <div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
@@ -106,7 +101,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Associated WAI-ARIA Roles, States, and Properties
 
-- ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
 
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 

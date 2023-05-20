@@ -1,16 +1,8 @@
 ---
-title: InputEvent.data
+title: "InputEvent: data property"
+short-title: data
 slug: Web/API/InputEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - data
-  - events
 browser-compat: api.InputEvent.data
 ---
 
@@ -42,10 +34,10 @@ property.
 ```
 
 ```js
-const editable = document.querySelector('input');
-const result = document.querySelector('.result');
+const editable = document.querySelector("input");
+const result = document.querySelector(".result");
 
-editable.addEventListener('input', (e) => {
+editable.addEventListener("input", (e) => {
   result.textContent = `Inputted text: ${e.data}`;
 });
 ```

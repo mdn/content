@@ -2,18 +2,8 @@
 title: NavigationDestination
 slug: Web/API/NavigationDestination
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - History
-  - Interface
-  - Landing
-  - Navigate
-  - NavigationDestination
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationDestination
 ---
 
@@ -46,8 +36,8 @@ It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
-  // Exit early if this navigation shouldn't be intercepted, 
+navigation.addEventListener("navigate", (event) => {
+  // Exit early if this navigation shouldn't be intercepted,
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(event)) {
     return;
@@ -57,8 +47,8 @@ navigation.addEventListener('navigate', (event) => {
   // NavigationDestination.url value
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
-   event.intercept({
+  if (url.pathname.startsWith("/articles/")) {
+    event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
         //fetching the new content, such as a spinner or loading page

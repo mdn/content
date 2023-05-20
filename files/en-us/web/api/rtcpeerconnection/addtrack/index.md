@@ -1,30 +1,17 @@
 ---
-title: RTCPeerConnection.addTrack()
+title: "RTCPeerConnection: addTrack() method"
+short-title: addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - Tracks
-  - Video
-  - WebRTC
-  - addTrack
 browser-compat: api.RTCPeerConnection.addTrack
 ---
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method
-**`addTrack()`** adds a new media track to the set of tracks
-which will be transmitted to the other peer.>
+The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media track to the set of tracks which will be transmitted to the other peer.
 
-> **Note:** Adding a track to a connection triggers renegotiation by
-> firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} for details.
+> **Note:** Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
+> See [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
 
@@ -95,8 +82,10 @@ track:
 
 ```js
 async function openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track);
   }
@@ -157,8 +146,10 @@ remote peer:
 
 ```js
 async function openCall(pc) {
-  const gumStream = await navigator.mediaDevices.getUserMedia(
-                          {video: true, audio: true});
+  const gumStream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true,
+  });
   for (const track of gumStream.getTracks()) {
     pc.addTrack(track, gumStream);
   }
@@ -168,7 +159,7 @@ async function openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({streams: [stream]}) => videoElem.srcObject = stream;
+pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 ```
 
 This sets the video element's current stream to the one that contains the track that's

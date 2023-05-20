@@ -1,22 +1,8 @@
 ---
-title: RTCRtpEncodingParameters.maxFramerate
+title: "RTCRtpEncodingParameters: maxFramerate property"
+short-title: maxFramerate
 slug: Web/API/RTCRtpEncodingParameters/maxFramerate
 page-type: web-api-instance-property
-tags:
-  - API
-  - BPS
-  - Bandwidth
-  - Bit Rate
-  - Codec
-  - Encoding
-  - Property
-  - RTCRtpEncodingParameters
-  - Reference
-  - Settings
-  - WebRTC
-  - WebRTC API
-  - maxFramerate
-  - parameters
 browser-compat: api.RTCRtpEncodingParameters.maxFramerate
 ---
 

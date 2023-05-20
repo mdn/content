@@ -1,16 +1,8 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Overview
-  - Video
-browser-compat: api.MediaStream
 page-type: web-api-overview
+browser-compat: api.MediaStream
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -35,19 +27,15 @@ In these reference articles, you'll find the fundamental information you'll need
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
 

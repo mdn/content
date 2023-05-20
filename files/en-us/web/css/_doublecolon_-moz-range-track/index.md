@@ -1,14 +1,9 @@
 ---
-title: '::-moz-range-track'
+title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-range-track
 ---
 
@@ -21,7 +16,9 @@ The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 ## Syntax
 
 ```css
-::-moz-range-track
+::-moz-range-track {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -66,7 +63,6 @@ Not part of any standard.
 - Similar pseudo-elements used by other browsers:
 
   - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
-  - {{cssxref("::-ms-track")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

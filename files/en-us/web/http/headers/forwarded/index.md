@@ -1,12 +1,7 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
+page-type: http-header
 browser-compat: http.headers.Forwarded
 ---
 

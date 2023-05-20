@@ -1,18 +1,8 @@
 ---
-title: MediaTrackConstraints.width
+title: "MediaTrackConstraints: width property"
+short-title: width
 slug: Web/API/MediaTrackConstraints/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - width
 browser-compat: api.MediaTrackConstraints.width
 ---
 
@@ -39,7 +29,7 @@ provided and have the same value) or to a best-possible value.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

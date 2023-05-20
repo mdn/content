@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.domComplete
+title: "PerformanceNavigationTiming: domComplete property"
+short-title: domComplete
 slug: Web/API/PerformanceNavigationTiming/domComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
 

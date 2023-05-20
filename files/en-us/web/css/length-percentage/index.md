@@ -2,14 +2,6 @@
 title: <length-percentage>
 slug: Web/CSS/length-percentage
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - length-percentage
-  - units
-  - values
 browser-compat: css.types.length-percentage
 ---
 

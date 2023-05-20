@@ -2,9 +2,6 @@
 title: Other macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -33,11 +30,3 @@ We have an assortment of macros that can be used to automatically generate the c
 We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.
-
-## Deprecated
-
-These macros have been replace by other ways of doing the same thing, and should no longer be used. If you find them in existing articles, please replace them.
-
-### Linking
-
-- The [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) macro creates a phrase that links to both the name of a section and the article containing that section. For example, `\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}` outputs the following: _{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}_.

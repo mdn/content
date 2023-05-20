@@ -1,15 +1,10 @@
 ---
-title: Bluetooth.requestDevice()
+title: "Bluetooth: requestDevice() method"
+short-title: requestDevice()
 slug: Web/API/Bluetooth/requestDevice
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - requestDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Bluetooth.requestDevice
 ---
 

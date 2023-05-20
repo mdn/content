@@ -1,16 +1,7 @@
 ---
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowState
-  - Windows
+page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowState
 ---
 

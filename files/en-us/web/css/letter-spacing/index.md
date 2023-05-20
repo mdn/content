@@ -2,13 +2,6 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - SVG
-  - recipe:css-property
 browser-compat: css.properties.letter-spacing
 ---
 

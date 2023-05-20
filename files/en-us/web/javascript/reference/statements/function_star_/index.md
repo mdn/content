@@ -2,13 +2,6 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.generator_function
 ---
 
@@ -18,10 +11,10 @@ The **`function*`** declaration (`function` keyword
 followed by an asterisk) defines a _generator function_, which returns a
 {{jsxref("Global_Objects/Generator","Generator")}} object.
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
-
 You can also define generator functions using the {{jsxref("GeneratorFunction")}}
 constructor, or the function expression syntax.
+
+{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
 
 ## Syntax
 

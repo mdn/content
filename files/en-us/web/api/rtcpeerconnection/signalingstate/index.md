@@ -1,21 +1,8 @@
 ---
-title: RTCPeerConnection.signalingState
+title: "RTCPeerConnection: signalingState property"
+short-title: signalingState
 slug: Web/API/RTCPeerConnection/signalingState
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Media
-  - Negotiation
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - signalingState
-  - state
 browser-compat: api.RTCPeerConnection.signalingState
 ---
 
@@ -26,8 +13,7 @@ The read-only **`signalingState`** property on the
 describing the state of the signaling process
 on the local end of the connection
 while connecting or reconnecting to another peer.
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime",
-  "Signaling")}} for more details about the signaling process.
+See [Signaling](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#signaling) in our WebRTC session lifetime page.
 
 Because the signaling process is a state machine, being able to verify that your code
 is in the expected state when messages arrive can help avoid unexpected and avoidable

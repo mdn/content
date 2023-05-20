@@ -1,15 +1,7 @@
 ---
 title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - onUpdated
+page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onUpdated
 ---
 

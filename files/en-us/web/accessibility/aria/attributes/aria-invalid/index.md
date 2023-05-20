@@ -1,13 +1,7 @@
 ---
 title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-invalid
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 
@@ -29,7 +23,7 @@ There are currently four values: in addition to `true` and `false` we have `gram
 
 HTML has native form validation. When a user submits a form with a control containing errors, the first form control with an invalid value displays an error message, natively.
 
-If there is a {{htmlattrxref("required")}} attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
+If there is a [`required`](/en-US/docs/Web/HTML/Global_attributes#required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
 
 ```html
 <input type="number" step="2" min="0" max="100" required />
@@ -76,7 +70,7 @@ The following snippet shows a simplified version of two form fields with a valid
       id="email"
       aria-required="true"
       aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid e-mail address');" />
+      onblur="checkValidity('email', '@', 'Invalid email address');" />
   </li>
 </ul>
 ```

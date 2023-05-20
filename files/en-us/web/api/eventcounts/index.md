@@ -2,11 +2,6 @@
 title: EventCounts
 slug: Web/API/EventCounts
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Interface
-  - Maplike
 browser-compat: api.EventCounts
 ---
 
@@ -52,7 +47,7 @@ for (entry of performance.eventCounts.entries()) {
   const count = entry[1];
 }
 
-const clickCount = performance.eventCounts.get("click"); 
+const clickCount = performance.eventCounts.get("click");
 
 const isExposed = performance.eventCounts.has("mousemove");
 const exposedEventsCount = performance.eventCounts.size;

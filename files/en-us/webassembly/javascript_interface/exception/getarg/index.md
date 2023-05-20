@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - getArg
-  - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
 

@@ -1,27 +1,7 @@
 ---
-title: 'Spaces and reference spaces: Spatial tracking in WebXR'
+title: "Spaces and reference spaces: Spatial tracking in WebXR"
 slug: Web/API/WebXR_Device_API/Spatial_tracking
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Guide
-  - Motion
-  - NeedsContent
-  - NeedsExample
-  - Orientation
-  - Poses
-  - Position
-  - Spaces
-  - Spatial tracking
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - movement
-  - tracking
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -36,7 +16,7 @@ In this guide, we'll explore how WebXR uses **spaces** and, more specifically, *
 
 ## Representing a position using a reference space
 
-As covered in {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Defining spatial relationships with reference spaces")}}, reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.
+As covered in [Defining spatial relationships with reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Geometry#defining_spatial_relationships_with_reference_spaces), reference spaces establish a local coordinate system which is offset from another coordinate system that is itself defined by some other space. Thus, a reference space can be used to define the position and orientation of a point and by extension the entire object for which that point is the origin. While this is a little heavy-handed to be used for every single object in a scene, it can be very useful for a few specific objects to have their own coordinate system in this manner.
 
 - **The world space**; the origin of this space is the origin of the [WebGL coordinate system](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) underlying the entire 3D canvas.
 - The player, avatar, or camera; the origin of this space is used as the camera position for rendering the scene to be displayed to the user.
@@ -108,7 +88,10 @@ The simplest case for using `getOffsetReferenceSpace()` is to transform a point 
 
 ```js
 let halfMeterTransform = new XRRigidTransform({
-        x: 0.5, y: 0.5, z: 0.5, w: 1.0
+  x: 0.5,
+  y: 0.5,
+  z: 0.5,
+  w: 1.0,
 });
 aRefSpace = aRefSpace.getOffsetReferenceSpace(halfMeterTransform);
 ```
@@ -123,8 +106,9 @@ Since most users would prefer that you maintain the same viewer position and fac
 
 ```js
 let viewerPose = frame.getViewerPose(worldReferenceSpace);
-let newSession = navigator.xr.requestSession("immersive-vr",
-      { requiredFeatures: "unbounded" });
+let newSession = navigator.xr.requestSession("immersive-vr", {
+  requiredFeatures: "unbounded",
+});
 worldReferenceSpace = await newSession.requestReferenceSpace("unbounded");
 viewerPose = worldReferenceSpace.getOffsetReferenceSpace(viewerPose.transform);
 ```
@@ -156,8 +140,11 @@ function myDrawFrame(currentFrameTime, frame) {
     }
 
     let offsetMatrix = mat4.create();
-    mat4.sub(offsetMatrix, previousViewerPose.transform.matrix,
-             viewerPose.transform.matrix);
+    mat4.sub(
+      offsetMatrix,
+      previousViewerPose.transform.matrix,
+      viewerPose.transform.matrix
+    );
 
     previousViewerPose = viewerPose;
   }

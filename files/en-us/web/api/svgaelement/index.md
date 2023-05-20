@@ -2,11 +2,6 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVGAElement
 browser-compat: api.SVGAElement
 ---
 
@@ -60,7 +55,7 @@ linkRef.onclick = () => {
   } else {
     console.log("SORRY! not _blank");
   }
-}
+};
 ```
 
 ## Specifications

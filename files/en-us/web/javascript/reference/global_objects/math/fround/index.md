@@ -2,20 +2,12 @@
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 page-type: javascript-static-method
-tags:
-  - ES6
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - fround
-  - Polyfill
 browser-compat: javascript.builtins.Math.fround
 ---
 
 {{JSRef}}
 
-The **`Math.fround()`** function returns the nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
+The **`Math.fround()`** static method returns the nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 

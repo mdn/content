@@ -1,16 +1,8 @@
 ---
-title: CacheStorage.keys()
+title: "CacheStorage: keys() method"
+short-title: keys()
 slug: Web/API/CacheStorage/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - keys
 browser-compat: api.CacheStorage.keys
 ---
 

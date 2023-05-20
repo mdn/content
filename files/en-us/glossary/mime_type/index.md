@@ -1,13 +1,13 @@
 ---
 title: MIME type
 slug: Glossary/MIME_type
-tags:
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 A **MIME type** (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled `audio/ogg`, or an image file `image/png`).
 
-It serves the same purpose as filename extensions traditionally do on Windows. The name originates from the {{glossary("mime","MIME")}} standard originally used in E-Mail.
+It serves the same purpose as filename extensions traditionally do on Windows.
+The name originates from the {{glossary("mime","MIME")}} standard originally used in email.
 
 ## See also
 

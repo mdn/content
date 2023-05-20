@@ -1,8 +1,7 @@
 ---
 title: Grid Lines
 slug: Glossary/Grid_Lines
-tags:
-  - CSS Grids
+page-type: glossary-definition
 ---
 
 **Grid lines** are created when you define {{glossary("Grid tracks", "tracks")}} in the explicit grid using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).

@@ -2,19 +2,6 @@
 title: Geometry and reference spaces in WebXR
 slug: Web/API/WebXR_Device_API/Geometry
 page-type: guide
-tags:
-  - API
-  - Geometry
-  - Guide
-  - Math
-  - Orientation
-  - Placement
-  - Position
-  - Reference Spaces
-  - Spaces
-  - WebXR
-  - WebXR API
-  - WebXR Device API
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -57,7 +44,7 @@ let radiansToDegrees = (rad) => rad / RADIANS_PER_DEGREE;
 #### Times and durations
 
 > **Note:** For security reasons, `DOMHighResTimeStamp` usually introduces a
-> small amount of imprecision to the clock in order to prevent it from being used in [fingerprinting](/en-US/docs/Web/Privacy#fingerprinting) and timing-based
+> small amount of imprecision to the clock in order to prevent it from being used in [fingerprinting](/en-US/docs/Glossary/Fingerprinting) and timing-based
 > attacks.
 
 All times and durations in WebXR are measured using the {{domxref("DOMHighResTimeStamp")}} type, which is a double-precision floating-point value specifying the time in milliseconds relative to the starting time. Since the value is a floating-point number, it may be accurate to well better than the millisecond level, depending on the platform and hardware.
@@ -125,7 +112,7 @@ Regardless of the type of reference space you choose, its type is {{domxref("XRR
 - `local`
   - : An {{domxref("XRReferenceSpace")}} tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case. For devices with six degrees of freedom (6DoF) tracking, the `local` reference space tries to keep the origin stable relative to the environment.
 - `local-floor`
-  - : An {{domxref("XRReferenceSpace")}} similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).
+  - : An {{domxref("XRReferenceSpace")}} similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid [fingerprinting](/en-US/docs/Glossary/Fingerprinting) (likely to the nearest centimeter).
 - `unbounded`
   - : An {{domxref("XRReferenceSpace")}} tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.
 - `viewer`

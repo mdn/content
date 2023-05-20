@@ -1,13 +1,6 @@
 ---
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-tags:
-  - Controls
-  - Games
-  - JavaScript
-  - Mobile
-  - pointer
-  - touch
 ---
 
 {{GamesSidebar}}

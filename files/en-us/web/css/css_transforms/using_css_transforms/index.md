@@ -2,18 +2,6 @@
 title: Using CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 page-type: guide
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS Transforms
-  - Graphics
-  - Guide
-  - Rotate
-  - Scale
-  - Scaling
-  - perspective
-  - rotation
 ---
 
 {{CSSRef}}
@@ -22,11 +10,11 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. An element is positioned by the box model if it has `display: block`.
+> **Warning:** Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_Box_Model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## CSS transforms properties
 
-Two major properties are used to define CSS transforms: {{cssxref("transform")}} (or the individual {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} properties) and {{cssxref("transform-origin")}}
+Two major properties are used to define CSS transforms: {{cssxref("transform")}} (or the individual {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} properties) and {{cssxref("transform-origin")}}.
 
 - {{cssxref("transform-origin")}}
   - : Specifies the position of the origin. By default, it is at the center of the element and can be moved. It is used by several transforms, like rotations, scaling or skewing, that need a specific point as a parameter.
@@ -59,7 +47,7 @@ Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X
 
 ```html
 <img
-  style="transform: skewx(10deg) translatex(150px);
+  style="transform: skewX(10deg) translateX(150px);
             transform-origin: bottom left;"
   src="logo.png"
   alt="MDN logo" />
@@ -545,7 +533,7 @@ Once you have done this, you can work on the element in the 3D space.
 ## See also
 
 - The [CSS `transform` property](/en-US/docs/Web/CSS/transform) and the [CSS `<transform-function>` data types](/en-US/docs/Web/CSS/transform-function)
-- The individual transforms properties: {{cssxref('translate')}}, {{cssxref('rotate')}}), and {{cssxref('scale')}} (There is no `skew` property)
+- The individual transforms properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (There is no `skew` property)
 - [Using device orientation with 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

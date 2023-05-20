@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.toJSON()
+title: "PerformanceElementTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON()
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.toJSON
 ---
 
@@ -54,7 +50,7 @@ const observer = new PerformanceObserver((list) => {
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+observer.observe({ type: "element", buffered: true });
 ```
 
 This would log a JSON object like so:
@@ -70,12 +66,12 @@ This would log a JSON object like so:
   "intersectionRect": {
     "x": 299,
     "y": 76,
-     "width": 135,
-     "height": 155,
-     "top": 76,
-     "right": 434,
-     "bottom": 231,
-      "left": 299
+    "width": 135,
+    "height": 155,
+    "top": 76,
+    "right": 434,
+    "bottom": 231,
+    "left": 299
   },
   "identifier": "big-image",
   "naturalWidth": 135,

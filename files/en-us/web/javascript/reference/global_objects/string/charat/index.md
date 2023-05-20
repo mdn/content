@@ -2,19 +2,12 @@
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.charAt
 ---
 
 {{JSRef}}
 
-The {{jsxref("String")}} object's
-**`charAt()`** method returns a new string consisting of the
+The **`charAt()`** method of {{jsxref("String")}} values returns a new string consisting of the
 single UTF-16 code unit located at the specified offset into the string.
 
 {{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}

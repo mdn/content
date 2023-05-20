@@ -2,11 +2,6 @@
 title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
 page-type: guide
-tags:
-  - Overview
-  - Tutorial
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}}

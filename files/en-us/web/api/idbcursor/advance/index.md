@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.advance()
+title: "IDBCursor: advance() method"
+short-title: advance()
 slug: Web/API/IDBCursor/advance
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - advance
 browser-compat: api.IDBCursor.advance
 ---
 
@@ -62,22 +54,22 @@ data from the current record under the cursor object using `cursor.value.foo`. F
 
 ```js
 function advanceResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
-      console.log('Every other entry displayed.');
+      console.log("Every other entry displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

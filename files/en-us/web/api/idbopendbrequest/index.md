@@ -2,15 +2,6 @@
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
 page-type: web-api-interface
-tags:
-  - API
-  - DOM Reference
-  - Database
-  - IDBOpenDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
 
@@ -55,11 +46,11 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -79,11 +70,13 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

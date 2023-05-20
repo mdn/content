@@ -1,17 +1,12 @@
 ---
 title: TCP
 slug: Glossary/TCP
-tags:
-  - Infrastructure
-  - Networking
-  - TCP
-  - Transmission Control Protocol
-  - data
+page-type: glossary-definition
 ---
 
 **TCP (Transmission Control Protocol)** is an important network {{Glossary("protocol")}} that lets two hosts connect and exchange data streams. TCP guarantees the delivery of data and packets in the same order as they were sent. Vint Cerf and Bob Kahn, who were DARPA scientists at the time, designed TCP in the 1970s.
 
-TCP's role is to ensure the packets are reliably delivered, error free. TCP has concurrence control, which means the initial requests start small, increasing in size to the levels of bandwidth the computers, servers, and network can support.
+TCP's role is to ensure the packets are reliably delivered, and error-free. TCP implements [congestion control](https://en.wikipedia.org/wiki/TCP_congestion_control), which means the initial requests start small, increasing in size to the levels of bandwidth the computers, servers, and network can support.
 
 ## See also
 

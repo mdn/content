@@ -1,11 +1,7 @@
 ---
 title: Intercept HTTP requests
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Add-ons
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -69,14 +65,14 @@ To test it:
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
 - Enable _Show Content Messages_ in the menu:
 
-  ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
+  ![Browser console menu: Show Content Messages](browser_console_show_content_messages.png)
 
 - Open some web pages.
 
 In the Browser Console, you should see the URLs for any resources the browser requests.
 For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![Browser console menu : URLs from extension](browser_console_url_from_extension.png)
+![Browser console menu: URLs from extension](browser_console_url_from_extension.png)
 
 <!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
 

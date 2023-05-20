@@ -1,27 +1,8 @@
 ---
-title: 'HTMLTrackElement: cuechange event'
+title: "HTMLTrackElement: cuechange event"
+short-title: cuechange
 slug: Web/API/HTMLTrackElement/cuechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Accessibility
-  - Audio
-  - Chapters
-  - Descriptions
-  - HTMLTextTrack
-  - Media
-  - Reference
-  - Text
-  - TextTrack
-  - Video
-  - WebVTT
-  - a11y
-  - captions
-  - cuechange
-  - events
-  - oncuechange
-  - track
-  - vtt
 browser-compat: api.HTMLTrackElement.cuechange_event
 ---
 
@@ -34,9 +15,9 @@ The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cuechange', (event) => { })
+addEventListener("cuechange", (event) => {});
 
-oncuechange = (event) => { }
+oncuechange = (event) => {};
 ```
 
 ## Event type

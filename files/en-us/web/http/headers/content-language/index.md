@@ -1,10 +1,7 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Content-Language
 ---
 
@@ -58,7 +55,7 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : Multiple language tags are separated by a comma. Each language tag is a sequence of one or more case-insensitive subtags, each separated by a hyphen character ("`-`", `%x2D`). In most cases, a language tag consists of a primary language subtag that identifies a broad family of related languages (e.g., "`en`" = English) and is optionally followed by a series of subtags that refine or narrow that language's range (e.g., "`en-CA`" = the variety of English as communicated in Canada).
 
-> **Note:** Language tags are formally defined in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646), which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
+> **Note:** Language tags are formally defined in [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt), which rely on the [ISO 639](https://en.wikipedia.org/wiki/ISO_639) standard (quite often the [ISO 639-1 code list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) for [language codes](https://en.wikipedia.org/wiki/Language_code) to be used.
 
 ## Examples
 
@@ -67,13 +64,15 @@ Content-Language: de-DE, en-CA
 The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is used on HTML elements to indicate the language of an entire [HTML](/en-US/docs/Web/HTML) document or parts of it.
 
 ```html
-<html lang="de">…</html>
+<html lang="de">
+  …
+</html>
 ```
 
 Do **not** use this meta element like this for stating a document language:
 
 ```html example-bad
-<!-- /!\ This is bad practice -->
+<!-- ⚠️ This is bad practice -->
 <meta http-equiv="content-language" content="de" />
 ```
 

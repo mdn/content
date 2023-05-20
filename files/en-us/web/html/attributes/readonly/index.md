@@ -1,12 +1,7 @@
 ---
-title: 'HTML attribute: readonly'
+title: "HTML attribute: readonly"
 slug: Web/HTML/Attributes/readonly
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
+page-type: html-attribute
 browser-compat:
   - html.elements.input.readonly
   - html.elements.textarea.readonly

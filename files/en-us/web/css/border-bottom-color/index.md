@@ -2,12 +2,6 @@
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-bottom-color
 ---
 
@@ -24,7 +18,7 @@ The **`border-bottom-color`** CSS property sets the color of an element's bottom
 border-bottom-color: red;
 border-bottom-color: #ffbb00;
 border-bottom-color: rgb(255, 0, 0);
-border-bottom-color: hsla(100%, 50%, 25%, 0.75);
+border-bottom-color: hsl(100deg 50% 25% / 0.75);
 border-bottom-color: currentcolor;
 border-bottom-color: transparent;
 
@@ -97,3 +91,4 @@ The `border-bottom-color` property is specified as a single value.
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, and {{Cssxref("border-left-color")}}.
 - The other border-related CSS properties applying to the same border: {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-width")}}.
+- The default [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) color value.

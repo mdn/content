@@ -1,14 +1,7 @@
 ---
 title: Traversing an HTML table with JavaScript and DOM Interfaces
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 page-type: guide
-tags:
-  - API
-  - DOM
-  - Guide
-  - HTML
-  - JavaScript
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -222,17 +215,17 @@ This means that you have created a node of the type `TEXT_NODE` (a piece of text
 
 ### Inserting Elements with appendChild(..)
 
-So, by calling `myP.appendChild(node_element)`, you are making the element a new child of the second `<p>` element.
+So, by calling `secondParagraph.appendChild(node_element)`, you are making the element a new child of the second `<p>` element.
 
 ```js
-myP.appendChild(myTextNode);
+secondParagraph.appendChild(myTextNode);
 ```
 
 After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type `TEXT_NODE`, and it is the second child of the second `<p>` tag. The following figure shows the recently created Text Node object inside the document tree.
 
 ![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
 
-> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words hello and world. Another important note is that the `appendChild` method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world, you will need to use `insertBefore` instead of `appendChild`.
+> **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
 
 ### Creating New Elements with the document object and the createElement(..) method
 
@@ -247,10 +240,10 @@ myBody.appendChild(myNewPTagNode);
 
 ### Removing nodes with the removeChild(..) method
 
-Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `myP`.
+Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `secondParagraph`.
 
 ```js
-myP.removeChild(myTextNode);
+secondParagraph.removeChild(myTextNode);
 ```
 
 Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTagNode`.
@@ -338,7 +331,7 @@ This example introduces two new DOM attributes. First it uses the `childNodes` a
 
 The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `getElementsByTagName()` returns descendants at any level, not just immediate children.
 
-Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myCellText the text node of the second cell in the second row of the table.
+Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
 
 Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
 

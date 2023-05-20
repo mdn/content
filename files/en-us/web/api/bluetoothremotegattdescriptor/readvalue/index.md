@@ -1,17 +1,10 @@
 ---
-title: BluetoothRemoteGATTDescriptor.readValue()
+title: "BluetoothRemoteGATTDescriptor: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - readValue()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 ---
 

@@ -1,14 +1,7 @@
 ---
-title: '<rp>: The Ruby Fallback Parenthesis element'
+title: "<rp>: The Ruby Fallback Parenthesis element"
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
+page-type: html-element
 browser-compat: html.elements.rp
 ---
 
@@ -45,7 +38,7 @@ body {
 }
 ```
 
-The result looks like this in your browser:
+#### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
@@ -67,13 +60,13 @@ body {
 
 {{EmbedLiveSample("Without_ruby_support", 600, 60)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

@@ -1,15 +1,6 @@
 ---
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - lists
-  - v-for
-  - Vue
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -52,7 +43,7 @@ At this point we've got a fully working component; we're now ready to add multip
 
 ## Rendering lists with v-for
 
-To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://v2.vuejs.org/v2/api/#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
+To be an effective to-do list, we need to be able to render multiple to-do items. To do that, Vue has a special directive, [`v-for`](https://vuejs.org/api/built-in-directives.html#v-for). This is a built-in Vue directive that lets us include a loop inside of our template, repeating the rendering of a template feature for each item in an array. We'll use this to iterate through an array of to-do items and display them in our app in separate `ToDoItem` components.
 
 ### Adding some data to render
 
@@ -62,20 +53,20 @@ Add a few sample to-do items, along the lines of those seen below. This way you 
 
 ```js
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
+    ToDoItem,
   },
   data() {
     return {
       ToDoItems: [
-        { label: 'Learn Vue', done: false },
-        { label: 'Create a Vue project with the CLI', done: true },
-        { label: 'Have fun', done: true },
-        { label: 'Create a to-do list', done: false }
-      ]
+        { label: "Learn Vue", done: false },
+        { label: "Create a Vue project with the CLI", done: true },
+        { label: "Have fun", done: true },
+        { label: "Create a to-do list", done: false },
+      ],
     };
-  }
+  },
 };
 ```
 
@@ -92,7 +83,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 1. Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
    ```js
-    import uniqueId from 'lodash.uniqueid';
+   import uniqueId from "lodash.uniqueid";
    ```
 
 2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
@@ -100,24 +91,28 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
    The `<script>` element in `App.vue` should now have the following contents:
 
    ```js
-   import ToDoItem from './components/ToDoItem.vue';
-   import uniqueId from 'lodash.uniqueid'
+   import ToDoItem from "./components/ToDoItem.vue";
+   import uniqueId from "lodash.uniqueid";
 
    export default {
-     name: 'app',
+     name: "app",
      components: {
-       ToDoItem
+       ToDoItem,
      },
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
-           { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-           { id: uniqueId('todo-'), label: 'Have fun', done: true },
-           { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
-         ]
+           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           {
+             id: uniqueId("todo-"),
+             label: "Create a Vue project with the CLI",
+             done: true,
+           },
+           { id: uniqueId("todo-"), label: "Have fun", done: true },
+           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+         ],
        };
-     }
+     },
    };
    ```
 
@@ -160,17 +155,17 @@ The `<script>` contents in your `ToDoItem` component should now look something l
 
 ```js
 export default {
-    props: {
-        label: {required: true, type: String},
-        done: {default: false, type: Boolean},
-        id: {required: true, type: String}
-    },
-    data() {
-        return {
-           isDone : this.done,
-        }
-    },
-}
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean },
+    id: { required: true, type: String },
+  },
+  data() {
+    return {
+      isDone: this.done,
+    };
+  },
+};
 ```
 
 Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem` component. Your `App.vue` template should now look like this:
@@ -200,58 +195,3 @@ And that brings us to the end of another article. We now have sample data in pla
 What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. We'll get to these in the next article.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

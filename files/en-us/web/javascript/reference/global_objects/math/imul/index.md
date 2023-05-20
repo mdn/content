@@ -2,19 +2,12 @@
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - imul
-  - Polyfill
 browser-compat: javascript.builtins.Math.imul
 ---
 
 {{JSRef}}
 
-The **`Math.imul()`** function returns the result of the C-like 32-bit multiplication of the two parameters.
+The **`Math.imul()`** static method returns the result of the C-like 32-bit multiplication of the two parameters.
 
 {{EmbedInteractiveExample("pages/js/math-imul.html")}}
 

@@ -2,12 +2,6 @@
 title: table-layout
 slug: Web/CSS/table-layout
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
 

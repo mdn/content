@@ -2,14 +2,6 @@
 title: x1
 slug: Web/SVG/Attribute/x1
 page-type: svg-attribute
-tags:
-  - Drawing Lines
-  - Gradients
-  - LInes
-  - SVG
-  - SVG Attribute
-  - SVG Gradients
-  - Vector Graphics
 spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementX1Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX1Attribute

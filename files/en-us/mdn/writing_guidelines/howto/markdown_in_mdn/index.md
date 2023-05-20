@@ -1,9 +1,6 @@
 ---
 title: How to write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -280,6 +277,7 @@ This example contains a code block.
 > ```js
 > const s = "I'm in a code block";
 > ```
+>
 > Like that.
 ````
 
@@ -327,16 +325,18 @@ For example, this is a `<dl>`:
 
 ````md
 - term1
-    - : My description of term1
+
+  - : My description of term1
 
 - `term2`
-    - : My description of term2
 
-      It can have multiple paragraphs, and code blocks too:
+  - : My description of term2
 
-      ```js
-      const thing = 1;
-      ```
+    It can have multiple paragraphs, and code blocks too:
+
+    ```js
+    const thing = 1;
+    ```
 ````
 
 In GFM/CommonMark, this would produce the following HTML:
@@ -391,7 +391,7 @@ As a workaround for cases where an author needs to associate multiple `<dt>` ite
 
 ```md
 - `param1`, `param2`, `param3`
-    - : My description of params 1, 2, and 3
+  - : My description of params 1, 2, and 3
 ```
 
 The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.
@@ -418,7 +418,7 @@ That is, MDN authors must use this style:
 
 ```md
 | Heading 1 | Heading 2 | Heading 3 |
-|-----------|-----------|-----------|
+| --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
 | cell 4    | cell 5    | cell 6    |
 ```
@@ -426,10 +426,10 @@ That is, MDN authors must use this style:
 and not this style:
 
 ```md
-Heading 1 | Heading 2 | Heading 3
- --- | --- | ---
-cell 1    | cell 2    | cell 3
-cell 4    | cell 5    | cell 6
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
 ```
 
 ### When to use HTML tables

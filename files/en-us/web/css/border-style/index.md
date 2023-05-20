@@ -2,12 +2,6 @@
 title: border-style
 slug: Web/CSS/border-style
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-style
 ---
 

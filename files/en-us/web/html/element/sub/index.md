@@ -1,19 +1,7 @@
 ---
-title: '<sub>: The Subscript element'
+title: "<sub>: The Subscript element"
 slug: Web/HTML/Element/sub
-tags:
-  - Baseline
-  - Element
-  - Footnotes
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Subscript
-  - Web
-  - sub
+page-type: html-element
 browser-compat: html.elements.sub
 ---
 
@@ -68,7 +56,7 @@ Traditional footnotes are denoted using numbers which are rendered in subscript.
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Footnote_numbers", 650, 80)}}
 
@@ -83,7 +71,7 @@ In mathematics, families of variables related to the same concept (such as dista
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Variable_subscripts", 650, 80)}}
 
@@ -101,25 +89,25 @@ Another example:
 </p>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Chemical_formulas", 650, 120)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -127,7 +115,7 @@ The output:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -140,7 +128,7 @@ The output:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

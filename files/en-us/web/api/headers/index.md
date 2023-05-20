@@ -2,13 +2,6 @@
 title: Headers
 slug: Web/API/Headers
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Headers
-  - Interface
-  - Reference
 browser-compat: api.Headers
 ---
 
@@ -45,6 +38,8 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
   - : Executes a provided function once for each key/value pair in this `Headers` object.
 - {{domxref("Headers.get()")}}
   - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
+- {{domxref("Headers.getSetCookie()")}}
+  - : Returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response.
 - {{domxref("Headers.has()")}}
   - : Returns a boolean stating whether a `Headers` object contains a certain header.
 - {{domxref("Headers.keys()")}}
@@ -67,23 +62,21 @@ In the following snippet, we create a new header using the `Headers()` construct
 ```js
 const myHeaders = new Headers();
 
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
 ```js
 let myHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // or, using an array of arrays:
-myHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+myHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 ## Specifications

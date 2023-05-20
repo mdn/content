@@ -1,12 +1,8 @@
 ---
-title: PerformanceResourceTiming.responseStart
+title: "PerformanceResourceTiming: responseStart property"
+short-title: responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.responseStart
 ---
 

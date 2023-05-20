@@ -1,11 +1,7 @@
 ---
-title: '<li>: The List Item element'
+title: "<li>: The List Item element"
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
+page-type: html-element
 browser-compat: html.elements.li
 ---
 
@@ -19,9 +15,9 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- {{htmlattrdef("type")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : This character attribute indicates the numbering type:
 
@@ -49,6 +45,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ol>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Ordered_list")}}
 
 ### Ordered list with a custom value
@@ -60,6 +58,8 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
   <li>fifth item</li>
 </ol>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Ordered_list_with_a_custom_value")}}
 
@@ -73,15 +73,17 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 </ul>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Unordered_list")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -90,7 +92,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -128,12 +130,12 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radio")}}, {{ARIARole("separator")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>

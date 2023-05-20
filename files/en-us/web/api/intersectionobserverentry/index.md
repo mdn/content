@@ -2,13 +2,6 @@
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Reference
 browser-compat: api.IntersectionObserverEntry
 ---
 

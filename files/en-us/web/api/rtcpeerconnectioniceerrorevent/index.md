@@ -2,21 +2,6 @@
 title: RTCPeerConnectionIceErrorEvent
 slug: Web/API/RTCPeerConnectionIceErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Error
-  - Interface
-  - Media
-  - Networking
-  - RTCPeerConnectionIceErrorEvent
-  - Reference
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - rtc
 browser-compat: api.RTCPeerConnectionIceErrorEvent
 ---
 

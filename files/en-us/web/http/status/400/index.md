@@ -1,12 +1,7 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.400
 ---
 
@@ -28,4 +23,4 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## See also
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)

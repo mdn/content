@@ -2,14 +2,6 @@
 title: SVGFEColorMatrixElement
 slug: Web/API/SVGFEColorMatrixElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEColorMatrixElement
 ---
 

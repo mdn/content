@@ -2,12 +2,6 @@
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.operators.new_target
 ---
 
@@ -35,7 +29,7 @@ new.target
 
 ## Description
 
-The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), but a special expression syntax.
+The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), but a special expression syntax.
 
 The `new.target` meta-property is available in all function/class bodies; using `new.target` outside of functions or classes is a syntax error.
 
@@ -108,7 +102,7 @@ All built-in constructors directly construct the entire prototype chain of the n
 function BetterMap(entries) {
   // Call the base class constructor, but setting `new.target` to the subclass,
   // so that the instance created has the correct prototype chain.
-  return Reflect.construct(Map, [entries], ExtendedMap);
+  return Reflect.construct(Map, [entries], BetterMap);
 }
 
 BetterMap.prototype.upsert = function (key, actions) {

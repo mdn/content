@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.setTransform()
+title: "CanvasRenderingContext2D: setTransform() method"
+short-title: setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.setTransform
 ---
 
@@ -42,6 +37,8 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
 </mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
 &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+
+This transformation matrix gets multiplied on the left of a column vector representing each point being drawn on the canvas, to produce the final coordinate used on the canvas.
 
 ### Parameters
 
@@ -111,7 +108,9 @@ type), and draw a circle on it.
 #### HTML
 
 ```html
+<!-- First canvas (ctx1) -->
 <canvas width="240"></canvas>
+<!-- Second canvas (ctx2) -->
 <canvas width="240"></canvas>
 ```
 

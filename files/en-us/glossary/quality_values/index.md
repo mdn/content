@@ -1,8 +1,7 @@
 ---
 title: Quality values
 slug: Glossary/Quality_values
-tags:
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 **Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.
@@ -43,7 +42,7 @@ Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifie
 
 ### Firefox
 
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).
+Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ([Firefox bug 672448](https://bugzil.la/672448)).
 
 ## More information
 

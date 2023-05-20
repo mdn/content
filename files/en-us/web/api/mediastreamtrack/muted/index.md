@@ -1,15 +1,8 @@
 ---
-title: MediaStreamTrack.muted
+title: "MediaStreamTrack: muted property"
+short-title: muted
 slug: Web/API/MediaStreamTrack/muted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - muted
 browser-compat: api.MediaStreamTrack.muted
 ---
 

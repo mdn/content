@@ -1,15 +1,6 @@
 ---
 title: "Express Tutorial Part 6: Working with forms"
 slug: Learn/Server-side/Express_Nodejs/forms
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Forms
-  - HTML forms
-  - Learn
-  - Node
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
@@ -171,7 +162,7 @@ The functions are defined as below:
 - [`validationResult(req)`](https://express-validator.github.io/docs/validation-result-api.html#validationresultreq): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
 
   ```js
-  (req, res, next) => {
+  asyncHandler(async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -181,10 +172,10 @@ The functions are defined as below:
     } else {
       // Data from form is valid.
     }
-  };
+  });
   ```
 
-  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Validation Result API](https://express-validator.github.io/docs/validation-result-api.html) for more information.
+  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started#handling-validation-errors) for more information.
 
 The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.
 
@@ -202,7 +193,7 @@ For this project we will simplify the implementation by stating that a form can 
 - Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
 - Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
 
-> **Note:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+> **Note:** A more flexible implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
 
 ### Routes
 
@@ -238,8 +229,8 @@ Implement the delete pages for the `Book`, `BookInstance`, and `Genre` models, l
 
 A few tips:
 
-- Deleting a `Genre` is just like deleting an `Author` as both objects are dependencies of `Book` (so in both cases you can delete the object only when the associated books are deleted).
-- Deleting a `Book` is also similar, but you need to check that there are no associated `BookInstances`.
+- Deleting a `Genre` is just like deleting an `Author`, as both objects are dependencies of `Book` (so in both cases you can delete the object only when the associated books are deleted).
+- Deleting a `Book` is also similar as you need to first check that there are no associated `BookInstances`.
 - Deleting a `BookInstance` is the easiest of all because there are no dependent objects. In this case, you can just find the associated record and delete it.
 
 Implement the update pages for the `BookInstance`, `Author`, and `Genre` models, linking them from the associated detail pages in the same way as our _Book update_ page.
@@ -261,15 +252,3 @@ You should now understand how to add basic forms and form-handling code to your 
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm docs).
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

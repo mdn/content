@@ -1,14 +1,8 @@
 ---
-title: SubtleCrypto.encrypt()
+title: "SubtleCrypto: encrypt() method"
+short-title: encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
 browser-compat: api.SubtleCrypto.encrypt
 ---
 
@@ -30,41 +24,10 @@ encrypt(algorithm, key, data)
 - `algorithm`
 
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
-
-    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
-
-      - `name`
-        - : A string. This should be set to `RSA-OAEP`.
-      - `label` {{optional_inline}}
-
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
-          A digest of the label is part of the input to the encryption operation.
-
-          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
-
-    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
-
-      - `name`
-        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
-      - `iv`
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
-          The initialization vector.
-          Must be 16 bytes, unpredictable, and preferably cryptographically random.
-          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
-
-    - To use [AES-CTR](#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
-
-      - `name`
-        - : A string indicating the name of the algorithm: `AES-CTR`.
-      - `counter`
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
-          This must be 16 bytes long (the AES block size).
-          The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce.
-          For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
-      - `length`
-        - : A `Number` — the number of bits in the counter block that are used for the actual counter.
-          The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`.
-          The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
+    - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
+    - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
+    - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
+    - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}} object.
 
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for encryption.
@@ -81,9 +44,9 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm*)*.
+  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
+  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes).
 
 ## Supported algorithms
 
@@ -202,9 +165,9 @@ function encryptMessage(key) {
 let iv = window.crypto.getRandomValues(new Uint8Array(16));
 let key = window.crypto.getRandomValues(new Uint8Array(16));
 let data = new Uint8Array(12345);
-//crypto functions are wrapped in promises so we have to use await and make sure the function that
-//contains this code is an async function
-//encrypt function wants a cryptokey object
+// crypto functions are wrapped in promises so we have to use await and make sure the function that
+// contains this code is an async function
+// encrypt function wants a cryptokey object
 const key_encoded = await crypto.subtle.importKey(
   "raw",
   key.buffer,

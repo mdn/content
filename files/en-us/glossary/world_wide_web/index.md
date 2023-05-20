@@ -1,13 +1,10 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Infrastructure
-  - WWW
-  - World Wide Web
+page-type: glossary-definition
 ---
 
-The _World Wide Web_—commonly referred to as **WWW**, **W3**, or **the Web**—is an interconnected system of public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.
+The _World Wide Web_—commonly referred to as **WWW**, **W3**, or **the Web**—is a system of interconnected public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.
 
 Tim Berners-Lee proposed the architecture of what became known as the World Wide Web. He created the first web {{Glossary("Server","server")}}, web {{Glossary("Browser","browser")}}, and webpage on his computer at the CERN physics research lab in 1990. In 1991, he announced his creation on the alt.hypertext newsgroup, marking the moment the Web was first made public.
 

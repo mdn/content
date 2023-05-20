@@ -2,18 +2,12 @@
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
 
 {{JSRef}}
 
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
+The **`handler.has()`** method is a trap for the `[[HasProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/in", "in")}} operator.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
@@ -41,9 +35,6 @@ bound to the handler.
 The `has()` method must return a boolean value.
 
 ## Description
-
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
 
 ### Interceptions
 
@@ -78,7 +69,7 @@ const p = new Proxy(
       console.log(`called: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 console.log("a" in p);

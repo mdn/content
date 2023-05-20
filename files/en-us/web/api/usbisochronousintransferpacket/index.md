@@ -2,15 +2,8 @@
 title: USBIsochronousInTransferPacket
 slug: Web/API/USBIsochronousInTransferPacket
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBIsochronousInTransferPacket
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBIsochronousInTransferPacket
 ---
 

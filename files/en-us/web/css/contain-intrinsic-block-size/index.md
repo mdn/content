@@ -1,12 +1,6 @@
 ---
 title: contain-intrinsic-block-size
 slug: Web/CSS/contain-intrinsic-block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
 ---

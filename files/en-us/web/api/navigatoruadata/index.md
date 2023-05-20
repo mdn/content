@@ -2,12 +2,8 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
 
@@ -50,13 +46,17 @@ console.log(navigator.userAgentData.brands);
 In the following value a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications

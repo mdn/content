@@ -1,47 +1,44 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 page-type: css-pseudo-class
-tags:
-  - ':has'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.has
 ---
 
 {{CSSRef}}
 
-The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [forgiving relative selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_relative_selector_list) as an argument.
+The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
 ```css
 /* Selects an h1 heading with a
 paragraph element that immediately follows
 the h1 and applies the style to h1 */
-h1:has(+ p) { margin-bottom: 0; }
+h1:has(+ p) {
+  margin-bottom: 0;
+}
 ```
 
 The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
 
 ## Syntax
 
+```css-nolint
+:has(<relative-selector-list>) {
+  /* ... */
+}
 ```
-:has( <forgiving-relative-selector-list> )
-```
 
-The relative selector list parameter is [forgiving](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list). Normally in CSS, when a selector in a selector list is invalid, then the whole list is deemed invalid. When a selector in a `:has()` selector list fails to parse, the incorrect or unsupported selector will be ignored and the others will be used.
+If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).
 
-Note that if the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail (unless `:has()` itself is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).
+The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
-The `:has()` pseudo-class cannot be nested within another `:has()`. Also, pseudo-elements are not valid selectors within `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. While `:has()` and pseudo-elements are not valid `:has()` selectors, as the selector list is forgiving, they will just be ignored. The selector will not fail.
+Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`.
 
 ## Examples
 
 ### With the sibling combinator
 
-The `:has()` style declaration in the following example adjusts the spacing after `H1` headings if they are immediately followed by an `H2` heading.
+The `:has()` style declaration in the following example adjusts the spacing after `<h1>` headings if they are immediately followed by an `<h2>` heading.
 
 #### HTML
 
@@ -49,12 +46,18 @@ The `:has()` style declaration in the following example adjusts the spacing afte
 <section>
   <article>
     <h1>Morning Times</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -63,9 +66,9 @@ The `:has()` style declaration in the following example adjusts the spacing afte
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -73,19 +76,21 @@ article {
   width: 40%;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.2em;
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 ```
 
 ```css
-h1, h2 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2 {
+  margin: 0 0 1rem 0;
 }
 
 h1:has(+ h2) {
@@ -110,13 +115,19 @@ This example builds on the previous example to show how to select multiple eleme
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
     <h3>8:00 am</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -125,9 +136,9 @@ This example builds on the previous example to show how to select multiple eleme
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -140,7 +151,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 
@@ -151,8 +162,10 @@ h3 {
 ```
 
 ```css
-h1, h2, h3 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem 0;
 }
 
 :is(h1, h2, h3):has(+ :is(h2, h3, h4)) {

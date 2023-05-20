@@ -1,16 +1,7 @@
 ---
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
+page-type: webextension-api-property
 browser-compat: webextensions.api.extension.lastError
 ---
 

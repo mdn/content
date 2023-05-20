@@ -1,10 +1,8 @@
 ---
-title: BroadcastChannel.postMessage()
+title: "BroadcastChannel: postMessage() method"
+short-title: postMessage()
 slug: Web/API/BroadcastChannel/postMessage
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.BroadcastChannel.postMessage
 ---
 

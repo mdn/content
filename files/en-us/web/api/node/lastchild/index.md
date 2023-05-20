@@ -1,20 +1,20 @@
 ---
-title: Node.lastChild
+title: "Node: lastChild property"
+short-title: lastChild
 slug: Web/API/Node/lastChild
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.lastChild
 ---
 
 {{APIRef("DOM")}}
 
 The read-only **`lastChild`** property of the {{domxref("Node")}} interface
-returns the last child of the node.
-If its parent is an element, then the child is generally an element node, a text node, or a comment node.
-It returns `null` if there are no child nodes.
+returns the last child of the node, or `null` if there are no child nodes.
+
+> **Note:** This property returns any type of node that is the last child of this one.
+> It may be a {{domxref("Text")}} or a {{domxref("Comment")}} node.
+> If you want to get the last {{domxref("Element")}} that is a child of another element,
+> consider using {{domxref("Element.lastElementChild")}}.
 
 ## Value
 

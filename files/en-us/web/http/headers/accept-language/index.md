@@ -1,20 +1,14 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Accept-Language
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Accept-Language
 ---
 
 {{HTTPSidebar}}
 
 The **`Accept-Language`** request HTTP header indicates the natural language and locale that the client prefers.
-The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Language")}} response header. Browsers set required values for this header according to their active user interface language. Users rarely change it, and such changes are not recommended because they may lead to fingerprinting.
+The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Language")}} response header. Browsers set required values for this header according to their active user interface language. Users rarely change it, and such changes are not recommended because they may lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 This header serves as a hint when the server cannot determine the target content language otherwise (for example, use a specific URL that depends on an explicit user decision). The server should never override an explicit user language choice. The content of `Accept-Language` is often out of a user's control (when traveling, for instance). A user may also want to visit a page in a language different from the user interface language.
 

@@ -1,11 +1,7 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Element/mfrac
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mfrac
 ---
 
@@ -64,12 +60,6 @@ denominator "3 − b":
 ### Fraction without bar
 
 The following MathML code should render as a [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient):
-
-```html hidden
-<link
-  rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
-```
 
 ```html
 <math display="block">

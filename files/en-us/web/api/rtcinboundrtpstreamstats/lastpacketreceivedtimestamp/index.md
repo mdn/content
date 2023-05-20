@@ -1,21 +1,8 @@
 ---
-title: RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
+title: "RTCInboundRtpStreamStats: lastPacketReceivedTimestamp property"
+short-title: lastPacketReceivedTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Time
-  - Time stamp
-  - WebRTC
-  - WebRTC API
-  - lastPacketReceivedTimestamp
-  - stream
-  - timeStamp
 browser-compat: api.RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
 ---
 

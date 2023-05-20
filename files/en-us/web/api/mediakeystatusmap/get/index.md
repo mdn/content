@@ -1,14 +1,8 @@
 ---
-title: MediaKeyStatusMap.get()
+title: "MediaKeyStatusMap: get() method"
+short-title: get()
 slug: Web/API/MediaKeyStatusMap/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - get()
 browser-compat: api.MediaKeyStatusMap.get
 ---
 

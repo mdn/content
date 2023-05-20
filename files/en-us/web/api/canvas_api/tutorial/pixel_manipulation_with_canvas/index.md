@@ -2,11 +2,6 @@
 title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
@@ -295,14 +290,14 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mai
 The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
 > **Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
-> See {{SectionOnPage("/en-US/docs/Web/HTML/CORS_enabled_image", "Security and tainted canvases")}}
+> See [Security and tainted canvases](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/en-US/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

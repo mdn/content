@@ -2,18 +2,6 @@
 title: max-height
 slug: Web/CSS/max-height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Maximum
-  - Reference
-  - dimensions
-  - height
-  - limit
-  - max-height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.max-height
 ---
 

@@ -2,15 +2,6 @@
 title: gap
 slug: Web/CSS/gap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - gap
-  - recipe:css-property
 browser-compat: css.properties.gap
 ---
 

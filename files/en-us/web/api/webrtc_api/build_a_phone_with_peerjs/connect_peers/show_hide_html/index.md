@@ -22,7 +22,7 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 
 2. Try reloading the app in your browser. Instead of `connecting...`, you should see `Your device ID is: <peer ID>`.
 
-   ![A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Your device ID is: 3b77' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background.](158clu6q0bcaxyhqrt9lvra.png)
+   ![A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Your device ID is: 3b77' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background.](app_showing_device_id.png)
 
 3. While you're here, you may as well create some functions to display and hide various content, which you'll use later. There are two functions you should create, `showCallContent()` and `showConnectedContent()`. These functions will be responsible for showing the call button and showing the hang up button and audio elements when appropriate.
 

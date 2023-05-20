@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.onerror
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onerror
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.onerror
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: Element.getAttribute()
+title: "Element: getAttribute() method"
+short-title: getAttribute()
 slug: Web/API/Element/getAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getAttribute
 ---
 
@@ -43,13 +38,13 @@ A string containing the value of `attributeName`.
 
 ```js
 // in a console
-const div1 = document.getElementById('div1');
+const div1 = document.getElementById("div1");
 //=> <div id="div1">Hi Champ!</div>
 
-const exampleAttr = div1.getAttribute('id');
+const exampleAttr = div1.getAttribute("id");
 //=> "div1"
 
-const align = div1.getAttribute('align')
+const align = div1.getAttribute("align");
 //=> null
 ```
 
@@ -71,7 +66,7 @@ sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad
-let nonce = script.getAttribute('nonce');
+let nonce = script.getAttribute("nonce");
 // returns empty string
 ```
 

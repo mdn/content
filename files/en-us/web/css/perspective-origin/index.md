@@ -2,18 +2,6 @@
 title: perspective-origin
 slug: Web/CSS/perspective-origin
 page-type: css-property
-tags:
-  - 3D
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Graphics
-  - Property
-  - Reference
-  - Transforms
-  - perspective
-  - perspective-origin
-  - recipe:css-property
 browser-compat: css.properties.perspective-origin
 ---
 

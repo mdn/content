@@ -1,11 +1,7 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - accesskey
+page-type: html-attribute
 browser-compat: html.global_attributes.accesskey
 ---
 
@@ -41,14 +37,6 @@ The way to activate the accesskey depends on the browser and its platform:
         ><br />On Firefox 13 or older: <kbd>Control</kbd> +
         <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
-      <td rowspan="3">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td colspan="2">N/A</td>
     </tr>
     <tr>
       <th>Edge</th>

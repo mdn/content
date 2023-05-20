@@ -1,14 +1,10 @@
 ---
-title: SerialPort.open()
+title: "SerialPort: open() method"
+short-title: open()
 slug: Web/API/SerialPort/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.open
 ---
 

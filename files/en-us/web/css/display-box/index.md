@@ -2,13 +2,6 @@
 title: <display-box>
 slug: Web/CSS/display-box
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-box
 browser-compat: css.properties.display.contents
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: Window.confirm()
+title: "Window: confirm() method"
+short-title: confirm()
 slug: Web/API/Window/confirm
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - confirm
 browser-compat: api.Window.confirm
 ---
 
@@ -45,7 +39,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Produces:
 
-![Firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox confirm](firefox_confirm_dialog.png)
 
 ## Notes
 

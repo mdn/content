@@ -1,11 +1,6 @@
 ---
 title: The Web Open Font Format (WOFF)
 slug: Web/Guide/WOFF
-tags:
-  - Fonts
-  - NeedsMobileBrowserCompatibility
-  - WOFF
-  - WOFF2
 browser-compat:
   - css.at-rules.font-face.WOFF
   - css.at-rules.font-face.WOFF_2

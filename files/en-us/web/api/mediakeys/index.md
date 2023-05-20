@@ -2,22 +2,12 @@
 title: MediaKeys
 slug: Web/API/MediaKeys
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeys
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaKeys
 ---
 
 {{APIRef("EncryptedMediaExtensions")}}
 
-The **`MediaKeys`** interface of [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a set of keys that an associated {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
+The **`MediaKeys`** interface of [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a set of keys that an associated {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 
 ## Instance properties
 

@@ -1,12 +1,9 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.strike
 ---
 
@@ -20,18 +17,18 @@ The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-## Example
+## Examples
 
 ```html
 &lt;strike&gt;: <strike>Today's Special: Salmon</strike> SOLD OUT<br />
 &lt;s&gt;: <s>Today's Special: Salmon</s> SOLD OUT
 ```
 
-The result of this code is:
+### Result
 
 {{EmbedLiveSample("Example")}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>

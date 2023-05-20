@@ -1,11 +1,7 @@
 ---
 title: JavaScript language overview
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 page-type: guide
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
 ---
 
 {{jsSidebar}}
@@ -92,7 +88,7 @@ Number values also include {{jsxref("NaN")}} (short for "Not a Number") and {{js
 
 ### Strings
 
-Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+Strings in JavaScript are sequences of Unicode characters. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are [UTF-16 encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ```js
 console.log("Hello, world");
@@ -268,7 +264,7 @@ Or for caching values (when falsy values are invalid):
 const name = cachedName || (cachedName = getName());
 ```
 
-For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+For a comprehensive list of operators, see the [guide page](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) or [reference section](/en-US/docs/Web/JavaScript/Reference/Operators). You may be especially interested in the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Grammar
 
@@ -417,7 +413,7 @@ const obj = {
 };
 ```
 
-Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
+Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
 // Dot notation
@@ -563,7 +559,7 @@ avg(2, 3, 4, 5); // 3.5
 
 In the above code, the variable `args` holds all the values that were passed into the function.
 
-The rest parameter will store all arguments _after_ where it's declared, but not before. i.e. `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
+The rest parameter will store all arguments _after_ where it's declared, but not before. In other words, `function avg(firstValue, ...args)` will store the first value passed into the function in the `firstValue` variable and the remaining arguments in `args`.
 
 If a function accepts a list of arguments and you already hold an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
@@ -723,7 +719,7 @@ const p = new Person("Maria");
 console.log(p.sayHello());
 ```
 
-JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes#mix-ins).
+JavaScript classes are just functions that must be instantiated with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. Every time a class is instantiated, it returns an object containing the methods and properties that the class specified. Classes don't enforce any code organization — for example, you can have functions returning classes, or you can have multiple classes per file. Here's an example of how ad hoc the creation of a class can be: it's just an expression returned from an arrow function. This pattern is called a [mixin](/en-US/docs/Web/JavaScript/Reference/Classes/extends#mix-ins).
 
 ```js
 const withAuthentication = (cls) =>
@@ -740,11 +736,11 @@ class Admin extends withAuthentication(Person) {
 
 Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
 
-For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/EventLoop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
@@ -770,7 +766,8 @@ fs.readFile(filename)
   .then((content) => {
     // What to do when the file is read
     console.log(content);
-  }).catch((err) => {
+  })
+  .catch((err) => {
     throw err;
   });
 // Code here will be executed while the file is waiting to be read
@@ -792,7 +789,7 @@ To learn more about asynchronous programming, you can read about [using promises
 
 ## Modules
 
-JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by it's file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
+JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by its file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
 
 ```js
 import { foo } from "./foo.js";
@@ -827,5 +824,5 @@ There are some essential parts of the language that we have omitted due to space
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

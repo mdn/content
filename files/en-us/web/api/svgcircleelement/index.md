@@ -2,13 +2,6 @@
 title: SVGCircleElement
 slug: Web/API/SVGCircleElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - SVG
-  - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
 

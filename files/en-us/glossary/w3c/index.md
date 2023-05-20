@@ -1,12 +1,7 @@
 ---
 title: W3C
 slug: Glossary/W3C
-tags:
-  - Community
-  - Consortium
-  - Intro
-  - W3C
-  - Web consortium
+page-type: glossary-definition
 ---
 
 The _World Wide Web Consortium_ (W3C) is an international body that maintains {{Glossary("World Wide Web", "Web-related")}} rules and frameworks.

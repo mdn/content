@@ -2,19 +2,12 @@
 title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setUTCFullYear
 ---
 
 {{JSRef}}
 
-The **`setUTCFullYear()`** method sets the full year for a
-specified date according to universal time.
+The **`setUTCFullYear()`** method of {{jsxref("Date")}} instances changes the year for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
 
@@ -23,29 +16,26 @@ specified date according to universal time.
 ```js-nolint
 setUTCFullYear(yearValue)
 setUTCFullYear(yearValue, monthValue)
-setUTCFullYear(yearValue, monthValue, dayValue)
+setUTCFullYear(yearValue, monthValue, dateValue)
 ```
 
 ### Parameters
 
 - `yearValue`
-  - : An integer specifying the numeric value of the year, for example, 1995.
-- `monthValue`
-  - : Optional. An integer between 0 and 11 representing the months January through
-    December.
-- `dayValue`
-  - : Optional. An integer between 1 and 31 representing the day of the month. If you
-    specify the `dayValue` parameter, you must also specify the
-    `monthValue`.
+  - : An integer representing the year. For example, 1995.
+- `monthValue` {{optional_inline}}
+  - : An integer representing the month: 0 for January, 1 for February, and so on.
+- `dateValue` {{optional_inline}}
+  - : An integer between 1 and 31 representing the day of the month. If you specify `dateValue`, you must also specify `monthValue`.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
 If you do not specify the `monthValue` and
-`dayValue` parameters, the values returned from the
+`dateValue` parameters, the values returned from the
 {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} and
 {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} methods are used.
 

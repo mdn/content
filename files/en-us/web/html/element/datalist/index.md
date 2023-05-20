@@ -1,12 +1,7 @@
 ---
-title: '<datalist>: The HTML Data List element'
+title: "<datalist>: The HTML Data List element"
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.datalist
 ---
 
@@ -16,7 +11,7 @@ The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HT
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
-To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Element/input#attr-list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
+To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
 
 > **Note:** The `<option>` element can store a value as internal content and in the `value` and `label` attributes. Which one will be visible in the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
@@ -38,7 +33,6 @@ Typically the right side of a control will also have an arrow pointing to the pr
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
   <option value="Opera"></option>
   <option value="Safari"></option>
   <option value="Microsoft Edge"></option>
@@ -113,21 +107,21 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 {{EmbedLiveSample("Password_type", 600, 40)}}
 
-## Technical Summary
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -136,7 +130,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted content</th>
       <td>
         Either
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
         or zero or more {{HTMLElement("option")}} elements.
@@ -150,7 +144,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -184,5 +178,5 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 ## See also
 
-- The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;
+- The {{HTMLElement("input")}} element, and more specifically its [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute;
 - The {{HTMLElement("option")}} element.

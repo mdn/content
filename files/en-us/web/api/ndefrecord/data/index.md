@@ -1,12 +1,10 @@
 ---
-title: NDEFRecord.data
+title: "NDEFRecord: data property"
+short-title: data
 slug: Web/API/NDEFRecord/data
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.data
 ---
 

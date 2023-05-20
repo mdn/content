@@ -1,16 +1,7 @@
 ---
 title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - cancel
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.cancel
 ---
 

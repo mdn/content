@@ -1,14 +1,8 @@
 ---
-title: DOMRectReadOnly.left
+title: "DOMRectReadOnly: left property"
+short-title: left
 slug: Web/API/DOMRectReadOnly/left
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Property
-  - Reference
 browser-compat: api.DOMRectReadOnly.left
 ---
 

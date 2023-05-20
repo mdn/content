@@ -2,9 +2,6 @@
 title: Guidelines for styling HTML code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -35,7 +32,7 @@ You should use the HTML5 doctype. It is short, easy to remember, and backwards c
 
 ### Document language
 
-Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>
@@ -51,7 +48,7 @@ You should also define your document's characterset like so:
 <meta charset="utf-8" />
 ```
 
-Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
+Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document.
 
 ### Viewport meta tag
 
@@ -155,5 +152,4 @@ There are some rules for writing about HTML elements on MDN Web Docs. Adhering t
   If you don't want to create a link, **enclose the name in angle brackets** and use the "Inline Code" style (e.g., `<title>`).
 - **Attribute names**: Use "Inline Code" style to put attribute names in `code font`.
   Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does or when it is used for the first time on the page.
-- **Attribute definitions**: Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term. This allows the term definition to be linked from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`).
 - **Attribute values**: Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. For example, "When the `type` attribute of an `<input>` element is set to `email` or `tel` ...".

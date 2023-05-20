@@ -1,15 +1,6 @@
 ---
 title: Using the WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - DevTools
-  - JavaScript
-  - WebAssembly
-  - compile
-  - instantiate
-  - memory
-  - table
 ---
 
 {{WebAssemblySidebar}}
@@ -87,7 +78,7 @@ In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose th
 
 ![Developer tools debugger panel highlighting a module.](wasm-debug.png)
 
-In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
+In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format.
 
 ## Memory
 

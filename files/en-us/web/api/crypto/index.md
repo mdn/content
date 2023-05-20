@@ -2,17 +2,6 @@
 title: Crypto
 slug: Web/API/Crypto
 page-type: web-api-interface
-tags:
-  - API
-  - Code
-  - Crypto
-  - Encoding
-  - Encryption
-  - Interface
-  - Privacy
-  - Reference
-  - Security
-  - Web Crypto API
 browser-compat: api.Crypto
 ---
 

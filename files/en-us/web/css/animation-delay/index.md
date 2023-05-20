@@ -2,12 +2,6 @@
 title: animation-delay
 slug: Web/CSS/animation-delay
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-delay
 ---
 

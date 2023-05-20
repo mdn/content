@@ -1,13 +1,10 @@
 ---
-title: NDEFReader.scan()
+title: "NDEFReader: scan() method"
+short-title: scan()
 slug: Web/API/NDEFReader/scan
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.scan
 ---
 

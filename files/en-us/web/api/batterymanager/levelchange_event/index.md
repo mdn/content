@@ -1,11 +1,8 @@
 ---
 title: "BatteryManager: levelchange event"
+short-title: levelchange
 slug: Web/API/BatteryManager/levelchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.levelchange_event
 ---
 

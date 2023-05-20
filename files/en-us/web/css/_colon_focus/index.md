@@ -2,14 +2,6 @@
 title: ":focus"
 slug: Web/CSS/:focus
 page-type: css-pseudo-class
-tags:
-  - ":focus"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.focus
 ---
 
@@ -23,8 +15,10 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:focus
+```css
+:focus {
+  /* ... */
+}
 ```
 
 ## Examples

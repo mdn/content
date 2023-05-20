@@ -1,13 +1,7 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.itemscope
 ---
 
@@ -23,7 +17,7 @@ Every HTML element may have an `itemscope` attribute specified. An `itemscope` e
 
 ### itemscope id attributes
 
-When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an {{htmlattrxref("id")}} attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
+When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
 
 ## Examples
 

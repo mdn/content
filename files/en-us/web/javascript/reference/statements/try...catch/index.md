@@ -2,11 +2,6 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 page-type: javascript-statement
-tags:
-  - Exception
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.try_catch
 ---
 
@@ -130,7 +125,7 @@ try {
 ### The exception identifier
 
 When an exception is thrown in the `try`-block,
-`exception_var` (i.e., the `e` in `catch (e)`)
+`exceptionVar` (i.e., the `e` in `catch (e)`)
 holds the exception value. You can use this identifier to get information about the
 exception that was thrown. This identifier is only available in the
 `catch`-block's {{Glossary("Scope", "scope")}}. If you don't need the

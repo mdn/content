@@ -1,14 +1,10 @@
 ---
-title: Document.xmlEncoding
+title: "Document: xmlEncoding property"
+short-title: xmlEncoding
 slug: Web/API/Document/xmlEncoding
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document.xmlEncoding
-  - MakeBrowserAgnostic
-  - Property
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.xmlEncoding
 ---
 

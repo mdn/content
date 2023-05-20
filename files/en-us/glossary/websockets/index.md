@@ -1,13 +1,7 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-tags:
-  - Connection
-  - Infrastructure
-  - Networking
-  - Protocols
-  - Web
-  - WebSocket
+page-type: glossary-definition
 ---
 
 _WebSocket_ is a {{Glossary("protocol")}} that allows for a persistent {{Glossary("TCP")}} connection between {{Glossary("Server", "server")}} and client so they can exchange data at any time.

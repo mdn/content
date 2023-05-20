@@ -1,11 +1,8 @@
 ---
-title: Event.timeStamp
+title: "Event: timeStamp property"
+short-title: timeStamp
 slug: Web/API/Event/timeStamp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Event.timeStamp
 ---
 
@@ -20,7 +17,7 @@ created.
 This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created. If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document. In a worker, the time origin is the moment of creation of the worker.
 
 The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
-5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent fingerprinting.
+5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 ## Example
 

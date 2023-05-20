@@ -2,12 +2,6 @@
 title: GeolocationCoordinates
 slug: Web/API/GeolocationCoordinates
 page-type: web-api-interface
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Interface
-  - Secure context
 browser-compat: api.GeolocationCoordinates
 ---
 

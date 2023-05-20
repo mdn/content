@@ -1,17 +1,7 @@
 ---
 title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Script
-  - Security
-  - script-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src
 ---
 
@@ -56,9 +46,9 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ## Examples
 
-### Violation case
+### Blocking resources from untrusted domains
 
-Given this CSP header:
+Given this CSP header that only allows scripts from `https://example.com`:
 
 ```http
 Content-Security-Policy: script-src https://example.com/
@@ -82,17 +72,25 @@ You should replace them with {{domxref("EventTarget.addEventListener", "addEvent
 document.getElementById("btn").addEventListener("click", doSomething);
 ```
 
+If you cannot replace inline event handlers, you can use the `'unsafe-hashes'` source expression to allow them.
+See [Unsafe hashes](#unsafe_hashes) for more information.
+
 ### Unsafe inline script
 
-> **Note:** Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
+> **Note:**
+> Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides.
+> If you absolutely have to use them, there are a few mechanisms that will allow them.
+> Hashes apply to inline scripts and styles, but not event handlers.
+> See [Unsafe hashes](#unsafe_hashes) for more information.
 
-To allow inline scripts and inline event handlers, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
+To allow inline scripts and styles, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
+The following Content Security Policy will allow all inline {{HTMLElement("script")}} elements:
 
 ```http
 Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
-The above Content Security Policy will allow inline {{HTMLElement("script")}} elements
+The following {{HTMLElement("script")}} element will be allowed by the policy:
 
 ```html
 <script>
@@ -101,13 +99,14 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 </script>
 ```
 
-You can use a nonce-source to only allow specific inline script blocks:
+Allowing all inline scripts is considered a security risk, so it's recommended to use a nonce-source or a hash-source instead.
+To allow inline scripts and styles with a nonce-source, you need to generate a random value and include it in the policy:
 
 ```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
-You will have to set the same nonce on the {{HTMLElement("script")}} element:
+Then, you need to include the same nonce in the {{HTMLElement("script")}} element:
 
 ```html
 <script nonce="2726c7f26c">
@@ -130,6 +129,35 @@ When generating the hash, don't include the {{HTMLElement("script")}} tags and n
 </script>
 ```
 
+### Unsafe hashes
+
+Policies for inline resources with hashes like `script-src 'sha256-{HASHED_INLINE_SCRIPT}'` allow scripts and styles by their hash, but not event handlers:
+
+```html
+<!-- Allowed by CSP: script-src 'sha256-{HASHED_INLINE_SCRIPT}' -->
+<script>
+  const inline = 1;
+</script>
+
+<!-- CSP: script-src 'sha256-{HASHED_EVENT_HANDLER}'
+      will not allow this event handler -->
+<button onclick="myScript()">Submit</button>
+```
+
+Instead of allowing `'unsafe-inline'`, you can use the `'unsafe-hashes'` source expression if code can't be updated to equivalent {{domxref("EventTarget.addEventListener", "addEventListener")}} calls.
+Given a HTML page that includes the following inline event handler:
+
+```html
+<!-- I wan't to use addEventListener, but I can't :( -->
+<button onclick="myScript()">Submit</button>
+```
+
+The following CSP header will allow the script to execute:
+
+```http
+Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDLER}'
+```
+
 ### Unsafe eval expressions
 
 The `'unsafe-eval'` source expression controls several script execution methods that create code from strings.
@@ -149,6 +177,7 @@ If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-
 
 The `'wasm-unsafe-eval'` source expression controls WebAssembly execution.
 If a page has a CSP header and `'wasm-unsafe-eval'` isn't specified in the `script-src` directive, WebAssembly is blocked from loading and executing on the page.
+
 The `'wasm-unsafe-eval'` source expression is more specific than `'unsafe-eval'` which permits both compilation (and instantiation) of WebAssembly and, for example, the use of the `eval` operation in JavaScript.
 If the `'unsafe-eval'` source keyword is used, then this overrides any occurrence of `'wasm-unsafe-eval'` in the CSP policy.
 

@@ -2,11 +2,6 @@
 title: symbols()
 slug: Web/CSS/symbols
 page-type: css-function
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Function
-  - Reference
 browser-compat: css.properties.list-style-type.symbols
 ---
 

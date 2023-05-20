@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.frameRate
+title: "MediaTrackSettings: frameRate property"
+short-title: frameRate
 slug: Web/API/MediaTrackSettings/frameRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - frameRate
 browser-compat: api.MediaTrackSettings.frameRate
 ---
 
@@ -40,8 +29,7 @@ track's frame rate, in frames per second.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

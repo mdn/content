@@ -1,13 +1,10 @@
 ---
-title: 'SerialPort: disconnect event'
+title: "SerialPort: disconnect event"
+short-title: disconnect
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 
@@ -22,9 +19,9 @@ This event bubbles to the instance of {{domxref("Serial")}} that returned this i
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', (event) => { });
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { };
+ondisconnect = (event) => {};
 ```
 
 ## Event type
@@ -44,7 +41,7 @@ For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building
 Here the event listener is installed on a specific {{domxref("SerialPort")}} object.
 
 ```js
-port.addEventListener('disconnect', (event) => {
+port.addEventListener("disconnect", (event) => {
   // notify that the port has become unavailable
 });
 ```
@@ -54,7 +51,7 @@ port.addEventListener('disconnect', (event) => {
 The `disconnect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any ports that become unavailable.
 
 ```js
-navigator.serial.addEventListener('disconnect', (event) => {
+navigator.serial.addEventListener("disconnect", (event) => {
   // notify that a port has become unavailable
   // use `event.target` to refer to the unavailable port
 });

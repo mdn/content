@@ -1,25 +1,8 @@
 ---
-title: MediaTrackSettings.displaySurface
+title: "MediaTrackSettings: displaySurface property"
+short-title: displaySurface
 slug: Web/API/MediaTrackSettings/displaySurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Media
-  - Media Capture and Streaming
-  - Media Capture and Streaming API
-  - Monitor
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - displaySurface
-  - screen
 browser-compat: api.MediaTrackSettings.displaySurface
 ---
 
@@ -33,9 +16,6 @@ surface being captured.
 
 The value of `displaySurface` is a string that comes from the `DisplayCaptureSurfaceType` enumerated type, and is one of the following:
 
-- `application`
-  - : The stream's video track contains all of the windows belonging to the application chosen by the user.
-    The windows are aggregated into a single video track, with any empty space filled with a backdrop; that backdrop is selected by the {{Glossary("user agent")}}.
 - `browser`
   - : The stream's video track presents the entire contents of a single browser tab which the user selected during the {{domxref("MediaDevices.getDisplayMedia","getDisplayMedia()")}} call.
 - `monitor`

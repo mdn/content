@@ -1,16 +1,8 @@
 ---
-title: HTMLInputElement.checkValidity()
+title: "HTMLInputElement: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsExample
-  - Reference
-  - checkValidity
-  - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
 
@@ -44,4 +36,4 @@ Returns `true` if the value of the element has no validity problems; otherwise r
 
 - [reportValidity](/en-US/docs/Web/API/HTMLInputElement/reportValidity)
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

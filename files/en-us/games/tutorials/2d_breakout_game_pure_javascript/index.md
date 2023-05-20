@@ -1,13 +1,6 @@
 ---
 title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
 ---
 
 {{GamesSidebar}}

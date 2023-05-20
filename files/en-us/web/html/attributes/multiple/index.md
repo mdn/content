@@ -1,11 +1,7 @@
 ---
-title: 'HTML attribute: multiple'
+title: "HTML attribute: multiple"
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
+page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple
 ---
 
@@ -17,7 +13,7 @@ The Boolean **`multiple`** attribute, if set, means the form control accepts one
 
 ## Overview
 
-Depending on the type, the form control may have a different appearance if the `multiple` attribute is set. For the file input type, the native messaging the browser provides differs. In Firefox, the file input reads "No files selected" when the attribute is present and "No file selected" when not, when no files are selected. Most browsers displaying a scrolling list box for a {{HTMLElement("select")}} control with the `multiple` attribute set versus a single line dropdown when the attribute is omitted. The {{HTMLElement("input/email", "email")}} input displays the same, but will match the {{cssxref(':invalid')}} pseudo-class if more than one comma-separated email address is included if the attribute is not present.
+Depending on the type, the form control may have a different appearance if the `multiple` attribute is set. For the file input type, the native messaging the browser provides differs. In Firefox, the file input reads "No files selected" when the attribute is present and "No file selected" when it is not. Most browsers display a scrolling list box for a {{HTMLElement("select")}} control with the `multiple` attribute set and a single line dropdown when the attribute is omitted. The {{HTMLElement("input/email", "email")}} input displays the same whether or not the `multiple` attribute is included, but will match the {{cssxref(':invalid')}} pseudo-class if more than one comma-separated email address is included if the attribute is not present.
 
 When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type, the user can include zero (if not also [`required`](/en-US/docs/Web/HTML/Attributes/required)), one or more comma-separated email addresses.
 
@@ -25,7 +21,7 @@ When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type
 <input type="email" multiple name="emails" id="emails" />
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list.
 
 When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
 
@@ -89,7 +85,7 @@ input:invalid {
 }
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
 
 Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Attributes/list) of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when `multiple` is present. Others do not.
 
@@ -191,4 +187,4 @@ There are a few ways to select multiple options in a `<select>` element with a `
 
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}
-- [Allowing multiple e-mail addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
+- [Allowing multiple email addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_email_addresses)

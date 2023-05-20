@@ -1,15 +1,8 @@
 ---
-title: HTMLObjectElement.form
+title: "HTMLObjectElement: form property"
+short-title: form
 slug: Web/API/HTMLObjectElement/form
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - form
 browser-compat: api.HTMLObjectElement.form
 ---
 

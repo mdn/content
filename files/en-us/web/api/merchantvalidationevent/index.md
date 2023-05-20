@@ -2,19 +2,8 @@
 title: MerchantValidationEvent
 slug: Web/API/MerchantValidationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Merchant
-  - Merchant Validation
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Payments
-  - Reference
-  - Secure context
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent
 ---
 
@@ -22,7 +11,7 @@ browser-compat: api.MerchantValidationEvent
 
 The **`MerchantValidationEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) enables a merchant to verify themselves as allowed to use a particular payment handler.
 
-To learn more about merchant validation, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}.
+Learn more about [merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation).
 
 ## Constructor
 

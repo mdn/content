@@ -1,19 +1,12 @@
 ---
-title: KeyframeEffect()
+title: "KeyframeEffect: KeyframeEffect() constructor"
+short-title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - Constructor
-  - KeyframeEffect
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
@@ -44,7 +37,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `duration` {{optional_inline}}
       - : The number of milliseconds each iteration of the animation takes to complete. Defaults to 0. Although this is technically optional, keep in mind that your animation will not run if this value is 0.
     - `easing` {{optional_inline}}
-      - : The rate of the animation's change over time. Accepts the pre-defined values `"linear"`, `"ease"`, `"ease-in"`, `"ease-out"`, and `"ease-in-out"`, or a custom `"cubic-bezier"` value like `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
+      - : The rate of the animation's change over time. Accepts an {{cssxref("easing-function")}}, such as `"linear"`, `"ease-in"`, `"step-end"`, or `"cubic-bezier(0.42, 0, 0.58, 1)"`. Defaults to `"linear"`.
     - `endDelay` {{optional_inline}}
       - : The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0.
     - `fill` {{optional_inline}}
@@ -73,6 +66,8 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : Determines how values build from iteration to iteration in this animation. Can be
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
+    - `pseudoElement` {{optional_inline}}
+      - : A `string` containing a {{cssxref("pseudo-elements","pseudo-element")}} selector, such as `"::before"`. If present, the effect is applied to the selected pseudo-element of `target`, rather than to `target` itself.
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 
@@ -84,18 +79,21 @@ The single argument constructor (see above) creates a clone of an existing {{dom
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `KeyframeEffect` constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
-const whiteRabbit = document.getElementById('rabbit');
+const whiteRabbit = document.getElementById("rabbit");
 
 const rabbitDownKeyframes = new KeyframeEffect(
-    whiteRabbit, // element to animate
-    [
-      { transform: 'translateY(0%)' }, // keyframe
-      { transform: 'translateY(100%)' } // keyframe
-    ],
-    { duration: 3000, fill: 'forwards' } // keyframe options
-  );
+  whiteRabbit, // element to animate
+  [
+    { transform: "translateY(0%)" }, // keyframe
+    { transform: "translateY(100%)" }, // keyframe
+  ],
+  { duration: 3000, fill: "forwards" } // keyframe options
+);
 
-const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(
+  rabbitDownKeyframes,
+  document.timeline
+);
 
 // Play rabbit animation
 rabbitDownAnimation.play();

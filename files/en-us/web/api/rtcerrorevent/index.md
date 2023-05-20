@@ -2,17 +2,6 @@
 title: RTCErrorEvent
 slug: Web/API/RTCErrorEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Error
-  - Error Handling
-  - ICE
-  - Interface
-  - RTCErrorEvent
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - rtc
 browser-compat: api.RTCErrorEvent
 ---
 

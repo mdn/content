@@ -1,13 +1,7 @@
 ---
-title: '<section>: The Generic Section element'
+title: "<section>: The Generic Section element"
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Section
-  - Web
+page-type: html-element
 browser-compat: html.elements.section
 ---
 
@@ -32,7 +26,7 @@ Also consider these cases:
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
 - If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.
 
-To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}} - {{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement("Heading_Elements", "h1")}} - {{HTMLElement("Heading_Elements", "h6")}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
 ## Examples
 
@@ -47,6 +41,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
 </div>
 ```
 
+##### Result
+
+{{EmbedLiveSample('Before')}}
+
 #### After
 
 ```html
@@ -55,6 +53,10 @@ To reiterate, each `<section>` should be identified, typically by including a he
   <p>Bunch of awesome content</p>
 </section>
 ```
+
+##### Result
+
+{{EmbedLiveSample('After')}}
 
 ### Using a section without a heading
 
@@ -90,6 +92,10 @@ Make sure to use some assistive technology and screen-reader-friendly CSS to hid
 }
 ```
 
+#### Result
+
+{{EmbedLiveSample('Using a section without a heading')}}
+
 Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
 
 ## Technical summary
@@ -98,24 +104,24 @@ Depending on the content, including a heading could also be good for SEO, so it 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
           >Sectioning content</a
-        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
+        >, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -128,7 +134,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >. Note that a <code>&#x3C;section></code> element must not be a
         descendant of an {{HTMLElement("address")}} element.
@@ -155,16 +161,16 @@ Depending on the content, including a heading could also be good for SEO, so it 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("none")}}, {{ARIARole("note")}},
-        {{ARIARole("presentation")}}, {{ARIARole("search")}},
-        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/log_role"><code>log</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role"><code>marquee</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"><code>navigation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role"><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>
@@ -184,7 +190,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
 
 ## See also
 
-- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

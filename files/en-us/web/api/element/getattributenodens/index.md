@@ -1,12 +1,8 @@
 ---
-title: Element.getAttributeNodeNS()
+title: "Element: getAttributeNodeNS() method"
+short-title: getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Element.getAttributeNodeNS
 ---
 

@@ -1,14 +1,8 @@
 ---
-title: Window.open()
+title: "Window: open() method"
+short-title: open()
 slug: Web/API/Window/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Window
-  - open
 browser-compat: api.Window.open
 ---
 
@@ -33,9 +27,9 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
+  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
-    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target) elements.
+    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
 
@@ -76,7 +70,7 @@ open(url, target, windowFeatures)
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
     - `noreferrer`
-      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) for more information.
+      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
 
 > **Note:** Requested position (`top`, `left`), and requested dimension (`width`, `height`) values in `windowFeatures` **will be corrected** if any of such requested value does not allow the entire browser popup to be rendered within the work area for applications of the user's operating system. In other words, no part of the new popup can be initially positioned offscreen.
 
@@ -112,11 +106,14 @@ It is possible to control the size and position of the new popup:
 
 ```js
 const windowFeatures = "left=100,top=100,width=320,height=320";
-const handle = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+const handle = window.open(
+  "https://www.mozilla.org/",
+  "mozillaWindow",
+  windowFeatures
+);
 if (!handle) {
   // The window wasn't allowed to open
   // This is likely caused by built-in popup blockers.
-
   // …
 }
 ```
@@ -147,19 +144,23 @@ function openRequestedTab(url, windowName) {
     windowObjectReference = window.open(url, windowName);
   } else {
     windowObjectReference.focus();
-  };
+  }
 }
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener("click", (event) => {
-  openRequestedTab(link.href);
-  event.preventDefault();
-  }, false);
+link.addEventListener(
+  "click",
+  (event) => {
+    openRequestedTab(link.href);
+    event.preventDefault();
+  },
+  false
+);
 ```
 
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
 
-> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target).
+> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target).
 
 ### Reuse existing windows and avoid `target="_blank"`
 
@@ -202,18 +203,24 @@ function openRequestedSingleTab(url) {
     windowObjectReference.focus();
   } else {
     windowObjectReference.focus();
-  };
+  }
   previousURL = url;
   /* explanation: we store the current url in order to compare url
      in the event of another call of this function. */
 }
 
-const links = document.querySelectorAll("a[target='SingleSecondaryWindowName']");
+const links = document.querySelectorAll(
+  "a[target='SingleSecondaryWindowName']"
+);
 for (const link of links) {
-  link.addEventListener("click", (event) => {
-    openRequestedSingleTab(link.href);
-    event.preventDefault();
-  }, false);
+  link.addEventListener(
+    "click",
+    (event) => {
+      openRequestedSingleTab(link.href);
+      event.preventDefault();
+    },
+    false
+  );
 }
 ```
 
@@ -290,8 +297,8 @@ When extreme changes in context are explicitly identified before they occur, the
 ## See also
 
 - `target` attribute documentation:
-  - [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target)
-  - [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target)
+  - [`<a>`](/en-US/docs/Web/HTML/Element/a#target)
+  - [`<form>`](/en-US/docs/Web/HTML/Element/form#target)
 - [`window.close()`](/en-US/docs/Web/API/Window/close)
 - [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)

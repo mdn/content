@@ -2,18 +2,12 @@
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
 browser-compat: javascript.builtins.Number.parseInt
 ---
 
 {{JSRef}}
 
-The **`Number.parseInt()`** method parses a string argument and
+The **`Number.parseInt()`** static method parses a string argument and
 returns an integer of the specified radix or base.
 
 {{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
@@ -47,13 +41,13 @@ If the `radix` is smaller than `2` or bigger than
 
 ## Examples
 
-### Number.parseInt vs parseInt
+### Number.parseInt vs. parseInt
 
 This method has the same functionality as the global {{jsxref("parseInt",
   "parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 Its purpose is modularization of globals. Please see

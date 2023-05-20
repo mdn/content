@@ -1,14 +1,8 @@
 ---
-title: ReadableStream.getReader()
+title: "ReadableStream: getReader() method"
+short-title: getReader()
 slug: Web/API/ReadableStream/getReader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - getReader
 browser-compat: api.ReadableStream.getReader
 ---
 
@@ -76,7 +70,7 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -95,3 +89,11 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

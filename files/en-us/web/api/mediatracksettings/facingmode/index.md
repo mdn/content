@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.facingMode
+title: "MediaTrackSettings: facingMode property"
+short-title: facingMode
 slug: Web/API/MediaTrackSettings/facingMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - Video
-  - WebRTC
-  - facingMode
 browser-compat: api.MediaTrackSettings.facingMode
 ---
 
@@ -63,8 +52,7 @@ pointed.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

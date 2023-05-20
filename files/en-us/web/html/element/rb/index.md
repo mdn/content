@@ -1,14 +1,9 @@
 ---
-title: '<rb>: The Ruby Base element'
+title: "<rb>: The Ruby Base element"
 slug: Web/HTML/Element/rb
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Text
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.rb
 ---
 
@@ -41,6 +36,8 @@ In this example, we provide an annotation for the original character equivalent 
 
 Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
 
+#### Result
+
 {{EmbedLiveSample("Using_rb", "100%", 60)}}
 
 ### Separate annotations
@@ -54,6 +51,10 @@ Note that we could also write this example with the two base text parts annotate
 </ruby>
 ```
 
+#### Result
+
+{{EmbedLiveSample('Separate annotations')}}
+
 See the article about the {{HTMLElement("ruby")}} element for further examples.
 
 ## Technical summary
@@ -62,7 +63,7 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

@@ -2,11 +2,6 @@
 title: HTMLDataListElement
 slug: Web/API/HTMLDataListElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLDataListElement
 ---
 

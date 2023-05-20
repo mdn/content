@@ -1,18 +1,8 @@
 ---
-title: RTCStats.id
+title: "RTCStats: id property"
+short-title: id
 slug: Web/API/RTCStats/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
 browser-compat: api.RTCStats.id
 ---
 

@@ -2,14 +2,6 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Pointer Events
-  - PointerEvent
-  - Reference
-  - events
 browser-compat: api.PointerEvent
 ---
 
@@ -109,5 +101,4 @@ Examples of each property, event type, and global event handler are included in 
 
 - {{ domxref("Touch_events","Touch Events") }}
 - {{ domxref("GestureEvent") }}
-- {{ domxref("MSGestureEvent") }}
 - {{cssxref("touch-action")}}

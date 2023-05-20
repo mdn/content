@@ -2,14 +2,11 @@
 title: Using macros
 slug: MDN/Writing_guidelines/Page_structures/Macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
 
-The [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) platform on which MDN runs provides a macro system, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
+The [Yari](https://github.com/mdn/yari) platform on which MDN runs provides a macro system, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
 
 The [KumaScript guide](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
 

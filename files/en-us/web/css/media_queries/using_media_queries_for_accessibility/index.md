@@ -2,15 +2,9 @@
 title: Using media queries for accessibility
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 page-type: guide
-tags:
-  - "@media"
-  - Accessibility
-  - Animation
-  - CSS
-  - Guide
 ---
 
-[**Media Queries**](/en-US/docs/Web/CSS/@media/) can be used to help users with disabilities better experience your website.
+[**Media Queries**](/en-US/docs/Web/CSS/@media) can be used to help users with disabilities better experience your website.
 
 ## Reduced Motion
 
@@ -50,47 +44,6 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 ```
 
 The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
-
-## High Contrast Mode
-
-{{CSSRef}}{{Non-standard_header}}
-
-The [`-ms-high-contrast`](/en-US/docs/Web/CSS/@media/-ms-high-contrast) CSS media feature is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_Extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
-
-This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.
-
-### Syntax
-
-The **`-ms-high-contrast`** media feature is specified as one of the following values.
-
-### Values
-
-- `active`
-  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.
-- `black-on-white`
-  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a black-on-white color variation.
-- `white-on-black`
-  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a white-on-black color variation.
-
-### Example
-
-The following declarations will match applications that are being displayed in high contrast mode with any color variation, a black-on-white color variation, and a white-on-black color variation, respectively.
-
-```css
-@media screen and (-ms-high-contrast: active) {
-  /* All high contrast styling rules */
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  div {
-    background-image: url("image-bw.png");
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  div {
-    background-image: url("image-wb.png");
-  }
-}
-```
 
 ## See also
 

@@ -1,15 +1,8 @@
 ---
-title: Window.stop()
+title: "Window: stop() method"
+short-title: stop()
 slug: Web/API/Window/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - stop
 browser-compat: api.Window.stop
 ---
 

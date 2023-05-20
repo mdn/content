@@ -1,17 +1,13 @@
 ---
-title: get SharedArrayBuffer[@@species]
+title: SharedArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/@@species
 page-type: javascript-static-accessor-property
-tags:
-  - SharedArrayBuffer
-  - JavaScript
-  - Property
 browser-compat: javascript.builtins.SharedArrayBuffer.@@species
 ---
 
 {{JSRef}}
 
-The **`SharedArrayBuffer[@@species]`** accessor property returns the constructor used to construct return values from `SharedArrayBuffer` methods.
+The **`SharedArrayBuffer[@@species]`** static accessor property returns the constructor used to construct return values from `SharedArrayBuffer` methods.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 

@@ -2,14 +2,6 @@
 title: SVGSymbolElement
 slug: Web/API/SVGSymbolElement
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGSymbolElement
 browser-compat: api.SVGSymbolElement
 ---
 

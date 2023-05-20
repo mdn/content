@@ -1,12 +1,6 @@
 ---
 title: JavaScript performance
 slug: Learn/Performance/JavaScript
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
@@ -50,7 +44,7 @@ Performance optimizations should include:
 - **Reducing the amount of JavaScript that is needed.** Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?
 - **Remove unused code.**
 - **Split the JavaScript into smaller files.** Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.
-- **Optimize these smaller files.** [Minification](/en-US/docs/Glossary/minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further, and should be used even if you don't minify. [Brotli](/en-US/docs/Glossary/brotli_compression) is similar to Gzip, generally outperforming Gzip's compression.
+- **Optimize these smaller files.** [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further, and should be used even if you don't minify. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, generally outperforming Gzip's compression.
 
 ## Render impact
 
@@ -63,19 +57,3 @@ Web applications include a lot of JavaScript. Many applications are built with a
 While optimizing your media files and scripts will get you very far along in terms of web performance optimization, everything that touches a web pages impacts performance. In the next article we take a look at some HTML features that can impact performance, including some attributes specifically created to improve performance.
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [The business case for web performance](/en-US/docs/Learn/Performance/business_case_for_performance)
-- [Web performance resources](/en-US/docs/Learn/Performance/Web_Performance_Basics)

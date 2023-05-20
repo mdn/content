@@ -2,11 +2,6 @@
 title: Statements and declarations
 slug: Web/JavaScript/Reference/Statements
 page-type: landing-page
-tags:
-  - JavaScript
-  - Landing page
-  - Reference
-  - statements
 browser-compat: javascript.statements
 ---
 
@@ -66,9 +61,9 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
   - : Creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 
@@ -78,6 +73,8 @@ For an alphabetical listing see the sidebar on the left.
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
 - {{jsxref("Statements/block", "Block", "", 1)}}
   - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
+  - : An expression statement evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
 - {{jsxref("Statements/export", "export")}}
@@ -107,7 +104,7 @@ Everything else in the [list above](#statements_and_declarations_by_category) is
 
 The terms "statement" and "declaration" have a precise meaning in the formal syntax of JavaScript that affects where they may be placed in code. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
 
-```js
+```js-nolint
 if (condition)
   statement1;
 else
@@ -116,14 +113,14 @@ else
 
 If you use a declaration instead of a statement, it would be a {{jsxref("SyntaxError")}}. For example, a [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declaration is not a statement, so you can't use it in its bare form as the body of an `if` statement.
 
-```js example-bad
+```js-nolint example-bad
 if (condition)
   let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
 On the other hand, [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) is a statement, so you can use it on its own as the `if` body.
 
-```js example-good
+```js-nolint example-good
 if (condition)
   var i = 0;
 ```

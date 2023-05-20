@@ -1,13 +1,8 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/CharacterData/replaceWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - CharacterData
-  - Reference
 browser-compat: api.CharacterData.replaceWith
 ---
 

@@ -2,11 +2,6 @@
 title: CanvasPattern
 slug: Web/API/CanvasPattern
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Reference
 browser-compat: api.CanvasPattern
 ---
 
@@ -25,7 +20,7 @@ _As an opaque object, this has no exposed property._
 _There are no inherited method._
 
 - {{domxref("CanvasPattern.setTransform()")}}
-  - : Applies an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} representing a linear transform to the pattern.
+  - : Applies a {{domxref("DOMMatrix")}} representing a linear transform to the pattern.
 
 ## Specifications
 

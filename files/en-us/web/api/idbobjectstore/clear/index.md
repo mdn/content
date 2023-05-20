@@ -1,16 +1,8 @@
 ---
-title: IDBObjectStore.clear()
+title: "IDBObjectStore: clear() method"
+short-title: clear()
 slug: Web/API/IDBObjectStore/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - clear
 browser-compat: api.IDBObjectStore.clear
 ---
 
@@ -40,8 +32,9 @@ None.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
 ### Exceptions
 
@@ -62,7 +55,7 @@ full working example, see our [To-do Notifications](https://github.com/mdn/dom-e
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -78,7 +71,7 @@ function clearData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
   transaction.onerror = (event) => {
@@ -93,9 +86,9 @@ function clearData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
-};
+}
 ```
 
 ## Specifications

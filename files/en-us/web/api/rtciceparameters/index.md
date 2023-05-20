@@ -2,22 +2,6 @@
 title: RTCIceParameters
 slug: Web/API/RTCIceParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Interface
-  - Negotiation
-  - RTCIceParameters
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - password
-  - ufrag
-  - username
 browser-compat: api.RTCIceParameters
 ---
 

@@ -2,14 +2,6 @@
 title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-block
-  - scroll-margin-block-end
 browser-compat: css.properties.scroll-margin-block-end
 ---
 

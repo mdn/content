@@ -1,22 +1,13 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAuthRequired
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onAuthRequired
 ---
 
 {{AddonSidebar()}}
 
-Fired when the server sends a `401` or `407` status code (that is, when the server is asking the client to provide authentication credentials, such as a username and password).
+Fired when the server sends a `401` or `407` status code and a `WWW-Authenticate` header using the `Basic` scheme (that is, when the server is asking the client to provide authentication credentials, such as a username and password).
 
 The listener can respond in one of four different ways:
 
@@ -111,7 +102,6 @@ Events have three functions:
 
     - `host`
       - : `string`. The server's [hostname](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames).
-        > **Warning:** Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if `isProxy` is `true`.
     - `port`
       - : `integer`. The server's port number.
 

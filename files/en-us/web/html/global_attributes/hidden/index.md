@@ -1,10 +1,7 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.hidden
 ---
 
@@ -56,7 +53,7 @@ Elements that are descendants of a hidden element are still active, which means 
 
 The _hidden_ state indicates that the element is not currently relevant to the page, or that it is being used to declare content for reuse by other parts of the page and should not be directly presented to the user. The browser will not render elements that are in the _hidden_ state.
 
-Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout. This also means that changing the value of the CSS {{cssxref("display")}} property on an element in the _hidden_ state will overrides the state. For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
+Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout. This also means that changing the value of the CSS {{cssxref("display")}} property on an element in the _hidden_ state will override the state. For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
 
 ### The hidden until found state
 
@@ -150,7 +147,7 @@ Note that although the content of the element is hidden, the element still has a
 
 Clicking the "Go to hidden content" button navigates to the hidden until found element. The `beforematch` event fires, the text content is updated, and the element content is displayed.
 
-To run the example again, click "Reload".
+To run the example again, click "Reset".
 
 {{EmbedLiveSample("Using until-found", "", 400)}}
 
@@ -166,5 +163,5 @@ To run the example again, click "Reload".
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- The [`beforematch](/en-US/docs/Web/API/Element/beforematch_event) event
+- The [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute
+- The [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event

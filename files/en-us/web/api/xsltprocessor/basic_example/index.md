@@ -2,13 +2,12 @@
 title: XSLT Basic Example
 slug: Web/API/XSLTProcessor/Basic_Example
 page-type: guide
-tags:
-  - XSLT
-  - Example
 ---
 
+{{APIRef("XSLT")}}
+
 This first example demonstrates the basics of setting up an XSLT transformation in a browser.
-The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human readable form.
+The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human-readable form.
 
 The XML document (**example.xml**) is shown below.
 
@@ -53,8 +52,8 @@ The template that matches the root node outputs the article's title and then say
 
 To try out the example:
 
-1. Create a directory in your file system and inside it create the files **example.xml** and **example.xsl** listed above
-2. [Start a local server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
+1. Create a directory in your file system and inside it create the files `example.xml` and `example.xsl` listed above
+2. [Start a local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
    > **Warning:** Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.

@@ -1,12 +1,6 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
-tags:
-  - Transforming_XML_with_XSLT
-  - XPath
-  - XPath_Reference
-  - XSLT
-  - XSLT_Reference
 ---
 
 <section id="Quick_links">

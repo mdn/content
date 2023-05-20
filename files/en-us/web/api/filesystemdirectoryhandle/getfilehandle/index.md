@@ -1,13 +1,8 @@
 ---
-title: FileSystemDirectoryHandle.getFileHandle()
+title: "FileSystemDirectoryHandle: getFileHandle() method"
+short-title: getFileHandle()
 slug: Web/API/FileSystemDirectoryHandle/getFileHandle
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
 
@@ -62,10 +57,10 @@ The following example returns a file handle with the specified name, if the file
 not exist it is created.
 
 ```js
-const fileName = 'fileToGetName';
+const fileName = "fileToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});
+const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
 ```
 
 ## Specifications

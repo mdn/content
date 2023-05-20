@@ -1,13 +1,7 @@
 ---
-title: 'HTML attribute: capture'
+title: "HTML attribute: capture"
 slug: Web/HTML/Attributes/capture
-tags:
-  - API
-  - Attribute
-  - Attributes
-  - Capture
-  - Constraint validation
-  - HTML
+page-type: html-attribute
 browser-compat: html.elements.input.capture
 ---
 

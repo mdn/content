@@ -1,16 +1,7 @@
 ---
 title: BrowserSetting.onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
+page-type: webextension-api-event
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
 

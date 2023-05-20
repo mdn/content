@@ -1,13 +1,7 @@
 ---
 title: "ARIA: menuitemradio role"
 slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - menuitemradio
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
   - https://w3c.github.io/aria-practices/#menu
@@ -25,7 +19,7 @@ The three menu item elements can only be contained in, or owned by, an element w
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute should be used.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
 Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`.
 
@@ -150,7 +144,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## See Also
 
-- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
 

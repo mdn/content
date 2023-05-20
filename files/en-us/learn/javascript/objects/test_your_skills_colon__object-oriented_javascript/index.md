@@ -1,13 +1,6 @@
 ---
-title: 'Test your skills: Object-oriented JavaScript'
+title: "Test your skills: Object-oriented JavaScript"
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - OOJS
-  - Objects
-  - test your skills
 ---
 
 {{learnsidebar}}

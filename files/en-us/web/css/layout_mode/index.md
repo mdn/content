@@ -2,11 +2,6 @@
 title: Layout mode
 slug: Web/CSS/Layout_mode
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
 ---
 
 {{CSSRef}}
@@ -30,7 +25,7 @@ A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an a
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)

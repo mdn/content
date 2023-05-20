@@ -1,11 +1,7 @@
 ---
-title: 'RangeError: x can''t be converted to BigInt because it isn''t an integer'
+title: "RangeError: x can't be converted to BigInt because it isn't an integer"
 slug: Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}

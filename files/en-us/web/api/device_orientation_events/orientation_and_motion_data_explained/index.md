@@ -2,13 +2,6 @@
 title: Orientation and motion data explained
 slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 page-type: guide
-tags:
-  - Intermediate
-  - Mobile
-  - Motion
-  - Orientation
-  - páginas_a_traducir
-  - rotation
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}

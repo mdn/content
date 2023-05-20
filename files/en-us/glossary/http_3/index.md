@@ -1,10 +1,7 @@
 ---
 title: HTTP/3
 slug: Glossary/HTTP_3
-tags:
-  - HTTP
-  - Intro
-  - NeedsContent
+page-type: glossary-definition
 ---
 
 **HTTP/3** is the upcoming major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP), succeeding {{glossary("HTTP 2", "HTTP/2")}}.

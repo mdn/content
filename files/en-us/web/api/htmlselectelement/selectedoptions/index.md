@@ -1,18 +1,8 @@
 ---
-title: HTMLSelectElement.selectedOptions
+title: "HTMLSelectElement: selectedOptions property"
+short-title: selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
 
@@ -79,31 +69,35 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", () => {
-  let collection = itemList.selectedOptions;
-  let output = "";
+orderButton.addEventListener(
+  "click",
+  () => {
+    let collection = itemList.selectedOptions;
+    let output = "";
 
-  for (let i = 0; i < collection.length; i++) {
+    for (let i = 0; i < collection.length; i++) {
+      if (output === "") {
+        output = "Your order for the following items has been placed: ";
+      }
+      output += collection[i].label;
+
+      if (i === collection.length - 2 && collection.length < 3) {
+        output += " and ";
+      } else if (i < collection.length - 2) {
+        output += ", ";
+      } else if (i === collection.length - 2) {
+        output += ", and ";
+      }
+    }
+
     if (output === "") {
-      output = "Your order for the following items has been placed: ";
+      output = "You didn't order anything!";
     }
-    output += collection[i].label;
 
-    if (i === (collection.length - 2) && (collection.length < 3)) {
-      output +=  " and ";
-    } else if (i < (collection.length - 2)) {
-      output += ", ";
-    } else if (i === (collection.length - 2)) {
-      output += ", and ";
-    }
-  }
-
-  if (output === "") {
-    output = "You didn't order anything!";
-  }
-
-  outputBox.innerHTML = output;
-}, false);
+    outputBox.innerHTML = output;
+  },
+  false
+);
 ```
 
 This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
@@ -128,4 +122,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}
+- [Drop-down controls](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls)

@@ -2,17 +2,12 @@
 title: RangeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
 
 {{JSRef}}
 
-The **`RangeError()`** constructor creates an error
-when a value is not in the set or range of allowed values.
+The **`RangeError()`** constructor creates {{jsxref("RangeError")}} objects.
 
 ## Syntax
 
@@ -72,7 +67,7 @@ try {
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".'
+      'The argument must be an "apple", "banana", or "carrot".',
     );
   }
 }
