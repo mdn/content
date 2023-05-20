@@ -3,12 +3,10 @@ title: "WebTransportError: streamErrorCode property"
 short-title: streamErrorCode
 slug: Web/API/WebTransportError/streamErrorCode
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`streamErrorCode`** read-only property of the {{domxref("WebTransportError")}} interface returns a number in the range 0-255 indicating the application protocol error code for this error, or `null` if one is not available.
 

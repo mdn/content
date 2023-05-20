@@ -3,10 +3,12 @@ title: "RTCAudioSourceStats: totalAudioEnergy property"
 short-title: totalAudioEnergy
 slug: Web/API/RTCAudioSourceStats/totalAudioEnergy
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_media-source.totalAudioEnergy
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The {{domxref("RTCAudioSourceStats")}} dictionary's **`totalAudioEnergy`** property represents the total audio energy of the media source over the lifetime of this stats object.
 
