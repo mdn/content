@@ -53,10 +53,10 @@ Taking care of the selectors and rulesets provided in the CSS resource file:
 - Next up, we'd like you to look at the four selectors, and calculate the specificity for each one. Write these down somewhere where they can be found later on, such as in a comment at the top of your CSS.
 - Now it's time to put the right selector on the right rule set! You've got four pairs of selector and ruleset to match in your CSS resources. Do this now, and add them to your CSS file. You need to:
 
-  - Give the main card container a fixed width/height, solid background color, border, and border-radius (rounded corners!), amongst other things.
+  - Give the main card container a fixed `width`/`height`, solid `background color`, `border`, and `border-radius` (rounded corners!), amongst other things.
   - Give the header a background gradient that goes from darker to lighter, plus rounded corners that fit in with the rounded corners set on the main card container.
   - Give the footer a background gradient that goes from lighter to darker, plus rounded corners that fit in with the rounded corners set on the main card container.
-  - [Float](/en-US/docs/Learn/CSS/CSS_layout/Floats) the image to the right so that it sticks to the right-hand side of the main business card contents, and give it a max-height of 100% (a clever trick that ensures that it will grow/shrink to stay the same height as its parent container, regardless of what height it becomes.)
+  - `Float` the image to the right so that it sticks to the right-hand side of the main business card contents, and give it a `max-height` of 100% (a clever trick that ensures that it will grow/shrink to stay the same height as its parent container, regardless of what height it becomes.)
 
 - Beware! There are two errors in the provided rulesets. Using any technique that you know, track these down and fix them before moving on.
 
