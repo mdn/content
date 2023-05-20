@@ -1,5 +1,6 @@
 ---
-title: MessageChannel.port2
+title: "MessageChannel: port2 property"
+short-title: port2
 slug: Web/API/MessageChannel/port2
 page-type: web-api-instance-property
 browser-compat: api.MessageChannel.port2

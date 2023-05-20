@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.complete()
+title: "PaymentResponse: complete() method"
+short-title: complete()
 slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
 browser-compat: api.PaymentResponse.complete

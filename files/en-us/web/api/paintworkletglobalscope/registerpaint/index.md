@@ -1,9 +1,10 @@
 ---
-title: PaintWorkletGlobalScope.registerPaint()
+title: "PaintWorkletGlobalScope: registerPaint() method"
+short-title: registerPaint()
 slug: Web/API/PaintWorkletGlobalScope/registerPaint
 page-type: web-api-instance-method
 status:
-  - Experimental
+  - experimental
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Worker.postMessage()
+title: "Worker: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Worker/postMessage
 page-type: web-api-instance-method
 browser-compat: api.Worker.postMessage

@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.name
+title: "IDBIndex: name property"
+short-title: name
 slug: Web/API/IDBIndex/name
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.name

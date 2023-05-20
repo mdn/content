@@ -1,5 +1,6 @@
 ---
-title: ByteLengthQueuingStrategy.size()
+title: "ByteLengthQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/ByteLengthQueuingStrategy/size
 page-type: web-api-instance-method
 browser-compat: api.ByteLengthQueuingStrategy.size
@@ -56,3 +57,7 @@ const size = queueingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.texImage3D()
+title: "WebGL2RenderingContext: texImage3D() method"
+short-title: texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texImage3D

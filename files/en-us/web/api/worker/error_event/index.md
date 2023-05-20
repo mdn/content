@@ -1,5 +1,6 @@
 ---
 title: "Worker: error event"
+short-title: error
 slug: Web/API/Worker/error_event
 page-type: web-api-event
 browser-compat: api.Worker.error_event

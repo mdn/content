@@ -1,5 +1,6 @@
 ---
 title: "Document: DOMContentLoaded event"
+short-title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
 page-type: web-api-event
 browser-compat: api.Document.DOMContentLoaded_event

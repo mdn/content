@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: error event"
+short-title: error
 slug: Web/API/XMLHttpRequestUpload/error_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.error_event
@@ -14,9 +15,9 @@ The `error` event is fired when the request encountered an error.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', (event) => { })
+addEventListener("error", (event) => {});
 
-onerror = (event) => { }
+onerror = (event) => {};
 ```
 
 ## Event type

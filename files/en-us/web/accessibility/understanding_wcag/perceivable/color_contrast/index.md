@@ -1,6 +1,7 @@
 ---
 title: Color contrast
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

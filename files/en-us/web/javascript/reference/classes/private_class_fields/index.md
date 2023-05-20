@@ -51,7 +51,7 @@ Most class features have their private counterparts:
 
 These features are collectively called _private properties_. However, [constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) cannot be private in JavaScript. To prevent classes from being constructed outside of the class, you have to [use a private flag](#simulating_private_constructors).
 
-Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation).
+Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
 
 It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
@@ -123,8 +123,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass();
-// SubClass {#subPrivateField: 23}
+new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
@@ -278,7 +277,7 @@ class C {
 }
 
 console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // Object must be an instance of class C
+console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
 ```
 
 #### Private static methods
@@ -369,7 +368,7 @@ PrivateConstructor.create(); // PrivateConstructor {}
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Statements/class", "class")}}

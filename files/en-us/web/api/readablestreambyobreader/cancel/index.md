@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamBYOBReader.cancel()
+title: "ReadableStreamBYOBReader: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.cancel
@@ -56,4 +57,5 @@ Note that this code can be seen running in the [Using readable byte streams](/en
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

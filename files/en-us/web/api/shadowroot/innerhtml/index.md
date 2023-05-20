@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.innerHTML
+title: "ShadowRoot: innerHTML property"
+short-title: innerHTML
 slug: Web/API/ShadowRoot/innerHTML
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.innerHTML

@@ -1,5 +1,6 @@
 ---
-title: VideoEncoder.configure()
+title: "VideoEncoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoEncoder/configure
 page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.configure
@@ -7,7 +8,9 @@ browser-compat: api.VideoEncoder.configure
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
+The **`configure()`** method of the {{domxref("VideoEncoder")}} interface changes the {{domxref("VideoEncoder.state", "state")}} of the encoder to "configured" and asynchronously prepares the encoder to accept {{domxref("VideoEncoder")}}s for encoding with the specified parameters. If the encoder doesn't support the specified parameters or can't be initialized for other reasons an error will be reported via the error callback provided to the {{domxref("VideoEncoder")}} constructor.
+
+If the {{domxref("VideoEncoder")}} has been previously configured, the new configuration will not be applied until all previous tasks have completed.
 
 ## Syntax
 

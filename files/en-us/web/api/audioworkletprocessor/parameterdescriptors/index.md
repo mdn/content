@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletProcessor.parameterDescriptors (static getter)
+title: "AudioWorkletProcessor: parameterDescriptors property"
+short-title: parameterDescriptors
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 page-type: web-api-instance-property
 status:

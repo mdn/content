@@ -1,5 +1,6 @@
 ---
-title: VRStageParameters.sizeX
+title: "VRStageParameters: sizeX property"
+short-title: sizeX
 slug: Web/API/VRStageParameters/sizeX
 page-type: web-api-instance-property
 status:

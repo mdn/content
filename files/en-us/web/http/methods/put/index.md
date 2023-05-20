@@ -1,6 +1,7 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
+page-type: http-method
 browser-compat: http.methods.PUT
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.crossOrigin

@@ -1,5 +1,6 @@
 ---
-title: FetchEvent.request
+title: "FetchEvent: request property"
+short-title: request
 slug: Web/API/FetchEvent/request
 page-type: web-api-instance-property
 browser-compat: api.FetchEvent.request

@@ -46,7 +46,7 @@ In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as [identifier](#ident
 
 In addition to [white space](#white_space) characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of [automatic semicolon insertion](#automatic_semicolon_insertion).
 
-Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) in regular expressions matches all white space and line terminators.
+Outside the context of lexical grammar, white space and line terminators are often conflated. For example, {{jsxref("String.prototype.trim()")}} removes all white space and line terminators from the beginning and end of a string. The `\s` [character class escape](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) in regular expressions matches all white space and line terminators.
 
 Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
 
@@ -155,7 +155,7 @@ class C {
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode codepoints are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode code points are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
 
 > **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
@@ -185,7 +185,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
+Some keywords are _reserved_, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -431,11 +431,12 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
+A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
-- U+005C \ (backslash),
-- U+000D \<CR>,
-- and U+000A \<LF>.
+- U+005C \ (backslash)
+- U+000D \<CR>
+- U+000A \<LF>
+- The same kind of quote that begins the string literal
 
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
@@ -443,6 +444,48 @@ Any code points may appear in the form of an escape sequence. String literals ev
 'foo'
 "bar"
 ```
+
+The following subsections describe various escape sequences (`\` followed by one or more characters) available in string literals. Any escape sequence not listed below becomes an "identity escape" that becomes the code point itself. For example, `\z` is the same as `z`. There's a deprecated octal escape sequence syntax described in the [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences) page. Many of these escape sequences are also valid in regular expressions — see [Character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
+
+#### Escape sequences
+
+Special characters can be encoded using escape sequences:
+
+| Escape sequence                                        | Unicode code point                           |
+| ------------------------------------------------------ | -------------------------------------------- |
+| `\0`                                                   | null character (U+0000 NULL)                 |
+| `\'`                                                   | single quote (U+0027 APOSTROPHE)             |
+| `\"`                                                   | double quote (U+0022 QUOTATION MARK)         |
+| `\\`                                                   | backslash (U+005C REVERSE SOLIDUS)           |
+| `\n`                                                   | newline (U+000A LINE FEED; LF)               |
+| `\r`                                                   | carriage return (U+000D CARRIAGE RETURN; CR) |
+| `\v`                                                   | vertical tab (U+000B LINE TABULATION)        |
+| `\t`                                                   | tab (U+0009 CHARACTER TABULATION)            |
+| `\b`                                                   | backspace (U+0008 BACKSPACE)                 |
+| `\f`                                                   | form feed (U+000C FORM FEED)                 |
+| `\` followed by a [line terminator](#line_terminators) | empty string                                 |
+
+The last escape sequence, `\` followed by a line terminator, is useful for splitting a string literal across multiple lines without changing its meaning.
+
+```js
+const longString =
+  "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+```
+
+Make sure there is no space or any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
+
+You can also use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator to append multiple strings together, like this:
+
+```js
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
+```
+
+Both of the above methods result in identical strings.
 
 #### Hexadecimal escape sequences
 
@@ -624,7 +667,7 @@ const a = 1(1).toString();
 const b = 1[1, 2, 3].forEach(console.log);
 ```
 
-This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
+This happens to be valid syntax. `1[1, 2, 3]` is a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) with a [comma](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
 
 Within classes, class fields and generator methods can be a pitfall as well.
 

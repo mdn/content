@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.width
+title: "HTMLCanvasElement: width property"
+short-title: width
 slug: Web/API/HTMLCanvasElement/width
 page-type: web-api-instance-property
 browser-compat: api.HTMLCanvasElement.width

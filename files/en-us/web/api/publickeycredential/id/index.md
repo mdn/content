@@ -1,5 +1,6 @@
 ---
-title: PublicKeyCredential.id
+title: "PublicKeyCredential: id property"
+short-title: id
 slug: Web/API/PublicKeyCredential/id
 page-type: web-api-instance-property
 browser-compat: api.PublicKeyCredential.id

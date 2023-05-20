@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.component
+title: "RTCIceCandidate: component property"
+short-title: component
 slug: Web/API/RTCIceCandidate/component
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.component

@@ -1,5 +1,6 @@
 ---
-title: Range.startContainer
+title: "Range: startContainer property"
+short-title: startContainer
 slug: Web/API/Range/startContainer
 page-type: web-api-instance-property
 browser-compat: api.Range.startContainer

@@ -4,7 +4,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 page-type: guide
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API's readable stream functionality? This article explains the basics.
 
@@ -152,19 +152,17 @@ fetch("http://example.com/somefile.txt")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
-    while (true) {
-      // read() returns a promise that resolves when a value has been received
-      reader.read().then(function pump({ done, value }) {
-        if (done) {
-          // Do something with last chunk of data then exit reader
-          return;
-        }
-        // Otherwise do something here to process current chunk
+    // read() returns a promise that resolves when a value has been received
+    reader.read().then(function pump({ done, value }) {
+      if (done) {
+        // Do something with last chunk of data then exit reader
+        return;
+      }
+      // Otherwise do something here to process current chunk
 
-        // Read some more, and call this function again
-        return reader.read().then(pump);
-      });
-    }
+      // Read some more, and call this function again
+      return reader.read().then(pump);
+    });
   })
   .catch((err) => console.error(err));
 ```

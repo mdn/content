@@ -1,5 +1,6 @@
 ---
-title: Sensor.hasReading
+title: "Sensor: hasReading property"
+short-title: hasReading
 slug: Web/API/Sensor/hasReading
 page-type: web-api-instance-property
 browser-compat: api.Sensor.hasReading

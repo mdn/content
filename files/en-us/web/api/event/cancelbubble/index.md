@@ -1,5 +1,6 @@
 ---
-title: Event.cancelBubble
+title: "Event: cancelBubble property"
+short-title: cancelBubble
 slug: Web/API/Event/cancelBubble
 page-type: web-api-instance-property
 status:

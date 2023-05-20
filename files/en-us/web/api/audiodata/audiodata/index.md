@@ -1,5 +1,6 @@
 ---
-title: AudioData()
+title: "AudioData: AudioData() constructor"
+short-title: AudioData()
 slug: Web/API/AudioData/AudioData
 page-type: web-api-constructor
 status:

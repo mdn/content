@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.exitPresent()
+title: "VRDisplay: exitPresent() method"
+short-title: exitPresent()
 slug: Web/API/VRDisplay/exitPresent
 page-type: web-api-instance-method
 status:

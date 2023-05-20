@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.twist
+title: "PointerEvent: twist property"
+short-title: twist
 slug: Web/API/PointerEvent/twist
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.twist

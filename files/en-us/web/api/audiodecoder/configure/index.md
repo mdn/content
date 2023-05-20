@@ -1,5 +1,6 @@
 ---
-title: AudioDecoder.configure()
+title: "AudioDecoder: configure() method"
+short-title: configure()
 slug: Web/API/AudioDecoder/configure
 page-type: web-api-instance-method
 status:

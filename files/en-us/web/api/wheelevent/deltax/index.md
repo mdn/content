@@ -1,5 +1,6 @@
 ---
-title: WheelEvent.deltaX
+title: "WheelEvent: deltaX property"
+short-title: deltaX
 slug: Web/API/WheelEvent/deltaX
 page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaX

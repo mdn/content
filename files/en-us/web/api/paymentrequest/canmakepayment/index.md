@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.canMakePayment()
+title: "PaymentRequest: canMakePayment() method"
+short-title: canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
 page-type: web-api-instance-method
 browser-compat: api.PaymentRequest.canMakePayment

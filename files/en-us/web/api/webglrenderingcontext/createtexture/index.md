@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.createTexture()
+title: "WebGLRenderingContext: createTexture() method"
+short-title: createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createTexture

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.tcpType
+title: "RTCIceCandidate: tcpType property"
+short-title: tcpType
 slug: Web/API/RTCIceCandidate/tcpType
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.tcpType

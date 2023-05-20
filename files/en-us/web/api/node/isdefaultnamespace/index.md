@@ -1,5 +1,6 @@
 ---
-title: Node.isDefaultNamespace()
+title: "Node: isDefaultNamespace() method"
+short-title: isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 page-type: web-api-instance-method
 browser-compat: api.Node.isDefaultNamespace

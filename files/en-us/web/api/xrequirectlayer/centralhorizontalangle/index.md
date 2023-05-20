@@ -1,5 +1,6 @@
 ---
-title: XREquirectLayer.centralHorizontalAngle
+title: "XREquirectLayer: centralHorizontalAngle property"
+short-title: centralHorizontalAngle
 slug: Web/API/XREquirectLayer/centralHorizontalAngle
 page-type: web-api-instance-property
 status:
@@ -29,7 +30,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
   lowerVerticalAngle: -Math.PI / 2.0,
-  radius: 0
+  radius: 0,
 });
 
 equirectLayer.centralHorizontalAngle; // 6.283185307179586

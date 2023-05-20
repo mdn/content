@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.entries()
+title: "CustomStateSet: entries() method"
+short-title: entries()
 slug: Web/API/CustomStateSet/entries
 page-type: web-api-instance-method
 status:

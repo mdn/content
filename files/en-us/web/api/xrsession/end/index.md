@@ -1,5 +1,6 @@
 ---
-title: XRSession.end()
+title: "XRSession: end() method"
+short-title: end()
 slug: Web/API/XRSession/end
 page-type: web-api-instance-method
 status:

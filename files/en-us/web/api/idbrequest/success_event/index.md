@@ -1,5 +1,6 @@
 ---
 title: "IDBRequest: success event"
+short-title: success
 slug: Web/API/IDBRequest/success_event
 page-type: web-api-event
 browser-compat: api.IDBRequest.success_event

@@ -1,5 +1,6 @@
 ---
-title: NodeList.item()
+title: "NodeList: item() method"
+short-title: item()
 slug: Web/API/NodeList/item
 page-type: web-api-instance-method
 browser-compat: api.NodeList.item

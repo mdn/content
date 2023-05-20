@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.write()
+title: "WritableStreamDefaultWriter: write() method"
+short-title: write()
 slug: Web/API/WritableStreamDefaultWriter/write
 page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.write

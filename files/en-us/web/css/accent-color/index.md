@@ -27,8 +27,8 @@ accent-color: auto;
 /* <color> values */
 accent-color: darkred;
 accent-color: #5729e9;
-accent-color: rgb(0, 200, 0);
-accent-color: hsl(228, 4%, 24%);
+accent-color: rgb(0 200 0);
+accent-color: hsl(228 4% 24%);
 
 /* Global values */
 accent-color: inherit;

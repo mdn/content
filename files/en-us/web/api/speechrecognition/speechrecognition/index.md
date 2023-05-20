@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition()
+title: "SpeechRecognition: SpeechRecognition() constructor"
+short-title: SpeechRecognition()
 slug: Web/API/SpeechRecognition/SpeechRecognition
 page-type: web-api-constructor
 browser-compat: api.SpeechRecognition.SpeechRecognition

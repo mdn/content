@@ -1,5 +1,6 @@
 ---
-title: USBConfiguration()
+title: "USBConfiguration: USBConfiguration() constructor"
+short-title: USBConfiguration()
 slug: Web/API/USBConfiguration/USBConfiguration
 page-type: web-api-constructor
 status:

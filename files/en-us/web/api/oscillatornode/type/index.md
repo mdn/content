@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode.type
+title: "OscillatorNode: type property"
+short-title: type
 slug: Web/API/OscillatorNode/type
 page-type: web-api-instance-property
 browser-compat: api.OscillatorNode.type

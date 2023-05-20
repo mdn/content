@@ -1,6 +1,7 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
+page-type: http-header
 browser-compat: http.headers.Transfer-Encoding
 ---
 

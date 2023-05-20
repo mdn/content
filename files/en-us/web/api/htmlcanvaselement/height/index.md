@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.height
+title: "HTMLCanvasElement: height property"
+short-title: height
 slug: Web/API/HTMLCanvasElement/height
 page-type: web-api-instance-property
 browser-compat: api.HTMLCanvasElement.height

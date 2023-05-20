@@ -1,5 +1,6 @@
 ---
-title: TextTrackCue.endTime
+title: "TextTrackCue: endTime property"
+short-title: endTime
 slug: Web/API/TextTrackCue/endTime
 page-type: web-api-instance-property
 browser-compat: api.TextTrackCue.endTime

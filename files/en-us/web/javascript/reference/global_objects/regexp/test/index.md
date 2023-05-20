@@ -129,6 +129,6 @@ regex.test("foobarfoo"); // false
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the
   [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

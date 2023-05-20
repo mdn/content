@@ -1,5 +1,6 @@
 ---
-title: Element.hasAttributeNS()
+title: "Element: hasAttributeNS() method"
+short-title: hasAttributeNS()
 slug: Web/API/Element/hasAttributeNS
 page-type: web-api-instance-method
 browser-compat: api.Element.hasAttributeNS

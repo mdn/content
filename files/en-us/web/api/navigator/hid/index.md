@@ -1,5 +1,6 @@
 ---
-title: Navigator.hid
+title: "Navigator: hid property"
+short-title: hid
 slug: Web/API/Navigator/hid
 page-type: web-api-instance-property
 status:

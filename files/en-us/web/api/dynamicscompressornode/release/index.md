@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.release
+title: "DynamicsCompressorNode: release property"
+short-title: release
 slug: Web/API/DynamicsCompressorNode/release
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.release

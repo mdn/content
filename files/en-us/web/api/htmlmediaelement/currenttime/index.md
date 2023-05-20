@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.currentTime
+title: "HTMLMediaElement: currentTime property"
+short-title: currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentTime

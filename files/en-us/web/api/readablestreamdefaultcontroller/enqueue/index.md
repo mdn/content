@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.enqueue
@@ -84,3 +85,8 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

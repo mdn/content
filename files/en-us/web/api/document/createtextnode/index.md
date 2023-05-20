@@ -1,5 +1,6 @@
 ---
-title: Document.createTextNode()
+title: "Document: createTextNode() method"
+short-title: createTextNode()
 slug: Web/API/Document/createTextNode
 page-type: web-api-instance-method
 browser-compat: api.Document.createTextNode

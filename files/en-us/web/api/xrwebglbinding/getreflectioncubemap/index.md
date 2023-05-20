@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.getReflectionCubeMap()
+title: "XRWebGLBinding: getReflectionCubeMap() method"
+short-title: getReflectionCubeMap()
 slug: Web/API/XRWebGLBinding/getReflectionCubeMap
 page-type: web-api-instance-method
 status:
@@ -36,10 +37,10 @@ If the `rgba16f` format is used, enable the {{domxref("OES_texture_half_float")}
 
 ```js
 const glBinding = new XRWebGLBinding(xrSession, gl);
-gl.getExtension('OES_texture_half_float'); // if rgba16f is the preferredReflectionFormat
+gl.getExtension("OES_texture_half_float"); // if rgba16f is the preferredReflectionFormat
 
 xrSession.requestLightProbe().then((lightProbe) => {
-  lightProbe.addEventListener('reflectionchange', () => {
+  lightProbe.addEventListener("reflectionchange", () => {
     glBinding.getReflectionCubeMap(lightProbe);
   });
 });

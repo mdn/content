@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.fixedFoveation
+title: "XRWebGLLayer: fixedFoveation property"
+short-title: fixedFoveation
 slug: Web/API/XRWebGLLayer/fixedFoveation
 page-type: web-api-instance-property
 status:

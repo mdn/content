@@ -1,5 +1,6 @@
 ---
-title: Geolocation.watchPosition()
+title: "Geolocation: watchPosition() method"
+short-title: watchPosition()
 slug: Web/API/Geolocation/watchPosition
 page-type: web-api-instance-method
 browser-compat: api.Geolocation.watchPosition

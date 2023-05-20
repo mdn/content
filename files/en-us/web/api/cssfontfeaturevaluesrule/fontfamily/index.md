@@ -1,5 +1,6 @@
 ---
-title: CSSFontFeatureValuesRule.fontFamily
+title: "CSSFontFeatureValuesRule: fontFamily property"
+short-title: fontFamily
 slug: Web/API/CSSFontFeatureValuesRule/fontFamily
 page-type: web-api-instance-property
 browser-compat: api.CSSFontFeatureValuesRule.fontFamily

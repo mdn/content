@@ -15,7 +15,7 @@ In Firefox, this limit is evaluated separately per ruleset.
 
 In Safari, there is no separate limit on the number of `regexFilter` rules.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: IdleDeadline.didTimeout
+title: "IdleDeadline: didTimeout property"
+short-title: didTimeout
 slug: Web/API/IdleDeadline/didTimeout
 page-type: web-api-instance-property
 browser-compat: api.IdleDeadline.didTimeout

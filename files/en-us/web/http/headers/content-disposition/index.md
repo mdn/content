@@ -1,6 +1,7 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
+page-type: http-header
 browser-compat: http.headers.Content-Disposition
 ---
 

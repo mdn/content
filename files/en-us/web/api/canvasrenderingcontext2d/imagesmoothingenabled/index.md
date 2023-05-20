@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
+title: "CanvasRenderingContext2D: imageSmoothingEnabled property"
+short-title: imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled

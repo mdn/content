@@ -1,6 +1,7 @@
 ---
 title: mathvariant
 slug: Web/MathML/Global_attributes/mathvariant
+page-type: mathml-attribute
 browser-compat: mathml.global_attributes.mathvariant
 ---
 

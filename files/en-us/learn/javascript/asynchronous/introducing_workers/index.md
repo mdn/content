@@ -49,12 +49,11 @@ Let's first take another look at the JavaScript in our previous example:
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -72,14 +71,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output"
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -117,7 +119,7 @@ The "index.html" file and the "style.css" files are already complete:
 
     <textarea id="user-input" rows="5" cols="62">
 Try typing in here immediately after pressing "Generate primes"
-</textarea>
+    </textarea>
 
     <div id="output"></div>
   </body>
@@ -139,15 +141,15 @@ Now copy the following code into "main.js":
 
 ```js
 // Create a new worker, giving it the code in "generate.js"
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
+    command: "generate",
     quota,
   });
 });
@@ -155,12 +157,15 @@ document.querySelector('#generate').addEventListener('click', () => {
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output"
+  ).textContent = `Finished generating ${message.data} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -182,19 +187,18 @@ Now for the worker code. Copy the following code into "generate.js":
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
 addEventListener("message", (message) => {
-  if (message.data.command === 'generate') {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }

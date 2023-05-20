@@ -1,5 +1,6 @@
 ---
-title: fetch()
+title: fetch() global function
+short-title: fetch()
 slug: Web/API/fetch
 page-type: web-api-global-function
 browser-compat: api.fetch

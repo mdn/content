@@ -1,5 +1,6 @@
 ---
-title: Document.createProcessingInstruction()
+title: "Document: createProcessingInstruction() method"
+short-title: createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
 browser-compat: api.Document.createProcessingInstruction

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@matchAll
 
 {{JSRef}}
 
-The **`[@@matchAll]()`** method of a regular expression specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
+The **`[@@matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
@@ -55,7 +55,7 @@ console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
 // [ [ "a" ], [ "b" ] ]
 ```
 
-If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode codepoint; otherwise, it advances by one UTF-16 codepoint.
+If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode code point; otherwise, it advances by one UTF-16 code point.
 
 ```js
 console.log(Array.from("😄".matchAll(/(?:)/g)));
@@ -86,7 +86,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method to modify the default behavior.
 
-For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators):
+For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators):
 
 ```js
 class MyRegExp extends RegExp {
@@ -119,4 +119,8 @@ console.log(result[1]);
 
 - [Polyfill of `RegExp.prototype[@@matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.matchAll()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("Symbol.matchAll")}}

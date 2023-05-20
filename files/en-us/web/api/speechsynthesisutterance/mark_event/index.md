@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: mark event"
+short-title: mark
 slug: Web/API/SpeechSynthesisUtterance/mark_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.mark_event

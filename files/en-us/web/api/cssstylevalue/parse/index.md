@@ -1,5 +1,6 @@
 ---
-title: CSSStyleValue.parse()
+title: "CSSStyleValue: parse() method"
+short-title: parse()
 slug: Web/API/CSSStyleValue/parse
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleValue.parse

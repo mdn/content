@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.height
+title: "HTMLObjectElement: height property"
+short-title: height
 slug: Web/API/HTMLObjectElement/height
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.height

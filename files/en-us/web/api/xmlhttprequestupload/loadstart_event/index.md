@@ -1,5 +1,6 @@
 ---
 title: "XMLHttpRequestUpload: loadstart event"
+short-title: loadstart
 slug: Web/API/XMLHttpRequestUpload/loadstart_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.loadstart_event
@@ -14,9 +15,9 @@ The **`loadstart`** event is fired when a request has started to load data.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadstart', (event) => { })
+addEventListener("loadstart", (event) => {});
 
-onloadstart = (event) => { }
+onloadstart = (event) => {};
 ```
 
 ## Event type

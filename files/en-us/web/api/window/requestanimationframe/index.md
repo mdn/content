@@ -1,5 +1,6 @@
 ---
-title: Window.requestAnimationFrame()
+title: "Window: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
@@ -49,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 

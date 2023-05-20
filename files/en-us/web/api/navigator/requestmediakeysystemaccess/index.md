@@ -1,5 +1,6 @@
 ---
-title: Navigator.requestMediaKeySystemAccess()
+title: "Navigator: requestMediaKeySystemAccess() method"
+short-title: requestMediaKeySystemAccess()
 slug: Web/API/Navigator/requestMediaKeySystemAccess
 page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMediaKeySystemAccess

@@ -1,6 +1,7 @@
 ---
 title: Viewport-Width
 slug: Web/HTTP/Headers/Viewport-Width
+page-type: http-header
 status:
   - deprecated
   - non-standard

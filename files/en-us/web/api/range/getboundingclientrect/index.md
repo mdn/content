@@ -1,5 +1,6 @@
 ---
-title: Range.getBoundingClientRect()
+title: "Range: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
 page-type: web-api-instance-method
 browser-compat: api.Range.getBoundingClientRect
@@ -27,7 +28,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("DOMRect")}} object that encloses the union of the bounding rectangles for all elements in the range.
 
 ## Examples
 

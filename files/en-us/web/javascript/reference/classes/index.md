@@ -9,7 +9,7 @@ browser-compat: javascript.classes
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
-For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes) guide.
+For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide.
 
 ## Description
 
@@ -43,7 +43,7 @@ const Rectangle = class Rectangle2 {
 };
 ```
 
-Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting).
+Like function expressions, class expressions may be anonymous, or have a name that's different from the variable that it's assigned to. However, unlike function declarations, class declarations have the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restrictions as `let` or `const` and behave as if they are [not hoisted](/en-US/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting).
 
 ### Class body
 
@@ -262,6 +262,23 @@ l.speak();
 // Fuzzy roars.
 ```
 
+### Evaluation order
+
+When a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class) is evaluated, its various components are evaluated in the following order:
+
+1. The {{jsxref("Classes/extends", "extends")}} clause, if present, is first evaluated. It must evaluate to a valid constructor function or `null`, or a {{jsxref("TypeError")}} is thrown.
+2. The {{jsxref("Classes/constructor", "constructor")}} method is extracted, substituted with a default implementation if `constructor` is not present. However, because the `constructor` definition is only a method definition, this step is not observable.
+3. The class elements' property keys are evaluated in the order of declaration. If the property key is computed, the computed expression is evaluated, with the `this` value is set to the `this` value surrounding the class (not the class itself). None of the property values are evaluated yet.
+4. Methods and accessors are installed in the order of declaration. Instance methods and accessors are installed on the `prototype` property of the current class, and static methods and accessors are installed on the class itself. Private instance methods and accessors are saved to be installed on the instance directly later. This step is not observable.
+5. The class is now initialized with the prototype specified by `extends` and implementation specified by `constructor`. For all steps above, if an evaluated expression tries to access the name of the class, a {{jsxref("ReferenceError")}} is thrown because the class is not initialized yet.
+6. The class elements' values are evaluated in the order of declaration:
+   - For each [instance field](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) (public or private), its initializer expression is saved. The initializer is evaluated during instance creation, at the start of the constructor (for base classes) or immediately before the `super()` call returns (for derived classes).
+   - For each [static field](/en-US/docs/Web/JavaScript/Reference/Classes/static) (public or private), its initializer is evaluated with `this` set to the class itself, and the property is created on the class.
+   - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated with `this` set to the class itself.
+7. The class is now fully initialized and can be used as a constructor function.
+
+For how instances are created, see the {{jsxref("Classes/constructor", "constructor")}} reference.
+
 ## Examples
 
 ### Binding this with instance and static methods
@@ -319,7 +336,7 @@ eat(); // global object (in non-strict mode)
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
 - [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)
 - [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)

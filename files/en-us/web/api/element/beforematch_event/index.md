@@ -1,5 +1,6 @@
 ---
 title: "Element: beforematch event"
+short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
 status:

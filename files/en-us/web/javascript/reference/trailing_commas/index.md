@@ -208,7 +208,7 @@ export { A as B, C as D, E as F, };
 
 ### Quantifier prefix
 
-> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
+> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
 
 ```js
 /x{2}/; // Exactly 2 occurrences of "x"; equivalent to /xx/

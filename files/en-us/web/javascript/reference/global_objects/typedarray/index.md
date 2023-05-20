@@ -66,7 +66,7 @@ const float32 = new Float32Array(buffer, 0, 2);
 
 console.log(float32.byteLength); // 8
 console.log(float32.length); // 2
-console.log(float32[0]) // 0, the initial value
+console.log(float32[0]); // 0, the initial value
 
 buffer.resize(12);
 
@@ -166,7 +166,7 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 
 All `TypedArray` subclasses also have the following static properties:
@@ -259,13 +259,19 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}
   - : Returns a new `TypedArray` from the given start and end element index.
-- {{jsxref("TypedArray.prototype.values()")}}
-  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.prototype.toReversed()")}}
+  - : Returns a new array with the elements in reversed order, without modifying the original array.
+- {{jsxref("TypedArray.prototype.toSorted()")}}
+  - : Returns a new array with the elements sorted in ascending order, without modifying the original array.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.prototype.with()")}}
+  - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
@@ -355,7 +361,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## See also
 
 - [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/en-US/docs/Web/API/TextDecoder) — Helper that decode

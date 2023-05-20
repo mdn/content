@@ -1,9 +1,10 @@
 ---
-title: PaintWorkletGlobalScope.devicePixelRatio
+title: "PaintWorkletGlobalScope: devicePixelRatio property"
+short-title: devicePixelRatio
 slug: Web/API/PaintWorkletGlobalScope/devicePixelRatio
 page-type: web-api-instance-property
 status:
-  - Experimental
+  - experimental
 browser-compat: api.PaintWorkletGlobalScope.devicePixelRatio
 ---
 

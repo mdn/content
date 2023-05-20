@@ -1,5 +1,6 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() constructor"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream
@@ -147,3 +148,10 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableByteStreamController")}}
+- {{domxref("ReadableStreamDefaultController")}}
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

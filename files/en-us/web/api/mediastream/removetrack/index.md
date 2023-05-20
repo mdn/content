@@ -1,5 +1,6 @@
 ---
-title: MediaStream.removeTrack()
+title: "MediaStream: removeTrack() method"
+short-title: removeTrack()
 slug: Web/API/MediaStream/removeTrack
 page-type: web-api-instance-method
 browser-compat: api.MediaStream.removeTrack

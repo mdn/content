@@ -1,5 +1,6 @@
 ---
-title: AudioContext.getOutputTimestamp()
+title: "AudioContext: getOutputTimestamp() method"
+short-title: getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.getOutputTimestamp

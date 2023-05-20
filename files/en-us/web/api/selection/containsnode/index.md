@@ -1,5 +1,6 @@
 ---
-title: Selection.containsNode()
+title: "Selection: containsNode() method"
+short-title: containsNode()
 slug: Web/API/Selection/containsNode
 page-type: web-api-instance-method
 browser-compat: api.Selection.containsNode
@@ -30,7 +31,7 @@ containsNode(node, partialContainment)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns `true` if the given node is part of the selection, and `false` otherwise.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.stepDown()
+title: "HTMLInputElement: stepDown() method"
+short-title: stepDown()
 slug: Web/API/HTMLInputElement/stepDown
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.stepDown

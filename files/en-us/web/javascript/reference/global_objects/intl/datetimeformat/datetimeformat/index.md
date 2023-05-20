@@ -29,7 +29,7 @@ Intl.DateTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation). The following Unicode extension keys are allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). The following Unicode extension keys are allowed:
 
     - `nu`
       - : Numbering system. Possible values include: `"arab"`,
@@ -224,7 +224,6 @@ Intl.DateTimeFormat(locales, options)
       - : The number of digits used to represent fractions of a second (any
         additional digits are truncated). Possible values are:
 
-        - `0` (Fractional part dropped.)
         - `1` (Fractional part represented as 1 digit. For
           example, 736 is formatted as `7`.)
         - `2` (Fractional part represented as 2 digits. For

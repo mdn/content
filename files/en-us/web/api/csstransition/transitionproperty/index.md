@@ -1,5 +1,6 @@
 ---
-title: CSSTransition.transitionProperty
+title: "CSSTransition: transitionProperty property"
+short-title: transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
 page-type: web-api-instance-property
 browser-compat: api.CSSTransition.transitionProperty

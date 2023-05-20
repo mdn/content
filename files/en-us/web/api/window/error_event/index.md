@@ -1,5 +1,6 @@
 ---
 title: "Window: error event"
+short-title: error
 slug: Web/API/Window/error_event
 page-type: web-api-event
 browser-compat: api.Window.error_event

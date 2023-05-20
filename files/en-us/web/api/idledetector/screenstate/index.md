@@ -1,5 +1,6 @@
 ---
-title: IdleDetector.screenState
+title: "IdleDetector: screenState property"
+short-title: screenState
 slug: Web/API/IdleDetector/screenState
 page-type: web-api-instance-property
 status:

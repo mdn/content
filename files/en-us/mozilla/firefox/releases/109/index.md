@@ -41,6 +41,8 @@ No notable changes.
 
 ### APIs
 
+#### DOM
+
 - The `scrollend` events are now supported, which indicate that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
   For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ([Firefox bug 1797013](https://bugzil.la/1797013), [Firefox bug 1803435](https://bugzil.la/1803435)).
 

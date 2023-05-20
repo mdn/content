@@ -1,5 +1,6 @@
 ---
-title: 'XMLHttpRequestUpload: timeout event'
+title: "XMLHttpRequestUpload: timeout event"
+short-title: timeout
 slug: Web/API/XMLHttpRequestUpload/timeout_event
 page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.timeout_event
@@ -14,9 +15,9 @@ The **`timeout`** event is fired when progression is terminated due to preset ti
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeout', (event) => { })
+addEventListener("timeout", (event) => {});
 
-ontimeout = (event) => { }
+ontimeout = (event) => {};
 ```
 
 ## Event type

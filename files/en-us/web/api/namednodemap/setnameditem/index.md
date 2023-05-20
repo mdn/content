@@ -1,5 +1,6 @@
 ---
-title: NamedNodeMap.setNamedItem()
+title: "NamedNodeMap: setNamedItem() method"
+short-title: setNamedItem()
 slug: Web/API/NamedNodeMap/setNamedItem
 page-type: web-api-instance-method
 browser-compat: api.NamedNodeMap.setNamedItem

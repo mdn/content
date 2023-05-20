@@ -13,14 +13,14 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint8Array/Uint8Array", "Uint8Array()")}}
+- {{jsxref("Uint8Array/Uint8Array", "Uint8Array()")}}
   - : Creates a new `Uint8Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Uint8Array`.
 
 ## Static methods
@@ -33,7 +33,7 @@ _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
 These properties are defined on `Uint8Array.prototype` and shared by all `Uint8Array` instances.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8Array`.
 - {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Uint8Array` instances, the initial value is the {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} constructor.
@@ -87,6 +87,6 @@ console.log(uint8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

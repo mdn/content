@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.relList
+title: "HTMLAreaElement: relList property"
+short-title: relList
 slug: Web/API/HTMLAreaElement/relList
 page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.relList
