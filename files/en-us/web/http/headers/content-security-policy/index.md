@@ -71,8 +71,7 @@ where `<policy-directive>` consists of:
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     > **Note:** Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
@@ -122,8 +121,7 @@ for example.
     given context.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
-    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.
+    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can initiate navigation by any means,
     including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),

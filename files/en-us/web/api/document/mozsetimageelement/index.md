@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 This example changes the background of a {{ HTMLElement("div") }} block each time the
 block is clicked by the user.
 
-[View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
+[View this example live](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
 ```html
 <style>
