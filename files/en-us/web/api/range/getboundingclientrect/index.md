@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("DOMRect")}} object that encloses the union of the bounding rectangles for all elements in the range.
 
 ## Examples
 

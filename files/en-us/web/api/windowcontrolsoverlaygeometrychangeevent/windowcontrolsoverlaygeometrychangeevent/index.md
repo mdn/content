@@ -1,15 +1,11 @@
 ---
-title: >-
-  WindowControlsOverlayGeometryChangeEvent:
-  WindowControlsOverlayGeometryChangeEvent() constructor
+title: "WindowControlsOverlayGeometryChangeEvent: WindowControlsOverlayGeometryChangeEvent() constructor"
 short-title: WindowControlsOverlayGeometryChangeEvent()
-slug: >-
-  Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
+slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-constructor
 status:
   - experimental
-browser-compat: >-
-  api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
+browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
 
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}

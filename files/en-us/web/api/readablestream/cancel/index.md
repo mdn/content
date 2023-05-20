@@ -123,3 +123,8 @@ fetch(url)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

@@ -7,8 +7,7 @@ browser-compat:
   - html.elements.link.crossorigin
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
-spec-urls: >-
-  https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
+spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 ---
 
 {{HTMLSidebar}}
