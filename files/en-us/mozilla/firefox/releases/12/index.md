@@ -1,11 +1,6 @@
 ---
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-  - Gecko 12
-  - Web Development
 ---
 
 {{FirefoxSidebar}}
@@ -52,8 +47,8 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### SVG
 
-- Firefox now implements the `SVGTests` DOM API, see {{bug("607854")}}
-- The {{domxref("SVGStringList")}} DOM interface support the non-standard `length` property see {{bug("711958")}}
+- Firefox now implements the `SVGTests` DOM API, see [Firefox bug 607854](https://bugzil.la/607854)
+- The {{domxref("SVGStringList")}} DOM interface support the non-standard `length` property see [Firefox bug 711958](https://bugzil.la/711958)
 
 ### MathML
 

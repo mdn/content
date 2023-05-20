@@ -1,45 +1,25 @@
 ---
-title: Window.toolbar
+title: "Window: toolbar property"
+short-title: toolbar
 slug: Web/API/Window/toolbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.toolbar
 ---
 
 {{APIRef}}
 
-The **`Window.toolbar`** property returns the toolbar object,
-which can be used to check the browser toolbar visibility.
+Returns the `toolbar` object.
+
+This is one of a group of `Window` properties that contain a boolean `visible` property, that used to represent whether or not a particular part of a web browser's user interface was visible.
+
+For privacy and interoperability reasons, the value of the `visible` property is now `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Value
 
-A `toolbar` object.
+An object containing a single property:
 
-## Examples
-
-The following complete HTML example demonstrates how the `visible` property
-of the `toolbar` object is used.
-
-```html
-<html lang="en">
-  <head>
-    <title>Various DOM Tests</title>
-    <script>
-      const visible = window.toolbar.visible;
-    </script>
-  </head>
-  <body>
-    <p>Various DOM Tests</p>
-  </body>
-</html>
-```
+- `visible` {{ReadOnlyInline}}
+  - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications
 
@@ -48,3 +28,11 @@ of the `toolbar` object is used.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.personalbar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}

@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-tags:
-  - Array
-  - Array method
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reduce
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
 ---
 
@@ -32,37 +23,14 @@ The reducer walks through the array element-by-element, at each step adding the 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-reduce((accumulator, currentValue) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex) => { /* … */ })
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })
-
-reduce((accumulator, currentValue) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex) => { /* … */ }, initialValue)
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
-
-// Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// Inline callback function
-reduce(function (accumulator, currentValue) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ })
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ })
-
-reduce(function (accumulator, currentValue) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
     - `accumulator`
       - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`
@@ -71,11 +39,10 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
       - : The index position of `currentValue` in the array. On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`
       - : The array `reduce()` was called upon.
-
 - `initialValue` {{optional_inline}}
   - : A value to which `accumulator` is initialized the first time the callback is called.
-    If `initialValue` is specified, that also causes `currentValue` to be initialized to the first value in the array.
-    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `currentValue` is initialized to the second value in the array.
+    If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `callbackFn` starts executing with the second value in the array as `currentValue`. In this case, if the array is empty (so that there's no first value to return as `accumulator`), an error is thrown.
 
 ### Return value
 
@@ -84,8 +51,7 @@ The value that results from running the "reducer" callback function to completio
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
-  - : The array contains no elements and `initialValue` is not provided.
+  - : Thrown if the array contains no elements and `initialValue` is not provided.
 
 ## Description
 
@@ -158,12 +124,12 @@ array.reduce(reducer);
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
 
-|             | `accumulator`   | `currentValue` | `index` | Return value |
-| ----------- | --------------- | -------------- | ------- | ------------ |
-| First call  | `15`            | `16`           | `1`     | `31`         |
-| Second call | `31`            | `17`           | `2`     | `48`         |
-| Third call  | `48`            | `18`           | `3`     | `66`         |
-| Fourth call | `66`            | `19`           | `4`     | `85`         |
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `15`          | `16`           | `1`     | `31`         |
+| Second call | `31`          | `17`           | `2`     | `48`         |
+| Third call  | `48`          | `18`           | `3`     | `66`         |
+| Fourth call | `66`          | `19`           | `4`     | `85`         |
 
 The `array` parameter never changes through the process — it's always `[15, 16, 17, 18, 19]`. The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
@@ -180,13 +146,13 @@ Here we reduce the same array using the same algorithm, but with an `initialValu
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
 
-|             | `accumulator`   | `currentValue` | `index` | Return value |
-| ----------- | --------------- | -------------- | ------- | ------------ |
-| First call  | `10`            | `15`           | `0`     | `25`         |
-| Second call | `25`            | `16`           | `1`     | `41`         |
-| Third call  | `41`            | `17`           | `2`     | `58`         |
-| Fourth call | `58`            | `18`           | `3`     | `76`         |
-| Fifth call  | `76`            | `19`           | `4`     | `95`         |
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `15`           | `0`     | `25`         |
+| Second call | `25`          | `16`           | `1`     | `41`         |
+| Third call  | `41`          | `17`           | `2`     | `58`         |
+| Fourth call | `58`          | `18`           | `3`     | `76`         |
+| Fifth call  | `76`          | `19`           | `4`     | `95`         |
 
 The value returned by `reduce()` in this case would be `95`.
 
@@ -212,10 +178,7 @@ const flattened = [
   [0, 1],
   [2, 3],
   [4, 5],
-].reduce(
-  (accumulator, currentValue) => accumulator.concat(currentValue),
-  [],
-);
+].reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 // flattened is [0, 1, 2, 3, 4, 5]
 ```
 
@@ -307,15 +270,12 @@ console.log(allbooks);
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
-const myArrayWithNoDuplicates = myArray.reduce(
-  (accumulator, currentValue) => {
-    if (!accumulator.includes(currentValue)) {
-      return [...accumulator, currentValue];
-    }
-    return accumulator;
-  },
-  [],
-);
+const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
+  if (!accumulator.includes(currentValue)) {
+    return [...accumulator, currentValue];
+  }
+  return accumulator;
+}, []);
 
 console.log(myArrayWithNoDuplicates);
 ```
@@ -324,7 +284,7 @@ console.log(myArrayWithNoDuplicates);
 
 Using {{jsxref("Array/filter", "filter()")}} then {{jsxref("Array/map", "map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array/reduce", "reduce()")}}, thereby being more efficient. (If you like `for` loops, you
+`reduce()`, thereby being more efficient. (If you like `for` loops, you
 can filter and map while traversing once with {{jsxref("Array/forEach", "forEach()")}}.)
 
 ```js
@@ -349,8 +309,8 @@ console.log(doubledPositiveNumbers); // [12, 4]
  *
  * @param {array} arr - A list of promise handlers, each one receiving the
  * resolved result of the previous handler and returning another promise.
- * @param {*} input The initial value to start the promise chain
- * @return {Object} Final promise with a chain of handlers attached
+ * @param {*} input - The initial value to start the promise chain
+ * @return {Object} - Final promise with a chain of handlers attached
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
@@ -451,4 +411,12 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxref("TypedArray.prototype.reduce()")}}

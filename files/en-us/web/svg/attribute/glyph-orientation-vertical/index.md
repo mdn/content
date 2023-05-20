@@ -1,10 +1,9 @@
 ---
 title: glyph-orientation-vertical
 slug: Web/SVG/Attribute/glyph-orientation-vertical
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.glyph-orientation-vertical
 ---
 

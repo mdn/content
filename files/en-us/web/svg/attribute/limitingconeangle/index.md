@@ -1,10 +1,7 @@
 ---
 title: limitingConeAngle
 slug: Web/SVG/Attribute/limitingConeAngle
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.limitingConeAngle
 ---
 

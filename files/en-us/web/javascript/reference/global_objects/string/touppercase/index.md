@@ -1,12 +1,7 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toUpperCase
 ---
 
@@ -26,12 +21,6 @@ toUpperCase()
 ### Return value
 
 A new string representing the calling string converted to upper case.
-
-### Exceptions
-
-- {{jsxref("TypeError")}}
-  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
-    `String.prototype.toUpperCase.call(undefined)`.
 
 ## Description
 

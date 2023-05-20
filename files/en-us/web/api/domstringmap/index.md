@@ -2,14 +2,6 @@
 title: DOMStringMap
 slug: Web/API/DOMStringMap
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMarkupWork
-  - NeedsNewLayout
-  - NeedsUpdate
-  - Reference
 browser-compat: api.DOMStringMap
 ---
 
@@ -28,4 +20,4 @@ The **`DOMStringMap`** interface is used for the {{domxref("HTMLElement.dataset"
 ## See also
 
 - {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [Global attributes - `data-*`](/en-US/docs/Web/HTML/Global_attributes#data-)
+- [Global attributes - `data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)

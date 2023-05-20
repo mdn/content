@@ -1,18 +1,12 @@
 ---
-title: Response.status
+title: "Response: status property"
+short-title: status
 slug: Web/API/Response/status
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - status
 browser-compat: api.Response.status
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Status) of the response.
 
@@ -20,7 +14,7 @@ For example, `200` for success, `404` if the resource could not be found.
 
 ## Value
 
-A unsigned short number.
+An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Status).
 
 ## Examples
@@ -32,9 +26,9 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.status); // returns 200

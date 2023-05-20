@@ -1,15 +1,8 @@
 ---
-title: AudioBufferSourceNode.detune
+title: "AudioBufferSourceNode: detune property"
+short-title: detune
 slug: Web/API/AudioBufferSourceNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.AudioBufferSourceNode.detune
 ---
 

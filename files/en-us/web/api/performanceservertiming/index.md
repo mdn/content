@@ -2,11 +2,6 @@
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ServerTiming
 browser-compat: api.PerformanceServerTiming
 ---
 
@@ -35,34 +30,66 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a Node.js server like this:
 
 ```js
-const http = require('http');
+const http = require("http");
 
 function requestHandler(request, response) {
   const headers = {
-    'Server-Timing': `
+    "Server-Timing": `
       cache;desc="Cache Read";dur=23.2,
       db;dur=53,
       app;dur=47.2
-    `.replace(/\n/g, '')
+    `.replace(/\n/g, ""),
   };
   response.writeHead(200, headers);
-  response.write('');
+  response.write("");
   return setTimeout(() => {
-   response.end();
- }, 1000)
-};
+    response.end();
+  }, 1000);
+}
 
-http.createServer(requestHandler).listen(3000).on('error', console.error);
+http.createServer(requestHandler).listen(3000).on("error", console.error);
 ```
 
-The `PerformanceServerTiming` entries are now observable from JavaScript via the {{domxref("PerformanceResourceTiming.serverTiming")}} property:
+The `PerformanceServerTiming` entries are now observable from JavaScript via the {{domxref("PerformanceResourceTiming.serverTiming")}} property and live on `navigation` and `resource` entries.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` and `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-let entries = performance.getEntriesByType('resource');
-console.log(entries[0].serverTiming);
-// 0: PerformanceServerTiming {name: "cache", duration: 23.2, description: "Cache Read"}
-// 1: PerformanceServerTiming {name: "db", duration: 53, description: ""}
-// 2: PerformanceServerTiming {name: "app", duration: 47.2, description: ""}
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    entry.serverTiming.forEach((serverEntry) => {
+      console.log(
+        `${serverEntry.name} (${serverEntry.description}) duration: ${serverEntry.duration}`
+      );
+      // Logs "cache (Cache Read) duration: 23.2"
+      // Logs "db () duration: 53"
+      // Logs "app () duration: 47.2"
+    });
+  });
+});
+
+["navigation", "resource"].forEach((type) =>
+  observer.observe({ type, buffered: true })
+);
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` and `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+for (const entryType of ["navigation", "resource"]) {
+  for (const { name: url, serverTiming } of performance.getEntriesByType(
+    entryType
+  )) {
+    if (serverTiming) {
+      for (const { name, description, duration } of serverTiming) {
+        console.log(`${name} (${description}) duration: ${duration}`);
+        // Logs "cache (Cache Read) duration: 23.2"
+        // Logs "db () duration: 53"
+        // Logs "app () duration: 47.2"
+      }
+    }
+  }
+}
 ```
 
 ## Specifications

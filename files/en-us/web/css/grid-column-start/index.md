@@ -2,12 +2,6 @@
 title: grid-column-start
 slug: Web/CSS/grid-column-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.grid-column-start
 ---
 

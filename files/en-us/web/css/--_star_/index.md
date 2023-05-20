@@ -2,11 +2,6 @@
 title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 page-type: guide
-tags:
-  - CSS
-  - CSS Custom Properties
-  - Guide
-  - Reference
 browser-compat: css.properties.custom-property
 ---
 

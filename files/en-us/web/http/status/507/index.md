@@ -1,10 +1,7 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.5
 ---
 
@@ -16,7 +13,7 @@ It indicates that a method could not be performed because the server cannot stor
 
 ## Status
 
-```
+```http
 507 Insufficient Storage
 ```
 

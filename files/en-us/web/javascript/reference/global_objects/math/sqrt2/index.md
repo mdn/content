@@ -1,21 +1,21 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.SQRT2
 ---
 
 {{JSRef}}
 
-The **`Math.SQRT2`** property represents the square root of 2, approximately 1.414:
+The **`Math.SQRT2`** static data property represents the square root of 2, approximately 1.414.
+
+{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}
+
+## Value
 
 <math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}{{js_property_attributes(0, 0, 0)}}
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 

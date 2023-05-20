@@ -1,17 +1,13 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.valueOf
 ---
 
 {{JSRef}}
 
-The **`valueOf()`** method of {{jsxref("Object")}} converts the `this` value [to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
+The **`valueOf()`** method of {{jsxref("Object")}} instances converts the `this` value [to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
 

@@ -1,19 +1,14 @@
 ---
-title: AnalyserNode.getFloatFrequencyData()
+title: "AnalyserNode: getFloatFrequencyData() method"
+short-title: getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.getFloatFrequencyData
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
+The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a _sample_, the magnitude of the signal at a particular time.
 
 Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a `48000` Hz sample rate, the last item of the array will represent the decibel value for `24000` Hz.
 
@@ -48,7 +43,7 @@ analyser.getFloatFrequencyData(myDataArray);
 
 ### Drawing a spectrum
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an `AnalyserNode`. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bargraph style" to a {{htmlelement("canvas")}} element.
+The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an `AnalyserNode`. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bar graph style" to a {{htmlelement("canvas")}} element.
 
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 

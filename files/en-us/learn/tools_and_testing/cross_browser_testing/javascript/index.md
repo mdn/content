@@ -1,18 +1,6 @@
 ---
 title: Handling common JavaScript problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Libraries
-  - Testing
-  - cross browser
-  - feature detection
-  - linting
-  - polyfills
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -27,19 +15,13 @@ This includes information on using browser dev tools to track down and fix probl
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high-level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >.
+        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea of the high-level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to diagnose common JavaScript cross-browser problems, and use
-        appropriate tools and techniques to fix them.
+        To be able to diagnose common JavaScript cross-browser problems, and use appropriate tools and techniques to fix them.
       </td>
     </tr>
   </tbody>
@@ -129,22 +111,23 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  let heroes = jsonObj["members"];
 
   for (const hero of heroes) {
     // …
-   }
+  }
 
-   // …
- }
+  // …
+}
 ```
 
 So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+let requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 let superHeroes = request.response;
@@ -161,7 +144,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ', superHeroes);
+console.log("Response value: ", superHeroes);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
@@ -177,11 +160,11 @@ showHeroes(superHeroes);
 to the following:
 
 ```js
-request.onload = function() {
+request.onload = function () {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
@@ -243,34 +226,9 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 ### Using modern JavaScript/API features
 
-In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
+In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, such as when new, unsupported features are used, more often than not it will throw errors.
 
-There are a number of modern JavaScript language features defined in recent versions of the specs that won't work in older browsers.
-Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
-
-For example:
-
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
-  As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
-  They are not supported in IE at all but are supported across all modern browsers.
-- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions).
-  For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
-  Arrow functions are supported across all modern browsers, except for IE.
-- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
-  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
-  These are available in IE10 and above, and all modern browsers.
-
-There are also many new APIs appearing in recent browsers, which don't work in older browsers, for example:
-
-- [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), and others for storing website data on the client-side.
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) for running JavaScript in a separate thread, helping to improve performance.
-- [WebGL API](/en-US/docs/Web/API/WebGL_API) for real 3D graphics.
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for advanced audio manipulation.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API) for multi-person, real-time video/audio connectivity (e.g. video conferencing).
-- [WebVR API](/en-US/docs/Web/API/WebVR_API) for engineering virtual reality experiences in the browser (e.g. controlling a 3D view with data input from VR Hardware)
-
-There are a few strategies for handling incompatibilities between browsers relating to feature support; let's explore the most common ones.
+There are a few strategies for handling new feature support; let's explore the most common ones.
 
 > **Note:** These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.
 
@@ -319,9 +277,7 @@ Library usage at a basic level tends to consist of downloading the library's fil
 
 Polyfills also consist of 3rd party JavaScript files that you can drop into your project, but they differ from libraries — whereas libraries tend to enhance existing functionality and make things easier, polyfills provide functionality that doesn't exist at all. Polyfills use JavaScript or other technologies entirely to build in support for a feature that a browser doesn't support natively. For example, you might use a polyfill like [es6-promise](https://github.com/stefanpenner/es6-promise) to make promises work in browsers where they are not supported natively.
 
-Modernizr's list of [HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) is a useful place to find polyfills for different purposes. Again, you should research them before you use them — make sure they work and are maintained.
-
-Let's work through an exercise — in this example we will use a Fetch polyfill to provide support for the Fetch API in older browsers; however we also need to use the es6-promise polyfill, as Fetch makes heavy use of promises, and browsers that don't support them will still be in trouble.
+Let's work through an exercise — in this example used for demonstration purposes only, we use a Fetch polyfill and an es6-promise polyfill. While Fetch and promises are fully supported in modern browsers, if we were targeting a browser that did not support Fetch that browser would likely not support Fetch either, and Fetch makes heavy use of promises:
 
 1. To get started, make a local copy of our [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) example and [our nice image of some flowers](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg) in a new directory. We are going to write code to fetch the flowers image and display it in the page.
 2. Next, save a copy of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) in the same directory as the HTML.
@@ -336,9 +292,9 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
    ```js
-   const myImage = document.querySelector('.my-image');
+   const myImage = document.querySelector(".my-image");
 
-   fetch('flowers.jpg').then((response) => {
+   fetch("flowers.jpg").then((response) => {
      response.blob().then((myBlob) => {
        const objectURL = URL.createObjectURL(myBlob);
        myImage.src = objectURL;
@@ -361,7 +317,7 @@ Doing this requires some extra setup in your JavaScript. You need some kind of a
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -381,7 +337,7 @@ Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -403,61 +359,24 @@ You can see this code in action in [fetch-polyfill-only-when-needed.html](https:
 
 #### JavaScript transpiling
 
-Another option that is becoming popular for people that want to use modern JavaScript features now is converting code that makes use of ECMAScript 6/ECMAScript 2015 features to a version that will work in older browsers.
+Another option that is becoming popular for people who want to use modern JavaScript features now is converting code that uses recent ECMAScript features to a version that will work in older browsers.
 
 > **Note:** This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).
 
-So for example, we talked about arrow functions (see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) live, and see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)) earlier in the article, which only work in the newest browsers:
+A common transpiler is [Babel.js](https://babeljs.io/) but there are others.
 
-```js
-addEventListener("click", () => { });
-```
+### Don't browser sniff
 
-We could transpile this across to a traditional old-fashioned anonymous function, so it would work in older browsers:
+Historically developers used _browser sniffing code_ to detect which browser the user was using, and give them appropriate code to work on that browser.
 
-```js
-addEventListener("click", function() { /* … */ });
-```
+All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.). Many developers implemented bad browser sniffing code and didn't maintain it. This lead to supporting browsers getting locked out of using websites they could easily render. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless.
 
-The recommended tool for JavaScript transpiling is currently [Babel](https://babeljs.io/). This offers transpilation capabilities for language features that are appropriate for transpilation. For features that can't just be easily transpiled into an older equivalent, Babel also offers polyfills to provide support.
-
-The easiest way to give Babel a try is to use the [online version](https://babeljs.io/repl/), which allows you to enter your source code on the left, and outputs a transpiled version on the right.
-
-> **Note:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/en/setup/).
-
-### Using bad browser sniffing code
-
-All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.) In the bad only days when pretty much everyone used Netscape or Internet Explorer, developers used to use so-called **browser sniffing code** to detect which browser the user was using, and give them appropriate code to work on that browser.
-
-The code used to look something like this (although this is a simplified example):
-
-```js
-let ua = navigator.userAgent;
-
-if (ua.includes('Firefox')) {
-  // run Firefox-specific code
-} else if (ua.includes('Chrome')) {
-  // run Chrome-specific code
-}
-```
-
-The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.
-
-> **Note:** Try opening up your JavaScript console now and running `navigator.userAgent`, to see what you get returned.
-
-However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.
-
-Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless.
-
-> **Note:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
-
-The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
-
-If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
+[History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen provides a useful and amusing take on the history of browser sniffing.
+Use [feature detection](#feature_detection) (and CSS @supports for CSS feature detection) to reliably detect whether a feature is supported. But doing so, you won't need to change your code when new browser versions come out.
 
 ### Handling JavaScript prefixes
 
-In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
+In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations used to use prefixes as well, with JavaScript using camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
 
 - Mozilla would use `mozObject`
 - Chrome/Opera/Safari would use `webkitObject`
@@ -481,7 +400,7 @@ Again, prefixed features were never supposed to be used in production websites �
 For example, try going into your browser's developer console and start typing
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 If this feature is supported in your browser, it will autocomplete.
@@ -495,14 +414,3 @@ There are many other issues you'll encounter with JavaScript; the most important
 So that's JavaScript. Simple huh? Maybe not so simple, but this article should at least give you a start, and some ideas on how to tackle the JavaScript-related problems you will come across.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

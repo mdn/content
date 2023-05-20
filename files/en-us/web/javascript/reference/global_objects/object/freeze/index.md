@@ -1,24 +1,13 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - Change
-  - Changeability
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Mutability
-  - Mutable
-  - Object
-  - Reference
-  - freeze
-  - lock
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.freeze
 ---
 
 {{JSRef}}
 
-The **`Object.freeze()`** method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
+The **`Object.freeze()`** static method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
 
 Freezing an object is the highest integrity level that JavaScript provides.
 
@@ -56,19 +45,19 @@ A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} with elements will cause 
 as they are views over memory and will definitely cause other possible issues:
 
 ```js
-Object.freeze(new Uint8Array(0)) // No elements
+Object.freeze(new Uint8Array(0)); // No elements
 // Uint8Array []
 
-Object.freeze(new Uint8Array(1)) // Has elements
+Object.freeze(new Uint8Array(1)); // Has elements
 // TypeError: Cannot freeze array buffer views with elements
 
-Object.freeze(new DataView(new ArrayBuffer(32))) // No elements
+Object.freeze(new DataView(new ArrayBuffer(32))); // No elements
 // DataView {}
 
-Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // No elements
+Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)); // No elements
 // Float64Array []
 
-Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Has elements
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // Has elements
 // TypeError: Cannot freeze array buffer views with elements
 ```
 
@@ -86,13 +75,13 @@ Unlike {{jsxref("Object.seal()")}}, existing properties in objects frozen with `
 ```js
 const obj = {
   prop() {},
-  foo: 'bar'
+  foo: "bar",
 };
 
 // Before freezing: new properties may be added,
 // and existing properties may be changed or removed
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Freeze.
@@ -105,30 +94,30 @@ o === obj; // true
 Object.isFrozen(obj); // === true
 
 // Now any changes will fail
-obj.foo = 'quux'; // silently does nothing
+obj.foo = "quux"; // silently does nothing
 // silently doesn't add the property
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 
 // In strict mode such attempts will throw TypeErrors
 function fail() {
-  'use strict';
-  obj.foo = 'sparky'; // throws a TypeError
+  "use strict";
+  obj.foo = "sparky"; // throws a TypeError
   delete obj.foo; // throws a TypeError
   delete obj.quaxxor; // returns true since attribute 'quaxxor' was never added
-  obj.sparky = 'arf'; // throws a TypeError
+  obj.sparky = "arf"; // throws a TypeError
 }
 
 fail();
 
 // Attempted changes through Object.defineProperty;
 // both statements below throw a TypeError.
-Object.defineProperty(obj, 'ohai', { value: 17 });
-Object.defineProperty(obj, 'foo', { value: 'eit' });
+Object.defineProperty(obj, "ohai", { value: 17 });
+Object.defineProperty(obj, "foo", { value: "eit" });
 
 // It's also impossible to change the prototype
 // both statements below will throw a TypeError.
-Object.setPrototypeOf(obj, { x: 20 })
-obj.__proto__ = { x: 20 }
+Object.setPrototypeOf(obj, { x: 20 });
+obj.__proto__ = { x: 20 };
 ```
 
 ### Freezing arrays
@@ -157,13 +146,13 @@ _constant_. The following example shows that a frozen object is not constant
 
 ```js
 const obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 ```
 
 To be a constant object, the entire reference graph (direct and indirect references to
@@ -187,8 +176,8 @@ const employee = {
   designation: "Developer",
   address: {
     street: "Rohini",
-    city: "Delhi"
-  }
+    city: "Delhi",
+  },
 };
 
 Object.freeze(employee);
@@ -199,7 +188,7 @@ employee.address.city = "Noida"; // attributes of child object can be modified
 console.log(employee.address.city); // "Noida"
 ```
 
-To make an object immutable, recursively freeze each property which is of type object
+To make an object immutable, recursively freeze each non-primitive property
 (deep freeze). Use the pattern on a case-by-case basis based on your design when you
 know the object contains no [cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference
 graph, otherwise an endless loop will be triggered. An enhancement to
@@ -211,14 +200,13 @@ risk of freezing an object that shouldn't be frozen, such as \[window].
 ```js
 function deepFreeze(object) {
   // Retrieve the property names defined on object
-  const propNames = Object.getOwnPropertyNames(object);
+  const propNames = Reflect.ownKeys(object);
 
   // Freeze properties before freezing self
-
   for (const name of propNames) {
     const value = object[name];
 
-    if (value && typeof value === "object") {
+    if ((value && typeof value === "object") || typeof value === "function") {
       deepFreeze(value);
     }
   }
@@ -228,13 +216,13 @@ function deepFreeze(object) {
 
 const obj2 = {
   internal: {
-    a: null
-  }
+    a: null,
+  },
 };
 
 deepFreeze(obj2);
 
-obj2.internal.a = 'anotherValue'; // fails silently in non-strict mode
+obj2.internal.a = "anotherValue"; // fails silently in non-strict mode
 obj2.internal.a; // null
 ```
 

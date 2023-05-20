@@ -2,15 +2,6 @@
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
 page-type: guide
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
 browser-compat: api.EventSource
 ---
 
@@ -20,7 +11,11 @@ Developing a web application that uses [server-sent events](/en-US/docs/Web/API/
 
 ## Receiving events from the server
 
-The server-sent event API is contained in the {{domxref("EventSource")}} interface; to open a connection to the server to begin receiving events from it, create a new `EventSource` object with the URL of a script that generates the events. For example:
+The server-sent event API is contained in the {{domxref("EventSource")}} interface.
+
+### Creating an `EventSource` instance
+
+To open a connection to the server to begin receiving events from it, create a new `EventSource` object with the URL of a script that generates the events. For example:
 
 ```js
 const evtSource = new EventSource("ssedemo.php");
@@ -29,10 +24,14 @@ const evtSource = new EventSource("ssedemo.php");
 If the event generator script is hosted on a different origin, a new `EventSource` object should be created with both the URL and an options dictionary. For example, assuming the client script is on `example.com`:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
-Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
+### Listening for `message` events
+
+Messages sent from the server that don't have an [`event`](#event) field are received as `message` events. To receive message events, attach a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
 evtSource.onmessage = (event) => {
@@ -41,12 +40,14 @@ evtSource.onmessage = (event) => {
 
   newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
-This code listens for incoming messages (that is, notices from the server that do not have an `event` field on them) and appends the message text to a list in the document's HTML.
+This code listens for incoming message events and appends the message text to a list in the document's HTML.
 
-You can also listen for events with `addEventListener()`:
+### Listening for custom events
+
+Messages from the server that do have an `event` field defined are received as events with the name given in `event`. For example:
 
 ```js
 evtSource.addEventListener("ping", (event) => {
@@ -58,9 +59,9 @@ evtSource.addEventListener("ping", (event) => {
 });
 ```
 
-This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
+This code will be called whenever the server sends a message with the `event` field set to `ping`; it then parses the JSON in the `data` field and outputs that information.
 
-> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://crbug.com/275955) and [Firefox](https://bugzil.la/906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## Sending events from the server
 

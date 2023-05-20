@@ -1,13 +1,7 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
 ---
 
@@ -15,7 +9,7 @@ browser-compat: javascript.builtins.RegExp
 
 The **`RegExp`** object is used for matching text with a pattern.
 
-For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+For an introduction to regular expressions, read the [Regular expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the JavaScript guide. For detailed information of regular expression syntax, read the [regular expression reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions).
 
 ## Description
 
@@ -31,9 +25,9 @@ The following three expressions create the same regular expression object:
 ```js
 const re = /ab+c/i; // literal notation
 // OR
-const re = new RegExp('ab+c', 'i'); // constructor with string pattern as first argument
+const re = new RegExp("ab+c", "i"); // constructor with string pattern as first argument
 // OR
-const re = new RegExp(/ab+c/, 'i'); // constructor with regular expression literal as first argument
+const re = new RegExp(/ab+c/, "i"); // constructor with regular expression literal as first argument
 ```
 
 Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
@@ -53,7 +47,7 @@ For example, the following are equivalent:
 ```js
 const re = /\w+/;
 // OR
-const re = new RegExp('\\w+');
+const re = new RegExp("\\w+");
 ```
 
 ### Special handling for regexes
@@ -96,7 +90,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl-like RegExp properties
 
-Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
+Note that several of the {{jsxref("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.) See also [deprecated `RegExp` properties](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp).
 
 ## Constructor
 
@@ -105,63 +99,70 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 ## Static properties
 
-- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
-  - : The constructor function that is used to create derived objects.
-- {{JSxRef("RegExp.n", "RegExp.$1-$9")}}
-  - : The legacy read-only static properties that contain parenthesized substring matches.
-- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{Non-standard_Inline}}
-  - : A static read-only property that contains the last string against which a regular expression was successfully matched.
-- {{JSxRef("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Non-standard_Inline}}
-  - : A static read-only property that contains the last matched characters.
-- {{JSxRef("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Non-standard_Inline}}
-  - : A static property that contains the last parenthesized substring match.
-- {{JSxRef("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Non-standard_Inline}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{Deprecated_Inline}}
+  - : Static read-only properties that contain parenthesized substring matches.
+- {{jsxref("RegExp.input", "RegExp.input ($_)")}} {{Deprecated_Inline}}
+  - : A static property that contains the last string against which a regular expression was successfully matched.
+- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&)")}} {{Deprecated_Inline}}
+  - : A static read-only property that contains the last matched substring.
+- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}} {{Deprecated_Inline}}
+  - : A static read-only property that contains the last parenthesized substring match.
+- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring preceding the most recent match.
-- {{JSxRef("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Non-standard_Inline}}
+- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}} {{Deprecated_Inline}}
   - : A static read-only property that contains the substring following the most recent match.
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+  - : The constructor function that is used to create derived objects.
 
 ## Instance properties
 
-- {{JSxRef("RegExp.prototype.flags")}}
-  - : A string that contains the flags of the `RegExp` object.
-- {{JSxRef("RegExp.prototype.dotAll")}}
+These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
+
+- {{jsxref("Object/constructor", "RegExp.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `RegExp` instances, the initial value is the {{jsxref("RegExp/RegExp", "RegExp")}} constructor.
+- {{jsxref("RegExp.prototype.dotAll")}}
   - : Whether `.` matches newlines or not.
-- {{JSxRef("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.flags")}}
+  - : A string that contains the flags of the `RegExp` object.
+- {{jsxref("RegExp.prototype.global")}}
   - : Whether to test the regular expression against all possible matches in a string, or only against the first.
-- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
   - : Whether the regular expression result exposes the start and end indices of captured substrings.
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
   - : Whether to ignore case while attempting a match in a string.
-- {{JSxRef("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.multiline")}}
   - : Whether or not to search in strings across multiple lines.
-- {{JSxRef("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.source")}}
   - : The text of the pattern.
-- {{JSxRef("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.sticky")}}
   - : Whether or not the search is sticky.
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.unicode")}}
   - : Whether or not Unicode features are enabled.
-- {{jsxref("RegExp.prototype.lastIndex")}}
+
+These properties are own properties of each `RegExp` instance.
+
+- {{jsxref("RegExp/lastIndex", "lastIndex")}}
   - : The index at which to start the next match.
 
 ## Instance methods
 
-- {{JSxRef("RegExp.prototype.compile()")}} {{deprecated_inline}}
+- {{jsxref("RegExp.prototype.compile()")}} {{Deprecated_Inline}}
   - : (Re-)compiles a regular expression during execution of a script.
-- {{JSxRef("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
   - : Executes a search for a match in its string parameter.
-- {{JSxRef("RegExp.prototype.test()")}}
+- {{jsxref("RegExp.prototype.test()")}}
   - : Tests for a match in its string parameter.
-- {{JSxRef("RegExp.prototype.toString()")}}
-  - : Returns a string representing the specified object. Overrides the {{JSxRef("Object.prototype.toString()")}} method.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
   - : Performs match to given string and returns match result.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
   - : Returns all matches of the regular expression against a string.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
   - : Replaces matches in given string with new substring.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
   - : Searches the match in given string and returns the index the pattern found in the string.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
   - : Splits given string into an array by separating the string into substrings.
 
 ## Examples
@@ -174,8 +175,8 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'Maria Cruz';
-const newstr = str.replace(re, '$2, $1');
+const str = "Maria Cruz";
+const newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
@@ -186,7 +187,7 @@ This displays `"Cruz, Maria"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
+const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
 const lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
@@ -196,7 +197,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-const s = 'Please yes\nmake my day!';
+const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -207,17 +208,17 @@ s.match(/yes[^]*day/);
 
 ### Using a regular expression with the sticky flag
 
-The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
+The {{jsxref("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-const str = '#foo#';
+const str = "#foo#";
 const regex = /foo/y;
 
 regex.lastIndex = 1;
-regex.test(str)      // true
+regex.test(str); // true
 regex.lastIndex = 5;
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### The difference between the sticky flag and the global flag
@@ -248,7 +249,7 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-const text = 'Образец text на русском языке';
+const text = "Образец text на русском языке";
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
@@ -262,7 +263,7 @@ console.log(regex.lastIndex); // 15
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
 ### Extracting subdomain name from URL
 
@@ -276,10 +277,10 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ### Building a regular expression from dynamic inputs
 
 ```js
-const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
-const order = 'Let me get some bacon and eggs, please';
+const breakfasts = ["bacon", "eggs", "oatmeal", "toast", "cereal"];
+const order = "Let me get some bacon and eggs, please";
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 // Returns ['bacon', 'eggs']
 ```
 
@@ -297,24 +298,25 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${JSON.stringify(group)}`);
 });
 // group: ""
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${group}`);
 });
 // group: undefined
 ```
 
-Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
+Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzil.la/1053944)).
 
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.split()")}}

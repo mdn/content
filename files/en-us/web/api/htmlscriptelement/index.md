@@ -2,12 +2,6 @@
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLScriptElement
 ---
 
@@ -24,13 +18,13 @@ JavaScript files should be served with the `application/javascript` [MIME type](
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the MIME type of the script. It reflects the {{htmlattrxref("type","script")}} attribute.
+  - : A string representing the MIME type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the {{htmlattrxref("src","script")}} attribute.
+  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
 - {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
-  - : A string representing the character encoding of an external script. It reflects the {{htmlattrxref("charset","script")}} attribute.
+  - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
   - : The `async` and `defer` attributes are boolean attributes that control how the script should be executed. **The `defer` and `async` attributes must not be specified if the `src` attribute is absent.**
@@ -58,7 +52,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : A string that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
 ## Static methods
 
@@ -69,6 +63,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 ## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
+
+## Events
+
+_No specific events; inherits events from its parent, {{domxref("HTMLElement")}}._
 
 ## Examples
 
@@ -86,8 +84,13 @@ function loadError(oError) {
 function prefixScript(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
+  document.currentScript.parentNode.insertBefore(
+    newScript,
+    document.currentScript
+  );
   newScript.src = url;
 }
 ```
@@ -102,7 +105,9 @@ function loadError(oError) {
 function affixScriptToHead(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
   document.head.appendChild(newScript);
   newScript.src = url;
 }
@@ -112,7 +117,9 @@ Sample usage:
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => {
+  alert('The script "myScript2.js" has been correctly loaded.');
+});
 ```
 
 ### Checking if a script type is supported
@@ -123,10 +130,10 @@ The example below shows how to check for module support, using the existence of 
 
 ```js
 function checkModuleSupport() {
-  if ('supports' in HTMLScriptElement) {
-    return HTMLScriptElement.supports('module');
+  if ("supports" in HTMLScriptElement) {
+    return HTMLScriptElement.supports("module");
   }
-  return 'noModule' in document.createElement('script');
+  return "noModule" in document.createElement("script");
 }
 ```
 
@@ -146,4 +153,3 @@ Classic scripts are assumed to be supported on all browsers.
 - HTML {{HTMLElement("noscript")}} element
 - {{domxref("document.currentScript")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/en-US/docs/Web/API/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)

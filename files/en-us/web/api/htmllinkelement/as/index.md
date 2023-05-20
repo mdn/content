@@ -1,16 +1,8 @@
 ---
-title: HTMLLinkElement.as
+title: "HTMLLinkElement: as property"
+short-title: as
 slug: Web/API/HTMLLinkElement/as
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - Link
-  - Preload API
-  - Property
-  - Reference
-  - as
 browser-compat: api.HTMLLinkElement.as
 ---
 

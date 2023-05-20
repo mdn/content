@@ -1,18 +1,13 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
 
 {{JSRef}}
 
-The **`Object.preventExtensions()`** method prevents new
+The **`Object.preventExtensions()`** static method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
 object). It also prevents the object's prototype from being re-assigned.
 
@@ -73,16 +68,16 @@ Object.isExtensible(empty); // false
 // a new property to a non-extensible object.
 const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // throws a TypeError
 
 // In strict mode, attempting to add new properties
 // to a non-extensible object throws a TypeError.
 function fail() {
-  'use strict';
+  "use strict";
   // throws a TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -92,7 +87,7 @@ A non-extensible object's prototype is immutable:
 ```js
 const fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
 ### Non-object argument

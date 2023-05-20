@@ -1,18 +1,13 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.then
 ---
 
 {{JSRef}}
 
-The **`then()`** method returns a {{jsxref("Promise")}}. It takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`.
+The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
 {{EmbedInteractiveExample("pages/js/promise-then.html")}}
 
@@ -21,19 +16,27 @@ The **`then()`** method returns a {{jsxref("Promise")}}. It takes up to two argu
 ```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
-
-then(
-  (value) => { /* fulfillment handler */ },
-  (reason) => { /* rejection handler */ },
-);
 ```
 
 ### Parameters
 
 - `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is fulfilled. This function has one argument, the _fulfillment value_. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+
+  - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
+
+    - `value`
+      - : The value that the promise was fulfilled with.
+
+    If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is rejected. This function has one argument, the _rejection reason_. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
+
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
+
+    - `reason`
+      - : The value that the promise was rejected with.
+
+    If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 
@@ -42,15 +45,23 @@ Returns a new {{jsxref("Promise")}} immediately. This new promise is always pend
 One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the returned promise (call it `p`) depends on the handler's execution result, following a specific set of rules. If the handler function:
 
 - returns a value: `p` gets fulfilled with the returned value as its value.
-- doesn't return anything: `p` gets fulfilled with `undefined`.
+- doesn't return anything: `p` gets fulfilled with `undefined` as its value.
 - throws an error: `p` gets rejected with the thrown error as its value.
 - returns an already fulfilled promise: `p` gets fulfilled with that promise's value as its value.
 - returns an already rejected promise: `p` gets rejected with that promise's value as its value.
-- returns another pending promise: the fulfillment/rejection of the promise returned by `then` will be subsequent to the resolution/rejection of the promise returned by the handler. Also, the resolved value of the promise returned by `then` will be the same as the resolved value of the promise returned by the handler.
+- returns another pending promise: `p` is pending and becomes fulfilled/rejected with that promise's value as its value immediately after that promise becomes fulfilled/rejected.
 
 ## Description
 
-As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return promises, they [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) — an operation called _composition_.
+The `then()` method schedules callback functions for the eventual completion of a Promise — either fulfillment or rejection. It is the primitive method of promises: the [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) protocol expects all promise-like objects to expose a `then()` method, and the {{jsxref("Promise/catch", "catch()")}} and {{jsxref("Promise/finally", "finally()")}} methods both work by invoking the object's `then()` method.
+
+For more information about the `onRejected` handler, see the {{jsxref("Promise/catch", "catch()")}} reference.
+
+`then()` returns a new promise object. If you call the `then()` method twice on the same promise object (instead of chaining), then this promise object will have two pairs of settlement handlers. All handlers attached to the same promise object are always called in the order they were added. Moreover, the two promises returned by each call of `then()` start separate chains and do not wait for each other's settlement.
+
+[Thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) objects that arise along the `then()` chain are always [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) — the `onFulfilled` handler never receives a thenable object, and any thenable returned by either handler are always resolved before being passed to the next handler. This is because when constructing the new promise, the `resolve` and `reject` functions passed by the `executor` are saved, and when the current promise settles, the respective function will be called with the fulfillment value or rejection reason. The resolving logic comes from the resolver function passed by the {{jsxref("Promise/Promise", "Promise()")}} constructor.
+
+`then()` supports subclassing, which means it can be called on instances of subclasses of `Promise`, and the result will be a promise of the subclass type. You can customize the type of the return value through the [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) property.
 
 ## Examples
 
@@ -89,13 +100,14 @@ If the function passed as handler to `then` returns a `Promise`, an equivalent `
 ```js
 Promise.resolve("foo")
   // 1. Receive "foo", concatenate "bar" to it, and resolve that to the next then
-  .then((string) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        string += "bar";
-        resolve(string);
-      }, 1);
-    })
+  .then(
+    (string) =>
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          string += "bar";
+          resolve(string);
+        }, 1);
+      }),
   )
   // 2. receive "foobar", register a callback function to work on that string
   // and print it to the console, but not before returning the unworked on
@@ -137,7 +149,7 @@ p2.then((value) => {
   console.log(value); // 1
   return value + 1;
 }).then((value) => {
-  console.log(value, " - A synchronous value works"); // 2 - A synchronous value works
+  console.log(value, "- A synchronous value works"); // 2 - A synchronous value works
 });
 
 p2.then((value) => {
@@ -230,7 +242,7 @@ p3.then(
   },
   (e) => {
     console.error("rejected", e); // "rejected", 'Error'
-  }
+  },
 );
 ```
 
@@ -270,7 +282,11 @@ const resolvedProm = Promise.resolve(33);
 console.log(resolvedProm);
 
 const thenProm = resolvedProm.then((value) => {
-  console.log(`this gets called after the end of the main stack. the value received is: ${value}, the value returned is: ${value + 1}`);
+  console.log(
+    `this gets called after the end of the main stack. the value received is: ${value}, the value returned is: ${
+      value + 1
+    }`,
+  );
   return value + 1;
 });
 console.log(thenProm);

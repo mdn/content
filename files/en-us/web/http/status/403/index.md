@@ -1,11 +1,7 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.403
 ---
 
@@ -17,7 +13,7 @@ This status is similar to {{HTTPStatus("401")}}, but for the **`403 Forbidden`**
 
 ## Status
 
-```
+```http
 403 Forbidden
 ```
 
@@ -39,4 +35,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 ## See also
 
 - {{HTTPStatus("401")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.403)

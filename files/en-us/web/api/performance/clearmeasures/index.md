@@ -1,24 +1,14 @@
 ---
-title: performance.clearMeasures()
+title: "Performance: clearMeasures() method"
+short-title: clearMeasures()
 slug: Web/API/Performance/clearMeasures
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.clearMeasures
 ---
 
 {{APIRef("Performance API")}}
 
-The **`clearMeasures()`** method removes the _named
-measure_ from the browser's performance entry buffer. If the method is called with
-no arguments, all {{domxref("PerformanceEntry","performance entries")}} with an
-{{domxref("PerformanceEntry.entryType","entry type")}} of "`measure`" will be
-removed from the performance entry buffer.
-
-{{AvailableInWorkers}}
+The **`clearMeasures()`** method removes all or specific {{domxref("PerformanceMeasure")}} objects from the browser's performance timeline.
 
 ## Syntax
 
@@ -30,10 +20,7 @@ clearMeasures(name)
 ### Parameters
 
 - `name` {{optional_inline}}
-  - : A string representing the name of the timestamp. If this argument
-    is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
-    {{domxref("PerformanceEntry.entryType","entry type")}} of "`measure`" will
-    be removed.
+  - : A string representing the {{domxref("PerformanceEntry.name", "name")}} of the {{domxref("PerformanceMeasure")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`" will be removed.
 
 ### Return value
 
@@ -41,17 +28,12 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows both uses of the `clearMeasures()` method.
+### Removing measures
+
+To clean up all performance measure, or just specific entries, use the `clearMeasures()` method like this:
 
 ```js
-// Create a small helper to show how many PerformanceMeasure entries there are.
-function logMeasureCount() {
-  console.log(
-    `Found this many entries: ${performance.getEntriesByType("measure").length}`
-  );
-}
-
-// Create a bunch of measures.
+// Create a bunch of measures
 performance.measure("from navigation");
 performance.mark("a");
 performance.measure("from mark a", "a");
@@ -60,15 +42,15 @@ performance.measure("from mark a", "a");
 performance.mark("b");
 performance.measure("between a and b", "a", "b");
 
-logMeasureCount() // "Found this many entries: 5"
+performance.getEntriesByType("measure").length; // 5
 
-// Delete just the "from navigation" PerformanceMeasure entries.
+// Delete just the "from navigation" measure entries
 performance.clearMeasures("from navigation");
-logMeasureCount() // "Found this many entries: 3"
+performance.getEntriesByType("measure").length; // 3
 
-// Delete all of the PerformanceMeasure entries.
+// Delete all of the measure entries
 performance.clearMeasures();
-logMeasureCount() // "Found this many entries: 0"
+performance.getEntriesByType("measure").length; // 0
 ```
 
 ## Specifications
@@ -78,3 +60,7 @@ logMeasureCount() // "Found this many entries: 0"
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("PerformanceMeasure")}}

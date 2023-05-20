@@ -1,12 +1,6 @@
 ---
 title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - for
-  - for-each
 ---
 
 {{ XsltRef() }}

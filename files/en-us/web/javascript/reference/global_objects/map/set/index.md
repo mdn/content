@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.set
 ---
 
@@ -42,11 +36,11 @@ The `Map` object.
 const myMap = new Map();
 
 // Add new elements to the map
-myMap.set('bar', 'foo');
-myMap.set(1, 'foobar');
+myMap.set("bar", "foo");
+myMap.set(1, "foobar");
 
 // Update an element in the map
-myMap.set('bar', 'baz');
+myMap.set("bar", "baz");
 ```
 
 ### Using the set() with chaining
@@ -56,9 +50,7 @@ method call like below:
 
 ```js
 // Add new elements to the map with chaining.
-myMap.set('bar', 'foo')
-  .set(1, 'foobar')
-  .set(2, 'baz');
+myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ```
 
 ## Specifications

@@ -1,11 +1,7 @@
 ---
 title: targetX
 slug: Web/SVG/Attribute/targetX
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.targetX
 ---
 

@@ -2,11 +2,6 @@
 title: SVGEllipseElement
 slug: Web/API/SVGEllipseElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGEllipseElement
 ---
 
@@ -59,7 +54,7 @@ function outputSize() {
   console.log(
     `horizontal radius: ${ellipse.rx.baseVal.valueAsString}`,
     `vertical radius: ${ellipse.ry.baseVal.valueAsString}`
-  )
+  );
 }
 ```
 

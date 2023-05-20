@@ -1,43 +1,29 @@
 ---
-title: RegExp.$1-$9
+title: RegExp.$1, …, RegExp.$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - JavaScript
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.n
 ---
 
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
-The legacy RegExp **$1, $2, $3, $4, $5, $6, $7, $8, $9** properties are static and read-only properties of regular expressions that contain parenthesized substring matches.
+> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+
+The **`RegExp.$1, …, RegExp.$9`** static accessor properties return parenthesized substring matches.
 
 ## Description
 
-The $1, …, $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as `RegExp.$1`, …, `RegExp.$9`.
+Because `$1`–`$9` are static properties of {{jsxref("RegExp")}}, you always use them as `RegExp.$1`, `RegExp.$2`, etc., rather than as properties of a `RegExp` object you created.
 
-The values of these properties are read-only and modified whenever successful matches are made.
+The values of `$1, …, $9` update whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, or if the last match does not have the corresponding capturing group, the respective property is an empty string. The set accessor of each property is `undefined`, so you cannot change the properties directly.
 
 The number of possible parenthesized substrings is unlimited, but the `RegExp` object can only hold the first nine. You can access all parenthesized substrings through the returned array's indexes.
 
-These properties can be used in the replacement text for the {{jsxref("String.prototype.replace()")}} method. When used this way, do not prepend them with `RegExp`. The example below illustrates this. When parentheses are not included in the regular expression, the script interprets `$n`'s literally (where `n` is a positive integer).
+`$1, …, $9` can also be used in the replacement string of {{jsxref("String.prototype.replace()")}}, but that's unrelated to the `RegExp.$n` legacy properties.
 
 ## Examples
-
-### Using $n with String.prototype.replace()
-
-The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("String")}} instance to match a name in the format _first last_ and output it in the format _last, first_. In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
-
-```js
-const re = /(\w+)\s(\w+)/;
-const str = "Maria Cruz";
-str.replace(re, "$2, $1"); // "Cruz, Maria"
-RegExp.$1; // "Maria"
-RegExp.$2; // "Cruz"
-```
 
 ### Using $n with RegExp.prototype.test()
 

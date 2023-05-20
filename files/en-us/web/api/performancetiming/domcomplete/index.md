@@ -1,17 +1,10 @@
 ---
-title: PerformanceTiming.domComplete
+title: "PerformanceTiming: domComplete property"
+short-title: domComplete
 slug: Web/API/PerformanceTiming/domComplete
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domComplete
 ---
 

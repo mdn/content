@@ -2,16 +2,6 @@
 title: Determining the dimensions of elements
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 page-type: guide
-tags:
-  - API
-  - CSSOM View
-  - Client width
-  - Guide
-  - Intermediate
-  - client height
-  - offsetHeight
-  - offsetWidth
-  - size of displayed content
 ---
 
 {{DefaultAPISidebar("CSSOM View")}}

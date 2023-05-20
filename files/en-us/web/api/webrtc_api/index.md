@@ -2,17 +2,6 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Conferencing
-  - Landing
-  - Media
-  - Networking
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
 spec-urls:
   - https://w3c.github.io/webrtc-pc/
   - https://w3c.github.io/mediacapture-main/
@@ -25,14 +14,6 @@ spec-urls:
 
 WebRTC consists of several interrelated APIs and protocols which work together to achieve this. The documentation you'll find here will help you understand the fundamentals of WebRTC, how to set up and use both data and media connections, and more.
 
-## Interoperability
-
-Because implementations of WebRTC are still evolving, and because each browser has [different levels of support for codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) and WebRTC features, you should _strongly_ consider making use of [the Adapter.js library](https://github.com/webrtcHacks/adapter) provided by Google before you begin to write your code.
-
-Adapter.js uses shims and polyfills to smooth over the differences among the WebRTC implementations across the environments supporting it. Adapter.js also handles prefixes and other naming differences to make the entire WebRTC development process easier, with more broadly compatible results. The library is also [available as an npm package](https://www.npmjs.com/package/webrtc-adapter).
-
-To learn more about Adapter.js, see [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js).
-
 ## WebRTC concepts and usage
 
 WebRTC serves multiple purposes; together with the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API), they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, screen sharing, identity management, and interfacing with legacy telephone systems including support for sending {{Glossary("DTMF")}} (touch-tone dialing) signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.
@@ -43,7 +24,9 @@ Media streams can consist of any number of tracks of media information; tracks, 
 
 You can also use the connection between two peers to exchange arbitrary binary data using the {{DOMxRef("RTCDataChannel")}} interface. This can be used for back-channel information, metadata exchange, game status packets, file transfers, or even as a primary channel for data transfer.
 
-**_more details and links to relevant guides and tutorials needed_**
+### Interoperability
+
+WebRTC is in general well supported in modern browsers, but some incompatibilities remain. The [adapter.js](https://github.com/webrtcHacks/adapter) library is a shim to insulate apps from these incompatibilities.
 
 ## WebRTC reference
 

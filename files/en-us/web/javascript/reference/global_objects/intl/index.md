@@ -1,19 +1,17 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Namespace
+page-type: javascript-namespace
 browser-compat: javascript.builtins.Intl
 ---
 
 {{JSRef}}
 
-The **`Intl`** object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The **`Intl`** object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
+The **`Intl`** namespace object contains several constructors as well as functionality common to the internationalization constructors and other language sensitive functions. Collectively, they comprise the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, date and time formatting, and more.
 
 ## Description
+
+Unlike most global objects, `Intl` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Intl` object as a function. All properties and methods of `Intl` are static (just like the {{jsxref("Math")}} object).
 
 The internationalization constructors as well as several language sensitive methods of other constructors (listed under [See also](#see_also)) use a common pattern for identifying locales and determining the one they will actually use: they all accept `locales` and `options` arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the `options.localeMatcher` property.
 
@@ -25,7 +23,7 @@ The `locales` argument is used to determine the locale used in a given operation
 - A locale: A locale identifier or an [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) object that wraps a locale identifier.
 - A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.
 
-In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_identification_and_negotiation).
+In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_identification_and_negotiation). If a locale identifier is not a string or an object, a {{jsxref("TypeError")}} is thrown. If a locale identifier is a string that's syntactically invalid, a {{jsxref("RangeError")}} is thrown. If a locale identifier is well-formed but the implementation doesn't recognize it, it is ignored and the next locale in the list is considered, eventually falling back to the system's locale. However, you shouldn't rely on a particular locale name being ignored, because the implementation may add data for any locale in the future. For example, `new Intl.DateTimeFormat("default")` uses the implementation's default locale only because `"default"` is syntactically valid but not recognized as any locale.
 
 A locale identifier is a string that consists of:
 
@@ -47,7 +45,7 @@ Subtags identifying languages, scripts, regions (including countries), and (rare
 
 BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: `"de-a-foo-a-foo"` is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47). Currently only two extensions have defined semantics:
 
-- The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, or {{jsxref("Intl.DateTimeFormat")}} objects. Examples:
+- The `"u"` (Unicode) extension can be used to request additional customization of `Intl` API objects. Examples:
 
   - `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.
   - `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
@@ -62,7 +60,7 @@ Finally, a private-use extension sequence using the letter `"x"` may appear, fol
 
 The `options` argument must be an object with properties that vary between constructors and functions. If the `options` argument is not provided or is undefined, default values are used for all properties.
 
-One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
+One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described below.
 
 ### Locale identification and negotiation
 
@@ -70,26 +68,30 @@ The list of locales specified by the `locales` argument, after Unicode extension
 
 If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its `"phonebk"` value is only supported for German.
 
-## Constructor properties
+## Static properties
 
-- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+- {{jsxref("Intl.Collator")}}
   - : Constructor for collators, which are objects that enable language-sensitive string comparison.
-- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+- {{jsxref("Intl.DateTimeFormat")}}
   - : Constructor for objects that enable language-sensitive date and time formatting.
-- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+- {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+- {{jsxref("Intl.DurationFormat")}}
+  - : Constructor for objects that enable locale-sensitive duration formatting.
+- {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+- {{jsxref("Intl.Locale")}}
   - : Constructor for objects that represents a Unicode locale identifier.
-- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+- {{jsxref("Intl.NumberFormat")}}
   - : Constructor for objects that enable language-sensitive number formatting.
-- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+- {{jsxref("Intl.PluralRules")}}
   - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
-- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
-- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+- {{jsxref("Intl.Segmenter")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
+- `Intl[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 
@@ -110,7 +112,9 @@ const date = new Date("2012-05-24");
 
 function log(locale) {
   console.log(
-    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
+    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(
+      locale,
+    ).format(count)}`,
   );
 }
 
@@ -134,11 +138,13 @@ log("de-DE"); // 24.5.2012 26.254,39
 
   - {{jsxref("Intl/Collator", "Intl.Collator()")}}
   - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/DisplayNames", "Intl.DisplayNames()")}}
+  - {{jsxref("Intl/DurationFormat", "Intl.DurationFormat()")}}
   - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
   - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods

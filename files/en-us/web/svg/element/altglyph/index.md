@@ -1,12 +1,9 @@
 ---
 title: <altGlyph>
 slug: Web/SVG/Element/altGlyph
-tags:
-  - Deprecated
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyph
 ---
 

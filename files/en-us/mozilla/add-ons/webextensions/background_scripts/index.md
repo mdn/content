@@ -1,8 +1,7 @@
 ---
 title: Background scripts
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -50,18 +49,19 @@ This section describes how to implement a non-persistent background script.
 
 ### Specify the background scripts
 
-In your extension, you include a background script using the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
+In your extension, you include a background script or scripts, if you need them, using the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`, as script are always non-persistent in Manifest V3. Including `"type": "module"` loads the background scripts as ES modules.
 
 ```json
 "background": {
   "scripts": ["background-script.js"],
-  "persistent": false
+  "persistent": false,
+  "type": "module"
 }
 ```
 
-You can specify multiple background scripts. If you do, they run in the same context, just like scripts loaded into a web page.
+These scripts execute in the extension's background page, so they run in the same context, like scripts loaded into a web page.
 
-Instead of specifying background scripts, you can specify a background page. This has the added advantage of support for ES modules:
+However, if you need certain content in the background page, you can specify one. You then specify your script from the page rather than using the `"scripts"` property. Before the introduction of the `"type"` property to the `"background"` key, this was the only option to include ES modules. You specify a background page like this:
 
 - manifest.json
 
@@ -224,7 +224,7 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 
 ### Move event listeners
 
-Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern, moved to the top-level, and unnested.
+Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern and moved to the top-level.
 
 ```js
 browser.runtime.onStartup.addListener(() => {

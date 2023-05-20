@@ -1,18 +1,14 @@
 ---
-title: XRFrame.fillJointRadii()
+title: "XRFrame: fillJointRadii() method"
+short-title: fillJointRadii()
 slug: Web/API/XRFrame/fillJointRadii
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+status:
+  - experimental
 browser-compat: api.XRFrame.fillJointRadii
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`fillJointRadii()`** method of the {{domxref("XRFrame")}} interface populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces and returns `true` if successful for all spaces.
 

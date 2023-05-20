@@ -1,14 +1,7 @@
 ---
 title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
-tags:
-  - Class
-  - ECMAScript 2018
-  - Generator
-  - JavaScript
-  - Async Generator
-  - Async Iterator
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGenerator
 ---
 
@@ -17,6 +10,8 @@ browser-compat: javascript.builtins.AsyncGenerator
 The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [async iterable protocol and the async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 Async generator methods always yield {{jsxref("Promise")}} objects.
+
+`AsyncGenerator` is a subclass of the hidden {{jsxref("AsyncIterator")}} class.
 
 {{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
 
@@ -31,20 +26,29 @@ async function* createAsyncGenerator() {
   yield await Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 1
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 2
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 3
+asyncGen.next().then((res) => console.log(res.value)); // 1
+asyncGen.next().then((res) => console.log(res.value)); // 2
+asyncGen.next().then((res) => console.log(res.value)); // 3
 ```
 
+In fact, there's no JavaScript entity that corresponds to the `AsyncGenerator` constructor. There's only a hidden object which is the prototype object shared by all objects created by async generator functions. This object is often stylized as `AsyncGenerator.prototype` to make it look like a class, but it should be more appropriately called [`AsyncGeneratorFunction.prototype.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction), because `AsyncGeneratorFunction` is an actual JavaScript entity.
+
 ## Instance properties
+
+These properties are defined on `AsyncGenerator.prototype` and shared by all `AsyncGenerator` instances.
+
+- {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
+
+  - : The constructor function that created the instance object. For `AsyncGenerator` instances, the initial value is [`AsyncGeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction).
+
+    > **Note:** `AsyncGenerator` objects do not store a reference to the async generator function that created them.
 
 - `AsyncGenerator.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
+
+_Also inherits instance methods from its parent {{jsxref("AsyncIterator")}}_.
 
 - {{jsxref("AsyncGenerator.prototype.next()")}}
   - : Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression.
@@ -75,17 +79,16 @@ async function* generate() {
   yield delayedValue(250, 4);
   yield delayedValue(125, 5);
   yield delayedValue(50, 6);
-  console.log('All done!');
+  console.log("All done!");
 }
 
 async function main() {
   for await (const value of generate()) {
-    console.log('value', value);
+    console.log("value", value);
   }
 }
 
-main()
-  .catch((e) => console.error(e));
+main().catch((e) => console.error(e));
 ```
 
 ## Specifications
@@ -103,4 +106,4 @@ main()
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

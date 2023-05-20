@@ -1,14 +1,7 @@
 ---
 title: Regular expressions
-slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - regex
+slug: Web/JavaScript/Guide/Regular_expressions
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -33,7 +26,7 @@ You construct a regular expression in one of two ways:
 - Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:
 
   ```js
-  const re = new RegExp('ab+c');
+  const re = new RegExp("ab+c");
   ```
 
   Using the constructor function provides runtime compilation of the regular expression.
@@ -43,9 +36,9 @@ You construct a regular expression in one of two ways:
 
 A regular expression pattern is composed of simple characters, such as `/abc/`, or a combination of simple and special characters, such as `/ab*c/` or `/Chapter (\d+)\.\d*/`.
 The last example includes parentheses, which are used as a memory device.
-The match made with this part of the pattern is remembered for later use, as described in [Using groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups).
+The match made with this part of the pattern is remembered for later use, as described in [Using groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups).
 
-> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheatsheet](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
+> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheat sheet](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
 
 ### Using simple patterns
 
@@ -62,16 +55,14 @@ In the string `"cbbabbbbcdebc"`, this pattern will match the substring `"abbbbc"
 
 The following pages provide lists of the different special characters that fit into each category, along with descriptions and examples.
 
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - : Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - : Distinguish different types of characters. For example, distinguishing between letters and digits.
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : Indicate numbers of characters or expressions to match.
-- [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - : Distinguish based on unicode character properties, for example, upper- and lower-case letters, math symbols, and punctuation.
 
 If you want to look at all the special characters that can be used in regular expressions in a single table, see the following:
 
@@ -88,16 +79,18 @@ If you want to look at all the special characters that can be used in regular ex
   <tbody>
     <tr>
       <td>
-        <code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>,
-        <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>,
-        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>,
-        <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>,
-        <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code>
+        <code>[xyz]</code>, <code>[^xyz]</code>, <code>.</code>,
+        <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
+        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
+        <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
+        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
+        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >Character classes</a
           >
         </p>
@@ -105,14 +98,14 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>^</code>, <code>$</code>, <code>x(?=y)</code>,
-        <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
-        <code>(?&#x3C;!y)x</code>, <code>\b</code>, <code>\B</code>
+        <code>^</code>, <code>$</code>, <code>\b</code>, <code>\B</code>,
+        <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
+        <code>(?&#x3C;!y)x</code>
       </td>
       <td>
         <p>
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
             >Assertions</a
           >
         </p>
@@ -120,14 +113,13 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>(x)</code>, <code>(?:x)</code>, <code>(?&#x3C;Name>x)</code>,
-        <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>,
-        <code>\<em>Number</em></code>
+        <code>(<em>x</em>)</code>, <code>(?&#x3C;Name>x)</code>, <code>(?:<em>x</em>)</code>,
+        <code>\<em>n</em></code>, <code>\k&#x3C;Name></code>
       </td>
       <td>
         <p>
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences"
             >Groups and backreferences</a
           >
         </p>
@@ -135,35 +127,23 @@ If you want to look at all the special characters that can be used in regular ex
     </tr>
     <tr>
       <td>
-        <code>*</code>, <code>+</code>, <code>?</code>,
-        <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>,
-        <code>x{<em>n</em>,<em>m</em>}</code>
+        <code><em>x</em>*</code>, <code><em>x</em>+</code>, <code><em>x</em>?</code>,
+        <code><em>x</em>{<em>n</em>}</code>, <code><em>x</em>{<em>n</em>,}</code>,
+        <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
         <p>
           <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers"
+            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers"
             >Quantifiers</a
           >
         </p>
       </td>
     </tr>
-    <tr>
-      <td>
-        <code>\p{<em>UnicodeProperty</em>}</code>,
-        <code>\P{<em>UnicodeProperty</em>}</code>
-      </td>
-      <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes"
-          >Unicode property escapes</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 
-> **Note:** [A larger cheatsheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
@@ -183,7 +163,7 @@ If escape strings are not already part of your pattern you can add them using {{
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 ```
 
@@ -195,7 +175,7 @@ _Why isn't this built into JavaScript?_ There is a [proposal](https://github.com
 ### Using parentheses
 
 Parentheses around any part of the regular expression pattern causes that part of the matched substring to be remembered.
-Once remembered, the substring can be recalled for other use. See [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups) for more details.
+Once remembered, the substring can be recalled for other use. See [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups) for more details.
 
 ## Using regular expressions in JavaScript
 
@@ -220,13 +200,13 @@ In the following example, the script uses the `exec()` method to find a match in
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // similar to 'cdbbdbsbz'.match(/d(b+)d/g); however,
 // 'cdbbdbsbz'.match(/d(b+)d/g) outputs [ "dbbd" ]
 // while /d(b+)d/g.exec('cdbbdbsbz') outputs [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
@@ -237,8 +217,8 @@ const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
 ```js
-const myRe = new RegExp('d(b+)d', 'g');
-const myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp("d(b+)d", "g");
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -303,7 +283,7 @@ For example, assume you have this script:
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
@@ -312,7 +292,7 @@ console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 However, if you have this script:
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
@@ -345,7 +325,7 @@ const re = /pattern/flags;
 or
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
@@ -354,7 +334,7 @@ For example, `re = /\w+\s/g` creates a regular expression that looks for one or 
 
 ```js
 const re = /\w+\s/g;
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -370,7 +350,7 @@ const re = /\w+\s/g;
 with:
 
 ```js
-const re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp("\\w+\\s", "g");
 ```
 
 and get the same result.
@@ -383,7 +363,7 @@ If the `m` flag is used, `^` and `$` match at the start or end of any line withi
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
 
 ```js
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const re = /\w+\s/g;
 
 console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
@@ -400,19 +380,11 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 #### Using unicode regular expressions
 
-The "u" flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. This is mainly accomplished through the use of [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), which are supported only within "unicode" regular expressions.
-
-For example, the following regular expression might be used to match against an arbitrary unicode "word":
+The `u` flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. An important feature that's enabled in unicode mode is [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape). For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
-/\p{L}*/u
+/\p{L}*/u;
 ```
-
-There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
-
-- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
-- Curly brackets need to be escaped when not used as [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers). For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not — instead, the bracket should be escaped and `/\\{/u` should be used instead.
-- The `-` character is interpreted differently within character classes. In particular, for Unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of the character class. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/[\w-:]/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
 
 Unicode regular expressions have different execution behavior as well. [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) contains more explanation about this.
 
@@ -421,7 +393,7 @@ Unicode regular expressions have different execution behavior as well. [`RegExp.
 > **Note:** Several examples are also available in:
 >
 > - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
-> - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ### Using special characters to verify input
 
@@ -458,9 +430,9 @@ The regular expression looks for:
 #### JavaScript
 
 ```js
-const form = document.querySelector('#form');
-const input = document.querySelector('#phone');
-const output = document.querySelector('#output');
+const form = document.querySelector("#form");
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
 
 const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
@@ -472,7 +444,7 @@ function testInfo(phoneInput) {
     : `${phoneInput.value} isn't a phone number with area code!`;
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   testInfo(input);
 });
@@ -489,7 +461,7 @@ form.addEventListener('submit', (event) => {
 - [Regex tester](https://regex101.com/)
   - : An online regex builder/debugger
 - [Regex interactive tutorial](https://regexlearn.com/)
-  - : An online interactive tutorials, Cheatsheet, & Playground.
+  - : An online interactive tutorials, Cheat sheet, & Playground.
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : An online visual regex tester.
 

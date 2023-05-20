@@ -1,12 +1,10 @@
 ---
 title: Tools for SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Tools
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
 

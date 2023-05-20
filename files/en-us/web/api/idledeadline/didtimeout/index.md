@@ -1,18 +1,8 @@
 ---
-title: IdleDeadline.didTimeout
+title: "IdleDeadline: didTimeout property"
+short-title: didTimeout
 slug: Web/API/IdleDeadline/didTimeout
 page-type: web-api-instance-property
-tags:
-  - API
-  - Background Tasks
-  - HTML DOM
-  - IdleDeadline
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
-  - didTimeout
-  - requestIdleCallback
 browser-compat: api.IdleDeadline.didTimeout
 ---
 

@@ -1,16 +1,8 @@
 ---
-title: IDBRequest.error
+title: "IDBRequest: error property"
+short-title: error
 slug: Web/API/IDBRequest/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Error
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
 browser-compat: api.IDBRequest.error
 ---
 
@@ -44,15 +36,14 @@ in the exception object:
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
 could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the request failed and the
-result is not available, the `InvalidStateError` exception
-is thrown.
+problems when the request is being made. For example, if the result is accessed
+while the request is not completed, the `InvalidStateError` exception is thrown.
 
 ## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available as
-`objectStoreTitleRequest.result`, updates one property of the record, and then puts the
+`objectStoreTitleRequest.result`), updates one property of the record, and then puts the
 updated record back into the object store. Also included at the bottom is an
 `onerror` function that reports what the error was if the request fails.
 For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
@@ -61,9 +52,11 @@ For a full working example, see our [To-do Notifications](https://github.com/mdn
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
-// Get the do-do list with the specified title
+// Get the to-do list with the specified title
 const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = () => {
@@ -86,7 +79,9 @@ objectStoreTitleRequest.onsuccess = () => {
 
 objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
-  console.log(`There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`);
+  console.log(
+    `There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`
+  );
 };
 ```
 

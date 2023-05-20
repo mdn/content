@@ -1,9 +1,7 @@
 ---
 title: Falsy
 slug: Glossary/Falsy
-tags:
-  - CodingScripting
-  - JavaScript
+page-type: glossary-definition
 ---
 
 A **falsy** (sometimes written **falsey**) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.
@@ -12,17 +10,19 @@ A **falsy** (sometimes written **falsey**) value is a value that is considered f
 
 The following table provides a complete list of JavaScript falsy values:
 
-| Value                       | Description                                                                                                                                                                                                                      |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `false`                     | The keyword [`false`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#future_reserved_keywords_in_older_standards).                                                                                                         |
-| `0`                         | The {{jsxref("Number")}} zero (so, also `0.0`, etc., and `0x0`).                                                                                                                                                                 |
-| `-0`                        | The {{jsxref("Number")}} negative zero (so, also `-0.0`, etc., and `-0x0`).                                                                                                                                                      |
-| `0n`                        | The {{jsxref("BigInt")}} zero (so, also `0x0n`). Note that there is no {{jsxref("BigInt")}} negative zero — the negation of `0n` is `0n`.                                                                                        |
-| `""`, `''`, ` `` `          | Empty [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) value.                                                                                                                                                |
-| {{Glossary("null")}}        | [null](/en-US/docs/Web/JavaScript/Reference/Operators/null) — the absence of any value.                                                                                                                                          |
-| {{Glossary("undefined")}}   | [undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) — the primitive value.                                                                                                                                |
-| {{Glossary("NaN")}}         | [NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) — not a number.                                                                                                                                                   |
-| {{domxref("document.all")}} | Objects are falsy if and only if they have the [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) internal slot. That slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript. |
+| Value                       | Type      | Description                                                                                                                                         |
+| --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("null")}}        | Null      | The keyword [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) — the absence of any value.                                               |
+| {{Glossary("undefined")}}   | Undefined | [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) — the primitive value.                                                 |
+| `false`                     | Boolean   | The keyword [`false`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).                                                         |
+| {{Glossary("NaN")}}         | Number    | [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) — not a number.                                                                    |
+| `0`                         | Number    | The {{jsxref("Number")}} zero, also including `0.0`, `0x0`, etc.                                                                                    |
+| `-0`                        | Number    | The {{jsxref("Number")}} negative zero, also including `-0.0`, `-0x0`, etc.                                                                         |
+| `0n`                        | BigInt    | The {{jsxref("BigInt")}} zero, also including `0x0n`, etc. Note that there is no {{jsxref("BigInt")}} negative zero — the negation of `0n` is `0n`. |
+| `""`                        | String    | Empty [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) value, also including `''` and ` `` `.                                   |
+| {{domxref("document.all")}} | Object    | The only falsy object in JavaScript is the built-in {{domxref("document.all")}}.                                                                    |
+
+The values `null` and `undefined` are also [nullish](/en-US/docs/Glossary/Nullish).
 
 ## Examples
 

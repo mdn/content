@@ -2,12 +2,6 @@
 title: font-weight
 slug: Web/CSS/font-weight
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-weight
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: bias
 slug: Web/SVG/Attribute/bias
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.bias
 ---
 

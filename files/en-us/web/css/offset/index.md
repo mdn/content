@@ -2,12 +2,6 @@
 title: offset
 slug: Web/CSS/offset
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.offset
 ---
 
@@ -16,6 +10,8 @@ browser-compat: css.properties.offset
 The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the properties required for animating an element along a defined path.
 
 > **Note:** Early versions of the spec called this property `motion`.
+
+{{EmbedInteractiveExample("pages/css/offset.html")}}
 
 ## Constituent properties
 

@@ -2,28 +2,31 @@
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Paint Timing
-  - Performance Timeline API
-  - PerformancePaintTiming
-  - Reference
-  - Web Performance
 browser-compat: api.PerformancePaintTiming
 ---
 
 {{APIRef("Performance API")}}
 
-The **`PerformancePaintTiming`** interface of the [Paint Timing API](/en-US/docs/Web/API/Paint_Timing_API) provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.
+The **`PerformancePaintTiming`** interface provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.
 
-An application can register a {{domxref("PerformanceObserver")}} for "`paint`" {{domxref("PerformanceEntry","performance entry types")}} and the observer can retrieve the times that paint events occur. Use this information to help identify areas that take too long to provide a good user experience.
+There are two key paint moments this API provides:
+
+- {{Glossary("First paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First contentful paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+
+A third key paint moment is provided by the {{domxref("LargestContentfulPaint")}} API:
+
+- {{Glossary("Largest contentful paint")}} (LCP): Render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
+
+The data this API provides helps you minimize the time that users have to wait before they can see the site's content start to appear. Decreasing the time until these key paint moments make sites feel more responsive, performant, and engaging for your users.
+
+Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "`paint`" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:
+This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns "`paint`".
@@ -38,27 +41,35 @@ This interface has no properties but it extends the following {{domxref("Perform
 
 This interface has no methods.
 
-## Example
+## Examples
+
+### Getting paint timings
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `paint` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-function showPaintTimings() {
-  if (window.performance) {
-    let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach((performanceEntry) => {
-      console.log(`The time to ${performanceEntry.name} was ${performanceEntry.startTime} milliseconds.`);
-    });
-  } else {
-    console.log('Performance timing isn\'t supported.');
-  }
-}
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(
+      `The time to ${entry.name} was ${entry.startTime} milliseconds.`
+    );
+    // Logs "The time to first-paint was 386.7999999523163 milliseconds."
+    // Logs "The time to first-contentful-paint was 400.6999999284744 milliseconds."
+  });
+});
+
+observer.observe({ type: "paint", buffered: true });
 ```
 
-The code above produces console output something like the following:
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `paint` performance entries present in the browser's performance timeline at the time you call this method:
 
-```bash
-The time to first-paint was 2785.915 milliseconds.
-The time to first-contentful-paint was 2787.460 milliseconds.
+```js
+const entries = performance.getEntriesByType("paint");
+entries.forEach((entry) => {
+  console.log(`The time to ${entry.name} was ${entry.startTime} milliseconds.`);
+  // Logs "The time to first-paint was 386.7999999523163 milliseconds."
+  // Logs "The time to first-contentful-paint was 400.6999999284744 milliseconds."
+});
 ```
 
 ## Specifications
@@ -68,3 +79,7 @@ The time to first-contentful-paint was 2787.460 milliseconds.
 ## Browser compatibility
 
 {{Compat}}
+
+### See also
+
+- {{domxref("LargestContentfulPaint")}}

@@ -1,17 +1,10 @@
 ---
-title: Using Promises
+title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - "l10n:priority"
+page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
 
@@ -43,7 +36,7 @@ This convention has several advantages. We will explore each one.
 
 A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
 
-```js
+```js-nolint
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
@@ -228,7 +221,7 @@ doSomething()
 // Forgot to terminate chain with a catch!
 ```
 
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run in parallel with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
+The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run concurrently with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
 
 The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
 
@@ -307,10 +300,10 @@ Promises solve a fundamental flaw with the callback pyramid of doom, by catching
 
 If a promise rejection event is not handled by any handler, it bubbles to the top of the call stack, and the host needs to surface it. On the web, whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the [`window`](/en-US/docs/Web/API/Window) or, if being used in a web worker, it's the [`Worker`](/en-US/docs/Web/API/Worker) or other worker-based interface). The two events are:
 
-- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
-  - : Sent when a promise is rejected, after that rejection has been handled by the executor's `reject` function.
 - [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Sent when a promise is rejected but there is no rejection handler available.
+- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
+  - : Sent when a handler is attached to a rejected promise that has already caused an `unhandledrejection` event.
 
 In both cases, the event (of type [`PromiseRejectionEvent`](/en-US/docs/Web/API/PromiseRejectionEvent)) has as members a [`promise`](/en-US/docs/Web/API/PromiseRejectionEvent/promise) property indicating the promise that was rejected, and a [`reason`](/en-US/docs/Web/API/PromiseRejectionEvent/reason) property that provides the reason given for the promise to be rejected.
 
@@ -332,7 +325,7 @@ However, if you add that `process.on` listener but don't also have code within i
 
 There are four [composition tools](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) for running asynchronous operations concurrently: {{jsxref("Promise.all()")}}, {{jsxref("Promise.allSettled()")}}, {{jsxref("Promise.any()")}}, and {{jsxref("Promise.race()")}}.
 
-We can start operations in parallel and wait for them all to finish like this:
+We can start operations at the same time and wait for them all to finish like this:
 
 ```js
 Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
@@ -342,7 +335,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 
 If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise and aborts the other operations. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
-These methods all run promises in parallel — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
+These methods all run promises concurrently — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
 
 ```js
 [func1, func2, func3]
@@ -391,7 +384,7 @@ for (const f of [func1, func2, func3]) {
 /* use last result (i.e. result3) */
 ```
 
-However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises in parallel so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
+However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
 
 ## Creating a Promise around an old callback API
 
@@ -425,7 +418,7 @@ Lastly, we will look into the more technical details, about when the registered 
 
 In the callback-based API, when and how the callback gets called depends on the API implementor. For example, the callback may be called synchronously or asynchronously:
 
-```js
+```js example-bad
 function doSomething(callback) {
   if (Math.random() > 0.5) {
     callback();
@@ -435,7 +428,7 @@ function doSomething(callback) {
 }
 ```
 
-This leads to [the state of Zalgo](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), because it makes side effects hard to analyze:
+The above design is strongly discouraged because it leads to the so-called "state of Zalgo". In the context of designing asynchronous APIs, this means a callback is called synchronously in some cases but asynchronously in other cases, creating ambiguity for the caller. For further background, see the article [Designing APIs for Asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony/), where the term was first formally presented. This API design makes side effects hard to analyze:
 
 ```js
 let value = 1;
@@ -447,7 +440,7 @@ console.log(value); // 1 or 2?
 
 On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
 
-- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion) of the JavaScript event loop.
+- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Event_loop#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
 - Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
 
@@ -471,7 +464,7 @@ Promise.resolve()
 console.log(1); // 1, 2, 3, 4
 ```
 
-### Task queues vs microtasks
+### Task queues vs. microtasks
 
 Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
 
@@ -499,7 +492,7 @@ Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 ```
 
-For more details, refer to [Tasks vs microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
+For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
 
 ### When promises and tasks collide
 
@@ -517,4 +510,4 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Using_Classes", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}

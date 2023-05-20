@@ -1,13 +1,8 @@
 ---
-title: Document.compatMode
+title: "Document: compatMode property"
+short-title: compatMode
 slug: Web/API/Document/compatMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.compatMode
 ---
 

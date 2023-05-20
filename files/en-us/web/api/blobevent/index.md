@@ -2,22 +2,10 @@
 title: BlobEvent
 slug: Web/API/BlobEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Blob
-  - Interface
-  - Media
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording Media
-  - Reference
-  - Video
-  - events
 browser-compat: api.BlobEvent
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 The **`BlobEvent`** interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily, associated with media content.
 

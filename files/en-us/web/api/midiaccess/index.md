@@ -2,11 +2,6 @@
 title: MIDIAccess
 slug: Web/API/MIDIAccess
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIAccess
 ---
 
@@ -37,19 +32,16 @@ The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that r
 When a port changes state, information about that port is printed to the console.
 
 ```js
-navigator.requestMIDIAccess()
-  .then((access) => {
+navigator.requestMIDIAccess().then((access) => {
+  // Get lists of available MIDI controllers
+  const inputs = access.inputs.values();
+  const outputs = access.outputs.values();
 
-     // Get lists of available MIDI controllers
-     const inputs = access.inputs.values();
-     const outputs = access.outputs.values();
-
-     access.onstatechange = (event) => {
-
-       // Print information about the (dis)connected MIDI controller
-       console.log(event.port.name, event.port.manufacturer, event.port.state);
-     };
-  });
+  access.onstatechange = (event) => {
+    // Print information about the (dis)connected MIDI controller
+    console.log(event.port.name, event.port.manufacturer, event.port.state);
+  };
+});
 ```
 
 ## Specifications

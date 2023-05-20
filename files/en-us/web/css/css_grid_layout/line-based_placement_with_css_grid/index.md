@@ -2,10 +2,6 @@
 title: Grid layout using line-based placement
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}
@@ -20,7 +16,7 @@ As a very simple example we can take a grid with 3 column tracks and 3 row track
 
 Inside our grid container we have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) you can see how the grid has defined columns and rows.
 
-![Our Grid highlighted in DevTools](3_hilighted_grid.png)
+![Our Grid highlighted in DevTools](highlighted_grid.png)
 
 ```css hidden
 * {

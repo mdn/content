@@ -1,23 +1,7 @@
 ---
 title: Using HTTP cookies
 slug: Web/HTTP/Cookies
-tags:
-  - Advertising
-  - Browser
-  - Cookies
-  - Cookies Article
-  - Guide
-  - HTTP
-  - History
-  - JavaScript
-  - Privacy
-  - Protocols
-  - Server
-  - Storage
-  - Web Development
-  - data
-  - request
-  - tracking
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -114,7 +98,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 #### Domain attribute
 
-The `Domain` attribute specifies which hosts can receive a cookie. If unspecified, the attribute defaults to the same {{Glossary("host")}} that set the cookie, _excluding subdomains_. If `Domain` _is_ specified, then subdomains are always included. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
+The `Domain` attribute specifies which hosts can receive a cookie. If the server does not specify a `Domain`, the browser defaults the domain to the same {{Glossary("host")}} that set the cookie, _excluding subdomains_. If `Domain` _is_ specified, then subdomains are always included. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
 
 For example, if you set `Domain=mozilla.org`, cookies are available on subdomains like `developer.mozilla.org`.
 
@@ -138,7 +122,7 @@ But these request paths don't:
 
 #### SameSite attribute
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain and the _scheme_: http or https).
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain and the _scheme_: http or https).
 This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 It takes three possible values: `Strict`, `Lax`, and `None`.
 
@@ -154,7 +138,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
 > **Note:** The standard related to `SameSite` recently changed (MDN documents the new behavior above).
-> See the cookies [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about how the attribute is handled in specific browser versions:
+> See the cookies [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility) table for information about how the attribute is handled in specific browser versions:
 >
 > - `SameSite=Lax` is the new default if `SameSite` isn't specified.
 >   Previously, cookies were sent for all requests by default.
@@ -221,7 +205,10 @@ Firefox, by default, blocks third-party cookies that are known to contain tracke
 Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
 Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended.
 
-> **Note:** Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) to specify whether or not cookies may be sent to third party sites.
+There are some useful features available for developers who wish to respect user privacy, and minimize third-party tracking:
+
+- Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) to specify whether or not third-party cookies may be sent.
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) enables developers to opt-in their cookies to partitioned storage, with a separate cookie jar per top-level site. This enables valid non-tracking uses of third-party cookies to continue working in browsers that do not allow cookies to be used for third-party tracking.
 
 ### Cookie-related regulations
 
@@ -253,7 +240,6 @@ There are some techniques designed to recreate cookies after they're deleted. Th
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
 - [Inspecting cookies using the Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)

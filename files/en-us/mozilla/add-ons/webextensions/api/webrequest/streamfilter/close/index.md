@@ -1,13 +1,7 @@
 ---
 title: webRequest.StreamFilter.close()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - StreamFilter.close
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.close
 ---
 

@@ -1,13 +1,8 @@
 ---
 title: "Document: DOMContentLoaded event"
+short-title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
 page-type: web-api-event
-tags:
-  - API
-  - DOMContentLoaded
-  - Document
-  - Event
-  - Web
 browser-compat: api.Document.DOMContentLoaded_event
 ---
 
@@ -26,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('DOMContentLoaded', (event) => {});
+addEventListener("DOMContentLoaded", (event) => {});
 
-onDOMContentLoaded = (event) => { };
+onDOMContentLoaded = (event) => {};
 ```
 
 ## Event type
@@ -40,8 +35,8 @@ A generic {{domxref("Event")}}.
 ### Basic usage
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-  console.log('DOM fully loaded and parsed');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 
@@ -65,15 +60,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```js
 function doSomething() {
-  console.info('DOM loaded');
+  console.info("DOM loaded");
 }
 
-if (document.readyState === 'loading') {  // Loading hasn't finished yet
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` has already fired
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` has already fired
   doSomething();
 }
 ```
+
+> **Note:** There's no race condition here — it's not possible for the document to be loaded between the `if` check and the `addEventListener()` call. JavaScript has run-to-completion semantics, which means if the document is loading at one particular tick of the event loop, it can't become loaded until the next cycle, at which time the `doSomething` handler is already attached and will be fired.
 
 ### Live example
 
@@ -91,7 +90,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
     class="event-log-contents"
     rows="8"
     cols="30"
-    id="leventLog"></textarea>
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -116,7 +115,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -128,26 +128,26 @@ label, button {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   setTimeout(() => {
     window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-  log.textContent += 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent += "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
+document.addEventListener("readystatechange", (event) => {
   log.textContent += `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  log.textContent += 'DOMContentLoaded\n';
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent += "DOMContentLoaded\n";
 });
 ```
 

@@ -1,15 +1,8 @@
 ---
-title: IntersectionObserver.rootMargin
+title: "IntersectionObserver: rootMargin property"
+short-title: rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - rootMargin
 browser-compat: api.IntersectionObserver.rootMargin
 ---
 
@@ -25,8 +18,8 @@ outward so that the target element is considered 100% visible even if a certain 
 of pixels worth of width or height is clipped away, or treat the target as partially
 hidden if an edge is too close to the edge of the root's bounding box.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element
-  and root margin")}} for a more in-depth look at the root margin and how it works with
+See [how intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
 ## Value
@@ -43,9 +36,8 @@ the values
 If `rootMargin` isn't specified when the object was instantiated, it
 defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection
 will be computed between the root element's unmodified bounds rectangle and the target's
-bounds. {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root
-  element and root margin")}} describes how the `rootMargin` is used in more
-detail.
+bounds. [How intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated)
+describes how the `rootMargin` is used in more detail.
 
 ## Specifications
 

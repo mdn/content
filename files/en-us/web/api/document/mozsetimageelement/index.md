@@ -1,14 +1,10 @@
 ---
-title: Document.mozSetImageElement()
+title: "Document: mozSetImageElement() method"
+short-title: mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Document.mozSetImageElement
 ---
 
@@ -27,7 +23,7 @@ mozSetImageElement(imageElementId, imageElement)
 ### Parameters
 
 - `imageElementId` is a string indicating the name of an element that has
-  been specified as a background image using the {{ cssxref("-moz-element") }} CSS
+  been specified as a background image using the {{ cssxref("element", "-moz-element") }} CSS
   function.
 - `imageElement` is the new element to use as the background corresponding
   to that image element string. Specify `null` to remove the background
@@ -42,7 +38,7 @@ None ({{jsxref("undefined")}}).
 This example changes the background of a {{ HTMLElement("div") }} block each time the
 block is clicked by the user.
 
-[View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
+[View this example live](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
 ```html
 <style>
@@ -66,7 +62,7 @@ function clicked() {
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   ctx.fillStyle = `#${c.toString(16)}0000`;
   ctx.fillRect(25, 25, 75, 75);
 
@@ -100,4 +96,4 @@ Not part of any specification.
 
 ## See also
 
-- {{ cssxref("-moz-element") }}
+- {{ cssxref("element", "-moz-element") }}

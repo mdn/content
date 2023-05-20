@@ -1,13 +1,7 @@
 ---
 title: Inheritance
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Inheritance
-  - Layout
-  - Web
 ---
 
 {{CSSRef}}
@@ -19,7 +13,7 @@ CSS properties can be categorized in two types:
 - **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/computed_value) of the parent element
 - **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/initial_value) of the property
 
-Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#keyword_index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
+Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
 
 ## Inherited properties
 
@@ -103,7 +97,7 @@ We can see here another border around the word "emphasized text".
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)

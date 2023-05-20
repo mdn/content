@@ -1,13 +1,7 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-tags:
-  - Class
-  - Uint8ClampedArray
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
 
@@ -15,19 +9,19 @@ browser-compat: javascript.builtins.Uint8ClampedArray
 
 The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of \[0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
+`Uint8ClampedArray` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : Creates a new `Uint8ClampedArray` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Uint8ClampedArray`.
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
-  - : Returns the string value of the constructor name. `"Uint8ClampedArray"` in the case of `Uint8ClampedArray`.
 
 ## Static methods
 
@@ -37,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Uint8ClampedArray.prototype` and shared by all `Uint8ClampedArray` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8ClampedArray.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8ClampedArray`.
+- {{jsxref("Object/constructor", "Uint8ClampedArray.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint8ClampedArray` instances, the initial value is the {{jsxref("Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray")}} constructor.
 
 ## Instance methods
 
@@ -91,6 +89,6 @@ console.log(uintc8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8ClampedArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

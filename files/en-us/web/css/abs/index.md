@@ -2,15 +2,8 @@
 title: abs()
 slug: Web/CSS/abs
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - abs
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.abs
 ---
 
@@ -72,7 +65,7 @@ In older browsers that lack the support for CSS `abs()` function, you can use th
 
 ```css
 p {
-  line-height: max(var(--lh), -1*var(--lh));
+  line-height: max(var(--lh), -1 * var(--lh));
 }
 ```
 

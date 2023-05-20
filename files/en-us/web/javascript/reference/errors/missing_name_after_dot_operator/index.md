@@ -1,18 +1,14 @@
 ---
-title: 'SyntaxError: missing name after . operator'
+title: "SyntaxError: missing name after . operator"
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing name after . operator" occurs when there is a problem
 with how the dot operator (`.`) is used
-for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 ## Message
 
@@ -27,7 +23,7 @@ SyntaxError: Unexpected token '['. Expected a property name after '.'. (Safari)
 
 ## What went wrong?
 
-The dot operator (`.`) is used for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+The dot operator (`.`) is used for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 You will have to specify the name of the property that you want to access.
 For computed property access, you might need to change your property access from using a
 dot to using square brackets. These will allow you to compute an expression. Maybe you
@@ -38,7 +34,7 @@ case. Please see the examples below.
 
 ### Property access
 
-[Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+[Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 in JavaScript use either the dot (.) or square brackets (`[]`), but not both.
 Square brackets allow computed property access.
 
@@ -85,4 +81,4 @@ console.log("Hello" + "World");
 
 ## See also
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)

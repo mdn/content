@@ -5,12 +5,13 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - "**/*.json"
       - "**/*.jsonc"
       - .github/workflows/pr-check_json.yml
 
 jobs:
-  docs:
+  lint-json:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +20,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint JSON files
         run: yarn lint:json

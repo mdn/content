@@ -1,10 +1,7 @@
 ---
 title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.color-interpolation
 ---
 
@@ -24,7 +21,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
 - {{SVGElement("defs")}}

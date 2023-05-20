@@ -1,16 +1,7 @@
 ---
-title: "aria-autocomplete"
+title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-autocomplete
-  - combobox
-  - searchbox
-  - listbox
-  - NeedsExample
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-autocomplete,
   - https://w3c.github.io/aria-practices/#combobox
@@ -26,7 +17,7 @@ The `aria-autocomplete` property describes the type of autocompletion interactio
 
 The `aria-autocomplete` property only describes the type of predictive behavior for an input element for assistive technologies; it doesn't provide the functionality. The actual autocompletion should be provided using HTML attributes or JavaScript.
 
-If the suggested autocomplete value provides suggested values that aren't dependent on the input provided by the user, consider omitting autocomplete for everyone. For example, a searchbox input displaying unfiltered recent search terms may be helpful to a marketing team on an eCommerce site, but likely isn't helpful for the screen reader user. When it is best to not specify a value for `aria-autocomplete` or to set the value to the `none` default, likely your non-assistive technology users also don't need the experience.
+If the suggested autocomplete value provides suggested values that aren't dependent on the input provided by the user, consider omitting autocomplete for everyone. For example, a searchbox input displaying unfiltered recent search terms may be helpful to a marketing team on an e-commerce site, but likely isn't helpful for the screen reader user. When it is best to not specify a value for `aria-autocomplete` or to set the value to the `none` default, likely your non-assistive technology users also don't need the experience.
 
 When implementing autocomplete functionality, ensure the suggested portion of the value is presented as selected text to enable distinguishing between a user's input and the suggestion. Make sure that when the suggested value is not the desired value, users can easily delete the suggestion or replace it by continuing to type.
 

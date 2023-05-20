@@ -1,11 +1,7 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - HTTP
-  - Redirect
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.301
 ---
 
@@ -17,7 +13,7 @@ The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect stat
 
 ## Status
 
-```
+```http
 301 Moved Permanently
 ```
 

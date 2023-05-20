@@ -2,12 +2,6 @@
 title: animation-play-state
 slug: Web/CSS/animation-play-state
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-play-state
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.every
 ---
 
@@ -22,37 +16,20 @@ returns a Boolean value.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-every((element) => { /* … */ })
-every((element, index) => { /* … */ })
-every((element, index, array) => { /* … */ })
-
-// Callback function
 every(callbackFn)
 every(callbackFn, thisArg)
-
-// Inline callback function
-every(function (element) { /* … */ })
-every(function (element, index) { /* … */ })
-every(function (element, index, array) { /* … */ })
-every(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to indicate the element passes the test, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `every()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -88,7 +65,7 @@ The following example tests whether all elements in the array are bigger than 10
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -97,7 +74,8 @@ function isBigEnough(element, index, array) {
 The following example tests if all the elements of an array are present in another array.
 
 ```js
-const isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
+const isSubset = (array1, array2) =>
+  array2.every((element) => array1.includes(element));
 
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
@@ -123,10 +101,10 @@ array is modified.
 // ---------------
 let arr = [1, 2, 3, 4];
 arr.every((elem, index, arr) => {
-  arr[index+1]--;
+  arr[index + 1]--;
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 2;
-})
+});
 
 // Loop runs for 3 iterations, but would
 // have run 2 iterations without any modification
@@ -140,10 +118,10 @@ arr.every((elem, index, arr) => {
 // ---------------
 arr = [1, 2, 3];
 arr.every((elem, index, arr) => {
-  arr.push('new');
+  arr.push("new");
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 4;
-})
+});
 
 // Loop runs for 3 iterations, even after appending new items
 //
@@ -159,7 +137,7 @@ arr.every((elem, index, arr) => {
   arr.pop();
   console.log(`[${arr}][${index}] -> ${elem}`);
   return elem < 4;
-})
+});
 
 // Loop runs for 2 iterations only, as the remaining
 // items are `pop()`ed off
@@ -195,6 +173,8 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.find()")}}

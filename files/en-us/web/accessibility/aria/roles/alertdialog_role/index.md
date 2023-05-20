@@ -1,14 +1,7 @@
 ---
 title: "ARIA: alertdialog role"
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - Alert
-  - Alertdialog
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alertdialog
   - https://w3c.github.io/aria-practices/#alertdialog
@@ -93,6 +86,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ## See Also
 
+- HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)

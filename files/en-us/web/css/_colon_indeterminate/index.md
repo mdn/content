@@ -2,17 +2,6 @@
 title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 page-type: css-pseudo-class
-tags:
-  - ":indeterminate"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - checkbox
-  - progress
-  - radio button
 browser-compat: css.selectors.indeterminate
 ---
 
@@ -35,7 +24,7 @@ Elements targeted by this selector are:
 
 ## Syntax
 
-```
+```plain
 :indeterminate
 ```
 

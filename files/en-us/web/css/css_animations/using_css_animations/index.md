@@ -2,12 +2,6 @@
 title: Using CSS animations
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Guide
 ---
 
 {{CSSRef}}
@@ -343,7 +337,7 @@ The events get delivered to the `listener()` function, which is shown below.
 ```js
 function listener(event) {
   const l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
       break;

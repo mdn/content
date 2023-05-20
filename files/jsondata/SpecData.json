@@ -1039,6 +1039,11 @@
     "url": "https://w3c.github.io/IndexedDB/",
     "status": "ED"
   },
+  "Ink API": {
+    "name": "Ink API",
+    "url": "https://wicg.github.io/ink-enhancement/",
+    "status": "Draft"
+  },
   "InputDeviceCapabilities": {
     "name": "InputDeviceCapabilities",
     "url": "https://wicg.github.io/InputDeviceCapabilities/",
@@ -1082,11 +1087,6 @@
   "Largest Contentful Paint": {
     "name": "Largest Contentful Paint",
     "url": "https://wicg.github.io/largest-contentful-paint/",
-    "status": "ED"
-  },
-  "Layout Instability": {
-    "name": "Layout Instability API",
-    "url": "https://wicg.github.io/layout-instability/",
     "status": "ED"
   },
   "Legacy RegExp features": {
@@ -1333,11 +1333,6 @@
     "name": "Presentation API",
     "url": "https://w3c.github.io/presentation-api/",
     "status": "CR"
-  },
-  "Priority Hints": {
-    "name": "Priority Hints",
-    "url": "https://wicg.github.io/priority-hints/",
-    "status": "Draft"
   },
   "Promise.any": {
     "name": "Promise.any",
@@ -1621,7 +1616,7 @@
   },
   "Trusted Types": {
     "name": "Trusted Types",
-    "url": "https://w3c.github.io/webappsec-trusted-types/dist/spec/",
+    "url": "https://w3c.github.io/trusted-types/dist/spec/",
     "status": "ED"
   },
   "UI Events": {

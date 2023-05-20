@@ -1,13 +1,7 @@
 ---
-title: '<legend>: The Field Set Legend element'
+title: "<legend>: The Field Set Legend element"
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.legend
 ---
 
@@ -17,11 +11,21 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+See {{HTMLElement("form")}} for examples on `<legend>`.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -30,7 +34,7 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         and
@@ -67,14 +71,6 @@ The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## Specifications
 

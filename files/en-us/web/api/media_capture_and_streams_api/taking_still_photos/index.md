@@ -2,18 +2,6 @@
 title: Taking still photos with getUserMedia()
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Example
-  - Photos
-  - Sample code
-  - Still Photos
-  - Video
-  - camera
-  - MediaDevices
-  - getusermedia
-  - webcam
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -467,5 +455,5 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 
 - [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
+- [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

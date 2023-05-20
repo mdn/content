@@ -1,11 +1,7 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
+title: "SyntaxError: \"x\" is a reserved identifier"
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}

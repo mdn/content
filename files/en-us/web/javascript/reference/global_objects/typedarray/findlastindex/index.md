@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLastIndex
 ---
 
@@ -24,42 +17,22 @@ See also the {{jsxref("TypedArray.findLast()", "findLast()")}} method, which ret
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLastIndex((element) => { /* ... */ } )
-findLastIndex((element, index) => { /* ... */ } )
-findLastIndex((element, index, array) => { /* ... */ } )
-
-// Callback function
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
-
-// Inline callback function
-findLastIndex(function(element) { /* ... */ })
-findLastIndex(function(element, index) { /* ... */ })
-findLastIndex(function(element, index, array){ /* ... */ })
-findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function used to test elements in the typed array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
-      - : The current element in the typed array.
+      - : The current element being processed in the typed array.
     - `index`
-      - : The index (position) of the current element in the typed array.
+      - : The index of the current element being processed in the typed array.
     - `array`
-      - : The typed array that `findLastIndex()` was called on.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The index of this element is returned by `findLastIndex()`.
-
+      - : The typed array `findLastIndex()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -70,7 +43,7 @@ Otherwise -1 if no matching element is found.
 
 The `findLastIndex()` method executes the `callbackFn` function once for each index of the typed array in descending-index order until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
 `findLastIndex()` then returns the index of that element and stops iterating through the typed array.
-If `callbackFn` never returns a truthy value, `findLastIndex()` returns {{jsxref("undefined")}}.
+If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
 
 `callbackFn` is invoked with three arguments: the value of the element, the index of the element, and the typed array object being traversed.
 
@@ -109,7 +82,7 @@ console.log(uint8.findLastIndex(isPrime));
 // -1 (no primes in array)
 uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLastIndex(isPrime));
-// 11
+// 5
 ```
 
 ## Specifications

@@ -2,12 +2,6 @@
 title: CryptoKeyPair
 slug: Web/API/CryptoKeyPair
 page-type: web-api-interface
-tags:
-  - API
-  - CryptoKeyPair
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#keypair
 ---
 

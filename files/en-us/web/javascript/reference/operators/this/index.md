@@ -1,19 +1,13 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expressions
-  - Reference
-  - this
+page-type: javascript-language-feature
 browser-compat: javascript.operators.this
 ---
 
 {{jsSidebar("Operators")}}
 
-A function's **`this` keyword** behaves a little differently in JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode.
+A function's **`this`** keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode.
 
 In most cases, the value of `this` is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()", "bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
 
@@ -122,7 +116,7 @@ In typical function calls, `this` is implicitly passed like a parameter through 
 
 #### Callbacks
 
-When a function is passed as a callback, the value of `this` depends on how the callback is called, which is determined by the implementor of the API. Callbacks are _typically_ called with a `this` value of `undefined` (calling it directly without attaching it to any object), which means if the function is non–strict, the value of `this` is the global object ({{jsxref("globalThis")}}). This is the case for [iterative array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor, [`setTimeout()`](/en-US/docs/Web/API/setTimeout), etc.
+When a function is passed as a callback, the value of `this` depends on how the callback is called, which is determined by the implementor of the API. Callbacks are _typically_ called with a `this` value of `undefined` (calling it directly without attaching it to any object), which means if the function is non–strict, the value of `this` is the global object ({{jsxref("globalThis")}}). This is the case for [iterative array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor, etc.
 
 ```js
 function logThis() {
@@ -131,7 +125,6 @@ function logThis() {
 }
 
 [1, 2, 3].forEach(logThis); // undefined, undefined, undefined
-setTimeout(logThis, 1000); // undefined
 ```
 
 Some APIs allow you to set a `this` value for invocations of the callback. For example, all iterative array methods and related ones like {{jsxref("Set.prototype.forEach()")}} accept an optional `thisArg` parameter.
@@ -192,6 +185,10 @@ console.log(o.a); // 38
 ```
 
 In the second example (`C2`), because an object was returned during construction, the new object that `this` was bound to gets discarded. (This essentially makes the statement `this.a = 37;` dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)
+
+#### super
+
+When a function is invoked in the `super.method()` form, the `this` inside the `method` function is the same value as the `this` value around the `super.method()` call, and is generally not equal to the object that `super` refers to. This is because `super.method` is not an object member access like the ones above — it's a special syntax with different binding rules. For examples, see the [`super` reference](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
 
 ### Class context
 
@@ -262,7 +259,7 @@ console.log(b); // "MDN"
 
 If the source is loaded as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) (for HTML, this means adding `type="module"` to the `<script>` tag), `this` is always `undefined` at the top level.
 
-If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for direct eval, or `globalThis` (as if it's run in a separate global script) for indirect eval.
+If the source is executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), `this` is the same as the enclosing context for [direct eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval), or `globalThis` (as if it's run in a separate global script) for indirect eval.
 
 ```js
 function test() {

@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-tags:
-  - TypedArray
-  - TypedArrays
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
-  - at
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.at
 ---
 

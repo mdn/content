@@ -1,10 +1,7 @@
 ---
 title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.writing-mode
 ---
 

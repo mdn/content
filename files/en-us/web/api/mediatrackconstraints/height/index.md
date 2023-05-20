@@ -1,18 +1,8 @@
 ---
-title: MediaTrackConstraints.height
+title: "MediaTrackConstraints: height property"
+short-title: height
 slug: Web/API/MediaTrackConstraints/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - height
 browser-compat: api.MediaTrackConstraints.height
 ---
 
@@ -39,8 +29,7 @@ provided and have the same value) or to a best-possible value.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 

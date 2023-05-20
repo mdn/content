@@ -2,12 +2,6 @@
 title: touch-action
 slug: Web/CSS/touch-action
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Pointer Events
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.touch-action
 ---
 

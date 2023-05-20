@@ -1,11 +1,7 @@
 ---
 title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Language feature
+page-type: javascript-language-feature
 browser-compat: javascript.functions.default_parameters
 ---
 
@@ -73,7 +69,7 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **Note:** Parameters after the first default parameter will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
+> **Note:** The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 The default parameter initializers live in their own scope, which is a parent of the scope created for the function body.
 
@@ -246,4 +242,7 @@ preFilledObject({ z: 2 }); // 2
 
 ## See also
 
-- [Original proposal at ecmascript.org](https://web.archive.org/web/20161222115423/http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

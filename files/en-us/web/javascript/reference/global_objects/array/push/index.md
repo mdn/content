@@ -1,19 +1,13 @@
 ---
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.push
 ---
 
 {{JSRef}}
 
-The **`push()`** method adds one or more elements to the end of
+The **`push()`** method adds the specified elements to the end of
 an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
@@ -21,6 +15,7 @@ an array and returns the new length of the array.
 ## Syntax
 
 ```js-nolint
+push()
 push(element0)
 push(element0, element1)
 push(element0, element1, /* … ,*/ elementN)
@@ -54,8 +49,8 @@ appends two elements to it. The `total` variable contains the new length of
 the array.
 
 ```js
-const sports = ['soccer', 'baseball'];
-const total = sports.push('football', 'swimming');
+const sports = ["soccer", "baseball"];
+const total = sports.push("football", "swimming");
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total); // 4
@@ -67,8 +62,8 @@ This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}
 second array into the first one.
 
 ```js
-const vegetables = ['parsnip', 'potato'];
-const moreVegs = ['celery', 'beetroot'];
+const vegetables = ["parsnip", "potato"];
+const moreVegs = ["celery", "beetroot"];
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
@@ -143,7 +138,10 @@ were dealing with an actual array.
 ## See also
 
 - [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

@@ -2,15 +2,9 @@
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - Intermediate
-  - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Since we're using JavaScript to control {{HTMLElement("canvas")}} elements, it's also very easy to make (interactive) animations. In this chapter we will take a look at how to do some basic animations.
 
@@ -46,7 +40,7 @@ First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and
 - {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
-If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
+If you don't want any user interaction you can use the `setInterval()` function, which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting listeners using {{domxref("Window.addEventListener", "addEventListener()")}}, we catch any user interaction and execute our animation functions.
 
 > **Note:** In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
 
@@ -67,33 +61,39 @@ const sun = new Image();
 const moon = new Image();
 const earth = new Image();
 function init() {
-  sun.src = 'canvas_sun.png';
-  moon.src = 'canvas_moon.png';
-  earth.src = 'canvas_earth.png';
+  sun.src = "canvas_sun.png";
+  moon.src = "canvas_moon.png";
+  earth.src = "canvas_earth.png";
   window.requestAnimationFrame(draw);
 }
 
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.globalCompositeOperation = 'destination-over';
+  ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
-  ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
   ctx.save();
   ctx.translate(150, 150);
 
   // Earth
   const time = new Date();
-  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 60) * time.getSeconds() +
+      ((2 * Math.PI) / 60000) * time.getMilliseconds()
+  );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
   ctx.drawImage(earth, -12, -12);
 
   // Moon
   ctx.save();
-  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 6) * time.getSeconds() +
+      ((2 * Math.PI) / 6000) * time.getMilliseconds()
+  );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
@@ -131,17 +131,17 @@ This example draws an animated clock, showing your current time.
 ```js
 function clock() {
   const now = new Date();
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
   ctx.scale(0.4, 0.4);
   ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = 'black';
-  ctx.fillStyle = 'white';
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "white";
   ctx.lineWidth = 8;
-  ctx.lineCap = 'round';
+  ctx.lineCap = "round";
 
   // Hour marks
   ctx.save();
@@ -170,16 +170,18 @@ function clock() {
 
   const sec = now.getSeconds();
   const min = now.getMinutes();
-  const hr  = now.getHours() % 12;
+  const hr = now.getHours() % 12;
 
-  ctx.fillStyle = 'black';
+  ctx.fillStyle = "black";
 
   // Write image description
-  canvas.innerText = `The time is: ${hr}:${min}`; 
+  canvas.innerText = `The time is: ${hr}:${min}`;
 
   // Write Hours
   ctx.save();
-  ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
+  ctx.rotate(
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
+  );
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -199,9 +201,9 @@ function clock() {
 
   // Write seconds
   ctx.save();
-  ctx.rotate(sec * Math.PI / 30);
-  ctx.strokeStyle = '#D40000';
-  ctx.fillStyle = '#D40000';
+  ctx.rotate((sec * Math.PI) / 30);
+  ctx.strokeStyle = "#D40000";
+  ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -213,14 +215,14 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#325FA2';
+  ctx.strokeStyle = "#325FA2";
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
@@ -245,7 +247,9 @@ In this example, a panorama is scrolled left-to-right. We're using [an image of 
 The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `canvasXSize` and `canvasYSize` variables in the JavaScript code.
 
 ```html
-<canvas id="canvas" width="800" height="200">Yosemite National Park, meadow at the base of El Capitan</canvas>
+<canvas id="canvas" width="800" height="200"
+  >Yosemite National Park, meadow at the base of El Capitan</canvas
+>
 ```
 
 ### JavaScript
@@ -255,7 +259,7 @@ const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
-img.src = 'capitan_meadows_yosemite_national_park.jpg';
+img.src = "capitan_meadows_yosemite_national_park.jpg";
 const canvasXSize = 800;
 const canvasYSize = 200;
 const speed = 30; // lower is faster
@@ -285,11 +289,11 @@ img.onload = () => {
   clearY = Math.max(imgH, canvasYSize);
 
   // Get canvas context
-  ctx = document.getElementById('canvas').getContext('2d');
+  ctx = document.getElementById("canvas").getContext("2d");
 
   // Set refresh rate
   return setInterval(draw, speed);
-}
+};
 
 function draw() {
   ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
@@ -340,7 +344,10 @@ function draw() {
 ### HTML
 
 ```html
-<canvas id="cw">Animation creating multi-colored disappearing stream of light that follow the cursor as it moves over the image </canvas>
+<canvas id="cw"
+  >Animation creating multi-colored disappearing stream of light that follow the
+  cursor as it moves over the image
+</canvas>
 ```
 
 ### CSS

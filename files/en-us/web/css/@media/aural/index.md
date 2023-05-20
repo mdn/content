@@ -2,13 +2,8 @@
 title: aural
 slug: Web/CSS/@media/aural
 page-type: css-media-feature
-tags:
-  - CSS
-  - Deprecated
-  - Reference
-  - aural
-  - media feature
-  - speech
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/CSS22/aural.html
 ---
 

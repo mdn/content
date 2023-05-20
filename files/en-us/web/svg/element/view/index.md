@@ -1,11 +1,7 @@
 ---
 title: <view>
 slug: Web/SVG/Element/view
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.view
 ---
 

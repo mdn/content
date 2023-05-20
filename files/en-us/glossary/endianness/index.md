@@ -1,9 +1,7 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
+page-type: glossary-definition
 ---
 
 **Endian** and **endianness** (or "byte-order") describe how computers organize the bytes that make up numbers.

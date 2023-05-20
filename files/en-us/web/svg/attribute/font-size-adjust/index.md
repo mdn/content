@@ -1,9 +1,7 @@
 ---
 title: font-size-adjust
 slug: Web/SVG/Attribute/font-size-adjust
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-size-adjust
 ---
 

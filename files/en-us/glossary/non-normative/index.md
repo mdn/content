@@ -1,13 +1,10 @@
 ---
-title: non-normative
-slug: Glossary/non-normative
-tags:
-  - Infrastructure
-  - Specification
-  - Standardization
+title: Non-normative
+slug: Glossary/Non-normative
+page-type: glossary-definition
 ---
 
-Software {{Glossary("specification", "specifications")}} often contains information marked as **non-normative** or _informative_, which means that those are provided there to help the readers to understand the specification better or to show an example or a best practice and not need to be followed as a rule. Sections that contain the official part of the specification that must be followed are often marked as {{Glossary("normative")}}.
+Software {{Glossary("specification", "specifications")}} often contain information marked as **non-normative** or _informative_, which is provided to help readers understand the specification better, or to show an example or best practice. Non-normative parts of the specification are provided as guidelines, and are not considered part of the formal specification. Sections that contain the official part of the specification are often marked as {{Glossary("normative")}}.
 
 ## See also
 

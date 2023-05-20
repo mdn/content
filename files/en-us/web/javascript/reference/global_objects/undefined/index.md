@@ -1,36 +1,29 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-global-property
 browser-compat: javascript.builtins.undefined
 ---
 
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
+The **`undefined`** global property represents the primitive
 value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{js_property_attributes(0,0,0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
-## Syntax
+## Value
 
-```js-nolint
-undefined
-```
+The primitive value `{{Glossary("Undefined", "undefined")}}`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`undefined` is a property of the _global object_. That is, it is a
-variable in global scope. The initial value of `undefined` is the primitive
-value `{{Glossary("Undefined", "undefined")}}`.
+`undefined` is a property of the _global object_. That is, it is a variable in global scope.
 
-In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. (Even when this is not the case, avoid overriding it.)
+In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 A variable that has not been assigned a value is of type `undefined`. A
 method or statement also returns `undefined` if the variable that is being
@@ -94,13 +87,12 @@ error if the variable has not been declared.
 ```js
 // x has not been declared before
 // evaluates to true without errors
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // these statements execute
 }
 
 // Throws a ReferenceError
 if (x === undefined) {
-
 }
 ```
 

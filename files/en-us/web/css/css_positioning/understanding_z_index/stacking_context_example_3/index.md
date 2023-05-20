@@ -2,11 +2,6 @@
 title: Stacking context example 3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Understanding_CSS_z-index
 ---
 
 {{CSSRef}}
@@ -25,7 +20,7 @@ The second-level menu is absolutely positioned inside the parent element. In ord
 
 So a third-level menu will be stacked under the following second-level menus, because all second-level menus share the same z-index value and the default stacking rules apply.
 
-To better understand the situation, here is the stacking context hierarchy:
+To better understand the situation, here is the stacking context hierarchy (the three dots "..." represent multiple repetition of the previous line):
 
 - Root stacking context
 
@@ -76,6 +71,12 @@ This problem can be avoided by removing overlapping between different level menu
       </div>
     </div>
 
+    <div class="lev2">
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+    </div>
+    <div class="lev2">
+      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+    </div>
     <div class="lev2">
       <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
     </div>

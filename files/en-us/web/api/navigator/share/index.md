@@ -1,13 +1,8 @@
 ---
-title: Navigator.share()
+title: "Navigator: share() method"
+short-title: share()
 slug: Web/API/Navigator/share
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Navigator
-  - Reference
-  - Share
-  - Web
 browser-compat: api.Navigator.share
 ---
 
@@ -49,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : The [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission has not been granted, or the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
+  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:
@@ -117,7 +112,7 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Security
 
-This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
+This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 ## Examples
 
@@ -139,19 +134,19 @@ The HTML just creates a button to trigger the share, and a paragraph in which to
 
 ```js
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
 
 // Share must be triggered by "user activation"
-btn.addEventListener('click', async () => {
+btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = 'MDN shared successfully';
+    resultPara.textContent = "MDN shared successfully";
   } catch (err) {
     resultPara.textContent = `Error: ${err}`;
   }
@@ -184,39 +179,39 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 Note that the data object passed to the `navigator.canShare()` only includes the `files` property, as the `title` and `text` shouldn't matter.
 
 ```js
-const input = document.getElementById('files')
-const output = document.getElementById('output')
+const input = document.getElementById("files");
+const output = document.getElementById("output");
 
-document.getElementById('share').addEventListener('click', async () => {
-  const files = input.files
+document.getElementById("share").addEventListener("click", async () => {
+  const files = input.files;
 
   if (files.length === 0) {
-    output.textContent = 'No files selected.'
-    return
+    output.textContent = "No files selected.";
+    return;
   }
 
   // feature detecting navigator.canShare() also implies
   // the same for the navigator.share()
   if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`
-    return
+    output.textContent = `Your browser doesn't support the Web Share API.`;
+    return;
   }
 
   if (navigator.canShare({ files })) {
     try {
       await navigator.share({
         files,
-        title: 'Images',
-        text: 'Beautiful images'
-      })
-      output.textContent = 'Shared!'
+        title: "Images",
+        text: "Beautiful images",
+      });
+      output.textContent = "Shared!";
     } catch (error) {
-      output.textContent = `Error: ${error.message}`
+      output.textContent = `Error: ${error.message}`;
     }
   } else {
-    output.textContent = `Your system doesn't support sharing these files.`
+    output.textContent = `Your system doesn't support sharing these files.`;
   }
-})
+});
 ```
 
 #### Result

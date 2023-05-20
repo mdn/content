@@ -2,14 +2,9 @@
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Intermediate
-  - Tutorial
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 After having seen how to [apply styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the previous chapter, we will now have a look at how to draw text onto the canvas.
 
@@ -28,9 +23,9 @@ The text is filled using the current `fillStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -50,9 +45,9 @@ The text is filled using the current `strokeStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -110,11 +105,11 @@ ctx.strokeText("Hello world", 0, 100);
 ```
 
 ```js hidden
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const edit = document.getElementById('edit');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
 const code = textarea.value;
 
 function drawCanvas() {
@@ -122,17 +117,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', () => {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
@@ -148,8 +143,8 @@ The following code snippet shows how you can measure a text and get its width.
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
-  const text = ctx.measureText('foo'); // TextMetrics object
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
 ```

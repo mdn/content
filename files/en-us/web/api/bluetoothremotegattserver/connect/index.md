@@ -1,16 +1,10 @@
 ---
-title: BluetoothRemoteGATTServer.connect()
+title: "BluetoothRemoteGATTServer: connect() method"
+short-title: connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - connect()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
 

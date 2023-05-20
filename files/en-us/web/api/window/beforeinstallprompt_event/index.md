@@ -1,14 +1,8 @@
 ---
-title: 'Window: beforeinstallprompt event'
+title: "Window: beforeinstallprompt event"
+short-title: beforeinstallprompt
 slug: Web/API/Window/beforeinstallprompt_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Manifest
-  - Reference
-  - Window
-  - beforeinstallprompt
 browser-compat: api.Window.beforeinstallprompt_event
 ---
 
@@ -21,9 +15,9 @@ The **`beforeinstallprompt`** event fires on devices when a user is about to be 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeinstallprompt', (event) => { });
+addEventListener("beforeinstallprompt", (event) => {});
 
-onbeforeinstallprompt = (event) => { };
+onbeforeinstallprompt = (event) => {};
 ```
 
 ## Event type

@@ -1,17 +1,13 @@
 ---
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Relational Operators
+page-type: javascript-operator
 browser-compat: javascript.operators.in
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`in` operator** returns `true` if the specified property is in the specified object or its prototype chain.
+The **`in`** operator returns `true` if the specified property is in the specified object or its prototype chain.
 
 {{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 
@@ -269,7 +265,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-For more examples, see [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_Classes#private_fields).
+For more examples, see [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#private_fields).
 
 ## Specifications
 

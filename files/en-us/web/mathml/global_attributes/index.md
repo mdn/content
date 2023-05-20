@@ -1,11 +1,7 @@
 ---
 title: Global attributes
 slug: Web/MathML/Global_attributes
-tags:
-  - Attribute
-  - MathML
-  - Reference
-  - Web
+page-type: landing-page
 browser-compat: mathml.global_attributes
 ---
 
@@ -23,7 +19,7 @@ In addition to the basic MathML global attributes, the following global attribut
 ## List of global attributes
 
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/MathML/Global_attributes/dir)
@@ -57,11 +53,11 @@ In addition to the basic MathML global attributes, the following global attribut
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
 
-  - A logical classes of token elements.
+  - : A logical classes of token elements.
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
+  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)
 

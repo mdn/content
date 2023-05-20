@@ -1,26 +1,40 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Namespace
-  - Overview
-  - Reflect
+page-type: javascript-namespace
 browser-compat: javascript.builtins.Reflect
 ---
 
 {{JSRef}}
 
-**`Reflect`** is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of [proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` is not a function object, so it's not constructible.
+The **`Reflect`** namespace object contains static methods for invoking interceptable JavaScript object internal methods. The methods are the same as those of [proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
 ## Description
 
-Unlike most global objects, `Reflect` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Reflect` object as a function. All properties and methods of `Reflect` are static (just like the {{jsxref("Math")}} object).
+Unlike most global objects, `Reflect` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Reflect` object as a function. All properties and methods of `Reflect` are static (just like the {{jsxref("Math")}} object).
 
-The `Reflect` object provides the following static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
+The `Reflect` object provides a collection of static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
-Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
+The major use case of `Reflect` is to provide default forwarding behavior in `Proxy` handler traps. A [trap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#terminology) is used to intercept an operation on an object — it provides a custom implementation for an [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods). The `Reflect` API is used to invoke the corresponding internal method. For example, the code below creates a proxy `p` with a [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) trap that intercepts the `[[Delete]]` internal method. `Reflect.deleteProperty()` is used to invoke the default `[[Delete]]` behavior on `targetObject` directly. You can replace it with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete), but using `Reflect` saves you from having to remember the syntax that each internal method corresponds to.
+
+```js
+const p = new Proxy(
+  {},
+  {
+    deleteProperty(targetObject, property) {
+      // Custom functionality: log the deletion
+      console.log("Deleting property:", property);
+
+      // Execute the default introspection behavior
+      return Reflect.deleteProperty(targetObject, property);
+    },
+  },
+);
+```
+
+The `Reflect` methods also allow finer control of how the internal method is invoked. For example, {{jsxref("Reflect.construct()")}} is the only way to construct a target function with a specific [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value. If you use the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator to invoke a function, the `new.target` value is always the function itself. This has important effects with [subclassing](/en-US/docs/Web/JavaScript/Reference/Operators/new.target#new.target_using_reflect.construct). For another example, {{jsxref("Reflect.get()")}} allows you to run a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) with a custom `this` value, while [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) always use the current object as the `this` value.
+
+Nearly every `Reflect` method's behavior can be done with some other syntax or method. Some of these methods have corresponding static methods of the same name on {{jsxref("Object")}}, although they do have some subtle differences. For the exact differences, see the description for each `Reflect` method.
 
 ## Static properties
 

@@ -1,14 +1,7 @@
 ---
-title: '<style>: The Style Information element'
+title: "<style>: The Style Information element"
 slug: Web/HTML/Element/style
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Style
-  - Web
+page-type: html-element
 browser-compat: html.elements.style
 ---
 
@@ -28,16 +21,19 @@ In the same manner as `<link>` elements, `<style>` elements can include `media` 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("media")}}
+- `media`
   - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which defaults to `all` if the attribute is missing.
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
-- {{htmlattrdef("title")}}
+- `title`
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
+- `blocking`
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for `text/css`.
 
 ## Examples
@@ -63,6 +59,8 @@ In the following example, we apply a very simple stylesheet to a document:
   </body>
 </html>
 ```
+
+#### Result
 
 {{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
 
@@ -97,6 +95,8 @@ In this example we've included two `<style>` elements — notice how the conflic
 </html>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Multiple_style_elements', '100%', '100')}}
 
 ### Including a media query
@@ -130,6 +130,8 @@ In this example we build on the previous one, including a `media` attribute on t
 </html>
 ```
 
+#### Result
+
 {{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
 ## Technical summary
@@ -138,15 +140,15 @@ In this example we build on the previous one, including a `media` attribute on t
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >, and if the <code>scoped</code> attribute is present:
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -166,7 +168,7 @@ In this example we build on the previous one, including a `media` attribute on t
       <th>Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >metadata content</a
         >.
       </td>

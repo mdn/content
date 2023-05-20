@@ -2,17 +2,6 @@
 title: line-height
 slug: Web/CSS/line-height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Text
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.line-height
 ---
 

@@ -1,13 +1,21 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - Guide
-  - HTML
-  - Media
-  - Video
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Guides</summary>
+        <ol>
+          {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
 
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
@@ -79,12 +87,12 @@ For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and 
 ### JavaScript Audio
 
 ```js
-const myAudio = document.createElement('audio');
+const myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -106,12 +114,12 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 ### JavaScript Video
 
 ```js
-const myVideo = document.createElement('video');
+const myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -130,7 +138,11 @@ let source;
 try {
   context = new AudioContext();
   request = new XMLHttpRequest();
-  request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.open(
+    "GET",
+    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true
+  );
   request.responseType = "arraybuffer";
 
   request.onload = () => {
@@ -144,9 +156,8 @@ try {
   };
 
   request.send();
-
 } catch (e) {
-  alert('web audio api not supported');
+  alert("web audio api not supported");
 }
 ```
 
@@ -166,17 +177,20 @@ Next, if supported connect the webcam source to the video element:
 
 ```js
 if (navigator.mediaDevices) {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  .then(function onSuccess(stream) {
-    const video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.srcObject = stream;
-  })
-  .catch(function onError() {
-    alert('There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?');
-  });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(function onSuccess(stream) {
+      const video = document.getElementById("webcam");
+      video.autoplay = true;
+      video.srcObject = stream;
+    })
+    .catch(function onError() {
+      alert(
+        "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?"
+      );
+    });
 } else {
-  alert('getUserMedia is not supported in this browser.');
+  alert("getUserMedia is not supported in this browser.");
 }
 ```
 
@@ -184,12 +198,13 @@ To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
 
 ## Mediastream Recording
 
-New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaRecorder API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
+New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaStream Recording API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
 
 The main mechanism is outlined below:
 
 ```js
-navigator.mediaDevices.getUserMedia({audio:true})
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
   .then(function onSuccess(stream) {
     const recorder = new MediaRecorder(stream);
 
@@ -200,11 +215,11 @@ navigator.mediaDevices.getUserMedia({audio:true})
     recorder.start();
     recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
-    }
+    };
     recorder.onstop = (e) => {
-      const audio = document.createElement('audio');
+      const audio = document.createElement("audio");
       audio.src = window.URL.createObjectURL(new Blob(data));
-    }
+    };
     setTimeout(() => {
       rec.stop();
     }, 5000);
@@ -214,7 +229,7 @@ navigator.mediaDevices.getUserMedia({audio:true})
   });
 ```
 
-See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
+See [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
 
 ## Media Source Extensions (MSE)
 
@@ -226,7 +241,7 @@ See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more 
 
 The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
-One of the principle uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
+One of the principal uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
 
 ### Adaptive Streaming
 
@@ -261,8 +276,8 @@ add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
 window.onload = () => {
-  const myAudio = document.getElementById('my-audio');
-  const myControl = document.getElementById('my-control');
+  const myAudio = document.getElementById("my-audio");
+  const myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused) {
@@ -275,17 +290,22 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode === 32) { // space bar
+    if (e.keycode === 32) {
+      // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', () => {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    () => {
+      switchState();
+    },
+    false
+  );
 
   window.addEventListener("keypress", checkKey, false);
-}
+};
 ```
 
 You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
@@ -315,11 +335,11 @@ Media elements provide support for moving the current playback position to speci
 You can use the element's `seekable` property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.
 
 ```js
-const mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
-mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
+const mediaElement = document.querySelector("#mediaElementID");
+mediaElement.seekable.start(0); // Returns the starting time (in seconds)
+mediaElement.seekable.end(0); // Returns the ending time (in seconds)
 mediaElement.currentTime = 122; // Seek to 122 seconds
-mediaElement.played.end(0);      // Returns the number of seconds the browser has played
+mediaElement.played.end(0); // Returns the number of seconds the browser has played
 ```
 
 ### Specifying playback range
@@ -347,7 +367,7 @@ A few examples:
 
 ## Error handling
 
-Errors gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Errors get delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
@@ -438,14 +458,18 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-const v = document.querySelector('video');
-const sources = v.querySelectorAll('source');
+const v = document.querySelector("video");
+const sources = v.querySelectorAll("source");
 const lastsource = sources[sources.length - 1];
-lastsource.addEventListener('error', (ev) => {
-  const d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
+lastsource.addEventListener(
+  "error",
+  (ev) => {
+    const d = document.createElement("div");
+    d.innerHTML = v.innerHTML;
+    v.parentNode.replaceChild(d, v);
+  },
+  false
+);
 ```
 
 ## Audio/Video JavaScript Libraries
@@ -505,7 +529,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
-  - : Explains the basics of using the MediaRecorder API to directly record a media stream.
+  - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
 > **Note:** Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
 
@@ -515,6 +539,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/en-US/docs/Web/API/MediaSource)
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [Event reference > Media](/en-US/docs/Web/Events#media)

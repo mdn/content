@@ -1,10 +1,9 @@
 ---
 title: string
 slug: Web/SVG/Attribute/string
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face-format.string
 ---
 

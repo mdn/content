@@ -1,9 +1,7 @@
 ---
 title: y2
 slug: Web/SVG/Attribute/y2
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/shapes.html#LineElementY2Attribute
   - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY2Attribute

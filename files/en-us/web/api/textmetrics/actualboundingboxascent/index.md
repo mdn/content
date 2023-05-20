@@ -1,12 +1,8 @@
 ---
-title: TextMetrics.actualBoundingBoxAscent
+title: "TextMetrics: actualBoundingBoxAscent property"
+short-title: actualBoundingBoxAscent
 slug: Web/API/TextMetrics/actualBoundingBoxAscent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics.actualBoundingBoxAscent
 ---
 
@@ -17,9 +13,9 @@ The read-only **`actualBoundingBoxAscent`** property of the {{domxref("TextMetri
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.actualBoundingBoxAscent; // 8;
 ```

@@ -2,12 +2,8 @@
 title: EyeDropper API
 slug: Web/API/EyeDropper_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - EyeDropper
-  - Overview
-  - Reference
+status:
+  - experimental
 browser-compat: api.EyeDropper
 ---
 
@@ -28,7 +24,7 @@ To prevent malicious websites from getting pixel data from a user's screen witho
 - The API doesn't let the eyedropper mode start without user intent. The {{domxref("EyeDropper.prototype.open()")}} method can only be called in response to a user action (like a button click).
 - No pixel information can be retrieved without user intent again. The promise returned by {{domxref("EyeDropper.prototype.open()")}} only resolves to a color value in response to a user action (clicking on a pixel). So the eyedropper cannot be used in the background without the user noticing it.
 - To help users notice the eyedropper mode more easily, it is made obvious by browsers. The normal mouse cursor disappears after a short delay and a magnifying glass appears instead. There is also a delay between when the eyedropper mode starts and when the user can select a pixel to ensure the user has had time to see the magnifying glass.
-- Users are also be able to cancel the eyedropper mode at any time (by pressing the <kbd>Escape</kbd> key).
+- Users are also able to cancel the eyedropper mode at any time (by pressing the <kbd>Escape</kbd> key).
 
 ## Interfaces
 

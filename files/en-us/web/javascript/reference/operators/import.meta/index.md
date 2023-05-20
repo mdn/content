@@ -1,21 +1,13 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Operator
-  - import
-  - import.meta
+page-type: javascript-language-feature
 browser-compat: javascript.operators.import_meta
 ---
 
 {{JSSidebar("Operators")}}
 
-The **`import.meta`** object exposes context-specific metadata
-to a JavaScript module. It contains information about the module, like the module's URL.
+The **`import.meta`** meta-property exposes context-specific metadata to a JavaScript module. It contains information about the module, such as the module's URL.
 
 ## Syntax
 
@@ -23,39 +15,26 @@ to a JavaScript module. It contains information about the module, like the modul
 import.meta
 ```
 
+### Value
+
+The `import.meta` object is created by the host environment, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object where all properties are writable, configurable, and enumerable. The spec doesn't specify any properties to be defined on it, but hosts usually implement the following properties:
+
+- `url`
+  - : The full URL to the module, includes query parameters and/or hash (following the `?` or `#`). In browsers, this is either the URL from which the script was obtained (for external scripts), or the URL of the containing document (for inline scripts). In Node.js, this is the file path (including the `file://` protocol).
+- [`resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
+  - : Resolves a module specifier to a URL using the current module's URL as base.
+
 ## Description
 
-The syntax consists of the keyword {{JSxRef("Statements/import","import")}}, a dot, and
-the identifier `meta`. Normally the left-hand side of the dot is the object
-on which property access is performed, but here `import` is not really an
-object.
+The `import.meta` syntax consists of the keyword `import`, a dot, and the identifier `meta`. Because `import` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), but a special expression syntax.
 
-The `import.meta` object is created by the ECMAScript implementation, as an extensible [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) object. The JavaScript spec doesn't specify any properties to be defined on it, but usually there's a `url` property, which is writable, configurable, and enumerable.
+The `import.meta` meta-property is available in JavaScript modules; using `import.meta` outside of a module (including [direct `eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval) within a module) is a syntax error.
 
 ## Examples
 
-### Using import.meta
+### Passing query parameters
 
-Given a module `my-module.js`:
-
-```html
-<script type="module" src="my-module.js"></script>
-```
-
-You can access meta information about the module using the `import.meta` object.
-
-```js
-console.log(import.meta); // { url: "file:///home/user/my-module.js" }
-```
-
-It returns an object with a `url` property indicating the base URL of the
-module. This will either be the URL from which the script was obtained, for external
-scripts, or the document base URL of the containing document, for inline scripts.
-
-Note that this will include query parameters and/or hash (i.e., following the
-`?` or `#`).
-
-For example, with the following HTML:
+Using query parameters in the `import` specifier allows module-specific argument passing, which may be complementary to reading parameters from the application-wide [`window.location`](/en-US/docs/Web/API/Window/location) (or on Node.js, through `process.argv`). For example, with the following HTML:
 
 ```html
 <script type="module">
@@ -63,14 +42,14 @@ For example, with the following HTML:
 </script>
 ```
 
-The following JavaScript logs the `someURLInfo` parameter:
+The `index.mjs` module is able to retrieve the `someURLInfo` parameter through `import.meta`:
 
 ```js
 // index.mjs
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
-The same applies when a file imports another:
+The same applies when a module imports another:
 
 ```js
 // index.mjs
@@ -80,14 +59,31 @@ import "./index2.mjs?someURLInfo=5";
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
-Note that while Node.js will pass on query parameters (or the hash) as in the latter
-example, as of Node 18.12.0, a URL with query parameters will err when loading in the
-form `node index.mjs?someURLInfo=5` (it is treated as
-a file rather than a URL in this context).
+The ES module implementation in Node.js supports resolving module specifiers containing query parameters (or the hash), as in the latter example. However, you cannot use queries or hashes when the module is specified through the CLI command (like `node index.mjs?someURLInfo=5`), because the CLI entrypoint uses a more CommonJS-like resolution mode, treating the path as a file path rather than a URL. To pass parameters to the entrypoint module, use CLI arguments and read them through `process.argv` instead (like `node index.mjs --someURLInfo=5`).
 
-Such file-specific argument passing may be complementary to that used in the
-application-wide `location.href` (with query strings or hash added after the
-HTML file path) (or on Node.js, through `process.argv`).
+### Getting current module's file path
+
+In Node.js CommonJS modules, there's a `__dirname` variable that contains the absolute path to the folder containing current module, which is useful for resolving relative paths. However, ES modules cannot have contextual variables except for `import.meta`. Therefore, to get the current module's file path, you can use `import.meta.url`.
+
+Before (CommonJS):
+
+```js
+const fs = require("fs/promises");
+const path = require("path");
+
+const filePath = path.join(__dirname, "someFile.txt");
+fs.readFile(filePath, "utf8").then(console.log);
+```
+
+After (ES modules):
+
+```js
+import fs from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+
+const filePath = fileURLToPath(new URL("./someFile.txt", import.meta.url));
+fs.readFile(filePath, "utf8").then(console.log);
+```
 
 ## Specifications
 

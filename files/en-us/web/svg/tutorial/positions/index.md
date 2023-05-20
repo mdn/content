@@ -1,16 +1,10 @@
 ---
 title: Positions
 slug: Web/SVG/Tutorial/Positions
-tags:
-  - Beginner
-  - Coordinate systems
-  - Coordinates
-  - Drawing
-  - Graphics
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
@@ -32,11 +26,11 @@ The element
 <rect x="0" y="0" width="100" height="100" />
 ```
 
-defines a rectangle from the upper left corner, that spans from there 100px to the right and to the bottom.
+defines a rectangle from the upper left corner that spans 100px to the right and 100px to the bottom.
 
 ### What are "pixels"?
 
-In the most basic case one pixel in an SVG document maps to one pixel on the output device (a.k.a. the screen). But SVG wouldn't have the "Scalable" in its name, if there weren't several possibilities to change this behavior. Much like absolute and relative font sizes in CSS, SVG defines absolute units (ones with a dimensional identifier like "pt" or "cm") and so-called user units, that lack that identifier and are plain numbers.
+In the most basic case, one pixel in an SVG document maps to one pixel on the output device (i.e., the screen). But SVG wouldn't have the "Scalable" in its name if there weren't several possibilities to change this behavior. Much like absolute and relative font sizes in CSS, SVG defines absolute units (ones with a dimensional identifier like "pt" or "cm") and so-called user units, which lack that identifier and are plain numbers.
 
 Without further specification, one user unit equals one screen unit. To explicitly change this behavior, there are several possibilities in SVG. We start with the `svg` root element:
 
@@ -52,7 +46,7 @@ The above element defines a simple SVG canvas with 100x100px. One user unit equa
 
 The whole SVG canvas here is 200px by 200px in size. However, the `viewBox` attribute defines the portion of that canvas to display. These 200x200 pixels display an area that starts at user unit (0,0) and spans 100x100 user units to the right and to the bottom. This effectively zooms in on the 100x100 unit area and enlarges the image to double size.
 
-The current mapping (for a single element or the whole image) of user units to screen units is called **user coordinate system**. Apart from scaling the coordinate system can also be rotated, skewed and flipped. The default user coordinate system maps one user pixel to one device pixel. (However, the device may decide, what it understands as one pixel.) Lengths in the SVG file with specific dimensions, like "in" or "cm", are then calculated in a way that makes them appear 1:1 in the resulting image.
+The current mapping (for a single element or the whole image) of user units to screen units is called **user coordinate system**. Apart from scaling, the coordinate system can also be rotated, skewed, and flipped. The default user coordinate system maps one user pixel to one device pixel. (However, the device may decide what it understands as one pixel.) Lengths in the SVG file with specific dimensions, like "in" or "cm", are then calculated in a way that makes them appear 1:1 in the resulting image.
 
 A quote from the SVG 1.1 specification illustrates this:
 

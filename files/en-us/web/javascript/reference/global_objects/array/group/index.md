@@ -1,13 +1,9 @@
 ---
 title: Array.prototype.group()
 slug: Web/JavaScript/Reference/Global_Objects/Array/group
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Experimental
+page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Array.group
 ---
 
@@ -24,48 +20,26 @@ If you need to group elements using a key that is some arbitrary value, use {{js
 ## Syntax
 
 ```js-nolint
-// Arrow function
-group((element) => { /* … */ })
-group((element, index) => { /* … */ })
-group((element, index, array) => { /* … */ })
-
-// Callback function
 group(callbackFn)
 group(callbackFn, thisArg)
-
-// Inline callback function
-group(function (element) { /* … */ })
-group(function (element, index) { /* … */ })
-group(function (element, index, array) { /* … */ })
-group(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a value that can get coerced into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indicating the group of the current element.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a value that can get coerced into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indicating the group of the current element. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `group()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
 A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
-
-### Exceptions
-
-- `TypeError`
-  - : The specified callback function is not callable.
 
 ## Description
 
@@ -96,11 +70,11 @@ Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
-  { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas', type: 'fruit', quantity: 0 },
-  { name: 'goat', type: 'meat', quantity: 23 },
-  { name: 'cherries', type: 'fruit', quantity: 5 },
-  { name: 'fish', type: 'meat', quantity: 22 }
+  { name: "asparagus", type: "vegetables", quantity: 5 },
+  { name: "bananas", type: "fruit", quantity: 0 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 5 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
@@ -136,7 +110,7 @@ Below is a very similar example that puts the items into `ok` or `restock` group
 
 ```js
 function myCallback({ quantity }) {
-  return quantity > 5 ? 'ok' : 'restock';
+  return quantity > 5 ? "ok" : "restock";
 }
 
 const result2 = inventory.group(myCallback);
@@ -189,5 +163,9 @@ console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
 
 ## See also
 
-- {{jsxref("Array.prototype.groupToMap()")}} – Group an array into a map, using any kind of object as a key or value.
 - [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.fromEntries()")}}

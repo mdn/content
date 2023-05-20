@@ -1,22 +1,15 @@
 ---
-title: MediaRecorder.stop()
+title: "MediaRecorder: stop() method"
+short-title: stop()
 slug: Web/API/MediaRecorder/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - stop
 browser-compat: api.MediaRecorder.stop
 ---
 
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder.stop()`** method
-(part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) is
+(part of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is
 used to stop media capture.
 
 When the `stop()` method is invoked, the UA queues a task that runs the
@@ -56,7 +49,7 @@ is "inactive" — it makes no sense to stop media capture if it is already stopp
 stop.onclick = () => {
   mediaRecorder.stop();
   console.log("recorder stopped, data available");
-}
+};
 ```
 
 ## Specifications
@@ -69,7 +62,7 @@ stop.onclick = () => {
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

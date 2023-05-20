@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - inArray
-  - in_array
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.includes
 ---
 
@@ -44,7 +36,7 @@ A boolean value which is `true` if the value `searchElement` is found within the
 
 ## Description
 
-The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) algorithm. Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is equal to `0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
+The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is equal to `0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
 
@@ -55,12 +47,12 @@ The `includes()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global
 ### Using includes()
 
 ```js
-[1, 2, 3].includes(2)         // true
-[1, 2, 3].includes(4)         // false
-[1, 2, 3].includes(3, 3)      // false
-[1, 2, 3].includes(3, -1)     // true
-[1, 2, NaN].includes(NaN)     // true
-["1", "2", "3"].includes(3)   // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true
+["1", "2", "3"].includes(3); // false
 ```
 
 ### fromIndex is greater than or equal to the array length
@@ -69,10 +61,10 @@ If `fromIndex` is greater than or equal to the length of the
 array, `false` is returned. The array will not be searched.
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('c', 3)    // false
-arr.includes('c', 100)  // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### Computed index is less than 0
@@ -87,12 +79,12 @@ be used as a position in the array at which to begin searching for
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('a', -100) // true
-arr.includes('b', -100) // true
-arr.includes('c', -100) // true
-arr.includes('a', -2)   // false
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
 ### Using includes() on sparse arrays
@@ -131,8 +123,10 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}

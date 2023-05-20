@@ -2,25 +2,20 @@
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
 page-type: guide
-tags:
-  - API
-  - Reference
-  - WebGL
-  - constants
 spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that are passed into or returned by functions. All constants are of type {{domxref("WebGL_API/Types", "GLenum")}}.
 
 Standard WebGL constants are installed on the {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} objects, so that you use them as `gl.CONSTANT_NAME`:
 
 ```js
-const canvas = document.getElementById('myCanvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
@@ -28,7 +23,7 @@ gl.getParameter(gl.LINE_WIDTH);
 Some constants are also provided by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions). A [list](#constants_defined_in_webgl_extensions) is provided below.
 
 ```js
-const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
 const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
@@ -129,7 +124,7 @@ Constants passed to {{domxref("WebGLRenderingContext.drawElements()")}} or {{dom
 
 ### Blending modes
 
-Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -266,7 +261,7 @@ Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxre
 
 ### Blending equations
 
-Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RBG and alpha, or separately).
+Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RGB and alpha, or separately).
 
 <table class="no-markdown">
   <thead>
@@ -1851,7 +1846,7 @@ For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
     <tr>
       <td><code>COMPRESSED_RGB8_ETC2</code></td>
       <td>0x9274</td>
-      <td>Compresses RBG8 data with no alpha channel.</td>
+      <td>Compresses RGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_RGBA8_ETC2_EAC</code></td>
@@ -1864,7 +1859,7 @@ For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
     <tr>
       <td><code>COMPRESSED_SRGB8_ETC2</code></td>
       <td>0x9276</td>
-      <td>Compresses sRBG8 data with no alpha channel.</td>
+      <td>Compresses sRGB8 data with no alpha channel.</td>
     </tr>
     <tr>
       <td><code>COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></td>

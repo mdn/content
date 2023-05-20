@@ -1,22 +1,20 @@
 ---
 title: Filter effects
 slug: Web/SVG/Tutorial/Filter_effects
-tags:
-  - Advanced
-  - NeedsContent
-  - SVG
-  - SVG:Tutorial
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
-There are situations, where basic shapes do not provide the flexibility you need to achieve a certain effect. Drop shadows, to provide a popular example, cannot be created reasonably with a combination of gradients. Filters are SVG's mechanism to create sophisticated effects.
+There are situations where basic shapes do not provide the flexibility you need to achieve a certain effect. Drop shadows, to provide a popular example, cannot be created reasonably with a combination of gradients. Filters are SVG's mechanism to create sophisticated effects.
 
 A basic example is to add a blur effect to SVG content. While basic blurs can be achieved with the help of gradients, the blur filter is needed to do anything beyond.
 
 ## Example
 
-Filters are defined by {{SVGElement('filter')}} element, which should be put in the `<defs>` section of your SVG file. Between the filter tags, goes a list of _primitives_, basic operations that build on top of the previous operations (like blurring, adding a lighting effect, etc.). To apply your created filter on a graphic element, you set the {{SVGAttr('filter')}} attribute.
+Filters are defined by the {{SVGElement('filter')}} element, which should be put in the `<defs>` section of your SVG file. Between the filter tags goes a list of _primitives_: basic operations that build on top of the previous operations (like blurring, adding a lighting effect, etc.). To apply your created filter on a graphic element, you set the {{SVGAttr('filter')}} attribute.
 
 ```html
 <svg
@@ -95,7 +93,7 @@ Filters are defined by {{SVGElement('filter')}} element, which should be put in 
 <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
 ```
 
-{{SVGElement('feGaussianBlur')}} takes `in` "SourceAlpha", which is the alpha channel of the source graphic, applies a blur of 4, and stores the `result` in a temporary buffer named "blur".
+{{SVGElement('feGaussianBlur')}} takes `in` "SourceAlpha", which is the alpha channel of the source graphic; applies a blur of 4; and stores the `result` in a temporary buffer named "blur".
 
 ### Step 2
 
@@ -103,7 +101,7 @@ Filters are defined by {{SVGElement('filter')}} element, which should be put in 
 <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 ```
 
-{{SVGElement('feOffset')}} takes `in` "blur", which we previously created, shifts the result 4 to the right and 4 to the bottom, and stores the `result` in the buffer "offsetBlur". The two first primitives just created a drop shadow.
+{{SVGElement('feOffset')}} takes `in` "blur", which we previously created; shifts the result "4" to the right and "4" to the bottom; and stores the `result` in the buffer "offsetBlur". The two first primitives just created a drop shadow.
 
 ### Step 3
 

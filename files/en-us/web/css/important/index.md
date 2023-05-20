@@ -1,14 +1,7 @@
 ---
-title: '!important'
+title: "!important"
 slug: Web/CSS/important
 page-type: css-keyword
-tags:
-  - CSS
-  - Reference
-  - CSS rule
-  - important
-  - \!important
-# browser-compat: css.flag.important
 ---
 
 {{CSSRef}}
@@ -17,11 +10,11 @@ A `!` delimiter followed by the `important` keyword marks the declaration as imp
 
 To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
 
-```css
+```css-nolint
 selector {
   property: value; /* normal declaration */
-  property: value !important; /* important declaration (standard) */
-  property: value !important; /* important declaration (non-standard) */
+  property: value !important; /* important declaration (preferred) */
+  property: value ! important; /* important declaration (not preferred) */
 }
 ```
 
@@ -93,7 +86,7 @@ In this case, the selector specificity matters. Only if the selectors had the sa
 
 ## Impact on shorthand properties
 
-Declaring a shorthand property with `!important` sets all of sub-properties as important. To two following selector style blocks are equivalent:
+Declaring a shorthand property with `!important` sets all of sub-properties as important. The two following selector style blocks are equivalent:
 
 ```css
 p {
@@ -125,10 +118,10 @@ When the `!important` flag is added to a custom property value declaration, it m
 }
 p {
   color: var(--myColor);
-  }
+}
 blockquote {
-   color: var(--myColor);
-   color: purple;
+  color: var(--myColor);
+  color: purple;
 }
 ```
 

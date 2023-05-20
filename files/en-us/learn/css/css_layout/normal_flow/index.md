@@ -1,14 +1,6 @@
 ---
 title: Normal Flow
 slug: Learn/CSS/CSS_layout/Normal_Flow
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - float
-  - grid
-  - normal flow
 ---
 
 {{LearnSidebar}}
@@ -47,7 +39,9 @@ Before digging deeper into different layout methods, it's worth revisiting some 
 
 The process begins as the boxes of individual elements are laid out in such a way that any padding, border, or margin they happen to have is added to their content. This is what we call the **box model**.
 
-By default, a [block level element](/en-US/docs/Web/HTML/Block-level_elements)'s content fills the available inline space of the parent element containing it and grows along the block dimension to accommodate its content. The size of [inline elements](/en-US/docs/Web/HTML/Inline_elements) is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements — except for images. Unlike other inline elements, images can be resized without changing their `display` property. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
+By default, a [block-level element](/en-US/docs/Glossary/Block-level_content)'s content fills the available inline space of the parent element containing it, growing along the block dimension to accommodate its content. The size of [inline-level elements](/en-US/docs/Glossary/Inline-level_content) is just the size of their content. You can set {{cssxref("width")}} or {{cssxref("height")}} on some elements that have a default {{cssxref("display")}} property value of `inline`, like {{HTMLElement("img")}}, but `display` value will still remain `inline`.
+
+If you want to control the `display` property of an inline-level element in this manner, use CSS to set it to behave like a block-level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
 That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, which is based on the parent's [writing mode](/en-US/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.
 
@@ -115,18 +109,3 @@ In this lesson you've learned the basics of normal flow — the default layout f
 In the next article, we'll build on this knowledge by making changes to CSS elements using [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

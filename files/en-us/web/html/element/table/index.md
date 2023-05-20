@@ -1,15 +1,7 @@
 ---
-title: '<table>: The Table element'
+title: "<table>: The Table element"
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
+page-type: html-element
 browser-compat: html.elements.table
 ---
 
@@ -23,12 +15,12 @@ The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data �
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >
       </td>
@@ -87,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates how the table must be aligned inside the containing document. It may have the following values:
 
@@ -97,51 +89,51 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to `auto` or {{cssxref("margin")}} to `0 auto` to achieve an effect that is similar to the align attribute.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("border")}} {{Deprecated_inline}}
+- `border` {{Deprecated_inline}}
 
-  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the {{htmlattrxref("frame", "table")}} attribute is set to void.
+  - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the [`frame`](#frame) attribute is set to void.
 
     To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.
 
-- {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
+- `cellpadding` {{Deprecated_inline}}
 
   - : This attribute defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right).
 
     To achieve a similar effect, apply the {{cssxref("border-collapse")}} property to the `<table>` element, with its value set to collapse, and the {{cssxref("padding")}} property to the {{HTMLElement("td")}} elements.
 
-- {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
+- `cellspacing` {{Deprecated_inline}}
 
   - : This attribute defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.
 
     To achieve a similar effect, apply the {{cssxref("border-spacing")}} property to the `<table>` element. `border-spacing` does not have any effect if {{cssxref("border-collapse")}} is set to collapse.
 
-- {{htmlattrdef("frame")}} {{Deprecated_inline}}
+- `frame` {{Deprecated_inline}}
 
   - : This enumerated attribute defines which side of the frame surrounding the table must be displayed.
 
     To achieve a similar effect, use the {{cssxref("border-style")}} and {{cssxref("border-width")}} properties.
 
-- {{htmlattrdef("rules")}} {{Deprecated_inline}}
+- `rules` {{Deprecated_inline}}
 
   - : This enumerated attribute defines where rules, i.e. lines, should appear in a table. It can have the following values:
 
     - `none`, which indicates that no rules will be displayed; it is the default value;
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;
     - `rows`, which will cause the rules to be displayed between rows;
-    - `columns`, which will cause the rules to be displayed between columns;
+    - `cols`, which will cause the rules to be displayed between columns;
     - `all`, which will cause the rules to be displayed between rows and columns.
 
     To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.
 
-- {{htmlattrdef("summary")}} {{Deprecated_inline}}
+- `summary` {{Deprecated_inline}}
   - : This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.
-- {{htmlattrdef("width")}} {{Deprecated_inline}}
+- `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
 ## Examples
@@ -160,6 +152,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   </tr>
 </table>
 ```
+
+#### Result
 
 {{EmbedLiveSample('Simple_table', '100%', '100')}}
 
@@ -268,6 +262,8 @@ td {
   border: 1px solid black;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
 
@@ -380,7 +376,7 @@ for (const table of allTables) {
 
 ### Displaying large tables in small spaces
 
-A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
+A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CMS and cannot be modified to have a wrapper.
 
 This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.
 
@@ -625,9 +621,9 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 ### Scoping rows and columns
 
-The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
+The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
-#### Example
+#### Examples
 
 ```html
 <table>
@@ -644,18 +640,22 @@ The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsla(180, 90%, 64%, 1)</code></td>
-      <td><code>rgba(81, 246, 246, 1)</code></td>
+      <td><code>hsl(180 90% 64% / 1)</code></td>
+      <td><code>rgb(81 246 246 / 1)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsla(38, 90%, 65%, 1)</code></td>
-      <td><code>rgba(246, 188, 87, 1)</code></td>
+      <td><code>hsl(38 90% 65% / 1)</code></td>
+      <td><code>rgba(246 188 87 / 1)</code></td>
     </tr>
   </tbody>
 </table>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Scoping_rows_and_columns')}}
 
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 
@@ -666,11 +666,11 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 
-If the table cannot be broken apart, use a combination of the {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.
+If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to programmatically associate each table cell with the header(s) the cell is associated with.
 
 - [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
@@ -690,6 +690,6 @@ If the table cannot be broken apart, use a combination of the {{htmlattrxref("id
 - CSS properties that may be especially useful to style the `<table>` element:
 
   - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules, and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.

@@ -1,15 +1,8 @@
 ---
-title: Element.ariaKeyShortcuts
+title: "Element: ariaKeyShortcuts property"
+short-title: ariaKeyShortcuts
 slug: Web/API/Element/ariaKeyShortcuts
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaKeyShortcuts
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaKeyShortcuts
 ---
 
@@ -32,9 +25,9 @@ In this example the `aria-keyshortcuts` attribute on the element with an ID of `
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
-el.ariaKeyShortcuts = "Alt+Shift+M"
+el.ariaKeyShortcuts = "Alt+Shift+M";
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
 ```
 

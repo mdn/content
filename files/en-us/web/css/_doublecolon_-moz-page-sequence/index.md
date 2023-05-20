@@ -1,15 +1,9 @@
 ---
-title: '::-moz-page-sequence'
+title: "::-moz-page-sequence"
 slug: Web/CSS/::-moz-page-sequence
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-page-sequence
 ---
 
@@ -19,8 +13,10 @@ The **`::-moz-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-U
 
 ## Syntax
 
-```
-::-moz-page-sequence
+```css
+::-moz-page-sequence {
+  /* ... */
+}
 ```
 
 ## Specifications

@@ -1,13 +1,8 @@
 ---
-title: Document.createTreeWalker()
+title: "Document: createTreeWalker() method"
+short-title: createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Document
-  - Method
 browser-compat: api.Document.createTreeWalker
 ---
 
@@ -75,13 +70,17 @@ array.
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  }
 );
 
 const nodeList = [];
 let currentNode = treeWalker.currentNode;
 
-while(currentNode) {
+while (currentNode) {
   nodeList.push(currentNode);
   currentNode = treeWalker.nextNode();
 }

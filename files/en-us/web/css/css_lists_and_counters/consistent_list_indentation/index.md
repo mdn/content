@@ -2,15 +2,11 @@
 title: Consistent list indentation
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
 ---
 
 {{CSSRef}}
 
-One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they move over in Internet Explorer, but sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.
+One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.
 
 To understand why this is the case, and more importantly how to avoid the problem altogether, it's necessary to examine the details of list construction.
 
@@ -36,7 +32,7 @@ Now we add the list item markers. Since this is an unordered list, we'll add tra
 
 Visually, the markers are _outside_ the content area of the `<ul>`, but that's not the important part here. What's key is that the markers are placed outside the "principal box" of the `<li>` elements, not the `<ul>`. They're sort of like appendages to the list items, hanging outside the content-area of the `<li>` but still attached to the `<li>`.
 
-This is why, in every browser except Internet Explorer for Windows, markers are placed outside any border set for an `<li>` element, assuming the value of `list-style-position` is `outside`. If it's changed to `inside`, then the markers are brought inside the `<li>`'s content, as though they're an inline box placed at the very beginning of the `<li>`.
+This is why, in every modern browser, markers are placed outside any border set for an `<li>` element, assuming the value of `list-style-position` is `outside`. If it's changed to `inside`, then the markers are brought inside the `<li>`'s content, as though they're an inline box placed at the very beginning of the `<li>`.
 
 ## Indenting It Twice
 
@@ -58,9 +54,9 @@ To avoid this and get some indentation, there are only three options available t
 2. Give the `<ul>` element a left margin.
 3. Give the `<ul>` element some left padding.
 
-As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer, and Opera. The third was adopted by Firefox.
+As it turns out, nobody seems to have used the first option. The second option was taken by Opera. The third was adopted by Firefox.
 
-Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the `<ul>` element. If we apply a background color to the `<ul>` element and leave the list item and `<ul>` borders in place, we get the result shown in Figure 5.
+Let's look at the two approaches for a moment. In Opera, the lists are indented by setting a left margin of 40 pixels on the `<ul>` element. If we apply a background color to the `<ul>` element and leave the list item and `<ul>` borders in place, we get the result shown in Figure 5.
 
 ![Figure 5](consistent-list-indentation-figure5.gif)
 
@@ -72,7 +68,7 @@ As we can see, the markers remain attached to the `<li>` elements, no matter whe
 
 ## Finding Consistency
 
-Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set **both** the left margin and left padding of the `<ul>` element. We can ignore `<li>` altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:
+Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko and Opera, you need to set **both** the left margin and left padding of the `<ul>` element. We can ignore `<li>` altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:
 
 ```css
 ul {
@@ -81,7 +77,7 @@ ul {
 }
 ```
 
-If you're more interested in following the Internet Explorer/Opera model, then:
+If you're more interested in following the Opera model, then:
 
 ```css
 ul {

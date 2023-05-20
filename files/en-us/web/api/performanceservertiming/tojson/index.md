@@ -1,14 +1,8 @@
 ---
-title: PerformanceServerTiming.toJSON()
+title: "PerformanceServerTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceServerTiming
-  - Reference
-  - ServerTiming
-  - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
 
@@ -32,20 +26,30 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 ## Examples
 
-### Using the toJSON method
+### Logging server timing entries
 
-In this example, calling `serverEntry.toJSON()` returns a JSON representation of the `PerformanceServerTiming` object.
+Server timing metrics require the server to send the {{HTTPHeader("Server-Timing")}} header. For example:
+
+```http
+Server-Timing: cache;desc="Cache Read";dur=23.2
+```
+
+The `serverTiming` entries can live on `navigation` and `resource` entries.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` and `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-      entry.serverTiming.forEach((serverEntry) => {
-        console.log(serverEntry.toJSON());
-      });
+    entry.serverTiming.forEach((serverEntry) => {
+      console.log(serverEntry.toJSON());
+    });
   });
 });
 
-observer.observe({ entryTypes: ["resource"] });
+["navigation", "resource"].forEach((type) =>
+  observer.observe({ type, buffered: true })
+);
 ```
 
 This would log a JSON object like so:
@@ -53,8 +57,8 @@ This would log a JSON object like so:
 ```json
 {
   "name": "cache",
-  "duration": 0,
-  "description": "hit-front"
+  "duration": 23.2,
+  "description": "Cache Read"
 }
 ```
 

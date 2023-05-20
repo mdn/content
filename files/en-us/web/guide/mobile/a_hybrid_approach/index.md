@@ -1,11 +1,9 @@
 ---
 title: A hybrid approach
 slug: Web/Guide/Mobile/A_hybrid_approach
-tags:
-  - Mobile
-  - Responsive Design
-  - Web Development
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
 
 Silver bullets are hard to find in web development — you're more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the separate sites and [responsive design](/en-US/docs/Web/Progressive_web_apps) approaches by combining them.
 

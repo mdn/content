@@ -1,13 +1,8 @@
 ---
-title: OffscreenCanvas.getContext()
+title: "OffscreenCanvas: getContext() method"
+short-title: getContext()
 slug: Web/API/OffscreenCanvas/getContext
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.OffscreenCanvas.getContext
 ---
 
@@ -82,7 +77,7 @@ getContext(contextType, contextAttributes)
 
 A rendering context which is either a
 
-- {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
+- {{domxref("OffscreenCanvasRenderingContext2D")}} for `"2d"`,
 - {{domxref("WebGLRenderingContext")}} for `"webgl"` and `"experimental-webgl"`,
 - {{domxref("WebGL2RenderingContext")}} for `"webgl2"` and `"experimental-webgl2"` {{experimental_inline}}, or
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.

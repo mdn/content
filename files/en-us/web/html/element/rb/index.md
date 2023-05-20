@@ -1,14 +1,9 @@
 ---
-title: '<rb>: The Ruby Base element'
+title: "<rb>: The Ruby Base element"
 slug: Web/HTML/Element/rb
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Text
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.rb
 ---
 
@@ -16,11 +11,59 @@ browser-compat: html.elements.rb
 
 The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+- Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment of the ruby base text.
+- Even though `<rb>` is not a {{glossary("void element")}}, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.
+- You need to include one {{htmlelement("rt")}} element for each base segment/`<rb>` element that you want to annotate.
+
+## Examples
+
+### Using rb
+
+In this example, we provide an annotation for the original character equivalent of "Kanji":
+
+```html
+<ruby>
+  <rb>漢<rb>字
+  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+</ruby>
+```
+
+Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
+
+#### Result
+
+{{EmbedLiveSample("Using_rb", "100%", 60)}}
+
+### Separate annotations
+
+Note that we could also write this example with the two base text parts annotated completely separately. In this case we don't need to include `<rb>` elements:
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+#### Result
+
+{{EmbedLiveSample('Separate annotations')}}
+
+See the article about the {{HTMLElement("ruby")}} element for further examples.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -54,46 +97,6 @@ The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base 
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-- Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment of the ruby base text.
-- Even though `<rb>` is not a {{glossary("void element")}}, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.
-- You need to include one {{htmlelement("rt")}} element for each base segment/`<rb>` element that you want to annotate.
-
-## Examples
-
-### Using rb
-
-In this example, we provide an annotation for the original character equivalent of "Kanji":
-
-```html
-<ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
-</ruby>
-```
-
-Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
-
-{{EmbedLiveSample("Using_rb", "100%", 60)}}
-
-### Separate annotations
-
-Note that we could also write this example with the two base text parts annotated completely separately. In this case we don't need to include `<rb>` elements:
-
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
-```
-
-See the article about the {{HTMLElement("ruby")}} element for further examples.
 
 ## Specifications
 

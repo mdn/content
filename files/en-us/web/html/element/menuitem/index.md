@@ -1,21 +1,10 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Navigation
-  - Navigation Menus
-  - Reference
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menuitem
-  - Non-standard
-browser-compat: html.elements.menuitem
+page-type: html-element
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
@@ -24,65 +13,25 @@ The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command t
 
 A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an _indirect command_ whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Must have a start tag and must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        The {{HTMLElement("menu")}} element, where that element is in
-        the <em>popup menu</em> state. (If specified, the
-        <code>type</code> attribute of the {{HTMLElement("menu")}}
-        element must be <code>popup</code>; if missing, the parent element of
-        the {{HTMLElement("menu")}} must itself be a
-        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
 
-- {{HTMLAttrDef("checked")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `checked` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
-- {{HTMLAttrDef("command")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `command` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
-- {{HTMLAttrDef("default")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `default` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
-- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
-- {{HTMLAttrDef("icon")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `icon` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Image URL, used to provide a picture to represent the command.
-- {{HTMLAttrDef("label")}}
+- `label`
   - : The name of the command as shown to the user. Required when a `command` attribute is not present.
-- {{HTMLAttrDef("radiogroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `radiogroup` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
-- {{HTMLAttrDef("type")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : This attribute indicates the kind of command, and can be one of three values.
 
@@ -90,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `checkbox`: Represents a command that can be toggled between two different states.
     - `radio`: Represent one selection from a group of commands that can be toggled as radio buttons.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -133,13 +82,55 @@ div {
 
 {{EmbedLiveSample("Example", '100%', 80)}}
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        The {{HTMLElement("menu")}} element, where that element is in
+        the <em>popup menu</em> state. (If specified, the
+        <code>type</code> attribute of the {{HTMLElement("menu")}}
+        element must be <code>popup</code>; if missing, the parent element of
+        the {{HTMLElement("menu")}} must itself be a
+        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 Not part of any current specifications.
 
 ## Browser compatibility
 
-{{Compat}}
+No longer supported in any browser. Firefox, the only browser that supported this element, removed support in 85.
 
 ## See also
 

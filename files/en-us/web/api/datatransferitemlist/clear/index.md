@@ -1,16 +1,8 @@
 ---
-title: DataTransferItemList.clear()
+title: "DataTransferItemList: clear() method"
+short-title: clear()
 slug: Web/API/DataTransferItemList/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - clear
-  - drag and drop
 browser-compat: api.DataTransferItemList.clear
 ---
 
@@ -66,17 +58,17 @@ This example shows the use of the `clear()` method.
 ### CSS
 
 ```css
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #source {
-    color: blue;
-    border: 1px solid black;
-  }
-  #target {
-    border: 1px solid black;
-  }
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+#target {
+  border: 1px solid black;
+}
 ```
 
 ### JavaScript
@@ -97,17 +89,17 @@ function dropHandler(ev) {
 
   // Loop through the dropped items and log their data
   for (const item of ev.dataTransfer.items) {
-    if (item.kind === 'string' && item.type.match(/^text\/plain/)) {
+    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
       // This item is the target node
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (item.kind === 'string' && item.type.match(/^text\/html/)) {
+    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
       // Drag data item is HTML
       item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if (item.kind === 'string' && item.type.match(/^text\/uri-list/)) {
+    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
       // Drag data item is URI
       item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
@@ -121,7 +113,7 @@ function dragoverHandler(ev) {
   ev.preventDefault();
 
   // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 
 function dragendHandler(ev) {

@@ -1,11 +1,8 @@
 ---
 title: "BatteryManager: chargingtimechange event"
+short-title: chargingtimechange
 slug: Web/API/BatteryManager/chargingtimechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.chargingtimechange_event
 ---
 

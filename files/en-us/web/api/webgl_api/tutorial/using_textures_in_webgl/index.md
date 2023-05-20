@@ -2,16 +2,11 @@
 title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 page-type: guide
-tags:
-  - Tutorial
-  - WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.
-
-> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
 ## Loading textures
 
@@ -19,7 +14,7 @@ The first thing to do is add code to load the textures. In our case, we'll be us
 
 > **Note:** It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](#cross-domain_textures) for details.
 
-The code that loads the texture looks like this:
+> **Note:** Add these two functions to your "webgl-demo.js" script:
 
 ```js
 //
@@ -42,29 +37,43 @@ function loadTexture(gl, url) {
   const border = 0;
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // opaque blue
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  const pixel = new Uint8Array([0, 0, 255, 255]); // opaque blue
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel
+  );
 
   const image = new Image();
   image.onload = () => {
     gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                  srcFormat, srcType, image);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image
+    );
 
     // WebGL1 has different requirements for power of 2 images
-    // vs non power of 2 images so check if the image is a
+    // vs. non power of 2 images so check if the image is a
     // power of 2 in both dimensions.
     if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-       // Yes, it's a power of 2. Generate mips.
-       gl.generateMipmap(gl.TEXTURE_2D);
+      // Yes, it's a power of 2. Generate mips.
+      gl.generateMipmap(gl.TEXTURE_2D);
     } else {
-       // No, it's not a power of 2. Turn off mips and set
-       // wrapping to clamp to edge
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      // No, it's not a power of 2. Turn off mips and set
+      // wrapping to clamp to edge
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     }
   };
   image.src = url;
@@ -104,63 +113,51 @@ But also note: Browsers copy pixels from the loaded image in top-to-bottom order
 
 So in order to prevent the resulting image texture from having the wrong orientation when rendered, we also need call [`pixelStorei()`](/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei) with the `gl.UNPACK_FLIP_Y_WEBGL` parameter set to `true` — to cause the pixels to be flipped into the bottom-to-top order that WebGL expects.
 
+> **Note:** Add the following code to your `main()` function, right after the call to `initBuffers()`:
+
 ```js
 // Load texture
-const texture = loadTexture(gl, 'cubetexture.png');
+const texture = loadTexture(gl, "cubetexture.png");
 // Flip image pixels into the bottom-to-top order that WebGL expects.
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
+
+> **Note:** Finally, download the [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) file to the same local directory as your JavaScript files.
 
 ## Mapping the texture onto the faces
 
 At this point, the texture is loaded and ready to use. But before we can use it, we need to establish the mapping of the texture coordinates to the vertices of the faces of our cube. This replaces all the previously existing code for configuring colors for each of the cube's faces in `initBuffers()`.
 
+> **Note:** Add this function to your "init-buffer.js" module:
+
 ```js
+function initTextureBuffer(gl) {
   const textureCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
   const textureCoordinates = [
     // Front
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
     // Back
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
     // Top
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
     // Bottom
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
     // Right
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
     // Left
-    0.0,  0.0,
-    1.0,  0.0,
-    1.0,  1.0,
-    0.0,  1.0,
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
   ];
 
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
-                gl.STATIC_DRAW);
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(textureCoordinates),
+    gl.STATIC_DRAW
+  );
 
-  // …
-  return {
-    position: positionBuffer,
-    textureCoord: textureCoordBuffer,
-    indices: indexBuffer,
-  };
+  return textureCoordBuffer;
+}
 ```
 
 First, this code creates a WebGL buffer into which we'll store the texture coordinates for each face, then we bind that buffer as the array we'll be writing into.
@@ -168,6 +165,26 @@ First, this code creates a WebGL buffer into which we'll store the texture coord
 The `textureCoordinates` array defines the texture coordinates corresponding to each vertex of each face. Note that the texture coordinates range from 0.0 to 1.0; the dimensions of textures are normalized to a range of 0.0 to 1.0 regardless of their actual size, for the purpose of texture mapping.
 
 Once we've set up the texture mapping array, we pass the array into the buffer, so that WebGL has that data ready for its use.
+
+Then we return the new buffer.
+
+Next, we need to update `initBuffers()` to create and return the texture coordinates buffer instead of the color buffer.
+
+> **Note:** In the `initBuffers()` function of your "init-buffers.js" module, replace the call to `initColorBuffer()` with the following line:
+
+```js
+const textureCoordBuffer = initTextureBuffer(gl);
+```
+
+> **Note:** In the `initBuffers()` function of your "init-buffers.js" module, replace the `return` statement with the following:
+
+```js
+return {
+  position: positionBuffer,
+  textureCoord: textureCoordBuffer,
+  indices: indexBuffer,
+};
+```
 
 ## Updating the shaders
 
@@ -177,8 +194,10 @@ The shader program also needs to be updated to use the textures instead of solid
 
 We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.
 
+> **Note:** Update the `vsSource` declaration in your `main()` function like this:
+
 ```js
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -198,10 +217,12 @@ The key change here is that instead of fetching the vertex color, we're fetching
 
 ### The fragment shader
 
-The fragment shader likewise needs to be updated:
+The fragment shader likewise needs to be updated.
+
+> **Note:** Update the `fsSource` declaration in your `main()` function like this:
 
 ```js
-  const fsSource = `
+const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
@@ -216,66 +237,87 @@ Instead of assigning a color value to the fragment's color, the fragment's color
 
 ### Attribute and Uniform Locations
 
-Because we changed an attribute and added a uniform we need to look up their locations
+Because we changed an attribute and added a uniform we need to look up their locations.
+
+> **Note:** Update the `programInfo` declaration in your `main()` function like this:
 
 ```js
-  const programInfo = {
-    program: shaderProgram,
-    attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-      textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
-    },
-    uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-      uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
-    },
-  };
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
+  },
+};
 ```
 
 ## Drawing the textured cube
 
 The changes to the `drawScene()` function are simple.
 
-First, the code to specify the colors buffer is gone, replaced with this:
+> **Note:** In the `drawScene()` function of your "draw-scene.js" module, add the following function:
 
 ```js
 // tell webgl how to pull out the texture coordinates from buffer
-{
-    const num = 2; // every coordinate composed of 2 values
-    const type = gl.FLOAT; // the data in the buffer is 32-bit float
-    const normalize = false; // don't normalize
-    const stride = 0; // how many bytes to get from one set to the next
-    const offset = 0; // how many bytes inside the buffer to start from
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
-    gl.vertexAttribPointer(programInfo.attribLocations.textureCoord, num, type, normalize, stride, offset);
-    gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
+function setTextureAttribute(gl, buffers, programInfo) {
+  const num = 2; // every coordinate composed of 2 values
+  const type = gl.FLOAT; // the data in the buffer is 32-bit float
+  const normalize = false; // don't normalize
+  const stride = 0; // how many bytes to get from one set to the next
+  const offset = 0; // how many bytes inside the buffer to start from
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }
 ```
 
-Then add code to specify the texture to map onto the faces, just before draw:
+> **Note:** In the `drawScene()` function of your "draw-scene.js" module, replace the call to `setColorAttribute()` with the following line:
 
 ```js
-  // Tell WebGL we want to affect texture unit 0
-  gl.activeTexture(gl.TEXTURE0);
+setTextureAttribute(gl, buffers, programInfo);
+```
 
-  // Bind the texture to texture unit 0
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+Then add code to specify the texture to map onto the faces.
 
-  // Tell the shader we bound the texture to texture unit 0
-  gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
+> **Note:** In your `drawScene()` function, just after the two calls to `gl.uniformMatrix4fv()`, add the following code:
+
+```js
+// Tell WebGL we want to affect texture unit 0
+gl.activeTexture(gl.TEXTURE0);
+
+// Bind the texture to texture unit 0
+gl.bindTexture(gl.TEXTURE_2D, texture);
+
+// Tell the shader we bound the texture to texture unit 0
+gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
 ```
 
 WebGL provides a minimum of 8 texture units; the first of these is `gl.TEXTURE0`. We tell WebGL we want to affect unit 0. We then call {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} which binds the texture to the `TEXTURE_2D` bind point of texture unit 0. We then tell the shader that for the `uSampler` use texture unit 0.
 
 Lastly, add `texture` as a parameter to the `drawScene()` function, both where it is defined and where it is called.
 
+> **Note:** Update the declaration of your `drawScene()` function to add the new parameter:
+
+```js-nolint
+function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+```
+
+> **Note:** Update the place in your `main()` function where you call `drawScene()`:
+
 ```js
-drawScene(gl, programInfo, buffers, texture, deltaTime);
-// …
-function drawScene(gl, programInfo, buffers, texture, deltaTime) {
-  // …
-}
+drawScene(gl, programInfo, buffers, texture, cubeRotation);
 ```
 
 At this point, the rotating cube should be good to go.
@@ -288,7 +330,7 @@ At this point, the rotating cube should be good to go.
 
 Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/CORS) for details on CORS.
 
-Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
+Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 

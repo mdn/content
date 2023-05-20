@@ -2,18 +2,6 @@
 title: max-width
 slug: Web/CSS/max-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Limits
-  - Maximum
-  - Reference
-  - dimensions
-  - max-width
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.max-width
 ---
 

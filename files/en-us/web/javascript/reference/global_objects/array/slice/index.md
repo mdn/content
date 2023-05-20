@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.slice
 ---
 
@@ -58,7 +53,7 @@ The `slice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 ### Return a portion of an existing array
 
 ```js
-const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -74,21 +69,25 @@ change.
 
 ```js
 // Using slice, create newCar from myCar.
-const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
-const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+const myHonda = {
+  color: "red",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
+const myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 const newCar = myCar.slice(0, 2);
 
-console.log('myCar =', myCar);
-console.log('newCar =', newCar);
-console.log('myCar[0].color =', myCar[0].color);
-console.log('newCar[0].color =', newCar[0].color);
+console.log("myCar =", myCar);
+console.log("newCar =", newCar);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
 
 // Change the color of myHonda.
-myHonda.color = 'purple';
-console.log('The new color of my Honda is', myHonda.color);
+myHonda.color = "purple";
+console.log("The new color of my Honda is", myHonda.color);
 
-console.log('myCar[0].color =', myCar[0].color);
-console.log('newCar[0].color =', newCar[0].color);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
 ```
 
 This script writes:
@@ -156,6 +155,12 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 
 ## See also
 
+- [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("TypedArray.prototype.slice()")}}
+- {{jsxref("String.prototype.slice()")}}

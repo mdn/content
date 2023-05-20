@@ -1,12 +1,8 @@
 ---
-title: TextDecoderStream()
+title: "TextDecoderStream: TextDecoderStream() constructor"
+short-title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TextDecoderStream
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
 
@@ -31,7 +27,7 @@ new TextDecoderStream(label, options)
   - : An object with the property:
 
     - `fatal`
-      - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
+      - : A boolean value indicating if this object must throw a {{jsxref("TypeError")}} when decoding invalid data.
         It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
 
 ### Exceptions

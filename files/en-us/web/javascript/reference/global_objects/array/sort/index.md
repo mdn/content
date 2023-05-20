@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - Array method
-  - JavaScript
-  - Method
-  - Prototype
-  - Sorting
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort
 ---
 
@@ -19,34 +12,29 @@ The **`sort()`** method sorts the elements of an array _[in place](https://en.wi
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
 
+To sort the elements in an array without mutating the original array, use {{jsxref("Array/toSorted", "toSorted()")}}.
+
 {{EmbedInteractiveExample("pages/js/array-sort.html")}}
 
 ## Syntax
 
 ```js-nolint
-// Functionless
 sort()
-
-// Arrow function
-sort((a, b) => { /* … */ } )
-
-// Compare function
 sort(compareFn)
-
-// Inline compare function
-sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
 
 - `compareFn` {{optional_inline}}
 
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : A function that defines the sort order. The return value should be a number whose positivity indicates the relative order of the two elements. The function is called with the following arguments:
 
     - `a`
-      - : The first element for comparison.
+      - : The first element for comparison. Will never be `undefined`.
     - `b`
-      - : The second element for comparison.
+      - : The second element for comparison. Will never be `undefined`.
+
+    If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
 ### Return value
 
@@ -76,8 +64,8 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFn(a, b)` return value | sort order                         |
 | ------------------------------ | ---------------------------------- |
-| > 0                            | sort `a` after `b`                 |
-| < 0                            | sort `a` before `b`                |
+| > 0                            | sort `a` after `b`, e.g. `[b, a]`  |
+| < 0                            | sort `a` before `b`, e.g. `[a, b]` |
 | === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:
@@ -128,10 +116,10 @@ sorted arrays. The numeric arrays are sorted without a compare function, then so
 using one.
 
 ```js
-const stringArray = ['Blue', 'Humpback', 'Beluga'];
+const stringArray = ["Blue", "Humpback", "Beluga"];
 const numberArray = [40, 1, 5, 200];
-const numericStringArray = ['80', '9', '700'];
-const mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+const numericStringArray = ["80", "9", "700"];
+const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
@@ -159,12 +147,12 @@ Arrays of objects can be sorted by comparing the value of one of their propertie
 
 ```js
 const items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // sort by value
@@ -194,7 +182,7 @@ For sorting strings with non-ASCII characters, i.e. strings with accented charac
 appear in the right order.
 
 ```js
-const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+const items = ["réservé", "premier", "communiqué", "café", "adieu", "éclair"];
 items.sort((a, b) => a.localeCompare(b));
 
 // items is ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
@@ -212,12 +200,12 @@ temporary array to achieve the right order.
 
 ```js
 // the array to be sorted
-const data = ['delta', 'alpha', 'charlie', 'bravo'];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
-})
+});
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {
@@ -247,7 +235,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 1, 4, 1, 5];
@@ -265,10 +253,10 @@ For example, say you had a list of students alongside their grades. Note that th
 
 ```js
 const students = [
-  { name: "Alex",   grade: 15 },
+  { name: "Alex", grade: 15 },
   { name: "Devlin", grade: 15 },
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 }
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
 ];
 ```
 
@@ -282,10 +270,10 @@ The `students` variable will then have the following value:
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
-  { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
-  { name: "Devlin", grade: 15 }  // original maintained for similar grade (stable sorting)
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
+  { name: "Alex", grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
 ];
 ```
 
@@ -295,10 +283,10 @@ Before version 10 (or ECMAScript 2019), sort stability was not guaranteed, meani
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }  // original order not maintained
+  { name: "Alex", grade: 15 }, // original order not maintained
 ];
 ```
 
@@ -310,7 +298,7 @@ For example, consider this code:
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? 1 : 0;
+const compareFn = (a, b) => (a > b ? 1 : 0);
 arr.sort(compareFn);
 ```
 
@@ -320,7 +308,7 @@ However, if the `compareFn` function is changed slightly so that it returns `-1`
 
 ```js
 const arr = [3, 1, 4, 1, 5, 9];
-const compareFn = (a, b) => a > b ? -1 : 0;
+const compareFn = (a, b) => (a > b ? -1 : 0);
 arr.sort(compareFn);
 ```
 
@@ -363,8 +351,12 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
+- {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
-- [V8 sort stability](https://v8.dev/features/stable-sort)
-- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
+- {{jsxref("TypedArray.prototype.sort()")}}
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) on v8.dev (September 28, 2018)
+- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort) on v8.dev (July 2, 2019)
+- [`Array.prototype.sort` stability](https://mathiasbynens.be/demo/sort-stability) by Mathias Bynens

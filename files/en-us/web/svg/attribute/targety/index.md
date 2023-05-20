@@ -1,11 +1,7 @@
 ---
 title: targetY
 slug: Web/SVG/Attribute/targetY
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.targetY
 ---
 

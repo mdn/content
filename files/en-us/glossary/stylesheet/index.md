@@ -1,8 +1,7 @@
 ---
 title: Stylesheet
 slug: Glossary/Stylesheet
-tags:
-  - StyleSheet
+page-type: glossary-definition
 ---
 
 A **stylesheet** is a set of CSS rules used to control the layout and design of a webpage or document. _Internal_ stylesheets are placed inside a {{htmlelement("style")}} element inside the {{htmlelement("head")}} of a web document, and _external_ stylesheets are placed inside a separate `.css` file, which is applied to a document by referencing the file inside a {{htmlelement("link")}} element in the document's head.

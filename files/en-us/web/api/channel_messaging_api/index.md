@@ -2,12 +2,6 @@
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
 page-type: web-api-overview
-tags:
-  - API
-  - Channel messaging
-  - HTML API
-  - Overview
-  - Reference
 browser-compat:
   - api.MessageChannel
   - api.MessagePort

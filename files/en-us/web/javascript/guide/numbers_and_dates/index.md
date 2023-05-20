@@ -1,22 +1,10 @@
 ---
 title: Numbers and dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Calculation
-  - Dates
-  - FP
-  - Floating Point
-  - Floating-Point
-  - Guide
-  - Integer
-  - JavaScript
-  - Math
-  - Numbers
-  - Numeric
-  - "l10n:priority"
+page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
 
@@ -32,34 +20,35 @@ You can use four types of number literals: decimal, binary, octal, and hexadecim
 
 ### Decimal numbers
 
-```js
+```js-nolint
 1234567890
 42
-
-// Caution when using leading zeros:
-
-0888 // 888 parsed as decimal
-0777 // parsed as octal in non-strict mode (511 in decimal)
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if every digit after the leading `0` is smaller than 8, the number gets parsed as an octal number.
+Decimal literals can start with a zero (`0`) followed by another decimal digit, but if all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This is considered a legacy syntax, and number literals prefixed with `0`, whether interpreted as octal or decimal, cause a syntax error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#legacy_octal_literals) — so, use the `0o` prefix instead.
+
+```js-nolint example-bad
+0888 // 888 parsed as decimal
+0777 // parsed as octal, 511 in decimal
+```
 
 ### Binary numbers
 
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
-```js
-const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+```js-nolint
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
 ```
 
 ### Octal numbers
 
 The standard syntax for octal numbers is to prefix them with `0o`. For example:
 
-```js
-const a = 0o10; // 8
+```js-nolint
+0O755 // 493
+0o644 // 420
 ```
 
 There's also a legacy syntax for octal numbers — by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
@@ -75,7 +64,7 @@ const m = 0644; // 420
 
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
-```js
+```js-nolint
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
@@ -83,10 +72,14 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 
 ### Exponentiation
 
-```js
-1E3   // 1000
-2e6   // 2000000
-0.1e2 // 10
+```js-nolint
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
 ## Number object
@@ -138,13 +131,13 @@ The `Number` prototype provides methods for retrieving information from `Number`
 The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141…), which you would use in an application as
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 Similarly, standard mathematical functions are methods of `Math`. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 Note that all trigonometric methods of `Math` take arguments in radians.
@@ -315,15 +308,15 @@ const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
 
 Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
 
-Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
 ## Date object
 
 JavaScript does not have a date data type. However, you can use the {{jsxref("Date")}} object and its methods to work with dates and times in your applications. The `Date` object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.
 
-JavaScript handles dates similarly to Java. The two languages have many of the same date methods, and both languages store dates as the number of milliseconds since January 1, 1970, 00:00:00, with a Unix Timestamp being the number of seconds since January 1, 1970, 00:00:00.
+JavaScript handles dates similarly to Java. The two languages have many of the same date methods, and both languages store dates as the number of milliseconds since midnight at the beginning of January 1, 1970, UTC, with a Unix Timestamp being the number of seconds since the same instant. The instant at the midnight at the beginning of January 1, 1970, UTC is called the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
-The `Date` object range is -100,000,000 days to 100,000,000 days relative to 01 January, 1970 UTC.
+The `Date` object range is -100,000,000 days to 100,000,000 days relative to the epoch.
 
 To create a `Date` object:
 
@@ -363,12 +356,12 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-const Xmas95 = new Date('December 25, 1995');
+const Xmas95 = new Date("December 25, 1995");
 ```
 
 Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
 
-The `getTime` and `setTime` methods are useful for comparing dates. The `getTime` method returns the number of milliseconds since January 1, 1970, 00:00:00 for a `Date` object.
+The `getTime` and `setTime` methods are useful for comparing dates. The `getTime` method returns the number of milliseconds since the epoch for a `Date` object.
 
 For example, the following code displays the number of days left in the current year:
 
@@ -387,7 +380,7 @@ The `parse` method is useful for assigning values from date strings to existing 
 
 ```js
 const ipoDate = new Date();
-ipoDate.setTime(Date.parse('Aug 9, 1995'));
+ipoDate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 ### Example
@@ -419,4 +412,4 @@ The next statement appends a `minute` value to `temp`. If the value of `minute` 
 
 Finally, a conditional expression appends "P.M." to `temp` if `hour` is 12 or greater; otherwise, it appends "A.M." to `temp`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}

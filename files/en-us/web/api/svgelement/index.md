@@ -2,14 +2,6 @@
 title: SVGElement
 slug: Web/API/SVGElement
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGElement
 browser-compat: api.SVGElement
 ---
 

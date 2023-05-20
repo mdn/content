@@ -1,13 +1,8 @@
 ---
-title: CSSRuleList.item()
+title: "CSSRuleList: item() method"
+short-title: item()
 slug: Web/API/CSSRuleList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - item
-  - CSSRuleList
 browser-compat: api.CSSRuleList.item
 ---
 
@@ -32,11 +27,15 @@ A {{domxref("CSSRule")}}.
 
 ## Examples
 
-In the following example the first item in the {{domxref("CSSRuleList")}} named `myRules` is printed to the console.
+In the following example, we assume that the `myRules` list has three items only.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]);
+console.log(myRules.item(0)); // Logs the first CSSRule item from this list
+
+// Accessing non-existing items using this method will return null instead of undefined
+console.log(myRules.item(5)); // null
+console.log(myRules[5]); // undefined
 ```
 
 ## Specifications

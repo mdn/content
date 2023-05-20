@@ -2,12 +2,6 @@
 title: SVGTextElement
 slug: Web/API/SVGTextElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTextElement
 ---
 

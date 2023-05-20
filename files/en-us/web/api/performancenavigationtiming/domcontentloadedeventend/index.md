@@ -1,53 +1,54 @@
 ---
-title: PerformanceNavigationTiming.domContentLoadedEventEnd
+title: "PerformanceNavigationTiming: domContentLoadedEventEnd property"
+short-title: domContentLoadedEventEnd
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventEnd
 ---
 
 {{APIRef("Performance API")}}
 
-The **`domContentLoadedEventEnd`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event completes.
+The **`domContentLoadedEventEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler completes.
+
+Typically frameworks and libraries wait for the `DOMContentLoaded` event before starting to run their code. We can use the `domContentLoadedEventEnd` and the [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) properties to calculate how long this takes to run.
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
-the time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
-event completes.
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler completes.
 
 ## Examples
 
-The following example illustrates this property's usage.
+### Measuring `DOMContentLoaded` event handler time
+
+The `domContentLoadedEventEnd` property can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-function printNavTimingData() {
-  // Use getEntriesByType() to just get the "navigation" events
-  performance.getEntriesByType("navigation")
-    .forEach((p, i) => {
-      console.log(`= Navigation entry[${i}]`);
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const domContentLoadedTime =
+      entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+    console.log(
+      `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`
+    );
+  });
+});
 
-      // DOM Properties
-      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-      console.log(`DOM complete = ${p.domComplete}`);
-      console.log(`DOM interactive = ${p.domInteractive}`);
+observer.observe({ type: "navigation", buffered: true });
+```
 
-      // Document load and unload time
-      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
 
-      // Other properties
-      console.log(`type = ${p.type}`);
-      console.log(`redirectCount = ${p.redirectCount}`);
-    });
-}
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  const domContentLoadedTime =
+    entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+  console.log(
+    `${entry.name}: DOMContentLoaded processing time: ${domContentLoadedTime}ms`
+  );
+});
 ```
 
 ## Specifications
@@ -57,3 +58,7 @@ function printNavTimingData() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)

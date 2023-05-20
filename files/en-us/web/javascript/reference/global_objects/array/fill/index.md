@@ -1,13 +1,7 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.fill
 ---
 
@@ -63,19 +57,19 @@ The `fill()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 ### Using fill
 
 ```js
-console.log([1, 2, 3].fill(4));                // [4, 4, 4]
-console.log([1, 2, 3].fill(4, 1));             // [1, 4, 4]
-console.log([1, 2, 3].fill(4, 1, 2));          // [1, 4, 3]
-console.log([1, 2, 3].fill(4, 1, 1));          // [1, 2, 3]
-console.log([1, 2, 3].fill(4, 3, 3));          // [1, 2, 3]
-console.log([1, 2, 3].fill(4, -3, -2));        // [4, 2, 3]
-console.log([1, 2, 3].fill(4, NaN, NaN));      // [1, 2, 3]
-console.log([1, 2, 3].fill(4, 3, 5));          // [1, 2, 3]
-console.log(Array(3).fill(4));                 // [4, 4, 4]
+console.log([1, 2, 3].fill(4)); // [4, 4, 4]
+console.log([1, 2, 3].fill(4, 1)); // [1, 4, 4]
+console.log([1, 2, 3].fill(4, 1, 2)); // [1, 4, 3]
+console.log([1, 2, 3].fill(4, 1, 1)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 3)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, -3, -2)); // [4, 2, 3]
+console.log([1, 2, 3].fill(4, NaN, NaN)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 5)); // [1, 2, 3]
+console.log(Array(3).fill(4)); // [4, 4, 4]
 
 // A single object, referenced by each slot of the array:
 const arr = Array(3).fill({}); // [{}, {}, {}]
-arr[0].hi = "hi";              // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
 ### Using fill() to create a matrix of all 1
@@ -125,5 +119,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

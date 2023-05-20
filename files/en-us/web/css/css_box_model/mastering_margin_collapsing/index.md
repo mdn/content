@@ -2,11 +2,6 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
 spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 
@@ -30,6 +25,7 @@ Some things to note:
 - When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.
 - When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.
 - Collapsing margins is only relevant in the vertical direction.
+- Margins don't collapse in a container with `display` set to `flex` or `grid`.
 
 ## Examples
 
@@ -86,7 +82,7 @@ p {
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

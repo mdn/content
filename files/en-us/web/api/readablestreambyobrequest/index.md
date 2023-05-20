@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBRequest
 slug: Web/API/ReadableStreamBYOBRequest
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
 

@@ -2,49 +2,62 @@
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
 page-type: web-api-interface
-tags:
-  - DOM
-  - Interface
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-The **`PerformanceResourceTiming`** interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's _resources_. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
+The **`PerformanceResourceTiming`** interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
 
-The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc.. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
+## Description
+
+The interface's properties create a resource loading timeline with high-resolution timestamps for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, and more. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the type of resource that initiated the fetch.
 
 {{InheritanceDiagram}}
 
-{{AvailableInWorkers}}
+### Typical resource timing metrics
+
+The properties of this interface allow you to calculate certain resource timing metrics. Common use cases include:
+
+- Measuring TCP handshake time (`connectEnd` - `connectStart`)
+- Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
+- Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring request time (`responseStart` - `requestStart`)
+- Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
+- Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
+- Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
+- Checking if content was compressed (`decodedBodySize` should not be `encodedBodySize`)
+- Checking if local caches were hit (`transferSize` should be `0`)
+- Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
+- Checking if the correct resources are render-blocking (`renderBlockingStatus`)
 
 ## Instance properties
 
+### Inherited from `PerformanceEntry`
+
 This interface extends the following {{domxref("PerformanceEntry")}} properties for resource performance entry types by qualifying and constraining them as follows:
 
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"resource"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
-  - : Returns the resources URL.
+  - : Returns the resource's URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}.
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.
 
-The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.
+### Timestamps
 
-- {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
-  - : A string representing the _type_ of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.
-- {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
-  - : A string representing the _network protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
-- {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
+The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
+
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
+
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.
 - {{domxref('PerformanceResourceTiming.redirectEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after receiving the last byte of the response of the last redirect.
+- {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
 - {{domxref('PerformanceResourceTiming.fetchStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource.
 - {{domxref('PerformanceResourceTiming.domainLookupStart')}} {{ReadOnlyInline}}
@@ -53,35 +66,79 @@ The interface also supports the following properties which are listed in the ord
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the browser finishes the domain name lookup for the resource.
 - {{domxref('PerformanceResourceTiming.connectStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish the connection to the server to retrieve the resource.
-- {{domxref('PerformanceResourceTiming.connectEnd')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.secureConnectionStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the handshake process to secure the current connection.
+- {{domxref('PerformanceResourceTiming.connectEnd')}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
-- {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
-  - : A `number` representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
-- {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
-  - : A `number` representing the size (in octets) received from the fetch (HTTP or cache), of the _payload body_, before removing any applied content-codings.
+
+### Additional resource information
+
+Additionally, this interface exposes the following properties containing more information about a resource:
+
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
-  - : A `number` that is the size (in octets) received from the fetch (HTTP or cache) of the _message body_, after removing any applied content-codings.
+  - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
+- {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
+  - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
+- {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
+  - : A string representing the web platform feature that initiated the performance entry.
+- {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
+  - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
+  - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
+- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : A number representing the HTTP response status code returned when fetching the resource.
+- {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
+  - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
-- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
-  - : A string representing the render-blocking status. Must be: "`blocking`" or "`non-blocking`".
 
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
   - : Returns a JSON representation of the `PerformanceResourceTiming` object.
 
-## Example
+## Examples
 
-See the example in [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API).
+### Logging resource timing information
+
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry);
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  console.log(entry);
+});
+```
+
+## Security requirements
+
+### Cross-origin timing information
+
+Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
 
 ## Specifications
 
@@ -93,5 +150,4 @@ See the example in [Using the Resource Timing API](/en-US/docs/Web/API/Resource_
 
 ## See also
 
-- [Resource Timing (Overview)](/en-US/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource timing (Overview)](/en-US/docs/Web/API/Performance_API/Resource_timing)

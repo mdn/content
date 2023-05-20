@@ -2,14 +2,8 @@
 title: Plugin
 slug: Web/API/Plugin
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plug-in
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Plugin
 ---
 
@@ -22,7 +16,7 @@ The `Plugin` interface provides information about a browser plugin.
 ## Instance properties
 
 - {{domxref("Plugin.description")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : A human readable description of the plugin.
+  - : A human-readable description of the plugin.
 - {{domxref("Plugin.filename")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The filename of the plugin file.
 - {{domxref("Plugin.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}

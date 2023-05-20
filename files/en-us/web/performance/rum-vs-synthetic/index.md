@@ -1,10 +1,6 @@
 ---
-title: 'Performance Monitoring: RUM vs synthetic monitoring'
+title: "Performance Monitoring: RUM vs. synthetic monitoring"
 slug: Web/Performance/Rum-vs-Synthetic
-tags:
-  - RUM
-  - Synthetic monitoring
-  - Web Performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

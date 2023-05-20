@@ -1,19 +1,19 @@
 ---
-title: Array.prototype.length
+title: "Array: length"
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-  - Reference
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.length
 ---
 
 {{JSRef}}
 
-The **`length`** property of an `Array` object represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
+The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+
+## Value
+
+A non-negative integer less than 2<sup>32</sup>.
 
 {{js_property_attributes(1, 0, 0)}}
 
@@ -126,5 +126,8 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- [`TypedArray`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`String`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

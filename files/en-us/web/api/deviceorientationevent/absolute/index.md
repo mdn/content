@@ -1,15 +1,8 @@
 ---
-title: DeviceOrientationEvent.absolute
+title: "DeviceOrientationEvent: absolute property"
+short-title: absolute
 slug: Web/API/DeviceOrientationEvent/absolute
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation API
-  - DeviceOrientationEvent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
 

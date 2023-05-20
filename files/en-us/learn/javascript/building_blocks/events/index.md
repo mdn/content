@@ -1,21 +1,11 @@
 ---
 title: Introduction to events
 slug: Learn/JavaScript/Building_blocks/Events
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Event Handler
-  - Guide
-  - JavaScript
-  - Learn
-  - events
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
+Events are things that happen in the system you are programming, which the system tells you about so your code can react to them.
 
 For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
@@ -43,15 +33,10 @@ This won't be an exhaustive study; just what you need to know at this stage.
   </tbody>
 </table>
 
-## A series of fortunate events
+## What is an event?
 
-As mentioned above, **events** are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
-For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot.
-As a result, the plane can safely take off.
-
-![Image displaying signal for plane to take-off](mdn-mozilla-events-runway.png)
-
-In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
+Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
+Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
 There are many different types of events that can occur.
 
 For example:
@@ -73,10 +58,9 @@ The listener listens out for the event happening, and the handler is the code th
 
 > **Note:** Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
 
-### A simple example
+### An example: handling a click event
 
-Let's look at a simple example of what we mean here.
-In the following example, we have a single {{htmlelement("button")}}, which when pressed, makes the background change to a random color:
+In the following example, we have a single {{htmlelement("button")}} in the page:
 
 ```html
 <button>Change color</button>
@@ -88,77 +72,56 @@ button {
 }
 ```
 
-The JavaScript looks like so:
+Then we have some JavaScript. We'll look at this in more detail in the next section, but for now we can just say: it adds an event handler to the button's `"click"` event, and the handler reacts to the event by setting the page background to a random color:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
-
-In this code, we store a reference to the [`<button>`](/en-US/docs/Web/HTML/Element/button) element inside a constant called `btn`, using the {{domxref("Document.querySelector()")}} function.
-
-We also define a function that returns a random number.
-
-The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
-
-- the string `'click'`, to indicate that we want to listen to the click event
-- a function to call when the event happens. In our case, the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
-{{ EmbedLiveSample('A_simple_example', '100%', 200, "", "") }}
-
-### It's not just web pages
-
-Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
-In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
-
-For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
-The [Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
-The [HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) provide a good example.
-
-You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
-The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
-See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
-
-You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
+{{ EmbedLiveSample('An example: handling a click event', '100%', 200, "", "") }}
 
 ## Using addEventListener()
 
-The recommended mechanism for adding event handlers in web pages is the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+As we saw in the last example, objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, and this is the recommended mechanism for adding event handlers.
+
+Let's take a closer look at the code from the last example:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
 
-> **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+The HTML {{HTMLElement("button")}} element will fire an event when the user clicks the button. So it defines an `addEventListener()` function, which we are calling here. We're passing in two parameters:
 
-Inside the `addEventListener()` function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it.
+- the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when the user presses a key and the button is focused.
+- a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Element/body) to that color.
 
 It is fine to make the handler function a separate named function, like this:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function changeBackground() {
@@ -166,7 +129,7 @@ function changeBackground() {
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', changeBackground);
+btn.addEventListener("click", changeBackground);
 ```
 
 ### Listening for other events
@@ -188,19 +151,22 @@ Some events, such as `click`, are available on nearly any element. Others are mo
 If you've added an event handler using `addEventListener()`, you can remove it again using the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) method. For example, this would remove the `changeBackground()` event handler:
 
 ```js
-btn.removeEventListener('click', changeBackground);
+btn.removeEventListener("click", changeBackground);
 ```
 
 Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
 For example, to add an event handler that we can remove with an `AbortSignal`:
 
-```js
+```js-nolint
 const controller = new AbortController();
 
-btn.addEventListener('click', () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
-}, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener("click",
+  () => {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+  },
+  { signal: controller.signal } // pass an AbortSignal to this handler
+);
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -217,8 +183,8 @@ Also, the ability to remove event handlers allows you to have the same button pe
 By making more than one call to {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, providing different handlers, you can have multiple handlers for a single event:
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 Both functions would now run when the element is clicked.
@@ -241,25 +207,25 @@ This is called an _event handler property_. To listen for the event, you can ass
 For example, we could rewrite the random-color example like this:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 btn.onclick = () => {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 You can also set the handler property to a named function:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function bgChange() {
@@ -273,8 +239,8 @@ btn.onclick = bgChange;
 With event handler properties, you can't add more than one handler for a single event. For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
 
 ```js
-element.addEventListener('click', function1);
-element.addEventListener('click', function2);
+element.addEventListener("click", function1);
+element.addEventListener("click", function2);
 ```
 
 This is impossible with event handler properties because any subsequent attempts to set the property will overwrite earlier ones:
@@ -318,10 +284,10 @@ One button is OK, but what if you had 100 buttons? You'd have to add 100 attribu
 With JavaScript, you could easily add an event handler function to all the buttons on the page no matter how many there were, using something like this:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', bgChange);
+  button.addEventListener("click", bgChange);
 }
 ```
 
@@ -336,10 +302,10 @@ This is called the **event object**, and it is automatically passed to event han
 For example, let's rewrite our random color example again slightly:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
 function bgChange(e) {
@@ -348,7 +314,7 @@ function bgChange(e) {
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
@@ -377,7 +343,9 @@ Some event objects add extra properties that are relevant to that particular typ
 ```js
 const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
-textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
 ```
 
 ```css hidden
@@ -429,15 +397,15 @@ Now some JavaScript — here we implement a very simple check inside a handler f
 If they are, we call the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:
 
 ```js
-const form = document.querySelector('form');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
-const para = document.querySelector('p');
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
 
-form.addEventListener('submit', (e) => {
-  if (fname.value === '' || lname.value === '') {
+form.addEventListener("submit", (e) => {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'You need to fill in both names!';
+    para.textContent = "You need to fill in both names!";
   }
 });
 ```
@@ -449,9 +417,9 @@ The output is as follows:
 
 > **Note:** For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here).
 
-## Event bubbling and capture
+## Event bubbling
 
-Event bubbling and capture are terms that describe phases in how the browser handles events targeted at nested elements.
+Event bubbling describes how the browser handles events targeted at nested elements.
 
 ### Setting a listener on a parent element
 
@@ -467,13 +435,13 @@ Consider a web page like this:
 Here the button is inside another element, a {{HTMLElement("div")}} element. We say that the `<div>` element here is the **parent** of the element it contains. What happens if we add a click event handler to the parent, then click the button?
 
 ```js
-const output = document.querySelector('#output');
+const output = document.querySelector("#output");
 function handleClick(e) {
   output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
 }
 
-const container = document.querySelector('#container');
-container.addEventListener('click', handleClick);
+const container = document.querySelector("#container");
+container.addEventListener("click", handleClick);
 ```
 
 {{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
@@ -502,17 +470,17 @@ What happens if we add event listeners to the button _and_ the parent?
 Let's try adding click event handlers to the button, its parent (the `<div>`), and the {{HTMLElement("body")}} element that contains both of them:
 
 ```js
-const output = document.querySelector('#output');
+const output = document.querySelector("#output");
 function handleClick(e) {
   output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
 }
 
-const container = document.querySelector('#container');
-const button = document.querySelector('button');
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
 
-document.body.addEventListener('click', handleClick);
-container.addEventListener('click', handleClick);
-button.addEventListener('click', handleClick);
+document.body.addEventListener("click", handleClick);
+container.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick);
 ```
 
 {{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
@@ -533,15 +501,17 @@ In this case:
 
 We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
 
-This behavior can be useful and can also cause unexpected problems. In the next section, we'll see a problem that it causes, and find the solution.
+This behavior can be useful and can also cause unexpected problems. In the next sections, we'll see a problem that it causes, and find the solution.
 
 ### Video player example
 
-Open up the [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) example in a new tab (and the [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/show-video-box.html) in another tab.) It is also available live below:
+In this example our page contains a video, which is hidden initially, and a button labeled "Display video". We want the following interaction:
 
-{{ EmbedLiveSample('Video_player_example', '100%', 500, "", "") }}
+- When the user clicks the "Display video" button, show the box containing the video, but don't start playing the video yet.
+- When the user clicks on the video, start playing the video.
+- When the user clicks anywhere in the box outside the video, hide the box.
 
-This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("video")}} element inside it:
+The HTML looks like this:
 
 ```html
 <button>Display video</button>
@@ -549,10 +519,7 @@ This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("vide
 <div class="hidden">
   <video>
     <source
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
-      type="video/mp4" />
-    <source
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
@@ -562,205 +529,168 @@ This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("vide
 </div>
 ```
 
-When the {{htmlelement("button")}} is clicked, the video is displayed, by changing the class attribute on the `<div>` from `hidden` to `showing` (the example's CSS contains these two classes, which position the box off the screen and on the screen, respectively):
+It includes:
 
-```js
-const btn = document.querySelector('button');
-const videoBox = document.querySelector('div');
+- a `<button>` element
+- a `<div>` element which initially has a `class="hidden"` attribute
+- a `<video>` element nested inside the `<div>` element.
 
-function displayVideo() {
-  if (videoBox.getAttribute('class') === 'hidden') {
-    videoBox.setAttribute('class','showing');
-  }
-}
-
-btn.addEventListener('click', displayVideo);
-```
+We're using CSS to hide elements with the `"hidden"` class set.
 
 ```css hidden
 div {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 480px;
-  height: 380px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   background-color: #eee;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.1)
-  );
 }
 
 .hidden {
-  left: -50%;
-}
-
-.showing {
-  left: 50%;
+  display: none;
 }
 
 div video {
+  padding: 40px;
   display: block;
   width: 400px;
   margin: 40px auto;
 }
 ```
 
-We then add a couple more `click` event handlers — the first one to the `<div>` and the second one to the `<video>`:
+The JavaScript looks like this:
 
 ```js
-videoBox.addEventListener('click', () => videoBox.setAttribute('class', 'hidden'));
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
 
-const video = document.querySelector('video');
-
-video.addEventListener('click', () => video.play());
+btn.addEventListener("click", () => box.classList.remove("hidden"));
+video.addEventListener("click", () => video.play());
+box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
-Now, when the area of the `<div>` outside the video is clicked, the box should be hidden again and when the video itself is clicked, the video should start to play.
+This adds three `'click'` event listeners:
 
-But there's a problem — currently, when you click the video it starts to play, but it causes the `<div>` to be hidden at the same time.
-This is because the video is inside the `<div>` — it is part of it — so clicking the video actually runs _both_ the above event handlers.
+- one on the `<button>`, which shows the `<div>` that contains the `<video>`
+- one on the `<video>`, which starts playing the video
+- one on the `<div>`, which hides the video
 
-### Bubbling and capturing explained
+Let's see how this works:
 
-When an event is fired on an element that has parent elements (in this case, the {{htmlelement("video")}} has the {{htmlelement("div")}} as a parent), modern browsers run three different phases — the **capturing** phase, the **target** phase, and the **bubbling** phase.
+{{ EmbedLiveSample('Video_player_example', '100%', 500) }}
 
-In the **capturing** phase:
+You should see that when you click the button, the box and the video it contains are shown. But then when you click the video, the video starts to play, but the box is hidden again!
 
-- The browser checks to see if the element's outer-most ancestor ({{htmlelement("html")}}) has a `click` event handler registered on it for the capturing phase, and runs it if so.
-- Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually clicked.
-
-In the **target** phase:
-
-- The browser checks to see if the {{domxref("Event.target", "target")}} property has an event handler for the `click` event registered on it, and runs it if so.
-- Then, if {{domxref("Event.bubbles", "bubbles")}} is `true`, it propagates the event to the direct parent of the clicked element, then the next one, and so on until it reaches the `<html>` element.
-  Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn't propagate the event to any ancestors of the target.
-
-In the **bubbling** phase, the exact opposite of the **capturing** phase occurs:
-
-- The browser checks to see if the direct parent of the clicked element has a `click` event handler registered on it for the bubbling phase, and runs it if so.
-- Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the `<html>` element.
-
-In modern browsers, by default, all event handlers are registered for the bubbling phase.
-So in our current example, when you click the video, the event bubbles from the `<video>` element outwards to the `<html>` element.
-Along the way:
-
-- It finds the `click` handler on the `video` element and runs it, so the video first starts playing.
-- It then finds the `click` handler on the `videoBox` element and runs that, so the video is hidden as well.
-
-> **Note:** All JavaScript events go through the capturing and target phases.
-> Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.
-
-> **Note:** Event listeners registered for the `<html>` element aren't at the top of the hierarchy.
-> For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.
-
-The following example demonstrates the behavior described above.
-Hover over the numbers and click on them to trigger events, and then observe the output that gets logged.
-
-{{EmbedLiveSample("Example_code_event_phases", "85ch", "400")}}
-
-#### Example code: event phases
-
-```html
-<div>1
-    <div>2
-        <div>3
-            <div>4
-                <div>5</div>
-            </div>
-        </div>
-    </div>
-</div>
-<button id="clear">clear output</button>
-<section id="log"></section>
-```
-
-```css
-p {
-  line-height: 0;
-}
-
-div {
-  display: inline-block;
-  padding: 5px;
-
-  background: #fff;
-  border: 1px solid #aaa;
-  cursor: pointer;
-}
-
-div:hover {
-  border: 1px solid #faa;
-  background: #fdd;
-}
-```
-
-```js
-/*
- * source 1: https://dom.spec.whatwg.org/#dom-event-eventphase
- * source 2: https://stackoverflow.com/a/4616720/15266715
-*/
-const evtPhasestr = ["NONE: ", "CAPTURING_PHASE: ", "AT_TARGET: ", "BUBBLING_PHASE: "];
-const logElement = document.getElementById('log');
-
-function log(msg) {
-    logElement.innerHTML += (`<p>${msg}</p>`);
-}
-
-function phase(evt) {
-    log(evtPhasestr[evt.eventPhase] + this.firstChild.nodeValue.trim());
-}
-function gphase(evt) {
-    log(evtPhasestr[evt.eventPhase] + evt.currentTarget.toString().slice(8,-1));
-}
-
-function clearOutput(evt) {
-    evt.stopPropagation();
-    logElement.innerHTML = '';
-}
-
-const divs = document.getElementsByTagName('div');
-for (const div of divs) {
-  div.addEventListener('click', phase, true);
-  div.addEventListener('click', phase, false);
-}
-
-document.addEventListener('click', gphase, true);
-document.addEventListener('click', gphase, false);
-window.addEventListener('click', gphase, true);
-window.addEventListener('click', gphase, false);
-
-const clearButton = document.getElementById('clear');
-clearButton.addEventListener('click', clearOutput);
-```
+The video is inside the `<div>` — it is part of it — so clicking the video runs _both_ the event handlers, causing this behavior.
 
 ### Fixing the problem with stopPropagation()
 
-As we saw in the video example, this can be a very annoying behavior, but there is a way to prevent it!
-The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that the first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
+As we saw in the last section, event bubbling can sometimes create problems, but there is a way to prevent it.
+The [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when called inside an event handler, prevents the event from bubbling up to any other elements.
 
-So we can fix our current problem by changing the second handler function in the previous code block to this:
+We can fix our current problem by changing the JavaScript to this:
 
 ```js
-video.addEventListener('click', (e) => {
-  e.stopPropagation();
+const btn = document.querySelector("button");
+const box = document.querySelector("div");
+const video = document.querySelector("video");
+
+btn.addEventListener("click", () => box.classList.remove("hidden"));
+
+video.addEventListener("click", (event) => {
+  event.stopPropagation();
   video.play();
 });
+
+box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
-You can try making a local copy of the [show-video-box.html source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/show-video-box.html) and fixing it yourself, or looking at the fixed result in [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/show-video-box-fixed.html) here).
+All we're doing here is calling `stopPropagation()` on the event object in the handler for the `<video>` element's `'click'` event. This will stop that event from bubbling up to the box. Now try clicking the button and then the video:
 
-> **Note:** Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling.
-> When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.
+{{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
 
-> **Note:** As mentioned above, by default almost all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
-> If you really want to register an event in the capturing phase instead, you can do so by registering your handler using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener), and setting the optional third property to `true`.
+```html hidden
+<button>Display video</button>
 
-### Event delegation
+<div class="hidden">
+  <video>
+    <source
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
+  </video>
+</div>
+```
 
-Event bubbling isn't just annoying though: it can be very useful. In particular, it enables a practice called **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
+```css hidden
+div {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.hidden {
+  display: none;
+}
+
+div video {
+  padding: 40px;
+  display: block;
+  width: 400px;
+  margin: 40px auto;
+}
+```
+
+### Event capture
+
+An alternative form of event propagation is _event capture_. This is like event bubbling but the order is reversed: so instead of the event firing first on the innermost element targeted, and then on successively less nested elements, the event fires first on the _least nested_ element, and then on successively more nested elements, until the target is reached.
+
+Event capture is disabled by default. To enable it you have to pass the `capture` option in `addEventListener()`.
+
+This example is just like the [bubbling example](#bubbling_example) we saw earlier, except that we have used the `capture` option:
+
+```html
+<body>
+  <div id="container">
+    <button>Click me!</button>
+  </div>
+  <pre id="output"></pre>
+</body>
+```
+
+```js
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
+
+document.body.addEventListener("click", handleClick, { capture: true });
+container.addEventListener("click", handleClick, { capture: true });
+button.addEventListener("click", handleClick);
+```
+
+{{ EmbedLiveSample('Event capture', '100%', 200, "", "") }}
+
+In this case, the order of messages is reversed: the `<body>` event handler fires first, followed by the `<div>` event handler, followed by the `<button>` event handler:
+
+```
+You clicked on a BODY element
+You clicked on a DIV element
+You clicked on a BUTTON element
+```
+
+Why bother with both capturing and bubbling? In the bad old days, when browsers were much less cross-compatible than now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is what modern browsers implement.
+
+By default almost all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
+
+## Event delegation
+
+In the last section, we looked at a problem caused by event bubbling and how to fix it. Event bubbling isn't just annoying, though: it can be very useful. In particular, it enables **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
 
 Let's go back to our first example, where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
 
@@ -801,7 +731,7 @@ Now in JavaScript, we could add a click event handler for every tile. But a much
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 
 function bgChange() {
@@ -809,9 +739,11 @@ function bgChange() {
   return rndCol;
 }
 
-const container = document.querySelector('#container');
+const container = document.querySelector("#container");
 
-container.addEventListener('click', (event) => event.target.style.backgroundColor = bgChange());
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
 ```
 
 The output is as follows (try clicking around on it):
@@ -821,6 +753,21 @@ The output is as follows (try clicking around on it):
 > **Note:** In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
 > **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
+
+## It's not just web pages
+
+Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
+In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
+
+For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
+The [Node.js event model](https://nodejs.org/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
+The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
+
+You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
+The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
+See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
+
+You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
 
 ## Test your skills!
 
@@ -844,13 +791,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- **Introduction to events**
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

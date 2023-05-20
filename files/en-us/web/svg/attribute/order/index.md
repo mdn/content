@@ -1,10 +1,7 @@
 ---
 title: order
 slug: Web/SVG/Attribute/order
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.order
 ---
 

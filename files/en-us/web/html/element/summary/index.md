@@ -1,16 +1,7 @@
 ---
-title: '<summary>: The Disclosure Summary element'
+title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
+page-type: html-element
 browser-compat: html.elements.summary
 ---
 
@@ -19,49 +10,6 @@ browser-compat: html.elements.summary
 The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
 {{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >
-        or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content"
-          >Heading content</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>None; both the start tag and the end tag are mandatory.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>The {{HTMLElement("details")}} element.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
-            >button</a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -106,6 +54,8 @@ A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} 
 </details>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_example", 650, 120)}}
 
 ### Summaries as headings
@@ -122,6 +72,8 @@ You can use heading elements in `<summary>`, like this:
   </ol>
 </details>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
@@ -144,7 +96,54 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 </details>
 ```
 
+#### Result
+
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >
+        or one element of
+        <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
+          >Heading content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None; both the start tag and the end tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>The {{HTMLElement("details")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+            >button</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

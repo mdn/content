@@ -1,9 +1,10 @@
 ---
 title: "Element: beforematch event"
+short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-tags:
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 
@@ -100,6 +101,8 @@ Clicking the "Go to hidden content" button navigates to the hidden-until-found e
 To run the example again, click "Reload".
 
 {{EmbedLiveSample("Using beforematch", "", 300)}}
+
+If your browser does not support the `"until-found"` enumerated value of the `hidden` attribute, the second `<div>` will be hidden (as `hidden` was boolean prior to the addition of the `until-found` value).
 
 ## Specifications
 

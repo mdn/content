@@ -1,18 +1,12 @@
 ---
-title: VideoDecoder.state
+title: "VideoDecoder: state property"
+short-title: state
 slug: Web/API/VideoDecoder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.state
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`state`** property of the {{domxref("VideoDecoder")}} interface returns the current state of the underlying codec.
 

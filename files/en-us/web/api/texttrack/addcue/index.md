@@ -1,13 +1,8 @@
 ---
-title: TextTrack.addCue()
+title: "TextTrack: addCue() method"
+short-title: addCue()
 slug: Web/API/TextTrack/addCue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - addCue
-  - TextTrack
 browser-compat: api.TextTrack.addCue
 ---
 
@@ -42,11 +37,11 @@ Undefined.
 In the following example two cues are added to a video text track using `addCue()`.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
-track.addCue(new VTTCue(1, 1.4, 'How are you?'));
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
 ```
 
 ## Specifications

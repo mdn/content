@@ -2,14 +2,6 @@
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - ellipse
-  - CSS Functions
-  - Data Type
-  - Reference
 browser-compat: css.types.basic-shape.ellipse
 ---
 

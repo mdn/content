@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: "x" is read-only'
+title: "TypeError: \"x\" is read-only"
 slug: Web/JavaScript/Reference/Errors/Read-only
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,25 +38,25 @@ Read-only properties are not super common, but they can be created using
 {{jsxref("Object.defineProperty()")}} or {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
-'use strict';
-const obj = Object.freeze({ name: 'Elsa', score: 157 });
-obj.score = 0;  // TypeError
+"use strict";
+const obj = Object.freeze({ name: "Elsa", score: 157 });
+obj.score = 0; // TypeError
 
-'use strict';
-Object.defineProperty(this, 'LUNG_COUNT', { value: 2, writable: false });
-LUNG_COUNT = 3;  // TypeError
+("use strict");
+Object.defineProperty(this, "LUNG_COUNT", { value: 2, writable: false });
+LUNG_COUNT = 3; // TypeError
 
-'use strict';
+("use strict");
 const frozenArray = Object.freeze([0, 1, 2]);
-frozenArray[0]++;  // TypeError
+frozenArray[0]++; // TypeError
 ```
 
 There are also a few read-only properties built into JavaScript. Maybe you tried to
 redefine a mathematical constant.
 
 ```js example-bad
-'use strict';
-Math.PI = 4;  // TypeError
+"use strict";
+Math.PI = 4; // TypeError
 ```
 
 Sorry, you can't do that.
@@ -69,16 +65,16 @@ The global variable `undefined` is also read-only, so you can't silence the
 infamous "undefined is not a function" error by doing this:
 
 ```js example-bad
-'use strict';
-undefined = function() {};  // TypeError: "undefined" is read-only
+"use strict";
+undefined = function () {}; // TypeError: "undefined" is read-only
 ```
 
 ### Valid cases
 
 ```js example-good
-'use strict';
-let obj = Object.freeze({ name: 'Score', points: 157 });
-obj = { name: obj.name, points: 0 };   // replacing it with a new object works
+"use strict";
+let obj = Object.freeze({ name: "Score", points: 157 });
+obj = { name: obj.name, points: 0 }; // replacing it with a new object works
 ```
 
 ## See also

@@ -2,14 +2,9 @@
 title: box-align
 slug: Web/CSS/box-align
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - NeedsUpdate
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-align
 ---
 

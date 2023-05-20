@@ -1,16 +1,7 @@
 ---
 title: font-style
 slug: Web/SVG/Attribute/font-style
-tags:
-  - CSS
-  - Font Style
-  - Italic
-  - Oblique
-  - SVG
-  - SVG Attribute
-  - Text
-  - Type
-  - font
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-style
 ---
 

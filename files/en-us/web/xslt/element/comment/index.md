@@ -1,11 +1,6 @@
 ---
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
-tags:
-  - Comment
-  - Element
-  - Reference
-  - XSLT
 ---
 
 {{ XsltRef() }}

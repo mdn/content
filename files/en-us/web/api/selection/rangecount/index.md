@@ -1,14 +1,8 @@
 ---
-title: Selection.rangeCount
+title: "Selection: rangeCount property"
+short-title: rangeCount
 slug: Web/API/Selection/rangeCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.rangeCount
 ---
 
@@ -68,7 +62,7 @@ setInterval(() => {
 ### Result
 
 Open your console to see how many ranges are in the selection. In Gecko browsers, you
-can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
+can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> (or <kbd>Cmd</kbd> on MacOS) while
 dragging with the mouse.
 
 {{EmbedLiveSample("Examples")}}

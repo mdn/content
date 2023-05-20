@@ -1,10 +1,7 @@
 ---
 title: to
 slug: Web/SVG/Attribute/To
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/specs/animations/#SetElementToAttribute
   - https://svgwg.org/specs/animations/#ToAttribute
@@ -19,7 +16,6 @@ The value of the attribute will change between the {{SVGAttr("from")}} attribute
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
@@ -50,9 +46,9 @@ svg {
 
 {{EmbedLiveSample("Example", "200", "200")}}
 
-## animate, animateColor, animateMotion, animateTransform
+## animate, animateMotion, animateTransform
 
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}, `to` specifies the ending value of the animation.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, and {{SVGElement("animateTransform")}}, `to` specifies the ending value of the animation.
 
 <table class="properties">
   <tbody>

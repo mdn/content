@@ -2,11 +2,6 @@
 title: HTMLMapElement
 slug: Web/API/HTMLMapElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLMapElement
 ---
 

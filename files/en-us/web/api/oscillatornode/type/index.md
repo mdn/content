@@ -1,14 +1,8 @@
 ---
-title: OscillatorNode.type
+title: "OscillatorNode: type property"
+short-title: type
 slug: Web/API/OscillatorNode/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Type
-  - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
 
@@ -58,7 +52,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.start();
 ```

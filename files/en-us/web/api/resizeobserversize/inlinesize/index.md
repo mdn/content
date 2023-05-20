@@ -1,13 +1,8 @@
 ---
-title: ResizeObserverSize.inlineSize
+title: "ResizeObserverSize: inlineSize property"
+short-title: inlineSize
 slug: Web/API/ResizeObserverSize/inlineSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - inlineSize
-  - ResizeObserverSize
 browser-compat: api.ResizeObserverSize.inlineSize
 ---
 

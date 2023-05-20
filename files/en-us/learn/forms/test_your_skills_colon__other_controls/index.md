@@ -1,15 +1,6 @@
 ---
-title: 'Test your skills: Other controls'
+title: "Test your skills: Other controls"
 slug: Learn/Forms/Test_your_skills:_Other_controls
-tags:
-  - Assessment
-  - Beginner
-  - Forms
-  - Learn
-  - Select
-  - datalist
-  - test your skills
-  - textarea
 ---
 
 {{learnsidebar}}
@@ -29,9 +20,9 @@ In our first "other controls" assessment, we'll get you to create a multi-line t
 3. Give the input 35 columns, and 10 rows of space in which to add comments.
 4. Give the comments a maximum length of 100 characters.
 
-Try updating the live code below to recreate the finished example:
+To create the input, update the HTML code in the editor below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls1.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls1.html", '100%', 500)}}
 
 > **Callout:**
 >
@@ -45,9 +36,9 @@ Now it's time to have a go at implementing a drop-down select menu, to allow a u
 2. Associate it semantically with the provided "food" label.
 3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".
 
-Try updating the live code below to recreate the finished example:
+To create the menu, update the HTML code in the editor below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls2.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls2.html", '100%', 500)}}
 
 > **Callout:**
 >
@@ -61,9 +52,9 @@ In our final task of this set, we start with much the same list of food choices.
 2. Put the food choices into a list that can be associated with a form input.
 3. Associate the list with your text input, so that when you type characters, any of the list options that match the character sequence are given in a dropdown list as autocomplete suggestions.
 
-Try updating the live code below to recreate the finished example:
+To create the input, update the HTML code in the editor below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls3.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls3.html", '100%', 500)}}
 
 > **Callout:**
 >

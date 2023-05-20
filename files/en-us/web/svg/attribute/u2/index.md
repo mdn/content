@@ -1,10 +1,9 @@
 ---
 title: u2
 slug: Web/SVG/Attribute/u2
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.u2
 ---
 

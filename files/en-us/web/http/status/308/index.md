@@ -1,11 +1,7 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
+page-type: http-status-code
 browser-compat: http.status.308
 ---
 
@@ -28,7 +24,7 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
 ## Status
 
-```
+```http
 308 Permanent Redirect
 ```
 

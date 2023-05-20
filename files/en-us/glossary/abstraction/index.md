@@ -1,11 +1,7 @@
 ---
 title: Abstraction
 slug: Glossary/Abstraction
-tags:
-  - Abstraction
-  - Coding
-  - CodingScripting
-  - Programming Language
+page-type: glossary-definition
 ---
 
 Abstraction in {{Glossary("computer programming")}} is a way to reduce complexity and allow efficient design and implementation in complex software systems. It hides the technical complexity of systems behind simpler {{Glossary("API", "APIs")}}.

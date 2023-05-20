@@ -1,10 +1,7 @@
 ---
 title: font-stretch
 slug: Web/SVG/Attribute/font-stretch
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-stretch
 ---
 

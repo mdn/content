@@ -1,9 +1,7 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.style.style
 ---
 

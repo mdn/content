@@ -1,14 +1,8 @@
 ---
-title: Element.attachShadow()
+title: "Element: attachShadow() method"
+short-title: attachShadow()
 slug: Web/API/Element/attachShadow
 page-type: web-api-instance-method
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - attachShadow
-  - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
 
@@ -21,7 +15,7 @@ The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specif
 Note that you can't attach a shadow root to every type of element.
 There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
 
-The following is a list of elements you **can** attach a shadow root to:
+The following is a list of elements you _can_ attach a shadow root to:
 
 - Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
@@ -30,12 +24,12 @@ The following is a list of elements you **can** attach a shadow root to:
 - {{htmlelement("body")}}
 - {{htmlelement("div")}}
 - {{htmlelement("footer")}}
-- {{htmlelement("h1")}}
-- {{htmlelement("h2")}}
-- {{htmlelement("h3")}}
-- {{htmlelement("h4")}}
-- {{htmlelement("h5")}}
-- {{htmlelement("h6")}}
+- {{htmlelement("Heading_Elements", "h1")}}
+- {{htmlelement("Heading_Elements", "h2")}}
+- {{htmlelement("Heading_Elements", "h3")}}
+- {{htmlelement("Heading_Elements", "h4")}}
+- {{htmlelement("Heading_Elements", "h5")}}
+- {{htmlelement("Heading_Elements", "h6")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
 - {{htmlelement("nav")}}
@@ -80,13 +74,20 @@ attachShadow(options)
             element.shadowRoot; // Returns null
             ```
 
-    - `delegatesFocus`
+    - `delegatesFocus` {{Optional_Inline}}
 
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
-        When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
+        When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
 
-    - `slotAssignment`
-      - : Either `manual` or `named` (default). When set to `manual`, use {{DOMxRef("HTMLSlotElement.assign()")}} to assign a value to `slot`.
+    - `slotAssignment` {{Optional_inline}}
+
+      - : A string specifying the _slot assignment mode_ for the shadow DOM tree. This can be one of:
+
+        - `named`
+          - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root. Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot. Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+        - `manual`
+          - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
+            Its default value is `named`.
 
 ### Return value
 
@@ -115,18 +116,21 @@ class WordCount extends HTMLParagraphElement {
     // count words in element's parent element
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
 
     // Create a shadow root
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // Create text node and add word count to it
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // Append it to the shadow root
@@ -141,7 +145,7 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ## Specifications
@@ -154,4 +158,6 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## See also
 
+- {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
+- {{domxref("ShadowRoot.slotAssignment")}}

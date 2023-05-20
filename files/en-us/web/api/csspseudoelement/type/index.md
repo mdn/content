@@ -1,14 +1,10 @@
 ---
-title: CSSPseudoElement.type
+title: "CSSPseudoElement: type property"
+short-title: type
 slug: Web/API/CSSPseudoElement/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPseudoElement
-  - Experimental
-  - Property
-  - Reference
-  - Type
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.type
 ---
 
@@ -32,8 +28,8 @@ The example below demonstrates the relationship between
 `CSSPseudoElement.type` and {{DOMxRef('Element.pseudo()')}}:
 
 ```js
-const myElement = document.querySelector('q');
-const mySelector = '::after';
+const myElement = document.querySelector("q");
+const mySelector = "::after";
 const cssPseudoElement = myElement.pseudo(mySelector);
 const typeOfPseudoElement = cssPseudoElement.type;
 

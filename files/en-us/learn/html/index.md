@@ -1,13 +1,6 @@
 ---
 title: Structuring the web with HTML
 slug: Learn/HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Intro
-  - Learn
-  - Topic
 ---
 
 {{LearnSidebar}}
@@ -31,8 +24,8 @@ It is recommended that you work through [Getting started with the web](/en-US/do
 
 After learning HTML, you can then move on to learning about more advanced topics such as:
 
-- [CSS](/en-US/docs/Learn/CSS), and how to use it to style HTML (for example alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects).
-- [JavaScript](/en-US/docs/Learn/JavaScript), and how to use it to add dynamic functionality to web pages (for example find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more).
+- [CSS](/en-US/docs/Learn/CSS), and how to use it to style HTML (for example, alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects).
+- [JavaScript](/en-US/docs/Learn/JavaScript), and how to use it to add dynamic functionality to web pages (for example, find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more).
 
 ## Modules
 

@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-  - flatMap
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap
 ---
 
@@ -22,37 +14,20 @@ The **`flatMap()`** method returns a new array formed by applying a given callba
 ## Syntax
 
 ```js-nolint
-// Arrow function
-flatMap((element) => { /* … */ })
-flatMap((element, index) => { /* … */ })
-flatMap((element, index, array) => { /* … */ })
-
-// Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
-
-// Inline callback function
-flatMap(function (element) { /* … */ })
-flatMap(function (element, index) { /* … */ })
-flatMap(function (element, index, array) { /* … */ })
-flatMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `flatMap()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -78,7 +53,7 @@ arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
-for (let i = 0; i < n; i++){
+for (let i = 0; i < n; i++) {
   const x = arr[i];
   acc[i * 2] = x;
   acc[i * 2 + 1] = x * 2;
@@ -139,7 +114,7 @@ Return a 1-element array to keep the item, a multiple-element array to add items
 ```js
 // Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
-const a = [5, 4, -3, 20, 17, -33, -4, 18]
+const a = [5, 4, -3, 20, 17, -33, -4, 18];
 //         |\  \  x   |  | \   x   x   |
 //        [4,1, 4,   20, 16, 1,       18]
 
@@ -157,8 +132,8 @@ console.log(result); // [4, 1, 4, 20, 16, 1, 18]
 The `callbackFn` won't be called for empty slots in the source array because `map()` doesn't, while `flat()` ignores empty slots in the returned arrays.
 
 ```js
-console.log([1, 2, , 4, 5].flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
-console.log([1, 2, 3, 4].flatMap(x => [, x * 2])); // [2, 4, 6, 8]
+console.log([1, 2, , 4, 5].flatMap((x) => [x, x * 2])); // [1, 2, 2, 4, 4, 8, 5, 10]
+console.log([1, 2, 3, 4].flatMap((x) => [, x * 2])); // [2, 4, 6, 8]
 ```
 
 ### Calling flatMap() on non-array objects
@@ -196,8 +171,9 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

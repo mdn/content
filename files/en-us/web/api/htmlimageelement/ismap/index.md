@@ -1,18 +1,8 @@
 ---
-title: HTMLImageElement.isMap
+title: "HTMLImageElement: isMap property"
+short-title: isMap
 slug: Web/API/HTMLImageElement/isMap
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image Map
-  - Link
-  - Reference
-  - isMap
-  - server-side
-  - Property
 browser-compat: api.HTMLImageElement.isMap
 ---
 
@@ -38,7 +28,7 @@ mouse was clicked as offsets from the top-left corner of the image, specified in
 pixels.
 
 The browser then fetches that URL from the server and displays or downloads it
-depending on the value of the {{htmlattrxref("download", "a")}} attribute.
+depending on the value of the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute.
 
 Unlike server-side image maps, client-side image maps don't cause the
 {{HTMLElement("img")}} element to adopt interactive content mode.

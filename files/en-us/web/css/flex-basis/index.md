@@ -2,12 +2,6 @@
 title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
 
@@ -57,7 +51,15 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 ### Values
 
 - `<'width'>`
-  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword `auto`. Negative values are invalid. Defaults to `auto`.
+
+  - : Any of the following units:
+    - {{cssxref("&lt;length&gt;")}} sets an absolute value
+    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of a containing block's content area
+    - `auto` uses the value of the [width](https://drafts.csswg.org/css2/#the-width-property) in horizontal writing mode, and the value of the [height](https://drafts.csswg.org/css2/#the-height-property) in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead
+    - `max-content` sets the intrinsic preferred width
+    - `min-content` sets the intrinsic minimum width
+    - `fit-content` sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element
+
 - `content`
 
   - : Indicates automatic sizing, based on the flex item's content.
@@ -65,8 +67,8 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
     > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/#the-width-property) or [height](https://drafts.csswg.org/css2/#the-height-property)) of `auto`.
     >
     > - Originally, `flex-basis:auto` meant "look at my `width` or `height` property".
-    > - Then, `flex-basis:auto` was changed to mean automatic sizing, and "main-size" was introduced as the "look at my `width` or `height` property" keyword. It was implemented in {{bug("1032922")}}.
-    > - Then, that change was reverted in {{bug("1093316")}}, so `auto` once again means "look at my `width` or `height` property"; and a new `content` keyword is being introduced to trigger automatic sizing. ({{bug("1105111")}} covers adding that keyword).
+    > - Then, `flex-basis:auto` was changed to mean automatic sizing, and "main-size" was introduced as the "look at my `width` or `height` property" keyword. It was implemented in [Firefox bug 1032922](https://bugzil.la/1032922).
+    > - Then, that change was reverted in [Firefox bug 1093316](https://bugzil.la/1093316), so `auto` once again means "look at my `width` or `height` property"; and a new `content` keyword is being introduced to trigger automatic sizing. ([Firefox bug 1105111](https://bugzil.la/1105111) covers adding that keyword).
 
 ## Formal definition
 

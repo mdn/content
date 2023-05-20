@@ -1,24 +1,11 @@
 ---
 title: Parsing and serializing XML
 slug: Web/Guide/Parsing_and_serializing_XML
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - DOM Parsing
-  - Document
-  - Extensions
-  - Guide
-  - HTMLDocument
-  - JSON
-  - Parsing
-  - Parsing XML
-  - Serializing
-  - Serializing XML
-  - XML
-  - XMLDocument
-  - XMLHttpRequest
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
 
 At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
@@ -33,7 +20,7 @@ At times, you may need to parse {{Glossary("XML")}} content and convert it into 
 
 ## Creating an XML document
 
-Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}.
+Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}).
 
 ### Parsing strings into DOM trees
 
@@ -63,18 +50,18 @@ const xhr = new XMLHttpRequest();
 
 xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
-}
+};
 
 xhr.onerror = () => {
   dump("Error while getting XML.");
-}
+};
 
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();
 ```
 
-The value returned in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
+The value in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
 
 If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually a {{domxref("XMLDocument")}}. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
 

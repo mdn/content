@@ -1,16 +1,13 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Class
-  - Function
-  - JavaScript
+page-type: javascript-class
 browser-compat: javascript.builtins.Function
 ---
 
 {{JSRef}}
 
-Every JavaScript function is actually a `Function` object. This can be seen with the code `(function () {}).constructor === Function`, which returns true.
+The **`Function`** object provides methods for [functions](/en-US/docs/Web/JavaScript/Reference/Functions). In JavaScript, every function is actually a `Function` object.
 
 ## Constructor
 
@@ -19,19 +16,24 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 
 ## Instance properties
 
+These properties are defined on `Function.prototype` and shared by all `Function` instances.
+
 - {{jsxref("Function.prototype.arguments")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : An array corresponding to the arguments passed to a function.
-    This is deprecated as a property of {{jsxref("Function")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object (available within the function) instead.
-- {{jsxref("Function.prototype.caller")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Specifies the function that invoked the currently executing function.
-    This property is deprecated, and is only functional for some non-strict functions.
-- {{jsxref("Function.prototype.displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
+  - : Represents the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures instead.
+- {{jsxref("Function.prototype.caller")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Represents the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
+- {{jsxref("Object/constructor", "Function.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Function` instances, the initial value is the {{jsxref("Function/Function", "Function")}} constructor.
+
+These properties are own properties of each `Function` instance.
+
+- {{jsxref("Function/displayName", "displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
   - : The display name of the function.
-- {{jsxref("Function.prototype.length")}}
+- {{jsxref("Function/length", "length")}}
   - : Specifies the number of arguments expected by the function.
-- {{jsxref("Function.prototype.name")}}
+- {{jsxref("Function/name", "name")}}
   - : The name of the function.
-- {{jsxref("Function.prototype.prototype")}}
+- {{jsxref("Function/prototype", "prototype")}}
   - : Used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
 ## Instance methods
@@ -45,6 +47,8 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 - {{jsxref("Function.prototype.toString()")}}
   - : Returns a string representing the source code of the function.
     Overrides the {{jsxref("Object.prototype.toString")}} method.
+- [`Function.prototype[@@hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+  - : Specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. Called by the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator.
 
 ## Examples
 
@@ -87,10 +91,9 @@ While this code works in web browsers, `f1()` will produce a `ReferenceError` in
 
 ## See also
 
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
+- {{jsxref("Functions", "Functions", "", 1)}}

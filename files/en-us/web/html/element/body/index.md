@@ -1,13 +1,7 @@
 ---
-title: '<body>: The Document Body element'
+title: "<body>: The Document Body element"
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Sectioning Root Element
-  - Sections
-  - Web
+page-type: html-element
 browser-compat: html.elements.body
 ---
 
@@ -19,7 +13,7 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -32,7 +26,7 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -91,74 +85,74 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("alink")}} {{deprecated_inline}}
+- `alink` {{deprecated_inline}}
   - : Color of text for hyperlinks when selected.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
-- {{htmlattrdef("background")}} {{deprecated_inline}}
+- `background` {{deprecated_inline}}
   - : URI of an image to use as a background.
     **Do not use this attribute! Use the CSS {{cssxref("background")}} property on the element instead.**
-- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
   - : Background color for the document.
     **Do not use this attribute! Use the CSS {{cssxref("background-color")}} property on the element instead.**
-- {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
+- `bottommargin` {{deprecated_inline}}
   - : The margin of the bottom of the body.
     **Do not use this attribute! Use the CSS {{cssxref("margin-bottom")}} property on the element instead.**
-- {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
+- `leftmargin` {{deprecated_inline}}
   - : The margin of the left of the body.
     **Do not use this attribute! Use the CSS {{cssxref("margin-left")}} property on the element instead.**
-- {{htmlattrdef("link")}} {{deprecated_inline}}
+- `link` {{deprecated_inline}}
   - : Color of text for unvisited hypertext links.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.**
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : Function to call after the user has printed the document.
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : Function to call when the user requests printing of the document.
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : Function to call when the document is about to be unloaded.
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : Function to call when the document loses focus.
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : Function to call when the document fails to load properly.
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : Function to call when the document receives focus.
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-- {{htmlattrdef("onlanguagechange")}}
+- `onlanguagechange`
   - : Function to call when the preferred languages changed.
-- {{htmlattrdef("onload")}}
+- `onload`
   - : Function to call when the document has finished loading.
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : Function to call when the document has received a message.
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : Function to call when network communication has failed.
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : Function to call when network communication has been restored.
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : Function to call when the user has navigated session history.
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : Function to call when the user has moved forward in undo transaction history.
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : Function to call when the document has been resized.
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : Function to call when the storage area has changed.
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : Function to call when the user has moved backward in undo transaction history.
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : Function to call when the document is going away.
-- {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
+- `rightmargin` {{deprecated_inline}}
   - : The margin of the right of the body.
     **Do not use this attribute! Use the CSS {{cssxref("margin-right")}} property on the element instead.**
-- {{htmlattrdef("text")}} {{deprecated_inline}}
+- `text` {{deprecated_inline}}
   - : Foreground color of text.
     **Do not use this attribute! Use CSS {{cssxref("color")}} property on the element instead.**
-- {{htmlattrdef("topmargin")}} {{deprecated_inline}}
+- `topmargin` {{deprecated_inline}}
   - : The margin of the top of the body.
     **Do not use this attribute! Use the CSS {{cssxref("margin-top")}} property on the element instead.**
-- {{htmlattrdef("vlink")}} {{deprecated_inline}}
+- `vlink` {{deprecated_inline}}
   - : Color of text for visited hypertext links.
     **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
 
-## Example
+## Examples
 
 ```html
 <html lang="en">
@@ -166,10 +160,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     <title>Document title</title>
   </head>
   <body>
-    <p>This is a paragraph</p>
+    <p>The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.</p>
   </body>
 </html>
 ```
+
+### Result
+
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 

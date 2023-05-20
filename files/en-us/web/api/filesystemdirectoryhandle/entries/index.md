@@ -1,23 +1,17 @@
 ---
-title: FileSystemDirectoryHandle.entries()
+title: "FileSystemDirectoryHandle: entries() method"
+short-title: entries()
 slug: Web/API/FileSystemDirectoryHandle/entries
 page-type: web-api-instance-method
-tags:
-  - Directories
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Files
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.entries
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`entries()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
 own enumerable property `[key, value]` pairs, in the same order as that
-provided by a {{jsxref('for...in')}} loop (the difference being that a for-in loop
+provided by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop (the difference being that a for-in loop
 enumerates properties in the prototype chain as well).
 
 ## Syntax
@@ -38,10 +32,10 @@ property `[key, value]` pairs.
 ## Examples
 
 ```js
-const dirHandle = await window.showDirectoryPicker()
+const dirHandle = await window.showDirectoryPicker();
 
 for await (const [key, value] of dirHandle.entries()) {
-    console.log({ key, value })
+  console.log({ key, value });
 }
 ```
 

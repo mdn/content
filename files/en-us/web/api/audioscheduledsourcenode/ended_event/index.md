@@ -1,18 +1,8 @@
 ---
 title: "AudioScheduledSourceNode: ended event"
+short-title: ended
 slug: Web/API/AudioScheduledSourceNode/ended_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - Web Audio API
-  - ended
 browser-compat: api.AudioScheduledSourceNode.ended_event
 ---
 

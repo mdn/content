@@ -1,12 +1,7 @@
 ---
-title: 'HTML attribute: readonly'
+title: "HTML attribute: readonly"
 slug: Web/HTML/Attributes/readonly
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
+page-type: html-attribute
 browser-compat:
   - html.elements.input.readonly
   - html.elements.textarea.readonly
@@ -15,6 +10,10 @@ browser-compat:
 {{HTMLSidebar}}
 
 The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user can not edit the control.
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-readonly.html", "tabbed-shorter")}}
+
+## Overview
 
 If the `readonly` attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.
 

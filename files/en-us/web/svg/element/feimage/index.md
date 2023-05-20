@@ -1,10 +1,7 @@
 ---
 title: <feImage>
 slug: Web/SVG/Element/feImage
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feImage
 ---
 

@@ -1,14 +1,10 @@
 ---
-title: SerialPort.writable
+title: "SerialPort: writable property"
+short-title: writable
 slug: Web/API/SerialPort/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.writable
 ---
 

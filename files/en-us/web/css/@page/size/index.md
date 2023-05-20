@@ -2,14 +2,6 @@
 title: size
 slug: Web/CSS/@page/size
 page-type: css-at-rule-descriptor
-tags:
-  - "@page"
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - NeedsBrowserCompatibility
-  - Reference
-  - Web
 browser-compat: css.at-rules.page.size
 ---
 
@@ -73,11 +65,11 @@ size: A4 portrait;
     - JIS-B4
       - : This correspond to the JIS standard dimensions: 257mm x 364mm.
     - letter
-      - : This keyword is a equivalent to the dimensions of letter paper in North America i.e. 8.5in x 11in.
+      - : This keyword is an equivalent to the dimensions of letter paper in North America i.e. 8.5in x 11in.
     - legal
-      - : This keyword is a equivalent to the dimensions of legal papers in North America i.e. 8.5in x 14in.
+      - : This keyword is an equivalent to the dimensions of legal papers in North America i.e. 8.5in x 14in.
     - ledger
-      - : This keyword is a equivalent to the dimensions of ledger pages in North America i.e. 11in x 17in.
+      - : This keyword is an equivalent to the dimensions of ledger pages in North America i.e. 11in x 17in.
 
 ## Formal definition
 

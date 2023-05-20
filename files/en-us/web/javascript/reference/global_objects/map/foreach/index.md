@@ -1,13 +1,7 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.forEach
 ---
 
@@ -21,37 +15,22 @@ pair in the `Map` object, in insertion order.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* … */ } )
-forEach((value) => { /* … */ } )
-forEach((value, key) => { /* … */ } )
-forEach((value, key, map) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* … */ })
-forEach(function(value) { /* … */ })
-forEach(function(value, key) { /* … */ })
-forEach(function(value, key, map) { /* … */ })
-forEach(function(value, key, map) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-  - : Function to execute for each entry in the map. It takes the following
-    arguments:
-    - `value` {{Optional_Inline}}
+  - : A function to execute for each entry in the map. The function is called with the following arguments:
+    - `value`
       - : Value of each iteration.
-    - `key` {{Optional_Inline}}
+    - `key`
       - : Key of each iteration.
-    - `map` {{Optional_Inline}}
+    - `map`
       - : The map being iterated.
-- `thisArg` {{Optional_Inline}}
-  - : Value to use as `this` when executing `callback`.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value
 
@@ -91,7 +70,11 @@ The following code logs a line for each element in an `Map` object:
 function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
 // Logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"

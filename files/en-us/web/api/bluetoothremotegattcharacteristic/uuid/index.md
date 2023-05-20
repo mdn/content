@@ -1,17 +1,10 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.uuid
+title: "BluetoothRemoteGATTCharacteristic: uuid property"
+short-title: uuid
 slug: Web/API/BluetoothRemoteGATTCharacteristic/uuid
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Service
-  - Web Bluetooth API
-  - uuid
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.uuid
 ---
 

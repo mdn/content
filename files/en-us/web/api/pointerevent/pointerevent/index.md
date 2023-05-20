@@ -1,12 +1,8 @@
 ---
-title: PointerEvent()
+title: "PointerEvent: PointerEvent() constructor"
+short-title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
 
@@ -59,15 +55,15 @@ A new {{domxref("PointerEvent")}} object.
 ```js
 const moveEvent = new PointerEvent("pointermove");
 
-const downEvent = new PointerEvent("pointerdown",
-   {pointerId: 1,
-    bubbles: true,
-    cancelable: true,
-    pointerType: "touch",
-    width: 100,
-    height: 100,
-    isPrimary: true
-   });
+const downEvent = new PointerEvent("pointerdown", {
+  pointerId: 1,
+  bubbles: true,
+  cancelable: true,
+  pointerType: "touch",
+  width: 100,
+  height: 100,
+  isPrimary: true,
+});
 ```
 
 ## Specifications

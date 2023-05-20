@@ -1,22 +1,13 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Maximum
-  - Reference
-  - Largest
-  - Largest Number
-  - Largest Value
-  - max
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.max
 ---
 
 {{JSRef}}
 
-The **`Math.max()`** function returns the largest of the numbers given as input parameters, or -{{jsxref("Infinity")}} if there are no parameters.
+The **`Math.max()`** static method returns the largest of the numbers given as input parameters, or -{{jsxref("Infinity")}} if there are no parameters.
 
 {{EmbedInteractiveExample("pages/js/math-max.html")}}
 

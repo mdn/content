@@ -1,17 +1,13 @@
 ---
 title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.equality
 ---
 
 {{jsSidebar("Operators")}}
 
-The equality operator (`==`) checks whether its two operands are equal,
+The **equality (`==`)** operator checks whether its two operands are equal,
 returning a Boolean result.
 Unlike the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator,
 it attempts to convert and compare operands that are of different types.

@@ -1,22 +1,16 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - remove
-  - replace
-  - splice
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.splice
 ---
 
 {{JSRef}}
 
 The **`splice()`** method changes the contents of an array by
-removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm). To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
+removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
+
+To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
@@ -35,8 +29,9 @@ splice(start, deleteCount, item1, item2, itemN)
 
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
-    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
+    - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
 
 - `deleteCount` {{optional_inline}}
 
@@ -74,8 +69,8 @@ The `splice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_O
 ### Remove 0 (zero) elements before index 2, and insert "drum"
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-const removed = myFish.splice(2, 0, 'drum');
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum");
 
 // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -84,8 +79,8 @@ const removed = myFish.splice(2, 0, 'drum');
 ### Remove 0 (zero) elements before index 2, and insert "drum" and "guitar"
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-const removed = myFish.splice(2, 0, 'drum', 'guitar');
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
@@ -94,7 +89,7 @@ const removed = myFish.splice(2, 0, 'drum', 'guitar');
 ### Remove 1 element at index 3
 
 ```js
-const myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 const removed = myFish.splice(3, 1);
 
 // myFish is ["angel", "clown", "drum", "sturgeon"]
@@ -104,8 +99,8 @@ const removed = myFish.splice(3, 1);
 ### Remove 1 element at index 2, and insert "trumpet"
 
 ```js
-const myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-const removed = myFish.splice(2, 1, 'trumpet');
+const myFish = ["angel", "clown", "drum", "sturgeon"];
+const removed = myFish.splice(2, 1, "trumpet");
 
 // myFish is ["angel", "clown", "trumpet", "sturgeon"]
 // removed is ["drum"]
@@ -114,8 +109,8 @@ const removed = myFish.splice(2, 1, 'trumpet');
 ### Remove 2 elements from index 0, and insert "parrot", "anemone" and "blue"
 
 ```js
-const myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-const removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+const myFish = ["angel", "clown", "trumpet", "sturgeon"];
+const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
 // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed is ["angel", "clown"]
@@ -124,7 +119,7 @@ const removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 ### Remove 2 elements, starting from index 2
 
 ```js
-const myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+const myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 const removed = myFish.splice(2, 2);
 
 // myFish is ["parrot", "anemone", "sturgeon"]
@@ -134,7 +129,7 @@ const removed = myFish.splice(2, 2);
 ### Remove 1 element from index -2
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(-2, 1);
 
 // myFish is ["angel", "clown", "sturgeon"]
@@ -144,7 +139,7 @@ const removed = myFish.splice(-2, 1);
 ### Remove all elements, starting from index 2
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]
@@ -188,6 +183,12 @@ console.log(arrayLike);
 
 ## See also
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}}— add/remove elements from the end of the array
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}}— add/remove elements from the beginning of the array
-- {{jsxref("Array.prototype.concat()", "concat()")}}— returns a new array comprised of this array joined with other array(s) and/or value(s)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.slice()")}}
+- {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.unshift()")}}

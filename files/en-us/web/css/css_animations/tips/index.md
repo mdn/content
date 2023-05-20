@@ -2,12 +2,6 @@
 title: CSS Animations tips and tricks
 slug: Web/CSS/CSS_Animations/Tips
 page-type: guide
-tags:
-  - CSS
-  - CSS Animations
-  - Example
-  - Guide
-  - Reference
 ---
 
 {{CSSRef}}
@@ -146,15 +140,15 @@ The following demo shows how you'd achieve the aforementioned JavaScript techniq
 ```
 
 ```js
-const watchme = document.getElementById('watchme');
+const watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false)
+);
 ```
 
 Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>

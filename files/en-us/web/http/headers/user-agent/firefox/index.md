@@ -1,13 +1,7 @@
 ---
 title: Firefox user agent string reference
 slug: Web/HTTP/Headers/User-Agent/Firefox
-tags:
-  - Compatibility
-  - Firefox
-  - Firefox 4
-  - Gecko
-  - Gecko 2.0
-  - Guide
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -41,7 +35,7 @@ For other products based on Gecko, the string can take one of two forms, where t
 - `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
 - `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
-Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since {{ Bug(581008) }}.
+Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since [Webkit bug 581008](https://bugzil.la/581008).
 
 ## Mobile and Tablet indicators
 
@@ -184,7 +178,7 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
 ```js
-/mobi/i
+/mobi/i;
 ```
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
@@ -235,8 +229,8 @@ These are some sample UA strings from other Gecko-based browsers on various plat
 
 ## See also
 
-- [Firefox OS User Agent String](https://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/) (blog post w/[bug 777710](https://bugzilla.mozilla.org/show_bug.cgi?id=777710) reference)
+- [Firefox OS User Agent String](https://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/) (blog post w/[bug 777710](https://bugzil.la/777710) reference)
 - [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post)
 - Recommendations on [sniffing the UA string for cross-browser support](/en-US/docs/Browser_Detection_and_Cross_Browser_Support)
 - [window.navigator.userAgent](/en-US/docs/Web/API/Window/navigator)
-- [Add Android version to Fennec UA String (bug 1169772)](https://bugzilla.mozilla.org/show_bug.cgi?id=1169772)
+- [Add Android version to Fennec UA String (bug 1169772)](https://bugzil.la/1169772)

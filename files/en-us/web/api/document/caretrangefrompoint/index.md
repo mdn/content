@@ -1,16 +1,10 @@
 ---
-title: Document.caretRangeFromPoint()
+title: "Document: caretRangeFromPoint() method"
+short-title: caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Document
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - caretRangeFromPoint
+status:
+  - non-standard
 browser-compat: api.Document.caretRangeFromPoint
 ---
 

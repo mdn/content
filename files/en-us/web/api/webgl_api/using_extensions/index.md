@@ -2,12 +2,9 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 page-type: guide
-tags:
-  - Advanced
-  - WebGL
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
 
@@ -20,11 +17,10 @@ Extensions may be supported by browser vendors before being officially ratified 
 If you wish to work with the bleeding edge of extensions, and want to keep working on upon ratification (assuming, of course, that the extension doesn't change in incompatible ways), that you query the canonical extension name as well as the vendor extension name. For instance:
 
 ```js
-const ext = (
-  gl.getExtension('OES_vertex_array_object') ||
-  gl.getExtension('MOZ_OES_vertex_array_object') ||
-  gl.getExtension('WEBKIT_OES_vertex_array_object')
-);
+const ext =
+  gl.getExtension("OES_vertex_array_object") ||
+  gl.getExtension("MOZ_OES_vertex_array_object") ||
+  gl.getExtension("WEBKIT_OES_vertex_array_object");
 ```
 
 Note that, vendor prefix have been discouraged thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
@@ -58,8 +54,6 @@ The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns
 
 The current extensions are:
 
-### Extensions
-
 - {{domxref("ANGLE_instanced_arrays")}}
 - {{domxref("EXT_blend_minmax")}}
 - {{domxref("EXT_color_buffer_float")}}
@@ -74,6 +68,7 @@ The current extensions are:
 - {{domxref("EXT_texture_filter_anisotropic")}}
 - {{domxref("EXT_texture_norm16")}}
 - {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_draw_buffers_indexed")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}
@@ -102,7 +97,7 @@ The current extensions are:
 Before an extension can be used it has to be enabled using {{domxref("WebGLRenderingContext.getExtension()")}}. For example:
 
 ```js
-const float_texture_ext = gl.getExtension('OES_texture_float');
+const float_texture_ext = gl.getExtension("OES_texture_float");
 ```
 
 The return value is `null` if the extension is not supported, or an extension object otherwise.

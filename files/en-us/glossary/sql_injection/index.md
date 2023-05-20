@@ -1,11 +1,7 @@
 ---
 title: SQL Injection
 slug: Glossary/SQL_Injection
-tags:
-  - Security
-  - Sql
-  - Sql Injection
-  - Webapp
+page-type: glossary-definition
 ---
 
 SQL injection takes advantage of Web apps that fail to validate user input. Hackers can maliciously pass SQL commands through the Web app for execution by a backend database.
@@ -46,7 +42,7 @@ After clicking on the login button, the SQL query will work as follows:
 
 Just take a closer look at the above query's password section.
 
-```
+```plain
 Password=' anything 'or'1'='1 '
 ```
 

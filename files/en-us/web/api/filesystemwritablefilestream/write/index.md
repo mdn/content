@@ -1,29 +1,17 @@
 ---
-title: FileSystemWritableFileStream.write()
+title: "FileSystemWritableFileStream: write() method"
+short-title: write()
 slug: Web/API/FileSystemWritableFileStream/write
 page-type: web-api-instance-method
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Method
-  - stream
-  - working with files
-  - write
-  - Experimental
 browser-compat: api.FileSystemWritableFileStream.write
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
-The **`write()`** method of the
-{{domxref("FileSystemWritableFileStream")}} interface writes content into the file the
-method is called on, at the current file cursor offset.
+The **`write()`** method of the {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the method is called on, at the current file cursor offset.
 
 No changes are written to the actual file on disk until the stream has been closed.
-Changes are typically written to a temporary file instead. This method can also be used
-to seek to a byte point within the stream and truncate to modify the total bytes the
-file contains.
+Changes are typically written to a temporary file instead. This method can also be used to seek to a byte point within the stream and truncate to modify the total bytes the file contains.
 
 ## Syntax
 
@@ -67,17 +55,13 @@ write(data)
 
 ## Examples
 
-This asynchronous function opens the 'Save File' picker, which returns a
-{{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable
-stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}}
-method.
+This asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected.
+From which a writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-A user defined {{domxref('Blob')}} is then written to the stream which is subsequently
-closed.
+A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 
@@ -92,8 +76,7 @@ async function saveFile() {
 }
 ```
 
-The following show different examples of options that can be passed into the
-`write()` method.
+The following show different examples of options that can be passed into the `write()` method.
 
 ```js
 // just pass in the data (no options)

@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.renderTime
+title: "PerformanceElementTiming: renderTime property"
+short-title: renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - renderTime
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
 
@@ -20,13 +16,15 @@ The **`renderTime`** read-only property of the {{domxref("PerformanceElementTimi
 
 A {{domxref("DOMHighResTimeStamp")}} with the render time of the element.
 
-For images this will be the **image rendering timestamp**. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the [Timing-allow-origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) header) this will return 0.
+For images this will be the **image rendering timestamp**. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the [Timing-allow-origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) header) this will return `0`.
 
 For text nodes this will be the **text rendering timestamp**. This is defined as when the element becomes text painted.
 
 ## Examples
 
-In this example calling `entry.renderTime` returns the render time of the image element.
+### Logging `renderTime`
+
+In this example an {{HTMLElement("image")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
 
 ```html
 <img
@@ -44,10 +42,26 @@ const observer = new PerformanceObserver((list) => {
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+observer.observe({ type: "element", buffered: true });
 ```
 
-> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
+### Cross-origin image render time
+
+For security reasons, the value of the `renderTime` property is `0` if the resource is a cross-origin request. To expose cross-origin render time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see `renderTime`, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}} which returns the value of the entry's `renderTime` if it is not `0`, and otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
+
+If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
+
+```js
+const isRenderTime = entry.renderTime ? true : false;
+```
 
 ## Specifications
 

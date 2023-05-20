@@ -1,16 +1,7 @@
 ---
 title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBackgroundPage
 ---
 
@@ -22,13 +13,13 @@ This provides a convenient way for other privileged extension scripts to get dir
 
 Note that variables that were declared using [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) or [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) do not appear in the `Window` object returned by this function.
 
-**Also note that this method cannot be used in a private window in Firefox**—it always returns `null`. For more info see [related bug at bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
+**Also note that this method cannot be used in a private window in Firefox**—it always returns `null`. For more info see [related bug at bugzilla](https://bugzil.la/1329304).
 
 If the background page is an event page, the system will ensure it is loaded before resolving the promise.
 
 This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
-> **Note:** In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see {{bug(1329304)}}.
+> **Note:** In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
 >
 > In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/mv3/migrating_to_service_workers/) for details.
 >
@@ -84,8 +75,6 @@ getting.then(onGot, onError);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

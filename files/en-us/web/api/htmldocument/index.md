@@ -2,14 +2,6 @@
 title: HTMLDocument
 slug: Web/API/HTMLDocument
 page-type: web-api-interface
-tags:
-  - API
-  - Document
-  - HTML
-  - HTML DOM
-  - HTMLDocument
-  - Interface
-  - Reference
 browser-compat: api.HTMLDocument
 ---
 

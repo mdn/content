@@ -1,9 +1,7 @@
 ---
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-opacity
 ---
 

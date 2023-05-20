@@ -1,14 +1,10 @@
 ---
-title: LargestContentfulPaint.renderTime
+title: "LargestContentfulPaint: renderTime property"
+short-title: renderTime
 slug: Web/API/LargestContentfulPaint/renderTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - renderTime
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.renderTime
 ---
 
@@ -18,27 +14,42 @@ The **`renderTime`** read-only property of the {{domxref("LargestContentfulPaint
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was rendered to the screen.
+The `renderTime` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time in milliseconds that the element was rendered to the screen.
+- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
 ## Examples
 
-The following example gets the `LargestContentfulPaint` object and prints the value of `renderTime` to the console.
+### Logging the renderTime of the largest contentful paint
+
+This example uses a {{domxref("PerformanceObserver")}} notifying of new `largest-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
-try {
-  let lcp;
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+  console.log(lastEntry.renderTime);
+});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
+```
 
-  const po = new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    const lastEntry = entries[entries.length - 1];
-    console.log(lastEntry.renderTime);
-  });
+### Cross-origin image render time
 
-  po.observe({type: 'largest-contentful-paint', buffered: true});
+For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property is `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} is exposed. To expose cross-origin render time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+For example, to allow `https://developer.mozilla.org` to see `renderTime`, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
+
+Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}} which returns the value of the entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, and otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}. However, it is recommended to set the {{HTTPHeader("Timing-Allow-Origin")}} header so that the metrics will be more accurate.
+
+If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
+
+```js
+const isAccurateLCP = entry.renderTime ? true : false;
 ```
 
 ## Specifications

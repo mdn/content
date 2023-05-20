@@ -1,11 +1,7 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Class
-  - JavaScript
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Boolean
 ---
 
@@ -40,18 +36,18 @@ if (x) {
 Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
 
 ```js
-const good = Boolean(expression);    // use this
-const good2 = !!(expression);        // or this
+const good = Boolean(expression); // use this
+const good2 = !!expression; // or this
 const bad = new Boolean(expression); // don't use this!
 ```
 
 If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
 
 ```js
-const myFalse = new Boolean(false);   // initial value of false
-const g = Boolean(myFalse);           // initial value of true
-const myString = new String('Hello'); // string object
-const s = Boolean(myString);          // initial value of true
+const myFalse = new Boolean(false); // initial value of false
+const g = Boolean(myFalse); // initial value of true
+const myString = new String("Hello"); // string object
+const s = Boolean(myString); // initial value of true
 ```
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
@@ -102,8 +98,15 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+- {{jsxref("Boolean/Boolean", "Boolean()")}}
   - : Creates a new `Boolean` object.
+
+## Instance properties
+
+These properties are defined on `Boolean.prototype` and shared by all `Boolean` instances.
+
+- {{jsxref("Object/constructor", "Boolean.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Boolean` instances, the initial value is the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ## Instance methods
 
@@ -120,7 +123,7 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 const bNoParam = new Boolean();
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
-const bEmptyString = new Boolean('');
+const bEmptyString = new Boolean("");
 const bfalse = new Boolean(false);
 ```
 
@@ -128,9 +131,9 @@ const bfalse = new Boolean(false);
 
 ```js
 const btrue = new Boolean(true);
-const btrueString = new Boolean('true');
-const bfalseString = new Boolean('false');
-const bSuLin = new Boolean('Su Lin');
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
 const bArrayProto = new Boolean([]);
 const bObjProto = new Boolean({});
 ```

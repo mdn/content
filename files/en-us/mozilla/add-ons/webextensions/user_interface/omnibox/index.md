@@ -1,9 +1,7 @@
 ---
 title: Address bar suggestions
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-tags:
-  - User Interface
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar()}}

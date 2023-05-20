@@ -2,15 +2,8 @@
 title: BluetoothRemoteGATTService
 slug: Web/API/BluetoothRemoteGATTService
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattService
-  - BluetoothRemoteGATTService
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService
 ---
 

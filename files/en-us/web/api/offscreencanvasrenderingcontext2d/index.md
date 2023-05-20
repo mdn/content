@@ -2,13 +2,6 @@
 title: OffscreenCanvasRenderingContext2D
 slug: Web/API/OffscreenCanvasRenderingContext2D
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - OffscreenCanvasRenderingContext2D
-  - Games
-  - Graphics
-  - Reference
 browser-compat: api.OffscreenCanvasRenderingContext2D
 ---
 
@@ -69,7 +62,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
@@ -91,7 +84,7 @@ The following methods and properties control drawing text. See also the {{domxre
   - : Draws (strokes) a given text at the given (x, y) position.
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
-- {{domxref("CanvasRenderingContext2D.textRendering")}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{Experimental_Inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
@@ -125,7 +118,7 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.

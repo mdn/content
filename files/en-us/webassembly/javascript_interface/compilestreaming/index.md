@@ -1,23 +1,13 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - compile
-  - compileStreaming
-  - streaming
 browser-compat: javascript.builtins.WebAssembly.compileStreaming
 ---
 
 {{WebAssemblySidebar}}
 
 The **`WebAssembly.compileStreaming()`** function compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source.
-This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
+This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -47,7 +37,7 @@ representing the compiled module.
 - If compilation fails, the promise rejects with a
   [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError).
 - If the `source` is a `Promise` that rejects, the promise rejects with the error.
-- If the `source` `Result` has an error (e.g. bad MIME type), the promise rejects an error.
+- If the `source`'s `Result` has an error (e.g. bad MIME type), the promise rejects an error.
 
 ## Examples
 

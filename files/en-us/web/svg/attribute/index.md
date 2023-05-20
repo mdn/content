@@ -1,16 +1,7 @@
 ---
 title: SVG Attribute reference
 slug: Web/SVG/Attribute
-tags:
-  - Drawing
-  - Landing
-  - NeedsHelp
-  - Overview
-  - Responsive Design
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - Vector Graphics
+page-type: landing-page
 ---
 
 {{SVGRef}}

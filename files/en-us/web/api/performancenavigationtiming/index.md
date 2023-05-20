@@ -2,13 +2,6 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Navigation Timing API
-  - Performance Timeline API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming
 ---
 
@@ -16,22 +9,28 @@ browser-compat: api.PerformanceNavigationTiming
 
 The **`PerformanceNavigationTiming`** interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
 
+Only the current document is included in the performance timeline, so there is only one `PerformanceNavigationTiming` object in the performance timeline. It inherits all of the properties and methods of {{domxref("PerformanceResourceTiming")}} and {{domxref("PerformanceEntry")}}.
+
 {{InheritanceDiagram}}
+
+The following diagram shows all of the timestamp properties defined in `PerformanceNavigationTiming`.
+
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](timestamp-diagram.svg)
 
 ## Instance properties
 
-This interface extends the following {{domxref('PerformanceEntry')}} properties for navigation performance entry types by qualifying and constraining them as follows:
+This interface extends the following {{domxref('PerformanceEntry')}} properties by qualifying and constraining them as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"navigation"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
-  - : Returns the [document's address](https://dom.spec.whatwg.org/#concept-document-url).
+  - : Returns the [document's URL](/en-US/docs/Web/API/Document/URL).
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} with a value of "`0`".
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceNavigationTiming.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties.
 
-This interface also extends following {{domxref('PerformanceResourceTiming')}} properties for navigation performance entry types by qualifying and constraining them as follows:
+This interface also extends the following {{domxref('PerformanceResourceTiming')}} properties by qualifying and constraining them as follows:
 
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
   - : Returns `"navigation"`.
@@ -39,33 +38,25 @@ This interface also extends following {{domxref('PerformanceResourceTiming')}} p
 The interface also supports the following properties:
 
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing a time value equal to the time immediately before the browser sets the current document readiness of the current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end) event completes.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler completes.
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end) event at the current document.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler starts.
 - {{domxref('PerformanceNavigationTiming.domInteractive')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"interactive"`.
 - {{domxref('PerformanceNavigationTiming.loadEventEnd')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the load event of the current document is completed.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately before the load event of the current document is fired.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
-
-  - : A number representing the number of redirects since the last non-redirect navigation under the current browsing context.
-
-    If there was no redirect, or if the redirect was from another origin, and that origin does not permit it's timing information to be exposed to the current origin then the value will be 0.
-
-- {{domxref('PerformanceNavigationTiming.requestStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent starts requesting the resource from the server, or from relevant application caches or from local resources.
-- {{domxref('PerformanceNavigationTiming.responseStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the user agent's HTTP parser receives the first byte of the response from relevant application caches, or from local resources or from the server.
+  - : A number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
-  - : A string representing the navigation type. Must be: "`navigate`", "`reload`", "`back_forward`" or "`prerender`".
+  - : A string representing the navigation type. Either `"navigate"`, `"reload"`, `"back_forward"` or `"prerender"`.
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately after the user agent finishes the unload event of the previous document.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately before the user agent starts the unload event of the previous document.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
 
 ## Instance methods
 

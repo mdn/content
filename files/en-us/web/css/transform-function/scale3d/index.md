@@ -2,12 +2,6 @@
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.scale3d
 ---
 

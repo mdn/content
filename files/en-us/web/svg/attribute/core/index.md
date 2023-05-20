@@ -1,22 +1,18 @@
 ---
 title: SVG Core Attributes
 slug: Web/SVG/Attribute/Core
-tags:
-  - Attribute
-  - Intermediate
-  - Reference
-  - SVG
+page-type: svg-attribute
 browser-compat: svg.attributes.core
 ---
 
 The SVG core attributes are all the common attributes that can be specified on any SVG element.
 
-- [`id`](#attr-id)
-- [`lang`](#attr-lang)
-- [`tabindex`](#attr-tabindex)
-- [`xml:base`](#attr-xml:base)
-- [`xml:lang`](#attr-xml:lang)
-- [`xml:space`](#attr-xml:space)
+- [`id`](#id)
+- [`lang`](#lang)
+- [`tabindex`](#tabindex)
+- [`xml:base`](#xmlbase)
+- [`xml:lang`](#xmllang)
+- [`xml:space`](#xmlspace)
 
 ## Attributes
 

@@ -2,12 +2,8 @@
 title: Web Serial API
 slug: Web/API/Web_Serial_API
 page-type: web-api-overview
-tags:
-  - API
-  - Web Serial
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial
 ---
 
@@ -41,11 +37,11 @@ The `connect` and `disconnect` events let sites react when a device is connected
 If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
 ```js
-navigator.serial.addEventListener('connect', (e) => {
+navigator.serial.addEventListener("connect", (e) => {
   // Connect to `e.target` or add it to a list of available ports.
 });
 
-navigator.serial.addEventListener('disconnect', (e) => {
+navigator.serial.addEventListener("disconnect", (e) => {
   // Remove `e.target` from the list of available ports.
 });
 
@@ -53,13 +49,16 @@ navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
 });
 
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // Connect to `port` or add it to the list of available ports.
+    })
+    .catch((e) => {
+      // The user didn't select a port.
+    });
 });
 ```
 

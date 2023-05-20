@@ -2,15 +2,6 @@
 title: Controlling multiple parameters with ConstantSourceNode
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
 page-type: guide
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Intermediate
-  - Media
-  - Tutorial
-  - Web Audio
-  - Web Audio API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -131,18 +122,20 @@ function setup() {
   context = new AudioContext();
 
   gainNode1 = new GainNode(context, {
-    gain: 0.5
+    gain: 0.5,
   });
-  gainNode2 =  new GainNode(context, {
-    gain: gainNode1.gain.value
+  gainNode2 = new GainNode(context, {
+    gain: gainNode1.gain.value,
   });
   gainNode3 = new GainNode(context, {
-    gain: gainNode1.gain.value
+    gain: gainNode1.gain.value,
   });
 
   volumeControl.value = gainNode1.gain.value;
 
-  constantNode = new ConstantSourceNode(context, { offset: volumeControl.value });
+  constantNode = new ConstantSourceNode(context, {
+    offset: volumeControl.value,
+  });
   constantNode.connect(gainNode2.gain);
   constantNode.connect(gainNode3.gain);
   constantNode.start();
@@ -153,7 +146,6 @@ function setup() {
 
   // All is set up. We can hook the volume control.
   volumeControl.addEventListener("input", changeVolume, false);
-
 }
 ```
 
@@ -217,19 +209,19 @@ When the user clicks the play/pause toggle button while the oscillators aren't p
 function startOscillators() {
   oscNode1 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 261.625565300598634 // middle C$
+    frequency: 261.625565300598634, // middle C$
   });
   oscNode1.connect(gainNode1);
 
   oscNode2 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 329.627556912869929 // E
+    frequency: 329.627556912869929, // E
   });
   oscNode2.connect(gainNode2);
 
   oscNode3 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 391.995435981749294 // G
+    frequency: 391.995435981749294, // G
   });
   oscNode3.connect(gainNode3);
 

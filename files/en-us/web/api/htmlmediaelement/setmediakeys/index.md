@@ -1,22 +1,14 @@
 ---
-title: HTMLMediaElement.setMediaKeys()
+title: "HTMLMediaElement: setMediaKeys() method"
+short-title: setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.setMediaKeys
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`setMediaKeys()`** property of the
+The **`setMediaKeys()`** method of the
 {{domxref("HTMLMediaElement")}} interface returns a {{jsxref("Promise")}} that resolves
 to the passed {{domxref("MediaKeys")}}, which are those used to decrypt media during
 playback.

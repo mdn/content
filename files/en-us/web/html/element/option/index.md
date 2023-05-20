@@ -1,13 +1,7 @@
 ---
-title: '<option>: The HTML Option element'
+title: "<option>: The HTML Option element"
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Select
+page-type: html-element
 browser-compat: html.elements.option
 ---
 
@@ -17,11 +11,34 @@ The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an ite
 
 {{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `disabled`
+  - : If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.
+- `label`
+  - : This attribute is text for the label indicating the meaning of the option. If the `label` attribute isn't defined, its value is that of the element text content.
+- `selected`
+  - : If present, this Boolean attribute indicates that the option is initially selected. If the `<option>` element is the descendant of a {{HTMLElement("select")}} element whose [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute is not set, only one single `<option>` of this {{HTMLElement("select")}} element may have the `selected` attribute.
+- `value`
+  - : The content of this attribute represents the value to be submitted with the form, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element.
+
+## Styling with CSS
+
+Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set, however in Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
+
+## Examples
+
+See {{HTMLElement("select")}} for examples.
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -53,7 +70,7 @@ The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an ite
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>{{ARIARole("option")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
@@ -65,27 +82,6 @@ The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an ite
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- {{htmlattrdef("disabled")}}
-  - : If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.
-- {{htmlattrdef("label")}}
-  - : This attribute is text for the label indicating the meaning of the option. If the `label` attribute isn't defined, its value is that of the element text content.
-- {{htmlattrdef("selected")}}
-  - : If present, this Boolean attribute indicates that the option is initially selected. If the `<option>` element is the descendant of a {{HTMLElement("select")}} element whose {{htmlattrxref("multiple", "select")}} attribute is not set, only one single `<option>` of this {{HTMLElement("select")}} element may have the `selected` attribute.
-- {{htmlattrdef("value")}}
-  - : The content of this attribute represents the value to be submitted with the form, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element.
-
-## Styling with CSS
-
-Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set however in Chrome or Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
-
-## Examples
-
-See {{HTMLElement("select")}} for examples.
 
 ## Specifications
 

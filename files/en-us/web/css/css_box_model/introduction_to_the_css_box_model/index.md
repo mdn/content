@@ -2,11 +2,6 @@
 title: Introduction to the CSS basic box model
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Layout
 spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 
@@ -16,7 +11,7 @@ When laying out a document, the browser's rendering engine represents each eleme
 
 Every box is composed of four parts (or _areas_), defined by their respective edges: the _content edge_, _padding edge_, _border edge_, and _margin edge_.
 
-![CSS Box model](<boxmodel-(3).png>)
+![CSS Box model](boxmodel.png)
 
 ## Content area
 
@@ -52,13 +47,13 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)

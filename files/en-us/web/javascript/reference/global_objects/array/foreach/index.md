@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
 ---
 
@@ -22,37 +15,20 @@ for each array element.
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function (element) { /* … */ })
-forEach(function (element, index) { /* … */ })
-forEach(function (element, index, array) { /* … */ })
-forEach(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. Its return value is discarded.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. Its return value is discarded. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `forEach()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -68,7 +44,7 @@ The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Refer
 
 `forEach()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `every()` began.
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `forEach()` began.
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
 
@@ -125,7 +101,7 @@ The callback function is not invoked for the missing value at index 2.
 ### Converting a for loop to forEach
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copyItems = [];
 
 // before
@@ -235,10 +211,10 @@ Because element `four` is now at an earlier position in the array,
 `forEach()` does not make a copy of the array before iterating.
 
 ```js
-const words = ['one', 'two', 'three', 'four'];
+const words = ["one", "two", "three", "four"];
 words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift(); //'one' will delete from array
   }
 }); // one // two // four
@@ -249,7 +225,7 @@ console.log(words); // ['two', 'three', 'four']
 ### Flatten an array
 
 The following example is only here for learning purpose. If you want to flatten an
-array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
+array using built-in methods, you can use {{jsxref("Array.prototype.flat()")}}.
 
 ```js
 const flatten = (arr) => {
@@ -262,7 +238,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // Usage
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
@@ -297,11 +273,13 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## See also
 
 - [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.filter()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

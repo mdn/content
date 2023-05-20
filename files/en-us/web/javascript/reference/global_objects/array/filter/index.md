@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
 ---
 
@@ -21,37 +14,20 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 ## Syntax
 
 ```js-nolint
-// Arrow function
-filter((element) => { /* … */ })
-filter((element, index) => { /* … */ })
-filter((element, index, array) => { /* … */ })
-
-// Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// Inline callback function
-filter(function (element) { /* … */ })
-filter(function (element, index) { /* … */ })
-filter(function (element, index, array) { /* … */ })
-filter(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) to keep the element in the resulting array, and a falsy value otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `filter()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
@@ -123,7 +99,7 @@ const arr = [
   {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' },
+  { id: "undefined" },
 ];
 
 let invalidEntries = 0;
@@ -138,11 +114,11 @@ function filterByID(item) {
 
 const arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID);
+console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries);
+console.log("Number of Invalid Entries =", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 
@@ -151,7 +127,7 @@ console.log('Number of Invalid Entries = ', invalidEntries);
 Following example uses `filter()` to filter array content based on search criteria.
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Filter array items based on search criteria (query)
@@ -160,8 +136,8 @@ function filterItems(arr, query) {
   return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
-console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
 ### Using filter() on sparse arrays
@@ -184,9 +160,8 @@ const arrayLike = {
   1: "b",
   2: "c",
 };
-console.log(
-  Array.prototype.filter.call(arrayLike, (x) => x <= "b"),
-); // [ 'a', 'b' ]
+console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+// [ 'a', 'b' ]
 ```
 
 ### Affecting Initial Array (modifying, appending and deleting)
@@ -195,10 +170,10 @@ The following example tests the behavior of the `filter` method when the array i
 
 ```js
 // Modifying each word
-let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 
 const modifiedWords = words.filter((word, index, arr) => {
-  arr[index + 1] += ' extra';
+  arr[index + 1] += " extra";
   return word.length < 6;
 });
 
@@ -207,22 +182,22 @@ console.log(modifiedWords);
 // ["spray"]
 
 // Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const appendedWords = words.filter((word, index, arr) => {
-  arr.push('new');
+  arr.push("new");
   return word.length < 6;
-})
+});
 
 console.log(appendedWords);
 // Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
 // ["spray" ,"limit" ,"elite"]
 
 // Deleting words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const deleteWords = words.filter((word, index, arr) => {
   arr.pop();
   return word.length < 6;
-})
+});
 
 console.log(deleteWords);
 // Notice 'elite' is not even obtained as it's been popped off 'words' before filter can even get there
@@ -240,8 +215,11 @@ console.log(deleteWords);
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}

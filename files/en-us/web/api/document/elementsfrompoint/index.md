@@ -1,13 +1,8 @@
 ---
-title: Document.elementsFromPoint()
+title: "Document: elementsFromPoint() method"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - elementsFromPoint
 browser-compat: api.Document.elementsFromPoint
 ---
 
@@ -63,9 +58,10 @@ if (document.elementsFromPoint) {
     }
   });
 } else {
-  output.innerHTML = "<span style=\"color: red;\">" +
-     "Browser does not support <code>document.elementsFromPoint()</code>" +
-     "</span>";
+  output.innerHTML =
+    '<span style="color: red;">' +
+    "Browser does not support <code>document.elementsFromPoint()</code>" +
+    "</span>";
 }
 ```
 

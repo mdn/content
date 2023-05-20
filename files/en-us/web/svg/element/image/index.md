@@ -1,11 +1,7 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.image
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: yChannelSelector
 slug: Web/SVG/Attribute/yChannelSelector
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDisplacementMap.yChannelSelector
 ---
 

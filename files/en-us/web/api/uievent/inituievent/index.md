@@ -1,14 +1,10 @@
 ---
-title: UIEvent.initUIEvent()
+title: "UIEvent: initUIEvent() method"
+short-title: initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - UIEvent
+status:
+  - deprecated
 browser-compat: api.UIEvent.initUIEvent
 ---
 
@@ -44,7 +40,7 @@ initUIEvent(type, canBubble, cancelable, view, detail)
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 - `view`
-  - : Is the {{domxref("WindowProxy")}} associated with the event.
+  - : Is the {{glossary("WindowProxy")}} associated with the event.
 - `detail`
   - : An `unsigned long` specifying some detail information about the
     event, depending on the type of event. For mouse events, it indicates how many times

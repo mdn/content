@@ -1,9 +1,7 @@
 ---
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.pointer-events
 ---
 

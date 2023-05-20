@@ -1,23 +1,8 @@
 ---
-title: XRInputSourcesChangeEvent.added
+title: "XRInputSourcesChangeEvent: added property"
+short-title: added
 slug: Web/API/XRInputSourcesChangeEvent/added
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - XR
-  - XRInputSource
-  - XRInputSourcesChangeEvent
-  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
 

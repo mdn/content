@@ -1,17 +1,8 @@
 ---
-title: Document.exitPictureInPicture()
+title: "Document: exitPictureInPicture() method"
+short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.Document.exitPictureInPicture
 ---
 
@@ -47,13 +38,14 @@ mouse button is clicked within it.
 ```js
 document.onclick = (event) => {
   if (document.pictureInPictureElement) {
-    document.exitPictureInPicture()
+    document
+      .exitPictureInPicture()
       .then(() => console.log("Document Exited from Picture-in-Picture mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     video.requestPictureInPicture();
   }
-}
+};
 ```
 
 Note that if you want to track which video on your page is currently playing in picture-in-picture mode, you should listen to the `enterpictureinpicture` and `exitpictureinpicture` events on the {{DOMxRef("HTMLVideoElement")}} element(s) in question. Alternatively, you can check whether {{DOMxRef("Document.pictureInPictureElement")}} refers to the current {{DOMxRef("HTMLVideoElement")}} element.
@@ -69,7 +61,6 @@ Note that if you want to track which video on your page is currently playing in 
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

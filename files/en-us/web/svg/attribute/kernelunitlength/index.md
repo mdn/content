@@ -1,12 +1,7 @@
 ---
 title: kernelUnitLength
 slug: Web/SVG/Attribute/kernelUnitLength
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength

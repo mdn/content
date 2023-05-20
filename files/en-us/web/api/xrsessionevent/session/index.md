@@ -1,26 +1,8 @@
 ---
-title: XRSessionEvent.session
+title: "XRSessionEvent: session property"
+short-title: session
 slug: Web/API/XRSessionEvent/session
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Mixed
-  - Property
-  - Reality
-  - Reference
-  - Session
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - XRSessionEvent
-  - augmented
-  - events
-  - sessions
 browser-compat: api.XRSessionEvent.session
 ---
 
@@ -41,7 +23,7 @@ to manage when an event is received.
 
 ```js
 xrSession.addEventListener("visibilitychange", (e) => {
-  switch(e.session.visibilityState) {
+  switch (e.session.visibilityState) {
     case "hidden":
       myEnableRendering(true);
       break;

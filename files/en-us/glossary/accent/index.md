@@ -1,9 +1,7 @@
 ---
-title: accent
-slug: Glossary/accent
-tags:
-  - Input
-  - accent
+title: Accent
+slug: Glossary/Accent
+page-type: glossary-definition
 ---
 
 An **accent** is a typically bright color that contrasts with the more utilitarian background and foreground colors within a color scheme. These are present in the visual style of many platforms (though not all).

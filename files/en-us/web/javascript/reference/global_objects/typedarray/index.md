@@ -1,12 +1,7 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - Class
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.TypedArray
 ---
 
@@ -44,6 +39,77 @@ When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an arra
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                         | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
+### Behavior when viewing a resizable buffer
+
+When a `TypedArray` is created as a view of a [resizable buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#resizing_arraybuffers), resizing the underlying buffer will have different effects on the size of the `TypedArray` depending on whether the `TypedArray` is constructed as length-tracking.
+
+If a typed array is created without a specific size by omitting the third parameter or passing `undefined`, the typed array will become _length-tracking_, and will automatically resize to fit the underlying `buffer` as the latter is resized:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+
+buffer.resize(12);
+
+console.log(float32.byteLength); // 12
+console.log(float32.length); // 3
+```
+
+If a typed array is created with a specific size using the third `length` parameter, it won't resize to contain the `buffer` as the latter is grown:
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 0, 2);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]); // 0, the initial value
+
+buffer.resize(12);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]); // 0, the initial value
+```
+
+When a `buffer` is shrunk, the viewing typed array may become out of bounds, in which case the typed array's observed size will decrease to 0. This is the only case where a non-length-tracking typed array's length may change.
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 0, 2);
+
+buffer.resize(7);
+
+console.log(float32.byteLength); // 0
+console.log(float32.length); // 0
+console.log(float32[0]); // undefined
+```
+
+If you then grow the `buffer` again to bring the typed array back in bounds, the typed array's size will be restored to its original value.
+
+```js
+buffer.resize(8);
+
+console.log(float32.byteLength); // 8
+console.log(float32.length); // 2
+console.log(float32[0]); // 0 - back in bounds again!
+```
+
+The same can happen for length-tracking typed arrays as well, if the buffer is shrunk beyond the `byteOffset`.
+
+```js
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+const float32 = new Float32Array(buffer, 4);
+// float32 is length-tracking, but it only extends from the 4th byte
+// to the end of the buffer, so if the buffer is resized to be shorter
+// than 4 bytes, the typed array will become out of bounds
+buffer.resize(3);
+console.log(float32.byteLength); // 0
+```
+
 ## Constructor
 
 This object cannot be instantiated directly — attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
@@ -79,7 +145,7 @@ Where `TypedArray` is a constructor for one of the concrete types.
 - `length` {{optional_inline}}
   - : When called with a non-object, the parameter will be treated as a number specifying the length of the typed array. An internal array buffer is created in memory, of size `length` multiplied by [`BYTES_PER_ELEMENT`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) bytes, filled with zeros. Omitting all parameters is equivalent to using `0` as `length`.
 - `buffer`, `byteOffset` {{optional_inline}}, `length` {{optional_inline}}
-  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed.
+  - : When called with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) instance, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified buffer. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` starting from `byteOffset` is viewed. If `length` is omitted, the typed array becomes [length-tracking](#behavior_when_viewing_a_resizable_buffer).
 
 ### Exceptions
 
@@ -100,15 +166,13 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 
 All `TypedArray` subclasses also have the following static properties:
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size for the different `TypedArray` objects.
-- {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) (e.g., `"Int8Array"`).
 
 ## Static methods
 
@@ -121,18 +185,20 @@ These methods are defined on the `TypedArray` constructor object and are thus sh
 
 ## Instance properties
 
-These properties are all [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) defined on the `TypedArray` prototype object and are thus read-only and shared by all `TypedArray` subclass instances.
+These properties are defined on `TypedArray.prototype` and shared by all `TypedArray` subclass instances.
 
-- `TypedArray.prototype[@@toStringTag]`
-  - : The initial value of a typed array's [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the same string as its [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 - {{jsxref("TypedArray.prototype.buffer")}}
   - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.
 - {{jsxref("TypedArray.prototype.byteLength")}}
   - : Returns the length (in bytes) of the typed array.
 - {{jsxref("TypedArray.prototype.byteOffset")}}
   - : Returns the offset (in bytes) of the typed array from the start of its {{jsxref("ArrayBuffer")}}.
+- {{jsxref("Object/constructor", "TypedArray.prototype.constructor")}}
+  - : The constructor function that created the instance object. `TypedArray.prototype.constructor` is the hidden `TypedArray` constructor function, but each typed array subclass also defines its own `constructor` property.
 - {{jsxref("TypedArray.prototype.length")}}
   - : Returns the number of elements held in the typed array.
+- `TypedArray.prototype[@@toStringTag]`
+  - : The initial value of the [`TypedArray.prototype[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array constructor's name. It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 
 All `TypedArray` subclasses also have the following instance properties:
 
@@ -158,7 +224,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.find()")}}
   - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.find()")}}.
 - {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
+  - : Returns the first index value in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
 - {{jsxref("TypedArray.prototype.findLast()")}}
   - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.findLast()")}}.
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}
@@ -193,13 +259,19 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}
   - : Returns a new `TypedArray` from the given start and end element index.
-- {{jsxref("TypedArray.prototype.values()")}}
-  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.prototype.toReversed()")}}
+  - : Returns a new array with the elements in reversed order, without modifying the original array.
+- {{jsxref("TypedArray.prototype.toSorted()")}}
+  - : Returns a new array with the elements sorted in ascending order, without modifying the original array.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.prototype.with()")}}
+  - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
+- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
@@ -289,7 +361,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## See also
 
 - [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/en-US/docs/Web/API/TextDecoder) — Helper that decode

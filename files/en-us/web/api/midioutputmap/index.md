@@ -2,8 +2,6 @@
 title: MIDIOutputMap
 slug: Web/API/MIDIOutputMap
 page-type: web-api-interface
-tags:
-  - API
 browser-compat: api.MIDIOutputMap
 ---
 

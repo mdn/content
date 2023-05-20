@@ -1,20 +1,8 @@
 ---
-title: HTMLImageElement.srcset
+title: "HTMLImageElement: srcset property"
+short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Image Candidates
-  - Property
-  - Reference
-  - Responsive Design
-  - list
-  - source
-  - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
 
@@ -31,9 +19,11 @@ that indicates the conditions under which that candidate should be used instead 
 image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
 The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
-  "sizes")}} property, are a crucial component in designing responsive web sites, as they
+  "sizes")}} property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
+
+> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -49,9 +39,7 @@ characters, other than the whitespace separating the URL and the corresponding c
 descriptor, are ignored; this includes both leading and trailing space, as well as space
 before or after each comma.
 
-If the condition descriptor is not provided (in other words, the image candidate
-provides only a URL), the candidate is used as the fallback if none of the other
-candidates match. Otherwise, the condition descriptor may take one of two forms:
+The condition descriptor may take one of two forms:
 
 - To indicate that the image resource specified by the image candidate string should
   be used when the image is being rendered with a particular width in pixels, provide a
@@ -59,7 +47,9 @@ candidates match. Otherwise, the condition descriptor may take one of two forms:
   followed by the lower case letter "w". For example, to provide an image resource to be
   used when the renderer needs a 450 pixel wide image, use the width descriptor string
   `450w`. The specified width must be a positive, non-zero, integer, and
-  _must_ match the intrinsic width of the referenced image.
+  _must_ match the intrinsic width of the referenced image. When a `srcset` contains
+  "w" descriptors, the browser uses those descriptors together with the
+  {{domxref("HTMLImageElement.sizes", "sizes")}} attribute to pick a resource.
 - Alternatively, you can use a **pixel density descriptor**, which
   specifies the condition in which the corresponding image resource should be used as
   the display's pixel density. This is written by stating the pixel density as a
@@ -68,56 +58,47 @@ candidates match. Otherwise, the condition descriptor may take one of two forms:
   is double the standard density, you can give the pixel density descriptor
   `2x` or `2.0x`.
 
-You may mix and match the two types of descriptor. You must not, however, provide
-multiple image candidate strings that specify the same descriptor. All of the following
-are valid image candidate strings:
+If the condition descriptor is not provided (in other words, the image candidate
+provides only a URL), the candidate is assigned a default descriptor of "1x".
 
 ```plain
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
+"images/team-photo.jpg, images/team-photo-retina.jpg 2x"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
-(`1x`) as well as double that pixel density (`2x`). Also available
-is a version of the image for use at a width of 2048 pixels (`2048w`).
+(undescribed, assigned a default of `1x`) as well as double that pixel density (`2x`).
+
+When an image element's `srcset` contains "x" descriptors, browsers also consider
+the URL in the {{domxref("HTMLImageElement.src", "src")}} attribute (if present) as a
+candidate, and assign it a default descriptor of `1x`.
 
 ```plain
-"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
+"header640.png 640w, header960.png 960w, header1024.png 1024w"
 ```
 
 This string provides versions of a header image to use when the {{Glossary("user
-  agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An
-additional, fallback image candidate is provided without any condition at all, to be
-used for any other width.
+  agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px.
 
-```plain
-"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"
-```
-
-Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel
-densities of 2x and 3x. A fallback image is provided as an SVG file that should be used
-in all other cases. Notice that the candidates may use different image types.
-
-For more information on what image formats are available for use in the
-{{HTMLElement("img")}} element, see [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+Note that if any resource in a `srcset` is described with a "w" descriptor, all
+resources within that `srcset` must also be described with "w" descriptors, and
+the image element's {{domxref("HTMLImageElement.src", "src")}} is not considered
+a candidate.
 
 ## Examples
 
 ### HTML
 
-The HTML below indicates that the default image is the 200 pixel wide version of the
-clock image we use in several places throughout our documentation. Also specified by the
-`srcset` attribute is that the 200-pixel version should be used for 1x
-displays while the 400-pixel version should be used for 2x displays.
+The HTML below indicates that the default image resource, contained within the
+{{domxref("HTMLImageElement.src", "src")}} attribute should be used for 1x
+displays, and that a 400-pixel version (contained within the `srcset`, and assigned
+a `2x` descriptor) should be used for 2x displays.
 
 ```html
 <div class="box">
   <img
     src="/en-us/web/html/element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="
-      /en-us/web/html/element/img/clock-demo-200px.png 1x,
-      /en-us/web/html/element/img/clock-demo-400px.png 2x
-    " />
+    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 

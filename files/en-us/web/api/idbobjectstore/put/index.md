@@ -1,16 +1,8 @@
 ---
-title: IDBObjectStore.put()
+title: "IDBObjectStore: put() method"
+short-title: put()
 slug: Web/API/IDBObjectStore/put
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - put
 browser-compat: api.IDBObjectStore.put
 ---
 
@@ -43,15 +35,13 @@ put(item, key)
   - : The item you wish to update (or insert).
 - `key` {{optional_inline}}
   - : The primary key of the record you want to update (e.g. from
-    {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
-    an `autoIncrement` primary key, therefore the key is not in a field on the
-    record object. In such cases, calling `put(item)` will always insert a new
-    record, because it doesn't know what existing record you might want to modify.
+    {{domxref("IDBCursor.primaryKey")}}).
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the new or updated record.
 
 ### Exceptions
 
@@ -63,10 +53,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if any of the following conditions apply:
-    - The object store uses in-line keys or has a key generator, and a key parameter was provided.
-    - The object store uses out-of-line keys and has no key generator, and no key parameter was provided.
-    - The object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.
-    - The key parameter was provided but does not contain a valid key.
+    - The object store uses [in-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#in-line_key) or has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator), and a `key` parameter was provided.
+    - The object store uses out-of-line keys and has no key generator, and no `key` parameter was provided.
+    - The object store uses in-line keys but no `key` generator, and the object store's [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) does not yield a valid key.
+    - The `key` parameter was provided but does not contain a valid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 - `DataCloneError` {{domxref("DOMException")}}
@@ -87,7 +77,9 @@ our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-no
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
@@ -103,7 +95,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
+  console.log(
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`
+  );
 
   // When this new request succeeds, run the displayData() function again to update the display
   updateTitleRequest.onsuccess = () => {

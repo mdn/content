@@ -1,17 +1,13 @@
 ---
 title: Error() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
 ---
 
 {{JSRef}}
 
-The **`Error()`** constructor creates an error object.
+The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
 ## Syntax
 
@@ -38,14 +34,11 @@ Error(message, fileName, lineNumber)
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
-      - : A property indicating the specific cause of the error.
-        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+      - : A value indicating the specific cause of the error, reflected in the {{jsxref("Error/cause", "cause")}} property. When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
-  - : The value for the `fileName` property on the created `Error` object.
-    Defaults to the name of the file containing the code that called the `Error()` constructor.
+  - : The path to the file that raised this error, reflected in the {{jsxref("Error/fileName", "fileName")}} property. Defaults to the name of the file containing the code that called the `Error()` constructor.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
-  - : The value for the `lineNumber` property on the created `Error` object.
-    Defaults to the line number containing the `Error()` constructor invocation.
+  - : The line number within the file on which the error was raised, reflected in the {{jsxref("Error/lineNumber", "lineNumber")}} property. Defaults to the line number containing the `Error()` constructor invocation.
 
 ## Examples
 
@@ -75,6 +68,24 @@ try {
 ```
 
 For a more detailed example see [Error > Differentiate between similar errors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
+
+### Omitting options argument
+
+JavaScript only tries to read `options.cause` if `options` is an object — this avoids ambiguity with the other non-standard `Error(message, fileName, lineNumber)` signature, which requires the second parameter to be a string. If you omit `options`, pass a primitive value as `options`, or pass an object without the `cause` property, then the created `Error` object will have no `cause` property.
+
+```js
+// Omitting options
+const error1 = new Error("Error message");
+console.log("cause" in error1); // false
+
+// Passing a primitive value
+const error2 = new Error("Error message", "");
+console.log("cause" in error2); // false
+
+// Passing an object without a cause property
+const error3 = new Error("Error message", { details: "http error" });
+console.log("cause" in error3); // false
+```
 
 ## Specifications
 

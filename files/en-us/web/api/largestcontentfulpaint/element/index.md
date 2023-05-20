@@ -1,14 +1,10 @@
 ---
-title: LargestContentfulPaint.element
+title: "LargestContentfulPaint: element property"
+short-title: element
 slug: Web/API/LargestContentfulPaint/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - element
-  - LargestContentfulPaint
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.element
 ---
 
@@ -22,23 +18,17 @@ An {{domxref("Element")}}.
 
 ## Examples
 
-The following example gets the `LargestContentfulPaint` object and prints the value of `element` to the console.
+### Logging the largest contentful paint element
+
+This example uses a {{domxref("PerformanceObserver")}} notifying of new `largest-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
-try {
-  let lcp;
-
-  const po = new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    const lastEntry = entries[entries.length - 1];
-    console.log(lastEntry.element);
-  });
-
-  po.observe({type: 'largest-contentful-paint', buffered: true});
-
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+  console.log(lastEntry.element);
+});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```
 
 ## Specifications

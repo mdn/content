@@ -2,14 +2,6 @@
 title: Detecting device orientation
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
 page-type: guide
-tags:
-  - API
-  - Device Orientation
-  - Intermediate
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat:
   - api.DeviceMotionEvent
   - api.DeviceOrientationEvent

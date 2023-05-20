@@ -1,12 +1,7 @@
 ---
 title: DataView.prototype.getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint32
 ---
 
@@ -29,8 +24,8 @@ getUint32(byteOffset, littleEndian)
 
 - `byteOffset`
   - : The offset, in byte, from the start of the view where to read the data.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 32-bit int is stored in
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the 32-bit int is stored in
     {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
     `undefined`, a big-endian value is read.
 

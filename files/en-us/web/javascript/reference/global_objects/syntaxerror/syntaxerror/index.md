@@ -1,18 +1,13 @@
 ---
 title: SyntaxError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - SyntaxError
+page-type: javascript-constructor
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
 
 {{JSRef}}
 
-The **`SyntaxError`** constructor creates a new error object
-that represents an error when trying to interpret syntactically invalid code.
+The **`SyntaxError()`** constructor creates {{jsxref("SyntaxError")}} objects.
 
 ## Syntax
 

@@ -1,15 +1,7 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onRequest
 ---
 

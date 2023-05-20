@@ -1,9 +1,7 @@
 ---
 title: transform-origin
 slug: Web/SVG/Attribute/transform-origin
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.transform-origin
 ---
 

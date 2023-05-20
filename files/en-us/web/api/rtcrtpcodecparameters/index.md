@@ -2,30 +2,14 @@
 title: RTCRtpCodecParameters
 slug: Web/API/RTCRtpCodecParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Codec Configuration
-  - Codec Parameters
-  - Codec Preferences
-  - Dictionary
-  - Interface
-  - Media
-  - RTCRtpCodecParameters
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - SDP
-  - WebRTC
-  - setCodecPreferences
 ---
 
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.
 
-In addition to being the type of the {{domxref("RTCRtpParameters.codecs")}} property, it's used when calling {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.
+It's used in {{domxref("RTCRtpSender.getParameters()")}}, {{domxref("RTCRtpSender.setParameters()")}} and {{domxref("RTCRtpReceiver.getParameters()")}}.
+Its also use used when calling {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.
 
 Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the [see also](#see_also) section at the end of this article.
 

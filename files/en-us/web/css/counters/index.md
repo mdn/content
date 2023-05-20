@@ -2,12 +2,6 @@
 title: counters()
 slug: Web/CSS/counters
 page-type: css-function
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Function
-  - Function
-  - Reference
 browser-compat: css.types.counters
 ---
 
@@ -28,10 +22,6 @@ counters(countername, '.', upper-roman)
 ```
 
 A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.
-
-> **Note:** The `counters()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
->
-> Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
 
 ### Values
 

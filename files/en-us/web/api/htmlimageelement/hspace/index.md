@@ -1,24 +1,10 @@
 ---
-title: HTMLImageElement.hspace
+title: "HTMLImageElement: hspace property"
+short-title: hspace
 slug: Web/API/HTMLImageElement/hspace
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Horizontal
-  - Image
-  - Layout
-  - Property
-  - Reference
-  - hspace
-  - img
-  - left
-  - margin
-  - right
-  - spacing
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.hspace
 ---
 
@@ -30,7 +16,7 @@ _obsolete_ **`hspace`** property of the
 space to leave empty on the left and right sides of the {{HTMLElement("img")}} element
 when laying out the page.
 
-This property reflects the {{Glossary("HTML")}} {{htmlattrxref("hspace", "img")}}
+This property reflects the {{Glossary("HTML")}} [`hspace`](/en-US/docs/Web/HTML/Element/img#hspace)
 attribute.
 
 ## Value
