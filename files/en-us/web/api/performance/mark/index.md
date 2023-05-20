@@ -1,5 +1,6 @@
 ---
-title: performance.mark()
+title: "Performance: mark() method"
+short-title: mark()
 slug: Web/API/Performance/mark
 page-type: web-api-instance-method
 browser-compat: api.Performance.mark

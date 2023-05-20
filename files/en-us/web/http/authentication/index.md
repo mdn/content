@@ -1,6 +1,7 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
+page-type: guide
 ---
 
 {{HTTPSidebar}}

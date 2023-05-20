@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.detach()
+title: "NodeIterator: detach() method"
+short-title: detach()
 slug: Web/API/NodeIterator/detach
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.src
+title: "HTMLMediaElement: src property"
+short-title: src
 slug: Web/API/HTMLMediaElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.src
@@ -41,4 +42,4 @@ console.log(obj.src); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.src` property

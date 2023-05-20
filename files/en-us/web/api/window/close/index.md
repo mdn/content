@@ -1,5 +1,6 @@
 ---
-title: Window.close()
+title: "Window: close() method"
+short-title: close()
 slug: Web/API/Window/close
 page-type: web-api-instance-method
 browser-compat: api.Window.close

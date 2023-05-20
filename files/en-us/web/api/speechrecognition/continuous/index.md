@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognition.continuous
+title: "SpeechRecognition: continuous property"
+short-title: continuous
 slug: Web/API/SpeechRecognition/continuous
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognition.continuous

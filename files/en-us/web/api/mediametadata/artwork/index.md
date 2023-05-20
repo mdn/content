@@ -1,5 +1,6 @@
 ---
-title: MediaMetadata.artwork
+title: "MediaMetadata: artwork property"
+short-title: artwork
 slug: Web/API/MediaMetadata/artwork
 page-type: web-api-instance-property
 browser-compat: api.MediaMetadata.artwork

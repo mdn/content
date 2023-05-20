@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.wrapKey()
+title: "SubtleCrypto: wrapKey() method"
+short-title: wrapKey()
 slug: Web/API/SubtleCrypto/wrapKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.wrapKey

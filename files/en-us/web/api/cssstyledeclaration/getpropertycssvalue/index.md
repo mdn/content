@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.getPropertyCSSValue()
+title: "CSSStyleDeclaration: getPropertyCSSValue() method"
+short-title: getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 page-type: web-api-instance-method
 status:

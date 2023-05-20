@@ -1,6 +1,7 @@
 ---
 title: Web accessibility for seizures and physical reactions
 slug: Web/Accessibility/Seizure_disorders
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -531,7 +532,7 @@ The `update` media feature is used to query the ability of the output device to 
 
 ### MDN Navigator.doNotTrack
 
-[From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by web sites, content, or advertising"_.
+[From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by websites, content, or advertising"_.
 
 ### Media Queries Level 5
 

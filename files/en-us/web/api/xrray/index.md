@@ -39,17 +39,19 @@ The {{domxref("XRSession.requestHitTestSource()")}} method takes an `XRRay` obje
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 
 let hitTestSource = null;
 
-xrSession.requestHitTestSource({
-  space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay: new XRRay({y: 0.5})
-}).then((viewerHitTestSource) => {
-  hitTestSource = viewerHitTestSource;
-});
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
 ```
 
 ## Specifications

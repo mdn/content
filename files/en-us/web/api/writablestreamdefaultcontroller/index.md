@@ -15,7 +15,8 @@ None. `WritableStreamDefaultController` instances are created automatically duri
 
 ## Instance properties
 
-None.
+- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the controller.
 
 ## Instance methods
 

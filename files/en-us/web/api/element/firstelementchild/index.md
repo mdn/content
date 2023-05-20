@@ -1,5 +1,6 @@
 ---
-title: Element.firstElementChild
+title: "Element: firstElementChild property"
+short-title: firstElementChild
 slug: Web/API/Element/firstElementChild
 page-type: web-api-instance-property
 browser-compat: api.Element.firstElementChild

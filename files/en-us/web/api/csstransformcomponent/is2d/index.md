@@ -1,5 +1,6 @@
 ---
-title: CSSTransformComponent.is2D
+title: "CSSTransformComponent: is2D property"
+short-title: is2D
 slug: Web/API/CSSTransformComponent/is2D
 page-type: web-api-instance-property
 browser-compat: api.CSSTransformComponent.is2D

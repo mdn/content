@@ -1,5 +1,6 @@
 ---
-title: SVGClipPathElement.transform
+title: "SVGClipPathElement: transform property"
+short-title: transform
 slug: Web/API/SVGClipPathElement/transform
 page-type: web-api-instance-property
 browser-compat: api.SVGClipPathElement.transform
@@ -25,7 +26,7 @@ svg {
 
 ```html
 <div>
-  <svg viewbox="0 0 100 100" width="200" height="200">
+  <svg viewBox="0 0 100 100" width="200" height="200">
     <clipPath
       id="clip1"
       clipPathUnits="objectBoundingBox"

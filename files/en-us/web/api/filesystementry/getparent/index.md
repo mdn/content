@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.getParent()
+title: "FileSystemEntry: getParent() method"
+short-title: getParent()
 slug: Web/API/FileSystemEntry/getParent
 page-type: web-api-instance-method
 browser-compat: api.FileSystemEntry.getParent

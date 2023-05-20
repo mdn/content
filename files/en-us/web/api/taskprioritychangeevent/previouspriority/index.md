@@ -1,5 +1,6 @@
 ---
-title: TaskPriorityChangeEvent.previousPriority
+title: "TaskPriorityChangeEvent: previousPriority property"
+short-title: previousPriority
 slug: Web/API/TaskPriorityChangeEvent/previousPriority
 page-type: web-api-instance-property
 browser-compat: api.TaskPriorityChangeEvent.previousPriority

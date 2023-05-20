@@ -21,7 +21,7 @@ Numbers are most commonly expressed in literal forms like `255` or `3.14159`. Th
 255 === 255.0; // true
 255 === 0xff; // true (hexadecimal notation)
 255 === 0b11111111; // true (binary notation)
-255 === 0.255e+3; // true (decimal exponential notation)
+255 === 0.255e3; // true (decimal exponential notation)
 ```
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)
@@ -100,18 +100,18 @@ new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
 //     =      0000 0001 (mod 2^8)
 //     = 1
 // -257 = 1110 1111 1111
-//      =      1111 1111 (mod 2^8) 
+//      =      1111 1111 (mod 2^8)
 //      = -1 (as signed integer)
 
 new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
-// -257 = 1110 1111 1111 
+// -257 = 1110 1111 1111
 //      =      1111 1111 (mod 2^8)
 //      = 255 (as unsigned integer)
 ```
 
 ## Constructor
 
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
+- {{jsxref("Number/Number", "Number()")}}
   - : Creates a new `Number` value.
 
 When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
@@ -136,17 +136,15 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : Special value representing negative infinity. Returned on overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Special value representing infinity. Returned on overflow.
-- {{jsxref("Number", "Number.prototype")}}
-  - : Allows the addition of properties to the `Number` object.
 
 ## Static methods
 
-- {{jsxref("Number.isNaN()")}}
-  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isFinite()")}}
   - : Determine whether the passed value is a finite number.
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
+- {{jsxref("Number.isNaN()")}}
+  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}

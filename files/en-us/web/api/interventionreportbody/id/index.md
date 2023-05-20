@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.id
+title: "InterventionReportBody: id property"
+short-title: id
 slug: Web/API/InterventionReportBody/id
 page-type: web-api-instance-property
 status:

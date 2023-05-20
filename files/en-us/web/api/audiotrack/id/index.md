@@ -1,5 +1,6 @@
 ---
-title: AudioTrack.id
+title: "AudioTrack: id property"
+short-title: id
 slug: Web/API/AudioTrack/id
 page-type: web-api-instance-property
 browser-compat: api.AudioTrack.id

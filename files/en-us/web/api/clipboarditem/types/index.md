@@ -1,5 +1,6 @@
 ---
-title: ClipboardItem.types
+title: "ClipboardItem: types property"
+short-title: types
 slug: Web/API/ClipboardItem/types
 page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.types

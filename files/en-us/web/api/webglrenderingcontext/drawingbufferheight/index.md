@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.drawingBufferHeight
+title: "WebGLRenderingContext: drawingBufferHeight property"
+short-title: drawingBufferHeight
 slug: Web/API/WebGLRenderingContext/drawingBufferHeight
 page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.drawingBufferHeight

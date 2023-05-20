@@ -1,5 +1,6 @@
 ---
-title: NodeIterator.previousNode()
+title: "NodeIterator: previousNode() method"
+short-title: previousNode()
 slug: Web/API/NodeIterator/previousNode
 page-type: web-api-instance-method
 browser-compat: api.NodeIterator.previousNode
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("Node")}} representing the node before the current node in the set represented by this `NodeIterator`, or `null` if the current node is the first node in the set.
 
 ## Examples
 

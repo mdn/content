@@ -1,5 +1,6 @@
 ---
-title: PointerEvent()
+title: "PointerEvent: PointerEvent() constructor"
+short-title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 page-type: web-api-constructor
 browser-compat: api.PointerEvent.PointerEvent

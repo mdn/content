@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.isBuffer()
+title: "WebGLRenderingContext: isBuffer() method"
+short-title: isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isBuffer

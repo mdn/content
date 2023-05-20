@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.featurePolicy
+title: "HTMLIFrameElement: featurePolicy property"
+short-title: featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
 page-type: web-api-instance-property
 status:

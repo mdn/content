@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.currentSrc
+title: "HTMLMediaElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentSrc
@@ -37,4 +38,4 @@ console.log(obj.currentSrc); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentSrc` property

@@ -1,5 +1,6 @@
 ---
-title: ImageTrackList.selectedIndex
+title: "ImageTrackList: selectedIndex property"
+short-title: selectedIndex
 slug: Web/API/ImageTrackList/selectedIndex
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: FontFaceSet.check()
+title: "FontFaceSet: check() method"
+short-title: check()
 slug: Web/API/FontFaceSet/check
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.check

@@ -26,6 +26,8 @@ The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifie
 /* Global values */
 -webkit-text-stroke-width: inherit;
 -webkit-text-stroke-width: initial;
+-webkit-text-stroke-width: revert;
+-webkit-text-stroke-width: revert-layer;
 -webkit-text-stroke-width: unset;
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: SVGClipPathElement.clipPathUnits
+title: "SVGClipPathElement: clipPathUnits property"
+short-title: clipPathUnits
 slug: Web/API/SVGClipPathElement/clipPathUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGClipPathElement.clipPathUnits
@@ -15,7 +16,7 @@ The read-only **`clipPathUnits`** property of the {{domxref("SVGClipPathElement"
 
 An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are defined in the {{domxref("SVGUnitTypes")}} interface:
 
-- `0` (`SVG_UNIT_TYPE_UNKWOWN`)
+- `0` (`SVG_UNIT_TYPE_UNKNOWN`)
   - : The type is not one of the predefined type.
 - `1` (`SVG_UNIT_TYPE_USERSPACEONUSE`)
   - : Corresponds to a value of `userSpaceOnUse` for the {{SVGAttr("clipPathUnits")}} attribute and means that all coordinates inside the element refer to the user coordinate system as defined when the clipping path was created. It is the default value.
@@ -34,7 +35,7 @@ svg {
 
 ```html
 <div>
-  <svg viewbox="0 0 100 100" width="200" height="200">
+  <svg viewBox="0 0 100 100" width="200" height="200">
     <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
       <circle cx="50" cy="50" r="35" />
     </clipPath>

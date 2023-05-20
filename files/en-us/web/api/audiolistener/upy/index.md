@@ -1,5 +1,6 @@
 ---
-title: AudioListener.upY
+title: "AudioListener: upY property"
+short-title: upY
 slug: Web/API/AudioListener/upY
 page-type: web-api-instance-property
 browser-compat: api.AudioListener.upY
@@ -17,7 +18,7 @@ An {{domxref("AudioParam")}}. Its default value is 1, and it can range between p
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

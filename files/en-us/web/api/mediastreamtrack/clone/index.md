@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.clone()
+title: "MediaStreamTrack: clone() method"
+short-title: clone()
 slug: Web/API/MediaStreamTrack/clone
 page-type: web-api-instance-method
 browser-compat: api.MediaStreamTrack.clone

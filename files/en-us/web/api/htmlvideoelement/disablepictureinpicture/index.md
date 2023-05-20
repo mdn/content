@@ -1,5 +1,6 @@
 ---
-title: HTMLVideoElement.disablePictureInPicture
+title: "HTMLVideoElement: disablePictureInPicture property"
+short-title: disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
 page-type: web-api-instance-property
 browser-compat: api.HTMLVideoElement.disablePictureInPicture

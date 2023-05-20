@@ -1,5 +1,6 @@
 ---
-title: MediaMetadata.artist
+title: "MediaMetadata: artist property"
+short-title: artist
 slug: Web/API/MediaMetadata/artist
 page-type: web-api-instance-property
 browser-compat: api.MediaMetadata.artist

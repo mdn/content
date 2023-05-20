@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.multiple
+title: "HTMLInputElement: multiple property"
+short-title: multiple
 slug: Web/API/HTMLInputElement/multiple
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.multiple

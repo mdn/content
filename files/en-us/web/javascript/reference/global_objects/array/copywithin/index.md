@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Array.copyWithin
 
 {{JSRef}}
 
-The **`copyWithin()`** method shallow copies part of an array
-to another location in the same array and returns it without modifying its length.
+The **`copyWithin()`** method shallow copies part of an array to another location in the same array and returns it without modifying its length.
 
 {{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
@@ -107,4 +106,6 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.copyWithin()")}}

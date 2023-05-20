@@ -1,5 +1,5 @@
 ---
-title: '<button>: The Button element'
+title: "<button>: The Button element"
 slug: Web/HTML/Element/button
 page-type: html-element
 browser-compat: html.elements.button
@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `disabled`
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
-    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`]] (#autocomplete) attribute.
+    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`](#autocomplete) attribute.
 
 - `form`
 
@@ -71,6 +71,20 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `name`
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
+
+- `popovertarget`
+  - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+
+- `popovertargetaction`
+  - : Specifies the the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
+
+    - `"hide"`
+      - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
+    - `"show"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
+    - `"toggle"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
+
 - `type`
 
   - : The default behavior of the button. Possible values are:
@@ -92,7 +106,7 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
-## Example
+## Examples
 
 ```html
 <button name="button">Press me</button>
@@ -108,7 +122,7 @@ Buttons that only show an icon to represent do not have an _accessible name_. Ac
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
-#### Example
+#### Examples
 
 ```html
 <button name="favorite">
@@ -118,6 +132,10 @@ To give an icon button an accessible name, put text in the `<button>` element th
   Add to favorites
 </button>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Icon buttons')}}
 
 If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
 

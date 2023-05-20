@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnectionIceEvent.candidate
+title: "RTCPeerConnectionIceEvent: candidate property"
+short-title: candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnectionIceEvent.candidate

@@ -1,5 +1,6 @@
 ---
-title: NavigationCurrentEntryChangeEvent.navigationType
+title: "NavigationCurrentEntryChangeEvent: navigationType property"
+short-title: navigationType
 slug: Web/API/NavigationCurrentEntryChangeEvent/navigationType
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: Window.document
+title: "Window: document property"
+short-title: document
 slug: Web/API/Window/document
 page-type: web-api-instance-property
 browser-compat: api.Window.document

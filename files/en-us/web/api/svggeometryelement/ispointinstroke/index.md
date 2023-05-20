@@ -1,5 +1,6 @@
 ---
-title: SVGGeometryElement.isPointInStroke()
+title: "SVGGeometryElement: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
 page-type: web-api-instance-method
 browser-compat: api.SVGGeometryElement.isPointInStroke

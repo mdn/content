@@ -34,8 +34,6 @@ The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxR
 
 ### Instance properties on the HTMLVideoElement interface
 
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : The `autoPictureInPicture` property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : The `disablePictureInPicture` property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.
 
@@ -109,7 +107,6 @@ If the value is `null`, no video is in the floating window. So we can request a 
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

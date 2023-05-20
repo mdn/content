@@ -9,9 +9,9 @@ browser-compat: javascript.statements.async_generator_function
 
 The **`async function*`** declaration defines an _async generator function_, which returns an {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} object.
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
-
 You can also define async generator functions using the {{jsxref("AsyncGeneratorFunction")}} constructor or the [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*) syntax.
+
+{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
 
 ## Syntax
 

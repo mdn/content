@@ -19,7 +19,7 @@ Regardless of how content changes are done, they are submitted as pull requests 
 The content changes go through the following stages before they are published on MDN Web Docs:
 
 1. **Submitting changes:** As a pull request author, you submit changes via opening a pull request.
-   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and (After you open a pull request)(#after-you-open-a-pull-request) to learn more about our processes.
+   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and [After you open a pull request](#after-you-open-a-pull-request) to learn more about our processes.
 2. **Reviewing changes:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process).
    See the section [Pull request review process](#pull-request-review-process) for more details.
 3. **Viewing published changes:** Content updated on `mdn/content` goes live within a day of merging via a site rebuild once every 24 hours.

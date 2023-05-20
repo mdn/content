@@ -1,5 +1,6 @@
 ---
-title: SVGAnimatedEnumeration.animVal
+title: "SVGAnimatedEnumeration: animVal property"
+short-title: animVal
 slug: Web/API/SVGAnimatedEnumeration/animVal
 page-type: web-api-instance-property
 browser-compat: api.SVGAnimatedEnumeration.animVal
@@ -25,7 +26,7 @@ svg {
 
 ```html
 <div>
-  <svg viewbox="0 0 100 100" width="200" height="200">
+  <svg viewBox="0 0 100 100" width="200" height="200">
     <clipPath id="clip1" clipPathUnits="userSpaceOnUse">
       <animate
         attributeName="clipPathUnits"

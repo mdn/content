@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.displayName
+title: "VRDisplay: displayName property"
+short-title: displayName
 slug: Web/API/VRDisplay/displayName
 page-type: web-api-instance-property
 status:

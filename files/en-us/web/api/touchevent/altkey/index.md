@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.altKey
+title: "TouchEvent: altKey property"
+short-title: altKey
 slug: Web/API/TouchEvent/altKey
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.altKey

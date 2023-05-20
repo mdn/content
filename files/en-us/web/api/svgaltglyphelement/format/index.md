@@ -1,5 +1,6 @@
 ---
-title: SVGAltGlyphElement.format
+title: "SVGAltGlyphElement: format property"
+short-title: format
 slug: Web/API/SVGAltGlyphElement/format
 page-type: web-api-instance-property
 status:
@@ -8,8 +9,6 @@ browser-compat: api.SVGAltGlyphElement.format
 ---
 
 {{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
-
-{{Deprecated_header}}
 
 The **`SVGAltGlyphElement.format`** property is a
 string that defines the format of the given font. It has the same

@@ -1,5 +1,6 @@
 ---
-title: Element.remove()
+title: "Element: remove() method"
+short-title: remove()
 slug: Web/API/Element/remove
 page-type: web-api-instance-method
 browser-compat: api.Element.remove

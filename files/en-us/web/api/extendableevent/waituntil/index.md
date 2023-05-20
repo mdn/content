@@ -1,5 +1,6 @@
 ---
-title: ExtendableEvent.waitUntil()
+title: "ExtendableEvent: waitUntil() method"
+short-title: waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 page-type: web-api-instance-method
 browser-compat: api.ExtendableEvent.waitUntil

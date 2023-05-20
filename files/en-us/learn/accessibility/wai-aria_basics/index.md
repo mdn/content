@@ -430,10 +430,10 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 ## See also
 
-- [Definition of Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) — ARIA roles reference.
-- [Definitions of States and Properties (all aria-\* attributes)](/en-US/docs/Web/Accessibility/ARIA/Attributes) — properties and states reference.
-- [Deque university code library](https://dequeuniversity.com/library/) — a library of really useful practical examples showing complex UI controls made accessible using WAI-ARIA features.
-- [WAI-ARIA Authoring Practices](https://w3c.github.io/aria-practices/) — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
+- [Aria states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes): All aria-\* attributes
+- [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles): Categories of ARIA roles and the roles covered on MDN
+- [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
+- [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://w3c.github.io/aria-practices/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.maskUnits
+title: "SVGMaskElement: maskUnits property"
+short-title: maskUnits
 slug: Web/API/SVGMaskElement/maskUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.maskUnits
@@ -15,7 +16,7 @@ The read-only **`maskUnits`** property of the {{domxref("SVGMaskElement")}} inte
 
 An {{domxref("SVGAnimatedEnumeration")}} representing the coordinate system. The possible values are defined in the {{domxref("SVGUnitTypes")}} interface:
 
-- `0` (`SVG_UNIT_TYPE_UNKWOWN`)
+- `0` (`SVG_UNIT_TYPE_UNKNOWN`)
   - : The type is not one of the predefined types.
 - `1` (`SVG_UNIT_TYPE_USERSPACEONUSE`)
   - : Corresponds to a value of `userSpaceOnUse` for the {{SVGAttr("maskUnits")}} attribute and means that all coordinates inside the element refer to the user coordinate system as defined when the mask was created. It is the default value.

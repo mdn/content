@@ -1,5 +1,6 @@
 ---
-title: SVGCircleElement.cx
+title: "SVGCircleElement: cx property"
+short-title: cx
 slug: Web/API/SVGCircleElement/cx
 page-type: web-api-instance-property
 browser-compat: api.SVGCircleElement.cx

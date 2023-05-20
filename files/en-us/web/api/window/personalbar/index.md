@@ -1,5 +1,6 @@
 ---
-title: Window.personalbar
+title: "Window: personalbar property"
+short-title: personalbar
 slug: Web/API/Window/personalbar
 page-type: web-api-instance-property
 browser-compat: api.Window.personalbar

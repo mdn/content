@@ -234,7 +234,7 @@ document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
 
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
+What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field has been updated for us:
 
 ```json
 "dependencies": {

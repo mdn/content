@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getStats()
+title: "RTCPeerConnection: getStats() method"
+short-title: getStats()
 slug: Web/API/RTCPeerConnection/getStats
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getStats

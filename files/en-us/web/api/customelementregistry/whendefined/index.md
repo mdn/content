@@ -1,5 +1,6 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: "CustomElementRegistry: whenDefined() method"
+short-title: whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.whenDefined
@@ -24,7 +25,7 @@ whenDefined(name)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
+A {{jsxref("Promise")}} that fulfills with the [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements)'s constructor when a custom element becomes defined with the given name. If a custom element has already been defined with the name, the promise will immediately fulfill.
 
 The promise is rejected with a `SyntaxError` {{domxref("DOMException")}} if the name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
 

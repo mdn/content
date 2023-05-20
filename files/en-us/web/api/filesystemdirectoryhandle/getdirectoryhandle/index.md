@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.getDirectoryHandle()
+title: "FileSystemDirectoryHandle: getDirectoryHandle() method"
+short-title: getDirectoryHandle()
 slug: Web/API/FileSystemDirectoryHandle/getDirectoryHandle
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle

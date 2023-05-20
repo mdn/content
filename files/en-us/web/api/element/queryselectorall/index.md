@@ -1,5 +1,6 @@
 ---
-title: Element.querySelectorAll()
+title: "Element: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 page-type: web-api-instance-method
 browser-compat: api.Element.querySelectorAll
@@ -33,7 +34,7 @@ querySelectorAll(selectors)
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
 > special care must be taken when writing string literals using these characters. See
-> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more information.
+> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more information.
 
 ### Return value
 

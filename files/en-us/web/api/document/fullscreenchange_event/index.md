@@ -1,5 +1,6 @@
 ---
 title: "Document: fullscreenchange event"
+short-title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 page-type: web-api-event
 browser-compat: api.Document.fullscreenchange_event
@@ -106,7 +107,7 @@ document.getElementById("toggle-fullscreen").addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Logging fullscreenchange events", 640, 250, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Logging fullscreenchange events", 640, 250, "", "", "", "fullscreen")}}
 
 ## Specifications
 

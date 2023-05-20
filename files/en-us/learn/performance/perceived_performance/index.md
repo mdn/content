@@ -33,7 +33,7 @@ This article provides a brief introduction to the factors that affect perceived 
 
 ## Overview
 
-The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important that the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
+The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important than the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it _feels_ for your users.
 
 A good general rule for improving perceived performance is that it is usually better to provide a quick response and regular status updates than make the user wait until an operation fully completes (before providing any information). For example, when loading a page it is better to display the text when it arrives rather than wait for all the images and other resources. Even though the content has not fully downloaded the user can see something is happening and they can start interacting with the content.
 
@@ -86,7 +86,7 @@ Make things like type-ahead a progressive enhancement: use CSS to display input 
 
 ### Make task initiators appear more interactive
 
-Making a content request on `keydown` rather than waiting for `keyup` can shave 200ms off the perceived load of the content. Adding an interesting but unobtrusive 200ms animation to that `keyup` event can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.
+Making a content request on `keydown` rather than waiting for `keyup` can reduce the perceived load time of the content by 200ms. Adding an interesting but unobtrusive 200ms animation to that `keyup` event can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.
 
 ## Conclusion
 

@@ -58,7 +58,7 @@ The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifyin
 
 In Flexbox, the `gap` property is applied to the flex container. It creates a fixed space between adjacent flex items. However, the `gap` property is not the only thing that can put space between items. Margins, paddings, `justify-content`, and `align-content` can also increase the size of the gutter, affecting the actual size of the gap.
 
-To see how the `gap` property differs from `margin` in both axes, try adding a `gap` to the container `.box` and change the `margin` value on the `.box > *` flex items.
+To see how the `gap` property differs from `margin` in both axes, try changing the `gap` value in the container `.box` and adding a `margin` value to the `.box > *` rule in the stylesheet below. Click the Reset button to revert to the previous values.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 

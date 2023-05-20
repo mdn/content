@@ -1,5 +1,6 @@
 ---
-title: FileSystemSyncAccessHandle.read()
+title: "FileSystemSyncAccessHandle: read() method"
+short-title: read()
 slug: Web/API/FileSystemSyncAccessHandle/read
 page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.read

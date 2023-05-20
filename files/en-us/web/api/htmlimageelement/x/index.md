@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x property"
+short-title: x
 slug: Web/API/HTMLImageElement/x
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.x
@@ -47,7 +48,7 @@ The example below demonstrates the use of the `HTMLImageElement` properties
 
 ### HTML
 
-In this example, we see a table showing information about users of a web site,
+In this example, we see a table showing information about users of a website,
 including their user ID, their full name, and their avatar image.
 
 ```html

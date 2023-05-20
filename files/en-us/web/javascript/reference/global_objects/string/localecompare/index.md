@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.String.localeCompare
 
 The **`localeCompare()`** method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method simply calls `Intl.Collator`.
 
+When comparing large numbers of strings, such as in sorting large arrays, it is better to create an {{jsxref("Intl.Collator")}} object and use the function provided by its {{jsxref("Intl/Collator/compare", "compare()")}} method.
+
 {{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
 ## Syntax
@@ -61,13 +63,9 @@ before, after or is equivalent to the `compareString`.
 > **Warning:** Do not rely on exact return values of `-1` or `1`!
 >
 > Negative and positive integer results vary between browsers (as well as between
-> browser versions) because the W3C specification only mandates negative and positive
+> browser versions) because the ECMAScript specification only mandates negative and positive
 > values. Some browsers may return `-2` or `2`, or even some other
 > negative or positive value.
-
-## Performance
-
-When comparing large numbers of strings, such as in sorting large arrays, it is better to create an [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) object and use the function provided by its [`compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) method.
 
 ## Examples
 

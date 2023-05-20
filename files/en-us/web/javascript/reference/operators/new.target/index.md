@@ -29,7 +29,7 @@ new.target
 
 ## Description
 
-The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), but a special expression syntax.
+The `new.target` syntax consists of the keyword `new`, a dot, and the identifier `target`. Because `new` is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an identifier, this is not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), but a special expression syntax.
 
 The `new.target` meta-property is available in all function/class bodies; using `new.target` outside of functions or classes is a syntax error.
 
