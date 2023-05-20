@@ -31,10 +31,15 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### Values
 
 - `<rectangular-color-space>`
+
   - : One of the keywords `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, and `xyz-d65`.
+
 - `<polar-color-space>`
+
   - : One of the keywords `hsl`, `hwb`, `lch`, and `oklch`.
+
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
+
   - : The algorithm for hue interpolation. It defaults to `shorter hue`.
 
 ### Formal syntax
