@@ -137,7 +137,7 @@ def youngest(request):
 
 ### Rendering data
 
-Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of document.
+Web frameworks often provide templating systems. These allow you to specify the structure of an output document, using placeholders for data that will be added when a page is generated. Templates are often used to create HTML, but can also create other types of documents.
 
 Web frameworks often provide a mechanism to make it easy to generate other formats from stored data, including {{glossary("JSON")}} and {{glossary("XML")}}.
 

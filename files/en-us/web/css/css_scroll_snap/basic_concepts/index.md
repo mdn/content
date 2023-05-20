@@ -18,7 +18,7 @@ You can then define scroll snapping on the scroll container by using the followi
 
 - {{cssxref("scroll-snap-type")}}: Using this property, you can define whether or not the scrollable viewport can be snapped to, whether snapping is required or optional, and the axis on which the snapping should occur.
 - {{cssxref("scroll-snap-align")}}: This property is set on every child of the scroll container and you can use it to define each child's snap position or lack thereof. (Using the {{cssxref("scroll-snap-stop")}} property, you can ensure that a child is snapped to during scrolling and not passed over. You can also set several {{cssxref("scroll-margin")}} properties on child elements that are snapped to during scrolling to create an outset from the defined box.)
-Optional {{cssxref("scroll-padding")}} properties can be set on the scroll container to create a snapping offset.
+  Optional {{cssxref("scroll-padding")}} properties can be set on the scroll container to create a snapping offset.
 
 The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` applies on all the children of the `<section>` element, dictating the point where the scrolling of each child should stop.
 
