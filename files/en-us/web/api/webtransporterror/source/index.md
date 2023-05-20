@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportError.source
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`source`** read-only property of the {{domxref("WebTransportError")}} interface returns an enumerated value indicating the source of the error.
 
