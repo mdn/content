@@ -977,7 +977,8 @@
         "/docs/Web/API/Performance_API/High_precision_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
-        "/docs/Web/API/Performance_API/User_timing"
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
@@ -1071,6 +1072,24 @@
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
       "properties": ["Document.pointerLockElement"],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+    },
+    "Popover API": {
+      "overview": ["Popover API"],
+      "guides": ["/docs/Web/API/Popover_API/Using"],
+      "interfaces": ["ToggleEvent"],
+      "methods": [
+        "HTMLElement.hidePopover()",
+        "HTMLElement.showPopover()",
+        "HTMLElement.togglePopover()"
+      ],
+      "properties": [
+        "HTMLButtonElement.popoverTargetAction",
+        "HTMLButtonElement.popoverTargetElement",
+        "HTMLElement.popover",
+        "HTMLInputElement.popoverTargetAction",
+        "HTMLInputElement.popoverTargetElement"
+      ],
+      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1638,22 +1657,22 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
       "overview": ["Web components"],
@@ -2017,6 +2036,7 @@
         "RTCRemoteOutboundRtpStreamStats",
         "RTCRtpContributingSourceStats",
         "RTCPeerConnectionStats",
+        "RTCAudioSourceStats",
         "RTCMediaStreamStats",
         "RTCMediaHandlerStats",
         "RTCVideoHandlerStats",
@@ -2124,6 +2144,7 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
         "WebTransportError"
       ],
       "methods": [],

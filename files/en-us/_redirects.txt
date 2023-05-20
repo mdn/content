@@ -3631,7 +3631,9 @@
 /en-US/docs/Glossary/XForm	/en-US/docs/Glossary/XForms
 /en-US/docs/Glossary/XHR_(XMLHttpRequest)	/en-US/docs/Glossary/XMLHttpRequest
 /en-US/docs/Glossary/XSS	/en-US/docs/Glossary/Cross-site_scripting
+/en-US/docs/Glossary/block-level	/en-US/docs/Glossary/Block-level_content
 /en-US/docs/Glossary/entities	/en-US/docs/Glossary/Entity
+/en-US/docs/Glossary/inline-level	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Glossary/l10n	/en-US/docs/Glossary/Localization
 /en-US/docs/Glossary/q_values	/en-US/docs/Glossary/Quality_values
 /en-US/docs/Glossarybandwidth	/en-US/docs/Glossary/Bandwidth
@@ -3640,7 +3642,7 @@
 /en-US/docs/HTML	/en-US/docs/Web/HTML
 /en-US/docs/HTML/Attributes	/en-US/docs/Web/HTML/Attributes
 /en-US/docs/HTML/Bad_copy_pasting_habits	/en-US/docs/Learn/HTML/Introduction_to_HTML
-/en-US/docs/HTML/Block-level_elements	/en-US/docs/Web/HTML/Block-level_elements
+/en-US/docs/HTML/Block-level_elements	/en-US/docs/Glossary/Block-level_content
 /en-US/docs/HTML/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
 /en-US/docs/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
@@ -3665,7 +3667,6 @@
 /en-US/docs/HTML/Element/acronym-redirect-1	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/acronym2	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML/Element/applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML/Element/area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/area-redirect-1	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/article	/en-US/docs/Web/HTML/Element/article
@@ -3916,7 +3917,7 @@
 /en-US/docs/HTML/HTML_Elements/tr	/en-US/docs/Web/HTML/Element/tr
 /en-US/docs/HTML/HTML_Elements/track	/en-US/docs/Web/HTML/Element/track
 /en-US/docs/HTML/Historical_artifacts_to_avoid	/en-US/docs/Learn/HTML/Introduction_to_HTML
-/en-US/docs/HTML/Inline_elements	/en-US/docs/Web/HTML/Inline_elements
+/en-US/docs/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/HTML/Intro	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Learn/HTML
@@ -3930,14 +3931,13 @@
 /en-US/docs/HTML/WebVTT	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/HTML/aside	/en-US/docs/Web/HTML/Element/aside
 /en-US/docs/HTML/tag	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTML:Block-level_elements	/en-US/docs/Web/HTML/Block-level_elements
+/en-US/docs/HTML:Block-level_elements	/en-US/docs/Glossary/Block-level_content
 /en-US/docs/HTML:Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/HTML:Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML:Element:a	/en-US/docs/Web/HTML/Element/a
 /en-US/docs/HTML:Element:abbr	/en-US/docs/Web/HTML/Element/abbr
 /en-US/docs/HTML:Element:acronym	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML:Element:address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML:Element:applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
@@ -3977,7 +3977,7 @@
 /en-US/docs/HTML:Element:strong	/en-US/docs/Web/HTML/Element/strong
 /en-US/docs/HTML:Element:tt	/en-US/docs/Web/HTML/Element/tt
 /en-US/docs/HTML:Element:ul	/en-US/docs/Web/HTML/Element/ul
-/en-US/docs/HTML:Inline_elements	/en-US/docs/Web/HTML/Inline_elements
+/en-US/docs/HTML:Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/HTML:The_Importance_of_Correct_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/HTML:tag	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
@@ -11852,6 +11852,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
+/en-US/docs/Web/Guide/API/DOM/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
@@ -12018,6 +12019,7 @@
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
 /en-US/docs/Web/HTML/Applying_color	/en-US/docs/Web/CSS/CSS_Colors/Applying_color
+/en-US/docs/Web/HTML/Block-level_elements	/en-US/docs/Glossary/Block-level_content
 /en-US/docs/Web/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/Web/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
@@ -12069,8 +12071,9 @@
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
-/en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Web/HTML/Inline_elements
-/en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Web/HTML/Inline_elements
+/en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
+/en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
+/en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/Web/HTML/Link_types	/en-US/docs/Web/HTML/Attributes/rel
@@ -12274,6 +12277,7 @@
 /en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
@@ -12306,6 +12310,7 @@
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/en-US/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode

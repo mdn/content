@@ -154,7 +154,9 @@ Add the line shown at the bottom of the following block to your main HTML templa
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.</p>
+<p>
+  You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.
+</p>
 ```
 
 Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.

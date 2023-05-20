@@ -1,7 +1,6 @@
 ---
 title: Information contained in a WebIDL file
-slug: >-
-  MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}

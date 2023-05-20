@@ -99,12 +99,12 @@ Let's get started. First of all, add the following lines inside your {{htmleleme
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -149,7 +149,7 @@ Next, add the following below your previous JavaScript:
 
 ```js
 function checkGuess() {
-  alert('I am a placeholder');
+  alert("I am a placeholder");
 }
 ```
 
@@ -185,9 +185,9 @@ First let's look at arithmetic operators, for example:
 You can also use the `+` operator to join text strings together (in programming, this is called _concatenation_). Try entering the following lines, one at a time:
 
 ```js
-const name = 'Bingo';
+const name = "Bingo";
 name;
-const hello = ' says hello!';
+const hello = " says hello!";
 hello;
 const greeting = name + hello;
 greeting;
@@ -196,15 +196,15 @@ greeting;
 There are also some shortcut operators available, called augmented [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new text string to an existing one and return the result, you could do this:
 
 ```js
-let name1 = 'Bingo';
-name1 += ' says hello!';
+let name1 = "Bingo";
+name1 += " says hello!";
 ```
 
 This is equivalent to
 
 ```js
-let name2 = 'Bingo';
-name2 = name2 + ' says hello!';
+let name2 = "Bingo";
+name2 = name2 + " says hello!";
 ```
 
 When we are running true/false tests (for example inside conditionals — see [below](#conditionals)) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
@@ -275,31 +275,31 @@ At this point, replace your current `checkGuess()` function with this version in
 function checkGuess() {
   const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: ';
+    guesses.textContent = "Previous guesses: ";
   }
   guesses.textContent += `${userGuess} `;
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Congratulations! You got it right!';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "Congratulations! You got it right!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!GAME OVER!!!';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "!!!GAME OVER!!!";
+    lowOrHi.textContent = "";
     setGameOver();
   } else {
-    lastResult.textContent = 'Wrong!';
-    lastResult.style.backgroundColor = 'red';
+    lastResult.textContent = "Wrong!";
+    lastResult.style.backgroundColor = "red";
     if (userGuess < randomNumber) {
-      lowOrHi.textContent = 'Last guess was too low!';
+      lowOrHi.textContent = "Last guess was too low!";
     } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = 'Last guess was too high!';
+      lowOrHi.textContent = "Last guess was too high!";
     }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -310,7 +310,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
 - Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses, we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case, the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
 
   ```js
-  guessCount === 1
+  guessCount === 1;
   ```
 
   If it is, we make the guesses paragraph's text content equal to `Previous guesses:`. If not, we don't.
@@ -331,7 +331,7 @@ At this point, we have a nicely implemented `checkGuess()` function, but it won'
 Add the following line below your `checkGuess()` function:
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
 Here we are adding an event listener to the `guessSubmit` button. This is a method that takes two input values (called _arguments_) — the type of event we are listening out for (in this case `click`) as a string, and the code we want to run when the event occurs (in this case the `checkGuess()` function). Note that we don't need to specify the parentheses when writing it inside {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
@@ -346,10 +346,10 @@ Let's add that `setGameOver()` function to the bottom of our code and then walk 
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start new game";
   document.body.append(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -363,19 +363,19 @@ Now we need to define this function too! Add the following code, again to the bo
 function resetGame() {
   guessCount = 1;
 
-  const resetParas = document.querySelectorAll('.resultParas p');
+  const resetParas = document.querySelectorAll(".resultParas p");
   for (const resetPara of resetParas) {
-    resetPara.textContent = '';
+    resetPara.textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -401,7 +401,7 @@ One part of the above code that we need to take a more detailed look at is the [
 To start with, go to your [browser developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) again, and enter the following:
 
 ```js
-const fruits = ['apples', 'bananas', 'cherries'];
+const fruits = ["apples", "bananas", "cherries"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
@@ -422,9 +422,9 @@ In this case, the code inside the brackets is writing out `fruit` to the console
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
 ```js
-const resetParas = document.querySelectorAll('.resultParas p');
+const resetParas = document.querySelectorAll(".resultParas p");
 for (const resetPara of resetParas) {
-  resetPara.textContent = '';
+  resetPara.textContent = "";
 }
 ```
 
@@ -447,7 +447,7 @@ Let's analyze what's going on here in a bit more detail. In JavaScript, most of 
 In this particular case, we first created a `guessField` constant that stores a reference to the text input form field in our HTML — the following line can be found amongst our declarations near the top of the code:
 
 ```js
-const guessField = document.querySelector('.guessField');
+const guessField = document.querySelector(".guessField");
 ```
 
 To get this reference, we used the {{domxref("document.querySelector", "querySelector()")}} method of the {{domxref("document")}} object. `querySelector()` takes one piece of information — a [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) that selects the element you want a reference to.
@@ -479,7 +479,7 @@ Let's play with some browser objects a bit.
 6. Now try entering the following line:
 
    ```js
-   guesses.value
+   guesses.value;
    ```
 
    The browser returns `undefined`, because paragraphs don't have the `value` property.
@@ -487,16 +487,16 @@ Let's play with some browser objects a bit.
 7. To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
 
    ```js
-   guesses.textContent = 'Where is my paragraph?';
+   guesses.textContent = "Where is my paragraph?";
    ```
 
 8. Now for some fun stuff. Try entering the below lines, one by one:
 
    ```js
-   guesses.style.backgroundColor = 'yellow';
-   guesses.style.fontSize = '200%';
-   guesses.style.padding = '10px';
-   guesses.style.boxShadow = '3px 3px 6px black';
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
    ```
 
    Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.

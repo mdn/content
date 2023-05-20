@@ -37,7 +37,7 @@ The following sections show you how to call the application generator, and provi
 >
 > - The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 > - The _Express Application Generator_ declares most variables using `var`.
-> We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
+>   We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
 > - This tutorial uses the version of _Express_ and other dependencies that are defined in the **package.json** created by the _Express Application Generator_.
 >   These are not (necessarily) the latest version, and you may want to update them when deploying a real application to production.
 

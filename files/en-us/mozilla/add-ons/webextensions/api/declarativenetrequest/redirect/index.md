@@ -7,20 +7,28 @@ browser-compat: webextensions.api.declarativeNetRequest.Redirect
 
 {{AddonSidebar()}}
 
-Details describing how a redirect should be performed. Only valid for redirect rules.
+Details describing how a redirect should be performed, as the `redirect` property of a {{WebExtAPIRef("declarativeNetRequest.RuleAction", "RuleAction")}}. Only valid for redirect rules.
+
+> **Note:**
+> A redirect action does not redirect the request, and the request continues as usual when:
+>
+> - the action does not change the request.
+> - the redirect URL is invalid (e.g., the value of {{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} is not a valid URL).
 
 ## Type
 
 Values of this type are objects. They contain these properties:
 
 - `extensionPath` {{optional_inline}}
-  - : A `string`. The path relative to the extension directory. Should start with '/'.
+  - : A `string`. The path relative to the extension directory. Should start with '/'. The initiator of the request can only follow the redirect when the resource is listed in [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources).
 - `regexSubstitution` {{optional_inline}}
   - : A `string`. The substitution pattern for rules that specify a `regexFilter`. The first match of `regexFilter` within the URL is replaced with this pattern. Within `regexSubstitution`, backslash-escaped digits (`\1` to `\9`) are used to insert the corresponding capture groups. `\0` refers to the entire matching text.
 - `transform` {{optional_inline}}
   - : {{WebExtAPIRef("declarativeNetRequest.URLTransform")}}. The URL transformations to perform.
 - `url` {{optional_inline}}
   - : A `string`. The redirect URL. Redirects to JavaScript URLs are not allowed.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
