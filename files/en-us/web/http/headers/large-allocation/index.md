@@ -1,6 +1,7 @@
 ---
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
+page-type: http-header
 status:
   - deprecated
   - non-standard

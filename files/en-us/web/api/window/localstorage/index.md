@@ -1,5 +1,6 @@
 ---
-title: Window.localStorage
+title: "Window: localStorage property"
+short-title: localStorage
 slug: Web/API/Window/localStorage
 page-type: web-api-instance-property
 browser-compat: api.Window.localStorage

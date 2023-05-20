@@ -1,5 +1,6 @@
 ---
-title: MediaMetadata.album
+title: "MediaMetadata: album property"
+short-title: album
 slug: Web/API/MediaMetadata/album
 page-type: web-api-instance-property
 browser-compat: api.MediaMetadata.album

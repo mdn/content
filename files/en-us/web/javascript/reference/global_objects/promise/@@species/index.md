@@ -1,5 +1,5 @@
 ---
-title: get Promise[@@species]
+title: Promise[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Promise/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Promise.@@species

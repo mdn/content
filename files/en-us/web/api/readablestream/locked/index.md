@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.locked
+title: "ReadableStream: locked property"
+short-title: locked
 slug: Web/API/ReadableStream/locked
 page-type: web-api-instance-property
 browser-compat: api.ReadableStream.locked
@@ -36,3 +37,8 @@ stream.locked;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

@@ -1,5 +1,6 @@
 ---
-title: AudioListener.setPosition()
+title: "AudioListener: setPosition() method"
+short-title: setPosition()
 slug: Web/API/AudioListener/setPosition
 page-type: web-api-instance-method
 status:

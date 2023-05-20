@@ -1,5 +1,6 @@
 ---
-title: Node.contains()
+title: "Node: contains() method"
+short-title: contains()
 slug: Web/API/Node/contains
 page-type: web-api-instance-method
 browser-compat: api.Node.contains

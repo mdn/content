@@ -43,6 +43,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
+- {{domxref("HTMLElement.popover")}} {{Experimental_Inline}}
+  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -88,6 +90,12 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
   - : Sends a mouse click event to the element.
 - {{DOMxRef("HTMLElement.focus()")}}
   - : Makes the element the current keyboard focus.
+- {{DOMxRef("HTMLElement.hidePopover()")}} {{Experimental_Inline}}
+  - : Hides a popover element by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
+- {{DOMxRef("HTMLElement.showPopover()")}} {{Experimental_Inline}}
+  - : Shows a popover element by adding it to the {{glossary("top layer")}} and removing `display: none;` from its styles.
+- {{DOMxRef("HTMLElement.togglePopover()")}} {{Experimental_Inline}}
+  - : Toggles a popover element between the hidden and showing states.
 
 ## Events
 
@@ -101,6 +109,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
+- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+  - : Fired when the element is a popover, before it is hidden or shown.
+- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+  - : Fired when the element is a popover, just after it is hidden or shown.
 
 ### Animation events
 

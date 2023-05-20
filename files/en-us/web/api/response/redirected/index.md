@@ -1,5 +1,6 @@
 ---
-title: Response.redirected
+title: "Response: redirected property"
+short-title: redirected
 slug: Web/API/Response/redirected
 page-type: web-api-instance-property
 browser-compat: api.Response.redirected

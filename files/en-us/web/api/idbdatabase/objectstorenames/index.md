@@ -1,5 +1,6 @@
 ---
-title: IDBDatabase.objectStoreNames
+title: "IDBDatabase: objectStoreNames property"
+short-title: objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.objectStoreNames

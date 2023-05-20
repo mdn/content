@@ -9,8 +9,7 @@ browser-compat: javascript.builtins.TypedArray.sort
 
 The **`sort()`** method sorts the elements of a typed array
 numerically _in place_ and returns the typed array. This method has the same
-algorithm as {{jsxref("Array.prototype.sort()")}}, except that sorts the values
-numerically instead of as strings. _TypedArray_ is one of the
+algorithm as {{jsxref("Array.prototype.sort()")}}, except that it sorts the values numerically instead of as strings by default. _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}
@@ -25,6 +24,7 @@ sort(compareFn)
 ### Parameters
 
 - `compareFunction` {{optional_inline}}
+
   - : A function that defines the sort order. The return value should be a number whose positivity indicates the relative order of the two elements. The function is called with the following arguments:
 
     - `a`

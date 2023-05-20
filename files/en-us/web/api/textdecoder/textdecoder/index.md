@@ -1,5 +1,6 @@
 ---
-title: TextDecoder()
+title: "TextDecoder: TextDecoder() constructor"
+short-title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
 page-type: web-api-constructor
 browser-compat: api.TextDecoder.TextDecoder

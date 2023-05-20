@@ -1,6 +1,7 @@
 ---
 title: "ARIA: contentinfo role"
 slug: Web/Accessibility/ARIA/Roles/contentinfo_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#contentinfo
   - https://w3c.github.io/aria-practices/#aria_lh_contentinfo

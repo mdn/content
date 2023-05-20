@@ -1,5 +1,6 @@
 ---
-title: setTimeout()
+title: setTimeout() global function
+short-title: setTimeout()
 slug: Web/API/setTimeout
 page-type: web-api-global-function
 browser-compat: api.setTimeout
@@ -231,7 +232,7 @@ setTimeout(() => {
 }, 500);
 ```
 
-A string passed to {{domxref("setTimeout()")}} is evaluated in the global context, so local symbols in the context where {{domxref("setTimeout()")}} was called will not be available when the string is evaluated as code.
+A string passed to `setTimeout()` is evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
 
 ### Reasons for delays longer than specified
 
@@ -434,7 +435,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example).
+See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
 
 ## Specifications
 

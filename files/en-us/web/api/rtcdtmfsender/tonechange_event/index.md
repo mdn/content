@@ -1,5 +1,6 @@
 ---
 title: "RTCDTMFSender: tonechange event"
+short-title: tonechange
 slug: Web/API/RTCDTMFSender/tonechange_event
 page-type: web-api-event
 browser-compat: api.RTCDTMFSender.tonechange_event

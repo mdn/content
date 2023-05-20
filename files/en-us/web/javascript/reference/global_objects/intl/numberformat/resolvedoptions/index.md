@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this `Intl.NumberFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
 

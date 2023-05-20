@@ -1,5 +1,6 @@
 ---
-title: Headers.values()
+title: "Headers: values() method"
+short-title: values()
 slug: Web/API/Headers/values
 page-type: web-api-instance-method
 browser-compat: api.Headers.values

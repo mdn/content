@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.opened
+title: "HIDDevice: opened property"
+short-title: opened
 slug: Web/API/HIDDevice/opened
 page-type: web-api-instance-property
 status:

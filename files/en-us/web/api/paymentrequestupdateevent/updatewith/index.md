@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestUpdateEvent.updateWith()
+title: "PaymentRequestUpdateEvent: updateWith() method"
+short-title: updateWith()
 slug: Web/API/PaymentRequestUpdateEvent/updateWith
 page-type: web-api-instance-method
 browser-compat: api.PaymentRequestUpdateEvent.updateWith

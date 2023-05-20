@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.src
+title: "HTMLMediaElement: src property"
+short-title: src
 slug: Web/API/HTMLMediaElement/src
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.src

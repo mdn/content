@@ -1,10 +1,11 @@
 ---
-title: LayoutShift.hadRecentInput
+title: "LayoutShift: hadRecentInput property"
+short-title: hadRecentInput
 slug: Web/API/LayoutShift/hadRecentInput
 page-type: web-api-instance-property
-browser-compat: api.LayoutShift.hadRecentInput
 status:
   - experimental
+browser-compat: api.LayoutShift.hadRecentInput
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}

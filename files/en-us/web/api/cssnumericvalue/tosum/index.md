@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.toSum()
+title: "CSSNumericValue: toSum() method"
+short-title: toSum()
 slug: Web/API/CSSNumericValue/toSum
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.toSum

@@ -1,5 +1,6 @@
 ---
-title: FileReader.result
+title: "FileReader: result property"
+short-title: result
 slug: Web/API/FileReader/result
 page-type: web-api-instance-property
 browser-compat: api.FileReader.result

@@ -1,5 +1,6 @@
 ---
 title: "WakeLockSentinel: release event"
+short-title: release
 slug: Web/API/WakeLockSentinel/release_event
 page-type: web-api-event
 browser-compat: api.WakeLockSentinel.release_event

@@ -1,5 +1,6 @@
 ---
-title: FileSystemWritableFileStream.truncate()
+title: "FileSystemWritableFileStream: truncate() method"
+short-title: truncate()
 slug: Web/API/FileSystemWritableFileStream/truncate
 page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.truncate

@@ -1,5 +1,6 @@
 ---
-title: Window.setImmediate()
+title: "Window: setImmediate() method"
+short-title: setImmediate()
 slug: Web/API/Window/setImmediate
 page-type: web-api-instance-method
 browser-compat: api.Window.setImmediate

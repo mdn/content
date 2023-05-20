@@ -39,9 +39,9 @@ If `separator` is an empty string (`""`), `str` is converted to an array of each
 
 > **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator`.
 
-> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
+> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (code points), but by UTF-16 code units. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
 
-If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode codepoints depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
+If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode code points depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
 
 ```js
 "😄😄".split(/(?:)/); // [ "\ud83d", "\ude04", "\ud83d", "\ude04" ]
@@ -169,7 +169,7 @@ console.log(splits);
 // [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
+> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) for digits between 0 and 9.
 
 ### Using a custom splitter
 
@@ -295,4 +295,4 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

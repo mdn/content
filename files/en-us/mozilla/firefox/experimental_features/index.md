@@ -18,46 +18,6 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### inert attribute
-
-The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}. When present, it may make the browser "ignore" the element from assistive technologies, page search, and text selection. For more details on the status of this feature, see [Firefox bug 1655722](https://bugzil.la/1655722).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>html5.inert.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Layout for input type="search"
 
 Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
@@ -239,8 +199,8 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>109</td>
-      <td>No</td>
+      <td>113</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -594,47 +554,6 @@ The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that cont
   </tbody>
 </table>
 
-### linear() easing function
-
-The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
-(See [Firefox bug 1764126](https://bugzil.la/1764126) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>104</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>104</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### animation-composition property
 
 The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
@@ -799,6 +718,88 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
+### page-orientation
+
+The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
+See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.page-orientation.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### prefers-reduced-transparency media feature
+
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.prefers-reduced-transparency.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -887,89 +888,9 @@ The `groupBy` method should be used when strings can be used to represent elemen
   </tbody>
 </table>
 
-#### Static module import in workers
-
-[Workers](/en-US/docs/Web/API/Web_Workers_API) can now [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1247687](https://bugzil.la/1247687)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.workers.modules.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
-
-#### Interface: OffscreenCanvas
-
-The {{domxref("OffscreenCanvas")}} interface provides a canvas that can be rendered offscreen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts. (See [Firefox bug 1390089](https://bugzil.la/1390089) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>44</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>gfx.offscreencanvas.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
 
 #### Hit regions
 
@@ -1017,7 +938,7 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-This new API provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. The [specification](https://gpuweb.github.io/gpuweb/) is still a work-in-progress. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
 <table>
   <thead>
@@ -1030,8 +951,8 @@ This new API provides low-level support for performing computation and graphics 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>73</td>
-      <td>No</td>
+      <td>113</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1093,6 +1014,90 @@ This new API provides low-level support for performing computation and graphics 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>media.setsinkid.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### WebTransport API
+
+#### WebTransport API core classes
+
+This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### WebTransport datagrams
+
+This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.datagrams.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1188,49 +1193,12 @@ Permitted values are:
   </tbody>
 </table>
 
-#### AV1 support for Firefox on Android
-
-This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web/Media/Formats/Video_codecs#av1). This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">—</td>
-    </tr>
-  </tbody>
-</table>
-
 #### JPEG XL support
 
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
+See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
 <table>
   <thead>
@@ -1248,13 +1216,13 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1820,8 +1788,6 @@ The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked 
 Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
 See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
-Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
-
 <table>
   <thead>
     <tr>
@@ -1833,8 +1799,8 @@ Note that since locking the screen orientation isn't typically supported on desk
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
-      <td>No</td>
+      <td>111</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -2089,7 +2055,7 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 
 ### SameSite=Lax by default
 
-[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax) have a default value of [`Lax`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#lax).
+[`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
 With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 

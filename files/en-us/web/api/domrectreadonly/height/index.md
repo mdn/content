@@ -1,5 +1,6 @@
 ---
-title: DOMRectReadOnly.height
+title: "DOMRectReadOnly: height property"
+short-title: height
 slug: Web/API/DOMRectReadOnly/height
 page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.height

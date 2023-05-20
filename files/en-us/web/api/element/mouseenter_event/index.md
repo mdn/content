@@ -1,5 +1,6 @@
 ---
 title: "Element: mouseenter event"
+short-title: mouseenter
 slug: Web/API/Element/mouseenter_event
 page-type: web-api-event
 browser-compat: api.Element.mouseenter_event
@@ -100,7 +101,7 @@ Combined with the corresponding `mouseleave` (which is fired at the element when
 
 ## Examples
 
-The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
+The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#examples) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
 
 ### mouseenter
 

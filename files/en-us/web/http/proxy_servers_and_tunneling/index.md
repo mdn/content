@@ -1,6 +1,7 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
+page-type: guide
 ---
 
 {{HTTPSidebar}}

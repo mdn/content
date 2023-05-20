@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.height
+title: "SVGMaskElement: height property"
+short-title: height
 slug: Web/API/SVGMaskElement/height
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.height

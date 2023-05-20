@@ -1,5 +1,6 @@
 ---
-title: URL.protocol
+title: "URL: protocol property"
+short-title: protocol
 slug: Web/API/URL/protocol
 page-type: web-api-instance-property
 browser-compat: api.URL.protocol

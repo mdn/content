@@ -37,7 +37,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 #### Other changes
 
-- The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+- The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 - The {{ cssxref("azimuth") }} CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.

@@ -1,5 +1,6 @@
 ---
 title: "AudioScheduledSourceNode: ended event"
+short-title: ended
 slug: Web/API/AudioScheduledSourceNode/ended_event
 page-type: web-api-event
 browser-compat: api.AudioScheduledSourceNode.ended_event

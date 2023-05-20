@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: canplaythrough event"
+short-title: canplaythrough
 slug: Web/API/HTMLMediaElement/canplaythrough_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.canplaythrough_event

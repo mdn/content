@@ -1,5 +1,6 @@
 ---
 title: "Element: gesturestart event"
+short-title: gesturestart
 slug: Web/API/Element/gesturestart_event
 page-type: web-api-event
 status:

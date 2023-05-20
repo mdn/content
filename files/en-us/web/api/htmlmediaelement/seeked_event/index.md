@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: seeked event"
+short-title: seeked
 slug: Web/API/HTMLMediaElement/seeked_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.seeked_event

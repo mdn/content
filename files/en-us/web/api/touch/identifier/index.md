@@ -1,5 +1,6 @@
 ---
-title: Touch.identifier
+title: "Touch: identifier property"
+short-title: identifier
 slug: Web/API/Touch/identifier
 page-type: web-api-instance-property
 browser-compat: api.Touch.identifier

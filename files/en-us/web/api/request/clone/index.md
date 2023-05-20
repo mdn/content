@@ -1,5 +1,6 @@
 ---
-title: Request.clone()
+title: "Request: clone() method"
+short-title: clone()
 slug: Web/API/Request/clone
 page-type: web-api-instance-method
 browser-compat: api.Request.clone

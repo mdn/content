@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.shaderSource()
+title: "WebGLRenderingContext: shaderSource() method"
+short-title: shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.shaderSource

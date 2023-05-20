@@ -1,5 +1,6 @@
 ---
-title: PannerNode.setPosition()
+title: "PannerNode: setPosition() method"
+short-title: setPosition()
 slug: Web/API/PannerNode/setPosition
 page-type: web-api-instance-method
 status:

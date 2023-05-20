@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.clear()
+title: "WebGLRenderingContext: clear() method"
+short-title: clear()
 slug: Web/API/WebGLRenderingContext/clear
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.clear

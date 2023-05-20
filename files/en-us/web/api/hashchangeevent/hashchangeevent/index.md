@@ -1,5 +1,6 @@
 ---
-title: HashChangeEvent()
+title: "HashChangeEvent: HashChangeEvent() constructor"
+short-title: HashChangeEvent()
 slug: Web/API/HashChangeEvent/HashChangeEvent
 page-type: web-api-constructor
 browser-compat: api.HashChangeEvent.HashChangeEvent

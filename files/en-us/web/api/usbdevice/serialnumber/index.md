@@ -1,5 +1,6 @@
 ---
-title: USBDevice.serialNumber
+title: "USBDevice: serialNumber property"
+short-title: serialNumber
 slug: Web/API/USBDevice/serialNumber
 page-type: web-api-instance-property
 status:

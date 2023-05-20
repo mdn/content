@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.abort()
+title: "BackgroundFetchRegistration: abort() method"
+short-title: abort()
 slug: Web/API/BackgroundFetchRegistration/abort
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
-title: MediaError.code
+title: "MediaError: code property"
+short-title: code
 slug: Web/API/MediaError/code
 page-type: web-api-instance-property
 browser-compat: api.MediaError.code

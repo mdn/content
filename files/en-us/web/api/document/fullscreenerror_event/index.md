@@ -1,5 +1,6 @@
 ---
 title: "Document: fullscreenerror event"
+short-title: fullscreenerror
 slug: Web/API/Document/fullscreenerror_event
 page-type: web-api-event
 browser-compat: api.Document.fullscreenerror_event

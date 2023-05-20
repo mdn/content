@@ -1,5 +1,6 @@
 ---
 title: "Element: webkitmouseforcewillbegin event"
+short-title: webkitmouseforcewillbegin
 slug: Web/API/Element/webkitmouseforcewillbegin_event
 page-type: web-api-event
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.Element.webkitmouseforcewillbegin_event
 ---
 
-{{APIRef}}{{Non-standard_header()}}
+{{APIRef}}{{Non-standard_header}}
 
 Safari for macOS fires the non-standard **`webkitmouseforcewillbegin`** event at an {{domxref("Element")}} before firing the initial {{domxref("Element/mousedown_event", "mousedown")}} event.
 

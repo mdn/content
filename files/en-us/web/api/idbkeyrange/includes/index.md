@@ -1,5 +1,6 @@
 ---
-title: IDBKeyRange.includes()
+title: "IDBKeyRange: includes() method"
+short-title: includes()
 slug: Web/API/IDBKeyRange/includes
 page-type: web-api-instance-method
 browser-compat: api.IDBKeyRange.includes

@@ -1,5 +1,6 @@
 ---
-title: NodeList.values()
+title: "NodeList: values() method"
+short-title: values()
 slug: Web/API/NodeList/values
 page-type: web-api-instance-method
 browser-compat: api.NodeList.values

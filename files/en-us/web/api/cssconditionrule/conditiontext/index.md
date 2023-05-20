@@ -1,5 +1,6 @@
 ---
-title: CSSConditionRule.conditionText
+title: "CSSConditionRule: conditionText property"
+short-title: conditionText
 slug: Web/API/CSSConditionRule/conditionText
 page-type: web-api-instance-property
 browser-compat: api.CSSConditionRule.conditionText

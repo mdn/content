@@ -1,5 +1,6 @@
 ---
-title: VTTCue.getCueAsHTML()
+title: "VTTCue: getCueAsHTML() method"
+short-title: getCueAsHTML()
 slug: Web/API/VTTCue/getCueAsHTML
 page-type: web-api-instance-method
 browser-compat: api.VTTCue.getCueAsHTML

@@ -66,7 +66,7 @@ function startDownload() {
   let imageDescription = "The Mozilla logo";
 
   downloadedImg = new Image();
-  downloadedImg.crossOrigin = "Anonymous";
+  downloadedImg.crossOrigin = "anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;

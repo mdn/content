@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.currentSrc
+title: "HTMLMediaElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentSrc
