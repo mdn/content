@@ -23,6 +23,8 @@ Values of this type are objects. They contain these properties:
     - For a rule originating from the set of dynamic rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}}, i.e., `"_dynamic"`.
     - For a rule originating from the set of session rules, the value defined in {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}, i.e., `"_session"`.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
