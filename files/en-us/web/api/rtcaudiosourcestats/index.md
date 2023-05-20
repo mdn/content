@@ -15,11 +15,11 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 
 ## Instance properties
 
-- {{domxref("RTCAudioSourceStats.audioLevel", "audioLevel")}}
+- {{domxref("RTCAudioSourceStats.audioLevel", "audioLevel")}} {{Experimental_Inline}}
   - : A number that represents the audio level of the media source.
-- {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}}
+- {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}} {{Experimental_Inline}}
   - : A number that represents the total audio energy of the media source over the lifetime of the stats object.
-- {{domxref("RTCAudioSourceStats.totalSamplesDuration", "totalSamplesDuration")}}
+- {{domxref("RTCAudioSourceStats.totalSamplesDuration", "totalSamplesDuration")}} {{Experimental_Inline}}
   - : A number that represents the total duration of all samples produced by the media source over the lifetime of the stats object.
 
 The following properties are present in both `RTCAudioSourceStats` and {{domxref("RTCVideoSourceStats")}}: <!-- RTCMediaSourceStats  -->

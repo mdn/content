@@ -7,7 +7,9 @@ browser-compat: api.PublicKeyCredential
 
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure multi-authentication (MFA) without SMS texts.
+The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
+
+> **Note:** [Passkeys](https://passkeys.dev/) are a significant use case for web authentication; see [Create a passkey for passwordless logins](https://web.dev/passkey-registration/) and [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for implementation details. See also [Google Identity > Passwordless login with passkeys](https://developers.google.com/identity/passkeys).
 
 ## WebAuthn concepts and usage
 
@@ -24,7 +26,7 @@ Many websites already have pages that allow users to register new accounts or si
   - The asymmetric key pair is stored in the authenticator, which can then be used to authenticate a user with a relying party for example during MFA. The authenticator may be embedded into the user agent, into an operating system, such as Windows Hello, or it may be a physical token, such as a USB or Bluetooth Security Key.
 - When {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is used with the `publicKey` option, the user agent uses an existing set of credentials to authenticate to a relying party (either as the primary login or to provide an additional factor during MFA as described above).
 
-In their most basic forms, both `create()` and `get()` receive a very large random number called the "challenge" from the server and return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.
+In their most basic forms, both `create()` and `get()` receive a very large random number called the "challenge" from the server and return the challenge signed by the private key back to the server. This proves to the server that a user has the private key required for authentication without revealing any secrets over the network.
 
 > **Note:** The "challenge" must be a buffer of random information at least 16 bytes in size.
 

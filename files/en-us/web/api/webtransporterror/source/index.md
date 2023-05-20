@@ -3,12 +3,10 @@ title: "WebTransportError: source property"
 short-title: source
 slug: Web/API/WebTransportError/source
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportError.source
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`source`** read-only property of the {{domxref("WebTransportError")}} interface returns an enumerated value indicating the source of the error.
 

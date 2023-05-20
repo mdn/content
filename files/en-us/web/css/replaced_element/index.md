@@ -27,7 +27,6 @@ Some elements are treated as replaced elements only in specific cases:
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
 HTML spec also says that an {{HTMLElement("input")}} element can be replaced, because {{HTMLElement("input")}} elements of the `"image"` type are replaced elements similar to {{HTMLElement("img")}}. However, other form controls, including other types of {{HTMLElement("input")}} elements, are explicitly listed as non-replaced elements (the spec describes their default platform-specific rendering with the term "Widgets").
 
