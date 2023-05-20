@@ -37,5 +37,5 @@ new BeforeInstallPromptEvent(type, eventInitDict)
 
 ## See also
 
-- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_pwas_installable)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)

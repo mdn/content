@@ -23,5 +23,5 @@ An array of strings, in which each string identifies a target platform for the i
 
 ## See also
 
-- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_pwas_installable)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)

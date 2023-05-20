@@ -11,9 +11,10 @@ browser-compat: api.BeforeInstallPromptEvent.prompt
 
 {{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
 
-The **`prompt()`** method of the
-{{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
-install prompt at a time of their own choosing.
+The **`prompt()`** method of the {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
+install prompt at a time of their own choosing. Typically this will be called in the event handler for the app's custom install UI.
+
+This method must be called in the event handler for a user action (such as a button click) and may only be called once on a given `BeforeInstallPromptEvent` instance.
 
 ## Syntax
 
@@ -40,22 +41,7 @@ A {{jsxref("Promise")}} resolving to an object containing the following properti
 
 ## Examples
 
-In this example we listen for the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event. When it fires, we cancel the default behavior, which prevents the browser's built-in install prompt from showing. Next we show the app's custom install UI, and when the user clicks this UI, we call `prompt()` on the `BeforeInstallPromptEvent` that was passed into the `beforeinstallprompt` listener.
-
-```js
-window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
-  // Prevent browser's own prompt display
-  beforeInstallPromptEvent.preventDefault();
-  // Show the app's custom install button
-  const customInstallButton = document.querySelector("#install");
-  customInstallButton.hidden = false;
-  // Prompt the user to install when they press the custom install button
-  customInstallButton.addEventListener("click", async () => {
-    const result = await beforeInstallPromptEvent.prompt();
-    console.log(`Outcome: ${result.outcome}`);
-  });
-});
-```
+See the [example for the `BeforeInstallPromptEvent` interface](/en-US/docs/Web/API/BeforeInstallPromptEvent#examples).
 
 ## Browser compatibility
 
@@ -63,5 +49,5 @@ window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
 
 ## See also
 
-- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_pwas_installable)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)

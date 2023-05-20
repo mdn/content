@@ -32,25 +32,48 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 
 ## Instance methods
 
-- {{domxref("BeforeInstallPromptEvent.prompt()")}} {{Experimental_Inline}}
-  - : Allows a developer to show the install prompt at a time of their own choosing. This method returns a {{jsxref("Promise")}} that resolves to an object describing the user's choice when they were prompted to install the app.
+- {{domxref("BeforeInstallPromptEvent.prompt()")}}{{Non-standard_Inline}} {{Experimental_Inline}}
+  - : Show a prompt asking the user if they want to install the app. This method returns a {{jsxref("Promise")}} that resolves to an object describing the user's choice when they were prompted to install the app.
 
-## Example
+## Examples
 
-In this example we listen for the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event. When it fires, we cancel the default behavior, which prevents the browser's built-in install prompt from showing. Next we show the app's custom install UI, and when the user clicks this UI, we call `prompt()` on the `BeforeInstallPromptEvent` that was passed into the `beforeinstallprompt` listener.
+In the following example an app provides its own install button, which has an `id` of `"install"`. Initially the button is hidden.
+
+```html
+<button id="install" hidden>Install</button>
+```
+
+The `beforeinstallprompt` handler:
+
+- Cancels the event, which prevents the browser displaying its own install UI on some platforms
+- Assigns the `BeforeInstallPromptEvent` object to a variable, so it can be used later
+- Reveals the app's install button.
 
 ```js
-window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
-  // Prevent browser's own prompt display
-  beforeInstallPromptEvent.preventDefault();
-  // Show the app's custom install button
-  const customInstallButton = document.querySelector("#install");
-  customInstallButton.hidden = false;
-  // Prompt the user to install when they press the custom install button
-  customInstallButton.addEventListener("click", async () => {
-    const result = await beforeInstallPromptEvent.prompt();
-    console.log(`Outcome: ${result.outcome}`);
-  });
+let installPrompt = null;
+const installButton = document.querySelector("#install");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.removeAttribute("hidden");
+});
+```
+
+When clicked, the app's install button:
+
+- Calls the {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} method of the stored event object, to trigger the installation prompt.
+- Resets its state by clearing the `installPrompt` variable and hiding itself again.
+
+```js
+installButton.addEventListener("click", async () => {
+  if (!installPrompt) {
+    return;
+  }
+  const result = await installPrompt.prompt();
+  console.log(`Install prompt was: ${result.outcome}`);
+  installPrompt = null;
+  installButton.setAttribute("hidden", "");
 });
 ```
 
@@ -60,5 +83,5 @@ window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent) => {
 
 ## See also
 
-- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_pwas_installable)
+- [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (May 19, 2021)
