@@ -3,15 +3,12 @@ title: "WebTransportError: WebTransportError() constructor"
 short-title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
-The **`WebTransportError()`** constructor creates a new
-{{domxref("WebTransportError")}} object instance.
+The **`WebTransportError()`** constructor creates a new {{domxref("WebTransportError")}} object instance.
 
 {{AvailableInWorkers}}
 
