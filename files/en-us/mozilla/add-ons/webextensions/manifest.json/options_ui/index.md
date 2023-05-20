@@ -77,7 +77,7 @@ The `options_ui` key is an object with the following contents:
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>
@@ -87,16 +87,6 @@ The `options_ui` key is an object with the following contents:
           setting dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
-        </p>
-        <p>
-          The
-          <a
-            class="external external-icon"
-            href="https://acorn.firefox.com/latest/acorn.html"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the popup
-          to get particular styles.
         </p>
       </td>
     </tr>

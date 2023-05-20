@@ -20,9 +20,10 @@ Your extension can include user interface elements - browser and page action [po
 You can style these elements to match the browser's style. The manifest.json keys include an optional property to help with this: `browser_style`. If this is included and set to `true`, your document gets one or more extra stylesheets that help make it look consistent with the browser's UI and with other extensions that use the `browser_style` property.
 
 > **Note:**
-> Support for `browser_style` in Manifest V3 is deprecated. Starting from Firefox 115, the default value of `options_ui.browser_style` and `sidebar_action.browser_style` changes from `true` to `false`. In Firefox 118, `"browser_style": notrue` will no longer be supported in Manifest V3 extensions.
+> Support for `browser_style` in Manifest V3 is deprecated. Starting from Firefox 115, the default value of `options_ui.browser_style` and `sidebar_action.browser_style` changes from `true` to `false`. In Firefox 118, `"browser_style": true` will no longer be supported in Manifest V3 extensions.
 > If your Manifest V3 extension depends on the `"browser_style": true` styles, follow the [Manifest V3 migration guide for `browser_style`](#manifest_v3_migration).
 > See ([Firefox bug 1827910](https://bugzil.la/1827910)) for more information.
+> If you want to apply the Firefox style to your extension, see the [Firefox Style Guide](https://acorn.firefox.com/latest/acorn.html).
 
 When considering whether to use `browser_style: true`, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
 

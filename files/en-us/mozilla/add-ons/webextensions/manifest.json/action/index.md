@@ -26,7 +26,6 @@ browser-compat: webextensions.manifest.action
       <td>
         <pre class="brush: json">
 "action": {
-  "browser_style": true,
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -85,55 +84,14 @@ The `action` key is an object that may have any of these properties, all optiona
         <p>Optional, defaulting to <code>false</code>.</p>
         <div class="notecard warning">
           <p>
-            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
-        </div>
-        <p>
-          In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css or
-          chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this stylesheet sets
-          <code>box-sizing: border-box</code> (see
-          <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
-        </p>
-        <p>
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >Browser styles</a
-          > describes the classes you can apply to elements in the popup
-          to get particular styles.
-        </p>
-        <p>
-          The
-          <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
-            >latest-download</a
-          >
-          example extension uses <code>browser_style</code> in its popup.
-        </p>
-        <div class="notecard note">
-          <p>
-            <strong>Note:</strong> Setting <code>browser_style</code> to
-            <code>true</code> prevents users from selecting text in an
-            extension's popup or sidebar content. This is normal behavior. You
-            can't select parts of the UI in the browser. However, you can work
-            around this limitation to allow your users to select text in two
-            ways:
-          </p>
-          <ol>
-            <li>Set <code>browser_style</code> to <code>false</code>.</li>
-            <li>
-              Use CSS styling on the body of your sidebar or popup's HTML to
-              allow text selection by adding the rule
-              <code>-moz-user-select</code> with a value of <code>all</code> or
-              <code>text</code>.
-            </li>
-          </ol>
         </div>
       </td>
     </tr>
     <tr>
-      <td><code>default_area</code></td>
+      <td><code>default_area</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -170,7 +128,8 @@ The `action` key is an object that may have any of these properties, all optiona
       </td>
     </tr>
     <tr>
-      <td><code>default_icon</code></td>
+      <td><code>default_icon</code>
+      <br />{{optional_inline}}</td>
       <td><code>Object</code> or <code>String</code></td>
       <td>
         <p>
@@ -204,7 +163,8 @@ The `action` key is an object that may have any of these properties, all optiona
       </td>
     </tr>
     <tr>
-      <td><code>default_popup</code></td>
+      <td><code>default_popup</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -259,7 +219,8 @@ The `action` key is an object that may have any of these properties, all optiona
       </td>
     </tr>
     <tr>
-      <td><code>default_title</code></td>
+      <td><code>default_title</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -277,7 +238,8 @@ The `action` key is an object that may have any of these properties, all optiona
       </td>
     </tr>
     <tr>
-      <td><code>theme_icons</code></td>
+      <td><code>theme_icons</code>
+      <br />{{optional_inline}}</td>
       <td><code>Array</code></td>
       <td>
         <p>

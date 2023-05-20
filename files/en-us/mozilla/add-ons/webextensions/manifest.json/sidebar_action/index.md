@@ -80,7 +80,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set `browser_style` to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for `browser_style`</a>.
+            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>
@@ -104,7 +104,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
       </td>
     </tr>
     <tr>
-      <td><code>default_icon</code></td>
+      <td><code>default_icon</code>
+      <br />{{optional_inline}}</td>
       <td><code>Object</code> or <code>String</code></td>
       <td>
         <p>
@@ -182,7 +183,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
       </td>
     </tr>
     <tr>
-      <td><code>default_title</code></td>
+      <td><code>default_title</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -210,7 +212,8 @@ The `sidebar_action` key is an object that may have any of the properties listed
       </td>
     </tr>
     <tr>
-      <td><code>open_at_install</code></td>
+      <td><code>open_at_install</code>
+      <br />{{optional_inline}}</td>
       <td>Boolean</td>
       <td>
         Optional, defaulting to <code>true</code>. Determines whether the
