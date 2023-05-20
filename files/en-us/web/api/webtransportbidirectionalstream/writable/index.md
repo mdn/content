@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportBidirectionalStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to write outgoing data.
 
