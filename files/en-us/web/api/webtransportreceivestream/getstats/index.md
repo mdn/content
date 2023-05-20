@@ -36,7 +36,7 @@ The returned object has the following properties:
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp at which the statistics were gathered, relative to Jan 1, 1970, UTC.
 - `bytesReceived`
   - : A positive integer indicating the number of bytes received by this stream, up to the first missing byte.
-     The number does not include any network overhead, and can only increase.
+    The number does not include any network overhead, and can only increase.
 - `bytesRead`
   - : A positive integer indicating the number of bytes the application has read from this `WebTransportReceiveStream` stream.
     This number can only increase, and is always less than or equal to `bytesReceived`.
