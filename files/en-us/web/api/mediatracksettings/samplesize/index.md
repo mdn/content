@@ -1,19 +1,8 @@
 ---
-title: MediaTrackSettings.sampleSize
+title: "MediaTrackSettings: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
 

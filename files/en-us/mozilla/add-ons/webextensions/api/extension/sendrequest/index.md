@@ -1,17 +1,9 @@
 ---
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
+page-type: webextension-api-function
+status:
+  - deprecated
 browser-compat: webextensions.api.extension.sendRequest
 ---
 

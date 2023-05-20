@@ -2,22 +2,6 @@
 title: XRViewerPose
 slug: Web/API/XRViewerPose
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Mixed Reality
-  - Overview
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
 browser-compat: api.XRViewerPose
 ---
 

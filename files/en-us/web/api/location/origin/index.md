@@ -1,12 +1,8 @@
 ---
-title: location.origin
+title: "location: origin property"
+short-title: origin
 slug: Web/API/Location/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.origin
 ---
 

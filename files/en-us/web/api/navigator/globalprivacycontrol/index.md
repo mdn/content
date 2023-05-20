@@ -1,15 +1,11 @@
 ---
-title: Navigator.globalPrivacyControl
+title: "Navigator: globalPrivacyControl property"
+short-title: globalPrivacyControl
 slug: Web/API/Navigator/globalPrivacyControl
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Navigator.globalPrivacyControl
 ---
 

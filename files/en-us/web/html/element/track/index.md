@@ -1,19 +1,7 @@
 ---
-title: '<track>: The Embed Text Track element'
+title: "<track>: The Embed Text Track element"
 slug: Web/HTML/Element/track
 page-type: html-element
-tags:
-  - Accessibility
-  - Cues
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - TextTrack
-  - Web
-  - a11y
-  - track
 browser-compat: html.elements.track
 ---
 
@@ -27,7 +15,7 @@ The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -76,9 +64,9 @@ The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("default")}}
+- `default`
   - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute contains an invalid value, it will use `metadata` (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`). The following keywords are allowed:
 
@@ -106,11 +94,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - Tracks used by scripts. Not visible to the user.
 
-- {{htmlattrdef("label")}}
+- `label`
   - : A user-readable title of the text track which is used by the browser when listing available text tracks.
-- {{htmlattrdef("src")}}
+- `src`
   - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute.
-- {{htmlattrdef("srclang")}}
+- `srclang`
   - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
 
 ## Usage notes

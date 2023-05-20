@@ -2,19 +2,6 @@
 title: RTCOutboundRtpStreamStats
 slug: Web/API/RTCOutboundRtpStreamStats
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Outbound
-  - RTCOutboundRtpStreamStats
-  - RTCRtpSender
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - stream
 browser-compat: api.RTCOutboundRtpStreamStats
 ---
 

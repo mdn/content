@@ -1,9 +1,7 @@
 ---
 title: Working with files
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
-tags:
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar()}}
@@ -59,8 +57,6 @@ API references: [DOM File API](/en-US/docs/Web/API/File)
 
 If your extension needs to save files locally, the [idb-file-storage library](https://www.npmjs.com/package/idb-file-storage) provides a simple Promise-based wrapper to the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to aid the storage and retrieval of files and blobs.
 
-On Firefox, this library also provides a Promise-based API wrapper for the non-standard `IDBMutableFile` API. (The `IDBMutableFile` API enables extensions to create and persist an IndexedDB database file object that provides an API to read and change the file's content without loading all the file into memory.)
-
 The key features of the library are:
 
 - [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)
@@ -74,7 +70,7 @@ The key features of the library are:
     - get to retrieve a file or blob from the database.
     - remove to delete a file or blob from the database.
 
-The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) example illustrates how to use most of these features. (IDBMutableFile is not included, but you can find examples in the [idb-file-storage examples](https://rpl.github.io/idb-file-storage/examples/) along with a number of other examples of the library in action).
+The [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain) example illustrates how to use most of these features.
 
 The Store Collected Images example lets users add images to a collection using an option on the image context menu. Selected images are collected in a popup and can be saved to a named collection. A toolbar button ({{WebExtAPIRef("browserAction")}}) opens a navigate collection page, on which the user can view and delete saved images, with a filter option to narrow choices. [See the example in action](https://www.youtube.com/watch?v=t6aVqMMe2Rc&ab_channel=LucaGreco).
 

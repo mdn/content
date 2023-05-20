@@ -1,13 +1,8 @@
 ---
-title: AudioWorkletNode()
+title: "AudioWorkletNode: AudioWorkletNode() constructor"
+short-title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
 page-type: web-api-constructor
-tags:
-  - API
-  - AudioWorkletNode
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
 

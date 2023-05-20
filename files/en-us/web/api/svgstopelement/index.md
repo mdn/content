@@ -2,12 +2,6 @@
 title: SVGStopElement
 slug: Web/API/SVGStopElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStopElement
 ---
 

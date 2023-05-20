@@ -1,12 +1,6 @@
 ---
 title: Floor
 slug: WebAssembly/Reference/Numeric/Floor
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

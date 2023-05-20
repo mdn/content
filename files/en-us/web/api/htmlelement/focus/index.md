@@ -1,17 +1,8 @@
 ---
-title: HTMLElement.focus()
+title: "HTMLElement: focus() method"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
 browser-compat: api.HTMLElement.focus
 ---
 
@@ -106,9 +97,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -146,12 +139,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 

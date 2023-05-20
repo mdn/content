@@ -1,17 +1,7 @@
 ---
-title: '<summary>: The Disclosure Summary element'
+title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
 page-type: html-element
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
 browser-compat: html.elements.summary
 ---
 
@@ -64,6 +54,8 @@ A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} 
 </details>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_example", 650, 120)}}
 
 ### Summaries as headings
@@ -80,6 +72,8 @@ You can use heading elements in `<summary>`, like this:
   </ol>
 </details>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
@@ -102,6 +96,8 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 </details>
 ```
 
+#### Result
+
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
 ## Technical summary
@@ -111,11 +107,11 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >
       </td>

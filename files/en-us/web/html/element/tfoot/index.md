@@ -1,14 +1,7 @@
 ---
-title: '<tfoot>: The Table Foot element'
+title: "<tfoot>: The Table Foot element"
 slug: Web/HTML/Element/tfoot
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
 browser-compat: html.elements.tfoot
 ---
 
@@ -26,7 +19,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -34,26 +27,26 @@ The following attributes are deprecated and should not be used. They are documen
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tfoot")}} and {{htmlattrxref("charoff", "tfoot")}} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
     > **Note:**
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the [`char`](#char) as the value of the {{cssxref("text-align")}} property.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tfoot")}} is not set to `char`, this attribute is ignored.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table footer. Possible values for this attribute are:
 
@@ -74,7 +67,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<tfoot>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

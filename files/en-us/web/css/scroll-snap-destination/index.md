@@ -2,14 +2,9 @@
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - Deprecated
-  - Reference
-  - recipe:css-property
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.scroll-snap-destination
 ---
 

@@ -1,17 +1,10 @@
 ---
-title: XMLHttpRequest.mozBackgroundRequest
+title: "XMLHttpRequest: mozBackgroundRequest property"
+short-title: mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - Background Service
-  - Mozilla
-  - Non-standard
-  - Property
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - mozBackgroundRequest
+status:
+  - non-standard
 ---
 
 {{APIRef('XMLHttpRequest')}}

@@ -1,16 +1,10 @@
 ---
-title: Window.releaseEvents()
+title: "Window: releaseEvents() method"
+short-title: releaseEvents()
 slug: Web/API/Window/releaseEvents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Method
-  - Reference
-  - Window
-  - releaseEvents
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.releaseEvents
 ---
 
@@ -45,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-window.releaseEvents(Event.KEYPRESS)
+window.releaseEvents(Event.KEYPRESS);
 ```
 
 ## Notes

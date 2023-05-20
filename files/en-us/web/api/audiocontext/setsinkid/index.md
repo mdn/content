@@ -1,13 +1,10 @@
 ---
-title: AudioContext.setSinkId()
+title: "AudioContext: setSinkId() method"
+short-title: setSinkId()
 slug: Web/API/AudioContext/setSinkId
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - setSinkId
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.AudioContext.setSinkId
 ---
 

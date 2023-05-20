@@ -2,12 +2,6 @@
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.rotateY
 ---
 

@@ -1,21 +1,6 @@
 ---
 title: Digital audio concepts
 slug: Web/Media/Formats/Audio_concepts
-tags:
-  - AAC
-  - Audio
-  - Codecs
-  - Coding
-  - Compressed
-  - Guide
-  - MPEG
-  - Media
-  - Music
-  - compression
-  - formats
-  - mp3
-  - mp4
-  - sound
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -87,7 +72,7 @@ There is a reason why 44.1 kHz is considered the minimum "high fidelity" samplin
 
 To provide additional room for a [low-pass filter](https://en.wikipedia.org/wiki/Low-pass_filter) in order to avoid distortion caused by [aliasing](https://en.wikipedia.org/wiki/Aliasing), an additional 2.05 kHz [transition band](https://en.wikipedia.org/wiki/Transition_band) is added to the pre-sampling frequency (resulting in 22,050 Hz). Doubling that per the Nyquist theorem results in a final minimum frequency of (you guessed it) 44.1 kHz.
 
-High-resolution (96 kHz) audio is used in some high-end audio systems, and it and ultra-high resolution (192 kHz) audio are useful for audio mastering, where you need as much quality as possible while manipulating and editing the sound before downsampling to the sample rate you will use for the final product. This is similar to how photographers will use high resolution images for editing and compositing before presenting the customer with a JPEG suitable for use on a web site.
+High-resolution (96 kHz) audio is used in some high-end audio systems, and it and ultra-high resolution (192 kHz) audio are useful for audio mastering, where you need as much quality as possible while manipulating and editing the sound before downsampling to the sample rate you will use for the final product. This is similar to how photographers will use high resolution images for editing and compositing before presenting the customer with a JPEG suitable for use on a website.
 
 ### Audio file size and network bandwidth
 
@@ -215,7 +200,7 @@ Some codecs offer special profiles which are specifically intended for particula
 
 ### Joint stereo
 
-Normally, stereo sound is represented by audio frames which contain one sample per channel. This results in audio frames which require 2⨉_sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2⨉16 or 32 bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
+Stereo sound is typically represented by audio frames containing one sample per channel. This results in audio frames that require 2 times _sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2 times 16, or 32, bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
 
 **Joint stereo** is a method of storing stereo audio samples in a more space-efficient manner by taking into account that usually the sound entering each ear is similar. Thus, rather than storing every bit of each channel's sample, a base amplitude and a per-channel amplitude deviation value are stored, wherein the deviation value may use fewer bits than a complete sample.
 

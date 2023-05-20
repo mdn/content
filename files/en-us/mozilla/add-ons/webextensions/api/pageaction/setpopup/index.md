@@ -1,16 +1,7 @@
 ---
 title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setPopup
 ---
 

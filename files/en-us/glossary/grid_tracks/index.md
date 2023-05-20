@@ -2,8 +2,6 @@
 title: Grid Tracks
 slug: Glossary/Grid_Tracks
 page-type: glossary-definition
-tags:
-  - CSS Grids
 ---
 
 A **grid track** is the space between two adjacent {{glossary("grid lines")}}. They are defined in the _explicit grid_ by using the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties or the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties. Tracks are also created in the _implicit grid_ by positioning a grid item outside of the tracks created in the explicit grid.

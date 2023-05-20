@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getPanel
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
 

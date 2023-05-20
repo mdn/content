@@ -1,17 +1,9 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlightChanged
-  - tabs
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.onHighlightChanged
 ---
 

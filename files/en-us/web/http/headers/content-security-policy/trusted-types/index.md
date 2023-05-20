@@ -1,12 +1,9 @@
 ---
-title: 'CSP: trusted-types'
+title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Security
-  - Experimental
+page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 
@@ -37,10 +34,10 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```js
 // Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
-if (typeof trustedTypes !== 'undefined') {
-  const policyFoo = trustedTypes.createPolicy('foo', {});
-  const policyFoo2 = trustedTypes.createPolicy('foo', {});
-  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+if (typeof trustedTypes !== "undefined") {
+  const policyFoo = trustedTypes.createPolicy("foo", {});
+  const policyFoo2 = trustedTypes.createPolicy("foo", {});
+  const policyBaz = trustedTypes.createPolicy("baz", {}); // Throws and dispatches a SecurityPolicyViolationEvent.
 }
 ```
 

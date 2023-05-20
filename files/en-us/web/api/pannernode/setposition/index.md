@@ -1,15 +1,10 @@
 ---
-title: PannerNode.setPosition()
+title: "PannerNode: setPosition() method"
+short-title: setPosition()
 slug: Web/API/PannerNode/setPosition
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setPosition
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PannerNode.setPosition
 ---
 
@@ -42,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

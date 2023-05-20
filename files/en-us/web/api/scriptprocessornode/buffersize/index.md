@@ -1,15 +1,10 @@
 ---
-title: ScriptProcessorNode.bufferSize
+title: "ScriptProcessorNode: bufferSize property"
+short-title: bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ScriptProcessorNode
-  - Web Audio API
-  - bufferSize
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode.bufferSize
 ---
 
@@ -25,11 +20,11 @@ An integer.
 
 ## Examples
 
-See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code.
+See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#examples) for example code.
 
 ## Specifications
 
-Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
+Since the August 29, 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
 It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 

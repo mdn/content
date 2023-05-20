@@ -2,12 +2,6 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-duration
 ---
 

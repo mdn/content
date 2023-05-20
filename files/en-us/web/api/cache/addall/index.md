@@ -1,17 +1,8 @@
 ---
-title: Cache.addAll()
+title: "Cache: addAll() method"
+short-title: addAll()
 slug: Web/API/Cache/addAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - addAll
 browser-compat: api.Cache.addAll
 ---
 

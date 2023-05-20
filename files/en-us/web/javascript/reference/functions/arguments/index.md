@@ -2,18 +2,12 @@
 title: The arguments object
 slug: Web/JavaScript/Reference/Functions/arguments
 page-type: javascript-language-feature
-tags:
-  - Functions
-  - JavaScript
-  - Namespace
-  - Reference
-  - arguments
 browser-compat: javascript.functions.arguments
 ---
 
 {{JSSidebar("Functions")}}
 
-**`arguments`** is an `Array`-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
+**`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
@@ -96,7 +90,7 @@ funcWithDefault3(); // undefined; 0
 
 This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), regardless of the type of parameters they are passed. That is, assigning new values to parameters in the body of the function never affects the `arguments` object, nor will assigning new values to the `arguments` indices affect the value of parameters, even when the function only has simple parameters.
 
-> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ### arguments is an array-like object
 
@@ -202,5 +196,6 @@ console.log(typeof arguments[0]); // returns the type of the first argument
 
 ## See also
 
-- {{JSxRef("Function")}}
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)

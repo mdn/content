@@ -2,12 +2,8 @@
 title: IdleDetector
 slug: Web/API/IdleDetector
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector
 ---
 

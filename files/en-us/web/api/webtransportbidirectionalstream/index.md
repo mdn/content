@@ -2,17 +2,10 @@
 title: WebTransportBidirectionalStream
 slug: Web/API/WebTransportBidirectionalStream
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - WebTransport API
-  - WebTransportBidirectionalStream
 browser-compat: api.WebTransportBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("ReadableStream")}} for reading incoming data, and a {{domxref("WritableStream")}} for writing outgoing data.
 
@@ -22,9 +15,9 @@ The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTranspo
 
 ## Instance properties
 
-- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming data.
-- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing data.
 
 ## Examples
@@ -52,7 +45,7 @@ Reading from the `ReadableStream` can then be done as follows:
 async function readData(readable) {
   const reader = readable.getReader();
   while (true) {
-    const {value, done} = await reader.read();
+    const { value, done } = await reader.read();
     if (done) {
       break;
     }
@@ -83,7 +76,7 @@ async function receiveBidirectional() {
   const bds = transport.incomingBidirectionalStreams;
   const reader = bds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }

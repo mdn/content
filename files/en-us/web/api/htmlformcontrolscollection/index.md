@@ -2,18 +2,6 @@
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
 page-type: web-api-interface
-tags:
-  - API
-  - Collection
-  - Form Collection
-  - Form List
-  - Forms
-  - HTML DOM
-  - HTML forms
-  - HTMLFormControlsCollection
-  - Interface
-  - NeedsHTML5Update
-  - Reference
 browser-compat: api.HTMLFormControlsCollection
 ---
 

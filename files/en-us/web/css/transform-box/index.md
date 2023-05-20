@@ -2,13 +2,6 @@
 title: transform-box
 slug: Web/CSS/transform-box
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transform-box
 ---
 
@@ -43,11 +36,11 @@ The `transform-box` property is specified as one of the keyword values listed be
 - `border-box`
   - : The border box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its table wrapper box, not its table box.
 - `fill-box`
-  - : The object bounding box is used as the reference box.
+  - : The object bounding box is used as the reference box. For elements with associated CSS layout box, acts as `content-box`.
 - `stroke-box`
-  - : The stroke bounding box is used as the reference box.
+  - : The stroke bounding box is used as the reference box. For elements with associated CSS layout box, acts as `border-box`.
 - `view-box`
-  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : The nearest {{Glossary("SVG")}} viewport is used as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute, and the dimension of the reference box is set to the width and height values of the `viewBox` attribute. For elements with associated CSS layout box, acts as `border-box`.
 
 ## Formal definition
 

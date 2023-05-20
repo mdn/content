@@ -2,14 +2,6 @@
 title: Microdata
 slug: Web/HTML/Microdata
 page-type: guide
-tags:
-  - Composing
-  - Example
-  - HTML
-  - Microdata
-  - Reference
-  - SEO
-  - Search
 ---
 
 {{HTMLSidebar}}

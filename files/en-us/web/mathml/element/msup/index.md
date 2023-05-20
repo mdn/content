@@ -1,11 +1,7 @@
 ---
 title: <msup>
 slug: Web/MathML/Element/msup
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.msup
 ---
 

@@ -2,8 +2,6 @@
 title: CSS preprocessor
 slug: Glossary/CSS_preprocessor
 page-type: glossary-definition
-tags:
-  - CSS
 ---
 
 A **CSS preprocessor** is a program that lets you generate {{Glossary("CSS")}} from the preprocessor's own unique {{Glossary("syntax")}}.

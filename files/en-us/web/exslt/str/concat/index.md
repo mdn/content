@@ -1,10 +1,6 @@
 ---
 title: str:concat()
 slug: Web/EXSLT/str/concat
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

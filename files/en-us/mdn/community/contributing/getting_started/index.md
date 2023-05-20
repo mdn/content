@@ -2,10 +2,6 @@
 title: Getting started with MDN Web Docs
 slug: MDN/Community/Contributing/Getting_started
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}
@@ -19,7 +15,7 @@ We are an open community of developers, technical writers, and learners building
 There are multiple avenues you can take to contribute to MDN, depending on your skill set and interests. Therefore, along with each task, we provide a short description and an approximate time each type of task typically takes.
 
 > If you're unsure what to do, you can always ask for help in one of [our communication channels](/en-US/docs/MDN/Community/Communication_channels).
-> Also note that our small, but mighty docs team maintains this repo, to preserve our bandwidth, off-topic conversations will be closed.
+> Also note that our small but mighty docs team maintains this repo. To preserve our bandwidth, off-topic conversations will be closed.
 
 ## Primary contribution types
 

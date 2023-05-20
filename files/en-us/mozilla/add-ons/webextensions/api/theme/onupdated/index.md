@@ -1,12 +1,7 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-tags:
-  - Add-ons
-  - Event
-  - Extensions
-  - Theme
-  - WebExtensions
+page-type: webextension-api-event
 browser-compat: webextensions.api.theme.onUpdated
 ---
 

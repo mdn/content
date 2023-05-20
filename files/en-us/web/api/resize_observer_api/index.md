@@ -2,17 +2,6 @@
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
 page-type: web-api-overview
-tags:
-  - API
-  - Draft
-  - Element
-  - Monitor
-  - Overview
-  - Reference
-  - Resize Observer
-  - Resize Observer API
-  - observe
-  - size
 browser-compat: api.ResizeObserver
 ---
 

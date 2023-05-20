@@ -2,14 +2,6 @@
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Logical Properties
-  - CSS Property
-  - Reference
-  - overscroll-behavior-inline
-  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-inline
 ---
 

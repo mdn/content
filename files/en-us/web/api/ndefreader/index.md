@@ -2,11 +2,8 @@
 title: NDEFReader
 slug: Web/API/NDEFReader
 page-type: web-api-interface
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader
 ---
 

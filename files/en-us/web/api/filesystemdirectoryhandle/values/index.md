@@ -1,14 +1,8 @@
 ---
-title: FileSystemDirectoryHandle.values()
+title: "FileSystemDirectoryHandle: values() method"
+short-title: values()
 slug: Web/API/FileSystemDirectoryHandle/values
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
 

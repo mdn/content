@@ -1,12 +1,6 @@
 ---
 title: Count trailing zeros
 slug: WebAssembly/Reference/Numeric/Count_trailing_zeros
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
 ---
 
 {{WebAssemblySidebar}}

@@ -2,8 +2,6 @@
 title: Entity header
 slug: Glossary/Entity_header
 page-type: glossary-definition
-tags:
-  - WebMechanics
 ---
 
 > **Warning:** The current HTTP/1.1 specification no longer refers to entities, entity headers or entity-body. Some of the fields are now referred to as {{glossary("Representation header")}} fields.

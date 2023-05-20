@@ -2,16 +2,6 @@
 title: ":default"
 slug: Web/CSS/:default
 page-type: css-pseudo-class
-tags:
-  - ":default"
-  - CSS
-  - Forms
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - default
 browser-compat: css.selectors.default
 ---
 
@@ -29,8 +19,10 @@ What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes]
 
 ## Syntax
 
-```
-:default
+```css
+:default {
+  /* ... */
+}
 ```
 
 ## Examples

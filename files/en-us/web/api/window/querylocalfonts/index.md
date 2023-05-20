@@ -1,17 +1,14 @@
 ---
-title: window.queryLocalFonts()
+title: "window: queryLocalFonts() method"
+short-title: queryLocalFonts()
 slug: Web/API/Window/queryLocalFonts
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - queryLocalFonts
+status:
+  - experimental
 browser-compat: api.Window.queryLocalFonts
 ---
 
-{{APIRef("Local Font Access API")}}{{SeeCompatTable()}}
+{{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 
@@ -72,8 +69,8 @@ To limit the returned font data to only a specific list of font faces, use the `
 ```js
 async function returnSpecificFonts() {
   const availableFonts = await window.queryLocalFonts({
-    postscriptNames: ['Verdana', 'Verdana-Bold', 'Verdana-Italic'],
-  })
+    postscriptNames: ["Verdana", "Verdana-Bold", "Verdana-Italic"],
+  });
 
   return availableFonts;
 }
@@ -87,7 +84,7 @@ The {{domxref("FontData.blob", "blob()")}} method provides access to low-level [
 async function computeOutlineFormat() {
   try {
     const availableFonts = await window.queryLocalFonts({
-      postscriptNames: ['ComicSansMS'],
+      postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
       // `blob()` returns a Blob containing valid and complete
@@ -98,18 +95,18 @@ async function computeOutlineFormat() {
       // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
-      let outlineFormat = 'UNKNOWN';
+      let outlineFormat = "UNKNOWN";
       switch (sfntVersion) {
-        case '\x00\x01\x00\x00':
-        case 'true':
-        case 'typ1':
-          outlineFormat = 'truetype';
+        case "\x00\x01\x00\x00":
+        case "true":
+        case "typ1":
+          outlineFormat = "truetype";
           break;
-        case 'OTTO':
-          outlineFormat = 'cff';
+        case "OTTO":
+          outlineFormat = "cff";
           break;
       }
-      console.log('Outline format:', outlineFormat);
+      console.log("Outline format:", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);

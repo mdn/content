@@ -2,19 +2,6 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 
@@ -30,7 +17,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/Web_Components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## HTML DOM concepts and usage
 
@@ -253,7 +240,7 @@ The History API interfaces let you access information about the browser's histor
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/en-US/docs/Web/Web_Components) to create and manage the available [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/en-US/docs/Web/API/Web_components) to create and manage the available [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 - {{DOMxRef("CustomElementRegistry")}}
 

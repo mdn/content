@@ -2,11 +2,6 @@
 title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
-tags:
-  - CSS
-  - Selector
-  - Selector Lists
-  - Selectors
 browser-compat: css.selectors.list
 ---
 
@@ -50,7 +45,7 @@ When applying the same styles to elements matching different criteria, grouping 
 
 This example shows grouping selectors in a single line using a comma-separated list.
 
-```css
+```css-nolint
 h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
@@ -92,7 +87,9 @@ h3 {
 ```
 
 ```css
-h1, h2:invalid-pseudo, h3 {
+h1,
+h2:invalid-pseudo,
+h3 {
   font-family: sans-serif;
 }
 ```

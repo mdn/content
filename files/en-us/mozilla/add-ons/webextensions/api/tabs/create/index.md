@@ -1,16 +1,7 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.create
 ---
 

@@ -2,10 +2,6 @@
 title: Auto-placement in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}

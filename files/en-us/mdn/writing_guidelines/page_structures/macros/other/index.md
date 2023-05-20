@@ -2,9 +2,6 @@
 title: Other macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}

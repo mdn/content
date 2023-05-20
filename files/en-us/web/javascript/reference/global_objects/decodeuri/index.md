@@ -2,16 +2,6 @@
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 page-type: javascript-function
-tags:
-  - Decode
-  - JavaScript
-  - Method
-  - String
-  - Text
-  - URI
-  - URL
-  - decodeURI
-  - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
 

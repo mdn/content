@@ -1,14 +1,6 @@
 ---
 title: Publishing games
 slug: Games/Publishing_games
-tags:
-  - Games
-  - HTML
-  - JavaScript
-  - Monetization
-  - Promotion
-  - distribution
-  - publishing
 ---
 
 {{GamesSidebar}}

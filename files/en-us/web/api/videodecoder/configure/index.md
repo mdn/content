@@ -1,18 +1,12 @@
 ---
-title: VideoDecoder.configure()
+title: "VideoDecoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
@@ -27,7 +21,7 @@ configure(config)
 - `config`
   - : An object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `description` {{optional_inline}}
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `codedWidth` {{optional_inline}}
@@ -88,13 +82,13 @@ const init = {
   output: handleFrame,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 const config = {
-  codec: 'vp8',
+  codec: "vp8",
   codedWidth: 640,
-  codedHeight: 480
+  codedHeight: 480,
 };
 
 let decoder = new VideoDecoder(init);

@@ -1,10 +1,6 @@
 ---
 title: exsl:node-set()
 slug: Web/EXSLT/exsl/node-set
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

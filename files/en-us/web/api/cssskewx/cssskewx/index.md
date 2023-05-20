@@ -1,20 +1,12 @@
 ---
-title: CSSSkewX()
+title: "CSSSkewX: CSSSkewX() constructor"
+short-title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSSkewX
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
 browser-compat: api.CSSSkewX.CSSSkewX
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSSkewX()`** constructor creates a new
 {{domxref("CSSSkewX")}} object which represents the

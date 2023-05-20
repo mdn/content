@@ -1,17 +1,14 @@
 ---
-title: Node.replaceChild()
+title: "Node: replaceChild() method"
+short-title: replaceChild()
 slug: Web/API/Node/replaceChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.replaceChild
 ---
 
 {{APIRef("DOM")}}
 
-The **`replaceChild()`** method of the {{domxref("Node")}} element
-replaces a child node within the given (parent) node.
+The **`replaceChild()`** method of the {{domxref("Node")}} interface replaces a child node within the given (parent) node.
 
 ## Syntax
 

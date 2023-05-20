@@ -1,13 +1,7 @@
 ---
-title: '<wbr>: The Line Break Opportunity element'
+title: "<wbr>: The Line Break Opportunity element"
 slug: Web/HTML/Element/wbr
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 browser-compat: html.elements.wbr
 ---
 
@@ -27,7 +21,7 @@ On UTF-8 encoded pages, `<wbr>` behaves like the `U+200B ZERO-WIDTH SPACE` code 
 
 For the same reason, the `<wbr>` element does not introduce a hyphen at the line break point. To make a hyphen appear only at the end of a line, use the soft hyphen character entity (`&shy;`) instead.
 
-## Example
+## Examples
 
 _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)_ recommends [breaking a URL _before_ punctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), to avoid leaving a punctuation mark at the end of the line, which the reader might mistake for the end of the URL.
 
@@ -37,6 +31,8 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
 </p>
 ```
 
+### Result
+
 {{EmbedLiveSample("Example")}}
 
 ## Technical summary
@@ -45,15 +41,15 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -73,7 +69,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

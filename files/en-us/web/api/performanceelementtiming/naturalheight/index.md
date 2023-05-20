@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.naturalHeight
+title: "PerformanceElementTiming: naturalHeight property"
+short-title: naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - naturalHeight
-  - PerformanceElementTiming
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.naturalHeight
 ---
 

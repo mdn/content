@@ -1,10 +1,6 @@
 ---
 title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

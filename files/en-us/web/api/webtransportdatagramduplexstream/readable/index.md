@@ -1,19 +1,12 @@
 ---
-title: WebTransportDatagramDuplexStream.readable
+title: "WebTransportDatagramDuplexStream: readable property"
+short-title: readable
 slug: Web/API/WebTransportDatagramDuplexStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - readable
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransportDatagramDuplexStream.readable
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`readable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to unreliably read incoming datagrams from the stream.
 

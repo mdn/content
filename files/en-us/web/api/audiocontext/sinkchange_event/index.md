@@ -1,14 +1,10 @@
 ---
 title: "AudioContext: sinkchange event"
+short-title: sinkchange
 slug: Web/API/AudioContext/sinkchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Experimental
-  - Property
-  - Reference
-  - sinkchange
+status:
+  - experimental
 browser-compat: api.AudioContext.sinkchange_event
 ---
 
@@ -37,11 +33,11 @@ onsinkchange = (event) => {};
 A `sinkchange` event listener can be used to report a change of audio output device. Note that if {{domxref("AudioContext.sinkId", "sinkId")}} contains an {{domxref("AudioSinkInfo")}} object, it indicates that the audio has been changed to not play on any output device.
 
 ```js
-audioCtx.addEventListener('sinkchange', () => {
-  if (typeof audioCtx.sinkId === 'object' && audioCtx.sinkId.type === 'none') {
-    console.log('Audio changed to not play on any device');
+audioCtx.addEventListener("sinkchange", () => {
+  if (typeof audioCtx.sinkId === "object" && audioCtx.sinkId.type === "none") {
+    console.log("Audio changed to not play on any device");
   } else {
-    console.log(`Audio output device changed to ${ audioCtx.sinkId }`);
+    console.log(`Audio output device changed to ${audioCtx.sinkId}`);
   }
 });
 ```

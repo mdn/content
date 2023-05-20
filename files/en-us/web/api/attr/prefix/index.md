@@ -1,11 +1,8 @@
 ---
-title: Attr.prefix
+title: "Attr: prefix property"
+short-title: prefix
 slug: Web/API/Attr/prefix
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.prefix
 ---
 

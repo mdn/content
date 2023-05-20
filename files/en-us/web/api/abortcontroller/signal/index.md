@@ -1,14 +1,8 @@
 ---
-title: AbortController.signal
+title: "AbortController: signal property"
+short-title: signal
 slug: Web/API/AbortController/signal
 page-type: web-api-instance-property
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - Property
-  - Reference
-  - signal
 browser-compat: api.AbortController.signal
 ---
 

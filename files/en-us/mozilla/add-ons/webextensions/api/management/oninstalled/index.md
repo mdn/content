@@ -1,14 +1,7 @@
 ---
 title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onInstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onInstalled
 ---
 

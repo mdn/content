@@ -1,13 +1,7 @@
 ---
-title: '::first-letter'
+title: "::first-letter"
 slug: Web/CSS/::first-letter
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.first-letter
 ---
 
@@ -41,8 +35,10 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Syntax
 
-```
-::first-letter
+```css
+::first-letter {
+  /* ... */
+}
 ```
 
 ## Examples

@@ -2,12 +2,6 @@
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLHeadingElement
 ---
 
@@ -38,4 +32,4 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.
+- The HTML element implementing this interface: {{ HTMLElement("Heading_Elements", "h1")}}, {{ HTMLElement("Heading_Elements", "h2")}}, {{ HTMLElement("Heading_Elements", "h3")}}, {{ HTMLElement("Heading_Elements", "h4")}}, {{ HTMLElement("Heading_Elements", "h5")}}, and {{ HTMLElement("Heading_Elements", "h6")}}.

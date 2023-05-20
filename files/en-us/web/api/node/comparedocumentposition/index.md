@@ -1,10 +1,8 @@
 ---
-title: Node.compareDocumentPosition()
+title: "Node: compareDocumentPosition() method"
+short-title: compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.compareDocumentPosition
 ---
 
@@ -56,9 +54,9 @@ const head = document.head;
 const body = document.body;
 
 if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
-  console.log('Well-formed document');
+  console.log("Well-formed document");
 } else {
-  console.error('<head> is not before <body>');
+  console.error("<head> is not before <body>");
 }
 ```
 

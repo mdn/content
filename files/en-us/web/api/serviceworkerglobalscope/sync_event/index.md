@@ -1,13 +1,8 @@
 ---
-title: 'ServiceWorkerGlobalScope: sync event'
+title: "ServiceWorkerGlobalScope: sync event"
+short-title: sync
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
 page-type: web-api-event
-tags:
-  - Offline
-  - PWA
-  - Background Synchronization
-  - ServiceWorkerGlobalScope
-  - events
 browser-compat: api.ServiceWorkerGlobalScope.sync_event
 ---
 
@@ -22,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('sync', (event) => { });
+addEventListener("sync", (event) => {});
 
-onsync = (event) => { };
+onsync = (event) => {};
 ```
 
 ## Event type
@@ -47,8 +42,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 The following example shows how to respond to a sync event in the service worker.
 
 ```js
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-messages') {
+self.addEventListener("sync", (event) => {
+  if (event.tag === "sync-messages") {
     event.waitUntil(sendOutboxMessages());
   }
 });

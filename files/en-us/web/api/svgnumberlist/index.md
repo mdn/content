@@ -2,11 +2,6 @@
 title: SVGNumberList
 slug: Web/API/SVGNumberList
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGNumberList
 ---
 

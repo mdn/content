@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - imports
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
 

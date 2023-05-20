@@ -1,13 +1,7 @@
 ---
 title: userScripts.RegisteredUserScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredUserScript
-  - Type
-  - userScripts
+page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.RegisteredUserScript
 ---
 

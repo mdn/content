@@ -1,19 +1,8 @@
 ---
-title: ClipboardItem.types
+title: "ClipboardItem: types property"
+short-title: types
 slug: Web/API/ClipboardItem/types
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Property
-  - Read-only
-  - Reference
-  - Types
-  - copy
-  - paste
 browser-compat: api.ClipboardItem.types
 ---
 

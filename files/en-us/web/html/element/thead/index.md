@@ -1,14 +1,7 @@
 ---
-title: '<thead>: The Table Head element'
+title: "<thead>: The Table Head element"
 slug: Web/HTML/Element/thead
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
 browser-compat: html.elements.thead
 ---
 
@@ -24,7 +17,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -32,7 +25,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "thead")}} and {{htmlattrxref("charoff", "thead")}} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
@@ -40,25 +33,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - To align values, use the CSS {{cssxref("text-align")}} property instead.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
+- `bgcolor` {{Deprecated_Inline}}
 
   - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
 
     > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
     > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
 
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
     > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
@@ -79,7 +72,7 @@ See {{HTMLElement("table")}} for examples on `<thead>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>

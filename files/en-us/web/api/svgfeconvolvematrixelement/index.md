@@ -2,12 +2,6 @@
 title: SVGFEConvolveMatrixElement
 slug: Web/API/SVGFEConvolveMatrixElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEConvolveMatrixElement
 ---
 

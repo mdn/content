@@ -1,16 +1,8 @@
 ---
-title: PaymentRequest()
+title: "PaymentRequest: PaymentRequest() constructor"
+short-title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
 
@@ -31,7 +23,7 @@ new PaymentRequest(methodData, details, options)
 
 - `methodData`
 
-  - : Contains an array of identifiers for the payment methods the merchant web site
+  - : Contains an array of identifiers for the payment methods the merchant website
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 
@@ -125,40 +117,44 @@ The following example shows minimal functionality and focuses instead on showing
 complete context of instantiating a `PaymentRequest` object.
 
 ```js
-const supportedInstruments = [{
- supportedMethods: 'https://example.com/pay'
-}];
+const supportedInstruments = [
+  {
+    supportedMethods: "https://example.com/pay",
+  },
+];
 
 const details = {
-  total: {label: 'Donation', amount: {currency: 'USD', value: '65.00'}},
+  total: { label: "Donation", amount: { currency: "USD", value: "65.00" } },
   displayItems: [
     {
-      label: 'Original donation amount',
-      amount: {currency: 'USD', value: '65.00'}
-    }
+      label: "Original donation amount",
+      amount: { currency: "USD", value: "65.00" },
+    },
   ],
   shippingOptions: [
     {
-      id: 'standard',
-      label: 'Standard shipping',
-      amount: {currency: 'USD', value: '0.00'},
-      selected: true
-    }
-  ]
+      id: "standard",
+      label: "Standard shipping",
+      amount: { currency: "USD", value: "0.00" },
+      selected: true,
+    },
+  ],
 };
 
-const options = {requestShipping: true};
+const options = { requestShipping: true };
 
 try {
   const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then((instrumentResponse) => {
-    // Do something with the response from the UI.
-  })
-  .catch((err) => {
-    // Do something with the error from request.show().
-  });
+  request
+    .show()
+    .then((instrumentResponse) => {
+      // Do something with the response from the UI.
+    })
+    .catch((err) => {
+      // Do something with the error from request.show().
+    });
 } catch (e) {
   // Catch any other errors.
 }

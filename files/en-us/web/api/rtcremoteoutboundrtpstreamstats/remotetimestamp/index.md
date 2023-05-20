@@ -1,22 +1,8 @@
 ---
-title: RTCRemoteOutboundRtpStreamStats.remoteTimestamp
+title: "RTCRemoteOutboundRtpStreamStats: remoteTimestamp property"
+short-title: remoteTimestamp
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCRemoteOutboundRtpStreamStats
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - Timer
-  - Timing
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - remoteTimestamp
-  - timeStamp
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.remoteTimestamp
 ---
 

@@ -2,16 +2,6 @@
 title: revert
 slug: Web/CSS/revert
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - revert
 browser-compat: css.types.global_keywords.revert
 ---
 

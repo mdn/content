@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.texImage2D()
+title: "WebGLRenderingContext: texImage2D() method"
+short-title: texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texImage2D
 ---
 

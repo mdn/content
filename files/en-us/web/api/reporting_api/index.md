@@ -2,13 +2,8 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Reporting
-  - Secure context
+status:
+  - experimental
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
 
@@ -38,7 +33,7 @@ The endpoints are arranged into groups; an endpoint group can work together to p
 
 > **Note:** There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
-Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a web site and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
+Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
 ### Reporting observers
 

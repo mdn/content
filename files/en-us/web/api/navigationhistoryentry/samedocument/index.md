@@ -1,20 +1,10 @@
 ---
-title: NavigationHistoryEntry.sameDocument
+title: "NavigationHistoryEntry: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationHistoryEntry/sameDocument
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - sameDocument
-  - Scroll
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigationHistoryEntry.sameDocument
 ---
 

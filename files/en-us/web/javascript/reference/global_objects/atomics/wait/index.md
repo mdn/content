@@ -2,11 +2,6 @@
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.wait
 ---
 
@@ -45,10 +40,10 @@ A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not a
-  shared {{jsxref("Int32Array")}}.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not a shared {{jsxref("Int32Array")}}.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

@@ -2,12 +2,6 @@
 title: Basic concepts of Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 page-type: guide
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Guide
-  - concepts
-  - writing modes
 ---
 
 {{CSSRef}}

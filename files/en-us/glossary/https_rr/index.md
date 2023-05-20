@@ -2,11 +2,6 @@
 title: HTTPS RR
 slug: Glossary/HTTPS_RR
 page-type: glossary-definition
-tags:
-  - HTTPS
-  - HTTPS RR
-  - Infrastructure
-  - Security
 ---
 
 **HTTPS RR** (**_HTTPS Resource Records_**) are a type of DNS record that delivers configuration information and parameters for how to access a service via {{Glossary("HTTPS")}}.

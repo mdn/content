@@ -2,14 +2,6 @@
 title: AudioContext
 slug: Web/API/AudioContext
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Interface
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioContext
 ---
 

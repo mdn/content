@@ -1,16 +1,8 @@
 ---
-title: Element.innerHTML
+title: "Element: innerHTML property"
+short-title: innerHTML
 slug: Web/API/Element/innerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - Property
-  - Reference
-  - innerHTML
 browser-compat: api.Element.innerHTML
 ---
 
@@ -75,7 +67,10 @@ Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(/</g,"&lt;")}</pre>`;
+document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
+  /</g,
+  "&lt;"
+)}</pre>`;
 ```
 
 #### Operational details

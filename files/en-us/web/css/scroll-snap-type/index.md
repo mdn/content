@@ -2,12 +2,6 @@
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.scroll-snap-type
 ---
 

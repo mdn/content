@@ -2,11 +2,6 @@
 title: UI Events
 slug: Web/API/UI_Events
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
 
@@ -153,45 +148,45 @@ body {
 #### JavaScript
 
 ```js
-const outer = document.querySelector('#outer');
-const inner = document.querySelector('#inner');
-const contents = document.querySelector('#contents');
-const clear = document.querySelector('#clear');
+const outer = document.querySelector("#outer");
+const inner = document.querySelector("#inner");
+const contents = document.querySelector("#contents");
+const clear = document.querySelector("#clear");
 let lines = 0;
 
-outer.addEventListener('click', (event) => {
+outer.addEventListener("click", (event) => {
   log(event);
 });
 
-outer.addEventListener('dblclick', (event) => {
+outer.addEventListener("dblclick", (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseover', (event) => {
+outer.addEventListener("mouseover", (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseout', (event) => {
+outer.addEventListener("mouseout", (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseenter', (event) => {
+outer.addEventListener("mouseenter", (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseleave', (event) => {
+outer.addEventListener("mouseleave", (event) => {
   log(event);
 });
 
 function log(event) {
-  const prefix = `${String(lines++).padStart(3, '0')}: `;
+  const prefix = `${String(lines++).padStart(3, "0")}: `;
   const line = `${event.type}(${event.clientX}, ${event.clientY})`;
   contents.textContent = `${contents.textContent}${prefix}${line}\n`;
   contents.scrollTop = contents.scrollHeight;
 }
 
-clear.addEventListener('click', () => {
-  contents.textContent = '';
+clear.addEventListener("click", () => {
+  contents.textContent = "";
   lines = 0;
 });
 ```
@@ -239,31 +234,31 @@ body {
 #### JavaScript
 
 ```js
-const story = document.querySelector('#story');
-const contents = document.querySelector('#contents');
-const clear = document.querySelector('#clear');
+const story = document.querySelector("#story");
+const contents = document.querySelector("#contents");
+const clear = document.querySelector("#clear");
 let lines = 0;
 
-story.addEventListener('keydown', (event) => {
+story.addEventListener("keydown", (event) => {
   log(`${event.type}(${event.key})`);
 });
 
-story.addEventListener('beforeinput', (event) => {
+story.addEventListener("beforeinput", (event) => {
   log(`${event.type}(${event.data})`);
 });
 
-story.addEventListener('input', (event) => {
+story.addEventListener("input", (event) => {
   log(`${event.type}(${event.data})`);
 });
 
 function log(line) {
-  const prefix = `${String(lines++).padStart(3, '0')}: `;
+  const prefix = `${String(lines++).padStart(3, "0")}: `;
   contents.textContent = `${contents.textContent}${prefix}${line}\n`;
   contents.scrollTop = contents.scrollHeight;
 }
 
-clear.addEventListener('click', () => {
-  contents.textContent = '';
+clear.addEventListener("click", () => {
+  contents.textContent = "";
   lines = 0;
 });
 ```

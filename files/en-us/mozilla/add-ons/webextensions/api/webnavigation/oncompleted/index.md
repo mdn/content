@@ -1,16 +1,7 @@
 ---
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webNavigation
+page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCompleted
 ---
 

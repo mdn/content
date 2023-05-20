@@ -2,16 +2,6 @@
 title: height
 slug: Web/CSS/height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Vertical
-  - dimensions
-  - height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.height
 ---
 

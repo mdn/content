@@ -2,18 +2,6 @@
 title: RTCDTMFSender
 slug: Web/API/RTCDTMFSender
 page-type: web-api-interface
-tags:
-  - Audio
-  - DTMF
-  - Interface
-  - Media
-  - PSTN
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDTMFSender
 ---
 

@@ -2,12 +2,6 @@
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
 
@@ -20,12 +14,12 @@ The **logical AND assignment (`x &&= y`)** operator only assigns if `x` is {{Glo
 ## Syntax
 
 ```js-nolint
-expr1 &&= expr2
+x &&= y
 ```
 
 ## Description
 
-Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#short-circuiting), meaning that `x &&= y` is equivalent to:
+Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x &&= y` is equivalent to:
 
 ```js
 x && (x = y);

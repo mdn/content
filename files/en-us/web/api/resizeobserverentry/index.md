@@ -2,16 +2,6 @@
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
 browser-compat: api.ResizeObserverEntry
 ---
 
@@ -46,10 +36,19 @@ The following snippet is taken from the [resize-observer-text.html](https://mdn.
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentBoxSize.inlineSize / 200
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(
+        1,
+        entry.contentBoxSize.inlineSize / 600
+      )}rem`;
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }

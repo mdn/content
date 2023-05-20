@@ -1,15 +1,7 @@
 ---
 title: "ARIA: table role"
 slug: Web/Accessibility/ARIA/Roles/table_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Table
-  - ARIA Table Role
-  - Accessibility
-  - Reference
-  - Table Role
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#table
   - https://w3c.github.io/aria-practices/#table

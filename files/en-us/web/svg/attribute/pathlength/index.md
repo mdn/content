@@ -2,9 +2,6 @@
 title: pathLength
 slug: Web/SVG/Attribute/pathLength
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
 ---
 

@@ -2,11 +2,6 @@
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.ceil
 ---
 

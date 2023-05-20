@@ -2,14 +2,6 @@
 title: TCP handshake
 slug: Glossary/TCP_handshake
 page-type: glossary-definition
-tags:
-  - Networking
-  - SSL
-  - Security
-  - TCP
-  - TCP handshake
-  - TLS
-  - Web Performance
 ---
 
 {{glossary('Transmission Control Protocol (TCP)','TCP (Transmission Control Protocol)')}} uses a **three-way handshake** (aka TCP-handshake, three message handshake, and/or SYN-SYN-ACK) to set up a TCP/IP connection over an IP based network.

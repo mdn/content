@@ -2,16 +2,6 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 page-type: html-element
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - button
 browser-compat: html.elements.input.type_button
 ---
 
@@ -179,7 +169,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 ## Validation
 
@@ -332,6 +322,10 @@ draw();
     <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Implicit ARIA Role</strong></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

@@ -1,15 +1,7 @@
 ---
 title: browserSettings.webNotificationsDisabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - webNotificationsDisabled
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.webNotificationsDisabled
 ---
 

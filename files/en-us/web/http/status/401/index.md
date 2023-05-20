@@ -1,11 +1,7 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.401
 ---
 

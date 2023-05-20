@@ -1,16 +1,8 @@
 ---
-title: SourceBuffer.videoTracks
+title: "SourceBuffer: videoTracks property"
+short-title: videoTracks
 slug: Web/API/SourceBuffer/videoTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - videoTracks
 browser-compat: api.SourceBuffer.videoTracks
 ---
 

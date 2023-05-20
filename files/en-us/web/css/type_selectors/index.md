@@ -2,13 +2,6 @@
 title: Type selectors
 slug: Web/CSS/Type_selectors
 page-type: css-selector
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.type
 ---
 

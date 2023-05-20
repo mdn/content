@@ -2,19 +2,8 @@
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer
 ---
 

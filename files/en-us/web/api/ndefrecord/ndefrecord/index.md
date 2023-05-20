@@ -1,12 +1,10 @@
 ---
-title: NDEFRecord()
+title: "NDEFRecord: NDEFRecord() constructor"
+short-title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
 page-type: web-api-constructor
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
 

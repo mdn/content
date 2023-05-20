@@ -1,15 +1,6 @@
 ---
 title: Front-end web developer
 slug: Learn/Front-end_web_developer
-tags:
-  - Beginner
-  - CSS
-  - Front-end
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - Web Standards
 ---
 
 {{learnsidebar}}

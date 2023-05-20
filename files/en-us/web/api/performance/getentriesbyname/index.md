@@ -1,12 +1,8 @@
 ---
-title: performance.getEntriesByName()
+title: "Performance: getEntriesByName() method"
+short-title: getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.Performance.getEntriesByName
 ---
 

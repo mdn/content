@@ -2,14 +2,8 @@
 title: PresentationConnectionList
 slug: Web/API/PresentationConnectionList
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Presentation
-  - Presentation API
-  - PresentationConnectionList
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationConnectionList
 ---
 

@@ -1,20 +1,10 @@
 ---
-title: NavigateEvent.intercept()
+title: "NavigateEvent: intercept() method"
+short-title: intercept()
 slug: Web/API/NavigateEvent/intercept
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - History
-  - intercept
-  - Method
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.NavigateEvent.intercept
 ---
 
@@ -65,14 +55,14 @@ None (`undefined`).
 ### Handling a navigation using `intercept()`
 
 ```js
-navigation.addEventListener('navigate', event => {
-  // Exit early if this navigation shouldn't be intercepted, 
+navigation.addEventListener("navigate", (event) => {
+  // Exit early if this navigation shouldn't be intercepted,
   // e.g. if the navigation is cross-origin, or a download request
   if (shouldNotIntercept(event)) return;
 
   const url = new URL(event.destination.url);
 
-  if (url.pathname.startsWith('/articles/')) {
+  if (url.pathname.startsWith("/articles/")) {
     event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
@@ -93,7 +83,7 @@ navigation.addEventListener('navigate', event => {
 Form submission can be detected by querying for the {{domxref("NavigateEvent.formData")}} property. The following example turns any form submission into one which stays on the current page. In this case, you don't update the DOM, so you can cancel any default reset and scroll behavior using `focusReset` and `scroll`.
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   if (event.formData && event.canIntercept) {
     // User submitted a POST form to a same-domain URL
     // (If canIntercept is false, the event is just informative:
@@ -103,11 +93,11 @@ navigation.addEventListener('navigate', (event) => {
     event.intercept({
       // Since we don't update the DOM in this navigation,
       // don't allow focus or scrolling to reset:
-      focusReset: 'manual',
-      scroll: 'manual',
+      focusReset: "manual",
+      scroll: "manual",
       async handler() {
         await fetch(event.destination.url, {
-          method: 'POST',
+          method: "POST",
           body: event.formData,
         });
         // You could navigate again with {history: 'replace'} to change the URL here,

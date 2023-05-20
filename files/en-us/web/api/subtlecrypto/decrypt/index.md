@@ -1,14 +1,8 @@
 ---
-title: SubtleCrypto.decrypt()
+title: "SubtleCrypto: decrypt() method"
+short-title: decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Decrypt
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
 browser-compat: api.SubtleCrypto.decrypt
 ---
 
@@ -98,6 +92,7 @@ This code decrypts `ciphertext` using AES in CBC mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
+  // The iv value is the same as that used for encryption
   return window.crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, ciphertext);
 }
 ```
@@ -109,6 +104,7 @@ This code decrypts `ciphertext` using AES in GCM mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
+  // The iv value is the same as that used for encryption
   return window.crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ciphertext);
 }
 ```

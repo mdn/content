@@ -1,23 +1,6 @@
 ---
 title: Parsing and serializing XML
 slug: Web/Guide/Parsing_and_serializing_XML
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - DOM Parsing
-  - Document
-  - Extensions
-  - Guide
-  - HTMLDocument
-  - JSON
-  - Parsing
-  - Parsing XML
-  - Serializing
-  - Serializing XML
-  - XML
-  - XMLDocument
-  - XMLHttpRequest
 ---
 
 <section id="Quick_links">
@@ -67,11 +50,11 @@ const xhr = new XMLHttpRequest();
 
 xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
-}
+};
 
 xhr.onerror = () => {
   dump("Error while getting XML.");
-}
+};
 
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";

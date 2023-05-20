@@ -1,15 +1,8 @@
 ---
-title: Element.ariaColCount
+title: "Element: ariaColCount property"
+short-title: ariaColCount
 slug: Web/API/Element/ariaColCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaColCount
 ---
 
@@ -66,9 +59,9 @@ In this example the `aria-colcount` attribute on the element with an ID of `sema
 ```
 
 ```js
-let el = document.getElementById('semantic-table');
+let el = document.getElementById("semantic-table");
 console.log(el.ariaColCount); // 2
-el.ariaColCount = "3"
+el.ariaColCount = "3";
 console.log(el.ariaColCount); // 3
 ```
 

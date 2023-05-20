@@ -1,13 +1,7 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.identity
 ---
 

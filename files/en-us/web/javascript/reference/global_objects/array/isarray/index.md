@@ -2,19 +2,14 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 page-type: javascript-static-method
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.isArray
 ---
 
 {{JSRef}}
 
 The **`Array.isArray()`** static method determines whether the passed value is an {{jsxref("Array")}}.
+
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
 
 ## Syntax
 
@@ -96,5 +91,5 @@ arr instanceof Array; // false
 ## See also
 
 - [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}

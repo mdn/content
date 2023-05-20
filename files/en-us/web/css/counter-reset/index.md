@@ -2,12 +2,6 @@
 title: counter-reset
 slug: Web/CSS/counter-reset
 page-type: css-property
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
 browser-compat: css.properties.counter-reset
 ---
 

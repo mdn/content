@@ -1,20 +1,10 @@
 ---
-title: Navigation.forward()
+title: "Navigation: forward() method"
+short-title: forward()
 slug: Web/API/Navigation/forward
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - forward
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
+status:
+  - experimental
 browser-compat: api.Navigation.forward
 ---
 
@@ -61,7 +51,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -71,7 +61,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```

@@ -1,15 +1,7 @@
 ---
 title: sidebarAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Reference
-  - Type
-  - WebExtensions
-  - sidebarAction
+page-type: webextension-api-type
 browser-compat: webextensions.api.sidebarAction.ImageDataType
 ---
 

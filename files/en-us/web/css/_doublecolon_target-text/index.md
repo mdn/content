@@ -1,15 +1,9 @@
 ---
-title: '::target-text'
+title: "::target-text"
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
-tags:
-  - '::target-text'
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: css.selectors.target-text
 ---
 
@@ -25,8 +19,10 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 ## Syntax
 
-```
-::target-text
+```css
+::target-text {
+  /* ... */
+}
 ```
 
 ## Examples

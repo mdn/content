@@ -1,17 +1,8 @@
 ---
-title: RTCPeerConnection.pendingLocalDescription
+title: "RTCPeerConnection: pendingLocalDescription property"
+short-title: pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - pendingLocalDescription
 browser-compat: api.RTCPeerConnection.pendingLocalDescription
 ---
 
@@ -44,8 +35,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!
-}
-else {
+} else {
   // No description change pending
 }
 ```

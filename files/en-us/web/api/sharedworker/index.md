@@ -2,13 +2,6 @@
 title: SharedWorker
 slug: Web/API/SharedWorker
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - Workers
 browser-compat: api.SharedWorker
 ---
 
@@ -48,7 +41,7 @@ In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/ma
 The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
 > **Note:** Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it. The shared worker will be alive as long as its global scope's owner set (a set of `Document` and `WorkerGlobalScope` objects) is not empty (for example, if there is any live page holding a reference to it, maybe through `new SharedWorker()`). To read more about shared worker lifetime, see [The worker's lifetime](https://html.spec.whatwg.org/multipage/workers.html#the-worker's-lifetime) section of the HTML specification.
@@ -64,18 +57,18 @@ When the port is started, both scripts post messages to the worker and handle me
 ```js
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
@@ -84,13 +77,13 @@ Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", 
 onconnect = (e) => {
   const port = e.ports[0];
 
-  port.addEventListener('message', (e) => {
+  port.addEventListener("message", (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+};
 ```
 
 ## Specifications

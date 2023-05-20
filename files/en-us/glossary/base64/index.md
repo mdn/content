@@ -2,16 +2,6 @@
 title: Base64
 slug: Glossary/Base64
 page-type: glossary-definition
-tags:
-  - Advanced
-  - Base64
-  - JavaScript
-  - Typed Arrays
-  - URI
-  - URL
-  - Unicode Problem
-  - atob()
-  - btoa()
 ---
 
 **Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
@@ -102,7 +92,7 @@ function b64ToUint6(nChr) {
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
-  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Only necessary if the base64 includes whitespace such as line breaks.
+  const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Remove any non-base64 characters, such as trailing "=", whitespace, and more.
   const nInLen = sB64Enc.length;
   const nOutLen = nBlocksSize
     ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
@@ -153,10 +143,10 @@ function base64EncArr(aBytes) {
   let nUint24 = 0;
   for (let nIdx = 0; nIdx < nLen; nIdx++) {
     nMod3 = nIdx % 3;
-// To break your base64 into several 80-character lines, add:
-//   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
-//      sB64Enc += "\r\n";
-//    }
+    // To break your base64 into several 80-character lines, add:
+    //   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
+    //      sB64Enc += "\r\n";
+    //    }
 
     nUint24 |= aBytes[nIdx] << ((16 >>> nMod3) & 24);
     if (nMod3 === 2 || aBytes.length - nIdx === 1) {

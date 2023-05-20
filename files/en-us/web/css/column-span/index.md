@@ -2,12 +2,6 @@
 title: column-span
 slug: Web/CSS/column-span
 page-type: css-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-span
 ---
 
@@ -111,5 +105,5 @@ h2 {
 
 ## See also
 
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

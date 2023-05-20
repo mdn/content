@@ -1,13 +1,7 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - HTTP
-  - HTTPS
-  - Reference
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy-Report-Only
 ---
 
@@ -49,7 +43,7 @@ The CSP {{CSP("report-to")}} directive should be used with this header, otherwis
 
 ## Examples
 
-This header reports violations that would have occurred. You can use this to iteratively work on your content security policy. You observe how your site behaves, watching for violation reports, or [malware redirects](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/), then choose the desired policy enforced by the {{HTTPHeader("Content-Security-Policy")}} header.
+This header reports violations that would have occurred. You can use this to iteratively work on your content security policy. You observe how your site behaves, watching for violation reports, then choose the desired policy enforced by the {{HTTPHeader("Content-Security-Policy")}} header.
 
 ```http
 Content-Security-Policy-Report-Only: default-src https:; report-to /csp-violation-report-endpoint/

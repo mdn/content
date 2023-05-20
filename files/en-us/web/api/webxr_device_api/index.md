@@ -2,19 +2,8 @@
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
 page-type: web-api-overview
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
 

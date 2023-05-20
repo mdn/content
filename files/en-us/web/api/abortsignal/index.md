@@ -2,12 +2,6 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 page-type: web-api-interface
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - Interface
-  - Reference
 browser-compat: api.AbortSignal
 ---
 

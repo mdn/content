@@ -1,14 +1,8 @@
 ---
-title: Crypto.subtle
+title: "Crypto: subtle property"
+short-title: subtle
 slug: Web/API/Crypto/subtle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Cryptography
-  - Property
-  - Read-only
-  - Reference
-  - Web Crypto API
 browser-compat: api.Crypto.subtle
 ---
 

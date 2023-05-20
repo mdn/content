@@ -2,17 +2,11 @@
 title: Visual formatting model
 slug: Web/CSS/Visual_formatting_model
 page-type: guide
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-  - visual formatting model
 ---
 
 {{CSSRef}}
 
-In CSS The **Visual Formatting Model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and {{glossary("paged media")}} such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
+In CSS The **Visual Formatting Model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and [paged media](/en-US/docs/Web/CSS/Paged_Media) such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
 
 In the visual formatting model, each element in the document tree generates zero or more boxes according to the box model. The layout of these boxes is governed by:
 
@@ -124,7 +118,7 @@ Elements either participate in the formatting context of their containing block 
 
 The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap round the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
 
-{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 720)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 720)}}
 
 ### Block boxes
 
@@ -148,10 +142,10 @@ A block box is a block-level box that is also a block container. As described in
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - **Visual formatting models**
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)

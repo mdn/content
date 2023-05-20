@@ -2,13 +2,6 @@
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Images
-  - Reference
-  - aspect-ratio
-  - recipe:css-property
 browser-compat: css.properties.aspect-ratio
 ---
 

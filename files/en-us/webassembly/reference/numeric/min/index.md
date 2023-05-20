@@ -1,12 +1,6 @@
 ---
 title: Min
 slug: WebAssembly/Reference/Numeric/Min
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

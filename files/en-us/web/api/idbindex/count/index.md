@@ -1,16 +1,8 @@
 ---
-title: IDBIndex.count()
+title: "IDBIndex: count() method"
+short-title: count()
 slug: Web/API/IDBIndex/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - count
 browser-compat: api.IDBIndex.count
 ---
 

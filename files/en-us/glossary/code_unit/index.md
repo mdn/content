@@ -2,7 +2,6 @@
 title: Code unit
 slug: Glossary/Code_unit
 page-type: glossary-definition
-tags:
 ---
 
 A **code unit** is the basic component used by a character encoding system (such as UTF-8 or UTF-16). A character encoding system uses one or more code units to encode a Unicode {{Glossary("code point")}}.

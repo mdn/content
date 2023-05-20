@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.shadowColor
+title: "CanvasRenderingContext2D: shadowColor property"
+short-title: shadowColor
 slug: Web/API/CanvasRenderingContext2D/shadowColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowColor
 ---
 
@@ -51,11 +46,11 @@ the shapes.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowOffsetX = 10;
 ctx.shadowOffsetY = 10;
 
@@ -90,22 +85,22 @@ The resulting alpha value of the fill shadow is `.8 * .2`, or
 `.48`.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'rgba(255, 0, 0, .8)';
+ctx.shadowColor = "rgba(255, 0, 0, .8)";
 ctx.shadowBlur = 8;
 ctx.shadowOffsetX = 30;
 ctx.shadowOffsetY = 20;
 
 // Filled rectangle
-ctx.fillStyle = 'rgba(0, 255, 0, .2)';
+ctx.fillStyle = "rgba(0, 255, 0, .2)";
 ctx.fillRect(10, 10, 150, 100);
 
 // Stroked rectangle
 ctx.lineWidth = 10;
-ctx.strokeStyle = 'rgba(0, 0, 255, .6)';
+ctx.strokeStyle = "rgba(0, 0, 255, .6)";
 ctx.strokeRect(10, 10, 150, 100);
 ```
 

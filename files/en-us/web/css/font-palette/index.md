@@ -2,13 +2,6 @@
 title: font-palette
 slug: Web/CSS/font-palette
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - Color Fonts
-  - CSS Property
-  - font-palette
-  - Reference
 browser-compat: css.properties.font-palette
 ---
 

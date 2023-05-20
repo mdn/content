@@ -2,11 +2,6 @@
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.atan2
 ---
 
@@ -94,8 +89,8 @@ function format(template, ...args) {
       (Object.is(num, -0)
         ? "-0"
         : formattedNumbers.get(num) ?? String(num)
-      ).padEnd(5)
-    )
+      ).padEnd(5),
+    ),
   );
 }
 

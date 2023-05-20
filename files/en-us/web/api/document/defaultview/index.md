@@ -1,13 +1,8 @@
 ---
-title: Document.defaultView
+title: "Document: defaultView property"
+short-title: defaultView
 slug: Web/API/Document/defaultView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.defaultView
 ---
 

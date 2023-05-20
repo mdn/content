@@ -2,18 +2,12 @@
 title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.background
 ---
 
 {{CSSRef("CSS Background")}}
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method.
+The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
 {{EmbedInteractiveExample("pages/css/background.html")}}
 
@@ -72,25 +66,33 @@ The syntax of each layer is as follows:
 ### Values
 
 - `<attachment>`
-  - : See {{cssxref("background-attachment")}}.
+  - : See {{cssxref("background-attachment")}}. Default: `scroll`.
 - `<box>`
-  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}.
+  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}. Default: `border-box` and `padding-box` respectively.
 - `<background-color>`
-  - : See {{cssxref("background-color")}}.
+  - : See {{cssxref("background-color")}}. Default: `transparent`.
 - `<bg-image>`
-  - : See {{Cssxref("background-image")}}.
+  - : See {{Cssxref("background-image")}}. Default: `none`.
 - `<position>`
-  - : See {{cssxref("background-position")}}.
+  - : See {{cssxref("background-position")}}. Default: 0% 0%.
 - `<repeat-style>`
-  - : See {{cssxref("background-repeat")}}.
+  - : See {{cssxref("background-repeat")}}. Default: `repeat`.
 - `<bg-size>`
-  - : See {{cssxref("background-size")}}.
+  - : See {{cssxref("background-size")}}. Default: `auto`.
+
+The following three lines of CSS are equivalent:
+
+```css
+background: none;
+background: transparent;
+background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
+```
 
 ## Accessibility concerns
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Formal definition

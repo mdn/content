@@ -1,14 +1,7 @@
 ---
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
+page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
 ---
 
@@ -37,22 +30,24 @@ browser.find.find(
 
 ### Parameters
 
-- `queryphrase`
-  - : `string`. The text to search for.
 - `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
-    - `tabId`
-      - : `integer`. ID of the tab to search. Defaults to the active tab.
     - `caseSensitive`
-      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+      - : `boolean`. If `true` the, the search is case-sensitive. Defaults to `false`.
     - `entireWord`
       - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
     - `includeRangeData`
       - : `boolean`. Include range data in the response, which describe where in the page DOM the match was found. Defaults to `false`.
     - `includeRectData`
-      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
+      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`
+    - `matchDiacritics`
+      - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
+    - `tabId`
+      - : `integer`. ID of the tab to search. Defaults to the active tab.
+- `queryphrase`
+  - : `string`. The text to search for.
 
 ### Return value
 
@@ -68,16 +63,16 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
     Each `RangeData` contains the following properties:
 
-    - `framePos`
-      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
-    - `startTextNodePos`
-      - : The ordinal position of the text node in which the match started.
-    - `endTextNodePos`
-      - : The ordinal position of the text node in which the match ended.
-    - `startOffset`
-      - : The ordinal position of the start of the match within its text node.
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
+    - `endTextNodePos`
+      - : The ordinal position of the text node in which the match ended.
+    - `framePos`
+      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
+    - `startOffset`
+      - : The ordinal position of the start of the match within its text node.
+    - `startTextNodePos`
+      - : The ordinal position of the text node in which the match started.
 
 - `rectData` {{optional_inline}}
 

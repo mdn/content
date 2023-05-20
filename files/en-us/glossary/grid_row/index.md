@@ -2,8 +2,6 @@
 title: Grid Row
 slug: Glossary/Grid_Row
 page-type: glossary-definition
-tags:
-  - CSS Grids
 ---
 
 A **grid row** is a horizontal track in a [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), that is the space between two horizontal grid lines. It is defined by the {{cssxref("grid-template-rows")}} property or in the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties.

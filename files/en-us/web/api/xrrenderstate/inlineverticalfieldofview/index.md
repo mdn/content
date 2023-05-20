@@ -1,15 +1,10 @@
 ---
-title: XRRenderState.inlineVerticalFieldOfView
+title: "XRRenderState: inlineVerticalFieldOfView property"
+short-title: inlineVerticalFieldOfView
 slug: Web/API/XRRenderState/inlineVerticalFieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Field of View
-  - Vertical Field of View
-  - WebXR
-  - WebXR Device API
-  - Property
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRRenderState.inlineVerticalFieldOfView
 ---
 

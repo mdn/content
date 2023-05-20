@@ -2,10 +2,6 @@
 title: seed
 slug: Web/SVG/Attribute/seed
 page-type: svg-attribute
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
 browser-compat: svg.elements.feTurbulence.seed
 ---
 

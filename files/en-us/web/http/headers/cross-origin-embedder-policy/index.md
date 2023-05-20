@@ -1,12 +1,7 @@
 ---
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Embedder-Policy
 ---
 
@@ -60,7 +55,7 @@ See also the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header which you'll ne
 To check if cross origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);

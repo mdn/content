@@ -2,15 +2,6 @@
 title: column-gap
 slug: Web/CSS/column-gap
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - column-gap
-  - recipe:css-property
 browser-compat: css.properties.column-gap
 ---
 

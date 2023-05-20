@@ -2,12 +2,6 @@
 title: CSS Charsets
 slug: Web/CSS/CSS_Charsets
 page-type: css-module
-tags:
-  - CSS
-  - CSS Charsets
-  - Guide
-  - Overview
-  - Reference
 browser-compat: css.at-rules.charset
 ---
 

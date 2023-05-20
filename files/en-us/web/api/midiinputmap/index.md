@@ -2,8 +2,6 @@
 title: MIDIInputMap
 slug: Web/API/MIDIInputMap
 page-type: web-api-interface
-tags:
-  - NeedsContent
 browser-compat: api.MIDIInputMap
 ---
 

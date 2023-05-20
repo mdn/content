@@ -1,16 +1,6 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Beginner
-  - Canvas
-  - Example
-  - Games
-  - Graphics
-  - Tutorial
-  - collision
-  - detection
 ---
 
 {{GamesSidebar}}

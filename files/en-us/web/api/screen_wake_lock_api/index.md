@@ -2,19 +2,10 @@
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLock
-  - screen
-  - Experimental
 browser-compat: api.WakeLock
 ---
 
-{{DefaultAPISidebar("Screen Wake Lock API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The Screen Wake Lock API provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
 
@@ -48,12 +39,12 @@ The Screen Wake Lock API should be used to keep the screen on to benefit usabili
 This code checks for wake lock support and updates the UI accordingly.
 
 ```js
-if ('wakeLock' in navigator) {
+if ("wakeLock" in navigator) {
   isSupported = true;
-  statusElem.textContent = 'Screen Wake Lock API supported!';
+  statusElem.textContent = "Screen Wake Lock API supported!";
 } else {
   wakeButton.disabled = true;
-  statusElem.textContent = 'Wake lock is not supported by this browser.';
+  statusElem.textContent = "Wake lock is not supported by this browser.";
 }
 ```
 
@@ -67,8 +58,8 @@ let wakeLock = null;
 
 // create an async function to request a wake lock
 try {
-  wakeLock = await navigator.wakeLock.request('screen');
-  statusElem.textContent = 'Wake Lock is active!';
+  wakeLock = await navigator.wakeLock.request("screen");
+  statusElem.textContent = "Wake Lock is active!";
 } catch (err) {
   // The Wake Lock request has failed - usually system related, such as battery.
   statusElem.textContent = `${err.name}, ${err.message}`;
@@ -80,10 +71,9 @@ try {
 The following example shows how to release the previously acquired wake lock.
 
 ```js
-wakeLock.release()
-  .then(() => {
-    wakeLock = null;
-  });
+wakeLock.release().then(() => {
+  wakeLock = null;
+});
 ```
 
 ### Listening for wake lock release
@@ -91,9 +81,9 @@ wakeLock.release()
 This example updates the UI if the wake lock has been released for any reason (such as navigating away from the active window/tab).
 
 ```js
-wakeLock.addEventListener('release', () => {
+wakeLock.addEventListener("release", () => {
   // the wake lock has been released
-  statusElem.textContent = 'Wake Lock has been released';
+  statusElem.textContent = "Wake Lock has been released";
 });
 ```
 
@@ -102,9 +92,9 @@ wakeLock.addEventListener('release', () => {
 The following code reacquires the wake lock should the visibility of the document change and the wake lock is released.
 
 ```js
-document.addEventListener('visibilitychange', async () => {
-  if (wakeLock !== null && document.visibilityState === 'visible') {
-    wakeLock = await navigator.wakeLock.request('screen');
+document.addEventListener("visibilitychange", async () => {
+  if (wakeLock !== null && document.visibilityState === "visible") {
+    wakeLock = await navigator.wakeLock.request("screen");
   }
 });
 ```

@@ -1,11 +1,8 @@
 ---
 title: share_target
 slug: Web/Manifest/share_target
-tags:
-  - Manifest
-  - Web
-  - share_target
-  - Experimental
+status:
+  - experimental
 browser-compat: html.manifest.share_target
 ---
 
@@ -16,10 +13,6 @@ browser-compat: html.manifest.share_target
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

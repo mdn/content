@@ -1,12 +1,6 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
-tags:
-  - Example
-  - Snippets
-  - XML
-  - XPath
-  - XSLT
 ---
 
 <section id="Quick_links">
@@ -28,12 +22,15 @@ The following custom utility function can be used to evaluate XPath expressions 
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   const xpe = new XPathEvaluator();
-  const nsResolver = xpe.createNSResolver(aNode.ownerDocument === null ? aNode.documentElement : aNode.ownerDocument.documentElement);
+  const nsResolver = xpe.createNSResolver(
+    aNode.ownerDocument === null
+      ? aNode.documentElement
+      : aNode.ownerDocument.documentElement
+  );
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
   let res;
-  while (res = result.iterateNext())
-    found.push(res);
+  while ((res = result.iterateNext())) found.push(res);
   return found;
 }
 ```
@@ -96,14 +93,20 @@ The following is a simple utility function to get (ordered) XPath results into a
 // const els = docEvaluateArray('//a');
 // console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray (expr, doc, context, resolver) {
+function docEvaluateArray(expr, doc, context, resolver) {
   let i;
   const a = [];
   doc = doc || (context ? context.ownerDocument : document);
   resolver = resolver || null;
   context = context || doc;
 
-  const result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  const result = doc.evaluate(
+    expr,
+    context,
+    resolver,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null
+  );
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));
   }
@@ -119,25 +122,30 @@ The following function allows one to pass an element and an XML document to find
 
 ```js
 function getXPathForElement(el, xml) {
-  let xpath = '';
+  let xpath = "";
   let pos, tempitem2;
 
   while (el !== xml.documentElement) {
     pos = 0;
     tempitem2 = el;
     while (tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+        // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}'][${pos}]/${xpath}`;
+    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${
+      el.namespaceURI ?? ""
+    }'][${pos}]/${xpath}`;
 
     el = el.parentNode;
   }
-  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}']/${xpath}`;
-  xpath = xpath.replace(/\/$/, '');
+  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${
+    el.namespaceURI ?? ""
+  }']/${xpath}`;
+  xpath = xpath.replace(/\/$/, "");
   return xpath;
 }
 ```

@@ -2,10 +2,6 @@
 title: MDN Web Docs Repositories
 slug: MDN/Community/Contributing/Our_repositories
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

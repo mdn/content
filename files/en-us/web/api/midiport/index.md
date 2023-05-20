@@ -2,11 +2,6 @@
 title: MIDIPort
 slug: Web/API/MIDIPort
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MIDIPort
 browser-compat: api.MIDIPort
 ---
 

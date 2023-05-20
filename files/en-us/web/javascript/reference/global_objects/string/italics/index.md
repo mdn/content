@@ -2,14 +2,8 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.italics
 ---
 

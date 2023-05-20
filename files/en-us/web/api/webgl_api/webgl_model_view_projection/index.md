@@ -2,19 +2,6 @@
 title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 page-type: guide
-tags:
-  - 3D
-  - Graphics
-  - Guide
-  - Model
-  - Scale
-  - Transformation
-  - View
-  - WebGL
-  - matrix
-  - projection
-  - render
-  - rotation
 ---
 
 {{DefaultAPISidebar("WebGL")}}

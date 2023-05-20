@@ -1,21 +1,8 @@
 ---
-title: RTCPeerConnection.signalingState
+title: "RTCPeerConnection: signalingState property"
+short-title: signalingState
 slug: Web/API/RTCPeerConnection/signalingState
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Media
-  - Negotiation
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - Signaling
-  - WebRTC
-  - WebRTC API
-  - signalingState
-  - state
 browser-compat: api.RTCPeerConnection.signalingState
 ---
 

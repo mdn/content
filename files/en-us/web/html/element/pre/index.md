@@ -1,14 +1,7 @@
 ---
-title: '<pre>: The Preformatted Text element'
+title: "<pre>: The Preformatted Text element"
 slug: Web/HTML/Element/pre
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - Web
 browser-compat: html.elements.pre
 ---
 
@@ -24,11 +17,11 @@ If you have to display reserved characters such as `<`, `>`, `&`, and `"` within
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS {{Cssxref("width")}} instead.
-- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `cols` {{non-standard_inline}} {{deprecated_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](#width). To achieve such an effect, use CSS {{Cssxref("width")}} instead.
+- `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
-- {{htmlattrdef("wrap")}} {{non-standard_inline}} {{Deprecated_Inline}}
+- `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
 ## Accessibility concerns
@@ -105,12 +98,12 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -118,7 +111,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -131,7 +124,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

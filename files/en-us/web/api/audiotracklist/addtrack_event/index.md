@@ -1,20 +1,8 @@
 ---
 title: "AudioTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/AudioTrackList/addtrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - addtrack
-  - Adding Audio Tracks
-  - Adding Tracks
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - addtrack
-  - track
 browser-compat: api.AudioTrackList.addtrack_event
 ---
 

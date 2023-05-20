@@ -1,17 +1,10 @@
 ---
-title: PresentationConnection.close()
+title: "PresentationConnection: close() method"
+short-title: close()
 slug: Web/API/PresentationConnection/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMarkupWork
-  - Presentation
-  - PresentationConnection
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationConnection.close
 ---
 

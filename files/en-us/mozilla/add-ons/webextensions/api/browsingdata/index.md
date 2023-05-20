@@ -1,14 +1,7 @@
 ---
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browsingData
+page-type: webextension-api
 browser-compat: webextensions.api.browsingData
 ---
 

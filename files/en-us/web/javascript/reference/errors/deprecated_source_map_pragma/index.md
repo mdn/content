@@ -1,14 +1,7 @@
 ---
-title: >-
-  SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //#
-  instead
+title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Source maps
 ---
 
 {{jsSidebar("Errors")}}

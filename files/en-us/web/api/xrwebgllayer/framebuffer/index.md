@@ -1,25 +1,10 @@
 ---
-title: XRWebGLLayer.framebuffer
+title: "XRWebGLLayer: framebuffer property"
+short-title: framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
 
@@ -65,17 +50,14 @@ framebuffer:
     "checkFramebufferStatus()")}} on the WebGL context from outside the animation frame
   callback causes the WebGL `FRAMEBUFFER_UNSUPPORTED` error (0x8CDD) to be
   reported.
-- Opaque framebuffers initialized with the {{domxref("WebXRLayerInit.depth",
-    "depth")}} property set to `false` will not have a depth buffer and will
+- Opaque framebuffers initialized with the `depth` property set to `false` will not have a depth buffer and will
   rely on the coordinates alone to determine distance.
-- Opaque framebuffers initialized without specifying a
-  {{domxref("WebXRLayerInit.stencil", "stencil")}} will not have a stencil buffer.
-- Opaque framebuffers will not have an alpha channel available unless the
-  {{domxref("WebGLLayerInit.alpha", "alpha")}} property is `true` when
+- Opaque framebuffers initialized without specifying a `stencil`")}}` will not have a stencil buffer.
+- Opaque framebuffers will not have an alpha channel available unless the `alpha` property is `true` when
   creating the layer.
 - The XR compositor assumes that opaque framebuffers use colors with premultiplied
   alpha, regardless of whether or not the WebGL context's
-  {{domxref("WebGLContextAttributes.premultipliedAlpha", "premultipliedAlpha")}} context
+  `premultipliedAlpha`")}}` context
   attribute is set.
 
 > **Note:** The `depth` and `stencil` properties are
@@ -114,5 +96,3 @@ gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}
-- {{domxref("WebGLContextAttributes")}}

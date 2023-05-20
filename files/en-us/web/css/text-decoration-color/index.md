@@ -2,19 +2,6 @@
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styling HTML
-  - Styling text
-  - color
-  - colors
-  - recipe:css-property
 browser-compat: css.properties.text-decoration-color
 ---
 

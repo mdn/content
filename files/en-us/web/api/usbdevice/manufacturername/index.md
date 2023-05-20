@@ -1,17 +1,10 @@
 ---
-title: USBDevice.manufacturerName
+title: "USBDevice: manufacturerName property"
+short-title: manufacturerName
 slug: Web/API/USBDevice/manufacturerName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - manufacturerName
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.manufacturerName
 ---
 

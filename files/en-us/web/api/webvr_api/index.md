@@ -2,16 +2,9 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 page-type: web-api-overview
-tags:
-  - API
-  - Deprecated
-  - Landing
-  - Deprecated
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Navigator.getVRDisplays
 ---
 

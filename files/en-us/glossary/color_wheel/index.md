@@ -2,8 +2,6 @@
 title: Color wheel
 slug: Glossary/Color_wheel
 page-type: glossary-definition
-tags:
-  - Color
 ---
 
 A **color wheel**, or _color circle_, is a chart representing a palette of colors in a circle. A color wheel can display colors identified by two polar coordinates, the _angle_ and the _distance_ from the origin, the circle's center.

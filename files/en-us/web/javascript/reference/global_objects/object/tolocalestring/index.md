@@ -2,12 +2,6 @@
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Object.toLocaleString
 ---
 
@@ -53,7 +47,7 @@ The base `toLocaleString()` method simply calls `toString()`.
 const obj = {
   toString() {
     return "My Object";
-  }
+  },
 };
 console.log(obj.toLocaleString()); // "My Object"
 ```

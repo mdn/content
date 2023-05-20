@@ -2,11 +2,6 @@
 title: RGB
 slug: Glossary/RGB
 page-type: glossary-definition
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - Guide
 ---
 
 _Red-Green-Blue_ (**RGB**) is a color model that represents colors as mixtures of three underlying components (or channels), namely: _red_, _green_, and _blue_. This model describes a color with a sequence of three numbers (typically between 0.0 and 1.0, or between 0 and 255). Each number represents the primary colors' different intensities (or contributions) in determining the final color.

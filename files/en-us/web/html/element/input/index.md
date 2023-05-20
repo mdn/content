@@ -2,17 +2,6 @@
 title: "<input>: The Input (Form Input) element"
 slug: Web/HTML/Element/input
 page-type: html-element
-tags:
-  - Data entry
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - MakeBrowserAgnostic
-  - Reference
-  - Web
 browser-compat: html.elements.input
 ---
 
@@ -353,6 +342,8 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`name`](#name)                     | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair        |
 | [`pattern`](#pattern)               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                            |
 | [`placeholder`](#placeholder)       | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                        |
+| [`popovertarget`](#popovertarget)       | `button`           | Designates an `<input type="button">` as a control for a popover element                        |
+| [`popovertargetaction`](#popovertargetaction)       | `button`           | Specifies the action that a popover control should perform                        |
 | [`readonly`](#readonly)             | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                    |
 | [`required`](#required)             | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
 | [`size`](#size)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
@@ -469,7 +460,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `max`
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
@@ -477,11 +468,11 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value `0` or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
 
 - `min`
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
     This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present but is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
 
@@ -491,7 +482,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
 
 - `multiple`
 
@@ -531,7 +522,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `pattern`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
     If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
 
@@ -544,6 +535,19 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
 
     > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
+
+- `popovertarget`
+  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+
+- `popovertargetaction`
+  - : Specifies the the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
+
+    - `"hide"`
+      - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
+    - `"show"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
+    - `"toggle"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
 
 - `readonly`
 
@@ -619,6 +623,12 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
+      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
+      <td>
+        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
+      </td>
+    </tr>
+    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
@@ -664,6 +674,19 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
+
+- `autocapitalize` {{non-standard_inline}}
+
+  - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
+
+    - `none`
+      - : Do not automatically capitalize any text
+    - `sentences`
+      - : Automatically capitalize the first character of each sentence.
+    - `words`
+      - : Automatically capitalize the first character of each word.
+    - `characters`
+      - : Automatically capitalize every character.
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -1093,7 +1116,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
   </tbody>
 </table>
 
-If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, and empty string will not lead to an error.
+If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, an empty string will not lead to an error.
 
 We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.
 
@@ -1180,7 +1203,7 @@ In brief:
 
 > **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
-> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).
+> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see [Firefox bug 1513890](https://bugzil.la/1513890)).
 
 ### Localization
 
@@ -1198,11 +1221,11 @@ Firefox uses the following heuristics to determine the locale to validate the us
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
         <code>hidden</code>, then labelable element, palpable content.
       </td>
     </tr>
@@ -1218,7 +1241,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -1404,7 +1427,7 @@ Interactive elements such as form input should provide an area large enough that
 
 ## See also
 
-- [Form constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 - [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)

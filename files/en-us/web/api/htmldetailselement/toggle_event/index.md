@@ -1,13 +1,8 @@
 ---
-title: 'HTMLDetailsElement: toggle event'
+title: "HTMLDetailsElement: toggle event"
+short-title: toggle
 slug: Web/API/HTMLDetailsElement/toggle_event
 page-type: web-api-event
-tags:
-  - Event
-  - HTMLDetailsElement
-  - Reference
-  - details
-  - toggle
 browser-compat: api.HTMLDetailsElement.toggle_event
 ---
 
@@ -17,14 +12,16 @@ The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("
 
 This event is not cancelable and does not bubble.
 
+> **Note:** The `toggle` event is also available in a different form on {{domxref("HTMLElement")}}; this version fires on [popover elements](/en-US/docs/Web/API/Popover_API) just after they are shown or hidden. See the `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle event")}} page for more information.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('toggle', (event) => {});
+addEventListener("toggle", (event) => {});
 
-ontoggle = (event) => { };
+ontoggle = (event) => {};
 ```
 
 ## Event type
@@ -87,12 +84,12 @@ body {
 ```js
 function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
-  item.toggleAttribute('hidden');
+  item.toggleAttribute("hidden");
 }
 
-const chapters = document.querySelectorAll('details');
+const chapters = document.querySelectorAll("details");
 chapters.forEach((chapter) => {
-  chapter.addEventListener('toggle', logItem);
+  chapter.addEventListener("toggle", logItem);
 });
 ```
 

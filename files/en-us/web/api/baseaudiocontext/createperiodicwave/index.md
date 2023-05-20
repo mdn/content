@@ -1,17 +1,8 @@
 ---
-title: BaseAudioContext.createPeriodicWave()
+title: "BaseAudioContext: createPeriodicWave() method"
+short-title: createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - createPeriodicWave
 browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
 
@@ -92,7 +83,10 @@ the result of a Fourier transform, where you get frequency domain values from ti
 domain value. Here, with `createPeriodicWave()`, you specify the
 frequencies, and the browser performs an inverse Fourier transform to get a time
 domain buffer for the frequency of the oscillator. Here, we only set one component at
-full volume (1.0) on the fundamental tone, so we get a sine wave.
+full volume (1.0) on the fundamental tone, so we get a sine wave. Bear in mind the
+fundamental tone is the oscillator's frequency (which, by default, is 440 Hz).
+Thus, by altering the oscillator's frequency we are in effect shifting the frequency
+of this periodic wave along with it.
 
 The coefficients of the Fourier transform should be given in _ascending_ order
 (i.e. <math>
