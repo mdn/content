@@ -26,7 +26,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -130,7 +129,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Animation elements
 
-{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
 ### Basic shapes
 
