@@ -45,3 +45,8 @@ jobs:
           yarn markdownlint-cli2 ${files_to_lint}
           echo "Linting front-matter"
           node scripts/front-matter_linter.js ${files_to_lint}
+
+      - name: Prettier markdown files
+        run: |
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          yarn prettier -c ${files_to_lint}

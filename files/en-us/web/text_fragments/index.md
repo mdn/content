@@ -104,7 +104,7 @@ If you don't see one or more of your text fragments highlighted and you are sure
 
 ### Styling matched text fragments
 
-Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://w3c.github.io/csswg-drafts/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
+Browsers are free to style the highlighted text in whatever default way they choose. The [CSS Pseudo-Elements Module Level 4](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) defines a pseudo-element, {{cssxref("::target-text")}}, which allows you to specifying custom styling.
 
 For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance) we have the following CSS:
 

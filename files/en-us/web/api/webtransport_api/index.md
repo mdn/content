@@ -2,12 +2,10 @@
 title: WebTransport API
 slug: Web/API/WebTransport_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.WebTransport
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
 
 The **WebTransport API** provides a modern update to {{domxref("WebSockets API", "WebSockets", "", "nocode")}}, transmitting data between client and server using [HTTP/3 Transport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/). WebTransport provides support for multiple streams, unidirectional streams, and out-of-order delivery. It enables reliable transport via {{domxref("Streams API", "streams", "", "nocode")}} and unreliable transport via UDP-like datagrams.
 
@@ -221,7 +219,7 @@ async function receiveBidirectional() {
 
 ## Interfaces
 
-- {{domxref("WebTransport")}} {{Experimental_Inline}}
+- {{domxref("WebTransport")}}
   - : Provides functionality to enable a user agent to connect to an HTTP/3 server, initiate reliable and unreliable transport in either or both directions, and close the connection once it is no longer needed.
 - {{domxref("WebTransportBidirectionalStream")}}
   - : Represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("ReadableStream")}} for reading incoming data, and a {{domxref("WritableStream")}} for writing outgoing data.
