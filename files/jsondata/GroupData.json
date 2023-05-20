@@ -977,7 +977,8 @@
         "/docs/Web/API/Performance_API/High_precision_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
-        "/docs/Web/API/Performance_API/User_timing"
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
@@ -1656,22 +1657,22 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
       "overview": ["Web components"],
@@ -2035,6 +2036,7 @@
         "RTCRemoteOutboundRtpStreamStats",
         "RTCRtpContributingSourceStats",
         "RTCPeerConnectionStats",
+        "RTCAudioSourceStats",
         "RTCMediaStreamStats",
         "RTCMediaHandlerStats",
         "RTCVideoHandlerStats",
@@ -2142,6 +2144,7 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
         "WebTransportError"
       ],
       "methods": [],

@@ -518,3 +518,4 @@ hsl(240 100% 50% / 5%)       /*   5% opaque blue */
 - The {{cssxref("&lt;hue&gt;")}} data type represents a color by hue angle.
 - Some common properties that use this data type: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)

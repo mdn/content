@@ -85,7 +85,7 @@ In addition, navigating to another page, changing tabs, or switching to another 
 
 In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Watching for the Enter key
 

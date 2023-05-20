@@ -45,8 +45,8 @@ The following example creates a new media binding for a session to create an {{d
 ```js
 const xrMediaBinding = new XRMediaBinding(xrSession);
 
-const video = document.createElement('video');
-video.src = 'just-fascination.mp4';
+const video = document.createElement("video");
+video.src = "just-fascination.mp4";
 const layer = xrMediaBinding.createQuadLayer(video);
 ```
 

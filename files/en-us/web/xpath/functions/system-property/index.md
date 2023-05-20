@@ -26,7 +26,7 @@ An object representing the given system-property.
 
 - xsl:version, a number giving the version of XSLT implemented by the processor; for XSLT processors implementing the version of XSLT specified by this document, this is the number 1.0
 - xsl:vendor, a string identifying the vendor of the XSLT processor
-- xsl:vendor-url, a string containing a URL identifying the vendor of the XSLT processor; typically this is the host page (home page) of the vendor's Web site.
+- xsl:vendor-url, a string containing a URL identifying the vendor of the XSLT processor; typically this is the host page (home page) of the vendor's website.
 
 ### Defined
 
