@@ -1,17 +1,7 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.where
 ---
 
@@ -141,8 +131,10 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-```
-:where( <complex-selector-list> )
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -157,4 +149,4 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 - {{CSSxRef(":is", ":is()")}}
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

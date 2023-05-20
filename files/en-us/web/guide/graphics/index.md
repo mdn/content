@@ -1,17 +1,11 @@
 ---
 title: Graphics on the Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphics
-  - HTML
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
 
 Websites and applications often need to present graphics, such as images. Static images can easily be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. These articles provide insight into how you can accomplish this.
 

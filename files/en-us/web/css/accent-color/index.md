@@ -1,16 +1,7 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - accent-color
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.accent-color
 ---
 
@@ -34,10 +25,10 @@ Browsers that support `accent-color` currently apply it to the following HTML el
 accent-color: auto;
 
 /* <color> values */
-accent-color: red;
+accent-color: darkred;
 accent-color: #5729e9;
-accent-color: rgb(0, 200, 0);
-accent-color: hsl(228, 4%, 24%);
+accent-color: rgb(0 200 0);
+accent-color: hsl(228 4% 24%);
 
 /* Global values */
 accent-color: inherit;
@@ -102,7 +93,7 @@ input.custom {
 
 ## See also
 
-- The {{HTMLElement("input")}} element
+- {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
+- {{cssxref("&lt;color&gt;")}}: Related data type
+- {{HTMLElement("input")}}: Related HTML element
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

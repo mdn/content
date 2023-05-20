@@ -2,21 +2,16 @@
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLTitleElement
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTitleElement`** interface contains the title for a document. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
+The **`HTMLTitleElement`** interface is implemented by a document's {{ HTMLElement( "title" )}}. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -42,7 +37,7 @@ console.log(title.text); // yield: "Hello world!  really?"
 
 As you can see, the tag `span` and its content were skipped.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

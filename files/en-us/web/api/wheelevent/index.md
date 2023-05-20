@@ -2,12 +2,6 @@
 title: WheelEvent
 slug: Web/API/WheelEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent
 ---
 
@@ -26,7 +20,7 @@ The **`WheelEvent`** interface represents events that occur due to the user movi
 - {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
   - : Creates a `WheelEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 
@@ -55,7 +49,7 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 
 > **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
 
-## Methods
+## Instance methods
 
 _This interface doesn't define any specific methods, but inherits methods from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 

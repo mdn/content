@@ -1,13 +1,9 @@
 ---
 title: math-depth
 slug: Web/CSS/math-depth
-tags:
-  - CSS
-  - MathML
-  - Property
-  - Reference
-  - math-depth
-  - Experimental
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.math-depth
 ---
 

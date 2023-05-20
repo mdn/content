@@ -1,10 +1,6 @@
 ---
 title: MathML scripted elements
 slug: Learn/MathML/First_steps/Scripts
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
@@ -233,7 +229,7 @@ math {
 
 ```js hidden
 const scriptedElements = Array.from(
-  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover"),
+  document.querySelectorAll("msub, msup, msubsup, munder, mover, munderover")
 );
 const outputDiv = document.getElementById("output");
 function clearHighlight() {
@@ -247,7 +243,7 @@ scriptedElements.forEach((scripted) => {
     scripted.classList.add("highlight");
     outputDiv.insertAdjacentHTML(
       "beforeend",
-      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`,
+      `<p><strong>You clicked an <code>&lt;${scripted.tagName}&gt;</code> element.</strong></p>`
     );
   });
 });

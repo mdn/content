@@ -1,13 +1,7 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-inline
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.margin-inline
 ---
 
@@ -28,10 +22,10 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* <length> values */
-margin-inline: 10px 20px;  /* An absolute length */
-margin-inline: 1em 2em;    /* relative to the text size */
-margin-inline: 5% 2%;      /* relative to the nearest block container's width */
-margin-inline: 10px;       /* sets both start and end values */
+margin-inline: 10px 20px; /* An absolute length */
+margin-inline: 1em 2em; /* relative to the text size */
+margin-inline: 5% 2%; /* relative to the nearest block container's width */
+margin-inline: 10px; /* sets both start and end values */
 
 /* Keyword values */
 margin-inline: auto;

@@ -1,16 +1,7 @@
 ---
 title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - port
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
 ---
 
@@ -21,6 +12,8 @@ A `Port` object represents one end of a connection between two specific contexts
 One side initiates the connection, using a `connect()` API. This returns a `Port` object. The other side listens for connection attempts using an `onConnect` listener. This is passed a corresponding `Port` object.
 
 Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
+
+A `Port` can also become disconnected in response to various events. See [Lifecycle](#lifecycle).
 
 You can use this pattern to communicate between:
 
@@ -97,6 +90,20 @@ Values of this type are objects. They contain the following properties:
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+
+## Lifecycle
+
+The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
+
+There is, however, one important difference between Firefox and Chrome, stemming from the fact that the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome, a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads. In other words, the disconnection condition,
+
+- All frames that received the port (via `runtime.onConnect`) have unloaded.
+
+which holds in Chrome, is replaced by
+
+- _Any_ frame that received the port (via `runtime.onConnect`) has unloaded.
+
+in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
 ## Browser compatibility
 
@@ -212,8 +219,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

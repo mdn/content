@@ -2,15 +2,6 @@
 title: AnimationPlaybackEvent
 slug: Web/API/AnimationPlaybackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - AnimationPlaybackEvent
-  - Interface
-  - Reference
-  - events
-  - waapi
-  - web animations api
 browser-compat: api.AnimationPlaybackEvent
 ---
 
@@ -27,7 +18,7 @@ As animations play, they report changes to their {{domxref("Animation.playState"
 - {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
   - : Constructs a new `AnimationPlaybackEvent` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.

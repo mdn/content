@@ -1,11 +1,7 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.polyline
 ---
 

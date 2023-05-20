@@ -2,11 +2,6 @@
 title: Screen
 slug: Web/API/Screen
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
 browser-compat: api.Screen
 ---
 
@@ -18,7 +13,7 @@ Note that browsers determine which screen to report as current by detecting whic
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
@@ -49,7 +44,7 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 

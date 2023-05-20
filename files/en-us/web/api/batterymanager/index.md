@@ -2,12 +2,6 @@
 title: BatteryManager
 slug: Web/API/BatteryManager
 page-type: web-api-interface
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Interface
-  - Reference
 browser-compat: api.BatteryManager
 ---
 
@@ -17,7 +11,7 @@ The `BatteryManager` interface of the [Battery Status API](/en-US/docs/Web/API/B
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether the battery is currently being charged.
@@ -28,7 +22,7 @@ The `BatteryManager` interface of the [Battery Status API](/en-US/docs/Web/API/B
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
   - : A number representing the system's battery charge level scaled to a value between 0.0 and 1.0.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface:_ {{domxref("EventTarget")}}.
 

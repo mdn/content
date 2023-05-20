@@ -2,12 +2,6 @@
 title: SVGTextPathElement
 slug: Web/API/SVGTextPathElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGTextPathElement
 ---
 
@@ -81,7 +75,7 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
 
@@ -94,7 +88,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGTextContentElement")}}._
 

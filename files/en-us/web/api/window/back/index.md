@@ -1,17 +1,11 @@
 ---
-title: Window.back()
+title: "Window: back() method"
+short-title: back()
 slug: Web/API/Window/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - Firefox
-  - Gecko
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Deprecated
-  - Window
-  - back
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}

@@ -1,9 +1,6 @@
 ---
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
-tags:
-  - Kitchensink
-  - MDN Meta
 browser-compat: html.elements.video
 ---
 
@@ -50,7 +47,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 ### HTML
 
 ```html
-<pre>
+<pre></pre>
 ```
 
 ### JavaScript
@@ -58,7 +55,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 ```js
 const f = () => {
   return Math.random();
-}
+};
 ```
 
 ### CSS
@@ -77,20 +74,24 @@ const f = () => {
 
 ### WebAssembly
 
-<pre class="brush: wasm">(func (param i32) (param f32) (local f64)
+```wasm
+(func (param i32) (param f32) (local f64)
   local.get 0
   local.get 1
-  local.get 2)</pre>
+  local.get 2)
+```
 
 ### Rust
 
-<pre class="brush: rust">#[cfg(test)]
+```rust
+#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
-}</pre>
+}
+```
 
 ### Python
 
@@ -133,17 +134,17 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -153,7 +154,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -215,7 +216,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
         </p>
         <p>
           The <code>cover</code> value means that the viewport is scaled to fill the device display.
-          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to
+          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
@@ -248,30 +249,40 @@ The algorithm works by ensuring there is no gap between any of the 4 sides of th
 Any gap means a collision does not exist.
 
 ```js
-var rect1 = {x: 5, y: 5, width: 50, height: 50}
-var rect2 = {x: 20, y: 10, width: 10, height: 10}
+var rect1 = { x: 5, y: 5, width: 50, height: 50 };
+var rect2 = { x: 20, y: 10, width: 10, height: 10 };
 
-if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.y + rect1.height > rect2.y) {
-    // collision detected!
+if (
+  rect1.x < rect2.x + rect2.width &&
+  rect1.x + rect1.width > rect2.x &&
+  rect1.y < rect2.y + rect2.height &&
+  rect1.y + rect1.height > rect2.y
+) {
+  // collision detected!
 }
 
 // filling in the values =>
 
-if (5 < 30 &&
-    55 > 20 &&
-    5 < 20 &&
-    55 > 10) {
-    // collision detected!
+if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
+  // collision detected!
 }
 ```
 
-<div class="hidden"><h5 id="Rect_code">Rect code</h5><pre class="brush: html">&#x3C;div id="cr-stage">&#x3C;/div>
-&#x3C;p>Move the rectangle with arrow keys. Green means collision, blue means no collision.&#x3C;/p>
-&#x3C;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js">&#x3C;/script>
-</pre><pre class="brush: js">Crafty.init(200, 200);
+### Rect code
+
+```html
+<div id="cr-stage"></div>
+<p>
+  Move the rectangle with arrow keys. Green means collision, blue means no
+  collision.
+</p>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+```
+
+```js
+Crafty.init(200, 200);
 
 var dim1 = {x: 5, y: 5, w: 50, h: 50}
 var dim2 = {x: 20, y: 10, w: 60, h: 40}
@@ -281,9 +292,9 @@ var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
 
 rect2.bind("EnterFrame", function () {
-if (rect1.x &#x3C; rect2.x + rect2.w &#x26;&#x26;
+if (rect1.x > rect2.x + rect2.w &#x26;&#x26;
 rect1.x + rect1.w > rect2.x &#x26;&#x26;
-rect1.y &#x3C; rect2.y + rect2.h &#x26;&#x26;
+rect1.y > rect2.y + rect2.h &#x26;&#x26;
 rect1.h + rect1.y > rect2.y) {
 // collision detected!
 this.color("green");
@@ -292,10 +303,9 @@ this.color("green");
 this.color("blue");
 }
 });
+```
 
-</pre></div>
-
-{{ EmbedLiveSample('Rect_code', '700', '300') }}
+{{EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
@@ -314,16 +324,16 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 {{AvailableInWorkers}}
 
-- {{ARIARole("button")}}
-- {{ARIARole("checkbox")}}
-- {{ARIARole("menuitem")}}
-- {{ARIARole("menuitemcheckbox")}}
-- {{ARIARole("menuitemradio")}}
-- {{ARIARole("option")}}
-- {{ARIARole("radio")}}
-- {{ARIARole("switch")}}
-- {{ARIARole("tab")}}
-- {{ARIARole("treeitem")}}
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 <!---->
 
@@ -337,7 +347,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
 
-  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+  - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
@@ -351,8 +361,8 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
 - {{SVGElement("feGaussianBlur")}}
 - {{SVGAttr("keySplines")}} SVG attribute
-- {{htmlattrxref("dir")}}
-- {{htmlattrxref("lang")}}
+- [dir](/en-US/docs/Web/HTML/Global_attributes#dir)
+- [lang](/en-US/docs/Web/HTML/Global_attributes#lang)
 - {{cssxref(":dir")}}
 - {{cssxref("direction")}}
 

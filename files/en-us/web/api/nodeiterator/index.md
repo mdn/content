@@ -2,9 +2,6 @@
 title: NodeIterator
 slug: Web/API/NodeIterator
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
 browser-compat: api.NodeIterator
 ---
 
@@ -23,7 +20,7 @@ A `NodeIterator` can be created using the
 const nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 ```
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any property._
 
@@ -66,7 +63,7 @@ _This interface doesn't inherit any property._
     {{domxref("NodeIterator")}} is anchored before, the flag being `true`,
     or after, the flag being `false`, the anchor node.
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any method._
 

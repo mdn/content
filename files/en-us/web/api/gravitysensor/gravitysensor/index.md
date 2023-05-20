@@ -1,17 +1,8 @@
 ---
-title: GravitySensor()
+title: "GravitySensor: GravitySensor() constructor"
+short-title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
 page-type: web-api-constructor
-tags:
-  - API
-  - Accelerometer
-  - Constructor
-  - Generic Sensor API
-  - GravitySensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
 
@@ -49,9 +40,7 @@ new GravitySensor(options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
-    it is because your code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Specifications
 

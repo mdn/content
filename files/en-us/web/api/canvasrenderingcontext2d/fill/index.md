@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.fill()
+title: "CanvasRenderingContext2D: fill() method"
+short-title: fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.fill
 ---
 
@@ -63,8 +58,8 @@ This example fills a rectangle with the `fill()` method.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 150, 100);
 ctx.fill();
 ```
@@ -89,8 +84,8 @@ object's center by using the `"evenodd"` rule; by default (with the
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create path
 let region = new Path2D();
@@ -103,8 +98,8 @@ region.lineTo(270, 90);
 region.closePath();
 
 // Fill path
-ctx.fillStyle = 'green';
-ctx.fill(region, 'evenodd');
+ctx.fillStyle = "green";
+ctx.fill(region, "evenodd");
 ```
 
 #### Result

@@ -1,12 +1,7 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.outline-offset
 ---
 

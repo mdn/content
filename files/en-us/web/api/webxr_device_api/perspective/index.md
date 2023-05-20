@@ -2,21 +2,6 @@
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Guide
-  - Mixed
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR Device API
-  - XR
-  - augmented
-  - perspective
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -61,10 +46,22 @@ function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
   const rangeInv = 1 / (near - far);
 
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio,
+    0,
+    0,
+    0,
+    0,
+    f,
+    0,
+    0,
+    0,
+    0,
+    (near + far) * rangeInv,
+    -1,
+    0,
+    0,
+    near * far * rangeInv * 2,
+    0,
   ];
 }
 ```

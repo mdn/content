@@ -2,9 +2,6 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -46,7 +43,13 @@ If the work is more significant, then you should consider a few factors when pri
 - How low quality is the information?
 - How popular is the feature? How sought after is the information?
 
-If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Communication_channels).
+
+## The page-type front matter key
+
+We have defined a front matter key `page-type` to clearly identify the type of MDN pages. The templates linked below indicate which `page-type` values you should set for each page type.
+
+For the complete list of page types see [The page-type front matter key](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key).
 
 ## API landing page
 

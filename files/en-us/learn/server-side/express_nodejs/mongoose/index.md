@@ -1,18 +1,6 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
-tags:
-  - Beginner
-  - CodingScripting
-  - Database
-  - Express
-  - Learn
-  - Node
-  - ODM
-  - mongoose
-  - nodejs
-  - orm
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
@@ -52,7 +40,7 @@ For more information on the options see [Database integration](https://expressjs
 
 There are two common approaches for interacting with a database:
 
-- Using the databases' native query language (e.g. SQL)
+- Using the databases' native query language, such as SQL.
 - Using an Object Data Model ("ODM") or an Object Relational Model ("ORM"). An ODM/ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
 
 The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
@@ -109,6 +97,77 @@ The diagram also shows the relationships between the models, including their _mu
 
 > **Note:** The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
 
+### Database APIs are asynchronous
+
+Database methods to create, find, update, or delete records are asynchronous.
+What this means is that the methods return immediately, and the code to handle the success or failure of the method runs at a later time when the operation completes.
+Other code can execute while the server is waiting for the database operation to complete, so the server can remain responsive to other requests.
+
+JavaScript has a number of mechanisms for supporting asynchronous behavior.
+Historically JavaScript relied heavily on passing [callback functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) to asynchronous methods to handle the success and error cases.
+In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Promises are objects that are (immediately) returned by an asynchronous method that represent it's future state.
+When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
+
+There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) for a high level overview of both approaches.
+In this tutorial, we'll primarily be using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) to wait on promise completion within an [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), because this leads to more readable and understandable asynchronous code.
+
+The way this approach works is that you use the `async function` keyword to mark a function as asynchronous, and then inside that function apply `await` to any method that returns a promise.
+When the asynchronous function is executed its operation is paused at the first `await` method until the promise settles.
+From the perspective of the surrounding code the asynchronous function then returns and the code after it is able to run.
+Later when the promise settles, the `await` method inside the asynchronous function returns with the result, or an error is thrown if the promise was rejected.
+The code in the asynchronous function then executes until either another `await` is encountered, at which point it will pause again, or until all the code in the function has been run.
+
+You can see how this works in the example below.
+`myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
+
+```js
+async function myFunction {
+  // ...
+  await someObject.methodThatReturnsPromise();
+  // ...
+  await aFunctionThatReturnsPromise();
+  // ...
+}
+
+try {
+  // ...
+  myFunction();
+  // ...
+} catch (e) {
+ // error handling code
+}
+```
+
+The asynchronous methods above are run in sequence.
+If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
+This done using the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method, which takes an iterable of promises as input and returns a single `Promise`.
+This returned promise fulfills when all of the input's promises fulfill, with an array of the fulfillment values.
+It rejects when any of the input's promises rejects, with this first rejection reason.
+
+The code below shows how this works.
+First, we have two functions that return promises.
+We `await` on both of them to complete using the promise returned by `Promise.all()`.
+Once they both complete `await` returns and the results array is populated,
+the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+You would call the `myFunction()` in a `try...catch` block to catch any errors.
+
+```js
+async function myFunction {
+  // ...
+  const [resultFunction1, resultFunction2] = await Promise.all([
+     functionThatReturnsPromise1(),
+     functionThatReturnsPromise2()
+  ]);
+  // ...
+  await anotherFunctionThatReturnsPromise(resultFunction1);
+}
+```
+
+Promises with `await`/`async` allow both flexible and "comprehensible" control over asynchronous execution!
+
 ## Mongoose primer
 
 This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema and a model, and how to make basic queries.
@@ -117,7 +176,8 @@ This section provides an overview of how to connect Mongoose to a MongoDB databa
 
 ### Installing Mongoose and MongoDB
 
-Mongoose is installed in your project (**package.json**) like any other dependency — using npm. To install it, use the following command inside your project folder:
+Mongoose is installed in your project (**package.json**) like any other dependency — using npm.
+To install it, use the following command inside your project folder:
 
 ```bash
 npm install mongoose
@@ -129,26 +189,35 @@ Installing _Mongoose_ adds all its dependencies, including the MongoDB database 
 
 ### Connecting to MongoDB
 
-_Mongoose_ requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
+_Mongoose_ requires a connection to a MongoDB database.
+You can `require()` and connect to a locally hosted database with `mongoose.connect()` as shown below (for the tutorial we'll instead connect to an internet-hosted database).
 
 ```js
 // Import the mongoose module
 const mongoose = require("mongoose");
 
-// Set up default mongoose connection
+// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
+// Included because it removes preparatory warnings for Mongoose 7.
+// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
+mongoose.set("strictQuery", false);
+
+// Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Get the default connection
-const db = mongoose.connection;
-
-// Bind connection to error event (to get notification of connection errors)
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+// Wait for database to connect, logging an error if there is a problem
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
-You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
+> **Note:** As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within a function declared using `async function` ( section).
+> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
 
-> **Note:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+You can get the default `Connection` object with `mongoose.connection`.
+If you need to create additional connections you can use `mongoose.createConnection()`.
+This takes the same form of database URI (with host, database, port, options, etc.) as `connect()` and returns a `Connection` object).
+Note that `createConnection()` returns immediately; if you need to wait on the connection to be established you can call it with `asPromise()` to return a promise (`mongoose.createConnection(mongoDB).asPromise()`).
 
 ### Defining and creating models
 
@@ -287,30 +356,29 @@ Once you've created a schema you can use it to create models. The model represen
 
 We provide a brief overview below. For more information see: [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs).
 
+> **Note:** Creation, update, deletion and querying of records are asynchronous operations that return a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> The examples below show just the use of the relevant methods and `await` (i.e. the essential code for using the methods).
+> The surrounding `async function` and `try...catch` block to catch errors are omitted for clarity.
+> For more information on using `await/async` see [Database APIs are asynchronous](#database_apis_are_asynchronous) above.
+
 #### Creating and modifying documents
 
-To create a record you can define an instance of the model and then call `save()`. The examples below assume SomeModel is a model (with a single field "name") that we have created from our schema.
+To create a record you can define an instance of the model and then call [`save()`](https://mongoosejs.com/docs/api/model.html#Model.prototype.save) on it.
+The examples below assume `SomeModel` is a model (with a single field `name`) that we have created from our schema.
 
 ```js
 // Create an instance of model SomeModel
 const awesome_instance = new SomeModel({ name: "awesome" });
 
-// Save the new model instance, passing a callback
-awesome_instance.save((err) => {
-  if (err) return handleError(err);
-  // saved!
-});
+// Save the new model instance asynchronously
+await awesome_instance.save();
 ```
 
-Creation of records (along with updates, deletes, and queries) are asynchronous operations — you supply a callback that is called when the operation completes. The API uses the error-first argument convention, so the first argument for the callback will always be an error value (or null). If the API returns some result, this will be provided as the second argument.
-
-You can also use `create()` to define the model instance at the same time as you save it. The callback will return an error for the first argument and the newly-created model instance for the second argument.
+You can also use [`create()`](https://mongoosejs.com/docs/api/model.html#Model.create) to define the model instance at the same time as you save it.
+Below we create just one, but you can create multiple instances by passing in an array of objects.
 
 ```js
-SomeModel.create({ name: "also_awesome" }, function (err, awesome_instance) {
-  if (err) return handleError(err);
-  // saved!
-});
+await SomeModel.create({ name: "also_awesome" });
 ```
 
 Every model has an associated connection (this will be the default connection when you use `mongoose.model()`). You create a new connection and call `.model()` on it to create the documents on a different database.
@@ -323,9 +391,7 @@ console.log(awesome_instance.name); //should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
 awesome_instance.name = "New cool name";
-awesome_instance.save((err) => {
-  if (err) return handleError(err); // saved!
-});
+await awesome_instance.save();
 ```
 
 #### Searching for records
@@ -336,19 +402,18 @@ You can search for records using query methods, specifying the query conditions 
 const Athlete = mongoose.model("Athlete", yourSchema);
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ sport: "Tennis" }, "name age", (err, athletes) => {
-  if (err) return handleError(err);
-  // 'athletes' contains the list of athletes that match the criteria.
-});
+const tennisPlayers = await Athlete.find(
+  { sport: "Tennis" },
+  "name age"
+).exec();
 ```
 
-If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.
+> **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application.
+> If your application expects a search to find a value you can check the number of entries returned in the result.
 
-> **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
-
-> **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
-
-If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
+Query APIs, such as [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>), return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js).
+You can use a query object to build up a query in parts before executing it with the [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) method.
+`exec()` executes the query and returns a promise that you can `await` on for the result.
 
 ```js
 // find all athletes that play tennis
@@ -364,13 +429,11 @@ query.limit(5);
 query.sort({ age: -1 });
 
 // execute the query at a later time
-query.exec((err, athletes) => {
-  if (err) return handleError(err);
-  // athletes contains an ordered list of 5 athletes who play Tennis
-});
+query.exec();
 ```
 
-Above we've defined the query conditions in the `find()` method. We can also do this using a `where()` function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately. The code fragment below is the same as our query above, with an additional condition for the age.
+Above we've defined the query conditions in the [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) method. We can also do this using a [`where()`](<https://mongoosejs.com/docs/api/model.html#Model.where()>) function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately.
+The code fragment below is the same as our query above, with an additional condition for the age.
 
 ```js
 Athlete.find()
@@ -382,22 +445,22 @@ Athlete.find()
   .limit(5)
   .sort({ age: -1 })
   .select("name age")
-  .exec(callback); // where callback is the name of our callback function.
+  .exec();
 ```
 
-The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
+The [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
 
-- [`findById()`](https://mongoosejs.com/docs/api.html#model_Model.findById): Finds the document with the specified `id` (every document has a unique `id`).
-- [`findOne()`](https://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](https://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](https://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](https://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](https://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
+- [`findById()`](<https://mongoosejs.com/docs/api/model.html#Model.findById()>): Finds the document with the specified `id` (every document has a unique `id`).
+- [`findOne()`](<https://mongoosejs.com/docs/api/model.html#Model.findOne()>): Finds a single document that matches the specified criteria.
+- [`findByIdAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndRemove()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
 
-> **Note:** There is also a [`count()`](https://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
+> **Note:** There is also a [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
 There is a lot more you can do with queries. For more information see: [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs).
 
 #### Working with related documents — population
 
-You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the [`populate()`](https://mongoosejs.com/docs/api.html#query_Query-populate) method in a query to replace the id with the actual data.
+You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the [`populate()`](https://mongoosejs.com/docs/populate.html) method in a query to replace the id with the actual data.
 
 For example, the following schema defines authors and stories.
 Each author can have multiple stories, which we represent as an array of `ObjectId`.
@@ -429,32 +492,27 @@ Below we create an author, then a story, and assign the author id to our story's
 ```js
 const bob = new Author({ name: "Bob Smith" });
 
-bob.save((err) => {
-  if (err) return handleError(err);
+await bob.save();
 
-  // Bob now exists, so lets create a story
-  const story = new Story({
-    title: "Bob goes sledding",
-    author: bob._id, // assign the _id from our author Bob. This ID is created by default!
-  });
-
-  story.save((err) => {
-    if (err) return handleError(err);
-    // Bob now has his story
-  });
+// Bob now exists, so lets create a story
+const story = new Story({
+  title: "Bob goes sledding",
+  author: bob._id, // assign the _id from our author Bob. This ID is created by default!
 });
+
+await story.save();
 ```
 
-Our story document now has an author referenced by the author document's ID. In order to get the author information in the story results we use `populate()`, as shown below.
+> **Note:** One great benefit of this style of programming is that we don't have to complicate the main path of our code with error checking.
+> If any of the `save()` operations fail, the promise will reject and an error will be thrown.
+> Our error handling code deals with that separately (usually in a `catch()` block), so the intent of our code is very clear.
+
+Our story document now has an author referenced by the author document's ID. In order to get the author information in the story results we use [`populate()`](https://mongoosejs.com/docs/api/model.html#Model.populate), as shown below.
 
 ```js
 Story.findOne({ title: "Bob goes sledding" })
-  .populate("author") // This populates the author id with actual author information!
-  .exec((err, story) => {
-    if (err) return handleError(err);
-    console.log("The author is %s", story.author.name);
-    // prints "The author is Bob Smith"
-  });
+  .populate("author") // Replace the author id with actual author information in results
+  .exec();
 ```
 
 > **Note:** Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our story to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
@@ -462,10 +520,7 @@ Story.findOne({ title: "Bob goes sledding" })
 > A better way is to get the `_id` of our _author_, then use `find()` to search for this in the author field across all stories.
 >
 > ```js
-> Story.find({ author: bob._id }).exec((err, stories) => {
->   if (err) return handleError(err);
->   // returns all stories that have Bob's id as their author.
-> });
+> Story.find({ author: bob._id }).exec();
 > ```
 
 This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs).
@@ -500,7 +555,7 @@ You can then require and use the model immediately in other files. Below we show
 const SomeModel = require("../models/somemodel");
 
 // Use the SomeModel object (model) to find all SomeModel records
-SomeModel.find(callback_function);
+const modelInstances = await SomeModel.find().exec();
 ```
 
 ## Setting up the MongoDB database
@@ -509,7 +564,8 @@ Now that we understand something of what Mongoose can do and how we want to desi
 
 For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
 
-> **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial requires some form of remote database, since the free tier of the [Heroku](https://www.heroku.com/) service does not provide persistent storage. It is therefore highly recommended to use [MongoDB Atlas](https://www.mongodb.com/atlas/database).
+> **Note:** If you prefer, you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
@@ -566,23 +622,27 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ screen. Click the **Connect your application** option.
+11. This will open the _Connect to Cluster_ screen.
+    Click the **Connect your application** option.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
+    - Select the Node driver and version as shown.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
-    - Update the password with your user's password.
-    - Replace `myFirstDatabase` with `local_library`.
+    - Update the username and password with your user's password.
+    - Insert the database name "local_library" in the path before the options (`...mongodb.net/local_library?retryWrites...`)
     - Save the file containing this string somewhere safe.
 
-You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.upbx7.mongodb.net/local_library?retryWrites=true&w=majority`
+You have now created the database, and have a URL (with username and password) that can be used to access it.
+This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority`
 
 ## Install Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
+Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
 npm install mongoose
@@ -595,13 +655,16 @@ Open **/app.js** (in the root of your project) and copy the following text below
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 ```
 
-As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
+As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
 
 ## Defining the LocalLibrary Schema
 
@@ -642,9 +705,7 @@ AuthorSchema.virtual("name").get(function () {
   if (this.first_name && this.family_name) {
     fullname = `${this.family_name}, ${this.first_name}`;
   }
-  if (!this.first_name || !this.family_name) {
-    fullname = "";
-  }
+
   return fullname;
 });
 
@@ -687,7 +748,7 @@ const BookSchema = new Schema({
 // Virtual for book's URL
 BookSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
-  return "/catalog/book/" + this._id;
+  return `/catalog/book/${this._id}`;
 });
 
 // Export model
@@ -734,7 +795,7 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 The new things we show here are the field options:
 
 - `enum`: This allows us to set the allowed values of a string. In this case, we use it to specify the availability status of our books (using an enum means that we can prevent mis-spellings and arbitrary values for our status).
-- `default`: We use default to set the default status for newly created bookinstances to maintenance and the default `due_back` date to `now` (note how you can call the Date function when setting the date!).
+- `default`: We use default to set the default status for newly created book instances to "Maintenance" and the default `due_back` date to `now` (note how you can call the Date function when setting the date!).
 
 Everything else should be familiar from our previous schema.
 
@@ -755,27 +816,23 @@ That's it. We now have all models for the site set up!
 
 In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
 
-1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-   > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
+   > **Note:** You don't need to know how `populatedb.js` works; it just adds sample data into the database.
 
-2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials).
-
-   ```bash
-   npm install async
-   ```
-
-3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
    ```bash
    node populatedb <your mongodb url>
    ```
 
-   > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
+   > **Note:** On Windows you need to wrap the database URL inside double (").
+   > On other operating systems you may need single (') quotation marks.
 
-4. The script should run through to completion, displaying items as it creates them in the terminal.
+3. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab).
+> You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary
 
@@ -795,15 +852,3 @@ Last of all, we tested our models by creating a number of instances (using a sta
 - [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- **Express Tutorial Part 3: Using a Database (with Mongoose)**
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

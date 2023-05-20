@@ -2,26 +2,6 @@
 title: Starting up and shutting down a WebXR session
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Beginner
-  - Guide
-  - Initialization
-  - Mixed
-  - Preparation
-  - Reality
-  - Setup
-  - Shutdown
-  - Startup
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
@@ -97,7 +77,7 @@ let webxrPolyfill = null;
 function getXR(usePolyfill) {
   let tempXR;
 
-  switch(usePolyfill) {
+  switch (usePolyfill) {
     case "if-needed":
       tempXR = navigator.xr;
       if (!tempXR) {
@@ -118,7 +98,7 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const nativeXr = getXR("no");  // Get the native XRSystem object
+const nativeXr = getXR("no"); // Get the native XRSystem object
 const polyfilledXr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
@@ -129,7 +109,7 @@ Of course, you can simplify this depending on your needs; since your app is prob
 
 ### Permissions and security
 
-There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
+There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
 
 For more specifics about securing WebXR activities and usage, see the article [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
@@ -189,7 +169,7 @@ For example, if you need an `unbounded` reference space, you can specify that as
 ```js
 async function createImmersiveSession(xr) {
   session = await xr.requestSession("immersive-vr", {
-    requiredFeatures: [ "unbounded" ]
+    requiredFeatures: ["unbounded"],
   });
   return session;
 }
@@ -200,7 +180,7 @@ On the other hand, if you need an _inline_ session and would prefer a `local` re
 ```js
 async function createInlineSession(xr) {
   session = await xr.requestSession("inline", {
-    optionalFeatures: [ "local" ]
+    optionalFeatures: ["local"],
   });
   return session;
 }
@@ -242,15 +222,20 @@ async function runSession(session) {
   // Finish configuring WebGL
 
   worldData.session.updateRenderState({
-    baseLayer: new XRWebGLLayer(worldData.session, gl)
+    baseLayer: new XRWebGLLayer(worldData.session, gl),
   });
 
   // Start rendering the scene
 
   referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
-  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
+    new XRRigidTransform(
+      worldData.playerSpawnPosition,
+      worldData.playerSpawnOrientation
+    )
+  );
+  worldData.animationFrameRequestID =
+    worldData.session.requestAnimationFrame(onDrawFrame);
 
   return worldData;
 }
@@ -266,7 +251,7 @@ Next, any data and setup needed for the WebGL renderer is performed before then 
 
 At this point, the `XRSession` itself has been fully configured, so we can begin rendering. First, we need a reference space within which coordinates for the world will be stated. We can get the initial reference space for the session by calling the `XRSession`'s {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method. We specify when calling `requestReferenceSpace()` the name of the type of reference space we want; in this case, `unbounded`. You might just as easily specify `local` or `viewer`, depending on your needs.
 
-> **Note:** To understand how to select the right reference space for your needs, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.
+> **Note:** To understand how to select the right reference space for your needs, see [Selecting the reference space type](/en-US/docs/Web/API/WebXR_Device_API/Geometry#selecting_the_reference_space_type).
 
 The reference space returned by `requestReferenceSpace()` places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a _new_ reference space [which offsets the coordinate system](/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space) so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into `getOffsetReferenceSpace()` is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.
 
@@ -290,7 +275,7 @@ When the state of the `XRSession`'s visibility changes—such as when the sessio
 
 ```js
 session.onvisibilitychange = (event) => {
-  switch(event.session.visibilityState) {
+  switch (event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
       break;

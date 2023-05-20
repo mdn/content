@@ -1,9 +1,7 @@
 ---
 title: rx
 slug: Web/SVG/Attribute/rx
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/geometry.html#RX
 ---
 

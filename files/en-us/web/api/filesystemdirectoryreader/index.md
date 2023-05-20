@@ -2,14 +2,6 @@
 title: FileSystemDirectoryReader
 slug: Web/API/FileSystemDirectoryReader
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryReader
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemDirectoryReader
 ---
 
@@ -17,7 +9,7 @@ browser-compat: api.FileSystemDirectoryReader
 
 The `FileSystemDirectoryReader` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) lets you access the {{domxref("FileSystemFileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.
 
-## Methods
+## Instance methods
 
 - {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
   - : Returns an array containing some number of the directory's entries. Each item in the array is an object based on {{domxref("FileSystemEntry")}}—typically either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.

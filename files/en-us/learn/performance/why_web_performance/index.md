@@ -1,14 +1,6 @@
 ---
 title: The "why" of web performance
 slug: Learn/Performance/why_web_performance
-tags:
-  - Beginner
-  - Introduction
-  - Learn
-  - Performance
-  - Reference
-  - Tutorial
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
@@ -49,7 +41,7 @@ Web performance — and its associated best practices—are vital for your websi
 As an example, consider the loading experience of CNN.com, which at the time of this writing had over 400 HTTP requests with a file size of over 22.6MB.
 
 - Imagine loading this on a desktop computer connected to a fibre optic network. This would seem relatively fast, and the file size would be largely irrelevant.
-- Imagine loading that same site using tethered mobile data on a 9 year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
+- Imagine loading that same site using tethered mobile data on a nine-year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
 - Imagine loading that same site on a $35 Huawei device in a rural India with limited coverage or no coverage. The site will be very slow to load—if it loads at all—with blocking scripts possibly timing out, and adverse CPU impact causing browser crashes if it does load.
 
 A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
@@ -82,18 +74,3 @@ Tracking performance is important. Multiple factors, including network speed and
 Web performance is important for accessibility and also for other website metrics that serve the goals of an organization or business. Good or bad website performance correlates powerfully to user experience, as well as the overall effectiveness of most sites. This is why you should care about web performance.
 
 {{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)

@@ -2,16 +2,8 @@
 title: SyncEvent
 slug: Web/API/SyncEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Offline
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - Workers
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SyncEvent
 ---
 
@@ -28,7 +20,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("SyncEvent.SyncEvent", "SyncEvent()")}} {{Experimental_Inline}}
   - : Creates a new `SyncEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
@@ -37,7 +29,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 - {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

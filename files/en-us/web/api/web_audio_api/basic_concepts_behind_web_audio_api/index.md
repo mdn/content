@@ -2,16 +2,6 @@
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 page-type: guide
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - Introduction
-  - Media
-  - Web Audio
-  - Web Audio API
-  - concepts
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -81,7 +71,7 @@ const context = new AudioContext();
 const buffer = new AudioBuffer(context, {
   numberOfChannels: 2,
   length: 22050,
-  sampleRate: 44100
+  sampleRate: 44100,
 });
 ```
 
@@ -387,8 +377,8 @@ Similarly, the Web Audio API describes the listener using right-hand Cartesian c
 
 In audio terms, **fan-in** describes the process by which a {{domxref("ChannelMergerNode")}} takes a series of _mono_ input sources and outputs a single multi-channel signal:
 
-![](fanin.svg)
+![Fan-in process diagram. Multiple point-less arrows representing mono-input sources combine to output a single pointed arrow representing a single multi-channel signal](fanin.svg)
 
 **Fan-out** describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple _mono_ output signals:
 
-![](fanout.svg)
+![Fan-out process diagram. A single point-less arrow representing a multi-channel input source splits to output multiple pointed arrows representing multiple mono output signals](fanout.svg)

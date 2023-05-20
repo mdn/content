@@ -1,15 +1,9 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Experimental
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.text-decoration-skip
 ---
 

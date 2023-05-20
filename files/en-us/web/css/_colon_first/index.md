@@ -1,14 +1,7 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
-tags:
-  - '@page'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.first
 ---
 
@@ -28,8 +21,10 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:first
+```css
+:first {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -58,7 +53,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

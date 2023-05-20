@@ -1,15 +1,7 @@
 ---
 title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isShown
-  - pageAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.isShown
 ---
 

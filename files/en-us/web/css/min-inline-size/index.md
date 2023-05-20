@@ -1,13 +1,7 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - min-inline-size
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.min-inline-size
 ---
 

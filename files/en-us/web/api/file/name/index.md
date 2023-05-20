@@ -1,13 +1,8 @@
 ---
-title: File.name
+title: "File: name property"
+short-title: name
 slug: Web/API/File/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.name
 ---
 
@@ -35,19 +30,19 @@ A string, containing the name of the file without path, such as "My Resume.rtf".
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = file.name;
     output.appendChild(li);
   }
-})
+});
 ```
 
 ### Result

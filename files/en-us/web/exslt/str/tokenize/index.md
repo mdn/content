@@ -1,10 +1,6 @@
 ---
 title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -28,7 +24,7 @@ str:tokenize(string, delimiters)
 
 A node-set of `token` elements, each containing one token from the `string`.
 
-## Example:
+## Example
 
 ```plain
 str:tokenize('2007-09-14-03T11:40:23', '-T:')

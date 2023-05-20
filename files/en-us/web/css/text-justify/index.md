@@ -1,13 +1,7 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-  - text-justify
+page-type: css-property
 browser-compat: css.properties.text-justify
 ---
 

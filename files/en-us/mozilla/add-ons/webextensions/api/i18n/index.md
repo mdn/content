@@ -1,15 +1,7 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - i18n
+page-type: webextension-api
 browser-compat: webextensions.api.i18n
 ---
 
@@ -22,7 +14,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 ## Types
 
 - {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) such as `"en-US"` or "`fr`".
+  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or "`fr`".
 
 ## Functions
 
@@ -42,8 +34,6 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 {{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 ## See also
 

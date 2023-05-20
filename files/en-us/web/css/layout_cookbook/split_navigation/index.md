@@ -1,13 +1,7 @@
 ---
-title: Split Navigation
+title: Split navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Navigation
-  - cookbook
-  - flexbox
+page-type: guide
 browser-compat: css.properties.flex
 ---
 

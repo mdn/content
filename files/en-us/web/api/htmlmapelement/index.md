@@ -2,11 +2,6 @@
 title: HTMLMapElement
 slug: Web/API/HTMLMapElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLMapElement
 ---
 
@@ -16,7 +11,7 @@ The **`HTMLMapElement`** interface provides special properties and methods (beyo
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -25,7 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLMapElement.areas")}} {{ReadOnlyInline}}
   - : A live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} ._
 

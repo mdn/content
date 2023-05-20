@@ -1,12 +1,7 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.frequency
 ---
 

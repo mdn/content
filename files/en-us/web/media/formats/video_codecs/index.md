@@ -1,26 +1,6 @@
 ---
 title: Web video codec guide
 slug: Web/Media/Formats/Video_codecs
-tags:
-  - AV1
-  - Codecs
-  - Encoder
-  - Encoding
-  - Guide
-  - H.264
-  - MPEG
-  - Media
-  - Theora
-  - VP8
-  - VP9
-  - Video
-  - compression
-  - data
-  - decoding
-  - h.263
-  - h.265
-  - mp4
-  - streaming
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -267,7 +247,7 @@ In addition, each encoder utility may have variations in how they process the so
     <tr>
       <th scope="row">Lossy compression</th>
       <td>
-        To some degree, artifacts and other forms of quality degradation wil
+        To some degree, artifacts and other forms of quality degradation will
         occur, depending on the specific codec and how much compression is being
         applied
       </td>
@@ -366,7 +346,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
       </td>
       <td>
         <a href="stroboscopic-effect.gif"
-          ><img alt="" src="stroboscopic-effect.gif"
+          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -397,7 +377,7 @@ Ringing is another type of artifact that can make it particularly difficult to r
 
 **Posterization** occurs when the compression results in the loss of color detail in gradients. Instead of smooth transitions through the various colors in a region, the image becomes blocky, with blobs of color that approximate the original appearance of the image.
 
-[![](posterize-effect.jpg)](posterize-effect.jpg)
+[![Bald eagle photo with blotchy resolution.](posterize-effect.jpg)](posterize-effect.jpg)
 
 Note the blockiness of the colors in the plumage of the bald eagle in the photo above (and the snowy owl in the background). The details of the feathers is largely lost due to these posterization artifacts.
 
@@ -413,7 +393,7 @@ In the example image above, note how the sky has bands of different shades of bl
 
 **Mosquito noise** is a temporal artifact which presents as noise or **edge busyness** that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to [ringing](#ringing) .
 
-![](mosquito-effect-sm.png)
+![Example of an image whose compression has introduced mosquito noise.](mosquito-effect-sm.png)
 
 The photo above shows mosquito noise in a number of places, including in the sky surrounding the bridge. In the upper-right corner, an inset shows a close-up of a portion of the image that exhibits mosquito noise.
 
@@ -438,7 +418,7 @@ Compression of video generally works by comparing two frames and recording the d
   <tbody>
     <tr>
       <td><img alt="Original frame of video" src="motion-comp-orig.jpg" /></td>
-      <td><img alt="" src="motion-comp-diff.jpg" /></td>
+      <td><img alt="Differences between the first frame and the following frame." src="motion-comp-diff.jpg" /></td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"
@@ -518,8 +498,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
       <th scope="row">Supported bit rates</th>
       <td>
         <p>
-          Varies depending on the video's level; theoretical maximum reaches 800
-          Mbps at level 6.3
+          Varies depending on the video's level; theoretical maximum reaches 800 Mbps at level 6.3
         </p>
         <p>
           See the AV1 specification's
@@ -532,8 +511,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
     <tr>
       <th scope="row">Supported frame rates</th>
       <td>
-        Varies by level; for example, level 2.0 has a maximum of 30 FPS while
-        level 6.3 can reach 120 FPS
+        Varies by level; for example, level 2.0 has a maximum of 30 FPS while level 6.3 can reach 120 FPS
       </td>
     </tr>
     <tr>
@@ -548,8 +526,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
     <tr>
       <th scope="row">Supported frame sizes</th>
       <td>
-        8 x 8 pixels to 65,535 x 65535 pixels with each dimension allowed to
-        take any value between these
+        8 x 8 pixels to 65,535 x 65535 pixels with each dimension allowed to take any value between these
       </td>
     </tr>
     <tr>
@@ -601,6 +578,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
+              <th scope="col">Firefox Android</th>
               <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
@@ -610,6 +588,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <td>70</td>
               <td>75</td>
               <td>67</td>
+              <td>113</td>
               <td>No</td>
               <td>57</td>
               <td>No</td>
@@ -969,7 +948,7 @@ For example, each coding tree unit (CTU)—similar to the macroblock used in pre
 
 An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
-HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!
+HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
 
 <table class="standard-table">
   <tbody>
@@ -1083,25 +1062,35 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>18</td>
               <td>No</td>
               <td>11</td>
-              <td>No</td>
+              <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
-        <p>
-          Internet Explorer and Edge only supports HEVC on devices with a
-          hardware codec.
+        <p>Chrome support HEVC for devices with hardware support on Windows 8+, Linux and ChromeOS, for all devices on macOS Big Sur 11+ and Android 5.0+.</p>
+        <p>Edge (Chromium) supports HEVC for devices with hardware support on Windows 10 1709+ when
+          <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC video extensions from the Microsoft Store</a>
+          is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
+        <p>Internet Explorer only supports HEVC for devices with a hardware decoder.</p>
+        <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
+        <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
+          >ISOBMFF</a
+        >, MPEG-TS,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+      </td>
     </tr>
     <tr>
       <th scope="row">
@@ -1261,7 +1250,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
 
 **MPEG-1 Part 2 Video** was unveiled at the beginning of the 1990s. Unlike the later MPEG video standards, MPEG-1 was created solely by MPEG, without the {{Glossary("ITU", "ITU's")}} involvement.
 
-Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wide variety of software and hardware devices. There are no active patents remaining in relation to MPEG-1 video, so it may be used free of any licensing concerns. However, few web browsers support MPEG-1 video without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-1 a poor choice for use in web sites and web applications.
+Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wide variety of software and hardware devices. There are no active patents remaining in relation to MPEG-1 video, so it may be used free of any licensing concerns. However, few web browsers support MPEG-1 video without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-1 a poor choice for use in websites and web applications.
 
 <table class="standard-table">
   <tbody>
@@ -1371,7 +1360,7 @@ The goal was to allow MPEG-2 to compress standard definition television, so inte
 
 MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers support for larger frame dimensions and bit rates. For example, the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.
 
-However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in web sites and web applications.
+However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in websites and web applications.
 
 <table class="standard-table">
   <tbody>
@@ -1976,13 +1965,13 @@ If you are only able to offer a single version of each video, you can choose the
 
 ### Recommendations for everyday videos
 
-First, let's look at the best options for videos presented on a typical web site such as a blog, informational site, small business web site where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
+First, let's look at the best options for videos presented on a typical website such as a blog, informational site, small business website where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
 
 1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
@@ -2001,9 +1990,9 @@ If your mission is to present video at the highest possible quality, you will pr
 
 1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
-    ```html
-    <video controls src="filename.webm"></video>
-    ```
+   ```html
+   <video controls src="filename.webm"></video>
+   ```
 
 2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
@@ -2022,7 +2011,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 
 #### Preparing video externally
 
-To prepare video for archival purposes from outside your web site or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
+To prepare video for archival purposes from outside your website or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
 ```bash
 x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile
@@ -2036,11 +2025,11 @@ Given the constraints on how close to lossless you can get, you might consider u
 
 ```js
 const kbps = 1024;
-const Mbps = kbps*kbps;
+const Mbps = kbps * kbps;
 
 const options = {
   mimeType: 'video/webm; codecs="av01.2.19H.12.0.000.09.16.09.1, flac"',
-  bitsPerSecond: 800*Mbps,
+  bitsPerSecond: 800 * Mbps,
 };
 
 let recorder = new MediaRecorder(sourceStream, options);
@@ -2050,7 +2039,7 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Description                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                              |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -2060,7 +2049,7 @@ Breaking down the value of the `codecs` parameter into its dot-delineated proper
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                       |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 The documentation for your codec choices will probably offer information you'll use when constructing your `codecs` parameter.

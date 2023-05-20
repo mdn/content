@@ -2,12 +2,6 @@
 title: SVGLineElement
 slug: Web/API/SVGLineElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGLineElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGLineElement`** interface provides access to the properties of {{ SVGEl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -30,7 +24,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 - {{domxref("SVGLineElement.y2")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("y2")}} on the given {{SVGElement("line")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 

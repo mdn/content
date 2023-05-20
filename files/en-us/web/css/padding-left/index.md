@@ -1,12 +1,7 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.padding-left
 ---
 

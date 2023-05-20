@@ -1,19 +1,12 @@
 ---
-title: FileSystemFileHandle.getFile()
+title: "FileSystemFileHandle: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - getFile
-  - working with files
 browser-compat: api.FileSystemFileHandle.getFile
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a

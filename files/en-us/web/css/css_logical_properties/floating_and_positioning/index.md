@@ -1,12 +1,7 @@
 ---
 title: Logical properties for floating and positioning
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-tags:
-  - CSS
-  - CSS Logical Properties
-  - Floating
-  - Guide
-  - Positioning
+page-type: guide
 ---
 
 {{CSSRef}}

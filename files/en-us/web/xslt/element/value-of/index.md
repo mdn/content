@@ -1,11 +1,6 @@
 ---
 title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - value-of
 ---
 
 {{ XsltRef() }}

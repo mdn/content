@@ -2,15 +2,6 @@
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioScheduledSourceNode
 ---
 
@@ -24,11 +15,11 @@ Unless stated otherwise, nodes based upon `AudioScheduledSourceNode` output sile
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent interface, {{domxref("AudioNode")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
 

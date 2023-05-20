@@ -1,15 +1,10 @@
 ---
-title: Window.showDirectoryPicker()
+title: "Window: showDirectoryPicker() method"
+short-title: showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
 
@@ -44,13 +39,17 @@ showDirectoryPicker()
 
 ### Return value
 
-A {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemDirectoryHandle')}} object.
 
 ### Exceptions
 
 - `AbortError`
   - : Thrown if the user dismisses the prompt without making a selection, or if the user
     agent deems the selected content to be too sensitive or dangerous
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

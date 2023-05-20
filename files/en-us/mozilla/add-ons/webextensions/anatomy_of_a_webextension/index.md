@@ -1,8 +1,7 @@
 ---
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -19,14 +18,14 @@ The manifest can also contain pointers to several other types of files:
   - : Scripts that respond to browser events.
 - Icons
   - : For the extension and any buttons it might define.
-- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
+- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages_2)
   - : HTML documents that provide content for various user interface components.
-- [Content scripts](#content_scripts)
+- [Content scripts](#content_scripts_2)
   - : JavaScript included with your extension, that you will inject into web pages.
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.
 
-![](webextension-anatomy.png)
+![The components of a web extension. The manifest.JSON must be present in all extensions. It provides pointers to background pages, content scripts, browser actions, page actions, options pages, and web accessible resources. Background pages consist of HTML and JS. Content scripts consist of JS and CSS. The user clicks on an icon to trigger browser actions and page actions and the resulting pop-up consists of HTML, CSS, and JS. Options pages consist of HTML, CSS, and JS.](webextension-anatomy.png)
 
 See the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) reference page for all the details.
 

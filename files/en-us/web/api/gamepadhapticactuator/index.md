@@ -2,15 +2,6 @@
 title: GamepadHapticActuator
 slug: Web/API/GamepadHapticActuator
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad
-  - GamepadHapticActuator
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
 
@@ -20,18 +11,18 @@ The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/A
 
 This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
   - : Returns an enum representing the type of the haptic hardware.
 
-## Methods
+## Instance methods
 
 - {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
 
   - : Makes the hardware pulse at a certain intensity for a specified duration.
 
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Makes the hardware play a specific vibration pattern.
 
 ## Examples
@@ -41,7 +32,7 @@ const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

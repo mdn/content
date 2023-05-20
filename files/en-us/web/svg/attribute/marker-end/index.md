@@ -1,9 +1,7 @@
 ---
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.marker-end
 ---
 

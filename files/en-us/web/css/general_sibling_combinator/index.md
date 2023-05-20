@@ -1,11 +1,7 @@
 ---
 title: General sibling combinator
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-combinator
 browser-compat: css.selectors.general_sibling
 ---
 

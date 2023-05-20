@@ -1,20 +1,12 @@
 ---
-title: KeyframeEffect.composite
+title: "KeyframeEffect: composite property"
+short-title: composite
 slug: Web/API/KeyframeEffect/composite
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - KeyframeEffect
-  - Property
-  - Reference
-  - composite
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.composite
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`composite`** property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.
 

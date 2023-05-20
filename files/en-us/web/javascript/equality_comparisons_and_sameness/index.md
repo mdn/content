@@ -1,25 +1,15 @@
 ---
 title: Equality comparisons and sameness
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Comparison
-  - Equality
-  - Guide
-  - Intermediate
-  - JS
-  - JavaScript
-  - NaN
-  - SameValue
-  - SameValueZero
-  - Sameness
+page-type: guide
 ---
 
 {{jsSidebar("Intermediate")}}
 
 JavaScript provides three different value-comparison operations:
 
-- [`===`](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — strict equality (triple equals)
-- [`==`](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) — loose equality (double equals)
+- [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) — strict equality (triple equals)
+- [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) — loose equality (double equals)
 - [`Object.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
 Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:
@@ -60,12 +50,13 @@ console.log(obj === undefined); // false
 
 Strict equality is almost always the correct comparison operation to use. For all values except numbers, it uses the obvious semantics: a value is only equal to itself. For numbers it uses slightly different semantics to gloss over two different edge cases. The first is that floating point zero is either positively or negatively signed. This is useful in representing certain mathematical solutions, but as most situations don't care about the difference between `+0` and `-0`, strict equality treats them as the same value. The second is that floating point includes the concept of a not-a-number value, `NaN`, to represent the solution to certain ill-defined mathematical problems: negative infinity added to positive infinity, for example. Strict equality treats `NaN` as unequal to every other value — including itself. (The only case in which `(x !== x)` is `true` is when `x` is `NaN`.)
 
-Besides `===`, strict equality is also used by array index-finding methods including [`Array.prototype.indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), [`Array.prototype.lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf), [`TypedArray.prototype.index()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf), [`TypedArray.prototype.lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf), and [`case`](/en-US/docs/Web/JavaScript/Reference/Statements/switch)-matching. This means you cannot use `indexOf(NaN)` to find the index of a `NaN` value in an array, or use `NaN` as a `case` value in a `switch` statement and make it match anything.
+Besides `===`, strict equality is also used by array index-finding methods including [`Array.prototype.indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), [`Array.prototype.lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf), [`TypedArray.prototype.indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf), [`TypedArray.prototype.lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf), and [`case`](/en-US/docs/Web/JavaScript/Reference/Statements/switch)-matching. This means you cannot use `indexOf(NaN)` to find the index of a `NaN` value in an array, or use `NaN` as a `case` value in a `switch` statement and make it match anything.
 
 ```js
 console.log([NaN].indexOf(NaN)); // -1
 switch (NaN) {
-  case NaN: console.log("Surprise"); // Nothing is logged
+  case NaN:
+    console.log("Surprise"); // Nothing is logged
 }
 ```
 
@@ -81,12 +72,12 @@ Loose equality is _symmetric_: `A == B` always has identical semantics to `B == 
    - BigInt: return `true` only if both operands have the same value.
    - Symbol: return `true` only if both operands reference the same symbol.
 2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
-3. If one of the operands is an object and the other is a primitive, convert the object to a primitive using the object's [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"default"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. (This primitive conversion is the same as the one used in [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition).)
+3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion).
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
-   - If one of the operands is a Boolean but the other is not, convert the boolean to a number: `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
-   - Number to String: convert the string to a Number using the same algorithm as the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor. Conversion failure would result in `NaN`, which will guarantee the equality to be `false`.
+   - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
+   - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
    - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
@@ -208,14 +199,14 @@ Here's a non-exhaustive list of built-in methods and operators that might cause 
   - : In some cases, it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

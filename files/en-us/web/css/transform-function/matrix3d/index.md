@@ -1,12 +1,7 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
 ---
 
@@ -198,7 +193,7 @@ Another `transform3d()` example, which implements an animated combined translate
 
 #### CSS
 
-```css
+```css-nolint
 html {
   width: 100%;
 }
@@ -235,27 +230,26 @@ body {
         Scales down by 10%
     */
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      -50, -100, 0, 1.1
     );
-
   }
   50% {
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 0.9
     );
   }
   to {
      transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      50, 100, 0, 1.1
     )
   }
 }
@@ -276,5 +270,9 @@ body {
 ## See also
 
 - {{cssxref("transform")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/) (2012)

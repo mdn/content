@@ -1,20 +1,13 @@
 ---
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@match
 ---
 
 {{JSRef}}
 
-The **`[@@match]()`** method of a regular expression specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
+The **`[@@match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
@@ -43,9 +36,9 @@ This method is called internally in {{jsxref("String.prototype.match()")}}.
 For example, the following two examples return same result.
 
 ```js
-'abc'.match(/a/);
+"abc".match(/a/);
 
-/a/[Symbol.match]('abc');
+/a/[Symbol.match]("abc");
 ```
 
 If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once and its result becomes the return value of `@@match`.
@@ -70,7 +63,7 @@ When the regex is sticky and global, it would still perform sticky matches — i
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
 ```
 
-If the current match is an empty string, the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode codepoint; otherwise, it advances by one UTF-16 code unit.
+If the current match is an empty string, the `lastIndex` would still be advanced — if the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 
 ```js
 console.log("😄".match(/(?:)/g)); // [ '', '', '' ]
@@ -89,9 +82,9 @@ This method can be used in _almost_ the same way as {{jsxref("String.prototype.m
 
 ```js
 const re = /[0-9]+/g;
-const str = '2016-01-02';
+const str = "2016-01-02";
 const result = re[Symbol.match](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Using @@match in subclasses
@@ -106,13 +99,13 @@ class MyRegExp extends RegExp {
     return {
       group(n) {
         return result[n];
-      }
+      },
     };
   }
 }
 
-const re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-const str = '2016-01-02';
+const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+const str = "2016-01-02";
 const result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
@@ -131,8 +124,10 @@ console.log(result.group(3)); // 02
 
 - [Polyfill of `RegExp.prototype[@@match]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.match")}}

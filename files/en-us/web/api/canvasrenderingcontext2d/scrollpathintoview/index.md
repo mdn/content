@@ -1,14 +1,10 @@
 ---
-title: CanvasRenderingContext2D.scrollPathIntoView()
+title: "CanvasRenderingContext2D: scrollPathIntoView() method"
+short-title: scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 ---
 
@@ -50,8 +46,8 @@ This example demonstrates the `scrollPathIntoView()` method.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.fillRect(10, 10, 30, 30);
@@ -102,7 +98,7 @@ reset.addEventListener("click", () => {
 
 edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

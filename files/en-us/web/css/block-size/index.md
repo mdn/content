@@ -1,12 +1,7 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.block-size
 ---
 

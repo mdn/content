@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createDynamicsCompressor()
+title: "BaseAudioContext: createDynamicsCompressor() method"
+short-title: createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDynamicsCompressor
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
 

@@ -1,17 +1,7 @@
 ---
 title: Sharing objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Content script
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - page scripts
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -226,8 +216,17 @@ window.eval(`
   console.log(objA instanceof Object);           // false
   console.log(objB instanceof Object);           // true
 
-  console.log(objA.foo);                         // undefined
-  objA.baz = "baz";                              // Error: permission denied
+  try {
+    console.log(objA.foo);
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
+ 
+  try {
+    objA.baz = "baz";
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
 
   console.log(objB.foo, objB.bar);               // "foo", "bar"
   objB.baz = "baz";
@@ -248,9 +247,9 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(() => {                  // getters must be exported like regular functions
-       return 'propC';
-     })
+    get: exportFunction(() => {                  // getters must be exported like regular functions
+      return 'propC';
+    }, window)
   }
 );
 

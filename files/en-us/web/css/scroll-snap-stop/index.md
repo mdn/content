@@ -1,14 +1,7 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-snap-stop
+page-type: css-property
 browser-compat: css.properties.scroll-snap-stop
 ---
 

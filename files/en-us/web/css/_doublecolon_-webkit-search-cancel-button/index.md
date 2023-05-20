@@ -1,13 +1,9 @@
 ---
-title: '::-webkit-search-cancel-button'
+title: "::-webkit-search-cancel-button"
 slug: Web/CSS/::-webkit-search-cancel-button
-tags:
-  - CSS
-  - NeedsExample
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-search-cancel-button
 ---
 
@@ -18,7 +14,9 @@ The **`::-webkit-search-cancel-button`** CSS [pseudo-element](/en-US/docs/Web/CS
 ## Syntax
 
 ```css
- selector::-webkit-search-cancel-button
+selector::-webkit-search-cancel-button {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -31,5 +29,4 @@ Not part of any standard.
 
 ## See also
 
-- {{cssxref('::-ms-clear')}}
 - {{cssxref('::-webkit-search-results-button')}}

@@ -1,15 +1,7 @@
 ---
 title: State machine
 slug: Glossary/State_machine
-tags:
-  - CodingScripting
-  - Finite
-  - Glossary
-  - Input
-  - Mealy
-  - Moore
-  - State Machine
-  - Turing Machine
+page-type: glossary-definition
 ---
 
 A state machine is a mathematical abstraction used to design algorithms. A state machine reads a set of inputs and changes to a different state based on those inputs.

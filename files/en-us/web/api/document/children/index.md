@@ -1,14 +1,8 @@
 ---
-title: Document.children
+title: "Document: children property"
+short-title: children
 slug: Web/API/Document/children
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
 browser-compat: api.Document.children
 ---
 

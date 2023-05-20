@@ -2,11 +2,6 @@
 title: CSSPageRule
 slug: Web/API/CSSPageRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSPageRule
 ---
 
@@ -16,7 +11,7 @@ browser-compat: api.CSSPageRule
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
@@ -25,7 +20,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
   - : Returns the [declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) associated with the at-rule.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 

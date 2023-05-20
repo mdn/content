@@ -1,18 +1,6 @@
 ---
 title: Silly story generator
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - Arrays
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Numbers
-  - Operators
-  - Variables
-  - "l10n:priority"
-  - strings
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -112,7 +100,7 @@ Completing the `result()` function:
 - If you are unsure whether the JavaScript is applied to your HTML properly, try removing everything else from the JavaScript file temporarily, adding in a simple bit of JavaScript that you know will create an obvious effect, then saving and refreshing. The following for example turns the background of the {{htmlelement("html")}} element red — so the entire browser window should go red if the JavaScript is applied properly:
 
   ```js
-  document.querySelector('html').style.backgroundColor = 'red';
+  document.querySelector("html").style.backgroundColor = "red";
   ```
 
 - [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that rounds the result of a calculation to the nearest whole number.
@@ -131,15 +119,3 @@ If you would like your work assessed, or are stuck and want to ask for help:
    - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

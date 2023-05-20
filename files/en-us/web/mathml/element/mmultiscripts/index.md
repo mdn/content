@@ -1,21 +1,17 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
 
 {{MathMLRef}}
 
-The MathML `<mmultiscripts>` element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either prescripts (placed before the expression) or postscripts (placed after it).
+The **`<mmultiscripts>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either prescripts (placed before the expression) or postscripts (placed after it).
 
-MathML uses the syntax below, that is a base expression, followed by an arbitrary number of postsubscript-postsuperscript pairs (attached in the given order) optionally followed by an `<mprescripts>` and an arbitrary number of presubscript-presuperscript pairs (attached in the given order). In addition you are able to use `<none/>` as a placeholder for empty scripts.
+MathML uses the syntax below, that is a base expression, followed by an arbitrary number of postsubscript-postsuperscript pairs (attached in the given order) optionally followed by an `<mprescripts>` and an arbitrary number of presubscript-presuperscript pairs (attached in the given order). In addition, empty `<mrow>` elements can be used to represent absent scripts.
 
-```html
+```html-nolint
 <mmultiscripts>
   base
   postsubscript1 postsuperscript1
@@ -34,7 +30,14 @@ MathML uses the syntax below, that is a base expression, followed by an arbitrar
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
+
+- `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the subscript down.
+- `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the superscript up.
+
+> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -42,7 +45,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 Children after the `<mprescripts/>` element are placed as pre-scripts (before the base expression):
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->
@@ -57,19 +60,19 @@ Children after the `<mprescripts/>` element are placed as pre-scripts (before th
 
 {{ EmbedLiveSample('mprescripts_example', 700, 200, "", "") }}
 
-### Using `<none/>`
+### Empty scripts
 
-`<none/>` children don't render anything and represent empty scripts:
+Empty `<mrow>` elements can be used to represent absent scripts:
 
-```html
+```html-nolint
 <math display="block">
   <mmultiscripts>
     <mi>X</mi>      <!-- base expression -->
-    <none />        <!-- postsubscript -->
+    <mrow></mrow>   <!-- postsubscript -->
     <mi>c</mi>      <!-- postsuperscript -->
     <mprescripts />
     <mi>b</mi>      <!-- presubscript -->
-    <none />        <!-- presuperscript -->
+    <mrow></mrow>   <!-- presuperscript -->
   </mmultiscripts>
 </math>
 ```

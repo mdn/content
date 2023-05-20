@@ -2,18 +2,8 @@
 title: XRRenderState
 slug: Web/API/XRRenderState
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRRenderState
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRRenderState
 ---
 
@@ -23,7 +13,7 @@ The **`XRRenderState`** interface of the [WebXR Device API](/en-US/docs/Web/API/
 
 When you apply changes using the `XRSession` method {{domxref("XRSession.updateRenderState", "updateRenderState()")}}, the specified changes take effect after the current animation frame has completed, but before the next one begins.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("XRRenderState.baseLayer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{DOMxRef("XRWebGLLayer")}} from which the browser's compositing system obtains the image for the XR session.

@@ -1,13 +1,7 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - css scrollbars
-  - recipe:css-property
-  - scrollbar-color
+page-type: css-property
 browser-compat: css.properties.scrollbar-color
 ---
 
@@ -18,6 +12,8 @@ The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of 
 The **track** refers to the background of the scrollbar, which is generally fixed regardless of the scrolling position.
 
 The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
+
+When `scrollbar-color` value is set on the document's root element, the values are applied to the viewport scrollbars.
 
 ## Syntax
 
@@ -62,7 +58,7 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **Note:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+> **Note:** [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets {{cssxref("scrollbar-color")}} to `auto`.
 
 ## Accessibility concerns
 
@@ -117,5 +113,6 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## See also
 
-- [`scrollbar-width`](/en-US/docs/Web/CSS/scrollbar-width)
 - [`overflow`](/en-US/docs/Web/CSS/overflow)
+- [`scrollbar-width`](/en-US/docs/Web/CSS/scrollbar-width)
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_Scrollbars) module

@@ -2,12 +2,8 @@
 title: WindowControlsOverlayGeometryChangeEvent
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - WindowControlsOverlayGeometryChangeEvent
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent
 ---
 
@@ -22,7 +18,7 @@ The **`WindowControlsOverlayGeometryChangeEvent`** interface of the [Window Cont
 - {{domxref("WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent", "WindowControlsOverlayGeometryChangeEvent()")}} {{Experimental_Inline}}
   - : Creates a `WindowControlsOverlayGeometryChangeEvent` event with the given parameters.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
@@ -37,13 +33,16 @@ The following example shows how to use a `WindowControlsOverlayGeometryChangeEve
 event handler on the {{domxref("Navigator.windowControlsOverlay")}} property, to listen to geometry changes of a PWA's title bar region.
 
 ```js
-if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-    if (event.visible) {
-      const rect = event.titlebarAreaRect;
-      // Do something with the coordinates of the title bar area.
+if ("windowControlsOverlay" in navigator) {
+  navigator.windowControlsOverlay.addEventListener(
+    "geometrychange",
+    (event) => {
+      if (event.visible) {
+        const rect = event.titlebarAreaRect;
+        // Do something with the coordinates of the title bar area.
+      }
     }
-  });
+  );
 }
 ```
 

@@ -81,7 +81,7 @@
       "impl": []
     },
     "AudioDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioDestinationNode": {
@@ -89,7 +89,7 @@
       "impl": []
     },
     "AudioEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "AudioListener": {
@@ -122,6 +122,10 @@
     },
     "AudioScheduledSourceNode": {
       "inh": "AudioNode",
+      "impl": []
+    },
+    "AudioSinkInfo": {
+      "inh": "",
       "impl": []
     },
     "AudioTrack": {
@@ -316,6 +320,10 @@
       "inh": "Event",
       "impl": []
     },
+    "CaptureController": {
+      "inh": "",
+      "impl": []
+    },
     "CaretPosition": {
       "inh": "",
       "impl": []
@@ -404,7 +412,7 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
-    "ContentVisibilityAutoStateChangedEvent": {
+    "ContentVisibilityAutoStateChangeEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -462,6 +470,10 @@
     },
     "CSSColor": {
       "inh": "CSSColorValue",
+      "impl": []
+    },
+    "CSSColorProfileRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSColorValue": {
@@ -592,10 +604,6 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSNestingRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -676,6 +684,10 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
+    "CSSScopeRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSSkew": {
       "inh": "CSSTransformComponent",
       "impl": []
@@ -734,10 +746,6 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
-      "impl": []
-    },
-    "CSSViewportRule": {
-      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -880,10 +888,6 @@
       "inh": "",
       "impl": []
     },
-    "DOMTransition": {
-      "inh": "",
-      "impl": []
-    },
     "DragEvent": {
       "inh": "MouseEvent",
       "impl": []
@@ -937,10 +941,6 @@
       "impl": []
     },
     "EXT_blend_minmax": {
-      "inh": "",
-      "impl": []
-    },
-    "EXT_clip_cull_distance": {
       "inh": "",
       "impl": []
     },
@@ -1069,6 +1069,10 @@
       "impl": []
     },
     "FileSystemHandle": {
+      "inh": "",
+      "impl": []
+    },
+    "FileSystemSyncAccessHandle": {
       "inh": "",
       "impl": []
     },
@@ -1266,6 +1270,10 @@
     },
     "GPUOutOfMemoryError": {
       "inh": "GPUError",
+      "impl": []
+    },
+    "GPUPipelineError": {
+      "inh": "DOMException",
       "impl": []
     },
     "GPUPipelineLayout": {
@@ -1796,10 +1804,6 @@
       "inh": "",
       "impl": []
     },
-    "InteractionCounts": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -2072,6 +2076,10 @@
       "inh": "",
       "impl": []
     },
+    "MLActivation": {
+      "inh": "",
+      "impl": []
+    },
     "MLCommandEncoder": {
       "inh": "",
       "impl": []
@@ -2089,10 +2097,6 @@
       "impl": []
     },
     "MLOperand": {
-      "inh": "",
-      "impl": []
-    },
-    "MLOperator": {
       "inh": "",
       "impl": []
     },
@@ -2308,10 +2312,6 @@
       "inh": "",
       "impl": []
     },
-    "PaymentInstruments": {
-      "inh": "",
-      "impl": []
-    },
     "PaymentManager": {
       "inh": "",
       "impl": []
@@ -2489,6 +2489,10 @@
       "impl": []
     },
     "PressureObserver": {
+      "inh": "",
+      "impl": []
+    },
+    "PressureRecord": {
       "inh": "",
       "impl": []
     },
@@ -3048,10 +3052,6 @@
       "inh": "SVGElement",
       "impl": []
     },
-    "SVGDiscardElement": {
-      "inh": "SVGAnimationElement",
-      "impl": []
-    },
     "SVGElement": {
       "inh": "Element",
       "impl": []
@@ -3432,6 +3432,10 @@
       "inh": "",
       "impl": []
     },
+    "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -3577,11 +3581,11 @@
       "impl": []
     },
     "VideoDecoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoEncoder": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "VideoFrame": {
@@ -3606,6 +3610,10 @@
     },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
+      "impl": []
+    },
+    "ViewTransition": {
+      "inh": "",
       "impl": []
     },
     "VirtualKeyboard": {
@@ -3637,6 +3645,10 @@
       "impl": []
     },
     "WEBGL_blend_equation_advanced_coherent": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_clip_cull_distance": {
       "inh": "",
       "impl": []
     },
@@ -3697,6 +3709,10 @@
       "impl": []
     },
     "WEBGL_multi_draw_instanced_base_vertex_base_instance": {
+      "inh": "",
+      "impl": []
+    },
+    "WEBGL_provoking_vertex": {
       "inh": "",
       "impl": []
     },
@@ -3785,7 +3801,7 @@
       "impl": []
     },
     "WebTransport": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "WebTransportBidirectionalStream": {
@@ -3798,6 +3814,10 @@
     },
     "WebTransportError": {
       "inh": "DOMException",
+      "impl": []
+    },
+    "WebTransportRateControlFeedback": {
+      "inh": "",
       "impl": []
     },
     "WebTransportReceiveStream": {

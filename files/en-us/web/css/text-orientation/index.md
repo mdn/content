@@ -1,12 +1,7 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-orientation
 ---
 

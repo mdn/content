@@ -2,23 +2,18 @@
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
 page-type: web-api-overview
-tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaintWorkletGlobalScope
 ---
 
-{{DefaultAPISidebar("CSS Painting API")}}
+{{DefaultAPISidebar("CSS Painting API")}}{{SeeCompatTable}}
 
 The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
 
 ## Concepts and usage
 
-Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('paint()', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
+Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('image/paint', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
 
 For example:
 
@@ -28,23 +23,16 @@ aside {
 }
 ```
 
-The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can be used to programmatically generate an image that responds to computed style changes. To find out more about how this is used, consult [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide).
+The API defines a {{domxref('worklet')}} that can be used to programmatically generate an image that responds to computed style changes. To find out more about how this is used, consult [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide).
 
 ## Interfaces
 
-- {{domxref('PaintWorklet')}}
-  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet).
 - {{domxref('PaintWorkletGlobalScope')}}
-  - : The global execution context of the `paintWorklet`.
+  - : The global execution context of the paint worklet.
 - {{domxref('PaintRenderingContext2D')}}
-  - : Implements a subset of the [CanvasRenderingContext2D API](/en-US/docs/Web/API/CanvasRenderingContext2D). It has an output bitmap that is the size of the object it is rendering to.
+  - : Implements a subset of the [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) API. It has an output bitmap that is the size of the object it is rendering to.
 - {{domxref('PaintSize')}}
   - : Returns the read-only values of the output bitmap's width and height.
-
-## Dictionaries
-
-- {{domxref('PaintRenderingContext2DSettings')}}
-  - : A dictionary providing a subset of [CanvasRenderingContext2D](/en-US/docs/Web/API/CanvasRenderingContext2D) settings.
 
 ## Examples
 
@@ -59,26 +47,38 @@ To achieve this we'll define two custom CSS properties, `--boxColor` and `--widt
 In our worklet, we can reference these custom properties.
 
 ```js
-registerPaint('boxbg', class {
-  static get contextOptions() { return {alpha: true}; }
+registerPaint(
+  "boxbg",
+  class {
+    static get contextOptions() {
+      return { alpha: true };
+    }
 
-  /*
+    /*
      use this function to retrieve any custom properties (or regular properties, such as 'height')
      defined for the element, return them in the specified array
   */
-  static get inputProperties() { return ['--boxColor', '--widthSubtractor']; }
+    static get inputProperties() {
+      return ["--boxColor", "--widthSubtractor"];
+    }
 
-  paint(ctx, size, props) {
-    /*
+    paint(ctx, size, props) {
+      /*
        ctx -> drawing context
        size -> paintSize: width and height
        props -> properties: get() method
     */
 
-    ctx.fillStyle = props.get('--boxColor');
-    ctx.fillRect(0, size.height/3, size.width*0.4 - props.get('--widthSubtractor'), size.height*0.6);
+      ctx.fillStyle = props.get("--boxColor");
+      ctx.fillRect(
+        0,
+        size.height / 3,
+        size.width * 0.4 - props.get("--widthSubtractor"),
+        size.height * 0.6
+      );
+    }
   }
-});
+);
 ```
 
 We used the `inputProperties()` method in the `registerPaint()` class to get the values of two custom properties set on an element that has `boxbg` applied to it and then used those within our `paint()` function. The `inputProperties()` method can return all properties affecting the element, not just custom properties.
@@ -117,16 +117,16 @@ In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties
 ```css
 li {
   background-image: paint(boxbg);
-  --boxColor: hsla(55, 90%, 60%, 1);
+  --boxColor: hsl(55 90% 60% / 1);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
+  --boxColor: hsl(155 90% 60% / 1);
   --widthSubtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
+  --boxColor: hsl(255 90% 60% / 1);
   --widthSubtractor: 40;
 }
 ```
@@ -136,7 +136,7 @@ li:nth-of-type(3n + 1) {
 In our `<script>` we register the worklet:
 
 ```js
-CSS.paintWorklet.addModule('boxbg.js');
+CSS.paintWorklet.addModule("boxbg.js");
 ```
 
 #### Result

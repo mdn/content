@@ -2,15 +2,6 @@
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 page-type: guide
-tags:
-  - '1.1'
-  - API
-  - Canvas
-  - Tutorial
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
@@ -31,7 +22,7 @@ To get started, you need:
 - A computer powerful enough to handle rendering/displaying of VR scenes using your dedicated VR Hardware, if required. To give you an idea of what you need, look at the relevant guide for the VR you are purchasing (e.g. [VIVE READY Computers](https://www.vive.com/us/ready/)).
 - A supporting browser installed — the latest [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
 
-Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
+Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/webvr/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
 
 [A-Frame](https://aframe.io/) is by far the best option if you want to create a WebVR-compatible 3D scene quickly, without needing to understand a bunch of new JavaScript code. It doesn't however teach you how the raw WebVR API works, and this is what we'll get on to next.
 
@@ -39,9 +30,9 @@ Once you have everything assembled, you can test to see whether your setup works
 
 To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:
 
-![](capture1.png)
+![A gray rotating 3D cube](capture1.png)
 
-> **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/raw-webgl-example/) also.
+> **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
 > **Note:** If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose _Run with graphics processor > High-performance NVIDIA processor_.
 
@@ -52,7 +43,7 @@ Our demo also features:
 - A button to start (and stop) our scene from being presented in the VR display.
 - A button to show (and hide) VR pose data, i.e. the position and orientation of the headset, updated in real time.
 
-When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
+When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
 
 > **Note:** To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn/JavaScript), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
@@ -78,20 +69,20 @@ The first WebVR-related code you'll meet is this following block:
 
 const frameData = new VRFrameData();
 let vrDisplay;
-const btn = document.querySelector('.stop-start');
+const btn = document.querySelector(".stop-start");
 let normalSceneFrame;
 let vrSceneFrame;
 
-const poseStatsBtn = document.querySelector('.pose-stats');
-const poseStatsSection = document.querySelector('section');
-poseStatsSection.style.visibility = 'hidden'; // hide it initially
+const poseStatsBtn = document.querySelector(".pose-stats");
+const poseStatsSection = document.querySelector("section");
+poseStatsSection.style.visibility = "hidden"; // hide it initially
 
-const posStats = document.querySelector('.pos');
-const orientStats = document.querySelector('.orient');
-const linVelStats = document.querySelector('.lin-vel');
-const linAccStats = document.querySelector('.lin-acc');
-const angVelStats = document.querySelector('.ang-vel');
-const angAccStats = document.querySelector('.ang-acc');
+const posStats = document.querySelector(".pos");
+const orientStats = document.querySelector(".orient");
+const linVelStats = document.querySelector(".lin-vel");
+const linAccStats = document.querySelector(".lin-acc");
+const angVelStats = document.querySelector(".ang-vel");
+const angAccStats = document.querySelector(".ang-acc");
 let poseStatsDisplayed = false;
 ```
 
@@ -115,7 +106,7 @@ One of the major functions inside our code is `start()` — we run this function
 document.body.onload = start;
 ```
 
-To begin with, `start()` retrieves a WebGL context to use to render 3D graphics into the {{htmlelement("canvas")}} element in [our HTML](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/index.html). We then check whether the `gl` context is available — if so, we run a number of functions to set up the scene for display.
+To begin with, `start()` retrieves a WebGL context to use to render 3D graphics into the {{htmlelement("canvas")}} element in [our HTML](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/index.html). We then check whether the `gl` context is available — if so, we run a number of functions to set up the scene for display.
 
 ```js
 function start() {
@@ -129,11 +120,11 @@ function start() {
 Next, we start the process of actually rendering the scene onto the canvas, by setting the canvas to fill the entire browser viewport, and running the rendering loop (`drawScene()`) for the first time. This is the non-WebVR — normal — rendering loop.
 
 ```js
-  // draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
+// draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  drawScene();
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+drawScene();
 ```
 
 Now onto our first WebVR-specific code. First of all, we check to see if {{domxref("Navigator.getVRDisplays")}} exists — this is the entry point into the API, and therefore good basic feature detection for WebVR. You'll see at the end of the block (inside the `else` clause) that if this doesn't exist, we log a message to indicate that WebVR 1.1 isn't supported by the browser.
@@ -187,21 +178,21 @@ With our presentation request successful, we now want to start setting up to ren
 We then do some simple math to calculate the total width of the VRDisplay rendering area based on the eye {{domxref("VREyeParameters.renderWidth")}} and {{domxref("VREyeParameters.renderHeight")}}.
 
 ```js
-              // Set the canvas size to the size of the vrDisplay viewport
+// Set the canvas size to the size of the vrDisplay viewport
 
-              const leftEye = vrDisplay.getEyeParameters('left');
-              const rightEye = vrDisplay.getEyeParameters('right');
+const leftEye = vrDisplay.getEyeParameters("left");
+const rightEye = vrDisplay.getEyeParameters("right");
 
-              canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-              canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
 ```
 
 Next, we {{domxref("Window.cancelAnimationFrame()", "cancel the animation loop")}} previously set in motion by the {{domxref("Window.requestAnimationFrame()")}} call inside the `drawScene()` function, and instead invoke `drawVRScene()`. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special {{domxref("VRDisplay.requestAnimationFrame")}} method.
 
 ```js
-              // stop the normal presentation, and start the vr presentation
-              window.cancelAnimationFrame(normalSceneFrame);
-              drawVRScene();
+// stop the normal presentation, and start the vr presentation
+window.cancelAnimationFrame(normalSceneFrame);
+drawVRScene();
 ```
 
 Finally, we update the button text so that the next time it is pressed, it will stop presentation to the VR display.
@@ -235,7 +226,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
 
-![](capture2.png)
+![Stereoscopic view of 3D cube](capture2.png)
 
 You'll learn below how the stereoscopic view is actually produced.
 
@@ -262,39 +253,42 @@ Next, we call {{domxref("VRDisplay.getFrameData()")}}, passing it the name of th
 This has to be called on every frame so the rendered view is always up-to-date.
 
 ```js
-  // Populate frameData with the data of the next frame to display
-  vrDisplay.getFrameData(frameData);
+// Populate frameData with the data of the next frame to display
+vrDisplay.getFrameData(frameData);
 ```
 
 Now we retrieve the current {{domxref("VRPose")}} from the {{domxref("VRFrameData.pose")}} property, store the position and orientation for use later on, and send the current pose to the pose stats box for display, if the `poseStatsDisplayed` variable is set to true.
 
 ```js
-  // You can get the position, orientation, etc. of the display from the current frame's pose
+// You can get the position, orientation, etc. of the display from the current frame's pose
 
-  const curFramePose = frameData.pose;
-  const curPos = curFramePose.position;
-  const curOrient = curFramePose.orientation;
-  if (poseStatsDisplayed) {
-    displayPoseStats(curFramePose);
-  }
+const curFramePose = frameData.pose;
+const curPos = curFramePose.position;
+const curOrient = curFramePose.orientation;
+if (poseStatsDisplayed) {
+  displayPoseStats(curFramePose);
+}
 ```
 
 We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:
 
 ```js
-  // Clear the canvas before we start drawing on it.
+// Clear the canvas before we start drawing on it.
 
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 ```
 
 We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. These are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
 
 ```js
-  // WebVR: Create the required projection and view matrix locations needed
-  // for passing into the uniformMatrix4fv methods below
+// WebVR: Create the required projection and view matrix locations needed
+// for passing into the uniformMatrix4fv methods below
 
-  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+const projectionMatrixLocation = gl.getUniformLocation(
+  shaderProgram,
+  "projMatrix"
+);
+const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 ```
 
 The next rendering step involves:
@@ -304,21 +298,29 @@ The next rendering step involves:
 - Running the `drawGeometry()` function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.
 
 ```js
-  // WebVR: Render the left eye's view to the left half of the canvas
-  gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
-  drawGeometry();
+// WebVR: Render the left eye's view to the left half of the canvas
+gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
+gl.uniformMatrix4fv(
+  projectionMatrixLocation,
+  false,
+  frameData.leftProjectionMatrix
+);
+gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
+drawGeometry();
 ```
 
 We now do exactly the same thing, but for the right eye:
 
 ```js
-  // WebVR: Render the right eye's view to the right half of the canvas
-  gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
-  drawGeometry();
+// WebVR: Render the right eye's view to the right half of the canvas
+gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
+gl.uniformMatrix4fv(
+  projectionMatrixLocation,
+  false,
+  frameData.rightProjectionMatrix
+);
+gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
+drawGeometry();
 ```
 
 Next we define our `drawGeometry()` function. Most of this is just general WebGL code required to draw our 3D cube. You'll see some WebVR-specific parts in the `mvTranslate()` and `mvRotate()` function calls — these pass matrices into the WebGL program that define the translation and rotation of the cube for the current frame
@@ -328,64 +330,64 @@ You'll see that we are modifying these values by the position (`curPos`) and ori
 This is a quick and dirty way to use VR pose data, but it illustrates the basic principle.
 
 ```js
-  function drawGeometry() {
-    // Establish the perspective with which we want to view the
-    // scene. Our field of view is 45 degrees, with a width/height
-    // ratio of 640:480, and we only want to see objects between 0.1 units
-    // and 100 units away from the camera.
-    perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+function drawGeometry() {
+  // Establish the perspective with which we want to view the
+  // scene. Our field of view is 45 degrees, with a width/height
+  // ratio of 640:480, and we only want to see objects between 0.1 units
+  // and 100 units away from the camera.
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 
-    // Set the drawing position to the "identity" point, which is
-    // the center of the scene.
-    loadIdentity();
+  // Set the drawing position to the "identity" point, which is
+  // the center of the scene.
+  loadIdentity();
 
-    // Now move the drawing position a bit to where we want to start
-    // drawing the cube.
-    mvTranslate([
-                  0.0 - (curPos[0] * 25) + (curOrient[1] * 25),
-                  5.0 - (curPos[1] * 25) - (curOrient[0] * 25),
-                  -15.0 - (curPos[2] * 25)
-               ]);
+  // Now move the drawing position a bit to where we want to start
+  // drawing the cube.
+  mvTranslate([
+    0.0 - curPos[0] * 25 + curOrient[1] * 25,
+    5.0 - curPos[1] * 25 - curOrient[0] * 25,
+    -15.0 - curPos[2] * 25,
+  ]);
 
-    // Save the current matrix, then rotate before we draw.
-    mvPushMatrix();
-    mvRotate(cubeRotation, [0.25, 0, 0.25 - curOrient[2] * 0.5]);
+  // Save the current matrix, then rotate before we draw.
+  mvPushMatrix();
+  mvRotate(cubeRotation, [0.25, 0, 0.25 - curOrient[2] * 0.5]);
 
-    // Draw the cube by binding the array buffer to the cube's vertices
-    // array, setting attributes, and pushing it to GL.
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesBuffer);
-    gl.vertexAttribPointer(vertexPositionAttribute, 3, gl.FLOAT, false, 0, 0);
+  // Draw the cube by binding the array buffer to the cube's vertices
+  // array, setting attributes, and pushing it to GL.
+  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesBuffer);
+  gl.vertexAttribPointer(vertexPositionAttribute, 3, gl.FLOAT, false, 0, 0);
 
-    // Set the texture coordinates attribute for the vertices.
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
-    gl.vertexAttribPointer(textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+  // Set the texture coordinates attribute for the vertices.
+  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+  gl.vertexAttribPointer(textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 
-    // Specify the texture to map onto the faces.
-    gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-    gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+  // Specify the texture to map onto the faces.
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
+  gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 
-    // Draw the cube.
-    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
-    setMatrixUniforms();
-    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+  // Draw the cube.
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
+  setMatrixUniforms();
+  gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
-    // Restore the original matrix
-    mvPopMatrix();
-  }
+  // Restore the original matrix
+  mvPopMatrix();
+}
 ```
 
 The next bit of the code has nothing to do with WebVR — it just updates the rotation of the cube on each frame:
 
 ```js
-  // Update the rotation for the next draw, if it's time to do so.
-  let currentTime = (new Date).getTime();
-  if (lastCubeUpdateTime) {
-    const delta = currentTime - lastCubeUpdateTime;
+// Update the rotation for the next draw, if it's time to do so.
+let currentTime = new Date().getTime();
+if (lastCubeUpdateTime) {
+  const delta = currentTime - lastCubeUpdateTime;
 
-    cubeRotation += (30 * delta) / 1000.0;
-  }
-  lastCubeUpdateTime = currentTime;
+  cubeRotation += (30 * delta) / 1000.0;
+}
+lastCubeUpdateTime = currentTime;
 ```
 
 The last part of the rendering loop involves us calling {{domxref("VRDisplay.submitFrame()")}} — now all the work has been done and we've rendered the display on the {{htmlelement("canvas")}}, this method then submits the frame to the VR display so it is displayed on there as well.
@@ -465,8 +467,10 @@ The WebVR spec features a number of events that are fired, allowing our app code
 To demonstrate how they work, our simple demo includes the following example:
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-  console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`
+  );
 });
 ```
 

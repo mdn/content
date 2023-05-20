@@ -1,12 +1,7 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
-tags:
-  - ':placeholder-shown'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown
 ---
 
@@ -18,8 +13,10 @@ The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/do
 
 ## Syntax
 
-```
-:placeholder-shown
+```css
+:placeholder-shown {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -78,7 +75,7 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 
 ### Customized input field
 
-The following example highlights the Branch and ID code fields with a custom style.
+The following example highlights the Student ID field with a custom style.
 
 #### HTML
 

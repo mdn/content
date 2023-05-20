@@ -1,16 +1,7 @@
 ---
 title: border-inline-end-style
 slug: Web/CSS/border-inline-end-style
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-inline
-  - border-inline-end
-  - border-inline-end-style
-  - border-inline-style
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-inline-end-style
 ---
 
@@ -93,5 +84,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

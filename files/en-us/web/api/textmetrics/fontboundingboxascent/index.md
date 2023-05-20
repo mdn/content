@@ -1,12 +1,8 @@
 ---
-title: TextMetrics.fontBoundingBoxAscent
+title: "TextMetrics: fontBoundingBoxAscent property"
+short-title: fontBoundingBoxAscent
 slug: Web/API/TextMetrics/fontBoundingBoxAscent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - TextMetrics
 browser-compat: api.TextMetrics.fontBoundingBoxAscent
 ---
 
@@ -17,9 +13,9 @@ The read-only `fontBoundingBoxAscent` property of the {{domxref("TextMetrics")}}
 ## Examples
 
 ```js
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const text = ctx.measureText('foo'); // returns TextMetrics object
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const text = ctx.measureText("foo"); // returns TextMetrics object
 
 text.fontBoundingBoxAscent; // 10;
 ```

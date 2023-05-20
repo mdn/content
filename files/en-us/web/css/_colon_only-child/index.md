@@ -1,13 +1,7 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.only-child
 ---
 
@@ -21,8 +15,10 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 ## Syntax
 
-```
-:only-child
+```css
+:only-child {
+  /* ... */
+}
 ```
 
 ## Examples

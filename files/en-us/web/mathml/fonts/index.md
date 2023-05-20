@@ -1,11 +1,10 @@
 ---
 title: Fonts for MathML
 slug: Web/MathML/Fonts
-tags:
-  - Fonts
-  - MathML
-  - Project
+page-type: guide
 ---
+
+{{MathMLRef}}
 
 Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
 This page describes how users can install such math fonts to properly display MathML in browsers.
@@ -25,7 +24,7 @@ Install the _Latin Modern Math_ and _STIX Two Math_ fonts as follows:
 5. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular` file.
 6. Open the `STIXTwoMath-Regular` file and click the **Install** button. If desired, you may also do the same for the other font files in the directory.
 
-> **Note:** _Cambria Math_ is installed by default on Windows 7 and later versions and should ensure relatively good MathML rendering.
+> **Note:** _Cambria Math_ is installed by default on Windows and should ensure relatively good MathML rendering.
 
 ### macOS
 
@@ -35,7 +34,7 @@ Install the _Latin Modern Math_ font as follows:
 2. Extract the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Double-click the `latinmodern-math` font file click the **Install font** button from the window that opens.
 
-> **Note:** If you are using macOS Ventura (version 13) or higher then _STIX Two Math_ is already pre-installed and you can skip the steps below.
+> **Note:** If you are using macOS Ventura (version 13) or higher, then _STIX Two Math_ is already pre-installed and you can skip the steps below.
 
 Install the _STIX Two Math_ font as follows:
 

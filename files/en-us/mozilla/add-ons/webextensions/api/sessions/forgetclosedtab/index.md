@@ -1,19 +1,13 @@
 ---
 title: sessions.forgetClosedTab()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - forgetClosedTab
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.forgetClosedTab
 ---
 
-{{AddonSidebar()}}Removes a closed tab from the browser's list of recently closed tabs. Note that the sites visited by that tab are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
+{{AddonSidebar()}}
+
+Removes a closed tab from the browser's list of recently closed tabs. Note that the sites visited by that tab are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

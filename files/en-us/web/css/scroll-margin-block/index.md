@@ -1,14 +1,7 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scroll-margin-block
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-block
 ---
 

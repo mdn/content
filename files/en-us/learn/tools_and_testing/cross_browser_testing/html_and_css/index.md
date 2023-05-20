@@ -1,17 +1,6 @@
 ---
 title: Handling common HTML and CSS problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - Learn
-  - Selectors
-  - Testing
-  - cross browser
-  - linting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -111,7 +100,7 @@ Now let's move on to look at some of the most common cross browser HTML and CSS 
 
 ### Browsers not supporting modern features
 
-This is a common problem, especially when you need to support old browsers (such as Internet Explorer) or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility).
+This is a common problem, especially when you need to support old browsers or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/en-US/docs/Web/CSS/:has#browser_compatibility).
 
 Once you've identified a list of technologies you will be using that are not universally supported, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
@@ -121,7 +110,7 @@ Some problems can be solved by just taking advantage of the natural way in which
 
 Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
 
-More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), [`<picture>`](/en-US/docs/Web/HTML/Element/picture), [`<object>`](/en-US/docs/Web/HTML/Element/object),and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added incase the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), [`<picture>`](/en-US/docs/Web/HTML/Element/picture), [`<object>`](/en-US/docs/Web/HTML/Element/object), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added in case the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
 For example:
 
@@ -165,7 +154,7 @@ The output of this code is as follows:
 
 > **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
-If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
+If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
 #### CSS fallback behavior
 
@@ -175,7 +164,7 @@ Let's look at an example — a simple box styled with CSS, which has some stylin
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 
-> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
 The button has a number of declarations that style, but the two we are most interested in are as follows:
 
@@ -184,22 +173,22 @@ button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
-      rgba(0 0 0 / 0.4);
+  background-color: rgb(255 0 0 / 1);
+  box-shadow: inset 1px 1px 3px rgb(255 255 255 / 0.4), inset -1px -1px 3px rgb(0
+          0 0 / 0.4);
 }
 
 button:hover {
-  background-color: rgba(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 0.5);
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+  box-shadow: inset 1px 1px 3px rgb(0 0 0 / 0.4), inset -1px -1px 3px rgb(255
           255 255 / 0.4);
 }
 ```
 
-Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgba) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
@@ -211,7 +200,7 @@ To sort this out, we have added a second `background-color` declaration, which j
 
 Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
 
-In a comma separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the entire list of selectors and the selector block are ignored. For this reason, you never want to include a :-moz- prefixed pseudo class or pseudo-element in a group of selectors as all browsers other than Firefox will ignore the entire block.
+In a comma-separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the **entire** list of selectors is ignored, along with the entire style block. For this reason, only include a `:-moz-` prefixed pseudo class or pseudo-element in a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), such as `:where(::-moz-thumb)`. Don't include a `:-moz-` prefixed pseudo class or pseudo-element within a comma-separated group of selectors outside of a [`:is()`](/en-US/docs/Web/CSS/:is) or [`:where()`](/en-US/docs/Web/CSS/:where) forgiving selector list as all browsers other than Firefox will ignore the entire block. Note that both `:is()` and `:where()` can be passed as parameters in other selector lists, including [`:has()`](/en-US/docs/Web/CSS/:has) and [`:not()`](/en-US/docs/Web/CSS/:not).
 
 We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.
 
@@ -229,65 +218,49 @@ form > #date
 
 #### Handling CSS prefixes
 
-Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations. So for example:
+Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations.
 
-- Firefox uses `-moz-`
-- Chrome/Edge/Opera/Safari use `-webkit-`
+For example, Firefox uses `-moz-` and Chrome/Edge/Opera/Safari use `-webkit-`. Other prefixes you may encounter in old code include `-ms-`, used by Internet Explorer and early versions of Edge, and `-o`, used in the original versions of Opera.
 
-More prefixes were used in the past: Internet Explorer and early versions of Edge used `-ms-`, and old versions of Opera used `-o`.
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, may cause performance issues in old browser versions that require them, and have been the cause of cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
 
-Here's some examples:
+If using a prefix, make sure it is needed; that the property is one of the few remaining prefixed features. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers. Include the standard non-prefixed version after the prefixed style declaration; it will be ignored if not supported and used when supported.
 
 ```css
--webkit-transform: rotate(90deg);
--moz-transform: rotate(90deg);
-transform: rotate(90deg);
+.masked {
+  -webkit-mask-image: url(MDN.svg);
+  mask-image: url(MDN.svg);
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+}
 ```
-
-While the `transform` property does not require a prefix, you may encounter this old CSS in a codebase. The first line shows the {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
-
-The second line has a `-moz-` prefix, which is also no longer needed. The third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
-
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning and cause cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
-
-If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
 Try this simple example:
 
-1. Open up google.com, or another site that has a prominent heading or other block-level element.
+1. Use this page, or another site that has a prominent heading or other block-level element.
 2. Right/Cmd + click on the element in question and choose Inspect/Inspect element (or whatever the option is in your browser) — this should open up the dev tools in your browser, with the element highlighted in the DOM inspector.
-3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
+3. Look for a feature you can use to select that element. For example, at the time of writing, this page on MDN has a logo with an ID of `mdn-docs-logo`.
 4. Store a reference to this element in a variable, for example:
 
    ```js
-   const test = document.getElementById('hplogo');
+   const test = document.getElementById("mdn-docs-logo");
    ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/en-US/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
    ```js
-   test.style.transform = 'rotate(90deg)'
-   test.style.webkitTransform = 'rotate(90deg)'
+   test.style.transform = "rotate(90deg)";
    ```
 
-As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
+As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what properties are implemented in that browser.
 
-At the time of writing, both Firefox and Chrome implemented `-webkit-` prefixed and non-prefixed versions of {{cssxref("transform")}}. As a general rule, put the prefixed version of a property name before the unprefixed version so that the unprefixed version overrides the prefixed version. Prefixed properties aren't guaranteed to perform well; unprefixed properties are.
-
-Once you've found out which prefixes you need to support, you should write them all out in your CSS, for example:
-
-```css
--webkit-appearance: none;
-appearance: none;
-```
-
-Generally, you will rarely need to include a prefix; and you may want to delete them from old code basis you inherit as a maintainer. If you do need to include prefixed features or super modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
+If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 
 #### Responsive design problems
 
 Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [The building blocks of responsive design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks).
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('image')}} element's {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} attributes.
+Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('image')}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 
 ## Finding help
 
@@ -312,14 +285,3 @@ Aside from that, try searching your favorite search engine for an answer to your
 Now you should be familiar with the main types of cross browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

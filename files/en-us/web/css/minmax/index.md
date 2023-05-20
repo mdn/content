@@ -1,14 +1,7 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax
 ---
 

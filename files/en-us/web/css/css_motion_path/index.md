@@ -1,13 +1,7 @@
 ---
 title: CSS Motion Path
 slug: Web/CSS/CSS_Motion_Path
-tags:
-  - CSS
-  - CSS Motion Path
-  - Guide
-  - Motion Path
-  - Overview
-  - Reference
+page-type: css-module
 browser-compat: css.properties.offset-path
 ---
 

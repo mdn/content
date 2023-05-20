@@ -1,11 +1,7 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
-tags:
-  - Animations
-  - At-rule
-  - CSS
-  - Reference
+page-type: css-at-rule
 browser-compat: css.at-rules.keyframes
 ---
 
@@ -141,9 +137,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ## Formal syntax
 
-```
-@keyframes <keyframes-name> { <rule-list> }
-```
+{{csssyntax}}
 
 ## Examples
 

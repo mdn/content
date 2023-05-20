@@ -1,12 +1,7 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.scaleY
 ---
 
@@ -171,3 +166,8 @@ div {
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - Note: there is no `skew` property

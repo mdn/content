@@ -2,12 +2,8 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 page-type: guide
-tags:
-  - API
-  - Experimental
-  - Geolocation
-  - Guide
-  - Permissions
+status:
+  - experimental
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -55,19 +51,23 @@ In our example, the Permissions functionality is handled by one function — `ha
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({ name: 'geolocation' }).then((result) => {
-    if (result.state === 'granted') {
+  navigator.permissions.query({ name: "geolocation" }).then((result) => {
+    if (result.state === "granted") {
       report(result.state);
-      geoBtn.style.display = 'none';
-    } else if (result.state === 'prompt') {
+      geoBtn.style.display = "none";
+    } else if (result.state === "prompt") {
       report(result.state);
-      geoBtn.style.display = 'none';
-      navigator.geolocation.getCurrentPosition(revealPosition,positionDenied,geoSettings);
-    } else if (result.state === 'denied') {
+      geoBtn.style.display = "none";
+      navigator.geolocation.getCurrentPosition(
+        revealPosition,
+        positionDenied,
+        geoSettings
+      );
+    } else if (result.state === "denied") {
       report(result.state);
-      geoBtn.style.display = 'inline';
+      geoBtn.style.display = "inline";
     }
-    result.addEventListener('change', () => {
+    result.addEventListener("change", () => {
       report(result.state);
     });
   });
@@ -89,18 +89,18 @@ The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dic
 Starting in Firefox 47, you can now revoke existing permissions, using the {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually `prompt`). See the following code in our demo:
 
 ```js
-const revokeBtn = document.querySelector('.revoke');
+const revokeBtn = document.querySelector(".revoke");
 
 // ...
 
 revokeBtn.onclick = () => {
   revokePermission();
-}
+};
 
 // ...
 
 function revokePermission() {
-  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
+  navigator.permissions.revoke({ name: "geolocation" }).then((result) => {
     report(result.state);
   });
 }

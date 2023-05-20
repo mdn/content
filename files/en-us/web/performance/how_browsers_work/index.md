@@ -1,19 +1,9 @@
 ---
-title: 'Populating the page: how browsers work'
+title: "Populating the page: how browsers work"
 slug: Web/Performance/How_browsers_work
-tags:
-  - Browsers
-  - Compositing
-  - Critical rendering path
-  - DNS Lookup
-  - Navigation
-  - Page load
-  - Painting
-  - SSL/TLS Handshake
-  - TCP handshake
-  - Web Performance
-  - render
 ---
+
+{{QuickLinksWithSubPages("Web/Performance")}}
 
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
@@ -23,11 +13,11 @@ To understand how to improve performance and perceived performance, it helps to 
 
 Fast sites provide better user experiences. Users want and expect web experiences with content that is fast to load and smooth to interact with.
 
-Two major issues in web performance are understanding issues having to do with latency and issues having to do with the fact that for the most part, browsers are single threaded.
+Two major issues in web performance are issues having to do with latency and issues having to do with the fact that for the most part, browsers are single-threaded.
 
-Latency is our main threat to overcome to ensure a fast load. To be fast to load, the developers' goals include sending requested information as fast as possible, or at least seem super fast. Network latency is the time it takes to transmit bytes over-the-air to computers. Web performance is what we have to do to make the page load happen as quickly as possible.
+Latency is the biggest threat to our ability to ensure a fast-loading page. It is the developers' goal to make the site load as fast as possible — or at least _appear_ to load super fast — so the user gets the requested information as quickly as possible. Network latency is the time it takes to transmit bytes over the air to computers. Web performance is what we have to do to make the page load as quickly as possible.
 
-For the most part, browsers are considered single threaded. For smooth interactions, the developer's goal is to ensure performant site interactions, from smooth scrolling to being responsive to touch. Render time is key, with ensuring the main thread can complete all the work we throw at it and still always be available to handle user interactions. Web performance can be improved by understanding the single-threaded nature of the browser and minimizing the main thread's responsibilities, where possible and appropriate, to ensure rendering is smooth and responses to interactions are immediate.
+For the most part, browsers are considered single-threaded. That is, they execute a task from beginning to end before taking up another task. For smooth interactions, the developer's goal is to ensure performant site interactions, from smooth scrolling to being responsive to touch. Render time is key, with ensuring the main thread can complete all the work we throw at it and still always be available to handle user interactions. Web performance can be improved by understanding the single-threaded nature of the browser and minimizing the main thread's responsibilities, where possible and appropriate, to ensure rendering is smooth and responses to interactions are immediate.
 
 ## Navigation
 
@@ -51,7 +41,7 @@ This can be problematic for performance, particularly on mobile networks. When a
 
 Once the IP address is known, the browser sets up a connection to the server via a {{glossary('TCP handshake','TCP three-way handshake')}}. This mechanism is designed so that two entities attempting to communicate—in this case the browser and web server—can negotiate the parameters of the network TCP socket connection before transmitting data, often over {{glossary('HTTPS')}}.
 
-TCP's three way handshaking technique is often referred to as "SYN-SYN-ACK"—or more accurately SYN, SYN-ACK, ACK—because there are three messages transmitted by TCP to negotiate and start a TCP session between two computers. Yes, this means three more messages back and forth between each server, and the request has yet to be made.
+TCP's three-way handshaking technique is often referred to as "SYN-SYN-ACK"—or more accurately SYN, SYN-ACK, ACK—because there are three messages transmitted by TCP to negotiate and start a TCP session between two computers. Yes, this means three more messages back and forth between each server, and the request has yet to be made.
 
 ### TLS Negotiation
 
@@ -73,7 +63,7 @@ Once we have an established connection to a web server, the browser sends an ini
   <head>
     <meta charset="UTF-8" />
     <title>My simple page</title>
-    <link rel="stylesheet" src="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="myscript.js"></script>
   </head>
   <body>
@@ -111,7 +101,7 @@ Once the browser receives the first chunk of data, it can begin parsing the info
 
 The DOM is the internal representation of the markup for the browser. The DOM is also exposed, and can be manipulated through various APIs in JavaScript.
 
-Even if the request page's HTML is larger than the initial 14KB packet, the browser will begin parsing and attempting to render an experience based on the data it has. This is why it's important for web performance optimization to include everything the browser needs to start rendering a page, or at least a template of the page - the CSS and HTML needed for the first render — in the first 14 kilobytes. But before anything is rendered to the screen, the HTML, CSS, and JavaScript have to be parsed.
+Even if the requested page's HTML is larger than the initial 14KB packet, the browser will begin parsing and attempting to render an experience based on the data it has. This is why it's important for web performance optimization to include everything the browser needs to start rendering a page, or at least a template of the page - the CSS and HTML needed for the first render — in the first 14 kilobytes. But before anything is rendered to the screen, the HTML, CSS, and JavaScript have to be parsed.
 
 ### Building the DOM tree
 
@@ -127,10 +117,10 @@ When the parser finds non-blocking resources, such as an image, the browser will
 
 ### Preload scanner
 
-While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may possibly already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
+While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
 
 ```html
-<link rel="stylesheet" src="styles.css" />
+<link rel="stylesheet" href="styles.css" />
 <script src="myscript.js" async></script>
 <img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>
@@ -186,7 +176,7 @@ The first time the size and position of nodes are determined is called _layout_.
 
 ### Paint
 
-The last step in the critical rendering path is painting the individual nodes to the screen, the first occurrence of which is called the [first meaningful paint](/en-US/docs/Glossary/first_meaningful_paint). In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.
+The last step in the critical rendering path is painting the individual nodes to the screen, the first occurrence of which is called the [first meaningful paint](/en-US/docs/Glossary/First_meaningful_paint). In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.
 
 To ensure smooth scrolling and animation, everything occupying the main thread, including calculating styles, along with reflow and paint, must take the browser less than 16.67ms to accomplish. At 2048 X 1536, the iPad has over 3,145,000 pixels to be painted to the screen. That is a lot of pixels that have to be painted very quickly. To ensure repainting can be done even faster than the initial paint, the drawing to the screen is generally broken down into several layers. If this occurs, then compositing is necessary.
 
@@ -210,7 +200,7 @@ In our example, maybe the image loaded quickly, but perhaps the `anotherscript.j
 
 ![The main thread is occupied by the downloading, parsing and execution of a JavaScript file - over a fast connection](visa_network.png)
 
-In this example, the DOM content load process took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
+In this example, JavaScript execution took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
 
 ## See also
 

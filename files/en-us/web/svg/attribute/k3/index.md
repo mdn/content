@@ -1,10 +1,7 @@
 ---
 title: k3
 slug: Web/SVG/Attribute/k3
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k3
 ---
 
@@ -15,7 +12,7 @@ The **`k3`** attribute defines one of the values to be used within the `arithmet
 The pixel composition is computed using the following formula:
 
 ```js
-result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+result = k1 * i1 * i2 + k2 * i1 + k3 * i2 + k4;
 ```
 
 You can use this attribute with the following SVG elements:

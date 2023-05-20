@@ -1,17 +1,8 @@
 ---
-title: Window.devicePixelRatio
+title: "Window: devicePixelRatio property"
+short-title: devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - devicePixelRatio
-  - ratio
-  - resolution
 browser-compat: api.Window.devicePixelRatio
 ---
 
@@ -62,8 +53,8 @@ should be added to allow for a sharper image.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Set display size (css pixels).
 const size = 200;
@@ -81,9 +72,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 const x = size / 2;
 const y = size / 2;
@@ -106,15 +97,21 @@ The JavaScript code creates the media query that monitors the device resolution 
 checks the value of `devicePixelRatio` any time it changes.
 
 ```js
-let pixelRatioBox = document.querySelector(".pixel-ratio");
+let remove = null;
 
 const updatePixelRatio = () => {
-  let pr = window.devicePixelRatio;
-  let prString = (pr * 100).toFixed(0);
-  pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
-}
+  if (remove != null) {
+    remove();
+  }
+  let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
+  let media = matchMedia(mqString);
+  media.addEventListener("change", updatePixelRatio);
+  remove = function () {
+    media.removeEventListener("change", updatePixelRatio);
+  };
 
+  console.log("devicePixelRatio: " + window.devicePixelRatio);
+};
 updatePixelRatio();
 ```
 

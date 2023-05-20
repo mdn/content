@@ -1,19 +1,16 @@
 ---
 title: box-flex-group
 slug: Web/CSS/box-flex-group
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-flex-group
 ---
 
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`box-flex-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to a flex group.
 
@@ -75,6 +72,7 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef("box-flex")}}
-- {{CSSxRef("box-ordinal-group")}}
-- {{CSSxRef("box-pack")}}
+- {{CSSxRef("flex")}}
+- {{CSSxRef("flex-basis")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}

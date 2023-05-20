@@ -1,18 +1,8 @@
 ---
-title: self.crypto
+title: crypto global property
+short-title: crypto
 slug: Web/API/crypto_property
 page-type: web-api-global-property
-tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encoding
-  - Encryption
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Security
 browser-compat: api.crypto
 ---
 
@@ -43,7 +33,7 @@ globalThis.genRandomNumbers = () => {
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `The random numbers are: ${array.join(" ")}`;
-}
+};
 ```
 
 ### HTML

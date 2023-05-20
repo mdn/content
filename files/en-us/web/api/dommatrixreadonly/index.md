@@ -2,9 +2,6 @@
 title: DOMMatrixReadOnly
 slug: Web/API/DOMMatrixReadOnly
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.DOMMatrixReadOnly
 ---
 
@@ -19,7 +16,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
   - : Creates a new `DOMMatrixReadOnly` object.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any properties._
 
@@ -42,7 +39,7 @@ _This interface doesn't inherit any properties._
     | `e` | `m41`         |
     | `f` | `m42`         |
 
-## Methods
+## Instance methods
 
 _This interface doesn't inherit any methods. None of the following methods alter the original matrix._
 
@@ -113,5 +110,4 @@ _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 ## See also
 
 - The mutable matrix type, {{domxref("DOMMatrix")}}, which is based on this one.
-- {{domxref("SVGMatrix")}} and {{domxref("CSSMatrix")}}, the {{Glossary("SVG")}} and {{Glossary("CSS")}} specific types that should be getting replaced by this interface.
 - The CSS {{cssxref("transform-function", "matrix()", "#matrix()")}} and {{cssxref("transform-function", "matrix3d()", "#matrix3d()")}} functional notation that can be generated from this interface to be used in a CSS {{cssxref("transform")}}.

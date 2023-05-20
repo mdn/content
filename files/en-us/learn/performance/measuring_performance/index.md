@@ -1,19 +1,13 @@
 ---
 title: Measuring performance
 slug: Learn/Performance/Measuring_performance
-tags:
-  - API
-  - Beginner
-  - Guide
-  - Tools
-  - Web
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
-Measuring performance provides an important metric to help you asses the success of your app, site, or web service.
+Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
-For example, you can use performance metrics to determine how your app performs in comparison to a competitor or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
+For example, you can use performance metrics to determine how your app performs in comparison to a competitor, or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
 
 This article introduces web performance metrics that you can use to measure and optimize your site's performance.
 
@@ -49,15 +43,15 @@ This article introduces web performance metrics that you can use to measure and 
 
 When writing code for the Web, there are a large number of [Web APIs](/en-US/docs/Web/API) available that allow you to create your own performance measuring tools.
 
-You can use the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API) to measure client-side web performance; including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all of the navigation events displayed in the diagram below.
+You can use the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API) to measure client-side web performance; including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all the navigation events displayed in the diagram below.
 
 ![The various handlers that the navigation timing API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-The [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API), which provides access to performance-related information for the current page, includes the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API). These interfaces allows the accurate measurement of the time it takes for JavaScript tasks to complete.
+The [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API), which provides access to performance-related information for the current page, includes the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API). These interfaces allow the accurate measurement of the time it takes for JavaScript tasks to complete.
 
 The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways; such as loading a resource, like an image.
 
-The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and it can notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
+The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and to notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
 
 While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings) article for further examples on using performance Web APIs.
 
@@ -78,7 +72,7 @@ At the time of writing, MDN's performance report summary looks similar to the fo
 
 ![A screenshot of PageSpeed Insights report for the Mozilla homepage.](pagespeed-insight-mozilla-homepage.png)
 
-A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know it the measured values are considered good or bad.
+A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know if the measured values are considered good or bad.
 
 [webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns useful metrics.
 
@@ -92,25 +86,10 @@ Most browsers have tools available that you can use to run against loaded pages 
 
 You can also use the [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
 
-![](perf-monitor.png)
+![Developer tools performance panel showing the waterfall of recording #1.](perf-monitor.png)
 
 ## Conclusion
 
 This article provided a brief overview of the web performance metrics to help introduce you to what you can measure on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)

@@ -1,14 +1,8 @@
 ---
-title: DynamicsCompressorNode.release
+title: "DynamicsCompressorNode: release property"
+short-title: release
 slug: Web/API/DynamicsCompressorNode/release
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Release
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode.release
 ---
 
@@ -32,7 +26,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.release.value = 0.25;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

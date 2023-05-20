@@ -1,14 +1,7 @@
 ---
 title: In flow and out of flow
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -43,7 +36,7 @@ You can see the background color of the following paragraph running underneath, 
 
 ### Absolute positioning
 
-Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example I have three paragraph elements, the second element has `position` `absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
+Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example I have three paragraph elements, the second element has `position: absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
 
 {{EmbedGHLiveSample("css-examples/flow/in-flow/abspos.html", '100%', 700)}}
 

@@ -1,11 +1,7 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Gradient
+page-type: svg-element
 browser-compat: svg.elements.stop
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: Authoring MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
+page-type: guide
 ---
 
 {{MathMLRef}}
@@ -112,7 +109,7 @@ In this section, we review some tools to convert MathML from a [lightweight mark
 
 With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
+A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
 <!DOCTYPE html>
@@ -182,16 +179,8 @@ Instead of generating MathML expression at page load, you can instead rely on co
   </head>
   <body>
     <h1>MathML in HTML5</h1>
-
-    <p>
-      One over square root of two (inline style):
-      $\frac{1}{\sqrt{2}}$
-    </p>
-
-    <p>
-      One over square root of two (display style):
-      $$\frac{1}{\sqrt{2}}$$
-    </p>
+    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
+    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
   </body>
 </html>
 ```
@@ -204,7 +193,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
-```html
+```html-nolint
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -227,7 +216,7 @@ After running that command, a file `output.html` containing the following HTML o
 </html>
 ```
 
-There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
+There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into an HTML or EPUB document:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html

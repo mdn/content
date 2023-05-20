@@ -1,9 +1,7 @@
 ---
 title: tableValues
 slug: Web/SVG/Attribute/tableValues
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-tablevalues
 ---
 
@@ -104,6 +102,7 @@ svg {
 </table>
 
 - `<list-of-numbers>`
+
   - : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
     An empty list results in an identity transfer function.

@@ -1,13 +1,9 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
+page-type: http-header
+status:
+  - non-standard
 ---
 
 {{HTTPSidebar}}
@@ -101,7 +97,7 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
 
-There may be multiple `X-Forwarded-For` headers present in a request (per [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
+There may be multiple `X-Forwarded-For` headers present in a request. The IP addresses in
 these headers must be treated as a single list, starting with the first IP address of the
 first header and continuing to the last IP address of the last header. There are two ways
 of making this single list:

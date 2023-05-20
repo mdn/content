@@ -1,12 +1,7 @@
 ---
 title: Using feature queries
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
-tags:
-  - CSS
-  - Conditional CSS
-  - Guide
-  - feature queries
-  - progressive enhancement
+page-type: guide
 ---
 
 {{CSSRef}}

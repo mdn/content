@@ -1,16 +1,10 @@
 ---
 title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-tags:
-  - Accessibility
-  - Principle 1
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
@@ -115,7 +109,7 @@ The key here is that text can be converted to other forms that people with disab
             >Backgrounds</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (`alt=""`). Otherwise, screen readers may try to read out
+          (<code>alt=""</code>). Otherwise, screen readers may try to read out
           the filepath, etc.
         </p>
         <p>

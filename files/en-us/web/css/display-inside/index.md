@@ -1,14 +1,7 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-inside
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
+page-type: css-type
 browser-compat:
   - css.properties.display.multi-keyword_values
   - css.properties.display.flow-root
@@ -16,6 +9,7 @@ browser-compat:
   - css.properties.display.grid
   - css.properties.display.flex
   - css.properties.display.ruby_values
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 ---
 
 {{CSSRef}}

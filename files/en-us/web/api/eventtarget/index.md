@@ -2,9 +2,6 @@
 title: EventTarget
 slug: Web/API/EventTarget
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.EventTarget
 ---
 
@@ -26,7 +23,7 @@ Many event targets (including elements, documents, and windows) also support set
 - {{domxref("EventTarget.EventTarget()", "EventTarget()")}}
   - : Creates a new `EventTarget` object instance.
 
-## Methods
+## Instance methods
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Registers an event handler of a specific event type on the `EventTarget`.

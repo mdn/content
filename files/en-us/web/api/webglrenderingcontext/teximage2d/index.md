@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.texImage2D()
+title: "WebGLRenderingContext: texImage2D() method"
+short-title: texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texImage2D
 ---
 
@@ -21,10 +15,8 @@ image.
 
 ```js-nolint
 // WebGL1
-texImage2D(target, level, internalformat, width, height, border, format, type)
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels a TypedArray or a DataView
-texImage2D(target, level, internalformat, format, type)
-texImage2D(target, level, internalformat, format, type, pixels)
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels can be a TypedArray or a DataView or null
+texImage2D(target, level, internalformat, format, type, pixels) // pixels cannot be a TypedArray or a DataView or null
 
 
 // WebGL2
@@ -781,8 +773,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT`
-    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the
-        extension)
+    - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:
 

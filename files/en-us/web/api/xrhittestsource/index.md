@@ -2,15 +2,8 @@
 title: XRHitTestSource
 slug: Web/API/XRHitTestSource
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestSource
 ---
 
@@ -20,11 +13,11 @@ The **`XRHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/AP
 
 This object doesn't itself contain hit test results, but it is used to compute hit tests for each {{domxref("XRFrame")}} by calling {{domxref("XRFrame.getHitTestResults()")}}, which returns {{domxref("XRHitTestResult")}} objects.
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRHitTestSource.cancel()")}} {{Experimental_Inline}}
   - : Unsubscribes from the hit test.
@@ -37,17 +30,19 @@ Call {{domxref("XRSession.requestHitTestSource()")}} to get a hit test source.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 
 let hitTestSource = null;
 
-xrSession.requestHitTestSource({
-  space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay : new XRRay({y: 0.5})
-}).then((viewerHitTestSource) => {
-  hitTestSource = viewerHitTestSource;
-});
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
 
 // frame loop
 function onXRFrame(time, xrFrame) {

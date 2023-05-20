@@ -2,12 +2,6 @@
 title: StorageEvent
 slug: Web/API/StorageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - StorageEvent
-  - Web Storage API
 browser-compat: api.StorageEvent
 ---
 
@@ -24,7 +18,7 @@ when a storage area the window has access to is changed within the context of an
 - {{domxref("StorageEvent.StorageEvent()", "StorageEvent()")}}
   - : Returns a newly constructed `StorageEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
@@ -46,7 +40,7 @@ _In addition to the properties listed below, this interface inherits the propert
 - {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
   - : Returns string with the URL of the document whose `key` changed.
 
-## Methods
+## Instance methods
 
 _In addition to the methods listed below, this interface inherits the methods of its parent interface, {{domxref("Event")}}._
 

@@ -1,14 +1,7 @@
 ---
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - flexbox
-  - grid
-  - sticky footer
+page-type: guide
 browser-compat:
   - css.properties.grid-template-rows
   - css.properties.flex-direction

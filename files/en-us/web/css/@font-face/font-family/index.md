@@ -1,13 +1,7 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-family
 ---
 
@@ -40,13 +34,7 @@ font-family: examplefont;
 
 ## Formal syntax
 
-```
-<family-name>
-
-<family-name> =
-  <string>        |
-  <custom-ident>+
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -73,7 +61,6 @@ font-family: examplefont;
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

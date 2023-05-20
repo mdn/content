@@ -1,16 +1,7 @@
 ---
 title: "ARIA: cell role"
 slug: Web/Accessibility/ARIA/Roles/cell_role
-tags:
-  - ARIA
-  - HTML
-  - cell
-  - table
-  - role
-  - role attribute
-  - cell role
-  - Reference
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#cell
   - https://w3c.github.io/aria-practices/#cell

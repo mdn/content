@@ -1,12 +1,7 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
+page-type: landing-page
 browser-compat: mathml.elements.math
 ---
 
@@ -18,7 +13,9 @@ browser-compat: mathml.elements.math
 
 [MathML Core](https://w3c.github.io/mathml-core/) is a subset with increased implementation details based on rules from [LaTeX](https://en.wikipedia.org/wiki/LaTeX) and the [Open Font Format](https://docs.microsoft.com/typography/opentype/spec/math). It is tailored for browsers and designed specifically to work well with other web standards including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript).
 
-Below you will find links to documentation, examples, and tools to work with MathML. Although many of these still use the [MathML Full](https://w3c.github.io/mathml/) specification as a reference, transition towards [MathML Core](https://w3c.github.io/mathml-core/) is in progress. It is highly recommended that developers and authors switch to that specification, perhaps relying on other web technologies to cover missing use cases from the legacy specification.
+Below you will find links to documentation, examples, and tools to work with MathML. MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification but, due to an erratic standardization history, legacy MathML features may still show up in existing implementations and web content.
+
+> **Note:** It is highly recommended that developers and authors switch to MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills) to facilitate that transition.
 
 ## MathML reference
 
@@ -42,10 +39,7 @@ Below you will find links to documentation, examples, and tools to work with Mat
 ## Tools
 
 - [W3C Validator](https://validator.w3.org)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/en-US/firefox/collections/5509895/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) — JavaScript LaTeX to MathML converter ([live demo](https://fred-wang.github.io/TeXZilla/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program, etc.](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) - Convert LaTeX documents into HTML+MathML Web pages
-- [MathJax](https://www.mathjax.org/) - Cross-browser JavaScript display engine for mathematics. To force MathJax to use native MathML, try [this Mozilla add-on](https://addons.mozilla.org/en-US/firefox/addon/native-mathml/), this [Safari extension](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) or this [GreaseMonkey script](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [W3C's wiki page](https://www.w3.org/wiki/Math_Tools)
 
 ## Related topics
 

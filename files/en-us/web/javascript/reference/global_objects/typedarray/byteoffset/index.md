@@ -1,18 +1,13 @@
 ---
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteOffset
 ---
 
 {{JSRef}}
 
-The **`byteOffset`** accessor property represents the offset (in bytes) of a typed array from the start of its {{jsxref("ArrayBuffer")}}.
+The **`byteOffset`** accessor property of {{jsxref("TypedArray")}} instances returns the offset (in bytes) of this typed array from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
 ## Description
 
@@ -42,5 +37,5 @@ uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

@@ -1,16 +1,7 @@
 ---
 title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connect
 ---
 
@@ -25,6 +16,8 @@ You can call this:
 
 Note that you can't use this function to connect an extension to its content scripts. To do this, use {{WebExtAPIRef('tabs.connect()')}}.
 
+By default, this connection enables the extension to exchange messages with itself or any other extension (if `extensionId` is specified). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites. Connections within the extension trigger the {{WebExtAPIRef('runtime.onConnect')}} event, connections from other extensions or web pages trigger the {{WebExtAPIRef('runtime.onConnectExternal')}} event.
+
 ## Syntax
 
 ```js-nolint
@@ -37,7 +30,7 @@ let port = browser.runtime.connect(
 ### Parameters
 
 - `extensionId` {{optional_inline}}
-  - : `string`. The ID of the extension to connect to. If the target has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the target.
+  - : `string`. The ID of the extension to connect to. If the target has set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the target.
 - `connectInfo` {{optional_inline}}
 
   - : `object`. Details of the connection:
@@ -114,8 +107,6 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

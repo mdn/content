@@ -2,22 +2,6 @@
 title: URL
 slug: Web/API/URL
 page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
 browser-compat: api.URL
 ---
 
@@ -36,7 +20,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.URL", "URL()")}}
   - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
 
-## Properties
+## Instance properties
 
 - {{domxref("URL.hash", "hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
@@ -63,13 +47,6 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.username","username")}}
   - : A string containing the username specified before the domain name.
 
-## Methods
-
-- {{domxref("URL.toString", "toString()")}}
-  - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
-- {{domxref("URL.toJSON", "toJSON()")}}
-  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
-
 ## Static methods
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
@@ -77,12 +54,19 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 
+## Instance methods
+
+- {{domxref("URL.toString", "toString()")}}
+  - : Returns a string containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
+- {{domxref("URL.toJSON", "toJSON()")}}
+  - : Returns a string containing the whole URL. It returns the same string as the `href` property.
+
 ## Usage notes
 
 The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL:
 
 ```js
-const url = new URL('../cats', 'http://www.example.com/dogs');
+const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
@@ -90,14 +74,14 @@ console.log(url.pathname); // "/cats"
 URL properties can be set to construct the URL:
 
 ```js
-url.hash = 'tabby';
+url.hash = "tabby";
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
 URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:
 
 ```js
-url.pathname = 'démonstration.html';
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -114,7 +98,9 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 The {{domxref("URL.toString", "toString()")}} method of `URL` just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html")
+);
 ```
 
 ## Specifications
@@ -129,6 +115,6 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - Property to obtain a `URL` object: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

@@ -1,13 +1,7 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.first-of-type
 ---
 
@@ -19,8 +13,10 @@ The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/W
 
 ## Syntax
 
-```
-:first-of-type
+```css
+:first-of-type {
+  /* ... */
+}
 ```
 
 ## Examples

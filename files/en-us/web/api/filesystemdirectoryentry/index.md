@@ -2,16 +2,6 @@
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Interface
-  - NeedsMarkupWork
-  - Offline
-  - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
 
@@ -31,31 +21,35 @@ In the following code snippet, we create a directory called "Documents."
 
 ```js
 // Taking care of the browser-specific prefixes.
-window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+window.requestFileSystem =
+  window.requestFileSystem || window.webkitRequestFileSystem;
 window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 
 // …
 
-function onFs(fs){
-  fs.root.getDirectory('Documents', {create:true}, (directoryEntry) => {
-    //directoryEntry.isFile === false
-    //directoryEntry.isDirectory === true
-    //directoryEntry.name === 'Documents'
-    //directoryEntry.fullPath === '/Documents'
-
-    }, onError);
-
-  }
+function onFs(fs) {
+  fs.root.getDirectory(
+    "Documents",
+    { create: true },
+    (directoryEntry) => {
+      //directoryEntry.isFile === false
+      //directoryEntry.isDirectory === true
+      //directoryEntry.name === 'Documents'
+      //directoryEntry.fullPath === '/Documents'
+    },
+    onError
+  );
+}
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /*1MB*/, onFs, onError);
 ```
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}._
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent interface, {{domxref("FileSystemEntry")}}._
 

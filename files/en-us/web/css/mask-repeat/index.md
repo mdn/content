@@ -1,12 +1,7 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-repeat
 ---
 

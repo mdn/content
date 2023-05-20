@@ -1,12 +1,7 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-width
 ---
 
@@ -37,10 +32,10 @@ border-width: thick;
 border-width: 4px;
 border-width: 1.2rem;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 border-width: 2px 1.5em;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 border-width: 1px 2em 1.5cm;
 
 /* top | right | bottom | left */
@@ -88,15 +83,15 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### HTML
 
 ```html
-<p id="sval">one value: 6px wide border on all 4 sides</p>
-<p id="bival">
+<p id="one-value">one value: 6px wide border on all 4 sides</p>
+<p id="two-values">
   two different values: 2px wide top and bottom border, 10px wide right and left
   border
 </p>
-<p id="treval">
+<p id="three-values">
   three different values: 0.3em top, 9px bottom, and zero width right and left
 </p>
-<p id="fourval">
+<p id="four-values">
   four different values: "thin" top, "medium" right, "thick" bottom, and 1em
   left
 </p>
@@ -105,19 +100,19 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### CSS
 
 ```css
-#sval {
+#one-value {
   border: ridge #ccc;
   border-width: 6px;
 }
-#bival {
+#two-values {
   border: solid red;
   border-width: 2px 10px;
 }
-#treval {
+#three-values {
   border: dotted orange;
   border-width: 0.3em 0 9px;
 }
-#fourval {
+#four-values {
   border: solid lightgreen;
   border-width: thin medium thick 1em;
 }

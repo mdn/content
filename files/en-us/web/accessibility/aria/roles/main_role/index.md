@@ -1,13 +1,7 @@
 ---
 title: "ARIA: main role"
 slug: Web/Accessibility/ARIA/Roles/main_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - Accessibility
-  - main role
-  - landmark role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#main
   - https://w3c.github.io/aria-practices/#aria_lh_main
@@ -26,7 +20,7 @@ This is the main section of a document that discusses avocados. Subsections of t
 
 ## Description
 
-The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
+The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
 
 By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links.
 
@@ -42,7 +36,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
 
-  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
+  - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
 
@@ -63,7 +57,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 ### Use only one `main` role per document
 
-The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) should only be used once per document.
+The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) should only be used once per document.
 
 If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
 

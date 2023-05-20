@@ -1,24 +1,13 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.entries
 ---
 
 {{JSRef}}
 
-The **`entries()`** method returns a new
-_[iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)_ object
-that contains the `[key, value]` pairs for each element in the `Map` object in
-insertion order. In this particular case, this iterator object is also an
-iterable, so the for-of loop can be used. When the protocol `[Symbol.iterator]`
-is used, it returns a function that, when invoked, returns this iterator itself.
+The **`entries()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the `[key, value]` pairs for each element in the `Map` object in insertion order.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
@@ -30,7 +19,7 @@ entries()
 
 ### Return value
 
-A new {{jsxref("Map")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
@@ -38,9 +27,9 @@ A new {{jsxref("Map")}} iterator object.
 
 ```js
 const myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 const mapIter = myMap.entries();
 

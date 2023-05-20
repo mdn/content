@@ -1,13 +1,7 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Networking
-  - Overview
-  - Reference
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}
@@ -74,16 +68,20 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request head
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
+- {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
+  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 The different categories of client hints are listed below.
 
 ### User agent client hints
 
-The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent and the platform/architecture on which it is running:
+The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
 
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
+  - : User agent's reduced motion preference setting.
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : User agent's branding and version.
 - {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
@@ -201,7 +199,7 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Origin")}}
   - : Indicates where a fetch originates from.
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : Specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.
+  - : Specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing), which would otherwise be reported as zero due to cross-origin restrictions.
 
 ## Downloads
 
@@ -238,6 +236,8 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
+- {{HTTPHeader("Refresh")}}
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Element/meta#http-equiv).
 
 ## Request context
 
@@ -284,18 +284,16 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}}
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
-- {{HTTPHeader("Feature-Policy")}}
-  - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Permissions-Policy")}}
+  - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : Sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
-- {{HTTPHeader("X-Download-Options")}}
-  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application.
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
@@ -398,8 +396,6 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
   - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
-- {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
-  - : Used by Internet Explorer to signal which document mode to use.
 
 ## Contributing
 

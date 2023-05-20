@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-tags:
-  - API
-  - JavaScript
-  - Property
-  - Reference
-  - WebAssembly
-  - exports
-  - instance
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
 
@@ -18,10 +10,6 @@ The **`exports`** readonly property of the
 [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object prototype returns an object containing as its
 members all the functions exported from the WebAssembly module instance, to allow them
 to be accessed and used by JavaScript.
-
-```js
-instance.exports
-```
 
 ## Examples
 
@@ -41,8 +29,9 @@ const importObject = {
   },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-  .then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 > **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)

@@ -1,19 +1,13 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.of
 ---
 
 {{JSRef}}
 
-The **`TypedArray.of()`** method creates a new
+The **`TypedArray.of()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) from a variable number of arguments. This method is nearly the same as
 {{jsxref("Array.of()")}}.
 
@@ -22,9 +16,10 @@ The **`TypedArray.of()`** method creates a new
 ## Syntax
 
 ```js-nolint
+TypedArray.of()
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, /* ... ,*/ elementN)
+TypedArray.of(element0, element1, /* … ,*/ elementN)
 ```
 
 Where `TypedArray` is one of:
@@ -66,10 +61,10 @@ Some subtle distinctions between {{jsxref("Array.of()")}} and
 ### Using of()
 
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
-Int8Array.of('1', '2', '3'); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // Int16Array [ 0 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
+Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // Int16Array [ 0 ]
 ```
 
 ## Specifications

@@ -1,14 +1,7 @@
 ---
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
+page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onStateChanged
 ---
 
@@ -53,7 +46,7 @@ function handlePortalStatus(portalstatusInfo) {
   console.log(`The portal status is now: ${portalstatusInfo.details}`);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}

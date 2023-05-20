@@ -1,13 +1,7 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.orphans
 ---
 

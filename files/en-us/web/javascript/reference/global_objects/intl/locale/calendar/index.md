@@ -1,86 +1,42 @@
 ---
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.calendar
 ---
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.calendar`** property is an accessor property which returns the type of calendar used in the `Locale`.
+The **`calendar`** accessor property of {{jsxref("Intl.Locale")}} instances returns the calendar type for this locale.
 
 ## Description
 
-The `calendar` property returns the part of the `Locale` that indicates the `Locale`'s calendar era. While most of the world uses the Gregorian calendar, there are several regional calendar eras used around the world. The following table shows all the valid Unicode calendar key strings, along with a description of the calendar era they represent.
+While most of the world uses the Gregorian calendar, there are several regional calendar eras used around the world. The `calendar` property's value is set at construction time, either through the `ca` key of the locale identifier or through the `calendar` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-### Unicode calendar keys
+For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types).
 
-- `buddhist`
-  - : Thai Buddhist calendar
-- `chinese`
-  - : Traditional Chinese calendar
-- `coptic`
-  - : Coptic calendar
-- `dangi`
-  - : Traditional Korean calendar
-- `ethioaa`
-  - : Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)
-- `ethiopic`
-  - : Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)
-- `gregory`
-  - : Gregorian calendar
-- `hebrew`
-  - : Traditional Hebrew calendar
-- `indian`
-  - : Indian calendar
-- `islamic`
-  - : Islamic calendar
-- `islamic-umalqura`
-  - : Islamic calendar, Umm al-Qura
-- `islamic-tbla`
-  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-- `islamic-civil`
-  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
-- `islamic-rgsa`
-  - : Islamic calendar, Saudi Arabia sighting
-- `iso8601`
-  - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
-- `japanese`
-  - : Japanese Imperial calendar
-- `persian`
-  - : Persian calendar
-- `roc`
-  - : Minguo Calendar (Republic of China)
-- `islamicc`
-  - : Civil (algorithmic) Arabic calendar
-    > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
+The set accessor of `calendar` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
-### Adding a calendar in the Locale string
+Like other locale subtags, the calendar type can be added to the {{jsxref("Intl.Locale")}} object via the locale string, or a configuration object argument to the constructor.
 
-Calendar eras fall under the category of locale key "extension keys". These keys add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the calendar era type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the calendar type, first add the `-u` extension to the string. Next, add the `-ca` extension to indicate that you are adding a calendar type. Finally, add the calendar era to the string.
+### Adding a calendar type via the locale string
+
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), calendar era types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the calendar era type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the calendar type, first add the `-u` extension to the string. Next, add the `-ca` extension to indicate that you are adding a calendar type. Finally, add the calendar era type to the string.
 
 ```js
 const locale = new Intl.Locale("fr-FR-u-ca-buddhist");
 console.log(locale.calendar); // Prints "buddhist"
 ```
 
-### Adding a calendar with a configuration object
+### Adding a calendar type via the configuration object argument
 
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can contain any of several extension types, including calendars. Set the `calendar` property of the configuration object to your desired calendar era, and then pass it into the constructor.
 
 ```js
 const locale = new Intl.Locale("fr-FR", { calendar: "buddhist" });
-console.log(locale.calendar); // Prints "buddhist"
+console.log(locale.calendar); // "buddhist"
 ```
 
 ## Specifications
@@ -93,5 +49,6 @@ console.log(locale.calendar); // Prints "buddhist"
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}
+- [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars)
 - [Unicode Calendar Identifiers](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)

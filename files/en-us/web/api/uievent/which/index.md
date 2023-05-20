@@ -1,15 +1,10 @@
 ---
-title: UIEvent.which
+title: "UIEvent: which property"
+short-title: which
 slug: Web/API/UIEvent/which
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - UIEvent
-  - Property
-  - Read-only
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.UIEvent.which
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.update
 ---
 
@@ -101,5 +92,3 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

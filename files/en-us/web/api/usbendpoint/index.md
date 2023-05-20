@@ -2,14 +2,8 @@
 title: USBEndpoint
 slug: Web/API/USBEndpoint
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - USBEndpoint
-  - Web USB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBEndpoint
 ---
 
@@ -22,7 +16,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 - {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}} {{Experimental_Inline}}
   - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.

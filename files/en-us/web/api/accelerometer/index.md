@@ -2,17 +2,8 @@
 title: Accelerometer
 slug: Web/API/Accelerometer
 page-type: web-api-interface
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer
 ---
 
@@ -22,7 +13,7 @@ The **`Accelerometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Senso
 
 To use this sensor, the user must grant permission to the `'accelerometer'`, device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-If a feature policy blocks the use of a feature, it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -31,7 +22,7 @@ If a feature policy blocks the use of a feature, it is because your code is inco
 - {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}} {{Experimental_Inline}}
   - : Creates a new `Accelerometer` object.
 
-## Properties
+## Instance properties
 
 _In addition to the properties listed below, `Accelerometer` inherits properties from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
@@ -42,7 +33,7 @@ _In addition to the properties listed below, `Accelerometer` inherits properties
 - {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the acceleration of the device along the device's z axis.
 
-## Methods
+## Instance methods
 
 _`Accelerometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

@@ -1,12 +1,6 @@
 ---
 title: Max
 slug: WebAssembly/Reference/Numeric/Max
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

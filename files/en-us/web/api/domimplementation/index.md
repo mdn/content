@@ -2,11 +2,6 @@
 title: DOMImplementation
 slug: Web/API/DOMImplementation
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
 browser-compat: api.DOMImplementation
 ---
 
@@ -18,7 +13,7 @@ The **`DOMImplementation`** interface represents an object providing methods whi
 
 _This interface has no specific property and doesn't inherit any._
 
-## Methods
+## Instance methods
 
 _No inherited method._
 

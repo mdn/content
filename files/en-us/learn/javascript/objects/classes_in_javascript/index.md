@@ -1,18 +1,15 @@
 ---
 title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
 We also talked about how it's possible to use [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
 
-In this article we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
+In this article, we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
 
 <table>
   <tbody>
@@ -45,7 +42,6 @@ You can declare a class using the {{jsxref("Statements/class", "class")}} keywor
 
 ```js
 class Person {
-
   name;
 
   constructor(name) {
@@ -55,7 +51,6 @@ class Person {
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}`);
   }
-
 }
 ```
 
@@ -79,7 +74,7 @@ The constructor is defined using the {{jsxref("Classes/constructor", "constructo
 Given the class declaration code above, you can create and use a new `Person` instance like this:
 
 ```js
-const giles = new Person('Giles');
+const giles = new Person("Giles");
 
 giles.introduceSelf(); // Hi! I'm Giles
 ```
@@ -92,11 +87,9 @@ If you don't need to do any special initialization, you can omit the constructor
 
 ```js
 class Animal {
-
   sleep() {
-    console.log('zzzzzzz');
+    console.log("zzzzzzz");
   }
-
 }
 
 const spot = new Animal();
@@ -110,7 +103,6 @@ Given our `Person` class above, let's define the `Professor` subclass.
 
 ```js
 class Professor extends Person {
-
   teaches;
 
   constructor(name, teaches) {
@@ -119,14 +111,15 @@ class Professor extends Person {
   }
 
   introduceSelf() {
-    console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
+    console.log(
+      `My name is ${this.name}, and I will be your ${this.teaches} professor.`
+    );
   }
 
   grade(paper) {
     const grade = Math.floor(Math.random() * (5 - 1) + 1);
     console.log(grade);
   }
-
 }
 ```
 
@@ -134,7 +127,7 @@ We use the {{jsxref("Classes/extends", "extends")}} keyword to say that this cla
 
 The `Professor` class adds a new property `teaches`, so we declare that.
 
-Since we want to set `teaches` when a new `Professor` is created, we define a constructor, which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
+Since we want to set `teaches` when a new `Professor` is created, we define a constructor, which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that, the `Professor` constructor sets the `teaches` property.
 
 > **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 
@@ -143,10 +136,10 @@ We've also overridden the `introduceSelf()` method from the superclass, and adde
 With this declaration we can now create and use professors:
 
 ```js
-const walsh = new Professor('Walsh', 'Psychology');
-walsh.introduceSelf();  // 'My name is Walsh, and I will be your Psychology professor'
+const walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Walsh, and I will be your Psychology professor'
 
-walsh.grade('my paper'); // some random grade
+walsh.grade("my paper"); // some random grade
 ```
 
 ## Encapsulation
@@ -157,14 +150,12 @@ Here's a declaration of the `Student` class that does just that:
 
 ```js
 class Student extends Person {
-
   #year;
 
   constructor(name, year) {
     super(name);
     this.#year = year;
   }
-
 
   introduceSelf() {
     console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
@@ -173,14 +164,13 @@ class Student extends Person {
   canStudyArchery() {
     return this.#year > 1;
   }
-
 }
 ```
 
 In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
 
 ```js
-const summers = new Student('Summers', 2);
+const summers = new Student("Summers", 2);
 
 summers.introduceSelf(); // Hi! I'm Summers, and I'm in year 2.
 summers.canStudyArchery(); // true
@@ -201,7 +191,7 @@ class Example {
   }
 
   #somePrivateMethod() {
-    console.log('You called me?');
+    console.log("You called me?");
   }
 }
 
@@ -218,16 +208,5 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-In this article we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
-
+In this article, we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- **Classes in JavaScript**
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

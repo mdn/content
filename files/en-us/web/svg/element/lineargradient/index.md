@@ -1,10 +1,7 @@
 ---
 title: <linearGradient>
 slug: Web/SVG/Element/linearGradient
-tags:
-  - Element
-  - SVG
-  - SVG Gradient
+page-type: svg-element
 browser-compat: svg.elements.linearGradient
 ---
 

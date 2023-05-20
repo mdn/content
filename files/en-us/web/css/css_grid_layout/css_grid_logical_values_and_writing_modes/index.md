@@ -1,10 +1,7 @@
 ---
 title: Grids, logical values, and writing modes
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -188,7 +185,7 @@ If we add `writing-mode: vertical-lr` to the grid container, we can see that the
 
 {{ EmbedLiveSample('Setting_writing_mode', '500', '330') }}
 
-![A image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
+![An image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
 
 ## Logical values for alignment
 

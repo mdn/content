@@ -1,18 +1,13 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
 
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
 
 ## Syntax
 
@@ -87,7 +82,7 @@ w.onchange = w.oninput = () => {
 h.onchange = h.oninput = () => {
   outer.style.height = `${h.value}px`;
   hf.textContent = `height: ${h.value}`;
-}
+};
 ```
 
 {{ EmbedLiveSample('Result', '300px', '350px') }}

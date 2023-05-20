@@ -1,18 +1,8 @@
 ---
-title: 'Element: touchend event'
+title: "Element: touchend event"
+short-title: touchend
 slug: Web/API/Element/touchend_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
 browser-compat: api.Element.touchend_event
 ---
 
@@ -25,9 +15,9 @@ The `touchend` event fires when one or more touch points are removed from the to
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchend', (event) => {});
+addEventListener("touchend", (event) => {});
 
-ontouchend = (event) => { };
+ontouchend = (event) => {};
 ```
 
 ## Event type
@@ -55,9 +45,9 @@ _This interface inherits properties from its parent, {{domxref("UIEvent")}} and 
 - {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
 - {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`.
 - {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`.
 
 ## Examples
 

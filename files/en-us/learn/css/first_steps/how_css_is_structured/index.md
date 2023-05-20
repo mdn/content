@@ -1,18 +1,6 @@
 ---
 title: How CSS is structured
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -170,6 +158,7 @@ For the exercise that follows, create a folder on your computer. You can name th
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -350,7 +339,7 @@ The output from the above code looks like this:
 
 - **{{cssxref("transform")}}**
 - **{{cssxref("background-image")}}, in particular gradient values**
-- **{{cssxref("color")}}, in particular rgb/rgba/hsl/hsla values**
+- **{{cssxref("color")}}, in particular rgb and hsl values**
 
 ## @rules
 
@@ -526,35 +515,15 @@ div p + p {
 
 The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.
 
-```css
-body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
-  padding: 1em;
-  margin: 0 auto;
-  max-width: 33em;
-}
-@media (min-width: 70em) {
-  body {
-    font-size: 130%;
-  }
-}
+```css-nolint
+body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+@media (min-width: 70em) { body { font-size: 130%;}}
 
-h1 {
-  font-size: 1.5em;
-}
+h1 {font-size: 1.5em;}
 
-div p,
-#id:first-line {
-  background-color: red;
-  border-radius: 3px;
-}
-div p {
-  margin: 0;
-  padding: 1em;
-}
-div p + p {
-  padding-top: 0;
-}
+div p, #id:first-line {background-color: red; border-radius: 3px;}
+div p {margin: 0; padding: 1em;}
+div p + p {padding-top: 0;}
 ```
 
 For your own projects, you will format your code according to personal preference. For team projects, you may find that a team or project has its own style guide.
@@ -586,11 +555,3 @@ You should always make sure to separate distinct values from one another by at l
 At this point, you should have a better idea about how CSS is structured. It's also useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## In this module
-
-- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

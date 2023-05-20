@@ -1,15 +1,9 @@
 ---
-title: '-webkit-tap-highlight-color'
+title: "-webkit-tap-highlight-color"
 slug: Web/CSS/-webkit-tap-highlight-color
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - WebKit
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-tap-highlight-color
 ---
 
@@ -20,6 +14,13 @@ browser-compat: css.properties.-webkit-tap-highlight-color
 ```css
 -webkit-tap-highlight-color: red;
 -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+
+/* Global values */
+-webkit-tap-highlight-color: inherit;
+-webkit-tap-highlight-color: initial;
+-webkit-tap-highlight-color: revert;
+-webkit-tap-highlight-color: revert-layer;
+-webkit-tap-highlight-color: unset;
 ```
 
 ## Syntax

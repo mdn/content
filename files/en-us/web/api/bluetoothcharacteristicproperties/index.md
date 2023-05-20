@@ -2,14 +2,8 @@
 title: BluetoothCharacteristicProperties
 slug: Web/API/BluetoothCharacteristicProperties
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties
 ---
 
@@ -19,7 +13,7 @@ The **`BluetoothCharacteristicProperties`** interface of the [Web Bluetooth API]
 
 This interface is returned by calling {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("BluetoothCharacteristicProperties.authenticatedSignedWrites","authenticatedSignedWrites")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `boolean` that is `true` if signed writing to the characteristic value is permitted.

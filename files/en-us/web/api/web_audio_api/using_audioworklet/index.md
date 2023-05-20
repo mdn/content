@@ -2,18 +2,6 @@
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
 page-type: guide
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -30,7 +18,7 @@ It's worth noting that because audio processing can often involve substantial co
 
 Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.
 
-1. Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
+1. Create module that defines an audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
 2. Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.
 3. As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.
 4. Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.
@@ -74,7 +62,7 @@ class MyAudioProcessor extends AudioWorkletProcessor {
     // …
     return true;
   }
-};
+}
 
 registerProcessor("my-audio-processor", MyAudioProcessor);
 ```
@@ -106,7 +94,7 @@ const firstChannelByteCount = firstInputFirstChannel.length;
 const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0][0])
 ```
 
-The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of `Float32Array` objects, which contain the samples for that channel.
+The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is a `Float32Array` object, which contains the samples for that channel.
 
 How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).
 
@@ -182,7 +170,7 @@ Specifying a value of `true` as the result from your `process()` function in ess
 
 Returning `false` from the `process()` method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, `process()` will not be called again.
 
-> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
+> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://crbug.com/921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
 
 ## Creating an audio processor worklet node
 
@@ -268,9 +256,9 @@ process(inputList, outputList, parameters) {
   const output = outputList[0];
   const gain = parameters.gain;
 
-  for (let channelNum = 0; channelNum < input.length; channel++) {
-    const inputChannel = input[channel];
-    const outputChannel = output[channel];
+  for (let channelNum = 0; channelNum < input.length; channelNum++) {
+    const inputChannel = input[channelNum];
+    const outputChannel = output[channelNum];
 
     // If gain.length is 1, it's a k-rate parameter, so apply
     // the first entry to every frame. Otherwise, apply each

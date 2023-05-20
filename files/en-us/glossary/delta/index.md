@@ -1,11 +1,7 @@
 ---
 title: Delta
 slug: Glossary/Delta
-tags:
-  - Delta
-  - Glossary
-  - difference
-  - value
+page-type: glossary-definition
 ---
 
 The term **delta** refers to the difference between two values or states.

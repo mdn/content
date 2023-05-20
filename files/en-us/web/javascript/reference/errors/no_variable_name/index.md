@@ -1,11 +1,7 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -29,7 +25,7 @@ SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in para
 A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
 Make sure that you've provided the name of the variable before the `=` sign.
 
-When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semi-colon.
+When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semicolon.
 
 ## Examples
 
@@ -65,8 +61,8 @@ Did you remember to assign values for all your `const` variables?
 let x, y = "foo",
 const z, = "foo"
 
-const first = document.getElementById('one'),
-const second = document.getElementById('two'),
+const first = document.getElementById("one"),
+const second = document.getElementById("two"),
 
 // SyntaxError: missing variable name
 ```
@@ -74,11 +70,12 @@ const second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-let x, y = "foo";
+let x,
+  y = "foo";
 const z = "foo";
 
-const first = document.getElementById('one');
-const second = document.getElementById('two');
+const first = document.getElementById("one");
+const second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -94,7 +91,7 @@ const arr = 1,2,3,4,5;
 This would be correct:
 
 ```js example-good
-const arr = [1,2,3,4,5];
+const arr = [1, 2, 3, 4, 5];
 ```
 
 ## See also

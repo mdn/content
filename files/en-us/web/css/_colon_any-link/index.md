@@ -1,16 +1,7 @@
 ---
 title: ":any-link"
 slug: Web/CSS/:any-link
-tags:
-  - ":any-link"
-  - CSS
-  - Layout
-  - Links
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - hyperlinks
+page-type: css-pseudo-class
 browser-compat: css.selectors.any-link
 ---
 
@@ -22,8 +13,10 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-```
-:any-link
+```css
+:any-link {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -66,7 +59,7 @@ a:-webkit-any-link {
 ## See also
 
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) with an {{htmlattrxref("href", "a")}} attribute
+- Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) with an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute
 - Related CSS selectors:
 
   - [`:visited`](/en-US/docs/Web/CSS/:visited)

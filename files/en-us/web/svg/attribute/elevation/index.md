@@ -1,10 +1,7 @@
 ---
 title: elevation
 slug: Web/SVG/Attribute/elevation
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDistantLight.elevation
 ---
 

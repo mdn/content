@@ -1,11 +1,7 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-tags:
-  - CSS
-  - CSS Property
-  - Compositing and Blending
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-blend-mode
 ---
 

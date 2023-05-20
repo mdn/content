@@ -2,15 +2,9 @@
 title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Event
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MouseScrollEvent
 ---
 
@@ -59,7 +53,7 @@ void initMouseScrollEvent(
 | `HORIZONTAL_AXIS` | `0x01` | The event is caused by horizontal wheel operation. |
 | `VERTICAL_AXIS`   | `0x02` | The event is caused by vertical wheel operation.   |
 
-## Methods
+## Instance methods
 
 - `initMouseScrollEvent()`
   - : See `nsIDOMMouseScrollEvent::initMouseScrollEvent()`.

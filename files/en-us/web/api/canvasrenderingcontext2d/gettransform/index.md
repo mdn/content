@@ -1,22 +1,14 @@
 ---
-title: CanvasRenderingContext2D.getTransform()
+title: "CanvasRenderingContext2D: getTransform() method"
+short-title: getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.getTransform
 ---
 
 {{APIRef}}
 
-The
-**`CanvasRenderingContext2D.getTransform()`**
-method of the Canvas 2D API retrieves the current transformation matrix being applied to
-the context.
+The **`CanvasRenderingContext2D.getTransform()`** method of the Canvas 2D API retrieves the current transformation matrix being applied to the context.
 
 ## Syntax
 
@@ -78,11 +70,11 @@ canvas {
 ### JavaScript
 
 ```js
-const canvases = document.querySelectorAll('canvas');
-const ctx1 = canvases[0].getContext('2d');
-const ctx2 = canvases[1].getContext('2d');
+const canvases = document.querySelectorAll("canvas");
+const ctx1 = canvases[0].getContext("2d");
+const ctx2 = canvases[1].getContext("2d");
 
-ctx1.setTransform(1, .2, .8, 1, 0, 0);
+ctx1.setTransform(1, 0.2, 0.8, 1, 0, 0);
 ctx1.fillRect(25, 25, 50, 50);
 
 let storedTransform = ctx1.getTransform();

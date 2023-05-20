@@ -1,10 +1,12 @@
 ---
-title: Accessibility Information for Web Authors
+title: Accessibility information for web authors
 slug: Web/Accessibility/Information_for_Web_authors
-tags:
-  - Accessibility
-  - Authoring
+page-type: guide
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
 
 ## Guidelines and Regulations
 

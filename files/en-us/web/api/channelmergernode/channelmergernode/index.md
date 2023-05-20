@@ -1,14 +1,8 @@
 ---
-title: ChannelMergerNode()
+title: "ChannelMergerNode: ChannelMergerNode() constructor"
+short-title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelMergerNode
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode.ChannelMergerNode
 ---
 
@@ -61,8 +55,8 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfInputs : 2
-}
+  numberOfInputs: 2,
+};
 
 const myMerger = new ChannelMergerNode(ac, options);
 ```

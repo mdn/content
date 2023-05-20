@@ -1,13 +1,7 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 spec-urls:
   - https://drafts.csswg.org/css-values/#custom-idents
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
@@ -43,6 +37,7 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
+
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
 
     - `none`
@@ -106,8 +101,11 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
     - `upper-armenian`
     - `disclosure-open`
     - `disclosure-close`
+
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
+- {{CSSxRef("view-transition-name")}}
+  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("will-change")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values `will-change`, `auto`, `scroll-position`, and `contents`.
 
@@ -145,4 +143,5 @@ _As this type is not a real type but a convenience type used to simplify the des
 
 ## See also
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/en-US/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

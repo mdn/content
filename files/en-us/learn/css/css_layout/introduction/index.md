@@ -1,19 +1,6 @@
 ---
 title: Introduction to CSS layout
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Floats
-  - Grids
-  - Introduction
-  - Layout
-  - Learn
-  - Positioning
-  - Tables
-  - flexbox
-  - flow
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
@@ -375,6 +362,13 @@ p {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
+}
+```
+
+```css hidden
+.positioned {
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
 }
 ```
 
@@ -747,18 +741,3 @@ body {
 This article has provided a brief summary of all the layout technologies you should know about. Read on for more information on each individual technology!
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

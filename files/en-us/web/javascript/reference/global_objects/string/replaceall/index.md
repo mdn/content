@@ -1,14 +1,7 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - regex
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replaceAll
 ---
 
@@ -28,9 +21,9 @@ replaceAll(pattern, replacement)
 
 - `pattern`
 
-  - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
+  - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
 
-    If `pattern` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
+    If `pattern` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
 
 - `replacement`
   - : Can be a string or a function. The replacement has the same semantics as that of [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
@@ -52,13 +45,14 @@ Unlike [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/
 
 ```js
 function unsafeRedactName(text, name) {
-  return text.replace(new RegExp(name, 'g'), '[REDACTED]');
+  return text.replace(new RegExp(name, "g"), "[REDACTED]");
 }
 function safeRedactName(text, name) {
-  return text.replaceAll(name, '[REDACTED]');
+  return text.replaceAll(name, "[REDACTED]");
 }
 
-const report = "A hacker called ha.*er used special characters in their name to breach the system.";
+const report =
+  "A hacker called ha.*er used special characters in their name to breach the system.";
 
 console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
@@ -79,7 +73,7 @@ For more information about how regex properties (especially the [sticky](/en-US/
 ### Using replaceAll()
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -88,15 +82,15 @@ For more information about how regex properties (especially the [sticky](/en-US/
 When using a regular expression search value, it must be global. This won't work:
 
 ```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
+"aabbcc".replaceAll(/b/, ".");
 // TypeError: replaceAll must be called with a global RegExp
 ```
 
 This will work:
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## Specifications

@@ -1,9 +1,7 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.path.d
 ---
 
@@ -14,7 +12,7 @@ The **`d`** attribute defines a path to be drawn.
 A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters.
 The commands are [detailed below](#path_commands).
 
-You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
+You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
@@ -91,7 +89,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
   </tbody>
 </table>
 
-> **Note:** The point of origin (the coordinate `0`,`0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
+> **Note:** The point of origin (the coordinate `0`, `0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
 
 ## missing-glyph
 

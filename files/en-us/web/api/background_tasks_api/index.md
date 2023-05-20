@@ -2,14 +2,6 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
 
@@ -383,7 +375,7 @@ Now that we've got the task management and display maintenance code done, we can
 
 #### The task handler
 
-The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler`(). It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
+The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler()`. It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ```js
 function logTaskHandler(data) {

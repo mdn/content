@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Module.exports()
 slug: WebAssembly/JavaScript_interface/Module/exports
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - exports
 browser-compat: javascript.builtins.WebAssembly.Module.exports
 ---
 
@@ -51,15 +42,16 @@ compiles the loaded simple.wasm byte code using the
 ```js
 const worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-  .then((mod) => worker.postMessage(mod));
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
+);
 ```
 
 In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the [`WebAssembly.Instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/Instantiate) method, invoke an
+instance from it using the [`WebAssembly.Instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method, invoke an
 exported function from inside it, then show how we can return information on the
 available exports on a module using `WebAssembly.Module.exports`.
 
@@ -73,7 +65,7 @@ const importObject = {
 };
 
 onmessage = (e) => {
-  console.log('module received from main thread');
+  console.log("module received from main thread");
   const mod = e.data;
 
   WebAssembly.instantiate(mod, importObject).then((instance) => {

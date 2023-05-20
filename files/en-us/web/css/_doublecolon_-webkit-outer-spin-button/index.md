@@ -1,12 +1,9 @@
 ---
-title: '::-webkit-outer-spin-button'
+title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-outer-spin-button
 ---
 
@@ -17,7 +14,9 @@ The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the ou
 ## Syntax
 
 ```css
-::-webkit-outer-spin-button
+::-webkit-outer-spin-button {
+  /* ... */
+}
 ```
 
 ## Examples

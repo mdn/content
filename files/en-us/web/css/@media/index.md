@@ -1,12 +1,7 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - At-rule
-  - CSS
-  - Conditional
-  - Reference
+page-type: css-at-rule
 browser-compat: css.at-rules.media
 ---
 
@@ -15,6 +10,8 @@ browser-compat: css.at-rules.media
 The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > **Note:** In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
+
+{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -129,7 +126,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
-- {{cssxref("@media/update-frequency", "update")}} {{Experimental_Inline}}
+- {{cssxref("@media/update-frequency", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
@@ -139,7 +136,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 
 ### Logical operators
 
-The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query.
+The _logical operators_ `not`, `and`, `only`, and `or` can be used to compose a complex media query.
 You can also combine multiple media queries into a single rule by separating them with commas.
 
 - `and`
@@ -163,6 +160,8 @@ You can also combine multiple media queries into a single rule by separating the
     Each query in a comma-separated list is treated separately from the others
     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
     In other words, lists behave like a logical `or` operator.
+- `or`
+  - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
 ## Accessibility concerns
 
@@ -174,17 +173,13 @@ Also consider using Level 4 media queries to improve the user's experience. For 
 
 ## Security
 
-Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a "fingerprint" which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
+Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a ["fingerprint"](/en-US/docs/Glossary/Fingerprinting) which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
 
 Because of this potential, a browser may opt to fudge the returned values in some manner in order to prevent them from being used to precisely identify a computer. A browser might also offer additional measures in this area; for example, if Firefox's "Resist Fingerprinting" setting is enabled, many media queries report default values rather than values representing the actual device state.
 
 ## Formal syntax
 
-```
-@media <media-query-list> {
-  <stylesheet>
-}
-```
+{{csssyntax}}
 
 ## Examples
 

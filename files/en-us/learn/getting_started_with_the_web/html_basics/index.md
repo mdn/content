@@ -1,14 +1,6 @@
 ---
 title: HTML basics
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Beginner
-  - CodingScripting
-  - Doctype html
-  - HTML
-  - Learn
-  - Web
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -47,8 +39,9 @@ Elements can also have attributes that look like the following:
 ![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
 
 Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
+Some attributes have no value, such as [`required`](/en-US/docs/Web/HTML/Attributes/required).
 
-An attribute should always have the following:
+Attributes that set a value always have:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
 2. The attribute name followed by an equal sign.
@@ -72,9 +65,9 @@ You do however need to make sure that your elements are properly nested. In the 
 
 The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
 
-### Empty elements
+### Void elements
 
-Some elements have no content and are called **empty elements**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
+Some elements have no content and are called **{{glossary("void element", "void elements")}}**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
 
 ```html
 <img src="images/firefox-icon.png" alt="My test image" />
@@ -102,10 +95,10 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 
 Here, we have the following:
 
-- `<!DOCTYPE html>` — [doctype](/en-US/docs/Glossary/Doctype). It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+- `<!DOCTYPE html>` — [doctype](/en-US/docs/Glossary/Doctype). It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
 - `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the `lang` attribute, setting the primary language of the document.
 - `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
-- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
 - `<meta name="viewport" content="width=device-width">` — This [viewport element](/en-US/docs/Web/CSS/Viewport_concepts#mobile_viewports) ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
 - `<title></title>` — the {{htmlelement("title")}} element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
 - `<body></body>` — the {{htmlelement("body")}} element. This contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
@@ -135,7 +128,7 @@ Try coming up with some better alt text for your image now.
 
 ## Marking up text
 
-This section will cover some of the essential HTML elements you'll use for marking up the text.
+This section will cover some essential HTML elements you'll use for marking up the text.
 
 ### Headings
 
@@ -219,7 +212,9 @@ Links are very important — they are what makes the web a web! To add a link, w
 4. Fill in the value of this attribute with the web address that you want the link to:
 
    ```html
-   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Mozilla Manifesto
+   </a>
    ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
@@ -239,14 +234,3 @@ If you get stuck, you can always compare your work with our [finished example co
 Here, we have only really scratched the surface of HTML. To find out more, go to our [Learning HTML](/en-US/docs/Learn/HTML) topic.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

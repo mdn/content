@@ -1,12 +1,7 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.order
 ---
 

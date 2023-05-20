@@ -2,9 +2,6 @@
 title: Event
 slug: Web/API/Event
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.Event
 ---
 
@@ -80,7 +77,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.Event", "Event()")}}
   - : Creates an `Event` object, returning it to the caller.
 
-## Properties
+## Instance properties
 
 - {{domxref("Event.bubbles")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether or not the event bubbles up through the DOM.
@@ -115,10 +112,8 @@ Note that all event interfaces have names which end in "Event".
   - : A historical property still supported in order to ensure existing sites continue to work. Use {{domxref("Event.preventDefault()")}} and {{domxref("Event.defaultPrevented")}} instead.
 - {{domxref("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A boolean value indicating whether the given event will bubble across through the shadow root into the standard DOM. Use {{domxref("Event.composed", "composed")}} instead.
-- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : An alias (from old versions of Microsoft Internet Explorer) for {{domxref("Event.target")}}. Use {{domxref("Event.target")}} instead.
 
-## Methods
+## Instance methods
 
 - {{domxref("Event.composedPath()")}}
   - : Returns the event's path (an array of objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.
@@ -145,5 +140,5 @@ Note that all event interfaces have names which end in "Event".
 ## See also
 
 - Types of events available: [Event reference](/en-US/docs/Web/Events)
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
 - [Creating and triggering custom events](/en-US/docs/Web/Events/Creating_and_triggering_events)

@@ -1,16 +1,10 @@
 ---
 title: Flow layout and overflow
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-tags:
-  - CSS
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Visibility
-  - overflow
-  - text-overflow
+page-type: guide
 ---
+
+{{CSSRef}}
 
 When there is more content than can fit into a container, an overflow situation occurs. Understanding how overflow behaves is important in dealing with any element with a constrained size in CSS. This guide explains how overflow works when working with normal flow.
 
@@ -69,5 +63,3 @@ This is useful in the situation where you have a listing of articles, for exampl
 ## Summary
 
 Whether you are in continuous media on the web or in a Paged Media format such as print or EPUB, understanding how content overflows is useful when dealing with any layout method. By understanding how overflow works in normal flow, you should find it easier to understand the implications of overflow content in layout methods such as grid and flexbox.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/CSS_Flow_Layout/")}}

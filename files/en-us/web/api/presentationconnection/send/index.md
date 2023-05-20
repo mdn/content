@@ -1,17 +1,10 @@
 ---
-title: PresentationConnection.send()
+title: "PresentationConnection: send() method"
+short-title: send()
 slug: Web/API/PresentationConnection/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Presentation API
-  - PresentationConnection
-  - Reference
-  - send
+status:
+  - experimental
 browser-compat: api.PresentationConnection.send
 ---
 

@@ -1,11 +1,10 @@
 ---
 title: Text labels and names
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
-tags:
-  - Accessibility
-  - WCAG
-  - text labels
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
 
 There are many situations in which a control, dialog, or other website feature should be given a descriptive name or label to allow users of assistive technologies to understand what its purpose is and how to operate it correctly. There are a number of different types of problems in this category, found in different contexts, and each has its own solution. The different problems and solutions are discussed in the sections below.
 
@@ -130,7 +129,7 @@ The following example shows code for a figure with a caption. The `alt` attribut
 ```html
 <figure>
   <img
-    src="milkweed.jgp"
+    src="milkweed.jpg"
     alt="Black and white close-up photo of milkweed flowers" />
   <figcaption>Asclepias verticillata</figcaption>
 </figure>
@@ -153,13 +152,13 @@ Users of assistive technology find this description helpful when trying to work 
   <fieldset>
     <legend>Choose your favorite monster</legend>
 
-    <input type="radio" id="kraken" name="monster" />
+    <input type="radio" id="kraken" name="monster" value="K" />
     <label for="kraken">Kraken</label><br />
 
-    <input type="radio" id="sasquatch" name="monster" />
+    <input type="radio" id="sasquatch" name="monster" value="S" />
     <label for="sasquatch">Sasquatch</label><br />
 
-    <input type="radio" id="mothman" name="monster" />
+    <input type="radio" id="mothman" name="monster" value="M" />
     <label for="mothman">Mothman</label>
   </fieldset>
 </form>

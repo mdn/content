@@ -1,16 +1,7 @@
 ---
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RunAt
-  - Type
-  - WebExtensions
-  - extensionTypes
+page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.RunAt
 ---
 
@@ -35,8 +26,6 @@ The default value is `"document_idle"`.
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-RunAt) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

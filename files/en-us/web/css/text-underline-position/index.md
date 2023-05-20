@@ -1,12 +1,7 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-underline-position
 ---
 

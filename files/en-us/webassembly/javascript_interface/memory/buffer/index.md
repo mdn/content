@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
-tags:
-  - API
-  - Buffer
-  - JavaScript
-  - Property
-  - Reference
-  - WebAssembly
-  - memory
 browser-compat: javascript.builtins.WebAssembly.Memory.buffer
 ---
 
@@ -25,18 +17,19 @@ The following example (see [memory.html](https://github.com/mdn/webassembly-exam
 ```js
 const memory = new WebAssembly.Memory({
   initial: 10,
-  maximum: 100
+  maximum: 100,
 });
 
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-  .then((obj) => {
-    const summands = new Uint32Array(memory.buffer);
-    for (let i = 0; i < 10; i++) {
-      summands[i] = i;
-    }
-    const sum = obj.instance.exports.accumulate(0, 10);
-    console.log(sum);
-  });
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
+  const summands = new Uint32Array(memory.buffer);
+  for (let i = 0; i < 10; i++) {
+    summands[i] = i;
+  }
+  const sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
+});
 ```
 
 ## Specifications

@@ -2,14 +2,6 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.FetchEvent
 ---
 
@@ -24,12 +16,14 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
   - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
+- {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
+  - : A promise that is pending while the event has not been handled, and fulfilled once it has.
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
@@ -39,7 +33,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 - {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
   - : The {{domxref("Request")}} the browser intends to make.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 

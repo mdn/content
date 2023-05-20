@@ -2,14 +2,6 @@
 title: XRJointPose
 slug: Web/API/XRJointPose
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRJointPose
 ---
 
@@ -19,7 +11,7 @@ The **`XRJointPose`** interface is an {{domxref("XRPose")}} with additional info
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("XRJointPose.radius")}} {{ReadOnlyInline}}
   - : The radius (distance from skin) for a joint.

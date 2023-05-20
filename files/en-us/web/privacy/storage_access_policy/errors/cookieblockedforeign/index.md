@@ -1,13 +1,9 @@
 ---
-title: 'Blocked: All third-party storage access requests'
+title: "Blocked: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedForeign
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
 
 ## Message
 

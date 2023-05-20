@@ -1,16 +1,8 @@
 ---
-title: IDBCursor.update()
+title: "IDBCursor: update() method"
+short-title: update()
 slug: Web/API/IDBCursor/update
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Update
 browser-compat: api.IDBCursor.update
 ---
 
@@ -41,8 +33,9 @@ update(value)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the updated record.
 
 ### Exceptions
 
@@ -81,32 +74,32 @@ you can grab data from the current record under the cursor object using `cursor.
 
 ```js
 function updateResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'A farewell to kings') {
+      if (cursor.value.albumTitle === "A farewell to kings") {
         const updateData = cursor.value;
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
         request.onsuccess = () => {
-          console.log('A better album year?');
+          console.log("A better album year?");
         };
-      };
+      }
 
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {
-      console.log('Entries displayed.');
+      console.log("Entries displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -125,4 +118,4 @@ function updateResult() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,9 +1,7 @@
 ---
 title: display
 slug: Web/SVG/Attribute/display
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.display
 ---
 

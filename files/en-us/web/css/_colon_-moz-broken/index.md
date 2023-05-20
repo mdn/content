@@ -1,14 +1,9 @@
 ---
 title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-broken
 ---
 
@@ -21,7 +16,9 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ## Syntax
 
 ```css
-:-moz-broken
+:-moz-broken {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -56,4 +53,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
-- {{bug("11011")}}
+- [Firefox bug 11011](https://bugzil.la/11011)

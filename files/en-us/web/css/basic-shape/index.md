@@ -1,12 +1,7 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Shapes
-  - Data Type
-  - Reference
+page-type: css-type
 browser-compat: css.types.basic-shape
 ---
 

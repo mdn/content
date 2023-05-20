@@ -1,15 +1,7 @@
 ---
 title: min()
 slug: Web/CSS/min
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - min
+page-type: css-function
 browser-compat: css.types.min
 ---
 

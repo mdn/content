@@ -1,11 +1,7 @@
 ---
 title: <textPath>
 slug: Web/SVG/Element/textPath
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
 browser-compat: svg.elements.textPath
 ---
 
@@ -55,7 +51,7 @@ svg {
     _Value type_: `align`|`stretch` ; _Default value_: `align`; _Animatable_: **yes**
 - {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
-    _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Attribute/path#path-data) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("side")}} {{Experimental_Inline}}
   - : Which side of the path the text should be rendered.
     _Value type_: `left`|`right` ; _Default value_: `left`; _Animatable_: **yes**

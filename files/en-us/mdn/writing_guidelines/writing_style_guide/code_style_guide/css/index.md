@@ -2,9 +2,6 @@
 title: Guidelines for styling CSS code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -77,7 +74,7 @@ Where quotes can or should be included, use them, and use double quotes. For exa
 
 ## Longhand vs. shorthand rules
 
-Usually when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless of course you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why recommend writing longhand rules.
+Usually, when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless, of course, you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why writing with longhand rules is recommended.
 
 - It is often harder to understand what the shorthand is doing. In the example below, it takes a while to pick apart exactly what the {{cssxref("font")}} syntax is doing.
 
@@ -172,7 +169,7 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 
   Not this: <!--I thought this is the preferred style-->
 
-  ```css example-bad
+  ```css-nolint example-bad
   h1, h2, h3 {
     font-family: sans-serif;
     text-align: center;
@@ -195,7 +192,7 @@ There are a variety of CSS writing styles you can use, but we prefer the expande
 In addition, keep these specifics in mind:
 
 - Include a space between the selector(s) and the opening curly brace.
-- Always include a semi-colon at the end of the last declaration, even though it isn't strictly necessary.
+- Always include a semicolon at the end of the last declaration, even though it isn't strictly necessary.
 - Put the closing curly brace on a new line.
 - In each declaration, put a space after the separating colon, but not before.
 - Use two spaces for code indentation.
@@ -208,7 +205,7 @@ p {
 }
 ```
 
-```css example-bad
+```css-nolint example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
 

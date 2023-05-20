@@ -1,12 +1,7 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
-tags:
-  - CSS
-  - Keyword
-  - Reference
-  - min-content
-  - sizing
+page-type: css-keyword
 browser-compat: css.properties.width.min-content
 ---
 
@@ -25,13 +20,6 @@ block-size: min-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr min-content;
-
-/* Global values */
-min-content: inherit;
-min-content: initial;
-min-content: revert;
-min-content: revert-layer;
-min-content: unset;
 ```
 
 ## Examples

@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: "x" is (not) "y"'
+title: "TypeError: \"x\" is (not) \"y\""
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -51,10 +47,10 @@ const foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-const foo = {}
+const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-const foo = 'bar'
+const foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 

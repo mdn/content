@@ -1,13 +1,8 @@
 ---
-title: WheelEvent()
+title: "WheelEvent: WheelEvent() constructor"
+short-title: WheelEvent()
 slug: Web/API/WheelEvent/WheelEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.WheelEvent
 ---
 
@@ -25,7 +20,7 @@ new WheelEvent(type)
 new WheelEvent(type, options)
 ```
 
-### Properties
+### Parameters
 
 - `type`
   - : A string with the name of the event.

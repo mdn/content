@@ -1,24 +1,10 @@
 ---
-title: CSSStyleSheet.removeRule()
+title: "CSSStyleSheet: removeRule() method"
+short-title: removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Rule
-  - StyleSheet
-  - delete
-  - legacy
-  - remove
-  - removeRule
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
 
@@ -54,7 +40,7 @@ None ({{jsxref("undefined")}}).
 This example removes the first rule from the stylesheet `myStyles`.
 
 ```js
- myStyles.removeRule(0);
+myStyles.removeRule(0);
 ```
 
 You can rewrite this to use the standard `deleteRule()` method very easily:

@@ -1,14 +1,10 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - box-flex
-  - recipe:css-property
-  - Deprecated
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-flex
 ---
 

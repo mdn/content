@@ -1,12 +1,7 @@
 ---
 title: Grid wrapper
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - cookbook
-  - recipes
+page-type: guide
 browser-compat: css.properties.grid-template-columns
 ---
 

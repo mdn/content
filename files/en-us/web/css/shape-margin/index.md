@@ -1,19 +1,7 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Property
-  - Reference
-  - Shape
-  - float
-  - margin
-  - recipe:css-property
-  - shape-margin
+page-type: css-property
 browser-compat: css.properties.shape-margin
 ---
 

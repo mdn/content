@@ -1,11 +1,7 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
-tags:
-  - CSS
-  - CSS Property
-  - recipe:css-shorthand-property
-  - scroll-snap
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding
 ---
 

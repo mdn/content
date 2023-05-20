@@ -1,18 +1,15 @@
 ---
 title: create fancy boxes
 slug: Learn/CSS/Howto/create_fancy_boxes
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
 ---
+
+{{LearnSidebar}}
 
 CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.
 
 Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
 
-On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics its also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
+On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics it's also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
 
 We are about to see many examples, but we will always work on the most simple piece of HTML possible, a simple element:
 
@@ -20,18 +17,18 @@ We are about to see many examples, but we will always work on the most simple pi
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Ok, that's a very small bit of HTML, what can we tweak on that element? All of the following:
+Ok, that's a very small bit of HTML, what can we tweak on that element? All the following:
 
 - Its box model properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("border")}}, etc.
 - Its background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-position")}}, {{cssxref("background-size")}}, etc.
 - Its pseudo-element: {{cssxref("::before")}} and {{cssxref("::after")}}
-- and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.
+- and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("rotate")}}, {{cssxref("outline")}}, etc.
 
 So we have a very large playground. Let the fun begin.
 
 ## Box model tweak
 
-The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc.. It starts to get interesting when you push the properties to the limit by having negative `padding` and/or- `margin` by having `border-radius` larger than the actual size of the box.
+The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc. It starts to get interesting when you push the properties to the limit by having negative `padding` and/or- `margin` by having `border-radius` larger than the actual size of the box.
 
 ### Making circles
 
@@ -87,7 +84,7 @@ Before we jump to some practical examples, let's step back a bit as there are tw
 
 Okay, let's have fun with backgrounds:
 
-```css
+```css-nolint
 .fancy {
   padding: 1em;
   width: 100%;
@@ -120,7 +117,7 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 ## Pseudo-elements
 
@@ -286,7 +283,7 @@ So it's possible to create a wonderful effect when we mix all of this together. 
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Let's create some partial drop shadow effect. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
+Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using a pseudo-element and the {{cssxref("rotate")}} property, one of the three individual {{cssxref("transform")}} properties.
 
 ```css
 .fancy {
@@ -309,7 +306,7 @@ Let's create some partial drop shadow effect. The {{cssxref("box-shadow")}} prop
   max-width: 200px;
 
   box-shadow: 0px 13px 10px black;
-  transform: rotate(4deg);
+  rotate: 4deg;
 }
 ```
 

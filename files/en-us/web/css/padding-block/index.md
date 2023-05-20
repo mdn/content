@@ -1,11 +1,7 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - CSS Property
-  - padding-block
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.padding-block
 ---
 
@@ -37,6 +33,7 @@ padding-block: 5% 2%; /* relative to the nearest block container's width */
 padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
+padding-block: revert-layer;
 padding-block: unset;
 ```
 
@@ -100,5 +97,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

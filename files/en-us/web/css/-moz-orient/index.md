@@ -1,12 +1,9 @@
 ---
 title: "-moz-orient"
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-moz-orient
 ---
 

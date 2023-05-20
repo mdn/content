@@ -1,17 +1,10 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat:
-  - css.properties.width.fit-content_function
   - css.properties.grid-template-columns.fit-content
+  - css.properties.width.fit-content_function
 ---
 
 {{CSSRef}}

@@ -2,9 +2,6 @@
 title: CDATASection
 slug: Web/API/CDATASection
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.CDATASection
 ---
 
@@ -36,12 +33,12 @@ of a CDATA section itself, `]]>`.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no specific properties and implements those of its parent
 {{DOMxRef("Text")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no specific methods and implements those of its parent
 {{DOMxRef("Text")}}._

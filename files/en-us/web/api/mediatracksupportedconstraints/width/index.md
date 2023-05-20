@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.width
+title: "MediaTrackSupportedConstraints: width property"
+short-title: width
 slug: Web/API/MediaTrackSupportedConstraints/width
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.width
@@ -63,7 +64,7 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

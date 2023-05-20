@@ -2,16 +2,6 @@
 title: Migrating from webkitAudioContext
 slug: Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - Migrating
-  - Migration
-  - Updating
-  - Web Audio API
-  - porting
-  - webkitAudioContext
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -32,7 +22,7 @@ Three of the creator methods on `webkitAudioContext` have been renamed in {{domx
 - `createDelayNode()` has been renamed to {{domxref("createDelay")}}.
 - `createJavaScriptNode()` has been renamed to {{domxref("createScriptProcessor")}}.
 
-These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}. If your code uses either of these names, like in the example below :
+These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}. If your code uses either of these names, like in the example below:
 
 ```js
 // Old method names
@@ -54,7 +44,7 @@ The semantics of these methods remain the same in the renamed versions.
 
 ## Changes to starting and stopping nodes
 
-In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods. ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the `noteGrainOn()` method.) The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
+In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods. ({{domxref("AudioBufferSourceNode")}} has yet another way of starting output: the `noteGrainOn()` method.) The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
 
 In order to port your code, you can just rename the method that you're using. For example, if you have code like the below:
 
@@ -130,15 +120,15 @@ Note that the `decodeAudioData()` method is asynchronous, which means that it wi
 The `setTargetValueAtTime()` method on the {{domxref("AudioParam")}} interface has been renamed to `setTargetAtTime()`. This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same. If your code is using `setTargetValueAtTime()`, you can rename it to use `setTargetAtTime()`. For example, if we have code that looks like this:
 
 ```js
-  const gainNode = context.createGain();
-  gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
+const gainNode = context.createGain();
+gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
 ```
 
 you can rename the method, and be compliant with the standard, like so:
 
 ```js
-  const gainNode = context.createGain();
-  gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
+const gainNode = context.createGain();
+gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
 ```
 
 ## Enumerated values that changed
@@ -152,8 +142,8 @@ The original `webkitAudioContext` API used C-style number based enumerated value
 ```js
 // Old webkitAudioContext code:
 const osc = context.createOscillator();
-osc.type = osc.SINE;     // sine waveform
-osc.type = osc.SQUARE;   // square waveform
+osc.type = osc.SINE; // sine waveform
+osc.type = osc.SQUARE; // square waveform
 osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
@@ -163,11 +153,11 @@ const isCustom = osc.type === osc.CUSTOM; // isCustom will be true
 ```js
 // New standard AudioContext code:
 const osc = context.createOscillator();
-osc.type = "sine";       // sine waveform
-osc.type = "square";     // square waveform
-osc.type = "sawtooth";   // sawtooth waveform
-osc.type = "triangle";   // triangle waveform
-osc.setPeriodicWave(table);  // Note: setWaveTable has been renamed to setPeriodicWave!
+osc.type = "sine"; // sine waveform
+osc.type = "square"; // square waveform
+osc.type = "sawtooth"; // sawtooth waveform
+osc.type = "triangle"; // triangle waveform
+osc.setPeriodicWave(table); // Note: setWaveTable has been renamed to setPeriodicWave!
 const isCustom = osc.type === "custom"; // isCustom will be true
 ```
 
@@ -178,27 +168,27 @@ const isCustom = osc.type === "custom"; // isCustom will be true
 ```js
 // Old webkitAudioContext code:
 const filter = context.createBiquadFilter();
-filter.type = filter.LOWPASS;   // lowpass filter
-filter.type = filter.HIGHPASS;  // highpass filter
-filter.type = filter.BANDPASS;  // bandpass filter
-filter.type = filter.LOWSHELF;  // lowshelf filter
+filter.type = filter.LOWPASS; // lowpass filter
+filter.type = filter.HIGHPASS; // highpass filter
+filter.type = filter.BANDPASS; // bandpass filter
+filter.type = filter.LOWSHELF; // lowshelf filter
 filter.type = filter.HIGHSHELF; // highshelf filter
-filter.type = filter.PEAKING;   // peaking filter
-filter.type = filter.NOTCH;     // notch filter
-filter.type = filter.ALLPASS;   // allpass filter
+filter.type = filter.PEAKING; // peaking filter
+filter.type = filter.NOTCH; // notch filter
+filter.type = filter.ALLPASS; // allpass filter
 ```
 
 ```js
 // New standard AudioContext code:
 const filter = context.createBiquadFilter();
-filter.type = "lowpass";        // lowpass filter
-filter.type = "highpass";       // highpass filter
-filter.type = "bandpass";       // bandpass filter
-filter.type = "lowshelf";       // lowshelf filter
-filter.type = "highshelf";      // highshelf filter
-filter.type = "peaking";        // peaking filter
-filter.type = "notch";          // notch filter
-filter.type = "allpass";        // allpass filter
+filter.type = "lowpass"; // lowpass filter
+filter.type = "highpass"; // highpass filter
+filter.type = "bandpass"; // bandpass filter
+filter.type = "lowshelf"; // lowshelf filter
+filter.type = "highshelf"; // highshelf filter
+filter.type = "peaking"; // peaking filter
+filter.type = "notch"; // notch filter
+filter.type = "allpass"; // allpass filter
 ```
 
 ### PannerNode.panningModel
@@ -208,15 +198,15 @@ filter.type = "allpass";        // allpass filter
 ```js
 // Old webkitAudioContext code:
 const panner = context.createPanner();
-panner.panningModel = panner.EQUALPOWER;  // equalpower panning
-panner.panningModel = panner.HRTF;        // HRTF panning
+panner.panningModel = panner.EQUALPOWER; // equalpower panning
+panner.panningModel = panner.HRTF; // HRTF panning
 ```
 
 ```js
 // New standard AudioContext code:
 const panner = context.createPanner();
-panner.panningModel = "equalpower";       // equalpower panning
-panner.panningModel = "HRTF";             // HRTF panning
+panner.panningModel = "equalpower"; // equalpower panning
+panner.panningModel = "HRTF"; // HRTF panning
 ```
 
 ### PannerNode.distanceModel
@@ -226,17 +216,17 @@ panner.panningModel = "HRTF";             // HRTF panning
 ```js
 // Old webkitAudioContext code:
 const panner = context.createPanner();
-panner.distanceModel = panner.LINEAR_DISTANCE;      // linear distance model
-panner.distanceModel = panner.INVERSE_DISTANCE;     // inverse distance model
+panner.distanceModel = panner.LINEAR_DISTANCE; // linear distance model
+panner.distanceModel = panner.INVERSE_DISTANCE; // inverse distance model
 panner.distanceModel = panner.EXPONENTIAL_DISTANCE; // exponential distance model
 ```
 
 ```js
 // Mew standard AudioContext code:
 const panner = context.createPanner();
-panner.distanceModel = "linear";                    // linear distance model
-panner.distanceModel = "inverse";                   // inverse distance model
-panner.distanceModel = "exponential";               // exponential distance model
+panner.distanceModel = "linear"; // linear distance model
+panner.distanceModel = "inverse"; // inverse distance model
+panner.distanceModel = "exponential"; // exponential distance model
 ```
 
 ## Gain control moved to its own node type
@@ -366,7 +356,7 @@ const sources = [];
 function startSource(src, ...startArgs) {
   src.onended = () => {
     sources.splice(sources.indexOf(src), 1);
-  }
+  };
   sources.push(src);
   src.start.apply(src, startArgs);
 }

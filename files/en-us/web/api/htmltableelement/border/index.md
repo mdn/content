@@ -1,14 +1,10 @@
 ---
-title: HTMLTableElement.border
+title: "HTMLTableElement: border property"
+short-title: border
 slug: Web/API/HTMLTableElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.border
 ---
 
@@ -25,8 +21,8 @@ A string representing the width of the border in pixels.
 
 ```js
 // Set the width of a table border to 2 pixels
-const t = document.getElementById('TableA');
-t.border = '2';
+const t = document.getElementById("TableA");
+t.border = "2";
 ```
 
 ## Specifications

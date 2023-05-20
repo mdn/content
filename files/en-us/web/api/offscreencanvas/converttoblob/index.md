@@ -1,18 +1,12 @@
 ---
-title: OffscreenCanvas.convertToBlob()
+title: "OffscreenCanvas: convertToBlob() method"
+short-title: convertToBlob()
 slug: Web/API/OffscreenCanvas/convertToBlob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - Method
-  - OffscreenCanvas
-  - Reference
 browser-compat: api.OffscreenCanvas.convertToBlob
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 

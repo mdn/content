@@ -1,12 +1,7 @@
 ---
 title: direction
 slug: Web/CSS/direction
-tags:
-  - BiDi
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.direction
 ---
 
@@ -95,4 +90,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- The HTML {{htmlattrxref("dir")}} global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute

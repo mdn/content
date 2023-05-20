@@ -1,12 +1,7 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-block-color
 ---
 
@@ -34,8 +29,8 @@ border-block-color: unset;
 
 ### Values
 
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -87,5 +82,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}+ bug 1297097
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

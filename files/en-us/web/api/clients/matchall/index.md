@@ -1,14 +1,8 @@
 ---
-title: Clients.matchAll()
+title: "Clients: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Clients/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
 
@@ -57,7 +51,7 @@ order, correct as per spec.
 ```js
 clients.matchAll(options).then((clientList) => {
   for (const client of clientList) {
-    if (client.url === 'index.html') {
+    if (client.url === "index.html") {
       clients.openWindow(client);
       // or do something else involving the matching client
     }

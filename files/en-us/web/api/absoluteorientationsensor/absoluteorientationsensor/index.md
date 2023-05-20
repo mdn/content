@@ -1,25 +1,14 @@
 ---
-title: AbsoluteOrientationSensor()
+title: "AbsoluteOrientationSensor: AbsoluteOrientationSensor() constructor"
+short-title: AbsoluteOrientationSensor()
 slug: Web/API/AbsoluteOrientationSensor/AbsoluteOrientationSensor
 page-type: web-api-constructor
-tags:
-  - API
-  - AbsoluteOrientationSensor
-  - Constructor
-  - Generic Sensor API
-  - Orientation Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.AbsoluteOrientationSensor.AbsoluteOrientationSensor
 ---
 
 {{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor()`** constructor creates a new {{domxref("AbsoluteOrientationSensor")}} object which describes the device's physical orientation in relation to the Earth's reference coordinate system.
-
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
 ## Syntax
 

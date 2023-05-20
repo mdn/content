@@ -1,13 +1,7 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
-tags:
-  - "@counter-style"
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.system
 ---
 
@@ -77,17 +71,7 @@ This may take one of three forms:
 
 ## Formal syntax
 
-```
-cyclic                             |
-numeric                            |
-alphabetic                         |
-symbolic                           |
-additive                           |
-[ fixed <integer>? ]               |
-[ extends <counter-style-name> ]
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## Examples
 

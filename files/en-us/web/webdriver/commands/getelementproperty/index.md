@@ -1,11 +1,6 @@
 ---
 title: Get Element Property
 slug: Web/WebDriver/Commands/GetElementProperty
-tags:
-  - Command
-  - Get Element Property
-  - Reference
-  - WebDriver
 browser-compat: webdriver.commands.GetElementProperty
 ---
 

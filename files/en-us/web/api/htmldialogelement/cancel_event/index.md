@@ -1,31 +1,27 @@
 ---
-title: 'HTMLDialogElement: cancel event'
+title: "HTMLDialogElement: cancel event"
+short-title: cancel
 slug: Web/API/HTMLDialogElement/cancel_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - HTMLDialogElement
-  - NeedsExample
-  - cancel
 browser-compat: api.HTMLDialogElement.cancel_event
 ---
 
 {{APIRef}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
 
 This event does not bubble.
+
+When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cancel', (event) => {});
+addEventListener("cancel", (event) => {});
 
-oncancel = (event) => { };
+oncancel = (event) => {};
 ```
 
 ## Event type
@@ -58,27 +54,27 @@ div {
 #### JavaScript
 
 ```js
-const result = document.querySelector('.result');
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog');
+const dialog = document.querySelector(".example-dialog");
 
-dialog.addEventListener('cancel', (event) => {
-  result.textContent = 'dialog was canceled';
+dialog.addEventListener("cancel", (event) => {
+  result.textContent = "dialog was canceled";
 });
 
-const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
-      dialog.showModal();
-      result.textContent = '';
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
+  if (typeof dialog.showModal === "function") {
+    dialog.showModal();
+    result.textContent = "";
   } else {
-      result.textContent = 'The dialog API is not supported by this browser';
+    result.textContent = "The dialog API is not supported by this browser";
   }
 });
 
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-    dialog.close();
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 

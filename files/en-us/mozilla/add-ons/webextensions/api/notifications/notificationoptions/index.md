@@ -1,16 +1,7 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - NotificationOptions
-  - Notifications
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.NotificationOptions
 ---
 
@@ -82,5 +73,3 @@ Note that `appIconMaskUrl` and `isClickable` are not supported.
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

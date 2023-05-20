@@ -2,11 +2,6 @@
 title: Contributing to MDN Web Docs content
 slug: MDN/Community/MDN_content
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-  - mdn-content
 ---
 
 {{MDNSidebar}}
@@ -19,13 +14,13 @@ Problems with MDN Web Docs are reported as [content repo issues](https://github.
 
 To help you choose what content issues to work on, we've sorted them using GitHub labels.
 
-The labels below help you find tasks based on how much time you have available.
+The labels below help you find tasks based on estimated effort to complete the task.
 
-| Label                                                                                                                                       | Description                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [Less-than-30-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) | A task that will probably take less than 30 minutes. |
-| [Less-than-3-hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)       | A task that will probably take less than 3 hours.    |
-| [Less-than-2-day tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)      | A task that will probably take less than 2 days.     |
+| Label                                                                      | Description                                                                                                                        |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [effort: small](https://github.com/mdn/content/labels/effort%3A%20small)   | A task that will probably require little effort, such as fixing a typo, or adding a few sentences of clarification.                |
+| [effort: medium](https://github.com/mdn/content/labels/effort%3A%20medium) | A task that will probably require non-trivial effort. For example, updating a page to reflect changes to the formal specification. |
+| [effort: large](https://github.com/mdn/content/labels/effort%3A%20large)   | A task that will probably require significant and large-scale effort, such as writing new guide and reference pages.               |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
@@ -43,11 +38,11 @@ If you'd prefer to browse your tasks and choose by technology category instead, 
 ## How to help
 
 1. First of all, sign up for a [GitHub account](https://github.com/join), if you don't already have one — you'll need this to communicate on the GitHub issues.
-2. Next, choose one or more topic areas you'd like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+2. Next, choose one or more topic areas you'd like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 
 After you are set up, you can:
 
 1. Choose an issue to work on that interests you, and ask us to assign it to you with a comment on the issue.
-2. If you need any help when you are working on it, feel free to contact us in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+2. If you need any help when you are working on it, feel free to contact us in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms).
 3. Once you've fixed an issue, ask the submitter for a review and, hopefully, they will tell you whether they think more work is required. We will get involved if needed.
 4. Once the issue is verified fixed, it can be closed. The person closing the issue can be either the original issue submitter, or an MDN staff member.

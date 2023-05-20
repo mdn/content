@@ -1,23 +1,11 @@
 ---
-title: '<audio>: The Embed Audio element'
+title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
+page-type: html-element
 browser-compat: html.elements.audio
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
@@ -31,46 +19,46 @@ The content inside the opening and closing `<audio></audio>` tags is shown as a 
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
     > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
-- {{htmlattrdef("controls")}}
+- `controls`
 
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
-  - : This enumerated attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
     - `anonymous`
-      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
+      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the resource will be _tainted_, and its usage restricted.
     - `use-credentials`
-      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the resource will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
+- `disableremoteplayback` {{experimental_inline}}
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     > **Note:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
-- {{htmlattrdef("loop")}}
+- `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
-- {{htmlattrdef("muted")}}
+- `muted`
   - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
-- {{htmlattrdef("preload")}}
+- `preload`
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
 
     - `none`: Indicates that the audio should not be preloaded.
     - `metadata`: Indicates that only audio metadata (e.g. length) is fetched.
@@ -84,7 +72,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 ## Events
@@ -179,7 +167,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to
@@ -266,6 +254,7 @@ Other usage notes:
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
 - You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
 - `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
+- To test the fallback content on browsers that support the element, you can replace `<audio>` with a non-existing element like `<notanaudio>`.
 
 A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -273,7 +262,7 @@ A good general source of information on using HTML `<audio>` is the [Video and a
 
 The `<audio>` element has no intrinsic visual output of its own unless the `controls` attribute is specified, in which case the browser's default controls are shown.
 
-The default controls have a {{cssxref("display")}} value of `inline` by default, and it is often a good idea set the value to `block` to improve control over positioning and layout, unless you want it to sit within a text block or similar.
+The default controls have a {{cssxref("display")}} value of `inline` by default, and it is often a good idea to set the value to `block` to improve control over positioning and layout, unless you want it to sit within a text block or similar.
 
 You can style the default controls with properties that affect the block as a single unit, so for example you can give it a {{cssxref("border")}} and {{cssxref("border-radius")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, etc. You can't however style the individual components inside the audio player (e.g. change the button size or icons, change the font, etc.), and the controls are different across the different browsers.
 
@@ -292,7 +281,7 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
-> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the use interface implications can be odd.
+> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
 
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
@@ -399,22 +388,22 @@ Also it's a good practice to provide some content (such as the direct download l
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        {{htmlattrxref("controls", "audio")}} attribute: interactive
+        <a href="/en-US/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the element has a {{htmlattrxref("src", "audio")}}
+        If the element has a <a href="/en-US/docs/Web/HTML/Element/audio#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
         {{HTMLElement("audio")}} or {{HTMLElement("video")}}
@@ -443,7 +432,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

@@ -2,13 +2,6 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 page-type: web-api-interface
-tags:
-  - API
-  - IDBCursor
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBCursor
 ---
 
@@ -24,7 +17,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 > **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
@@ -39,7 +32,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 - {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBRequest")}} that was used to obtain the cursor.
 
-## Methods
+## Instance methods
 
 - {{domxref("IDBCursor.advance()")}}
   - : Sets the number of times a cursor should move its position forward.
@@ -56,7 +49,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{Deprecated_Header}}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})
+> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
@@ -69,19 +62,19 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }
@@ -103,4 +96,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

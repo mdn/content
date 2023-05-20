@@ -1,12 +1,7 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - CSS Property
-  - Page Breaks
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.page-break-before
 ---
 
@@ -17,6 +12,10 @@ browser-compat: css.properties.page-break-before
 The **`page-break-before`** CSS property adjusts page breaks _before_ the current element.
 
 This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.
+
+{{EmbedInteractiveExample("pages/css/page-break-before.html")}}
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -35,8 +34,6 @@ page-break-before: revert;
 page-break-before: revert-layer;
 page-break-before: unset;
 ```
-
-## Syntax
 
 ### Values
 

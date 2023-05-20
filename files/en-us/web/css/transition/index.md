@@ -1,12 +1,7 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.transition
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: WebAssembly.Instance() constructor
 slug: WebAssembly/JavaScript_interface/Instance/Instance
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
 
@@ -24,7 +19,7 @@ The **`WebAssembly.Instance()`** constructor creates a new
 > times.
 
 ```js
-new WebAssembly.Instance(module, importObject)
+new WebAssembly.Instance(module, importObject);
 ```
 
 ### Parameters
@@ -58,17 +53,17 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then((response) =>
-  response.arrayBuffer()
-).then((bytes) => {
-  const mod = new WebAssembly.Module(bytes);
-  const instance = new WebAssembly.Instance(mod, importObject);
-  instance.exports.exported_func();
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    const mod = new WebAssembly.Module(bytes);
+    const instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
 However, the preferred way to get an `Instance` is through the asynchronous
@@ -79,12 +74,13 @@ const importObject = {
   imports: {
     imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 ## Specifications

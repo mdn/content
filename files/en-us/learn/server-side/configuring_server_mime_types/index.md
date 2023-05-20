@@ -1,13 +1,9 @@
 ---
 title: Properly configuring server MIME types
 slug: Learn/Server-side/Configuring_server_MIME_types
-tags:
-  - Apache
-  - HTTP
-  - MIME Types
-  - nginx
-  - server-side
 ---
+
+{{LearnSidebar}}
 
 MIME types describe the media type of content, either in email, or served by web servers or web applications. They are intended to help provide a hint as to how the content should be processed and displayed.
 
@@ -32,13 +28,13 @@ As new content types are invented or added to web servers, web administrators ma
 
 If a web server or application reports an incorrect MIME type for content (including a "default type" for unknown content), a web browser has no way of knowing the author's intentions. This may cause unexpected behavior.
 
-Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
+Some web browsers may try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
 
 - Loss of control
 
   - : If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.
 
-    For example, a web site oriented for web developers might wish to send certain example HTML documents as either `text/html` or `text/plain` in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.
+    For example, a website oriented for web developers might wish to send certain example HTML documents as either `text/html` or `text/plain` in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.
 
 - Security
 
@@ -116,6 +112,3 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)
-- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://mskb.pkisolutions.com/kb/293336)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -1,14 +1,7 @@
 ---
-title: ':is()'
+title: ":is()"
 slug: Web/CSS/:is
-tags:
-  - ':is'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.is
 ---
 
@@ -50,93 +43,6 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
 ## Examples
-
-### Cross-browser example
-
-```html
-<header>
-  <p>This is my header paragraph</p>
-</header>
-
-<main>
-  <ul>
-    <li>
-      <p>This is my first</p>
-      <p>list item</p>
-    </li>
-    <li>
-      <p>This is my second</p>
-      <p>list item</p>
-    </li>
-  </ul>
-</main>
-
-<footer>
-  <p>This is my footer paragraph</p>
-</footer>
-```
-
-```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
-} catch (e) {
-  try {
-    matchedItems = document.querySelectorAll(
-      ":matches(header, main, footer) p"
-    );
-  } catch (e) {
-    try {
-      matchedItems = document.querySelectorAll(
-        ":-webkit-any(header, main, footer) p"
-      );
-    } catch (e) {
-      try {
-        matchedItems = document.querySelectorAll(
-          ":-moz-any(header, main, footer) p"
-        );
-      } catch (e) {
-        console.log(
-          "Your browser doesn't support :is(), :matches(), or :any()"
-        );
-      }
-    }
-  }
-}
-
-matchedItems.forEach(applyHandler);
-
-function applyHandler(elem) {
-  elem.addEventListener("click", (e) => {
-    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
-  });
-}
-```
-
-{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
 
 ### Simplifying list selectors
 
@@ -209,7 +115,7 @@ You can replace it with:
 
 The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
-For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
+For example, without `:is()`, styling all the {{HTMLElement("Heading_Elements", "h1")}} elements at different depths could be very complicated:
 
 ```css
 /* Level 0 */
@@ -283,6 +189,14 @@ some-element:is(::before, ::after) {
 }
 ```
 
+or this:
+
+```css example-bad
+:is(some-element::before, some-element::after) {
+  display: block;
+}
+```
+
 instead do:
 
 ```css example-good
@@ -294,8 +208,10 @@ some-element::after {
 
 ## Syntax
 
-```
-:is( <forgiving-selector-list> )
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -310,4 +226,4 @@ some-element::after {
 
 - {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

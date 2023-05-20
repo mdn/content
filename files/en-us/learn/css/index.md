@@ -1,16 +1,6 @@
 ---
 title: Learn to style HTML using CSS
 slug: Learn/CSS
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Debugging
-  - Landing
-  - Style
-  - Topic
-  - length
-  - specificity
 ---
 
 {{LearnSidebar}}
@@ -46,7 +36,7 @@ This topic contains the following modules, in a suggested order for working thro
 
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
 
-  - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
+  - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 

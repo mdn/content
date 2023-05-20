@@ -1,11 +1,7 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.vertical-align
 ---
 
@@ -17,10 +13,10 @@ The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical align
 
 The vertical-align property can be used in two contexts:
 
-- To vertically align an inline element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
+- To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
 - To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
 
-Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
+Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Glossary/Block-level_content).
 
 ## Syntax
 
@@ -157,22 +153,22 @@ img.middle {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+top:         <img style="vertical-align: top" src="star.png" alt="star"/>
+middle:      <img style="vertical-align: middle" src="star.png" alt="star"/>
+bottom:      <img style="vertical-align: bottom" src="star.png" alt="star"/>
+super:       <img style="vertical-align: super" src="star.png" alt="star"/>
+sub:         <img style="vertical-align: sub" src="star.png" alt="star"/>
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+text-top:    <img style="vertical-align: text-top" src="star.png" alt="star"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png" alt="star"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png" alt="star"/>
+-1em:        <img style="vertical-align: -1em" src="star.png" alt="star"/>
+20%:         <img style="vertical-align: 20%" src="star.png" alt="star"/>
+-100%:       <img style="vertical-align: -100%" src="star.png" alt="star"/>
 </p>
 ```
 

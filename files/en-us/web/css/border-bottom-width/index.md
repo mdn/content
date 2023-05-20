@@ -1,12 +1,7 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-bottom-width
 ---
 

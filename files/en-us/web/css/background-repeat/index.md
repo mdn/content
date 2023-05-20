@@ -1,12 +1,7 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-repeat
 ---
 
@@ -216,8 +211,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(starsolid.gif),
-    url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-image: url(starsolid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

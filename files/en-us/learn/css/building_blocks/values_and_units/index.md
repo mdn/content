@@ -1,19 +1,6 @@
 ---
 title: CSS values and units
 slug: Learn/CSS/Building_blocks/Values_and_units
-tags:
-  - Beginner
-  - CSS
-  - Function
-  - Image
-  - Learn
-  - Number
-  - Position
-  - color
-  - length
-  - percentage
-  - units
-  - values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
@@ -267,7 +254,7 @@ To start with, we set 16px as the font size on the `<html>` element.
 
 **To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
-However, if you change the `<html>` `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
+However, if you change the `<html>` element's `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
@@ -333,9 +320,9 @@ Let's rewrite our last example to use RGB colors:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 800)}}
 
-You can also use RGBA colors — these work in exactly the same way as RGB colors, and so you can use any RGB values. However, there is a fourth value that represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
+You can pass a fourth parameter to `rgb()`, which represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
 
-> **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you are specifying opaque.
+> **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
 
 In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
@@ -343,11 +330,11 @@ In the example below, we have added a background image to the containing block o
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> **Note:** As of CSS Colors Level 4, `rgba()` is an alias for `rgb()` and `hsla()` is an alias for `hsl()` (see below). In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way. So for example both `rgba()` and `rgb()` accept colors with and without alpha channel values. Try changing the above example's `rgba()` functions to `rgb()` and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.
+> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
 
 ### HSL and HSLA values
 
-Slightly less well-supported than RGB is the HSL color model (not supported on old versions of IE), which was implemented after much interest from designers. Instead of red, green, and blue values, the `hsl()` function accepts hue, saturation, and lightness values, which are used to distinguish between the 16.7 million colors, but in a different way:
+An alternative way to specify colors is the HSL color model. Instead of red, green, and blue values, the `hsl()` function accepts hue, saturation, and lightness values, which are used to distinguish between the 16.7 million colors, but in a different way:
 
 - **Hue**: The base shade of the color. This takes a value between 0 and 360, representing the angles around a {{glossary("color wheel")}}.
 - **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation
@@ -357,9 +344,11 @@ We can update the RGB example to use HSL colors like this:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
 
-Just as RGB has RGBA, HSL has an HSLA equivalent, which gives you the same ability to specify the alpha channel. I've demonstrated this below by changing my RGBA example to use HSLA colors.
+Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opacity:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
+
+> **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
 You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!
 
@@ -389,7 +378,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 
@@ -416,27 +405,3 @@ The key thing to remember is that each property has a defined list of allowed va
 In the next article, we'll take a look at how [items are sized](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) in CSS.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

@@ -1,18 +1,7 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - CSS Property
-  - Legibility
-  - Ligatures
-  - Precision
-  - Reference
-  - SVG
-  - Text
-  - Text Features
-  - Text Rendering
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-rendering
 ---
 
@@ -97,7 +86,7 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 
 {{ EmbedLiveSample('Automatic_application_of_optimizeLegibility') }}
 
-### optimizeSpeed vs optimizeLegibility
+### optimizeSpeed vs. optimizeLegibility
 
 This example shows the difference between the appearance of `optimizeSpeed` and `optimizeLegibility` (in your browser; other browsers may vary).
 

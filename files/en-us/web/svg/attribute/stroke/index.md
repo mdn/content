@@ -1,9 +1,7 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke
 ---
 

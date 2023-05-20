@@ -2,12 +2,8 @@
 title: CaretPosition
 slug: Web/API/CaretPosition
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CaretPosition
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.CaretPosition
 
 The `CaretPosition` interface represents the caret position, an indicator for the text insertion point. You can get a `CaretPosition` using the {{domxref("Document.caretPositionFromPoint()")}} method.
 
-## Properties
+## Instance properties
 
 _This interface doesn't inherit any properties._
 
@@ -24,7 +20,7 @@ _This interface doesn't inherit any properties._
 - {{domxref("CaretPosition.offset")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `long` representing the character offset in the caret position node.
 
-## Methods
+## Instance methods
 
 - {{domxref("CaretPosition.getClientRect")}} {{Experimental_Inline}}
   - : Returns the client rectangle for the caret range.

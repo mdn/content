@@ -2,19 +2,6 @@
 title: RTCIceCandidateStats
 slug: Web/API/RTCIceCandidateStats
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Dictionary
-  - ICE
-  - Ice Candidate
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidateStats
 ---
 
@@ -22,7 +9,7 @@ browser-compat: api.RTCIceCandidateStats
 
 The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics related to an {{domxref("RTCIceCandidate")}}.
 
-## Properties
+## Instance properties
 
 `RTCIceCandidateStats` is based upon the {{domxref("RTCStats")}} dictionary, so it includes those properties in addition to the ones below.
 

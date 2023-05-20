@@ -1,16 +1,9 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - CSS Selectors
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Selector
+page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.blank
 ---
 
@@ -24,8 +17,10 @@ The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:blank
+```css
+:blank {
+  /* ... */
+}
 ```
 
 ## Examples

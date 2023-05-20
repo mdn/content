@@ -1,12 +1,7 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
 
@@ -25,7 +20,7 @@ This property is a shorthand for the following CSS properties:
 - [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
 - [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
 - [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) {{Non-standard_Inline}}
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
 
 ## Syntax
 
@@ -115,7 +110,9 @@ The `text-decoration` property is specified as one or more space-separated value
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+#### Result
+
+{{EmbedLiveSample('Examples','auto','520')}}
 
 ## Specifications
 

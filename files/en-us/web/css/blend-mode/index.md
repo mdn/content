@@ -1,15 +1,7 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Blend modes
-  - CSS
-  - CSS Data Type
-  - Compositing
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
+page-type: css-type
 browser-compat: css.types.blend-mode
 ---
 
@@ -394,7 +386,7 @@ In the following example, we have a `<div>` with two background images set on it
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
       no-repeat center, linear-gradient(to bottom, blue, orange);
 }
 ```
@@ -402,10 +394,10 @@ div {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```
@@ -424,6 +416,7 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

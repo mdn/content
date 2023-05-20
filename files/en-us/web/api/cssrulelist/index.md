@@ -2,11 +2,6 @@
 title: CSSRuleList
 slug: Web/API/CSSRuleList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSRuleList
 ---
 
@@ -20,12 +15,14 @@ To edit the underlying rules returned by `CSSRule` objects, use {{domxref("CSSSt
 
 The interface has no constructor. An instance of `CSSRuleList` is returned by {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}.
 
-## Properties
+> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
+
+## Instance properties
 
 - {{domxref("CSSRuleList.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of {{domxref("CSSRule")}} objects in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("CSSRuleList.item()")}}
   - : Gets a single {{domxref("CSSRule")}}.
@@ -40,7 +37,7 @@ The number of rules in the list is printed to the console using {{domxref("CSSRu
 
 ```css
 body {
-  font-family: system-ui,-apple-system,sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   margin: 2em;
 }
 

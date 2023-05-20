@@ -1,20 +1,12 @@
 ---
-title: DocumentTimeline()
+title: "DocumentTimeline: DocumentTimeline() constructor"
+short-title: DocumentTimeline()
 slug: Web/API/DocumentTimeline/DocumentTimeline
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - Constructor
-  - DocumentTimeline
-  - DocumentTimeline()
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.DocumentTimeline.DocumentTimeline
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) creates a new instance of the {{domxref("DocumentTimeline")}} object associated with the active document of the current browsing context.
 
@@ -26,28 +18,41 @@ new DocumentTimeline(options)
 
 ### Parameters
 
-- `options`
+- `options` {{optional_inline}}
   - : An object specifying options for the new timeline. The following properties are available:
-    - `originTime`
-      - : A number that specifies the zero time for the `documentTimeline`
-        as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} time of the active document
-        for the current browsing context.
+    - `originTime` {{optional_inline}}
+      - : A `number` that specifies the zero time for the {{domxref("DocumentTimeline")}}
+        as a number of milliseconds relative to {{domxref("Performance.timeOrigin")}}.
+        Defaults to `0`.
 
 ## Examples
 
-We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
+### Origin time
+
+A {{domxref("DocumentTimeline")}} with an `originTime` of zero counts time
+starting from {{domxref("Performance.timeOrigin")}}. This is the same behavior
+as {{domxref("Document.timeline")}}.
 
 ```js
-let cats = document.querySelectorAll('.sharedTimelineCat');
-cats = Array.prototype.slice.call(cats);
+const timeline = new DocumentTimeline();
+console.log(timeline.currentTime === document.timeline.currentTime); // true
+```
 
-const sharedTimeline = new DocumentTimeline({ originTime: 500 });
+Setting a non-zero `originTime` will offset the {{domxref("DocumentTimeline")}}
+from {{domxref("Document.timeline")}} by that amount:
 
-cats.forEach((cat) => {
-  const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
-  const catAnimation = new Animation(catKeyframes, sharedTimeline);
-  catAnimation.play();
+```js
+const offsetTimeline = new DocumentTimeline({ originTime: 500 });
+console.log(document.timeline.currentTime - offsetTimeline.currentTime); // 500
+```
+
+A {{domxref("DocumentTimeline")}} relative to the current moment can be constructed with:
+
+```js
+const nowTimeline = new DocumentTimeline({
+  originTime: document.timeline.currentTime,
 });
+console.log(nowTimeline.currentTime); // 0
 ```
 
 ## Specifications

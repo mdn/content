@@ -1,13 +1,8 @@
 ---
-title: TrustedTypePolicyFactory.createPolicy()
+title: "TrustedTypePolicyFactory: createPolicy() method"
+short-title: createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createPolicy
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
 ---
 
@@ -37,11 +32,11 @@ createPolicy(policyName, policyOptions)
 
   - : User-defined functions for converting strings into trusted values.
 
-    - `CreateHTML(input[,args])`
+    - `createHTML(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
-    - `CreateScript(input[,args])`
+    - `createScript(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScript")}} object.
-    - `CreateScriptURL(input[,args])`
+    - `createScriptURL(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
 ### Return value
@@ -61,7 +56,7 @@ The below code creates a policy with the name `"myEscapePolicy"` with a function
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 ```
 
@@ -72,11 +67,13 @@ On a site where Trusted Types are enforced via a Content Security Policy with th
 The policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.
 
 ```js
-trustedTypes.createPolicy('default', {
+trustedTypes.createPolicy("default", {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
-    return `${s}?default-policy-used&type=${encodeURIComponent(type)}&sink=${encodeURIComponent(sink)}`;
-  }
+    return `${s}?default-policy-used&type=${encodeURIComponent(
+      type
+    )}&sink=${encodeURIComponent(sink)}`;
+  },
 });
 ```
 

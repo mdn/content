@@ -1,13 +1,7 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - CSS Fonts
-  - Reference
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-style
 ---
 
@@ -46,11 +40,7 @@ font-style: oblique 30deg 50deg;
 
 ## Formal syntax
 
-```
-normal               |
-italic               |
-oblique <angle>{0,2}
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -97,7 +87,6 @@ On the other hand, if a true italicized version of the font family exists, we ca
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}

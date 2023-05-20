@@ -2,13 +2,6 @@
 title: FileSystem
 slug: Web/API/FileSystem
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Interface
-  - Offline
-  - filesystem
 browser-compat: api.FileSystem
 ---
 
@@ -25,7 +18,7 @@ There are two ways to get access to a `FileSystem` object:
 1. You can directly ask for one representing a sandboxed file system created just for your web app directly by calling `window.requestFileSystem()`. If that call is successful, it executes a callback handler, which receives as a parameter a `FileSystem` object describing the file system.
 2. You can get it from a file system entry object, through its {{domxref("FileSystemEntry.filesystem", "filesystem")}} property.
 
-## Properties
+## Instance properties
 
 - {{domxref("FileSystem.name")}} {{ReadOnlyInline}}
   - : A string representing the file system's name. This name is unique among the entire list of exposed file systems.

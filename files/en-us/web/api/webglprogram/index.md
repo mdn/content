@@ -2,17 +2,6 @@
 title: WebGLProgram
 slug: Web/API/WebGLProgram
 page-type: web-api-interface
-tags:
-  - API
-  - GL
-  - GLSL
-  - Graphics
-  - Interface
-  - Program
-  - Reference
-  - Shader
-  - WebGL
-  - WebGLProgram
 browser-compat: api.WebGLProgram
 ---
 

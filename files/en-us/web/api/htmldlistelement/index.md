@@ -2,12 +2,6 @@
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLDListElement
 ---
 
@@ -17,14 +11,14 @@ The **`HTMLDListElement`** interface provides special properties (beyond those o
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}
   - : A boolean value indicating that spacing between list items should be reduced.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

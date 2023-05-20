@@ -1,14 +1,8 @@
 ---
-title: Element.scrollWidth
+title: "Element: scrollWidth property"
+short-title: scrollWidth
 slug: Web/API/Element/scrollWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.Element.scrollWidth
 ---
 

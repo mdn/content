@@ -2,23 +2,8 @@
 title: XRView
 slug: Web/API/XRView
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Eye
-  - Interface
-  - Orientation
-  - Position
-  - Reference
-  - VR
-  - View
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - camera
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView
 ---
 
@@ -26,7 +11,7 @@ browser-compat: api.XRView
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** interface describes a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRView.eye", "eye")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Which of the two eyes (`left`) or (`right`) for which this `XRView` represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be `none` if the `XRView` is presenting monoscopic data (such as a 2D image, a fullscreen view of text, or a close-up view of something that doesn't need to appear in 3D).
@@ -39,7 +24,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
 - {{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("XRRigidTransform")}} which describes the current position and orientation of the viewpoint in relation to the {{domxref("XRReferenceSpace")}} specified when {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} was called on the {{domxref("XRFrame")}} being rendered.
 
-## Methods
+## Instance methods
 
 - {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Requests that the user agent should set the requested viewport scale for this viewport to the requested value.
@@ -106,8 +91,13 @@ To programmatically move and/or rotate (often referred to as **teleporting**) an
 
 ```js
 function applyMouseMovement(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -128,11 +118,15 @@ function applyMouseMovement(refSpace) {
   // later; otherwise we probably wouldn't need to save mouseMatrix
   // at all.
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    }
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   // Create a new reference space that transforms the object to the new

@@ -1,14 +1,7 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - url()
+page-type: css-function
 browser-compat: css.types.url
 ---
 

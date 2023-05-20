@@ -2,9 +2,6 @@
 title: CharacterData
 slug: Web/API/CharacterData
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.CharacterData
 ---
 
@@ -14,7 +11,7 @@ The **`CharacterData`** abstract interface represents a {{domxref("Node")}} obje
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parents, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
@@ -27,7 +24,7 @@ _This interface also inherits properties from its parents, {{domxref("Node")}} a
 - {{domxref("CharacterData.previousElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _precedes_ this node, and is a sibling.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parents, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 

@@ -1,14 +1,8 @@
 ---
-title: PannerNode.positionZ
+title: "PannerNode: positionZ property"
+short-title: positionZ
 slug: Web/API/PannerNode/positionZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionZ
 browser-compat: api.PannerNode.positionZ
 ---
 
@@ -53,14 +47,13 @@ const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 
 panner.positionZ.setValueAtTime(1, context.currentTime + 1);
 panner.positionZ.setValueAtTime(-1, context.currentTime + 2);
 panner.positionZ.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

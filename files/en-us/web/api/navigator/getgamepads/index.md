@@ -1,14 +1,8 @@
 ---
-title: Navigator.getGamepads()
+title: "Navigator: getGamepads() method"
+short-title: getGamepads()
 slug: Web/API/Navigator/getGamepads
 page-type: web-api-instance-method
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Method
-  - Navigator
-  - Reference
 browser-compat: api.Navigator.getGamepads
 ---
 
@@ -19,8 +13,6 @@ The **`Navigator.getGamepads()`** method returns an array of
 
 Elements in the array may be `null` if a gamepad disconnects during a
 session, so that the remaining gamepads retain the same index.
-
-Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
 
 ## Syntax
 
@@ -36,12 +28,19 @@ None.
 
 An {{jsxref("Array")}} of {{domxref("Gamepad")}} objects, eventually empty.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log(`Gamepad connected at index ${gp.index}: ${gpid} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`);
+  console.log(
+    `Gamepad connected at index ${gp.index}: ${gp.id} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`
+  );
 });
 ```
 

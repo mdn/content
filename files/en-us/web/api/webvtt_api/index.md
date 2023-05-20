@@ -2,19 +2,6 @@
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
 page-type: web-api-overview
-tags:
-  - API
-  - Intermediate
-  - Media
-  - NeedsMarkupWork
-  - NeedsUpdate
-  - Reference
-  - Video
-  - Web Video Text Tracks
-  - WebVTT
-  - captions
-  - subtitles
-  - text tracks
 browser-compat:
   - api.VTTCue
   - api.TextTrack
@@ -287,7 +274,7 @@ Some time ago in a place rather distant....
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 Here are a few examples:
 
@@ -319,7 +306,7 @@ Here are a few examples:
 
 A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`) then the file cannot have overlapping timings.
 
 Each cue timing contains five components:
 
@@ -459,7 +446,7 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 
@@ -537,7 +524,7 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     <v Bob>text</v>
     ```
 
-## Methods and properties
+## Instance methods and properties
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
@@ -548,7 +535,7 @@ The methods which are available in the {{domxref("VTTCue")}} interface are:
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
 - A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}}) for a complete list.
+Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
 
 ### VTTRegion
 
@@ -615,7 +602,7 @@ Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {
 
 WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
+Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs [Firefox bug 1338030](https://bugzil.la/1338030) and [Firefox bug 1415805](https://bugzil.la/1415805)).
 
 ## See also
 

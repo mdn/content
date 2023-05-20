@@ -1,14 +1,7 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.visibility
 ---
 

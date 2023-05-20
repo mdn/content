@@ -1,16 +1,9 @@
 ---
-title: Getting Started
+title: Getting started
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - API
-  - Advanced
-  - JavaScript
-  - WebMechanics
-  - XMLHttpRequest
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Guide/AJAX")}}
 
 This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.
 
@@ -45,18 +38,18 @@ Note that there are no parentheses or parameters after the function name, becaus
 
 ```js
 httpRequest.onreadystatechange = () => {
-    // Process the server response here.
+  // Process the server response here.
 };
 ```
 
 Next, after declaring what happens when you receive the response, you need to actually make the request, by calling the `open()` and `send()` methods of the HTTP request object, like this:
 
 ```js
-httpRequest.open('GET', 'http://www.example.org/some.file', true);
+httpRequest.open("GET", "http://www.example.org/some.file", true);
 httpRequest.send();
 ```
 
-- The first parameter of the call to `open()` is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the [W3C specs](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
+- The first parameter of the call to `open()` is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the [specification](https://www.rfc-editor.org/rfc/rfc9110.html#name-methods).
 - The second parameter is the URL you're sending the request to. As a security feature, you cannot call URLs on 3rd-party domains by default. Be sure to use the exact domain name on all of your pages or you will get a "permission denied" error when you call `open()`. A common pitfall is accessing your site by `domain.tld`, but attempting to call pages with `www.domain.tld`. If you really need to send a request to another domain, see [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS).
 - The optional third parameter sets whether the request is asynchronous. If `true` (the default), JavaScript execution will continue and the user can interact with the page while the server response has yet to arrive. This is the first A in AJAX.
 
@@ -71,7 +64,10 @@ or other formats, like `multipart/form-data`, JSON, XML, and so on.
 Note that if you want to `POST` data, you may have to set the MIME type of the request. For example, use the following before calling `send()` for form data sent as a query string:
 
 ```js
-httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+httpRequest.setRequestHeader(
+  "Content-Type",
+  "application/x-www-form-urlencoded"
+);
 ```
 
 ## Step 2 – Handling the server response
@@ -86,9 +82,9 @@ What should this function do? First, the function needs to check the request's s
 
 ```js
 if (httpRequest.readyState === XMLHttpRequest.DONE) {
-    // Everything is good, the response was received.
+  // Everything is good, the response was received.
 } else {
-    // Not ready yet.
+  // Not ready yet.
 }
 ```
 
@@ -100,15 +96,15 @@ The full list of the `readyState` values is documented at [XMLHTTPRequest.readyS
 - 3 (interactive) or (**processing request**)
 - 4 (complete) or (**request finished and response is ready**)
 
-Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. The possible codes are listed at the [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
+Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
 
 ```js
 if (httpRequest.status === 200) {
-    // Perfect!
+  // Perfect!
 } else {
-    // There was a problem with the request.
-    // For example, the response may have a 404 (Not Found)
-    // or 500 (Internal Server Error) response code.
+  // There was a problem with the request.
+  // For example, the response may have a 404 (Not Found)
+  // or 500 (Internal Server Error) response code.
 }
 ```
 
@@ -165,8 +161,6 @@ In this example:
 - The request is made and then (`onreadystatechange`) the execution is passed to `alertContents()`;
 - `alertContents()` checks if the response was received and OK, then `alert()`s the contents of the `test.html` file.
 
-> **Note:** If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header `Content-Type: application/xml`, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.
-
 > **Note:** If you do not set header `Cache-Control: no-cache` the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see [bypassing the cache](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache))
 
 > **Note:** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en-US/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
@@ -180,7 +174,7 @@ function alertContents() {
       if (httpRequest.status === 200) {
         alert(httpRequest.responseText);
       } else {
-        alert('There was a problem with the request.');
+        alert("There was a problem with the request.");
       }
     }
   } catch (e) {
@@ -203,14 +197,14 @@ First off, let's create a valid XML document that we'll request later on. The do
 Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
 
 ```js
-httpRequest.open('GET', 'test.xml');
+httpRequest.open("GET", "test.xml");
 ```
 
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
 ```js
 const xmldoc = httpRequest.responseXML;
-const root_node = xmldoc.querySelector('root');
+const root_node = xmldoc.querySelector("root");
 alert(root_node.firstChild.data);
 ```
 
@@ -223,7 +217,8 @@ Finally, let's send some data to the server and receive a response. Our JavaScri
 First we'll add a text box to our HTML so the user can enter their name:
 
 ```html
-<label>Your name:
+<label>
+  Your name:
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
@@ -236,7 +231,7 @@ We'll also add a line to our event handler to get the user's data from the text 
 ```js
 document.getElementById("ajaxButton").onclick = () => {
   const userName = document.getElementById("ajaxTextbox").value;
-  makeRequest('test.php', userName);
+  makeRequest("test.php", userName);
 };
 ```
 
@@ -244,12 +239,14 @@ We need to modify `makeRequest()` to accept the user data and pass it along to t
 
 ```js
 function makeRequest(url, userName) {
-
   // …
 
   httpRequest.onreadystatechange = alertContents;
-  httpRequest.open('POST', url);
-  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  httpRequest.open("POST", url);
+  httpRequest.setRequestHeader(
+    "Content-Type",
+    "application/x-www-form-urlencoded"
+  );
   httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
 ```
@@ -269,7 +266,7 @@ function alertContents() {
       const response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
-      alert('There was a problem with the request.');
+      alert("There was a problem with the request.");
     }
   }
 }

@@ -1,16 +1,7 @@
 ---
 title: browserAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - openPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.openPopup
 ---
 
@@ -46,7 +37,7 @@ Open the popup when the user selects a context menu item:
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

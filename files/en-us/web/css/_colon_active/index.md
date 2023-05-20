@@ -1,13 +1,7 @@
 ---
 title: ":active"
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.active
 ---
 
@@ -25,8 +19,10 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 
 ## Syntax
 
-```
-:active
+```css
+:active {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -46,20 +42,25 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### CSS
 
 ```css
-a:link { /* Unvisited links */
+/* Unvisited links */
+a:link {
   color: blue;
 }
-a:visited { /* Visited links */
+/* Visited links */
+a:visited {
   color: purple;
 }
-a:hover { /* Hovered links */
+/* Hovered links */
+a:hover {
   background: yellow;
 }
-a:active { /* Active links */
+/* Active links */
+a:active {
   color: red;
 }
 
-p:active { /* Active paragraphs */
+/* Active paragraphs */
+p:active {
   background: #eee;
 }
 ```

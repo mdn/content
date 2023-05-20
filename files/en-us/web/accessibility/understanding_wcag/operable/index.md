@@ -1,21 +1,10 @@
 ---
 title: Operable
 slug: Web/Accessibility/Understanding_WCAG/Operable
-tags:
-  - Accessibility
-  - Focus
-  - Navigation
-  - Principle 2
-  - Timing
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - headings
-  - keyboard
-  - keyboard trap
-  - labels
-  - operable
-  - seizures
+page-type: guide
 ---
+
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
@@ -207,7 +196,7 @@ This guideline covers situations in which functionality may have a time limit. F
         <p>
           If there is a timeout (caused by user inactivity) warn users at the
           start of a process so they will not be surprised that a timeout exists
-          (or only allow the timeout to occur after 20 hours of inactivity.
+          (or only allow the timeout to occur after 20 hours of inactivity).
         </p>
       </td>
       <td>
@@ -347,7 +336,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           You should provide at least two general navigation mechanisms to find
-          pages on your web site, for example navigation menu, breadcrumb trail,
+          pages on your website, for example navigation menu, breadcrumb trail,
           site search, site map, list of related links, etc.
         </p>
         <p>
@@ -476,7 +465,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 
 > **Note:** Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
 
-## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.
+## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard
 
 The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input devices).
 

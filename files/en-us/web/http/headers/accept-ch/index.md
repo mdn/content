@@ -1,12 +1,7 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
-tags:
-  - Accept-CH
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
+page-type: http-header
 browser-compat: http.headers.Accept-CH
 ---
 

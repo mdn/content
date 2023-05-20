@@ -1,14 +1,7 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.split
 ---
 
@@ -21,15 +14,14 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 ## Syntax
 
 ```js-nolint
-split()
 split(separator)
 split(separator, limit)
 ```
 
 ### Parameters
 
-- `separator` {{optional_inline}}
-  - : The pattern describing where each split should occur. Can be a string or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. If undefined, the original target string is returned wrapped in an array.
+- `separator`
+  - : The pattern describing where each split should occur. Can be `undefined`, a string, or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. Omitting `separator` or passing `undefined` causes `split()` to return an array with the calling string as a single element. All values that are not `undefined` or objects with a `@@split` method are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
 - `limit` {{optional_inline}}
   - : A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified `separator`, but stops when `limit` entries have been placed in the array. Any leftover text is not included in the array at all.
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
@@ -47,9 +39,9 @@ If `separator` is an empty string (`""`), `str` is converted to an array of each
 
 > **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator`.
 
-> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
+> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (code points), but by UTF-16 code units. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
 
-If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode codepoints depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
+If `separator` is a regexp that matches empty strings, whether the match is split by UTF-16 code units or Unicode code points depends on if the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set.
 
 ```js
 "😄😄".split(/(?:)/); // [ "\ud83d", "\ude04", "\ud83d", "\ude04" ]
@@ -66,15 +58,13 @@ Any other value will be coerced to a string before being used as separator.
 
 ### Using split()
 
-When the string is empty and no separator is specified, `split()` returns an array containing one empty
-string, rather than an empty array. If the string and separator are both empty
-strings, an empty array is returned.
+When the string is empty and a non-empty separator is specified, `split()` returns `[""]`. If the string and separator are both empty strings, an empty array is returned.
 
 ```js
-const emptyString = '';
+const emptyString = "";
 
-// string is empty and no separator is specified
-console.log(emptyString.split());
+// string is empty and separator is non-empty
+console.log(emptyString.split("a"));
 // [""]
 
 // string and separator are both empty strings
@@ -89,27 +79,32 @@ number of elements in the array, and the individual array elements.
 
 ```js
 function splitString(stringToSplit, separator) {
-  const arrayOfStrings = stringToSplit.split(separator)
+  const arrayOfStrings = stringToSplit.split(separator);
 
-  console.log('The original string is: ', stringToSplit)
-  console.log('The separator is: ', separator)
-  console.log('The array has ', arrayOfStrings.length, ' elements: ', arrayOfStrings.join(' / '))
+  console.log("The original string is:", stringToSplit);
+  console.log("The separator is:", separator);
+  console.log(
+    "The array has",
+    arrayOfStrings.length,
+    "elements:",
+    arrayOfStrings.join(" / "),
+  );
 }
 
-const tempestString = 'Oh brave new world that has such people in it.'
-const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'
+const tempestString = "Oh brave new world that has such people in it.";
+const monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 
-const space = ' '
-const comma = ','
+const space = " ";
+const comma = ",";
 
-splitString(tempestString, space)
-splitString(tempestString)
-splitString(monthString, comma)
+splitString(tempestString, space);
+splitString(tempestString);
+splitString(monthString, comma);
 ```
 
 This example produces the following output:
 
-```plain
+```
 The original string is: "Oh brave new world that has such people in it."
 The separator is: " "
 The array has 10 elements: Oh / brave / new / world / that / has / such / people / in / it.
@@ -131,20 +126,20 @@ the semicolon from the string. `nameList` is the array returned as a result
 of `split()`.
 
 ```js
-const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+const names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
 
-console.log(names)
+console.log(names);
 
-const re = /\s*(?:;|$)\s*/
-const nameList = names.split(re)
+const re = /\s*(?:;|$)\s*/;
+const nameList = names.split(re);
 
-console.log(nameList)
+console.log(nameList);
 ```
 
 This logs two lines; the first line logs the original string, and the second line logs
 the resulting array.
 
-```plain
+```
 Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 ```
@@ -155,37 +150,26 @@ In the following example, `split()` looks for spaces in a string and returns
 the first 3 splits that it finds.
 
 ```js
-const myString = 'Hello World. How are you doing?'
-const splits = myString.split(' ', 3)
+const myString = "Hello World. How are you doing?";
+const splits = myString.split(" ", 3);
 
-console.log(splits)
-```
-
-This script displays the following:
-
-```js
-["Hello", "World.", "How"]
+console.log(splits); // [ "Hello", "World.", "How" ]
 ```
 
 ### Splitting with a `RegExp` to include parts of the separator in the result
 
 If `separator` is a regular expression that contains capturing
-parentheses `(` `)`, matched results are included in the array.
+parentheses `( )`, matched results are included in the array.
 
 ```js
-const myString = 'Hello 1 word. Sentence number 2.'
-const splits = myString.split(/(\d)/)
+const myString = "Hello 1 word. Sentence number 2.";
+const splits = myString.split(/(\d)/);
 
-console.log(splits)
+console.log(splits);
+// [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-This script displays the following:
-
-```js
-[ "Hello ", "1", " word. Sentence number ", "2", "." ]
-```
-
-> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
+> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) for digits between 0 and 9.
 
 ### Using a custom splitter
 
@@ -210,11 +194,11 @@ const splitByNumber = {
       num++;
     }
     return result;
-  }
+  },
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
 
 The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
@@ -231,8 +215,8 @@ const splitCommands = {
       brightness: {
         current: 2,
         min: 1,
-        max: 3
-      }
+        max: 3,
+      },
     };
     let pos = 0;
     let matchPos = str.indexOf(DELIMITER, pos);
@@ -288,11 +272,12 @@ const splitCommands = {
     }
 
     return results;
-  }
+  },
 };
 
-const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
-console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
+const commands =
+  "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
+console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", "brightness down"]
 ```
 
 ## Specifications
@@ -310,4 +295,4 @@ console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

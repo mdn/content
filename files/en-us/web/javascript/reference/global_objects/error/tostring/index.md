@@ -1,11 +1,7 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Error.toString
 ---
 
@@ -27,28 +23,26 @@ A string representing the specified {{jsxref("Error")}} object.
 ## Description
 
 The {{jsxref("Error")}} object overrides the {{jsxref("Object.prototype.toString()")}}
-method inherited by all objects. Its semantics are as follows (assuming
-{{jsxref("Object")}} and {{jsxref("String")}} have their original values):
+method inherited by all objects. Its semantics are as follows:
 
 ```js
 Error.prototype.toString = function () {
-  if (typeof this !== 'object' || typeof this !== 'function') {
+  if (
+    this === null ||
+    (typeof this !== "object" && typeof this !== "function")
+  ) {
     throw new TypeError();
   }
-
   let name = this.name;
-  name = name === undefined ? 'Error' : String(name);
-
+  name = name === undefined ? "Error" : `${name}`;
   let msg = this.message;
-  msg = msg === undefined ? '' : String(msg);
-
-  if (name === '') {
+  msg = msg === undefined ? "" : `${msg}`;
+  if (name === "") {
     return msg;
   }
-  if (msg === '') {
+  if (msg === "") {
     return name;
   }
-
   return `${name}: ${msg}`;
 };
 ```
@@ -58,26 +52,26 @@ Error.prototype.toString = function () {
 ### Using toString()
 
 ```js
-const e1 = new Error('fatal error');
-console.log(e1.toString()); // 'Error: fatal error'
+const e1 = new Error("fatal error");
+console.log(e1.toString()); // "Error: fatal error"
 
-const e2 = new Error('fatal error');
+const e2 = new Error("fatal error");
 e2.name = undefined;
-console.log(e2.toString()); // 'Error: fatal error'
+console.log(e2.toString()); // "Error: fatal error"
 
-const e3 = new Error('fatal error');
-e3.name = '';
-console.log(e3.toString()); // 'fatal error'
+const e3 = new Error("fatal error");
+e3.name = "";
+console.log(e3.toString()); // "fatal error"
 
-const e4 = new Error('fatal error');
-e4.name = '';
+const e4 = new Error("fatal error");
+e4.name = "";
 e4.message = undefined;
-console.log(e4.toString()); // ''
+console.log(e4.toString()); // ""
 
-const e5 = new Error('fatal error');
-e5.name = 'hello';
+const e5 = new Error("fatal error");
+e5.name = "hello";
 e5.message = undefined;
-console.log(e5.toString()); // 'hello'
+console.log(e5.toString()); // "hello"
 ```
 
 ## Specifications

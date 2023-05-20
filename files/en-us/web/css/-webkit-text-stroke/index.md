@@ -1,12 +1,7 @@
 ---
-title: '-webkit-text-stroke'
+title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - WebKit
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.-webkit-text-stroke
 ---
 
@@ -22,10 +17,9 @@ text-stroke: 4px navy;
 /* Global values */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
+-webkit-text-stroke: revert;
+-webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
-text-stroke: inherit;
-text-stroke: initial;
-text-stroke: unset;
 ```
 
 ## Constituent properties

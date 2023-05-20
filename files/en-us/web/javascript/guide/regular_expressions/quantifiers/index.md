@@ -1,13 +1,7 @@
 ---
 title: Quantifiers
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - quantifiers
-  - regex
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
+page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -18,7 +12,7 @@ Quantifiers indicate numbers of characters or expressions to match.
 
 ## Types
 
-> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
   <thead>
@@ -160,13 +154,13 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```js
 const singleLetterWord = /\b\w\b/g;
 const notSoLongWord = /\b\w{2,6}\b/g;
-const loooongWord = /\b\w{13,}\b/g;
+const longWord = /\b\w{13,}\b/g;
 
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(longWord)); // ["multiplication"]
 ```
 
 ### Optional character
@@ -208,12 +202,11 @@ console.log(text.match(nonGreedyRegexp));
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [Quantifiers in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-quantifier)

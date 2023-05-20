@@ -1,15 +1,10 @@
 ---
-title: Window.showSaveFilePicker()
+title: "Window: showSaveFilePicker() method"
+short-title: showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Window.showSaveFilePicker
 ---
 
@@ -60,6 +55,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 The following function shows a file picker, with text files highlighted for selection.
@@ -67,10 +66,12 @@ The following function shows a file picker, with text files highlighted for sele
 ```js
 async function getNewFileHandle() {
   const opts = {
-    types: [{
-      description: 'Text file',
-      accept: {'text/plain': ['.txt']},
-    }],
+    types: [
+      {
+        description: "Text file",
+        accept: { "text/plain": [".txt"] },
+      },
+    ],
   };
   return await window.showSaveFilePicker(opts);
 }

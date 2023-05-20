@@ -2,12 +2,6 @@
 title: SVGScriptElement
 slug: Web/API/SVGScriptElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGScriptElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("script")}} element.
@@ -26,7 +20,7 @@ The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script
 - {{domxref("SVGScriptElement.crossOrigin")}} {{ReadOnlyInline}}
   - : A string corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("script")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 

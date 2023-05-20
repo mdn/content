@@ -1,13 +1,8 @@
 ---
-title: Navigator.canShare()
+title: "Navigator: canShare() method"
+short-title: canShare()
 slug: Web/API/Navigator/canShare
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Navigator
-  - Reference
-  - Share
 browser-compat: api.Navigator.canShare
 ---
 
@@ -22,7 +17,7 @@ The method returns `false` if the data cannot be _validated_. Reasons the data m
 - Files are specified but the implementation does not support file sharing.
 - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy.
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
 The **`canShare()`** method will return `false` if the permission is supported but has not been granted.
 
 ## Syntax
@@ -71,20 +66,20 @@ The HTML just creates a paragraph in which to display the result of the test.
 
 ```js
 let shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const resultPara = document.querySelector('.result');
+const resultPara = document.querySelector(".result");
 
 if (!navigator.canShare) {
-  resultPara.textContent = 'navigator.canShare() not supported.';
-}
-else if (navigator.canShare(shareData)) {
-  resultPara.textContent = 'navigator.canShare() supported. We can use navigator.share() to send the data.';
+  resultPara.textContent = "navigator.canShare() not supported.";
+} else if (navigator.canShare(shareData)) {
+  resultPara.textContent =
+    "navigator.canShare() supported. We can use navigator.share() to send the data.";
 } else {
-  resultPara.textContent = 'Specified data cannot be shared.';
+  resultPara.textContent = "Specified data cannot be shared.";
 }
 ```
 
@@ -103,15 +98,15 @@ The code below demonstrates verifying that a data property is supported.
 
 ```js
 // Feature that may not be supported
-let testShare = { someNewProperty: 'Data to share' }
+let testShare = { someNewProperty: "Data to share" };
 
 // Complex data that uses new key
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-  someNewProperty: 'Data to share'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+  someNewProperty: "Data to share",
+};
 
 // Test that the key is valid and supported before sharing
 if (navigator.canShare(testShare)) {

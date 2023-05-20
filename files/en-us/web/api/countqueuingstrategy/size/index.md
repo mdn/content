@@ -1,14 +1,8 @@
 ---
-title: CountQueuingStrategy.size()
+title: "CountQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/CountQueuingStrategy/size
 page-type: web-api-instance-method
-tags:
-  - API
-  - CountQueuingStrategy
-  - Method
-  - Reference
-  - Streams
-  - size
 browser-compat: api.CountQueuingStrategy.size
 ---
 
@@ -37,18 +31,21 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 const size = queuingStrategy.size();
 ```
@@ -60,3 +57,7 @@ const size = queuingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor

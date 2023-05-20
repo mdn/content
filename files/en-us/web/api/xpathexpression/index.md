@@ -2,16 +2,6 @@
 title: XPathExpression
 slug: Web/API/XPathExpression
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathExpression
 browser-compat: api.XPathExpression
 ---
 
@@ -23,7 +13,7 @@ This is useful when an expression will be reused in an application, because it i
 
 Objects of this type are created by calling {{domxref("XPathEvaluator.createExpression", "XPathEvaluator.createExpression()")}}.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("XPathExpression.evaluate()")}}
   - : Evaluates the XPath expression on the given node or document.
@@ -45,7 +35,10 @@ The following example shows the use of the `XPathExpression` interface.
 const xpath = "//div";
 const evaluator = new XPathEvaluator();
 const expression = evaluator.createExpression(xpath);
-const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

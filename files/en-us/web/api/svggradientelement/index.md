@@ -2,12 +2,6 @@
 title: SVGGradientElement
 slug: Web/API/SVGGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGradientElement
 ---
 
@@ -53,7 +47,7 @@ The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinear
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -66,7 +60,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGGradientElement.spreadMethod")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

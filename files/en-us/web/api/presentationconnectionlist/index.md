@@ -2,14 +2,8 @@
 title: PresentationConnectionList
 slug: Web/API/PresentationConnectionList
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Presentation
-  - Presentation API
-  - PresentationConnectionList
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationConnectionList
 ---
 
@@ -19,7 +13,7 @@ browser-compat: api.PresentationConnectionList
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref('PresentationConnectionList.connections')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the [set of presentation controllers](https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers).

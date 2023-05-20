@@ -1,12 +1,7 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variant-alternates
 ---
 
@@ -83,34 +78,38 @@ This property may take one of two forms:
 #### HTML
 
 ```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
 #### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
+@font-face {
+  font-family: MonteCarlo;
+  src: url(MonteCarlo-Regular.ttf);
+}
+
+@font-feature-values "MonteCarlo" {
   @swash {
     fancy: 1;
   }
 }
 
 p {
+  font-family: "MonteCarlo";
   font-size: 1.5rem;
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
+  font-feature-settings: "swsh" 1;
   font-variant-alternates: swash(fancy);
 }
 ```
 
-#### Result
-
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
-
-{{ EmbedLiveSample('Enabling swash glyphs') }}
+> **Note:** For this example to work you need to load the MonteCarlo font which is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL). Download at <https://github.com/googlefonts/monte-carlo>.
+>
+> More fonts are available in the [Google Font corpus](https://github.com/google/fonts). However, note that fonts loaded from Google Fonts directly (for example, using `@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");`) won't work. Google Fonts hosted fonts seem to strip the swash feature.
 
 ## Specifications
 
@@ -120,11 +119,13 @@ p {
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("@font-feature-values")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
+- [`@font-feature-values`](/en-US/docs/Web/CSS/@font-feature-values)

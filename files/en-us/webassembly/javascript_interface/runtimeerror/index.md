@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.RuntimeError
 slug: WebAssembly/JavaScript_interface/RuntimeError
-tags:
-  - API
-  - Class
-  - JavaScript
-  - Reference
-  - RuntimeError
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.RuntimeError
 ---
 
@@ -50,15 +43,15 @@ The following snippet creates a new `RuntimeError` instance, and logs its detail
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message);                             // "Hello"
-  console.log(e.name);                                // "RuntimeError"
-  console.log(e.fileName);                            // "someFile"
-  console.log(e.lineNumber);                          // 10
-  console.log(e.columnNumber);                        // 0
-  console.log(e.stack);                               // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

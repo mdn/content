@@ -1,19 +1,13 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.required
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
-The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.
+The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute set on it.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
 
@@ -23,8 +17,10 @@ This pseudo-class is useful for highlighting fields that must have valid data be
 
 ## Syntax
 
-```
-:required
+```css
+:required {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -77,7 +73,7 @@ input:required:invalid {
 
 ## Accessibility concerns
 
-Mandatory {{htmlelement("input")}}s should have the {{ htmlattrxref("required", "input") }} attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
+Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
 
 If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 

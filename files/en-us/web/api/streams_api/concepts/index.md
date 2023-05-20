@@ -2,13 +2,9 @@
 title: Streams API concepts
 slug: Web/API/Streams_API/Concepts
 page-type: guide
-tags:
-  - API
-  - Streams
-  - concepts
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
 
@@ -23,7 +19,7 @@ There are two types of underlying source:
 
 The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
 
-![](readable_streams.png)
+![Readable streams data flow](readable_streams.png)
 
 The chunks placed in a stream are said to be **enqueued** — this means they are waiting in a queue ready to be read. An **internal queue** keeps track of the chunks that have not yet been read (see the Internal queues and queuing strategies section below).
 
@@ -45,7 +41,7 @@ In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} meth
 
 You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
-![](tee.png)
+![Teeing data flow](tee.png)
 
 ## Writable streams
 

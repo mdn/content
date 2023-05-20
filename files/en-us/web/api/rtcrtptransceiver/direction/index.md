@@ -1,18 +1,8 @@
 ---
-title: RTCRtpTransceiver.direction
+title: "RTCRtpTransceiver: direction property"
+short-title: direction
 slug: Web/API/RTCRtpTransceiver/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceiver
-  - Transceiver Direction
-  - WebRTC
-  - direction
 browser-compat: api.RTCRtpTransceiver.direction
 ---
 

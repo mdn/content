@@ -1,17 +1,6 @@
 ---
 title: WebAssembly Concepts
 slug: WebAssembly/Concepts
-tags:
-  - C
-  - C++
-  - Emscripten
-  - JavaScript
-  - WebAssembly
-  - AssemblyScript
-  - concepts
-  - rust
-  - text format
-  - web platform
 ---
 
 {{WebAssemblySidebar}}
@@ -97,7 +86,7 @@ These are great resources for people who are trying to figure out where to start
 
 The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
-![](emscripten-diagram.png)
+![Diagram: Emscripten compiles C/C++ source code and into a WASM module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
 In a nutshell, the process works as follows:
 
@@ -129,7 +118,7 @@ It is also possible to write Rust code and compile over to WebAssembly, thanks t
 
 ### Using AssemblyScript
 
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code intellisense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 

@@ -1,15 +1,7 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - dimensions
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.width
 ---
 
@@ -48,7 +40,7 @@ width: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the width as an absolute value.
+  - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Defines the width as a percentage of the containing block's width.
 - `auto`
@@ -137,8 +129,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }

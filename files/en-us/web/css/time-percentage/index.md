@@ -1,14 +1,7 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - time-percentage
-  - units
-  - values
+page-type: css-type
 browser-compat: css.types.time-percentage
 ---
 

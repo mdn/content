@@ -2,13 +2,6 @@
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController
 ---
 
@@ -39,14 +32,14 @@ Note that even though the controller is primarily used by the underlying byte so
 
 None. `ReadableByteStreamController` instances are automatically created if an `underlyingSource` with the property `type="bytes"` is passed to the [`ReadableStream()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableByteStreamController.byobRequest")}} {{ReadOnlyInline}}
   - : Returns the current BYOB pull request, or `null` if there no outstanding request.
 - {{domxref("ReadableByteStreamController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableByteStreamController.close()")}}
   - : Closes the associated stream.
@@ -71,4 +64,8 @@ The example in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Usi
 
 ## See also
 
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

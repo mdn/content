@@ -2,18 +2,6 @@
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Device Info
-  - Media Devices
-  - MediaDevicesInfo
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
 browser-compat: api.MediaDeviceInfo
 ---
 
@@ -23,7 +11,7 @@ The **`MediaDeviceInfo`** interface contains information that describes a single
 
 The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of `MediaDeviceInfo` objects, one per media device.
 
-## Properties
+## Instance properties
 
 - {{domxref("MediaDeviceInfo.deviceId")}} {{ReadOnlyInline}}
   - : Returns a string that is an identifier for the represented device that is persisted across sessions. It is un-guessable by other applications and unique to the origin of the calling application. It is reset when the user clears cookies (for Private Browsing, a different identifier is used that is not persisted across sessions).
@@ -34,11 +22,12 @@ The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices
 - {{domxref("MediaDeviceInfo.label")}} {{ReadOnlyInline}}
   - : Returns a string describing this device (for example "External USB Webcam").
 
-> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.
+> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) mechanism to identify a user.
 
-## Methods
+## Instance methods
 
-None.
+- {{domxref("MediaDeviceInfo.toJSON()")}}
+  - : Returns a JSON representation of the `MediaDeviceInfo` object.
 
 ## Example
 
@@ -49,7 +38,8 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
-  navigator.mediaDevices.enumerateDevices()
+  navigator.mediaDevices
+    .enumerateDevices()
     .then((devices) => {
       devices.forEach((device) => {
         console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);

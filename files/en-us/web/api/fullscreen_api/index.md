@@ -2,27 +2,12 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Full
-  - fullscreen
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - Intermediate
-  - Overview
-  - Reference
-  - View
-  - fullscreen
-  - screen
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenElement
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -37,21 +22,21 @@ See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API
 
 _The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide fullscreen functionality. These are listed in the following sections._
 
-## Methods
+## Instance methods
 
 The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces to allow turning off and on fullscreen mode.
 
-### Methods on the Document interface
+### Instance methods on the Document interface
 
 - {{DOMxRef("Document.exitFullscreen()")}}
   - : Requests that the {{Glossary("user agent")}} switch from fullscreen mode back to windowed mode. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been completely shut off.
 
-### Methods on the Element interface
+### Instance methods on the Element interface
 
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asks the user agent to place the specified element (and, by extension, its descendants) into fullscreen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a {{jsxref("Promise")}} which is resolved once fullscreen mode has been activated.
 
-## Properties
+## Instance properties
 
 _The {{DOMxRef("Document")}} interface provides properties that can be used to determine if fullscreen mode is supported and available, and if fullscreen mode is currently active, which element is using the screen._
 
@@ -79,9 +64,7 @@ _The Fullscreen API defines two events which can be used to detect when fullscre
 
 ## Controlling access
 
-The availability of fullscreen mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allow-list value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
+The availability of fullscreen mode can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allowlist value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Usage notes
 
@@ -102,11 +85,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false
+);
 ```
 
 #### Toggling fullscreen mode
@@ -137,10 +124,9 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## See also
 
-- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
 - {{DOMxRef("Element.requestFullscreen()")}}
 - {{DOMxRef("Document.exitFullscreen()")}}
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

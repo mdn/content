@@ -1,12 +1,7 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-align-last
 ---
 

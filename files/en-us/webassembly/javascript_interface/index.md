@@ -1,13 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly
 ---
 
@@ -70,8 +63,9 @@ The following example (see our [instantiate-streaming.html](https://github.com/m
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-  .then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 The `ResultObject`'s `.instance` property is then accessed, and the contained exported function invoked.

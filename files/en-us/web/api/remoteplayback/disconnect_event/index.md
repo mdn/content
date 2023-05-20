@@ -1,13 +1,8 @@
 ---
-title: 'RemotePlayback: disconnect event'
+title: "RemotePlayback: disconnect event"
+short-title: disconnect
 slug: Web/API/RemotePlayback/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - ondisconnect
-  - RemotePlayback
 browser-compat: api.RemotePlayback.disconnect_event
 ---
 
@@ -20,9 +15,9 @@ The **`disconnect`** event of the {{domxref("RemotePlayback")}} interface fires 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', (event) => { });
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { };
+ondisconnect = (event) => {};
 ```
 
 ## Event type
@@ -36,7 +31,7 @@ In the following example the value of {{domxref("RemotePlayback.state")}} is pri
 ```js
 RemotePlayback.disconnect = () => {
   console.log(RemotePlayback.state);
-}
+};
 ```
 
 ## Specifications

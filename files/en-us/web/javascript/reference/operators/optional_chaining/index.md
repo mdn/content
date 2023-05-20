@@ -1,19 +1,13 @@
 ---
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - Chaining
-  - JavaScript
-  - Language feature
-  - Operator
-  - Optional chaining
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
 ---
 
 {{JSSidebar("Operators")}}
 
-The **optional chaining** operator (**`?.`**) accesses an object's property or calls a function. If the object is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it returns {{jsxref("undefined")}} instead of throwing an error.
+The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
 {{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
 
@@ -99,11 +93,11 @@ However, if there is a property with such a name which is not a function, using 
 > you have to use `?.` at this position as
 > well: `someInterface?.customMethod?.()`.
 
-`eval?.()` is the shortest way to enter _indirect eval_ mode. For more information, see the [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#description) reference page.
+`eval?.()` is the shortest way to enter [_indirect eval_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval) mode.
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation), which allows passing an expression as the property name:
+You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
 const nestedProp = obj?.["prop" + "Name"];
@@ -244,7 +238,7 @@ const customerName = customer.name?.getName?.(); // Method does not exist, custo
 
 ### Combining with the nullish coalescing operator
 
-The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) may be used after optional chaining in order to build a default value when none was found:
+The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) may be used after optional chaining in order to build a default value when none was found:
 
 ```js
 function printCustomerCity(customer) {
@@ -272,4 +266,4 @@ printCustomerCity({
 
 ## See also
 
-- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

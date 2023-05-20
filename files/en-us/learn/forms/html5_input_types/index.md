@@ -1,20 +1,11 @@
 ---
 title: The HTML5 input types
 slug: Learn/Forms/HTML5_input_types
-tags:
-  - Beginner
-  - Controls
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Web
-  - Widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we looked at the {{htmlelement("input")}} element, covering the original values of the `type` attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.
+In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we looked at the {{htmlelement("input")}} element, covering the original values of the `type` attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow the collection of specific types of data.
 
 <table>
   <tbody>
@@ -41,15 +32,15 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
 
 Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-## E-mail address field
+## Email address field
 
-This type of field is set using the value `email` for the {{htmlattrxref("type","input")}} attribute:
+This type of field is set using the value `email` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="email" id="email" name="email" />
 ```
 
-When this {{htmlattrxref("type","input")}} is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
+When this [`type`](/en-US/docs/Web/HTML/Element/input#type) is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -59,7 +50,7 @@ You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attr
 <input type="email" id="email" name="email" multiple />
 ```
 
-On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
+On some devices — notably, touch devices with dynamic keyboards like smartphones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
 
 ![Firefox for Android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
@@ -73,13 +64,13 @@ As you can see above, `email` — along with other newer `input` types — provi
 
 But it _should not be considered_ an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the _server-side_ as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
 
-Note that `a@b` is a valid email address according to the default provided constraints. This is because the `email` input type allows intranet email addresses by default. To implement different validation behavior, you can use the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, and you can also customize the error messages; we'll talk how to use these features in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article later on.
+Note that `a@b` is a valid email address according to the default provided constraints. This is because the `email` input type allows intranet email addresses by default. To implement different validation behavior, you can use the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, and you can also customize the error messages; we'll talk about how to use these features in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article later on.
 
 > **Note:** If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return `true`.
 
 ## Search field
 
-Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the {{htmlattrxref("type","input")}} attribute:
+Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="search" id="search" name="search" />
@@ -95,7 +86,7 @@ Another worth-noting feature is that the values of a `search` field can be autom
 
 ## Phone number field
 
-A special field for filling in phone numbers can be created using `tel` as the value of the {{htmlattrxref("type","input")}} attribute:
+A special field for filling in phone numbers can be created using `tel` as the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="tel" id="tel" name="tel" />
@@ -113,7 +104,7 @@ As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern
 
 ## URL field
 
-A special type of field for entering URLs can be created using the value `url` for the {{htmlattrxref("type","input")}} attribute:
+A special type of field for entering URLs can be created using the value `url` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
 
 ```html
 <input type="url" id="url" name="url" />
@@ -129,13 +120,13 @@ See below for an example (taken on Firefox for Android):
 
 ## Numeric field
 
-Controls for entering numbers can be created with an {{HTMLElement("input")}} {{htmlattrxref("type","input")}} of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
+Controls for entering numbers can be created with an {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Element/input#type) of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
 
 The following screenshot (from Firefox for Android) provides an example:
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-With the `number` input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.
+With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes.
 
 You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer. To allow float numbers, specify [`step="any"`](/en-US/docs/Web/HTML/Attributes/step). If omitted, the `step` value defaults to `1`, meaning only whole numbers are valid.
 
@@ -155,17 +146,17 @@ The `number` input type makes sense when the range of valid values is limited, f
 
 ## Slider controls
 
-Another way to pick a number is to use a **slider**. You see these quite often on sites like house buying sites where you want to set a maximum property price to filter by. Let's look at a live example to illustrate this:
+Another way to pick a number is to use a **slider**. You see these quite often on sites like house-buying sites where you want to set a maximum property price to filter by. Let's look at a live example to illustrate this:
 
 {{EmbedGHLiveSample("learning-area/html/forms/range-example/index.html", '100%', 200)}}
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 
-A slider is created using the {{HTMLElement("input")}} with its {{htmlattrxref("type","input")}} attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+A slider is created using the {{HTMLElement("input")}} with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
-It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
+It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum, and increment values, respectively.
 
-Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:
+Let's look at the code behind the above example, so you can see how it's done. First of all, the basic HTML:
 
 ```html
 <label for="price">Choose a maximum house price: </label>
@@ -180,7 +171,7 @@ Let's look at the code behind the above example, so you can see how its done. Fi
 <output class="price-output" for="price"></output>
 ```
 
-This example creates a slider whose value may range between `50000` and `500000`, which increments/decrements by 100 at a time. We've given it default value of `250000`, using the `value` attribute.
+This example creates a slider whose value may range between `50000` and `500000`, which increments/decrements by 100 at a time. We've given it a default value of `250000`, using the `value` attribute.
 
 One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value. You could display an input value or the output of a calculation inside any element, but `<output>` is special — like `<label>` — and it can take a `for` attribute that allows you to associate it with the element or elements that the output value came from.
 
@@ -203,11 +194,11 @@ Here we store references to the `range` input and the `output` in two variables.
 
 ## Date and time pickers
 
-Gathering date and time values has traditionally been a nightmare for web developers. For good user experience, it is important to provide a calendar selection UI, enabling users to select dates without necessitating context switching to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways, for example: 1999/12/31, 23:59 or 12/31/99T11:59PM.
+Gathering date and time values has traditionally been a nightmare for web developers. For a good user experience, it is important to provide a calendar selection UI, enabling users to select dates without necessitating context switching to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways, for example: 1999/12/31, 23:59 or 12/31/99T11:59PM.
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the {{htmlattrxref("type","input")}} attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
+A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -266,17 +257,15 @@ All date and time controls can be constrained using the [`min`](/en-US/docs/Web/
 
 Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, and so on.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `color`:
+A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
 
 ```html
 <input type="color" name="color" id="color" />
 ```
 
-When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
+Clicking a color control generally displays the operating system's default color-picking functionality for you to choose.
 
-![Firefox for Android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
-
-And here is a live example for you to try out:
+Here is a live example for you to try out:
 
 {{EmbedGHLiveSample("learning-area/html/forms/color-example/index.html", '100%', 200)}}
 
@@ -291,19 +280,6 @@ You've reached the end of this article, but can you remember the most important 
 That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped together due to their very specific behaviors, but which are still essential to know about. We cover those in the next article.
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

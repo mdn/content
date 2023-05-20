@@ -1,12 +1,8 @@
 ---
-title: EXT_disjoint_timer_query
+title: EXT_disjoint_timer_query extension
+short-title: EXT_disjoint_timer_query
 slug: Web/API/EXT_disjoint_timer_query
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query
 ---
 
@@ -47,7 +43,7 @@ This extension exposes seven new constants.
 - `ext.GPU_DISJOINT_EXT`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the GPU performed any disjoint operation.
 
-## Methods
+## Instance methods
 
 This extension exposes eight new methods.
 
@@ -71,7 +67,7 @@ This extension exposes eight new methods.
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 ```
 
 ## Specifications

@@ -1,19 +1,14 @@
 ---
-title: AnalyserNode.getFloatTimeDomainData()
+title: "AnalyserNode: getFloatTimeDomainData() method"
+short-title: getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AnalyserNode
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
+The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a _sample_, the magnitude of the signal at a particular time.
 
 ## Syntax
 
@@ -33,7 +28,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

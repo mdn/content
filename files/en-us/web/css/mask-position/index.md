@@ -1,12 +1,7 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-position
 ---
 

@@ -2,11 +2,6 @@
 title: DeviceMotionEventAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
 page-type: web-api-interface
-tags:
-  - API
-  - DeviceAcceleration
-  - Interface
-  - Reference
 browser-compat: api.DeviceMotionEventAcceleration
 ---
 
@@ -14,7 +9,7 @@ browser-compat: api.DeviceMotionEventAcceleration
 
 The **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
 
-## Properties
+## Instance properties
 
 - {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}}
   - : The amount of acceleration along the X axis.

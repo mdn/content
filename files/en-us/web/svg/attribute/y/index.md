@@ -1,9 +1,7 @@
 ---
-title: 'y'
+title: "y"
 slug: Web/SVG/Attribute/y
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-y
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-y

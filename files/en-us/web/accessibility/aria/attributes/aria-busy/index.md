@@ -1,13 +1,7 @@
 ---
 title: aria-busy
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - aria-busy
-  - aria live regions
-  - aria state
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-busy
   - https://w3c.github.io/aria-practices/#feed

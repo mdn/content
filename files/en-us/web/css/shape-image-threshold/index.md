@@ -1,18 +1,7 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Opacity
-  - Property
-  - Reference
-  - Shape
-  - recipe:css-property
-  - shape-image-threshold
+page-type: css-property
 browser-compat: css.properties.shape-image-threshold
 ---
 

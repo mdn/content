@@ -1,13 +1,9 @@
 ---
-title: '::-moz-color-swatch'
+title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-color-swatch
 ---
 
@@ -19,8 +15,10 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 
 ## Syntax
 
-```
-::-moz-color-swatch
+```css
+::-moz-color-swatch {
+  /* ... */
+}
 ```
 
 ## Examples

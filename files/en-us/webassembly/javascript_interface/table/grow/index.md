@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Table/grow
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - grow
-  - table
 browser-compat: javascript.builtins.WebAssembly.Table.grow
 ---
 
@@ -46,15 +38,19 @@ The following example creates a new WebAssembly Table instance with an initial s
 2 and a maximum size of 10:
 
 ```js
-const table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+const table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 Grow the table by 1 using `WebAssembly.grow()`:
 
 ```js
-console.log(table.length);   // 2
+console.log(table.length); // 2
 table.grow(1);
-console.log(table.length);   // 3
+console.log(table.length); // 3
 ```
 
 ## Specifications

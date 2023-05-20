@@ -1,12 +1,7 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS Property
-  - CSSOM View
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.scroll-behavior
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: cursor
 slug: Web/SVG/Attribute/cursor
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.cursor
 ---
 

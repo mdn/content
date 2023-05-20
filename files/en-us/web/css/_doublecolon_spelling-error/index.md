@@ -1,13 +1,9 @@
 ---
-title: '::spelling-error'
+title: "::spelling-error"
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.spelling-error
 ---
 
@@ -31,7 +27,9 @@ Only a small subset of CSS properties can be used in a rule with `::spelling-err
 ## Syntax
 
 ```css
-::spelling-error
+::spelling-error {
+  /* ... */
+}
 ```
 
 ## Examples

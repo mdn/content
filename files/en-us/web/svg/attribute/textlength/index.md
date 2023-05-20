@@ -1,17 +1,7 @@
 ---
 title: textLength
 slug: Web/SVG/Attribute/textLength
-tags:
-  - Attribute
-  - CSS
-  - HTML
-  - JavaScript
-  - SVG Attribute
-  - Text
-  - height
-  - length
-  - size
-  - width
+page-type: svg-attribute
 browser-compat: svg.attributes.textLength
 ---
 
@@ -144,11 +134,17 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener("input", (event) => {
-  textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
-  widthDisplay.innerText = widthSlider.value;
-}, false);
+widthSlider.addEventListener(
+  "input",
+  (event) => {
+    textElement.textLength.baseVal.newValueSpecifiedUnits(
+      SVGLength.SVG_LENGTHTYPE_PX,
+      widthSlider.valueAsNumber
+    );
+    widthDisplay.innerText = widthSlider.value;
+  },
+  false
+);
 
 widthSlider.dispatchEvent(new Event("input"));
 ```

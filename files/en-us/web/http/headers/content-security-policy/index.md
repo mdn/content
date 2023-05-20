@@ -1,20 +1,14 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Content Security Policy
-  - HTTP
-  - Reference
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
-web site administrators to control resources the user agent is allowed to load for a
+website administrators to control resources the user agent is allowed to load for a
 given page. With a few exceptions, policies mostly involve specifying server origins and
 script endpoints. This helps guard against cross-site scripting attacks
 ({{Glossary("Cross-site_scripting")}}).
@@ -59,7 +53,7 @@ where `<policy-directive>` consists of:
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
 - {{CSP("connect-src")}}
-  - : Restricts the URLs which can be loaded using script interfaces
+  - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
     directives")}}.
@@ -77,8 +71,7 @@ where `<policy-directive>` consists of:
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     > **Note:** Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
@@ -87,7 +80,7 @@ where `<policy-directive>` consists of:
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
   - : Specifies valid sources for JavaScript and WebAssembly resources.
@@ -116,7 +109,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
 
 ### Navigation directives
 
@@ -128,8 +121,7 @@ for example.
     given context.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
-    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.
+    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can initiate navigation by any means,
     including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
@@ -165,12 +157,10 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 ### Other directives
 
-- {{CSP("require-sri-for")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
-  - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+  - : Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}
-  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
+  - : Used to specify an allowlist of [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
     only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
@@ -197,43 +187,43 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 
 ### Keyword values
 
-- `none`
+- `'none'`
   - : Won't allow loading of any resources.
-- `self`
+- `'self'`
   - : Only allow resources from the current origin.
-- `strict-dynamic`
+- `'strict-dynamic'`
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
-- `report-sample`
+- `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
 
 ### Unsafe keyword values
 
-- `unsafe-inline`
+- `'unsafe-inline'`
   - : Allow use of inline resources.
-- `unsafe-eval`
+- `'unsafe-eval'`
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
-- `unsafe-hashes`
+- `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `unsafe-allow-redirects` {{experimental_inline}}
+- `'unsafe-allow-redirects'` {{experimental_inline}}
   - : TBD
 
 ### Hosts values
 
 - Host
 
-  - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
-  - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
-  - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
+  - Only allow loading of resources from a specific host, with optional scheme, port, and path. For example, `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`.
+  - Path parts in the CSP that end in `/` match any path they are a prefix of. For example, `example.com/api/` will match URLs like `example.com/api/users/new`.
+  - Other path parts in the CSP are matched exactly; for example, `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`.
 
 - Scheme
-  - Only allow loading of resources over a specific scheme, should always end with "`:`". e.g. `https:`, `http:`, `data:` etc.
+  - Only allow loading of resources over a specific scheme, should always end with "`:`". For example, `https:`, `http:`, `data:`, etc.
 
 ### Other values
 
-- nonce-\*
-  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
-- sha\*-\*
-  - : sha256, sha384, or sha512. followed by a dash and then the sha\* value. e.g. `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`
+- `'nonce-*'`
+  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#nonce). For example, `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`.
+- `'sha*-*'`
+  - : sha256, sha384, or sha512. Followed by a dash and then the sha\* value. For example, `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`.
 
 ## CSP in workers
 

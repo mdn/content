@@ -1,14 +1,7 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - attr
+page-type: css-function
 browser-compat: css.types.attr
 ---
 

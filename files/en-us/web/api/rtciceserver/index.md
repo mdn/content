@@ -2,13 +2,6 @@
 title: RTCIceServer
 slug: Web/API/RTCIceServer
 page-type: web-api-interface
-tags:
-  - Authentication
-  - Configuration
-  - Dictionary
-  - ICE
-  - RTCIceServer
-  - WebRTC
 browser-compat: api.RTCIceServer
 ---
 
@@ -16,7 +9,7 @@ browser-compat: api.RTCIceServer
 
 The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}
   - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.
@@ -43,16 +36,17 @@ _The following properties have been removed from the specification and should no
 The configuration below establishes two ICE servers. The first one, `stun:stun.services.mozilla.com`, requires authentication, so the username and password are provided. The second server has two URLs: `stun:stun.example.com` and `stun:stun-1.example.com`.
 
 ```js
-const configuration = { iceServers: [{
-                          urls: "stun:stun.services.mozilla.com",
-                          username: "louis@mozilla.com",
-                          credential: "webrtcdemo"
-                      }, {
-                          urls: [
-                                  "stun:stun.example.com",
-                                  "stun:stun-1.example.com"
-                          ]
-                      }]
+const configuration = {
+  iceServers: [
+    {
+      urls: "stun:stun.services.mozilla.com",
+      username: "louis@mozilla.com",
+      credential: "webrtcdemo",
+    },
+    {
+      urls: ["stun:stun.example.com", "stun:stun-1.example.com"],
+    },
+  ],
 };
 
 const pc = new RTCPeerConnection(configuration);

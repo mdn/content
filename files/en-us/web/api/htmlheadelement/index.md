@@ -2,11 +2,6 @@
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLHeadElement
 ---
 
@@ -16,14 +11,14 @@ The **`HTMLHeadElement`** interface contains the descriptive information, or met
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
   - : A string representing the URIs of one or more metadata profiles (white space separated).
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

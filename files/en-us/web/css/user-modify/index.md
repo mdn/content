@@ -1,15 +1,10 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - CSS:WebKit Extensions
-  - Deprecated
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.user-modify
 ---
 
@@ -30,7 +25,7 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-> **Warning:** This property has been replaced by the {{HTMLAttrxRef("contenteditable")}} attribute.
+> **Warning:** This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
 ## Syntax
 
@@ -84,4 +79,4 @@ Not part of any standard.
 
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-select")}}
+- {{CSSxRef("user-select", "-moz-user-select")}}

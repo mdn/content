@@ -1,10 +1,7 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.clipPath
 ---
 

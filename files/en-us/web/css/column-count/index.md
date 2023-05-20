@@ -1,15 +1,7 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Layout
-  - Reference
-  - column-count
-  - columns
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-count
 ---
 
@@ -86,5 +78,7 @@ column-count: unset;
 
 ## See also
 
+- {{CSSXref("column-width")}}, {{CSSXref("columns")}} shorthand
+- {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} shorthand
 - [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)

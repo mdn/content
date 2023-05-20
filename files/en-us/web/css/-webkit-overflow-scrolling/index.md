@@ -1,12 +1,9 @@
 ---
 title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
 
@@ -15,6 +12,19 @@ browser-compat: css.properties.-webkit-overflow-scrolling
 The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls whether or not touch devices use momentum-based scrolling for a given element.
 
 ## Syntax
+
+```css
+/* Keyword values */
+-webkit-overflow-scrolling: auto;
+-webkit-overflow-scrolling: touch;
+
+/* Global values */
+-webkit-overflow-scrolling: inherit;
+-webkit-overflow-scrolling: initial;
+-webkit-overflow-scrolling: revert;
+-webkit-overflow-scrolling: revert-layer;
+-webkit-overflow-scrolling: unset;
+```
 
 ### Values
 

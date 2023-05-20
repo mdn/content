@@ -1,19 +1,7 @@
 ---
 title: ":checked"
 slug: Web/CSS/:checked
-tags:
-  - ":checked"
-  - CSS
-  - Checked
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Toggled
-  - Web
-  - button
-  - checkbox
-  - radio
+page-type: css-pseudo-class
 browser-compat: css.selectors.checked
 ---
 
@@ -29,8 +17,10 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ## Syntax
 
-```
-:checked
+```css
+:checked {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -41,10 +31,10 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes" />
+  <input type="radio" name="my-input" id="yes" value="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no" />
+  <input type="radio" name="my-input" id="no" value="no" />
   <label for="no">No</label>
 </div>
 

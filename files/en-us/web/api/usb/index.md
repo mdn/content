@@ -2,14 +2,8 @@
 title: USB
 slug: Web/API/USB
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB
 ---
 
@@ -23,11 +17,11 @@ The USB interface inherits from {{domxref("EventTarget")}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
 - {{domxref("USB.getDevices()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("USBDevice")}} objects for paired attached devices.

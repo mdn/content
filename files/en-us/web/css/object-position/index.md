@@ -1,17 +1,7 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Layout
-  - Position
-  - Reference
-  - Replaced Elements
-  - css layout
-  - object-position
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.object-position
 ---
 

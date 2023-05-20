@@ -1,15 +1,7 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
-tags:
-  - ':scope'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Scoped Elements
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.scope
 ---
 
@@ -28,8 +20,10 @@ Currently, when used in a stylesheet, `:scope` is the same as {{cssxref(":root")
 
 ## Syntax
 
-```
-:scope
+```css
+:scope {
+  /* ... */
+}
 ```
 
 ## Examples

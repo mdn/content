@@ -1,17 +1,7 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS Styles
-  - CSS Text Decoration
-  - HTML Colors
-  - Reference
-  - Styling HTML
-  - Text Emphasis
-  - recipe:css-property
-  - text-decoration-color
+page-type: css-property
 browser-compat: css.properties.text-emphasis-color
 ---
 

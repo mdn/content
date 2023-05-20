@@ -1,11 +1,6 @@
 ---
 title: Building up a basic demo with Babylon.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
-tags:
-  - 3D game engines
-  - Babylon.js
-  - Beginner
-  - WebGL
 ---
 
 {{GamesSidebar}}

@@ -1,15 +1,9 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-focus-inner
 ---
 
@@ -21,8 +15,10 @@ The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-focus-inner
+```css
+::-moz-focus-inner {
+  /* ... */
+}
 ```
 
 ## Example

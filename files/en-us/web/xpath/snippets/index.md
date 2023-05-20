@@ -1,17 +1,15 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
-tags:
-  - Example
-  - Snippets
-  - XML
-  - XPath
-  - XSLT
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
+</section>
 
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
-### Node-specific _evaluator_ function
+### Node-specific evaluator function
 
 The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
@@ -24,30 +22,20 @@ The following custom utility function can be used to evaluate XPath expressions 
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   const xpe = new XPathEvaluator();
-  const nsResolver = xpe.createNSResolver(aNode.ownerDocument === null ? aNode.documentElement : aNode.ownerDocument.documentElement);
+  const nsResolver = xpe.createNSResolver(
+    aNode.ownerDocument === null
+      ? aNode.documentElement
+      : aNode.ownerDocument.documentElement
+  );
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
   let res;
-  while (res = result.iterateNext())
-    found.push(res);
+  while ((res = result.iterateNext())) found.push(res);
   return found;
 }
 ```
 
-This function uses the **`new XPathEvaluator()`** constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to **`new XPathEvaluator()`** with the following fragment:
-
-```js
-  // XPathEvaluator is implemented on objects that implement Document
-  const xpe = aNode.ownerDocument || aNode;
-```
-
-In that case the creation of the [XPathNSResolver](/en-US/docs/Web/API/Document/createNSResolver) can be simplified as:
-
-```js
-  const nsResolver = xpe.createNSResolver(xpe.documentElement);
-```
-
-Note however that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
+Note that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
 If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
 
@@ -105,14 +93,20 @@ The following is a simple utility function to get (ordered) XPath results into a
 // const els = docEvaluateArray('//a');
 // console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray (expr, doc, context, resolver) {
+function docEvaluateArray(expr, doc, context, resolver) {
   let i;
   const a = [];
   doc = doc || (context ? context.ownerDocument : document);
   resolver = resolver || null;
   context = context || doc;
 
-  const result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  const result = doc.evaluate(
+    expr,
+    context,
+    resolver,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null
+  );
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));
   }
@@ -128,25 +122,30 @@ The following function allows one to pass an element and an XML document to find
 
 ```js
 function getXPathForElement(el, xml) {
-  let xpath = '';
+  let xpath = "";
   let pos, tempitem2;
 
   while (el !== xml.documentElement) {
     pos = 0;
     tempitem2 = el;
     while (tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+        // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}'][${pos}]/${xpath}`;
+    xpath = `*[name()='${el.nodeName}' and namespace-uri()='${
+      el.namespaceURI ?? ""
+    }'][${pos}]/${xpath}`;
 
     el = el.parentNode;
   }
-  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${el.namespaceURI ?? ''}']/${xpath}`;
-  xpath = xpath.replace(/\/$/, '');
+  xpath = `/*[name()='${xml.documentElement.nodeName}' and namespace-uri()='${
+    el.namespaceURI ?? ""
+  }']/${xpath}`;
+  xpath = xpath.replace(/\/$/, "");
   return xpath;
 }
 ```
@@ -159,5 +158,3 @@ function getXPathForElement(el, xml) {
 ## See also
 
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

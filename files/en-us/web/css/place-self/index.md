@@ -1,12 +1,7 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.place-self
 ---
 
@@ -38,8 +33,6 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
-place-self: left auto;
-place-self: right normal;
 
 /* Baseline alignment */
 place-self: baseline normal;
@@ -126,6 +119,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 80px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
 }
 
@@ -152,10 +146,6 @@ article,
 span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

@@ -1,13 +1,9 @@
 ---
 title: <glyphRef>
 slug: Web/SVG/Element/glyphRef
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.glyphRef
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: "ARIA: spinbutton role"
 slug: Web/Accessibility/ARIA/Roles/spinbutton_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - range role
-  - spinbutton role
-  - spinbutton
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
@@ -23,7 +15,7 @@ The spinbutton represents the range of possible values. The value of the spinbut
 
 Spinbuttons often have three components, including a text field that displays the current value, an increment button, and a decrement button. The text field is usually the only focusable component because the increment and decrement functions are keyboard accessible via arrow keys. Typically, the text field also allows users to directly edit the value.
 
-In addition to including the {{htmlattrxref('tabindex')}} attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
+In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
 
 > **Note:** It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
@@ -58,7 +50,7 @@ The `aria-valuetext` value must be updated as the value or `aria-valuenow` is up
 
 An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
-When not using the HTML {{HTMLElement('input')}} element to create your spinbutton, include the {{htmlattrxref('tabindex')}} attribute to make the spinbutton focusable. The `spinbutton` role is user-interactive, and therefore, requires being able to receive focus. Focus should be placed on the spinbutton input and not on the associated buttons that increment and decrement the spinbutton value.
+When not using the HTML {{HTMLElement('input')}} element to create your spinbutton, include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to make the spinbutton focusable. The `spinbutton` role is user-interactive, and therefore, requires being able to receive focus. Focus should be placed on the spinbutton input and not on the associated buttons that increment and decrement the spinbutton value.
 
 ### Descendants limited to buttons or text
 

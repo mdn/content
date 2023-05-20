@@ -1,11 +1,7 @@
 ---
 title: Sloppy mode
 slug: Glossary/Sloppy_mode
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Sloppy
+page-type: glossary-definition
 ---
 
 {{Glossary("ECMAScript")}} 5 and later let scripts opt in to a new [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), which alters the semantics of JavaScript in several ways to improve its resiliency and which make it easier to understand what's going on when there are problems.
@@ -14,4 +10,4 @@ The normal, non-strict mode of JavaScript is sometimes referred to as **sloppy m
 
 ## See also
 
-- "[Strict Mode](http://speakingjs.com/es5/ch07.html#strict_mode)" in chapter 7 ("JavaScript Syntax") in the book Speaking _JavaScript_.
+- "[Strict Mode](https://exploringjs.com/es5/ch07.html#_strict_mode)" in chapter 7 ("JavaScript Syntax") in the book Speaking _JavaScript_.

@@ -1,12 +1,7 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.writing-mode
 ---
 
@@ -45,9 +40,9 @@ The `writing-mode` property is specified as one of the values listed below. The 
 - `vertical-lr`
   - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
 - `sideways-rl` {{experimental_inline}}
-  - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.
+  - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
 - `sideways-lr` {{experimental_inline}}
-  - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.
+  - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the left.
 - `lr` {{deprecated_inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
 - `lr-tb` {{deprecated_inline}}
@@ -179,7 +174,7 @@ The CSS that adjusts the directionality of the content looks like this:
 
 This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb css properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
 
 {{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
 

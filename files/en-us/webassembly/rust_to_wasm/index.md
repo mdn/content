@@ -1,11 +1,6 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_wasm
-tags:
-  - Compiling
-  - WebAssembly
-  - rust
-  - wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -229,7 +224,7 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 The script in this file will import the js glue code, initialize the wasm module, and call the `greet` function we wrote in rust.
 
-Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server).
+Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 > **Note:** Make sure to use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
@@ -239,7 +234,7 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let's start by recompiling out Rust with the target bundler option:
+Let's start by recompiling our Rust with the target bundler option:
 
 ```bash
 wasm-pack build --target bundler
@@ -251,7 +246,7 @@ We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.
 
-Next, let's use \`npm link\` to make this package available to other JavaScript packages installed
+Next, let's use `npm link` to make this package available to other JavaScript packages installed
 
 ```bash
 cd pkg

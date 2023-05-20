@@ -1,12 +1,7 @@
 ---
 title: mask-clip
 slug: Web/CSS/mask-clip
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-clip
 ---
 

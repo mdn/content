@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.indexOf
 ---
 
@@ -49,8 +42,8 @@ The first index of the element in the array; `-1` if not found.
 
 `indexOf` compares `searchElement` to elements of the
 typed array using
-[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)
-(the same method used by the `===`, or triple-equals, operator).
+[strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)
+(the same method used by the `===` operator).
 
 ## Examples
 
@@ -58,9 +51,9 @@ typed array using
 
 ```js
 const uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2);     // 0
-uint8.indexOf(7);     // -1
-uint8.indexOf(9, 2);  // 2
+uint8.indexOf(2); // 0
+uint8.indexOf(7); // -1
+uint8.indexOf(9, 2); // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
 ```

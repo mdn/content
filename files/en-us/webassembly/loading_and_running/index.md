@@ -1,12 +1,6 @@
 ---
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
-tags:
-  - Fetch
-  - JavaScript
-  - WebAssembly
-  - XMLHttpRequest
-  - bytecode
 ---
 
 {{WebAssemblySidebar}}

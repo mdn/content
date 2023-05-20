@@ -2,12 +2,6 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - Interface
-  - Reference
 browser-compat: api.HTMLLinkElement
 ---
 
@@ -17,7 +11,7 @@ The **`HTMLLinkElement`** interface represents reference information for externa
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -36,13 +30,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.media")}}
   - : A string representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : A string that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+  - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : A string representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
@@ -61,7 +55,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
   - : A string representing the name of the target frame to which the resource applies.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

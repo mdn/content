@@ -2,14 +2,6 @@
 title: MIDIInput
 slug: Web/API/MIDIInput
 page-type: web-api-interface
-tags:
-  - API
-  - Draft
-  - Interface
-  - MIDIInput
-  - NeedsExample
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIInput
 ---
 
@@ -19,11 +11,11 @@ The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
 
@@ -41,8 +33,8 @@ inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
   input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

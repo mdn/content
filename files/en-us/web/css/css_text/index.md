@@ -1,14 +1,11 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
-tags:
-  - CSS
-  - CSS Text
-  - Guide
-  - Overview
+page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-logical/
   - https://drafts.csswg.org/css-text/
+  - https://drafts.csswg.org/css-text-4/
 ---
 
 {{CSSRef}}
@@ -20,6 +17,7 @@ spec-urls:
 ### Properties
 
 - {{cssxref("hanging-punctuation")}}
+- {{cssxref("hyphenate-limit-chars")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}

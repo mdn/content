@@ -1,14 +1,7 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Color
-  - color-profile
+page-type: css-at-rule
 browser-compat: css.at-rules.color-profile
 ---
 
@@ -59,6 +52,8 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 ```
 
 ## Formal syntax
+
+{{csssyntax}}
 
 ## Specifications
 

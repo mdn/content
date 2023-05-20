@@ -1,12 +1,6 @@
 ---
 title: Copy sign
 slug: WebAssembly/Reference/Numeric/Copy_sign
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
 ---
 
 {{WebAssemblySidebar}}

@@ -1,15 +1,9 @@
 ---
 title: align-tracks
 slug: Web/CSS/align-tracks
-tags:
-  - CSS
-  - CSS Property
-  - Experimental
-  - Property
-  - Reference
-  - align-tracks
-  - grid
-  - masonry
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.align-tracks
 ---
 
@@ -30,6 +24,7 @@ align-tracks: start, center, end;
 align-tracks: inherit;
 align-tracks: initial;
 align-tracks: revert;
+align-tracks: revert-layer;
 align-tracks: unset;
 ```
 

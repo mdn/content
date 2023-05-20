@@ -1,11 +1,7 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.ETag
 ---
 
@@ -19,9 +15,7 @@ each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
 If the resource at a given URL changes, a new `Etag` value _must_ be
 generated. A comparison of them can determine whether two representations of a resource
-are the same. Etags are therefore similar to fingerprints, and might also be used for
-tracking purposes by some servers. They might also be set to persist indefinitely by a
-tracking server.
+are the same.
 
 <table class="properties">
   <tbody>

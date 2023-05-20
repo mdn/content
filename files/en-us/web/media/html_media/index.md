@@ -1,16 +1,6 @@
 ---
 title: Using audio and video in HTML
 slug: Web/Media/HTML_media
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - HTML
-  - Media
-  - NeedsContent
-  - Video
-  - WIP
-  - sound
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

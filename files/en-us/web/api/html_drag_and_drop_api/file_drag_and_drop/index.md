@@ -2,10 +2,6 @@
 title: File drag and drop
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 page-type: guide
-tags:
-  - Guide
-  - drag and drop
-  - drop zone
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -16,7 +12,7 @@ The main steps to drag and drop are to define a _drop zone_ (i.e. a target eleme
 
 Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
-## Define the drop _zone_
+## Define the drop zone
 
 The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
@@ -47,7 +43,7 @@ Lastly, an application may want to style the drop target element to visually ind
 }
 ```
 
-> **Note:** `dragstart` and `dragend` events are not fired when dragging a file into the browser from the OS.
+> **Note:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
 
 ## Process the drop
 
@@ -59,7 +55,7 @@ Note that in this example, any drag item that is not a file is ignored.
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -68,7 +64,7 @@ function dropHandler(ev) {
     // Use DataTransferItemList interface to access the file(s)
     [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (item.kind === 'file') {
+      if (item.kind === "file") {
         const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
@@ -88,7 +84,7 @@ The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handle
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();

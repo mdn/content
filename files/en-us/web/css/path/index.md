@@ -1,11 +1,7 @@
 ---
 title: path()
 slug: Web/CSS/path
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.basic-shape.path
 ---
 

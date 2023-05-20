@@ -1,8 +1,7 @@
 ---
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -27,7 +26,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
@@ -149,10 +148,10 @@ The HTML file looks like this:
 
   <body>
     <div id="popup-content">
-      <div class="button beast">Frog</div>
-      <div class="button beast">Turtle</div>
-      <div class="button beast">Snake</div>
-      <div class="button reset">Reset</div>
+      <button>Frog</button>
+      <button>Turtle</button>
+      <button>Snake</button>
+      <button type="reset">Reset</button>
     </div>
     <div id="error-content" class="hidden">
       <p>Can't beastify this web page.</p>
@@ -163,17 +162,16 @@ The HTML file looks like this:
 </html>
 ```
 
-We have a [`<div>`](/en-US/docs/Web/HTML/Element/div) element with an ID of `"popup-content"` that contains an element for each animal choice. We have another `<div>` with an ID of `"error-content"` and a class `"hidden"`. We'll use that in case there's a problem initializing the popup.
+We have a [`<div>`](/en-US/docs/Web/HTML/Element/div) element with an ID of `"popup-content"` that contains a button for each animal choice and a reset button. We have another `<div>` with an ID of `"error-content"` and a class `"hidden"`. We'll use that in case there's a problem initializing the popup.
 
 Note that we include the CSS and JS files from this file, just like a web page.
 
 #### choose_beast.css
 
-The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `"error-content"` `<div>` will be hidden by default.
+The CSS fixes the size of the popup, ensures that the three choices fill the space, and gives them some basic styling. It also hides elements with `class="hidden"`: this means that our `<div id="error-content"...` element will be hidden by default.
 
 ```css
-html,
-body {
+html, body {
   width: 100px;
 }
 
@@ -181,27 +179,26 @@ body {
   display: none;
 }
 
-.button {
+button {
+  border: none;
+  width: 100%;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-.beast:hover {
-  background-color: #CFF2F2;
-}
-
-.beast {
   background-color: #E5F2F2;
 }
 
-.reset {
+button:hover {
+  background-color: #CFF2F2;
+}
+
+button[type="reset"] {
   background-color: #FBFBC9;
 }
 
-.reset:hover {
+button[type="reset"]:hover {
   background-color: #EAEA9D;
 }
 ```
@@ -246,7 +243,7 @@ function listenForClicks() {
      */
     function beastify(tabs) {
       browser.tabs.insertCSS({ code: hidePage }).then(() => {
-        let url = beastNameToURL(e.target.textContent);
+        const url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
           beastURL: url
@@ -277,15 +274,17 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.classList.contains("beast")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(beastify)
-        .catch(reportError);
-    } else if (e.target.classList.contains("reset")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+    if (e.target.tagName !== "BUTTON" || !e.target.closest("#popup-content")) {
+      // Ignore when click is not on a button within <div id="popup-content">.
+      return;
+    } 
+    if (e.target.type === "reset") {
+      browser.tabs.query({active: true, currentWindow: true})
         .then(reset)
+        .catch(reportError);
+    } else {
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(beastify)
         .catch(reportError);
     }
   });
@@ -312,14 +311,15 @@ browser.tabs
   .catch(reportExecuteScriptError);
 ```
 
-The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
+The place to start here is line 99. The popup script executes a content script in the active tab as soon as the popup is loaded, using the [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.
 
-A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `"popup-content"` `<div>`, show the `"error-content"` `<div>`, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
+A common reason the `browser.tabs.executeScript()` call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the [addons.mozilla.org](https://addons.mozilla.org/) domain. If it does fail, `reportExecuteScriptError()` will hide the `<div id="popup-content">` element, show the `<div id="error-content"...` element, and log an error to the [console](https://extensionworkshop.com/documentation/develop/debugging/).
 
 If executing the content script is successful, we call `listenForClicks()`. This listens for clicks on the popup.
 
-- If the click was on a button with `class="beast"`, then we call `beastify()`.
-- If the click was on a button with `class="reset"`, then we call `reset()`.
+- If the click was not on a button in the popup, we ignore it and do nothing.
+- If the click was on a button with `type="reset"`, then we call `reset()`.
+- If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
 
@@ -399,11 +399,11 @@ Finally, we need to include the images of the beasts.
 
 Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), or from here:
 
-![](frog.jpg)
+![A brown frog.](frog.jpg)
 
-![](snake.jpg)
+![An emerald tree boa with white stripes.](snake.jpg)
 
-![](turtle.jpg)
+![A red-eared slider turtle.](turtle.jpg)
 
 ## Testing it out
 

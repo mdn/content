@@ -1,13 +1,7 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-x
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-x
 ---
 

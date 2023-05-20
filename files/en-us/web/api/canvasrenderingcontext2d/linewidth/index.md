@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.lineWidth
+title: "CanvasRenderingContext2D: lineWidth property"
+short-title: lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
 
@@ -41,8 +36,8 @@ This example draws a line and a rectangle, using a line width of 15 units.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 15;
 

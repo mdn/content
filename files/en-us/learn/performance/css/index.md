@@ -1,14 +1,9 @@
 ---
 title: CSS performance optimization
 slug: Learn/Performance/CSS
-tags:
-  - CSS
-  - Performance
-  - Reference
-  - Tutorial
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
 Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.
 
@@ -30,7 +25,7 @@ CSS can scope styles to particular conditions with media queries. Media queries 
   media="screen and (max-width: 480px)" />
 ```
 
-By default the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
+By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
 
 ### Animating on the GPU
 
@@ -43,7 +38,9 @@ The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to brows
 > **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 ```css
-will-change: opacity, transform;
+.element {
+  will-change: opacity, transform;
+}
 ```
 
 ### The `font-display` property
@@ -66,22 +63,7 @@ The {{cssxref('contain')}} CSS property allows an author to indicate that an ele
 
 ## Conclusion
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
+{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
 ## See also
 

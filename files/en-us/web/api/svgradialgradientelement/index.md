@@ -2,11 +2,6 @@
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGRadialGradientElement
 ---
 
@@ -16,13 +11,13 @@ The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("Ra
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}._
 
 - {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cx")}} attribute of the given {{SVGElement("RadialGradient")}} element.
-- {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
+- {{domxref("SVGRadialGradientElement.cy")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 - {{domxref("SVGRadialGradientElement.r")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("r")}} attribute of the given {{SVGElement("RadialGradient")}} element.
@@ -31,7 +26,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGradient
 - {{domxref("SVGRadialGradientElement.fy")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}._
 

@@ -1,14 +1,6 @@
 ---
 title: Subtitle placement in IMSC
 slug: Related/IMSC/Subtitle_placement
-tags:
-  - Guide
-  - IMSC
-  - Layout
-  - Positioning
-  - captions
-  - region
-  - subtitles
 ---
 
 IMSC allows for very explicit positioning of the text over the video content you are displaying it against. There are a few tricks and best practices that can be used in order to simplify the placement of the on-screen text.
@@ -23,7 +15,7 @@ The `<region>` element essentially creates a box on the screen for the text to a
 
 In the example below, we have defined two regions. Both region boxes are the same size, which is 80% of the image width and 80% of the image height. This box is centered on the screen.
 
-{{EmbedGHLiveSample("imsc/layout-top-bottom/layout-top-bottom.html", '100%', 1000)}}
+{{EmbedGHLiveSample("imsc-examples/layout-top-bottom/layout-top-bottom.html", '100%', 1000)}}
 
 The important items to consider here are:
 

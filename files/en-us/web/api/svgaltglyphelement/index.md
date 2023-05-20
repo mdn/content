@@ -2,13 +2,8 @@
 title: SVGAltGlyphElement
 slug: Web/API/SVGAltGlyphElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVGAltGlyphElement
+status:
+  - deprecated
 browser-compat: api.SVGAltGlyphElement
 ---
 
@@ -16,7 +11,7 @@ browser-compat: api.SVGAltGlyphElement
 
 The **`SVGAltGlyphElement`** interface represents an {{ SVGElement("altglyph") }} element. This interface makes it possible to implement more sophisticated and particular glyph characters. For some textual representations as: ligatures (e.g. æ, ß, etc.), special-purpose fonts (e.g. musical symbols) or even alternate glyphs such as Asian text strings it is required that a different set of glyphs be used than the normal given character data.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
@@ -25,7 +20,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGAltGlyphElement.format")}} {{deprecated_inline}}
   - : It corresponds to the attribute {{ SVGAttr("format") }} on the given element. It's data type is 'String'. This property specifies the format of the given font.
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

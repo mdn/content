@@ -1,12 +1,7 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-size-adjust
 ---
 

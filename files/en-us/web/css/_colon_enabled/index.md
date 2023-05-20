@@ -1,13 +1,7 @@
 ---
 title: ":enabled"
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.enabled
 ---
 
@@ -19,7 +13,7 @@ The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Syntax
 
-```
+```plain
 :enabled
 ```
 

@@ -2,20 +2,6 @@
 title: WebXR application life cycle
 slug: Web/API/WebXR_Device_API/Lifecycle
 page-type: guide
-tags:
-  - API
-  - Application
-  - Draft
-  - Guide
-  - Life Cycle
-  - Lifecycle
-  - NeedsContent
-  - Outline
-  - Plan
-  - Web
-  - WebXR
-  - WebXR API
-  - WebXR Device API
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

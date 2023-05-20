@@ -2,11 +2,8 @@
 title: Sanitizer
 slug: Web/API/Sanitizer
 page-type: web-api-interface
-tags:
-  - HTML Sanitizer API
-  - Interface
-  - sanitize
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Sanitizer
 ---
 
@@ -25,7 +22,7 @@ This configuration may be customized using constructor options.
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
-## Methods
+## Instance methods
 
 - {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
 

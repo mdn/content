@@ -1,13 +1,7 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - At-rule
-  - CSS
-  - CSS Namespaces
-  - Layout
-  - Reference
-  - Web
+page-type: css-at-rule
 browser-compat: css.at-rules.namespace
 ---
 
@@ -45,9 +39,7 @@ In [HTML5](/en-US/docs/Glossary/HTML5), known [foreign elements](https://html.sp
 
 ## Formal syntax
 
-```
-@namespace <namespace-prefix>? [ <string> | <url> ] ;
-```
+{{csssyntax}}
 
 ## Examples
 

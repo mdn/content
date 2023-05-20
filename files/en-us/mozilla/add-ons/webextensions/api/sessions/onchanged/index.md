@@ -1,16 +1,7 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-  - sessions
+page-type: webextension-api-event
 browser-compat: webextensions.api.sessions.onChanged
 ---
 
@@ -81,8 +72,6 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

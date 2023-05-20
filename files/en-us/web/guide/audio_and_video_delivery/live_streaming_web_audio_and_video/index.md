@@ -1,12 +1,11 @@
 ---
-title: Live streaming web audio and video
+title: Livestreaming web audio and video
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - Guide
-  - adaptive streaming
 ---
 
-Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
+Livestreaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, livestreaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
 
 The key consideration when streaming media to a browser is the fact that rather than playing a finite file we are relaying a file that is being created on the fly and has no pre-determined start or end.
 
@@ -14,11 +13,11 @@ The key consideration when streaming media to a browser is the fact that rather 
 
 In this case, we are using static media to describe media that is represented by a file, whether it be an mp3 or WebM file. This file sits on a server and can be delivered — like most other files — to the browser. This is often known as a progressive download.
 
-Live streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
+Livestreamed media lacks a finite start and end time as rather as a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive (see below). Usually, we require different formats and special server-side software to achieve this.
 
 ## Adaptive streaming
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream: adaptive streaming is a technique for doing this in the case of low bandwidth. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Live streaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
+One of the main priorities for livestreaming is to keep the player synchronized with the stream: adaptive streaming is a technique for doing this in the case of low bandwidth. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Livestreaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
 
 ## Streaming Audio and Video on Demand
 
@@ -76,13 +75,13 @@ For example, [you could implement MPEG-DASH using JavaScript while offloading th
 
 ## Video Streaming File Formats
 
-A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
+A couple of HTTP-based livestreaming video formats are beginning to see support across browsers.
 
 > **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
-DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
+DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
 > **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
@@ -90,25 +89,24 @@ DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that ha
 
 HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and the latest versions of Android browser / Chrome. HLS is also adaptive.
 
-HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
+HLS can also be decoded using JavaScript, which means we can support the latest versions of Firefox, Chrome and Safari. See this [HTTP Live Streaming JavaScript player](https://github.com/dailymotion/hls.js).
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 
 ### Streaming File Format Support
 
-| Browser                  | DASH  | HLS   | Opus (Audio) |
-| ------------------------ | ----- | ----- | ------------ |
-| Firefox 32               | ✓ [1] | ✓ [2] | ✓ 14+        |
-| Safari 6+                |       | ✓     |              |
-| Chrome 24+               | ✓ [1] | ✓     |              |
-| Opera 20+                | ✓ [1] |       |              |
-| Internet Explorer 10+    | ✓ 11  | ✓ [2] |              |
-| Firefox Mobile           | ✓     | ✓     | ✓            |
-| Safari iOS6+             |       | ✓     |              |
-| Chrome Mobile            | ✓     | ✓ [2] |              |
-| Opera Mobile             | ✓ [1] | ✓     |              |
-| Internet Explorer Mobile | ✓ 11  | ✓ [2] |              |
-| Android                  | ✓     |       |              |
+| Browser               | DASH  | HLS   | Opus (Audio) |
+| --------------------- | ----- | ----- | ------------ |
+| Firefox 32            | ✓ [1] | ✓ [2] | ✓ 14+        |
+| Safari 6+             |       | ✓     |              |
+| Chrome 24+            | ✓ [1] | ✓     |              |
+| Opera 20+             | ✓ [1] |       |              |
+| Internet Explorer 10+ | ✓ 11  | ✓ [2] |              |
+| Firefox Mobile        | ✓     | ✓     | ✓            |
+| Safari iOS6+          |       | ✓     |              |
+| Chrome Mobile         | ✓     | ✓ [2] |              |
+| Opera Mobile          | ✓ [1] | ✓     |              |
+| Android               | ✓     |       |              |
 
 \[1] Via JavaScript and MSE
 
@@ -154,7 +152,7 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 [SHOUTcast](https://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
 
-> **Note:** [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> **Note:** [SHOUTcast URLs may require a semicolon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 

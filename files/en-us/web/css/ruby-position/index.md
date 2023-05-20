@@ -1,12 +1,7 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Ruby
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.ruby-position
 ---
 

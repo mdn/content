@@ -1,20 +1,13 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - Objects
-  - Reference
-  - stringify
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.stringify
 ---
 
 {{JSRef}}
 
-The **`JSON.stringify()`** method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
+The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 
 {{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
@@ -31,7 +24,7 @@ JSON.stringify(value, replacer, space)
 - `value`
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
-  - : A function that alters the behavior of the stringification process, or an array of strings or numbers naming properties of `value` that should be included in the output. If `replacer` is an array, all elements that are not strings or numbers (can be either primitives or wrapper objects), including {{jsxref("Symbol")}} values, are completely ignored. If `replacer` is anything other than a function or an array (e.g. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided), all properties of the object are included in the resulting JSON string.
+  - : A function that alters the behavior of the stringification process, or an array of strings and numbers that specifies properties of `value` to be included in the output. If `replacer` is an array, all elements in this array that are not strings or numbers (either primitives or wrapper objects), including {{jsxref("Symbol")}} values, are completely ignored. If `replacer` is anything other than a function or an array (e.g. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided), all string-keyed properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
   - : A string or number that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
@@ -48,17 +41,17 @@ A JSON string representing the given value, or undefined.
 
 ### Exceptions
 
-- {{JSxRef("TypeError")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one of the following is true:
     - `value` contains a circular reference.
     - A {{jsxref("BigInt")}} value is encountered.
 
 ## Description
 
-`JSON.stringify()` converts a value to JSON notation representing it:
+`JSON.stringify()` converts a value to the JSON notation that the value represents. Values are stringified in the following manner:
 
 - {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, {{JSxRef("String")}}, and {{jsxref("BigInt")}} (obtainable via [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)) objects are converted to the corresponding primitive values during stringification, in accordance with the traditional conversion semantics. {{jsxref("Symbol")}} objects (obtainable via [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)) are treated as plain objects.
-- Attempting to serialize {{jsxref("BigInt")}} values will throw. However, if the BigInt has a `toJSON()` method (through monkeypatching: `BigInt.prototype.toJSON = ...`), that method can provide the serialization result. This constraint ensures that a proper serialization (and, very likely, its accompanying deserialization) behavior is always explicitly provided by the user.
+- Attempting to serialize {{jsxref("BigInt")}} values will throw. However, if the BigInt has a `toJSON()` method (through monkey patching: `BigInt.prototype.toJSON = ...`), that method can provide the serialization result. This constraint ensures that a proper serialization (and, very likely, its accompanying deserialization) behavior is always explicitly provided by the user.
 - {{JSxRef("undefined")}}, {{JSxRef("Function")}}, and {{JSxRef("Symbol")}} values are not valid JSON values. If any such values are encountered during conversion, they are either omitted (when found in an object) or changed to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (when found in an array). `JSON.stringify()` can return `undefined` when passing in "pure" values like `JSON.stringify(() => {})` or `JSON.stringify(undefined)`.
 - The numbers {{JSxRef("Infinity")}} and {{JSxRef("NaN")}}, as well as the value [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), are all considered `null`. (But unlike the values in the previous point, they would never be omitted.)
 - Arrays are serialized as arrays (enclosed by square brackets). Only array indices between 0 and `length - 1` (inclusive) are serialized; other properties are ignored.
@@ -88,7 +81,7 @@ As a function, it takes two parameters: the `key` and the `value` being stringif
 
 The `replacer` function is called for the initial object being stringified as well, in which case the `key` is an empty string (`""`). It is then called for each property on the object or array being stringified. Array indices will be provided in its string form as `key`. The current property value will be replaced with the `replacer`'s return value for stringification. This means:
 
-- If you return a {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the stringified version of that value is used as the property's value.
+- If you return a number, string, boolean, or `null`, that value is directly serialized and used as the property's value. (Returning a BigInt will throw as well.)
 - If you return a {{JSxRef("Function")}}, {{JSxRef("Symbol")}}, or {{JSxRef("undefined")}}, the property is not included in the output.
 - If you return any other object, the object is recursively stringified, calling the `replacer` function on each property.
 
@@ -96,9 +89,9 @@ The `replacer` function is called for the initial object being stringified as we
 
 Typically, array elements' index would never shift (even when the element is an invalid value like a function, it will become `null` instead of omitted). Using the `replacer` function allows you to control the order of the array elements by returning a different array.
 
-### The space argument
+### The space parameter
 
-The `space` argument may be used to control spacing in the final string.
+The `space` parameter may be used to control spacing in the final string.
 
 - If it is a number, successive levels in the stringification will each be indented by this many space characters.
 - If it is a string, successive levels will be indented by this string.
@@ -117,8 +110,8 @@ JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
 JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
-// '"2006-01-02T15:04:05.000Z"'
+JSON.stringify(new Date(1906, 0, 2, 15, 4, 5));
+// '"1906-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
@@ -185,7 +178,7 @@ JSON.stringify(
   Object.create(null, {
     x: { value: "x", enumerable: false },
     y: { value: "y", enumerable: true },
-  })
+  }),
 );
 // '{"y":"y"}'
 

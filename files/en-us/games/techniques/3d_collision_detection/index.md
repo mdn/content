@@ -1,12 +1,6 @@
 ---
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
-tags:
-  - 3D
-  - Games
-  - JavaScript
-  - bounding boxes
-  - collision detection
 ---
 
 {{GamesSidebar}}
@@ -106,7 +100,7 @@ function isPointInsideSphere(point, sphere) {
 
 ### Sphere vs. sphere
 
-The sphere vs sphere test is similar to the point vs sphere test. What we need to test here is that the distance between the sphere's centers is less than or equal to the sum of their radii.
+The sphere vs. sphere test is similar to the point vs. sphere test. What we need to test here is that the distance between the sphere's centers is less than or equal to the sum of their radii.
 
 ![Hand drawing of two partially overlapping circles. Each circle (of different sizes) has a light radius line going from its center to its border, labeled R. The distance is denoted by a dotted line, labeled D, connecting the center points of both circles.](sphere_vs_sphere.png)
 
@@ -131,7 +125,7 @@ function intersect(sphere, other) {
 
 ### Sphere vs. AABB
 
-Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's _closest point_ (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.
+Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs. sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's _closest point_ (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.
 
 ![Hand drawing of a square partially overlapping the top of a circle. The radius is denoted by a light line labeled R. The distance line goes from the circle's center to the closest point of the square.](sphere_vs_aabb.png)
 

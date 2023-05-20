@@ -1,12 +1,7 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-spacing
 ---
 
@@ -18,7 +13,7 @@ The **`border-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the distance b
 
 The `border-spacing` value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) `border-spacing` and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.
 
-> **Note:** The `border-spacing` property is equivalent to the deprecated `cellspacing` `<table>` attribute, except that it has an optional second value that can be used to set different horizontal and vertical spacing.
+> **Note:** The `border-spacing` property is equivalent to the deprecated `cellspacing` attribute of the `<table>` element, except that `border-spacing` has an optional second value that can be used to set different horizontal and vertical spacing.
 
 ## Syntax
 

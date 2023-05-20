@@ -1,10 +1,7 @@
 ---
 title: <set>
 slug: Web/SVG/Element/set
-tags:
-  - Element
-  - SVG
-  - SVG Animation
+page-type: svg-element
 browser-compat: svg.elements.set
 ---
 

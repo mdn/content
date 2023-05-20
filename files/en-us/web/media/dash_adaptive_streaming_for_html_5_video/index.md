@@ -1,10 +1,9 @@
 ---
 title: DASH Adaptive Streaming for HTML 5 Video
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-tags:
-  - Guide
-  - HTML
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
@@ -12,7 +11,7 @@ Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. T
 
 Firefox 21 includes an implementation of DASH for HTML WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
 
-Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via JavaScript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
+Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via JavaScript libraries such as dash.js. See bug [778617](https://bugzil.la/778617) for details.
 
 ## Using DASH - Server Side
 
@@ -69,7 +68,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
 ```
 
-### 2. Create the manifest file:
+### 2. Create the manifest file
 
 ```bash
 ffmpeg \

@@ -1,13 +1,7 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.resolution
 ---
 

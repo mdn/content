@@ -1,12 +1,7 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-top
 ---
 

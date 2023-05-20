@@ -1,13 +1,7 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - SVG
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.letter-spacing
 ---
 
@@ -115,3 +109,4 @@ Some written languages should not have any letter spacing applied. For instance,
 ## See also
 
 - {{cssxref("font-kerning")}}
+- {{cssxref("word-spacing")}}

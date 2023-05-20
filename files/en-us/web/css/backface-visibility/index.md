@@ -1,12 +1,7 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.backface-visibility
 ---
 

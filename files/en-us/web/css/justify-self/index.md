@@ -1,12 +1,7 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.justify-self
 ---
 
@@ -33,15 +28,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* Positional alignment */
-justify-self: center;     /* Pack item around the center */
-justify-self: start;      /* Pack item from the start */
-justify-self: end;        /* Pack item from the end */
+justify-self: center; /* Pack item around the center */
+justify-self: start; /* Pack item from the start */
+justify-self: end; /* Pack item from the end */
 justify-self: flex-start; /* Equivalent to 'start'. Note that justify-self is ignored in Flexbox layouts. */
-justify-self: flex-end;   /* Equivalent to 'end'. Note that justify-self is ignored in Flexbox layouts. */
+justify-self: flex-end; /* Equivalent to 'end'. Note that justify-self is ignored in Flexbox layouts. */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* Pack item from the left */
-justify-self: right;      /* Pack item from the right */
+justify-self: left; /* Pack item from the left */
+justify-self: right; /* Pack item from the right */
 
 /* Baseline alignment */
 justify-self: baseline;
@@ -152,6 +147,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 40px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
   justify-items: stretch;
 }
@@ -179,10 +175,6 @@ article,
 span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

@@ -2,14 +2,6 @@
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBKeyRange
 ---
 
@@ -19,17 +11,17 @@ The **`IDBKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/Index
 
 A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is _bounded_; if it has no bounds, it is _unbounded_. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:
 
-| Range                       | Code                                                  |
-| --------------------------- | ----------------------------------------------------- |
-| All keys ≥ **x**            | {{domxref("IDBKeyRange.lowerBound")}}`(x)`            |
-| All keys > **x**            | {{domxref("IDBKeyRange.lowerBound")}}`(x, true)`      |
-| All keys ≤ **y**            | {{domxref("IDBKeyRange.upperBound")}}`(y)`            |
-| All keys < **y**            | {{domxref("IDBKeyRange.upperBound")}}`(y, true)`      |
-| All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
-| All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
-| All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
-| All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
-| The key = **z**             | {{domxref("IDBKeyRange.only")}}`(z)`                  |
+| Range                       | Code                                                   |
+| --------------------------- | ------------------------------------------------------ |
+| All keys ≥ **x**            | {{domxref("IDBKeyRange.lowerBound")}} `(x)`            |
+| All keys > **x**            | {{domxref("IDBKeyRange.lowerBound")}} `(x, true)`      |
+| All keys ≤ **y**            | {{domxref("IDBKeyRange.upperBound")}} `(y)`            |
+| All keys < **y**            | {{domxref("IDBKeyRange.upperBound")}} `(y, true)`      |
+| All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}} `(x, y)`              |
+| All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}} `(x, y, true, true)`  |
+| All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}} `(x, y, true, false)` |
+| All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}} `(x, y, false, true)` |
+| The key = **z**             | {{domxref("IDBKeyRange.only")}} `(z)`                  |
 
 A key is in a key range if the following conditions are true:
 
@@ -47,7 +39,7 @@ A key is in a key range if the following conditions are true:
 
 {{AvailableInWorkers}}
 
-## Properties
+## Instance properties
 
 - {{domxref("IDBKeyRange.lower")}} {{ReadOnlyInline}}
   - : Lower bound of the key range.
@@ -58,9 +50,7 @@ A key is in a key range if the following conditions are true:
 - {{domxref("IDBKeyRange.upperOpen")}} {{ReadOnlyInline}}
   - : Returns false if the upper-bound value is included in the key range.
 
-## Methods
-
-### Static methods
+## Static methods
 
 - {{domxref("IDBKeyRange.bound()")}}
   - : Creates a new key range with upper and lower bounds.
@@ -71,7 +61,7 @@ A key is in a key range if the following conditions are true:
 - {{domxref("IDBKeyRange.upperBound()")}}
   - : Creates a new upper-bound key range.
 
-### Instance methods
+## Instance methods
 
 - {{domxref("IDBKeyRange.includes()")}}
   - : Returns a boolean indicating whether a specified key is inside the key range.
@@ -87,19 +77,19 @@ If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not 
 function displayData() {
   const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
   objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }
@@ -121,4 +111,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

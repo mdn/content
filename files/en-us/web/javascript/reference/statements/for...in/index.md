@@ -1,16 +1,13 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.for_in
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`for...in` statement** iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
+The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
 
@@ -63,7 +60,7 @@ If you only want to consider properties attached to the object itself, and not i
 
 `Object.keys` will return a list of enumerable own string properties, while `Object.getOwnPropertyNames` will also contain non-enumerable ones.
 
-Many JavaScript style guides and linters recommend against the use of `for...in`, because it iterates over the entire prototype chain which is rarely what one wants, and may be a confusion with the more widely-used `for...of` loop. `for...in` is most practically used for debugging purposes, being an easy way to check the properties of an object (by outputting to the console or otherwise). In situations where objects are used as ad-hoc key-value pairs, `for...in` allows you check if any of those keys hold a particular value.
+Many JavaScript style guides and linters recommend against the use of `for...in`, because it iterates over the entire prototype chain which is rarely what one wants, and may be a confusion with the more widely-used `for...of` loop. `for...in` is most practically used for debugging purposes, being an easy way to check the properties of an object (by outputting to the console or otherwise). In situations where objects are used as ad hoc key-value pairs, `for...in` allows you check if any of those keys hold a particular value.
 
 ## Examples
 
@@ -78,7 +75,7 @@ for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
 }
 
-// Output:
+// Logs:
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
@@ -105,7 +102,7 @@ for (const prop in obj) {
   }
 }
 
-// Output:
+// Logs:
 // "obj.color = red"
 ```
 

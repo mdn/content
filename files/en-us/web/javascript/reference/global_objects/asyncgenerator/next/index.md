@@ -1,13 +1,7 @@
 ---
 title: AsyncGenerator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.next
 ---
 
@@ -60,10 +54,10 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then((res) => console.log(res));    // { value: 1, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 2, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: 3, done: false }
-asyncGen.next().then((res) => console.log(res));    // { value: undefined, done: true }
+asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 2, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: 3, done: false }
+asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator
@@ -92,9 +86,9 @@ async function* createAsyncGenerator() {
 async function main() {
   const asyncGen = createAsyncGenerator();
   // No log at this step: the first value sent through `next` is lost
-  console.log(await asyncGen.next(1));    // { value: undefined, done: false }
+  console.log(await asyncGen.next(1)); // { value: undefined, done: false }
   // Logs 2: the value sent through `next`
-  console.log(await asyncGen.next(2));    // { value: undefined, done: false }
+  console.log(await asyncGen.next(2)); // { value: undefined, done: false }
 }
 
 main();
@@ -111,4 +105,4 @@ main();
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

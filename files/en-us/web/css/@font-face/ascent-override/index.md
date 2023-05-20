@@ -1,13 +1,7 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - ascent-override
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.ascent-override
 ---
 
@@ -35,9 +29,7 @@ ascent-override: 90%;
 
 ## Formal syntax
 
-```
-normal | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -74,7 +66,6 @@ The `ascent-override` property can help when overriding the metrics of a fallbac
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}

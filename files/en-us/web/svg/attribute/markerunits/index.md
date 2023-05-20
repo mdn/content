@@ -1,10 +1,7 @@
 ---
 title: markerUnits
 slug: Web/SVG/Attribute/markerUnits
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.marker.markerUnits
 ---
 

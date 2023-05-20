@@ -1,10 +1,11 @@
 ---
 title: Web technology for developers
 slug: Web
-tags:
-  - Landing
-  - Web
 ---
+
+<section id="Quick_links">
+  {{ListSubpages("", 1, 0, 1)}}
+</section>
 
 The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our Web technology documentation.
 
@@ -15,7 +16,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Tutorials for Web developers](/en-US/docs/Web/Tutorials)
   - : Tutorials to take you step-by-step through learning HTML, CSS, JavaScript, and Web APIs.
 - [Accessibility](/en-US/docs/Web/Accessibility)
-  - : Enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
+  - : Enabling as many people as possible to use websites, even when those people's abilities are limited in some way.
 - [Performance](/en-US/docs/Web/Performance)
   - : Making content as available and interactive as possible, as soon as possible.
 - [Security](/en-US/docs/Web/Security)
@@ -40,10 +41,10 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Media](/en-US/docs/Web/Media)
   - : Formats, codecs, protocols, APIs, and techniques for embedding and streaming video, audio, and image content in Web documents and apps.
 - [SVG](/en-US/docs/Web/SVG)
-  - : Scalable Vector Graphics let you create images that scale smoothly to any size.
+  - : Scalable Vector Graphics lets you create images that scale smoothly to any size.
 - [MathML](/en-US/docs/Web/MathML)
   - : MathML lets you display complex mathematical notation on the Web.
-- [Web Components](/en-US/docs/Web/Web_Components)
+- [Web Components](/en-US/docs/Web/API/Web_components)
   - : Web Components are custom elements that you can define and reuse in your Web apps.
 - [WebDriver](/en-US/docs/Web/WebDriver)
   - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It's widely used for cross-browser testing of Web apps.

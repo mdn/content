@@ -1,12 +1,7 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-tags:
-  - CSS
-  - CSS Property
-  - Page Breaks
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.page-break-after
 ---
 
@@ -15,6 +10,10 @@ browser-compat: css.properties.page-break-after
 > **Warning:** This property has been replaced by the {{cssxref("break-after")}} property.
 
 The **`page-break-after`** CSS property adjusts page breaks _after_ the current element.
+
+{{EmbedInteractiveExample("pages/css/page-break-after.html")}}
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -35,8 +34,6 @@ page-break-after: unset;
 ```
 
 This property applies to block elements that generate a box. It won't apply on an empty {{HTMLElement("div")}} that won't generate a box.
-
-## Syntax
 
 ### Values
 

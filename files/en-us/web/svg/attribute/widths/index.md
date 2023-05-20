@@ -1,10 +1,9 @@
 ---
 title: widths
 slug: Web/SVG/Attribute/widths
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.widths
 ---
 
@@ -42,6 +41,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<number>`
+
   - : This value is a comma-separated list of UCS range values as defined in [ISO 10646](https://www.iso.org/standard/29819.html), each followed by one or more glyph widths.
 
     If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.

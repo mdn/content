@@ -1,11 +1,7 @@
 ---
 title: Spanning and balancing columns
 slug: Web/CSS/CSS_Columns/Spanning_Columns
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
+page-type: guide
 ---
 
 {{CSSRef}}

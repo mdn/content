@@ -1,28 +1,8 @@
 ---
-title: Element.getBoundingClientRect()
+title: "Element: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - Method
-  - Minimum
-  - Rectangle
-  - Reference
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
 
@@ -51,7 +31,7 @@ which contains the entire element, including its padding and border-width. The
 describe the position and size of the overall rectangle in pixels. Properties other than
 `width` and `height` are relative to the top-left of the viewport.
 
-![](element-box-diagram.png)
+![DOMRect object that is the smallest rectangle containing the entire element.](element-box-diagram.png)
 
 The `width` and `height` properties of the {{domxref("DOMRect")}}
 object returned by the method include the `padding` and
@@ -79,8 +59,8 @@ position changes (because their values are relative to the viewport and not abso
 
 If you need the bounding rectangle relative to the top-left corner of the document,
 just add the current scrolling position to the `top` and `left`
-properties (these can be obtained using {{domxref("window.scrollX")}} and
-{{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
+properties (these can be obtained using {{domxref("window.scrollY")}} and
+{{domxref("window.scrollX")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
 
 ## Examples
@@ -106,11 +86,11 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (const key in rect) {
-  if (typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
     para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
@@ -159,17 +139,17 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
+  container.innerHTML = "";
   for (const key in rect) {
-    if (typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
       para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 

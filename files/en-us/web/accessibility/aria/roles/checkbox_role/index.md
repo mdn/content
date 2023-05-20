@@ -1,14 +1,7 @@
 ---
 title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsContent
-  - Role
-  - ARIA widget
-  - Reference
-  - checkbox
+page-type: aria-role
 ---
 
 The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
@@ -22,7 +15,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <input type="checkbox" id="chk1-label" />

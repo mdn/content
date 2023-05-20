@@ -1,18 +1,7 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Property
-  - CSS Styles
-  - HTML Colors
-  - Reference
-  - Shadows
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.box-shadow
 ---
 
@@ -73,9 +62,14 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 - `inset`
   - : If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
     The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was debossed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
-- `<offset-x>` `<offset-y>`
-  - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
-    If both values are `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+- `<offset-x>`
+  - : The {{cssxref("&lt;length&gt;")}} value specifies the horizontal distance. Negative values place the shadow to the left of the element.
+- `<offset-y>`
+
+  - : The {{cssxref("&lt;length&gt;")}} values specifies the vertical distance. Negative values place the shadow above the element.
+
+    If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+
 - `<blur-radius>`
 
   - : This is a third {{cssxref("&lt;length&gt;")}} value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be `0` (the shadow's edge is sharp). The specification does not include an exact algorithm for how the blur radius should be calculated, however, it does elaborate as follows:
@@ -158,6 +152,8 @@ p {
 }
 ```
 
+<!-- these colors are intentionally pink and blue. WCAG requires color contrast between text and background, not between border colors. -->
+
 #### Result
 
 {{EmbedLiveSample('Setting_zero_for_offset_and_blur', '300', '300')}}
@@ -172,7 +168,7 @@ p {
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - {{cssxref("text-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

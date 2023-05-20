@@ -1,11 +1,6 @@
 ---
-title: 'Test your skills: JSON'
+title: "Test your skills: JSON"
 slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
-tags:
-  - Beginner
-  - Example
-  - JSON
-  - JavaScript
 ---
 
 {{learnsidebar}}

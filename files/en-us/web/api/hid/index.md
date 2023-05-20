@@ -2,12 +2,8 @@
 title: HID
 slug: Web/API/HID
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - WebHID
-  - WebHID API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID
 ---
 
@@ -17,11 +13,11 @@ The **`HID`** interface provides methods for connecting to _HID devices_, listin
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 

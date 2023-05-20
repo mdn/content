@@ -1,11 +1,7 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-tags:
-  - Filters
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
 ---
 
@@ -80,7 +76,7 @@ You can use this attribute with the following SVG elements:
 
 `BackgroundImage` is not supported as a filter source in modern browsers (see the [feComposite compatibility table](/en-US/docs/Web/SVG/Element/feComposite#browser_compatibility)). We therefore need to import one of the images to blend inside the filter itself, using an `<feImage>` element.
 
-> **Note:** Firefox [Bug 455986](https://bugzilla.mozilla.org/show_bug.cgi?id=455986) means that `feImage` cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.
+> **Note:** Firefox [Bug 455986](https://bugzil.la/455986) means that `feImage` cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.
 
 ### HTML
 

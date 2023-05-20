@@ -1,12 +1,7 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.inset-inline-start
 ---
 

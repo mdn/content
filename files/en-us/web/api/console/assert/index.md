@@ -1,15 +1,8 @@
 ---
-title: console.assert()
+title: "console: assert() method"
+short-title: assert()
 slug: Web/API/console/assert
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
 browser-compat: api.console.assert
 ---
 
@@ -57,10 +50,10 @@ The following code example demonstrates the use of a JavaScript object following
 assertion:
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number++) {
   console.log(`the # is ${number}`);
-  console.assert(number % 2 === 0, { number, errorMsg });
+  console.assert(number % 2 === 0, "%o", { number, errorMsg });
 }
 // output:
 // the # is 2

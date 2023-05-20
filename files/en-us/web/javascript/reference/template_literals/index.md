@@ -1,22 +1,13 @@
 ---
 title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - React
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
+page-type: javascript-language-feature
 browser-compat: javascript.grammar.template_literals
 ---
 
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
+**Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
 Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string_interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged_templates) to perform whatever operations you want on the different parts of the template literal.
 
@@ -53,13 +44,13 @@ To supply a function of your own, precede the template literal with a function n
 To escape a backtick in a template literal, put a backslash (`\`) before the backtick.
 
 ```js
-`\`` === "`"; // --> true
+`\`` === "`"; // true
 ```
 
 Dollar signs can be escaped as well to prevent interpolation.
 
 ```js
-`\${1}` === "${1}"; // --> true
+`\${1}` === "${1}"; // true
 ```
 
 ### Multi-line strings
@@ -85,7 +76,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -172,7 +163,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
+The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
@@ -271,7 +262,7 @@ function tag(strings) {
 }
 
 tag`string text line 1 \n string text line 2`;
-// logs "string text line 1 \n string text line 2" ,
+// Logs "string text line 1 \n string text line 2" ,
 // including the two characters '\' and 'n'
 ```
 
@@ -316,7 +307,7 @@ const doc = html`<!DOCTYPE html>
 
 ### Tagged templates and escape sequences
 
-In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
+In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
 
 - `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07` (which is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences))
 - `\x` followed by fewer than two hex digits (including none); for example `\xz`
@@ -363,8 +354,8 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (May 14, 2015)

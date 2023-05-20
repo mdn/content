@@ -1,13 +1,6 @@
 ---
 title: Building up a basic demo with A-Frame
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
-tags:
-  - 3D
-  - A-Frame
-  - VR
-  - Virtual Reality
-  - Web
-  - WebGL
 ---
 
 {{GamesSidebar}}
@@ -184,7 +177,7 @@ scene.appendChild(cylinder);
 
 We're getting a reference to the scene handler first, then we create the cylinder element as an A-Frame entity. After that it's all about setting the proper attributes: `color`, `height`, `radius` and `position`. The last line adds the newly created cylinder to the scene. That's it — you've created three different shapes with A-Frame! Here's how it looks right now:
 
-![A illustration of 3D representation of three different geometry shapes displayed on a grey background: the first one is a darker grey torus, the second is a blue cube and the last one is a yellow cylinder.](shapes.png)
+![An illustration of 3D representation of three different geometry shapes displayed on a grey background: the first one is a darker grey torus, the second is a blue cube and the last one is a yellow cylinder.](shapes.png)
 
 It is impressive to be able to create such a scene with just a few lines of HTML and JavaScript.
 

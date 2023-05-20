@@ -1,17 +1,11 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() method"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Mobile
-  - createTouchList
-  - touch
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouchList
 ---
 

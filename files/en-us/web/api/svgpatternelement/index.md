@@ -2,12 +2,6 @@
 title: SVGPatternElement
 slug: Web/API/SVGPatternElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGPatternElement
 ---
 
@@ -17,7 +11,7 @@ The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
 
@@ -38,7 +32,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGPatternElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("pattern")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
 

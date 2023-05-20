@@ -1,12 +1,7 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.list-style-type
 ---
 
@@ -51,9 +46,9 @@ list-style-type: unset;
 
 The `list-style-type` property may be defined as any one of:
 
-- a `<custom-ident>` value
-- a `symbols()` value
-- a `<string>` value
+- a `<custom-ident>` value,
+- a `symbols()` value,
+- a `<string>` value, or
 - the keyword `none`.
 
 Note that:
@@ -64,7 +59,7 @@ Note that:
 ### Values
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
+  - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
 - {{cssxref("symbols", "symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
@@ -118,11 +113,11 @@ Note that:
 - `gurmukhi`, `-moz-gurmukhi`
   - : Gurmukhi numbering.
 - `hebrew`
-  - : Traditional Hebrew numbering
+  - : Traditional Hebrew numbering.
 - `hiragana`
   - : Dictionary-order hiragana lettering.
 - `hiragana-iroha`
-  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) hiragana lettering.
 - `japanese-formal`
   - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
 - `japanese-informal`
@@ -130,9 +125,9 @@ Note that:
 - `kannada`, `-moz-kannada`
   - : Kannada numbering.
 - `katakana`
-  - : Dictionary-order katakana lettering
+  - : Dictionary-order katakana lettering.
 - `katakana-iroha`
-  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering
+  - : [Iroha-order](https://en.wikipedia.org/wiki/Iroha) katakana lettering.
 - `korean-hangul-formal`
   - : Korean hangul numbering.
 - `korean-hanja-formal`
@@ -152,7 +147,7 @@ Note that:
 - `oriya`, `-moz-oriya`
   - : Oriya numbering.
 - `persian`, `-moz-persian`
-  - : Persian numbering
+  - : Persian numbering.
 - `simp-chinese-formal`
   - : Simplified Chinese formal numbering.
 - `simp-chinese-informal`
@@ -178,7 +173,7 @@ Note that:
 
 ### Non-standard extensions
 
-A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
+A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers support which extension.
 
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
@@ -190,21 +185,7 @@ A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and
 
 ## Accessibility concerns
 
-The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type` value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/en-US/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
-
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
 
 ## Formal definition
 

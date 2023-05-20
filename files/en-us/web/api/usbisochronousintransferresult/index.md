@@ -2,15 +2,8 @@
 title: USBIsochronousInTransferResult
 slug: Web/API/USBIsochronousInTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBIsochronousInTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBIsochronousInTransferResult
 ---
 
@@ -23,7 +16,7 @@ The `USBIsochronousInTransferResult` interface of the [WebUSB API](/en-US/docs/W
 - {{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult", "USBIsochronousInTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBIsochronousInTransferResult` object with the provided `packets` and `data` fields.
 
-## Properties
+## Instance properties
 
 - {{domxref("USBIsochronousInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `DataView` object containing the data received from the device. This is the combined data from all packets. See the individual `DataView` objects in the `packets` array for the portion of this buffer containing data from each packet.

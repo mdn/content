@@ -1,10 +1,7 @@
 ---
 title: Grid layout using named grid lines
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
+page-type: guide
 ---
 
 {{CSSRef}}

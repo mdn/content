@@ -1,14 +1,8 @@
 ---
-title: btoa()
+title: btoa() global function
+short-title: btoa()
 slug: Web/API/btoa
 page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
 browser-compat: api.btoa
 ---
 
@@ -86,7 +80,7 @@ convert the string such that each 16-bit unit occupies only one byte. For exampl
 function toBinary(string) {
   const codeUnits = Uint16Array.from(
     { length: string.length },
-    (element, index) => string.charCodeAt(i)
+    (element, index) => string.charCodeAt(index)
   );
   const charCodes = new Uint8Array(codeUnits.buffer);
 
@@ -110,7 +104,7 @@ If you do this, of course you'll have to reverse the conversion on the decoded s
 ```js
 function fromBinary(binary) {
   const bytes = Uint8Array.from({ length: binary.length }, (element, index) =>
-    string.charCodeAt(i)
+    binary.charCodeAt(index)
   );
   const charCodes = new Uint16Array(bytes.buffer);
 

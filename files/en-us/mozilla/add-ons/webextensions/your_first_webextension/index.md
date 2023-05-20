@@ -1,11 +1,7 @@
 ---
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -18,7 +14,7 @@ The source code for this example is on GitHub: <https://github.com/mdn/webextens
 
 ## Writing the extension
 
-Create a new directory and navigate to it. For example, in your command line/terminal you do it like this:
+In a suitable location, such as in the `Documents` directory, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using the terminal, you create the directory like this:
 
 ```bash
 mkdir borderify
@@ -27,7 +23,7 @@ cd borderify
 
 ### manifest.json
 
-Now create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
+Using a suitable [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors), create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
 
 ```json
 {
@@ -126,7 +122,7 @@ Alternatively, you can run the extension from the command line using the [web-ex
 
 > **Note:** By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open "`about:addons`", click on the extension, and select the Allow radio button for Run in Private Windows.
 
-Now visit a page under "`mozilla.org`", and you should see the red border round the page.
+Now visit a page under "`https://www.mozilla.org/en-US/`", and you should see the red border round the page.
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 

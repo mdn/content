@@ -1,13 +1,9 @@
 ---
 title: Column combinator
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Selector
-  - Selectors
-  - Tables
+page-type: css-combinator
+status:
+  - experimental
 browser-compat: css.selectors.column
 ---
 

@@ -1,22 +1,8 @@
 ---
-title: 'RTCPeerConnection: iceconnectionstatechange event'
+title: "RTCPeerConnection: iceconnectionstatechange event"
+short-title: iceconnectionstatechange
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Disconnect
-  - ICE
-  - Media
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - iceConnectionState
-  - iceconnectionstatechange
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 ---
 
@@ -25,7 +11,7 @@ browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 An **`iceconnectionstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.
 The new ICE connection state is available in the object's {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property.
 
-One common task performed by the `iceconnectionstatechange` event listener: to trigger ICE restart when the state changes to `failed`. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} for further information.
+One common task performed by the `iceconnectionstatechange` event listener is to trigger [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) when the state changes to `failed`.
 
 This event is not cancelable and does not bubble.
 
@@ -34,9 +20,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('iceconnectionstatechange', (event) => { });
+addEventListener("iceconnectionstatechange", (event) => {});
 
-oniceconnectionstatechange = (event) => { };
+oniceconnectionstatechange = (event) => {};
 ```
 
 ## Event type
@@ -62,10 +48,14 @@ An event handler for this event can be added using the `oniceconnectionstatechan
 In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", (ev) => {
-  let stateElem = document.querySelector("#call-state");
-  stateElem.className = `${pc.iceConnectionState}-state`;
-}, false);
+pc.addEventListener(
+  "iceconnectionstatechange",
+  (ev) => {
+    let stateElem = document.querySelector("#call-state");
+    stateElem.className = `${pc.iceConnectionState}-state`;
+  },
+  false
+);
 ```
 
 This can also be written as:
@@ -74,7 +64,7 @@ This can also be written as:
 pc.oniceconnectionstatechange = (ev) => {
   let stateElem = document.querySelector("#call-state");
   stateElem.className = `${pc.iceConnectionState}-state`;
-}
+};
 ```
 
 ## Specifications

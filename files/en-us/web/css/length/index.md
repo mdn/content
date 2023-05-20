@@ -1,14 +1,7 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-  - length
+page-type: css-type
 browser-compat: css.types.length
 ---
 
@@ -36,7 +29,7 @@ The relative length units listed here are based on font and viewport.
 
 Font lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
-> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the [vertical rhythm of the page](https://24ways.org/2006/compose-to-a-vertical-rhythm) even when the user changes the font size.
+> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
 - `cap` {{experimental_inline}}
   - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
@@ -49,11 +42,11 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
   - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
-- `lh` {{experimental_inline}} {{Non-standard_Inline}}
+- `lh`
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
-- `rlh` {{experimental_inline}} {{Non-standard_Inline}}
+- `rlh`
   - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.
 
 ### Relative length units based on viewport
@@ -135,7 +128,38 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` represents the viewport-percentage length unit based on the browser default viewport size.
 
-#### Absolute length units
+### Container query length units
+
+When applying styles to a container using container queries, you can use container query length units.
+These units specify a length relative to the dimensions of a query container.
+Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
+
+- `cqw`
+
+  - : Represents a percentage of the width of the query container. `1cqw` is 1% of the query container's width. For example, if the query container's width is `800px`, then a value of `50cqw` on a property will be `400px`.
+
+- `cqh`
+
+  - : Represents a percentage of the height of the query container. `1cqh` is 1% of the query container's height. For example, if the query container's height is `300px`, then a value of `10cqh` on a property will be `30px`.
+
+- `cqi`
+
+  - : Represents a percentage of the inline size of the query container. `1cqi` is 1% of the query container's inline size. For example, if the query container's inline size is `800px`, then a value of `50cqi` on a property will be `400px`.
+
+- `cqb`
+
+  - : Represents a percentage of the block size of the query container. `1cqb` is 1% of the query container's block size. For example, if the query container's block size is `300px`, then a value of `10cqb` on a property will be `30px`.
+
+- `cqmin`
+
+  - : Represents a percentage of the smaller value of either the query container's inline size or block size. `1cqmin` is 1% of the smaller value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmin` on a property will be `150px`.
+
+- `cqmax`
+
+  - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
+
+### Absolute length units
 
 Absolute length units represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a physical unit and then defining the others relative to it. The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
 
@@ -146,19 +170,19 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 > **Note:** Many users increase their {{Glossary("user agent")}}'s default font size to make text more legible. Absolute lengths can cause accessibility problems because they are fixed and do not scale according to user settings. For this reason, prefer relative lengths (such as `em` or `rem`) when setting `font-size`.
 
 - `px`
-  - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = 1/96th of `1in`.
+  - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = `1in / 96`.
 - `cm`
-  - : One centimeter. `1cm` = `96px/2.54`.
+  - : One centimeter. `1cm` = `96px / 2.54`.
 - `mm`
-  - : One millimeter. `1mm` = 1/10th of `1cm`.
+  - : One millimeter. `1mm` = `1cm / 10`.
 - `Q`
-  - : One quarter of a millimeter. `1Q` = 1/40th of `1cm`.
+  - : One quarter of a millimeter. `1Q` = `1cm / 40`.
 - `in`
   - : One inch. `1in` = `2.54cm` = `96px`.
 - `pc`
-  - : One pica. `1pc` = `12pt` = 1/6th of `1in`.
+  - : One pica. `1pc` = `12pt` = `1in / 6`.
 - `pt`
-  - : One point. `1pt` = 1/72nd of `1in`.
+  - : One point. `1pt` = `1in / 72`.
 
 ## Interpolation
 
@@ -204,14 +228,14 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px
-      rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 5px rgb(255 255 255 / 0.5), inset -3px -3px 5px rgb(0
+          0 0 / 0.5);
 }
 
 .result {
   height: 20px;
-  box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px
-      rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 3px 5px rgba(255 255 255 / 0.5), inset -3px -3px 5px rgb(0
+          0 0 / 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
@@ -243,22 +267,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
 #### Result

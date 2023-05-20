@@ -1,11 +1,6 @@
 ---
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - sort
 ---
 
 {{ XsltRef() }}

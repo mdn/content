@@ -1,21 +1,9 @@
 ---
-title: Web Performance
+title: Web performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - Web
-  - Web Performance
 ---
+
+{{QuickLinksWithSubPages}}
 
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
@@ -76,7 +64,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 - {{glossary('Beacon')}}
 - {{glossary('Brotli compression')}}
-- {{glossary('Client hints')}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting')}}
 - {{glossary('CSSOM')}}
 - {{glossary('Domain sharding')}}
@@ -109,7 +97,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('RAIL')}}
 - {{glossary('Real User Monitoring')}}
 - {{glossary('Resource Timing')}}
-- {{glossary('Round Trip Time (RTT)')}}
+- {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
 - {{glossary('Server Timing')}}
 - {{glossary('Speculative parsing')}}
 - {{glossary('Speed index')}}
@@ -135,7 +123,8 @@ HTML
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload) - <https://w3c.github.io/preload/>
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- <https://w3c.github.io/preload/>
 
 CSS
 
@@ -161,7 +150,6 @@ APIs
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
 - [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Long Tasks API](/en-US/docs/Web/API/Long_Tasks_API)
 - [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
 - [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)

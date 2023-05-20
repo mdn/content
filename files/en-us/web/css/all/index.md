@@ -1,12 +1,7 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.all
 ---
 
@@ -34,7 +29,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 - {{cssxref("initial")}}
   - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/initial_value).
 - {{cssxref("inherit")}}
-  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/inheritance).
+  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/Inheritance).
 - {{cssxref("unset")}}
   - : Specifies that all the element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
 - {{cssxref("revert")}}
@@ -128,8 +123,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: initial;
 }
 ```
@@ -156,8 +149,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: inherit;
 }
 ```
@@ -184,8 +175,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: unset;
 }
 ```
@@ -212,8 +201,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: revert;
 }
 ```
@@ -240,8 +227,6 @@ body {
 blockquote {
   background-color: skyblue;
   color: red;
-}
-blockquote {
   all: revert-layer;
 }
 ```

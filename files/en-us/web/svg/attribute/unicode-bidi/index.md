@@ -1,9 +1,7 @@
 ---
 title: unicode-bidi
 slug: Web/SVG/Attribute/unicode-bidi
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.unicode-bidi
 ---
 

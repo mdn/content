@@ -1,15 +1,7 @@
 ---
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-tags:
-  - Alignment in Grids
-  - Boxes
-  - CSS
-  - CSS Grid
-  - Grid Alignment
-  - Guide
-  - alignment
-  - box alignment
+page-type: guide
 ---
 
 {{CSSRef}}

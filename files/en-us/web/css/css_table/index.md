@@ -1,12 +1,7 @@
 ---
 title: CSS Table
 slug: Web/CSS/CSS_Table
-tags:
-  - CSS
-  - CSS Table
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://www.w3.org/TR/CSS22/tables.html
 ---
 

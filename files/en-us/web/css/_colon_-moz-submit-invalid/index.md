@@ -1,14 +1,9 @@
 ---
-title: ':-moz-submit-invalid'
+title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
-tags:
-  - ':-moz-submit-invalid'
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-submit-invalid
 ---
 
@@ -20,8 +15,10 @@ By default, no style is applied. You can use this pseudo-class to customize the 
 
 ## Syntax
 
-```
-:-moz-submit-invalid
+```css
+:-moz-submit-invalid {
+  /* ... */
+}
 ```
 
 ## Specifications

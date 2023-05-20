@@ -1,15 +1,7 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
-tags:
-  - ':focus'
-  - ':focus-visible'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible
 ---
 
@@ -23,8 +15,10 @@ This selector is useful to provide a different focus indicator based on the user
 
 ## Syntax
 
-```
-:focus-visible
+```css
+:focus-visible {
+  /* ... */
+}
 ```
 
 ## Examples

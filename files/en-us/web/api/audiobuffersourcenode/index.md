@@ -2,14 +2,6 @@
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
 
@@ -51,7 +43,7 @@ Multiple calls to {{domxref("AudioScheduledSourceNode/stop", "stop()")}} are all
 - {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
   - : Creates and returns a new `AudioBufferSourceNode` object. As an alternative, you can use the {{domxref("BaseAudioContext.createBufferSource()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 
@@ -66,18 +58,18 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 - {{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}
   - : A floating-point number indicating the time, in seconds, at which playback of the {{domxref("AudioBuffer")}} stops and loops back to the time indicated by `loopStart`, if `loop` is `true`. The default value is `0`.
 - {{domxref("AudioBufferSourceNode.playbackRate")}}
-  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
+  - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
 
-### Event handlers
-
-_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
-
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and overrides the following method:_.
 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
   - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
+
+## Event handlers
+
+_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 
 ## Examples
 

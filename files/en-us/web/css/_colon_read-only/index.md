@@ -1,14 +1,7 @@
 ---
-title: ':read-only'
+title: ":read-only"
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Read-only
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.read-only
 ---
 
@@ -20,8 +13,10 @@ The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 
 ## Syntax
 
-```
-:read-only
+```css
+:read-only {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -93,4 +88,4 @@ p:read-write {
 ## See also
 
 - {{cssxref(":read-write")}}
-- HTML {{htmlattrxref("contenteditable")}} attribute
+- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute

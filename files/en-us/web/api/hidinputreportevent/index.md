@@ -2,12 +2,8 @@
 title: HIDInputReportEvent
 slug: Web/API/HIDInputReportEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDInputReportEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent
 ---
 
@@ -17,7 +13,7 @@ The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is pass
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
@@ -28,7 +24,7 @@ _This interface also inherits properties from {{domxref("Event")}}._
 - {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent, {{domxref("Event")}}._
 

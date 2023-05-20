@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - customSections
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
 
@@ -78,13 +69,12 @@ See custom-section.html [source code](https://github.com/mdn/webassembly-example
 and [live example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html).
 
 ```js
-WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
-.then(function(mod) {
+WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then((mod) => {
   const nameSections = WebAssembly.Module.customSections(mod, "name");
   if (nameSections.length !== 0) {
     console.log("Module contains a name section");
     console.log(nameSections[0]);
-  };
+  }
 });
 ```
 

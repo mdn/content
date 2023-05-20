@@ -2,9 +2,6 @@
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
 browser-compat: api.BeforeUnloadEvent
 ---
 

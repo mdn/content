@@ -1,12 +1,7 @@
 ---
 title: Accessibility tree
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accessibility
-  - DOM
-  - Glossary
-  - Reference
+page-type: glossary-definition
 ---
 
 The **accessibility tree** contains {{Glossary("accessibility")}}-related information for most HTML elements.

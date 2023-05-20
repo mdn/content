@@ -1,13 +1,9 @@
 ---
-title: 'Partitioned: All third-party storage access requests'
+title: "Partitioned: All third-party storage access requests"
 slug: Web/Privacy/Storage_access_policy/Errors/CookiePartitionedForeign
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
-  - tracking
 ---
+
+{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
 
 ## Message
 

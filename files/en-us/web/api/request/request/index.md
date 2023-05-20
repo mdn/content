@@ -1,13 +1,8 @@
 ---
-title: Request()
+title: "Request: Request() constructor"
+short-title: Request()
 slug: Web/API/Request/Request
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Fetch
-  - Reference
-  - request
 browser-compat: api.Request.Request
 ---
 
@@ -29,8 +24,7 @@ new Request(input, options)
 
   - : Defines the resource that you wish to fetch. This can either be:
 
-    - A string containing the direct URL of the resource you want to
-      fetch.
+    - A string containing the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
       throw exceptions:
@@ -83,21 +77,25 @@ new Request(input, options)
     - `keepalive`
       - : A boolean that indicates whether to make a persistent connection for multiple requests/responses.
     - `signal`
-      - : An [AbortSignal](/en-US/docs/Web/API/abortsignal) object which can be used to communicate with/abort a request.
+      - : An [AbortSignal](/en-US/docs/Web/API/AbortSignal) object which can be used to communicate with/abort a request.
+    - `priority`
+      - : Specifies the priority of the fetch request relative to other requests of the same type. Must be one of the following strings:
+        - `high`: A high priority fetch request relative to other requests of the same type.
+        - `low`: A low priority fetch request relative to other requests of the same type.
+        - `auto`: Automatically determine the priority of the fetch request relative to other requests of the same type (default).
 
     If you construct a new `Request` from an existing `Request`, any options you set in an _options_ argument for the new request replace any corresponding options set in the original `Request`. For example:
 
     ```js
     const oldRequest = new Request(
-      'https://github.com/mdn/content/issues/12959',
-      { headers: { 'From': 'webmaster@example.org' } },
+      "https://github.com/mdn/content/issues/12959",
+      { headers: { From: "webmaster@example.org" } }
     );
     oldRequest.headers.get("From"); // "webmaster@example.org"
-    const newRequest = new Request(
-      oldRequest,
-      { headers: { 'From': 'developer@example.org' } },
-    );
-    newRequest.headers.get('From'); // "developer@example.org"
+    const newRequest = new Request(oldRequest, {
+      headers: { From: "developer@example.org" },
+    });
+    newRequest.headers.get("From"); // "developer@example.org"
     ```
 
 ## Errors
@@ -131,9 +129,9 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())
@@ -147,19 +145,19 @@ In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tre
 invoke `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 
 fetch(myRequest).then((response) => {
   // ...
@@ -179,15 +177,15 @@ You can also use an object literal as `headers` in `myOptions`.
 
 ```js
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Content-Type': 'image/jpeg',
+    "Content-Type": "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`

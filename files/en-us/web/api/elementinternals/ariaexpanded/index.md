@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaExpanded
+title: "ElementInternals: ariaExpanded property"
+short-title: ariaExpanded
 slug: Web/API/ElementInternals/ariaExpanded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaExpanded
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaExpanded
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaExpanded`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 

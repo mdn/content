@@ -2,14 +2,6 @@
 title: Pointer events
 slug: Web/API/Pointer_events
 page-type: web-api-overview
-tags:
-  - API
-  - Interface
-  - Landing
-  - Overview
-  - Pointer Events
-  - Web
-  - events
 browser-compat: api.PointerEvent
 ---
 
@@ -21,7 +13,7 @@ Much of today's web content assumes the user's pointing device will be a mouse. 
 
 Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 
-The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
+The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
 
 The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, etc.). Consequently, pointer event types are intentionally similar to mouse event types.
 
@@ -86,7 +78,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 - {{ domxref('PointerEvent.twist','twist')}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType','pointerType')}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary','isPrimary')}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 

@@ -2,13 +2,6 @@
 title: SVGCircleElement
 slug: Web/API/SVGCircleElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - SVG
-  - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
 
@@ -18,7 +11,7 @@ The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circl
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
@@ -29,7 +22,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 - {{domxref("SVGCircleElement.r")}} {{ReadOnlyInline}}
   - : This property defines the radius of the `<circle>` element. It is denoted by the {{SVGAttr("r")}} of the element.
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 

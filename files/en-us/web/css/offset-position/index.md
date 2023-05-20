@@ -1,14 +1,9 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Experimental
-  - Property
-  - offset-position
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.offset-position
 ---
 

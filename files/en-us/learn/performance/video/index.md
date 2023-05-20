@@ -1,12 +1,6 @@
 ---
-title: 'Multimedia: video'
+title: "Multimedia: video"
 slug: Learn/Performance/video
-tags:
-  - Images
-  - Media
-  - Performance
-  - Video
-  - Web Performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
@@ -33,7 +27,7 @@ As we learned in the previous section, media, namely images and video, account f
       <td>
         To learn about the various video formats, their impact on performance,
         and how to reduce video impact on overall page load time while serving
-        the smallest video file size based on each browsers file type support.
+        the smallest video file size based on each browser's file type support.
       </td>
     </tr>
   </tbody>
@@ -107,7 +101,7 @@ For hero-video or other video without audio, removing audio is smart.
 </video>
 ```
 
-This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
+This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is autoplaying, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
 
 Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
@@ -134,18 +128,3 @@ Changing the setting to `auto` tells the browser to automatically download the e
 Optimizing video has the potential to significantly improve website performance. Video files are relatively large compared to other website files, and always worthy of attention. This article explains how to optimize website video through reducing file size, with (HTML) download settings, and with streaming.
 
 {{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
-- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
-- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)

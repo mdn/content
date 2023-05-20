@@ -1,12 +1,9 @@
 ---
 title: XML introduction
 slug: Web/XML/XML_introduction
-tags:
-  - Beginner
-  - Introduction
-  - NeedsContent
-  - XML
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
 
 XML (Extensible Markup Language) is a markup language similar to {{Glossary("HTML")}}, but without predefined tags to use. Instead, you define your own tags designed specifically for your needs. This is a powerful way to store data in a format that can be stored, searched, and shared. Most importantly, since the fundamental format of XML is standardized, if you share or transmit XML across systems or platforms, either locally or over the internet, the recipient can still parse the data due to the standardized XML syntax.
 
@@ -24,11 +21,11 @@ XML - declaration is not a tag. It is used for the transmission of the meta-data
 <?xml version="1.0" encoding="UTF-8"?>
 ```
 
-#### Attributes:
+#### Attributes
 
-- version:
+- `version`
   - : Used version XML in this document.
-- encoding :
+- `encoding`
   - : Used encoding in this document.
 
 ### Comments

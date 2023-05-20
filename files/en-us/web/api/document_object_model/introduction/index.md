@@ -2,14 +2,6 @@
 title: Introduction to the DOM
 slug: Web/API/Document_Object_Model/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
 spec-urls: https://dom.spec.whatwg.org/
 ---
 
@@ -90,7 +82,7 @@ and manipulation of the DOM (written in JavaScript),
 the JavaScript parts will be grouped together here,
 and separated from the HTML.
 
-For example, the following function creates a new {{HTMLElement("h1")}} element,
+For example, the following function creates a new {{HTMLElement("Heading_Elements", "h1")}} element,
 adds text to that element,
 and then adds it to the tree for the document:
 
@@ -216,7 +208,7 @@ But the relationship between objects and the interfaces that they implement in t
 
 ### Interfaces and objects
 
-Many objects borrow from several different interfaces. The table object, for example, implements a specialized {{domxref("HTMLTableElement")}} interface, which includes such methods as `createCaption` and `insertRow`. But since it's also an HTML element, `table` implements the `Element` interface described in the DOM {{domxref("Element")}} Reference chapter. And finally, since an HTML element is also, as far as the DOM is concerned, a node in the tree of nodes that make up the object model for an HTML or XML page, the table object also implements the more basic `Node` interface, from which `Element` derives.
+Many objects implement several different interfaces. The table object, for example, implements a specialized {{domxref("HTMLTableElement")}} interface, which includes such methods as `createCaption` and `insertRow`. But since it's also an HTML element, `table` implements the `Element` interface described in the DOM {{domxref("Element")}} Reference chapter. And finally, since an HTML element is also, as far as the DOM is concerned, a node in the tree of nodes that make up the object model for an HTML or XML page, the table object also implements the more basic `Node` interface, from which `Element` derives.
 
 When you get a reference to a `table` object, as in the following example, you routinely use all three of these interfaces interchangeably on the object, perhaps without knowing it.
 
@@ -250,7 +242,6 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()`
 - `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
 - `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
-- `{{domxref("window.content", "", "", "1")}}`
 - `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 

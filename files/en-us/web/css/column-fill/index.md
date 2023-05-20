@@ -1,12 +1,7 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-fill
 ---
 

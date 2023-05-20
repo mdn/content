@@ -1,11 +1,7 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-overflow
 ---
 
@@ -15,7 +11,7 @@ The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden over
 
 {{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
-The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
+The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
 
 ```css
 overflow: hidden;

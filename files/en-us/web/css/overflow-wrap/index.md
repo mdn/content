@@ -1,12 +1,7 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overflow-wrap
 ---
 

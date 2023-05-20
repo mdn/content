@@ -1,12 +1,7 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-composite
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-auto-flow
 ---
 
@@ -130,10 +125,10 @@ function changeGridAutoFlow() {
   grid.style.gridAutoFlow = gridAutoFlow;
 }
 
-const selectElem = document.querySelector('select');
-const inputElem = document.querySelector('input');
-selectElem.addEventListener('change', changeGridAutoFlow);
-inputElem.addEventListener('change', changeGridAutoFlow);
+const selectElem = document.querySelector("select");
+const inputElem = document.querySelector("input");
+selectElem.addEventListener("change", changeGridAutoFlow);
+inputElem.addEventListener("change", changeGridAutoFlow);
 ```
 
 #### Result

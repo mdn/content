@@ -1,10 +1,7 @@
 ---
 title: Browser detection using the user agent
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-tags:
-  - Compatibility
-  - HTTP
-  - Web Development
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -22,7 +19,7 @@ When considering using the user agent string to detect which browser is being us
 - Are you trying to work around a specific bug in some version of a browser?
   - : Look, or ask, in specialized forums: you're unlikely to be the first to hit this problem. Also, experts, or people with another point of view, can give you ideas for working around the bug. If the problem seems uncommon, it's worth checking if this bug has been reported to the browser vendor via their bug tracking system ([Mozilla](https://bugzilla.mozilla.org); [WebKit](https://bugs.webkit.org); [Blink](https://www.chromium.org/issue-tracking/); [Opera](https://bugs.opera.com/)). Browser makers do pay attention to bug reports, and the analysis may hint about other workarounds for the bug.
 - Are you trying to check for the existence of a specific feature?
-  - : Your site needs to use a specific Web feature that some browsers don't yet support, and you want to send those users to an older Web site with fewer features but that you know will work. This is the worst reason to use user agent detection because odds are eventually all the other browsers will catch up. In addition, it is not practical to test every one of the less popular browsers and test for those Web features. You should **never** do user agent sniffing. There is **always** the alternative of doing feature detection instead.
+  - : Your site needs to use a specific Web feature that some browsers don't yet support, and you want to send those users to an older website with fewer features but that you know will work. This is the worst reason to use user agent detection because odds are eventually all the other browsers will catch up. In addition, it is not practical to test every one of the less popular browsers and test for those Web features. You should **never** do user agent sniffing. There is **always** the alternative of doing feature detection instead.
 - Do you want to provide different HTML depending on which browser is being used?
   - : This is usually a bad practice, but there are some cases in which this is necessary. In these cases, you should first analyze your situation to be sure it's really necessary. Can you prevent it by adding some non-semantic {{ HTMLElement("div") }} or {{ HTMLElement("span") }} elements? The difficulty of successfully using user agent detection is worth a few disruptions to the purity of your HTML. Also, rethink your design: can you use progressive enhancement or fluid layouts to help remove the need to do this?
 
@@ -47,10 +44,13 @@ if (navigator.userAgent.includes("Chrome")) {
   splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
   // This fallback code is much less performant, but works
-  splitUpString = (str) => str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  splitUpString = (str) =>
+    String(str)
+      .split(/(.*?[A-Z])/)
+      .filter(Boolean);
 }
 
-console.log(splitUpString("fooBare")); // ["fooB", "are"]
+console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
@@ -75,7 +75,13 @@ try {
 
 const splitUpString = isLookBehindSupported
   ? (str) => String(str).split(new RegExp("(?<=[A-Z])"))
-  : (str) => str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  : (str) =>
+      String(str)
+        .split(/(.*?[A-Z])/)
+        .filter(Boolean);
+
+console.log(splitUpString("fooBar")); // ["fooB", "ar"]
+console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
 As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
@@ -83,7 +89,7 @@ As the above code demonstrates, there is **always** a way to test browser suppor
 Lastly, the above code snippets bring about a critical issue with cross-browser coding that must always be taken into account. Don't unintentionally use the API you are testing for in unsupported browsers. This may sound obvious and simple, but sometimes it is not. For example, in the above code snippets, using lookbehind in short-regexp notation (for example, /reg/igm) will cause a parser error in unsupported browsers. Thus, in the above example, you would use _new RegExp("(?<=look_behind_stuff)");_ instead of _/(?<=look_behind_stuff)/_, even in the lookbehind supported section of your code.
 
 - Progressive enhancement
-  - : This design technique involves developing your Web site in 'layers', using a bottom-up approach, starting with a simpler layer and improving the capabilities of the site in successive layers, each using more features.
+  - : This design technique involves developing your website in 'layers', using a bottom-up approach, starting with a simpler layer and improving the capabilities of the site in successive layers, each using more features.
 - Graceful degradation
   - : This is a top-down approach in which you build the best possible site using all the features you want, then tweak it to make it work on older browsers. This can be harder to do, and less effective, than progressive enhancement, but may be useful in some cases.
 - Mobile device detection
@@ -137,7 +143,7 @@ After reviewing all of the above better alternatives to user agent sniffing, the
 
 One such case is using user agent sniffing as a fallback when detecting if the device has a touch screen. See the [Mobile Device Detection](#mobile_device_detection) section for more information.
 
-Another such case is for fixing bugs in browsers that do not automatically update. Internet Explorer (on Windows) and Webkit (on iOS) are two perfect examples. Prior to version 9, Internet Explorer had issues with rendering bugs, CSS bugs, API bugs, and so forth. However, prior to version 9, Internet Explorer was very easy to detect based upon the browser-specific features available. Webkit is a bit worse because Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire [MediaQueryList](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
+Another such case is for fixing bugs in browsers that do not automatically update. Webkit (on iOS) is a perfect example. Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire [MediaQueryList](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
 
 ```js
 const UA = navigator.userAgent;
@@ -181,7 +187,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION,
+  PASSIVE_LISTENER_OPTION
 );
 
 addEventListener("resize", () =>
@@ -200,50 +206,41 @@ addEventListener("resize", () =>
 
 As there is no uniformity of the different part of the user agent string, this is the tricky part.
 
-### Browser Name
+### Browser Name and version
 
 When people say they want "browser detection", often they actually want "rendering engine detection". Do you actually want to detect Firefox, as opposed to SeaMonkey, or Chrome as opposed to Chromium? Or do you actually want to see if the browser is using the Gecko or the WebKit rendering engine? If this is what you need, see further down the page.
 
-Most browsers set the name and version in the format _BrowserName/VersionNumber_, with the notable exception of Internet Explorer. But as the name is not the only information in a user agent string that is in that format, you can not discover the name of the browser, you can only check if the name you are looking for. But note that some browsers are lying: Chrome for example reports both as Chrome and Safari. So to detect Safari you have to check for the Safari string and the absence of the Chrome string, Chromium often reports itself as Chrome too or Seamonkey sometimes reports itself as Firefox.
+Most browsers set the name and version in the format _BrowserName/VersionNumber_. But as the name is not the only information in a user agent string that is in that format, you can not discover the name of the browser, you can only check if the name you are looking for. But note that some browsers are lying: Chrome for example reports both as Chrome and Safari. So to detect Safari you have to check for the Safari string and the absence of the Chrome string, Chromium often reports itself as Chrome too or Seamonkey sometimes reports itself as Firefox.
 
 Also, pay attention not to use a simple regular expression on the BrowserName, user agents also contain strings outside the Keyword/Value syntax. Safari & Chrome contain the string 'like Gecko', for instance.
 
-| Engine                          | Must contain            | Must not contain               |
-| ------------------------------- | ----------------------- | ------------------------------ |
-| Firefox                         | `Firefox/xyz`           | `Seamonkey/xyz`                |
-| Seamonkey                       | `Seamonkey/xyz`         |                                |
-| Chrome                          | `Chrome/xyz`            | `Chromium/xyz`                 |
-| Chromium                        | `Chromium/xyz`          |                                |
-| Safari                          | `Safari/xyz`            | `Chrome/xyz` or `Chromium/xyz` |
-| Opera 15+ (Blink-based engine)  | `OPR/xyz`               |                                |
-| Opera 12- (Presto-based engine) | `Opera/xyz`             |                                |
-| Internet Explorer 10-           | `; MSIE xyz;`           |                                |
-| Internet Explorer 11            | `Trident/7.0; .*rv:xyz` |                                |
+| Engine                          | Must contain    | Must not contain               |
+| ------------------------------- | --------------- | ------------------------------ |
+| Firefox                         | `Firefox/xyz`   | `Seamonkey/xyz`                |
+| Seamonkey                       | `Seamonkey/xyz` |                                |
+| Chrome                          | `Chrome/xyz`    | `Chromium/xyz` or `Edg.*/xyz`  |
+| Chromium                        | `Chromium/xyz`  |                                |
+| Safari                          | `Safari/xyz`    | `Chrome/xyz` or `Chromium/xyz` |
+| Opera 15+ (Blink-based engine)  | `OPR/xyz`       |                                |
+| Opera 12- (Presto-based engine) | `Opera/xyz`     |                                |
 
 \[1] Safari gives two version numbers: one technical in the `Safari/xyz` token, and one user-friendly in a `Version/xyz` token.
 
 Of course, there is absolutely no guarantee that another browser will not hijack some of these things (like Chrome hijacked the Safari string in the past). That's why browser detection using the user agent string is unreliable and should be done only with the check of the version number (hijacking of past versions is less likely).
 
-### Browser version
-
-The browser version is often, but not always, put in the value part of the _BrowserName/VersionNumber_ token in the User Agent String. This is of course not the case for Internet Explorer (which puts the version number right after the MSIE token), and for Opera after version 10, which has added a Version/_VersionNumber_ token.
-
-Here again, be sure to take the right token for the browser you are looking for, as there is no guarantee that others will contain a valid number.
-
 ### Rendering engine
 
 As seen earlier, in most cases, looking for the rendering engine is a better way to go. This will help to not exclude lesser known browsers. Browsers sharing a common rendering engine will display a page in the same way: it is often a fair assumption that what will work in one will work in the other.
 
-There are five major rendering engines: Trident, Gecko, Presto, Blink, and WebKit. As sniffing the rendering engines names is common, a lot of user agents added other rendering names to trigger detection. It is therefore important to pay attention not to trigger false-positives when detecting the rendering engine.
+There are three active major rendering engines: Blink, Gecko, and WebKit. As sniffing the rendering engines names is common, a lot of user agents added other rendering names to trigger detection. It is therefore important to pay attention not to trigger false-positives when detecting the rendering engine.
 
 | Engine   | Must contain      | Comment                                                                                                                                                                                      |
 | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blink    | `Chrome/xyz`      |                                                                                                                                                                                              |
 | Gecko    | `Gecko/xyz`       |                                                                                                                                                                                              |
 | WebKit   | `AppleWebKit/xyz` | Pay attention, WebKit browsers add a 'like Gecko' string that may trigger false positive for Gecko if the detection is not careful.                                                          |
 | Presto   | `Opera/xyz`       | **Note:** Presto is no longer used in Opera browser builds >= version 15 (see 'Blink')                                                                                                       |
-| Trident  | `Trident/xyz`     | Internet Explorer put this token in the _comment_ part of the User Agent String                                                                                                              |
 | EdgeHTML | `Edge/xyz`        | The non-Chromium Edge puts its engine version after the _Edge/_ token, not the application version. **Note:** EdgeHTML is no longer used in Edge browser builds >= version 79 (see 'Blink'). |
-| Blink    | `Chrome/xyz`      |                                                                                                                                                                                              |
 
 ## Rendering engine version
 
@@ -251,7 +248,7 @@ Most rendering engines put the version number in the _RenderingEngine/VersionNum
 
 ## OS
 
-The Operating System is given in most User Agent strings (although not web-focused platforms like Firefox OS), but the format varies a lot. It is a fixed string between two semi-colons, in the comment part of the User Agent. These strings are specific for each browser. They indicate the OS, but also often its version and information on the relying hardware (32 or 64 bits, or Intel/PPC for Mac).
+The Operating System is given in most User Agent strings (although not web-focused platforms like Firefox OS), but the format varies a lot. It is a fixed string between two semicolons, in the comment part of the User Agent. These strings are specific for each browser. They indicate the OS, but also often its version and information on the relying hardware (32 or 64 bits, or Intel/PPC for Mac).
 
 Like in all cases, these strings may change in the future, one should use them only in conjunction with the detection of already released browsers. A technological survey must be in place to adapt the script when new browser versions are coming out.
 
@@ -270,7 +267,6 @@ The following table summarizes the way common browser vendors indicate that thei
 | WebKit-based (Android, Safari)                                    | `Mobile Safari` token [outside](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3) the comment. | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
 | Blink-based (Chromium, Google Chrome, Opera 15+, Edge on Android) | `Mobile Safari` token [outside](https://developer.chrome.com/docs/multidevice/user-agent/) the comment.                                                                                                                                              | `Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047` |
 | Presto-based (Opera 12-)                                          | `Opera Mobi/xyz` token [inside](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/) the comment.                                                                                                                   | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
-| Internet Explorer                                                 | `IEMobile/xyz` token in the comment.                                                                                                                                                                                                                 | `Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)`                                                                            |
 | Edge on Windows 10 Mobile                                         | `Mobile/xyz` and `Edge/` tokens outside the comment.                                                                                                                                                                                                 | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
 
 In summary, we recommend looking for the string `Mobi` anywhere in the User Agent to detect a mobile device.

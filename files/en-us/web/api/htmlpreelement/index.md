@@ -2,11 +2,6 @@
 title: HTMLPreElement
 slug: Web/API/HTMLPreElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLPreElement
 ---
 
@@ -16,14 +11,14 @@ The **`HTMLPreElement`** interface exposes specific properties and methods (beyo
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
-  - : A `long` value reflecting the obsolete {{htmlattrxref("width", "pre")}} attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.
+  - : A `long` value reflecting the obsolete [`width`](/en-US/docs/Web/HTML/Element/pre#width) attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

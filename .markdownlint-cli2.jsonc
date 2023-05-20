@@ -20,10 +20,12 @@
     "MD025": {
       "front_matter_title": "^\\s*title\\s*[:=]"
     },
-    "MD026": false,
-    // Consectutive Notes/Callouts currently don't conform with this rule
+    "MD026": {
+      "punctuation": ".,;:"
+    },
+    // Consecutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
-    // Force orderd numbering to catch accidental list ending from indenting
+    // Force ordered numbering to catch accidental list ending from indenting
     "MD029": {
       "style": "ordered"
     },
@@ -32,7 +34,6 @@
         "a",
         "abbr",
         "annotation",
-        "base",
         "br",
         "caption",
         "code",
@@ -40,7 +41,6 @@
         "colgroup",
         "dd",
         "details",
-        "dfn",
         "div",
         "dl",
         "dt",
@@ -82,6 +82,7 @@
         "ol",
         "p",
         "pre",
+        "q",
         "section",
         "semantics",
         "strong",
@@ -99,13 +100,12 @@
         "var"
       ]
     },
+    "MD034": false,
     // Pending https://github.com/mdn/content/pull/20115
     "MD037": false,
     "MD040": false,
     // See https://github.com/mdn/content/pull/20026, as macros currently break this
     "MD042": false,
-    // Tracked as part of https://github.com/mdn/content/pull/19334
-    "MD045": false,
     "MD046": {
       "style": "fenced"
     },
@@ -118,8 +118,6 @@
     // MD051 - Link fragments should be valid.
     // -> Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
     "MD051": false,
-    // Incompatible with brackets in macros like MD042
-    "MD052": false,
     "search-replace": {
       "rules": [
         {
@@ -137,6 +135,13 @@
           "skipCode": true
         },
         {
+          "name": "nbsp",
+          "message": "Don't use no-break spaces",
+          "searchPattern": "/ /g",
+          "replace": " ",
+          "skipCode": false
+        },
+        {
           "name": "m-dash",
           "message": "Don't use '--'. Use m-dash — instead",
           "search": " -- ",
@@ -151,15 +156,56 @@
           "skipCode": true
         },
         {
+          "name": "relative-link-path",
+          "message": "Don't use relative paths",
+          "search": "](..",
+          "skipCode": true
+        },
+        {
           "name": "trailing-spaces",
           "message": "Avoid trailing spaces",
           "searchPattern": "/  +$/gm",
           "replace": "",
           "skipCode": false
+        },
+        {
+          "name": "double-spaces",
+          "message": "Avoid double spaces",
+          "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+          "replace": "$1 $2",
+          "skipCode": true
+        },
+        {
+          "name": "stuck-definition",
+          "message": "Character is stuck to definition description marker",
+          "searchPattern": "/- :(\\w)/g",
+          "replace": "- : $1",
+          "skipCode": true
+        },
+        {
+          "name": "fqdn-moz-links",
+          "message": "Don't use developer.mozilla.org for links",
+          "search": "](https://developer.mozilla.org/",
+          "replace": "](/",
+          "skipCode": true
+        },
+        {
+          "name": "incorrect-spelling",
+          "message": "Incorrect spelling",
+          "searchPattern": ["/e-mail/ig", "/(w)eb site/ig"],
+          "replace": ["email", "$1ebsite"],
+          "skipCode": false
+        },
+        {
+          "name": "localhost-links",
+          "message": "Don't use localhost for links",
+          "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+          "replace": "](/",
+          "skipCode": true
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules"]
+  "ignores": ["node_modules", ".github", "tests"]
 }

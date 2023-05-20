@@ -1,14 +1,8 @@
 ---
-title: console.time()
+title: "console: time() method"
+short-title: time()
 slug: Web/API/console/time
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
 browser-compat: api.console.time
 ---
 
@@ -33,7 +27,7 @@ time(label)
 ### Parameters
 
 - `label`
-  - : The name to give the new timer. This will identify the timer; use the same name when
+  - : A `string` representing the name to give the new timer. This will identify the timer; use the same name when
     calling {{domxref("console.timeEnd()")}} to stop the timer and get the time output to
     the console.
 

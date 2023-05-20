@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-tags:
-  - API
-  - Class
-  - Exception
-  - JavaScript
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
@@ -88,9 +81,9 @@ const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
 
 // Note: import object properties match the WebAssembly import statement!
 const importObject = {
-  "extmod": {
-    "exttag": tagToImport
-  }
+  extmod: {
+    exttag: tagToImport,
+  },
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)

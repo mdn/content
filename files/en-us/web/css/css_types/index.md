@@ -1,17 +1,7 @@
 ---
 title: CSS data types
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - CSS Data Type
-  - Guide
-  - Index
-  - Overview
-  - Reference
-  - Syntax
-  - Types
-  - data types
-  - list
+page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
 ---
 
@@ -69,7 +59,7 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 - {{cssxref("&lt;ratio&gt;")}}
   - : A ratio, written with the syntax `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
-  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), written as a `<dimension>` with the `fr` unit attached and used for grid track sizing.
+  - : A flexible length introduced for [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), written as a `<number>` with the `fr` unit attached and used for grid track sizing.
 
 ## Quantities
 
@@ -101,12 +91,14 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-3/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+[The CSS Color Specification](https://www.w3.org/TR/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+- {{cssxref("&lt;hue&gt;")}}
+  - : Specifies the `<angle>`, with a unit identifier of `deg`, `grad`, `rad`, or `turn`, or unitless `<number>` interpreted as `deg`, of the {{glossary("color wheel")}} specific to the `<absolute-color-functions>` of which it is a component.
 
 ## Images
 
@@ -131,6 +123,19 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 
 - {{cssxref("&lt;position&gt;")}}
   - : Defines the position of an object area. Accepts a keyword value such as `top` or `left`, or a `<length-percentage>`.
+
+## Calculation data types
+
+These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functions#math_functions) calculations.
+
+- {{cssxref("&lt;calc-sum&gt;")}}
+  - : A calculation which is a sequence of calculation values interspersed with addition (`+`) and subtraction (`-`) operators. This data type requires both values to have units.
+- {{cssxref("&lt;calc-product&gt;")}}
+  - : A calculation which is a sequence of calculation values interspersed with multiplication (`*`) and division (`/`) operators. When multiplying, one value must be unitless. When dividing, the second value must be unitless.
+- {{cssxref("&lt;calc-value&gt;")}}
+  - : Defines accepted values for calculations, values such as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;calc-constant&gt;")}} or nested {{cssxref("&lt;calc-sum&gt;")}} calculations.
+- {{cssxref("&lt;calc-constant&gt;")}}
+  - : Defines a number of CSS keywords representing numeric constants such as `e` and `π`, that can be used in CSS math functions.
 
 ## Specifications
 

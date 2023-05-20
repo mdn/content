@@ -1,12 +1,7 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transform-style
 ---
 
@@ -133,12 +128,12 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 #### JavaScript
 
 ```js
-const cube = document.getElementById('example-element');
-const checkbox = document.getElementById('preserve');
+const cube = document.getElementById("example-element");
+const checkbox = document.getElementById("preserve");
 
-checkbox.addEventListener('change', () => {
-  cube.style.transformStyle = checkbox.checked ? 'preserve-3d' : 'flat';
-})
+checkbox.addEventListener("change", () => {
+  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
+});
 ```
 
 #### Result

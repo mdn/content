@@ -1,12 +1,7 @@
 ---
-title: 'HTML attribute: size'
+title: "HTML attribute: size"
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
+page-type: html-attribute
 browser-compat: html.elements.attribute.size
 ---
 
@@ -15,6 +10,8 @@ browser-compat: html.elements.attribute.size
 The **`size`** attribute defines the width of the {{htmlelement('input')}} and the height of the {{htmlelement('select')}} element. For the `input`, if the `type` attribute is {{HTMLElement("input/text", "text")}} or {{HTMLElement("input/password", "password")}} then it's the number of characters. This must be an integer value 0 or higher. If no `size` is specified, or an invalid value is specified, the input has no size declared, and the form control will be the default width based on the user agent. If CSS targets the element with properties impacting the width, CSS takes precedence.
 
 The `size` attribute has no impact on constraint validation.
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
 
 ## Examples
 

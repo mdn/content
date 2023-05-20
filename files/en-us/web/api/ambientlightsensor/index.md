@@ -2,17 +2,8 @@
 title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Ambient Light Sensor API
-  - AmbientLightSensor
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor
 ---
 
@@ -22,7 +13,7 @@ The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/
 
 To use this sensor, the user must grant permission to the `'ambient-light-sensor'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -31,12 +22,12 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}} {{Experimental_Inline}}
   - : Creates a new `AmbientLightSensor` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('AmbientLightSensor.illuminance')}} {{Experimental_Inline}}
   - : Returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
-## Methods
+## Instance methods
 
 _`AmbientLightSensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 

@@ -2,17 +2,6 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Layout
-  - Object Model
-  - Reference
-  - StyleSheet
 browser-compat: api.CSSStyleSheet
 ---
 
@@ -27,7 +16,8 @@ A stylesheet consists of a collection of {{domxref("CSSRule")}} objects represen
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```
@@ -41,7 +31,7 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 - {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
   - : Creates a new `CSSStyleSheet` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
@@ -54,7 +44,7 @@ _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 

@@ -2,13 +2,6 @@
 title: ReadableStreamBYOBReader
 slug: Web/API/ReadableStreamBYOBReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
 
@@ -31,12 +24,12 @@ The `read()` method differs in that it provide a view into which data should be 
 - {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}}
   - : Creates and returns a `ReadableStreamBYOBReader` object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("ReadableStreamBYOBReader.closed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableStreamBYOBReader.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
@@ -71,7 +64,8 @@ function readStream(reader) {
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
-    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    reader
+      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(function processBytes({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
@@ -87,7 +81,9 @@ function readStream(reader) {
         bytesReceived += value.byteLength;
 
         // Read some more, and call this function again
-        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+        return reader
+          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+          .then(processBytes);
       });
   }
 }
@@ -99,8 +95,12 @@ The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise th
 
 ```js
 reader.closed
-  .then(() => { /* Resolved - code to handle stream closing */ } )
-  .catch(() => { /* Rejected - code to handle error */ } );
+  .then(() => {
+    // Resolved - code to handle stream closing
+  })
+  .catch(() => {
+    // Rejected - code to handle error
+  });
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
@@ -110,8 +110,8 @@ When the stream is cancelled the controller will in turn call `cancel()` on the 
 The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
 
 ```js
-button.addEventListener('click', () => {
-  reader.cancel("user choice").then(() => console.log('cancel complete'));
+button.addEventListener("click", () => {
+  reader.cancel("user choice").then(() => console.log("cancel complete"));
 });
 ```
 
@@ -131,4 +131,8 @@ reader.releaseLock();
 
 ## See also
 
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

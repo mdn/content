@@ -1,20 +1,7 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - Boxes
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - border-box
-  - box model
-  - box-sizing
-  - content-box
-  - height
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.box-sizing
 ---
 

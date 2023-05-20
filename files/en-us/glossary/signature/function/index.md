@@ -1,11 +1,7 @@
 ---
 title: Signature (functions)
 slug: Glossary/Signature/Function
-tags:
-  - CodingScripting
-  - Glossary
-  - Java
-  - JavaScript
+page-type: glossary-definition
 ---
 
 A **function signature** (or _type_ signature, or _method_ signature) defines input and output of {{Glossary("Function", "functions")}} or {{Glossary("Method", "methods")}}.

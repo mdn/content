@@ -1,12 +1,7 @@
 ---
 title: CSS Display
 slug: Web/CSS/CSS_Display
-tags:
-  - CSS
-  - CSS Display
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 browser-compat: css.properties.display
 ---
 

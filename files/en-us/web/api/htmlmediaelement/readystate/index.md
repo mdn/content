@@ -1,14 +1,8 @@
 ---
-title: HTMLMediaElement.readyState
+title: "HTMLMediaElement: readyState property"
+short-title: readyState
 slug: Web/API/HTMLMediaElement/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLMediaElement.readyState
 ---
 
@@ -73,7 +67,7 @@ An `unsigned short`. Possible values are:
 
 ## Examples
 
-This example will listen for audio data to be loaded for the element \`example\`. It will
+This example will listen for audio data to be loaded for the element `example`. It will
 then check if at least the current playback position has been loaded. If it has, the
 audio will play.
 
@@ -84,14 +78,12 @@ audio will play.
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', () => {
-
+obj.addEventListener("loadeddata", () => {
   if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 
@@ -105,4 +97,4 @@ obj.addEventListener('loadeddata', () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.readyState` property

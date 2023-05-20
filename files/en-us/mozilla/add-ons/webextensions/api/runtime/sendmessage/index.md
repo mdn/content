@@ -1,16 +1,7 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendMessage
 ---
 
@@ -20,7 +11,7 @@ Sends a single message to event listeners within your extension or a different e
 
 If sending to your extension, omit the `extensionId` argument. The {{WebExtAPIRef('runtime.onMessage')}} event will be fired in each page in your extension, except for the frame that called `runtime.sendMessage`.
 
-If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension.
+If sending to a different extension, include the `extensionId` argument set to the other extension's ID. {{WebExtAPIRef('runtime.onMessageExternal')}} will be fired in the other extension. By default, your extension can exchange messages with itself and any other extension (defined by `extensionId`). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions.
 
 Extensions cannot send messages to content scripts using this method. To send messages to content scripts, use {{WebExtAPIRef('tabs.sendMessage')}}.
 
@@ -42,9 +33,9 @@ let sending = browser.runtime.sendMessage(
 
 - `extensionId` {{optional_inline}}
 
-  - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
+  - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
-    If `extensionId` is omitted, the message will be sent to your own extension.
+    If `extensionId` is omitted, the message is sent to your extension.
 
 - `message`
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
@@ -126,8 +117,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

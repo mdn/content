@@ -1,16 +1,6 @@
 ---
 title: Starting our Svelte to-do list app
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
-tags:
-  - Beginner
-  - Components
-  - Frameworks
-  - JavaScript
-  - Learn
-  - Svelte
-  - client-side
-  - state
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
 
 {{LearnSidebar}}
@@ -109,19 +99,19 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 
-   ```html
+   ```svelte
    <h1>Svelte to-do list</h1>
    ```
 
 3. Change the `title` element in `public/index.html` to contain the text _Svelte to-do list_:
 
-   ```html
+   ```svelte
    <title>Svelte to-do list</title>
    ```
 
 4. Open `src/App.svelte` and replace its contents with the following:
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
    </script>
@@ -132,13 +122,13 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
    ```js
-   import App from './App.svelte'
+   import App from "./App.svelte";
 
    const app = new App({
-     target: document.body
-   })
+     target: document.body,
+   });
 
-   export default app
+   export default app;
    ```
 
 Now if you check your testing server URL you'll see our `Todos.svelte` component being rendered:
@@ -149,7 +139,7 @@ Now if you check your testing server URL you'll see our `Todos.svelte` component
 
 For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our `Todos.svelte` component file, replacing the existing content:
 
-```html
+```svelte
 <!-- Todos.svelte -->
 <div class="todoapp stack-large">
   <!-- NewTodo -->
@@ -290,7 +280,7 @@ In subsequent articles we'll get all these features working, and more besides.
 
 You may notice some unusual attributes here. For example:
 
-```html
+```svelte
 <button class="btn toggle-btn" aria-pressed="true">
   <span class="visually-hidden">Show</span>
   <span>All</span>
@@ -304,7 +294,7 @@ The class `visually-hidden` has no effect yet, because we have not included any 
 
 Further down, you can find the following `<ul>` element:
 
-```html
+```svelte
 <ul
   role="list"
   className="todo-list stack-large"
@@ -325,7 +315,7 @@ Accessibility (shortened to a11y) isn't always easy to get right, but Svelte wil
 
 For example, if we add an `<img>` element to our `todos.svelte` component without its corresponding `alt` prop:
 
-```html
+```svelte
 <h1>Svelte To-Do list</h1>
 
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
@@ -351,7 +341,7 @@ Moreover, our editor can display this warning even before calling the compiler:
 
 You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs#Comments) beginning with `svelte-ignore`, like this:
 
-```html
+```svelte
 <!-- svelte-ignore a11y-missing-attribute -->
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
@@ -365,22 +355,24 @@ plugins: [
   svelte({
     dev: !production,
     css: (css) => {
-      css.write('public/build/bundle.css');
+      css.write("public/build/bundle.css");
     },
     // Warnings are normally passed straight to Rollup. You can
     // optionally handle them here, for example to squelch
     // warnings with a particular code
     onwarn: (warning, handler) => {
       // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === 'a11y-missing-attribute') return;
+      if (warning.code === "a11y-missing-attribute") {
+        return;
+      }
 
       // let Rollup handle all other warnings normally
       handler(warning);
-    }
+    },
   }),
 
   // …
-]
+];
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
@@ -727,58 +719,3 @@ To see the current state of the code in a REPL, visit:
 With our markup and styling in place, our to-do list app is starting to take shape, and we have everything ready so that we can start to focus on the features we have to implement.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React to-do list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing to-dos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte to-do list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular to-do list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

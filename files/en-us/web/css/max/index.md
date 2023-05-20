@@ -1,16 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - max
+page-type: css-function
 browser-compat: css.types.max
 ---
 

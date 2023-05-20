@@ -2,19 +2,8 @@
 title: XRCubeLayer
 slug: Web/API/XRCubeLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRCubeLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCubeLayer
 ---
 
@@ -30,7 +19,7 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
@@ -39,7 +28,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCubeLayer.orientation")}} {{Experimental_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the orientation relative to the `space` property.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
 

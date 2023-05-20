@@ -1,15 +1,7 @@
 ---
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Multi-col
-  - columns
-  - cookbook
-  - flexbox
-  - grid
+page-type: guide
 browser-compat:
   - css.properties.column-width
   - css.properties.column-rule

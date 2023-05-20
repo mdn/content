@@ -1,14 +1,7 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-border-width
 ---
 
@@ -31,10 +24,10 @@ mask-border-width: 25%;
 /* <number> value */
 mask-border-width: 3;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-width: 2em 3em;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 mask-border-width: 5% 15% 10%;
 
 /* top | right | bottom | left */

@@ -1,15 +1,8 @@
 ---
-title: AudioListener.forwardY
+title: "AudioListener: forwardY property"
+short-title: forwardY
 slug: Web/API/AudioListener/forwardY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioListener
-  - Property
-  - Reference
-  - Web Audio API
-  - forwardY
 browser-compat: api.AudioListener.forwardY
 ---
 
@@ -25,7 +18,7 @@ An {{domxref("AudioParam")}}. Its default value is 0, and it can range between p
 
 ## Examples
 
-See [BaseAudioContext.createPanner()](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [BaseAudioContext.createPanner()](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

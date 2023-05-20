@@ -1,17 +1,8 @@
 ---
-title: MediaSource.readyState
+title: "MediaSource: readyState property"
+short-title: readyState
 slug: Web/API/MediaSource/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - readyState
 browser-compat: api.MediaSource.readyState
 ---
 
@@ -38,27 +29,27 @@ The following snippet is from a simple example written by Nick Desaulniers ([vie
 ```js
 let mediaSource;
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   mediaSource = getMediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
 function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
       console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 ```
 
 ## Specifications

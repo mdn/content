@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.canvas
+title: "CanvasRenderingContext2D: canvas property"
+short-title: canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.canvas
 ---
 
@@ -34,9 +29,9 @@ Given this {{HTMLElement("canvas")}} element:
 `CanvasRenderingContext2D` by using the `canvas` property:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.canvas // HTMLCanvasElement
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## Specifications

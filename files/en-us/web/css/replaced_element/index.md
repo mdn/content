@@ -1,14 +1,7 @@
 ---
 title: Replaced elements
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - css layout
-  - rendering
-  - replaced element
+page-type: guide
 ---
 
 {{CSSRef}}
@@ -34,7 +27,6 @@ Some elements are treated as replaced elements only in specific cases:
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
 HTML spec also says that an {{HTMLElement("input")}} element can be replaced, because {{HTMLElement("input")}} elements of the `"image"` type are replaced elements similar to {{HTMLElement("img")}}. However, other form controls, including other types of {{HTMLElement("input")}} elements, are explicitly listed as non-replaced elements (the spec describes their default platform-specific rendering with the term "Widgets").
 
@@ -58,12 +50,13 @@ Certain CSS properties can be used to specify how the object contained within th
 ## See also
 
 - [HTML Spec](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
+- {{glossary("void element", "Void elements")}}
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

@@ -1,12 +1,7 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-combine-upright
 ---
 
@@ -14,7 +9,7 @@ browser-compat: css.properties.text-combine-upright
 
 The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
 
-This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.
+This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">縦中横</q> in Japanese, or as <q lang="zh-Hant">橫向文字</q> in Chinese.
 
 {{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
 
@@ -26,8 +21,8 @@ text-combine-upright: none;
 text-combine-upright: all;
 
 /* Digits values */
-text-combine-upright: digits;     /* fits 2 consecutive digits horizontally inside vertical text */
-text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits; /* fits 2 consecutive digits horizontally inside vertical text */
+text-combine-upright: digits 4; /* fits up to 4 consecutive digits horizontally inside vertical text */
 
 /* Global values */
 text-combine-upright: inherit;
@@ -56,31 +51,7 @@ text-combine-upright: unset;
 
 ## Examples
 
-### Example using "digits"
-
-The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.
-
-#### HTML
-
-```html
-<p lang="ja" class="exampleText">平成20年4月16日に</p>
-```
-
-#### CSS
-
-```css
-.exampleText {
-  writing-mode: vertical-lr;
-  text-combine-upright: digits 2;
-  font: 36px serif;
-}
-```
-
-#### Results
-
-{{EmbedLiveSample('Example using "digits"', 100, 350, "tate-chu-yoko.png")}}
-
-### Example using "all"
+### Using 'all' with horizontal text
 
 The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.
 
@@ -109,7 +80,7 @@ html {
 
 #### Results
 
-{{EmbedLiveSample('Example using "all"', 250, 300, "text-combine-upright-all.png")}}
+{{EmbedLiveSample('Example using "all"', 250, 200)}}
 
 ## Specifications
 

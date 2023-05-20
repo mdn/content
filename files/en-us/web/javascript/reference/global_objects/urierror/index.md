@@ -1,12 +1,7 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
+page-type: javascript-class
 browser-compat: javascript.builtins.URIError
 ---
 
@@ -16,27 +11,27 @@ The **`URIError`** object represents an error when a global URI handling functio
 
 `URIError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
+`URIError` is a subclass of {{jsxref("Error")}}.
+
 ## Constructor
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+- {{jsxref("URIError/URIError", "URIError()")}}
   - : Creates a new `URIError` object.
 
 ## Instance properties
 
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_Also inherits instance properties from its parent {{jsxref("Error")}}_.
+
+These properties are defined on `URIError.prototype` and shared by all `URIError` instances.
+
+- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `URIError` instances, the initial value is the {{jsxref("URIError/URIError", "URIError")}} constructor.
+- {{jsxref("Error/name", "URIError.prototype.name")}}
+  - : Represents the name for the type of error. For `URIError.prototype.name`, the initial value is `"URIError"`.
+
+## Instance methods
+
+_Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
@@ -44,15 +39,15 @@ The **`URIError`** object represents an error when a global URI handling functio
 
 ```js
 try {
-  decodeURIComponent('%')
+  decodeURIComponent("%");
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "malformed URI sequence"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "Scratchpad/1"
-  console.log(e.lineNumber)           // 2
-  console.log(e.columnNumber)         // 2
-  console.log(e.stack)                // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "malformed URI sequence"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -60,15 +55,15 @@ try {
 
 ```js
 try {
-  throw new URIError('Hello', 'someFile.js', 10)
+  throw new URIError("Hello", "someFile.js", 10);
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "Hello"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "someFile.js"
-  console.log(e.lineNumber)           // 10
-  console.log(e.columnNumber)         // 0
-  console.log(e.stack)                // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

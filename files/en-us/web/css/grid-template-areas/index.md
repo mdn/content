@@ -1,12 +1,7 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-template-areas
 ---
 

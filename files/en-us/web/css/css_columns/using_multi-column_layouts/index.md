@@ -1,13 +1,7 @@
 ---
 title: Using multi-column layouts
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - Advanced
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
-  - Web
+page-type: guide
 ---
 
 {{CSSRef}}

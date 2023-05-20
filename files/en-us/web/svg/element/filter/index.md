@@ -1,10 +1,7 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.filter
 ---
 

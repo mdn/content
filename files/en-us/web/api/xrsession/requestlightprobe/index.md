@@ -1,20 +1,10 @@
 ---
-title: XRSession.requestLightProbe()
+title: "XRSession: requestLightProbe() method"
+short-title: requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSession
+status:
+  - experimental
 browser-compat: api.XRSession.requestLightProbe
 ---
 
@@ -59,7 +49,7 @@ The default format is `srgb8`, however, some rendering engines may use other (hi
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
-  reflectionFormat: xrSession.preferredReflectionFormat
+  reflectionFormat: xrSession.preferredReflectionFormat,
 });
 ```
 

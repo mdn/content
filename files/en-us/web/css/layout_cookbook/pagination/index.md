@@ -1,13 +1,7 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - CSS Cookbook
-  - Guide
-  - css layout
-  - flexbox
-  - pagination
+page-type: guide
 browser-compat:
   - css.properties.justify-content
   - css.properties.column-gap.flex_context

@@ -1,12 +1,7 @@
 ---
 title: CSS Text Decoration
 slug: Web/CSS/CSS_Text_Decoration
-tags:
-  - CSS
-  - CSS Text Decoration
-  - Guide
-  - Overview
-  - Reference
+page-type: css-module
 spec-urls: https://drafts.csswg.org/css-text-decor/
 ---
 

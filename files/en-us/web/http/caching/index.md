@@ -1,10 +1,7 @@
 ---
 title: HTTP caching
 slug: Web/HTTP/Caching
-tags:
-  - Caching
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -154,7 +151,7 @@ The `Expires` header specifies the lifetime of the cache using an explicit time 
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore,`max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
+However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore, `max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
 
 If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
@@ -260,11 +257,11 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** When evaluating how to use `ETag` and `Last-Modified`, consider the following:
-> During cache revalidation, if both `ETag` and `Last-Modified` are present, `ETag` takes precedence.
-> Therefore, if you are only considering caching, you may think that `Last-Modified` is unnecessary.
-> However, `Last-Modified` is not just useful for caching; instead, it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
-> So considering the overall HTTP ecosystem, it is preferable to provide both `ETag` and `Last-Modified`.
+> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
+> If you are only considering caching, you may think that `Last-Modified` is unnecessary.
+> However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
+> So considering the overall HTTP ecosystem, it is better to provide both `ETag` and `Last-Modified`.
 
 ### Force Revalidation
 
@@ -295,7 +292,7 @@ Cache-Control: max-age=0, must-revalidate
 
 However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
-But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
+But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0` and `must-revalidate` combination — you should instead just use `no-cache`.
 
 ## Don't cache
 

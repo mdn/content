@@ -1,14 +1,10 @@
 ---
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
-tags:
-  - Accept-CH-Lifetime
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Accept-CH-Lifetime
 ---
 

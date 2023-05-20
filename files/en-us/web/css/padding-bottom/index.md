@@ -1,12 +1,7 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.padding-bottom
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-width
 ---
 

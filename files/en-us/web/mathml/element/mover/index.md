@@ -1,34 +1,25 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mover
 ---
 
 {{MathMLRef}}
 
-The MathML `<mover>` element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
+The **`<mover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attribute:
 
 - `accent`
-  - : If `true` the over-script is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value) the over-script is a _limit_ over the base expression.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
 
-Sample rendering: ![x+y+z](mover.png)
-
-Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏞</mo></mover></math>
-
 ```html
-<math>
+<math display="block">
   <mover accent="true">
     <mrow>
       <mi>x</mi>
@@ -41,6 +32,8 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo>
   </mover>
 </math>
 ```
+
+{{ EmbedLiveSample('mover_example', 700, 200, "", "") }}
 
 ## Specifications
 

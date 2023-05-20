@@ -1,12 +1,7 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.padding-top
 ---
 

@@ -1,11 +1,9 @@
 ---
 title: Masonry layout
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - masonry
+page-type: guide
+status:
+  - experimental
 ---
 
 {{CSSRef}}

@@ -2,15 +2,8 @@
 title: XRTransientInputHitTestResult
 slug: Web/API/XRTransientInputHitTestResult
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestResult
 ---
 
@@ -20,14 +13,14 @@ The **`XRTransientInputHitTestResult`** interface of the [WebXR Device API](/en-
 
 You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("XRTransientInputHitTestResult.inputSource")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents the {{domxref("XRInputSource")}} that was used to compute the `results` array.
 - {{domxref("XRTransientInputHitTestResult.results")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Represents an array of {{domxref("XRHitTestResult")}} objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -40,7 +33,9 @@ Two arrays are used to access transient input hit test results. First, you get a
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     resultsPerInputSource.results.forEach((hitTest) => {
@@ -48,7 +43,7 @@ function onXRFrame(time, xrFrame) {
       hitTest.getPose(referenceSpace);
     });
   });
- }
+}
 ```
 
 ### Filtering input sources
@@ -58,14 +53,16 @@ The {{domxref("XRTransientInputHitTestResult.inputSource", "inputSource")}} prop
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
   });
- }
+}
 ```
 
 ## Specifications

@@ -1,15 +1,10 @@
 ---
-title: MouseEvent.layerY
+title: "MouseEvent: layerY property"
+short-title: layerY
 slug: Web/API/MouseEvent/layerY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - MouseEvent
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.MouseEvent.layerY
 ---
 
@@ -103,7 +98,7 @@ An integer value in pixels for the y-coordinate of the mouse pointer, when the m
         <label for="parentId">Parent Element id: </label>
         <input type="text" name="parentId" size="7" /><br />
         <label for="pageXCoords">pageX: </label>
-        <input type="text" name="pageXCoords" size="7" /> 
+        <input type="text" name="pageXCoords" size="7" />
         <label for="pageYCoords">pageY: </label>
         <input type="text" name="pageYCoords" size="7" /><br />
         <label for="layerXCoords">layerX: </label>
