@@ -1,6 +1,7 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
+page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
 ---
 

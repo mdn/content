@@ -1,5 +1,6 @@
 ---
-title: RTCRtpContributingSource.source
+title: "RTCRtpContributingSource: source property"
+short-title: source
 slug: Web/API/RTCRtpContributingSource/source
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.source

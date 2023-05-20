@@ -1,5 +1,6 @@
 ---
 title: "Window: focus event"
+short-title: focus
 slug: Web/API/Window/focus_event
 page-type: web-api-event
 browser-compat: api.Window.focus_event

@@ -1,6 +1,7 @@
 ---
 title: "Reason: CORS header 'Origin' cannot be added"
 slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}

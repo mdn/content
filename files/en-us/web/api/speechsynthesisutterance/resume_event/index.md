@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: resume event"
+short-title: resume
 slug: Web/API/SpeechSynthesisUtterance/resume_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.resume_event

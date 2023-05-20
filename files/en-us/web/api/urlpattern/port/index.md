@@ -1,5 +1,6 @@
 ---
-title: URLPattern.port
+title: "URLPattern: port property"
+short-title: port
 slug: Web/API/URLPattern/port
 page-type: web-api-instance-property
 status:

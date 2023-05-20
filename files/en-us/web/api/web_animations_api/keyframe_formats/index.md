@@ -2,10 +2,9 @@
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 page-type: guide
-browser-compat: api.Element.animate
 ---
 
-{{APIRef("Web Animations API")}}
+{{DefaultAPISidebar("Web Animations")}}
 
 {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
@@ -129,14 +128,6 @@ The following special attributes may also be specified:
   - : The [timing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
   - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

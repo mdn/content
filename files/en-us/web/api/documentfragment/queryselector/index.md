@@ -1,5 +1,6 @@
 ---
-title: DocumentFragment.querySelector()
+title: "DocumentFragment: querySelector() method"
+short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
 page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.querySelector

@@ -1,5 +1,6 @@
 ---
-title: HTMLDialogElement.returnValue
+title: "HTMLDialogElement: returnValue property"
+short-title: returnValue
 slug: Web/API/HTMLDialogElement/returnValue
 page-type: web-api-instance-property
 browser-compat: api.HTMLDialogElement.returnValue

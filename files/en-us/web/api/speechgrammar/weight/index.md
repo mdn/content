@@ -1,5 +1,6 @@
 ---
-title: SpeechGrammar.weight
+title: "SpeechGrammar: weight property"
+short-title: weight
 slug: Web/API/SpeechGrammar/weight
 page-type: web-api-instance-property
 status:

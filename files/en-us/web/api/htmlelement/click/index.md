@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.click()
+title: "HTMLElement: click() method"
+short-title: click()
 slug: Web/API/HTMLElement/click
 page-type: web-api-instance-method
 browser-compat: api.HTMLElement.click

@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.forEach()
+title: "URLSearchParams: forEach() method"
+short-title: forEach()
 slug: Web/API/URLSearchParams/forEach
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.forEach

@@ -11,6 +11,11 @@ The **WebContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("WebGLContextEvent.WebGLContextEvent", "WebGLContextEvent()")}}
+  - : Creates a new `WebGLContextEvent` object.
+
 ## Instance properties
 
 _This interface inherits properties from its parent interface, {{domxref("Event")}}._

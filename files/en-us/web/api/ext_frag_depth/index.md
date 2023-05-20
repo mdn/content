@@ -1,5 +1,6 @@
 ---
-title: EXT_frag_depth
+title: EXT_frag_depth extension
+short-title: EXT_frag_depth
 slug: Web/API/EXT_frag_depth
 page-type: webgl-extension
 browser-compat: api.EXT_frag_depth

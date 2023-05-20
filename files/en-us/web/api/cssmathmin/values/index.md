@@ -1,5 +1,6 @@
 ---
-title: CSSMathMin.values
+title: "CSSMathMin: values property"
+short-title: values
 slug: Web/API/CSSMathMin/values
 page-type: web-api-instance-property
 browser-compat: api.CSSMathMin.values

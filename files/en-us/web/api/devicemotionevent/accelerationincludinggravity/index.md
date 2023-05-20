@@ -1,5 +1,6 @@
 ---
-title: DeviceMotionEvent.accelerationIncludingGravity
+title: "DeviceMotionEvent: accelerationIncludingGravity property"
+short-title: accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEvent.accelerationIncludingGravity

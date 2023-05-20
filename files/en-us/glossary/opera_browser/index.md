@@ -9,4 +9,4 @@ page-type: glossary-definition
 ## See also
 
 - [Opera Browser](https://en.wikipedia.org/wiki/Opera_Browser) on Wikipedia
-- [Opera browser web site](https://www.opera.com/)
+- [Opera browser website](https://www.opera.com/)

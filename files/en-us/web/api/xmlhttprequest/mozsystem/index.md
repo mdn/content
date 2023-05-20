@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.mozSystem
+title: "XMLHttpRequest: mozSystem property"
+short-title: mozSystem
 slug: Web/API/XMLHttpRequest/mozSystem
 page-type: web-api-instance-property
 status:

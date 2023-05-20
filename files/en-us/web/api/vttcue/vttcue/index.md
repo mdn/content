@@ -1,5 +1,6 @@
 ---
-title: VTTCue()
+title: "VTTCue: VTTCue() constructor"
+short-title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
 page-type: web-api-constructor
 browser-compat: api.VTTCue.VTTCue

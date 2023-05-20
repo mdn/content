@@ -1,5 +1,6 @@
 ---
-title: RTCIceServer.username
+title: "RTCIceServer: username property"
+short-title: username
 slug: Web/API/RTCIceServer/username
 page-type: web-api-instance-property
 browser-compat: api.RTCIceServer.username

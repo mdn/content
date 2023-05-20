@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.disconnect()
+title: "IntersectionObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/IntersectionObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.IntersectionObserver.disconnect

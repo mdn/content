@@ -1,6 +1,7 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
+page-type: http-header
 browser-compat: http.headers.Cache-Control
 ---
 

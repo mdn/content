@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.resume()
+title: "SpeechSynthesis: resume() method"
+short-title: resume()
 slug: Web/API/SpeechSynthesis/resume
 page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.resume

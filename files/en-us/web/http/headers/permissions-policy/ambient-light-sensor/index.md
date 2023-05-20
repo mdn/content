@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: ambient-light-sensor"
 slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.ambient-light-sensor

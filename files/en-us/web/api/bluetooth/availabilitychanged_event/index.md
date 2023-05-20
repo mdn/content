@@ -1,5 +1,6 @@
 ---
 title: "Bluetooth: availabilitychanged event"
+short-title: availabilitychanged
 slug: Web/API/Bluetooth/availabilitychanged_event
 page-type: web-api-event
 status:

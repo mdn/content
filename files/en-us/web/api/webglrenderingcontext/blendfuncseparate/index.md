@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.blendFuncSeparate()
+title: "WebGLRenderingContext: blendFuncSeparate() method"
+short-title: blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate

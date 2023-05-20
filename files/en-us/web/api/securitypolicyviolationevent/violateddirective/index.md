@@ -1,5 +1,6 @@
 ---
-title: SecurityPolicyViolationEvent.violatedDirective
+title: "SecurityPolicyViolationEvent: violatedDirective property"
+short-title: violatedDirective
 slug: Web/API/SecurityPolicyViolationEvent/violatedDirective
 page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.violatedDirective

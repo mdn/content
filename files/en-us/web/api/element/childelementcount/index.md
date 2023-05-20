@@ -1,5 +1,6 @@
 ---
-title: Element.childElementCount
+title: "Element: childElementCount property"
+short-title: childElementCount
 slug: Web/API/Element/childElementCount
 page-type: web-api-instance-property
 browser-compat: api.Element.childElementCount

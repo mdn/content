@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue()
+title: "CSSTransformValue: CSSTransformValue() constructor"
+short-title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
 page-type: web-api-constructor
 browser-compat: api.CSSTransformValue.CSSTransformValue

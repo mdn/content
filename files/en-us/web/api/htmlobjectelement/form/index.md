@@ -1,5 +1,6 @@
 ---
-title: HTMLObjectElement.form
+title: "HTMLObjectElement: form property"
+short-title: form
 slug: Web/API/HTMLObjectElement/form
 page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.form

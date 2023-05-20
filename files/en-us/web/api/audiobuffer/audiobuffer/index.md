@@ -1,5 +1,6 @@
 ---
-title: AudioBuffer()
+title: "AudioBuffer: AudioBuffer() constructor"
+short-title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
 page-type: web-api-constructor
 browser-compat: api.AudioBuffer.AudioBuffer

@@ -1,5 +1,6 @@
 ---
-title: MutationObserver.takeRecords()
+title: "MutationObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 page-type: web-api-instance-method
 browser-compat: api.MutationObserver.takeRecords

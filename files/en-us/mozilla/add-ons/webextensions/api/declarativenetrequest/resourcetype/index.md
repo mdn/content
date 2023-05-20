@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 ---
 
@@ -64,6 +65,8 @@ Values of this type are strings. Possible values are:
   - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
 - `other`
   - : Resources that aren't covered by any other available type.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

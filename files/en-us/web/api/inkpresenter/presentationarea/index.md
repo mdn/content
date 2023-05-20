@@ -1,5 +1,6 @@
 ---
-title: InkPresenter.presentationArea
+title: "InkPresenter: presentationArea property"
+short-title: presentationArea
 slug: Web/API/InkPresenter/presentationArea
 page-type: web-api-instance-property
 status:

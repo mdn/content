@@ -1,5 +1,6 @@
 ---
-title: CSSMathNegate.value
+title: "CSSMathNegate: value property"
+short-title: value
 slug: Web/API/CSSMathNegate/value
 page-type: web-api-instance-property
 browser-compat: api.CSSMathNegate.value

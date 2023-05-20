@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.centralAngle
+title: "XRCylinderLayer: centralAngle property"
+short-title: centralAngle
 slug: Web/API/XRCylinderLayer/centralAngle
 page-type: web-api-instance-property
 status:
@@ -26,10 +27,10 @@ const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 1200,
   viewPixelHeight: 600,
-  centralAngle : 60 * Math.PI / 180,
-  aspectRatio : 2,
-  radius : 2,
-  transform : new XRRigidTransform(/* … */),
+  centralAngle: (60 * Math.PI) / 180,
+  aspectRatio: 2,
+  radius: 2,
+  transform: new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.centralAngle; // 1.0471975511965976

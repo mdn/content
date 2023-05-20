@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.shiftKey
+title: "MouseEvent: shiftKey property"
+short-title: shiftKey
 slug: Web/API/MouseEvent/shiftKey
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.shiftKey

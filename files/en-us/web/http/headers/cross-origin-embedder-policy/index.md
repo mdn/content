@@ -1,6 +1,7 @@
 ---
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Embedder-Policy
 ---
 

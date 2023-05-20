@@ -27,6 +27,8 @@ _Doesn't inherit any properties._
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("HID")}} object providing methods
     for connecting to HID devices, listing attached HID devices, and event
@@ -106,7 +108,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "1", your web site or application should not track the user.
+  - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -130,14 +132,14 @@ _Doesn't inherit any method._
 
 - {{domxref("Navigator.canShare()")}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
-- {{domxref("Navigator.clearAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.clearAppBadge()")}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
 - {{domxref("Navigator.registerProtocolHandler()")}}
-  - : Allows web sites to register themselves as a possible handler for a given protocol.
+  - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.unregisterProtocolHandler()")}}
   - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
@@ -146,7 +148,7 @@ _Doesn't inherit any method._
   - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
-- {{domxref("Navigator.setAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.setAppBadge()")}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.share()")}}
   - : Invokes the native sharing mechanism of the current platform.

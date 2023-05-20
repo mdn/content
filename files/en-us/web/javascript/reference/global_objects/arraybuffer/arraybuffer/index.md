@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 
 {{JSRef}}
 
-The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} objects.
+The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 
@@ -75,5 +75,5 @@ buffer.resize(12);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}

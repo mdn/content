@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.duration
+title: "HTMLMediaElement: duration property"
+short-title: duration
 slug: Web/API/HTMLMediaElement/duration
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.duration

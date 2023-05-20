@@ -1,5 +1,6 @@
 ---
-title: SVGMarkerElement.orientType
+title: "SVGMarkerElement: orientType property"
+short-title: orientType
 slug: Web/API/SVGMarkerElement/orientType
 page-type: web-api-instance-property
 browser-compat: api.SVGMarkerElement.orientType

@@ -459,7 +459,12 @@ A fragment of the HTML is as follows — note the readonly attribute:
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-:is(input:read-only, input:-moz-read-only, textarea:-moz-read-only, textarea:read-only) {
+:is(
+    input:read-only,
+    input:-moz-read-only,
+    textarea:-moz-read-only,
+    textarea:read-only
+  ) {
   border: 0;
   box-shadow: none;
   background-color: white;

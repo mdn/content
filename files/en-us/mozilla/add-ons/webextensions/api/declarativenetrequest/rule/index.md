@@ -1,6 +1,7 @@
 ---
 title: declarativeNetRequest.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule
+page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Rule
 ---
 
@@ -22,6 +23,8 @@ Values of this type are objects. They contain these properties:
   - : `number`. An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
 - `priority` {{optional_inline}}
   - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1. See [Matching precedents](/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents) for details on how priority affects which rules are applied.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: PushManager.getSubscription()
+title: "PushManager: getSubscription() method"
+short-title: getSubscription()
 slug: Web/API/PushManager/getSubscription
 page-type: web-api-instance-method
 browser-compat: api.PushManager.getSubscription

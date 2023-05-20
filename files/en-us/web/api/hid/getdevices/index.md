@@ -1,5 +1,6 @@
 ---
-title: HID.getDevices()
+title: "HID: getDevices() method"
+short-title: getDevices()
 slug: Web/API/HID/getDevices
 page-type: web-api-instance-method
 status:

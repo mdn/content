@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: start event"
+short-title: start
 slug: Web/API/SpeechSynthesisUtterance/start_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.start_event

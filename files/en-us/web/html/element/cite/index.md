@@ -1,5 +1,5 @@
 ---
-title: '<cite>: The Citation element'
+title: "<cite>: The Citation element"
 slug: Web/HTML/Element/cite
 page-type: html-element
 browser-compat: html.elements.cite
@@ -51,13 +51,13 @@ To include a reference to the source of quoted material which is contained withi
 
 Typically, browsers style the contents of a `<cite>` element in italics by default. To avoid this, apply the CSS {{cssxref("font-style")}} property to the `<cite>` element.
 
-## Example
+## Examples
 
 ```html
 <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
 ```
 
-The HTML above outputs:
+### Result
 
 {{EmbedLiveSample("Example", 640, 80)}}
 

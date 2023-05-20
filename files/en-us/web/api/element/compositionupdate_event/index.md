@@ -1,5 +1,6 @@
 ---
 title: "Element: compositionupdate event"
+short-title: compositionupdate
 slug: Web/API/Element/compositionupdate_event
 page-type: web-api-event
 browser-compat: api.Element.compositionupdate_event

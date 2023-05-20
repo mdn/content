@@ -10,10 +10,10 @@ browser-compat: javascript.statements.class
 The **`class`** declaration creates a new class
 with a given name using prototype-based inheritance.
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
-
 You can also define a class using a {{jsxref("Operators/class", "class expression",
     "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
+
+{{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 ## Syntax
 

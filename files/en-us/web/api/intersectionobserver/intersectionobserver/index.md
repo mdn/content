@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver()
+title: "IntersectionObserver: IntersectionObserver() constructor"
+short-title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 page-type: web-api-constructor
 browser-compat: api.IntersectionObserver.IntersectionObserver

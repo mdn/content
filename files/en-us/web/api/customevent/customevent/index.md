@@ -1,5 +1,6 @@
 ---
-title: CustomEvent()
+title: "CustomEvent: CustomEvent() constructor"
+short-title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 page-type: web-api-constructor
 browser-compat: api.CustomEvent.CustomEvent

@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMapReadOnly.has()
+title: "StylePropertyMapReadOnly: has() method"
+short-title: has()
 slug: Web/API/StylePropertyMapReadOnly/has
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.has

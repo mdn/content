@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.stencilOp()
+title: "WebGLRenderingContext: stencilOp() method"
+short-title: stencilOp()
 slug: Web/API/WebGLRenderingContext/stencilOp
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilOp

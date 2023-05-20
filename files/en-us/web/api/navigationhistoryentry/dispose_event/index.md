@@ -1,5 +1,6 @@
 ---
 title: "NavigationHistoryEntry: dispose event"
+short-title: dispose
 slug: Web/API/NavigationHistoryEntry/dispose_event
 page-type: web-api-event
 status:

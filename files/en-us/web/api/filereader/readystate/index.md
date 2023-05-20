@@ -1,5 +1,6 @@
 ---
-title: FileReader.readyState
+title: "FileReader: readyState property"
+short-title: readyState
 slug: Web/API/FileReader/readyState
 page-type: web-api-instance-property
 browser-compat: api.FileReader.readyState

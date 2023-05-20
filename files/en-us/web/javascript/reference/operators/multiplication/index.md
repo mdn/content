@@ -17,6 +17,10 @@ The **multiplication (`*`)** operator produces the product of the operands.
 x * y
 ```
 
+## Description
+
+The `*` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt multiplication if both operands becomes BigInts; otherwise, it performs number multiplication. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+
 ## Examples
 
 ### Multiplication using numbers
@@ -37,6 +41,20 @@ Infinity * Infinity; // Infinity
 
 ```js
 "foo" * 2; // NaN
+"2" * 2; // 4
+```
+
+### Multiplication using BigInts
+
+```js
+2n * 2n; // 4n
+-2n * 2n; // -4n
+
+2n * 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+// To multiply a BigInt with a non-BigInt, convert either operand
+2n * BigInt(2); // 4n
+Number(2n) * 2; // 4
 ```
 
 ## Specifications

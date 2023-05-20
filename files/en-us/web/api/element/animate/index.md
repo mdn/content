@@ -1,5 +1,6 @@
 ---
-title: Element.animate()
+title: "Element: animate() method"
+short-title: animate()
 slug: Web/API/Element/animate
 page-type: web-api-instance-method
 browser-compat: api.Element.animate

@@ -1,5 +1,6 @@
 ---
-title: Notification.vibrate
+title: "Notification: vibrate property"
+short-title: vibrate
 slug: Web/API/Notification/vibrate
 page-type: web-api-instance-property
 status:

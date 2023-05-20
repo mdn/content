@@ -27,6 +27,7 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 paint-order: inherit;
 paint-order: initial;
 paint-order: revert;
+paint-order: revert-layer;
 paint-order: unset;
 ```
 

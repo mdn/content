@@ -36,7 +36,7 @@ This may happen if you attempt to use an insecure connection (most {{Glossary("u
 
 ### Connection errors
 
-If an error occurs while attempting to connect, first a simple event with the name `error` is sent to the {{domxref("WebSocket")}} object (thereby invoking its {{domxref("WebSocket.onerror", "onerror")}} handler), and then the {{domxref("CloseEvent")}} is sent to the `WebSocket` object (thereby invoking its {{domxref("WebSocket.onclose", "onclose")}} handler) to indicate the reason for the connection's closing.
+If an error occurs while attempting to connect, first a simple event with the name `error` is sent to the {{domxref("WebSocket")}} object (thereby invoking its {{domxref("WebSocket/error_event", "onerror")}} handler), and then the {{domxref("CloseEvent")}} is sent to the `WebSocket` object (thereby invoking its {{domxref("WebSocket/close_event", "onclose")}} handler) to indicate the reason for the connection's closing.
 
 The browser may also output to its console a more descriptive error message as well as a closing code as defined in [RFC 6455, Section 7.4](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4) through the {{domxref("CloseEvent")}}.
 
@@ -80,7 +80,7 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 You can send data as a string, {{ domxref("Blob") }}, or {{jsxref("ArrayBuffer")}}.
 
 As establishing a connection is asynchronous and prone to failure there is no guarantee that calling the `send()` method immediately after creating a WebSocket object will be successful.
-We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:
+We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket/open_event", "onopen")}} event handler to do the work:
 
 ```js
 exampleSocket.onopen = (event) => {
@@ -117,7 +117,7 @@ function sendText() {
 
 WebSockets is an event-driven API; when messages are received, a `message`
 event is sent to the `WebSocket` object. To handle it, add an event listener
-for the `message` event, or use the {{domxref("WebSocket.onmessage",
+for the `message` event, or use the {{domxref("WebSocket/message_event",
   "onmessage")}} event handler. To begin listening for incoming data, you can do something
 like this:
 

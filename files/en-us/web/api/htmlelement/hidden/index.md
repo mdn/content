@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.hidden
+title: "HTMLElement: hidden property"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.hidden

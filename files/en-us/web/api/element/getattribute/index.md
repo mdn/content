@@ -1,5 +1,6 @@
 ---
-title: Element.getAttribute()
+title: "Element: getAttribute() method"
+short-title: getAttribute()
 slug: Web/API/Element/getAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.getAttribute

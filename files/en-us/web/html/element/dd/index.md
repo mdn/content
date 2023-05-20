@@ -1,5 +1,5 @@
 ---
-title: '<dd>: The Description Details element'
+title: "<dd>: The Description Details element"
 slug: Web/HTML/Element/dd
 page-type: html-element
 browser-compat: html.elements.dd
