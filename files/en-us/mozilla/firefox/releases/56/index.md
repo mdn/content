@@ -80,7 +80,7 @@ _No changes._
 ### HTML
 
 - The {{htmlelement("isindex")}} element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
-- The {{htmlelement("applet")}} element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
+- The `<applet>` element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
 
 ### APIs
 
