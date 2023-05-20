@@ -51,7 +51,7 @@ q::after {
 
 #### Result
 
-{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}
+{{EmbedLiveSample('Adding_quotation_marks', '500', '50')}}
 
 ### Decorative example
 

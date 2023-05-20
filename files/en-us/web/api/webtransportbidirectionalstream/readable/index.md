@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportBidirectionalStream.readable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`readable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to reliably read incoming data.
 
