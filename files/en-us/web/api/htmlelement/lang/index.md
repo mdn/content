@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.lang
+title: "HTMLElement: lang property"
+short-title: lang
 slug: Web/API/HTMLElement/lang
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.lang

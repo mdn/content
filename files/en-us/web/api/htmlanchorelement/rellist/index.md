@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.relList
+title: "HTMLAnchorElement: relList property"
+short-title: relList
 slug: Web/API/HTMLAnchorElement/relList
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.relList

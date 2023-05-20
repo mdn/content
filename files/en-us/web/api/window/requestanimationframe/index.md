@@ -1,5 +1,6 @@
 ---
-title: Window.requestAnimationFrame()
+title: "Window: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
@@ -9,7 +10,7 @@ browser-compat: api.Window.requestAnimationFrame
 
 The **`window.requestAnimationFrame()`** method tells the
 browser that you wish to perform an animation and requests that the browser calls a
-specified function to update an animation before the next repaint. The method takes a
+specified function to update an animation right before the next repaint. The method takes a
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
@@ -49,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 
@@ -69,25 +70,26 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 (`0.1 * 2000`) to the right of its initial position.
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
-let done = false
+let done = false;
 
-function step(timestamp) {
+function step(timeStamp) {
   if (start === undefined) {
-    start = timestamp;
-    }
-  const elapsed = timestamp - start;
+    start = timeStamp;
+  }
+  const elapsed = timeStamp - start;
 
-  if (previousTimeStamp !== timestamp) {
+  if (previousTimeStamp !== timeStamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
-  if (elapsed < 2000) { // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp;
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
+    previousTimeStamp = timeStamp;
     if (!done) {
       window.requestAnimationFrame(step);
     }

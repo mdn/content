@@ -1,5 +1,6 @@
 ---
-title: PushManager.unregister()
+title: "PushManager: unregister() method"
+short-title: unregister()
 slug: Web/API/PushManager/unregister
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: copy event"
+short-title: copy
 slug: Web/API/HTMLElement/copy_event
 page-type: web-api-event
 browser-compat: api.Element.copy_event

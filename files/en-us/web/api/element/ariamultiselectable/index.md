@@ -1,5 +1,6 @@
 ---
-title: Element.ariaMultiSelectable
+title: "Element: ariaMultiSelectable property"
+short-title: ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaMultiSelectable

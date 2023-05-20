@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.tee()
+title: "ReadableStream: tee() method"
+short-title: tee()
 slug: Web/API/ReadableStream/tee
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.tee
@@ -106,3 +107,8 @@ function fetchStream(stream, list) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Teeing a stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#teeing_a_stream)

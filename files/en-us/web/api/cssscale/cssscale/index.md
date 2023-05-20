@@ -1,5 +1,6 @@
 ---
-title: CSSScale()
+title: "CSSScale: CSSScale() constructor"
+short-title: CSSScale()
 slug: Web/API/CSSScale/CSSScale
 page-type: web-api-constructor
 browser-compat: api.CSSScale.CSSScale

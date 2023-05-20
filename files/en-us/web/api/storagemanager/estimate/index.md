@@ -1,5 +1,6 @@
 ---
-title: StorageManager.estimate()
+title: "StorageManager: estimate() method"
+short-title: estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate

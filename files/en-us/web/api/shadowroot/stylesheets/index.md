@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.styleSheets
+title: "ShadowRoot: styleSheets property"
+short-title: styleSheets
 slug: Web/API/ShadowRoot/styleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.styleSheets

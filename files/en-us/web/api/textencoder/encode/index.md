@@ -1,5 +1,6 @@
 ---
-title: TextEncoder.encode()
+title: "TextEncoder: encode() method"
+short-title: encode()
 slug: Web/API/TextEncoder/encode
 page-type: web-api-instance-method
 browser-compat: api.TextEncoder.encode

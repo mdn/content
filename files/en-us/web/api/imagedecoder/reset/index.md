@@ -1,5 +1,6 @@
 ---
-title: ImageDecoder.reset()
+title: "ImageDecoder: reset() method"
+short-title: reset()
 slug: Web/API/ImageDecoder/reset
 page-type: web-api-instance-method
 status:

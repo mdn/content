@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryEntry.getFile()
+title: "FileSystemDirectoryEntry: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemDirectoryEntry/getFile
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryEntry.getFile

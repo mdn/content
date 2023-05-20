@@ -1,5 +1,6 @@
 ---
-title: Element.ariaValueText
+title: "Element: ariaValueText property"
+short-title: ariaValueText
 slug: Web/API/Element/ariaValueText
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaValueText

@@ -1,5 +1,6 @@
 ---
-title: RemotePlayback.prompt()
+title: "RemotePlayback: prompt() method"
+short-title: prompt()
 slug: Web/API/RemotePlayback/prompt
 page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.prompt

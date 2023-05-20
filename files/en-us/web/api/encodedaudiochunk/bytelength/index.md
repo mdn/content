@@ -1,5 +1,6 @@
 ---
-title: EncodedAudioChunk.byteLength
+title: "EncodedAudioChunk: byteLength property"
+short-title: byteLength
 slug: Web/API/EncodedAudioChunk/byteLength
 page-type: web-api-instance-property
 status:

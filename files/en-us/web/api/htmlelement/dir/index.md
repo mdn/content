@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.dir
+title: "HTMLElement: dir property"
+short-title: dir
 slug: Web/API/HTMLElement/dir
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.dir

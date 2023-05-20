@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: track event"
+short-title: track
 slug: Web/API/RTCPeerConnection/track_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.track_event

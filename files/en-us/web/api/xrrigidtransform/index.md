@@ -43,11 +43,11 @@ When an `XRRigidTransform` is interpreted, the orientation is always applied to 
 This code snippet creates an `XRRigidTransform` to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.
 
 ```js
-xrSession.requestReferenceSpace(refSpaceType)
-.then((refSpace) => {
+xrSession.requestReferenceSpace(refSpaceType).then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, cubeOrientation));
+    new XRRigidTransform(viewerStartPosition, cubeOrientation)
+  );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });
 ```

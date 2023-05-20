@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.filter
+title: "TreeWalker: filter property"
+short-title: filter
 slug: Web/API/TreeWalker/filter
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.filter

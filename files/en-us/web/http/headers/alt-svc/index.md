@@ -1,6 +1,7 @@
 ---
 title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
+page-type: http-header
 browser-compat: http.headers.Alt-Svc
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.currentTime
+title: "BaseAudioContext: currentTime property"
+short-title: currentTime
 slug: Web/API/BaseAudioContext/currentTime
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.currentTime

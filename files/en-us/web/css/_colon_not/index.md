@@ -33,11 +33,13 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 - `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
 - This selector will match everything that is "not an X". This may be surprising when used with [descendant combinators](/en-US/docs/Web/CSS/Descendant_combinator), since there are multiple paths to select a target element. For instance, `body :not(table) a` will still apply to links inside a {{HTMLElement("table")}}, since {{HTMLElement("tr")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}}, {{HTMLElement("caption")}}, etc. can all match the `:not(table)` part of the selector.
 - You can negate several selectors at the same time. Example: `:not(.foo, .bar)` is equivalent to `:not(.foo):not(.bar)`.
-- If any selector passed to the `:not()` pseudo-class is invalid or not supported by the browser, the whole rule will be invalidated. The effective way to overcome this behavior is to use [`:is()`](/en-US/docs/Web/CSS/:is) pseudo-class, which accepts a forgiving selector list. For example `:not(.foo, :invalid-pseudo-class)` will invalidate a whole rule, but `:not(is(.foo, :invalid-pseudo-class))` will match any (_including {{HTMLElement("html")}} and {{HTMLElement("body")}}_) element that isn't `.foo`.
+- If any selector passed to the `:not()` pseudo-class is invalid or not supported by the browser, the whole rule will be invalidated. The effective way to overcome this behavior is to use [`:is()`](/en-US/docs/Web/CSS/:is) pseudo-class, which accepts a forgiving selector list. For example `:not(.foo, :invalid-pseudo-class)` will invalidate a whole rule, but `:not(:is(.foo, :invalid-pseudo-class))` will match any (_including {{HTMLElement("html")}} and {{HTMLElement("body")}}_) element that isn't `.foo`.
 
 ## Examples
 
-### Basic set of :not() examples
+### Using :not() with valid selectors
+
+This example shows some simple cases of using `:not()`.
 
 #### HTML
 
@@ -68,8 +70,8 @@ body :not(p) {
   text-decoration: underline;
 }
 
-/* Elements that are not <div> and not <span> elements */
-body :not(div):not(span) {
+/* Elements that are not <div>s or `.fancy` */
+body :not(div):not(.fancy) {
   font-weight: bold;
 }
 
@@ -86,9 +88,9 @@ h2 :not(span.foo) {
 
 #### Result
 
-{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}
+{{EmbedLiveSample('Using_not_with_valid_selectors', '100%', 320)}}
 
-### :not() with invalid selectors
+### Using :not() with invalid selectors
 
 This example shows the use of `:not()` with invalid selectors and how to prevent invalidation.
 
@@ -132,7 +134,7 @@ div:not(:is(.foo, .bar)) {
 
 #### Result
 
-{{EmbedLiveSample('not_with_invalid_selectors', '100%', 320)}}
+{{EmbedLiveSample('Using_not_with_invalid_selectors', '100%', 320)}}
 
 The `p:not(.foo, :invalid-pseudo-class)` rule is invalid because it contains an invalid selector. The `:is()` pseudo-class accepts a forgiving selector list, so the `:is(.foo, :invalid-pseudo-class)` rule is valid and equivalent to `:is(.foo)`. Thus, the `p:not(:is(.foo, :invalid-pseudo-class))` rule is valid and equivalent to `p:not(.foo)`.
 
@@ -155,3 +157,5 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}
+
+- [How :not() chains multiple selectors](/en-US/blog/css-not-pseudo-multiple-selectors/) on MDN blog (May 5, 2023)

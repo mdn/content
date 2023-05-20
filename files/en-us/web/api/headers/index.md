@@ -38,6 +38,8 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
   - : Executes a provided function once for each key/value pair in this `Headers` object.
 - {{domxref("Headers.get()")}}
   - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
+- {{domxref("Headers.getSetCookie()")}}
+  - : Returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response.
 - {{domxref("Headers.has()")}}
   - : Returns a boolean stating whether a `Headers` object contains a certain header.
 - {{domxref("Headers.keys()")}}

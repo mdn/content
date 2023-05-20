@@ -1,5 +1,6 @@
 ---
-title: Scheduler.postTask()
+title: "Scheduler: postTask() method"
+short-title: postTask()
 slug: Web/API/Scheduler/postTask
 page-type: web-api-instance-method
 browser-compat: api.Scheduler.postTask

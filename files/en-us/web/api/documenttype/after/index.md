@@ -1,5 +1,6 @@
 ---
-title: DocumentType.after()
+title: "DocumentType: after() method"
+short-title: after()
 slug: Web/API/DocumentType/after
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.after

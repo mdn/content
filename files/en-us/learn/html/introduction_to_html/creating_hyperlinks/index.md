@@ -49,7 +49,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>
@@ -70,7 +70,9 @@ If you want to make a heading element a link then wrap it in an anchor (`<a>`) e
 <a href="https://developer.mozilla.org/en-US/">
   <h1>MDN Web Docs</h1>
 </a>
-<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+<p>
+  Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+</p>
 ```
 
 This turns the heading into a link:
@@ -104,13 +106,14 @@ This makes the MDN logo a link:
 Another attribute you may want to add to your links is `title`.
 The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
-```html
+```html-nolint
 <p>
   I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+          mission and how to contribute">
+    the Mozilla homepage</a>.
 </p>
 ```
 
@@ -171,7 +174,7 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an {{htmlattrxref("id")}} attribute to the element you want to link to.
+To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the element you want to link to.
 It normally makes sense to link to a specific heading, so this would look something like the following:
 
 ```html
@@ -229,18 +232,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
-  Download Firefox
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/">Download Firefox</a></p>
 ```
 
 **Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
-  Click here
-</a>
-to download Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/firefox/">Click here</a> to download Firefox
+</p>
 ```
 
 Other tips:
@@ -327,7 +327,7 @@ In its most basic and commonly used form, a `mailto:` link indicates the email a
 
 This results in a link that looks like this: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-In fact, the email address is optional. If you omit it and your {{htmlattrxref("href", "a")}} is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
+In fact, the email address is optional. If you omit it and your [`href`](/en-US/docs/Web/HTML/Element/a#href) is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
 This is often useful as "Share" links that users can click to send an email to an address of their choosing.
 
 ### Specifying details

@@ -1,5 +1,6 @@
 ---
 title: "SerialPort: connect event"
+short-title: connect
 slug: Web/API/SerialPort/connect_event
 page-type: web-api-event
 status:

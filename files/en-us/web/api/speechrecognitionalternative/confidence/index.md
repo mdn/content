@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionAlternative.confidence
+title: "SpeechRecognitionAlternative: confidence property"
+short-title: confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionAlternative.confidence

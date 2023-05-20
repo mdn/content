@@ -1,5 +1,6 @@
 ---
-title: Event.target
+title: "Event: target property"
+short-title: target
 slug: Web/API/Event/target
 page-type: web-api-instance-property
 browser-compat: api.Event.target

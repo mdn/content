@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.connect()
+title: "BluetoothRemoteGATTServer: connect() method"
+short-title: connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
 page-type: web-api-instance-method
 status:

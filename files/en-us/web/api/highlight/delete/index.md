@@ -1,5 +1,6 @@
 ---
-title: Highlight.delete()
+title: "Highlight: delete() method"
+short-title: delete()
 slug: Web/API/Highlight/delete
 page-type: web-api-instance-method
 status:

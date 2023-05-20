@@ -1,5 +1,6 @@
 ---
 title: "HTMLCanvasElement: contextrestored event"
+short-title: contextrestored
 slug: Web/API/HTMLCanvasElement/contextrestored_event
 page-type: web-api-event
 status:

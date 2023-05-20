@@ -1,5 +1,6 @@
 ---
-title: Navigator.getAutoplayPolicy()
+title: "Navigator: getAutoplayPolicy() method"
+short-title: getAutoplayPolicy()
 slug: Web/API/Navigator/getAutoplayPolicy
 page-type: web-api-instance-method
 status:
@@ -8,8 +9,6 @@ browser-compat: api.Navigator.getAutoplayPolicy
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
-
-{{SeeCompatTable}}
 
 The **`getAutoplayPolicy()`** method of the _Autoplay Policy Detection API_ provides information about whether [autoplay](/en-US/docs/Web/Media/Autoplay_guide) of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
 
@@ -197,13 +196,14 @@ if (!navigator.getAutoplayPolicy) {
   log.textContent =
     "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
-  log.textContent = `Autoplay policy for media elements is ${navigator.getAutoplayPolicy(
+  log.textContent = `Autoplay policy for media elements is: ${navigator.getAutoplayPolicy(
     "mediaelement"
-  )}. Video has been muted to allow it to autoplay.`;
+  )}. `;
 
   if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
     // Mute the video so it can autoplay
     video.muted = true;
+    log.textContent += "Video has been muted to allow it to autoplay.";
   }
 }
 ```
@@ -276,6 +276,7 @@ if (!navigator.getAutoplayPolicy) {
   if (navigator.getAutoplayPolicy(video) === "allowed-muted") {
     // Mute the video so it can autoplay
     video.muted = true;
+    log.textContent += "Video has been muted to allow it to autoplay.";
   }
 }
 ```

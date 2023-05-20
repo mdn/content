@@ -1,5 +1,6 @@
 ---
 title: "ScriptProcessorNode: audioprocess event"
+short-title: audioprocess
 slug: Web/API/ScriptProcessorNode/audioprocess_event
 page-type: web-api-event
 status:

@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: input event"
+short-title: input
 slug: Web/API/HTMLElement/input_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.input_event

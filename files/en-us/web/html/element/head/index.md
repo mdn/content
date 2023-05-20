@@ -1,5 +1,5 @@
 ---
-title: '<head>: The Document Metadata (Header) element'
+title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Element/head
 page-type: html-element
 browser-compat: html.elements.head
@@ -18,7 +18,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `profile` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <td>
         <p>
           If the document is an {{HTMLElement("iframe")}}
-          {{htmlattrxref("srcdoc", "iframe")}} document, or if title
+          <a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> document, or if title
           information is available from a higher level protocol (like the
           subject line in HTML email), zero or more elements of metadata
           content.

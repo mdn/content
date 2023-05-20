@@ -59,7 +59,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Attributes/align">align</a></code>
       </td>
       <td>
-        {{ HTMLElement("applet") }},
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
         {{ HTMLElement("colgroup") }},
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
@@ -82,7 +81,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Attributes/alt">alt</a></code>
       </td>
       <td>
-        {{ HTMLElement("applet") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("area") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>Alternative text in case an image can't be displayed.</td>
@@ -262,25 +261,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>Often used with CSS to style elements with common properties.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#code">code</a></code>
-      </td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        Specifies the URL of the applet's class file to be loaded and executed.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/applet#codebase">codebase</a></code>
-      </td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        This attribute gives the absolute or relative URL of the directory where
-        applets' .class files referenced by the code attribute are stored.
-      </td>
     </tr>
     <tr>
       <td><code>color</code></td>
@@ -579,7 +559,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute sets the encoding type to use during form submission. If
         this attribute is specified, it overrides the
         <code>enctype</code> attribute of the button's
@@ -595,7 +575,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute sets the submission method to use during form submission
         (<code>GET</code>, <code>POST</code>, etc.). If this attribute is
         specified, it overrides the <code>method</code> attribute of the
@@ -611,7 +591,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this boolean attribute specifies that the form is not to be validated
         when it is submitted. If this attribute is specified, it overrides the
         <code>novalidate</code> attribute of the button's
@@ -627,7 +607,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a submit button (<code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
         this attribute specifies the browsing context (for example, tab, window,
         or inline frame) in which to display the response that is received after
         submitting the form. If this attribute is specified, it overrides the
@@ -706,8 +686,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("link") }}
+        {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
       </td>
       <td>Specifies the language of the linked resource.</td>
     </tr>

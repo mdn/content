@@ -1,5 +1,6 @@
 ---
-title: FontFace.status
+title: "FontFace: status property"
+short-title: status
 slug: Web/API/FontFace/status
 page-type: web-api-instance-property
 browser-compat: api.FontFace.status

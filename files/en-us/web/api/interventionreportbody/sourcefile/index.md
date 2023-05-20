@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.sourceFile
+title: "InterventionReportBody: sourceFile property"
+short-title: sourceFile
 slug: Web/API/InterventionReportBody/sourceFile
 page-type: web-api-instance-property
 status:

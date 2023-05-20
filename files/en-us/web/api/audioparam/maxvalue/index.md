@@ -1,5 +1,6 @@
 ---
-title: AudioParam.maxValue
+title: "AudioParam: maxValue property"
+short-title: maxValue
 slug: Web/API/AudioParam/maxValue
 page-type: web-api-instance-property
 browser-compat: api.AudioParam.maxValue

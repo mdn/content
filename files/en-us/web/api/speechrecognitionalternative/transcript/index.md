@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionAlternative.transcript
+title: "SpeechRecognitionAlternative: transcript property"
+short-title: transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionAlternative.transcript

@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.relatedPort
+title: "RTCIceCandidate: relatedPort property"
+short-title: relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.relatedPort

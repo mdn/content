@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.label
+title: "RTCDataChannel: label property"
+short-title: label
 slug: Web/API/RTCDataChannel/label
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.label
@@ -23,7 +24,7 @@ A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.
 
 ## Value
 
-A string identifier assigned by the Web site or app when the data channel was created,
+A string identifier assigned by the website or app when the data channel was created,
 as specified when {{domxref("RTCPeerConnection.createDataChannel()")}} was called to
 create the channel.
 

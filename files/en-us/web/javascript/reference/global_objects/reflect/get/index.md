@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.get
 
 {{JSRef}}
 
-The **`Reflect.get()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, but as a function.
+The **`Reflect.get()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax, but as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
@@ -38,7 +38,7 @@ The value of the property.
 
 ## Description
 
-`Reflect.get()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). That is, `Reflect.get(target, propertyKey, receiver)` is semantically equivalent to:
+`Reflect.get()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). That is, `Reflect.get(target, propertyKey, receiver)` is semantically equivalent to:
 
 ```js
 target[propertyKey];
@@ -67,20 +67,20 @@ const obj2 = new Proxy(
     get(t, k, r) {
       return k + "bar";
     },
-  }
+  },
 );
 Reflect.get(obj2, "foo"); // "foobar"
 
-//Proxy with get handler and receiver
+// Proxy with get handler and receiver
 const obj3 = new Proxy(
   { p: 1, foo: 2 },
   {
     get(t, prop, receiver) {
       return receiver[prop] + "bar";
     },
-  }
+  },
 );
-Reflect.get(obj, "foo", { foo: 3 }); // "3bar"
+Reflect.get(obj3, "foo", { foo: 3 }); // "3bar"
 ```
 
 ## Specifications
@@ -95,5 +95,5 @@ Reflect.get(obj, "foo", { foo: 3 }); // "3bar"
 
 - [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`Proxy`'s `get` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)

@@ -1,5 +1,6 @@
 ---
-title: USBDevice.isochronousTransferIn()
+title: "USBDevice: isochronousTransferIn() method"
+short-title: isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
 page-type: web-api-instance-method
 status:

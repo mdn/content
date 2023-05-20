@@ -1,5 +1,6 @@
 ---
-title: OES_texture_float
+title: OES_texture_float extension
+short-title: OES_texture_float
 slug: Web/API/OES_texture_float
 page-type: webgl-extension
 browser-compat: api.OES_texture_float

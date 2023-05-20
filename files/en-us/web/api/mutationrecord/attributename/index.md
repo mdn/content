@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.attributeName
+title: "MutationRecord: attributeName property"
+short-title: attributeName
 slug: Web/API/MutationRecord/attributeName
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.attributeName

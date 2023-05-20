@@ -1,5 +1,6 @@
 ---
-title: XRTransientInputHitTestResult.results
+title: "XRTransientInputHitTestResult: results property"
+short-title: results
 slug: Web/API/XRTransientInputHitTestResult/results
 page-type: web-api-instance-property
 status:
@@ -24,7 +25,9 @@ Two arrays are used to access transient input hit test results. First, you get a
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     resultsPerInputSource.results.forEach((hitTest) => {
@@ -32,7 +35,7 @@ function onXRFrame(time, xrFrame) {
       hitTest.getPose(referenceSpace);
     });
   });
- }
+}
 ```
 
 ## Specifications

@@ -1,5 +1,5 @@
 ---
-title: '<h1>–<h6>: The HTML Section Heading elements'
+title: "<h1>–<h6>: The HTML Section Heading elements"
 slug: Web/HTML/Element/Heading_Elements
 page-type: html-element
 browser-compat: html.elements.h1
@@ -101,9 +101,7 @@ The following code shows all the heading levels, in use.
 <h6>Heading level 6</h6>
 ```
 
-Here is the result of this code:
-
-{{ EmbedLiveSample('All_headings', '280', '300', '') }}
+{{EmbedLiveSample('All_headings', '280', '300')}}
 
 ### Example page
 
@@ -125,9 +123,7 @@ The following code shows a few headings with some content under them.
 <p>Some text here…</p>
 ```
 
-Here is the result of this code:
-
-{{ EmbedLiveSample('Example_page', '280', '480', '') }}
+{{EmbedLiveSample('Example_page', '280', '480')}}
 
 ## Accessibility concerns
 
@@ -135,7 +131,7 @@ Here is the result of this code:
 
 A common navigation technique for users of screen reading software is jumping from heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
 
-#### Don't
+**Don't do this:**
 
 ```html example-bad
 <h1>Heading level 1</h1>
@@ -143,7 +139,7 @@ A common navigation technique for users of screen reading software is jumping fr
 <h4>Heading level 4</h4>
 ```
 
-#### Do
+**Prefer this:**
 
 ```html example-good
 <h1>Heading level 1</h1>
@@ -195,9 +191,9 @@ When headings are nested, heading levels may be "skipped" when closing a subsect
 
 Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
-#### Example
+#### Sectioning content examples
 
 ```html
 <header>
@@ -216,6 +212,8 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
   </nav>
 </footer>
 ```
+
+{{EmbedLiveSample('Sectioning_content_examples')}}
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 

@@ -1,5 +1,6 @@
 ---
-title: StylePropertyMap.clear()
+title: "StylePropertyMap: clear() method"
+short-title: clear()
 slug: Web/API/StylePropertyMap/clear
 page-type: web-api-instance-method
 browser-compat: api.StylePropertyMap.clear

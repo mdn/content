@@ -1,5 +1,6 @@
 ---
-title: btoa()
+title: btoa() global function
+short-title: btoa()
 slug: Web/API/btoa
 page-type: web-api-global-function
 browser-compat: api.btoa

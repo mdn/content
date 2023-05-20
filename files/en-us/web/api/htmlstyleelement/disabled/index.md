@@ -1,5 +1,6 @@
 ---
-title: HTMLStyleElement.disabled
+title: "HTMLStyleElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLStyleElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.HTMLStyleElement.disabled

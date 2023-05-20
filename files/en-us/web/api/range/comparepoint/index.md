@@ -1,5 +1,6 @@
 ---
-title: Range.comparePoint()
+title: "Range: comparePoint() method"
+short-title: comparePoint()
 slug: Web/API/Range/comparePoint
 page-type: web-api-instance-method
 browser-compat: api.Range.comparePoint

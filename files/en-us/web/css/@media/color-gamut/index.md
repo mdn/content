@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.color-gamut
 
 {{CSSRef}}
 
-The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to apply CSS styles based on the approximate range of color {{glossary("gamut")}} supported by the {{glossary("user agent")}} and the output device.
+The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on the approximate range of color {{glossary("gamut")}} supported by the {{glossary("user agent")}} and the output device.
 
 ## Syntax
 

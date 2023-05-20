@@ -14,8 +14,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
-- The {{ HTMLElement("body") }} element's {{ htmlattrxref("background", "body") }} attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
-- The {{ HTMLElement("option") }} element's {{ htmlattrxref("label", "option") }} attribute now reflects the value of the element's text content if the attribute isn't specified.
+- The {{ HTMLElement("body") }} element's [`background`](/en-US/docs/Web/HTML/Element/body#background) attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
+- The {{ HTMLElement("option") }} element's [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute now reflects the value of the element's text content if the attribute isn't specified.
 
 #### Canvas
 

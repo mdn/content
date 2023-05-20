@@ -12,20 +12,43 @@ The **container-type** [CSS](/en-US/docs/Web/CSS) property is used to define the
 ## Syntax
 
 ```css
-container-type: <type>;
+/* Keyword values */
+container-type: normal;
+container-type: size;
+container-type: inline-size;
+
+/* Global Values */
+container-type: inherit;
+container-type: initial;
+container-type: revert;
+container-type: revert-layer;
+container-type: unset;
 ```
 
 ### Values
 
-- `size`: Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
-  Applies layout containment, style containment, and size containment to the container.
+- `size`
 
-- `inline-size`: Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
-  Applies layout, style, and inline-size containment to the element.
+  - : Establishes a query container for container size queries on both the inline and block axis in both the [inline and block](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) dimensions.
+    Applies layout containment, style containment, and size containment to the container.
 
-- `normal`: The element is not a query container for any container size queries, but remains a query container for container style queries.
+- `inline-size`
+
+  - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) of the container.
+    Applies layout, style, and inline-size containment to the element.
+
+- `normal`
+  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the {{cssxref("contain")}} property.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Example
 

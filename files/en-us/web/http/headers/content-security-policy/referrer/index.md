@@ -1,6 +1,7 @@
 ---
 title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
+page-type: http-csp-directive
 status:
   - deprecated
   - non-standard

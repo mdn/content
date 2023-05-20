@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.scale()
+title: "CanvasRenderingContext2D: scale() method"
+short-title: scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.scale

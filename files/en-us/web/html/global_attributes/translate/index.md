@@ -39,4 +39,4 @@ In this example, the `translate` attribute is used to ask translation tools not 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.translate")}} property that reflects this attribute.
 - [Using HTML's translate attribute](https://www.w3.org/International/questions/qa-translate-flag).
-- HTML {{htmlattrxref("lang")}} attribute
+- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute

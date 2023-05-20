@@ -1,5 +1,5 @@
 ---
-title: '<select>: The HTML Select element'
+title: "<select>: The HTML Select element"
 slug: Web/HTML/Element/select
 page-type: html-element
 browser-compat: html.elements.select
@@ -13,7 +13,7 @@ The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control tha
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
-Each `<option>` element should have a {{htmlattrxref("value", "option")}} attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a {{htmlattrxref("selected", "option")}} attribute on an `<option>` element to make it selected by default when the page first loads.
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
@@ -33,7 +33,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
 
-  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
@@ -149,6 +149,8 @@ The following example creates a very simple dropdown menu, the second option of 
 </select>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_select", "", "100")}}
 
 ### Advanced select with multiple features
@@ -171,6 +173,8 @@ The follow example is more complex, showing off more features you can use on a `
   </select>
 </label>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
 

@@ -1,5 +1,6 @@
 ---
-title: File.webkitRelativePath
+title: "File: webkitRelativePath property"
+short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 page-type: web-api-instance-property
 browser-compat: api.File.webkitRelativePath
@@ -10,7 +11,7 @@ browser-compat: api.File.webkitRelativePath
 The **`File.webkitRelativePath`** is a read-only property that
 contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
-{{htmlattrxref("webkitdirectory", "input")}} attribute set.
+[`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute set.
 
 ## Value
 

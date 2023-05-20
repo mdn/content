@@ -1,5 +1,6 @@
 ---
-title: ChannelMergerNode()
+title: "ChannelMergerNode: ChannelMergerNode() constructor"
+short-title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 page-type: web-api-constructor
 browser-compat: api.ChannelMergerNode.ChannelMergerNode

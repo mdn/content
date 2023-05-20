@@ -35,7 +35,7 @@ The XML file that describes a search engine follows the basic template below. Se
 - Description
   - : A brief description of the search engine. It must be **1024 or fewer characters** of plain text, with no HTML or other markup.
 - InputEncoding
-  - : The [character encoding](/en-US/docs/Glossary/character_encoding) to use when submitting input to the search engine.
+  - : The [character encoding](/en-US/docs/Glossary/Character_encoding) to use when submitting input to the search engine.
 - Image
 
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
@@ -70,13 +70,13 @@ The XML file that describes a search engine follows the basic template below. Se
 
 - moz:SearchForm
 
-  - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the web site, and search from the site directly.
+  - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the website, and search from the site directly.
 
     > **Note:** Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the `moz:` XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.
 
 ## Autodiscovery of search plugins
 
-Web sites with search plugins can advertise them so Firefox users can easily install the plugins.
+Websites with search plugins can advertise them so Firefox users can easily install the plugins.
 
 To support autodiscovery, add a `<link>` element for each plugin to the `<head>` of your web page:
 

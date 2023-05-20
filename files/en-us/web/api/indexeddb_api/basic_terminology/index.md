@@ -12,7 +12,7 @@ You'll also find the following articles useful:
 
 - For a detailed tutorial on how to use the API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 - For the reference documentation on the IndexedDB API, refer back to the main [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) article and its subpages, which document the types of objects used by IndexedDB.
-- For more information on how the browser handles storing your data in the background, read [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+- For more information on how the browser handles storing your data in the background, read [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
 ## Key characteristics
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLMetaElement.charset
+title: "HTMLMetaElement: charset property"
+short-title: charset
 slug: Web/API/HTMLMetaElement/charset
 page-type: web-api-instance-property
 ---

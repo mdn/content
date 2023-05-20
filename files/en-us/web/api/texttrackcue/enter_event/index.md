@@ -1,5 +1,6 @@
 ---
 title: "TextTrackCue: enter event"
+short-title: enter
 slug: Web/API/TextTrackCue/enter_event
 page-type: web-api-event
 browser-compat: api.TextTrackCue.enter_event
