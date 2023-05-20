@@ -49,3 +49,7 @@ console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

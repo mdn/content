@@ -655,7 +655,7 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
 
 ##### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Scoping_rows_and_columns')}}
 
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 
@@ -690,6 +690,6 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
 - CSS properties that may be especially useful to style the `<table>` element:
 
   - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules, and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.

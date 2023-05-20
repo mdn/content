@@ -8,7 +8,8 @@ browser-compat: api.VideoEncoder.encode
 
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to encode a given {{domxref("VideoFrame")}}.
+The **`encode()`** method of the {{domxref("VideoEncoder")}} interface asynchronously encodes a {{domxref("VideoFrame")}}.
+Encoded data ({{domxref("EncodedVideoChunk")}}) or an error will eventually be returned via the callbacks provided to the {{domxref("VideoEncoder")}} constructor.
 
 ## Syntax
 

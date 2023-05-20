@@ -12,7 +12,6 @@ The author list controller function needs to get a list of all `Author` instance
 Open **/controllers/authorController.js**. Find the exported `author_list()` controller method near the top of the file and replace it with the following code.
 
 ```js
-
 // Display list of all Authors.
 exports.author_list = asyncHandler(async (req, res, next) => {
   const allAuthors = await Author.find().sort({ family_name: 1 }).exec();

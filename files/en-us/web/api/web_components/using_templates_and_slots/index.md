@@ -289,7 +289,7 @@ body {
 
 Finally let's put all the snippets together and see what the rendered result looks like.
 
-{{ EmbedLiveSample('A_more_involved_example', '300','400','element-details.png','') }}
+{{EmbedLiveSample('A_more_involved_example', '300','400')}}
 
 Notice the following points about this rendered result:
 

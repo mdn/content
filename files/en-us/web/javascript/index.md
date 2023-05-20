@@ -73,8 +73,6 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-  - : JavaScript typed arrays provide a mechanism for accessing raw binary data.
 - [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
 - [Concurrency model and Event Loop](/en-US/docs/Web/JavaScript/Event_loop)

@@ -1,7 +1,6 @@
 ---
 title: Load the assets and print them on screen
-slug: >-
-  Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
+slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
 
 {{GamesSidebar}}

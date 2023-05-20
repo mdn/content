@@ -1,7 +1,6 @@
 ---
 title: Focus management with Vue refs
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

@@ -22,17 +22,17 @@ A string.
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('0 UNSENT', xhr.statusText);
+console.log("0 UNSENT", xhr.statusText);
 
-xhr.open('GET', '/server', true);
-console.log('1 OPENED', xhr.statusText);
+xhr.open("GET", "/server", true);
+console.log("1 OPENED", xhr.statusText);
 
 xhr.onprogress = () => {
-  console.log('3 LOADING', xhr.statusText);
+  console.log("3 LOADING", xhr.statusText);
 };
 
 xhr.onload = () => {
-  console.log('4 DONE', xhr.statusText);
+  console.log("4 DONE", xhr.statusText);
 };
 
 xhr.send(null);

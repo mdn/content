@@ -54,7 +54,7 @@ This topic contains the following modules, in a suggested order for working thro
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - : In this module we take a look at asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
+  - : When writing client-side JavaScript for websites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other websites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 ## Solving common JavaScript problems
 

@@ -70,26 +70,28 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
 
 ## Static properties
 
-- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+- {{jsxref("Intl.Collator")}}
   - : Constructor for collators, which are objects that enable language-sensitive string comparison.
-- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+- {{jsxref("Intl.DateTimeFormat")}}
   - : Constructor for objects that enable language-sensitive date and time formatting.
-- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+- {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+- {{jsxref("Intl.DurationFormat")}}
   - : Constructor for objects that enable locale-sensitive duration formatting.
-- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+- {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+- {{jsxref("Intl.Locale")}}
   - : Constructor for objects that represents a Unicode locale identifier.
-- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+- {{jsxref("Intl.NumberFormat")}}
   - : Constructor for objects that enable language-sensitive number formatting.
-- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+- {{jsxref("Intl.PluralRules")}}
   - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
-- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
-- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+- {{jsxref("Intl.Segmenter")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
+- `Intl[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

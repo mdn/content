@@ -53,11 +53,15 @@ As an `<angle>` is periodic, normalized to the range of `0deg` to `360deg`. It i
 
 The following example shows the effect of changing the `hue` value of the [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) functional notation on a color.
 
+#### HTML
+
 ```html
 <input type="range" min="0" max="360" value="0" id="hue-slider" />
 <p>Hue: <span id="hue-value">0deg</span></p>
 <div id="box"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -85,6 +89,8 @@ span {
 }
 ```
 
+#### JavaScript
+
 ```js
 const hue = document.querySelector("#hue-slider");
 const box = document.querySelector("#box");
@@ -94,6 +100,8 @@ hue.addEventListener("input", () => {
 });
 ```
 
+#### Result
+
 {{EmbedLiveSample("Changing the hue of a color using a slider", "100%", "200")}}
 
 ### Approximating red hues in different color spaces
@@ -101,12 +109,16 @@ hue.addEventListener("input", () => {
 The following example shows a similar red color in different color spaces.
 The values in the `lch()` and `oklch()` functions are rounded for readability.
 
+#### HTML
+
 ```html
 <div data-color="hsl-red">hsl()</div>
 <div data-color="hwb-red">hwb()</div>
 <div data-color="lch-red">lch()</div>
 <div data-color="oklch-red">oklch()</div>
 ```
+
+#### CSS
 
 ```css
 [data-color="hsl-red"] {
@@ -138,6 +150,8 @@ div {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Approximating red hues in different color spaces", "100%", "150")}}
 
 ### Interpolating hue values
@@ -149,10 +163,14 @@ Conversely, `longer` uses the larger value between the two hue angles.
 
 > **Note:** For more information on using this functional notation, see the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) reference.
 
+#### HTML
+
 ```html
 <div id="shorter"></div>
 <div id="longer"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -183,6 +201,8 @@ div {
   );
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Interpolating hue values', '100%', '200')}}
 

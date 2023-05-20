@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.globalThis
 
 {{jsSidebar("Objects")}}
 
-The global **`globalThis`** property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
+The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
 {{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
 

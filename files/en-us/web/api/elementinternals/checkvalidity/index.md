@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ElementInternals.checkValidity
 ---
 
-{{DefaultAPISidebar("")}}
+{{APIRef("DOM")}}
 
 The **`checkValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
