@@ -1,5 +1,6 @@
 ---
-title: RTCDataChannel.ordered
+title: "RTCDataChannel: ordered property"
+short-title: ordered
 slug: Web/API/RTCDataChannel/ordered
 page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.ordered

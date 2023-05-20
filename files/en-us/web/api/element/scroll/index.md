@@ -1,5 +1,6 @@
 ---
-title: Element.scroll()
+title: "Element: scroll() method"
+short-title: scroll()
 slug: Web/API/Element/scroll
 page-type: web-api-instance-method
 browser-compat: api.Element.scroll

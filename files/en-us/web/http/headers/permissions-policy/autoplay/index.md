@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: autoplay"
 slug: Web/HTTP/Headers/Permissions-Policy/autoplay
+page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.autoplay

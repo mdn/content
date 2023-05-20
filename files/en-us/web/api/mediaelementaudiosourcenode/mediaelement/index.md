@@ -1,5 +1,6 @@
 ---
-title: MediaElementAudioSourceNode.mediaElement
+title: "MediaElementAudioSourceNode: mediaElement property"
+short-title: mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
 page-type: web-api-instance-property
 browser-compat: api.MediaElementAudioSourceNode.mediaElement

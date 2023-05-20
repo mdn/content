@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerContainer.getRegistration()
+title: "ServiceWorkerContainer: getRegistration() method"
+short-title: getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.getRegistration

@@ -1,5 +1,6 @@
 ---
-title: UserActivation.isActive
+title: "UserActivation: isActive property"
+short-title: isActive
 slug: Web/API/UserActivation/isActive
 page-type: web-api-instance-property
 browser-compat: api.UserActivation.isActive

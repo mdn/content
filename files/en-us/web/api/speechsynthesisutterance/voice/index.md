@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.voice
+title: "SpeechSynthesisUtterance: voice property"
+short-title: voice
 slug: Web/API/SpeechSynthesisUtterance/voice
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.voice

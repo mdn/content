@@ -1,5 +1,6 @@
 ---
-title: Worker.terminate()
+title: "Worker: terminate() method"
+short-title: terminate()
 slug: Web/API/Worker/terminate
 page-type: web-api-instance-method
 browser-compat: api.Worker.terminate
@@ -33,6 +34,8 @@ const myWorker = new Worker("worker.js");
 myWorker.terminate();
 ```
 
+> **Note:** DedicatedWorkers and SharedWorkers can also be stopped from the {{domxref("Worker")}} instance using the {{domxref("DedicatedWorkerGlobalScope.close()")}} or {{domxref("SharedWorkerGlobalScope.close()")}} methods.
+
 ## Specifications
 
 {{Specifications}}
@@ -43,4 +46,6 @@ myWorker.terminate();
 
 ## See also
 
-The {{domxref("Worker")}} interface it belongs to.
+- {{domxref("Worker")}} interface
+- {{domxref("DedicatedWorkerGlobalScope.close()")}}
+- {{domxref("SharedWorkerGlobalScope.close()")}}

@@ -1,5 +1,6 @@
 ---
-title: FormData.values()
+title: "FormData: values() method"
+short-title: values()
 slug: Web/API/FormData/values
 page-type: web-api-instance-method
 browser-compat: api.FormData.values

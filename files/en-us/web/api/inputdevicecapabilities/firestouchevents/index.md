@@ -1,5 +1,6 @@
 ---
-title: InputDeviceCapabilities.firesTouchEvents
+title: "InputDeviceCapabilities: firesTouchEvents property"
+short-title: firesTouchEvents
 slug: Web/API/InputDeviceCapabilities/firesTouchEvents
 page-type: web-api-instance-property
 status:

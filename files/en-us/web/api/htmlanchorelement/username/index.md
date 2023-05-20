@@ -1,5 +1,6 @@
 ---
-title: HTMLAnchorElement.username
+title: "HTMLAnchorElement: username property"
+short-title: username
 slug: Web/API/HTMLAnchorElement/username
 page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.username

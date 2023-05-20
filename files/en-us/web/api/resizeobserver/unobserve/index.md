@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver.unobserve()
+title: "ResizeObserver: unobserve() method"
+short-title: unobserve()
 slug: Web/API/ResizeObserver/unobserve
 page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.unobserve

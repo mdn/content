@@ -1,5 +1,6 @@
 ---
-title: Document.createTouchList()
+title: "Document: createTouchList() method"
+short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 page-type: web-api-instance-method
 status:

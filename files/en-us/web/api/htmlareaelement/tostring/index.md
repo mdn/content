@@ -1,5 +1,6 @@
 ---
-title: HTMLAreaElement.toString()
+title: "HTMLAreaElement: toString() method"
+short-title: toString()
 slug: Web/API/HTMLAreaElement/toString
 page-type: web-api-instance-method
 browser-compat: api.HTMLAreaElement.toString
@@ -23,7 +24,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A string containing the element's complete URL.
 
 ## Examples
 

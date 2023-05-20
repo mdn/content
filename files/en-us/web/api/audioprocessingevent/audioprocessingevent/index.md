@@ -1,5 +1,6 @@
 ---
-title: AudioProcessingEvent()
+title: "AudioProcessingEvent: AudioProcessingEvent() constructor"
+short-title: AudioProcessingEvent()
 slug: Web/API/AudioProcessingEvent/AudioProcessingEvent
 page-type: web-api-constructor
 status:

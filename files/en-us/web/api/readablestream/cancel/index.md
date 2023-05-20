@@ -1,5 +1,6 @@
 ---
-title: ReadableStream.cancel()
+title: "ReadableStream: cancel() method"
+short-title: cancel()
 slug: Web/API/ReadableStream/cancel
 page-type: web-api-instance-method
 browser-compat: api.ReadableStream.cancel
@@ -122,3 +123,8 @@ fetch(url)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

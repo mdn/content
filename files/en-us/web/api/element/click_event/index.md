@@ -1,5 +1,6 @@
 ---
 title: "Element: click event"
+short-title: click
 slug: Web/API/Element/click_event
 page-type: web-api-event
 browser-compat: api.Element.click_event

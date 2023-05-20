@@ -1,5 +1,6 @@
 ---
-title: PannerNode.panningModel
+title: "PannerNode: panningModel property"
+short-title: panningModel
 slug: Web/API/PannerNode/panningModel
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.panningModel

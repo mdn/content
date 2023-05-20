@@ -1,5 +1,6 @@
 ---
-title: BroadcastChannel.close()
+title: "BroadcastChannel: close() method"
+short-title: close()
 slug: Web/API/BroadcastChannel/close
 page-type: web-api-instance-method
 browser-compat: api.BroadcastChannel.close

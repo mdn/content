@@ -1,5 +1,6 @@
 ---
-title: XRInputSource.profiles
+title: "XRInputSource: profiles property"
+short-title: profiles
 slug: Web/API/XRInputSource/profiles
 page-type: web-api-instance-property
 browser-compat: api.XRInputSource.profiles

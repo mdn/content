@@ -2,9 +2,9 @@
 title: Array.fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
-browser-compat: javascript.builtins.Array.fromAsync
 status:
   - experimental
+browser-compat: javascript.builtins.Array.fromAsync
 ---
 
 {{JSRef}} {{SeeCompatTable}}
@@ -88,11 +88,7 @@ Array.fromAsync(
 
 ```js
 Array.fromAsync(
-  new Set([
-    Promise.resolve(1),
-    Promise.resolve(2),
-    Promise.resolve(3),
-  ]),
+  new Set([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]),
 ).then((array) => console.log(array));
 // [1, 2, 3]
 ```
@@ -119,11 +115,7 @@ function delayedValue(v) {
 }
 
 Array.fromAsync(
-  [
-    delayedValue(1),
-    delayedValue(2),
-    delayedValue(3),
-  ],
+  [delayedValue(1), delayedValue(2), delayedValue(3)],
   (element) => delayedValue(element * 2),
 ).then((array) => console.log(array));
 // [2, 4, 6]
@@ -206,7 +198,9 @@ If you need to close the iterator, you need to use a {{jsxref("Statements/for...
 ## See also
 
 - [Polyfill of `Array.fromAsync` in `core-js`](https://github.com/zloirock/core-js#arrayfromasync)
-- {{jsxref("Statements/for-await...of", "for await...of")}}}
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Statements/for-await...of", "for await...of")}}

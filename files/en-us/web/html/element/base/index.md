@@ -1,5 +1,5 @@
 ---
-title: '<base>: The Document Base URL element'
+title: "<base>: The Document Base URL element"
 slug: Web/HTML/Element/base
 page-type: html-element
 browser-compat: html.elements.base

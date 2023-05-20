@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.lineNumber
+title: "InterventionReportBody: lineNumber property"
+short-title: lineNumber
 slug: Web/API/InterventionReportBody/lineNumber
 page-type: web-api-instance-property
 status:

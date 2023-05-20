@@ -21,6 +21,8 @@ Values of this type are objects.
   - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
   - : Stores one or more items in the storage area. If an item already exists, its value will be updated.
+- {{WebExtAPIRef("storage.StorageArea.setAccessLevel()")}}
+  - : Sets the access level for the storage area.
 - {{WebExtAPIRef("storage.StorageArea.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}

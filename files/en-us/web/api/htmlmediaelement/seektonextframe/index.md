@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.seekToNextFrame()
+title: "HTMLMediaElement: seekToNextFrame() method"
+short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 page-type: web-api-instance-method
 status:

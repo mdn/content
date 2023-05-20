@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframesRule.appendRule()
+title: "CSSKeyframesRule: appendRule() method"
+short-title: appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
 page-type: web-api-instance-method
 browser-compat: api.CSSKeyframesRule.appendRule

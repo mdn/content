@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas.transferToImageBitmap()
+title: "OffscreenCanvas: transferToImageBitmap() method"
+short-title: transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
 page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvas.transferToImageBitmap

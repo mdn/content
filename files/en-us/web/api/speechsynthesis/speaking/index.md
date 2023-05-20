@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.speaking
+title: "SpeechSynthesis: speaking property"
+short-title: speaking
 slug: Web/API/SpeechSynthesis/speaking
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesis.speaking

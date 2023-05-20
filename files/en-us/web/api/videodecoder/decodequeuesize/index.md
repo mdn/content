@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.decodeQueueSize
+title: "VideoDecoder: decodeQueueSize property"
+short-title: decodeQueueSize
 slug: Web/API/VideoDecoder/decodeQueueSize
 page-type: web-api-instance-property
 browser-compat: api.VideoDecoder.decodeQueueSize

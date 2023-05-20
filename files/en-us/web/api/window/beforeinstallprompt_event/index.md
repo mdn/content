@@ -1,5 +1,6 @@
 ---
 title: "Window: beforeinstallprompt event"
+short-title: beforeinstallprompt
 slug: Web/API/Window/beforeinstallprompt_event
 page-type: web-api-event
 browser-compat: api.Window.beforeinstallprompt_event

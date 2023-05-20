@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlay.getTitlebarAreaRect()
+title: "WindowControlsOverlay: getTitlebarAreaRect() method"
+short-title: getTitlebarAreaRect()
 slug: Web/API/WindowControlsOverlay/getTitlebarAreaRect
 page-type: web-api-instance-method
 status:

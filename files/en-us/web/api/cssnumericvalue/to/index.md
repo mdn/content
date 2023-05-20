@@ -1,5 +1,6 @@
 ---
-title: CSSNumericValue.to()
+title: "CSSNumericValue: to() method"
+short-title: to()
 slug: Web/API/CSSNumericValue/to
 page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.to

@@ -1,6 +1,7 @@
 ---
 title: Critical-CH
 slug: Web/HTTP/Headers/Critical-CH
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Critical-CH

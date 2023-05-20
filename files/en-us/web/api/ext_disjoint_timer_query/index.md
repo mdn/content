@@ -1,5 +1,6 @@
 ---
-title: EXT_disjoint_timer_query
+title: EXT_disjoint_timer_query extension
+short-title: EXT_disjoint_timer_query
 slug: Web/API/EXT_disjoint_timer_query
 page-type: webgl-extension
 browser-compat: api.EXT_disjoint_timer_query

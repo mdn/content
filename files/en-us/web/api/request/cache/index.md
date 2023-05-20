@@ -1,5 +1,6 @@
 ---
-title: Request.cache
+title: "Request: cache property"
+short-title: cache
 slug: Web/API/Request/cache
 page-type: web-api-instance-property
 browser-compat: api.Request.cache

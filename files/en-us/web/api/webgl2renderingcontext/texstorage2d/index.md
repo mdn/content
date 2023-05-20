@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.texStorage2D()
+title: "WebGL2RenderingContext: texStorage2D() method"
+short-title: texStorage2D()
 slug: Web/API/WebGL2RenderingContext/texStorage2D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texStorage2D

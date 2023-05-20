@@ -1,5 +1,6 @@
 ---
-title: CSSAnimation.animationName
+title: "CSSAnimation: animationName property"
+short-title: animationName
 slug: Web/API/CSSAnimation/animationName
 page-type: web-api-instance-property
 browser-compat: api.CSSAnimation.animationName

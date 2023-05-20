@@ -1,5 +1,6 @@
 ---
-title: IDBObjectStore.name
+title: "IDBObjectStore: name property"
+short-title: name
 slug: Web/API/IDBObjectStore/name
 page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.name

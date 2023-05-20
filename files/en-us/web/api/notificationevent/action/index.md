@@ -1,5 +1,6 @@
 ---
-title: NotificationEvent.action
+title: "NotificationEvent: action property"
+short-title: action
 slug: Web/API/NotificationEvent/action
 page-type: web-api-instance-property
 browser-compat: api.NotificationEvent.action

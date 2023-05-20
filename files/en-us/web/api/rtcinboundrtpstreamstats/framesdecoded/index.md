@@ -1,5 +1,6 @@
 ---
-title: RTCInboundRtpStreamStats.framesDecoded
+title: "RTCInboundRtpStreamStats: framesDecoded property"
+short-title: framesDecoded
 slug: Web/API/RTCInboundRtpStreamStats/framesDecoded
 page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.framesDecoded

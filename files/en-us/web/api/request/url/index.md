@@ -1,5 +1,6 @@
 ---
-title: Request.url
+title: "Request: url property"
+short-title: url
 slug: Web/API/Request/url
 page-type: web-api-instance-property
 browser-compat: api.Request.url

@@ -1,8 +1,9 @@
 ---
-title: OES_draw_buffers_indexed.enableiOES()
+title: "OES_draw_buffers_indexed: enableiOES() method"
+short-title: enableiOES()
 slug: Web/API/OES_draw_buffers_indexed/enableiOES
 page-type: web-api-instance-method
-browser-compat: api.OES_draw_buffers_indexed.enableiOES 
+browser-compat: api.OES_draw_buffers_indexed.enableiOES
 ---
 
 {{APIRef("WebGL")}}

@@ -1,6 +1,7 @@
 ---
 title: aria-roledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-roledescription
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
 

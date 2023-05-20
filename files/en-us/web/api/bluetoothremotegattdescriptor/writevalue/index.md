@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTDescriptor.writeValue()
+title: "BluetoothRemoteGATTDescriptor: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 page-type: web-api-instance-method
 status:

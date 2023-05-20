@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.isConnected
+title: "VRDisplay: isConnected property"
+short-title: isConnected
 slug: Web/API/VRDisplay/isConnected
 page-type: web-api-instance-property
 status:

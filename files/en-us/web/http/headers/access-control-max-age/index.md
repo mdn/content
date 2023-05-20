@@ -1,6 +1,7 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
+page-type: http-header
 browser-compat: http.headers.Access-Control-Max-Age
 ---
 

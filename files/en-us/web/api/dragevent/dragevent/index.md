@@ -1,5 +1,6 @@
 ---
-title: DragEvent()
+title: "DragEvent: DragEvent() constructor"
+short-title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 page-type: web-api-constructor
 browser-compat: api.DragEvent.DragEvent

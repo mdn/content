@@ -1,8 +1,10 @@
 ---
-title: ViewTransition.finished
+title: "ViewTransition: finished property"
+short-title: finished
 slug: Web/API/ViewTransition/finished
 page-type: web-api-instance-property
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition.finished
 ---
 
@@ -28,7 +30,7 @@ Sometimes certain navigations will require specifically tailored transitions, fo
 ```js
 async function handleTransition() {
   if (isBackNavigation) {
-    document.documentElement.classList.add('back-transition');
+    document.documentElement.classList.add("back-transition");
   }
 
   const transition = document.startViewTransition(() =>
@@ -38,7 +40,7 @@ async function handleTransition() {
   try {
     await transition.finished;
   } finally {
-    document.documentElement.classList.remove('back-transition');
+    document.documentElement.classList.remove("back-transition");
   }
 }
 ```

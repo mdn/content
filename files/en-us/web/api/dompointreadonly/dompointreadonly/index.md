@@ -1,5 +1,6 @@
 ---
-title: DOMPointReadOnly()
+title: "DOMPointReadOnly: DOMPointReadOnly() constructor"
+short-title: DOMPointReadOnly()
 slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
 page-type: web-api-constructor
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly

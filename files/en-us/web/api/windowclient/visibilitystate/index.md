@@ -1,5 +1,6 @@
 ---
-title: WindowClient.visibilityState
+title: "WindowClient: visibilityState property"
+short-title: visibilityState
 slug: Web/API/WindowClient/visibilityState
 page-type: web-api-instance-property
 browser-compat: api.WindowClient.visibilityState

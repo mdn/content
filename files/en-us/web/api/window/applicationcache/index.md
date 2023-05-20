@@ -1,5 +1,6 @@
 ---
-title: Window.applicationCache
+title: "Window: applicationCache property"
+short-title: applicationCache
 slug: Web/API/Window/applicationCache
 page-type: web-api-instance-property
 status:

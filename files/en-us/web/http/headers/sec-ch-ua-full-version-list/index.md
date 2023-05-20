@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Full-Version-List
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List

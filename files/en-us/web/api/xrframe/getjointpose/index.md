@@ -1,5 +1,6 @@
 ---
-title: XRFrame.getJointPose()
+title: "XRFrame: getJointPose() method"
+short-title: getJointPose()
 slug: Web/API/XRFrame/getJointPose
 page-type: web-api-instance-method
 status:
