@@ -1,5 +1,6 @@
 ---
-title: NavigationTransition.navigationType
+title: "NavigationTransition: navigationType property"
+short-title: navigationType
 slug: Web/API/NavigationTransition/navigationType
 page-type: web-api-instance-property
 status:

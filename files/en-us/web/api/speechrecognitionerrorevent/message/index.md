@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionErrorEvent.message
+title: "SpeechRecognitionErrorEvent: message property"
+short-title: message
 slug: Web/API/SpeechRecognitionErrorEvent/message
 page-type: web-api-instance-property
 browser-compat: api.SpeechRecognitionErrorEvent.message
@@ -25,7 +26,7 @@ const recognition = new SpeechRecognition();
 recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
-}
+};
 ```
 
 ## Specifications

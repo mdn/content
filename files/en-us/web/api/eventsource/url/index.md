@@ -1,5 +1,6 @@
 ---
-title: EventSource.url
+title: "EventSource: url property"
+short-title: url
 slug: Web/API/EventSource/url
 page-type: web-api-instance-property
 browser-compat: api.EventSource.url
@@ -18,7 +19,7 @@ A string representing the URL of the source.
 ## Examples
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.url);
 ```
 

@@ -2,15 +2,6 @@
 title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
 browser-compat: webextensions.api.browsingData.removeFormData
 ---
 

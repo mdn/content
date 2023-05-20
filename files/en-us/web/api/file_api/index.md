@@ -64,7 +64,7 @@ In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Elem
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const [file] = fileInput.files;
@@ -75,7 +75,7 @@ fileInput.addEventListener("change", () => {
     });
     reader.readAsText(file);
   }
-})
+});
 ```
 
 ### Result

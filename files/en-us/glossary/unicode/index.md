@@ -2,8 +2,6 @@
 title: Unicode
 slug: Glossary/Unicode
 page-type: glossary-definition
-tags:
-  - Infrastructure
 ---
 
 Unicode is a standard {{Glossary("Character set","character set")}} that numbers and defines {{Glossary("Character","characters")}} from the world's different languages, writing systems, and symbols.

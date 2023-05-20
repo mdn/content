@@ -64,7 +64,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ```js
 if (navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene

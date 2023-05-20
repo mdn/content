@@ -2,17 +2,6 @@
 title: textLength
 slug: Web/SVG/Attribute/textLength
 page-type: svg-attribute
-tags:
-  - Attribute
-  - CSS
-  - HTML
-  - JavaScript
-  - SVG Attribute
-  - Text
-  - height
-  - length
-  - size
-  - width
 browser-compat: svg.attributes.textLength
 ---
 

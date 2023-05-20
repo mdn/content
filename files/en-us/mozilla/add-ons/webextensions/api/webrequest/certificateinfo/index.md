@@ -2,15 +2,6 @@
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - CertificateInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest.CertificateInfo
 ---
 

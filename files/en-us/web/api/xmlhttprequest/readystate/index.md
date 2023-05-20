@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.readyState
+title: "XMLHttpRequest: readyState property"
+short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.readyState
@@ -28,23 +29,21 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 - DONE
   - : The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
 
-> **Note:** The state names are different in versions of Internet Explorer earlier than 11. Instead of `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) are used.
-
 ## Example
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
 xhr.onprogress = () => {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
 xhr.onload = () => {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);

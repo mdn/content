@@ -2,10 +2,6 @@
 title: String
 slug: Glossary/String
 page-type: glossary-definition
-tags:
-  - Beginner
-  - CodingScripting
-  - String
 ---
 
 In any computer programming language, a string is a sequence of {{Glossary("character","characters")}} used to represent text.

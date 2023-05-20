@@ -2,12 +2,6 @@
 title: align-content
 slug: Web/CSS/align-content
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.align-content
 ---
 

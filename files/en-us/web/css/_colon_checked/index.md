@@ -2,19 +2,6 @@
 title: ":checked"
 slug: Web/CSS/:checked
 page-type: css-pseudo-class
-tags:
-  - ":checked"
-  - CSS
-  - Checked
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Toggled
-  - Web
-  - button
-  - checkbox
-  - radio
 browser-compat: css.selectors.checked
 ---
 

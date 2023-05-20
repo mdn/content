@@ -1,15 +1,6 @@
 ---
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - lives
 ---
 
 {{GamesSidebar}}

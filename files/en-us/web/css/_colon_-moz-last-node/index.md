@@ -2,13 +2,8 @@
 title: ":-moz-last-node"
 slug: Web/CSS/:-moz-last-node
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Selector
+status:
+  - non-standard
 ---
 
 {{Non-standard_header}}{{CSSRef}}

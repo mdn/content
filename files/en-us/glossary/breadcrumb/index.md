@@ -2,12 +2,6 @@
 title: Breadcrumb
 slug: Glossary/Breadcrumb
 page-type: glossary-definition
-tags:
-  - Accessibility
-  - Navigation
-  - Search
-  - Site map
-  - breadcrumb
 ---
 
 A **breadcrumb**, or breadcrumb trail, is a navigational aid that is typically placed between a site's header and the main content, displaying either a hierarchy of the current page in relation to the site's structure, from top level to current page, or a list of the links the user followed to get to the current page, in the order visited.

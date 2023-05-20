@@ -1,16 +1,6 @@
 ---
 title: Beginning our Angular todo list app
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Structure
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -100,33 +90,33 @@ Now that you know what an `item` is, you can give your application some items by
 In `app.component.ts`, replace the contents with the following:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-  title = 'todo';
+  title = "todo";
 
-  filter: 'all' | 'active' | 'done' = 'all';
+  filter: "all" | "active" | "done" = "all";
 
   allItems = [
-    { description: 'eat', done: true },
-    { description: 'sleep', done: false },
-    { description: 'play', done: false },
-    { description: 'laugh', done: false },
+    { description: "eat", done: true },
+    { description: "sleep", done: false },
+    { description: "play", done: false },
+    { description: "laugh", done: false },
   ];
 
   get items() {
-    if (this.filter === 'all') {
+    if (this.filter === "all") {
       return this.allItems;
     }
-    return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) =>
+      this.filter === "done" ? item.done : !item.done
+    );
   }
-
 }
 ```
 
@@ -219,9 +209,11 @@ In `app.component.html`, replace the `<h2>` with the following:
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```
 
-When the user types a new item in the `<input>` and presses **Enter**, the `addItem()` method adds the value to the `items` array.
-Pressing the **Enter** key also resets the value of `<input>` to an empty string.
-Alternatively, the user can click the **Add** button which calls the same `addItem()` method.
+In the above HTML, `#newItem` is a template variable. The template variable in this case uses the `<input>` element as its value. Template variables can be referred to anywhere in the component's template.
+
+When the user types a new item in the `<input>` field and presses **Enter**, the `addItem()` method adds the value to the `allItems` array.
+Pressing the **Enter** key also resets the value of `<input>` to an empty string. The template variable `#newItem` is used to access the value of the `<input>` element in the template.
+Instead of pressing the **Enter** key, the user can also click the **Add** button, which calls the same `addItem()` method.
 
 ## Summary
 

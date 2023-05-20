@@ -2,11 +2,6 @@
 title: Stacking context example 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Understanding_CSS_z-index
 ---
 
 {{CSSRef}}

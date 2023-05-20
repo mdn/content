@@ -1,13 +1,7 @@
 ---
-title: '<noscript>: The Noscript element'
+title: "<noscript>: The Noscript element"
 slug: Web/HTML/Element/noscript
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
 browser-compat: html.elements.noscript
 ---
 
@@ -19,18 +13,18 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -46,7 +40,7 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
         disabled and when it isn't a descendant of the
         {{HTMLElement("head")}} element: any
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >transparent content</a
         >, but no <code>&#x3C;noscript></code> element must be among its
         descendants.<br />Otherwise: flow content or phrasing content.
@@ -60,7 +54,7 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, if there are no ancestor <code>&#x3C;noscript></code> element, or in
         a {{HTMLElement("head")}} element (but only for an HTML

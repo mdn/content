@@ -1,5 +1,6 @@
 ---
-title: USB.getDevices()
+title: "USB: getDevices() method"
+short-title: getDevices()
 slug: Web/API/USB/getDevices
 page-type: web-api-instance-method
 status:
@@ -36,11 +37,12 @@ console. For information on pairing devices, see
 {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.
 
 ```js
-navigator.usb.getDevices()
-.then((devices) => {
+navigator.usb.getDevices().then((devices) => {
   console.log(`Total devices: ${devices.length}`);
   devices.forEach((device) => {
-    console.log(`Product name: ${device.productName}, serial number ${device.serialNumber}`);
+    console.log(
+      `Product name: ${device.productName}, serial number ${device.serialNumber}`
+    );
   });
 });
 ```

@@ -2,12 +2,6 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transition-delay
 ---
 

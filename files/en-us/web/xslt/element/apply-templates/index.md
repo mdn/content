@@ -1,11 +1,6 @@
 ---
 title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - apply-templates
 ---
 
 {{ XsltRef() }}

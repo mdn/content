@@ -2,16 +2,6 @@
 title: var()
 slug: Web/CSS/var
 page-type: css-function
-tags:
-  - CSS
-  - CSS Custom Properties
-  - CSS Function
-  - CSS Variables
-  - Function
-  - Reference
-  - Variables
-  - var
-  - var()
 browser-compat: css.properties.custom-property.var
 ---
 

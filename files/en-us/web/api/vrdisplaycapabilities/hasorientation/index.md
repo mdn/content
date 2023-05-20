@@ -1,5 +1,6 @@
 ---
-title: VRDisplayCapabilities.hasOrientation
+title: "VRDisplayCapabilities: hasOrientation property"
+short-title: hasOrientation
 slug: Web/API/VRDisplayCapabilities/hasOrientation
 page-type: web-api-instance-property
 status:

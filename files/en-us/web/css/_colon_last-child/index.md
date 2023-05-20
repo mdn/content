@@ -2,13 +2,6 @@
 title: ":last-child"
 slug: Web/CSS/:last-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.last-child
 ---
 

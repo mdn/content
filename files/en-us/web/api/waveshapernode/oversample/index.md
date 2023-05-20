@@ -1,5 +1,6 @@
 ---
-title: WaveShaperNode.oversample
+title: "WaveShaperNode: oversample property"
+short-title: oversample
 slug: Web/API/WaveShaperNode/oversample
 page-type: web-api-instance-property
 browser-compat: api.WaveShaperNode.oversample
@@ -25,7 +26,7 @@ One of `'none'`, `'2x'`, or `'4x'`.
 
 ## Examples
 
-See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#examples) for example code.
 
 ## Specifications
 

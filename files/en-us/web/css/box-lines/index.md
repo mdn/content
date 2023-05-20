@@ -2,13 +2,9 @@
 title: box-lines
 slug: Web/CSS/box-lines
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-lines
 ---
 

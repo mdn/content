@@ -22,7 +22,7 @@ The **`UserProximityEvent`** indicates whether a nearby physical object is prese
 ## Examples
 
 ```js
-window.addEventListener('userproximity', (event) => {
+window.addEventListener("userproximity", (event) => {
   // if not near, power off the screen
   navigator.mozPower.screenEnabled = !event.near;
 });

@@ -1,14 +1,7 @@
 ---
-title: '<small>: the side comment element'
+title: "<small>: the side comment element"
 slug: Web/HTML/Element/small
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - font-size
 browser-compat: html.elements.small
 ---
 
@@ -33,6 +26,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </p>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_usage")}}
 
 ### CSS alternative
@@ -43,6 +38,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
+
+#### Result
 
 {{EmbedLiveSample("CSS_alternative")}}
 
@@ -57,10 +54,10 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
     <tr>
       <th scope="row">Content categories</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >
       </td>
@@ -68,7 +65,7 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
         >
       </td>
@@ -81,10 +78,10 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

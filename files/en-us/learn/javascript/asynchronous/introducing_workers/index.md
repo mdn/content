@@ -1,9 +1,6 @@
 ---
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
@@ -52,12 +49,11 @@ Let's first take another look at the JavaScript in our previous example:
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -75,14 +71,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output"
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -120,7 +119,7 @@ The "index.html" file and the "style.css" files are already complete:
 
     <textarea id="user-input" rows="5" cols="62">
 Try typing in here immediately after pressing "Generate primes"
-</textarea>
+    </textarea>
 
     <div id="output"></div>
   </body>
@@ -142,15 +141,15 @@ Now copy the following code into "main.js":
 
 ```js
 // Create a new worker, giving it the code in "generate.js"
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
+    command: "generate",
     quota,
   });
 });
@@ -158,12 +157,15 @@ document.querySelector('#generate').addEventListener('click', () => {
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output"
+  ).textContent = `Finished generating ${message.data} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -185,19 +187,18 @@ Now for the worker code. Copy the following code into "generate.js":
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
 addEventListener("message", (message) => {
-  if (message.data.command === 'generate') {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -224,7 +225,7 @@ The first thing the worker does is start listening for messages from the main sc
 
 The `generatePrimes()` function is just like the synchronous version, except instead of returning a value, we send a message to the main script when we are done. We use the {{domxref("DedicatedWorkerGlobalScope/postMessage", "postMessage()")}} function for this, which like `addEventListener()` is a global function in a worker. As we already saw, the main script is listening for this message and will update the DOM when the message is received.
 
-> **Note:** To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
+> **Note:** To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
 >
 > If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished).
 
@@ -250,11 +251,3 @@ Workers can be an effective way to keep the main application responsive, althoug
 - [Web workers API](/en-US/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **Introducing workers**
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

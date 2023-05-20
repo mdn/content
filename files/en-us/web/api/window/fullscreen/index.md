@@ -1,5 +1,6 @@
 ---
-title: Window.fullScreen
+title: "Window: fullScreen property"
+short-title: fullScreen
 slug: Web/API/Window/fullScreen
 page-type: web-api-instance-property
 status:
@@ -11,11 +12,6 @@ browser-compat: api.Window.fullScreen
 
 The **`fullScreen`** property of the `Window`
 interface indicates whether the window is displayed in full screen mode or not.
-
-With chrome privileges, the property is read-write, otherwise it is read-only. Bear in
-mind that if you try to set this property without chrome privileges, it will not throw
-an exception and instead just silently fail. This is to prevent scripts designed to set
-this property in Internet Explorer from breaking.
 
 ## Value
 
@@ -31,8 +27,7 @@ A boolean value with `true` meaning that the window is in full-screen mode and `
 ```js
 if (window.fullScreen) {
   // it's fullscreen!
-}
-else {
+} else {
   // not fullscreen!
 }
 ```

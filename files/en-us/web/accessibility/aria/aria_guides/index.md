@@ -1,8 +1,7 @@
 ---
 title: ARIA guides
 slug: Web/Accessibility/ARIA/ARIA_Guides
-tags:
-  - ARIA
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -12,7 +11,7 @@ tags:
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>
@@ -33,7 +32,7 @@ This page lists the guides that you can use to help improve the accessibility of
 - [Designing accessible forms](https://www.w3.org/WAI/tutorials/forms/)
 - [Understanding WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
 - [Creating keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-- [Using ARIA for labels with embedded fields inside them](/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels)
+- [Using ARIA for labels with embedded fields inside them](/en-US/docs/Web/Accessibility/ARIA/Multipart_labels)
 - [Managing focus in composite widgets](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` vs. roving tabindex)
 - [Testing ARIA](https://www.w3.org/WAI/test-evaluate/)
 - [Displaying accessible tables](https://www.w3.org/WAI/tutorials/tables/)

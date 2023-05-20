@@ -1,10 +1,7 @@
 ---
 title: 207 Multi-Status
 slug: Web/HTTP/Status/207
-tags:
-  - HTTP
-  - Status code
-  - Partial Success
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 ---
 

@@ -2,13 +2,6 @@
 title: Variable fonts guide
 slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 page-type: guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Text
-  - variable fonts
-  - web fonts
 ---
 
 {{CSSRef}}

@@ -2,14 +2,8 @@
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
 page-type: css-property
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - masonry
-  - masonry-auto-flow
+status:
+  - experimental
 browser-compat: css.properties.masonry-auto-flow
 ---
 

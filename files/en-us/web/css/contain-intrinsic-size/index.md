@@ -2,11 +2,6 @@
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - contain-intrinsic-size
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
@@ -44,6 +39,7 @@ contain-intrinsic-size: auto 300px auto 4rem;
 contain-intrinsic-size: inherit;
 contain-intrinsic-size: initial;
 contain-intrinsic-size: revert;
+contain-intrinsic-size: revert-layer;
 contain-intrinsic-size: unset;
 ```
 

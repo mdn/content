@@ -1,13 +1,7 @@
 ---
 title: aria-setsize
 slug: Web/Accessibility/ARIA/Attributes/aria-setsize
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-setsize
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
 
@@ -66,8 +60,8 @@ To orient the user, assistive technologies would list the bananas above as "item
 Used in roles:
 
 - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemvalue_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)

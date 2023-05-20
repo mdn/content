@@ -1,14 +1,7 @@
 ---
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - HTML
-  - HTTP
-  - Link
-  - Necko
-  - Performance
-  - Prefetch
-  - Web Development
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -87,11 +80,11 @@ Yes, we send the following header along with each prefetch request:
 X-moz: prefetch
 ```
 
-Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).
+Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://webkit.org/b/46529).
 
 ### Is there a preference to disable link prefetching?
 
-Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`:
+Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`):
 
 ```js
 user_pref("network.prefetch-next", false);

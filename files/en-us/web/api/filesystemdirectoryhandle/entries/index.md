@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.entries()
+title: "FileSystemDirectoryHandle: entries() method"
+short-title: entries()
 slug: Web/API/FileSystemDirectoryHandle/entries
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.entries
@@ -31,10 +32,10 @@ property `[key, value]` pairs.
 ## Examples
 
 ```js
-const dirHandle = await window.showDirectoryPicker()
+const dirHandle = await window.showDirectoryPicker();
 
 for await (const [key, value] of dirHandle.entries()) {
-    console.log({ key, value })
+  console.log({ key, value });
 }
 ```
 

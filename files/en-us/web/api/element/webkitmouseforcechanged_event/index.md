@@ -1,5 +1,6 @@
 ---
-title: 'Element: webkitmouseforcechanged event'
+title: "Element: webkitmouseforcechanged event"
+short-title: webkitmouseforcechanged
 slug: Web/API/Element/webkitmouseforcechanged_event
 page-type: web-api-event
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.Element.webkitmouseforcechanged_event
 ---
 
-{{APIRef}}{{Non-standard_header()}}
+{{APIRef}}{{Non-standard_header}}
 
 The non-standard **`webkitmouseforcechanged`** event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.
 
@@ -20,9 +21,9 @@ This event first fires after the {{domxref("Element/mousedown_event", "mousedown
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webkitmouseforcechanged', (event) => {});
+addEventListener("webkitmouseforcechanged", (event) => {});
 
-onwebkitmouseforcechanged = (event) => { };
+onwebkitmouseforcechanged = (event) => {};
 ```
 
 ## Event type

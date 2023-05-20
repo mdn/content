@@ -1,14 +1,7 @@
 ---
-title: 'HTML attribute: accept'
+title: "HTML attribute: accept"
 slug: Web/HTML/Attributes/accept
 page-type: html-attribute
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
 browser-compat: html.elements.input.accept
 ---
 
@@ -120,7 +113,7 @@ Including the [`multiple`](multiple) attribute, as shown above, specifies that m
 
 Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}.
 
-Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
+Acceptable file types can be specified with the [`accept`](/en-US/docs/Web/HTML/Element/input/file#accept) attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
 - `accept="image/png"` or `accept=".png"` — Accepts PNG files.
 - `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.

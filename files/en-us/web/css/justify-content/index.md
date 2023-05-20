@@ -2,12 +2,6 @@
 title: justify-content
 slug: Web/CSS/justify-content
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.justify-content
 ---
 

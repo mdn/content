@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.crossOrigin
@@ -52,9 +53,7 @@ const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
-  image.addEventListener("load",
-    () => container.prepend(image)
-  );
+  image.addEventListener("load", () => container.prepend(image));
 
   image.addEventListener("error", () => {
     const errMsg = document.createElement("output");

@@ -1,17 +1,11 @@
 ---
 title: Measuring performance
 slug: Learn/Performance/Measuring_performance
-tags:
-  - API
-  - Beginner
-  - Guide
-  - Tools
-  - Web
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
-Measuring performance provides an important metric to help you asses the success of your app, site, or web service.
+Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
 For example, you can use performance metrics to determine how your app performs in comparison to a competitor, or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
 
@@ -78,7 +72,7 @@ At the time of writing, MDN's performance report summary looks similar to the fo
 
 ![A screenshot of PageSpeed Insights report for the Mozilla homepage.](pagespeed-insight-mozilla-homepage.png)
 
-A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know it the measured values are considered good or bad.
+A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know if the measured values are considered good or bad.
 
 [webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns useful metrics.
 

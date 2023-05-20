@@ -1,11 +1,6 @@
 ---
 title: Get Timeouts
 slug: Web/WebDriver/Commands/GetTimeouts
-tags:
-  - Command
-  - Get Timeouts
-  - Reference
-  - WebDriver
 browser-compat: webdriver.commands.GetTimeouts
 ---
 

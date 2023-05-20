@@ -2,14 +2,6 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - "default value: center"
-  - recipe:css-property
-  - transform-origin
 browser-compat: css.properties.transform-origin
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: PerformanceMark.detail
+title: "PerformanceMark: detail property"
+short-title: detail
 slug: Web/API/PerformanceMark/detail
 page-type: web-api-instance-property
 browser-compat: api.PerformanceMark.detail

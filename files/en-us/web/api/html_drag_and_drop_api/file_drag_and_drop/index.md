@@ -55,7 +55,7 @@ Note that in this example, any drag item that is not a file is ignored.
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -64,7 +64,7 @@ function dropHandler(ev) {
     // Use DataTransferItemList interface to access the file(s)
     [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (item.kind === 'file') {
+      if (item.kind === "file") {
         const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
@@ -84,7 +84,7 @@ The following {{domxref("HTMLElement/dragover_event", "dragover")}} event handle
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();

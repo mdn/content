@@ -1,16 +1,6 @@
 ---
 title: Typesetting a community school homepage
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Link
-  - Styling text
-  - font
-  - list
-  - web font
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

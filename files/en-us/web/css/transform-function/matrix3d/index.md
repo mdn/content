@@ -2,12 +2,6 @@
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 browser-compat: css.types.transform-function.matrix3d
 ---
 

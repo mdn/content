@@ -1,13 +1,12 @@
 ---
-title: CSSNumericValue.type()
+title: "CSSNumericValue: type() method"
+short-title: type()
 slug: Web/API/CSSNumericValue/type
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CSSNumericValue.type
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`type()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the type of

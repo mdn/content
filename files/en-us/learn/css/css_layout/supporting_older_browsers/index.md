@@ -1,17 +1,6 @@
 ---
 title: Supporting older browsers
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - Layout
-  - Learn
-  - feature queries
-  - flexbox
-  - float
-  - grid
-  - legacy
 ---
 
 {{LearnSidebar}}

@@ -34,6 +34,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `RangeError.prototype` and shared by all `RangeError` instances.
 
+- {{jsxref("Object/constructor", "RangeError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `RangeError` instances, the initial value is the {{jsxref("RangeError/RangeError", "RangeError")}} constructor.
 - {{jsxref("Error/name", "RangeError.prototype.name")}}
   - : Represents the name for the type of error. For `RangeError.prototype.name`, the initial value is `"RangeError"`.
 

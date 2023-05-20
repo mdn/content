@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements property"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.elements
@@ -36,7 +37,7 @@ Only the following elements are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -50,13 +51,16 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <label>Username:
+  <label>
+    Username:
     <input type="text" name="username" />
   </label>
-  <label>Full name:
+  <label>
+    Full name:
     <input type="text" name="full-name" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" name="password" />
   </label>
 </form>

@@ -1,5 +1,6 @@
 ---
-title: WorkerLocation.protocol
+title: "WorkerLocation: protocol property"
+short-title: protocol
 slug: Web/API/WorkerLocation/protocol
 page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.protocol

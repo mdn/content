@@ -1,20 +1,7 @@
 ---
 title: Identifying resources on the Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Domain
-  - HTTP
-  - Path
-  - Scheme
-  - Syntax
-  - URI
-  - URL
-  - URL Syntax
-  - Web
-  - fragment
-  - port
-  - query
-  - resources
+page-type: guide
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Element.slot
+title: "Element: slot property"
+short-title: slot
 slug: Web/API/Element/slot
 page-type: web-api-instance-property
 browser-compat: api.Element.slot
@@ -10,7 +11,7 @@ browser-compat: api.Element.slot
 The **`slot`** property of the {{domxref("Element")}} interface
 returns the name of the shadow DOM slot the element is inserted in.
 
-A slot is a placeholder inside a [web component](/en-US/docs/Web/Web_Components) that users can fill with their own markup (see [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
+A slot is a placeholder inside a [web component](/en-US/docs/Web/API/Web_components) that users can fill with their own markup (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
 ## Value
 
@@ -37,7 +38,7 @@ In our JavaScript file we get a reference to the {{htmlelement("span")}} shown a
 then log a reference to the name of the corresponding `<slot>` element.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 

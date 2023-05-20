@@ -2,13 +2,8 @@
 title: "::-webkit-meter-suboptimum-value"
 slug: Web/CSS/::-webkit-meter-suboptimum-value
 page-type: css-pseudo-element
-tags:
-  - "-webkit-meter-suboptimum-value"
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-meter-suboptimum-value
 ---
 

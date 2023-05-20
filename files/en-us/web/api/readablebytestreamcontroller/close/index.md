@@ -1,5 +1,6 @@
 ---
-title: ReadableByteStreamController.close()
+title: "ReadableByteStreamController: close() method"
+short-title: close()
 slug: Web/API/ReadableByteStreamController/close
 page-type: web-api-instance-method
 browser-compat: api.ReadableByteStreamController.close
@@ -61,3 +62,4 @@ For example if using a {{domxref("ReadableStreamBYOBReader")}} any {{domxref("Re
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

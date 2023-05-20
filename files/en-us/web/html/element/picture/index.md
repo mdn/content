@@ -1,17 +1,7 @@
 ---
-title: '<picture>: The Picture element'
+title: "<picture>: The Picture element"
 slug: Web/HTML/Element/picture
 page-type: html-element
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
 browser-compat: html.elements.picture
 ---
 
@@ -19,11 +9,11 @@ browser-compat: html.elements.picture
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
 
-The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's {{htmlattrxref("src", "img")}} attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
+The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
 
 {{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
-To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, and {{htmlattrxref("type", "source")}} attributes to select a compatible image that best matches the current layout and capabilities of the display device.
+To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Element/source#srcset), [`media`](/en-US/docs/Web/HTML/Element/source#media), and [`type`](/en-US/docs/Web/HTML/Element/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
 The `<img>` element serves two purposes:
 
@@ -39,18 +29,18 @@ Common use cases for `<picture>`:
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
-If providing higher-density versions of an image for high-DPI (Retina) display, use {{htmlattrxref("srcset", "img")}} on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
+If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content
       </td>
@@ -119,7 +109,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ### The srcset attribute
 
-The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images _based on size_.
+The [srcset](/en-US/docs/Web/HTML/Element/source#srcset) attribute is used to offer list of possible images _based on size_.
 
 It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either_:
 

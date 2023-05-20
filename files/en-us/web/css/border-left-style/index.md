@@ -2,12 +2,6 @@
 title: border-left-style
 slug: Web/CSS/border-left-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-left-style
 ---
 
@@ -42,7 +36,7 @@ border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
-The `border-left-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+The `border-left-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

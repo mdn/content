@@ -1,5 +1,6 @@
 ---
-title: MediaRecorder.stream
+title: "MediaRecorder: stream property"
+short-title: stream
 slug: Web/API/MediaRecorder/stream
 page-type: web-api-instance-property
 browser-compat: api.MediaRecorder.stream

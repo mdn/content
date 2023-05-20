@@ -1,17 +1,6 @@
 ---
 title: Handling text — strings in JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Join
-  - Quotes
-  - concatenation
-  - "l10n:priority"
-  - strings
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
@@ -42,7 +31,7 @@ Pretty much all of the programs we've shown you so far in the course have involv
 
 ## Strings — the basics
 
-Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to familiarize ourselves.
+Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to familiarize ourselves.
 
 ### Creating a string
 
@@ -78,7 +67,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 1. In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
 
-   ```js
+   ```js-nolint
    const sgl = 'Single quotes.';
    const dbl = "Double quotes";
    console.log(sgl);
@@ -87,7 +76,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 2. There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const badQuotes = 'What on earth?";
    ```
 
@@ -102,7 +91,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
-   ```js example-bad
+   ```js-nolint example-bad
    const bigmouth = 'I've got no right to take my place…';
    ```
 
@@ -112,12 +101,12 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
 
-```js
+```js-nolint
 const bigmouth = 'I\'ve got no right to take my place…';
 console.log(bigmouth);
 ```
 
-This works fine. You can escape other characters in the same way, e.g. `\"`, and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more details.
+This works fine. You can escape other characters in the same way, e.g. `\"`, and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more details.
 
 ## Concatenating strings
 
@@ -267,15 +256,3 @@ See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_litera
 So that's the very basics of strings covered in JavaScript. In the next article, we'll build on this, looking at some of the built-in methods available to strings in JavaScript and how we can use them to manipulate our strings into just the form we want.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

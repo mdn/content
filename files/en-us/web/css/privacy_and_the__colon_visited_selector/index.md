@@ -2,13 +2,6 @@
 title: Privacy and the :visited selector
 slug: Web/CSS/Privacy_and_the_:visited_selector
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Pseudo-class
-  - Reference
-  - Security
-  - Selectors
 ---
 
 {{CSSRef}}

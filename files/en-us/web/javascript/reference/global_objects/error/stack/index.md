@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
 status:
   - non-standard

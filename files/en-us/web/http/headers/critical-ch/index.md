@@ -1,14 +1,9 @@
 ---
 title: Critical-CH
 slug: Web/HTTP/Headers/Critical-CH
-tags:
-  - Critical-CH
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response header
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Critical-CH
 ---
 
@@ -93,4 +88,4 @@ The client will include the header in subsequent requests in the current session
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

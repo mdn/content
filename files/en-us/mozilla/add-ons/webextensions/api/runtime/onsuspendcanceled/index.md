@@ -2,16 +2,6 @@
 title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 page-type: webextension-api-event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspendCanceled
-  - runtime
 browser-compat: webextensions.api.runtime.onSuspendCanceled
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: XSLT elements reference
 slug: Web/XSLT/Element
-tags:
-  - Element
-  - Overview
-  - Reference
-  - XSLT
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}

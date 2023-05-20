@@ -1,13 +1,6 @@
 ---
 title: Creating and triggering events
 slug: Web/Events/Creating_and_triggering_events
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - JavaScript
-  - NeedsContent
-  - events
 ---
 
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
@@ -34,7 +27,7 @@ elem.dispatchEvent(event);
 
 The above code example uses the [EventTarget.dispatchEvent()](/en-US/docs/Web/API/EventTarget/dispatchEvent) method.
 
-This constructor is supported in most modern browsers (with Internet Explorer being the exception). For a more verbose approach (which works with Internet Explorer), see [the old-fashioned way](#the_old-fashioned_way) below.
+This constructor is supported in most modern browsers. For a more verbose approach, see [the old-fashioned way](#the_old-fashioned_way) below.
 
 ### Adding custom data – CustomEvent()
 
@@ -134,7 +127,7 @@ textarea.addEventListener("input", function () {
 
 ## Triggering built-in events
 
-This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)
+This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
 
 ```js
 function simulateClick() {

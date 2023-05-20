@@ -2,12 +2,6 @@
 title: "::selection"
 slug: Web/CSS/::selection
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.selection
 ---
 

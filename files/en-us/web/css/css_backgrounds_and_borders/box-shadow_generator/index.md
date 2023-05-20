@@ -2,10 +2,6 @@
 title: Box-shadow generator
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 page-type: guide
-tags:
-  - CSS
-  - Tools
-  - box-shadow
 ---
 
 {{CSSRef}}

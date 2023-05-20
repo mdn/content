@@ -1,16 +1,7 @@
 ---
 title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - default
-  - default-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
 ---
 

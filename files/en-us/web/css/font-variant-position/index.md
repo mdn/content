@@ -2,12 +2,6 @@
 title: font-variant-position
 slug: Web/CSS/font-variant-position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-position
 ---
 

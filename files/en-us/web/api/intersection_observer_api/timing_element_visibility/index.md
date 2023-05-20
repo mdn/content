@@ -236,11 +236,10 @@ function startup() {
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: [0.0, 0.75]
+    threshold: [0.0, 0.75],
   };
 
-  adObserver = new IntersectionObserver(intersectionCallback,
-                    observerOptions);
+  adObserver = new IntersectionObserver(intersectionCallback, observerOptions);
 
   buildContents();
   refreshIntervalID = setInterval(handleRefreshInterval, 1000);
@@ -304,7 +303,10 @@ function intersectionCallback(entries) {
       }
     } else {
       visibleAds.delete(adBox);
-      if ((entry.intersectionRatio === 0.0) && (adBox.dataset.totalViewTime >= 60000)) {
+      if (
+        entry.intersectionRatio === 0.0 &&
+        adBox.dataset.totalViewTime >= 60000
+      ) {
         replaceAd(adBox);
       }
     }
@@ -361,14 +363,15 @@ function updateAdTimer(adBox) {
   if (lastStarted) {
     const diff = currentTime - lastStarted;
 
-    adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
+    adBox.dataset.totalViewTime =
+      parseFloat(adBox.dataset.totalViewTime) + diff;
   }
 
   adBox.dataset.lastViewStarted = currentTime;
 }
 ```
 
-To track an element's visible time, we use two custom data attributes (see {{htmlattrxref("data-*")}}) on every ad:
+To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Global_attributes#data-*)) on every ad:
 
 - `lastViewStarted`
   - : The time in milliseconds, relative to the time at which the document was created, at which the ad's visibility count was last updated, or the ad last became visible. 0 if the ad was not visible as of the last time it was checked.
@@ -405,7 +408,8 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+const loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -414,7 +418,7 @@ const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " cursus nunc.</p>";
 
 function buildContents() {
-  for (let i=0; i<5; i++) {
+  for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
 
     if (!(i % 2)) {
@@ -444,13 +448,13 @@ function createArticle(contents) {
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
-  nextArticleID +=1 ;
+  nextArticleID += 1;
 
   return articleElem;
 }
 ```
 
-First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
+First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("Heading_Elements", "h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
 
 #### Creating an ad
 
@@ -461,24 +465,24 @@ function loadRandomAd(replaceBox) {
   const ads = [
     {
       bgcolor: "#cec",
-      title: 'Eat Green Beans',
-      body: "Make your mother proud—they're good for you!"
+      title: "Eat Green Beans",
+      body: "Make your mother proud—they're good for you!",
     },
     {
       bgcolor: "aquamarine",
-      title: 'MillionsOfFreeBooks.whatever',
-      body: "Read classic literature online free!"
+      title: "MillionsOfFreeBooks.whatever",
+      body: "Read classic literature online free!",
     },
     {
       bgcolor: "lightgrey",
-      title: '3.14 Shades of Gray: A novel',
-      body: "Love really does make the world go round…"
+      title: "3.14 Shades of Gray: A novel",
+      body: "Love really does make the world go round…",
     },
     {
       bgcolor: "#fee",
-      title: 'Flexbox Florist',
-      body: "When life's layout gets complicated, send flowers."
-    }
+      title: "Flexbox Florist",
+      body: "When life's layout gets complicated, send flowers.",
+    },
   ];
   let adBox, title, body, timerElem;
 
@@ -511,7 +515,7 @@ function loadRandomAd(replaceBox) {
   adBox.dataset.totalViewTime = 0;
   adBox.dataset.lastViewStarted = 0;
 
-  timerElem.className="timer";
+  timerElem.className = "timer";
   timerElem.innerText = "0:00";
 
   if (!replaceBox) {
@@ -529,7 +533,7 @@ Then we define several variables:
 - `adBox`
   - : This will be set to the element that represents the ad. For new ads being appended to the page, this is created using {{domxref("Document.createElement()")}}. When replacing an existing ad, this is set to the specified ad element (`replaceBox`).
 - `title`
-  - : Will hold the {{HTMLElement("h2")}} element representing the ad's title.
+  - : Will hold the {{HTMLElement("Heading_Elements", "h2")}} element representing the ad's title.
 - `body`
   - : Will hold the {{HTMLElement("p")}} representing the ad's body text.
 - `timerElem`
@@ -539,7 +543,7 @@ A random ad is selected by computing `Math.floor(Math.random() * ads.length)`; t
 
 If a value is specified for `replaceBox`, we use that as the ad element. To do so, we begin by ending observation of the element by calling {{domxref("IntersectionObserver.unobserve()")}}. Then the local variables for each of the elements that comprise an ad: the ad box itself, the title, the body, and the timer box, are all set to the corresponding elements in the existing ad.
 
-If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
+If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("Heading_Elements", "h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
 
 After that, the code paths converge once again. The ad's background color is set to the value specified in the new ad's record, and elements' classes and contents are set appropriately as well.
 
@@ -558,7 +562,11 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   const visibleTime = adBox.dataset.totalViewTime;
-  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`);
+  console.log(
+    `Replacing ad: ${
+      adBox.querySelector("h2").innerText
+    } - visible for ${visibleTime}`
+  );
 
   loadRandomAd(adBox);
 }

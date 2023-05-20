@@ -2,8 +2,6 @@
 title: Boolean
 slug: Glossary/Boolean
 page-type: glossary-disambiguation
-tags:
-  - Disambiguation
 ---
 
 In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.

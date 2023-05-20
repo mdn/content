@@ -2,14 +2,6 @@
 title: In flow and out of flow
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 page-type: guide
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - flow
 ---
 
 {{CSSRef}}

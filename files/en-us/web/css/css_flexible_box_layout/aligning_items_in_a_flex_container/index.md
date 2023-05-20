@@ -2,18 +2,6 @@
 title: Aligning items in a flex container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 page-type: guide
-tags:
-  - Align
-  - CSS
-  - Flex
-  - Guide
-  - align-content
-  - align-items
-  - align-self
-  - alignment
-  - flexbox
-  - justify
-  - justify-content
 ---
 
 {{CSSRef}}

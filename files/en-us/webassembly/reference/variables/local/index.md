@@ -1,11 +1,6 @@
 ---
 title: Local
 slug: WebAssembly/Reference/Variables/Local
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
 ---
 
 {{WebAssemblySidebar}}

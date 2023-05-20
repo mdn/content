@@ -2,17 +2,7 @@
 title: <dashed-ident>
 slug: Web/CSS/dashed-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Draft
-  - Layout
-  - Reference
-  - Web
-  - dashed-ident
-spec-urls:
-  - https://drafts.csswg.org/css-values/#dashed-idents
+spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
 ---
 
 {{CSSRef}}

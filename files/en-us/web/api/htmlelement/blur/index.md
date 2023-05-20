@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.blur()
+title: "HTMLElement: blur() method"
+short-title: blur()
 slug: Web/API/HTMLElement/blur
 page-type: web-api-instance-method
 browser-compat: api.HTMLElement.blur

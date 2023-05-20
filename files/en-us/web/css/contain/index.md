@@ -2,17 +2,6 @@
 title: contain
 slug: Web/CSS/contain
 page-type: css-property
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Layout
-  - NeedsExample
-  - Paint
-  - Reference
-  - Style
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.contain
 ---
 

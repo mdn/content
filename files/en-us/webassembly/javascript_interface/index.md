@@ -1,13 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
-  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly
 ---
 

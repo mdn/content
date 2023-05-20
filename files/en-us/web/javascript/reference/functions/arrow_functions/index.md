@@ -18,11 +18,17 @@ An **arrow function expression** is a compact alternative to a traditional [func
 ## Syntax
 
 ```js-nolint
+() => expression
+
 param => expression
 
 (param) => expression
 
 (param1, paramN) => expression
+
+() => {
+  statements
+}
 
 param => {
   statements
@@ -96,7 +102,7 @@ const b = 2;
   return a + b + 100;
 });
 
-// Arrow function (no arguments)
+// Arrow function (no parameters)
 () => a + b + 100;
 ```
 
@@ -315,7 +321,7 @@ const func4 = (
 
 ### Precedence of arrow
 
-Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) compared to regular functions.
+Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
 
 ```js example-bad
 let callback;
@@ -470,4 +476,8 @@ obj.doSomethingLater(); // logs 11
 
 ## See also
 
-- ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/function", "function")}}
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) on hacks.mozilla.org (June 4, 2015)

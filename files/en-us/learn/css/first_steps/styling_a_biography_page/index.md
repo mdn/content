@@ -1,13 +1,6 @@
 ---
 title: Styling a biography page
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - CSS
-  - Learn
-  - Playground
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

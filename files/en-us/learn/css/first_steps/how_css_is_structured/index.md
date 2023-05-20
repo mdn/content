@@ -1,18 +1,6 @@
 ---
 title: How CSS is structured
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Selectors
-  - Structure
-  - comments
-  - properties
-  - shorthand
-  - values
-  - whitespace
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -170,6 +158,7 @@ For the exercise that follows, create a folder on your computer. You can name th
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
     <link rel="stylesheet" href="styles.css" />
   </head>

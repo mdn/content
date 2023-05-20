@@ -2,15 +2,6 @@
 title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
 page-type: html-attribute
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - maxlength
-  - textarea
 browser-compat:
   - html.elements.input.maxlength
   - html.elements.textarea.maxlength
@@ -51,6 +42,6 @@ While the browser will generally prevent user from entering more text than the m
 - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}

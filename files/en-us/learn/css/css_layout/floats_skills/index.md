@@ -1,13 +1,6 @@
 ---
-title: 'Test your skills: Floats'
+title: "Test your skills: Floats"
 slug: Learn/CSS/CSS_layout/Floats_skills
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Floats
-  - Layout
-  - test your skills
 ---
 
 {{LearnSidebar}}

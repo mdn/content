@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.timeout
+title: "XMLHttpRequest: timeout property"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.timeout
@@ -13,13 +14,11 @@ The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the
 
 [Using a timeout with an asynchronous request](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 
-In Internet Explorer, the timeout property may be set only after calling the [open()](/en-US/docs/Web/API/XMLHttpRequest/open) method and before calling the [send()](/en-US/docs/Web/API/XMLHttpRequest/send) method.
-
 ## Example
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // time in milliseconds
 

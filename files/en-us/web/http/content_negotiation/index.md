@@ -1,11 +1,7 @@
 ---
 title: Content negotiation
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Content Negotiation
-  - Content Negotiation Reference
-  - HTTP
-  - Reference
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -40,7 +36,7 @@ In addition to these, there's an experimental proposal to add more headers to th
 Even if server-driven content negotiation is the most common way to agree on a specific representation of a resource, it has several drawbacks:
 
 - The server doesn't have total knowledge of the browser. Even with the Client Hints extension, it doesn't have a complete knowledge of the capabilities of the browser. Unlike reactive content negotiation where the client makes the choice, the server choice is always somewhat arbitrary.
-- The information from the client is quite verbose (HTTP/2 header compression mitigates this problem) and a privacy risk (HTTP fingerprinting).
+- The information from the client is quite verbose (HTTP/2 header compression mitigates this problem) and a privacy risk (HTTP [fingerprinting](/en-US/docs/Glossary/Fingerprinting)).
 - As several representations of a given resource are sent, shared caches are less efficient and server implementations are more complex.
 
 ### The `Accept` header
@@ -96,7 +92,7 @@ In contrast to the previous `Accept-*` headers, which are sent by the client, th
 
 The special value '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
 
-The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
+The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
 
 ## Agent-driven negotiation
 

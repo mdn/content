@@ -2,14 +2,9 @@
 title: box-pack
 slug: Web/CSS/box-pack
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - box-pack
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-pack
 ---
 

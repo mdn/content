@@ -2,14 +2,8 @@
 title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -59,7 +53,6 @@ Not part of any standard.
 ## See also
 
 - {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

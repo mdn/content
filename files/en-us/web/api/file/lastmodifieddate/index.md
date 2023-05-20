@@ -1,5 +1,6 @@
 ---
-title: File.lastModifiedDate
+title: "File: lastModifiedDate property"
+short-title: lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 page-type: web-api-instance-property
 status:
@@ -23,13 +24,15 @@ A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indi
 const fileInput = document.getElementById("myfileinput");
 
 for (const file of fileInput.files) {
-  console.log(`${file.name} has a last modified date of ${file.lastModifiedDate}`);
+  console.log(
+    `${file.name} has a last modified date of ${file.lastModifiedDate}`
+  );
 }
 ```
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
 
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 

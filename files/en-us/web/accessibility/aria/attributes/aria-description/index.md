@@ -1,13 +1,7 @@
 ---
-title: "aria-description"
+title: aria-description
 slug: Web/Accessibility/ARIA/Attributes/aria-description
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-description
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 

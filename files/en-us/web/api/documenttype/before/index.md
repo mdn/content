@@ -1,5 +1,6 @@
 ---
-title: DocumentType.before()
+title: "DocumentType: before() method"
+short-title: before()
 slug: Web/API/DocumentType/before
 page-type: web-api-instance-method
 browser-compat: api.DocumentType.before
@@ -11,10 +12,6 @@ The **`DocumentType.before()`** method inserts a set of
 {{domxref("Node")}} objects or strings in the children list of the
 `DocumentType`'s parent, just before the `DocumentType`.
 Strings are inserted as equivalent {{domxref("Text")}} nodes.
-
-> **Note:** Putting nodes before the document's doctype will set the rendering mode to
-> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-> in some browsers (Internet Explorer). It is not advisable to do this.
 
 ## Syntax
 

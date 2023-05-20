@@ -1,12 +1,6 @@
 ---
 title: WebAssembly memory instructions
 slug: WebAssembly/Reference/Memory
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Memory
 ---
 
 {{WebAssemblySidebar}}

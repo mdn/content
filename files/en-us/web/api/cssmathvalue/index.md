@@ -2,12 +2,10 @@
 title: CSSMathValue
 slug: Web/API/CSSMathValue
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSMathValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.
 
@@ -26,7 +24,7 @@ Below is a list of interfaces based on the CSSMathValue interface.
 
 ## Instance properties
 
-- {{domxref('CSSMathValue.operator')}} {{Experimental_Inline}}
+- {{domxref('CSSMathValue.operator')}}
   - : Indicates the operator that the current subtype represents.
 
 ## Static methods

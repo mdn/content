@@ -2,8 +2,6 @@
 title: Browser
 slug: Glossary/Browser
 page-type: glossary-definition
-tags:
-  - Navigation
 ---
 
 A **Web browser** or **browser** is a program that retrieves and displays pages from the {{Glossary("World Wide Web","Web")}}, and lets users access further pages through {{Glossary("hyperlink","hyperlinks")}}. A browser is the most familiar type of {{Glossary("user agent")}}.

@@ -1,5 +1,6 @@
 ---
-title: Element.requestPointerLock()
+title: "Element: requestPointerLock() method"
+short-title: requestPointerLock()
 slug: Web/API/Element/requestPointerLock
 page-type: web-api-instance-method
 browser-compat: api.Element.requestPointerLock
@@ -53,7 +54,7 @@ To disable OS-level mouse acceleration and access raw mouse input, you can set t
 ```js
 canvas.addEventListener("click", async () => {
   await canvas.requestPointerLock({
-    unadjustedMovement: true
+    unadjustedMovement: true,
   });
 });
 ```

@@ -2,20 +2,12 @@
 title: animation
 slug: Web/CSS/animation
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.animation
 ---
 
 {{CSSRef}}
 
 The **`animation`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.
-
-A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_animated_properties) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 

@@ -2,13 +2,6 @@
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - font-weight
 browser-compat: css.at-rules.font-face.font-weight
 ---
 

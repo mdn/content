@@ -2,14 +2,6 @@
 title: ":right"
 slug: Web/CSS/:right
 page-type: css-pseudo-class
-tags:
-  - "@page"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.right
 ---
 

@@ -13,17 +13,15 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 
 ## Constructor
 
-- [`Float64Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array)
+- {{jsxref("Float64Array/Float64Array", "Float64Array()")}}
   - : Creates a new `Float64Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of `Float64Array`.
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : Returns the string value of the constructor name. `"Float64Array"` in the case of `Float64Array`.
 
 ## Static methods
 
@@ -33,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Float64Array.prototype` and shared by all `Float64Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float64Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of a `Float64Array`.
+- {{jsxref("Object/constructor", "Float64Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Float64Array` instances, the initial value is the {{jsxref("Float64Array/Float64Array", "Float64Array")}} constructor.
 
 ## Instance methods
 
@@ -85,6 +87,6 @@ console.log(float64FromIterable);
 ## See also
 
 - [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

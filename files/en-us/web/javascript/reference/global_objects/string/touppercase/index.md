@@ -22,12 +22,6 @@ toUpperCase()
 
 A new string representing the calling string converted to upper case.
 
-### Exceptions
-
-- {{jsxref("TypeError")}}
-  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
-    `String.prototype.toUpperCase.call(undefined)`.
-
 ## Description
 
 The `toUpperCase()` method returns the value of the string converted to

@@ -1,9 +1,6 @@
 ---
 title: ceiling
 slug: Web/XPath/Functions/ceiling
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

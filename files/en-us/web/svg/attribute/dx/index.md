@@ -2,9 +2,6 @@
 title: dx
 slug: Web/SVG/Attribute/dx
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dx
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx

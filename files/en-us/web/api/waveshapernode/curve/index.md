@@ -1,5 +1,6 @@
 ---
-title: WaveShaperNode.curve
+title: "WaveShaperNode: curve property"
+short-title: curve
 slug: Web/API/WaveShaperNode/curve
 page-type: web-api-instance-property
 browser-compat: api.WaveShaperNode.curve
@@ -21,7 +22,7 @@ A {{jsxref("Float32Array")}}.
 
 ## Examples
 
-See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#examples) for example code.
 
 ## Specifications
 

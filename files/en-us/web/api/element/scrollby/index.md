@@ -1,5 +1,6 @@
 ---
-title: Element.scrollBy()
+title: "Element: scrollBy() method"
+short-title: scrollBy()
 slug: Web/API/Element/scrollBy
 page-type: web-api-instance-method
 browser-compat: api.Element.scrollBy
@@ -52,7 +53,7 @@ Using `options`:
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

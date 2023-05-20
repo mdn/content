@@ -1,5 +1,6 @@
 ---
-title: Node.parentNode
+title: "Node: parentNode property"
+short-title: parentNode
 slug: Web/API/Node/parentNode
 page-type: web-api-instance-property
 browser-compat: api.Node.parentNode

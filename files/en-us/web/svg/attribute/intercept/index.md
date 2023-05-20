@@ -2,10 +2,6 @@
 title: intercept
 slug: Web/SVG/Attribute/intercept
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
 ---
 

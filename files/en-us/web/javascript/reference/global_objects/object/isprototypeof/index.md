@@ -2,13 +2,6 @@
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
 

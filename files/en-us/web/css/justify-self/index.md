@@ -2,12 +2,6 @@
 title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.justify-self
 ---
 

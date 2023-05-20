@@ -2,15 +2,6 @@
 title: "::cue-region"
 slug: Web/CSS/::cue-region
 page-type: css-pseudo-element
-tags:
-  - "::cue-region"
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web Video Text Tracks
-  - WebVTT
 browser-compat: css.selectors.cue-region
 ---
 

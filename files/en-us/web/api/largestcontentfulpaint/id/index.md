@@ -1,5 +1,6 @@
 ---
-title: LargestContentfulPaint.id
+title: "LargestContentfulPaint: id property"
+short-title: id
 slug: Web/API/LargestContentfulPaint/id
 page-type: web-api-instance-property
 status:

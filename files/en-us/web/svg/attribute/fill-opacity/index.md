@@ -2,9 +2,6 @@
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 page-type: svg-attribute
-tags:
-  - SVG
-  - SVG Attribute
 browser-compat: svg.attributes.presentation.fill-opacity
 ---
 

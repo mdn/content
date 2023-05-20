@@ -1,5 +1,6 @@
 ---
-title: FileSystemDirectoryHandle.removeEntry()
+title: "FileSystemDirectoryHandle: removeEntry() method"
+short-title: removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
@@ -51,12 +52,12 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 The following example removes an entry within the directory handle.
 
 ```js
-const entryName = 'entryToRemove';
+const entryName = "entryToRemove";
 
 // assuming we have a directory handle: 'currentDirHandle'
 currentDirHandle.removeEntry(entryName).then(() => {
   // code to run if removing was successful
-} );
+});
 ```
 
 ## Specifications

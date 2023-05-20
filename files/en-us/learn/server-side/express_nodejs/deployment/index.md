@@ -1,14 +1,6 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Beginner
-  - CodingScripting
-  - Deployment
-  - Express
-  - Learn
-  - Node
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
@@ -121,21 +113,23 @@ The debug variable is declared with the name 'author', and the prefix "author" w
 ```js
 const debug = require("debug")("author");
 
-// Display Author update form on GET
-exports.author_update_get = (req, res, next) => {
-  req.sanitize("id").escape().trim();
-  Author.findById(req.params.id, (err, author) => {
-    if (err) {
-      debug(`update error: ${err}`);
-      return next(err);
-    }
-    // On success
-    res.render("author_form", { title: "Update Author", author });
-  });
-};
+// Display Author update form on GET.
+exports.author_update_get = asyncHandler(async (req, res, next) => {
+  const author = await Author.findById(req.params.id).exec();
+  if (author === null) {
+    // No results.
+    debug(`id not found on update: ${req.params.id}`);
+    const err = new Error("Author not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  res.render("author_form", { title: "Update Author", author: author });
+});
 ```
 
-You can then enable a particular set of logs by specifying them as a comma-separated list in the `DEBUG` environment variable. You can set the variables for displaying author and book logs as shown (wildcards are also supported).
+You can then enable a particular set of logs by specifying them as a comma-separated list in the `DEBUG` environment variable.
+You can set the variables for displaying author and book logs as shown (wildcards are also supported).
 
 ```bash
 #Windows
@@ -166,7 +160,7 @@ const catalogRouter = require("./routes/catalog"); // Import routes for "catalog
 const compression = require("compression");
 
 // Create the Express application object
-var app = express();
+const app = express();
 
 // …
 
@@ -201,13 +195,65 @@ const compression = require("compression");
 const helmet = require("helmet");
 
 // Create the Express application object
-var app = express();
+const app = express();
 
-app.use(helmet());
+// Add helmet to the middleware chain.
+// Set CSP headers to allow our Bootstrap and Jquery to be served
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      "script-src": ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+    },
+  })
+);
+
 // …
 ```
 
-> **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
+We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
+However in the [LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
+For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
+
+### Add rate limiting to the API routes
+
+[Express-rate-limit](https://www.npmjs.com/package/express-rate-limit) is a middleware package that can be used to limit repeated requests to APIs and endpoints.
+There are many reasons why excessive requests might be made to your site, such as denial of service attacks, brute force attacks, or even just a client or script that is not behaving as expected.
+Aside from performance issues that can arise from too many requests causing your server to slow down, you may also be charged for the additional traffic.
+This package can be used to limit the number of requests that can be made to a particular route or set of routes.
+
+Install this at the root of your project by running the following command:
+
+```bash
+npm install express-rate-limit
+```
+
+Open **./app.js** and require the _express-rate-limit_ library as shown.
+Then add the module to the middleware chain with the `use()` method.
+
+```js
+const compression = require("compression");
+const helmet = require("helmet");
+
+const app = express();
+
+// Set up rate limiter: maximum of twenty requests per minute
+const RateLimit = require("express-rate-limit");
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+// Apply rate limiter to all requests
+app.use(limiter);
+
+// …
+```
+
+> **Note:**
+>
+> - The command above limits all requests to 20 per minute. You can change this as needed.
+> - Third-party services like [Cloudflare](https://www.cloudflare.com/) can also be used if you need more advanced protection against denial of service or other types of attacks.
 
 ## Example: Installing LocalLibrary on Railway
 

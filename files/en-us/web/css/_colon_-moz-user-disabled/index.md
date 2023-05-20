@@ -2,14 +2,8 @@
 title: ":-moz-user-disabled"
 slug: Web/CSS/:-moz-user-disabled
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}}{{Non-standard_header}}

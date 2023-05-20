@@ -2,12 +2,6 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
 

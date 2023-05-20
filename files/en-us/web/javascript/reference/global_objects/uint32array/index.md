@@ -13,17 +13,15 @@ The **`Uint32Array`** typed array represents an array of 32-bit unsigned integer
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint32Array/Uint32Array", "Uint32Array()")}}
+- {{jsxref("Uint32Array/Uint32Array", "Uint32Array()")}}
   - : Creates a new `Uint32Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of `Uint32Array`.
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
-  - : Returns the string value of the constructor name. `"Uint32Array"` in the case of `Uint32Array`.
 
 ## Static methods
 
@@ -33,8 +31,12 @@ _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Uint32Array.prototype` and shared by all `Uint32Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint32Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of a `Uint32Array`.
+- {{jsxref("Object/constructor", "Uint32Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint32Array` instances, the initial value is the {{jsxref("Uint32Array/Uint32Array", "Uint32Array")}} constructor.
 
 ## Instance methods
 
@@ -85,6 +87,6 @@ console.log(uint32FromIterable);
 ## See also
 
 - [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

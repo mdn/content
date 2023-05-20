@@ -2,9 +2,6 @@
 title: API
 slug: Glossary/API
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Infrastructure
 ---
 
 An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.

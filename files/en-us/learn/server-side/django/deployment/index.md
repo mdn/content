@@ -1,13 +1,6 @@
 ---
-title: 'Django Tutorial Part 11: Deploying Django to production'
+title: "Django Tutorial Part 11: Deploying Django to production"
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Beginner
-  - CodingScripting
-  - Deployment
-  - Django deployment
-  - django
-  - web server
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

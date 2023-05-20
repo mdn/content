@@ -1,16 +1,13 @@
 ---
 title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Cross-Origin_Resource_Policy
-tags:
-  - HTTP
-  - Reference
-  - Security
+page-type: guide
 browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
 
 {{HTTPSidebar}}
 
-**Cross-Origin Resource Policy** is a policy set by the [`Cross-Origin-Resource-Policy` HTTP header](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks, like [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), as well as Cross-Site Script Inclusion attacks.
+**Cross-Origin Resource Policy** is a policy set by the [`Cross-Origin-Resource-Policy` HTTP header](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) that lets websites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks, like [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), as well as Cross-Site Script Inclusion attacks.
 
 CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb) (CORB), which is a mechanism to prevent some cross-origin reads by default.
 
@@ -20,7 +17,7 @@ As this policy is expressed via a _[response header](/en-US/docs/Glossary/Respon
 
 ## Usage
 
-> **Note:** Due to a [bug in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
+> **Note:** Due to a [bug in Chrome](https://crbug.com/1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
 
 Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header, which accepts one of three values:
 

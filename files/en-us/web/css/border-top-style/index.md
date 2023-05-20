@@ -2,12 +2,6 @@
 title: border-top-style
 slug: Web/CSS/border-top-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-top-style
 ---
 
@@ -42,7 +36,7 @@ border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-The `border-top-style` property is specified as a single keyword chosen from those available for the {{CSSxRef("border-style")}} property.
+The `border-top-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

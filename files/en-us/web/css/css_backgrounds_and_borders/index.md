@@ -2,12 +2,6 @@
 title: CSS backgrounds and borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
 page-type: css-module
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
 
@@ -87,6 +81,10 @@ To see the code for this sample, [view the source on Github](https://github.com/
 
 - {{cssxref("box-shadow")}}
 
+### Data types
+
+- {{cssxref("line-type")}} enumerated type
+
 ## Guides
 
 - [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
@@ -124,7 +122,7 @@ To see the code for this sample, [view the source on Github](https://github.com/
 - {{cssxref("box-decoration-break")}} property
 - {{cssxref("text-shadow")}} property
 
-- {{cssxref("url()")}} CSS function
+- {{cssxref("url", "url()")}} CSS function
 - [`<color>`](/en-US/docs/Web/CSS/color) data type
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
 - [`<position>`](/en-US/docs/Web/CSS/position) data type

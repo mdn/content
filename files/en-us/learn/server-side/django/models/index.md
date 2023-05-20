@@ -1,16 +1,6 @@
 ---
-title: 'Django Tutorial Part 3: Using models'
+title: "Django Tutorial Part 3: Using models"
 slug: Learn/Server-side/Django/Models
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Model
-  - Tutorial
-  - data
-  - django
-  - server-side
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}

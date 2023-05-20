@@ -2,11 +2,6 @@
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
 page-type: webextension-api
-tags:
-  - Extensions
-  - Themes
-  - WebExtensions
-  - add-on
 browser-compat: webextensions.api.theme
 ---
 

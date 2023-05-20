@@ -2,14 +2,6 @@
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 page-type: javascript-static-method
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - Objects
-  - Reference
-  - stringify
-  - Polyfill
 browser-compat: javascript.builtins.JSON.stringify
 ---
 
@@ -49,7 +41,7 @@ A JSON string representing the given value, or undefined.
 
 ### Exceptions
 
-- {{JSxRef("TypeError")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one of the following is true:
     - `value` contains a circular reference.
     - A {{jsxref("BigInt")}} value is encountered.

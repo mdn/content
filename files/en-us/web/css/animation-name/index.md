@@ -2,12 +2,6 @@
 title: animation-name
 slug: Web/CSS/animation-name
 page-type: css-property
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.animation-name
 ---
 

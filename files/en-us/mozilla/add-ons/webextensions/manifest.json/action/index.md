@@ -2,10 +2,6 @@
 title: action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/action
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 browser-compat: webextensions.manifest.action
 ---
 
@@ -369,7 +365,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 An action with just an icon, specified in 2 sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.Action.onClicked.addListener(handleClick);
+ browser.action.onClicked.addListener(handleClick);
 ```
 
 ```json

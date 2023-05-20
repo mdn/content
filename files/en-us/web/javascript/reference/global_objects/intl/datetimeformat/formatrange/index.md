@@ -7,15 +7,12 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.formatRange()`** formats a
-date range in the most concise way based on the **`locale`** and
-**`options`** provided when instantiating
-{{jsxref("Intl.DateTimeFormat")}} object.
+The **`formatRange()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a
+date range in the most concise way based on the locales and
+options provided when instantiating this
+`Intl.DateTimeFormat` object.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html",
-  "taller")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html", "taller")}}
 
 ## Syntax
 

@@ -2,12 +2,6 @@
 title: transform-style
 slug: Web/CSS/transform-style
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.transform-style
 ---
 

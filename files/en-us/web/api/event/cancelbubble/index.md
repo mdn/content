@@ -1,5 +1,6 @@
 ---
-title: Event.cancelBubble
+title: "Event: cancelBubble property"
+short-title: cancelBubble
 slug: Web/API/Event/cancelBubble
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,7 @@ A boolean value. The value `true` means that the event must not be propagated fu
 elem.onclick = (event) => {
   // Do cool things here
   event.cancelBubble = true;
-}
+};
 ```
 
 ## Specifications

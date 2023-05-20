@@ -1,12 +1,6 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - HTML
-  - HTTP
-  - Intro
-  - Networking
-  - Security
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity

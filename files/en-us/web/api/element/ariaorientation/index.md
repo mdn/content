@@ -1,5 +1,6 @@
 ---
-title: Element.ariaOrientation
+title: "Element: ariaOrientation property"
+short-title: ariaOrientation
 slug: Web/API/Element/ariaOrientation
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaOrientation
@@ -38,9 +39,9 @@ In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attr
 ```
 
 ```js
-let el = document.getElementById('handle_zoomSlider');
+let el = document.getElementById("handle_zoomSlider");
 console.log(el.ariaOrientation); // "vertical"
-el.ariaOrientation = "horizontal"
+el.ariaOrientation = "horizontal";
 console.log(el.ariaOrientation); // "horizontal"
 ```
 

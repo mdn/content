@@ -1,12 +1,6 @@
 ---
 title: Printing
 slug: Web/Guide/Printing
-tags:
-  - DOM
-  - Guide
-  - NeedsContent
-  - NeedsRelocation
-  - printing
 ---
 
 <section id="Quick_links">
@@ -93,7 +87,7 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 </html>
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/printevents.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/printevents.html)
 
 ### Print an external page without opening it
 
@@ -145,8 +139,6 @@ If you want to be able to print an external page without opening it, you can uti
   </body>
 </html>
 ```
-
-> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## See also
 

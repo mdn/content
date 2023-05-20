@@ -2,12 +2,6 @@
 title: Using CSS animations
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
 page-type: guide
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Guide
 ---
 
 {{CSSRef}}

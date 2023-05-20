@@ -1,13 +1,7 @@
 ---
 title: aria-selected
 slug: Web/Accessibility/ARIA/Attributes/aria-selected
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-selected
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
 

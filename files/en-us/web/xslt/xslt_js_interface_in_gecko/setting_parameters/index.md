@@ -1,8 +1,6 @@
 ---
 title: Setting parameters
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-tags:
-  - XSLT
 ---
 
 ## Setting Parameters

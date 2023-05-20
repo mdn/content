@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.qpSum
+title: "RTCRtpStreamStats: qpSum property"
+short-title: qpSum
 slug: Web/API/RTCRtpStreamStats/qpSum
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.qpSum
@@ -61,7 +62,7 @@ describe an RTP stream.
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

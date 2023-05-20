@@ -1,15 +1,6 @@
 ---
 title: Dealing with files
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Guide
-  - HTML
-  - "l10n:priority"
-  - theory
-  - website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}

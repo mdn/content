@@ -2,15 +2,8 @@
 title: rem()
 slug: Web/CSS/rem
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - rem
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.rem
 ---
 

@@ -2,11 +2,6 @@
 title: <polygon>
 slug: Web/SVG/Element/polygon
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
 browser-compat: svg.elements.polygon
 ---
 

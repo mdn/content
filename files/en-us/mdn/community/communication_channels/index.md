@@ -2,10 +2,6 @@
 title: Communication channels
 slug: MDN/Community/Communication_channels
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
 ---
 
 {{MDNSidebar}}

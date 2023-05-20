@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: invalid event"
+short-title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
 page-type: web-api-event
 browser-compat: api.HTMLInputElement.invalid_event
@@ -18,9 +19,9 @@ It is not checked on {{domxref("Element/blur_event", "blur")}}.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('invalid', (event) => {});
+addEventListener("invalid", (event) => {});
 
-oninvalid = (event) => { };
+oninvalid = (event) => {};
 ```
 
 ## Event type
@@ -51,15 +52,16 @@ Invalid values:
 ### JavaScript
 
 ```js
-const input = document.querySelector('input')
-const log = document.getElementById('log')
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('invalid', (e) => {
-  log.appendChild(Object.assign(
-    document.createElement('li'),
-    { textContent: JSON.stringify(e.target.value) }
-  ))
-})
+input.addEventListener("invalid", (e) => {
+  log.appendChild(
+    Object.assign(document.createElement("li"), {
+      textContent: JSON.stringify(e.target.value),
+    })
+  );
+});
 ```
 
 ### Result

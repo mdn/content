@@ -1,17 +1,7 @@
 ---
 title: "CSP: script-src-elem"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Script
-  - Security
-  - script-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src-elem
 ---
 

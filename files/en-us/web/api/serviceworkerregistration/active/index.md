@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.active
+title: "ServiceWorkerRegistration: active property"
+short-title: active
 slug: Web/API/ServiceWorkerRegistration/active
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.active

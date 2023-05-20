@@ -1,5 +1,6 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
 page-type: web-api-instance-method
 browser-compat: api.Element.replaceChildren
@@ -133,20 +134,23 @@ the list you are transferring to in another constant. It then calls
 operator to pass in all the options contained in both constants.
 
 ```js
-const noSelect = document.getElementById('no');
-const yesSelect = document.getElementById('yes');
-const noBtn = document.getElementById('to-no');
-const yesBtn = document.getElementById('to-yes');
+const noSelect = document.getElementById("no");
+const yesSelect = document.getElementById("yes");
+const noBtn = document.getElementById("to-no");
+const yesBtn = document.getElementById("to-yes");
 
-yesBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#no option:checked');
-  const existingYesOptions = document.querySelectorAll('#yes option');
+yesBtn.addEventListener("click", () => {
+  const selectedTransferOptions =
+    document.querySelectorAll("#no option:checked");
+  const existingYesOptions = document.querySelectorAll("#yes option");
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
-  const existingNoOptions = document.querySelectorAll('#no option');
+noBtn.addEventListener("click", () => {
+  const selectedTransferOptions = document.querySelectorAll(
+    "#yes option:checked"
+  );
+  const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
 });
 ```

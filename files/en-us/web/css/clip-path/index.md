@@ -2,13 +2,6 @@
 title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.clip-path
 ---
 
@@ -569,7 +562,7 @@ svg text.em {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
 
 ### Complete example
 

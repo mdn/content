@@ -1,10 +1,6 @@
 ---
 title: set:trailing()
 slug: Web/EXSLT/set/trailing
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

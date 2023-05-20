@@ -2,13 +2,6 @@
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
 page-type: webextension-api-function
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - WebExtensions
-  - devtools.network
-  - getHAR
 browser-compat: webextensions.api.devtools.network.getHAR
 ---
 

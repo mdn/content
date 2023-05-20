@@ -1,5 +1,6 @@
 ---
-title: NavigationDestination.sameDocument
+title: "NavigationDestination: sameDocument property"
+short-title: sameDocument
 slug: Web/API/NavigationDestination/sameDocument
 page-type: web-api-instance-property
 status:
@@ -21,7 +22,7 @@ A boolean.
 ## Examples
 
 ```js
-navigation.addEventListener('navigate', (event) => {
+navigation.addEventListener("navigate", (event) => {
   console.log(event.destination.sameDocument);
 });
 ```

@@ -1,10 +1,7 @@
 ---
 title: HTTP Messages
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - WebMechanics
+page-type: guide
 ---
 
 {{HTTPSidebar}}

@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrack.id
+title: "MediaStreamTrack: id property"
+short-title: id
 slug: Web/API/MediaStreamTrack/id
 page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.id

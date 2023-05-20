@@ -1,16 +1,6 @@
 ---
 title: Accessibility in React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - focus management
-  - keyboard
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

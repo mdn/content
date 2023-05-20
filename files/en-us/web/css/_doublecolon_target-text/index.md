@@ -2,14 +2,8 @@
 title: "::target-text"
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
-tags:
-  - "::target-text"
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
-  - Experimental
+status:
+  - experimental
 browser-compat: css.selectors.target-text
 ---
 

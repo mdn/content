@@ -2,10 +2,6 @@
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
 page-type: svg-element
-tags:
-  - Element
-  - Reference
-  - SVG
 browser-compat: svg.elements.foreignObject
 ---
 

@@ -2,15 +2,6 @@
 title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setTabValue
 browser-compat: webextensions.api.sessions.setTabValue
 ---
 

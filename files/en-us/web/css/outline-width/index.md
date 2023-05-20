@@ -2,13 +2,6 @@
 title: outline-width
 slug: Web/CSS/outline-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.outline-width
 ---
 

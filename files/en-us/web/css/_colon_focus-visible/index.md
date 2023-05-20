@@ -2,15 +2,6 @@
 title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 page-type: css-pseudo-class
-tags:
-  - ":focus"
-  - ":focus-visible"
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.focus-visible
 ---
 

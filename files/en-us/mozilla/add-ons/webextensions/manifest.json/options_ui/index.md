@@ -2,15 +2,6 @@
 title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 page-type: webextension-manifest-key
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Options
-  - Reference
-  - Web
-  - WebExtensions
-  - options_ui
 browser-compat: webextensions.manifest.options_ui
 ---
 
@@ -97,7 +88,7 @@ The `options_ui` key is an object with the following contents:
           The
           <a
             class="external external-icon"
-            href="https://design.firefox.com/photon/"
+            href="https://acorn.firefox.com/latest/acorn.html"
             >Firefox Style Guide</a
           >
           describes the classes you can apply to elements in the popup in order

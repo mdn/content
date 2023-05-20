@@ -2,10 +2,8 @@
 title: vert-origin-y
 slug: Web/SVG/Attribute/vert-origin-y
 page-type: svg-attribute
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.vert-origin-y
 ---
 

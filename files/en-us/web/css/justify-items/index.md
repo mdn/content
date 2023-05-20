@@ -2,12 +2,6 @@
 title: justify-items
 slug: Web/CSS/justify-items
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.justify-items
 ---
 

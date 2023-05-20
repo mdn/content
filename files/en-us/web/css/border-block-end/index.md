@@ -2,16 +2,6 @@
 title: border-block-end
 slug: Web/CSS/border-block-end
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - border-block
-  - border-block-end-color
-  - border-block-end-style
-  - border-block-end-width
-  - recipe:css-shorthand-property
 browser-compat: css.properties.border-block-end
 ---
 
@@ -56,8 +46,8 @@ The `border-block-end` is specified with one or more of the following, in any or
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 

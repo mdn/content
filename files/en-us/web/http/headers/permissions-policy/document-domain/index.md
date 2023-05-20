@@ -1,15 +1,9 @@
 ---
 title: "Permissions-Policy: document-domain"
 slug: Web/HTTP/Headers/Permissions-Policy/document-domain
-tags:
-  - Directive
-  - Experimental
-  - Permissions Policy
-  - Permissions-Policy
-  - HTTP
-  - Reference
-  - document-domain
-  - Header
+page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.document-domain
 ---
 

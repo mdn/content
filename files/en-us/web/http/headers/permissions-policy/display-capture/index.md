@@ -1,12 +1,7 @@
 ---
 title: "Permissions-Policy: display-capture"
 slug: Web/HTTP/Headers/Permissions-Policy/display-capture
-tags:
-  - Directive
-  - Permissions Policy
-  - HTTP
-  - Reference
-  - display-capture
+page-type: http-permissions-policy-directive
 browser-compat: http.headers.Permissions-Policy.display-capture
 ---
 

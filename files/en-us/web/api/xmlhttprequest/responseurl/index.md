@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.responseURL
+title: "XMLHttpRequest: responseURL property"
+short-title: responseURL
 slug: Web/API/XMLHttpRequest/responseURL
 page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseURL
@@ -13,7 +14,7 @@ The read-only **`XMLHttpRequest.responseURL`** property returns the serialized U
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/test', true);
+xhr.open("GET", "http://example.com/test", true);
 xhr.onload = () => {
   console.log(xhr.responseURL); // http://example.com/test
 };

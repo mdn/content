@@ -1,5 +1,6 @@
 ---
-title: DeviceMotionEvent.interval
+title: "DeviceMotionEvent: interval property"
+short-title: interval
 slug: Web/API/DeviceMotionEvent/interval
 page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEvent.interval

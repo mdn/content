@@ -9,7 +9,7 @@ browser-compat: javascript.operators.import
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
-Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permits greater syntactic flexibility.
+Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permit greater syntactic flexibility.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ The evaluation of `import()` never synchronously throws an error. `moduleName` i
 
 ## Description
 
-The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allows one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
+The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
 - When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When importing statically significantly increases your program's memory usage and there is a low likelihood that you will need the code you are importing.
@@ -57,6 +57,9 @@ The `options` parameter allows different kinds of import options. For example, [
 ```js
 import("./data.json", { assert: { type: "json" } });
 ```
+
+Dynamic module import is not permitted in all execution contexts.
+For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
 
 ### Module namespace object
 
@@ -76,12 +79,13 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled.
+Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) process.
 
 ```js
 // my-module.js
-export function then() {
+export function then(resolve) {
   console.log("then() called");
+  resolve(1);
 }
 ```
 
@@ -94,6 +98,8 @@ import("/my-module.js").then((mod2) => {
   console.log(mod === mod2); // false
 });
 ```
+
+> **Warning:** Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
 ## Examples
 

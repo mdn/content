@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Push API") }}
 
-This article provides a useful summary of best practices to keep in mind when developing web sites and applications that use Push Notifications for user engagement.
+This article provides a useful summary of best practices to keep in mind when developing websites and applications that use Push Notifications for user engagement.
 
 > "If done well, it's nice to have, but if not done well, it's really annoying." — Overheard conversation between two browser developers discussing the ethics of push notifications.
 
@@ -52,7 +52,7 @@ Some studies have shown that as many as 60% of push notifications are blocked. A
 
 Because of abuses of push notifications in the past, web browser developers have begun to implement strategies to help mitigate this problem. For example, Safari 12.1 now requires—and other browsers either already do, or are planning to do so—that the user interact with the page in some way before the page can request permission to perform push notifications. This at least prevents the user from getting spontaneously asked this question on web pages that they've only glanced at once may rarely if ever look at again.
 
-In the case of Firefox, see {{bug(1524619)}}, in which we find that Firefox 68 implements this, disabled by default, behind the preference `dom.webnotifications.requireuserinteraction`.
+In the case of Firefox, see [Firefox bug 1524619](https://bugzil.la/1524619), in which we find that Firefox 68 implements this, disabled by default, behind the preference `dom.webnotifications.requireuserinteraction`.
 
 ## See also
 

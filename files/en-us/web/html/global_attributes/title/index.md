@@ -2,11 +2,6 @@
 title: title
 slug: Web/HTML/Global_attributes/title
 page-type: html-attribute
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Title
 browser-compat: html.global_attributes.title
 ---
 

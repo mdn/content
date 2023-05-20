@@ -1,12 +1,6 @@
 ---
 title: Web Audio playbackRate explained
 slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-tags:
-  - Apps
-  - Audio
-  - Media
-  - Video
-  - playbackRate
 ---
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}

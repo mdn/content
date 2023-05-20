@@ -1,14 +1,6 @@
 ---
 title: WebRTC data channels
 slug: Games/Techniques/WebRTC_data_channels
-tags:
-  - API
-  - Games
-  - NeedsContent
-  - Network
-  - P2P
-  - WebRTC
-  - data channels
 ---
 
 {{GamesSidebar}}

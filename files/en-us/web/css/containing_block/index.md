@@ -2,22 +2,11 @@
 title: Layout and the containing block
 slug: Web/CSS/Containing_block
 page-type: guide
-tags:
-  - CSS
-  - CSS Position
-  - Containers
-  - Guide
-  - Layout
-  - Position
-  - Style
-  - blocks
-  - containing block
-  - size
 ---
 
 {{CSSRef}}
 
-The size and position of an element are often impacted by its **containing block**. Most often, the containing block is the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) of an element's nearest [block-level](/en-US/docs/Web/HTML/Block-level_elements) ancestor, but this is not always the case. In this article, we examine the factors that determine an element's containing block.
+The size and position of an element are often impacted by its **containing block**. Most often, the containing block is the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) of an element's nearest [block-level](/en-US/docs/Glossary/Block-level_content) ancestor, but this is not always the case. In this article, we examine the factors that determine an element's containing block.
 
 When a user agent (such as your browser) lays out a document, it generates a box for every element. Each box is divided into four areas:
 
@@ -48,7 +37,7 @@ The process for identifying the containing block depends entirely on the value o
    1. A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than `none`
    2. A {{cssxref("will-change")}} value of `transform` or `perspective`
    3. A {{cssxref("filter")}} value other than `none` or a `will-change` value of `filter` (only works on Firefox).
-   4. A {{cssxref("contain")}} value of `paint` (e.g. `contain: paint;`)
+   4. A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g. `contain: paint;`)
    5. A {{cssxref("backdrop-filter")}} other than `none` (e.g. `backdrop-filter: blur(10px);`)
 
 > **Note:** The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
@@ -59,6 +48,8 @@ As noted above, when certain properties are given a percentage value, the comput
 
 1. The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height` of the containing block.
 2. The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width` of the containing block.
+
+> **Note:** A **block container** (such as an inline-block, block, or list-item element) either contains only inline-level boxes participating in an inline formatting context, or only block-level boxes participating in a block formatting context. An element is a block container only if it contains block-level or inline-level boxes.
 
 ## Some examples
 
@@ -76,7 +67,7 @@ Only the CSS is altered in each instance below.
 
 ### Example 1
 
-In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.
+In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container (because of `display: block`).
 
 ```html hidden
 <body>
@@ -262,7 +253,7 @@ p {
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

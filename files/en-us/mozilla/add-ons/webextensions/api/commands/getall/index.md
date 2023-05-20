@@ -2,16 +2,6 @@
 title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 page-type: webextension-api-function
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-  - getAll
 browser-compat: webextensions.api.commands.getAll
 ---
 

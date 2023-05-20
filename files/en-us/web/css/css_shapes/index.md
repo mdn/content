@@ -2,15 +2,6 @@
 title: CSS Shapes
 slug: Web/CSS/CSS_Shapes
 page-type: css-module
-tags:
-  - Boundaries
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Overview
-  - Reference
-  - Shape
-  - wrapping
 spec-urls: https://drafts.csswg.org/css-shapes/
 ---
 

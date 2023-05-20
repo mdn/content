@@ -2,15 +2,6 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 page-type: webextension-api
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webRequest
 browser-compat: webextensions.api.webRequest
 ---
 

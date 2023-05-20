@@ -1,16 +1,6 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
-tags:
-  - Accessibility
-  - Article
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Mobile
-  - responsive
-  - screenreader
-  - touch
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

@@ -1,13 +1,7 @@
 ---
 title: aria-disabled
 slug: Web/Accessibility/ARIA/Attributes/aria-disabled
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-disabled
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
 
@@ -17,7 +11,7 @@ The `aria-disabled` state indicates that the element is perceivable but disabled
 
 The `aria-disabled` attribute, when set to `true`, indicates that the element upon which it is set and all of its focusable descendants are meant to be in the disabled state. This declaration will inform people using assistive technologies, such as screen readers, that such elements are not meant to be editable or otherwise operable.
 
-Unlike HTML's {{htmlattrxref('disabled')}} Boolean attribute which will communicate a form control as semantically being disabled, change its styling to reflect its state, and suppress all functionality along with disallowing the element's value from participating in form submission, the `aria-disabled="true"` <strong>only</strong> semantically exposes these elements as being disabled. Web developers must manually ensure such elements have their functionality suppressed when they are exposed in the disabled state.
+Unlike HTML's [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) Boolean attribute, which will communicate a form control as semantically being disabled, change its styling to reflect its state and suppress all functionality along with disallowing the element's value from participating in form submission, the `aria-disabled="true"` <strong>only</strong> semantically exposes these elements as being disabled. Web developers must manually ensure such elements have their functionality suppressed when exposed to the disabled state.
 
 When needing to disable native HTML form controls, developers will need to specify the `disabled` attribute, as it provides all of the generally expected features of disabling a control by default. However, there can be instances where elements need to be exposed as disabled, but are still available for users to find when navigating via the <kbd>Tab</kbd> key. Doing so can improve their discoverability as they will not be removed from the focus order of the web page, as `aria-disabled` does not change the focusability of such elements, nor will the elements be dimmed by default browser styling, making them easier to read. Some examples of where this may be useful include:
 
@@ -156,7 +150,7 @@ Inherits into roles:
 
 - [Making disabled buttons more inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/) by Sandrina Pereira
 - [Styling for Windows high contrast with new standards for forced colors](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{htmlattrxref('disabled')}}
+- [disabled](/en-US/docs/Web/HTML/Attributes/disabled)
 - {{domxref("Element.ariaDisabled")}}
 - {{domxref("ElementInternals.ariaDisabled")}}
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)

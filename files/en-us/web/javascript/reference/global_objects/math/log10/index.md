@@ -2,13 +2,6 @@
 title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.log10
 ---
 

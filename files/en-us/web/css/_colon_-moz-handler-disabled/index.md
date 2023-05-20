@@ -2,13 +2,8 @@
 title: ":-moz-handler-disabled"
 slug: Web/CSS/:-moz-handler-disabled
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{CSSRef}} {{Non-standard_header}}

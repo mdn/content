@@ -1,23 +1,15 @@
 ---
-title: '<center>: The Centered Text element'
+title: "<center>: The Centered Text element"
 slug: Web/HTML/Element/center
 page-type: html-element
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Text
-  - Text Alignment
-  - Web
-  - alignment
-  - center
+status:
+  - deprecated
 browser-compat: html.elements.center
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
+The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Glossary/Block-level_content) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
 
 This tag has been deprecated in HTML 4 (and XHTML 1) in favor of the [CSS](/en-US/docs/Web/CSS) {{Cssxref("text-align")}} property, which can be applied to the {{HTMLElement("div")}} element or to an individual {{HTMLElement("p")}}. For centering blocks, use other CSS properties like {{Cssxref("margin-left")}} and {{Cssxref("margin-right")}} and set them to `auto` (or set {{Cssxref("margin")}} to `0 auto`).
 

@@ -2,12 +2,6 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.asinh
 ---
 

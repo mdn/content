@@ -7,14 +7,11 @@ browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.ListFormat.prototype.resolvedOptions()`** method
+The **`resolvedOptions()`** method of {{jsxref("Intl.ListFormat")}} instances
 returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of the current {{jsxref("Intl.ListFormat")}}
-object.
+options computed during the construction of this `Intl.ListFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 

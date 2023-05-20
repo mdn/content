@@ -1,5 +1,6 @@
 ---
-title: NodeList.keys()
+title: "NodeList: keys() method"
+short-title: keys()
 slug: Web/API/NodeList/keys
 page-type: web-api-instance-method
 browser-compat: api.NodeList.keys
@@ -37,7 +38,7 @@ let list = node.childNodes;
 
 // Using for...of
 for (const key of list.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

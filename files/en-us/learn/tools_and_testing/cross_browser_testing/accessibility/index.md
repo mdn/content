@@ -1,19 +1,6 @@
 ---
 title: Handling common accessibility problems
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - Accessibility
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Learn
-  - Testing
-  - Tools
-  - cross browser
-  - keyboard
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -80,7 +67,7 @@ Semantic HTML (where the elements are used for their correct purpose) is accessi
 
 The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:
 
-```html example-bad
+```html-nolint example-bad
 <font size="7">My heading</font>
 <br /><br />
 This is the first section of my document.
@@ -218,7 +205,7 @@ If you instead look at our `punk-bands-complete.html` example ([live](https://md
 
 CSS tends to provide a lot fewer fundamental accessibility features than HTML, but it can still do just as much damage to accessibility if used incorrectly. We have already mentioned a couple of accessibility tips involving CSS:
 
-- Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use {{cssxref("font-size")}}, not an {{htmlelement("h1")}} element.
+- Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use {{cssxref("font-size")}}, not an {{htmlelement("Heading_Elements", "h1")}} element.
 - Make sure your source order makes sense without CSS; you can always use CSS to style the page any way you want afterward.
 - You should make sure interactive elements like buttons and links have appropriate focus/hover/active states set, to give the user visual clues as to their function. If you remove the defaults for stylistic reasons, make sure you include some replacement styles.
 

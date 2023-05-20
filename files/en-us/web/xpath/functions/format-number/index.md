@@ -1,9 +1,6 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}

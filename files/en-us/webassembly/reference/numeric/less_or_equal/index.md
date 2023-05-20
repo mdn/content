@@ -1,12 +1,6 @@
 ---
 title: Less or equal
 slug: WebAssembly/Reference/Numeric/Less_or_equal
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Comparison
 ---
 
 {{WebAssemblySidebar}}
@@ -33,9 +27,9 @@ i32.le_u
 
 | Instruction | Binary opcode |
 | ----------- | ------------- |
-| `i32.le_s`  | `0x4a`        |
-| `i32.le_u`  | `0x4d`        |
-| `i64.le_s`  | `0x55`        |
+| `i32.le_s`  | `0x4C`        |
+| `i32.le_u`  | `0x4D`        |
+| `i64.le_s`  | `0x57`        |
 | `i64.le_u`  | `0x58`        |
-| `f32.le`    | `0x5f`        |
+| `f32.le`    | `0x5F`        |
 | `f64.le`    | `0x65`        |

@@ -1,12 +1,6 @@
 ---
 title: "Test your skills: Advanced HTML text"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
-tags:
-  - Beginner
-  - HTML
-  - Learn
-  - advanced text
-  - test your skills
 ---
 
 {{learnsidebar}}

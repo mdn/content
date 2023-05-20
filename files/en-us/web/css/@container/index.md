@@ -2,12 +2,6 @@
 title: "@container"
 slug: Web/CSS/@container
 page-type: css-at-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Containment
-  - Reference
-  - container
 browser-compat: css.at-rules.container
 ---
 

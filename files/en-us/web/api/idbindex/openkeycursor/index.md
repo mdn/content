@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.openKeyCursor()
+title: "IDBIndex: openKeyCursor() method"
+short-title: openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
 page-type: web-api-instance-method
 browser-compat: api.IDBIndex.openKeyCursor

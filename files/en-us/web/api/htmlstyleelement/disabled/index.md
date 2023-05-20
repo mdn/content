@@ -1,5 +1,6 @@
 ---
-title: HTMLStyleElement.disabled
+title: "HTMLStyleElement: disabled property"
+short-title: disabled
 slug: Web/API/HTMLStyleElement/disabled
 page-type: web-api-instance-property
 browser-compat: api.HTMLStyleElement.disabled
@@ -47,20 +48,20 @@ The code below gets the `style` element using its id, and then sets it as disabl
 As the style already exists, as it is defined in the SVG, this should succeed.
 
 ```js
-const style = document.getElementById("InlineStyle")
+const style = document.getElementById("InlineStyle");
 style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the `disabled` value and button text.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  const buttonText = style.disabled ? "Enable" : "Disable";
+  button.innerText = buttonText;
+});
 ```
 
 #### Result
@@ -91,8 +92,8 @@ This is done by first creating a style element using [`Document.createElement()`
 
 ```js
 // Create the `style` element
-const style = document.createElement('style')
-const node = document.createTextNode('p { color: blue; }');
+const style = document.createElement("style");
+const node = document.createTextNode("p { color: blue; }");
 style.appendChild(node);
 document.body.appendChild(style);
 ```
@@ -103,19 +104,19 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true;
+style.disabled = true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', () => {
-   style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
-   });
+button.addEventListener("click", () => {
+  style.disabled = !style.disabled;
+  const buttonText = style.disabled ? "Enable" : "Disable";
+  button.innerText = buttonText;
+});
 ```
 
 #### Result

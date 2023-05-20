@@ -15,7 +15,7 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 
 ## Constructor
 
-- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
   - : Creates a new `ReferenceError` object.
 
 ## Instance properties
@@ -24,6 +24,8 @@ _Also inherits instance properties from its parent {{jsxref("Error")}}_.
 
 These properties are defined on `ReferenceError.prototype` and shared by all `ReferenceError` instances.
 
+- {{jsxref("Object/constructor", "ReferenceError.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `ReferenceError` instances, the initial value is the {{jsxref("ReferenceError/ReferenceError", "ReferenceError")}} constructor.
 - {{jsxref("Error/name", "ReferenceError.prototype.name")}}
   - : Represents the name for the type of error. For `ReferenceError.prototype.name`, the initial value is `"ReferenceError"`.
 

@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
+title: "ServiceWorkerRegistration: getNotifications() method"
+short-title: getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.getNotifications
@@ -40,14 +41,14 @@ A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} o
 ## Examples
 
 ```js
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register("sw.js");
 
-const options = { tag : 'user_alerts' };
+const options = { tag: "user_alerts" };
 
 navigator.serviceWorker.ready.then((registration) => {
   registration.getNotifications(options).then((notifications) => {
     // do something with your notifications
-  })
+  });
 });
 ```
 

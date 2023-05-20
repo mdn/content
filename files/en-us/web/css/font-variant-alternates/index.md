@@ -2,12 +2,6 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 ---
 

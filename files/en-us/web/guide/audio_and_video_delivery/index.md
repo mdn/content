@@ -1,12 +1,6 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - Guide
-  - HTML
-  - Media
-  - Video
 ---
 
 <section id="Quick_links">

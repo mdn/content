@@ -2,12 +2,6 @@
 title: ":modal"
 slug: Web/CSS/:modal
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Modal
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.modal
 ---
 

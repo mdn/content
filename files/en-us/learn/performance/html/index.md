@@ -1,10 +1,6 @@
 ---
 title: HTML performance features
 slug: Learn/Performance/HTML
-tags:
-  - HTML
-  - Learning
-  - Web Performance
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}

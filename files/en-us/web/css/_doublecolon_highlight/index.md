@@ -2,12 +2,8 @@
 title: "::highlight()"
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Experimental
+status:
+  - experimental
 browser-compat: css.selectors.highlight
 ---
 

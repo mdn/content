@@ -1,5 +1,6 @@
 ---
-title: NDEFRecord.mediaType
+title: "NDEFRecord: mediaType property"
+short-title: mediaType
 slug: Web/API/NDEFRecord/mediaType
 page-type: web-api-instance-property
 status:

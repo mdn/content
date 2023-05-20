@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.space
+title: "XRCylinderLayer: space property"
+short-title: space
 slug: Web/API/XRCylinderLayer/space
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,7 @@ The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinde
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 cylinderLayer.space = someOtherSpace;

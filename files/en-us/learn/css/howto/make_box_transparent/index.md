@@ -1,13 +1,6 @@
 ---
 title: How to make a box semi-transparent
 slug: Learn/CSS/Howto/Make_box_transparent
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
 ---
 
 {{LearnSidebar}}

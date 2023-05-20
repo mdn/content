@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesisUtterance.rate
+title: "SpeechSynthesisUtterance: rate property"
+short-title: rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisUtterance.rate
@@ -59,23 +60,23 @@ body {
 ```js
 const synth = window.speechSynthesis;
 
-const text = document.querySelector('#text');
-const play = document.querySelector('#play');
-const rate = document.querySelector('#rate');
+const text = document.querySelector("#text");
+const play = document.querySelector("#play");
+const rate = document.querySelector("#rate");
 
 function speak() {
   if (synth.speaking) {
     synth.cancel();
   }
   const utterThis = new SpeechSynthesisUtterance(text.textContent);
-  utterThis.addEventListener('error', () => {
-    console.error('SpeechSynthesisUtterance error');
+  utterThis.addEventListener("error", () => {
+    console.error("SpeechSynthesisUtterance error");
   });
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 }
 
-play.addEventListener('click', speak);
+play.addEventListener("click", speak);
 ```
 
 #### Output

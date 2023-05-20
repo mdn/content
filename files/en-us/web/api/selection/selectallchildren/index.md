@@ -1,5 +1,6 @@
 ---
-title: Selection.selectAllChildren()
+title: "Selection: selectAllChildren() method"
+short-title: selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 page-type: web-api-instance-method
 browser-compat: api.Selection.selectAllChildren
@@ -45,10 +46,10 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
-const footer = document.querySelector('footer');
+const button = document.querySelector("button");
+const footer = document.querySelector("footer");
 
-button.addEventListener('click', (e) => {
+button.addEventListener("click", (e) => {
   window.getSelection().selectAllChildren(footer);
 });
 ```

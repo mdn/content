@@ -1,5 +1,6 @@
 ---
-title: Element.hasAttribute()
+title: "Element: hasAttribute() method"
+short-title: hasAttribute()
 slug: Web/API/Element/hasAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.hasAttribute
@@ -31,7 +32,7 @@ A boolean.
 ```js
 const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // do something
+  // do something
 }
 ```
 
