@@ -114,7 +114,7 @@ uint8.findLast((value, index) => {
 // Visited index 2 with value 0
 // Visited index 1 with value 1
 // Visited index 0 with value 0
-// Deleting uint8[5] with value 5
+// Set uint8[3] to 44
 // Visited index 6 with value 6
 // Visited index 5 with value 5
 // Visited index 4 with value 0

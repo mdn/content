@@ -1,5 +1,6 @@
 ---
-title: Document.getSelection()
+title: "Document: getSelection() method"
+short-title: getSelection()
 slug: Web/API/Document/getSelection
 page-type: web-api-instance-method
 browser-compat: api.Document.getSelection

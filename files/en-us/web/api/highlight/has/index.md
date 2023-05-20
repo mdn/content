@@ -1,5 +1,6 @@
 ---
-title: Highlight.has()
+title: "Highlight: has() method"
+short-title: has()
 slug: Web/API/Highlight/has
 page-type: web-api-instance-method
 status:

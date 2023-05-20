@@ -1,5 +1,6 @@
 ---
-title: Element.scrollTop
+title: "Element: scrollTop property"
+short-title: scrollTop
 slug: Web/API/Element/scrollTop
 page-type: web-api-instance-property
 browser-compat: api.Element.scrollTop

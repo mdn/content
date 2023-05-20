@@ -1,5 +1,6 @@
 ---
-title: CanMakePaymentEvent()
+title: "CanMakePaymentEvent: CanMakePaymentEvent() constructor"
+short-title: CanMakePaymentEvent()
 slug: Web/API/CanMakePaymentEvent/CanMakePaymentEvent
 page-type: web-api-constructor
 status:

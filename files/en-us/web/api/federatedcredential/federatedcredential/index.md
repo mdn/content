@@ -1,5 +1,6 @@
 ---
-title: FederatedCredential()
+title: "FederatedCredential: FederatedCredential() constructor"
+short-title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
 page-type: web-api-constructor
 status:

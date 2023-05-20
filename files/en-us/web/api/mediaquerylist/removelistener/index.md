@@ -1,5 +1,6 @@
 ---
-title: MediaQueryList.removeListener()
+title: "MediaQueryList: removeListener() method"
+short-title: removeListener()
 slug: Web/API/MediaQueryList/removeListener
 page-type: web-api-instance-method
 status:

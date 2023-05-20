@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframeRule.keyText
+title: "CSSKeyframeRule: keyText property"
+short-title: keyText
 slug: Web/API/CSSKeyframeRule/keyText
 page-type: web-api-instance-property
 browser-compat: api.CSSKeyframeRule.keyText

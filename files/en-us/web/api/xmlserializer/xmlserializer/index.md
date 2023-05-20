@@ -1,5 +1,6 @@
 ---
-title: XMLSerializer()
+title: "XMLSerializer: XMLSerializer() constructor"
+short-title: XMLSerializer()
 slug: Web/API/XMLSerializer/XMLSerializer
 page-type: web-api-constructor
 browser-compat: api.XMLSerializer.XMLSerializer
@@ -30,10 +31,10 @@ A new {{domxref("XMLSerializer")}} object.
 This example serializes an entire document into a string containing XML.
 
 ```js
- const s = new XMLSerializer();
- const d = document;
- const str = s.serializeToString(d);
- saveXML(str);
+const s = new XMLSerializer();
+const d = document;
+const str = s.serializeToString(d);
+saveXML(str);
 ```
 
 This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document. `saveXML()` represents a function that would then save the serialized string.

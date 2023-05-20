@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.undefined
 
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
+The **`undefined`** global property represents the primitive
 value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 

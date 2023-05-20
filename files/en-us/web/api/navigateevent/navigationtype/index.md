@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.navigationType
+title: "NavigateEvent: navigationType property"
+short-title: navigationType
 slug: Web/API/NavigateEvent/navigationType
 page-type: web-api-instance-property
 status:

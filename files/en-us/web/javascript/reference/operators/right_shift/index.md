@@ -92,6 +92,6 @@ Right shifting any number `x` by `0` returns `x` converted to a 32-bit integer. 
 
 ## See also
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
 - [Right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
 - [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

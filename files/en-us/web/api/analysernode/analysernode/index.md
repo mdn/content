@@ -1,5 +1,6 @@
 ---
-title: AnalyserNode()
+title: "AnalyserNode: AnalyserNode() constructor"
+short-title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 page-type: web-api-constructor
 browser-compat: api.AnalyserNode.AnalyserNode

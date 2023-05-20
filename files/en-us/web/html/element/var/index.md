@@ -1,5 +1,5 @@
 ---
-title: '<var>: The Variable element'
+title: "<var>: The Variable element"
 slug: Web/HTML/Element/var
 page-type: html-element
 browser-compat: html.elements.var
@@ -51,7 +51,7 @@ Here's a simple example, using `<var>` to denote variable names in a mathematica
 <p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650,80)}}
 
@@ -80,7 +80,7 @@ This HTML uses `<var>` to enclose the names of two variables.
 
 #### Result
 
-{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
+{{EmbedLiveSample("Overriding_the_default_style", 650, 140)}}
 
 ## Technical summary
 

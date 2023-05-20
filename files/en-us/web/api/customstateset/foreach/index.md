@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.forEach()
+title: "CustomStateSet: forEach() method"
+short-title: forEach()
 slug: Web/API/CustomStateSet/forEach
 page-type: web-api-instance-method
 status:

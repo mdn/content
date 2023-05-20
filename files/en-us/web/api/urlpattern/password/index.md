@@ -1,5 +1,6 @@
 ---
-title: URLPattern.password
+title: "URLPattern: password property"
+short-title: password
 slug: Web/API/URLPattern/password
 page-type: web-api-instance-property
 status:

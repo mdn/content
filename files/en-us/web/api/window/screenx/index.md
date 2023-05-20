@@ -1,5 +1,6 @@
 ---
-title: Window.screenX
+title: "Window: screenX property"
+short-title: screenX
 slug: Web/API/Window/screenX
 page-type: web-api-instance-property
 browser-compat: api.Window.screenX

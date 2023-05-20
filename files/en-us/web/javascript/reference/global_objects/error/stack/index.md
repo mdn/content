@@ -2,9 +2,9 @@
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
-browser-compat: javascript.builtins.Error.stack
 status:
   - non-standard
+browser-compat: javascript.builtins.Error.stack
 ---
 
 {{JSRef}} {{non-standard_header}}

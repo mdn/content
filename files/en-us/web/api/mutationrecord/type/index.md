@@ -1,5 +1,6 @@
 ---
-title: MutationRecord.type
+title: "MutationRecord: type property"
+short-title: type
 slug: Web/API/MutationRecord/type
 page-type: web-api-instance-property
 browser-compat: api.MutationRecord.type

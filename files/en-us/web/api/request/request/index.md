@@ -1,5 +1,6 @@
 ---
-title: Request()
+title: "Request: Request() constructor"
+short-title: Request()
 slug: Web/API/Request/Request
 page-type: web-api-constructor
 browser-compat: api.Request.Request

@@ -1,6 +1,7 @@
 ---
 title: Firefox user agent string reference
 slug: Web/HTTP/Headers/User-Agent/Firefox
+page-type: guide
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ElementsPanel.setExpression()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---

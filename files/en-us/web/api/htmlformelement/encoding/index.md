@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.encoding
+title: "HTMLFormElement: encoding property"
+short-title: encoding
 slug: Web/API/HTMLFormElement/encoding
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.encoding

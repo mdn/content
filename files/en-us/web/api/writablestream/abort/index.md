@@ -1,5 +1,6 @@
 ---
-title: WritableStream.abort()
+title: "WritableStream: abort() method"
+short-title: abort()
 slug: Web/API/WritableStream/abort
 page-type: web-api-instance-method
 browser-compat: api.WritableStream.abort

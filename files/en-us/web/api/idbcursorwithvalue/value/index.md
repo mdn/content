@@ -1,5 +1,6 @@
 ---
-title: IDBCursorWithValue.value
+title: "IDBCursorWithValue: value property"
+short-title: value
 slug: Web/API/IDBCursorWithValue/value
 page-type: web-api-instance-property
 browser-compat: api.IDBCursorWithValue.value

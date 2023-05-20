@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.scroll()
+title: "NavigateEvent: scroll() method"
+short-title: scroll()
 slug: Web/API/NavigateEvent/scroll
 page-type: web-api-instance-method
 status:

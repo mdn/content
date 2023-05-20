@@ -110,7 +110,9 @@ The `text-decoration` property is specified as one or more space-separated value
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+#### Result
+
+{{EmbedLiveSample('Examples','auto','520')}}
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: Window.top
+title: "Window: top property"
+short-title: top
 slug: Web/API/Window/top
 page-type: web-api-instance-property
 browser-compat: api.Window.top

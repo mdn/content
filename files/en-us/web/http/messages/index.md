@@ -1,6 +1,7 @@
 ---
 title: HTTP Messages
 slug: Web/HTTP/Messages
+page-type: guide
 ---
 
 {{HTTPSidebar}}

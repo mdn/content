@@ -154,4 +154,7 @@ console.log(
 
 ## See also
 
-- {{jsxref("Function")}}
+- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Function.prototype.caller")}}

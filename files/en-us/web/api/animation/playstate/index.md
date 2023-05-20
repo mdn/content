@@ -1,5 +1,6 @@
 ---
-title: Animation.playState
+title: "Animation: playState property"
+short-title: playState
 slug: Web/API/Animation/playState
 page-type: web-api-instance-property
 browser-compat: api.Animation.playState

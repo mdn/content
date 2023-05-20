@@ -1,6 +1,7 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
+page-type: mathml-element
 browser-compat: mathml.elements.munderover
 ---
 

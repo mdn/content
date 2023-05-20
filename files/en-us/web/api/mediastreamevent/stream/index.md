@@ -1,5 +1,6 @@
 ---
-title: MediaStreamEvent.stream
+title: "MediaStreamEvent: stream property"
+short-title: stream
 slug: Web/API/MediaStreamEvent/stream
 page-type: web-api-instance-property
 status:

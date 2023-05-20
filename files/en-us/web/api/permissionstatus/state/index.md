@@ -1,5 +1,6 @@
 ---
-title: PermissionStatus.state
+title: "PermissionStatus: state property"
+short-title: state
 slug: Web/API/PermissionStatus/state
 page-type: web-api-instance-property
 browser-compat: api.PermissionStatus.state

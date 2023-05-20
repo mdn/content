@@ -1,5 +1,6 @@
 ---
 title: "Element: touchmove event"
+short-title: touchmove
 slug: Web/API/Element/touchmove_event
 page-type: web-api-event
 browser-compat: api.Element.touchmove_event

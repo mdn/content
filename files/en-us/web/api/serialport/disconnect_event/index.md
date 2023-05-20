@@ -1,5 +1,6 @@
 ---
 title: "SerialPort: disconnect event"
+short-title: disconnect
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
 status:

@@ -1,5 +1,5 @@
 ---
-title: '<rt>: The Ruby Text element'
+title: "<rt>: The Ruby Text element"
 slug: Web/HTML/Element/rt
 page-type: html-element
 browser-compat: html.elements.rt
@@ -36,7 +36,7 @@ body {
 }
 ```
 
-The output looks like this in your browser:
+#### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 

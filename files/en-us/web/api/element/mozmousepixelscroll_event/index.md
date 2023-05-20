@@ -1,5 +1,6 @@
 ---
 title: "Element: MozMousePixelScroll event"
+short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 page-type: web-api-event
 status:

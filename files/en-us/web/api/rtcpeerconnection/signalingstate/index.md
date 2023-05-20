@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.signalingState
+title: "RTCPeerConnection: signalingState property"
+short-title: signalingState
 slug: Web/API/RTCPeerConnection/signalingState
 page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.signalingState

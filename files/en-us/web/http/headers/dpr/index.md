@@ -1,6 +1,7 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
+page-type: http-header
 status:
   - deprecated
   - non-standard

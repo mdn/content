@@ -233,7 +233,6 @@
       "overview": ["CSS Painting API"],
       "guides": ["/docs/Web/API/CSS_Painting_API/Guide"],
       "interfaces": [
-        "PaintWorklet",
         "PaintWorkletGlobalScope",
         "PaintRenderingContext2D",
         "PaintSize"
@@ -282,7 +281,6 @@
         "CSSImportRule",
         "CSSKeyframeRule",
         "CSSKeyframesRule",
-        "CSSImportRule",
         "CSSLayerBlockRule",
         "CSSLayerStatementRule",
         "CSSMediaRule",
@@ -581,7 +579,6 @@
         "HTMLBRElement",
         "HTMLButtonElement",
         "HTMLCanvasElement",
-        "HTMLContentElement",
         "HTMLDataElement",
         "HTMLDataListElement",
         "HTMLDialogElement",
@@ -623,7 +620,6 @@
         "HTMLQuoteElement",
         "HTMLScriptElement",
         "HTMLSelectElement",
-        "HTMLShadowElement",
         "HTMLSourceElement",
         "HTMLSpanElement",
         "HTMLStyleElement",
@@ -977,16 +973,12 @@
     "Performance API": {
       "overview": ["Performance API"],
       "guides": [
-        "/docs/Web/API/Performance_API/Using_the_Performance_API",
-        "/docs/Web/API/Long_Tasks_API",
-        "/docs/Web/API/Navigation_timing_API",
-        "/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing",
-        "/docs/Web/API/Performance_Timeline",
-        "/docs/Web/API/Performance_Timeline/Using_Performance_Timeline",
-        "/docs/Web/API/Resource_Timing_API",
-        "/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API",
-        "/docs/Web/API/User_timing_API",
-        "/docs/Web/API/User_timing_API/Using_the_User_Timing_API"
+        "/docs/Web/API/Performance_API/Performance_data",
+        "/docs/Web/API/Performance_API/High_precision_timing",
+        "/docs/Web/API/Performance_API/Resource_timing",
+        "/docs/Web/API/Performance_API/Navigation_timing",
+        "/docs/Web/API/Performance_API/User_timing",
+        "/docs/Web/API/Performance_API/Server_timing"
       ],
       "interfaces": [
         "EventCounts",
@@ -1018,10 +1010,7 @@
       "overview": ["Web Periodic Background Synchronization API"],
       "interfaces": ["PeriodicSyncEvent", "PeriodicSyncManager"],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.periodicSync",
-        "ServiceWorkerGlobalScope.onperiodicsync"
-      ],
+      "properties": ["ServiceWorkerRegistration.periodicSync"],
       "events": ["ServiceWorkerGlobalScope: periodicsync"]
     },
     "Permissions API": {
@@ -1041,7 +1030,6 @@
         "Document.exitPictureInPicture()"
       ],
       "properties": [
-        "HTMLVideoElement.autoPictureInPicture",
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
         "Document.pictureInPictureElement"
@@ -1084,6 +1072,24 @@
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
       "properties": ["Document.pointerLockElement"],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+    },
+    "Popover API": {
+      "overview": ["Popover API"],
+      "guides": ["/docs/Web/API/Popover_API/Using"],
+      "interfaces": ["ToggleEvent"],
+      "methods": [
+        "HTMLElement.hidePopover()",
+        "HTMLElement.showPopover()",
+        "HTMLElement.togglePopover()"
+      ],
+      "properties": [
+        "HTMLButtonElement.popoverTargetAction",
+        "HTMLButtonElement.popoverTargetElement",
+        "HTMLElement.popover",
+        "HTMLInputElement.popoverTargetAction",
+        "HTMLInputElement.popoverTargetElement"
+      ],
+      "events": ["HTMLElement: beforetoggle", "HTMLElement: toggle"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1334,7 +1340,6 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
-        "SVGDocument",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1652,24 +1657,25 @@
     "Web Authentication API": {
       "overview": ["Web Authentication API"],
       "guides": [
-        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion"
+        "/docs/Web/API/Web_Authentication_API/Attestation_and_Assertion",
+        "/docs/Web/API/Web_Authentication_API/Authenticator_data",
+        "/docs/Web/API/Web_Authentication_API/WebAuthn_extensions"
       ],
       "interfaces": [
-        "CredentialsContainer",
         "PublicKeyCredential",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
       ],
-      "methods": [],
+      "methods": [
+        "CredentialsContainer.create()",
+        "CredentialsContainer.get()"
+      ],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "PublicKeyCredentialRequestOptions",
-        "PublicKeyCredentialCreationOptions"
-      ]
+      "events": []
     },
     "Web Components": {
+      "overview": ["Web components"],
       "guides": [
         "/docs/Web/Web_Components/Using_custom_elements",
         "/docs/Web/Web_Components/Using_shadow_DOM",
@@ -1856,6 +1862,49 @@
         "HTMLCanvasElement: webglcontextcreationerror"
       ]
     },
+    "WebGPU API": {
+      "overview": ["WebGPU API"],
+      "interfaces": [
+        "GPU",
+        "GPUAdapter",
+        "GPUAdapterInfo",
+        "GPUBindGroup",
+        "GPUBindGroupLayout",
+        "GPUBuffer",
+        "GPUCanvasContext",
+        "GPUCommandBuffer",
+        "GPUCommandEncoder",
+        "GPUCompilationInfo",
+        "GPUCompilationMessage",
+        "GPUComputePassEncoder",
+        "GPUComputePipeline",
+        "GPUDevice",
+        "GPUDeviceLostInfo",
+        "GPUError",
+        "GPUExternalTexture",
+        "GPUInternalError",
+        "GPUOutOfMemoryError",
+        "GPUPipelineError",
+        "GPUPipelineLayout",
+        "GPUQuerySet",
+        "GPUQueue",
+        "GPURenderBundle",
+        "GPURenderBundleEncoder",
+        "GPURenderPassEncoder",
+        "GPURenderPipeline",
+        "GPUSampler",
+        "GPUShaderModule",
+        "GPUSupportedFeatures",
+        "GPUSupportedLimits",
+        "GPUTexture",
+        "GPUTextureView",
+        "GPUUncapturedErrorEvent",
+        "GPUValidationError"
+      ],
+      "methods": ["HTMLCanvasElement.getContext()"],
+      "properties": ["Navigator.gpu", "WorkerNavigator.gpu"],
+      "events": ["GPUDevice: uncapturederror"]
+    },
     "WebHID API": {
       "overview": ["WebHID API"],
       "interfaces": [
@@ -1987,6 +2036,7 @@
         "RTCRemoteOutboundRtpStreamStats",
         "RTCRtpContributingSourceStats",
         "RTCPeerConnectionStats",
+        "RTCAudioSourceStats",
         "RTCMediaStreamStats",
         "RTCMediaHandlerStats",
         "RTCVideoHandlerStats",
@@ -2094,6 +2144,7 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
         "WebTransportError"
       ],
       "methods": [],
@@ -2249,9 +2300,7 @@
       "overview": ["XMLHttpRequest"],
       "guides": [
         "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest",
-        "/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6",
-        "/docs/XMLHttpRequest_changes_for_Gecko1.8"
+        "/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest"
       ],
       "interfaces": [
         "FormData",

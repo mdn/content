@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version
+page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version

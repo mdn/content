@@ -1,6 +1,7 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
+page-type: landing-page
 ---
 
 {{MathMLRef}}

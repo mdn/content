@@ -1,5 +1,6 @@
 ---
-title: Document.createElement()
+title: "Document: createElement() method"
+short-title: createElement()
 slug: Web/API/Document/createElement
 page-type: web-api-instance-method
 browser-compat: api.Document.createElement

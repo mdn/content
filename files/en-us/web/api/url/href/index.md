@@ -1,5 +1,6 @@
 ---
-title: URL.href
+title: "URL: href property"
+short-title: href
 slug: Web/API/URL/href
 page-type: web-api-instance-property
 browser-compat: api.URL.href

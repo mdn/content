@@ -1,5 +1,6 @@
 ---
-title: Window.history
+title: "Window: history property"
+short-title: history
 slug: Web/API/Window/history
 page-type: web-api-instance-property
 browser-compat: api.Window.history

@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragenter event"
+short-title: dragenter
 slug: Web/API/HTMLElement/dragenter_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragenter_event

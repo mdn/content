@@ -1,5 +1,6 @@
 ---
-title: SyncManager.register()
+title: "SyncManager: register() method"
+short-title: register()
 slug: Web/API/SyncManager/register
 page-type: web-api-instance-method
 status:

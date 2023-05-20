@@ -1,5 +1,6 @@
 ---
-title: SpeechSynthesis.pending
+title: "SpeechSynthesis: pending property"
+short-title: pending
 slug: Web/API/SpeechSynthesis/pending
 page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesis.pending

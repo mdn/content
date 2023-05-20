@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.getDisplayMedia()
+title: "MediaDevices: getDisplayMedia() method"
+short-title: getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
 page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getDisplayMedia

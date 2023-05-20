@@ -1,5 +1,6 @@
 ---
-title: SerialPort.readable
+title: "SerialPort: readable property"
+short-title: readable
 slug: Web/API/SerialPort/readable
 page-type: web-api-instance-property
 status:

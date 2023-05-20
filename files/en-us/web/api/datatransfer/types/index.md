@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.types
+title: "DataTransfer: types property"
+short-title: types
 slug: Web/API/DataTransfer/types
 page-type: web-api-instance-property
 browser-compat: api.DataTransfer.types

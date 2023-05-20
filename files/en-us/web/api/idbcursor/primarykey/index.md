@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.primaryKey
+title: "IDBCursor: primaryKey property"
+short-title: primaryKey
 slug: Web/API/IDBCursor/primaryKey
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.primaryKey

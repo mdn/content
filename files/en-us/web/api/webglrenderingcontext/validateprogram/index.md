@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.validateProgram()
+title: "WebGLRenderingContext: validateProgram() method"
+short-title: validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.validateProgram

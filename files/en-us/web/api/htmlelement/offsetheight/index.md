@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.offsetHeight
+title: "HTMLElement: offsetHeight property"
+short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.offsetHeight

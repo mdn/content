@@ -1,7 +1,6 @@
 ---
 title: FinalizationRegistry() constructor
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 page-type: javascript-constructor
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---

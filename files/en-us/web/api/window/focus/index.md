@@ -1,5 +1,6 @@
 ---
-title: Window.focus()
+title: "Window: focus() method"
+short-title: focus()
 slug: Web/API/Window/focus
 page-type: web-api-instance-method
 browser-compat: api.Window.focus

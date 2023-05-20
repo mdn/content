@@ -25,8 +25,7 @@ Intl.supportedValuesOf(key)
 ### Parameters
 
 - `key`
-  - : A key string indicating the category of values to be returned.
-    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+  - : A key string indicating the category of values to be returned. This is one of: `"calendar"`, `"collation"`, `"currency"`, `"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 
@@ -34,8 +33,8 @@ A sorted array of unique string values indicating the values supported by the im
 
 ### Exceptions
 
-- `RangeError`
-  - : An unsupported key was passed as a parameter.
+- {{jsxref("RangeError")}}
+  - : Thrown if an unsupported key was passed as a parameter.
 
 ## Examples
 
