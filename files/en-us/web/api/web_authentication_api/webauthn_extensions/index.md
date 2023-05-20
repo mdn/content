@@ -126,7 +126,7 @@ Outputs `appid: true` if the `appid` was successfully used for the assertion, or
 - Processed by: User agent
 - Specification: [FIDO AppID Exclusion Extension (appidExclude)](https://w3c.github.io/webauthn/#sctn-appid-exclude-extension)
 
-Allows a relying party to exclude authenticators containing specified credentials previously registered using the legacy FIDO U2F JavaScript API during regiatration. This is required because by default the contents of the `excludeCredentials` field are assumed to be WebAuthn credentials. When using this extension, you can include legacy FIDO U2F credentials inside `excludeCredentials`, and they will be recognized as such.
+Allows a relying party to exclude authenticators containing specified credentials previously registered using the legacy FIDO U2F JavaScript API during registration. This is required because by default the contents of the `excludeCredentials` field are assumed to be WebAuthn credentials. When using this extension, you can include legacy FIDO U2F credentials inside `excludeCredentials`, and they will be recognized as such.
 
 #### Input
 
@@ -353,6 +353,6 @@ Places where extensions are specified:
 
 ## Browser compatibility
 
-The compatibility data for WebAuthn extensions has been brooken down into two tables — extensions that can be used during credential registration ({{domxref("CredentialsContainer.create()","create()")}}), and extensions that can be used during authentication ({{domxref("CredentialsContainer.get()","get()")}}). Some extensions are usable during both operations.
+The compatibility data for WebAuthn extensions has been broken down into two tables — extensions that can be used during credential registration ({{domxref("CredentialsContainer.create()","create()")}}), and extensions that can be used during authentication ({{domxref("CredentialsContainer.get()","get()")}}). Some extensions are usable during both operations.
 
 {{Compat}}

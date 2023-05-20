@@ -138,8 +138,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -148,7 +146,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
+- `Window.returnValue` {{Deprecated_Inline}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar
@@ -174,7 +172,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
 - {{domxref("Window.clearImmediate()")}}
-  - : Cancels the repeated execution set using `setImmediate`.
+  - : Cancels the repeated execution set using `setImmediate()`.
 - {{domxref("clearInterval", "Window.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}

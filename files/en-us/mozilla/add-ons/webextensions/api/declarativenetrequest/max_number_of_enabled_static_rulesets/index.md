@@ -13,7 +13,7 @@ An extension can change the number of enabled rulesets using the {{WebExtAPIRef(
 
 Its value is `10`.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

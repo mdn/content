@@ -142,16 +142,16 @@ try {
 ```
 
 The asynchronous methods above are run in sequence.
-If the methods don't depends on each other then you can run them in parallel and finish the whole operation more quickly.
+If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
 This done using the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method, which takes an iterable of promises as input and returns a single `Promise`.
 This returned promise fulfills when all of the input's promises fulfill, with an array of the fulfillment values.
 It rejects when any of the input's promises rejects, with this first rejection reason.
 
 The code below shows how this works.
-First we have two functions that return promises.
-We `await` on both of them to compete using the promise returned by `Promise.all()`.
-Once they both complete `await` returns and the results array is populated.
-The function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+First, we have two functions that return promises.
+We `await` on both of them to complete using the promise returned by `Promise.all()`.
+Once they both complete `await` returns and the results array is populated,
+the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
@@ -705,9 +705,7 @@ AuthorSchema.virtual("name").get(function () {
   if (this.first_name && this.family_name) {
     fullname = `${this.family_name}, ${this.first_name}`;
   }
-  if (!this.first_name || !this.family_name) {
-    fullname = "";
-  }
+
   return fullname;
 });
 
