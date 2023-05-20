@@ -117,13 +117,13 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 
 {{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
 
-## Accessibility concerns
+### Accessibility concerns
 
 Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
 
 Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
 
-### Examples
+#### HTML
 
 ```html
 <p>
@@ -134,7 +134,7 @@ Only include a `title` if expanding the abbreviation or acronym in the text is n
 
 #### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample("Accessibility_concerns")}}
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
 

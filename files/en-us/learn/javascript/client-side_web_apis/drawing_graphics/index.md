@@ -96,8 +96,8 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
    ```js
    const canvas = document.querySelector(".myCanvas");
-   const width = canvas.width = window.innerWidth;
-   const height = canvas.height = window.innerHeight;
+   const width = (canvas.width = window.innerWidth);
+   const height = (canvas.height = window.innerHeight);
    ```
 
    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
@@ -226,7 +226,7 @@ Let's draw an equilateral triangle on the canvas.
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
    ```
 
@@ -416,7 +416,7 @@ Let's build a simple example.
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
 
    function rand(min, max) {
@@ -438,7 +438,7 @@ Let's build a simple example.
    ctx.beginPath();
    ctx.moveTo(moveOffset, moveOffset);
    ctx.lineTo(moveOffset + length, moveOffset);
-   const triHeight = length / 2 * Math.tan(degToRad(60));
+   const triHeight = (length / 2) * Math.tan(degToRad(60));
    ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
    ctx.lineTo(moveOffset, moveOffset);
    ctx.fill();
@@ -525,9 +525,9 @@ Now let's create our own simple animation — we'll get a character from a certa
 2. Update the inner HTML to reflect the image:
 
    ```html
-    <canvas class="myCanvas">
-      <p>A man walking.</p>
-    </canvas>
+   <canvas class="myCanvas">
+     <p>A man walking.</p>
+   </canvas>
    ```
 
 3. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
@@ -648,9 +648,9 @@ document.addEventListener("mousemove", (e) => {
   curY = e.pageY;
 });
 
-canvas.addEventListener("mousedown", () => pressed = true);
+canvas.addEventListener("mousedown", () => (pressed = true));
 
-canvas.addEventListener("mouseup", () => pressed = false);
+canvas.addEventListener("mouseup", () => (pressed = false));
 ```
 
 When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:

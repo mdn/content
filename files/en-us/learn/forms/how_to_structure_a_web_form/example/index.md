@@ -9,7 +9,7 @@ This the example for a basic payment form for the article [How to structure an H
 
 ### HTML Content
 
-```html
+```html-nolint
 <form method="post">
   <h1>Payment form</h1>
   <p>

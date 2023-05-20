@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCDate
 
 {{JSRef}}
 
-The **`getUTCDate()`** method of a {{jsxref("Date")}} instance returns the day of the month for this date according to universal time.
+The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
 

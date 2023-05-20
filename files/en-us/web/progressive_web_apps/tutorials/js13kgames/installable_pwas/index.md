@@ -13,10 +13,10 @@ These technologies allow the app to be launched directly from the device's home 
 
 ## Requirements
 
-To make the web site installable, it needs the following things in place:
+To make the website installable, it needs the following things in place:
 
 - A web manifest, with the [correct fields filled in](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)
-- The web site to be served from a secure (HTTPS) domain
+- The website to be served from a secure (HTTPS) domain
 - An icon to represent the app on the device
 - A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline (this is required only by Chrome for Android currently)
 
@@ -82,7 +82,7 @@ A minimal web manifest must have at least a `name` and an `icons` field with at 
 
 When the user visits the PWA with a supporting mobile browser, it should display a notification (such as a banner or dialog box) indicating that it's possible to install the app as a PWA.
 
-![Screenshot of a mobile phone display with a popup saying "You can easily add this web site to your Home screen to have instant access and browse faster with an app-like experience", with a link to continue to the website below the text.](js13kpwa-icon.png)
+![Screenshot of a mobile phone display with a popup saying "You can easily add this website to your Home screen to have instant access and browse faster with an app-like experience", with a link to continue to the website below the text.](js13kpwa-icon.png)
 
 After the user indicates they wish to proceed with installation, the install banner is shown. That banner is automatically created by the browser, based on the information from the manifest file. For instance, the prompt includes the app's name and icon.
 

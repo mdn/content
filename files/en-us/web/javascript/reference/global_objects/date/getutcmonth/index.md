@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getUTCMonth
 
 {{JSRef}}
 
-The **`getUTCMonth()`** method of a {{jsxref("Date")}} instance returns the month for this date according to universal time, as a zero-based value (where zero indicates the first month of the year).
+The **`getUTCMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to universal time, as a zero-based value (where zero indicates the first month of the year).
 
 {{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}
 

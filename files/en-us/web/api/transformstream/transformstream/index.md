@@ -30,7 +30,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
     - `start(controller)`
       - : Called when the `TransformStream` is constructed. It is typically used to enqueue chunks using {{domxref("TransformStreamDefaultController.enqueue()")}}.
     - `transform(chunk, controller)`
-      - : Called when a chunk written to the writable side is ready to be transformed, and performs the work of the transformation stream. If no `transform()` method is supplied, the identity transform is used, and the chunk will be enqueued with no changes.
+      - : Called when a chunk written to the writable side is ready to be transformed, and performs the work of the transformation stream. It can return a promise to signal success or failure of the write operation. If no `transform()` method is supplied, the identity transform is used, and the chunk will be enqueued with no changes.
     - `flush(controller)`
       - : Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.
 

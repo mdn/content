@@ -29,7 +29,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 ### Exceptions
 
 - {{jsxref("URIError")}}
-  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Thrown if `uriComponent` contains a [lone surrogate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Description
 
@@ -67,7 +67,10 @@ function encodeRFC5987ValueChars(str) {
       // the valid encoding of "*" is %2A, which necessitates calling
       // toUpperCase() to properly encode). Although RFC3986 reserves "!",
       // RFC5987 does not, so we do not need to escape it.
-      .replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`)
+      .replace(
+        /['()*]/g,
+        (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+      )
       // The following are not required for percent-encoding per RFC5987,
       // so we can allow for a little better readability over the wire: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>

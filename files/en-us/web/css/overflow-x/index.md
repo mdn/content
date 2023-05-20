@@ -29,9 +29,9 @@ overflow-x: revert-layer;
 overflow-x: unset;
 ```
 
-The `overflow-x` property is specified as a single keyword chosen from the list of values below.
+The `overflow-x` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value.
 
-If {{cssxref("overflow-y")}} is `hidden`, `scroll`, or `auto` and this property is `visible` (default), the value will be implicitly computed as `auto`.
+If {{cssxref("overflow-y")}} is `hidden`, `scroll`, or `auto`, and the `overflow-x` property is `visible` (default), the value will be implicitly computed as `auto`.
 
 ### Values
 
@@ -125,4 +125,6 @@ If {{cssxref("overflow-y")}} is `hidden`, `scroll`, or `auto` and this property 
 
 ## See also
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_Overflow) module
+- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
