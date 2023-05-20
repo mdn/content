@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Intl.Locale.maximize
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.maximize()`** method gets the
-most likely values for the language, script, and region of the locale based on
+The **`maximize()`** method of {{jsxref("Intl.Locale")}} instances gets the
+most likely values for the language, script, and region of this locale based on
 existing values.
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}

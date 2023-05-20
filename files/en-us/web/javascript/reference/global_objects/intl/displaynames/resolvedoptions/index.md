@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.DisplayNames.prototype.resolvedOptions()`** method
+The **`resolvedOptions()`** method of {{jsxref("Intl.DisplayNames")}} instances
 returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of the current {{jsxref("Intl.DisplayNames")}}
+options computed during the construction of this `Intl.DisplayNames`
 object.
 
 ## Syntax

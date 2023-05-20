@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.of
 
 {{JSRef}}
 
-The **`Intl.DisplayNames.prototype.of()`** method receives a code and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
+The **`of()`** method of {{jsxref("Intl.DisplayNames")}} instances receives a code and returns a string based on the locale and options provided when instantiating this `Intl.DisplayNames` object.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.setUTCMilliseconds
 
 {{JSRef}}
 
-The **`setUTCMilliseconds()`** method of a {{jsxref("Date")}} instance changes the milliseconds for this date according to universal time.
+The **`setUTCMilliseconds()`** method of {{jsxref("Date")}} instances changes the milliseconds for this date according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}
 

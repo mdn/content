@@ -228,14 +228,14 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgb(255 255 255 / 0.5), inset -3px -3px 5px
-      rgb(0 0 0 / 0.5);
+  box-shadow: inset 3px 3px 5px rgb(255 255 255 / 0.5), inset -3px -3px 5px rgb(0
+          0 0 / 0.5);
 }
 
 .result {
   height: 20px;
-  box-shadow: inset 3px 3px 5px rgba(255 255 255 / 0.5), inset -3px -3px 5px
-      rgb(0 0 0 / 0.5);
+  box-shadow: inset 3px 3px 5px rgba(255 255 255 / 0.5), inset -3px -3px 5px rgb(0
+          0 0 / 0.5);
   background-color: orange;
   display: flex;
   align-items: center;

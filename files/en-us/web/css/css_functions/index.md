@@ -132,15 +132,15 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Exponential functions
 
-- {{CSSxRef("pow", "pow()")}} {{Experimental_Inline}}
+- {{CSSxRef("pow", "pow()")}}
   - : Calculates the base raised to the power of a number.
-- {{CSSxRef("sqrt", "sqrt()")}} {{Experimental_Inline}}
+- {{CSSxRef("sqrt", "sqrt()")}}
   - : Calculates the square root of a number.
-- {{CSSxRef("hypot", "hypot()")}} {{Experimental_Inline}}
+- {{CSSxRef("hypot", "hypot()")}}
   - : Calculates the square root of the sum of the squares of its arguments.
-- {{CSSxRef("log", "log()")}} {{Experimental_Inline}}
+- {{CSSxRef("log", "log()")}}
   - : Calculates the logarithm of a number.
-- {{CSSxRef("exp", "exp()")}} {{Experimental_Inline}}
+- {{CSSxRef("exp", "exp()")}}
   - : Calculates `e` raised to the power of a number.
 
 ### Sign-related functions

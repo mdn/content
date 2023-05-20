@@ -17,9 +17,9 @@ The `loadend` event is also sent when the request has been interrupted (by a {{d
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loadend', (event) => { })
+addEventListener("loadend", (event) => {});
 
-onloadend = (event) => { }
+onloadend = (event) => {};
 ```
 
 ## Event type
@@ -49,7 +49,8 @@ You can use the `loadend` event to detect the (successful or not) termination of
 // When the upload is finished, we hide the progress bar.
 xhr.upload.addEventListener("loadend", (event) => {
   progressBar.classList.remove("visible");
-  if (event.loaded !== 0) { // Successful termination
+  if (event.loaded !== 0) {
+    // Successful termination
     log.textContent = "Upload finished.";
   }
   abortButton.disabled = true;
