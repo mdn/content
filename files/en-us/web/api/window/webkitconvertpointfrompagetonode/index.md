@@ -11,8 +11,6 @@ browser-compat: api.Window.webkitConvertPointFromPageToNode
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
-{{Non-standard_header}}
-
 Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
 {{domxref("Window")}} method **`webkitConvertPointFromPageToNode()`**
 returns a `Point` object specifying the same location in the coordinate

@@ -301,9 +301,9 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 ### Security
 
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
-  - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their web sites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
+  - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their websites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
 - [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
-  - : HTTP Strict Transport Security is a security feature that lets a web site tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
+  - : HTTP Strict Transport Security is a security feature that lets a website tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
 - [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
 - [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes

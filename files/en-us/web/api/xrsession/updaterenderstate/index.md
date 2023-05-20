@@ -65,7 +65,7 @@ function onXRSessionStarted(xrSession) {
   loadWebGLResources();
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 }
 ```
@@ -85,7 +85,7 @@ Layers will be presented in the order they are given in the `layers` array, with
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-  optionalFeatures: ["layers"]
+  optionalFeatures: ["layers"],
 });
 
 function onXRSessionStarted(xrSession) {
@@ -93,10 +93,13 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = new XRWebGLLayer(xrSession, gl);
-  const quadLayer = xrGlBinding.createQuadLayer({ pixelWidth: 1024, pixelHeight: 1024 });
+  const quadLayer = xrGlBinding.createQuadLayer({
+    pixelWidth: 1024,
+    pixelHeight: 1024,
+  });
 
   xrSession.updateRenderState({
-    layers: [projectionLayer, quadLayer]
+    layers: [projectionLayer, quadLayer],
   });
 }
 ```

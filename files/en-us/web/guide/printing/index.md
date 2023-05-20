@@ -87,7 +87,7 @@ If you want to be able to automatically close a [popup window](/en-US/docs/Web/A
 </html>
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/printevents.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/printevents.html)
 
 ### Print an external page without opening it
 

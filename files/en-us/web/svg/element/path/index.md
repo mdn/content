@@ -12,7 +12,11 @@ The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to de
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

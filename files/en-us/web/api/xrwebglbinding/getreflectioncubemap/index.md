@@ -37,10 +37,10 @@ If the `rgba16f` format is used, enable the {{domxref("OES_texture_half_float")}
 
 ```js
 const glBinding = new XRWebGLBinding(xrSession, gl);
-gl.getExtension('OES_texture_half_float'); // if rgba16f is the preferredReflectionFormat
+gl.getExtension("OES_texture_half_float"); // if rgba16f is the preferredReflectionFormat
 
 xrSession.requestLightProbe().then((lightProbe) => {
-  lightProbe.addEventListener('reflectionchange', () => {
+  lightProbe.addEventListener("reflectionchange", () => {
     glBinding.getReflectionCubeMap(lightProbe);
   });
 });

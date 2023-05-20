@@ -53,7 +53,13 @@ The following example shows the use of the `snapshotItem()` method.
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null
+);
 let node = null;
 const tagNames = [];
 for (let i = 0; i < result.snapshotLength; i++) {

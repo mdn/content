@@ -43,10 +43,10 @@ Add the `editTask()` function inside your `App` component, in the same place as 
 ```jsx
 function editTask(id, newName) {
   const editedTaskList = tasks.map((task) => {
-  // if this task has the same ID as the edited task
+    // if this task has the same ID as the edited task
     if (id === task.id) {
       //
-      return {...task, name: newName}
+      return { ...task, name: newName };
     }
     return task;
   });
@@ -117,28 +117,27 @@ const editingTemplate = (
 const viewTemplate = (
   <div className="stack-small">
     <div className="c-cb">
-        <input
-          id={props.id}
-          type="checkbox"
-          defaultChecked={props.completed}
-          onChange={() => props.toggleTaskCompleted(props.id)}
-        />
-        <label className="todo-label" htmlFor={props.id}>
-          {props.name}
-        </label>
-      </div>
-      <div className="btn-group">
-        <button type="button" className="btn">
-          Edit <span className="visually-hidden">{props.name}</span>
-        </button>
-        <button
-          type="button"
-          className="btn btn__danger"
-          onClick={() => props.deleteTask(props.id)}
-        >
-          Delete <span className="visually-hidden">{props.name}</span>
-        </button>
-      </div>
+      <input
+        id={props.id}
+        type="checkbox"
+        defaultChecked={props.completed}
+        onChange={() => props.toggleTaskCompleted(props.id)}
+      />
+      <label className="todo-label" htmlFor={props.id}>
+        {props.name}
+      </label>
+    </div>
+    <div className="btn-group">
+      <button type="button" className="btn">
+        Edit <span className="visually-hidden">{props.name}</span>
+      </button>
+      <button
+        type="button"
+        className="btn btn__danger"
+        onClick={() => props.deleteTask(props.id)}>
+        Delete <span className="visually-hidden">{props.name}</span>
+      </button>
+    </div>
   </div>
 );
 ```
@@ -177,8 +176,7 @@ Update the "Cancel" button in the `editingTemplate` like so:
 <button
   type="button"
   className="btn todo-cancel"
-  onClick={() => setEditing(false)}
->
+  onClick={() => setEditing(false)}>
   Cancel
   <span className="visually-hidden">renaming {props.name}</span>
 </button>
@@ -199,7 +197,7 @@ Much of what we're about to do will mirror the work we did in `Form.js`: as the 
 We'll start by making a new hook for storing and setting the new name. Still in `Todo.js`, put the following underneath the existing hook:
 
 ```jsx
-const [newName, setNewName] = useState('');
+const [newName, setNewName] = useState("");
 ```
 
 Next, create a `handleChange()` function that will set the new name; put this underneath the hooks but before the templates:
@@ -255,7 +253,7 @@ Now that our main features are complete, we can think about our filter buttons. 
 Add a new hook to your `App()` function that reads and sets a filter. We want the default filter to be `All` because all of our tasks should be shown initially:
 
 ```jsx
-const [filter, setFilter] = useState('All');
+const [filter, setFilter] = useState("All");
 ```
 
 ### Defining our filters
@@ -273,7 +271,7 @@ At the top of `App.js`, beneath our imports but above our `App()` function, let'
 const FILTER_MAP = {
   All: () => true,
   Active: (task) => !task.completed,
-  Completed: (task) => task.completed
+  Completed: (task) => task.completed,
 };
 ```
 
@@ -299,7 +297,7 @@ Add the following underneath your `taskList` constant declaration:
 
 ```jsx
 const filterList = FILTER_NAMES.map((name) => (
-  <FilterButton key={name} name={name}/>
+  <FilterButton key={name} name={name} />
 ));
 ```
 
@@ -314,7 +312,9 @@ Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `
 With this:
 
 ```jsx
-{filterList}
+{
+  filterList;
+}
 ```
 
 This won't work yet. We've got a bit more work to do first.
@@ -354,8 +354,7 @@ function FilterButton(props) {
       type="button"
       className="btn toggle-btn"
       aria-pressed={props.isPressed}
-      onClick={() => props.setFilter(props.name)}
-    >
+      onClick={() => props.setFilter(props.name)}>
       <span className="visually-hidden">Show </span>
       <span>{props.name}</span>
       <span className="visually-hidden"> tasks</span>
@@ -378,18 +377,18 @@ Update your `taskList` like so:
 
 ```jsx
 const taskList = tasks
-.filter(FILTER_MAP[filter])
-.map((task) => (
-  <Todo
-    id={task.id}
-    name={task.name}
-    completed={task.completed}
-    key={task.id}
-    toggleTaskCompleted={toggleTaskCompleted}
-    deleteTask={deleteTask}
-    editTask={editTask}
-  />
-));
+  .filter(FILTER_MAP[filter])
+  .map((task) => (
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+      toggleTaskCompleted={toggleTaskCompleted}
+      deleteTask={deleteTask}
+      editTask={editTask}
+    />
+  ));
 ```
 
 In order to decide which callback function to use in `Array.prototype.filter()`, we access the value in `FILTER_MAP` that corresponds to the key of our filter state. When filter is `All`, for example, `FILTER_MAP[filter]` will evaluate to `() => true`.
