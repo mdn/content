@@ -142,7 +142,7 @@ try {
 ```
 
 The asynchronous methods above are run in sequence.
-If the methods don't depends on each other then you can run them in parallel and finish the whole operation more quickly.
+If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
 This done using the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method, which takes an iterable of promises as input and returns a single `Promise`.
 This returned promise fulfills when all of the input's promises fulfill, with an array of the fulfillment values.
 It rejects when any of the input's promises rejects, with this first rejection reason.

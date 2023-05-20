@@ -23,10 +23,10 @@ This example shows the use of `meet` when the element's `width` is greater than 
 html,
 body,
 svg {
-  height: 100%; 
-} 
+  height: 100%;
+}
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsitivity at different screen sizes */
 body {
   display: flex;
 }
@@ -38,37 +38,38 @@ body {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
+  </defs>
+</svg>
 ```
 
 ```html
-  <rect x="0" y="0" width="60" height="30">
-    <title>xMidYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMid meet"
-    x="0"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="0" y="0" width="60" height="30">
+  <title>xMidYMid meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMidYMid meet"
+  x="0"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
-  <rect x="70" y="0" width="60" height="30">
-    <title>xMinYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMinYMid meet"
-    x="70"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="70" y="0" width="60" height="30">
+  <title>xMinYMid meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMinYMid meet"
+  x="70"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
@@ -101,8 +102,6 @@ rect:hover,
 rect:active {
   outline: 1px solid red;
 }
-
-
 ```
 
 {{EmbedLiveSample('meet width height', '100%', 200)}}
@@ -115,10 +114,10 @@ This example shows the use of `slice` when the element's `width` is greater than
 html,
 body,
 svg {
-  height: 100%; 
-} 
+  height: 100%;
+}
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsitivity at different screen sizes */
 body {
   display: flex;
 }
@@ -130,37 +129,38 @@ body {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
+  </defs>
+</svg>
 ```
 
 ```html
-  <rect x="0" y="15" width="60" height="30">
-    <title>xMidYMin slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMin slice"
-    x="0"
-    y="15">
-    <use href="#smiley" />
-  </svg>
+<rect x="0" y="15" width="60" height="30">
+  <title>xMidYMin slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMidYMin slice"
+  x="0"
+  y="15">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
-  <rect x="70" y="15" width="60" height="30">
-    <title>xMidYMid slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMid slice"
-    x="70"
-    y="15">
-    <use href="#smiley" />
-  </svg>
+<rect x="70" y="15" width="60" height="30">
+  <title>xMidYMid slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMidYMid slice"
+  x="70"
+  y="15">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
@@ -205,10 +205,10 @@ This example shows the use of `meet` when the element's `height` is greater than
 html,
 body,
 svg {
-  height: 100%; 
-} 
+  height: 100%;
+}
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsitivity at different screen sizes */
 body {
   display: flex;
 }
@@ -220,7 +220,8 @@ body {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
+  </defs>
+</svg>
 ```
 
 ```html
@@ -239,18 +240,18 @@ body {
 ```
 
 ```html
-  <rect x="35" y="0" width="30" height="75">
-    <title>xMidYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMidYMid meet"
-    x="35"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="35" y="0" width="30" height="75">
+  <title>xMidYMid meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMidYMid meet"
+  x="35"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
@@ -295,10 +296,10 @@ This example shows the use of `slice` when the element's `height` is greater tha
 html,
 body,
 svg {
-  height: 100%; 
-} 
+  height: 100%;
+}
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsitivity at different screen sizes */
 body {
   display: flex;
 }
@@ -310,37 +311,38 @@ body {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
+  </defs>
+</svg>
 ```
 
 ```html
-  <rect x="0" y="0" width="30" height="75">
-    <title>xMinYMid slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMinYMid slice"
-    x="0"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="0" y="0" width="30" height="75">
+  <title>xMinYMid slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMinYMid slice"
+  x="0"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
-  <rect x="35" y="0" width="30" height="75">
-    <title>xMidYMid slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMidYMid slice"
-    x="35"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="35" y="0" width="30" height="75">
+  <title>xMidYMid slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMidYMid slice"
+  x="35"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
@@ -385,10 +387,10 @@ This example shows an element with the alignment value set to `none`.
 html,
 body,
 svg {
-  height: 100%; 
-} 
+  height: 100%;
+}
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsitivity at different screen sizes */
 body {
   display: flex;
 }
@@ -400,7 +402,8 @@ body {
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-  </defs> 
+  </defs>
+</svg>
 ```
 
 ```html

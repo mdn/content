@@ -127,7 +127,7 @@ textarea.addEventListener("input", function () {
 
 ## Triggering built-in events
 
-This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)
+This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
 
 ```js
 function simulateClick() {
