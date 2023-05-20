@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Model
 slug: Web/HTTP/Headers/Sec-CH-UA-Model
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Model

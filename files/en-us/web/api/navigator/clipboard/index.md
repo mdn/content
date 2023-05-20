@@ -17,7 +17,7 @@ The Clipboard API can be used to implement cut, copy, and paste
 features within a web application.
 
 Use of the asynchronous clipboard read and write methods requires that the user grant
-the web site or app permission to access the clipboard. This permission must be obtained
+the website or app permission to access the clipboard. This permission must be obtained
 from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the
 `"clipboard-read"` and/or `"clipboard-write"` permissions.
 

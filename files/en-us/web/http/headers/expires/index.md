@@ -1,6 +1,7 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
+page-type: http-header
 browser-compat: http.headers.Expires
 ---
 

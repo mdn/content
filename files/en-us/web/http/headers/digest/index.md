@@ -1,6 +1,7 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
+page-type: http-header
 browser-compat: http.headers.Digest
 ---
 

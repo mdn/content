@@ -63,7 +63,7 @@ This is demonstrated below using spread-syntax:
 
 ```js
 const extraSheet = new CSSStyleSheet();
-sheet.replaceSync("p { color: green; }");
+extraSheet.replaceSync("p { color: green; }");
 
 // Combine the existing sheets and new one
 document.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
@@ -93,7 +93,7 @@ shadow.adoptedStyleSheets = [sheet];
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{domxref("CSSStyleSheet.replace()")}}

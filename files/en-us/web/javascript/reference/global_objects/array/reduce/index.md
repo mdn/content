@@ -284,7 +284,7 @@ console.log(myArrayWithNoDuplicates);
 
 Using {{jsxref("Array/filter", "filter()")}} then {{jsxref("Array/map", "map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array/reduce", "reduce()")}}, thereby being more efficient. (If you like `for` loops, you
+`reduce()`, thereby being more efficient. (If you like `for` loops, you
 can filter and map while traversing once with {{jsxref("Array/forEach", "forEach()")}}.)
 
 ```js
@@ -411,4 +411,12 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxref("TypedArray.prototype.reduce()")}}

@@ -130,10 +130,10 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
 
    ```js
-   const gulp = require('gulp');
+   const gulp = require("gulp");
 
-   exports.default = function(cb) {
-     console.log('Gulp running');
+   exports.default = function (cb) {
+     console.log("Gulp running");
      cb();
    };
    ```
@@ -171,17 +171,18 @@ To use each plugin, you need to first install it via npm, then require any depen
 2. Add the following dependency to `gulpfile.js`:
 
    ```js
-   const htmltidy = require('gulp-htmltidy');
+   const htmltidy = require("gulp-htmltidy");
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
    function html(cb) {
-     return gulp.src('src/index.html')
-           .pipe(htmltidy())
-           .pipe(gulp.dest('build'));
-       cb();
+     return gulp
+       .src("src/index.html")
+       .pipe(htmltidy())
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -215,22 +216,25 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const autoprefixer = require('gulp-autoprefixer');
-   const csslint = require('gulp-csslint');
+   const autoprefixer = require("gulp-autoprefixer");
+   const csslint = require("gulp-csslint");
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
    function css(cb) {
-       return gulp.src('src/style.css')
-           .pipe(csslint())
-           .pipe(csslint.formatter('compact'))
-           .pipe(autoprefixer({
-               cascade: false
-           }))
-           .pipe(gulp.dest('build'));
-       cb();
+     return gulp
+       .src("src/style.css")
+       .pipe(csslint())
+       .pipe(csslint.formatter("compact"))
+       .pipe(
+         autoprefixer({
+           cascade: false,
+         })
+       )
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -245,7 +249,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 5. Add this line after the const definitions:
 
    ```js
-   const { series } = require('gulp');
+   const { series } = require("gulp");
    ```
 
 6. Export the css task using:
@@ -275,22 +279,25 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const babel = require('gulp-babel');
-   const jshint = require('gulp-jshint');
+   const babel = require("gulp-babel");
+   const jshint = require("gulp-jshint");
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
    function js(cb) {
-       return gulp.src('src/main.js')
-           .pipe(jshint())
-           .pipe(jshint.reporter('default'))
-           .pipe(babel({
-               presets: ['@babel/env']
-           }))
-           .pipe(gulp.dest('build'));
-           cb();
+     return gulp
+       .src("src/main.js")
+       .pipe(jshint())
+       .pipe(jshint.reporter("default"))
+       .pipe(
+         babel({
+           presets: ["@babel/env"],
+         })
+       )
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -322,9 +329,9 @@ Gulp comes with a `watch()` function that you can use to watch your files and ru
 
 ```js
 function watch() {
-  gulp.watch('src/*.html', html)
-  gulp.watch('src/*.css', css)
-  gulp.watch('src/*.js', js)
+  gulp.watch("src/*.html", html);
+  gulp.watch("src/*.css", css);
+  gulp.watch("src/*.js", js);
 }
 
 exports.watch = watch;
@@ -394,7 +401,7 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 1. Click _Start a new manual session_.
 2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.![Sauce test running](sauce-test-running.png)
+4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
    - Stop the session
@@ -425,11 +432,11 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require('saucelabs');
+   const SauceLabs = require("saucelabs");
 
    let myAccount = new SauceLabs({
      username: "your-sauce-username",
-     password: "your-sauce-api-key"
+     password: "your-sauce-api-key",
    });
 
    myAccount.getAccountDetails((err, res) => {
@@ -563,7 +570,7 @@ Let's have a brief look at how we'd access the API using Node.js.
 Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.
 
 ```js
-function getBuilds(){
+function getBuilds() {
   request({ uri: `${baseUrl}builds.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
@@ -588,13 +595,16 @@ function getBuilds(){
     // …
   ]
   */
-};
+}
 
-function getSessionsInBuild(build){
+function getSessionsInBuild(build) {
   const buildId = build.automation_build.hashed_id;
-  request({ uri: `${baseUrl}builds/${buildId}/sessions.json` }, (err, res, body) => {
-    console.log(JSON.parse(body));
-  });
+  request(
+    { uri: `${baseUrl}builds/${buildId}/sessions.json` },
+    (err, res, body) => {
+      console.log(JSON.parse(body));
+    }
+  );
   /* Response:
   [
     {
@@ -646,9 +656,9 @@ function getSessionsInBuild(build){
   */
 }
 
-function getSessionDetails(session){
+function getSessionDetails(session) {
   const sessionId = session.automation_session.hashed_id;
-  request({uri: `${baseUrl}sessions/${sessionId}.json`}, (err, res, body) => {
+  request({ uri: `${baseUrl}sessions/${sessionId}.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
   /* Response:
@@ -699,7 +709,7 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.
    ![Test Choices](screen_shot_2019-04-19_at_14.55.33.png)
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the web site running in the chosen browser.
+4. When loading has finished, you can then start to remotely test the website running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
 
    - Stop the session
@@ -728,11 +738,11 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
 3. Create a new file inside your project root called `tb.js`. give it the following contents:
 
    ```js
-   const TestingBot = require('testingbot-api');
+   const TestingBot = require("testingbot-api");
 
    let tb = new TestingBot({
      api_key: "your-tb-key",
-     api_secret: "your-tb-secret"
+     api_secret: "your-tb-secret",
    });
 
    tb.getTests(function (err, tests) {

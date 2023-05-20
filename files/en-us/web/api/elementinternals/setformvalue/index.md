@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ElementInternals.setFormValue
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.
 

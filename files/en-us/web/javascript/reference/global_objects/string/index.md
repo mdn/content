@@ -40,7 +40,7 @@ See "[String primitives and String objects](#string_primitives_and_string_object
 
 String literals can be specified using single or double quotes, which are treated
 identically, or using the backtick character <kbd>`</kbd>. This last form specifies a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals):
-with this form you can interpolate expressions.
+with this form you can interpolate expressions. For more information on the syntax of string literals, see [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals).
 
 ### Character access
 
@@ -181,61 +181,11 @@ There are several ways to achieve nearly the same effect in JavaScript.
 
 Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in behavior) or `String(x)` (to handle symbol values without throwing an error), but you should not use `"" + x`.
 
-### Escape sequences
-
-Special characters can be encoded using escape sequences:
-
-| Escape sequence                                                                                                                                      | Unicode code point                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                                                                 | null character (U+0000 NULL)                                                                                               |
-| `\'`                                                                                                                                                 | single quote (U+0027 APOSTROPHE)                                                                                           |
-| `\"`                                                                                                                                                 | double quote (U+0022 QUOTATION MARK)                                                                                       |
-| `\\`                                                                                                                                                 | backslash (U+005C REVERSE SOLIDUS)                                                                                         |
-| `\n`                                                                                                                                                 | newline (U+000A LINE FEED; LF)                                                                                             |
-| `\r`                                                                                                                                                 | carriage return (U+000D CARRIAGE RETURN; CR)                                                                               |
-| `\v`                                                                                                                                                 | vertical tab (U+000B LINE TABULATION)                                                                                      |
-| `\t`                                                                                                                                                 | tab (U+0009 CHARACTER TABULATION)                                                                                          |
-| `\b`                                                                                                                                                 | backspace (U+0008 BACKSPACE)                                                                                               |
-| `\f`                                                                                                                                                 | form feed (U+000C FORM FEED)                                                                                               |
-| `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
-| `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
-| `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
-
-### Long literal strings
-
-Sometimes, your code will include strings which are very long. Rather than having lines
-that go on endlessly, or wrap at the whim of your editor, you may wish to specifically
-break the string into multiple lines in the source code without affecting the actual
-string contents.
-
-You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-operator to append multiple strings together, like this:
-
-```js
-const longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
-```
-
-Or you can use the backslash character (`\`) at the end of each line to
-indicate that the string will continue on the next line. Make sure there is no space or
-any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
-
-```js
-const longString =
-  "This is a very long string which needs \
-to wrap across multiple lines because \
-otherwise my code is unreadable.";
-```
-
-Both of the above methods result in identical strings.
-
-### UTF-16 characters, Unicode codepoints, and grapheme clusters
+### UTF-16 characters, Unicode code points, and grapheme clusters
 
 Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
-However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode code point_. Each Unicode code point can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
 
 A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
 
@@ -246,7 +196,7 @@ Lone surrogates do not represent any Unicode character. Although most JavaScript
 
 On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
 
-You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode codepoints. Iterating through grapheme clusters will require some custom code.
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -308,16 +258,16 @@ These properties are own properties of each `String` instance.
     encoded code point starting at the specified `pos`.
 - {{jsxref("String.prototype.concat()")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()")}}
-  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.endsWith()")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
+- {{jsxref("String.prototype.includes()")}}
+  - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.isWellFormed()")}}
-  - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters).
+  - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
@@ -361,7 +311,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
   - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
@@ -374,8 +324,7 @@ These properties are own properties of each `String` instance.
     For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
@@ -391,17 +340,17 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : Returns the calling string value converted to uppercase.
 - {{jsxref("String.prototype.toWellFormed()")}}
-  - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_codepoints_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
+  - : Returns a string where all [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters) of this string are replaced with the Unicode replacement character U+FFFD.
 - {{jsxref("String.prototype.trim()")}}
   - : Trims whitespace from the beginning and end of the string.
-- {{jsxref("String.prototype.trimStart()")}}
-  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.trimEnd()")}}
   - : Trims whitespace from the end of the string.
+- {{jsxref("String.prototype.trimStart()")}}
+  - : Trims whitespace from the beginning of the string.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 

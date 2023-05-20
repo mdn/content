@@ -1,6 +1,7 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Save-Data

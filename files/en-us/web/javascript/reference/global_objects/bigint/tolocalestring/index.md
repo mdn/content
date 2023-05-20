@@ -61,6 +61,20 @@ console.log(bigint.toLocaleString());
 // "3,500" if in U.S. English locale
 ```
 
+### Checking for support for locales and options parameters
+
+The `locales` and `options` parameters may not be supported in all implementations, because support for the internalization API is optional, and some systems may not have the necessary data. For implementations without internationalization support, `toLocaleString()` always uses the system's locale, which may not be what you want. Because any implementation that supports the `locales` and `options` parameters must support the {{jsxref("Intl")}} API, you can check the existence of the latter for support:
+
+```js
+function toLocaleStringSupportsLocales() {
+  return (
+    typeof Intl === "object" &&
+    !!Intl &&
+    typeof Intl.NumberFormat === "function"
+  );
+}
+```
+
 ### Using `locales`
 
 This example shows some of the variations in localized number formats. In order to get
@@ -72,24 +86,24 @@ specify that language (and possibly some fallback languages) using the
 const bigint = 123456789123456789n;
 
 // German uses period for thousands
-console.log(bigint.toLocaleString('de-DE'));
+console.log(bigint.toLocaleString("de-DE"));
 // 123.456.789.123.456.789
 
 // Arabic in most Arabic speaking countries uses Eastern Arabic digits
-console.log(bigint.toLocaleString('ar-EG'));
+console.log(bigint.toLocaleString("ar-EG"));
 // ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // India uses thousands/lakh/crore separators
-console.log(bigint.toLocaleString('en-IN'));
+console.log(bigint.toLocaleString("en-IN"));
 // 1,23,45,67,89,12,34,56,789
 
 // the nu extension key requests a numbering system, e.g. Chinese decimal
-console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // 一二三,四五六,七八九,一二三,四五六,七八九
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
-console.log(bigint.toLocaleString(['ban', 'id']));
+console.log(bigint.toLocaleString(["ban", "id"]));
 // 123.456.789.123.456.789
 ```
 
@@ -102,15 +116,19 @@ The results provided by `toLocaleString` can be customized using the
 const bigint = 123456789123456789n;
 
 // request a currency format
-console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // 123.456.789.123.456.789,00 €
 
 // the Japanese yen doesn't use a minor unit
-console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  bigint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // ￥123,456,789,123,456,789
 
 // limit to three significant digits
-console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(bigint.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // 1,23,00,00,00,00,00,00,000
 ```
 

@@ -88,7 +88,7 @@ For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown
 
 ## Constructor
 
-- [`SharedArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer)
+- {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}}
   - : Creates a new `SharedArrayBuffer` object.
 
 ## Static properties
@@ -102,21 +102,21 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
 
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the array. This is established when the array is constructed and can only be changed using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method if the `SharedArrayBuffer` is growable.
-- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
-  - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
-- {{jsxref("SharedArrayBuffer.prototype.growable")}}
-  - : Read-only. Returns `true` if the `SharedArrayBuffer` can be grown, or `false` if not.
 - {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
   - : The constructor function that created the instance object. For `SharedArrayBuffer` instances, the initial value is the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} constructor.
+- {{jsxref("SharedArrayBuffer.prototype.growable")}}
+  - : Read-only. Returns `true` if the `SharedArrayBuffer` can be grown, or `false` if not.
+- {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
+  - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
 - `SharedArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
-- {{jsxref("SharedArrayBuffer.prototype.slice()")}}
-  - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 - {{jsxref("SharedArrayBuffer.prototype.grow()")}}
   - : Grows the `SharedArrayBuffer` to the specified size, in bytes.
+- {{jsxref("SharedArrayBuffer.prototype.slice()")}}
+  - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 ## Examples
 
@@ -157,7 +157,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)

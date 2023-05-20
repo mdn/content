@@ -1,6 +1,7 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
+page-type: mathml-element
 browser-compat: mathml.elements.math
 ---
 

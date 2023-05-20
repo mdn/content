@@ -209,7 +209,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to codepoints
+          >, where "X" is a letter from A–Z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>
@@ -253,7 +253,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       <td>
         Matches a character based on its
         <a
-          href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes"
+          href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape"
           >Unicode character properties</a
         >
         (to match just, for example, emoji characters, or Japanese
@@ -374,7 +374,6 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
   - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
   - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

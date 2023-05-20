@@ -2,8 +2,8 @@
 title: "Element: transitioncancel event"
 short-title: transitioncancel
 slug: Web/API/Element/transitioncancel_event
-browser-compat: api.Element.transitioncancel_event
 page-type: web-api-event
+browser-compat: api.Element.transitioncancel_event
 ---
 
 {{APIRef}}

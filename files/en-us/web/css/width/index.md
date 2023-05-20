@@ -40,7 +40,7 @@ width: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the width as an absolute value.
+  - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Defines the width as a percentage of the containing block's width.
 - `auto`

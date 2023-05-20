@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.format()`** method formats
-a date according to the locale and formatting options of this
-{{jsxref("Intl.DateTimeFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
 
