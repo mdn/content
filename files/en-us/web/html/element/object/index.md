@@ -126,6 +126,5 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## See also
 
-- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("param")}}
