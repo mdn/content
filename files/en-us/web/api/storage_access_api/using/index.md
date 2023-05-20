@@ -19,7 +19,8 @@ In the example below, we show how an embedded cross-site {{htmlelement("iframe")
 First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) to allow Storage Access API requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies:
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   …
@@ -31,12 +32,7 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 Now on to the code executed inside the embedded document. In this code:
 
 1. We first use feature detection (`if (document.hasStorageAccess === null) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
-2. If the API is supported, we call `document.hasStorageAccess()`.
-   3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
-   4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed).
-      5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
-      6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
-      7. If the permission state is `"denied"`, the user has denied our requests to access unpartitioned cookies, and our code cannot make use of them.
+2. If the API is supported, we call `document.hasStorageAccess()`. 3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away. 4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed). 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies. 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies. 7. If the permission state is `"denied"`, the user has denied our requests to access unpartitioned cookies, and our code cannot make use of them.
 
 ```js
 function doThingsWithCookies() {
@@ -56,7 +52,9 @@ async function handleCookieAccess() {
     } else {
       // Check whether unpartitioned cookie access has been granted
       // to another same-site embed
-      const permission = await navigator.permissions.query({ name: "storage-access" });
+      const permission = await navigator.permissions.query({
+        name: "storage-access",
+      });
 
       if (permission.state === "granted") {
         // If so, you can just call requestStorageAccess() without a user interaction,
@@ -69,11 +67,11 @@ async function handleCookieAccess() {
           try {
             await document.requestStorageAccess();
             doThingsWithCookies();
-          } catch(err) {
+          } catch (err) {
             // If there is an error obtaining storage access.
             console.error(`Error obtaining storage access: ${err}.
                           Please sign in.`);
-          };
+          }
         });
       } else if (permission.state === "denied") {
         // User has denied unpartitioned cookie access, so we'll

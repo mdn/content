@@ -2144,6 +2144,7 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportReceiveStream",
         "WebTransportError"
       ],
       "methods": [],

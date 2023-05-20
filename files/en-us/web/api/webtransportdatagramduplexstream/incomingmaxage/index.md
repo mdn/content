@@ -3,12 +3,10 @@ title: "WebTransportDatagramDuplexStream: incomingMaxAge property"
 short-title: incomingMaxAge
 slug: Web/API/WebTransportDatagramDuplexStream/incomingMaxAge
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.incomingMaxAge
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`incomingMaxAge`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the maximum age for incoming datagrams, in milliseconds.
 
