@@ -1,13 +1,7 @@
 ---
 title: "ARIA: dialog role"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
-tags:
-  - ARIA
-  - Accessibility
-  - ARIA role
-  - ARIA dialog
-  - Reference
-  - Web Development
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#dialog
   - https://w3c.github.io/aria-practices/#dialog_modal
@@ -143,7 +137,6 @@ Coming soon
 ## See also
 
 - [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - {{HTMLElement('dialog', 'The HTML <code>&lt;dialog&gt;</code> element')}}
 
 <section id="Quick_links">

@@ -1,19 +1,13 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
+page-type: javascript-class
 browser-compat: javascript.builtins.WeakMap
 ---
 
 {{JSRef}}
 
-A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
 `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
@@ -21,7 +15,7 @@ You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaS
 
 ## Description
 
-Keys of WeakMaps are of the type `Object` only. {{Glossary("Primitive", "Primitive data types")}} as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a `WeakMap` key).
+Keys of WeakMaps must be garbage-collectable. Most {{Glossary("Primitive", "primitive data types")}} can be arbitrarily created and don't have a lifetime, so they cannot be used as keys. Objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) can be used as keys because they are garbage-collectable.
 
 ### Why WeakMap?
 
@@ -46,6 +40,15 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 - {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
   - : Creates a new `WeakMap` object.
 
+## Instance properties
+
+These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` instances.
+
+- {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `WeakMap` instances, the initial value is the {{jsxref("WeakMap/WeakMap", "WeakMap")}} constructor.
+- `WeakMap.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
 - {{jsxref("WeakMap.prototype.delete()")}}
@@ -62,15 +65,15 @@ But because a `WeakMap` doesn't allow observing the liveness of its keys, its ke
 ### Using WeakMap
 
 ```js
-const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
-const o1 = {},
-      o2 = function() {},
-      o3 = window;
+const wm1 = new WeakMap();
+const wm2 = new WeakMap();
+const wm3 = new WeakMap();
+const o1 = {};
+const o2 = function () {};
+const o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!
@@ -95,23 +98,24 @@ wm1.has(o1); // false
 
 ```js
 class ClearableWeakMap {
+  #wm;
   constructor(init) {
-    this._wm = new WeakMap(init);
+    this.#wm = new WeakMap(init);
   }
   clear() {
-    this._wm = new WeakMap();
+    this.#wm = new WeakMap();
   }
   delete(k) {
-    return this._wm.delete(k);
+    return this.#wm.delete(k);
   }
   get(k) {
-    return this._wm.get(k);
+    return this.#wm.get(k);
   }
   has(k) {
-    return this._wm.has(k);
+    return this.#wm.has(k);
   }
   set(k, v) {
-    this._wm.set(k, v);
+    this.#wm.set(k, v);
     return this;
   }
 }
@@ -132,19 +136,19 @@ let Thing;
   const privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -171,7 +175,7 @@ class Thing {
   static #counter = 0;
   #hidden;
   constructor() {
-    this.someProperty = 'foo';
+    this.someProperty = "foo";
     this.#hidden = ++Thing.#counter;
   }
   showPublic() {
@@ -191,6 +195,68 @@ thing.showPublic();
 thing.showPrivate();
 // 1
 ```
+
+### Associating metadata
+
+A {{jsxref("WeakMap")}} can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modelled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+
+This use case can be extended to already-created objects. For example, on the web, we may want to associate extra data with a DOM element, which the DOM element may access later. A common approach is to attach the data as a property:
+
+```js
+const buttons = document.querySelectorAll(".button");
+buttons.forEach((button) => {
+  button.clicked = false;
+  button.addEventListener("click", () => {
+    button.clicked = true;
+    const currentButtons = [...document.querySelectorAll(".button")];
+    if (currentButtons.every((button) => button.clicked)) {
+      console.log("All buttons have been clicked!");
+    }
+  });
+});
+```
+
+This approach works, but it has a few pitfalls:
+
+- The `clicked` property is enumerable, so it will show up in [`Object.keys(button)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops, etc. This can be mitigated by using {{jsxref("Object.defineProperty()")}}, but that makes the code more verbose.
+- The `clicked` property is a normal string property, so it can be accessed and overwritten by other code. This can be mitigated by using a {{jsxref("Symbol")}} key, but the key would still be accessible via {{jsxref("Object.getOwnPropertySymbols()")}}.
+
+Using a `WeakMap` fixes these:
+
+```js
+const buttons = document.querySelectorAll(".button");
+const clicked = new WeakMap();
+buttons.forEach((button) => {
+  clicked.set(button, false);
+  button.addEventListener("click", () => {
+    clicked.set(button, true);
+    const currentButtons = [...document.querySelectorAll(".button")];
+    if (currentButtons.every((button) => clicked.get(button))) {
+      console.log("All buttons have been clicked!");
+    }
+  });
+});
+```
+
+Here, only code that has access to `clicked` knows the clicked state of each button, and external code can't modify the states. In addition, if any of the buttons gets removed from the DOM, the associated metadata will automatically get garbage-collected.
+
+### Caching
+
+You can associate objects passed to a function with the result of the function, so that if the same object is passed again, the cached result can be returned without re-executing the function. This is useful if the function is pure (i.e. it doesn't mutate any outside objects or cause other observable side effects).
+
+```js
+const cache = new WeakMap();
+function handleObjectValues(obj) {
+  if (cache.has(obj)) {
+    return cache.get(obj);
+  }
+  const result = Object.values(obj).map(heavyComputation);
+  cache.set(obj, result);
+  return result;
+}
+```
+
+This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) example for more details.
 
 ## Specifications
 

@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.join
 ---
 
@@ -59,11 +54,11 @@ the array four times: using the default separator, then a comma and a space, the
 and an empty string.
 
 ```js
-const a = ['Wind', 'Water', 'Fire'];
-a.join();      // 'Wind,Water,Fire'
-a.join(', ');  // 'Wind, Water, Fire'
-a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'
+const a = ["Wind", "Water", "Fire"];
+a.join(); // 'Wind,Water,Fire'
+a.join(", "); // 'Wind, Water, Fire'
+a.join(" + "); // 'Wind + Water + Fire'
+a.join(""); // 'WindWaterFire'
 ```
 
 ### Using join() on sparse arrays
@@ -72,7 +67,7 @@ a.join('');    // 'WindWaterFire'
 
 ```js
 console.log([1, , 3].join()); // '1,,3'
-console.log([1, undefined, 3].join()); // '1,,3' 
+console.log([1, undefined, 3].join()); // '1,,3'
 ```
 
 ### Calling join() on non-array objects
@@ -102,6 +97,9 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 
 ## See also
 
-- {{jsxref("String.prototype.split()")}}
+- [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

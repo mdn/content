@@ -1,22 +1,6 @@
 ---
 title: Fetching data from the server
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Article
-  - Beginner
-  - CodingScripting
-  - Fetch
-  - JSON
-  - JavaScript
-  - Learn
-  - Promises
-  - Server
-  - XHR
-  - XML
-  - XMLHttpRequest
-  - data
-  - request
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -90,10 +74,10 @@ To begin this example, make a local copy of [fetch-start.html](https://github.co
 Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to function named `updateDisplay()` as a parameter.
 
 ```js
-const verseChoose = document.querySelector('select');
-const poemDisplay = document.querySelector('pre');
+const verseChoose = document.querySelector("select");
+const poemDisplay = document.querySelector("pre");
 
-verseChoose.addEventListener('change', () => {
+verseChoose.addEventListener("change", () => {
   const verse = verseChoose.value;
   updateDisplay(verse);
 });
@@ -101,7 +85,7 @@ verseChoose.addEventListener('change', () => {
 
 Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function.
 
-```js
+```js-nolint
 function updateDisplay(verse) {
 
 }
@@ -109,10 +93,10 @@ function updateDisplay(verse) {
 
 We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.
 
-However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [string concatenation](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Add the following lines inside your `updateDisplay()` function:
+However, web servers tend to be case-sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the 'V' to lower case, remove the space, and add ".txt" on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals). Add the following lines inside your `updateDisplay()` function:
 
 ```js
-verse = verse.replace(' ', '').toLowerCase();
+verse = verse.replace(" ", "").toLowerCase();
 const url = `${verse}.txt`;
 ```
 
@@ -135,10 +119,14 @@ fetch(url)
   })
   // When response.text() has succeeded, the `then()` handler is called with
   // the text, and we copy it into the `poemDisplay` box.
-  .then((text) => poemDisplay.textContent = text)
+  .then((text) => {
+    poemDisplay.textContent = text;
+  })
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
-  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+  .catch((error) => {
+    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+  });
 ```
 
 There's quite a lot to unpack in here.
@@ -156,21 +144,21 @@ Finally, we chain a {{jsxref("Promise/catch", "catch()")}} handler at the end, t
 One problem with the example as it stands is that it won't show any of the poem when it first loads. To fix this, add the following two lines at the bottom of your code (just above the closing `</script>` tag) to load verse 1 by default, and make sure the {{htmlelement("select")}} element always shows the correct value:
 
 ```js
-updateDisplay('Verse 1');
-verseChoose.value = 'Verse 1';
+updateDisplay("Verse 1");
+verseChoose.value = "Verse 1";
 ```
 
 #### Serving your example from a server
 
 Modern browsers will not run HTTP requests if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
 
-To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
+To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 ### The can store
 
 In this example we have created a sample site called The Can Store — it's a fictional supermarket that only sells canned goods. You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/), and [see the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right-hand column.](can-store.png)
+![A fake e-commerce site showing search options in the left hand column, and product search results in the right-hand column.](can-store.png)
 
 By default, the site displays all the products, but you can use the form controls in the left-hand column to filter them by category, or search term, or both.
 
@@ -181,7 +169,7 @@ We will, however, explain the Fetch code.
 The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
-fetch('products.json')
+fetch("products.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -238,15 +226,14 @@ Sometimes, especially in older code, you'll see another API called [`XMLHttpRequ
 const request = new XMLHttpRequest();
 
 try {
-  request.open('GET', 'products.json');
+  request.open("GET", "products.json");
 
-  request.responseType = 'json';
+  request.responseType = "json";
 
-  request.addEventListener('load', () => initialize(request.response));
-  request.addEventListener('error', () => console.error('XHR error'));
+  request.addEventListener("load", () => initialize(request.response));
+  request.addEventListener("error", () => console.error("XHR error"));
 
   request.send();
-
 } catch (error) {
   console.error(`XHR error ${request.status}`);
 }
@@ -280,13 +267,3 @@ There are however a lot of different subjects discussed in this article, which h
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- **Fetching data from the server**
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

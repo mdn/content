@@ -1,14 +1,10 @@
 ---
-title: Document.clear()
+title: "Document: clear() method"
+short-title: clear()
 slug: Web/API/Document/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.clear
 ---
 

@@ -1,18 +1,13 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.buffer
 ---
 
 {{JSRef}}
 
-The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} referenced by a _TypedArray_ at construction time.
+The **`buffer`** accessor property of {{jsxref("TypedArray")}} instances returns the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by this typed array at construction time.
 
 {{EmbedInteractiveExample("pages/js/typedarray-buffer.html","shorter")}}
 
@@ -52,5 +47,5 @@ console.log(arr.buffer === buffer); // true
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

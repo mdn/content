@@ -1,16 +1,6 @@
 ---
 title: Video and Audio APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-tags:
-  - API
-  - Article
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -62,13 +52,13 @@ This creates a video player inside the browser like so:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is {{htmlattrxref("controls", "video")}}, which enables the default set of playback controls. If you don't specify this, you get no playback controls:
+You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Element/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
 This is not as immediately useful for video playback, but it does have advantages. One big issue with the native browser controls is that they are different in each browser — not very good for cross-browser support! Another big issue is that the native controls in most browsers aren't very keyboard-accessible.
 
-You can solve both these problems by hiding the native controls (by removing the `controls` attribute), and programming your own with HTML, CSS, and JavaScript. In the next section we'll look at the basic tools we have available to do this.
+You can solve both these problems by hiding the native controls (by removing the `controls` attribute), and programming your own with HTML, CSS, and JavaScript. In the next section, we'll look at the basic tools we have available to do this.
 
 ## The HTMLMediaElement API
 
@@ -171,7 +161,7 @@ button:before {
 
 First of all, at the top of the CSS we use a {{cssxref("@font-face")}} block to import a custom web font. This is an icon font — all the characters of the alphabet equate to common icons you might want to use in an application.
 
-Next we use generated content to display an icon on each button:
+Next, we use generated content to display an icon on each button:
 
 - We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.
 - We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
@@ -209,7 +199,7 @@ Last but not least, let's look at the CSS for the timer:
 }
 ```
 
-- We set the outer `.timer` `<div>` to have flex: 5, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
+- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
 - The inner `<div>` is absolutely positioned to sit directly on top of the outer `<div>`. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.
 - The `<span>` is also absolutely positioned to sit near the left-hand side of the timer bar.
 - We also give our inner `<div>` and `<span>` the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner `<div>` below that. This way, we make sure we can see all the information — one box is not obscuring another.
@@ -222,17 +212,17 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
 2. At the top of this file, insert the following code:
 
    ```js
-   const media = document.querySelector('video');
-   const controls = document.querySelector('.controls');
+   const media = document.querySelector("video");
+   const controls = document.querySelector(".controls");
 
-   const play = document.querySelector('.play');
-   const stop = document.querySelector('.stop');
-   const rwd = document.querySelector('.rwd');
-   const fwd = document.querySelector('.fwd');
+   const play = document.querySelector(".play");
+   const stop = document.querySelector(".stop");
+   const rwd = document.querySelector(".rwd");
+   const fwd = document.querySelector(".fwd");
 
-   const timerWrapper = document.querySelector('.timer');
-   const timer = document.querySelector('.timer span');
-   const timerBar = document.querySelector('.timer div');
+   const timerWrapper = document.querySelector(".timer");
+   const timer = document.querySelector(".timer span");
+   const timerBar = document.querySelector(".timer div");
    ```
 
    Here we are creating constants to hold references to all the objects we want to manipulate. We have three groups:
@@ -244,8 +234,8 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
 3. Next, insert the following at the bottom of your code:
 
    ```js
-   media.removeAttribute('controls');
-   controls.style.visibility = 'visible';
+   media.removeAttribute("controls");
+   controls.style.visibility = "visible";
    ```
 
    These two lines remove the default browser controls from the video, and make the custom controls visible.
@@ -257,7 +247,7 @@ Let's implement probably the most important control — the play/pause button.
 1. First of all, add the following to the bottom of your code, so that the `playPauseMedia()` function is invoked when the play button is clicked:
 
    ```js
-   play.addEventListener('click', playPauseMedia);
+   play.addEventListener("click", playPauseMedia);
    ```
 
 2. Now to define `playPauseMedia()` — add the following, again at the bottom of your code:
@@ -265,10 +255,10 @@ Let's implement probably the most important control — the play/pause button.
    ```js
    function playPauseMedia() {
      if (media.paused) {
-       play.setAttribute('data-icon','u');
+       play.setAttribute("data-icon", "u");
        media.play();
      } else {
-       play.setAttribute('data-icon','P');
+       play.setAttribute("data-icon", "P");
        media.pause();
      }
    }
@@ -283,8 +273,8 @@ Let's implement probably the most important control — the play/pause button.
 1. Next, let's add functionality to handle stopping the video. Add the following [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous one you added:
 
    ```js
-   stop.addEventListener('click', stopMedia);
-   media.addEventListener('ended', stopMedia);
+   stop.addEventListener("click", stopMedia);
+   media.addEventListener("ended", stopMedia);
    ```
 
    The {{domxref("Element/click_event", "click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{domxref("HTMLMediaElement/ended_event", "ended")}} event firing, so we also set up a listener to run the function on that event firing too.
@@ -295,7 +285,7 @@ Let's implement probably the most important control — the play/pause button.
    function stopMedia() {
      media.pause();
      media.currentTime = 0;
-     play.setAttribute('data-icon','P');
+     play.setAttribute("data-icon", "P");
    }
    ```
 
@@ -305,13 +295,13 @@ Let's implement probably the most important control — the play/pause button.
 
 #### Seeking back and forth
 
-There are many ways that you can implement rewind and fast forward functionality; here we are showing you a relatively complex way of doing it, which doesn't break when the different buttons are pressed in an unexpected order.
+There are many ways that you can implement rewind and fast-forward functionality; here we are showing you a relatively complex way of doing it, which doesn't break when the different buttons are pressed in an unexpected order.
 
 1. First of all, add the following two [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous ones:
 
    ```js
-   rwd.addEventListener('click', mediaBackward);
-   fwd.addEventListener('click', mediaForward);
+   rwd.addEventListener("click", mediaBackward);
+   fwd.addEventListener("click", mediaForward);
    ```
 
 2. Now on to the event handler functions — add the following code below your previous functions to define `mediaBackward()` and `mediaForward()`:
@@ -322,14 +312,14 @@ There are many ways that you can implement rewind and fast forward functionality
 
    function mediaBackward() {
      clearInterval(intervalFwd);
-     fwd.classList.remove('active');
+     fwd.classList.remove("active");
 
-     if (rwd.classList.contains('active')) {
-       rwd.classList.remove('active');
+     if (rwd.classList.contains("active")) {
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        media.play();
      } else {
-       rwd.classList.add('active');
+       rwd.classList.add("active");
        media.pause();
        intervalRwd = setInterval(windBackward, 200);
      }
@@ -337,21 +327,21 @@ There are many ways that you can implement rewind and fast forward functionality
 
    function mediaForward() {
      clearInterval(intervalRwd);
-     rwd.classList.remove('active');
+     rwd.classList.remove("active");
 
-     if (fwd.classList.contains('active')) {
-       fwd.classList.remove('active');
+     if (fwd.classList.contains("active")) {
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        media.play();
      } else {
-       fwd.classList.add('active');
+       fwd.classList.add("active");
        media.pause();
        intervalFwd = setInterval(windForward, 200);
      }
    }
    ```
 
-   You'll notice that first we initialize two variables — `intervalFwd` and `intervalRwd` — you'll find out what they are for later on.
+   You'll notice that first, we initialize two variables — `intervalFwd` and `intervalRwd` — you'll find out what they are for later on.
 
    Let's step through `mediaBackward()` (the functionality for `mediaForward()` is exactly the same, but in reverse):
 
@@ -365,7 +355,7 @@ There are many ways that you can implement rewind and fast forward functionality
    ```js
    function windBackward() {
      if (media.currentTime <= 3) {
-       rwd.classList.remove('active');
+       rwd.classList.remove("active");
        clearInterval(intervalRwd);
        stopMedia();
      } else {
@@ -375,7 +365,7 @@ There are many ways that you can implement rewind and fast forward functionality
 
    function windForward() {
      if (media.currentTime >= media.duration - 3) {
-       fwd.classList.remove('active');
+       fwd.classList.remove("active");
        clearInterval(intervalFwd);
        stopMedia();
      } else {
@@ -391,12 +381,12 @@ There are many ways that you can implement rewind and fast forward functionality
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time-elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 
 ```js
-media.addEventListener('timeupdate', setTime);
+media.addEventListener("timeupdate", setTime);
 ```
 
 Now to define the `setTime()` function. Add the following at the bottom of your file:
@@ -406,13 +396,14 @@ function setTime() {
   const minutes = Math.floor(media.currentTime / 60);
   const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  const minuteValue = minutes.toString().padStart(2, '0');
-  const secondValue = seconds.toString().padStart(2, '0');
+  const minuteValue = minutes.toString().padStart(2, "0");
+  const secondValue = seconds.toString().padStart(2, "0");
 
   const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  const barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
   timerBar.style.width = `${barLength}px`;
 }
 ```
@@ -433,8 +424,8 @@ There is one problem left to fix. If the play/pause or stop buttons are pressed 
 First of all, add the following lines inside the `stopMedia()` function — anywhere will do:
 
 ```js
-rwd.classList.remove('active');
-fwd.classList.remove('active');
+rwd.classList.remove("active");
+fwd.classList.remove("active");
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
 ```
@@ -456,9 +447,9 @@ Here are some suggestions for ways you could enhance the existing example we've 
 3. Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scroller — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
 
    ```js
-   document.onclick = function(e) {
+   document.onclick = function (e) {
      console.log(e.x, e.y);
-   }
+   };
    ```
 
 ## See also
@@ -471,13 +462,3 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

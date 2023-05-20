@@ -1,8 +1,7 @@
 ---
 title: Gamut
 slug: Glossary/Gamut
-tags:
-  - Color
+page-type: glossary-definition
 ---
 
 A color **gamut** is a subset of colors, usually representing the colors that a display or a printing device can represent.

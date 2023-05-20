@@ -2,17 +2,6 @@
 title: AudioTrackList
 slug: Web/API/AudioTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - list
 browser-compat: api.AudioTrackList
 ---
 

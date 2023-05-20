@@ -1,11 +1,6 @@
 ---
 title: Select
 slug: WebAssembly/Reference/Control_flow/Select
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Control flow
 ---
 
 {{WebAssemblySidebar}}
@@ -26,7 +21,7 @@ i32.const 0
 select
 ```
 
-```
+```plain
 f32.const nan
 f32.const -54.1
 

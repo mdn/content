@@ -1,9 +1,6 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-tags:
-  - EXSLT
-  - Landing
 ---
 
 EXSLT is a set of extensions to [XSLT](/en-US/docs/Web/XSLT). There are a number of modules; those that are supported by Firefox are listed below:
@@ -84,7 +81,7 @@ The EXSLT Strings package provides functions that allow the manipulation of stri
 
 ## See also
 
-- [EXSLT web site](http://exslt.org/)
+- [EXSLT website](http://exslt.org/)
 
 <section id="Quick_links">
   <ol>

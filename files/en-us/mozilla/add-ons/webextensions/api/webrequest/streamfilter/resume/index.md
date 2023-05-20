@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.resume()
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.resume
 ---
 

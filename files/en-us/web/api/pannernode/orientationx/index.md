@@ -1,13 +1,8 @@
 ---
-title: PannerNode.orientationX
+title: "PannerNode: orientationX property"
+short-title: orientationX
 slug: Web/API/PannerNode/orientationX
 page-type: web-api-instance-property
-tags:
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationX
 browser-compat: api.PannerNode.orientationX
 ---
 
@@ -82,10 +77,10 @@ Now we can create our {{ domxref("AudioContext") }}, an oscillator and a {{
 const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
-osc.type = 'sawtooth';
+osc.type = "sawtooth";
 
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 ```
 
 Next, we set up the _cone_ of our spatialized sound, determining the area in
@@ -134,8 +129,7 @@ panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
 Finally, let's connect all our nodes and start the oscillator!
 
 ```js
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

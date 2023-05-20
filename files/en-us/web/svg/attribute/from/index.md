@@ -1,9 +1,7 @@
 ---
 title: from
 slug: Web/SVG/Attribute/From
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.animate.from
 ---
 
@@ -16,7 +14,6 @@ When used with the {{SVGAttr("to")}} attribute, the animation will change the mo
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 

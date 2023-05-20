@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.validity
+title: "ElementInternals: validity property"
+short-title: validity
 slug: Web/API/ElementInternals/validity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - validity
-  - ElementInternals
 browser-compat: api.ElementInternals.validity
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`validity`** read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 

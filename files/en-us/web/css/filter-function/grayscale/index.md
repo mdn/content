@@ -2,12 +2,6 @@
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
 browser-compat: css.types.filter-function.grayscale
 ---
 
@@ -26,7 +20,7 @@ grayscale(amount)
 ### Parameters
 
 - `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. Default value when omitted is `1`. The initial value for {{Glossary("interpolation")}} is `0`.
+  - : Amount of the input image that is converted to grayscale. It is specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` changes the input completely to grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect. The default value when omitted is `0`. The initial value used for {{Glossary("interpolation")}} is `0`.
 
 ## Examples
 
@@ -48,7 +42,8 @@ grayscale(100%)  /* Completely grayscale */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}

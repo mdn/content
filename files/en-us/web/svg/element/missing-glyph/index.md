@@ -1,12 +1,9 @@
 ---
 title: <missing-glyph>
 slug: Web/SVG/Element/missing-glyph
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.missing-glyph
 ---
 

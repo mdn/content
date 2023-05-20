@@ -2,11 +2,6 @@
 title: Grid layout and accessibility
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 page-type: guide
-tags:
-  - Accessibility
-  - CSS
-  - CSS Grids
-  - Guide
 ---
 
 {{CSSRef}}

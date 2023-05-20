@@ -1,25 +1,27 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor
 ---
 
 {{JSRef}}
 
-The **`constructor`** property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
+The **`constructor`** data property of an {{jsxref("Object")}} instance returns a reference to the constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
 
 > **Note:** This is a property of JavaScript objects. For the `constructor` method in classes, see [its own reference page](/en-US/docs/Web/JavaScript/Reference/Classes/constructor).
 
+## Value
+
+A reference to the constructor function that created the instance object.
+
 {{js_property_attributes(1, 0, 1)}}
+
+> **Note:** This property is created by default on the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property of every constructor function and is inherited by all objects created by that constructor.
 
 ## Description
 
-Any object (with the exception of [`null` prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#object_with_null_prototype)) will have a `constructor` property on its `[[Prototype]]`. Objects created with literals will also have a `constructor` property that points to the constructor type for that object — for example, array literals create {{jsxref("Array")}} objects, and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) create plain objects.
+Any object (with the exception of [`null` prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) will have a `constructor` property on its `[[Prototype]]`. Objects created with literals will also have a `constructor` property that points to the constructor type for that object — for example, array literals create {{jsxref("Array")}} objects, and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) create plain objects.
 
 ```js
 const o1 = {};
@@ -305,6 +307,6 @@ Again, using `Object.setPrototypeOf()` may have adverse performance effects, so 
 
 ## See also
 
-- {{jsxref("statements/class","Class declaration","",1)}}
-- {{jsxref("Classes/constructor","Class constructor","",1)}}
-- Glossary: {{Glossary("constructor", "", 1)}}
+- {{jsxref("statements/class", "Class declaration")}}
+- {{jsxref("Classes/constructor", "Class constructor")}}
+- Glossary: {{Glossary("constructor")}}

@@ -1,10 +1,7 @@
 ---
 title: filter
 slug: Web/SVG/Attribute/filter
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Filter
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.filter
 ---
 

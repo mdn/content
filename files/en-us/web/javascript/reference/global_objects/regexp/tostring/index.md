@@ -1,13 +1,7 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.toString
 ---
 
@@ -41,10 +35,10 @@ The following example displays the string value of a {{jsxref("RegExp")}} object
 
 ```js
 const myExp = new RegExp("a+b+c");
-console.log(myExp.toString()); // logs '/a+b+c/'
+console.log(myExp.toString()); // '/a+b+c/'
 
 const foo = new RegExp("bar", "g");
-console.log(foo.toString()); // logs '/bar/g'
+console.log(foo.toString()); // '/bar/g'
 ```
 
 ### Empty regular expressions and escaping

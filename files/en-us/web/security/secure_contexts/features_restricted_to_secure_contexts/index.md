@@ -1,16 +1,9 @@
 ---
 title: Features restricted to secure contexts
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
-tags:
-  - API
-  - Browsers
-  - Reference
-  - Secure contexts
-  - Security
-  - Web
-  - features
-  - support
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 
@@ -38,6 +31,7 @@ This section lists APIs that specifications make available only in secure contex
 - [Web Bluetooth](/en-US/docs/Web/API/Web_Bluetooth_API)
 - [Web MIDI](/en-US/docs/Web/API/Web_MIDI_API)
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
 
 In addition, the following methods require a secure context (even if the associated API does not):
@@ -49,5 +43,3 @@ In addition, the following methods require a secure context (even if the associa
 
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
 - ["secure context" query on Chrome Platform Status](https://chromestatus.com/features#secure%20context)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

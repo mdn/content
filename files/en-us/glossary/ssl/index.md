@@ -1,11 +1,7 @@
 ---
 title: Secure Sockets Layer (SSL)
 slug: Glossary/SSL
-tags:
-  - SSL
-  - Security
-  - TLS
-  - Web Performance
+page-type: glossary-definition
 ---
 
 Secure Sockets Layer, or SSL, was the old standard security technology for creating an encrypted network link between a server and client, ensuring all data passed is private and secure. The current version of SSL is version 3.0, released by Netscape in 1996, and has been superseded by the {{Glossary("TLS", "Transport Layer Security (TLS)")}} protocol.

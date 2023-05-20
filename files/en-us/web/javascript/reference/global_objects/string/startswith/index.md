@@ -1,14 +1,7 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.startsWith
 ---
 
@@ -28,18 +21,18 @@ startsWith(searchString, position)
 ### Parameters
 
 - `searchString`
-  - : The characters to be searched for at the start of this string. Cannot be a regex.
+  - : The characters to be searched for at the start of this string. Cannot [be a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes). All values that are not regexes are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `startsWith()` to search for the string `"undefined"`, which is rarely what you want.
 - `position` {{optional_inline}}
   - : The start position at which `searchString` is expected to be found (the index of `searchString`'s first character). Defaults to `0`.
 
 ### Return value
 
-**`true`** if the given characters are found at the beginning of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the beginning of the string, including when `searchString` is an empty string; otherwise, **`false`**.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
+  - : Thrown if `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 

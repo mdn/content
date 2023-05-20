@@ -1,18 +1,7 @@
 ---
 title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Guide
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - "l10n:priority"
+page-type: landing-page
 ---
 
 {{CSSRef}}
@@ -66,7 +55,7 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
 - CSS key concepts:
 
   - The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
   - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - The [containing block](/en-US/docs/Web/CSS/Containing_block)
@@ -91,7 +80,7 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## Meta bugs
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## See also
 

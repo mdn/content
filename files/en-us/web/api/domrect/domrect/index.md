@@ -1,14 +1,8 @@
 ---
-title: DOMRect()
+title: "DOMRect: DOMRect() constructor"
+short-title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Reference
-  - DOMRect
-  - Geometry
-  - Reference
 browser-compat: api.DOMRect.DOMRect
 ---
 

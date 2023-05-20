@@ -2,17 +2,6 @@
 title: CSS data types
 slug: Web/CSS/CSS_Types
 page-type: guide
-tags:
-  - CSS
-  - CSS Data Type
-  - Guide
-  - Index
-  - Overview
-  - Reference
-  - Syntax
-  - Types
-  - data types
-  - list
 spec-urls: https://drafts.csswg.org/css-values/
 ---
 
@@ -102,12 +91,14 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-3/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+[The CSS Color Specification](https://www.w3.org/TR/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+- {{cssxref("&lt;hue&gt;")}}
+  - : Specifies the `<angle>`, with a unit identifier of `deg`, `grad`, `rad`, or `turn`, or unitless `<number>` interpreted as `deg`, of the {{glossary("color wheel")}} specific to the `<absolute-color-functions>` of which it is a component.
 
 ## Images
 

@@ -2,18 +2,6 @@
 title: The WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 page-type: web-api-overview
-tags:
-  - API
-  - Client
-  - Communication
-  - Overview
-  - Server
-  - Two-Way
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-  - data
-  - interactive
 browser-compat: api.WebSocket
 ---
 
@@ -54,6 +42,7 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [ws](https://github.com/websockets/ws): a popular WebSocket client & server library for [Node.js](https://nodejs.org/).
 - [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).
 - [cowboy](https://github.com/ninenines/cowboy): Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.
+- [ZeroMQ](https://zeromq.org): ZeroMQ is embeddable networking library that carries messages across in-process, IPC, TCP, UDP, TIPC, multicast and WebSocket.
 - [WebSocket King](https://websocketking.com): A client tool to help develop, test and work with WebSocket servers.
 - [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websockets wss\:// or ws\://and normal sockets over ssl:// ,tcp\://
 - [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).

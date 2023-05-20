@@ -2,14 +2,6 @@
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
 ---
 
 {{CSSRef}}
@@ -56,7 +48,7 @@ Shorthands handling properties related to edges of a box, like {{cssxref("border
 
 - **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge: ![Box edges with three-value syntax](border3.png)
 
-- **4-value syntax:** border-width: 1em 2em 3em 4em — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
+- **4-value syntax:** `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
 
 #### Corners of a box
 
@@ -103,7 +95,7 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-This 5 statements can be shortened to the following:
+These 5 statements can be shortened to the following:
 
 ```css
 font: italic bold 0.8em/1.2 Arial, sans-serif;
@@ -151,6 +143,25 @@ Margin shorthand rules for one, two, three and four value declarations are:
 - When **three** values are specified, the first margin applies to the **top**, the second to the **left and right**, the third to the **bottom**.
 - When **four** values are specified, the margins apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
+## Position properties
+
+With position, the shorthand versions of top, right, bottom and left can be simplified into one declaration. For example, consider the following CSS:
+
+```css
+top: 0;
+right: 20px;
+bottom: 0;
+left: 20px;
+```
+
+It can be simplified as:
+
+```css
+inset: 0 20px 0 20px;
+```
+
+Just like margins and paddings, the inset values are ordered clockwise - top, right, bottom, then left (TRBL).
+
 ## The universal shorthand property
 
 CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
@@ -164,7 +175,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
@@ -206,6 +217,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("grid-column")}}
   - {{cssxref("grid-row")}}
   - {{cssxref("grid-template")}}
+  - {{cssxref("inset")}}
   - {{cssxref("list-style")}}
   - {{cssxref("margin")}}
   - {{cssxref("mask")}}

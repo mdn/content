@@ -1,11 +1,7 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
 ---
 
@@ -33,9 +29,9 @@ The {{jsxref("Array")}} object overrides the `toString` method of {{jsxref("Obje
 ```js
 const arr = [];
 arr.join = 1; // re-assign `join` with a non-function
-console.log(arr.toString()); // Logs [object Array]
+console.log(arr.toString()); // [object Array]
 
-console.log(Array.prototype.toString.call({ join: () => 1 }));  // Logs 1
+console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
 ```
 
 JavaScript calls the `toString` method automatically when an array is to be represented as a text value or when an array is referred to in a string concatenation.
@@ -45,10 +41,9 @@ JavaScript calls the `toString` method automatically when an array is to be repr
 ### Using toString()
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, "a", "1a"];
 
-console.log(array1.toString());
-// expected output: "1,2,a,1a"
+console.log(array1.toString()); // "1,2,a,1a"
 ```
 
 ### Using toString() on sparse arrays
@@ -61,17 +56,15 @@ console.log([1, , 3].toString()); // '1,,3'
 
 ### Calling toString() on non-array objects
 
-Same as `join()`, `toString()` is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods) and only reads the `length` property of `this` and then accesses each integer index.
+`toString()` is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It expects `this` to have a `join()` method; or, failing that, uses `Object.prototype.toString()` instead.
 
 ```js
-const arrayLike = {
-  length: 3,
-  0: 1,
-  1: 2,
-  2: 3,
-};
-console.log(Array.prototype.toString.call(arrayLike));
-// 1,2,3
+console.log(Array.prototype.toString.call({ join: () => 1 }));
+// 1; a number
+console.log(Array.prototype.toString.call({ join: () => undefined }));
+// undefined
+console.log(Array.prototype.toString.call({ join: "not function" }));
+// "[object Object]"
 ```
 
 ## Specifications
@@ -84,4 +77,9 @@ console.log(Array.prototype.toString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
+- {{jsxref("String.prototype.toString()")}}

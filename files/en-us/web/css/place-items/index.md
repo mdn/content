@@ -2,13 +2,6 @@
 title: place-items
 slug: Web/CSS/place-items
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.place-items
 ---
 
@@ -40,8 +33,6 @@ place-items: self-start legacy;
 place-items: self-end normal;
 place-items: flex-start legacy;
 place-items: flex-end normal;
-place-items: left legacy;
-place-items: right normal;
 
 /* Baseline alignment */
 place-items: baseline normal;
@@ -164,10 +155,10 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById('values');
-const container = document.getElementById('container');
+const values = document.getElementById("values");
+const container = document.getElementById("container");
 
-values.addEventListener('change', (evt) => {
+values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -276,10 +267,10 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById('gridvalues');
-const container = document.getElementById('gridcontainer');
+const values = document.getElementById("gridvalues");
+const container = document.getElementById("gridcontainer");
 
-values.addEventListener('change', (evt) => {
+values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
 });
 ```

@@ -1,14 +1,8 @@
 ---
-title: Window.location
+title: "Window: location property"
+short-title: location
 slug: Web/API/Window/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.location
 ---
 
@@ -38,7 +32,7 @@ A {{domxref("Location")}} object.
 alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window/location"
 ```
 
-### Example #1: Navigate to a new page
+### Example 1: Navigate to a new page
 
 Whenever a new value is assigned to the location object, a document will be loaded
 using the URL as if `location.assign()` had been called with the modified
@@ -51,13 +45,13 @@ location.assign("http://www.mozilla.org"); // or
 location = "http://www.mozilla.org";
 ```
 
-### Example #2: Reloading the current page
+### Example 2: Reloading the current page
 
 ```js
 location.reload();
 ```
 
-### Example #3
+### Example 3
 
 Consider the following example, which will reload the page by using the [`replace()`](/en-US/docs/Web/API/Location/replace) method to
 insert the value of `location.pathname` into the hash:
@@ -68,13 +62,18 @@ function reloadPageWithHash() {
 }
 ```
 
-### Example #4: Display the properties of the current URL in an alert dialog
+### Example 4: Display the properties of the current URL in an alert dialog
 
 ```js
 function showLoc() {
-  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  const logLines = [
+    "Property (Typeof): Value",
+    `location (${typeof location}): ${location}`,
+  ];
   for (const prop in location) {
-    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
+    logLines.push(
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`
+    );
   }
   alert(logLines.join("\n"));
 }
@@ -82,7 +81,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-### Example #5: Send a string of data to the server by modifying the `search` property
+### Example 5: Send a string of data to the server by modifying the `search` property
 
 ```js
 function sendData(data) {
@@ -95,7 +94,7 @@ function sendData(data) {
 The current URL with "?Some%20data" appended is sent to the server (if no action is
 taken by the server, the current document is reloaded with the modified search string).
 
-### Example #6: Using bookmarks without changing the `hash` property
+### Example 6: Using bookmarks without changing the `hash` property
 
 ```html
 <!DOCTYPE html>
@@ -402,8 +401,12 @@ const showBookmark = (() => {
       return;
     }
     _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    document.documentElement.scrollTop = Math.round(
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames
+    );
+    document.documentElement.scrollLeft = Math.round(
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames
+    );
     if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }

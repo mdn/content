@@ -2,13 +2,6 @@
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
 spec-urls:
   - https://html.spec.whatwg.org/multipage/#pseudo-classes
   - https://drafts.csswg.org/selectors/
@@ -86,9 +79,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir()")}}
+- {{CSSxRef(":dir", ":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang()")}}
+- {{CSSxRef(":lang", ":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes
@@ -176,14 +169,14 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 ## Functional pseudo-classes
 
-These pseudo-classes accept a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
+These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list#selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
 
 - [`:is()`](/en-US/docs/Web/CSS/:is)
-  - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided.
+  - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
 - [`:not()`](/en-US/docs/Web/CSS/:not)
   - : The negation, or matches-none, pseudo-class represents any element that is not represented by its argument.
 - [`:where()`](/en-US/docs/Web/CSS/:where)
-  - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight.
+  - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight. The list is forgiving.
 - [`:has()`](/en-US/docs/Web/CSS/:has)
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
 

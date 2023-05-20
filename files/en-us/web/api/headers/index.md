@@ -2,13 +2,6 @@
 title: Headers
 slug: Web/API/Headers
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Headers
-  - Interface
-  - Reference
 browser-compat: api.Headers
 ---
 
@@ -18,7 +11,7 @@ The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) al
 
 A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
 
-For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 A Headers object also has an associated guard, which takes a value of `immutable`, `request`, `request-no-cors`, `response`, or `none`. This affects whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods will mutate the header. For more information see {{Glossary("Guard")}}.
 
@@ -45,6 +38,8 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
   - : Executes a provided function once for each key/value pair in this `Headers` object.
 - {{domxref("Headers.get()")}}
   - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
+- {{domxref("Headers.getSetCookie()")}}
+  - : Returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response.
 - {{domxref("Headers.has()")}}
   - : Returns a boolean stating whether a `Headers` object contains a certain header.
 - {{domxref("Headers.keys()")}}
@@ -67,23 +62,21 @@ In the following snippet, we create a new header using the `Headers()` construct
 ```js
 const myHeaders = new Headers();
 
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
 ```js
 let myHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // or, using an array of arrays:
-myHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+myHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 ## Specifications

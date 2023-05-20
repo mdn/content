@@ -1,13 +1,8 @@
 ---
-title: TextTrackCue.id
+title: "TextTrackCue: id property"
+short-title: id
 slug: Web/API/TextTrackCue/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - id
-  - TextTrackCue
 browser-compat: api.TextTrackCue.id
 ---
 
@@ -24,11 +19,11 @@ A string containing the ID of this cue.
 In the following example a new {{domxref("VTTCue")}} (which inherits from `TextTrackCue`) is created. The `id` property is then set to "first", before the cue is added.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
 cue1.id = "first";
 track.addCue(cue1);
 ```

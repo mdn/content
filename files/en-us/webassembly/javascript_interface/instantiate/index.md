@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - instantiate
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 
@@ -57,11 +49,8 @@ WebAssembly.instantiate(bufferSource, importObject);
 A `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
-- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the
-  compiled WebAssembly module. This `Module` can be instantiated again,
-  shared via {{domxref("Worker.postMessage", "postMessage()")}} or [cached in IndexedDB](/en-US/docs/WebAssembly/Caching_modules).
-- `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all
-  the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/WebAssembly/Caching_modules).
+- `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
 
@@ -106,7 +95,7 @@ A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly
 ### First overload example
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) function, importing a
+module using the `WebAssembly.instantiate()` function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 
@@ -148,7 +137,7 @@ In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
 receive the module from the main thread. When the module is received, we create an
-instance from it using the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) method and invoke an
+instance from it using the `WebAssembly.instantiate()` method and invoke an
 exported function from inside it.
 
 ```js

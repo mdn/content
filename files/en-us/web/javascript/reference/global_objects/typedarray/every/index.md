@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.every
 ---
 
@@ -24,39 +17,22 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 ## Syntax
 
 ```js-nolint
-// Arrow function
-every((element) => { /* ... */ } )
-every((element, index) => { /* ... */ } )
-every((element, index, array) => { /* ... */ } )
-
-// Callback function
 every(callbackFn)
 every(callbackFn, thisArg)
-
-// Inline callback function
-every(function(element) { /* ... */ })
-every(function(element, index) { /* ... */ })
-every(function(element, index, array){ /* ... */ })
-every(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to test for each element.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the typed array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the element passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the typed array.
     - `index`
       - : The index of the current element being processed in the typed array.
     - `array`
-      - : The typed array `every` was called upon.
-
-- `thisArg` {{Optional_inline}}
-  - : A value to use as `this` when executing `callbackFn`.
+      - : The typed array `every()` was called upon.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 

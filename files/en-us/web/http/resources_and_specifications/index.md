@@ -1,9 +1,7 @@
 ---
 title: HTTP resources and specifications
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -16,7 +14,7 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | {{rfc(9111)}}                                                                              | HTTP Caching                                                                                                                                                                                                                                          | Internet Standard        |
 | {{rfc(9112)}}                                                                              | HTTP/1.1                                                                                                                                                                                                                                              | Internet Standard        |
 | {{rfc(9113)}}                                                                              | HTTP/2                                                                                                                                                                                                                                                | Proposed Standard        |
-| {{rfc(9114)}}                                                                              | HTTP/3                                                                                                                                                                                                                                                | Proposed Standard       |
+| {{rfc(9114)}}                                                                              | HTTP/3                                                                                                                                                                                                                                                | Proposed Standard        |
 | {{rfc(5861)}}                                                                              | HTTP Cache-Control Extensions for Stale Content                                                                                                                                                                                                       | Informational            |
 | {{rfc(8246)}}                                                                              | HTTP Immutable Responses                                                                                                                                                                                                                              | Proposed Standard        |
 | {{rfc(6265)}}                                                                              | HTTP State Management Mechanism _Defines Cookies_                                                                                                                                                                                                     | Proposed Standard        |

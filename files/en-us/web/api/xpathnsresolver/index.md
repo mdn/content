@@ -2,15 +2,6 @@
 title: XPathNSResolver
 slug: Web/API/XPathNSResolver
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Interface
-  - Reference
-  - XML
-  - XPath
-  - XPathNSResolver
 browser-compat: api.XPathNSResolver
 ---
 

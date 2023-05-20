@@ -2,15 +2,6 @@
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Reference
-  - Video
-  - Web
-  - WebRTC
 browser-compat: api.RTCSessionDescription
 ---
 

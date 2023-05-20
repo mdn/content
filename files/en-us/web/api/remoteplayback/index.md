@@ -2,11 +2,6 @@
 title: RemotePlayback
 slug: Web/API/RemotePlayback
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - RemotePlayback
 browser-compat: api.RemotePlayback
 ---
 

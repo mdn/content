@@ -1,11 +1,6 @@
 ---
 title: Script timeout
 slug: Web/WebDriver/Errors/ScriptTimeout
-tags:
-  - Error
-  - Reference
-  - Script timeout
-  - WebDriver
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

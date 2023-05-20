@@ -1,10 +1,7 @@
 ---
 title: <feDisplacementMap>
 slug: Web/SVG/Element/feDisplacementMap
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feDisplacementMap
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: Hypertext
 slug: Glossary/Hypertext
-tags:
-  - Web
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 Hypertext is text that contains links to other texts, as opposed to a single linear flow like in a novel.

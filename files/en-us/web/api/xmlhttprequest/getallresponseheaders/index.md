@@ -1,19 +1,8 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch Headers
-  - Get Headers
-  - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 
@@ -82,7 +71,6 @@ request.send();
 
 request.onreadystatechange = () => {
   if (request.readyState === this.HEADERS_RECEIVED) {
-
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
 
@@ -93,13 +81,13 @@ request.onreadystatechange = () => {
     // Create a map of header names to values
     const headerMap = {};
     arr.forEach((line) => {
-      const parts = line.split(': ');
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 Once this is done, you can, for example:

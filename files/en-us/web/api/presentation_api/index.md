@@ -2,12 +2,8 @@
 title: Presentation API
 slug: Web/API/Presentation_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - NeedsContent
-  - Presentation API
-  - Reference
+status:
+  - experimental
 browser-compat: api.Presentation
 ---
 
@@ -15,7 +11,7 @@ browser-compat: api.Presentation
 
 The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions. Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using [DLNA](https://www.dlna.org/), [Chromecast](https://developers.google.com/cast/), [AirPlay](https://developer.apple.com/airplay/), or [Miracast](https://www.wi-fi.org/discover-wi-fi/miracast).
 
-![](presentation_mode_illustration.png)
+![1-UA mode loaded the Controlling and Presenting pages together before outputting to displays. 2-UA mode loaded them separately using the Presentation Control Protocol.](presentation_mode_illustration.png)
 
 In general, a web page uses the Presentation Controller API to specify the web content to be rendered on presentation device and initiate the presentation session. With Presentation Receiver API, the presenting web content obtains the session status. With providing both the controller page and the receiver one with a messaged-based channel, a Web developer can implement the interaction between these two pages.
 
@@ -152,7 +148,7 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 
 ### Monitor connection's state and exchange data
 
-In `presentation.html`:
+In `controller.html`:
 
 ```html
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
@@ -181,7 +177,7 @@ In `presentation.html`:
       connection !== newConnection &&
       connection.state !== "closed"
     ) {
-      connection.onclosed = undefined;
+      connection.onclose = undefined;
       connection.close();
     }
 
@@ -236,8 +232,8 @@ In `presentation.html`:
 
 ```js
 const addConnection = (connection) => {
-  window.onmessage = (message) => {
-    if (message.data === "say hello") window.send("hello");
+  connection.onmessage = (message) => {
+    if (message.data === "Say hello") connection.send("hello");
   };
 };
 
@@ -257,10 +253,10 @@ In the `controller.html` file:
 
 ```html
 <script>
-  connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
-  connection.send("{string: 'こんにちは、世界!', lang: 'ja'}");
-  connection.send("{string: '안녕하세요, 세계!', lang: 'ko'}");
-  connection.send("{string: 'Hello, world!', lang: 'en-US'}");
+  connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
+  connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
+  connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
+  connection.send('{"string": "Hello, world!", "lang": "en-US"}');
 </script>
 ```
 
@@ -273,7 +269,7 @@ In the `presentation.html` file:
     const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;
     spanElt.textContent = messageObj.string;
-    document.appendChild(spanElt);
+    document.body.appendChild(spanElt);
   };
 </script>
 ```

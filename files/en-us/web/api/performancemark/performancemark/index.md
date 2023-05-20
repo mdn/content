@@ -1,16 +1,12 @@
 ---
-title: PerformanceMark()
+title: "PerformanceMark: PerformanceMark() constructor"
+short-title: PerformanceMark()
 slug: Web/API/PerformanceMark/PerformanceMark
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMark.PerformanceMark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 The **`PerformanceMark()`** constructor creates a {{domxref("DOMHighResTimeStamp","timestamp")}} with the given name.
 

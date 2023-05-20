@@ -2,21 +2,17 @@
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Scroll Snap
-  - NeedsExample
-  - Non-standard
-  - Reference
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.scroll-snap-type-x
 ---
 
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-type-x`** [CSS](/en-US/docs/Web/CSS) property defines how strictly snap points are enforced on the horizontal axis of the scroll container in case there is one.
+
+> **Note:** See [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type) for the standard feature.
 
 Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
@@ -61,5 +57,5 @@ Not part of any standard.
 
 ## See also
 
-- [`scroll-snap-type-y`](/en-US/docs/Web/CSS/scroll-snap-type-y)
-- [`scroll-snap-type`](/en-US/docs/Web/CSS/scroll-snap-type)
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

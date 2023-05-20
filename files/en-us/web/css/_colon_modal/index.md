@@ -2,12 +2,6 @@
 title: ":modal"
 slug: Web/CSS/:modal
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Modal
-  - Pseudo-class
-  - Reference
-  - Selector
 browser-compat: css.selectors.modal
 ---
 
@@ -17,8 +11,10 @@ The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:modal
+```css
+:modal {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -32,14 +28,15 @@ Examples of elements that will prevent user interaction with the rest of the pag
 
 ### Styling a modal dialog
 
-This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the dialog element [example](/en-US/docs/Web/HTML/Element/dialog#advanced_example).
+This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Element/dialog#advanced_example).
 
 ```html hidden
 <!-- Simple modal dialog containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label>Favorite animal:
+      <label
+        >Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
@@ -81,18 +78,14 @@ const confirmBtn = favDialog.querySelector("#confirmBtn");
 // dialog contents by default.
 if (typeof favDialog.showModal !== "function") {
   favDialog.hidden = true;
-  /* a fallback script to allow this dialog/form to function
-     for legacy browsers that do not support <dialog>
-     could be provided here.
-  */
+  // Your fallback script
 }
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener("click", () => {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    outputBox.value =
-      "Sorry, the <dialog> API is not supported by this browser.";
+    outputBox.value = "Sorry, the dialog API is not supported by this browser.";
   }
 });
 // "Favorite animal" input sets the value of the submit button

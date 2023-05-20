@@ -2,12 +2,8 @@
 title: HIDConnectionEvent
 slug: Web/API/HIDConnectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDConnectionEvent
 ---
 
@@ -34,11 +30,11 @@ _This interface also inherits properties from {{domxref("Event")}}._
 The following example registers event listeners for `connect` and `disconnect` events, then prints the {{domxref("HIDDevice.productName")}} to the console.
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
+navigator.hid.addEventListener("connect", ({ device }) => {
   console.log(`HID connected: ${device.productName}`);
 });
 
-navigator.hid.addEventListener('disconnect', ({device}) => {
+navigator.hid.addEventListener("disconnect", ({ device }) => {
   console.log(`HID disconnected: ${device.productName}`);
 });
 ```

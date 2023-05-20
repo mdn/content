@@ -1,13 +1,7 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
-tags:
-  - Element
-  - Filters
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Light Source
+page-type: svg-element
 browser-compat: svg.elements.feDistantLight
 ---
 

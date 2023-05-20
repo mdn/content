@@ -1,17 +1,13 @@
 ---
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
 
 {{JSRef}}
 
-The **`Symbol.keyFor(sym)`** method retrieves a shared symbol
+The **`Symbol.keyFor()`** static method retrieves a shared symbol
 key from the global symbol registry for the given symbol.
 
 {{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}

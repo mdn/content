@@ -1,13 +1,8 @@
 ---
-title: MIDIPort.name
+title: "MIDIPort: name property"
+short-title: name
 slug: Web/API/MIDIPort/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - MIDIPort
 browser-compat: api.MIDIPort.name
 ---
 

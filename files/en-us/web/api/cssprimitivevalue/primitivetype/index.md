@@ -1,15 +1,10 @@
 ---
-title: CSSPrimitiveValue.primitiveType
+title: "CSSPrimitiveValue: primitiveType property"
+short-title: primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Property
-  - Read-only
-  - Reference
-  - Deprecated
-  - primitiveValue
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
 

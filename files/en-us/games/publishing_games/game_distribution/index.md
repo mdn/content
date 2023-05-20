@@ -1,18 +1,6 @@
 ---
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
-tags:
-  - CocoonIO
-  - Game
-  - Game publishing
-  - Games
-  - Gaming
-  - HTML
-  - JavaScript
-  - Mobile Game Distribution
-  - Phonegap
-  - Web Stores
-  - distribution
 ---
 
 {{GamesSidebar}}
@@ -37,7 +25,7 @@ You don't have to wait several days to have your game's code updated. If your us
 
 You don't have to tell people to search for your game in an app store with HTML games. You can just send them a direct URL to access the game, which they can then click to play the game right away without the need to use third party plugins or download and install a large package. Bear in mind that downloading the game might still take a bit of time depending on the size of the game and your network speed. In any case, it's a lot easier to promote the game if you can drive traffic directly where you want it and don't have to jump through lots of hoops to play.
 
-## Desktop vs mobile
+## Desktop vs. mobile
 
 The vast majority of the traffic we are interested in — people playing HTML games — comes from mobile devices so that's something you will have to focus on if you truly want to succeed. Mobile devices are where HTML technology can truly shine and show its advantages. There's no Flash, and HTML is fully multiplatform.
 
@@ -109,8 +97,6 @@ The web is the first and the best choice for HTML games, but if you want to reac
 
 There are various tools to choose from depending on your skills, preferred frameworks or target platforms. It's all about picking the best tool for your particular task.
 
-- [Phonegap](https://phonegap.com/) — based on Cordova, this is the most popular tool for building/packaging JavaScript apps for native platforms.
-- [CocoonIO](http://cocoon.io/) — the most popular tool specifically for building HTML games for multiple native stores. It has its own performance optimizations for games rendered on Canvas and supports many game frameworks.
 - [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it supports only one framework and app store.
 - [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 

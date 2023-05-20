@@ -1,14 +1,8 @@
 ---
-title: AudioBufferSourceNode.playbackRate
+title: "AudioBufferSourceNode: playbackRate property"
+short-title: playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBufferSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - playbackRate
 browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
 

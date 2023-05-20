@@ -1,11 +1,7 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply
 ---
 
@@ -35,9 +31,9 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
-> **Note:** This function is almost identical to {{jsxref("Function.prototype.call()", "call()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
+> **Note:** This function is almost identical to {{jsxref("Function/call", "call()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
 
-You can assign a different `this` object when calling an existing function. `this` refers to the current object (the calling object). With `apply`, you can write a method once, and then inherit it in another object, without having to rewrite the method for the new object.
+Normally, when calling a function, the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) inside the function is the object that the function was accessed on. With `apply()`, you can assign an arbitrary value as `this` when calling an existing function, without first attaching the function to the object as a property. This allows you to use methods of one object as generic utility functions.
 
 You can also use any kind of object which is array-like as the second parameter. In practice, this means that it needs to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`. You can also use {{jsxref("Functions/arguments", "arguments")}}, for example:
 
@@ -55,13 +51,15 @@ function wrapper(...args) {
 }
 ```
 
-In general, `fn.apply(null, args)` is equivalent to `fn(...args)` with the parameter spread syntax.
+In general, `fn.apply(null, args)` is equivalent to `fn(...args)` with the parameter spread syntax, except `args` is expected to be an array-like object in the former case with `apply()`, and an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object in the latter case with spread syntax.
+
+> **Warning:** Do not use `apply()` to chain constructors (for example, to implement inheritance). This invokes the constructor function as a plain function, which means [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is `undefined`, and classes throw an error because they can't be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Use {{jsxref("Reflect.construct()")}} or [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) instead.
 
 ## Examples
 
-### Using apply to append an array to another
+### Using apply() to append an array to another
 
-You can use {{jsxref("Array.prototype.push()")}} to append an element to an array. Because `push()` accepts a variable number of arguments, you can also push multiple elements at once. But if you pass an array to `push()`, it will actually add that array as a single element, instead of adding the elements individually, ending up with an array inside an array. On the other hand, {{jsxref("Array.prototype.concat()")}} does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
+You can use {{jsxref("Array.prototype.push()")}} to append an element to an array. Because `push()` accepts a variable number of arguments, you can also push multiple elements at once. But if you pass an array to `push()`, it will actually add that array as a single element, instead of adding the elements individually, ending up with an array inside an array. On the other hand, {{jsxref("Array.prototype.concat()")}} does have the desired behavior in this case, but it does not append to the _existing_ array — it creates and returns a new array.
 
 In this case, you can use `apply` to implicitly "spread" an array as a series of arguments.
 
@@ -81,11 +79,11 @@ array.push(...elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
-### Using apply and built-in functions
+### Using apply() and built-in functions
 
-Clever usage of `apply` allows you to use built-in functions for some tasks that would probably have otherwise been written by looping over the array values.
+Clever usage of `apply()` allows you to use built-in functions for some tasks that would probably otherwise require manually looping over a collection (or using the spread syntax).
 
-As an example, here are {{jsxref("Global_Objects/Math/max", "Math.max")}}/{{jsxref("Global_Objects/Math/min", "Math.min")}}, used to find out the maximum/minimum value in an array.
+For example, we can use {{jsxref("Math.max()")}} and {{jsxref("Math.min()")}} to find out the maximum and minimum value in an array.
 
 ```js
 // min/max number in an array
@@ -112,9 +110,9 @@ for (let i = 0; i < numbers.length; i++) {
 }
 ```
 
-But beware: by using `apply` this way, you run the risk of exceeding the JavaScript engine's argument length limit. The consequences of applying a function with too many arguments (that is, more than tens of thousands of arguments) varies across engines. (The JavaScriptCore engine has hard-coded [argument limit of 65536](https://bugs.webkit.org/show_bug.cgi?id=80797).)
+But beware: by using `apply()` (or the spread syntax) with an arbitrarily long arguments list, you run the risk of exceeding the JavaScript engine's argument length limit.
 
-This is because the limit (and indeed, even the nature of any excessively-large-stack behavior) is unspecified. Some engines will throw an exception. More perniciously, others will arbitrarily limit the number of arguments actually passed to the applied function. To illustrate this latter case: if such an engine had a limit of four arguments (actual limits are of course significantly higher), it would be as if the arguments `5, 6, 2, 3` had been passed to `apply` in the examples above, rather than the full array.
+The consequences of calling a function with too many arguments (that is, more than tens of thousands of arguments) is unspecified and varies across engines. (The JavaScriptCore engine has a hard-coded [argument limit of 65536](https://webkit.org/b/80797).) Most engines throw an exception; but there's no normative specification preventing other behaviors, such as arbitrarily limiting the number of arguments actually passed to the applied function. To illustrate this latter case: if such an engine had a limit of four arguments (actual limits are of course significantly higher), it would be as if the arguments `5, 6, 2, 3` had been passed to `apply` in the examples above, rather than the full array.
 
 If your value array might grow into the tens of thousands, use a hybrid strategy: apply your function to chunks of the array at a time:
 
@@ -126,7 +124,7 @@ function minOfArray(arr) {
   for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(
       null,
-      arr.slice(i, Math.min(i + QUANTUM, arr.length))
+      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
     );
     min = Math.min(submin, min);
   }
@@ -152,4 +150,4 @@ const min = minOfArray([5, 6, 2, 3, 7]);
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}
 - {{jsxref("Reflect.apply()")}}
-- {{jsxref("Operators/Spread_syntax", "Spread syntax", "", 1)}}
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

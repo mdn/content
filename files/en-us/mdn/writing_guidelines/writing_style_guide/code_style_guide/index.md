@@ -2,9 +2,6 @@
 title: Guidelines for styling code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -193,7 +190,7 @@ function myFunc() {
 
 To represent the code block as a good or bad example, add `example-good` or `example-bad` after the language string, like so:
 
-````plain
+````md
 ```html example-good
 <p class="brush: js example-good"></p>
 ```

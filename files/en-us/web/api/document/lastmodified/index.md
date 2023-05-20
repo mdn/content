@@ -1,14 +1,8 @@
 ---
-title: Document.lastModified
+title: "Document: lastModified property"
+short-title: lastModified
 slug: Web/API/Document/lastModified
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.Document.lastModified
 ---
 
@@ -57,8 +51,18 @@ comparing the modification dates of documents. Here is a possible example of how
 an alert message when the page changes (see also: [JavaScript cookies API](/en-US/docs/Web/API/Document/cookie)):
 
 ```js
-if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
+if (
+  Date.parse(document.lastModified) >
+  parseFloat(
+    document.cookie.replace(
+      /(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/,
+      "$1"
+    ) || "0"
+  )
+) {
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
   alert("This page has changed!");
 }
 ```
@@ -66,11 +70,18 @@ if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(
 …the same example, but skipping the first visit:
 
 ```js
-const lastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/, "$1"));
+const lastVisit = parseFloat(
+  document.cookie.replace(
+    /(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/,
+    "$1"
+  )
+);
 const lastModif = Date.parse(document.lastModified);
 
 if (isNaN(lastVisit) || lastModif > lastVisit) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
 
   if (isFinite(lastVisit)) {
     alert("This page has been changed!");
@@ -78,8 +89,7 @@ if (isNaN(lastVisit) || lastModif > lastVisit) {
 }
 ```
 
-> **Note:** WebKit returns the time string in UTC; Gecko and
-> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> **Note:** WebKit returns the time string in UTC; Gecko returns a time in the local timezone. (See: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://webkit.org/b/4363))
 
 If you want to know **whether _an external page_ has changed**,
 please read [this paragraph about the `XMLHttpRequest()` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date).

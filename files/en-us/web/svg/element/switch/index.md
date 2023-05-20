@@ -1,11 +1,7 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.switch
 ---
 

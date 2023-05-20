@@ -1,15 +1,6 @@
 ---
 title: Converting WebAssembly text format to wasm
 slug: WebAssembly/Text_format_to_wasm
-tags:
-  - WebAssembly
-  - assembly
-  - conversion
-  - text format
-  - wabt
-  - wasm
-  - wast2wasm
-  - wat2wasm
 ---
 
 {{WebAssemblySidebar}}

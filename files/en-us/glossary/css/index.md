@@ -1,11 +1,7 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - CodingScripting
-  - Web
-  - "l10n:priority"
+page-type: glossary-definition
 ---
 
 **CSS** (Cascading Style Sheets) is a declarative language that controls how webpages look in the {{glossary("browser")}}.

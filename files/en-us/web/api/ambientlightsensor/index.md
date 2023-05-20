@@ -2,17 +2,8 @@
 title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
 page-type: web-api-interface
-tags:
-  - API
-  - Ambient Light Sensor API
-  - AmbientLightSensor
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AmbientLightSensor
 ---
 
@@ -22,7 +13,7 @@ The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/
 
 To use this sensor, the user must grant permission to the `'ambient-light-sensor'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 

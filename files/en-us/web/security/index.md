@@ -1,18 +1,16 @@
 ---
 title: Web security
 slug: Web/Security
-tags:
-  - Landing
-  - Security
-  - Web
 ---
+
+{{QuickLinksWithSubpages}}
 
 Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
 
 ## Content security
 
 - [Content security policy (CSP)](/en-US/docs/Web/HTTP/CSP)
-  - : **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
+  - : **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
 
 ## Connection security
 
@@ -48,10 +46,8 @@ Ensuring that your website or open web application is secure is critical. Even s
 
 - [Referer header policy: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
   - : There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer). This article describes them and offers advice on mitigating those risks.
-- Robots.txt
-  - : to be written
-- Site maps
-  - : to be written
+- [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless)
+  - : Iframe credentialless provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context. This context doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
 ## Integrity
 
@@ -69,9 +65,9 @@ Ensuring that your website or open web application is secure is critical. Even s
 In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects.
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+  - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
 ## User information security
 
@@ -126,6 +122,3 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 ## See also
 
 - [Security Blog](https://blog.mozilla.org/security/)
-- [@mozsec on Twitter](https://twitter.com/mozsec)
-
-{{QuickLinksWithSubpages}}

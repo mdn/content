@@ -2,16 +2,10 @@
 title: PerformanceMark
 slug: Web/API/PerformanceMark
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timing API
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
 **`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
 

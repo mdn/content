@@ -1,10 +1,6 @@
 ---
 title: "IMSC: subtitles and captioning for the Web"
 slug: Related/IMSC
-tags:
-  - IMSC
-  - captions
-  - subtitles
 ---
 
 IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.

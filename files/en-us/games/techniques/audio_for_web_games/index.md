@@ -1,13 +1,6 @@
 ---
 title: Audio for Web games
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - Audio
-  - Games
-  - Web Audio API
-  - audio sprites
-  - spatialization
-  - syncing tracks
 ---
 
 {{GamesSidebar}}
@@ -45,7 +38,7 @@ Programmatic volume control may be disabled in mobile browsers. The reason often
 
 Likely as an attempt to mitigate runaway mobile network data use, we also often find that buffering is disabled before playback has been initiated. Buffering is the process of the browser downloading the media in advance, which we often need to do to ensure smooth playback.
 
-The {{domxref("HTMLMediaElement")}} interface comes with [lots of properties](/en-US/docs/Web/API/HTMLMediaElement#properties) to help determine whether a track is in a state to be playable.
+The {{domxref("HTMLMediaElement")}} interface comes with [lots of properties](/en-US/docs/Web/API/HTMLMediaElement#instance_properties) to help determine whether a track is in a state to be playable.
 
 > **Note:** In many ways the concept of buffering is an outdated one. As long as byte-range requests are accepted (which is the default behavior), we should be able to jump to a specific point in the audio without having to download the preceding content. However, preloading is still useful — without it, there would always need to be some client-server communication required before playing can commence.
 

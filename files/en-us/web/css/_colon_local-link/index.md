@@ -18,8 +18,10 @@ a:local-link {
 
 ## Syntax
 
-```
-:local-link
+```css
+:local-link {
+  /* ... */
+}
 ```
 
 ## Examples

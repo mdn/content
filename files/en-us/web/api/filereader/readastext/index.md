@@ -1,13 +1,8 @@
 ---
-title: FileReader.readAsText()
+title: "FileReader: readAsText() method"
+short-title: readAsText()
 slug: Web/API/FileReader/readAsText
 page-type: web-api-instance-method
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileReader.readAsText
 ---
 
@@ -18,6 +13,8 @@ When the read operation is complete, the {{domxref("FileReader.readyState","read
 the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the {{domxref("FileReader.result","result")}} property contains the contents of the file as a text string.
 
 > **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
+
+> **Note:** This method loads the entire file's content into memory and is not suitable for large files. Prefer [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer) for large files.
 
 ## Syntax
 
@@ -50,14 +47,18 @@ None ({{jsxref("undefined")}}).
 
 ```js
 function previewFile() {
-  const content = document.querySelector('.content');
-  const [file] = document.querySelector('input[type=file]').files;
+  const content = document.querySelector(".content");
+  const [file] = document.querySelector("input[type=file]").files;
   const reader = new FileReader();
 
-  reader.addEventListener("load", () => {
-    // this will then display a text file
-    content.innerText = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // this will then display a text file
+      content.innerText = reader.result;
+    },
+    false
+  );
 
   if (file) {
     reader.readAsText(file);

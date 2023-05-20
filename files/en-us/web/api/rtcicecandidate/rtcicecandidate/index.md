@@ -1,19 +1,8 @@
 ---
-title: RTCIceCandidate()
+title: "RTCIceCandidate: RTCIceCandidate() constructor"
+short-title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Candidate
-  - Constructor
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
 
@@ -134,7 +123,7 @@ This constructor does not do complete validation of the specified `candidateInfo
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Protocols", "ICE")}}
+- [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols#ice)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

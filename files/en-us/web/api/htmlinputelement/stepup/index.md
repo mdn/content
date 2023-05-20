@@ -1,14 +1,8 @@
 ---
-title: HTMLInputElement.stepUp()
+title: "HTMLInputElement: stepUp() method"
+short-title: stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - Reference
-  - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepUp
 ---
 
@@ -18,8 +12,8 @@ The **`HTMLInputElement.stepUp()`** method increments the value
 of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute, or the
 default `step` value if the step attribute is not explicitly set. The method,
-when invoked, increments the {{htmlattrxref("value","input")}} by
-({{htmlattrxref("step","input")}} \* n), where `n` defaults to
+when invoked, increments the [`value`](/en-US/docs/Web/HTML/Element/input#value) by
+([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where `n` defaults to
 `1` if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
 default value for `step` if not specified.
@@ -35,36 +29,32 @@ default value for `step` if not specified.
       <td>{{HTMLElement("input/date", "date")}}</td>
       <td><code>1</code> (day)</td>
       <td>
-        7 day (one week) increments:<br /><code
-          >&#x3C;input type="date" min="2019-12-25" step="7"></code
-        >
+        7 day (one week) increments:<br />
+        <code>&#x3C;input type="date" min="2019-12-25" step="7"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/month", "month")}}</td>
       <td><code>1</code> (month)</td>
       <td>
-        12 month (one year) increments:<br /><code
-          >&#x3C;input type="month" min="2019-12" step="12"></code
-        >
+        12 month (one year) increments:<br />
+        <code>&#x3C;input type="month" min="2019-12" step="12"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/week", "week")}}</td>
       <td><code>1</code> (week)</td>
       <td>
-        Two week increments:<br /><code
-          >&#x3C;input type="week" min="2019-W23" step="2"></code
-        >
+        Two week increments:<br />
+        <code>&#x3C;input type="week" min="2019-W23" step="2"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
       <td><code>60</code> (seconds)</td>
       <td>
-        900 second (15 minute) increments:<br /><code
-          >&#x3C;input type="time" min="09:00" step="900"></code
-        >
+        900 second (15 minute) increments:<br />
+        <code>&#x3C;input type="time" min="09:00" step="900"></code>
       </td>
     </tr>
     <tr>
@@ -73,28 +63,25 @@ default value for `step` if not specified.
       </td>
       <td><code>1</code> (day)</td>
       <td>
-        Same day of the week:<br /><code
-          >&#x3C;input type="datetime-local" min="019-12-25T19:30"
-          step="7"></code
-        >
+        Same day of the week:<br />
+        <code>&#x3C;input type="datetime-local" min="019-12-25T19:30"
+          step="7"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td><code>1</code></td>
       <td>
-        0.1 increments<br /><code
-          >&#x3C;input type="number" min="0" step="0.1" max="10"></code
-        >
+        0.1 increments<br />
+        <code>&#x3C;input type="number" min="0" step="0.1" max="10"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
       <td><code>1</code></td>
       <td>
-        Increments by 2:<br /><code
-          >&#x3C;input type="range" min="0" step="2" max="10"></code
-        >
+        Increments by 2:<br />
+        <code>&#x3C;input type="range" min="0" step="2" max="10"></code>
       </td>
     </tr>
   </thead>
@@ -143,7 +130,9 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <label for="theNumber">
+    Enter a number between 0 and 400 that is divisible by 5:
+  </label>
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
@@ -151,7 +140,7 @@ Click the button in this example to increment the {{HTMLElement("input/number",
     Enter how many values of step you would like to increment by or leave it
     blank:
   </label>
-  <input type="number" step="1" id="incrementor" min="0" max="25" />
+  <input type="number" step="1" id="incrementInput" min="0" max="25" />
 </p>
 <input type="button" value="Increment" id="theButton" />
 ```
@@ -160,19 +149,21 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```js
 /* make the button call the function */
-const button = document.getElementById('theButton');
-button.addEventListener('click', () => {
-  steponup()
-})
+const button = document.getElementById("theButton");
+button.addEventListener("click", () => {
+  stepOnUp();
+});
 
-function steponup() {
-  let input = document.getElementById('theNumber')
-  let val = document.getElementById('incrementor').value
+function stepOnUp() {
+  let input = document.getElementById("theNumber");
+  let val = document.getElementById("incrementInput").value;
 
-  if (val) {  /* increment with a parameter */
-    input.stepUp(val)
-  } else {    /* or without a parameter. Try it with 0 */
-    input.stepUp()
+  if (val) {
+    /* increment with a parameter */
+    input.stepUp(val);
+  } else {
+    /* or without a parameter. Try it with 0 */
+    input.stepUp();
   }
 }
 ```
@@ -198,7 +189,7 @@ will not be incremented. The stepUp will not allow the input to out of range, in
 case stopping when it reaches `400`, and rounding down any floats that are
 passed as a parameter.
 
-Try setting the step increment to `1.2`. What happens when you invoke the
+Try setting the step increment input to `1.2`. What happens when you invoke the
 method?
 
 Try setting the value to `4`, which is not valid. What happens when you

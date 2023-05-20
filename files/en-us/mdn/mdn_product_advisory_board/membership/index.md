@@ -1,12 +1,6 @@
 ---
 title: Product Advisory Board Charter & Membership
 slug: MDN/MDN_Product_Advisory_Board/Membership
-tags:
-  - MDN
-  - Membership
-  - PAB
-  - Product advisory board
-  - Terms and conditions
 ---
 
 {{MDNSidebar}}

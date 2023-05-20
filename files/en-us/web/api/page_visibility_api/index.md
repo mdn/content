@@ -2,19 +2,6 @@
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Documents
-  - Hidden Pages
-  - Hiding Pages
-  - Intermediate
-  - Page Visibility
-  - Page Visibility API
-  - Showing Pages
-  - Tutorials
-  - Visibility
-  - Visible Pages
 browser-compat: api.Document.visibilityState
 ---
 
@@ -22,7 +9,9 @@ browser-compat: api.Document.visibilityState
 
 The Page Visibility API provides events you can watch for to know when a document becomes visible or hidden, as well as features to look at the current visibility state of the page.
 
-> **Note:** The Page Visibility API is especially useful for saving resources and improving performance by letting a page avoid performing unnecessary tasks when the document isn't visible.
+This is especially useful for saving resources and improving performance by letting a page avoid performing unnecessary tasks when the document isn't visible.
+
+## Concepts and usage
 
 When the user minimizes the window or switches to another tab, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
 
@@ -47,7 +36,7 @@ Separately from the Page Visibility API, user agents typically have a number of 
 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
 - Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for more details.
-- Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
+- Browsers implement budget-based background timeout throttling. This operates in a similar way across modern browsers, with the details being as follows:
 
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
   - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
@@ -61,61 +50,9 @@ Some processes are exempt from this throttling behavior. In these cases, you can
 - Tabs running code that's using real-time network connections ([WebSockets](/en-US/docs/Web/API/WebSockets_API) and [WebRTC](/en-US/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 
-## Example
+## Extensions to other interfaces
 
-View [live example](http://daniemon.com/tech/webapps/page-visibility/) (video with sound).
-
-The example, which pauses the video when you switch to another tab and plays again when you return to its tab, was created with the following code:
-
-```js
-// Set the name of the hidden property and the change event for visibility
-let hidden;
-let visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
-  hidden = "hidden";
-  visibilityChange = "visibilitychange";
-} else if (typeof document.msHidden !== "undefined") {
-  hidden = "msHidden";
-  visibilityChange = "msvisibilitychange";
-} else if (typeof document.webkitHidden !== "undefined") {
-  hidden = "webkitHidden";
-  visibilityChange = "webkitvisibilitychange";
-}
-
-const videoElement = document.getElementById("videoElement");
-
-// If the page is hidden, pause the video;
-// if the page is shown, play the video
-function handleVisibilityChange() {
-  if (document[hidden]) {
-    videoElement.pause();
-  } else {
-    videoElement.play();
-  }
-}
-
-// Warn if the browser doesn't support addEventListener or the Page Visibility API
-if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
-} else {
-  // Handle page visibility change
-  document.addEventListener(visibilityChange, handleVisibilityChange, false);
-
-  // When the video pauses, set the title.
-  // This shows the paused
-  videoElement.addEventListener("pause", () => {
-    document.title = 'Paused';
-  }, false);
-
-  // When the video plays, set the title.
-  videoElement.addEventListener("play", () => {
-    document.title = 'Playing';
-  }, false);
-
-}
-```
-
-## Instance properties added to the Document interface
+### Instance properties
 
 The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
 
@@ -130,25 +67,49 @@ The Page Visibility API adds the following properties to the {{domxref("Document
     - `hidden`
       - : The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.
 
-## Events added to the Document interface
+### Events
 
 The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
 
 - {{domxref("Document.visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
 
-```js
-// startSimulation and pauseSimulation defined elsewhere
-function handleVisibilityChange() {
-  if (document.visibilityState === "hidden") {
-    pauseSimulation();
-  } else {
-    startSimulation();
-  }
-}
+## Examples
 
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+### Pausing audio on page hide
+
+This example pauses audio when the user switches to a different tab, and plays when they switch back.
+
+#### HTML
+
+```html
+<audio
+  controls
+  src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
 ```
+
+#### JavaScript
+
+```js
+const audio = document.querySelector("audio");
+
+// Handle page visibility change:
+// - If the page is hidden, pause the video
+// - If the page is shown, play the video
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
+
+Try playing the audio, then switching to a different tab and back again.
 
 ## Specifications
 

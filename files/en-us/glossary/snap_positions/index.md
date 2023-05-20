@@ -1,10 +1,9 @@
 ---
 title: Snap positions
 slug: Glossary/Snap_positions
-tags:
-  - snap positions
+page-type: glossary-definition
 ---
 
-A [scroll container](/en-US/docs/Glossary/Scroll_container) may set **snap positions** — points that the [scrollport](/en-US/docs/Glossary/Scrollport) will stop moving at after a scrolling operation is completed. This allows a scrolling experience that gives the effect of paging through content rather than needing to drag content into view.
+Snap positions are points where the [scrollport](/en-US/docs/Glossary/Scrollport) stops moving after the scrolling operation completes. Setting up snap positions allows to create a scrolling experience of paging through content instead of needing to drag content into view.
 
-Defining Snap positions on the scroll container was introduced in the [CSS Scroll Snap specification](/en-US/docs/Web/CSS/CSS_Scroll_Snap).
+Snap positions are set up on a [scroll container](/en-US/docs/Glossary/Scroll_container). See the [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) properties.

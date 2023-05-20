@@ -1,18 +1,13 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
 
 {{JSRef}}
 
-The **`handler.get()`** method is a trap for getting a property
-value.
+The **`handler.get()`** method is a trap for the `[[Get]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
 
@@ -43,21 +38,18 @@ The `get()` method can return any value.
 
 ## Description
 
-The **`handler.get()`** method is a trap for getting a property
-value.
-
 ### Interceptions
 
 This trap can intercept these operations:
 
 - Property access: `proxy[foo]` and `proxy.bar`
-- Inherited property access: `Object.create(proxy)[foo]`
 - {{jsxref("Reflect.get()")}}
+
+Or any other operation that invokes the `[[Get]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - The value reported for a property must be the same as the value of the corresponding
   target object property if the target object property is a non-writable,
@@ -80,7 +72,7 @@ const p = new Proxy(
       console.log(`called: ${property}`);
       return 10;
     },
-  }
+  },
 );
 
 console.log(p.a);

@@ -1,16 +1,16 @@
 ---
-title: Node.appendChild()
+title: "Node: appendChild() method"
+short-title: appendChild()
 slug: Web/API/Node/appendChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.appendChild
 ---
 
 {{APIRef("DOM")}}
 
-The **`appendChild()`** method of the {{domxref("Node")}} interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.
+The **`appendChild()`** method of the {{domxref("Node")}} interface adds a node to the end of the list of children of a specified parent node.
+
+> **Note:** If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.
 
 If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the {{domxref("DocumentFragment")}} are moved into the child list of the specified parent node.
 
@@ -53,7 +53,7 @@ node before appending it to some other node. This means that a node can't be in 
 `appendChild()` returns the newly appended node, instead of the parent node. This means you can append the new node as soon as it's created without losing reference to it:
 
 ```js
-const paragraph = document.body.appendChild(document.createElement('p'));
+const paragraph = document.body.appendChild(document.createElement("p"));
 // You can append more elements to the paragraph later
 ```
 
@@ -63,9 +63,9 @@ On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.w
 // This doesn't append three paragraphs:
 // the three elements will be nested instead of siblings
 document.body
-  .appendChild(document.createElement('p'))
-  .appendChild(document.createElement('p'))
-  .appendChild(document.createElement('p'));
+  .appendChild(document.createElement("p"))
+  .appendChild(document.createElement("p"))
+  .appendChild(document.createElement("p"));
 ```
 
 ## Example
@@ -85,10 +85,10 @@ In this example, we attempt to create a nested DOM structure using as few tempor
 ```js
 const fragment = document.createDocumentFragment();
 const li = fragment
-  .appendChild(document.createElement('section'))
-  .appendChild(document.createElement('ul'))
-  .appendChild(document.createElement('li'));
-li.textContent = 'hello world';
+  .appendChild(document.createElement("section"))
+  .appendChild(document.createElement("ul"))
+  .appendChild(document.createElement("li"));
+li.textContent = "hello world";
 
 document.body.appendChild(fragment);
 ```

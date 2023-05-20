@@ -1,16 +1,12 @@
 ---
-title: Headers()
+title: "Headers: Headers() constructor"
+short-title: Headers()
 slug: Web/API/Headers/Headers
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Fetch
-  - Reference
 browser-compat: api.Headers.Headers
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`Headers()`** constructor creates a new
 {{domxref("Headers")}} object.
@@ -42,8 +38,8 @@ const myHeaders = new Headers(); // Currently empty
 You could add a header to this using {{domxref("Headers.append")}}:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 Or you can add the headers you want as the `Headers` object is created. In
@@ -51,7 +47,10 @@ the following snippet we create a new {{domxref("Headers")}} object, adding some
 by passing the constructor an init object as an argument:
 
 ```js
-const httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
+const httpHeaders = {
+  "Content-Type": "image/jpeg",
+  "X-My-Custom-Header": "Zeke are cool",
+};
 const myHeaders = new Headers(httpHeaders);
 ```
 
@@ -60,7 +59,7 @@ You can now create another `Headers` object, passing it the first
 
 ```js
 const secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+secondHeadersObj.get("Content-Type"); // Would return 'image/jpeg' — it inherits it from the first headers object
 ```
 
 You can also add the headers you want as the `Headers` object is created by using a two-dimensional array to add multiple headers with the same values. In
@@ -69,8 +68,8 @@ by passing the constructor an init array as an argument:
 
 ```js
 const headers = [
-  ['Set-Cookie', 'greeting=hello'],
-  ['Set-Cookie', 'name=world']
+  ["Set-Cookie", "greeting=hello"],
+  ["Set-Cookie", "name=world"],
 ];
 const myHeaders = new Headers(headers);
 ```

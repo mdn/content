@@ -1,14 +1,10 @@
 ---
-title: ImageTrackList.ready
+title: "ImageTrackList: ready property"
+short-title: ready
 slug: Web/API/ImageTrackList/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ready
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList.ready
 ---
 

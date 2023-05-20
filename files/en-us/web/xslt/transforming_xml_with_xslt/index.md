@@ -1,11 +1,6 @@
 ---
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - NeedsMigration
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
 ---
 
 {{XSLTRef}}
@@ -68,19 +63,19 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
 [Axes](/en-US/docs/Web/XPath/Axes)
 
-- [ancestor](/en-US/docs/Web/XPath/Axes/ancestor)
-- [ancestor-or-self](/en-US/docs/Web/XPath/Axes/ancestor-or-self)
-- [attribute](/en-US/docs/Web/XPath/Axes/attribute)
-- [child](/en-US/docs/Web/XPath/Axes/child)
-- [descendant](/en-US/docs/Web/XPath/Axes/descendant)
-- [descendant-or-self](/en-US/docs/Web/XPath/Axes/descendant-or-self)
-- [following](/en-US/docs/Web/XPath/Axes/following)
-- [following-sibling](/en-US/docs/Web/XPath/Axes/following-sibling)
-- [namespace](/en-US/docs/Web/XPath/Axes/namespace) _(not supported)_
-- [parent](/en-US/docs/Web/XPath/Axes/parent)
-- [preceding](/en-US/docs/Web/XPath/Axes/preceding)
-- [preceding-sibling](/en-US/docs/Web/XPath/Axes/preceding-sibling)
-- [self](/en-US/docs/Web/XPath/Axes/self)
+- [ancestor](/en-US/docs/Web/XPath/Axes#ancestor)
+- [ancestor-or-self](/en-US/docs/Web/XPath/Axes#ancestor-or-self)
+- [attribute](/en-US/docs/Web/XPath/Axes#attribute)
+- [child](/en-US/docs/Web/XPath/Axes#child)
+- [descendant](/en-US/docs/Web/XPath/Axes#descendant)
+- [descendant-or-self](/en-US/docs/Web/XPath/Axes#descendant-or-self)
+- [following](/en-US/docs/Web/XPath/Axes#following)
+- [following-sibling](/en-US/docs/Web/XPath/Axes#following-sibling)
+- [namespace](/en-US/docs/Web/XPath/Axes#namespace) _(not supported)_
+- [parent](/en-US/docs/Web/XPath/Axes#parent)
+- [preceding](/en-US/docs/Web/XPath/Axes#preceding)
+- [preceding-sibling](/en-US/docs/Web/XPath/Axes#preceding-sibling)
+- [self](/en-US/docs/Web/XPath/Axes#self)
 
 ### Functions
 
@@ -132,7 +127,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
   - [Websites](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#websites)
   - [Articles](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#articles)
-  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorials.2fexamples)
+  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorialsexamples)
   - [Other](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#other)
 
 ## Original Document Information

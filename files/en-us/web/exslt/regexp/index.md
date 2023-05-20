@@ -1,10 +1,6 @@
 ---
 title: Regular expressions (regexp)
 slug: Web/EXSLT/regexp
-tags:
-  - EXSLT
-  - Overview
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

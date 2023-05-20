@@ -2,15 +2,8 @@
 title: XRLightProbe
 slug: Web/API/XRLightProbe
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRLightProbe
 ---
 
@@ -65,7 +58,7 @@ const glBinding = new XRWebGLBinding(xrSession, gl);
 const lightProbe = await xrSession.requestLightProbe();
 let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
-lightProbe.addEventListener('reflectionchange', () => {
+lightProbe.addEventListener("reflectionchange", () => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });
 ```

@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.onstop
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstop
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onstop
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.onstop
 ---
 

@@ -2,11 +2,6 @@
 title: CompressionStream
 slug: Web/API/CompressionStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CompressionStream
 browser-compat: api.CompressionStream
 ---
 

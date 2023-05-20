@@ -1,11 +1,7 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
+page-type: javascript-language-feature
 browser-compat: javascript.classes.constructor
 ---
 
@@ -25,6 +21,11 @@ constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }
 constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
 ```
+
+There are some additional syntax restrictions:
+
+- A class method called `constructor` cannot be a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), [async](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), or [generator](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+- A class cannot have more than one `constructor` method.
 
 ## Description
 
@@ -166,9 +167,6 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
 
-There can be only one special method with the name `constructor` in a class.
-Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error. Having a getter or setter called `constructor` is also a {{jsxref("SyntaxError")}}.
-
 The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 
 ```js
@@ -202,6 +200,8 @@ foo.constructor(); // Logs "called"
 console.log(foo); // Foo { a: 1 }
 ```
 
+Async methods, generator methods, accessors, and class fields are forbidden from being called `constructor`. Private names cannot be called `#constructor`. Any member named `constructor` must be a plain method.
+
 ## Examples
 
 ### Using the constructor
@@ -232,12 +232,18 @@ class Square extends Polygon {
 
 ### Calling super in a constructor bound to a different prototype
 
-Here the prototype of `Square` class is changed, but the constructor of its base class, `Polygon`, is still called when a new instance of a square is created. For more information on why, see [the `super` reference](/en-US/docs/Web/JavaScript/Reference/Operators/super#methods_that_read_super.prop_do_not_behave_differently_when_bound_to_other_objects).
+`super()` calls the constructor that's the prototype of the current class. If you change the prototype of the current class itself, `super()` will call the constructor that's the new prototype. Changing the prototype of the current class's `prototype` property doesn't affect which constructor `super()` calls.
 
 ```js
 class Polygon {
   constructor() {
     this.name = "Polygon";
+  }
+}
+
+class Rectangle {
+  constructor() {
+    this.name = "Rectangle";
   }
 }
 
@@ -247,17 +253,21 @@ class Square extends Polygon {
   }
 }
 
-class Rectangle {}
-
 // Make Square extend Rectangle (which is a base class) instead of Polygon
-Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
-
-// Polygon is no longer part of Square's prototype chain
-console.log(Square.prototype instanceof Polygon); // false
-console.log(Square.prototype instanceof Rectangle); // true
+Object.setPrototypeOf(Square, Rectangle);
 
 const newInstance = new Square();
-console.log(newInstance.name); // Polygon
+
+// newInstance is still an instance of Polygon, because we didn't
+// change the prototype of Square.prototype, so the prototype chain
+// of newInstance is still
+//   newInstance --> Square.prototype --> Polygon.prototype
+console.log(newInstance instanceof Polygon); // true
+console.log(newInstance instanceof Rectangle); // false
+
+// However, because super() calls Rectangle as constructor, the name property
+// of newInstance is initialized with the logic in Rectangle
+console.log(newInstance.name); // Rectangle
 ```
 
 ## Specifications
@@ -270,9 +280,9 @@ console.log(newInstance.name); // Polygon
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Statements/class", "class")}}
 - {{jsxref("Operators/super", "super()")}}
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- {{jsxref("Classes")}}
-- [`Object.prototype.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-- [Class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks)
+- {{jsxref("Object.prototype.constructor")}}

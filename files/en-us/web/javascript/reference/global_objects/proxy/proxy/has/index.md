@@ -1,18 +1,13 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
 
 {{JSRef}}
 
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
+The **`handler.has()`** method is a trap for the `[[HasProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/in", "in")}} operator.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
@@ -41,22 +36,19 @@ The `has()` method must return a boolean value.
 
 ## Description
 
-The **`handler.has()`** method is a trap for the
-{{jsxref("Operators/in", "in")}} operator.
-
 ### Interceptions
 
 This trap can intercept these operations:
 
-- Property query: `foo in proxy`
-- Inherited property query: `foo in Object.create(proxy)`
-- `with` check: `with(proxy) { (foo); }`
+- The [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator: `foo in proxy`
+- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) check: `with(proxy) { (foo); }`
 - {{jsxref("Reflect.has()")}}
+
+Or any other operation that invokes the `[[HasProperty]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
 
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - A property cannot be reported as non-existent, if it exists as a non-configurable
   own property of the target object.
@@ -77,7 +69,7 @@ const p = new Proxy(
       console.log(`called: ${prop}`);
       return true;
     },
-  }
+  },
 );
 
 console.log("a" in p);

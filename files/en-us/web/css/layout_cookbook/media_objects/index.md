@@ -1,16 +1,7 @@
 ---
-title: 'Recipe: Media objects'
+title: "Recipe: Media objects"
 slug: Web/CSS/Layout_cookbook/Media_objects
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Media object
-  - cookbook
-  - fit-content
-  - float
-  - grid
 browser-compat:
   - css.properties.grid-template-areas
   - css.properties.float

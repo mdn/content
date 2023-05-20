@@ -1,11 +1,7 @@
 ---
-title: 'TypeError: "x" is not a constructor'
+title: "TypeError: \"x\" is not a constructor"
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -54,8 +50,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-const obj = new f;
+function* f() {}
+const obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -76,7 +72,7 @@ function Car(make, model, year) {
 Now you can create an object called `mycar` as follows:
 
 ```js
-const mycar = new Car('Eagle', 'Talon TSi', 1993);
+const mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### In Promises
@@ -88,7 +84,7 @@ This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Refere
 ```js example-bad
 const fn = () => {
   return new Promise.resolve(true);
-}
+};
 ```
 
 This is legal, but unnecessarily long:
@@ -98,7 +94,7 @@ const fn = () => {
   return new Promise((resolve, reject) => {
     resolve(true);
   });
-}
+};
 ```
 
 Instead, return the static method:
@@ -106,11 +102,11 @@ Instead, return the static method:
 ```js example-good
 const resolveAlways = () => {
   return Promise.resolve(true);
-}
+};
 
 const rejectAlways = () => {
   return Promise.reject(false);
-}
+};
 ```
 
 ## See also

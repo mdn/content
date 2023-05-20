@@ -1,20 +1,8 @@
 ---
-title: DOMPoint.z
+title: "DOMPoint: z property"
+short-title: z
 slug: Web/API/DOMPoint/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOMPoint
-  - Depth
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Property
-  - Reference
-  - z
 browser-compat: api.DOMPoint.z
 ---
 

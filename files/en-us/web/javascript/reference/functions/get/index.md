@@ -1,20 +1,13 @@
 ---
-title: getter
+title: get
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-language-feature
 browser-compat: javascript.functions.get
 ---
 
 {{jsSidebar("Functions")}}
 
-The **`get`** syntax binds an object property to a function
-that will be called when that property is looked up.
+The **`get`** syntax binds an object property to a function that will be called when that property is looked up. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
 {{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
@@ -25,10 +18,14 @@ that will be called when that property is looked up.
 { get [expression]() { /* … */ } }
 ```
 
+There are some additional syntax restrictions:
+
+- A getter must have exactly zero parameters.
+
 ### Parameters
 
 - `prop`
-  - : The name of the property to bind to the given function.
+  - : The name of the property to bind to the given function. In the same way as other properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), it can be a string literal, a number literal, or an identifier.
 - `expression`
   - : You can also use expressions for a computed property name to bind to the given function.
 
@@ -43,28 +40,6 @@ It is not possible to simultaneously have a getter bound to a property and have 
 property actually hold a value, although it _is_ possible to use a getter and a
 setter in conjunction to create a type of pseudo-property.
 
-Note the following when working with the `get` syntax:
-
-- It can have an identifier which is either a number or a string;
-- It must have exactly zero parameters
-  (see [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
-  for more information);
-- It must not appear in an object literal with another `get` e.g. the following is forbidden
-
-  ```js example-bad
-  {
-    get x() { }, get x() { }
-  }
-  ```
-
-- It must not appear with a data entry for the same property e.g. the following is forbidden
-
-  ```js example-bad
-  {
-    x: /* … */, get x() { /* … */ }
-  }
-  ```
-
 ## Examples
 
 ### Defining a getter on new objects in object initializers
@@ -74,16 +49,42 @@ which will return the last array item in `log`.
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
 Note that attempting to assign a value to `latest` will not change it.
+
+### Using getters in classes
+
+You can use the exact same syntax to define public instance getters that are available on class instances. In classes, you don't need the comma separator between methods.
+
+```js
+class ClassWithGetSet {
+  #msg = "hello world";
+  get msg() {
+    return this.#msg;
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`;
+  }
+}
+
+const instance = new ClassWithGetSet();
+console.log(instance.msg); // "hello world"
+
+instance.msg = "cake";
+console.log(instance.msg); // "hello cake"
+```
+
+Getter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike getter properties in object literals, getter properties in classes are not enumerable.
+
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
 
 ### Deleting a getter using the `delete` operator
 
@@ -100,20 +101,26 @@ To append a getter to an existing object later at any time, use
 {{jsxref("Object.defineProperty()")}}.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get() {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### Using a computed property name
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -124,12 +131,12 @@ console.log(obj.foo); // "bar"
 ```js
 class MyConstants {
   static get foo() {
-    return 'foo';
+    return "foo";
   }
 }
 
 console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = 'bar';
+MyConstants.foo = "bar";
 console.log(MyConstants.foo); // 'foo', a static getter's value cannot be changed
 ```
 
@@ -168,9 +175,10 @@ property this time. Finally, the value gets returned.
 const obj = {
   get notifier() {
     delete this.notifier;
-    return this.notifier = document.getElementById('bookmarked-notification-anchor');
+    this.notifier = document.getElementById("bookmarked-notification-anchor");
+    return this.notifier;
   },
-}
+};
 ```
 
 ### get vs. defineProperty
@@ -186,7 +194,7 @@ instance it is applied to.
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -194,13 +202,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
@@ -215,9 +221,11 @@ console.log(
 
 ## See also
 
-- [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (August 22, 2010)

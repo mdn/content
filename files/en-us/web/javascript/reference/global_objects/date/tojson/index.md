@@ -1,12 +1,7 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toJSON
 ---
 
@@ -70,6 +65,8 @@ const data = JSON.parse(response, (key, value) => {
 
 console.log(data);
 ```
+
+> **Note:** The reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a Date and a normal string.
 
 ## Specifications
 

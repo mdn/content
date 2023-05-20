@@ -1,13 +1,10 @@
 ---
 title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Guide
-  - JavaScript
-  - "l10n:priority"
+page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
 
@@ -16,6 +13,8 @@ An _array_ is an ordered list of values that you refer to with a name and an ind
 For example, consider an array called `emp`, which contains employees' names indexed by their numerical employee number. So `emp[0]` would be employee number zero, `emp[1]` employee number one, and so on.
 
 JavaScript does not have an explicit array data type. However, you can use the predefined `Array` object and its methods to work with arrays in your applications. The `Array` object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.
+
+We will be focusing on arrays in this article, but many of the same concepts apply to typed arrays as well, since arrays and typed arrays share many similar methods. For more information on typed arrays, see the [typed array guide](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ## Creating an array
 
@@ -88,20 +87,20 @@ const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
 
 ## Referring to array elements
 
-Because elements are also properties, you can access them using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Suppose you define the following array:
+Because elements are also properties, you can access them using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). Suppose you define the following array:
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
+const myArray = ["Wind", "Rain", "Fire"];
 ```
 
 You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc… The index of the elements begins with zero.
 
-> **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) to access other properties of the array, like with an object.
+> **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to access other properties of the array, like with an object.
 >
 > ```js
-> const arr = ['one', 'two', 'three'];
-> arr[2]          // three
-> arr['length']   // 3
+> const arr = ["one", "two", "three"];
+> arr[2]; // three
+> arr["length"]; // 3
 > ```
 
 ## Populating an array
@@ -110,16 +109,16 @@ You can populate an array by assigning values to its elements. For example:
 
 ```js
 const emp = [];
-emp[0] = 'Casey Jones';
-emp[1] = 'Phil Lesh';
-emp[2] = 'August West';
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
 ```
 
 > **Note:** If you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.
 >
 > ```js
 > const arr = [];
-> arr[3.4] = 'Oranges';
+> arr[3.4] = "Oranges";
 > console.log(arr.length); // 0
 > console.log(Object.hasOwn(arr, 3.4)); // true
 > ```
@@ -127,9 +126,9 @@ emp[2] = 'August West';
 You can also populate an array when you create it:
 
 ```js
-const myArray = new Array('Hello', myVar, 3.14159);
+const myArray = new Array("Hello", myVar, 3.14159);
 // OR
-const myArray = ['Mango', 'Apple', 'Orange'];
+const myArray = ["Mango", "Apple", "Orange"];
 ```
 
 ### Understanding length
@@ -142,7 +141,7 @@ Remember, JavaScript Array indexes are 0-based: they start at `0`, not `1`. This
 
 ```js
 const cats = [];
-cats[30] = ['Dusty'];
+cats[30] = ["Dusty"];
 console.log(cats.length); // 31
 ```
 
@@ -151,17 +150,17 @@ You can also assign to the `length` property.
 Writing a value that is shorter than the number of stored items truncates the array. Writing `0` empties it entirely:
 
 ```js
-const cats = ['Dusty', 'Misty', 'Twiggy'];
+const cats = ["Dusty", "Misty", "Twiggy"];
 console.log(cats.length); // 3
 
 cats.length = 2;
-console.log(cats); // logs "Dusty, Misty" - Twiggy has been removed
+console.log(cats); // [ 'Dusty', 'Misty' ] - Twiggy has been removed
 
 cats.length = 0;
-console.log(cats); // logs []; the cats array is empty
+console.log(cats); // []; the cats array is empty
 
 cats.length = 3;
-console.log(cats); // logs [ <3 empty items> ]
+console.log(cats); // [ <3 empty items> ]
 ```
 
 ### Iterating over arrays
@@ -169,7 +168,7 @@ console.log(cats); // logs [ <3 empty items> ]
 A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
 
 ```js
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 for (let i = 0; i < colors.length; i++) {
   console.log(colors[i]);
 }
@@ -178,8 +177,8 @@ for (let i = 0; i < colors.length; i++) {
 If you know that none of the elements in your array evaluate to `false` in a boolean context—if your array consists only of [DOM](/en-US/docs/Web/API/Document_Object_Model) nodes, for example—you can use a more efficient idiom:
 
 ```js
-const divs = document.getElementsByTagName('div');
-for (let i = 0, div; div = divs[i]; i++) {
+const divs = document.getElementsByTagName("div");
+for (let i = 0, div; (div = divs[i]); i++) {
   /* Process div in some way */
 }
 ```
@@ -189,7 +188,7 @@ This avoids the overhead of checking the length of the array, and ensures that t
 The [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method provides another way of iterating over an array:
 
 ```js
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 colors.forEach((color) => console.log(color));
 // red
 // green
@@ -201,31 +200,33 @@ The function passed to `forEach` is executed once for every item in the array, w
 Note that the elements of an array that are omitted when the array is defined are not listed when iterating by `forEach`, but _are_ listed when `undefined` has been manually assigned to the element:
 
 ```js
-const sparseArray = ['first', 'second', , 'fourth'];
+const sparseArray = ["first", "second", , "fourth"];
 
 sparseArray.forEach((element) => {
   console.log(element);
 });
+// Logs:
 // first
 // second
 // fourth
 
 if (sparseArray[2] === undefined) {
-  console.log('sparseArray[2] is undefined');  // true
+  console.log("sparseArray[2] is undefined"); // true
 }
 
-const nonsparseArray = ['first', 'second', undefined, 'fourth'];
+const nonsparseArray = ["first", "second", undefined, "fourth"];
 
 nonsparseArray.forEach((element) => {
   console.log(element);
 });
+// Logs:
 // first
 // second
 // undefined
 // fourth
 ```
 
-Since JavaScript elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
+Since JavaScript array elements are saved as standard object properties, it is not advisable to iterate through JavaScript arrays using {{jsxref("Statements/for...in","for...in")}} loops, because normal elements and all enumerable properties will be listed.
 
 ### Array methods
 
@@ -234,29 +235,29 @@ The {{jsxref("Array")}} object has the following methods:
 The [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method joins two or more arrays and returns a new array.
 
 ```js
-let myArray = ['1', '2', '3'];
-myArray = myArray.concat('a', 'b', 'c');
+let myArray = ["1", "2", "3"];
+myArray = myArray.concat("a", "b", "c");
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
 
 The [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) method joins all elements of an array into a string.
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
-const list = myArray.join(' - '); // list is "Wind - Rain - Fire"
+const myArray = ["Wind", "Rain", "Fire"];
+const list = myArray.join(" - "); // list is "Wind - Rain - Fire"
 ```
 
 The [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method adds one or more elements to the end of an array and returns the resulting `length` of the array.
 
 ```js
-const myArray = ['1', '2'];
-myArray.push('3'); // myArray is now ["1", "2", "3"]
+const myArray = ["1", "2"];
+myArray.push("3"); // myArray is now ["1", "2", "3"]
 ```
 
 The [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method removes the last element from an array and returns that element.
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 const last = myArray.pop();
 // myArray is now ["1", "2"], last = "3"
 ```
@@ -264,7 +265,7 @@ const last = myArray.pop();
 The [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method removes the first element from an array and returns that element.
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 const first = myArray.shift();
 // myArray is now ["2", "3"], first is "1"
 ```
@@ -272,31 +273,32 @@ const first = myArray.shift();
 The [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method adds one or more elements to the front of an array and returns the new length of the array.
 
 ```js
-const myArray = ['1', '2', '3'];
-myArray.unshift('4', '5');
+const myArray = ["1", "2", "3"];
+myArray.unshift("4", "5");
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
 
 The [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method extracts a section of an array and returns a new array.
 
 ```js
-let myArray = ['a', 'b', 'c', 'd', 'e'];
-myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
-                               // until index 3, returning [ "b", "c", "d"]
+let myArray = ["a", "b", "c", "d", "e"];
+myArray = myArray.slice(1, 4); // [ "b", "c", "d"]
+// starts at index 1 and extracts all elements
+// until index 3
 ```
 
 The [`at()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at) method returns the element at the specified index in the array, or `undefined` if the index is out of range. It's notably used for negative indices that access elements from the end of the array.
 
 ```js
-const myArray = ['a', 'b', 'c', 'd', 'e'];
+const myArray = ["a", "b", "c", "d", "e"];
 myArray.at(-2); // "d", the second-last element of myArray
 ```
 
 The [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.
 
 ```js
-const myArray = ['1', '2', '3', '4', '5'];
-myArray.splice(1, 3, 'a', 'b', 'c', 'd');
+const myArray = ["1", "2", "3", "4", "5"];
+myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
 // removed 3 elements there, and then inserted all consecutive
@@ -306,7 +308,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd');
 The [`reverse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method transposes the elements of an array, in place: the first array element becomes the last and the last becomes the first. It returns a reference to the array.
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 myArray.reverse();
 // transposes the array so that myArray = ["3", "2", "1"]
 ```
@@ -322,27 +324,22 @@ myArray = myArray.flat();
 The [`sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method sorts the elements of an array in place, and returns a reference to the array.
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
+const myArray = ["Wind", "Rain", "Fire"];
 myArray.sort();
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```
 
-`sort()` can also take a callback function to determine how array elements are compared.
-
-The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window)) when using arrow function as callback, or `undefined` when using normal function as callback.
-
-The callback function is called with two arguments, that are array's elements.
-
-The function below compares two values and returns one of three values:
-
-For instance, the following will sort by the last letter of a string:
+`sort()` can also take a callback function to determine how array elements are compared. The callback function is called with two arguments, which are two values from the array. The function compares these two values and returns a positive number, negative number, or zero, indicating the order of the two values. For instance, the following will sort the array by the last letter of a string:
 
 ```js
 const sortFn = (a, b) => {
-  if (a[a.length - 1] < b[b.length - 1]) return -1;
-  if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] === b[b.length - 1]) return 0;
-}
+  if (a[a.length - 1] < b[b.length - 1]) {
+    return -1; // Negative number => a < b, a comes before b
+  } else if (a[a.length - 1] > b[b.length - 1]) {
+    return 1; // Positive number => a > b, a comes after b
+  }
+  return 0; // Zero => a = b, a and b keep their original order
+};
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
 ```
@@ -354,39 +351,46 @@ myArray.sort(sortFn);
 The [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method searches the array for `searchElement` and returns the index of the first match.
 
 ```js
-const a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b')); // logs 1
+const a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // 1
 
 // Now try again, starting from after the last match
-console.log(a.indexOf('b', 2)); // logs 3
-console.log(a.indexOf('z')); // logs -1, because 'z' was not found
+console.log(a.indexOf("b", 2)); // 3
+console.log(a.indexOf("z")); // -1, because 'z' was not found
 ```
 
 The [`lastIndexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) method works like `indexOf`, but starts at the end and searches backwards.
 
 ```js
-const a = ['a', 'b', 'c', 'd', 'a', 'b'];
-console.log(a.lastIndexOf('b')); // 5
+const a = ["a", "b", "c", "d", "a", "b"];
+console.log(a.lastIndexOf("b")); // 5
 
 // Now try again, starting from before the last match
-console.log(a.lastIndexOf('b', 4)); // 1
-console.log(a.lastIndexOf('z')); // -1
+console.log(a.lastIndexOf("b", 4)); // 1
+console.log(a.lastIndexOf("z")); // -1
 ```
 
 The [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method executes `callback` on every array item and returns `undefined`.
 
 ```js
-const a = ['a', 'b', 'c'];
+const a = ["a", "b", "c"];
 a.forEach((element) => {
   console.log(element);
 });
-// logs each item in turn
+// Logs:
+// a
+// b
+// c
 ```
+
+The `forEach` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisArg`. If provided, `thisArg` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window), [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), etc.) when the function is [not strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or `undefined` when the function is strict.
+
+> **Note:** The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisArg` parameter either.
 
 The [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method returns a new array of the return value from executing `callback` on every array item.
 
 ```js
-const a1 = ['a', 'b', 'c'];
+const a1 = ["a", "b", "c"];
 const a2 = a1.map((item) => item.toUpperCase());
 console.log(a2); // ['A', 'B', 'C']
 ```
@@ -394,7 +398,7 @@ console.log(a2); // ['A', 'B', 'C']
 The [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) method runs `map()` followed by a `flat()` of depth 1.
 
 ```js
-const a1 = ['a', 'b', 'c'];
+const a1 = ["a", "b", "c"];
 const a2 = a1.flatMap((item) => [item.toUpperCase(), item.toLowerCase()]);
 console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
 ```
@@ -402,40 +406,40 @@ console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
 The [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method returns a new array containing the items for which `callback` returned `true`.
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const a2 = a1.filter((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const a2 = a1.filter((item) => typeof item === "number");
 console.log(a2); // [10, 20, 30]
 ```
 
 The [`find()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method returns the first item for which `callback` returned `true`.
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.find((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.find((item) => typeof item === "number");
 console.log(i); // 10
 ```
 
 The [`findLast()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) method returns the last item for which `callback` returned `true`.
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findLast((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLast((item) => typeof item === "number");
 console.log(i); // 30
 ```
 
 The [`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) method returns the index of the first item for which `callback` returned `true`.
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findIndex((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findIndex((item) => typeof item === "number");
 console.log(i); // 1
 ```
 
 The [`findLastIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex) method returns the index of the last item for which `callback` returned `true`.
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findLastIndex((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLastIndex((item) => typeof item === "number");
 console.log(i); // 5
 ```
 
@@ -443,11 +447,11 @@ The [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 const a1 = [1, 2, 3];
 console.log(a1.every(isNumber)); // true
-const a2 = [1, '2', 3];
+const a2 = [1, "2", 3];
 console.log(a2.every(isNumber)); // false
 ```
 
@@ -455,13 +459,13 @@ The [`some()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) m
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 const a1 = [1, 2, 3];
 console.log(a1.some(isNumber)); // true
-const a2 = [1, '2', 3];
+const a2 = [1, "2", 3];
 console.log(a2.some(isNumber)); // true
-const a3 = ['1', '2', '3'];
+const a3 = ["1", "2", "3"];
 console.log(a3.some(isNumber)); // false
 ```
 
@@ -475,7 +479,10 @@ If `callback` needs access to the index of the item being processed, or access t
 
 ```js
 const a = [10, 20, 30];
-const total = a.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const total = a.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0,
+);
 console.log(total); // 60
 ```
 
@@ -513,11 +520,13 @@ In some operations, empty slots behave as if they are filled with `undefined`.
 const arr = [1, 2, , , 5]; // Create a sparse array
 
 // Indexed access
-console.log(arr[2]); // Logs "undefined"
+console.log(arr[2]); // undefined
 
 // For...of
-for (const i of arr) console.log(i);
-// Logs "1 2 undefined undefined 5"
+for (const i of arr) {
+  console.log(i);
+}
+// Logs: 1 2 undefined undefined 5
 
 // Spreading
 const another = [...arr]; // "another" is [ 1, 2, undefined, undefined, 5 ]
@@ -527,13 +536,16 @@ But in others (most notably array iteration methods), empty slots are skipped.
 
 ```js
 const mapped = arr.map((i) => i + 1); // [ 2, 3, <2 empty items>, 6 ]
-arr.forEach((i) => console.log(i)); // Logs "1 2 5"
+arr.forEach((i) => console.log(i)); // 1 2 5
 const filtered = arr.filter(() => true); // [ 1, 2, 5 ]
 const hasFalsy = arr.some((k) => !k); // false
 
 // Property enumeration
 const keys = Object.keys(arr); // [ '0', '1', '4' ]
-for (const key in arr) console.log(key); // Logs "0 1 4"
+for (const key in arr) {
+  console.log(key);
+}
+// Logs: '0' '1' '4'
 // Spreading into an object uses property enumeration, not the array's iterator
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
@@ -572,10 +584,10 @@ Arrays can also be used like objects, to store related information.
 ```js
 const arr = [1, 2, 3];
 arr.property = "value";
-console.log(arr.property);  // Logs "value"
+console.log(arr.property); // "value"
 ```
 
-For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of [`RegExp.prototype.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), and [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+For example, when an array is the result of a match between a regular expression and a string, the array returns properties and elements that provide information about the match. An array is the return value of [`RegExp.prototype.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), and [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). For information on using arrays with regular expressions, see [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Working with array-like objects
 
@@ -585,9 +597,9 @@ Array methods cannot be called directly on array-like objects.
 
 ```js example-bad
 function printArguments() {
-  arguments.forEach((item) => { // TypeError: arguments.forEach is not a function
+  arguments.forEach((item) => {
     console.log(item);
-  });
+  }); // TypeError: arguments.forEach is not a function
 }
 ```
 
@@ -604,31 +616,9 @@ function printArguments() {
 Array prototype methods can be used on strings as well, since they provide sequential access to their characters in a similar way to arrays:
 
 ```js
-Array.prototype.forEach.call('a string', (chr) => {
-  console.log(chr)
-})
+Array.prototype.forEach.call("a string", (chr) => {
+  console.log(chr);
+});
 ```
 
-## Typed Arrays
-
-[JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/en-US/docs/Web/API/WebSockets_API), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
-
-Typed array objects share many of the same methods as arrays with similar semantics. However, they are conceptually not arrays and don't have all array methods.
-
-### Buffers and views: typed array architecture
-
-To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into _buffers_ and _views_. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a _context_ — that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.
-
-![A diagram showing how different typed arrays may be views of the same underlying buffer. Each one has a different element number and width.](typed_arrays.png)
-
-### ArrayBuffer
-
-The {{jsxref("ArrayBuffer")}} is a data type that is used to represent a generic, fixed-length binary data buffer. You can't directly manipulate the contents of an `ArrayBuffer`; instead, you create a typed array view or a {{jsxref("DataView")}} which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
-
-### Typed array views
-
-Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, {{jsxref("Uint8ClampedArray")}}, which clamps the values between `0` and `255`. This is useful for [Canvas data processing](/en-US/docs/Web/API/ImageData), for example.
-
-For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
-
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

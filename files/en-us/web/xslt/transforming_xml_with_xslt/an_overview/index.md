@@ -1,12 +1,6 @@
 ---
 title: An overview
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-tags:
-  - NeedsHelp
-  - NeedsMarkupWork
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
 ---
 
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)

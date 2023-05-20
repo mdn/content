@@ -2,13 +2,6 @@
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - ascent-override
 browser-compat: css.at-rules.font-face.ascent-override
 ---
 
@@ -36,9 +29,7 @@ ascent-override: 90%;
 
 ## Formal syntax
 
-```
-normal | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 

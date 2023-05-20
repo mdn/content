@@ -2,15 +2,8 @@
 title: <shape>
 slug: Web/CSS/shape
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Function
-  - Data Type
-  - Deprecated
-  - Layout
-  - Reference
-  - Web
+status:
+  - deprecated
 browser-compat: css.types.shape
 ---
 

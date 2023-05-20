@@ -1,12 +1,9 @@
 ---
 title: filterRes
 slug: Web/SVG/Attribute/filterRes
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - SVG Filter
-  - Deprecated
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.filter.filterRes
 ---
 

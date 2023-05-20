@@ -1,10 +1,7 @@
 ---
 title: NaN
 slug: Glossary/NaN
-tags:
-  - CodingScripting
-  - Computing
-  - NaN
+page-type: glossary-definition
 ---
 
 NaN (Not a Number) is a numeric {{Glossary("Type", "data type")}} that means an undefined value or value that cannot be represented, especially results of floating-point calculations.

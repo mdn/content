@@ -1,16 +1,7 @@
 ---
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdated
-  - tabs
+page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onUpdated
 ---
 
@@ -50,7 +41,7 @@ Events have three functions:
     - `tabId`
       - : `integer`. The ID of the updated tab.
     - `changeInfo`
-      - : [`object`](#changeinfo). Properties of the tab that changed. See [`changeInfo`](#changeinfo_2) below.
+      - : `object`. Properties of the tab that changed. See the [changeInfo](#changeinfo_2) section for more details.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 

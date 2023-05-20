@@ -1,12 +1,7 @@
 ---
 title: Developing WebExtensions for Thunderbird
 slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
-tags:
-  - Add-ons
-  - Draft
-  - NeedsContent
-  - WebExtensions
-  - thunderbird
+page-type: guide
 ---
 
 {{AddonSidebar}}

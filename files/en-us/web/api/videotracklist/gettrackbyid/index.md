@@ -1,21 +1,8 @@
 ---
-title: VideoTrackList.getTrackById()
+title: "VideoTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - getTrackById
-  - id
-  - track
 browser-compat: api.VideoTrackList.getTrackById
 ---
 

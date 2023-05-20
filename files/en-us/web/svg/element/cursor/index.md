@@ -1,12 +1,9 @@
 ---
 title: <cursor>
 slug: Web/SVG/Element/cursor
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.cursor
 ---
 

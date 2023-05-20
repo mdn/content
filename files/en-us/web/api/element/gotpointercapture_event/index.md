@@ -1,15 +1,9 @@
 ---
-title: 'Element: gotpointercapture event'
+title: "Element: gotpointercapture event"
+short-title: gotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-tags:
-  - Event
-  - HTML DOM
-  - Element
-  - NeedsSpecTable
-  - PointerEvent
-  - Reference
-browser-compat: api.Element.gotpointercapture_event
 page-type: web-api-event
+browser-compat: api.Element.gotpointercapture_event
 ---
 
 {{APIRef}}
@@ -21,9 +15,9 @@ The **`gotpointercapture`** event is fired when an element captures a pointer us
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gotpointercapture', (event) => {});
+addEventListener("gotpointercapture", (event) => {});
 
-ongotpointercapture = (event) => { };
+ongotpointercapture = (event) => {};
 ```
 
 ## Event type
@@ -62,13 +56,13 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 This example gets a `<p>` element and listens for the `gotpointercapture` event. It then calls `setPointerCapture()` on the element on a `pointerdown` event, which will trigger `gotpointercapture`.
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('gotpointercapture', () => {
-  console.log('I\'ve been captured!')
+para.addEventListener("gotpointercapture", () => {
+  console.log("I've been captured!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -76,13 +70,13 @@ para.addEventListener('pointerdown', (event) => {
 The same example, using the `ongotpointercapture` event handler property:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.ongotpointercapture = () => {
-  console.log('I\'ve been captured!')
+  console.log("I've been captured!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```

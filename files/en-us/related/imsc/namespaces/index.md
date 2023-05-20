@@ -1,11 +1,6 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
-tags:
-  - IMSC
-  - Namespaces
-  - TTML
-  - XML
 ---
 
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
@@ -14,7 +9,7 @@ This article covers the subject of XML namespaces, giving you enough information
 
 Namespaces are basically the mechanism that you use in XML to differentiate different families of markup (which may have features with the same name), and allow them to be used in the same document.
 
-To help you understand what we mean by this, let's use a real world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
+To help you understand what we mean by this, let's use a real-world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
 
 In XML you can also give elements and attributes a "family name", which is their namespace. Namespaces define what family an XML vocabulary belongs to, and generally consist of an identifying string of characters. The `<p>` element is available in both HTML and IMSC, so perhaps you could use the namespace `html` to specify HTML's `<p>`, and `imsc` to specify IMSC's `<p>`?
 

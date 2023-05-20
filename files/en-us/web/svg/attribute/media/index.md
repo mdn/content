@@ -1,9 +1,7 @@
 ---
 title: media
 slug: Web/SVG/Attribute/media
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.style.media
 ---
 
@@ -71,6 +69,7 @@ svg {
 </table>
 
 - `<media-query-list>`
+
   - : This value holds a media query that needs to match in order for the style sheet to be applied.
 
     If not specified, the style sheet is applied unconditionally.

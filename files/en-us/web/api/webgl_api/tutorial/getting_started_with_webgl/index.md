@@ -2,12 +2,9 @@
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 page-type: guide
-tags:
-  - Tutorial
-  - WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) enables web content to use an API based on [OpenGL ES](https://www.khronos.org/opengles/) 2.0 to perform 2D and 3D rendering in an HTML [`canvas`](/en-US/docs/Web/API/Canvas_API) in browsers that support it without the use of plug-ins.
 
@@ -21,30 +18,50 @@ It's worth noting here that this series of articles introduces WebGL itself; how
 
 ## Preparing to render in 3D
 
-The first thing you need in order to use WebGL for rendering is a canvas. The HTML fragment below declares a canvas that our sample will draw into.
+First, create two new files:
+
+- "index.html"
+- "webgl-demo.js"
+
+The "index.html" file should contain the following:
 
 ```html
-<body>
-  <canvas id="glCanvas" width="640" height="480"></canvas>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <script src="webgl-demo.js" type="module"></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
+</html>
 ```
+
+Note that this declares a canvas that our sample will draw into.
 
 ### Preparing the WebGL context
 
-The `main()` function in our JavaScript code, is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
+Add the following code to the "webgl-demo.js" file:
 
 ```js
+main();
+
 //
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glCanvas");
+  const canvas = document.querySelector("#glcanvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
   // Only continue if WebGL is available and working
   if (gl === null) {
-    alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+    alert(
+      "Unable to initialize WebGL. Your browser or machine may not support it."
+    );
     return;
   }
 
@@ -53,9 +70,9 @@ function main() {
   // Clear the color buffer with specified clear color
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
-
-window.onload = main;
 ```
+
+The `main()` function is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.
 
 The first thing we do here is obtain a reference to the canvas, assigning it to a variable named `canvas`.
 

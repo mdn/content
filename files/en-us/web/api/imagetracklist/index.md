@@ -2,12 +2,8 @@
 title: ImageTrackList
 slug: Web/API/ImageTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ImageTrackList
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageTrackList
 ---
 

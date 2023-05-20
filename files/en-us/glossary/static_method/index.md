@@ -1,12 +1,7 @@
 ---
 title: Static method
 slug: Glossary/Static_method
-tags:
-  - CodingScripting
-  - JavaScript
-  - Method
-  - Static
-  - Static Method
+page-type: glossary-definition
 ---
 
 A static method (or _static function_) is a {{Glossary("method")}} defined as a member of an {{Glossary("object")}} but is accessible directly from an API object's constructor, rather than from an object instance created via the constructor.
@@ -23,7 +18,7 @@ In the [Notifications API](/en-US/docs/Web/API/Notifications_API), the {{domxref
 let promise = Notification.requestPermission();
 ```
 
-The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on an specific notification object instance to close the system notification it represents:
+The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on a specific notification object instance to close the system notification it represents:
 
 ```js
 let myNotification = new Notification("This is my notification");

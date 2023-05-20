@@ -2,12 +2,8 @@
 title: MimeType
 slug: Web/API/MimeType
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Plugins
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MimeType
 ---
 

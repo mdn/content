@@ -1,11 +1,8 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - Guide
-  - JavaScript
-  - Strict Mode
+page-type: guide
+spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 ---
 
 {{JsSidebar("More")}}
@@ -52,7 +49,7 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ```js example-bad
 function sum(a = 1, b = 2) {
@@ -75,7 +72,7 @@ export default myStrictFunction;
 
 ### Strict mode for classes
 
-All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions).
+All parts of a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
 ```js
 class C1 {
@@ -136,8 +133,8 @@ For example, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) is
 "use strict";
 
 // Assignment to a non-writable global
-var undefined = 5; // TypeError
-var Infinity = 5; // TypeError
+undefined = 5; // TypeError
+Infinity = 5; // TypeError
 
 // Assignment to a non-writable property
 const obj1 = {};
@@ -275,7 +272,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 ```
 
-Whether the string passed to `eval()` is evaluated in strict mode depends on how `eval()` is invoked (direct eval or indirect eval). See the [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) reference page for more information.
+Whether the string passed to `eval()` is evaluated in strict mode depends on how `eval()` is invoked ([direct eval or indirect eval](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)).
 
 #### Block-scoped function declarations
 
@@ -336,7 +333,7 @@ console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
 console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)());
+console.assert(fun.bind(true)() === true);
 ```
 
 #### Removal of stack-walking properties
@@ -397,7 +394,7 @@ When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxEr
 - Using [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) or [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) as variable or function argument name
 - Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (in prevision for future language features): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Declaring two function parameters with the same name `function f(a, b, b) {}`
-- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
+- Declaring the same property name twice in an object literal `{a: 1, b: 3, a: 7}`. This constraint was later removed ([bug 1041128](https://bugzil.la/1041128)).
 
 These errors are good, because they reveal plain errors or bad practices. They occur before the code is running, so they are easily discoverable as long as the code gets parsed by the runtime.
 
@@ -423,7 +420,11 @@ These differences are very subtle differences. It's possible that a test suite d
 - Block-scoped function declarations
   - : In sloppy mode, a function declaration inside a block may be visible outside the block and even callable. In strict mode, a function declaration inside a block is only visible inside the block.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
-- [Strict Mode Code in the ECMAScript specification](https://tc39.es/ecma262/#sec-strict-mode-code)
-- [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

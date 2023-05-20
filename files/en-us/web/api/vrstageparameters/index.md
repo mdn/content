@@ -2,16 +2,9 @@
 title: VRStageParameters
 slug: Web/API/VRStageParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters
 ---
 
@@ -35,7 +28,7 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
 ## Examples
 
 ```js
-const info = document.querySelector('p');
+const info = document.querySelector("p");
 let vrDisplay;
 
 navigator.getVRDisplays().then((displays) => {
@@ -44,9 +37,11 @@ navigator.getVRDisplays().then((displays) => {
   // stageParams is a VRStageParameters object
 
   if (stageParams === null) {
-    info.textContent = 'Your VR Hardware does not support room-scale experiences.'
+    info.textContent =
+      "Your VR Hardware does not support room-scale experiences.";
   } else {
-    info.innerHTML = `<strong>Display stage parameters</strong><br>` +
+    info.innerHTML =
+      `<strong>Display stage parameters</strong><br>` +
       `Sitting to standing transform: ${stageParams.sittingToStandingTransform}<br>` +
       `Play area width (m): ${stageParams.sizeX}<br>` +
       `Play area depth (m): ${stageParams.sizeY}`;

@@ -1,20 +1,10 @@
 ---
-title: XRSession.renderState
+title: "XRSession: renderState property"
+short-title: renderState
 slug: Web/API/XRSession/renderState
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - renderState
+status:
+  - experimental
 browser-compat: api.XRSession.renderState
 ---
 

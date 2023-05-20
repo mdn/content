@@ -1,13 +1,10 @@
 ---
-title: AudioEncoder.AudioEncoder()
+title: "AudioEncoder: AudioEncoder() constructor"
+short-title: AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - AudioEncoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioEncoder.AudioEncoder
 ---
 

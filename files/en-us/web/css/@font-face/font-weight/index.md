@@ -2,13 +2,6 @@
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
 page-type: css-at-rule-descriptor
-tags:
-  - "@font-face"
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - font-weight
 browser-compat: css.at-rules.font-face.font-weight
 ---
 
@@ -83,11 +76,7 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ## Formal syntax
 
-```
-<font-weight-absolute>{1,2}
-
-<font-weight-absolute> = normal | bold | <number [1,1000]>
-```
+{{csssyntax}}
 
 ## Examples
 

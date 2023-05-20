@@ -1,9 +1,7 @@
 ---
 title: Linking
 slug: Web/SVG/Linking
-tags:
-  - Guide
-  - SVG
+page-type: guide
 ---
 
 {{SVGRef}}

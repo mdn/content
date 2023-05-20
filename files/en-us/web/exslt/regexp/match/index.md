@@ -1,10 +1,6 @@
 ---
 title: regexp:match()
 slug: Web/EXSLT/regexp/match
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

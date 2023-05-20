@@ -2,11 +2,6 @@
 title: Server-sent events
 slug: Web/API/Server-sent_events
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - SSE
-  - Server-sent events
 spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 
@@ -16,7 +11,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See [Firefox bug 1681218](https://bugzil.la/1681218).
 
 ## Concepts and usage
 

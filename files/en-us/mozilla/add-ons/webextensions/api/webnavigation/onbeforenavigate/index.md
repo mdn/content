@@ -1,16 +1,7 @@
 ---
 title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeNavigate
-  - webNavigation
+page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
 
@@ -47,7 +38,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the navigation event.
+      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
@@ -61,7 +52,7 @@ Events have three functions:
 - `url`
   - : `string`. The URL to which the given frame will navigate.
 - `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered (This property is **not supported on Firefox** and it is **deprecated on Chrome**).
+  - : `integer`. The ID of the process in which this tab is being rendered (This property is **not supported on Firefox**, and it is **deprecated on Chrome**).
 - `frameId`
   - : `integer`. Frame in which the navigation is about to occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `parentFrameId`
@@ -96,8 +87,6 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

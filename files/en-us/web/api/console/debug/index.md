@@ -1,19 +1,8 @@
 ---
-title: console.debug()
+title: "console: debug() method"
+short-title: debug()
 slug: Web/API/console/debug
 page-type: web-api-instance-method
-tags:
-  - API
-  - Debug
-  - Debugging
-  - Developer Tools
-  - Logging
-  - Method
-  - Reference
-  - console
-  - log
-  - output
-  - print
 browser-compat: api.console.debug
 ---
 
@@ -46,7 +35,7 @@ debug(msg, subst1, /* …, */ substN)
 - `subst1` … `substN`
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output. See
-    {{SectionOnPage("/en-US/docs/Web/API/console", "Using string substitutions")}} for a
+    [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a
     description of how substitutions work.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for

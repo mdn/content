@@ -1,10 +1,7 @@
 ---
 title: page_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.page_action
 ---
 

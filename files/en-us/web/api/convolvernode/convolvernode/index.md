@@ -1,14 +1,8 @@
 ---
-title: ConvolverNode()
+title: "ConvolverNode: ConvolverNode() constructor"
+short-title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Convolver
-  - Reference
-  - Web Audio API
 browser-compat: api.ConvolverNode.ConvolverNode
 ---
 
@@ -31,7 +25,7 @@ new ConvolverNode(context, options)
 
   - : Options are as follows:
 
-    - `audioBuffer`
+    - `buffer`
       - : A mono, stereo, or
         4-channel {{domxref("AudioBuffer")}} containing the
         (possibly multichannel) impulse response used by the `ConvolverNode`

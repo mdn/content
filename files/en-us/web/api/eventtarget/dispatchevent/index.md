@@ -1,10 +1,8 @@
 ---
-title: EventTarget.dispatchEvent()
+title: "EventTarget: dispatchEvent() method"
+short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.EventTarget.dispatchEvent
 ---
 
@@ -21,7 +19,7 @@ should have already been created and initialized using an {{domxref("Event/Event
 > **Note:** When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
 
 Unlike "native" events, which are fired by the browser and invoke event handlers
-asynchronously via the [event loop](/en-US/docs/Web/JavaScript/EventLoop),
+asynchronously via the [event loop](/en-US/docs/Web/JavaScript/Event_loop),
 `dispatchEvent()` invokes event handlers _synchronously_. All applicable event
 handlers are called and return before `dispatchEvent()` returns.
 

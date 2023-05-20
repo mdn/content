@@ -2,26 +2,12 @@
 title: caret-color
 slug: Web/CSS/caret-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - Editing
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - Text Editing
-  - caret
-  - caret-color
-  - contenteditable
-  - recipe:css-property
 browser-compat: css.properties.caret-color
 ---
 
 {{CSSRef}}
 
-The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
+The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
@@ -38,8 +24,8 @@ caret-color: currentcolor;
 /* <color> values */
 caret-color: red;
 caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 0.8);
 
 /* Global values */
 caret-color: inherit;
@@ -115,8 +101,7 @@ p.custom {
 ## See also
 
 - The {{HTMLElement("input")}} element
-- The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
+- The HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute, which can be used to make any element's text editable
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

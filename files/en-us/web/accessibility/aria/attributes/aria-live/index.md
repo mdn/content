@@ -1,13 +1,7 @@
 ---
-title: "aria-live"
+title: aria-live
 slug: Web/Accessibility/ARIA/Attributes/aria-live
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-live
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live
 ---
 

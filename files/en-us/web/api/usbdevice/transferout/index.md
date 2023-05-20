@@ -1,17 +1,10 @@
 ---
-title: USBDevice.transferOut()
+title: "USBDevice: transferOut() method"
+short-title: transferOut()
 slug: Web/API/USBDevice/transferOut
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - transferOut
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.transferOut
 ---
 

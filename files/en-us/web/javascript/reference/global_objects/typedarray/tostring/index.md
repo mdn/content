@@ -1,12 +1,7 @@
 ---
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toString
 ---
 

@@ -1,20 +1,15 @@
 ---
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
 
 {{JSRef}}
 
-The **`RegExp`** constructor creates a regular expression object for matching text with a pattern.
+The **`RegExp()`** constructor creates {{jsxref("RegExp")}} objects.
 
-For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
+For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 
 {{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
@@ -118,7 +113,7 @@ order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter
   in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

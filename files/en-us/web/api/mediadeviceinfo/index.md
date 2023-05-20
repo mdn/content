@@ -2,18 +2,6 @@
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Device Info
-  - Media Devices
-  - MediaDevicesInfo
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
 browser-compat: api.MediaDeviceInfo
 ---
 
@@ -34,11 +22,12 @@ The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices
 - {{domxref("MediaDeviceInfo.label")}} {{ReadOnlyInline}}
   - : Returns a string describing this device (for example "External USB Webcam").
 
-> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.
+> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) mechanism to identify a user.
 
 ## Instance methods
 
-None.
+- {{domxref("MediaDeviceInfo.toJSON()")}}
+  - : Returns a JSON representation of the `MediaDeviceInfo` object.
 
 ## Example
 
@@ -49,7 +38,8 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
-  navigator.mediaDevices.enumerateDevices()
+  navigator.mediaDevices
+    .enumerateDevices()
     .then((devices) => {
       devices.forEach((device) => {
         console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);

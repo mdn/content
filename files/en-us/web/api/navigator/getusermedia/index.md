@@ -1,18 +1,10 @@
 ---
-title: Navigator.getUserMedia()
+title: "Navigator: getUserMedia() method"
+short-title: getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Method
-  - Navigator
-  - Reference
-  - WebRTC
-  - getusermedia
+status:
+  - deprecated
 browser-compat: api.Navigator.getUserMedia
 ---
 
@@ -40,7 +32,7 @@ getUserMedia(constraints, successCallback, errorCallback)
   - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
 
   - : A function which is invoked when the request for media access is approved. The
@@ -51,11 +43,11 @@ getUserMedia(constraints, successCallback, errorCallback)
 
     ```js
     function successCallback(stream) {
-       const video = document.querySelector('video');
-       video.srcObject = stream;
-       video.onloadedmetadata = (e) => {
-          // Do something with the video here.
-       };
+      const video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        // Do something with the video here.
+      };
     }
     ```
 
@@ -79,25 +71,27 @@ various browsers' prefixes. Note that this is the deprecated way of doing it: Se
 under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.
 
 ```js
-navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      (stream) => {
-         const video = document.querySelector('video');
-         video.srcObject = stream;
-         video.onloadedmetadata = (e) => {
-           video.play();
-         };
-      },
-      (err) => {
-         console.error(`The following error occurred: ${err.name}`);
-      }
-   );
+  navigator.getUserMedia(
+    { audio: true, video: { width: 1280, height: 720 } },
+    (stream) => {
+      const video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+        video.play();
+      };
+    },
+    (err) => {
+      console.error(`The following error occurred: ${err.name}`);
+    }
+  );
 } else {
-   console.log("getUserMedia not supported");
+  console.log("getUserMedia not supported");
 }
 ```
 
@@ -131,7 +125,7 @@ See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the
   media stream objects
 - [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
   tutorial on using `getUserMedia() for taking photos rather than video.`

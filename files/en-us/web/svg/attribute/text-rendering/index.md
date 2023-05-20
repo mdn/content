@@ -1,9 +1,7 @@
 ---
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.text-rendering
 ---
 

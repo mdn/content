@@ -1,16 +1,7 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeRequest
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRequest
 ---
 
@@ -61,7 +52,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
+      - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -182,7 +173,7 @@ Events have three functions:
 
 ### DNS resolution ordering when BlockingResponse is used
 
-Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
+Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzil.la/1466099)
 
 ## Examples
 
@@ -199,11 +190,11 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-This code cancels requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code cancels requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
@@ -221,11 +212,11 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-This code replaces, by redirection, all network requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code replaces, by redirection, all network requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // redirect function
 // returns an object with a property `redirectURL`
@@ -250,7 +241,7 @@ This code is exactly like the previous example, except that the listener handles
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // URL we will redirect to
 let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
@@ -278,7 +269,7 @@ browser.webRequest.onBeforeRequest.addListener(
 Another example, that redirects all images to a data URL:
 
 ```js
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -306,7 +297,7 @@ function randomColor() {
   return `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
 
-const pattern = "https://mdn.mozillademos.org/*";
+const pattern = "https://developer.mozilla.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -329,8 +320,6 @@ browser.webRequest.onBeforeRequest.addListener(
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

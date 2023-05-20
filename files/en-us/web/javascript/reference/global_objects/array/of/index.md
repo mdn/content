@@ -1,24 +1,22 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.of
 ---
 
 {{JSRef}}
 
-The **`Array.of()`** method creates a new `Array`
+The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
+
+{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
+Array.of()
 Array.of(element0)
 Array.of(element0, element1)
 Array.of(element0, element1, /* … ,*/ elementN)
@@ -42,7 +40,7 @@ Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 The `Array.of()` method is a generic factory method. For example, if a subclass of `Array` inherits the `of()` method, the inherited `of()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array, and the constructor will be called with the number of arguments passed to `of()`. The final `length` will be set again when all elements are assigned. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
@@ -52,8 +50,8 @@ The `Array.of()` method is a generic factory method. For example, if a subclass 
 ### Using Array.of()
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
@@ -90,9 +88,8 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
-- [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
-- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)

@@ -1,10 +1,9 @@
 ---
 title: glyphRef
 slug: Web/SVG/Attribute/glyphRef
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.altGlyph.glyphRef
 ---
 

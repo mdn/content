@@ -1,17 +1,13 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.keygen
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate generation of key material, and submission of the public key as part of an [HTML form](/en-US/docs/Learn/Forms). This mechanism is designed for use with Web-based certificate management systems. It is expected that the `<keygen>` element will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate.
 
@@ -19,31 +15,31 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, interactive content,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
           >submittable</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
           >resettable</a
         >
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated element</a
         >, palpable content.
       </td>
@@ -60,7 +56,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -80,17 +76,17 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute lets you specify that the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the `autofocus` attribute, which is a Boolean.
-- {{HTMLAttrDef("challenge")}}
+- `challenge`
   - : A challenge string that is submitted along with the public key. Defaults to an empty string if not specified.
-- {{HTMLAttrDef("disabled")}}
+- `disabled`
   - : This Boolean attribute indicates that the form control is not available for interaction.
-- {{HTMLAttrDef("form")}}
+- `form`
   - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen>` elements anywhere within a document, not just as descendants of their form elements.
-- {{HTMLAttrDef("keytype")}}
+- `keytype`
   - : The type of key generated. The default value is `RSA`.
-- {{HTMLAttrDef("name")}}
+- `name`
   - : The name of the control, which is submitted with the form data.
 
 The element is written as follows:

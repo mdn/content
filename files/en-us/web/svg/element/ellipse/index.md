@@ -1,11 +1,7 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.ellipse
 ---
 
@@ -36,10 +32,10 @@ svg {
 ## Attributes
 
 - {{SVGAttr("cx")}}
-  - : The x position of the ellipse.
+  - : The x position of the center of the ellipse.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("cy")}}
-  - : The y position of the ellipse.
+  - : The y position of the center of the ellipse.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("rx")}}
   - : The radius of the ellipse on the x axis.

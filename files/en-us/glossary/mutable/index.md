@@ -1,9 +1,7 @@
 ---
 title: Mutable
 slug: Glossary/Mutable
-tags:
-  - CodingScripting
-  - NeedsContent
+page-type: glossary-definition
 ---
 
 A _mutable_ value is one that can be changed without creating an entirely new value. In {{glossary("JavaScript")}}, {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable by default, but {{Glossary("primitive", "primitive values")}} are not — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned.

@@ -1,12 +1,8 @@
 ---
-title: location.href
+title: "location: href property"
+short-title: href
 slug: Web/API/Location/href
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.href
 ---
 

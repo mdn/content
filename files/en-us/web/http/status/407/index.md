@@ -1,11 +1,7 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
+page-type: http-status-code
 browser-compat: http.status.407
 ---
 
@@ -21,7 +17,7 @@ information on how to authorize correctly.
 
 ## Status
 
-```
+```http
 407 Proxy Authentication Required
 ```
 

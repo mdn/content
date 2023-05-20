@@ -1,11 +1,7 @@
 ---
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
-  - stroke-linejoin
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-linejoin
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: mask
 slug: Web/SVG/Attribute/mask
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.mask
 ---
 

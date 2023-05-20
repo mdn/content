@@ -1,13 +1,10 @@
 ---
-title: Document.releaseCapture()
+title: "Document: releaseCapture() method"
+short-title: releaseCapture()
 slug: Web/API/Document/releaseCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.Document.releaseCapture
 ---
 
@@ -35,12 +32,12 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
+See the [example](/en-US/docs/Web/API/Element/setCapture#examples) for
 {{domxref("element.setCapture()")}}.
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

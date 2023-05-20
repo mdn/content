@@ -1,11 +1,7 @@
 ---
 title: Netscape Navigator
 slug: Glossary/Netscape_Navigator
-tags:
-  - Browser
-  - Navigation
-  - Netscape
-  - Netscape Navigator
+page-type: glossary-definition
 ---
 
 Netscape Navigator or Netscape was a leading {{glossary("browser")}} in the 1990s. Netscape was based on Mosaic and the Netscape team was led by Marc Andreessen, a programmer who also wrote code for Mosaic.

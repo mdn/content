@@ -1,9 +1,7 @@
 ---
 title: direction
 slug: Web/SVG/Attribute/direction
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.direction
 ---
 

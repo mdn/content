@@ -1,14 +1,11 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef}} {{Deprecated_Header}}

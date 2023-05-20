@@ -1,16 +1,8 @@
 ---
-title: SpeechRecognitionResult.isFinal
+title: "SpeechRecognitionResult: isFinal property"
+short-title: isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - isFinal
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.isFinal
 ---
 
@@ -44,7 +36,7 @@ recognition.onresult = (event) => {
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);
-}
+};
 ```
 
 ## Specifications

@@ -1,13 +1,8 @@
 ---
-title: RTCPeerConnection()
+title: "RTCPeerConnection: RTCPeerConnection() constructor"
+short-title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
 
@@ -107,7 +102,7 @@ new RTCPeerConnection(configuration)
         - `"public"` {{deprecated_inline}}
           - : Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._
         - `"relay"`
-          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.
+          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.
 
     - `peerIdentity` {{optional_inline}}
       - : A string

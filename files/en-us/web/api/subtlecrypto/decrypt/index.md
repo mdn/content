@@ -1,24 +1,16 @@
 ---
-title: SubtleCrypto.decrypt()
+title: "SubtleCrypto: decrypt() method"
+short-title: decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 page-type: web-api-instance-method
-tags:
-  - API
-  - Decrypt
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
 browser-compat: api.SubtleCrypto.decrypt
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`decrypt()`** method of the {{domxref("SubtleCrypto")}}
-interface decrypts some encrypted data. It takes as arguments a {{glossary("key")}} to
-decrypt with, some optional extra parameters, and the data to decrypt (also known as
-"ciphertext"). It returns a {{jsxref("Promise")}} which will be fulfilled with the
-decrypted data (also known as "plaintext").
+The **`decrypt()`** method of the {{domxref("SubtleCrypto")}} interface decrypts some encrypted data.
+It takes as arguments a {{glossary("key")}} to decrypt with, some optional extra parameters, and the data to decrypt (also known as "ciphertext").
+It returns a {{jsxref("Promise")}} which will be fulfilled with the decrypted data (also known as "plaintext").
 
 ## Syntax
 
@@ -32,41 +24,10 @@ decrypt(algorithm, key, data)
 
   - : An object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as required.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
-
-    - To use [RSA-OAEP](#rsa-oaep), pass an object with the following properties. <!-- RsaOaepParams dictionary in the spec -->
-
-      - `name`
-        - : A string. This should be set to `RSA-OAEP`.
-      - `label` {{optional_inline}}
-
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext.
-          A digest of the label is part of the input to the encryption operation.
-
-          Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
-
-    - To use [AES-CBC](#aes-cbc) or [AES-GCM](#aes-gcm) pass an object with the properties given below: <!-- AesGcmParams dictionary in the spec -->
-
-      - `name`
-        - : A string indicating the name of the algorithm: `AES-CBC`, `AES-GCM`.
-      - `iv`
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
-          The initialization vector.
-          Must be 16 bytes, unpredictable, and preferably cryptographically random.
-          However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
-
-    - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), pass an object with the following properties: <!-- AesCtrParams dictionary in the spec -->
-
-      - `name`
-        - : A string indicating the name of the algorithm: `AES-CTR`.
-      - `counter`
-        - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block.
-          This must be 16 bytes long (the AES block size).
-          The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce.
-          For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
-      - `length`
-        - : A `Number` — the number of bits in the counter block that are used for the actual counter.
-          The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`.
-          The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
+    - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
+    - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
+    - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}} object.
+    - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}} object.
 
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key to be used for decryption.
@@ -83,17 +44,13 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid
-    encryption algorithm, or invalid key for the specified encryption algorithm*)*.
+  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm*)*.
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or there was an error decrypting the ciphertext).
+  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or there was an error decrypting the ciphertext).
 
 ## Supported algorithms
 
-The `decrypt()` method supports the same algorithms as the
-[`encrypt()`](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-method.
+The `decrypt()` method supports the same algorithms as the [`encrypt()`](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms) method.
 
 ## Examples
 
@@ -135,6 +92,7 @@ This code decrypts `ciphertext` using AES in CBC mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
+  // The iv value is the same as that used for encryption
   return window.crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, ciphertext);
 }
 ```
@@ -146,6 +104,7 @@ This code decrypts `ciphertext` using AES in GCM mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
+  // The iv value is the same as that used for encryption
   return window.crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ciphertext);
 }
 ```

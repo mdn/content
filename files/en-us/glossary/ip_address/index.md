@@ -1,13 +1,12 @@
 ---
 title: IP Address
 slug: Glossary/IP_Address
-tags:
-  - Beginner
-  - Infrastructure
-  - Web
+page-type: glossary-definition
 ---
 
-An IP address is a number assigned to every device connected to a network that uses the Internet protocol.
+An **IP address** is a number used to address each device on an IP network uniquely.
+
+_IP_ stands for _Internet Protocol_ which is the [protocol layer](https://docs.oracle.com/cd/E19683-01/806-4075/ipov-7/index.html) with which the address is associated.
 
 "IP address" typically still refers to 32-bit IPv4 addresses until IPv6 is deployed more broadly.
 

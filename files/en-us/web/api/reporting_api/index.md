@@ -2,26 +2,21 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Reporting
-  - Secure context
+status:
+  - experimental
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
 
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
 
-The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
+The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
 ## Concepts and usage
 
-There are a number of different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
+There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violations.
-- [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy) violations.
+- [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -38,7 +33,7 @@ The endpoints are arranged into groups; an endpoint group can work together to p
 
 > **Note:** There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
-Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a web site and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
+Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
 ### Reporting observers
 
@@ -55,28 +50,18 @@ Methods are then available on the observer to start collecting reports ({{domxre
 
 The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportObserver` objects present in the loaded website. This is not yet documented.
 
-## Reporting API interfaces
+## Interfaces
 
-- {{domxref("ReportingObserver")}}
-  - : Create `ReportingObserver` instances using its constructor, which can then be used to collect and access reports.
+- {{domxref("CSPViolationReportBody")}}
+  - : Contains details of a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
+- {{domxref("DeprecationReportBody")}}
+  - : Contains details of deprecated web platform features that a website is using.
+- {{domxref("InterventionReportBody")}}
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g. for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
-
-### Reporting API dictionaries
-
-- {{domxref("ReportingObserverOptions")}}
-  - : Allows options to be set in the constructor when creating a reporting observer.
-
-### Available report types
-
-The spec defines the following report types:
-
-- Deprecation report
-  - : Indicates that a WebAPI or other browser feature being used in the website is expected to stop working in a future release. Indicated by a {{domxref("Report.body")}} property with a {{domxref("DeprecationReportBody")}} return value.
-- Intervention report
-  - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
-- Crash report
-  - : Indicates that the website stopped running due to a browser crash. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CrashReportBody")}} return value.
+- {{domxref("ReportingObserver")}}
+  - : An object that can be used to collect and access reports as they are generated.
 
 ## Examples
 
@@ -84,9 +69,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -103,15 +88,9 @@ Later on in the example we deliberately use the deprecated version of {{domxref(
 
 ```js
 if (navigator.mozGetUserMedia) {
-  navigator.mozGetUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.mozGetUserMedia(constraints, success, failure);
 } else {
-  navigator.getUserMedia(
-    constraints,
-    success,
-    failure);
+  navigator.getUserMedia(constraints, success, failure);
 }
 ```
 
@@ -137,4 +116,4 @@ Chrome is also working on an implementation: [information about Chrome implement
 ## See also
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy)

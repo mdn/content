@@ -1,14 +1,13 @@
 ---
 title: href
 slug: Web/MathML/Global_attributes/href
-tags:
-  - Global attributes
-  - MathML
-  - Reference
+page-type: mathml-attribute
+status:
+  - non-standard
 browser-compat: mathml.global_attributes.href
 ---
 
-{{MathMLRef("Global_attributes")}}
+{{MathMLRef}}{{Non-standard_header}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
 

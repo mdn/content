@@ -1,17 +1,13 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
 
 {{JSRef}}
 
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
+The **`handler.preventExtensions()`** method is a trap for the `[[PreventExtensions]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.preventExtensions()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
@@ -37,8 +33,6 @@ The `preventExtensions()` method must return a boolean value.
 
 ## Description
 
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
-
 ### Interceptions
 
 This trap can intercept these operations:
@@ -48,9 +42,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.seal()")}}
 - {{jsxref("Object.freeze()")}}
 
+Or any other operation that invokes the `[[PreventExtensions]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - `Object.preventExtensions(proxy)` only returns `true` if `Object.isExtensible(proxy)` is `false`.
 
@@ -69,7 +65,7 @@ const p = new Proxy(
       Object.preventExtensions(target);
       return true;
     },
-  }
+  },
 );
 
 console.log(Object.preventExtensions(p));
@@ -86,7 +82,7 @@ const p = new Proxy(
     preventExtensions(target) {
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p); // TypeError is thrown

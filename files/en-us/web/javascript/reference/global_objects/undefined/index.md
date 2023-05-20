@@ -1,36 +1,29 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-global-property
 browser-compat: javascript.builtins.undefined
 ---
 
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
+The **`undefined`** global property represents the primitive
 value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{js_property_attributes(0,0,0)}}
-
 {{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
-## Syntax
+## Value
 
-```js-nolint
-undefined
-```
+The primitive value `{{Glossary("Undefined", "undefined")}}`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`undefined` is a property of the _global object_. That is, it is a
-variable in global scope. The initial value of `undefined` is the primitive
-value `{{Glossary("Undefined", "undefined")}}`.
+`undefined` is a property of the _global object_. That is, it is a variable in global scope.
 
-In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. (Even when this is not the case, avoid overriding it.)
+In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 A variable that has not been assigned a value is of type `undefined`. A
 method or statement also returns `undefined` if the variable that is being
@@ -40,17 +33,15 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > **Note:** While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
 > ```js example-bad
-> //  DON'T DO THIS
+> // DON'T DO THIS
 >
-> //  logs "foo string"
 > (() => {
 >   const undefined = "foo";
->   console.log(undefined, typeof undefined);
+>   console.log(undefined, typeof undefined); // foo string
 > })();
 >
-> //  logs "foo string"
 > ((undefined) => {
->   console.log(undefined, typeof undefined);
+>   console.log(undefined, typeof undefined); // foo string
 > })("foo");
 > ```
 
@@ -94,15 +85,14 @@ One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not t
 error if the variable has not been declared.
 
 ```js
-//  x has not been declared before
+// x has not been declared before
+// evaluates to true without errors
 if (typeof x === "undefined") {
-  //  evaluates to true without errors
-  //  these statements execute
+  // these statements execute
 }
 
-//  throws a ReferenceError
+// Throws a ReferenceError
 if (x === undefined) {
-
 }
 ```
 
@@ -117,7 +107,7 @@ existence of a property on the _global object_, using the
 
 ```js
 if ("x" in window) {
-  //  these statements execute only if x is defined globally
+  // These statements execute only if x is defined globally
 }
 ```
 
@@ -128,12 +118,12 @@ The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 ```js
 let x;
 if (x === void 0) {
-  //  these statements execute
+  // these statements execute
 }
 
-//  y has not been declared before
+// y has not been declared before
 if (y === void 0) {
-  //  throws Uncaught ReferenceError: y is not defined
+  // throws Uncaught ReferenceError: y is not defined
 }
 ```
 

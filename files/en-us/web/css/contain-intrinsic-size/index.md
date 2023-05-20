@@ -2,18 +2,10 @@
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - experimental
-  - contain-intrinsic-size
-  - recipe:css-shorthand-property
-  - Experimental
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
@@ -47,6 +39,7 @@ contain-intrinsic-size: auto 300px auto 4rem;
 contain-intrinsic-size: inherit;
 contain-intrinsic-size: initial;
 contain-intrinsic-size: revert;
+contain-intrinsic-size: revert-layer;
 contain-intrinsic-size: unset;
 ```
 
@@ -151,26 +144,26 @@ The HTML defines two buttons, a container element that is subject to containment
 
 ```html
 <p>
-<label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
-<select id="contain_intrinsic_size_selector">
-  <option>none</option>
-  <option>40px 130px</option>
-  <option>auto 40px auto 130px</option>
-</select>;<br/>
+  <label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
+  <select id="contain_intrinsic_size_selector">
+    <option>none</option>
+    <option>40px 130px</option>
+    <option>auto 40px auto 130px</option></select
+  >;<br />
 
-<label for="contain_selector">contain:</label>
-<select id="contain_selector">
-  <option>none</option>
-  <option>size</option>
-  <option>strict</option>
-</select>;<br/>
+  <label for="contain_selector">contain:</label>
+  <select id="contain_selector">
+    <option>none</option>
+    <option>size</option>
+    <option>strict</option></select
+  >;<br />
 
-<label for="content_visibility_selector">content-visibility:</label>
-<select id="content_visibility_selector">
-  <option>visible</option>
-  <option>auto</option>
-  <option>hidden</option>
-</select>;
+  <label for="content_visibility_selector">content-visibility:</label>
+  <select id="content_visibility_selector">
+    <option>visible</option>
+    <option>auto</option>
+    <option>hidden</option></select
+  >;
 </p>
 
 <div id="contained_element">

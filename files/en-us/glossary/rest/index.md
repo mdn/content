@@ -1,12 +1,7 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - Architecture
-  - Beginner
-  - HTTP
-  - Rest
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 **REST** (Representational State Transfer) refers to a group of software architecture design constraints that bring about efficient, reliable and scalable distributed systems.

@@ -1,12 +1,7 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-tags:
-  - Access Control
-  - Authentication
-  - Guide
-  - HTTP
-  - Security
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -48,13 +43,13 @@ In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found
 ### Authentication of cross-origin images
 
 A potential security hole (that has since been fixed in browsers) was authentication of cross-site images.
-From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
 Browsers use `utf-8` encoding for usernames and passwords.
 
-Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in {{bug(1419658)}}.
+Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
 
 ### WWW-Authenticate and Proxy-Authenticate headers
 
@@ -159,7 +154,7 @@ https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://crbug.com/82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

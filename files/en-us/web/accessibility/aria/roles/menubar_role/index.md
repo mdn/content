@@ -1,15 +1,7 @@
 ---
 title: "ARIA: menubar role"
 slug: Web/Accessibility/ARIA/Roles/menubar_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - menubar role
-  - composite widget role
-  - menubar
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menubar
   - https://w3c.github.io/aria-practices/#menu
@@ -29,7 +21,7 @@ An example of a native menubar is the bar which may be present at the top of the
 
 Menubar interactions should be similar to the typical menu bar interaction in a desktop graphical user interface. In Google Docs, each of those menu items is a `menuitem` with a popup submenu, so each has an `aria-haspopup` attribute set to `true`. The `menubar` element does not.
 
-The menubar and all the menu items are focusable and have a {{htmlattrdef('tabindex')}} attribute set. When the menubar receives focus thru tabbing, keyboard focus is placed on the first menuitem. Each item in the menu has `tabindex` set to `-1`, except the first item has which has its `tabindex` set to `0`.
+The menubar and all the menu items are focusable and have a [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute set. When the menubar receives focus through tabbing, keyboard focus is placed on the first menuitem. Each item in the menu has `tabindex` set to `-1`, except the first item has which has its `tabindex` set to `0`.
 
 If a menubar receives focus as a result of a context action, such as a shortcut key, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. That said, make sure not to create shortcut keys that interfere with user agent, operating system, or assistive technology shortcuts - any UA, OS, or AT.
 

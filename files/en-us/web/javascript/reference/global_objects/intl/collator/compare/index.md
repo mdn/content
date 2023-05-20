@@ -1,26 +1,16 @@
 ---
 title: Intl.Collator.prototype.compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
-tags:
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.compare
 ---
 
 {{JSRef}}
 
-The **`Intl.Collator.prototype.compare()`** method compares two
-strings according to the sort order of this {{jsxref("Intl.Collator")}} object.
+The **`compare()`** method of {{jsxref("Intl.Collator")}} instances compares two
+strings according to the sort order of this collator object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
@@ -54,8 +44,7 @@ is bound to the collator from which it was obtained, so it can be passed directl
 const a = ["Offenbach", "Österreich", "Odenwald"];
 const collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(", "));
-// → "Odenwald, Österreich, Offenbach"
+console.log(a.join(", ")); // "Odenwald, Österreich, Offenbach"
 ```
 
 ### Using compare for array search
@@ -70,8 +59,7 @@ const collator = new Intl.Collator("fr", {
 });
 const s = "congres";
 const matches = a.filter((v) => collator.compare(v, s) === 0);
-console.log(matches.join(", "));
-// → "Congrès, congres"
+console.log(matches.join(", ")); // "Congrès, congres"
 ```
 
 ## Specifications

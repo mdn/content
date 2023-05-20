@@ -2,19 +2,6 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 
@@ -30,7 +17,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/Web_Components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## HTML DOM concepts and usage
 
@@ -233,7 +220,7 @@ The media interfaces provide HTML access to the contents of the media elements: 
 
 ### Drag and drop interfaces
 
-These interfaces are used by the {{DOMxRef("HTML_Drag_and_Drop_API", "", "", "1")}} to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
+These interfaces are used by the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
 
 - {{DOMxRef("DataTransfer")}}
 - {{DOMxRef("DataTransferItem")}}
@@ -253,7 +240,7 @@ The History API interfaces let you access information about the browser's histor
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/en-US/docs/Web/Web_Components) to create and manage the available [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/en-US/docs/Web/API/Web_components) to create and manage the available [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 - {{DOMxRef("CustomElementRegistry")}}
 
@@ -275,14 +262,14 @@ Several interfaces are technically defined in the HTML specification while actua
 
 #### Web storage interfaces
 
-The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
+The {{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
 
 - {{DOMxRef("Storage")}}
 - {{DOMxRef("StorageEvent")}}
 
 #### Web Workers interfaces
 
-These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
+These interfaces are used by the {{DOMxRef("Web_Workers_API", "Web Workers API", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
 
 - {{DOMxRef("BroadcastChannel")}}
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
@@ -298,7 +285,7 @@ These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} bot
 
 #### WebSocket interfaces
 
-These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "", "", "1")}}.
+These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "WebSockets API", "", "1")}}.
 
 - {{DOMxRef("CloseEvent")}}
 - {{DOMxRef("WebSocket")}}

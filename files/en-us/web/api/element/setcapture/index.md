@@ -1,15 +1,11 @@
 ---
-title: Element.setCapture()
+title: "Element: setCapture() method"
+short-title: setCapture()
 slug: Web/API/Element/setCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.setCapture
 ---
 
@@ -97,7 +93,7 @@ clicking and holding down on an element.
 </html>
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## Notes
 
@@ -106,7 +102,7 @@ layout of other elements.
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

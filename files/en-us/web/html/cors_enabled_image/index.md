@@ -1,19 +1,12 @@
 ---
 title: Allowing cross-origin use of images and canvas
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - CORS
-  - Canvas
-  - HTML
-  - Image
-  - Reference
-  - Security
-  - Storage
-  - data
+page-type: guide
 ---
 
-HTML provides a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
+{{HTMLSidebar}}
+
+HTML provides a [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
 See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details on how the `crossorigin` attribute is used.
 
@@ -32,11 +25,11 @@ Calling any of the following on a tainted canvas will result in an error:
 - Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
 - Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}, {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} or {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} on the {{HTMLElement("canvas")}} element itself
 
-Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
+Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote websites without permission.
 
 ## Storing an image from a foreign origin
 
-In this example, we wish to permit images from a foreign origin to be retrieved and saved to local storage. Implementing this requires configuring the server as well as writing code for the web site itself.
+In this example, we wish to permit images from a foreign origin to be retrieved and saved to local storage. Implementing this requires configuring the server as well as writing code for the website itself.
 
 ### Web server configuration
 
@@ -61,7 +54,7 @@ In short, this configures the server to allow graphic files (those with the exte
 
 Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to [local storage](/en-US/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
+The key is to use the [`crossorigin`](/en-US/docs/Web/HTML/Element/image#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when downloading the image data.
 
 #### Starting the download
 
@@ -73,7 +66,7 @@ function startDownload() {
   let imageDescription = "The Mozilla logo";
 
   downloadedImg = new Image();
-  downloadedImg.crossOrigin = "Anonymous";
+  downloadedImg.crossOrigin = "anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
@@ -119,5 +112,3 @@ Now it's time to actually save the image locally. To do this, we use the Web Sto
 - [Using Cross-domain images in WebGL and Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML Specification - the `crossorigin` attribute](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin)
 - [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

@@ -1,14 +1,8 @@
 ---
-title: ReadableByteStreamController.enqueue()
+title: "ReadableByteStreamController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
 
@@ -67,3 +61,4 @@ if (bytesRead === 0) {
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

@@ -2,17 +2,10 @@
 title: initial-value
 slug: Web/CSS/@property/initial-value
 page-type: css-at-rule-descriptor
-tags:
-  - CSS
-  - Reference
-  - Web
-  - Property
-  - Houdini
-  - Experimental
 browser-compat: css.at-rules.property.initial-value
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`initial-value`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) unless the syntax accepts any valid token stream. It sets the initial-value for the property.
 
@@ -44,9 +37,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Formal syntax
 
-```
-<string>
-```
+{{csssyntax}}
 
 ## Examples
 

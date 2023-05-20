@@ -1,15 +1,7 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Editing
-  - Global attributes
-  - HTML
-  - Reference
-  - Text Editing
-  - contenteditable
-  - text entry
-  - text input
+page-type: html-attribute
 browser-compat: html.global_attributes.contenteditable
 ---
 
@@ -33,6 +25,8 @@ Note that although its allowed values include `true` and `false`, this attribute
 
 You can set the color used to draw the text insertion {{Glossary("caret")}} with the CSS {{cssxref("caret-color")}} property.
 
+Elements that are made editable, and therefore interactive, by using the `contenteditable` attribute can be focused. They participate in sequential keyboard navigation. However, elements with the `contenteditable` attribute nested within other `contenteditable` elements are not added to the tabbing sequence by default. You can add the nested `contenteditable` elements to the keyboard navigation sequence by specifying the `tabindex` value ([`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
+
 ## Specifications
 
 {{Specifications}}
@@ -46,4 +40,4 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property
-- [`HTMLElement` `input` event](/en-US/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` event](/en-US/docs/Web/API/HTMLElement/input_event)

@@ -2,13 +2,9 @@
 title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Deprecated
-  - NeedsContent
-  - Non-standard
-  - Reference
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}

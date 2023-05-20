@@ -1,19 +1,8 @@
 ---
-title: XMLHttpRequest.responseType
+title: "XMLHttpRequest: responseType property"
+short-title: responseType
 slug: Web/API/XMLHttpRequest/responseType
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HTTP Response
-  - HTTP Response Type
-  - Property
-  - Reference
-  - Response
-  - XHR
-  - XMLHttpRequest
-  - responseType
 browser-compat: api.XMLHttpRequest.responseType
 ---
 
@@ -44,8 +33,6 @@ It can take the following values:
   - : The `response` is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.
 - `"text"`
   - : The `response` is a text in a string.
-- `"ms-stream"` {{non-standard_inline}}
-  - : The `response` is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.
 
 > **Note:** When setting `responseType` to a particular value, the author should make
 > sure that the server is actually sending a response compatible with that format. If

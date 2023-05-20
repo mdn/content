@@ -1,12 +1,7 @@
 ---
 title: <fePointLight>
 slug: Web/SVG/Element/fePointLight
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Filter
-  - SVG Light Source
+page-type: svg-element
 browser-compat: svg.elements.fePointLight
 ---
 

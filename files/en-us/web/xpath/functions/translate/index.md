@@ -1,9 +1,6 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
 
 {{ XsltRef() }}
@@ -12,7 +9,7 @@ The `translate` function evaluates a string and a set of characters to translate
 
 ### Syntax
 
-```
+```plain
 translate(string, abc, XYZ)
 ```
 
@@ -43,7 +40,7 @@ Example
 
 Output
 
-```
+```plain
 THE QUICK BROWN FOX.
 ```
 
@@ -57,7 +54,7 @@ Example
 
 Output
 
-```
+```plain
 The quick red fox.
 ```
 

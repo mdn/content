@@ -2,9 +2,6 @@
 title: Functions and classes available to Web Workers
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 page-type: guide
-tags:
-  - Reference
-  - Web
 ---
 
 {{DefaultAPISidebar("Web Workers API") }}
@@ -44,6 +41,7 @@ The following Web APIs are available to workers:
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications")}}
 - {{domxref("Performance")}}

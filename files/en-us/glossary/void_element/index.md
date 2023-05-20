@@ -1,10 +1,7 @@
 ---
 title: Void element
 slug: Glossary/Void_element
-tags:
-  - CodingScripting
-  - HTML
-  - Intermediate
+page-type: glossary-definition
 ---
 
 A **void element** is an {{Glossary("element")}} in HTML that **cannot** have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements.
@@ -25,19 +22,28 @@ The void elements in HTML are as follows:
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 Draft removed)
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
-- {{HTMLElement("param")}}
+- {{HTMLElement("param")}} {{deprecated_inline}}
 - {{HTMLElement("source")}}
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}
 
-## The curious case of self-closing tags
+## Self-closing tags
 
-_Self-closing tags (`<tag />`) do not exist in HTML._\
-However, the start tags of SVG and MathML elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
+_Self-closing tags (`<tag />`) do not exist in HTML._
 
-If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. However, some code formatters add a trailing slash character to the start tags of void elements to make them XHTML compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
+If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. This is important to remember when an element such as {{HTMLElement('script')}} or {{HTMLElement('ul')}} does require a closing tag. In this case, adding a trailing slash in the start tag does not close the element.
 
-> **Note:** If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.
+However, some code formatters add the trailing slash character to the start tags of void elements to make them XHTML-compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
+
+Self-closing tags are required in void elements in [XML](/en-US/docs/Glossary/XML), [XHTML](/en-US/docs/Glossary/XHTML), and [SVG](/en-US/docs/Glossary/SVG) (e.g., `<circle cx="50" cy="50" r="50" />`).
+
+In SVG and MathML, elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
+
+> **Note:** If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.
+
+## See also
+
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

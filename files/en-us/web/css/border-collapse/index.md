@@ -2,13 +2,6 @@
 title: border-collapse
 slug: Web/CSS/border-collapse
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-collapse
 ---
 

@@ -2,13 +2,6 @@
 title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.nth-of-type
 ---
 
@@ -24,8 +17,10 @@ The `nth-of-type` pseudo-class is specified with a single argument, which repres
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-of-type( <an-plus-b> | even | odd )
+```css-nolint
+:nth-of-type(<an-plus-b> | even | odd) {
+  /* ... */
+}
 ```
 
 ## Examples

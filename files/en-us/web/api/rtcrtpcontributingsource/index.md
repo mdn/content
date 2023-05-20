@@ -2,16 +2,6 @@
 title: RTCRtpContributingSource
 slug: Web/API/RTCRtpContributingSource
 page-type: web-api-interface
-tags:
-  - API
-  - Contributing Source
-  - Dictionary
-  - Interface
-  - Media
-  - RTCRtpContributingSource
-  - RTP
-  - Reference
-  - WebRTC
 browser-compat: api.RTCRtpContributingSource
 ---
 

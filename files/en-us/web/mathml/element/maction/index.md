@@ -1,12 +1,9 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Enlivening Expressions
-  - Deprecated
+page-type: mathml-element
+status:
+  - deprecated
 browser-compat: mathml.elements.maction
 ---
 
@@ -20,7 +17,7 @@ The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind acti
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
-- `actiontype` {{Deprecated_Inline}}
+- `actiontype` {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : The action which specifies what happens for this element. Special behavior
     for the following values were implemented by some browsers:
@@ -29,7 +26,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     - `toggle`: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the `selection` value.
       The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
 
-- `selection` {{Deprecated_Inline}}
+- `selection` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The child element currently visible, only taken into account for `actiontype="toggle"` or non-standard `actiontype` values. The default value is `1`, which is the first child element.
 
 ## Examples
@@ -37,12 +34,11 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 The following example uses the "toggle" `actiontype`:
 
 ```html
-<p>Try clicking this formula several times:
+<p>
+  Try clicking this formula several times:
 
   <math display="block">
-
     <maction actiontype="toggle">
-
       <mfrac>
         <mn>6</mn>
         <mn>8</mn>
@@ -65,9 +61,7 @@ The following example uses the "toggle" `actiontype`:
         <mn>3</mn>
         <mn>4</mn>
       </mfrac>
-
     </maction>
-
   </math>
 </p>
 ```

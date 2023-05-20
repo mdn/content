@@ -1,8 +1,7 @@
 ---
 title: Request header
 slug: Glossary/Request_header
-tags:
-  - WebMechanics
+page-type: glossary-definition
 ---
 
 A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g. {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
@@ -13,7 +12,7 @@ In addition, [CORS](/en-US/docs/Glossary/CORS) defines a subset of request heade
 
 The HTTP message below shows a few request headers after a {{HTTPMethod("GET")}} request:
 
-```bash
+```http
 GET /home.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0

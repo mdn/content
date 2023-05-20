@@ -1,15 +1,8 @@
 ---
-title: console.count()
+title: "console: count() method"
+short-title: count()
 slug: Web/API/console/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
 browser-compat: api.console.count
 ---
 

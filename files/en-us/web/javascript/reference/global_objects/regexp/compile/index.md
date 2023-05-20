@@ -1,22 +1,17 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.compile
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-The deprecated **`compile()`** method is used to (re-)compile a regular expression during execution of a script. It is basically the same as the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor.
+> **Note:** The `compile()` method is only specified for compatibility reasons. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations. You can use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to construct a new regular expression object instead.
 
-The `compile()` method is deprecated and is only specified for compatibility reasons. You can just use the `RegExp()` constructor to achieve the same effect.
+The **`compile()`** method of {{jsxref("RegExp")}} instances is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
 
 ## Syntax
 
@@ -35,8 +30,7 @@ compile(pattern, flags)
 
 ### Using compile()
 
-The following example shows how to recompile a regular expression with a new pattern
-and a new flag.
+The following example shows how to recompile a regular expression with a new pattern and a new flag.
 
 ```js
 const regexObj = new RegExp("foo", "gi");

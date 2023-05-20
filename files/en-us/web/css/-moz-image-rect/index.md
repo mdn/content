@@ -2,15 +2,9 @@
 title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - CSS:Mozilla Extensions
-  - Function
-  - Non-standard
-  - Reference
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
 

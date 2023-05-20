@@ -1,22 +1,17 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Namespace
-  - Object
-  - Reference
+page-type: javascript-namespace
 browser-compat: javascript.builtins.JSON
 ---
 
 {{JSRef}}
 
-The **`JSON`** object contains methods for parsing [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}) and converting values to JSON. It can't be called or constructed.
+The **`JSON`** namespace object contains static methods for parsing values from and converting values to [JavaScript Object Notation](https://json.org/) ({{glossary("JSON")}}).
 
 ## Description
 
-Unlike most global objects, `JSON` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `JSON` object as a function. All properties and methods of `JSON` are static (just like the {{jsxref("Math")}} object).
+Unlike most global objects, `JSON` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `JSON` object as a function. All properties and methods of `JSON` are static (just like the {{jsxref("Math")}} object).
 
 ### JavaScript and JSON differences
 
@@ -91,6 +86,11 @@ DIGIT = %x30-39            ; 0-9
 ```
 
 Insignificant {{glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
+
+## Static properties
+
+- `JSON[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"JSON"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

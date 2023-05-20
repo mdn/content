@@ -1,86 +1,45 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.GeneratorFunction
 ---
 
 {{JSRef}}
 
-In JavaScript, every generator function is actually a `GeneratorFunction` object. There is no global object with the name `GeneratorFunction`, but you can create a `GeneratorFunction()` constructor using the following code:
+The **`GeneratorFunction`** object provides methods for [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*). In JavaScript, every generator function is actually a `GeneratorFunction` object.
+
+Note that `GeneratorFunction` is _not_ a global object. It can be obtained with the following code:
 
 ```js
 const GeneratorFunction = function* () {}.constructor;
 ```
 
-## Syntax
+`GeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
-```js-nolint
-new GeneratorFunction(functionBody)
-new GeneratorFunction(arg0, functionBody)
-new GeneratorFunction(arg0, arg1, functionBody)
-new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
 
-GeneratorFunction(functionBody)
-GeneratorFunction(arg0, functionBody)
-GeneratorFunction(arg0, arg1, functionBody)
-GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
-```
+## Constructor
 
-> **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
+- {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
+  - : Creates a new `GeneratorFunction` object.
 
-### Parameters
+## Instance properties
 
-- `argN` {{optional_inline}}
+_Also inherits instance properties from its parent {{jsxref("Function")}}_.
 
-  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a default), or a list of such strings separated with commas.
+These properties are defined on `GeneratorFunction.prototype` and shared by all `GeneratorFunction` instances.
 
-    As the parameters are parsed in the same way as function declarations, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
+- {{jsxref("Object/constructor", "GeneratorFunction.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `GeneratorFunction` instances, the initial value is the {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction")}} constructor.
+- `GeneratorFunction.prototype.prototype`
+  - : All generator functions share the same [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property, which is [`Generator.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator). Each generator function instance also has its own `prototype` property. When the generator function is called, the returned generator object inherits from the generator function's `prototype` property, which in turn inherits from `GeneratorFunction.prototype.prototype`.
+- `GeneratorFunction.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"GeneratorFunction"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-- `functionBody`
-  - : A {{jsxref("String")}} containing the JavaScript statements comprising the function definition.
+## Instance methods
 
-## Description
-
-{{jsxref("Statements/function*", "Generator function", "", "1")}} objects created with a
-constructor are parsed when the function is created. That
-is less efficient than declaring a generator function with a
-[`function*` expression](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and calling it within your
-code, because such functions are parsed with the rest of the code.
-
-All arguments passed to the function, except the last, are treated as the names of the identifiers of the
-parameters in the function to be created, in the order in which they are passed.
-
-> **Note:** {{jsxref("Statements/function*", "generator functions", "", "1")}}
-> created with a constructor do not create closures to
-> their creation contexts; they are always created in the global scope.
->
-> When running them, they will only be able to access their own local variables and
-> global ones, not the ones from the scope in which the `GeneratorFunction`
-> constructor was called.
->
-> This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for
-> a generator function expression.
-
-Invoking a generator function constructor as a function (without using
-the `new` operator) has the same effect as invoking it as a constructor.
-
-## Examples
-
-### Creating and using a GeneratorFunction() constructor
-
-```js
-const GeneratorFunction = function* () {}.constructor;
-const g = new GeneratorFunction("a", "yield a * 2");
-const iterator = g(10);
-console.log(iterator.next().value); // 20
-```
+_Inherits instance methods from its parent {{jsxref("Function")}}_.
 
 ## Specifications
 
@@ -92,9 +51,9 @@ console.log(iterator.next().value); // 20
 
 ## See also
 
-- {{jsxref("Statements/function*", "function* function", "", 1)}}
-- {{jsxref("Operators/function*", "function* expression", "", 1)}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Statements/function", "function statement", "", 1)}}
-- {{jsxref("Operators/function", "function expression", "", 1)}}
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
+- [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Function")}}
+- {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- {{jsxref("Functions", "Functions", "", 1)}}

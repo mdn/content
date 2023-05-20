@@ -2,12 +2,6 @@
 title: column-rule
 slug: Web/CSS/column-rule
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.column-rule
 ---
 
@@ -37,9 +31,9 @@ column-rule: revert-layer;
 column-rule: unset;
 ```
 
-The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
-
 ### Values
+
+The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
 
 - `<'column-rule-width'>`
   - : Is a {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. See {{cssxref("border-width")}} for details.

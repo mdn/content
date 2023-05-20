@@ -1,23 +1,11 @@
 ---
 title: Strategies for carrying out testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-tags:
-  - Article
-  - Automation
-  - Beginner
-  - CodingScripting
-  - Learn
-  - Testing
-  - concepts
-  - cross browser
-  - device lab
-  - user testing
-  - virtual machine
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+This article explains how to do cross-browser testing: how to choose which browsers and devices to test, how to actually test those browsers and devices, and how to test with user groups.
 
 <table>
   <tbody>
@@ -27,7 +15,7 @@ In this article we drill down into carrying out testing, looking at identifying 
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high level
+        of the high-level
         <a
           href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >principles of cross-browser testing</a
@@ -44,69 +32,56 @@ In this article we drill down into carrying out testing, looking at identifying 
   </tbody>
 </table>
 
-## Gotta test 'em all?
+## Choosing which browsers and devices to test
 
-When doing cross-browser testing, you need to work out a list of browsers you will need to test on to start with. There is no way you can test on every combination of browser and device your users might use to view your site — there are just too many, and new ones appear all the time.
+Since you can't test every combination of browser and device, it's enough that you ensure your site works on the most important ones. In practical applications, "important" often means "commonly used among the target audience."
 
-Instead, you should try to make sure your site works on the most important target browsers and devices, and then code defensively to give your site the widest support reach it can be expected to have.
+You can classify browsers and devices by the amount of support you intend to give. For example:
 
-By coding defensively, we mean trying to build in intelligent fallbacks so that if a feature or style doesn't work in a browser, the site will be able to downgrade to something less exciting that still provides an acceptable user experience — the core information is still accessible, for example, even if it doesn't look quite as nice.
+1. A-grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
+2. B-grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
+3. C-grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
 
-The aim is to build up a chart of browsers/devices you can refer to as you test. You can make this as simple or as complex as you like — for example a common approach is to have multiple grades of support level, something like:
-
-1. A grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
-2. B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
-3. C grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
-
-Throughout the following sections, we'll build up a support chart in this format.
+In the following sections, we'll build up a support chart in this format.
 
 > **Note:** Yahoo first made this approach popular, with their [Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) approach.
 
-### Educated guesses
+### Predict your audience's most commonly used browsers
 
-You could call these "assumptions", or "gut feelings". This is not an accurate, scientific approach, but as someone who has experience with the web industry you'll have a pretty good idea of at least some of the browsers you should test. This can form a good basis for a support chart.
+This typically involves making educated guesses based on user demographics. For example, suppose your users are in North America and Western Europe:
 
-For example, if you live in Western Europe or North America, you will know that a lot of people use Windows and Mac desktops/laptops, where the main browsers are Chrome, Firefox, Safari, IE, and Edge. You probably want to just test the latest versions of the first three, as these browsers receive regular updates. For Edge and IE, you probably want to test the last couple of versions; these should all go in the A grade tier.
+A quick online search tells you that most people in North America and Western Europe use Windows or Mac desktops/laptops, where the main browsers are Chrome, Firefox, Safari, and Edge. You'd probably want to just test the latest versions of these browsers, as these browsers get regular updates. These should all go in the A-grade tier.
 
-> **Note:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
+Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
-Lots of people use iOS and Android, so you probably also want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to make sure that responsive designs are working OK.
+Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
 
-You might also know that a number of people still use IE 9. This is old and less capable, so let's put it in the B grade tier.
-
+Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
 This gives us the following support chart so far:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet
-2. B grade: IE 9 for Windows
-3. C grade: n/a
+1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge for Windows, iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone/tablet
+2. B-grade: Opera Mini
+3. C-grade: n/a
 
-If you live somewhere else, or are working on a site that will serve somewhere else (e.g. certain countries, or locales), then you will probably have different common browsers to test.
+If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from the above.
 
-> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
+> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be something to consider.
 
-### Browser support stats
+### Browser statistics
 
-One helpful measure you can call on to inform your browser testing choices is browser support stats. There are a number of sites that provide such stats, for example:
-
-- [Statcounter](https://gs.statcounter.com/)
-
-This is a very North America-centric, and not particularly accurate, but it can give you an idea of broad trends.
-
-Opera Mini isn't very capable in terms of running complex JavaScript at runtime. See [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) for more details. We should put this into grade B as well.
+Some websites show which browsers are popular in a given region. For example, [Statcounter](https://gs.statcounter.com/) gives an idea of trends in North America.
 
 ### Using analytics
 
-A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
+A much more accurate source of data, if you can get it, is an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/), which tells you exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't good for completely new sites.
 
-But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
-
-You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open-source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 
 1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://marketingplatform.google.com/about/analytics/).
 2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
-3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
+3. Enter your website/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the website URL. This needs to be your site/app's root URL.
 4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
 5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could place the snippets below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
 6. Upload the changes to the development server, or wherever else you need your code.
@@ -124,27 +99,27 @@ By default, you should see the reporting tab, like so:
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
 [Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
 
-You should also be encouraged to look at the different options on the left-hand side, and see what kinds of data you can find out. For example, you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
+You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 
 > **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
-There are other considerations that you should probably include as well. You should definitely include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article)
+You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article).
 
-Plus you might have other considerations. If you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones for example, you will probably want to make mobile IE support a priority.
+Also, you should be aware of situation-specific needs. For example, if you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones, you will probably want to make mobile IE support a priority.
 
 ### Final support chart
 
 So, our final support chart will end up looking like so:
 
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2. B grade: IE 8 and 9 for Windows, Opera Mini.
-3. C grade: Opera, other niche modern browsers.
+1. A-grade: Chrome and Firefox for Windows/Mac, Safari for Mac, and Edge (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome, and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
+2. B-grade: Opera Mini.
+3. C-grade: Opera, other niche modern browsers.
 
 ## What are you going to test?
 
-When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable web site feature.
+When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable website feature.
 
 Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
@@ -159,7 +134,7 @@ A and B grade:
 - The text should be readable.
 - Visually impaired users using screen readers should be able to access the text.
 
-A grade:
+A-grade:
 
 - The information box should animate smoothly as it appears/disappears.
 - The gradient and text shadow should appear to enhance the look of the box.
@@ -171,7 +146,7 @@ You might also notice that the button isn't usable using only the keyboard — t
 These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
 - They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab
@@ -184,13 +159,13 @@ It is generally better to have a real device running the browser you want to tes
 
 - A Mac, with the browsers installed that you need to test — this can include Firefox, Chrome, Opera, and Safari.
 - A Windows PC, with the browsers installed that you need to test — this can include Edge (or IE), Chrome, Firefox, and Opera.
-- A higher-spec Android phone and tablet with browser installed that you need to test — this can include Chrome, Firefox, and Opera Mini for Android, as well as the original Android stock browser.
+- A higher-spec Android phone and tablet with the browser installed that you need to test — this can include Chrome, Firefox, and Opera Mini for Android, as well as the original Android stock browser.
 - A higher-spec iOS phone and tablet with the browsers installed that you need to test — this can include iOS Safari and Chrome, Firefox, and Opera Mini for iOS.
 
 The following are also good options, if you can get them:
 
 - A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
-- A couple of lower-spec mobile devices, so you can test performance of features like animations on less powerful processors.
+- A couple of lower-spec mobile devices, so you can test the performance of features like animations on less powerful processors.
 
 Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
 
@@ -273,7 +248,7 @@ We will look at how to use such tools later on in the module.
 
 Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.
 
-Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the [What are you going to test](#what_are_you_going_to_test) section above — it is easy to turn the test criteria detailed there into steps to follow. For example, the following would work for a sighted user:
+Generally, you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the [What are you going to test](#what_are_you_going_to_test) section above — it is easy to turn the test criteria detailed there into steps to follow. For example, the following would work for a sighted user:
 
 - Click the question mark button using the mouse on your desktop computer a few times. Refresh the browser window.
 - Select and activate the question mark button using the keyboard on your desktop computer a few times.
@@ -297,17 +272,6 @@ These steps are designed to make sure that the browser you are testing in is as 
 
 After reading this article you should now have a good idea of what you can do to identify your target audience/target browser list, and then effectively carry out cross-browser testing on that list.
 
-Next we'll turn our attention to the actual code issues your testing might uncover, starting with HTML and CSS.
+Next, we'll turn our attention to the actual code issues your testing might uncover, starting with HTML and CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

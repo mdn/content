@@ -2,10 +2,6 @@
 title: Resolved value
 slug: Web/CSS/resolved_value
 page-type: guide
-tags:
-  - CSS
-  - Guide
-  - Reference
 spec-urls: https://drafts.csswg.org/cssom/#resolved-values
 ---
 
@@ -27,7 +23,7 @@ For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_val
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

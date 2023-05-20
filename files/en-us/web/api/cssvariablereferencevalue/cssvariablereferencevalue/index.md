@@ -1,20 +1,12 @@
 ---
-title: CSSVariableReferenceValue()
+title: "CSSVariableReferenceValue: CSSVariableReferenceValue() constructor"
+short-title: CSSVariableReferenceValue()
 slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSVariableReferenceValue
-  - Constructor
-  - Houdini
-  - NeedsExample
-  - Reference
-  - Experimental
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 Creates a new {{domxref('CSSVariableReferenceValue')}}.
 

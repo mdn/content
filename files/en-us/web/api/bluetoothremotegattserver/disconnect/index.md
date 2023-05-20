@@ -1,16 +1,10 @@
 ---
-title: BluetoothRemoteGATTServer.disconnect()
+title: "BluetoothRemoteGATTServer: disconnect() method"
+short-title: disconnect()
 slug: Web/API/BluetoothRemoteGATTServer/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - disconnect()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.disconnect
 ---
 

@@ -2,13 +2,6 @@
 title: <transform-function>
 slug: Web/CSS/transform-function
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Layout
-  - Reference
 browser-compat: css.types.transform-function
 ---
 
@@ -112,7 +105,7 @@ However, one major transformation is not linear, and therefore must be special-c
 
 > **Note:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can express translations as linear functions.
 
-> **Note:** Transform functions are used wtih the `transform` property but not with individual transform properties-{{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}.
+> **Note:** Transform functions are used with the `transform` property but not with individual transform properties-{{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}.
 
 ## Examples
 
@@ -233,19 +226,19 @@ main {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const example = document.querySelector('#example-element');
+const selectElem = document.querySelector("select");
+const example = document.querySelector("#example-element");
 
-selectElem.addEventListener('change', () => {
-  if (selectElem.value === 'Choose a function') {
+selectElem.addEventListener("change", () => {
+  if (selectElem.value === "Choose a function") {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
     setTimeout(() => {
-      example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
-    }, 2000)
+      example.style.transform = "rotate3d(1, 1, 1, 30deg)";
+    }, 2000);
   }
-})
+});
 ```
 
 #### Result

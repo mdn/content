@@ -1,9 +1,7 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
 
@@ -39,7 +37,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
   <!-- No dashes nor gaps -->
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
@@ -60,6 +58,15 @@ svg {
     y2="9"
     stroke="black"
     stroke-dasharray="4 1 2 3" />
+
+  <!-- Dashes starting with a gap -->
+  <line
+    x1="0"
+    y1="11"
+    x2="30"
+    y2="11"
+    stroke="black"
+    stroke-dasharray="0 4 0" />
 </svg>
 ```
 
@@ -85,6 +92,7 @@ svg {
 </table>
 
 - \<dasharray>
+
   - : A list of comma and/or white space separated [`<length>`](/en-US/docs/Web/SVG/Content_type#length)s and [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage)s that specify the lengths of alternating dashes and gaps.
 
     If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.

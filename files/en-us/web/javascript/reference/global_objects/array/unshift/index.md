@@ -1,19 +1,13 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.unshift
 ---
 
 {{JSRef}}
 
-The **`unshift()`** method adds one or more elements to the
+The **`unshift()`** method adds the specified elements to the
 beginning of an array and returns the new length of the array.
 
 {{EmbedInteractiveExample("pages/js/array-unshift.html")}}
@@ -21,6 +15,7 @@ beginning of an array and returns the new length of the array.
 ## Syntax
 
 ```js-nolint
+unshift()
 unshift(element0)
 unshift(element0, element1)
 unshift(element0, element1, /* … ,*/ elementN)
@@ -77,16 +72,16 @@ The `unshift()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_
 ```js
 const arr = [1, 2];
 
-arr.unshift(0);               // result of the call is 3, which is the new array length
+arr.unshift(0); // result of the call is 3, which is the new array length
 // arr is [0, 1, 2]
 
-arr.unshift(-2, -1);          // the new array length is 5
+arr.unshift(-2, -1); // the new array length is 5
 // arr is [-2, -1, 0, 1, 2]
 
-arr.unshift([-4, -3]);        // the new array length is 6
+arr.unshift([-4, -3]); // the new array length is 6
 // arr is [[-4, -3], -2, -1, 0, 1, 2]
 
-arr.unshift([-7, -6], [-5]);  // the new array length is 8
+arr.unshift([-7, -6], [-5]); // the new array length is 8
 // arr is [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]
 ```
 
@@ -122,7 +117,10 @@ console.log(plainObj);
 ## See also
 
 - [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

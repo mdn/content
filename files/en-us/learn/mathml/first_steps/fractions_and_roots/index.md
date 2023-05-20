@@ -1,10 +1,6 @@
 ---
 title: MathML fractions and roots
 slug: Learn/MathML/First_steps/Fractions_and_roots
-tags:
-  - Beginner
-  - MathML
-  - Landing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}

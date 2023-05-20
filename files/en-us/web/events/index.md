@@ -1,10 +1,6 @@
 ---
 title: Event reference
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 
@@ -311,32 +307,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
               ><code>gestureend</code> event</a
             >.
           </li>
-          <li>
-            Non-standard IE specific events on
-            <a href="/en-US/docs/Web/API/Element#touch_events"
-              ><code>Element</code></a
-            >:
-            <a href="/en-US/docs/Web/API/Element/MSGestureStart_event"
-              ><code>MSGestureStart</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureChange_event"
-              ><code>MSGestureChange</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureEnd_event"
-              ><code>MSGestureEnd</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureHold_event"
-              ><code>MSGestureHold</code></a
-            >,
-            <a href="/en-US/docs/Web/API/Element/MSGestureTap_event"
-              ><code>MSGestureTap</code></a
-            >.
-          </li>
-          <li>
-            <a href="/en-US/docs/Web/Events/Mouse_gesture_events"
-              >Mouse gesture events for Firefox Addons</a
-            >
-          </li>
         </ul>
       </td>
     </tr>
@@ -449,7 +419,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to media usage (including the
-          <a href="/en-US/docs/Web/API/Media_Streams_API#events"
+          <a href="/en-US/docs/Web/API/Media_Capture_and_Streams_API#events"
             >Media Capture and Streams API</a
           >,
           <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,
@@ -984,14 +954,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [mouseover event](/en-US/docs/Web/API/Element/mouseover_event)
   - [mouseup event](/en-US/docs/Web/API/Element/mouseup_event)
   - [mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event)
-  - [msContentZoom event](/en-US/docs/Web/API/Element/msContentZoom_event)
-  - [MSGestureChange event](/en-US/docs/Web/API/Element/MSGestureChange_event)
-  - [MSGestureEnd event](/en-US/docs/Web/API/Element/MSGestureEnd_event)
-  - [MSGestureHold event](/en-US/docs/Web/API/Element/MSGestureHold_event)
-  - [MSGestureStart event](/en-US/docs/Web/API/Element/MSGestureStart_event)
-  - [MSGestureTap event](/en-US/docs/Web/API/Element/MSGestureTap_event)
-  - [MSInertiaStart event](/en-US/docs/Web/API/Element/MSInertiaStart_event)
-  - [MSManipulationStateChanged event](/en-US/docs/Web/API/Element/MSManipulationStateChanged_event)
   - [paste event](/en-US/docs/Web/API/Element/paste_event)
   - [pointercancel event](/en-US/docs/Web/API/Element/pointercancel_event)
   - [pointerdown event](/en-US/docs/Web/API/Element/pointerdown_event)
@@ -1003,7 +965,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [pointerup event](/en-US/docs/Web/API/Element/pointerup_event)
   - [scroll event](/en-US/docs/Web/API/Element/scroll_event)
   - [select event](/en-US/docs/Web/API/Element/select_event)
-  - [show event](/en-US/docs/Web/API/Element/show_event)
   - [touchcancel event](/en-US/docs/Web/API/Element/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Element/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Element/touchmove_event)
@@ -1144,6 +1105,10 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
   - [mute event](/en-US/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute event](/en-US/docs/Web/API/MediaStreamTrack/unmute_event)
+
+- {{DOMxRef("MediaQueryList")}}
+
+  - [change event](/en-US/docs/Web/API/MediaQueryList/change_event)
 
 - {{DOMxRef("MessagePort")}}
 

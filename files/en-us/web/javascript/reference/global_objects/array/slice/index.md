@@ -1,12 +1,7 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.slice
 ---
 
@@ -30,34 +25,16 @@ slice(start, end)
 ### Parameters
 
 - `start` {{optional_inline}}
-
-  - : Zero-based index at which to start extraction.
-
-    A negative index can be used, indicating an offset from the end of the sequence.
-    `slice(-2)` extracts the last two elements in the sequence.
-
-    If `start` is `undefined`, `slice` starts from the index `0`.
-
-    If `start` is greater than the index range of the sequence, an
-    empty array is returned.
-
+  - : Zero-based index at which to start extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
+    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - If `start < -array.length` or `start` is omitted, `0` is used.
+    - If `start >= array.length`, nothing is extracted.
 - `end` {{optional_inline}}
-
-  - : The index of the first element to exclude from the returned array. `slice`
-    extracts up to but not including `end`. For example,
-    `slice(1,4)` extracts the second element through the fourth element
-    (elements indexed 1, 2, and 3).
-
-    A negative index can be used, indicating an offset from the end of the sequence.
-    `slice(2,-1)` extracts the third element through the second-to-last element
-    in the sequence.
-
-    If `end` is omitted or `undefined`, `slice` extracts through the
-    end of the sequence (`arr.length`).
-
-    If `end` is greater than the length of the sequence,
-    `slice` extracts through to the end of the sequence
-    (`arr.length`).
+  - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
+    - Negative index counts back from the end of the array — if `end < 0`, `end + array.length` is used.
+    - If `end < -array.length`, `0` is used.
+    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be extracted.
+    - If `end` is positioned before or at `start` after normalization, nothing is extracted.
 
 ### Return value
 
@@ -76,7 +53,7 @@ The `slice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 ### Return a portion of an existing array
 
 ```js
-const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -92,24 +69,25 @@ change.
 
 ```js
 // Using slice, create newCar from myCar.
-const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
-const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+const myHonda = {
+  color: "red",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
+const myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 const newCar = myCar.slice(0, 2);
 
-// Display the values of myCar, newCar, and the color of myHonda
-//  referenced from both arrays.
-console.log('myCar = ', myCar);
-console.log('newCar = ', newCar);
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log("myCar =", myCar);
+console.log("newCar =", newCar);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
 
 // Change the color of myHonda.
-myHonda.color = 'purple';
-console.log('The new color of my Honda is ', myHonda.color);
+myHonda.color = "purple";
+console.log("The new color of my Honda is", myHonda.color);
 
-// Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ', myCar[0].color);
-console.log('newCar[0].color = ', newCar[0].color);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
 ```
 
 This script writes:
@@ -121,7 +99,7 @@ myCar = [
   'cherry condition',
   'purchased 1997'
 ]
-newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
+newCar = [ { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }, 2 ]
 myCar[0].color = red
 newCar[0].color = red
 The new color of my Honda is purple
@@ -177,6 +155,12 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 
 ## See also
 
+- [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.splice()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("TypedArray.prototype.slice()")}}
+- {{jsxref("String.prototype.slice()")}}

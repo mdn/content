@@ -2,20 +2,6 @@
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
-tags:
-  - Adjusting Colors
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - forced-color-adjust
-  - recipe:css-property
 browser-compat: css.properties.forced-color-adjust
 ---
 

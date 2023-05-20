@@ -2,11 +2,6 @@
 title: TrustedTypePolicyFactory
 slug: Web/API/TrustedTypePolicyFactory
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory
 ---
 
@@ -46,12 +41,12 @@ We then use the policy to sanitize a string, creating a {{domxref("TrustedHTML")
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 
-console.log(trustedTypes.isHTML(escaped)) // true;
+console.log(trustedTypes.isHTML(escaped)); // true;
 ```
 
 ## Specifications

@@ -1,29 +1,27 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.input
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{deprecated_header}}
 
-The non-standard **`input`** property is a static property of regular expressions that contains the string against which a regular expression is matched. `RegExp.$_` is an alias for this property.
+> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+
+The **`RegExp.input`** static accessor property returns the string against which a regular expression is matched. `RegExp.$_` is an alias for this property.
 
 ## Description
 
-The `input` property is static, it is not a property of an individual regular expression object. Instead, you always use it as `RegExp.input` or `RegExp.$_.`
+Because `input` is a static property of {{jsxref("RegExp")}}, you always use it as `RegExp.input` or `RegExp.$_`, rather than as a property of a `RegExp` object you created.
 
-The value of the **`input`** property is modified whenever the searched string on the regular expression is changed and that string is matching.
+The value of `input` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, `input` is an empty string. You can set the value of `input`, but this does not affect other behaviors of the regex, and the value will be overwritten again when the next successful match is made.
 
 ## Examples
 
-### Using `input` and `$_`
+### Using input and $\_
 
 ```js
 const re = /hi/g;
@@ -49,4 +47,4 @@ RegExp.$_; // "hi world!"
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

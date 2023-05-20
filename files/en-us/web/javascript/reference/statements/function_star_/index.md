@@ -1,13 +1,7 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
 ---
 
@@ -17,10 +11,10 @@ The **`function*`** declaration (`function` keyword
 followed by an asterisk) defines a _generator function_, which returns a
 {{jsxref("Global_Objects/Generator","Generator")}} object.
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
-
 You can also define generator functions using the {{jsxref("GeneratorFunction")}}
 constructor, or the function expression syntax.
+
+{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
 
 ## Syntax
 
@@ -59,7 +53,7 @@ powerful tool for asynchronous programming as they mitigate — if not entirely 
 However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
-Calling a generator function does not execute its body immediately; an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)
+Calling a generator function does not execute its body immediately; a [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 object for the function is returned instead. When the iterator's `next()`
 method is called, the generator function's body is executed until the first
 {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be
@@ -101,7 +95,7 @@ console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
-// ...
+// …
 ```
 
 ### Example with yield\*
@@ -142,10 +136,10 @@ const gen = logGenerator();
 
 // the first call of next executes from the start of the function
 // until the first yield statement
-gen.next();             // 0
-gen.next('pretzel');    // 1 pretzel
-gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise
+gen.next(); // 0
+gen.next("pretzel"); // 1 pretzel
+gen.next("california"); // 2 california
+gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
 ### Return statement in a generator
@@ -167,13 +161,13 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const someObj = {
-  *generator () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *generator() {
+    yield "a";
+    yield "b";
+  },
+};
 
-const gen = someObj.generator()
+const gen = someObj.generator();
 
 console.log(gen.next()); // { value: 'a', done: false }
 console.log(gen.next()); // { value: 'b', done: false }
@@ -212,12 +206,12 @@ class Foo {
 
 const SomeObj = {
   *[Symbol.iterator]() {
-    yield 'a';
-    yield 'b';
-  }
-}
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(Array.from(new Foo)); // [ 1, 2 ]
+console.log(Array.from(new Foo())); // [ 1, 2 ]
 console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 ```
 
@@ -225,7 +219,7 @@ console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 
 ```js
 function* f() {}
-const obj = new f; // throws "TypeError: f is not a constructor
+const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
 ### Generator defined in an expression

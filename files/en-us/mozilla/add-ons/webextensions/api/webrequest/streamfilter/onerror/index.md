@@ -1,14 +1,7 @@
 ---
 title: webRequest.StreamFilter.onerror
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onerror
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.onerror
 ---
 
@@ -31,7 +24,7 @@ This example adds an `onerror` listener which logs the value of {{WebExtAPIRef("
 ```js
 function listener(details) {
   // This example seems not useful because,
-  // a extension would use "details.requestId"
+  // an extension would use "details.requestId"
   let filter = browser.webRequest.filterResponseData("12345");
 
   filter.onerror = (event) => {

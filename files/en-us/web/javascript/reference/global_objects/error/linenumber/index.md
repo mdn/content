@@ -1,18 +1,21 @@
 ---
-title: Error.prototype.lineNumber
+title: "Error: lineNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
+page-type: javascript-instance-data-property
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.lineNumber
 ---
 
 {{JSRef}} {{non-standard_header}}
 
-The **`lineNumber`** property contains the line number in the file that raised this error.
+The **`lineNumber`** data property of an {{jsxref("Error")}} instance contains the line number in the file that raised this error.
+
+## Value
+
+A positive integer.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Examples
 

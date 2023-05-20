@@ -1,10 +1,7 @@
 ---
 title: Lazy load
 slug: Glossary/Lazy_load
-tags:
-  - Lazy loading
-  - Reference
-  - Web Performance
+page-type: glossary-definition
 ---
 
 **Lazy loading** is a strategy that delays the loading of some assets (e.g., images) until they are needed by the user based on the user's activity and navigation pattern; typically, these assets are only loaded when they are scrolled into view.

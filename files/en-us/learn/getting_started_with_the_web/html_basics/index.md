@@ -1,14 +1,6 @@
 ---
 title: HTML basics
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Beginner
-  - CodingScripting
-  - Doctype html
-  - HTML
-  - Learn
-  - Web
-  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -47,8 +39,9 @@ Elements can also have attributes that look like the following:
 ![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
 
 Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
+Some attributes have no value, such as [`required`](/en-US/docs/Web/HTML/Attributes/required).
 
-An attribute should always have the following:
+Attributes that set a value always have:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
 2. The attribute name followed by an equal sign.
@@ -219,7 +212,9 @@ Links are very important — they are what makes the web a web! To add a link, w
 4. Fill in the value of this attribute with the web address that you want the link to:
 
    ```html
-   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Mozilla Manifesto
+   </a>
    ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
@@ -239,14 +234,3 @@ If you get stuck, you can always compare your work with our [finished example co
 Here, we have only really scratched the surface of HTML. To find out more, go to our [Learning HTML](/en-US/docs/Learn/HTML) topic.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

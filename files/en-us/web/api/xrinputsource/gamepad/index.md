@@ -1,18 +1,8 @@
 ---
-title: XRInputSource.gamepad
+title: "XRInputSource: gamepad property"
+short-title: gamepad
 slug: Web/API/XRInputSource/gamepad
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSource
 browser-compat: api.XRInputSource.gamepad
 ---
 
@@ -22,7 +12,7 @@ The read-only {{domxref("XRInputSource")}} property **`gamepad`** returns a {{do
 
 The {{domxref("Gamepad")}} instance returned behaves as described by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API). However, there are a few things to note:
 
-- `XRInputSource` `Gamepad` instances are not included in the array returned by {{domxref("navigator.getGamepads()")}}. Gamepads are strictly associated with the WebXR hardware and are not general-purpose gaming devices.
+- `Gamepad` instances belonging to `XRInputSource` are not included in the array returned by {{domxref("navigator.getGamepads()")}}. Gamepads are strictly associated with the WebXR hardware and are not general-purpose gaming devices.
 - {{domxref("Gamepad.id")}} is an empty string (`""`)
 - {{domxref("Gamepad.index")}} is `-1`
 - {{domxref("Gamepad.connected")}} is `true` until the `XRInputSource` is removed from the list of active XR input sources or the {{domxref("XRSession")}} is ended.

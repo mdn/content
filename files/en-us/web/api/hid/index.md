@@ -2,12 +2,8 @@
 title: HID
 slug: Web/API/HID
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - WebHID
-  - WebHID API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID
 ---
 

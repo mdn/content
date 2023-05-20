@@ -1,17 +1,14 @@
 ---
-title: PerformanceEventTiming.interactionId
+title: "PerformanceEventTiming: interactionId property"
+short-title: interactionId
 slug: Web/API/PerformanceEventTiming/interactionId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceEventTiming.interactionId
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The read-only **`interactionId`** property returns an ID that uniquely identifies a user interaction which triggered a series of associated events.
 
@@ -21,10 +18,10 @@ When a user interacts with a web page, a user interaction (for example a click) 
 
 An `interactionId` is only computed for the following event types belonging to a user interaction. It is `0` otherwise.
 
-| Event types | User interaction |
-| --- | --- |
-| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag  |
-| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}} | key press |
+| Event types                                                                                                                                               | User interaction   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| {{domxref("Element/pointerdown_event", "pointerdown")}}, {{domxref("Element/pointerup_event", "pointerup")}}, {{domxref("Element/click_event", "click")}} | click / tap / drag |
+| {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}                                                              | key press          |
 
 ## Value
 
@@ -51,7 +48,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({entryTypes: ["event"]}); 
+observer.observe({type: "event", buffered: true});
 
 // Log events with maximum event duration for a user interaction
 Object.entries(eventLatencies).forEach(([k, v]) => {

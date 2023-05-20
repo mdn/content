@@ -1,11 +1,8 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
+short-title: beforeunload
 slug: Web/API/Window/beforeunload_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Window
 browser-compat: api.Window.beforeunload_event
 ---
 
@@ -24,8 +21,8 @@ The HTML specification states that calls to {{domxref("window.alert()")}}, {{dom
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeunload', (event) => { });
-onbeforeunload = (event) => { };
+addEventListener("beforeunload", (event) => {});
+onbeforeunload = (event) => {};
 ```
 
 ## Event type
@@ -42,7 +39,8 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Sticky activation](/en-US/docs/Glossary/Sticky_activation) is required.
+The user has to have interacted with the page in order for this feature to work.
 
 ## Usage notes
 
@@ -54,13 +52,13 @@ Especially on mobile, the `beforeunload` event is not reliably fired. For exampl
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-The `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, browsers will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
+Additionally, on Firefox, the `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 
 However, unlike the `unload` event, there is a legitimate use case for the `beforeunload` event: the scenario where the user has entered unsaved data that will be lost if the page is unloaded.
 
 It is recommended that developers listen for `beforeunload` only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
 
-See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about the problems associated with the `beforeunload` event.
+See the [bfcache guide](https://web.dev/bfcache/#only-add-beforeunload-listeners-conditionally) on web.dev for more information about the problems associated with the `beforeunload` event.
 
 ## Examples
 
@@ -69,16 +67,18 @@ In this example a page listens for changes to a [text `input`](/en-US/docs/Web/H
 ```js
 const beforeUnloadListener = (event) => {
   event.preventDefault();
-  return event.returnValue = "Are you sure you want to exit?";
+  return (event.returnValue = "");
 };
 
 const nameInput = document.querySelector("#name");
 
 nameInput.addEventListener("input", (event) => {
   if (event.target.value !== "") {
-    addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    addEventListener("beforeunload", beforeUnloadListener, { capture: true });
   } else {
-    removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    removeEventListener("beforeunload", beforeUnloadListener, {
+      capture: true,
+    });
   }
 });
 ```
@@ -101,17 +101,13 @@ by all browsers.
 When this event returns (or sets the `returnValue` property to) a value
 other than `null` or `undefined`, the user will be prompted to
 confirm the page unload. In older browsers, the return value of the event is displayed
-in this dialog. Starting with Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
-string not under the control of the webpage will be shown instead of the returned
+in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+string not under the control of the webpage is shown instead of the returned
 string. For example:
 
 - Firefox displays the string, "This page is asking you to confirm that you want to
-  leave - data you have entered may not be saved." (see {{bug("588292")}}).
-- Chrome displays the string, "Do you want to leave this site? Changes you made may
-  not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
-
-Internet Explorer does not respect the `null` return value and will display
-this to users as "null" text. You have to use `undefined` to skip the prompt.
+  leave - data you have entered may not be saved." (see [Firefox bug 588292](https://bugzil.la/588292)).
+- Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
 In some browsers, calls to {{domxref("window.alert()")}},
 {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored

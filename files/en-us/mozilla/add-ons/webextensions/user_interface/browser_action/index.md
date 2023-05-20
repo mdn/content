@@ -1,14 +1,13 @@
 ---
 title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-tags:
-  - WebExtension
+page-type: guide
 ---
 
 {{AddonSidebar}}
 
 Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.
-![](browser-action.png)
+![A custom browser action icon it the browser tool bar that looks like paw print.](browser-action.png)
 
 The toolbar button (browser action) is very like the address bar button (page action). For the differences, and guidance on when to use what, see [Page actions and browser actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions).
 
@@ -42,7 +41,7 @@ You can change many of the browser action properties programmatically using the 
 
 ## Icons
 
-For details on how to create icons to use with your browser action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to create icons to use with your browser action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography.html) in the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html) documentation.
 
 ## Examples
 

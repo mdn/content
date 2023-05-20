@@ -1,15 +1,8 @@
 ---
-title: MediaKeys.createSession()
+title: "MediaKeys: createSession() method"
+short-title: createSession()
 slug: Web/API/MediaKeys/createSession
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeys
-  - Method
-  - Reference
-  - createSession
 browser-compat: api.MediaKeys.createSession
 ---
 

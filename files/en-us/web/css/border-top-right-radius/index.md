@@ -2,12 +2,6 @@
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
 page-type: css-property
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.border-top-right-radius
 ---
 

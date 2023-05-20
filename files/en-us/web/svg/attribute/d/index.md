@@ -1,9 +1,7 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.path.d
 ---
 

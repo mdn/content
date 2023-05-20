@@ -1,10 +1,7 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-tags:
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-function
 browser-compat: javascript.builtins.parseFloat
 ---
 

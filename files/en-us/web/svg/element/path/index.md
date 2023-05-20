@@ -1,11 +1,7 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.path
 ---
 
@@ -16,7 +12,11 @@ The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to de
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -71,4 +71,4 @@ html,body,svg { height:100% }
 ## See also
 
 - SVG basic shapes: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-- [The MDN SVG "Getting Started" tutorial : Path](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial: Path](/en-US/docs/Web/SVG/Tutorial/Paths)

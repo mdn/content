@@ -2,13 +2,6 @@
 title: TextTrackCueList
 slug: Web/API/TextTrackCueList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TextTrackCueList
-  - WebVTT
-  - Media
 browser-compat: api.TextTrackCueList
 ---
 
@@ -36,7 +29,7 @@ The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("Tex
 const video = document.getElementById("video");
 video.onplay = () => {
   console.log(video.textTracks[0].cues);
-}
+};
 ```
 
 ## Specifications
