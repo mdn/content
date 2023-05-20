@@ -63,15 +63,15 @@ Create an {{domxref("XRMediaBinding")}} and use an {{domxref("HTMLVideoElement")
 ```js
 function onXRSessionStarted(xrSession) {
   const xrMediaBinding = new XRMediaBinding(xrSession);
-  const video = document.createElement('video');
-  video.src = 'just-fascination.mp4';
+  const video = document.createElement("video");
+  video.src = "just-fascination.mp4";
 
   const videoLayer = xrMediaBinding.createCylinderLayer(video, {
-    space: xrReferenceSpace
+    space: xrReferenceSpace,
   });
 
   xrSession.updateRenderState({
-    layers: [videoLayer]
+    layers: [videoLayer],
   });
 }
 ```

@@ -45,7 +45,7 @@ first element. It also displays the removed element:
 ```js
 const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log("myFish before:", JSON.stringify(myFish));
+console.log("myFish before:", myFish);
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();

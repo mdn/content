@@ -96,9 +96,6 @@ Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
-- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-
 ## Keyed collections
 
 Overview: [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
@@ -135,6 +132,10 @@ Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Error handling](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_handling)
 - [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
+
+## Typed arrays
+
+Overview: [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 
 ## Iterators and generators
 

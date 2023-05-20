@@ -36,7 +36,7 @@ border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-The `border-top-style` property is specified as a single keyword chosen from those available for the {{CSSxRef("border-style")}} property.
+The `border-top-style` property is specified as a single {{cssxref("line-style")}} keyword value.
 
 ## Formal definition
 

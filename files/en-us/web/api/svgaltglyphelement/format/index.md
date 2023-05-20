@@ -10,8 +10,6 @@ browser-compat: api.SVGAltGlyphElement.format
 
 {{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
-{{Deprecated_header}}
-
 The **`SVGAltGlyphElement.format`** property is a
 string that defines the format of the given font. It has the same
 meaning as the 'format' property of {{domxref("SVGGlyphRefElement")}} property. If the

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Date.getFullYear
 
 {{JSRef}}
 
-The **`getFullYear()`** method of a {{jsxref("Date")}} instance returns the year for this date according to local time.
+The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to local time.
 
 Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 

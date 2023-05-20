@@ -111,22 +111,23 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  let heroes = jsonObj["members"];
 
   for (const hero of heroes) {
     // …
-   }
+  }
 
-   // …
- }
+  // …
+}
 ```
 
 So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+let requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 let superHeroes = request.response;
@@ -143,7 +144,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ', superHeroes);
+console.log("Response value: ", superHeroes);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
@@ -159,11 +160,11 @@ showHeroes(superHeroes);
 to the following:
 
 ```js
-request.onload = function() {
+request.onload = function () {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
@@ -291,9 +292,9 @@ Let's work through an exercise — in this example used for demonstration purpos
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
    ```js
-   const myImage = document.querySelector('.my-image');
+   const myImage = document.querySelector(".my-image");
 
-   fetch('flowers.jpg').then((response) => {
+   fetch("flowers.jpg").then((response) => {
      response.blob().then((myBlob) => {
        const objectURL = URL.createObjectURL(myBlob);
        myImage.src = objectURL;
@@ -316,7 +317,7 @@ Doing this requires some extra setup in your JavaScript. You need some kind of a
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -336,7 +337,7 @@ Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -399,7 +400,7 @@ Again, prefixed features were never supposed to be used in production websites �
 For example, try going into your browser's developer console and start typing
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 If this feature is supported in your browser, it will autocomplete.

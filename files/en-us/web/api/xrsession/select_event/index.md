@@ -19,9 +19,9 @@ The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired befor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('select', (event) => { })
+addEventListener("select", (event) => {});
 
-onselect = (event) => { }
+onselect = (event) => {};
 ```
 
 ## Event type
@@ -60,8 +60,10 @@ The following example uses {{domxref("EventTarget.addEventListener", "addEventLi
 ```js
 xrSession.addEventListener("select", (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace
+    );
     if (targetRayPose) {
       myHandleSelectWithRay(targetRayPose.transform);
     }
@@ -74,8 +76,10 @@ You can also set up a handler for `select` events by setting the {{domxref("XRSe
 ```js
 xrSession.onselect = (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace
+    );
     if (targetRayPose) {
       myHandleSelectWithRay(targetRayPose.transform);
     }
