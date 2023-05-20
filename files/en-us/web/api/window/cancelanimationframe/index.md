@@ -1,5 +1,6 @@
 ---
-title: window.cancelAnimationFrame()
+title: "Window: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.cancelAnimationFrame

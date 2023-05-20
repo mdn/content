@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.details
+title: "PaymentResponse: details property"
+short-title: details
 slug: Web/API/PaymentResponse/details
 page-type: web-api-instance-property
 browser-compat: api.PaymentResponse.details

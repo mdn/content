@@ -1,5 +1,6 @@
 ---
-title: Magnetometer()
+title: "Magnetometer: Magnetometer() constructor"
+short-title: Magnetometer()
 slug: Web/API/Magnetometer/Magnetometer
 page-type: web-api-constructor
 status:

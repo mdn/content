@@ -1,5 +1,6 @@
 ---
-title: ByteLengthQueuingStrategy.highWaterMark
+title: "ByteLengthQueuingStrategy: highWaterMark property"
+short-title: highWaterMark
 slug: Web/API/ByteLengthQueuingStrategy/highWaterMark
 page-type: web-api-instance-property
 browser-compat: api.ByteLengthQueuingStrategy.highWaterMark
@@ -48,3 +49,7 @@ console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

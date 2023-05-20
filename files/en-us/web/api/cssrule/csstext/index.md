@@ -1,5 +1,6 @@
 ---
-title: CSSRule.cssText
+title: "CSSRule: cssText property"
+short-title: cssText
 slug: Web/API/CSSRule/cssText
 page-type: web-api-instance-property
 browser-compat: api.CSSRule.cssText

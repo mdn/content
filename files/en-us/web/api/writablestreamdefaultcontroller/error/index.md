@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultController.error()
+title: "WritableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/WritableStreamDefaultController/error
 page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultController.error

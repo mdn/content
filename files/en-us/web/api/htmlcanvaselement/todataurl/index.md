@@ -1,5 +1,6 @@
 ---
-title: HTMLCanvasElement.toDataURL()
+title: "HTMLCanvasElement: toDataURL() method"
+short-title: toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 page-type: web-api-instance-method
 browser-compat: api.HTMLCanvasElement.toDataURL

@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchUpdateUIEvent.updateUI()
+title: "BackgroundFetchUpdateUIEvent: updateUI() method"
+short-title: updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
 page-type: web-api-instance-method
 status:

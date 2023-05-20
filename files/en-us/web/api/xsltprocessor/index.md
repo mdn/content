@@ -21,7 +21,7 @@ transformation to documents.
 
 - {{domxref("XSLTProcessor.importStylesheet()")}}
   - : Imports the XSLT stylesheet.
-  If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet);
+    If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet);
     otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
 - {{domxref("XSLTProcessor.transformToFragment()")}}
   - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.

@@ -1,5 +1,6 @@
 ---
-title: MediaRecorderErrorEvent.error
+title: "MediaRecorderErrorEvent: error property"
+short-title: error
 slug: Web/API/MediaRecorderErrorEvent/error
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpStreamStats.ssrc
+title: "RTCRtpStreamStats: ssrc property"
+short-title: ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.ssrc

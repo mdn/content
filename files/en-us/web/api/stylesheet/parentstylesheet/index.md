@@ -1,5 +1,6 @@
 ---
-title: StyleSheet.parentStyleSheet
+title: "StyleSheet: parentStyleSheet property"
+short-title: parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
 page-type: web-api-instance-property
 browser-compat: api.StyleSheet.parentStyleSheet

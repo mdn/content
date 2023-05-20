@@ -1,5 +1,6 @@
 ---
-title: IdleDeadline.timeRemaining()
+title: "IdleDeadline: timeRemaining() method"
+short-title: timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
 page-type: web-api-instance-method
 browser-compat: api.IdleDeadline.timeRemaining

@@ -1,5 +1,6 @@
 ---
-title: XSLTProcessor()
+title: "XSLTProcessor: XSLTProcessor() constructor"
+short-title: XSLTProcessor()
 slug: Web/API/XSLTProcessor/XSLTProcessor
 page-type: web-api-constructor
 browser-compat: api.XSLTProcessor.XSLTProcessor

@@ -1,5 +1,6 @@
 ---
 title: "IDBOpenDBRequest: blocked event"
+short-title: blocked
 slug: Web/API/IDBOpenDBRequest/blocked_event
 page-type: web-api-event
 browser-compat: api.IDBOpenDBRequest.blocked_event

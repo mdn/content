@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.mediaKeys
+title: "HTMLMediaElement: mediaKeys property"
+short-title: mediaKeys
 slug: Web/API/HTMLMediaElement/mediaKeys
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.mediaKeys

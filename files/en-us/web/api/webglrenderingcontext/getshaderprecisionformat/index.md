@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getShaderPrecisionFormat()
+title: "WebGLRenderingContext: getShaderPrecisionFormat() method"
+short-title: getShaderPrecisionFormat()
 slug: Web/API/WebGLRenderingContext/getShaderPrecisionFormat
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getShaderPrecisionFormat

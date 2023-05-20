@@ -1,5 +1,6 @@
 ---
-title: AnimationPlaybackEvent.timelineTime
+title: "AnimationPlaybackEvent: timelineTime property"
+short-title: timelineTime
 slug: Web/API/AnimationPlaybackEvent/timelineTime
 page-type: web-api-instance-property
 browser-compat: api.AnimationPlaybackEvent.timelineTime

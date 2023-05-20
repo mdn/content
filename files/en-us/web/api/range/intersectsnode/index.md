@@ -1,5 +1,6 @@
 ---
-title: Range.intersectsNode()
+title: "Range: intersectsNode() method"
+short-title: intersectsNode()
 slug: Web/API/Range/intersectsNode
 page-type: web-api-instance-method
 browser-compat: api.Range.intersectsNode

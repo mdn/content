@@ -1,5 +1,6 @@
 ---
-title: XPathEvaluator()
+title: "XPathEvaluator: XPathEvaluator() constructor"
+short-title: XPathEvaluator()
 slug: Web/API/XPathEvaluator/XPathEvaluator
 page-type: web-api-constructor
 browser-compat: api.XPathEvaluator.XPathEvaluator
@@ -42,7 +43,10 @@ The following example shows the use of the `XPathEvaluator` interface.
 const xpath = "//div";
 const evaluator = new XPathEvaluator();
 const expression = evaluator.createExpression(xpath);
-const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

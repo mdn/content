@@ -1,5 +1,6 @@
 ---
-title: SVGImageElement.width
+title: "SVGImageElement: width property"
+short-title: width
 slug: Web/API/SVGImageElement/width
 page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.width

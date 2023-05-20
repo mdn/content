@@ -1,8 +1,9 @@
 ---
-title: XSLTProcessor.transformToDocument()
+title: "XSLTProcessor: transformToDocument() method"
+short-title: transformToDocument()
 slug: Web/API/XSLTProcessor/transformToDocument
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.transformToDocument 
+browser-compat: api.XSLTProcessor.transformToDocument
 ---
 
 {{APIRef("XSLT")}}

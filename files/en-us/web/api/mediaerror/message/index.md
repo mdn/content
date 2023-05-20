@@ -1,5 +1,6 @@
 ---
-title: MediaError.message
+title: "MediaError: message property"
+short-title: message
 slug: Web/API/MediaError/message
 page-type: web-api-instance-property
 browser-compat: api.MediaError.message

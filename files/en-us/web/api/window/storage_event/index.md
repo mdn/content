@@ -1,5 +1,6 @@
 ---
 title: "Window: storage event"
+short-title: storage
 slug: Web/API/Window/storage_event
 page-type: web-api-event
 browser-compat: api.Window.storage_event

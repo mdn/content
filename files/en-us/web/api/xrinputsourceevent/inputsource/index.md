@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceEvent.inputSource
+title: "XRInputSourceEvent: inputSource property"
+short-title: inputSource
 slug: Web/API/XRInputSourceEvent/inputSource
 page-type: web-api-instance-property
 browser-compat: api.XRInputSourceEvent.inputSource

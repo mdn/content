@@ -1,5 +1,6 @@
 ---
-title: document.write()
+title: "document: write() method"
+short-title: write()
 slug: Web/API/Document/write
 page-type: web-api-instance-method
 browser-compat: api.Document.write

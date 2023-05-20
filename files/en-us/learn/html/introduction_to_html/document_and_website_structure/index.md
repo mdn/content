@@ -211,10 +211,10 @@ Sometimes you'll come across a situation where you can't find an ideal semantic 
 ```html
 <p>
   The King walked drunkenly back to his room at 01:00, the beer doing nothing to
-  aid him as he staggered through the door
+  aid him as he staggered through the door.
   <span class="editor-note">
-    [Editor's note: At this point in the play, the lights should be down low]
-  </span>.
+    [Editor's note: At this point in the play, the lights should be down low].
+  </span>
 </p>
 ```
 
@@ -222,14 +222,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 
 {{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:
 
-```html
+```html-nolint
 <div class="shopping-cart">
   <h2>Shopping cart</h2>
   <ul>
     <li>
       <p>
-        <a href=""><strong>Silver earrings</strong></a>:
-        $99.95.
+        <a href=""><strong>Silver earrings</strong></a>: $99.95.
       </p>
       <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>

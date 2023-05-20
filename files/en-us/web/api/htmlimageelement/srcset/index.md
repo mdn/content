@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.srcset
+title: "HTMLImageElement: srcset property"
+short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.srcset

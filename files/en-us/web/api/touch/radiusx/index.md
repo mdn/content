@@ -1,5 +1,6 @@
 ---
-title: Touch.radiusX
+title: "Touch: radiusX property"
+short-title: radiusX
 slug: Web/API/Touch/radiusX
 page-type: web-api-instance-property
 browser-compat: api.Touch.radiusX

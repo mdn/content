@@ -1,5 +1,6 @@
 ---
-title: PushManager.subscribe()
+title: "PushManager: subscribe() method"
+short-title: subscribe()
 slug: Web/API/PushManager/subscribe
 page-type: web-api-instance-method
 browser-compat: api.PushManager.subscribe

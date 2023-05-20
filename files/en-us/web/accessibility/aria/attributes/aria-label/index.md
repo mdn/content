@@ -1,6 +1,7 @@
 ---
 title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
@@ -95,6 +96,7 @@ The `aria-label` attribute is **NOT** supported in:
 
 - {{HTMLElement('label')}} element
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (May 15, 2023)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

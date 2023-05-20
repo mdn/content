@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.depthFunc()
+title: "WebGLRenderingContext: depthFunc() method"
+short-title: depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.depthFunc

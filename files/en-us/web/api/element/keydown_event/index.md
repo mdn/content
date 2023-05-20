@@ -1,5 +1,6 @@
 ---
 title: "Element: keydown event"
+short-title: keydown
 slug: Web/API/Element/keydown_event
 page-type: web-api-event
 browser-compat: api.Element.keydown_event

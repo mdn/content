@@ -1,5 +1,6 @@
 ---
 title: "Document: fullscreenchange event"
+short-title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 page-type: web-api-event
 browser-compat: api.Document.fullscreenchange_event

@@ -1,5 +1,6 @@
 ---
-title: RTCRtpContributingSource.audioLevel
+title: "RTCRtpContributingSource: audioLevel property"
+short-title: audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
 page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.audioLevel

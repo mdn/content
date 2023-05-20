@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.message
+title: "InterventionReportBody: message property"
+short-title: message
 slug: Web/API/InterventionReportBody/message
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: CSSFontPaletteValuesRule.basePalette
+title: "CSSFontPaletteValuesRule: basePalette property"
+short-title: basePalette
 slug: Web/API/CSSFontPaletteValuesRule/basePalette
 page-type: web-api-instance-property
 browser-compat: api.CSSFontPaletteValuesRule.basePalette

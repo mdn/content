@@ -1,5 +1,6 @@
 ---
-title: WEBGL_lose_context.restoreContext()
+title: "WEBGL_lose_context: restoreContext() method"
+short-title: restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_lose_context.restoreContext

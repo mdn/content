@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.createBuffer()
+title: "WebGLRenderingContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createBuffer

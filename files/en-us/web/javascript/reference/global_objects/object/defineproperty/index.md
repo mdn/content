@@ -349,7 +349,7 @@ Object.defineProperty(o, "b", {
 
 ### Adding properties and default values
 
-It is important to consider the way default values of attributes are applied. There is often a difference between using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) to assign a value and using `Object.defineProperty()`, as shown in the example below.
+It is important to consider the way default values of attributes are applied. There is often a difference between using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to assign a value and using `Object.defineProperty()`, as shown in the example below.
 
 ```js
 const o = {};

@@ -1,5 +1,6 @@
 ---
-title: DocumentType.publicId
+title: "DocumentType: publicId property"
+short-title: publicId
 slug: Web/API/DocumentType/publicId
 page-type: web-api-instance-property
 browser-compat: api.DocumentType.publicId

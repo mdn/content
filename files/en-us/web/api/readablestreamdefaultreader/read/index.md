@@ -1,5 +1,6 @@
 ---
-title: ReadableStreamDefaultReader.read()
+title: "ReadableStreamDefaultReader: read() method"
+short-title: read()
 slug: Web/API/ReadableStreamDefaultReader/read
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultReader.read
@@ -126,3 +127,8 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

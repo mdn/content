@@ -1,5 +1,6 @@
 ---
-title: Window.getSelection()
+title: "Window: getSelection() method"
+short-title: getSelection()
 slug: Web/API/Window/getSelection
 page-type: web-api-instance-method
 browser-compat: api.Window.getSelection

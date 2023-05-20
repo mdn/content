@@ -1,5 +1,6 @@
 ---
-title: FontData.postscriptName
+title: "FontData: postscriptName property"
+short-title: postscriptName
 slug: Web/API/FontData/postscriptName
 page-type: web-api-instance-property
 status:

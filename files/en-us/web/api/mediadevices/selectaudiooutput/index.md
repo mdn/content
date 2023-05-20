@@ -1,5 +1,6 @@
 ---
-title: MediaDevices.selectAudioOutput()
+title: "MediaDevices: selectAudioOutput() method"
+short-title: selectAudioOutput()
 slug: Web/API/MediaDevices/selectAudioOutput
 page-type: web-api-instance-method
 status:

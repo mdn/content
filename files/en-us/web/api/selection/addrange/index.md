@@ -1,5 +1,6 @@
 ---
-title: Selection.addRange()
+title: "Selection: addRange() method"
+short-title: addRange()
 slug: Web/API/Selection/addRange
 page-type: web-api-instance-method
 browser-compat: api.Selection.addRange

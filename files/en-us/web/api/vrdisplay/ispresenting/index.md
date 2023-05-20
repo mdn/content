@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.isPresenting
+title: "VRDisplay: isPresenting property"
+short-title: isPresenting
 slug: Web/API/VRDisplay/isPresenting
 page-type: web-api-instance-property
 status:

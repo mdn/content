@@ -1,5 +1,6 @@
 ---
-title: CryptoKey.algorithm
+title: "CryptoKey: algorithm property"
+short-title: algorithm
 slug: Web/API/CryptoKey/algorithm
 page-type: web-api-instance-property
 browser-compat: api.CryptoKey.algorithm

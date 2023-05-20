@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.emHeightAscent
+title: "TextMetrics: emHeightAscent property"
+short-title: emHeightAscent
 slug: Web/API/TextMetrics/emHeightAscent
 page-type: web-api-instance-property
 status:

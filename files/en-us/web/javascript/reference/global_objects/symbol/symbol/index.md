@@ -51,7 +51,7 @@ Symbol("foo") === Symbol("foo"); // false
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
-```js
+```js example-bad
 const sym = new Symbol(); // TypeError
 ```
 

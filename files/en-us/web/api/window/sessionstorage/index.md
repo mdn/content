@@ -1,5 +1,6 @@
 ---
-title: Window.sessionStorage
+title: "Window: sessionStorage property"
+short-title: sessionStorage
 slug: Web/API/Window/sessionStorage
 page-type: web-api-instance-property
 browser-compat: api.Window.sessionStorage

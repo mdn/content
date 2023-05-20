@@ -1,5 +1,6 @@
 ---
-title: Window.scrollMaxX
+title: "Window: scrollMaxX property"
+short-title: scrollMaxX
 slug: Web/API/Window/scrollMaxX
 page-type: web-api-instance-property
 status:

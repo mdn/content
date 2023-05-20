@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvas()
+title: "OffscreenCanvas: OffscreenCanvas() constructor"
+short-title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
 page-type: web-api-constructor
 browser-compat: api.OffscreenCanvas.OffscreenCanvas

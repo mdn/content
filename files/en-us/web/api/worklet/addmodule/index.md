@@ -1,5 +1,6 @@
 ---
-title: Worklet.addModule()
+title: "Worklet: addModule() method"
+short-title: addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
 browser-compat: api.Worklet.addModule
@@ -69,7 +70,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref("image/paint", "paint()")}} function
+Once the script has been added to the [paint worklet](/en-US/docs/Web/API/CSS/paintWorklet), the CSS {{cssxref("image/paint", "paint()")}} function
 can be used to include the image created by the worklet:
 
 ```css

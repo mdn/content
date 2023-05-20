@@ -20,6 +20,8 @@ The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shortha
 /* Global values */
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-border-before: unset;
 ```
 

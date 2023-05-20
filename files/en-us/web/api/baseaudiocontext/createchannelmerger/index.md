@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createChannelMerger()
+title: "BaseAudioContext: createChannelMerger() method"
+short-title: createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createChannelMerger

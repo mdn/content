@@ -1,6 +1,7 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
+page-type: http-method
 browser-compat: http.methods.GET
 ---
 

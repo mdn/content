@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.sign()
+title: "SubtleCrypto: sign() method"
+short-title: sign()
 slug: Web/API/SubtleCrypto/sign
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.sign

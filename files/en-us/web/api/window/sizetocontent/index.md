@@ -1,5 +1,6 @@
 ---
-title: Window.sizeToContent()
+title: "Window: sizeToContent() method"
+short-title: sizeToContent()
 slug: Web/API/Window/sizeToContent
 page-type: web-api-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: "Window: vrdisplayactivate event"
+short-title: vrdisplayactivate
 slug: Web/API/Window/vrdisplayactivate_event
 page-type: web-api-event
 status:

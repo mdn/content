@@ -1,5 +1,6 @@
 ---
-title: self.performance
+title: performance global property
+short-title: performance
 slug: Web/API/performance_property
 page-type: web-api-global-property
 browser-compat: api.performance

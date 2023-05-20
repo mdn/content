@@ -1,5 +1,6 @@
 ---
-title: ImageData()
+title: "ImageData: ImageData() constructor"
+short-title: ImageData()
 slug: Web/API/ImageData/ImageData
 page-type: web-api-constructor
 browser-compat: api.ImageData.ImageData

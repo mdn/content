@@ -94,3 +94,10 @@ setTimeout(() => {
 }, 10);
 export const b = 1;
 ```
+
+## See also
+
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/class", "class")}}
