@@ -38,7 +38,7 @@ Once installed, PWAs can be made to appear and act similarly to other applicatio
 
 ## Creating your first PWA
 
-In this tutorial, we will create a period tracker; a basic progressive web application in which the user can track the beginning and end of their menstrual cycles.
+The three main components of any PWA are the base web application, the manifest, and the service worker. In this tutorial, we will create a PWA. The base web application is a period tracker, in which the user can track the beginning and end of their menstrual cycles. We'll create the application, then add the manifest and the service worker.
 
 The steps include:
 
@@ -48,11 +48,11 @@ The steps include:
 - [JavaScript for app functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
   - : A line by line explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA.
 
+- [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
+  - : While all websites should be served over https, with PWAs, https is a requirement. CreateWhile no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
+
 - [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
-
-- [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
-  - : While no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
 
 - [Service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
