@@ -79,7 +79,7 @@ The state of our component will be represented by these three top-level variable
 
 1. Create a `<script>` section at the top of `src/components/Todos.svelte` and give it some content, as follows:
 
-   ```html
+   ```svelte
    <script>
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
@@ -95,7 +95,7 @@ The state of our component will be represented by these three top-level variable
 
 2. Let's start by showing a status message. Find the `<h2>` heading with an `id` of `list-heading` and replace the hardcoded number of active and completed tasks with dynamic expressions:
 
-   ```html
+   ```svelte
    <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
    ```
 
@@ -112,7 +112,7 @@ Let's give it a try.
 
 1. Replace the existing `<ul>` element with the following simplified version to get an idea of how it works:
 
-   ```html
+   ```svelte
    <ul>
    {#each todos as todo, index (todo.id)}
      <li>
@@ -130,7 +130,7 @@ Let's give it a try.
 
 3. Now that we've seen that this is working, let's generate a complete to-do item with each loop of the `{#each}` directive, and inside embed the information from the `todos` array: `id`, `name`, and `completed`. Replace your existing `<ul>` block with the following:
 
-   ```html
+   ```svelte
    <!-- To-dos -->
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each todos as todo (todo.id)}
@@ -170,7 +170,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 1. In `Todos.svelte`, replace the existing `let todos = …` block with `export let todos = []`.
 
    ```js
-   export let todos = []
+   export let todos = [];
    ```
 
    This may feel a little weird at first. That's not how `export` normally works in JavaScript modules! This is how Svelte 'extends' JavaScript by taking valid syntax and giving it a new purpose. In this case Svelte is using the `export` keyword to mark a variable declaration as a property or prop, which means it becomes accessible to consumers of the component.
@@ -182,7 +182,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 2. Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
 3. Now let's move our to-dos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
 
@@ -198,7 +198,7 @@ With a hardcoded list of to-dos, our `Todos` component is not very useful. To tu
 
 4. When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
 
-   ```html
+   ```svelte
    <Todos {todos} />
    ```
 
@@ -210,7 +210,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
 1. Update the `<input type="checkbox">` element inside `src/components/Todos.svelte` as follows:
 
-   ```html
+   ```svelte
    <input type="checkbox" id="todo-{todo.id}"
      on:click={() => todo.completed = !todo.completed}
      checked={todo.completed}
@@ -221,13 +221,13 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
    ```js
    function removeTodo(todo) {
-     todos = todos.filter((t) => t.id !== todo.id)
+     todos = todos.filter((t) => t.id !== todo.id);
    }
    ```
 
 3. We'll call it via the _Delete_ button. Update it with a `click` event, like so:
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger"
      on:click={() => removeTodo(todo)}
    >
@@ -250,8 +250,8 @@ As we've already seen, every time the value of a component top-level variable is
 The same is not true for `totalTodos` and `completedTodos`, however. In the following code they are assigned a value when the component is instantiated and the script is executed, but after that, their values are not modified:
 
 ```js
-let totalTodos = todos.length
-let completedTodos = todos.filter((todo) => todo.completed).length
+let totalTodos = todos.length;
+let completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 We could recalculate them after toggling and removing to-dos, but there's an easier way to do it.
@@ -263,8 +263,8 @@ We can tell Svelte that we want our `totalTodos` and `completedTodos` variables 
 Update your `totalTodos` and `completedTodos` variable definitions inside `src/components/Todos.svelte` to look like so:
 
 ```js
-$: totalTodos = todos.length
-$: completedTodos = todos.filter((todo) => todo.completed).length
+$: totalTodos = todos.length;
+$: completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 If you check your app now, you'll see that the heading's numbers are updated when to-dos are completed or deleted. Nice!
@@ -278,12 +278,12 @@ Now on to the next major task for this article — let's add some functionality 
 1. First we'll create a variable to hold the text of the new to-do. Add this declaration to the `<script>` section of `Todos.svelte` file:
 
    ```js
-   let newTodoName = ''
+   let newTodoName = "";
    ```
 
 2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
 
-   ```html
+   ```svelte
    <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
    ```
 
@@ -291,13 +291,13 @@ Now on to the next major task for this article — let's add some functionality 
 
    This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs#bind_element_property) directive:
 
-   ```html
+   ```svelte
    <input bind:value={newTodoName} />
    ```
 
    So, let's implement this. Update the `todo-0` input like so:
 
-   ```html
+   ```svelte
    <input
      bind:value={newTodoName}
      type="text"
@@ -309,7 +309,7 @@ Now on to the next major task for this article — let's add some functionality 
 3. An easy way to test that this works is to add a reactive statement to log the contents of `newTodoName`. Add this snippet at the end of the `<script>` section:
 
    ```js
-   $: console.log('newTodoName: ', newTodoName)
+   $: console.log("newTodoName: ", newTodoName);
    ```
 
    > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
@@ -319,8 +319,8 @@ Now on to the next major task for this article — let's add some functionality 
 
    ```js
    function addTodo() {
-     todos.push({ id: 999, name: newTodoName, completed: false })
-     newTodoName = ''
+     todos.push({ id: 999, name: newTodoName, completed: false });
+     newTodoName = "";
    }
    ```
 
@@ -328,7 +328,7 @@ Now on to the next major task for this article — let's add some functionality 
 
 6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
 
-   ```html
+   ```svelte
    <form on:submit|preventDefault={addTodo}>
    ```
 
@@ -344,8 +344,8 @@ Now on to the next major task for this article — let's add some functionality 
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: 999, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: 999, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -356,14 +356,14 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
 1. Let's declare a `newTodoId` variable calculated from the number of to-dos plus 1, and make it reactive. Add the following snippet to the `<script>` section:
 
    ```js
-   let newTodoId
-     $: {
-       if (totalTodos === 0) {
-         newTodoId = 1;
-       } else {
-         newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
-       }
+   let newTodoId;
+   $: {
+     if (totalTodos === 0) {
+       newTodoId = 1;
+     } else {
+       newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
      }
+   }
    ```
 
    > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
@@ -374,8 +374,8 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -386,11 +386,13 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 1. At the bottom of our `<script>` section add the following:
 
    ```js
-   let filter = 'all'
+   let filter = "all";
    const filterTodos = (filter, todos) =>
-     filter === 'active' ? todos.filter((t) => !t.completed) :
-     filter === 'completed' ? todos.filter((t) => t.completed) :
-     todos
+     filter === "active"
+       ? todos.filter((t) => !t.completed)
+       : filter === "completed"
+       ? todos.filter((t) => t.completed)
+       : todos;
    ```
 
    We use the `filter` variable to control the active filter: _all_, _active_, or _completed_. Just assigning one of these values to the filter variable will activate the filter and update the list of to-dos. Let's see how to achieve this.
@@ -399,7 +401,7 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
 2. Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:
 
-   ```html
+   ```svelte
    <div class="filters btn-group stack-exception">
      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
        <span class="visually-hidden">Show</span>
@@ -431,7 +433,7 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
 3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
 
-   ```html
+   ```svelte
    …
      <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}

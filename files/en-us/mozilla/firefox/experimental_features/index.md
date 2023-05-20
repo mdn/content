@@ -718,6 +718,88 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
+### page-orientation
+
+The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
+See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>111</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>111</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.page-orientation.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### prefers-reduced-transparency media feature
+
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>113</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.prefers-reduced-transparency.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -802,46 +884,6 @@ The `groupBy` method should be used when strings can be used to represent elemen
     <tr>
       <th>Preference name</th>
       <td colspan="2">None</td>
-    </tr>
-  </tbody>
-</table>
-
-#### Static module import in workers
-
-[Workers](/en-US/docs/Web/API/Web_Workers_API) can now [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1247687](https://bugzil.la/1247687)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>111</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.workers.modules.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -972,6 +1014,90 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>media.setsinkid.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### WebTransport API
+
+#### WebTransport API core classes
+
+This experimental feature delivers [WebTransport API](/en-US/docs/Web/API/WebTransport_API) interfaces, including: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream) , [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) ,[`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### WebTransport datagrams
+
+This experimental feature delivers all support for the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) datagram interface [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream).
+See [Firefox bug 1818754](https://bugzil.la/1818754).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>113</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>109</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>network.webtransport.datagrams.enabled</code></td>
     </tr>
   </tbody>
 </table>

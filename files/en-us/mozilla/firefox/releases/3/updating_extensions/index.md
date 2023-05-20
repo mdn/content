@@ -161,4 +161,4 @@ _Add simple changes you had to make while updating your extension to work with F
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
 - `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
 - Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for [Webkit bug 52209](https://bugzil.la/52209). You may use `nsITimer` instead.
-- If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).
+- If your extension needs to allow an untrusted source (e.g., a website) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).

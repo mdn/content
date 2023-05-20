@@ -5,7 +5,7 @@ slug: Web/Media/Formats/WebRTC_codecs
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct web sites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct websites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
 ## Containerless media
 
@@ -439,7 +439,7 @@ There are a number of factors that come into play when deciding upon a video cod
 
 #### Licensing terms
 
-Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical web site developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
+Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical website developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
 
 > **Warning:** The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
 

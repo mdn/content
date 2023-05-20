@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
 
 {{AddonSidebar()}}
 
-Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are returned.
+Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are not returned.
 
 ## Syntax
 
