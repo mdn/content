@@ -37,7 +37,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
 ```js
-globalScope.addEventListener("activate", (event) => {
+self.addEventListener("activate", (event) => {
   const cacheAllowlist = ["v2"];
 
   event.waitUntil(
@@ -53,7 +53,7 @@ globalScope.addEventListener("activate", (event) => {
 You can also set up the event handler using the `onactivate` property:
 
 ```js
-globalScope.onactivate = (event) => {
+self.onactivate = (event) => {
   // ...
 };
 ```

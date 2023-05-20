@@ -54,43 +54,15 @@ A new {{jsxref("TypedArray")}} instance.
 
 ## Description
 
-`TypedArray.from()` lets you create typed arrays from:
+See {{jsxref("Array.from()")}} for more details.
 
-- array-like objects (objects with a `length` property and indexed
-  elements); or
-- [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects
-  where you can get its elements, such as {{jsxref("Map")}} and {{jsxref("Set")}}).
+There are some subtle distinctions between {{jsxref("Array.from()")}} and `TypedArray.from()` (note: the `this` value mentioned below is the `this` value that `TypedArray.from()` was called with, not the `thisArg` argument used to invoke `mapFn`):
 
-`TypedArray.from()` has the optional parameter
-`mapFn`, which allows you to execute a
-{{jsxref("Array.prototype.map", "map()")}} function on each element of the typed array
-(or subclass object) that is being created. This means that the following are
-equivalent:
-
-- `TypedArray.from(obj, mapFn, thisArg)`
-- `TypedArray.from(Array.prototype.map.call(obj, mapFn, thisArg))`.
-
-The `length` property of the `from()` method is `1`.
-
-### Differences from Array.from()
-
-Some subtle distinctions between {{jsxref("Array.from()")}} and
-`TypedArray.from()`:
-
-- If the `thisArg` value passed to
-  `TypedArray.from()` is not a constructor,
-  `TypedArray.from()` will throw a {{jsxref("TypeError")}},
-  where `Array.from()` defaults to creating a new {{jsxref("Array")}}.
-- `TypedArray.from()` uses `[[Set]]` where `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
-- When the `source` parameter is an iterator, the
-  `TypedArray.from()` first collects all the values from the
-  iterator, then creates an instance of `thisArg` using the
-  count, then sets the values on the instance. `Array.from()` sets each
-  value as it receives them from the iterator, then sets its `length` at
-  the end.
-- When `Array.from()` gets an array-like which isn't an iterator, it
-  respects holes. `TypedArray.from()` will ensure the result
-  is dense.
+- If the `this` value of `TypedArray.from()` is not a constructor, `TypedArray.from()` will throw a {{jsxref("TypeError")}}, while `Array.from()` defaults to creating a new {{jsxref("Array")}}.
+- The object constructed by `this` must be a `TypedArray` instance, while `Array.from()` allows its `this` value to be constructed to any object.
+- When the `source` parameter is an iterator, `TypedArray.from()` first collects all the values from the iterator, then creates an instance of `this` using the count, and finally sets the values on the instance. `Array.from()` sets each value as it receives them from the iterator, then sets its `length` at the end.
+- `TypedArray.from()` uses `[[Set]]` while `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
+- When `Array.from()` gets an array-like which isn't an iterator, it respects holes. `TypedArray.from()` will ensure the result is dense.
 
 ## Examples
 
@@ -123,6 +95,31 @@ Float32Array.from([1, 2, 3], (x) => x + x);
 ```js
 Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
+```
+
+### Calling from() on non-TypedArray constructors
+
+The `this` value of `from()` must be a constructor that returns a `TypedArray` instance.
+
+```js
+function NotArray(len) {
+  console.log("NotArray called with length", len);
+}
+
+Int8Array.from.call({}, []); // TypeError: #<Object> is not a constructor
+Int8Array.from.call(NotArray, []);
+// NotArray called with length 0
+// TypeError: Method %TypedArray%.from called on incompatible receiver #<NotArray>
+```
+
+```js
+function NotArray2(len) {
+  console.log("NotArray2 called with length", len);
+  return new Uint8Array(len);
+}
+console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
+// NotArray2 called with length 3
+// Uint8Array(3) [ 1, 2, 3 ]
 ```
 
 ## Specifications
