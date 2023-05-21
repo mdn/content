@@ -182,7 +182,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 200)}}
+{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 750)}}
 
 ## Specifications
 
