@@ -464,21 +464,25 @@ The following steps can be followed to prevent exposure of MongoDB URI in Node.j
 
 - Create a `.env` file in the root directory of your `Node.js` project. If you don't already have one, you can create it using a text editor.
 - Inside the `.env` file, define your MongoDB URI using a unique name. For example:
-  ```shell
-    MONGODB_URI=mongodb://username:password@host:port/database
-  ```
+  
+```shell
+  MONGODB_URI=mongodb://username:password@host:port/database
+ ```
 - Install the `dotenv` package, which allows you to load environment variables from the `.env` file. You can install it using npm or yarn:
-  ```shell
-    npm install dotenv
-  ```
+  
+```shell
+  npm install dotenv
+```
 - In your `Node.js` application, require and initialize `dotenv` at the beginning of your code:
-  ```js
+  
+```js
     require('dotenv').config();
-  ```
+```
 - Now you can access the MongoDB URI using the environment variable you defined in the `.env` file:
-  ```js
+  
+```js
     const uri = process.env.MONGODB_URI;
-  ```
+ ```
 - Make sure to add the `.env` file to your `.gitignore` file. This prevents it from being committed to your version control system and keeps your sensitive information secure.
 - When deploying your application, ensure that you set the environment variable on your hosting platform or server, so it can be accessed during runtime.
 
