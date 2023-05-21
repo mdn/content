@@ -69,11 +69,7 @@ The following example shows the effect of using different interpolation color sp
 
 ```css
 .gradient {
-  background-image: linear-gradient(
-    var(--method) to right,
-    #a37,
-    #595
-  );
+  background-image: linear-gradient(var(--method) to right, #a37, #595);
   height: 40px;
   width: 200px;
 }
