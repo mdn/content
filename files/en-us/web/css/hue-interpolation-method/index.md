@@ -114,6 +114,18 @@ The following example shows the effect of using different hue interpolation algo
 <div class="decreasing"></div>
 ```
 
+#### CSS
+
+```css hidden
+div {
+  border: 1px solid;
+  display: inline-block;
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 200)}}
