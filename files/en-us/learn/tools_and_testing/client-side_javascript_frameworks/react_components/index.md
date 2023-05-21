@@ -261,7 +261,7 @@ To render our array of objects, we have to turn each object into a `<Todo />` co
 Above the return statement of `App()`, make a new `const` called `taskList`. Let's start by transforming each task in the `props.tasks` array into its `name`:
 
 ```jsx
-const taskList = props.tasks.map((task) => task.name);
+const taskList = props.tasks?.map((task) => task.name);
 ```
 
 Let's try replacing all the children of the `<ul>` with `taskList`:
