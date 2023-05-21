@@ -108,51 +108,75 @@ The following example shows the effect of using different hue interpolation algo
 #### HTML
 
 ```html
-<div class="shorter"></div>
-<div class="longer"></div>
-<div class="increasing"></div>
-<div class="decreasing"></div>
+<div class="hsl">
+  <p>HSL</p>
+</div>
+<div class="hsl-named">
+  <p>HSL named</p>
+</div>
+<div class="hsl-increasing">
+  <p>HSL increasing</p>
+</div>
+<div class="hsl-decreasing">
+  <p>HSL decreasing</p>
+</div>
+<div class="hsl-longer">
+  <p>HSL longer</p>
+</div>
+<div class="hsl-named-longer">
+  <p>HSL named (longer)</p>
+</div>
 ```
 
 #### CSS
 
 ```css hidden
 div {
-  border: 1px solid;
-  display: inline-block;
+  border: 1px solid black;
   height: 100px;
   margin: 10px;
-  width: 100px;
+  width: 90%;
+}
+p {
+  color: white;
+  margin: 6px;
 }
 ```
 
 ```css
-div {
-  background-color: color-mix(
-    in hsl var(--algo) hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
+.hsl {
+  background: linear-gradient(
+    to right in hsl,
+    hsl(39deg 100% 50%),
+    hsl(60deg 100% 50%)
   );
 }
-
-/* 20 degrees */
-.shorter {
-  --algo: shorter;
+.hsl-increasing {
+  background: linear-gradient(
+    to right in hsl increasing hue,
+    hsl(190deg 100% 50%),
+    hsl(180deg 100% 50%)
+  );
 }
-
-/* 340 degrees */
-.longer {
-  --algo: longer;
+.hsl-decreasing {
+  background: linear-gradient(
+    to right in hsl decreasing hue,
+    hsl(39deg 100% 50%),
+    hsl(60deg 100% 50%)
+  );
 }
-
-/* 340 degrees */
-.increasing {
-  --algo: increasing;
+.hsl-longer {
+  background: linear-gradient(
+    to right in hsl longer hue,
+    hsl(39deg 100% 50%),
+    hsl(60deg 100% 50%)
+  );
 }
-
-/* 20 degrees */
-.decreasing {
-  --algo: decreasing;
+.hsl-named {
+  background: linear-gradient(to right in hsl, orange, yellow);
+}
+.hsl-named-longer {
+  background: linear-gradient(to right in hsl longer hue, orange, yellow);
 }
 ```
 
