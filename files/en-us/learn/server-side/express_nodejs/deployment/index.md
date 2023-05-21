@@ -465,13 +465,13 @@ The following steps can be followed to prevent exposure of MongoDB URI in Node.j
 - Create a `.env` file in the root directory of your `Node.js` project. If you don't already have one, you can create it using a text editor.
 - Inside the `.env` file, define your MongoDB URI using a unique name. For example:
 
-```shell
+```sh
 MONGODB_URI=mongodb://username:password@host:port/database
 ```
 
 - Install the `dotenv` package, which allows you to load environment variables from the `.env` file. You can install it using npm or yarn:
 
-```shell
+```sh
 npm install dotenv
 ```
 
