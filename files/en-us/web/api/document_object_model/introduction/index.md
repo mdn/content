@@ -236,7 +236,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 - {{domxref("document.querySelector()")}}
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("document.createElement()")}}
-- {{domxref("Element.innerHTML()")}}
+- {{domxref("Element.innerHTML")}}
 - {{domxref("Element.setAttribute()")}}
 - {{domxref("Element.getAttribute()")}}
 - {{domxref("EventTarget.addEventListener()")}}
