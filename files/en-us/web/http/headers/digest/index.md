@@ -9,6 +9,8 @@ browser-compat: http.headers.Digest
 
 {{HTTPSidebar}}{{Deprecated_Header}}
 
+> **Warning:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08). Use {{HTTPHeader("Repr-Digest")}} instead. For `id-*` digest algorithms, use {{HTTPHeader("Content-Digest")}}.
+
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
 
 Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
@@ -42,18 +44,20 @@ Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 ## Directives
 
 - `<digest-algorithm>`
-  - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/).
-    - Permitted digest algorithms values include: `unixsum`, `unixcksum`, `crc32c`, `sha-256` and `sha-512`, `id-sha-256`, `id-sha-512`
-    - Deprecated algorithms values include: `md5`, `sha`, `adler32`.
+  - : Digest algorithm valuess are defined in [6. Digest Algorithm Values](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-07#name-digest-algorithm-values).
+    - Permitted digest algorithm values are: `sha-512` and `sha-256`
+    - Permitted insecure digest algorithm values are: `md5`, `sha`, `unixsum`, `unixcksum`, `adler32` and `crc32c`
+    - Deprecated digest algorithm values include: `id-sha-256`, `id-sha-512`
 - `<digest-value>`
-  - : The result of applying the digest algorithm to the resource representation and encoding the result.
-    The choice of digest algorithm also determines the encoding to use: for example `SHA-256` uses base64 encoding.
+  - : The result of applying the digest algorithm to the resource representation and encoding (for non-`id-*` digest algorithm values) the result.
+    The choice of digest algorithm also determines the encoding to use: for example SHA-256 uses base64 encoding whilst unixsum is represented by a decimal integer.
 
 ## Examples
 
 ```http
 Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
 Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,id-sha-256=0KJL0PvNLH5UbYZLTT7DBFuSyxKpnjyadrWx5E90E/z=
 ```
 
 ## Specifications
