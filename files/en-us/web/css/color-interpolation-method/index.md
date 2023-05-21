@@ -65,6 +65,23 @@ The following example shows the effect of using different interpolation color sp
 <div class="gradient oklch-longer"></div>
 ```
 
+#### CSS
+
+```css
+.srgb {
+  --method: in srgb;
+}
+.display-p3 {
+  --method: in display-p3;
+}
+.oklab {
+  --method: in oklab;
+}
+.oklch-longer {
+  --method: in oklch longer hue;
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 300)}}
