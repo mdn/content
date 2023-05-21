@@ -39,6 +39,7 @@ Any pair of hue angles `θ1` and `θ2` correspond to two radii on the {{Glossary
 There are four algorithms to determine which arc is used:
 
 - `shorter`
+
   - : Use the shorter arc. When the two radii coincide, the arc degenerates to a single point. When both arcs have the same lengths:
 
     - If `θ1 < θ2`, use the clockwise arc;
@@ -51,6 +52,7 @@ There are four algorithms to determine which arc is used:
     | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = -225deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
+
   - : Use the longer arc. When the two radii coincide:
 
     - If `θ1 ≤ θ2`, the arc becomes the full circumference with a clockwise orientation.
@@ -68,6 +70,7 @@ There are four algorithms to determine which arc is used:
     | ![longer with θ1 = 45deg and θ2 = -225deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
+
   - : Use the clockwise arc. When the two radii coincide:
 
     - If `θ1 < θ2`, the arc becomes the full circumference with a clockwise orientation.
@@ -80,6 +83,7 @@ There are four algorithms to determine which arc is used:
     | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 495deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
+
   - : Use the counterclockwise arc. When the two radii coincide:
 
     - If `θ1 ≤ θ2`, the arc degenerates to a single point.
@@ -108,40 +112,6 @@ The following example shows the effect of using different hue interpolation algo
 <div class="longer"></div>
 <div class="increasing"></div>
 <div class="decreasing"></div>
-```
-
-#### CSS
-
-```css hidden
-div {
-  border: 1px solid;
-  display: inline-block;
-  height: 100px;
-  margin: 10px;
-  width: 100px;
-}
-```
-
-```css
-div {
-  background-color: color-mix(in hsl var(--algo) hue, hsl(10 100% 50%), hsl(350 100% 50%));
-}
-/* 20 degrees */
-.shorter {
-  --algo: shorter;
-}
-/* 340 degrees */
-.longer {
-  --algo: longer;
-}
-/* 340 degrees */
-.increasing {
-  --algo: increasing;
-}
-/* 20 degrees */
-.decreasing {
-  --algo: decreasing;
-}
 ```
 
 #### Result
