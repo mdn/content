@@ -56801,26 +56801,6 @@
     "modified": "2020-10-15T21:45:14.743Z",
     "contributors": ["sideshowbarker", "fscholz", "abbycar", "dverane08"]
   },
-  "Web/API/SVGAltGlyphDefElement": {
-    "modified": "2020-10-15T21:53:52.726Z",
-    "contributors": ["fscholz", "Sebastianz"]
-  },
-  "Web/API/SVGAltGlyphElement": {
-    "modified": "2020-10-15T21:44:26.079Z",
-    "contributors": ["fscholz", "Sebastianz", "dverane08"]
-  },
-  "Web/API/SVGAltGlyphElement/format": {
-    "modified": "2020-10-15T21:44:26.804Z",
-    "contributors": ["fscholz", "dverane08", "rolfedh"]
-  },
-  "Web/API/SVGAltGlyphElement/glyphRef": {
-    "modified": "2020-10-15T21:44:25.621Z",
-    "contributors": ["fscholz", "dverane08", "PushpitaPikuDey"]
-  },
-  "Web/API/SVGAltGlyphItemElement": {
-    "modified": "2020-10-15T21:53:52.447Z",
-    "contributors": ["fscholz", "Sebastianz"]
-  },
   "Web/API/SVGAngle": {
     "modified": "2020-10-15T21:10:11.591Z",
     "contributors": [
@@ -125490,10 +125470,6 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Attribute/format": {
-    "modified": "2020-10-15T22:21:09.437Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Attribute/fr": {
     "modified": "2020-10-15T21:54:40.575Z",
     "contributors": ["Sebastianz", "chrisdavidmills"]
@@ -125530,10 +125506,6 @@
   },
   "Web/SVG/Attribute/glyph-orientation-vertical": {
     "modified": "2020-10-15T22:21:17.154Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Attribute/glyphRef": {
-    "modified": "2020-10-15T22:21:19.407Z",
     "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/gradientTransform": {
@@ -126593,37 +126565,6 @@
       "teoli",
       "kscarfone",
       "ethertank",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Element/altGlyph": {
-    "modified": "2020-10-15T21:09:16.585Z",
-    "contributors": [
-      "Sebastianz",
-      "fscholz",
-      "Jeremie",
-      "Barbrousse",
-      "kscarfone",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Element/altGlyphDef": {
-    "modified": "2020-10-15T21:11:31.706Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "Jeremie",
-      "kscarfone",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Element/altGlyphItem": {
-    "modified": "2020-10-15T21:11:32.750Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "Jeremie",
-      "kscarfone",
       "Manuel_Strehl"
     ]
   },
