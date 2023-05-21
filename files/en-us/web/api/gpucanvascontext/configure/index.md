@@ -45,7 +45,7 @@ configure(configuration)
         - `GPUTextureUsage.TEXTURE_BINDING`: The texture can be bound for use as a sampled texture in a shader, for example in a bind group entry in a {{domxref("GPUDevice.createBindGroup()")}} call.
         - `GPUTextureUsage.STORAGE_BINDING`: The texture can be bound for use as a storage texture in a shader, for example in a bind group entry in a {{domxref("GPUDevice.createBindGroup()")}} call.
 
-        Note that multiple possible usages can be specified using the bitwise OR operator, for example:
+        Note that multiple possible usages can be specified using the [bitwise OR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR). For example:
 
         ```js
         usage: GPUTextureUsage.COPY_SRC | GPUTextureUsage.RENDER_ATTACHMENT;
