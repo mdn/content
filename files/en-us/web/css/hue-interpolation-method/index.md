@@ -124,11 +124,7 @@ div {
 
 ```css
 div {
-  background-color: color-mix(
-    in hsl var(--algo) hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
-  );
+  background-color: color-mix(in hsl var(--algo) hue, hsl(10 100% 50%), hsl(350 100% 50%));
 }
 /* 20 degrees */
 .shorter {
