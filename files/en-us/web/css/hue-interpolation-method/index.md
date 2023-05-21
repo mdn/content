@@ -34,7 +34,7 @@ decreasing hue
 
 Any pair of hue angles `θ1` and `θ2` correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the fisrt radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
 
-> **Note:** The following descriptions and illustrations are based on a color wheel in which hue angles increase clockwise. Beware that there are also counterclockwise color wheels.
+> **Note:** The following descriptions and illustrations are based on color wheels in which hue angles increase clockwise. Beware that there are also counterclockwise color wheels.
 
 There are four algorithms to determine which arc is used:
 
