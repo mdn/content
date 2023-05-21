@@ -91,16 +91,6 @@ The `sidebar_action` key is an object that may have any of the properties listed
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
-        <p>
-          The
-          <a
-            class="external external-icon"
-            href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the sidebar
-          to get particular styles.
-        </p>
       </td>
     </tr>
     <tr>

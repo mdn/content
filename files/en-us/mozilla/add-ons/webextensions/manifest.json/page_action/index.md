@@ -89,14 +89,6 @@ The `page_action` key is an object that may have any of three properties, all op
         </p>
         <p>
           The
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the popup
-          to get particular styles.
-        </p>
-        <p>
-          The
           <a
             href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
             >latest-download</a
