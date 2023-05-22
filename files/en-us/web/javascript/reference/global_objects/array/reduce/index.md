@@ -73,10 +73,6 @@ Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 The `reduce()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
-### When to not use reduce()
-
-Recursive functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less-experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`. In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
-
 ### Edge cases
 
 If the array only has one element (regardless of position) and no `initialValue` is provided, or if `initialValue` is provided but the array is empty, the solo value will be returned _without_ calling `callbackFn`.
@@ -171,67 +167,20 @@ const sum = objects.reduce(
 console.log(sum); // 6
 ```
 
-### Running Promises in Sequence
+### Function sequential piping
+
+The `pipe` function takes a sequence of functions and returns a new function. When the new function is called with an argument, the sequence of functions are called in order, which each one receiving the return value of the previous function.
 
 ```js
-/**
- * Chain a series of promise handlers.
- *
- * @param {array} arr - A list of promise handlers, each one receiving the
- * resolved result of the previous handler and returning another promise.
- * @param {*} input - The initial value to start the promise chain
- * @return {Object} - Final promise with a chain of handlers attached
- */
-function runPromiseInSequence(arr, input) {
-  return arr.reduce(
-    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
-    Promise.resolve(input),
-  );
-}
-
-// promise function 1
-function p1(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 5);
-  });
-}
-
-// promise function 2
-function p2(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 2);
-  });
-}
-
-// function 3 - will be wrapped in a resolved promise by .then()
-function f3(a) {
-  return a * 3;
-}
-
-// promise function 4
-function p4(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 4);
-  });
-}
-
-const promiseArr = [p1, p2, f3, p4];
-runPromiseInSequence(promiseArr, 10).then(console.log); // 1200
-```
-
-### Function composition enabling piping
-
-```js
-// Building-blocks to use for composition
-const double = (x) => 2 * x;
-const triple = (x) => 3 * x;
-const quadruple = (x) => 4 * x;
-
-// Function composition enabling pipe functionality
 const pipe =
   (...functions) =>
   (initialValue) =>
     functions.reduce((acc, fn) => fn(acc), initialValue);
+
+// Building blocks to use for composition
+const double = (x) => 2 * x;
+const triple = (x) => 3 * x;
+const quadruple = (x) => 4 * x;
 
 // Composed functions for multiplication of specific values
 const multiply6 = pipe(double, triple);
@@ -244,6 +193,38 @@ multiply6(6); // 36
 multiply9(9); // 81
 multiply16(16); // 256
 multiply24(10); // 240
+```
+
+### Running promises in sequence
+
+[Promise sequencing](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition) is essentially function piping demonstrated in the previous section, except done asynchronously.
+
+```js
+// Compare this with pipe: fn(acc) is changed to acc.then(fn),
+// and initialValue is ensured to be a promise
+const asyncPipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => acc.then(fn), Promise.resolve(initialValue));
+
+// Building blocks to use for composition
+const p1 = async (a) => a * 5;
+const p2 = async (a) => a * 2;
+// The composed functions can also return non-promises, because the values are
+// all eventually wrapped in promises
+const f3 = (a) => a * 3;
+const p4 = async (a) => a * 4;
+
+asyncPipe(p1, p2, f3, p4)(10).then(console.log); // 1200
+```
+
+`asyncPipe` can also be implemented using `async`/`await`, which better demonstrates its similarity with `pipe`:
+
+```js
+const asyncPipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce(async (acc, fn) => fn(await acc), initialValue);
 ```
 
 ### Using reduce() with sparse arrays
@@ -269,6 +250,149 @@ const arrayLike = {
 console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 // 9
 ```
+
+### When to not use reduce()
+
+Recursive functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less-experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`.
+
+Note that `reduce()` is always equivalent to a `for...of` loop, except that instead of mutating a variable in the upper scope, we now return the new value for each iteration:
+
+```js
+const val = array.reduce((acc, cur) => update(acc, cur), initialValue);
+
+// Is equivalent to:
+let val = initialValue;
+for (const cur of array) {
+  val = update(val, cur);
+}
+```
+
+As previously stated, the reason why people may want to use `reduce()` is to mimic functional programming practices of immutable data. Therefore, developers who uphold the immutability of the accumulator often copy the entire accumulator for each iteration, like this:
+
+```js
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = names.reduce((allNames, name) => {
+  const currCount = allNames[name] ?? 0;
+  return {
+    ...allNames,
+    [name]: currCount + 1,
+  };
+}, {});
+```
+
+This code is ill-performing, because each iteration has to copy the entire `allNames` object, which could be big, depending how many unique names there are. This code has worst-case `O(N^2)` performance, where `N` is the length of `names`.
+
+A better alternative is to _mutate_ the `allNames` object on each iteration. However, if `allNames` gets mutated anyway, you may want to convert the `reduce()` to a simple `for` loop instead, which is much clearer:
+
+```js example-bad
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = names.reduce((allNames, name) => {
+  const currCount = allNames[name] ?? 0;
+  allNames[names] = currCount + 1;
+  // return allNames, otherwise the next iteration receives undefined
+  return allNames;
+}, {});
+```
+
+```js example-good
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = {};
+for (const name of names) {
+  const currCount = countedNames[name] ?? 0;
+  countedNames[names] = currCount + 1;
+}
+```
+
+Therefore, if your accumulator is an array or an object and you are copying the array or object on each iteration, you may accidentally introduce quadratic complexity into your code, causing performance to quickly degrade on large data.
+
+Some of the acceptable use cases of `reduce()` are given above (most notably, summing an array, promise sequencing, and function piping). There are other cases where better alternatives than `reduce()` exist.
+
+- Flattening an array of arrays. Use {{jsxref("Array/flat", "flat()")}} instead.
+
+  ```js example-bad
+  const flattened = array.reduce((acc, cur) => acc.concat(cur), []);
+  ```
+
+  ```js example-good
+  const flattened = array.flat();
+  ```
+
+- Grouping objects by a property. Use {{jsxref("Array/group", "group()")}} instead.
+
+  ```js example-bad
+  const groups = array.reduce((acc, obj) => {
+    const key = obj.name;
+    const curGroup = acc[key] ?? [];
+    return { ...acc, [key]: [...curGroup, obj] };
+  }, {});
+  ```
+
+  ```js example-good
+  const groups = array.group((obj) => obj.name);
+  ```
+
+- Concatenating arrays contained in an array of objects. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
+
+  ```js example-bad
+  const friends = [
+    { name: "Anna", books: ["Bible", "Harry Potter"] },
+    { name: "Bob", books: ["War and peace", "Romeo and Juliet"] },
+    { name: "Alice", books: ["The Lord of the Rings", "The Shining"] },
+  ];
+  const allBooks = friends.reduce((acc, cur) => [...acc, ...cur.books], []);
+  ```
+
+  ```js example-good
+  const allBooks = friends.flatMap((person) => person.books);
+  ```
+
+- Removing duplicate items in an array. Use {{jsxref("Set")}} and {{jsxref("Array.from()")}} instead.
+
+  ```js example-bad
+  const uniqArray = array.reduce(
+    (acc, cur) => (acc.includes(cur) ? acc : [...acc, cur]),
+    [],
+  );
+  ```
+
+  ```js example-good
+  const uniqArray = Array.from(new Set(array));
+  ```
+
+- Eliminating or adding elements in an array. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
+
+  ```js example-bad
+  // Takes an array of numbers and splits perfect squares into its square roots
+  const roots = array.reduce((acc, cur) => {
+    if (cur < 0) return acc;
+    const root = Math.sqrt(cur);
+    if (Number.isInteger(root)) return [...acc, root, root];
+    return [...acc, cur];
+  }, []);
+  ```
+
+  ```js example-good
+  const roots = array.flatMap((val) => {
+    if (val < 0) return [];
+    const root = Math.sqrt(val);
+    if (Number.isInteger(root)) return [root, root];
+    return [val];
+  });
+  ```
+
+  If you are only eliminating elements from an array, you also can use {{jsxref("Array/filter", "filter()")}}.
+
+- Searching for elements or testing if elements satisfy a condition. Use {{jsxref("Array/find", "find()")}} and {{jsxref("Array/find", "findIndex()")}}, or {{jsxref("Array/some", "some()")}} and {{jsxref("Array/every", "every()")}} instead. These methods have the additional benefit that they return as soon as the result is certain, without iterating the entire array.
+
+  ```js example-bad
+  const allEven = array.reduce((acc, cur) => acc && cur % 2 === 0, true);
+  ```
+
+  ```js example-good
+  const allEven = array.every((val) => val % 2 === 0);
+  ```
+
+In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
 
 ## Specifications
 
