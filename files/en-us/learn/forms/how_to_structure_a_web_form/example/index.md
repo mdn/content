@@ -7,7 +7,7 @@ This the example for a basic payment form for the article [How to structure an H
 
 ## A payment form
 
-### HTML Content
+### HTML
 
 ```html-nolint
 <form method="post">
@@ -101,7 +101,7 @@ This the example for a basic payment form for the article [How to structure an H
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 h1 {
