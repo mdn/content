@@ -397,4 +397,6 @@ div {
 - {{Cssxref("::marker")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
+- {{cssxref("gradient", "&lt;gradient&gt;")}}
+- {{cssxref("image/image-set", "image-set()")}} function
 - {{cssxref("url", "url()")}} function
