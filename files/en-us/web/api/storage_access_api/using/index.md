@@ -32,7 +32,12 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 Now on to the code executed inside the embedded document. In this code:
 
 1. We first use feature detection (`if (document.hasStorageAccess === null) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
-2. If the API is supported, we call `document.hasStorageAccess()`. 3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away. 4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed). 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies. 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies. 7. If the permission state is `"denied"`, the user has denied our requests to access unpartitioned cookies, and our code cannot make use of them.
+2. If the API is supported, we call `document.hasStorageAccess()`.
+3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
+4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access unpartitioned cookies has already been granted (i.e. to another same-site embed).
+5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
+6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
+7. If the permission state is `"denied"`, the user has denied our requests to access unpartitioned cookies, and our code cannot make use of them.
 
 ```js
 function doThingsWithCookies() {
