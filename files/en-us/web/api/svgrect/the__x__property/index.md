@@ -78,7 +78,7 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
 
 ## Simple usage
 
-A `<coordinate>` is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [`<length>`](https://www.w3.org/TR/SVG11/types.html#DataTypeLength).
+A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength).
 
 ```html
 <div id="svg-container"></div>
