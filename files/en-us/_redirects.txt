@@ -3687,7 +3687,6 @@
 /en-US/docs/HTML/Element/bgcound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML/Element/bgsound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML/Element/big	/en-US/docs/Web/HTML/Element/big
-/en-US/docs/HTML/Element/blink	/en-US/docs/Web/HTML/Element/blink
 /en-US/docs/HTML/Element/blockquote	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML/Element/blockquote-redirect-1	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML/Element/body	/en-US/docs/Web/HTML/Element/body
@@ -3943,7 +3942,6 @@
 /en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML:Element:big	/en-US/docs/Web/HTML/Element/big
-/en-US/docs/HTML:Element:blink	/en-US/docs/Web/HTML/Element/blink
 /en-US/docs/HTML:Element:blockquote	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML:Element:br	/en-US/docs/Web/HTML/Element/br
 /en-US/docs/HTML:Element:center	/en-US/docs/Web/HTML/Element/center
