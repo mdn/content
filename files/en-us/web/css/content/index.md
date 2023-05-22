@@ -72,7 +72,7 @@ content: unset;
   - : A list of anonymous inline boxes that will replace the content of the selected element (in the specified order).
     This list can include strings, images, counters, and so on.
 - {{cssxref("&lt;image&gt;")}}
-  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
+  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("image/image-set", "image-set()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
 - {{cssxref("counter", "counter()")}}
 
   - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
@@ -280,9 +280,9 @@ li {
 
 {{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-### Element replacement
+### Element replacement with `url()`
 
-This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url", "url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces an element's content with an image {{cssxref("url", "url()")}}. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
 
 #### HTML
 
@@ -305,7 +305,81 @@ This example replaces an element's content with an image. You can replace the co
 
 #### Result
 
-{{EmbedLiveSample('Element_replacement', '100%', 200)}}
+{{EmbedLiveSample('Element_replacement_with_url', '100%', 200)}}
+
+### Element replacement with `<gradient>`
+
+This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+
+#### HTML
+
+```html
+<div id="replaced">Mozilla</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgrey;
+}
+```
+
+```css
+#replaced {
+  content: linear-gradient(purple, yellow);
+}
+
+/* will not show if element replacement is supported */
+#replaced::after {
+  content: " (" attr(id) ")";
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 110)}}
+
+### Element replacement with `image-set()`
+
+This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the first image file-type is not supported it will fallback to the second. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+
+#### HTML
+
+```html
+<div id="replaced">Mozilla</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgrey;
+}
+```
+
+```css
+#replaced {
+  content: url("mdn.png");
+  content: image-set(
+    "mdn.webp" type("image/webp"),
+    "mdn.png" type("image/png")
+  );
+}
+
+/* will not show if element replacement is supported */
+#replaced::after {
+  content: " (" attr(id) ")";
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Element_replacement_with_image-set', '100%', 110)}}
 
 ## Specifications
 
