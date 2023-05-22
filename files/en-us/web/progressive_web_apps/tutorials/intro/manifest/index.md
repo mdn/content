@@ -3,7 +3,11 @@ title: PWA manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/Intro/manifest
 ---
 
-A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the users device.
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
+
+{{PWASidebar}}
+
+A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device.
 
 ## PWA manifest file
 
@@ -101,7 +105,7 @@ src: The URL of the icon file.
 sizes: The size of the icon file.
 type: The MIME type of the icon file.
 
-We will include another `<link>` when we create the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest) and will also include a `<link>` when developing the [PWA splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash)):
+We will include another `<link>` when we create the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest) and will also include a `<link>` when developing the [PWA splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash):
 
 PWAs require a manifest file. The web manifest is an external JSON file. To include the external JSON resource, the `rel="manifest"` is used. The `href` attribute of the `<link>` points to the location of the resource.
 
@@ -134,10 +138,14 @@ Here is an example of a service worker manifest file:
 
 ### File name
 
-Being a JSON file, the manifest file extension can be the specification suggestion `.webappmanifest`, though is most commonly the browser support `.json`.
-
-Copy and past the above JSON object into a new file, and save it as `cycletracker.manifest`.
+A service worker manifest file is a JSON file that contains information about the service worker. Being a JSON file, the manifest file extension can be the specification suggestion `.webappmanifest`, though is most commonly the browser support `.json`. The name of the service worker manifest file must be manifest.json.
 
 Before linking to it from our HTML file, let's discuss how this very brief `cycletracker.manifest` defines the identity, presentation, and iconography of the PWA, and introduce a few more keys that enable manifest files to define the appearance of our PWA.
 
-A service worker manifest file is a JSON file that contains information about the service worker. The name of the service worker manifest file must be manifest.json.
+#### Task
+
+Save the manifest file that you have created in the steps above.
+
+#### Example solution
+
+View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/intro/manifest/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/intro/manifest) on GitHub.
