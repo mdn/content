@@ -41,7 +41,7 @@ This example shows a function to return the total number of open connections, or
 This might be called in a loop, similar to the approach used in [`RTCPeerConnection.getStats()` example](/en-US/docs/Web/API/RTCPeerConnection/getStats#examples)
 
 The function waits for the result of a call to {{domxref("RTCPeerConnection.getStats()")}} and then iterates the returned {{domxref("RTCStatsReport")}} to get just the stats of type `"peer-connection"`.
-It then returns the total number of open channels using the data in the report.
+It then returns the total number of open channels, or `null`, using the data in the report.
 
 ```js
 async function numberOpenConnections (peerConnection) {
@@ -55,7 +55,8 @@ async function numberOpenConnections (peerConnection) {
     }
   });
 
-  return peerConnectionStats.dataChannelsOpened - peerConnectionStats.dataChannelsClosed;
+result = (typeof peerConnectionStats.dataChannelsOpened === 'undefined' || typeof peerConnectionStats.dataChannelsClosed=== 'undefined') ? null : peerConnectionStats.dataChannelsOpened - peerConnectionStats.dataChannelsClosed;
+return result
 }
 ```
 
