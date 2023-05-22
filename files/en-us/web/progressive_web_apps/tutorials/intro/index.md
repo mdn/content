@@ -3,6 +3,10 @@ title: Creating your first PWA
 slug: Web/Progressive_web_apps/Tutorials/Intro
 ---
 
+{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML")}}
+
+{{PWASidebar}}
+
 Progressive web applications, known as PWAs, are apps designed to work on all devices built using the web technologies we all know and love: HTML, CSS, and JavaScript.
 
 PWAs are a way of progressively enhancing websites to make them available on a user's device, even offline. By default, PWAs are regular websites. They use the same technologies as regular websites. They are also linkable, discoverable via search engines, and visible in a browser, just like regular websites. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
@@ -45,14 +49,14 @@ The steps include:
 - [App HTML and CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML)
   - : Line by line explanation of HTML for the static components head and body of the website along with the CSS to style it.
 
-- [JavaScript for app functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
-  - : A line by line explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA.
+- [JavaScript and LocalStorage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
+  - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using `localStorage` to store period information.
+
+- [Manifest: identity, appearance, and iconography](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
+  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
   - : While all websites should be served over https, with PWAs, https is a requirement. CreateWhile no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
-
-- [Icon and appearance](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
-  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 
 - [Service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
@@ -67,8 +71,12 @@ To complete this tutorial, it is helpful to have a basic level of understanding 
 
 You will be installing node.js, MAMP, or another local server to create a local secure connection. While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
+You can try the [live period tracker](https://mdn.github.io/pwa-examples/intro/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/intro) on GitHub.
+
 ## See Also
 
 Possible other introductory level tutorial topics:
 
 - [Splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash)
+
+{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/html")}}
