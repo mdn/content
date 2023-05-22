@@ -17,7 +17,7 @@ The **`<blink>`** [HTML](/en-US/docs/Web/HTML) element is a non-standard element
 
 This element is unsupported and thus implements the {{domxref("HTMLUnknownElement")}} interface.
 
-## Examples
+## Example
 
 ```html
 <blink>Why would somebody use this?</blink>
