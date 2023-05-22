@@ -28,7 +28,7 @@ The two mechanisms within Web Storage are as follows:
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
-> **Note:** In Firefox, when the browser crashes/restarts, to avoid memory issues caused by excessive usage of web storage, the amount of data saved per origin is limited to 10MB.
+> **Note:** In Firefox, when the browser crashes/restarts, to avoid memory issues caused by excessive usage of web storage, the amount of data saved per origin is limited to 10MB. See [storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox) for more information.
 
 > **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
 
