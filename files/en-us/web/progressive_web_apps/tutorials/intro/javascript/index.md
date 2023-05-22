@@ -3,6 +3,10 @@ title: JavaScript web functionality
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript
 ---
 
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/html", "Web/Progressive_web_apps/Tutorials/Intro/Manifest", "Web/Progressive_web_apps/Tutorials/Intro")}}
+
+{{PWASidebar}}
+
 In the previous section, we wrote the [CSS](style.css) and [HTML](step1.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functionalweb application.
 
 The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML) is:
@@ -139,7 +143,7 @@ function checkDatesInvalid(startDate, endDate) {
 
 In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to alert assistive technology users to the error.
 
-#### Retrieve, append, sort, and re-store data
+### Local storage
 
 We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
@@ -151,6 +155,8 @@ Limitations of `localStorage` include:
 - Stores stings only: `localStorage` stores data as string key and string value pairs. Our start and end dates will be stored as a JSON object parsed as a string. For more complex data, a more robust storage mechanism like IDB would be required.
 - Can cause poor performance: Getting and setting from and to local storage is done synchronously on the main thread. When the main thread is occupied, apps are not responsive and appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
 - Only available to the main thread: In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the local storage data.
+
+#### Retrieve, append, sort, and re-store data
 
 Because we're using localStorage, which comprises of a single string, we retrieve the JSON string of data from local storage, parse the JSON data (if any), push the new pair of dates to the existing array, sort the dates, parse the JSON object back into a string, and save that string back to `localStorage`.
 
@@ -189,15 +195,19 @@ function getAllStoredPeriods() {
 }
 ```
 
-#### Render data to screen
+#### Render data
 
-Add the container element to the list of contants at the top of your script.
+The last step of our application is to render the list of past periods to the screen along with a heading.
+
+In our HTML, we added a `<section id="past-periods">` placeholder to contain the heading and list of past periods.
+
+Add the container element to the list of contents at the top of your script.
 
 ```js
 const pastPeriodContainer = document.getElementById("past-periods");
 ```
 
-To render our content, we retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create an header and an unordered list. We loop thru the past periods, adding list items containing formated from and to dates.
+We retrieve the parsed string of past periods, or an empty array. If empty, we exit. If past periods exist, we clear the current contents from the past period container. We create a header and an unordered list. We loop thru the past periods, adding list items containing formatted from and to dates.
 
 ```javascript
 function renderPastPeriods() {
@@ -241,7 +251,7 @@ function formatDate(dateString) {
 }
 ```
 
-### Repeat visitor?
+### Render past periods on load
 
 When the deferred JavaScript runs on page load, we render past periods, if any.
 
@@ -329,8 +339,12 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
+You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript) on GitHub. Yes, it works, but it's not a yet PWA.
+
 ### Up next
 
 At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
-Up first, we create the [PWA's manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest).
+Up first, we create the [PWA's manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), including the PWA's identity, appearance, and iconography.
+
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/html", "Web/Progressive_web_apps/Tutorials/Intro/Manifest", "Web/Progressive_web_apps/Tutorials/Intro")}}
