@@ -3842,7 +3842,6 @@
 /en-US/docs/HTML/Element/select	/en-US/docs/Web/HTML/Element/select
 /en-US/docs/HTML/Element/small	/en-US/docs/Web/HTML/Element/small
 /en-US/docs/HTML/Element/source	/en-US/docs/Web/HTML/Element/source
-/en-US/docs/HTML/Element/spacer	/en-US/docs/Web/HTML/Element/spacer
 /en-US/docs/HTML/Element/span	/en-US/docs/Web/HTML/Element/span
 /en-US/docs/HTML/Element/span-redirect-1	/en-US/docs/Web/HTML/Element/span
 /en-US/docs/HTML/Element/span-redirect-2	/en-US/docs/Web/HTML/Element/span
