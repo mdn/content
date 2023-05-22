@@ -3667,7 +3667,6 @@
 /en-US/docs/HTML/Element/acronym-redirect-1	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/acronym2	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML/Element/address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML/Element/applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML/Element/area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/area-redirect-1	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML/Element/article	/en-US/docs/Web/HTML/Element/article
@@ -3939,7 +3938,6 @@
 /en-US/docs/HTML:Element:abbr	/en-US/docs/Web/HTML/Element/abbr
 /en-US/docs/HTML:Element:acronym	/en-US/docs/Web/HTML/Element/acronym
 /en-US/docs/HTML:Element:address	/en-US/docs/Web/HTML/Element/address
-/en-US/docs/HTML:Element:applet	/en-US/docs/Web/HTML/Element/applet
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
@@ -6639,9 +6637,6 @@
 /en-US/docs/SVG/Content_type	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Element	/en-US/docs/Web/SVG/Element
 /en-US/docs/SVG/Element/a	/en-US/docs/Web/SVG/Element/a
-/en-US/docs/SVG/Element/altGlyph	/en-US/docs/Web/SVG/Element/altGlyph
-/en-US/docs/SVG/Element/altGlyphDef	/en-US/docs/Web/SVG/Element/altGlyphDef
-/en-US/docs/SVG/Element/altGlyphItem	/en-US/docs/Web/SVG/Element/altGlyphItem
 /en-US/docs/SVG/Element/animate	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/SVG/Element/animateMotion	/en-US/docs/Web/SVG/Element/animateMotion

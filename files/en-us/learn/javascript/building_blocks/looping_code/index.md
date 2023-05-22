@@ -446,11 +446,11 @@ btn.addEventListener("click", () => {
 The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
 Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
 
-The HTML is basically the same as the last example — a simple text input, and a paragraph for output.
+The HTML is basically the same as the last example — a simple numeric input, and a paragraph for output.
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text" />
+<input id="number" type="number" />
 <button>Generate integer squares</button>
 
 <p>Output:</p>

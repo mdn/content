@@ -52,7 +52,7 @@ Make sure that the opening paragraph(s) before the first heading adequately summ
 
 In a guide or tutorial, the introductory paragraph(s) should inform the reader about the topics that will be covered as well as the prerequisite knowledge the reader is expected to have, if any. The opening paragraph should mention the technologies and/or APIs that are being documented or discussed, with links to the related information, and it should offer hints to situations in which the article's contents might be useful.
 
-- **Example of short introduction** This example of an introduction is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
+- **Example of short introduction**: This example of an introduction is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
   > **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
@@ -492,24 +492,24 @@ However, depending on the type of list you are creating, you will want to adjust
 
 - **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Sentences and phrases (i.e., sentence fragments missing a verb or a subject or both) in bulleted lists should include standard punctuation — sentences end with periods, phrases don't.
 
-If there are multiple sentences in a list item, a period must appear at the end of each sentence, including the item's final sentence, just as would be expected in a paragraph. This is an example of a correctly structured bulleted list:
+  If there are multiple sentences in a list item, a period must appear at the end of each sentence, including the item's final sentence, just as would be expected in a paragraph. This is an example of a correctly structured bulleted list:
 
-> In this example, we should include:
->
-> - A condition, with a brief explanation.
-> - A similar condition, with a brief explanation.
-> - Yet another condition, with some further explanation.
+  > In this example, we should include:
+  >
+  > - A condition, with a brief explanation.
+  > - A similar condition, with a brief explanation.
+  > - Yet another condition, with some further explanation.
 
-Notice how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.
+  Notice how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.
 
-If the list items include incomplete sentences, no period is required at the end. For example:
+  If the list items include incomplete sentences, no period is required at the end. For example:
 
-> The following color-related properties will be helpful in this scenario:
->
-> - propertyA: Sets the background color
-> - propertyB: Adds shadow to text
+  > The following color-related properties will be helpful in this scenario:
+  >
+  > - propertyA: Sets the background color
+  > - propertyB: Adds shadow to text
 
-If one or more list items are complete sentences, use a period after every list item, even if a list item contains three or fewer words. However, as far as possible, follow the same structure for all items in a list; ensure all list items are either complete sentences or phrases.
+  If one or more list items are complete sentences, use a period after every list item, even if a list item contains three or fewer words. However, as far as possible, follow the same structure for all items in a list; ensure all list items are either complete sentences or phrases.
 
 - **Numbered lists**: Numbered lists are used primarily to enumerate steps in a set of instructions. Because instructions can be complex, clarity is a priority, especially if the text in each list item is lengthy. As with bulleted lists, follow standard punctuation usage. This is an example of a correctly structured numbered list:
 
