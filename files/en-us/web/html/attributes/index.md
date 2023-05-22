@@ -125,7 +125,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -216,13 +215,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         From the <a href="https://w3c.github.io/html-media-capture/#the-capture-attribute">Media Capture specification</a>,
         specifies a new file can be captured.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#challenge">challenge</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>A challenge string that is submitted along with the public key.</td>
     </tr>
     <tr>
       <td>
@@ -455,7 +447,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -526,7 +517,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -769,13 +759,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/keygen#keytype">keytype</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Element/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
@@ -966,7 +949,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

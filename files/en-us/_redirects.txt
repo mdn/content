@@ -3781,8 +3781,6 @@
 /en-US/docs/HTML/Element/ins-redirect-1	/en-US/docs/Web/HTML/Element/ins
 /en-US/docs/HTML/Element/kbd	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/kbd-redirect-1	/en-US/docs/Web/HTML/Element/kbd
-/en-US/docs/HTML/Element/keygen	/en-US/docs/Web/HTML/Element/keygen
-/en-US/docs/HTML/Element/keygen-redirect-1	/en-US/docs/Web/HTML/Element/keygen
 /en-US/docs/HTML/Element/label	/en-US/docs/Web/HTML/Element/label
 /en-US/docs/HTML/Element/label-redirect-1	/en-US/docs/Web/HTML/Element/label
 /en-US/docs/HTML/Element/legend	/en-US/docs/Web/HTML/Element/legend
