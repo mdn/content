@@ -816,7 +816,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>
