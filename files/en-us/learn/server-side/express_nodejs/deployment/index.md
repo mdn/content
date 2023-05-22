@@ -505,7 +505,7 @@ Select **Deploy from GitHub repo**.
 All projects in the GitHub repos you shared with Railway during setup are displayed.
 Select your GitHub repository for the local library: `<user-name>/django-locallibrary-tutorial`.
 
-![Railway popup showing github repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
+![Railway popup showing GitHub repos that can be deployed](railway_new_project_button_deploy_github_selectrepo.png)
 
 Confirm your deployment by selecting **Deploy Now**.
 
@@ -540,7 +540,7 @@ Select the **New** button, which is used to add services to the current project.
 
 Select **Database** when prompted about the type of service to add:
 
-![Railway popup showing options for a new service, such as database, github repo, empty service etc](railway_database_add.png)
+![Railway popup showing options for a new service, such as database, GitHub repo, empty service etc](railway_database_add.png)
 
 Then select **Add MongoDB** to start adding the database
 
@@ -593,7 +593,7 @@ You can add data through the website interface and it should work in the same wa
 Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
 
 After the client is installed you will be able run commands.
-Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to github), and running your project locally using the same settings as you have on the production server.
+Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
 
 You can get a list of all the possible commands by entering the following in a terminal.
 
