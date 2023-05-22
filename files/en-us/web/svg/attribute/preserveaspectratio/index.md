@@ -26,7 +26,7 @@ svg {
   height: 100%; 
 } 
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsiveness at different screen sizes */ 
 body {
   display: flex;
 }
@@ -118,7 +118,7 @@ svg {
   height: 100%; 
 } 
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsiveness at different screen sizes */ 
 body {
   display: flex;
 }
@@ -208,7 +208,7 @@ svg {
   height: 100%; 
 } 
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsiveness at different screen sizes */ 
 body {
   display: flex;
 }
@@ -298,7 +298,7 @@ svg {
   height: 100%; 
 } 
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsiveness at different screen sizes */ 
 body {
   display: flex;
 }
@@ -388,7 +388,7 @@ svg {
   height: 100%; 
 } 
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */ 
+/* place flex element on each iframe body for responsiveness at different screen sizes */ 
 body {
   display: flex;
 }
