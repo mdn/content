@@ -27,24 +27,103 @@ An enumerated value. Possible values are:
 
 ## Examples
 
+### Toggle popover action
+
+This example shows the basic use of the popover API with a "toggle" value set for the `popoverTargetAction` property.
+
+First we define an [`<input>` element](/en-US/docs/Web/HTML/Element/input/button) of `type="button"` that we will use to control display and hide the popover, and a `div` that will be the popover.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `div`, as we will be doing so programmatically.
+
+```html
+<input id="toggleBtn" type="button" value="Toggle popover" />
+<div id="mypopover">This is popover content!</div>
+```
+
+The JavaScript code first gets a handle to the div element and the button.
+It then defines a function to feature check for popover support.
+
+```js
+const popover = document.getElementById("mypopover");
+const toggleBtn = document.getElementById("toggleBtn");
+
+// Feature check for popover API support.
+function supportsPopover() {
+  return HTMLElement.prototype.hasOwnProperty("popover");
+}
+```
+
+If the popover API is supported the code sets the `div` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
+We then set the `popoverTargetAction` of the button to `"toggle"`.
+If the popover API is not supported we simply change the text content of the `div` element to state this, and hide the toggle button.
+
+```js
+if (supportsPopover()) {
+  // Set the div element to be an auto popover
+  popover.popover = "auto";
+  // Set the button popover target to be the popover
+  toggleBtn.popoverTargetElement = popover;
+
+  // Set that the button toggles popover visibility
+  toggleBtn.popoverTargetAction = "toggle";
+} else {
+  popover.textContent = "Popover API not supported.";
+  toggleBtn.hidden = true;
+}
+```
+
+> **Note:** A popover element is hidden by default, but if the API is not supported your element will display "as usual".
+
+You can try out the example below.
+Show and hide the popover by toggling the button.
+The "auto" popover can also be dismissed by selecting outside the bounds of the popover text.
+
+{{EmbedLiveSample("Toggle popover action", "100%")}}
+
+### Show/hide popover action
+
+This example shows how to use the `"show"` and `"hide"` values of the `popoverTargetAction` attribute.
+
+The code is near identical to the previous example, except that there are two buttons, and the popover is set to "manual".
+
+```html
+<input id="showBtn" type="button" value="Show popover" />
+<input id="hideBtn" type="button" value="Hide popover" />
+<div id="mypopover">This is popover content!</div>
+```
+
 ```js
 function supportsPopover() {
   return HTMLElement.prototype.hasOwnProperty("popover");
 }
 
 const popover = document.getElementById("mypopover");
-const toggleBtn = document.getElementById("toggleBtn");
+const showBtn = document.getElementById("showBtn");
+const hideBtn = document.getElementById("hideBtn");
 
 const popoverSupported = supportsPopover();
 
-if (popoverSupported) {
-  popover.popover = "auto";
-  toggleBtn.popoverTargetElement = popover;
-  toggleBtn.popoverTargetAction = "toggle";
+if (supportsPopover()) {
+  // Set the div element be a manual popover
+  popover.popover = "manual";
+
+  // Set the button targets to be the popover
+  showBtn.popoverTargetElement = popover;
+  hideBtn.popoverTargetElement = popover;
+
+  // Set the target actions to be show/hide
+  showBtn.popoverTargetAction = "show";
+  hideBtn.popoverTargetAction = "hide";
 } else {
-  console.log("Popover API not supported.");
+  popover.textContent = "Popover API not supported.";
+  showBtn.hidden = true;
+  hideBtn.hidden = true;
 }
 ```
+
+The popover can be displayed by selecting the "Show popover" button, and dismissed using the "Hide popover" button.
+Note that the popover has been set to `"manual"`, so it can't be dismissed by selecting outside the popover.
+
+{{EmbedLiveSample("Show/hide popover action", "100%")}}
 
 ## Specifications
 
