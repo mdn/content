@@ -5230,7 +5230,7 @@
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Common_questions/Thinking_before_coding	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server	/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/en-US/docs/Learn/Common_questions/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/en-US/docs/Learn/Common_questions/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/Common_questions/What_are_browser_developer_tools	/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /en-US/docs/Learn/Common_questions/What_are_hyperlinks	/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /en-US/docs/Learn/Common_questions/What_is_a_URL	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
@@ -5384,7 +5384,7 @@
 /en-US/docs/Learn/Understanding_domain_names	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 /en-US/docs/Learn/Understanding_links_on_the_web	/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /en-US/docs/Learn/Upload_files_to_a_web_server	/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/en-US/docs/Learn/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/en-US/docs/Learn/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/WebGL/By_example	/en-US/docs/Web/API/WebGL_API/By_example
 /en-US/docs/Learn/WebGL/By_example/Basic_scissoring	/en-US/docs/Web/API/WebGL_API/By_example/Basic_scissoring
 /en-US/docs/Learn/WebGL/By_example/Boilerplate_1	/en-US/docs/Web/API/WebGL_API/By_example/Boilerplate_1
