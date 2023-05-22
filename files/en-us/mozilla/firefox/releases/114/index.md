@@ -52,6 +52,9 @@ This article provides information about the changes in Firefox 114 that affect d
 
 #### Removals
 
+- The deprecated and non-standard `mozImageSmoothingEnabled` property is permanently removed.
+  See the [`imageSmoothingEnabled`](/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) property for smoothing in scaled images ([Firefox bug 1228850](https://bugzil.la/1228850)).
+
 ### WebAssembly
 
 #### Removals
