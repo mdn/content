@@ -75,7 +75,7 @@ This example performs a four-second font size transition with a two-second delay
 </body>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 .box {
