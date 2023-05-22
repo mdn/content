@@ -43,6 +43,8 @@ This article provides information about the changes in Firefox 114 that affect d
 ### APIs
 
 - [`Window.print()`](/en-US/docs/Web/API/Window/print) now opens a print dialog on Firefox for Android, allowing the current document to be printed ([Firefox bug 1809922](https://bugzil.la/1809922)).
+- The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is now supported, which includes the following interfaces: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream), [`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+  For more information see [Firefox bug 1692754](https://bugzil.la/16927541), [Firefox bug 1818754](https://bugzil.la/1818754), and [Firefox bug 1791835](https://bugzil.la/1791835).
 
 #### DOM
 
