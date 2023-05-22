@@ -26,16 +26,21 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 In this example, we see a frameset with two frames. In addition, `<noframes>` is used to present an explanatory message if the {{Glossary("user agent")}} doesn't support frames.
 
 ```html
-<frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-  <noframes>
-    <p>
-      It seems your browser does not support frames or is configured to not
-      allow them.
-    </p>
-  </noframes>
-</frameset>
+<html>
+  <head>
+    <!-- Headers here -->
+  </head>
+  <frameset cols="50%,50%">
+    <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
+    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+    <noframes>
+      <p>
+        It seems your browser does not support frames or is configured to not
+        allow them.
+      </p>
+    </noframes>
+  </frameset>
+</html>
 ```
 
 ## Specifications
