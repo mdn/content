@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.toSorted
 
 {{JSRef}}
 
-The **`toSorted()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
+The **`toSorted()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
 
 ## Syntax
 
@@ -59,7 +59,7 @@ console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
 console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
 
 const values = [1, 10, 21, 2];
-const sortedValues = values.toSorted((a, b) => a - b));
+const sortedValues = values.toSorted((a, b) => a - b);
 console.log(sortedValues); // [1, 2, 10, 21]
 console.log(values); // [1, 10, 21, 2]
 ```
@@ -87,7 +87,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(Array.prototype.toSorted.call(arrayLike));
-// [0, 4, undefined]
+// [4, 5, undefined]
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: navigation role"
 slug: Web/Accessibility/ARIA/Roles/navigation_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#navigation
   - https://w3c.github.io/aria-practices/#aria_lh_navigation

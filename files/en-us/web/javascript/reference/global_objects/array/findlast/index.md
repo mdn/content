@@ -191,8 +191,13 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLastIndex()")}} – find last element and return its index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements
-- {{jsxref("Array.prototype.some()")}} – test until one element matches
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}

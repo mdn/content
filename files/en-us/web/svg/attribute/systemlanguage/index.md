@@ -12,7 +12,6 @@ The **`systemLanguage`** attribute represents a list of supported language tags.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
@@ -22,7 +21,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}

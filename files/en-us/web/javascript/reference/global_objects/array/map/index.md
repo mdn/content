@@ -252,6 +252,9 @@ const filteredNumbers = numbers.map((num, index) => {
 ## See also
 
 - [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map")}} object
 - {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.prototype.map()")}}
+- {{jsxref("Map")}}

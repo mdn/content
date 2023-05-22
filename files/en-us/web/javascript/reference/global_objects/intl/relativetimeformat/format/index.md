@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.format
 
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` and `unit` according to the locale and formatting options of this {{jsxref("Intl.RelativeTimeFormat")}} object.
+The **`format()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances formats a `value` and `unit` according to the locale and formatting options of this `Intl.RelativeTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
 

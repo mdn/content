@@ -1,6 +1,7 @@
 ---
 title: Operable
 slug: Web/Accessibility/Understanding_WCAG/Operable
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -195,7 +196,7 @@ This guideline covers situations in which functionality may have a time limit. F
         <p>
           If there is a timeout (caused by user inactivity) warn users at the
           start of a process so they will not be surprised that a timeout exists
-          (or only allow the timeout to occur after 20 hours of inactivity.
+          (or only allow the timeout to occur after 20 hours of inactivity).
         </p>
       </td>
       <td>
@@ -335,7 +336,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           You should provide at least two general navigation mechanisms to find
-          pages on your web site, for example navigation menu, breadcrumb trail,
+          pages on your website, for example navigation menu, breadcrumb trail,
           site search, site map, list of related links, etc.
         </p>
         <p>

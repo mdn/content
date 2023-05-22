@@ -2,7 +2,8 @@
 title: ViewTransition
 slug: Web/API/ViewTransition
 page-type: web-api-interface
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition
 ---
 

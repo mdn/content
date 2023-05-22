@@ -43,11 +43,10 @@ createIndex(indexName, keyPath, options)
   - : An object which can include the following
     properties:
     - `unique`
-      - : If true, the index will not allow duplicate values for a single key.
+      - : If `true`, the index will not allow duplicate values for a single key. Defaults to `false`.
     - `multiEntry`
-      - : If `true`, the index will add an entry in the index for each
-        array element when the `keyPath` resolves to an array.
-        If `false`, it will add one single entry containing the array.
+      - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
+        If `false`, it will add one single entry containing the array. Defaults to `false`.
     - `locale` {{non-standard_inline}}
       - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale

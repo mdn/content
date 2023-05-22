@@ -50,7 +50,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
     The callback function is passed one single argument, a
-    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
+    {{domxref("DOMHighResTimeStamp")}} identical to the one returned by
     {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 
@@ -74,13 +74,13 @@ const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
 let done = false;
 
-function step(timestamp) {
+function step(timeStamp) {
   if (start === undefined) {
-    start = timestamp;
+    start = timeStamp;
   }
-  const elapsed = timestamp - start;
+  const elapsed = timeStamp - start;
 
-  if (previousTimeStamp !== timestamp) {
+  if (previousTimeStamp !== timeStamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = `translateX(${count}px)`;
@@ -89,7 +89,7 @@ function step(timestamp) {
 
   if (elapsed < 2000) {
     // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp;
+    previousTimeStamp = timeStamp;
     if (!done) {
       window.requestAnimationFrame(step);
     }

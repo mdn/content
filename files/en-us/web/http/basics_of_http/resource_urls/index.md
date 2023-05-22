@@ -54,12 +54,12 @@ example:
 http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
 ```
 
-Web sites can easily collect Firefox default preferences by overriding this
+Websites can easily collect Firefox default preferences by overriding this
 `pref()` function and using the script
 `resource:///defaults/preferences/firefox.js`.
 
 Furthermore, some default values of preferences differ between build configurations,
-such as platform and locale, which means web sites could identify individual users using
+such as platform and locale, which means websites could identify individual users using
 this information.
 
 ## Solution

@@ -57,7 +57,7 @@ border-end-end-radius: unset;
 </div>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 div {
@@ -75,7 +75,7 @@ div {
 }
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
 

@@ -147,8 +147,8 @@ options = {
 console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // "12/19/2012, 19:00:00"
 
-// to specify options but use the browser's default locale, use 'default'
-console.log(new Intl.DateTimeFormat("default", options).format(date));
+// to specify options but use the browser's default locale, use undefined
+console.log(new Intl.DateTimeFormat(undefined, options).format(date));
 // "12/19/2012, 19:00:00"
 
 // sometimes it's helpful to include the period of the day
@@ -161,7 +161,7 @@ The used calendar and numbering formats can also be set independently via `optio
 
 ```js
 const options = { calendar: "chinese", numberingSystem: "arab" };
-const dateFormat = new Intl.DateTimeFormat("default", options);
+const dateFormat = new Intl.DateTimeFormat(undefined, options);
 const usedOptions = dateFormat.resolvedOptions();
 
 console.log(usedOptions.calendar);

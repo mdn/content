@@ -20,7 +20,7 @@ Returning a {{domxref("WritableStream")}} from a `TextDecoderStream`.
 
 ```js
 stream = new TextDecoderStream();
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications

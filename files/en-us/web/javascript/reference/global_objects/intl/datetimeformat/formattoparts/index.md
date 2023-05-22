@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.formatToParts()`** method
-allows locale-aware formatting of strings produced by {{jsxref("Intl.DateTimeFormat")}}
-formatters.
+The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html")}}
 

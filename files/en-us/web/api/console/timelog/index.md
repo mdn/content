@@ -6,9 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.console.timeLog
 ---
 
-{{APIRef("Console API")}}
-
-{{AvailableInWorkers}}
+{{APIRef("Console API")}}{{AvailableInWorkers}}
 
 The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}}.
 
