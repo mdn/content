@@ -11,25 +11,25 @@ This article provides a list of best practices to help you make sure your PWA is
 
 ## Adapt to all browsers
 
-Your PWA is based on Web technologies which means that, on top of being installable on devices, it can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers and operating systems.
+Your PWA is based on Web technologies. This means that, on top of being installable on devices, PWAs can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers and operating systems.
 
 Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
 
 Feature detection also helps with {{Glossary("Progressive Enhancement")}}, a design philosophy that makes it possible to deliver a great experience to as many users as possible.
 
-With Progressive Enhancement, you focus on making the core functionalities of your app work universally first, by using the simplest technology for them, and then enhance the experience on supporting devices.
+With Progressive Enhancement, you focus on making the core functionalities of your app work universally first by using the simplest technology, then enhancing the experience for supporting devices.
 
-For example, handling form submissions with the HTML {{htmlelement("form")}} element means that the form will work on all browsers, including those that don't support JavaScript. You can then progressively enhance the form by adding client-side validation and JavaScript-based submission for a better experience on compatible devices.
+For example, handling form submissions with the HTML {{htmlelement("form")}} element means that the form will work on all browsers, including those that don't support JavaScript. You can then progressively enhance the form by adding client-side validation and JavaScript-based submission handling for a better experience on compatible devices.
 
 ## Adapt to all devices
 
-Similar to how testing your app across various browsers is important, testing across devices also ensures that your app is accessible to the broadest audience.
+Similar to how testing your app across various browsers is important, testing across devices ensures your app is accessible to the broadest audience.
 
-[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure that content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
+[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure the content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
 
-Ensure users can interact with your application no matter how they access your content. Support keyboard and mouse, as well as touch or stylus input methods. Make sure all features of your application can be accessed through any input method.
+Ensure users can interact with your application no matter how they access your content. Support keyboard and mouse, as well as touch or stylus input methods. Make sure all your application features can be accessed through any input method.
 
-Finally, use [semantic HTML elements](/en-US/docs/Glossary/Semantics#semantics_in_html) rather than recreating your own buttons or form elements since as semantic HTML elements support all input methods out of the box.
+Finally, use [semantic HTML elements](/en-US/docs/Glossary/Semantics#semantics_in_html) rather than recreating your own buttons or form elements as semantic HTML elements support all user input methods right out of the box.
 
 ## Provide an offline experience
 
@@ -43,33 +43,33 @@ You can provide a custom offline page by using a [service worker](/en-US/docs/We
 
 ### Offline operation
 
-To go further and provide an app-like experience, your PWA should function when the user is offline. This means that the user can continue using some, preferably all, of your app's functionality even when they are offline.
+To go further and provide an app-like experience, your PWA should function when the user is offline. This means that the user can continue using some, and preferably all, of your app's functionality even when they are offline.
 
-Consider the following scenario: the user composes a long email, presses "Send", and then loses network connectivity. Because your app works offline, the email will be saved locally and sent automatically when the user is back online.
+Consider the following scenario: the user composes a long email and presses "Send", not realizing they have lost network connectivity. Because your app works offline, the email will be saved locally and sent automatically when the device is back online.
 
-Learn more about offline operation in [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+Learn more about [offline and background operations](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
 
 ## Support deep links
 
-Deep links are hyperlinks that point to specific pages within your app's domain. For example your app's home page might be available at `https://example.com/`, but you can also link to a specific product page at `https://example.com/products/123`.
+Deep links are hyperlinks that point to specific pages within your app's domain. For example, your app's home page might be available at `https://example.com/`, but you can also link to a specific product page at `https://example.com/products/123`.
 
 The ability to refer to any resource by a unique URL is one of the most powerful features of the web. Because they're built on web technologies, PWAs can, and should, take advantage of this feature.
 
-Making different sections of your app available via unique URLs allows users to bookmark, navigate directly, and share specific content within your app. It also allows search engines to index your app's content and make it discoverable through web searches.
+Making different sections of your app available via unique URLs allows users to bookmark, navigate directly to, and share specific content within your app. It also allows search engines to index your app's content and make it discoverable through web searches.
 
 ## Make it fast
 
-Users have different expectations for installed apps than they do for websites. Users anticipate websites to need time to load and navigate, particularly on poor network connections. However, they expect installed apps to be always fast and responsive.
+Users have different expectations for installed apps than they do for websites. Users anticipate websites to need time for loading and navigation, particularly on poor network connections. However, they expect installed apps to be always fast and responsive.
 
 The speed at which your app loads and performs its core functions plays a key role in user engagement and retention. The longer it takes for your app to respond, the more users will abandon it.
 
-There are tools, APIs, and best practices that help measure and improve performance. To learn more, see [Web performance](/en-US/docs/Web/Performance).
+There are tools, APIs, and best practices that help measure and improve performance. To learn more, see [web performance](/en-US/docs/Web/Performance).
 
 ## Make it accessible
 
 Accessibility is crucial to ensure everyone can use your app, regardless of an individual's abilities or the device they use to access your app. Accessibility ensures that as many people can use your app as possible. Accessibility is also required by law. Furthermore, accessibility often leads to better user experience for everyone, not just those with permanent or temporary disabilities.
 
-Learn how to make your app accessible in [Accessibility](/en-US/docs/Web/Accessibility).
+Learn how to make your app accessible in [accessibility](/en-US/docs/Web/Accessibility).
 
 ## Provide an app-like experience
 
