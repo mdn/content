@@ -25,7 +25,7 @@ reload()
 ### Parameters
 
 - `forceGet` {{nonstandard_inline}}
-  - : Boolean parameter only supported in Firefox.
+  - : Set `true` to force a reload bypassing the cache, `false` otherwise. **Only** supported in Firefox.
 
 ### Return value
 
