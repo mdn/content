@@ -25,7 +25,7 @@ This section lists questions related to the tools/software you can use to build 
   - : This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 - [How do you upload files to a web server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
   - : This article shows how to publish your site online with {{Glossary("FTP")}} tools — one of the most common ways to get a website online so others can access it from their computers.
-- [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages)
+- [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)
   - : This article provides a basic guide to publishing content using GitHub's gh-pages feature.
 - [How do you host your website on Google App Engine?](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
   - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.

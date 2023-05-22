@@ -263,10 +263,10 @@ Because the tool isn't installed globally we can't launch it from the command li
     },
   ```
 
-- On Windows, use this command instead:
+- On Windows, the "serverstart" value would instead look like this (if using the command prompt):
 
   ```bash
-  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
+  "serverstart": "SET DEBUG=express-locallibrary-tutorial:* & npm run devstart"
   ```
 
 We can now start the server in almost exactly the same way as previously, but using the `devstart` command.
