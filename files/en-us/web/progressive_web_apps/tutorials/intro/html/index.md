@@ -3,6 +3,10 @@ title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML
 ---
 
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript", "Web/Progressive_web_apps/Tutorials/Intro")}}
+
+{{PWASidebar}}
+
 To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
 In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) to convert this static content into a functional web application. Only then can we progressively enhance the application to make the app a PWA that is installable and works offline.
@@ -226,6 +230,8 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
   -->
 </section>
 ```
+
+You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/intro/html) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/intro/html) on GitHub.
 
 ### Up next
 
