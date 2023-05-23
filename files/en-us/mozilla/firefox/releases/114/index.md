@@ -17,6 +17,9 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### CSS
 
+- The [`:lang()`](/en-US/docs/Web/CSS/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
+  Additionally, comma-separated lists of languages are now supported for matching multiple languages ([Firefox bug 1121792](https://bugzil.la/1121792)).
+
 #### Removals
 
 ### JavaScript
