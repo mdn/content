@@ -40,7 +40,7 @@ In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Eleme
 <div id="mypopover">This is popover content!</div>
 ```
 
-The JavaScript code first gets a handle to the `<div>` and `<button>` elements.
+The JavaScript code first gets a handle to the `<div>` and `<input>` elements.
 It then defines a function to check for popover support.
 
 ```js
