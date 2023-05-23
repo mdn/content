@@ -393,7 +393,7 @@ Next, let's change the page title to a personalized welcome message when the use
    ```
 
 2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
-
+   Note: You have to remove or reuse the constant "myHeading" that you created earlier, or give this variable a different name; otherwise it will cause an error when you try to create  another variable with the same name.
    ```js
    let myButton = document.querySelector("button");
    let myHeading = document.querySelector("h1");
