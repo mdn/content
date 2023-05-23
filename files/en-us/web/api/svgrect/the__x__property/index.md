@@ -81,37 +81,13 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
 A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength).
 
 ```html
-<div id="svg-container"></div>
+<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="0" width="40" height="40" fill="blue"></rect>
+</svg>
+
+<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+  <rect x="40" y="0" width="40" height="40" fill="green"></rect>
+</svg>
 ```
 
-```js
-function createRectangle(xAxis, yAxis, width, height, style) {
-  // Prepare SVG elements
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-  const styleElement = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "style"
-  );
-
-  // Pass in style from parameter
-  styleElement.textContent = style;
-  defs.appendChild(styleElement);
-  svg.appendChild(defs);
-
-  // Draw the rectangle
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rect.setAttribute("x", xAxis);
-  rect.setAttribute("y", yAxis);
-  rect.setAttribute("width", width);
-  rect.setAttribute("height", height);
-  svg.appendChild(rect);
-
-  return svg;
-}
-
-const svg = createRectangle(10, 10, 80, 80, "rect {fill: blue;}");
-document.getElementById("svg-container").appendChild(svg);
-```
-
-{{EmbedLiveSample("Simple usage", "100%", "150")}}
+{{EmbedLiveSample("Simple usage", "100%", "100")}}
