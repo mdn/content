@@ -83,9 +83,9 @@ The "auto" popover can also be dismissed by selecting outside the bounds of the 
 ### Show/hide popover action with a manual popover
 
 This example shows how to use the `"show"` and `"hide"` values of the `popoverTargetAction` attribute.
-The `popover` attribute is set to [`"manual"`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state), so the popover must be closed using a button, and not "light dismissed" by selecting outside the popover area.
 
-The code is near identical to the previous example, except that there are two buttons, and the popover is set to "manual".
+The code is near identical to the previous example, except that there are two `<button>` elements, and the popover is set to [`"manual"`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state).
+A `manual` popover must be closed explicitly, and not "light dismissed" by selecting outside the popover area.
 
 ```html
 <input id="showBtn" type="button" value="Show popover" />
@@ -123,7 +123,6 @@ if (supportsPopover()) {
 ```
 
 The popover can be displayed by selecting the "Show popover" button, and dismissed using the "Hide popover" button.
-Note that the popover has been set to `"manual"`, so it can't be light dismissed by selecting outside the popover.
 
 {{EmbedLiveSample("Show/hide popover action with a manual popover", "100%")}}
 
