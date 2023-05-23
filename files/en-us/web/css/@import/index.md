@@ -14,13 +14,14 @@ An `@import` rule _must_ be defined at the top of the stylesheet, before any oth
 
 ```css
 @import url;
-@import url list-of-media-queries;
 @import url layer;
 @import url layer(layer-name);
+@import url layer(layer-name) supports(supports-condition)
+@import url layer(layer-name) supports(supports-condition) list-of-media-queries;
 @import url layer(layer-name) list-of-media-queries;
-@import url supports(import-condition);
-@import url supports(import-condition) list-of-media-queries;
-@import url layer(layer-name) supports(import-condition) list-of-media-queries;
+@import url supports(supports-condition);
+@import url supports(supports-condition) list-of-media-queries;
+@import url list-of-media-queries;
 ```
 
 where:
