@@ -65,9 +65,9 @@ The appearance, or presentation, of a PWA's installed and offline experiences ar
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
   - : The start page when a user launches the PWA.
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
-  - : The color of the address bar. We can use the
+  - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
-  - : A placeholder color to be displayed as the background of the app until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
+  - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
 - [`display`](/en-US/docs/Web/Manifest/display)
   - : Controls the app's display mode including `fullscreen`, `minimal-ui`, and `standalone`, displaying the PWA as a standalone application.
 
