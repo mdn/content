@@ -130,4 +130,4 @@ p {
 - The {{cssxref(":dir")}} pseudo-class that matches by directionality of text
 - HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute
 - HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute
-- {{RFC(5646, "Tags for Identifying Languages (also known as BCP47)")}}
+- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
