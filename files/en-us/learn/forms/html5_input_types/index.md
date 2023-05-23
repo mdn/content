@@ -188,7 +188,7 @@ price.addEventListener("input", () => {
 });
 ```
 
-Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`value`](/en-US/docs/Web/HTML/Element/output#examples) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `value` is updated to the new value.
+Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`value`](/en-US/docs/Web/API/HTMLOutputElement#htmloutputelement.value) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `value` is updated to the new value.
 
 > **Note:** There is a nice tutorial covering this subject on CSS Tricks: [The Output Element](https://css-tricks.com/the-output-element/).
 
