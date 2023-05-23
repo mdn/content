@@ -1298,7 +1298,7 @@ CSS updates include:
 - [`:popover-open`](https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open) 
 - [`::backdrop`](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers.
 
-The following HTML global attributes  are supported:
+The following HTML global attributes are supported:
 
 - [`popovertarget`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertarget)
 - [`popovertargetaction`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertargetaction)
