@@ -7,7 +7,8 @@ browser-compat: css.at-rules.import
 
 {{CSSRef}}
 
-The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other valid stylesheets. An `@import` rule _must_ be defined at the top of stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/@charset) and [@layer](/en-US/docs/Web/CSS/@layer)) and style declaration, or it will be ignored.
+The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other valid stylesheets.
+An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/@charset) and [@layer](/en-US/docs/Web/CSS/@layer)) and style declarations, or it will be ignored.
 
 ## Syntax
 
@@ -30,9 +31,9 @@ where:
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
   - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
-- _import-condition_
+- _supports-condition_
   - : Indicates the feature(s) that the browser must support in order for the stylesheet to be imported.
-    If the browser does not support any of the indicated features, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
+    If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
     The syntax of `supports()` is almost identical to that described in {{CSSxRef("@supports")}}, and that topic can be used as a more complete reference.
 
 ## Description
@@ -41,7 +42,7 @@ Imported rules must come before all other types of rules, except {{CSSxRef("@cha
 
 So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 
-Similarly, user agents can use the `supports()` function in an `@import` rule to only fetch resources if a particular feature or features are supported.
+Similarly, user agents can use the `supports()` function in an `@import` at-rule to only fetch resources if a particular feature set is (or is not) supported.
 This allows authors to take advantage of the recently introduced CSS features, while providing graceful fallback for older browser versions.
 Note that the conditions in the `supports()` function of an `@import` at-rule can be obtained in JavaScript using {{domxref("CSSImportRule.supportsText")}}.
 
@@ -81,11 +82,12 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
-While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, `or`, as long as you wrap each condition to be tested in round brackets and further use brackets to indicate precedence.
+While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`, as long as you wrap each condition to be tested in parentheses.
+You can also use parentheses to indicate precedence.
 Note that if you just have a single declaration then you don't need to wrap it in additional brackets: this is shown in the first example above.
 
 The examples above show support conditions using simple declaration syntax.
-You can also specify CSS functions in `supports()`, and it will evaluate "true" if they are supported and can be evaluated on the user-agent.
+You can also specify CSS functions in `supports()`, and it will evaluate to `true` if they are supported and can be evaluated on the user-agent.
 For example, the code below shows an `@import` that is conditional on both [child combinators](/en-US/docs/Web/CSS/Child_combinator) (`selector()`) and the `font-tech()` function:
 
 ```css
