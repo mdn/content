@@ -16,7 +16,7 @@ An `@import` rule _must_ be defined at the top of the stylesheet, before any oth
 @import url;
 @import url layer;
 @import url layer(layer-name);
-@import url layer(layer-name) supports(supports-condition)
+@import url layer(layer-name) supports(supports-condition);
 @import url layer(layer-name) supports(supports-condition) list-of-media-queries;
 @import url layer(layer-name) list-of-media-queries;
 @import url supports(supports-condition);
@@ -79,7 +79,8 @@ The `@import` rules in the above examples show media-dependent conditions that w
 
 ```css
 @import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports(not (display: grid) and (display:flex) ) screen and (max-width: 400px);
+@import url("flexy.css") supports(not (display: grid) and (display: flex)) screen
+  and (max-width: 400px);
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
@@ -92,7 +93,8 @@ You can also specify CSS functions in `supports()`, and it will evaluate to `tru
 For example, the code below shows an `@import` that is conditional on both [child combinators](/en-US/docs/Web/CSS/Child_combinator) (`selector()`) and the `font-tech()` function:
 
 ```css
-@import url("whatever.css") supports( (selector(h2 > p)) and (font-tech(color-COLRv1)) );
+@import url("whatever.css") supports((selector(h2 > p)) and
+    (font-tech(color-COLRv1)));
 ```
 
 ### Importing CSS rules into a cascade layer
