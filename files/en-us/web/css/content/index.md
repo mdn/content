@@ -309,7 +309,7 @@ This example replaces an element's content with an image {{cssxref("url", "url()
 
 ### Element replacement with `<gradient>`
 
-This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces an element's content with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}.
 
 #### HTML
 
@@ -331,11 +331,6 @@ div {
 #replaced {
   content: linear-gradient(purple, yellow);
 }
-
-/* will not show if element replacement is supported */
-#replaced::after {
-  content: " (" attr(id) ")";
-}
 ```
 
 #### Result
@@ -344,7 +339,7 @@ div {
 
 ### Element replacement with `image-set()`
 
-This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the first image file-type is not supported it will fallback to the second. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
 
 #### HTML
 
@@ -357,23 +352,16 @@ This example replaces an element's content with a {{cssxref("image/image-set" ,"
 ```css hidden
 div {
   width: 100px;
-  height: 100px;
   border: 1px solid lightgrey;
 }
 ```
 
 ```css
 #replaced {
-  content: url("mdn.png");
   content: image-set(
-    "mdn.webp" type("image/webp"),
-    "mdn.png" type("image/png")
+    "1x.png" 1x,
+    "2x.png" 2x
   );
-}
-
-/* will not show if element replacement is supported */
-#replaced::after {
-  content: " (" attr(id) ")";
 }
 ```
 
