@@ -39,11 +39,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 A frameset document has a {{HTMLElement("frameset")}} element instead of a {{HTMLElement("body")}} element. The `<frame>` elements are placed within the `<frameset>`.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
-    <!-- Headers here -->
+    <!-- Document metadata goes here -->
   </head>
-  <frameset cols="50%,50%">
+  <frameset cols="400, 500">
     <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
     <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
   </frameset>
