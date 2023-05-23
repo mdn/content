@@ -48,6 +48,8 @@ This article provides information about the changes in Firefox 114 that affect d
 - The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is now supported, which includes the following interfaces: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream), [`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
   For more information see [Firefox bug 1692754](https://bugzil.la/16927541), [Firefox bug 1818754](https://bugzil.la/1818754), and [Firefox bug 1791835](https://bugzil.la/1791835).
 
+- [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) can now be used for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
