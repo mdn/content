@@ -52,13 +52,13 @@ In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Eleme
 ```
 
 The JavaScript code first gets a handle to the `div` element and the button.
-It then defines a function to feature check for popover support.
+It then defines a function to check for popover support.
 
 ```js
 const popover = document.getElementById("mypopover");
 const toggleBtn = document.getElementById("toggleBtn");
 
-// Feature check for popover API support.
+// Check for popover API support.
 function supportsPopover() {
   return HTMLElement.prototype.hasOwnProperty("popover");
 }
@@ -66,7 +66,7 @@ function supportsPopover() {
 
 If the popover API is supported the code sets the `div` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
 We then set the `popoverTargetAction` of the button to `"toggle"`.
-If the popover API is not supported we simply change the text content of the `div` element to state this, and hide the input element.
+If the popover API is not supported we change the text content of the `<div>` element to state this, and hide the input element.
 
 ```js
 if (supportsPopover()) {
@@ -90,7 +90,7 @@ You can try out the example below.
 Show and hide the popover by toggling the button.
 The "auto" popover can also be dismissed by selecting outside the bounds of the popover text.
 
-{{EmbedLiveSample("Toggle popover action", "100%")}}
+{{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
 
 ## Specifications
 
