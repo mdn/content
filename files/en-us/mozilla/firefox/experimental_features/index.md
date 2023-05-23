@@ -1284,7 +1284,9 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 #### Popover API
 
-Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API) JavaScript interfaces, including:
+Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API).
+
+The following Web APIs are now implemented:
 
 - [`HTMLButtonElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement) and [`HTMLButtonElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction).
 - [`HTMLInputElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`HTMLInputElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction)
