@@ -1290,8 +1290,16 @@ Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API) JavaScri
 - [`HTMLInputElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`HTMLInputElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction)
 - [`HTMLElement.popover`](/en-US/docs/Web/API/HTMLElement/popover), [`HTMLElement.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`HTMLElement.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), [`HTMLElement.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover).
 - `HTMLElement` [`beforetoggle` event](/en-US/docs/Web/API/HTMLElement/beforetoggle_event), `HTMLElement` [`toggle_event` event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/toggle_event), and [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent).
-- CSS selectors [`::backdrop`](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop) and [`:popover-open`](https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open)
-- HTML global attributes  [`popovertarget`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertarget) and [`popovertargetaction`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertargetaction)
+
+CSS updates include:
+
+- [`:popover-open`](https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open) 
+- [`::backdrop`](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers.
+
+The following HTML global attributes  are supported:
+
+- [`popovertarget`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertarget)
+- [`popovertargetaction`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertargetaction)
 
 See [Firefox bug 934425](https://bugzil.la/934425) for more details.
 
