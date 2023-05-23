@@ -39,11 +39,12 @@ This example demonstrates the effects of both `inverted-colors` media feature ke
 <p>
   If color inversion is detected, this text will appear blue on white (the
   inverse of yellow on black) along with a line over the text. If no color
-  inversion is happening, the text will appear red on light gray without
-  the line over the text.
+  inversion is happening, the text will appear red on light gray without the
+  line over the text.
 </p>
 <p>
-  If the text is gray and no overline is present, it means your browser doesn't support the
+  If the text is gray and no overline is present, it means your browser doesn't
+  support the
   <code>inverted-colors</code> media feature.
 </p>
 ```
