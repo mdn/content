@@ -105,7 +105,7 @@ const hideBtn = document.getElementById("hideBtn");
 const popoverSupported = supportsPopover();
 
 if (supportsPopover()) {
-  // Set the div element be a manual popover
+  // Set the <div> element be a manual popover
   popover.popover = "manual";
 
   // Set the button targets to be the popover
