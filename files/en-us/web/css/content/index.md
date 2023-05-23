@@ -356,7 +356,7 @@ div {
 }
 ```
 
-```css
+```css-nolint
 #replaced {
   content: image-set(
     "1x.png" 1x,
