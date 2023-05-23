@@ -1286,7 +1286,7 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API) JavaScript interfaces, including:
 
-- [`HTMLButtonElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction) and [`HTMLButtonElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement)
+- [`HTMLButtonElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement) and [`HTMLButtonElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction).
 - [`HTMLInputElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`HTMLInputElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction)
 - [`HTMLElement.popover`](/en-US/docs/Web/API/HTMLElement/popover), [`HTMLElement.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`HTMLElement.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), [`HTMLElement.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover).
 - `HTMLElement` [`beforetoggle` event](/en-US/docs/Web/API/HTMLElement/beforetoggle_event), `HTMLElement` [`toggle_event` event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/toggle_event), and [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent).
