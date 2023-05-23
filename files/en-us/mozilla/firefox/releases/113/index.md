@@ -32,6 +32,8 @@ No notable changes.
   ([Firefox bug 1709347](https://bugzil.la/1709347)).
 - The [Compression Streams API](/en-US/docs/Web/API/Compression_Streams_API) is now supported.
   The interfaces provided by this API are used to compress and decompress data using the `gzip` and `deflate` formats ([Firefox bug 1823619](https://bugzil.la/1823619)).
+- The deprecated and non-standard `mozImageSmoothingEnabled` property is now disabled.
+  See the [`imageSmoothingEnabled`](/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) property for smoothing in scaled images ([Firefox bug 1822955](https://bugzil.la/1822955)).
 
 #### Media, WebRTC, and Web Audio
 

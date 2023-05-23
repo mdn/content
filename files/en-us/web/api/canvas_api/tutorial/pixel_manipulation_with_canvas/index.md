@@ -244,17 +244,11 @@ function draw(img) {
     .getElementById("smoothed-zoom")
     .getContext("2d");
   smoothedZoomCtx.imageSmoothingEnabled = true;
-  smoothedZoomCtx.mozImageSmoothingEnabled = true;
-  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
-  smoothedZoomCtx.msImageSmoothingEnabled = true;
 
   const pixelatedZoomCtx = document
     .getElementById("pixelated-zoom")
     .getContext("2d");
   pixelatedZoomCtx.imageSmoothingEnabled = false;
-  pixelatedZoomCtx.mozImageSmoothingEnabled = false;
-  pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
-  pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
     ctx.drawImage(
