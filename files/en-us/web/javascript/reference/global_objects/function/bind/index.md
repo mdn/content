@@ -118,9 +118,9 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (e.g. in ECMAScript modules, or through the `"use strict"` directive), the global `this` value will be undefined, causing the `retrieveX` call to fail.
+> **Note:** If you run this example in an ECMAScript module, at the top-level scope `this` will be set to `undefined` instead of `globalThis`, causing the `retrieveX` call to fail.
 >
-> If you run this in a Node CommonJS module, the top-scope `this` will be pointing to `module.exports` instead of `globalThis`, regardless of being in strict mode or not. However, in functions, the reference of unbound `this` still follows the rule of "`globalThis` in non-strict, `undefined` in strict". Therefore, in non-strict mode (default), `retrieveX` will return `undefined` because `this.x = 9` is writing to a different object (`module.exports`) from what `getX` is reading from (`globalThis`).
+> If you run this example in a Node CommonJS module, at the top-level scope `this` will be set to `module.exports` instead of `globalThis`, regardless of being in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) or not. However, in functions, the reference of unbound `this` still follows the rule of "`globalThis` in non-strict, `undefined` in strict". Therefore, in non-strict mode (default), `retrieveX` will return `undefined` because `this.x = 9` is writing to a different object (`module.exports`) from what `getX` is reading from (`globalThis`).
 
 In fact, some built-in "methods" are also getters that return bound functions — one notable example being [`Intl.NumberFormat.prototype.format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#using_format_with_map), which, when accessed, returns a bound function that you can directly pass as a callback.
 
