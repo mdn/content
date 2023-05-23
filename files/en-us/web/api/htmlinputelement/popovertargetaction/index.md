@@ -33,14 +33,14 @@ This example shows the basic use of the popover API with a "toggle" value set fo
 The `popover` attribute is set to [`"auto"`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so the popover can be closed ("light-dismissed") by clicking outside the popover area.
 
 First we define an [`<input>`](/en-US/docs/Web/HTML/Element/input/button) of `type="button"` that we will use to show and hide the popover, and a `<div>` that will be the popover.
-In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `div`, as we will be doing so programmatically.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
 
 ```html
 <input id="toggleBtn" type="button" value="Toggle popover" />
 <div id="mypopover">This is popover content!</div>
 ```
 
-The JavaScript code first gets a handle to the div element and the button.
+The JavaScript code first gets a handle to the `<div>` and `<button>` elements.
 It then defines a function to check for popover support.
 
 ```js
@@ -53,13 +53,13 @@ function supportsPopover() {
 }
 ```
 
-If the popover API is supported the code sets the `div` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
+If the popover API is supported the code sets the `<div>` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
 We then set the `popoverTargetAction` of the button to `"toggle"`.
 If the popover API is not supported we change the text content of the `<div>` element to state this, and hide the toggle button.
 
 ```js
 if (supportsPopover()) {
-  // Set the div element to be an auto popover
+  // Set the <div> element to be an auto popover
   popover.popover = "auto";
   // Set the button popover target to be the popover
   toggleBtn.popoverTargetElement = popover;
@@ -105,7 +105,7 @@ const hideBtn = document.getElementById("hideBtn");
 const popoverSupported = supportsPopover();
 
 if (supportsPopover()) {
-  // Set the div element be a manual popover
+  // Set the <div> element be a manual popover
   popover.popover = "manual";
 
   // Set the button targets to be the popover
