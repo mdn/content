@@ -43,7 +43,7 @@ So that {{glossary("user agent", "user agents")}} can avoid retrieving resources
 
 Similarly, user agents can use the `supports()` function in an `@import` rule to only fetch resources if a particular feature or features are supported.
 This allows authors to take advantage of the recently introduced CSS features, while providing graceful fallback for older browser versions.
-Note that the conditions in the `supports()` function can be obtained in JavaScript using {{domxref("CSSImportRule.supportsText")}}.
+Note that the conditions in the `supports()` function of an `@import` at-rule can be obtained in JavaScript using {{domxref("CSSImportRule.supportsText")}}.
 
 The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/CSS/@layer) by importing rules from a linked resource. Rules can also be imported into an existing cascade layer. The `layer` keyword or the `layer()` function is used with `@import` for this purpose. Declarations in style rules from imported stylesheets interact with the cascade as if they were written literally into the stylesheet at the point of the import.
 
