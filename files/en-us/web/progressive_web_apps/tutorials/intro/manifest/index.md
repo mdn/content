@@ -60,16 +60,22 @@ Write the first few lines of your manifest file. You can use the text below or m
 
 ### PWA presentation
 
-The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Some of the presentation manifest keys include the `start_url`, `theme_color`, `background_color`, and `display`.
+The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest include the `start_url` and `display` keys, and keys which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
   - : The start page when a user launches the PWA.
+
+- [`display`](/en-US/docs/Web/Manifest/display)
+  - : Controls the app's display mode including `fullscreen`, `standalone`, which displays the [PWA as a standalone application](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), `minimal-ui`, which is similar to a standalone view but with UI elements for controlling navigation, and `browser`, which opens the app in a regular browser view.
+
+There is also an `orientation` key to define the PWA's default orientation as `portrait` or `landscape`. As our app works either way, we'll omit this key.
+
+#### Colors
+
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
   - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
   - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
-- [`display`](/en-US/docs/Web/Manifest/display)
-  - : Controls the app's display mode including `fullscreen`, `minimal-ui`, and `standalone`, displaying the PWA as a standalone application.
 
 #### Task
 
@@ -77,24 +83,22 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 #### Example solution
 
-As the example application is a single page, we can use `"/"`, or omit the key altogether.
+As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display our period tracker without browser tools, setting the `display` to `standalone`.
 
 In [our CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML#CSS_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 }
 
 ```js
 {
-  "name": "Menstrual Cycle Tracker",
-  "short_name": "CT",
-  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving the data to your browser.", 
+  "name": "...",
+  "short_name": "...",
+  "description": "...", 
   "start_url": "/",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
   "display": "standalone"
 }
 ```
-
-There is also an `orientation` key to define the PWA's default orientation as `portrait` or `landscape` .
 
 ### PWA iconography
 
