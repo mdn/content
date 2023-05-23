@@ -10,7 +10,7 @@ browser-compat: api.HTMLButtonElement.popoverTargetElement
 
 {{ APIRef("DOM") }}{{SeeCompatTable}}
 
-The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a control button.
+The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a button.
 
 It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 
@@ -22,17 +22,17 @@ A reference to a popover element in the DOM.
 
 ### Toggle popover action
 
-This example shows the basic use of the popover API, setting a `div` element as a popover, and then setting it as the `popoverTargetElement` of a button.
+This example shows the basic use of the popover API, setting a `<div>` element as a popover, and then setting it as the `popoverTargetElement` of a `<button>`.
 
-First we define an HTML `button` element that we will use to display and hide the popover, and a `div` that will be the popover.
-In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `div`, as we will be doing so programmatically.
+First we define an HTML `<button>` element that we will use to display and hide the popover, and a `<div>` that will be the popover.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the <button> or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
 
 ```html
 <button id="toggleBtn">Toggle popover</button>
 <div id="mypopover">This is popover content!</div>
 ```
 
-The JavaScript code first gets a handle to the `div` element and the button.
+The JavaScript code first gets a handle to the `<div>` and `<button>` elements.
 It then defines a function to feature check for popover support.
 
 ```js
@@ -45,13 +45,13 @@ function supportsPopover() {
 }
 ```
 
-If the popover API is supported the code sets the `div` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
-We then set the `popoverTargetAction` of the button to `"toggle"`.
-If the popover API is not supported we simply change the text content of the `div` element to state this, and hide the toggle button.
+If the popover API is supported the code sets the `<div>` element's `popover` attribute to `"auto"` and makes it the popover target of the toggle button.
+We then set the `popoverTargetAction` of the `<button>` to `"toggle"`.
+If the popover API is not supported we simply change the text content of the `<div>` element to state this, and hide the toggle button.
 
 ```js
 if (supportsPopover()) {
-  // Set the div element to be an auto popover
+  // Set the <div> element to be an auto popover
   popover.popover = "auto";
 
   // Set the button popover target to be the popover
