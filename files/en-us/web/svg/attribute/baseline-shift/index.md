@@ -15,7 +15,6 @@ The **`baseline-shift`** attribute allows repositioning of the dominant-baseline
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
