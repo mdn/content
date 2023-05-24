@@ -26,7 +26,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 ## Guides
 
-- [Adapting to the two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
+- [Adapting to the multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 
 ### Flow layout (display: block, display: inline)
 

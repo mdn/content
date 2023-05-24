@@ -18,7 +18,7 @@ If you initially learned [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) 
 
 ## Basic examples
 
-The following examples demonstrate how some of the Box Alignment Properties are applied in [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_CSS_flexible_box_layout).
+The following examples demonstrate how some of the Box Alignment Properties are applied in [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
 ### CSS grid layout alignment example
 
