@@ -1,13 +1,13 @@
 ---
-title: CSS Display
-slug: Web/CSS/CSS_Display
+title: CSS display
+slug: Web/CSS/CSS_display
 page-type: css-module
 browser-compat: css.properties.display
 ---
 
 {{CSSRef}}
 
-**CSS Display** is a module of CSS that defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.
+The **CSS display** module defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.
 
 ## Reference
 
