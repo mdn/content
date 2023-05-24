@@ -7,18 +7,17 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/manifest
 
 {{PWASidebar}}
 
-A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device.
+A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
 ## PWA manifest file
 
-The manifest file contains information about the PWA's identity, presentation, an iconography. While the only requirement is to include a name using the `name` or `short_name` key, the minimum information you should include in the manifest file is the PWA's name, the icons to use, and the URL to be opened when the PWA is launched.
+The manifest file contains information about the PWA's identity, presentation, and iconography. While the only requirement is to include a name using the `name` or `short_name` key, you should also include icon information, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
 ```js
 {
   "short_name": "CT",
-  "start_url": "/",
   "icons": [
     {
       "src": "icon-512.png",
@@ -28,11 +27,11 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 }
 ```
 
-Before saving the manifest file and linking to it from our HTML file, let's discuss how this very brief JSON object defines the identity, presentation, and iconography of the PWA, and introduce a few more keys that enable manifest files to define the appearance of our PWA.
+Before saving the manifest file and linking to it from our HTML file, let's discuss we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more keys that enable manifest files to better define the appearance of our PWA.
 
 ### PWA identity
 
-The identity of your PWA is defined in the manifest file. The JSON must include a `name` or `short_name` key, or both. It can also include a `description`.
+To identity your PWA the JSON must include a `name` or `short_name` key, or both, to define the PWA name. It can also include a `description`.
 
 - [`name`](/en-US/docs/Web/Manifest/name)
   - : The name of the PWA. This is the name used when the operating system lists applications, as the label next to the application icon, etc.
@@ -102,54 +101,108 @@ In [our CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML#CSS_file)
 
 ### PWA iconography
 
-Icon is a property that contains a set of icons, which will be used for the home screen icon, task view icon, etc.
+PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, browser address bars, in app store search results: When users search for apps in the app store, the PWA icon will be displayed in the search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
-icons: An array of objects that specify the icons for the service worker. Each object in the array must have the following properties:
-src: The URL of the icon file.
-sizes: The size of the icon file.
-type: The MIME type of the icon file.
-
-We will include another `<link>` when we create the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest) and will also include a `<link>` when developing the [PWA splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash):
-
-PWAs require a manifest file. The web manifest is an external JSON file. To include the external JSON resource, the `rel="manifest"` is used. The `href` attribute of the `<link>` points to the location of the resource.
-
-The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
-
-The manifest file, which we'll call `cyclemanifest.json`, defines the [PWA icons and appearance](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest). For now, we include the link as a placeholder.
-
-Now that we hae a PWA manifest file, let's create the JavaScript functionality and [create a secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use X to create a secure localhost connection; a PWA requirement
-
-name: The name of the service worker.
-
-scope: The scope of the service worker. The scope is the URL of the directory that the service worker will be registered for.
-version: The version of the service worker.
-
-Here is an example of a service worker manifest file:
+Within the manifest JSON object, the `icons` key specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` key, and optional `type` and `purpose` keys. Each icon object's' `src` list the source of a single image file. The `sizes` key provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` key lists the image's MIME type.
 
 ```js
 {
-  "name": "Cycle Tracker",
-  "start_url": "/",
-  "display": "standalone",
-  "icons": [
+  "name": "MyApp",
+  "icons: [
     {
-      "src": "icon-512.png",
+      "src": "icon/tiny.webp",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon/small.png",
+      "sizes": "72x72 96x96 128x128 256x256",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon/large.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icon/scalable.svg",
+      "sizes": "any"
+    }
+  ]
+}
+```
+
+The `purpose` keys should be set to `maskable` defining [icona as adaptive](https://web.dev/maskable-icon/).
+
+All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares. Include safe zones so that when the image is masked by the operating system, it renders okay as a circle.
+
+#### Task
+
+Add the icons to the manifest file you have been constructing.
+
+Playing with the words "cycle" and "period" of our period cycle tracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `simple_wheel.svg`, and `detailed_wheel.svg`, adding more detail moving from a plain circle to a wheel as it gets larger, with our largest icons being a green unicycle wheel with spokes. That said, designing icons is beyond the scope of this tutorial.
+
+#### Example solution
+
+```js
+{
+  "name": "...",
+  "short_name": "...",
+  "description": "...", 
+  "start_url": "...",
+  "theme_color": "...",
+  "background_color": "...",
+  "display": "...",
+  "icons": [
+        {
+      "src": "circle.ico",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon/circle.svg",
+      "sizes": "72x72 96x96",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon/simple_wheel.svg",
+      "sizes": "128x128 256x256"
+    },
+    {
+      "src": "icon/detailed_wheel.svg",
       "sizes": "512x512"
     }
   ]
 }
 ```
 
-### File name
+### Adding the manifest
 
-A service worker manifest file is a JSON file that contains information about the service worker. Being a JSON file, the manifest file extension can be the specification suggestion `.webappmanifest`, though is most commonly the browser support `.json`. The name of the service worker manifest file must be manifest.json.
+You now have a fully usable manifest file. Time to save it and link to it from our HTML file.
 
-Before linking to it from our HTML file, let's discuss how this very brief `cycletracker.manifest` defines the identity, presentation, and iconography of the PWA, and introduce a few more keys that enable manifest files to define the appearance of our PWA.
+The manifest file extension can be the specification suggestion `.webappmanifest`. However, being a JSON file, it is most commonly saved with the browser-supported `.json` extension.
+
+PWAs require a manifest file. We have a fully functional app, but it's not yet a PWA. We have to add the manifest the app. The web manifest is an external JSON file. To include the external JSON resource, the `rel="manifest"` is used. The `href` attribute of the `<link>` points to the location of the resource.
+
+```html
+<link rel="manifest" href="cycletracker.json">
+```
+
+The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+
+```html
+<link rel="shortcut icon" href="icons/circle.svg">
+```
+
+When using the `.webmanifest` extension, set `type="application/manifest+json"` if your server doesn't support that MIME type.
 
 #### Task
 
-Save the manifest file that you have created in the steps above.
+Save the manifest file that you have created in the steps above, then link to it from the `index.html` file.
 
 #### Example solution
 
 View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/intro/manifest/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/intro/manifest) on GitHub.
+
+## Up next
+
+Now that we have a PWA manifest file, let's [create a secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use X to create a secure connection; a PWA requirement.
+
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
