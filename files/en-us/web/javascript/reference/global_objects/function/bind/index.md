@@ -98,7 +98,7 @@ A common mistake for new JavaScript programmers is to extract a method from an o
 Without special care, however, the original object is usually lost. Creating a bound function from the function, using the original object, neatly solves this problem:
 
 ```js
-this.x = 9; // 'this' refers to the global object (e.g. 'window') in non-strict mode
+this.x = 9; // 'this' refers to the global object (e.g. 'window') in scripts
 const module = {
   x: 81,
   getX() {
@@ -118,7 +118,7 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **Note:** If you run this example in an ECMAScript module, top-level `this` will be set to `undefined` instead of `globalThis`, causing the `retrieveX` call to fail.
+> **Note:** If you run this example in an ECMAScript module, top-level `this` will be set to `undefined` instead of `globalThis`, causing the `this.x = 9` assignment to fail. If you run this example in a strict mode script, then the `retrieveX()` call will fail because it has `undefined` as the `this` value.
 >
 > If you run this example in a Node CommonJS module, top-level `this` will be set to `module.exports` instead of `globalThis`, regardless of being in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) or not. However, in functions, the reference of unbound `this` still follows the rule of "`globalThis` in non-strict, `undefined` in strict". Therefore, in non-strict mode (default), `retrieveX` will return `undefined` because `this.x = 9` is writing to a different object (`module.exports`) from what `getX` is reading from (`globalThis`).
 
