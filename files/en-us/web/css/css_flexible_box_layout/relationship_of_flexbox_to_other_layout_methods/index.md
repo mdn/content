@@ -1,6 +1,6 @@
 ---
 title: Relationship of flexbox to other layout methods
-slug: Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 page-type: guide
 ---
 
@@ -20,11 +20,11 @@ The reason that the Box alignment properties remain detailed in the flexbox spec
 
 > "Note: While the alignment properties are defined in CSS Box Alignment \[CSS-ALIGN-3], Flexible Box Layout reproduces the definitions of the relevant ones here so as to not create a normative dependency that may slow down advancement of the spec. These properties apply only to flex layout until CSS Box Alignment Level 3 is finished and defines their effect for other layout modes. Additionally, any new values defined in the Box Alignment module will apply to Flexible Box Layout; in other words, the Box Alignment module, once completed, will supersede the definitions here."
 
-In a later article in this series — [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) — we will take a thorough look at how the Box Alignment properties apply to flex items.
+In a later article in this series — [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) — we will take a thorough look at how the Box Alignment properties apply to flex items.
 
 ## Writing Modes
 
-In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
 
 It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. See [this article](https://24ways.org/2016/css-writing-modes/) for a full description of writing modes and ways to use them, both for content in other languages and for creative reasons.
 
