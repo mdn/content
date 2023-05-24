@@ -8,14 +8,16 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 
 {{CSSRef}}
 
-The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} specifying a hue angle (a cylindrical polar color) in degrees of a full circle.
+The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the hue angle of a color.
 It is used in the color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
 
-> **Note:** The angles corresponding to particular hues depend on the color space. For example, green in [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), which use the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space, is at `120deg`. In [`lch()`](/en-US/docs/Web/CSS/color_value/lch), which uses the CIELAB color wheel, green is at `134.39deg`.
+![An sRGB color wheel](color_wheel.svg)
 
-![A sRGB color wheel indicating the angle for the hue of the primary (red-green-blue) and secondary (yellow-cyan-magenta) colors](hue-wheel.png)
+The color wheel above shows hues at all angles in the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space. In particular, _red_ is at `0deg`, _yellow_ is at `60deg`, _lime_ is at `120deg`, _cyan_ is at `180deg`, _blue_ is at `240deg`, and _magenta_ is at `300deg`.
 
-In the sRGB color space, for [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), _red_ is `0deg`, _yellow_ is `60deg`, _green_ is `120deg`, _cyan_ is `180deg`, _blue_ is `240deg`, and _magenta_ is `300deg`.
+> **Note:** The angles corresponding to particular hues depend on the color space. For example, the hue angle of sRGB green is `120deg` in the sRGB color space, but `134.39deg` in the CIELAB color space.
+
+The following table lists typical colors at various angles in the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces:
 
 ## Syntax
 
