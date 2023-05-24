@@ -66,9 +66,7 @@ The following example deletes all cached entries in the `v1` cache matching the 
 ```js
 caches.open("v1").then((cache) => {
   cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
-    for (const response of responses) {
-      cache.delete(response);
-    }
+    console.log(`Found ${responses.length} matching responses`);
   });
 });
 ```
