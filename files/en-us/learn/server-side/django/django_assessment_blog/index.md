@@ -305,7 +305,7 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this task is [available on Github here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
+The assessment for this task is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
 When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!

@@ -68,7 +68,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </menu>
 ```
 
-### CSS content
+### CSS
 
 ```css
 div {

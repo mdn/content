@@ -45,7 +45,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Asynchronously opens a bidirectional stream ({{domxref("WebTransportBidirectionalStream")}}) that can be used to read from and write to the server.
 - {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : Asynchronously opens a unidirectional stream ({{domxref("WritableStream")}}) that can be used to write to the server.
-- {{domxref("WebTransport.getStats", "getStats()")}}
+- {{domxref("WebTransport.getStats", "getStats()")}} {{Experimental_Inline}}
   - : Asynchronously returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.
 
 ## Examples

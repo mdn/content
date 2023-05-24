@@ -86,7 +86,7 @@ function parseDate(input) {
   if (!parts) {
     return null;
   }
-  return parts.map((p) => parseInt(p, 10));
+  return parts.slice(1).map((p) => parseInt(p, 10));
 }
 
 parseDate("2019-01-01"); // [2019, 1, 1]

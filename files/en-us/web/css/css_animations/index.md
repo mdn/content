@@ -19,7 +19,7 @@ To view the animation in the box below, click the checkbox 'Play the animation' 
 
 This sample animation uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the cloud move back and forth, {{cssxref("animation-fill-mode")}} to raise the snow level in response to the cloud movement, and {{cssxref("animation-play-state")}} to pause the animation.
 
-To see the code for this animation, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/animation.html).
+To see the code for this animation, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/animation.html).
 
 ## Reference
 

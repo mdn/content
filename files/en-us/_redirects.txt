@@ -3684,10 +3684,9 @@
 /en-US/docs/HTML/Element/bdi-redirect-1	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdo	/en-US/docs/Web/HTML/Element/bdo
 /en-US/docs/HTML/Element/bdo-redirect-1	/en-US/docs/Web/HTML/Element/bdo
-/en-US/docs/HTML/Element/bgcound	/en-US/docs/Web/HTML/Element/bgsound
-/en-US/docs/HTML/Element/bgsound	/en-US/docs/Web/HTML/Element/bgsound
+/en-US/docs/HTML/Element/bgcound	/en-US/docs/Web/HTML/Element/audio
+/en-US/docs/HTML/Element/bgsound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML/Element/big	/en-US/docs/Web/HTML/Element/big
-/en-US/docs/HTML/Element/blink	/en-US/docs/Web/HTML/Element/blink
 /en-US/docs/HTML/Element/blockquote	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML/Element/blockquote-redirect-1	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML/Element/body	/en-US/docs/Web/HTML/Element/body
@@ -3781,8 +3780,6 @@
 /en-US/docs/HTML/Element/ins-redirect-1	/en-US/docs/Web/HTML/Element/ins
 /en-US/docs/HTML/Element/kbd	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/kbd-redirect-1	/en-US/docs/Web/HTML/Element/kbd
-/en-US/docs/HTML/Element/keygen	/en-US/docs/Web/HTML/Element/keygen
-/en-US/docs/HTML/Element/keygen-redirect-1	/en-US/docs/Web/HTML/Element/keygen
 /en-US/docs/HTML/Element/label	/en-US/docs/Web/HTML/Element/label
 /en-US/docs/HTML/Element/label-redirect-1	/en-US/docs/Web/HTML/Element/label
 /en-US/docs/HTML/Element/legend	/en-US/docs/Web/HTML/Element/legend
@@ -3844,7 +3841,6 @@
 /en-US/docs/HTML/Element/select	/en-US/docs/Web/HTML/Element/select
 /en-US/docs/HTML/Element/small	/en-US/docs/Web/HTML/Element/small
 /en-US/docs/HTML/Element/source	/en-US/docs/Web/HTML/Element/source
-/en-US/docs/HTML/Element/spacer	/en-US/docs/Web/HTML/Element/spacer
 /en-US/docs/HTML/Element/span	/en-US/docs/Web/HTML/Element/span
 /en-US/docs/HTML/Element/span-redirect-1	/en-US/docs/Web/HTML/Element/span
 /en-US/docs/HTML/Element/span-redirect-2	/en-US/docs/Web/HTML/Element/span
@@ -3943,10 +3939,9 @@
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML:Element:basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML:Element:bdo	/en-US/docs/Web/HTML/Element/bdo
-/en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/bgsound
-/en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/bgsound
+/en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/audio
+/en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/HTML:Element:big	/en-US/docs/Web/HTML/Element/big
-/en-US/docs/HTML:Element:blink	/en-US/docs/Web/HTML/Element/blink
 /en-US/docs/HTML:Element:blockquote	/en-US/docs/Web/HTML/Element/blockquote
 /en-US/docs/HTML:Element:br	/en-US/docs/Web/HTML/Element/br
 /en-US/docs/HTML:Element:center	/en-US/docs/Web/HTML/Element/center
@@ -5230,7 +5225,7 @@
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Common_questions/Thinking_before_coding	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server	/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/en-US/docs/Learn/Common_questions/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/en-US/docs/Learn/Common_questions/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/Common_questions/What_are_browser_developer_tools	/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /en-US/docs/Learn/Common_questions/What_are_hyperlinks	/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /en-US/docs/Learn/Common_questions/What_is_a_URL	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
@@ -5384,7 +5379,7 @@
 /en-US/docs/Learn/Understanding_domain_names	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 /en-US/docs/Learn/Understanding_links_on_the_web	/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /en-US/docs/Learn/Upload_files_to_a_web_server	/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/en-US/docs/Learn/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/en-US/docs/Learn/Using_Github_pages	/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /en-US/docs/Learn/WebGL/By_example	/en-US/docs/Web/API/WebGL_API/By_example
 /en-US/docs/Learn/WebGL/By_example/Basic_scissoring	/en-US/docs/Web/API/WebGL_API/By_example/Basic_scissoring
 /en-US/docs/Learn/WebGL/By_example/Boilerplate_1	/en-US/docs/Web/API/WebGL_API/By_example/Boilerplate_1
@@ -12038,6 +12033,7 @@
 /en-US/docs/Web/HTML/Element/Video/loadeddata_event	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/HTML/Element/audio/playing_event	/en-US/docs/Web/API/HTMLMediaElement/playing_event
 /en-US/docs/Web/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
+/en-US/docs/Web/HTML/Element/bgsound	/en-US/docs/Web/HTML/Element/audio
 /en-US/docs/Web/HTML/Element/h1	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h1–h6	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h2	/en-US/docs/Web/HTML/Element/Heading_Elements

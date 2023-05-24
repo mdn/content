@@ -7131,7 +7131,7 @@
       "rhyne24"
     ]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
     "modified": "2020-07-16T22:35:51.402Z",
     "contributors": ["chrisdavidmills", "junBryl", "Mori"]
   },
@@ -94455,26 +94455,6 @@
       "Ptak82"
     ]
   },
-  "Web/HTML/Element/bgsound": {
-    "modified": "2020-10-15T21:05:41.246Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "mfluehr",
-      "slimsag",
-      "kscarfone",
-      "avsaro",
-      "Nickolay",
-      "ethertank",
-      "cers",
-      "fscholz",
-      "osdm",
-      "Ms2ger",
-      "Mgjbot",
-      "PablO",
-      "Ptak82"
-    ]
-  },
   "Web/HTML/Element/big": {
     "modified": "2020-10-15T21:02:25.097Z",
     "contributors": [
@@ -94498,44 +94478,6 @@
       "Jinexile",
       "Dria",
       "Charles"
-    ]
-  },
-  "Web/HTML/Element/blink": {
-    "modified": "2020-10-15T21:02:26.597Z",
-    "contributors": [
-      "karbassi",
-      "leela52452",
-      "mfuji09",
-      "yifeiyin",
-      "mfluehr",
-      "teoli",
-      "Sheppy",
-      "joshgriggs",
-      "ashrafsabrym",
-      "anonyco",
-      "scrum",
-      "slimsag",
-      "fscholz",
-      "behramcelen",
-      "YehonatanTs",
-      "Naesten",
-      "kscarfone",
-      "jswisher",
-      "avsaro",
-      "Ugoku",
-      "lmorchard",
-      "igorware",
-      "ethertank",
-      "evilpie",
-      "tregagnon",
-      "Nickolay",
-      "cers",
-      "Ms2ger",
-      "Ptak82",
-      "Yj5Cre",
-      "Mgjbot",
-      "PablO",
-      "alecananian"
     ]
   },
   "Web/HTML/Element/blockquote": {
@@ -96847,53 +96789,6 @@
       "Jscher2000"
     ]
   },
-  "Web/HTML/Element/keygen": {
-    "modified": "2020-10-30T18:15:38.179Z",
-    "contributors": [
-      "mikoMK",
-      "alattalatta",
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfuji09",
-      "gerganzh",
-      "LouisLazaris",
-      "Sheppy",
-      "alex_gaynor",
-      "teoli",
-      "saerdnaer",
-      "ziyunfei",
-      "erikadoyle",
-      "slimsag",
-      "foxbenjaminfox",
-      "jpmedley",
-      "jsx",
-      "Shavindra",
-      "kringsjaa",
-      "Sebastianz",
-      "renoirb",
-      "dvincent",
-      "DarkPark",
-      "estelle",
-      "shellac",
-      "vladimir53rus",
-      "kscarfone",
-      "Editmonkey",
-      "tregagnon",
-      "medicdude",
-      "ethertank",
-      "lieryan",
-      "cers",
-      "fscholz",
-      "McGurk",
-      "hobophobe",
-      "deimidis",
-      "jswisher",
-      "osdm",
-      "Ms2ger",
-      "Jürgen Jeka",
-      "Nelson_bolyard.com"
-    ]
-  },
   "Web/HTML/Element/label": {
     "modified": "2020-10-15T21:09:51.433Z",
     "contributors": [
@@ -98463,18 +98358,6 @@
       "Kinetik",
       "Jürgen Jeka",
       "Ms2ger"
-    ]
-  },
-  "Web/HTML/Element/spacer": {
-    "modified": "2020-10-15T21:20:21.362Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Sheppy",
-      "kscarfone",
-      "tregagnon",
-      "jswisher",
-      "avsaro"
     ]
   },
   "Web/HTML/Element/span": {
