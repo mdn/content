@@ -52,7 +52,7 @@ The steps include:
 - [JavaScript and LocalStorage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
   - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using `localStorage` to store period information.
 
-- [Manifest: identity, appearance, and iconography](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest)
+- [Manifest: identity, appearance, and iconography](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)

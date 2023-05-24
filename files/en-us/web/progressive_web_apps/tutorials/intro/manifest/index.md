@@ -1,6 +1,6 @@
 ---
 title: PWA manifest and iconography
-slug: Web/Progressive_web_apps/Tutorials/Intro/manifest
+slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
@@ -199,7 +199,7 @@ Save the manifest file that you have created in the steps above, then link to it
 
 #### Example solution
 
-View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/intro/manifest/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/intro/manifest) on GitHub.
+View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/Intro/Manifest/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/Intro/Manifest) on GitHub.
 
 ## Up next
 

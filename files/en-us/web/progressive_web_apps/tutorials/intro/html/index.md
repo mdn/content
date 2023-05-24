@@ -235,6 +235,6 @@ You can try the [static period tracker shell](https://mdn.github.io/pwa-examples
 
 ### Up next
 
-Before converting a web app into a progressive web app — before adding the [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure),[manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/manifest), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
+Before converting a web app into a progressive web app — before adding the [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure),[manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
 
 Up next we will create the [basic JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript).
