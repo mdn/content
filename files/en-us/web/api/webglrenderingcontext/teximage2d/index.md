@@ -15,8 +15,8 @@ image.
 
 ```js-nolint
 // WebGL1
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels can be a TypedArray or a DataView or null
-texImage2D(target, level, internalformat, format, type, pixels) // pixels cannot be a TypedArray or a DataView or null
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels may be any allowed type
+texImage2D(target, level, internalformat, format, type, pixels) // pixels must be a type with an intrinsic size, e.g. ImageData, HTMLImageElement, HTMLCanvasElement, HTMLVideoElement, or ImageBitmap.
 
 
 // WebGL2
