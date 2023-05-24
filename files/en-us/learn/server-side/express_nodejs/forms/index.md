@@ -137,7 +137,7 @@ The functions are defined as below:
   [
     // …
     body("age", "Invalid age")
-      .optional({ checkFalsy: true })
+      .optional({ values: "falsy" })
       .isISO8601()
       .toDate(),
     // …
