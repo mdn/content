@@ -182,10 +182,10 @@ piInput.addEventListener("input", function () {
 
 ### Infinity, NaN, and division by zero
 
-The following example shows the computed value of the `width` property when dividing by zero, followed by how serialization with different `calc()` constants looks like which you can see in the console:
+The following example shows the computed value of the `width` property when dividing by zero, followed by how serialization with different `calc()` constants look when viewed in the console:
 
 ```html
-<div id="div"></div>
+<div></div>
 ```
 
 ```css
@@ -197,7 +197,7 @@ div {
 ```
 
 ```js
-const div = document.getElementById("div");
+const div = document.querySelector("div");
 console.log(div.offsetWidth); // 17895698 (infinity clamped to largest value for width)
 
 function logSerializedWidth(value) {
@@ -213,11 +213,8 @@ logSerializedWidth("calc(1px * -infinity * infinity)"); // calc(-infinity * 1px)
 
 logSerializedWidth("calc(1px * (NaN + 1))"); // calc(NaN * 1px)
 
-// reset
-div.style.width = "50px";
 ```
 
-{{EmbedLiveSample('Infinity_NaN_and_division_by_zero', 'auto', '100')}}
 
 ## Specifications
 
