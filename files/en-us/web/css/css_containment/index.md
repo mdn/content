@@ -1,6 +1,6 @@
 ---
-title: CSS Containment
-slug: Web/CSS/CSS_Containment
+title: CSS containment
+slug: Web/CSS/CSS_containment
 page-type: css-module
 browser-compat:
   - css.properties.contain
@@ -9,7 +9,7 @@ browser-compat:
 
 {{CSSRef}}
 
-The aim of the CSS Containment specification is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
+The aim of the **CSS containment** module is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
 If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
 
 In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.

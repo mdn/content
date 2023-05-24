@@ -1,6 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 page-type: guide
 ---
 
