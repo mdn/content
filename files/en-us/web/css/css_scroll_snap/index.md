@@ -23,7 +23,7 @@ Using snap properties, you can allow or block the scrolling past an element, a n
 
 To compare scroll snapping to regular scrolling, check the "disable snapping" checkbox and try scrolling again.
 
-To see the code for this example, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
+To see the code for this example, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html).
 
 ## Reference
 

@@ -1,6 +1,6 @@
 ---
 title: Using feature queries
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 page-type: guide
 ---
 
@@ -10,7 +10,7 @@ page-type: guide
 
 ## Syntax
 
-CSS feature queries are part of the [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
 A feature query consists of the `@supports` rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as `display`; the rule requires a property name and a value:
 
