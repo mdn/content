@@ -31,7 +31,10 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-  - : The function called when this event occurs. The function is passed no arguments.
+  - : The function called when this event occurs. The function is passed this argument:
+
+    - `window`
+      - : `object`. The {{DOMxRef("window")}} object of the sidebar page, if a page was set with {{WebExtAPIRef("devtools.panels.ExtensionSidebarPane.setPage()","setPage()")}}.
 
 ## Browser compatibility
 
