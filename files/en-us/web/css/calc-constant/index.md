@@ -104,19 +104,27 @@ The following example shows how to use `e` inside `calc()` to rotate an element 
 The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/sin) function.
 
 ```css hidden
-#box-container,
-#slider-container,
-#label-container {
+#wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
-#box-container > div {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 200px;
+}
+.container > div {
   width: 100px;
   height: 100px;
   margin: 10px;
+}
+
+span {
+  font-family: monospace;
+  font-size: 0.8em;
 }
 
 #e {
@@ -128,32 +136,18 @@ The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/sin)
 }
 ```
 
-```html hidden
-<div id="box-container">
-  <div id="e"></div>
-  <div id="pi"></div>
-</div>
-```
-
 ```html
-<div id="slider-container">
-  <div>
+<div id="wrapper">
+  <div class="container">
+    <div id="e"></div>
     <input type="range" min="0" max="7" step="0.01" value="0" id="e-slider" />
-  </div>
-  <div>
-    <input type="range" min="0" max="1" step="0.01" value="0" id="pi-slider" />
-  </div>
-</div>
-```
-
-```html hidden
-<div id="label-container">
-  <div>
-    <label for="e-slider">e</label>
+    <label for="e-slider">e:</label>
     <span id="e-value"></span>
   </div>
-  <div>
-    <label for="pi-slider">pi</label>
+  <div class="container">
+    <div id="pi"></div>
+    <input type="range" min="0" max="1" step="0.01" value="0" id="pi-slider" />
+    <label for="pi-slider">pi:</label>
     <span id="pi-value"></span>
   </div>
 </div>
@@ -212,9 +206,7 @@ logSerializedWidth("calc(1px * -infinity * -infinity)"); // calc(infinity * 1px)
 logSerializedWidth("calc(1px * -infinity * infinity)"); // calc(-infinity * 1px)
 
 logSerializedWidth("calc(1px * (NaN + 1))"); // calc(NaN * 1px)
-
 ```
-
 
 ## Specifications
 
