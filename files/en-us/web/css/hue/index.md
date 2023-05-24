@@ -38,50 +38,86 @@ The following table lists typical colors at various angles in the sRGB (used by 
   <tbody>
     <tr>
       <th scope="row">sRGB</th>
-      <td style="background: hsl(0 100% 50%);" title="hsl(0 100% 50%)"></td>
-      <td style="background: hsl(60 100% 50%);" title="hsl(60 100% 50%)"></td>
-      <td style="background: hsl(120 100% 50%);" title="hsl(120 100% 50%)"></td>
-      <td style="background: hsl(180 100% 50%);" title="hsl(180 100% 50%)"></td>
-      <td style="background: hsl(240 100% 50%);" title="hsl(240 100% 50%)"></td>
-      <td style="background: hsl(300 100% 50%);" title="hsl(300 100% 50%)"></td>
+      <td
+        style="background: hsl(0 100% 50%);"
+        title="hsl(0 100% 50%)"></td>
+      <td
+        style="background: hsl(60 100% 50%);"
+        title="hsl(60 100% 50%)"></td>
+      <td
+        style="background: hsl(120 100% 50%);"
+        title="hsl(120 100% 50%)"></td>
+      <td
+        style="background: hsl(180 100% 50%);"
+        title="hsl(180 100% 50%)"></td>
+      <td
+        style="background: hsl(240 100% 50%);"
+        title="hsl(240 100% 50%)"></td>
+      <td
+        style="background: hsl(300 100% 50%);"
+        title="hsl(300 100% 50%)"></td>
     </tr>
     <tr>
       <th scope="row">CIELAB</th>
-      <td style="background: lch(50% 50% 0);" title="lch(50% 50% 0)"></td>
-      <td style="background: lch(65% 55% 60);" title="lch(65% 55% 60)"></td>
-      <td style="background: lch(90% 65% 120);" title="lch(90% 65% 120)"></td>
-      <td style="background: lch(90% 35% 180);" title="lch(90% 35% 180)"></td>
-      <td style="background: lch(75% 25% 240);" title="lch(75% 25% 240)"></td>
-      <td style="background: lch(40% 70% 300);" title="lch(40% 70% 300)"></td>
+      <td
+        style="background: lch(50% 50% 0);"
+        title="lch(50% 50% 0)"></td>
+      <td
+        style="background: lch(65% 55% 60);"
+        title="lch(65% 55% 60)"></td>
+      <td
+        style="background: lch(90% 65% 120);"
+        title="lch(90% 65% 120)"></td>
+      <td
+        style="background: lch(90% 35% 180);"
+        title="lch(90% 35% 180)"></td>
+      <td
+        style="background: lch(75% 25% 240);"
+        title="lch(75% 25% 240)"></td>
+      <td
+        style="background: lch(40% 70% 300);"
+        title="lch(40% 70% 300)"></td>
     </tr>
     <tr>
       <th scope="row">Oklab</th>
-      <td style="background: oklch(65% 65% 0);" title="oklch(65% 65% 0)"></td>
-      <td style="background: oklch(75% 40% 60);" title="oklch(75% 40% 60)"></td>
-      <td style="background: oklch(90% 50% 120);" title="oklch(90% 50% 120)"></td>
-      <td style="background: oklch(90% 35% 180);" title="oklch(90% 35% 180)"></td>
-      <td style="background: oklch(70% 40% 240);" title="oklch(70% 40% 240)"></td>
-      <td style="background: oklch(55% 70% 300);" title="oklch(55% 70% 300)"></td>
+      <td
+        style="background: oklch(65% 65% 0);"
+        title="oklch(65% 65% 0)"></td>
+      <td
+        style="background: oklch(75% 40% 60);"
+        title="oklch(75% 40% 60)"></td>
+      <td
+        style="background: oklch(90% 50% 120);"
+        title="oklch(90% 50% 120)"></td>
+      <td
+        style="background: oklch(90% 35% 180);"
+        title="oklch(90% 35% 180)"></td>
+      <td
+        style="background: oklch(70% 40% 240);"
+        title="oklch(70% 40% 240)"></td>
+      <td
+        style="background: oklch(55% 70% 300);"
+        title="oklch(55% 70% 300)"></td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-A `<hue>` value can be either an `<angle>` or a `<number>`.
+A `<hue>` can be either an `<angle>` or a `<number>`.
 
 ### Values
 
 - {{CSSXref("&lt;angle&gt;")}}
   - : An angle expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
-- {{CSSXref("&lt;number&gt;")}}
+- `<number>`
   - : A real number, representing degrees of the hue angle.
 
 As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg]`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
 
 ### Interpolation
 
-`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](https://developer.mozilla.org/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overriden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
+`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overriden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
 
 ### Formal syntax
 
