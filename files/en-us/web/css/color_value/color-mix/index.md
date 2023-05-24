@@ -23,10 +23,15 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
 - `method`
+
   - : A {{CSSXref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
+
 - `color1`, `color2`
+
   - : {{CSSXref("&lt;color&gt;")}} values to mix.
+
 - `p1`, `p2` {{optional_inline}}
+
   - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
 
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
