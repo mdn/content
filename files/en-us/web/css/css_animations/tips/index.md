@@ -1,6 +1,6 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 page-type: guide
 ---
 
