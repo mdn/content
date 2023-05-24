@@ -44,6 +44,77 @@ Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
 {{csssyntax}}
 
+## Examples
+
+### Mixing two colors
+
+In a supporting browser, the items have more blue, and therefore less white, as a higher percentage of `#34c9eb` is mixed in. When no value is given, the percentage defaults to 50%.
+
+#### HTML
+
+```html
+<ul>
+  <li>0%</li>
+  <li>25%</li>
+  <li>50%</li>
+  <li>75%</li>
+  <li>100%</li>
+  <li></li>
+</ul>
+```
+
+#### CSS
+
+```css hidden
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  outline: 1px solid #34c9eb;
+  text-align: center;
+}
+```
+
+```css
+li:nth-child(1) {
+  background-color: color-mix(in srgb, #34c9eb 0%, white);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in srgb, #34c9eb 25%, white);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in srgb, #34c9eb 50%, white);
+}
+
+li:nth-child(4) {
+  background-color: color-mix(in srgb, #34c9eb 75%, white);
+}
+
+li:nth-child(5) {
+  background-color: color-mix(in srgb, #34c9eb 100%, white);
+}
+
+li:nth-child(6) {
+  background-color: color-mix(in srgb, #34c9eb, white);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
+
 ## Specifications
 
 {{Specifications}}
