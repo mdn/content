@@ -21,7 +21,7 @@ browser.commands.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -32,7 +32,7 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
   - : Function that is called when a command's shortcut changes. The function is passed these:
 
