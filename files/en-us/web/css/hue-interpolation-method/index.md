@@ -111,9 +111,6 @@ The following example shows the effect of using different hue interpolation algo
 <div class="hsl">
   <p>HSL</p>
 </div>
-<div class="hsl-named">
-  <p>HSL named</p>
-</div>
 <div class="hsl-increasing">
   <p>HSL increasing</p>
 </div>
@@ -122,6 +119,9 @@ The following example shows the effect of using different hue interpolation algo
 </div>
 <div class="hsl-longer">
   <p>HSL longer</p>
+</div>
+<div class="hsl-named">
+  <p>HSL named</p>
 </div>
 <div class="hsl-named-longer">
   <p>HSL named (longer)</p>
@@ -133,7 +133,7 @@ The following example shows the effect of using different hue interpolation algo
 ```css hidden
 div {
   border: 1px solid black;
-  height: 100px;
+  height: 50px;
   margin: 10px;
   width: 90%;
 }
@@ -182,7 +182,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 750)}}
+{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 500)}}
 
 ## Specifications
 
