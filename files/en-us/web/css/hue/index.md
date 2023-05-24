@@ -19,6 +19,30 @@ The color wheel above shows hues at all angles in the [sRGB](https://en.wikipedi
 
 The following table lists typical colors at various angles in the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces:
 
+<table>
+  <colgroup>
+    <col />
+    <col span="6" width="15%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">0°</th>
+      <th scope="col">60°</th>
+      <th scope="col">120°</th>
+      <th scope="col">180°</th>
+      <th scope="col">240°</th>
+      <th scope="col">300°</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">sRGB</th>
+      <td style="background: hsl(0 100% 50%);" title="hsl(0 100% 50%)"></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Syntax
 
 A `<hue>` value can be either an `<angle>` or a `<number>`.
