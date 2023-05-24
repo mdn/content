@@ -20,32 +20,13 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 ### Values
 
-Functional notation: `color-mix(in colorspace[ hue-interpolation-method hue], color[ p1], color[ p2])`
+Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
-- `in`
-
-  - : A literal token as a component of the syntax.
-
-- `colorspace`
-
-  - : One of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, or `oklch`, specifying the color space for interpolation.
-
-- `hue-interpolation-method` {{optional_inline}}
-
-  - : One of `shorter`, `longer`, `increasing`, or `decreasing`, specifying how {{CSSXref("&lt;hue&gt;")}} values of the colors are interpolated.
-
-    > **Note:** This value is only valid if `colorspace` is one of `hsl`, `hwb`, `lch`, and `oklch`.
-
-- `hue`
-
-  - : A literal token as a component of the syntax.
-
-- `color`
-
-  - : Any valid {{CSSXref("&lt;color&gt;")}}.
-
+- `method`
+  - : A {{CSSXref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
+- `color1`, `color2`
+  - : {{CSSXref("&lt;color&gt;")}} values to mix.
 - `p1`, `p2` {{optional_inline}}
-
   - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
 
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
@@ -210,4 +191,5 @@ div {
 ## See also
 
 - {{cssxref("color_value")}}
+- {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
