@@ -59,14 +59,14 @@ Padding is inserted between the content edge and border edge of a box.
 
 There are other properties that relate to the box model, that are defined elsewhere.
 
-- [Borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
   - : The border properties specify the thickness of the border, drawing style and color.
 - [Overflow](/en-US/docs/Web/CSS/overflow)
   - : Controls what happens when there is too much content to fit into a box.
 
 ## Guides
 
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_Model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : Explains one of the fundamental concept of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
