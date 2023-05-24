@@ -54,7 +54,7 @@ You could log changes to command shortcuts like this:
 ```js
 function handleChanged(name, newShortcut, oldShortcut) {
   console.log(`Shortcut for: ${name} changed`);
-  console.log(`Fron: ${oldShortcut}`);
+  console.log(`From: ${oldShortcut}`);
   console.log(`To: ${newShortcut}`);
 }
 
