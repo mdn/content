@@ -34,7 +34,7 @@ Events have three functions:
 
 - `listener`
 
-  - : Function that is called when a command's shortcut changes. The function is passed these:
+  - : The function called when a command's shortcut changes. The function is passed these attributes:
 
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
