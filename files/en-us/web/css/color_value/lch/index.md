@@ -22,19 +22,12 @@ lch(52.2345% 72.2 56.2 / .5);
 Functional notation: `lch(L C H[ / A])`
 
 - `L`
-
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
-
 - `C`
-
   - : A {{CSSXref("&lt;number&gt;")}} or a {{CSSXref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
-
 - `H`
-
-  - : A {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;angle&gt;")}} that specifies the hue angle along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
-
+  - : A {{CSSXref("&lt;hue&gt;")}} representing the hue angle.
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
