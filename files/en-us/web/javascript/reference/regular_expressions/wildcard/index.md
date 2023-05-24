@@ -19,7 +19,7 @@ A **wildcard** matches all characters except line terminators. It also matches l
 
 `.` matches any character except [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators). If the [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) flag is set, `.` also matches line terminators.
 
-The exact character set matched by `.` depends on whether the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag is set. If the `u` flag is set, `.` matches any Unicode code point; otherwise, it matches any UTF-16 code unit. For example:
+The exact character set matched by `.` depends on whether the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). If it is Unicode-aware, `.` matches any Unicode code point; otherwise, it matches any UTF-16 code unit. For example:
 
 ```js
 /../.test("😄"); // true; matches two UTF-16 code units as a surrogate pair

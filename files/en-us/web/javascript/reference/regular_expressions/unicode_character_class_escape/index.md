@@ -7,7 +7,7 @@ browser-compat: javascript.regular_expressions.unicode_character_class_escape
 
 {{JsSidebar}}
 
-A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
+A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
@@ -24,7 +24,7 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 ### Parameters
 
 - `loneProperty`
-  - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/#table-binary-unicode-properties).
+  - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/#table-binary-unicode-properties). In [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) mode, it can also be a [binary Unicode property of strings](https://tc39.es/ecma262/#table-binary-unicode-properties-of-strings).
 - `property`
   - : A Unicode property name. Must be made of ASCII letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).
 - `value`
@@ -32,13 +32,15 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 
 ## Description
 
-`\p` and `\P` are only supported in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode). In non-unicode mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
+`\p` and `\P` are only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). In Unicode-unaware mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
-Every Unicode character has a set of properties that describe it. For example, the character [`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) has the `General_Category` property with value `Lowercase_Letter`, and the `Script` property with value `Latn`. The `\p` and `\P` escape sequences allow you to match a character based on its properties. For example, `a` can be matched by `\p{Lowercase_Letter}` (the `General_Category` property name is optional) as well as `\p{Script=Latn}`.
+Every Unicode character has a set of properties that describe it. For example, the character [`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) has the `General_Category` property with value `Lowercase_Letter`, and the `Script` property with value `Latn`. The `\p` and `\P` escape sequences allow you to match a character based on its properties. For example, `a` can be matched by `\p{Lowercase_Letter}` (the `General_Category` property name is optional) as well as `\p{Script=Latn}`. `\P` creates a _complement class_ that consists of code points without the specified property.
 
-To compose multiple properties, see [pattern subtraction and intersection](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection).
+To compose multiple properties, use the [character set intersection](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) syntax enabled with the `v` flag, or see [pattern subtraction and intersection](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection).
 
-<!-- TODO: replace it with a better suggestion when the v flag ships: https://github.com/tc39/proposal-regexp-v-flag -->
+In `v` mode, `\p` may match a sequence of code points, defined in Unicode as "properties of strings". This is most useful for emojis, which are often composed of multiple code points. However, `\P` can only complement character properties.
+
+> **Note:** There are plans to port the properties of strings feature to `u` mode as well.
 
 ## Examples
 
@@ -141,6 +143,22 @@ Japan store ¥2000`;
 console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
 ```
 
+### Matching strings
+
+The `\p` character class can match strings longer than one character by using one of the properties of strings (most of them are emojis):
+
+```js
+const flag = "🇺🇳";
+console.log(flag.length); // 2
+console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
+```
+
+However, you can't use `\P` to match "a string that's does not have a property", because it's unclear how many characters should be consumed.
+
+```js
+/\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -160,3 +178,5 @@ console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
 - [Unicode character property](https://en.wikipedia.org/wiki/Unicode_character_property) on Wikipedia
 - [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) by Dr. Axel Rauschmayer (July 19, 2017)
 - [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories) on unicode.org
+- [Unicode Utilities: UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
+- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (June 27, 2022)

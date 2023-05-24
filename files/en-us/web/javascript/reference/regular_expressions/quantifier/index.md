@@ -61,7 +61,7 @@ re.test("aa"); // false
 re.test("a{1, 3}"); // true
 ```
 
-This behavior is fixed in the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+This behavior is fixed in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
@@ -113,7 +113,7 @@ Quantifiers apply to a single atom. If you want to quantify a longer pattern or 
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+In [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
