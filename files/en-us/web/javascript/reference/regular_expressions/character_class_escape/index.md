@@ -26,7 +26,7 @@ Unlike [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressi
 - `\d`
   - : Matches any digit character. Equivalent to `[0-9]`.
 - `\w`
-  - : Matches any word character, where a word character includes letters (A–Z, a–z), numbers (0–9), and underscore (_). If the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) and the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag is set, it also matches other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
+  - : Matches any word character, where a word character includes letters (A–Z, a–z), numbers (0–9), and underscore (\_). If the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) and the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag is set, it also matches other Unicode characters that get canonicalized to one of the characters above through [case folding](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
 - `\s`
   - : Matches any [whitespace](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) or [line terminator](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) character.
 

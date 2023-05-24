@@ -129,7 +129,7 @@ The following example matches prices in a string:
 ```js
 function getPrices(str) {
   // Sc stands for "currency symbol"
-  return [...str.matchAll(/\p{Sc}\s*[\d.,]+/gu)].map(match => match[0]);
+  return [...str.matchAll(/\p{Sc}\s*[\d.,]+/gu)].map((match) => match[0]);
 }
 
 const str = `California rolls $6.99

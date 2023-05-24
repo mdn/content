@@ -110,29 +110,29 @@ These features do not specify any pattern themselves, but are used to compose pa
 
 _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed by one or more characters. They may serve very different purposes depending on what follow `\`. Below is a list of all valid "escape sequences":
 
-| Escape sequence | Followed by | Meaning |
-| --------------- | ----------- | ------- |
-| `\B` | None | [Non-word-boundary assertion][WBA] |
-| `\D` | None | [Character class escape][CCE] representing non-digit characters |
-| `\P` | `{`, a Unicode property and/or value, then `}` | [Unicode character class escape][UCCE] representing characters without the specified Unicode property |
-| `\S` | None | [Character class escape][CCE] representing non-white-space characters |
-| `\W` | None | [Character class escape][CCE] representing non-word characters |
-| `\b` | None | [Word boundary assertion][WBA]; inside [character classes][CC], represents U+0008 (BACKSPACE) |
-| `\c` | A letter from `A` to `Z` or `a` to `z` | A [character escape][CE] representing the control character with value equal to the letter's character value modulo 32 |
-| `\d` | None | [Character class escape][CCE] representing digit characters (`0` to `9`) |
-| `\f` | None | [Character escape][CE] representing U+000C (FORM FEED) |
-| `\k` | `<`, an identifier, then `>` | A [named backreference][NBR] |
-| `\n` | None | [Character escape][CE] representing U+000A (LINE FEED) |
-| `\p` | `{`, a Unicode property and/or value, then `}` | [Unicode character class escape][UCCE] representing characters with the specified Unicode property |
-| `\q` | `{`, a string, then a `}` | Only valid inside [`v`-mode character classes][VCC]; represents the string to be matched literally |
-| `\r` | None | [Character escape][CE] representing U+000D (CARRIAGE RETURN) |
-| `\s` | None | [Character class escape][CCE] representing whitespace characters |
-| `\t` | None | [Character escape][CE] representing U+0009 (CHARACTER TABULATION) |
-| `\u` | 4 hexadecimal digits; or `{`, 1 to 6 hexadecimal digits, then `}` | [Character escape][CE] representing the character with the given code point |
-| `\v` | None | [Character escape][CE] representing U+000B (LINE TABULATION) |
-| `\w` | None | [Character class escape][CCE] representing word characters (`A` to `Z`, `a` to `z`, `0` to `9`, `_`) |
-| `\x` | 2 hexadecimal digits | [Character escape][CE] representing the character with the given value |
-| `\0` | None | [Character escape][CE] representing U+0000 (NULL) |
+| Escape sequence | Followed by                                                       | Meaning                                                                                                                |
+| --------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `\B`            | None                                                              | [Non-word-boundary assertion][WBA]                                                                                     |
+| `\D`            | None                                                              | [Character class escape][CCE] representing non-digit characters                                                        |
+| `\P`            | `{`, a Unicode property and/or value, then `}`                    | [Unicode character class escape][UCCE] representing characters without the specified Unicode property                  |
+| `\S`            | None                                                              | [Character class escape][CCE] representing non-white-space characters                                                  |
+| `\W`            | None                                                              | [Character class escape][CCE] representing non-word characters                                                         |
+| `\b`            | None                                                              | [Word boundary assertion][WBA]; inside [character classes][CC], represents U+0008 (BACKSPACE)                          |
+| `\c`            | A letter from `A` to `Z` or `a` to `z`                            | A [character escape][CE] representing the control character with value equal to the letter's character value modulo 32 |
+| `\d`            | None                                                              | [Character class escape][CCE] representing digit characters (`0` to `9`)                                               |
+| `\f`            | None                                                              | [Character escape][CE] representing U+000C (FORM FEED)                                                                 |
+| `\k`            | `<`, an identifier, then `>`                                      | A [named backreference][NBR]                                                                                           |
+| `\n`            | None                                                              | [Character escape][CE] representing U+000A (LINE FEED)                                                                 |
+| `\p`            | `{`, a Unicode property and/or value, then `}`                    | [Unicode character class escape][UCCE] representing characters with the specified Unicode property                     |
+| `\q`            | `{`, a string, then a `}`                                         | Only valid inside [`v`-mode character classes][VCC]; represents the string to be matched literally                     |
+| `\r`            | None                                                              | [Character escape][CE] representing U+000D (CARRIAGE RETURN)                                                           |
+| `\s`            | None                                                              | [Character class escape][CCE] representing whitespace characters                                                       |
+| `\t`            | None                                                              | [Character escape][CE] representing U+0009 (CHARACTER TABULATION)                                                      |
+| `\u`            | 4 hexadecimal digits; or `{`, 1 to 6 hexadecimal digits, then `}` | [Character escape][CE] representing the character with the given code point                                            |
+| `\v`            | None                                                              | [Character escape][CE] representing U+000B (LINE TABULATION)                                                           |
+| `\w`            | None                                                              | [Character class escape][CCE] representing word characters (`A` to `Z`, `a` to `z`, `0` to `9`, `_`)                   |
+| `\x`            | 2 hexadecimal digits                                              | [Character escape][CE] representing the character with the given value                                                 |
+| `\0`            | None                                                              | [Character escape][CE] representing U+0000 (NULL)                                                                      |
 
 [CC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class
 [CCE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape

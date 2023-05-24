@@ -58,7 +58,7 @@ A **wildcard** matches all characters except line terminators.
 
 The following example matches the content of a code block enclosed by three backticks in Markdown. It uses the `s` flag to make `.` match line terminators, because the content of a code block may span multiple lines:
 
-```js
+````js
 function parseCodeBlock(entry) {
   return /^```.*?^(.+?)\n```/ms.exec(entry)?.[1];
 }
@@ -79,7 +79,7 @@ catch (e)
   console.log(e);
 \`\`\`
 `); // "try\n  doSomething();\ncatch (e)\n  console.log(e);"
-```
+````
 
 > **Warning:** These examples are for demonstration only. If you want to parse Markdown, use a dedicated Markdown parser because there are many edge cases to consider.
 

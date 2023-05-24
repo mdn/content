@@ -45,7 +45,7 @@ atom{min,max}?
 A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atom) to repeat it a certain number of times. It cannot appear on its own. Each quantifier is able to specify a minimum and maximum number that a pattern must be repeated for.
 
 | Quantifier  | Minimum | Maximum  |
-|-------------|---------|----------|
+| ----------- | ------- | -------- |
 | `?`         | 0       | 1        |
 | `*`         | 0       | Infinity |
 | `+`         | 1       | Infinity |
