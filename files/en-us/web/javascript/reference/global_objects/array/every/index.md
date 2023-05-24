@@ -160,7 +160,7 @@ const arrayLike = {
 };
 console.log(
   Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
-); // true: The key 3 is equal to the value of length, so it is not considered
+); // true
 ```
 
 ## Specifications

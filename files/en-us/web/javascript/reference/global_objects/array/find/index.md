@@ -159,7 +159,7 @@ The `find()` method reads the `length` property of `this` and then accesses each
 ```js
 const arrayLike = {
   length: 3,
-  "-1": 0.1, // will not be found since -1 < 0
+  "-1": 0.1, // ignored by find() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,

@@ -92,6 +92,7 @@ The `findIndex()` method reads the `length` property of `this` and then accesses
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by findIndex() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
