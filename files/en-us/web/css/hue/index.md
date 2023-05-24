@@ -21,29 +21,20 @@ The following table lists typical colors at various angles in the sRGB (used by 
 
 ## Syntax
 
-```css
-/* hsl(<hue> <saturation> <lightness>) */
-hsl(270 100% 50%);
-hsl(270deg 100% 50%);
-hsl(300grad 100% 50%);
-hsl(0.75turn 100% 50%);
-hsl(4.71rad 100% 50%);
-
-/* hwb(<hue> <whiteness> <blackness>) */
-hwb(270 0% 0%);
-/* lch(<hue> <chroma> <lightness>) */
-lch(39.35 121.2% -51.94%);
-/* … */
-```
+A `<hue>` value can be either an `<angle>` or a `<number>`.
 
 ### Values
 
-- `<angle>`
-  - : An {{cssxref("&lt;angle&gt;")}} values expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
-- `<number>`
-  - : An integer or floating point number, representing degrees of the hue angle.
+- {{CSSXref("&lt;angle&gt;")}}
+  - : An angle expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
+- {{CSSXref("&lt;number&gt;")}}
+  - : A real number, representing degrees of the hue angle.
 
-As an `<angle>` is periodic, normalized to the range of `0deg` to `360deg`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
+As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg]`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
+
+### Interpolation
+
+`<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](https://developer.mozilla.org/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overriden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
 
 ### Formal syntax
 
