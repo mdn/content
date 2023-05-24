@@ -34,7 +34,7 @@ Events have three functions:
 
 - `function`
 
-  - : The function called when this event occurs. This function will be passed this argument:
+  - : The function called when this event occurs. This function is passed this argument:
 
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.

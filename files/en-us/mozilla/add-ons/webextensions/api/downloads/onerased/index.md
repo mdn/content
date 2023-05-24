@@ -34,7 +34,7 @@ Events have three functions:
 
 - `listener`
 
-  - : The function called when this event occurs. This function will be passed this argument:
+  - : The function called when this event occurs. This function is passed this argument:
 
     - `downloadId`
       - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.
