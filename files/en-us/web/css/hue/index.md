@@ -39,6 +39,9 @@ The following table lists typical colors at various angles in the sRGB (used by 
     <tr>
       <th scope="row">sRGB</th>
       <td style="background: hsl(0 100% 50%);" title="hsl(0 100% 50%)"></td>
+      <td
+        style="background: hsl(60 100% 50%);"
+        title="hsl(60 100% 50%)"></td>
     </tr>
   </tbody>
 </table>
