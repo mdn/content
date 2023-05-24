@@ -77,14 +77,14 @@ const mixedCharacters = "aεЛ";
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a
 
-// Using a short alias for the script
-mixedCharacters.match(/\p{Script=Greek}/u); // ε
+// Using a short alias (ISO 15924 code) for the script
+mixedCharacters.match(/\p{Script=Grek}/u); // ε
 
 // Using the short name sc for the Script property
 mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 ```
 
-For more details, please refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script) and the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values).
+For more details, refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script), the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values), and the [ISO 15924 list of script codes](https://unicode.org/iso15924/iso15924-codes.html).
 
 If a character is used in a limited set of scripts, the `Script` property will only match for the "predominant" used script. If we want to match characters based on a "non-predominant" script, we could use the `Script_Extensions` property (`Scx` for short).
 
