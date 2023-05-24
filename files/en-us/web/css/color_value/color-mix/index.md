@@ -11,11 +11,7 @@ The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}}
 
 ## Syntax
 
-```css no-lint
-color-mix(in lch, plum, pink);
-color-mix(in lch, plum 40%, pink);
-color-mix(in srgb, #34c9eb 20%, white);
-color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+```css
 ```
 
 ### Values
@@ -47,63 +43,15 @@ In a supporting browser, the items have more blue, and therefore less white, as 
 
 #### HTML
 
-```html no-lint
-<ul>
-  <li>0%</li>
-  <li>25%</li>
-  <li>50%</li>
-  <li>75%</li>
-  <li>100%</li>
-  <li></li>
-</ul>
+```html
 ```
 
 #### CSS
 
-```css hidden no-lint
-ul {
-  display: flex;
-  list-style-type: none;
-  font-size: 150%;
-  gap: 10px;
-  border: 2px solid;
-  padding: 10px;
-}
-
-li {
-  padding: 10px;
-  flex: 1;
-  box-sizing: border-box;
-  font-family: monospace;
-  outline: 1px solid #34c9eb;
-  text-align: center;
-}
+```css hidden
 ```
 
-```css no-lint
-li:nth-child(1) {
-  background-color: color-mix(in srgb, #34c9eb 0%, white);
-}
-
-li:nth-child(2) {
-  background-color: color-mix(in srgb, #34c9eb 25%, white);
-}
-
-li:nth-child(3) {
-  background-color: color-mix(in srgb, #34c9eb 50%, white);
-}
-
-li:nth-child(4) {
-  background-color: color-mix(in srgb, #34c9eb 75%, white);
-}
-
-li:nth-child(5) {
-  background-color: color-mix(in srgb, #34c9eb 100%, white);
-}
-
-li:nth-child(6) {
-  background-color: color-mix(in srgb, #34c9eb, white);
-}
+```css
 ```
 
 #### Result
