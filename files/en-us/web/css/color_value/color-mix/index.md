@@ -29,12 +29,6 @@ Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 - `p1`, `p2` {{optional_inline}}
   - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
 
-    - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
-    - If `p1` is omitted, then `p1 = 100% - p2`.
-    - If `p2` is omitted, then `p2 = 100% - p1`.
-    - If `p1 = p2 = 0%`, the function is invalid.
-    - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
-
 ### Formal syntax
 
 {{csssyntax}}
