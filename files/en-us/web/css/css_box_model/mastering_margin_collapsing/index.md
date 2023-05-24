@@ -1,8 +1,7 @@
 ---
 title: Mastering margin collapsing
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
-spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 
 {{CSSRef}}

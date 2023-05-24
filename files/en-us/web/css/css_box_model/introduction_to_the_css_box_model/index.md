@@ -1,8 +1,7 @@
 ---
 title: Introduction to the CSS basic box model
-slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 
 {{CSSRef}}

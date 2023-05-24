@@ -1,6 +1,6 @@
 ---
 title: CSS backgrounds and borders
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---

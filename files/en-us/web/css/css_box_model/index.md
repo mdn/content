@@ -1,17 +1,17 @@
 ---
-title: CSS Box Model
-slug: Web/CSS/CSS_Box_Model
+title: CSS box model
+slug: Web/CSS/CSS_box_model
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-box/
 ---
 
 {{CSSRef}}
 
-**CSS Box Model** is a module of CSS that defines the rectangular boxes—including their padding and margin—that are generated for elements and laid out according to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
+The **CSS box model** module defines the rectangular boxes, including their padding and margin, that are generated for elements and laid out according to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
 ## Box model overview
 
-A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model).
+A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model).
 
 ### Box-edge keywords
 
@@ -66,9 +66,9 @@ There are other properties that relate to the box model, that are defined elsewh
 
 ## Guides
 
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_Model/Introduction_to_the_CSS_box_model)
   - : Explains one of the fundamental concept of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
-- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
   - : Explains the visual formatting model.
