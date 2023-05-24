@@ -57,6 +57,48 @@ The following table lists typical colors at various angles in the sRGB (used by 
         style="background: hsl(300 100% 50%);"
         title="hsl(300 100% 50%)"></td>
     </tr>
+    <tr>
+      <th scope="row">CIELAB</th>
+      <td
+        style="background: lch(50% 50% 0);"
+        title="lch(50% 50% 0)"></td>
+      <td
+        style="background: lch(65% 55% 60);"
+        title="lch(65% 55% 60)"></td>
+      <td
+        style="background: lch(90% 65% 120);"
+        title="lch(90% 65% 120)"></td>
+      <td
+        style="background: lch(90% 35% 180);"
+        title="lch(90% 35% 180)"></td>
+      <td
+        style="background: lch(75% 25% 240);"
+        title="lch(75% 25% 240)"></td>
+      <td
+        style="background: lch(40% 70% 300);"
+        title="lch(40% 70% 300)"></td>
+    </tr>
+    <tr>
+      <th scope="row">Oklab</th>
+      <td
+        style="background: oklch(65% 65% 0);"
+        title="oklch(65% 65% 0)"></td>
+      <td
+        style="background: oklch(75% 40% 60);"
+        title="oklch(75% 40% 60)"></td>
+      <td
+        style="background: oklch(90% 50% 120);"
+        title="oklch(90% 50% 120)"></td>
+      <td
+        style="background: oklch(90% 35% 180);"
+        title="oklch(90% 35% 180)"></td>
+      <td
+        style="background: oklch(70% 40% 240);"
+        title="oklch(70% 40% 240)"></td>
+      <td
+        style="background: oklch(55% 70% 300);"
+        title="oklch(55% 70% 300)"></td>
+    </tr>
   </tbody>
 </table>
 
