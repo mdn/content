@@ -106,7 +106,7 @@ browser.menus.create(
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
-- `listener` {{optional_inline}}
+- `callback` {{optional_inline}}
   - : `function`. Called when the item has been created. If there were any problems creating the item, details will be available in {{WebExtAPIRef('runtime.lastError')}}.
 
 ### Return value
