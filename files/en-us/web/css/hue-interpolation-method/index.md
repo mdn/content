@@ -17,7 +17,7 @@ spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
 
 The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the algorithm used for interpolation between {{CSSXref("&lt;hue&gt;")}} values. It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
 
-When mixing and [combining](https://drafts.csswg.org/css-values/#combining-values) colors, the hue interpolation algorithm defaults to [`shorter`](#values).
+When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#values).
 
 ## Syntax
 
