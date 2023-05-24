@@ -28,7 +28,7 @@ try {
 - `catchStatements`
   - : Statement that is executed if an exception is thrown in the `try` block.
 - `exceptionVar` {{optional_inline}}
-  - : An optional [identifier or pattern](#the_exception_variable) to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exceptionVar` and its surrounding parentheses, as `catch {...}`.
+  - : An optional [identifier or pattern](#the_exception_variable) to hold the caught exception for the associated `catch` block. If the `catch` block does not use the exception's value, you can omit the `exceptionVar` and its surrounding parentheses.
 - `finallyStatements`
   - : Statements that are executed before control flow exits the `try...catch...finally` construct. These statements execute regardless of whether an exception was thrown or caught.
 
@@ -94,7 +94,7 @@ try {
 }
 ```
 
-If you don't need the exception value, it could be omitted along with the enclosing parentheses.
+If you don't need the exception value, you can omit it along with the enclosing parentheses.
 
 ```js
 function isValidJSON(text) {
