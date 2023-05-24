@@ -95,7 +95,7 @@ hue.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Changing the hue of a color using a slider", "100%", "200")}}
+{{EmbedLiveSample("changing_the_hue_of_a_color_using_a_slider", "100%", "200")}}
 
 ### Approximating red hues in different color spaces
 
@@ -145,59 +145,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Approximating red hues in different color spaces", "100%", "150")}}
-
-### Interpolating hue values
-
-The [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) functional notation can be used to interpolate the hue of two colors.
-Four methods are available for interpolating the hue value: `shorter`, `longer`, `increasing`, and `decreasing`.
-The `shorter` method is the default for interpolation and the result will be the shortest distance between the two angles in degrees.
-Conversely, `longer` uses the larger value between the two hue angles.
-
-> **Note:** For more information on using this functional notation, see the [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix) reference.
-
-#### HTML
-
-```html
-<div id="shorter"></div>
-<div id="longer"></div>
-```
-
-#### CSS
-
-```css hidden
-div {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border: 1px solid;
-  display: inline-block;
-}
-```
-
-```css
-/* 20 degrees */
-#shorter {
-  background-color: color-mix(
-    in hsl shorter hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
-  );
-}
-
-/* 340 degrees */
-#longer {
-  background-color: color-mix(
-    in hsl longer hue,
-    hsl(10 100% 50%),
-    hsl(350 100% 50%)
-  );
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Interpolating hue values', '100%', '200')}}
+{{EmbedLiveSample("approximating_red_hues_in_different_color_spaces", "100%", "150")}}
 
 ## Specifications
 
@@ -210,3 +158,4 @@ div {
 ## See also
 
 - [`<color>`](/en-US/docs/Web/CSS/color_value)
+- {{CSSXref("&lt;hue-interpolation-method&gt;")}}
