@@ -37,7 +37,7 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg

@@ -30,7 +30,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Example
 
-### SVG content
+### SVG
 
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 </svg>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 function outputSize() {

@@ -52,7 +52,6 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 
   ```json
     "browser_action": {
-      "browser_style": true,
       "default_title": "Contextual Identities",
       "default_popup": "context.html",
       "default_icon": {

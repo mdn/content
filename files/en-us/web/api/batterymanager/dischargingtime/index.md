@@ -24,13 +24,13 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="dischargingTime">(discharging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {

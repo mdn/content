@@ -9,9 +9,9 @@ browser-compat: javascript.builtins.String.blink
 
 {{JSRef}} {{deprecated_header}}
 
-The **`blink()`** method creates a string that embeds a string in a {{HTMLElement("blink")}} element (`<blink>str</blink>`), which causes a string to blink.
+The **`blink()`** method creates a string that embeds a string in a (`<blink>str</blink>`), which used to cause a string to blink in old browsers.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `blink()`, the `<blink>` element itself is non-standard and deprecated, and blinking text is frowned upon by several accessibility standards. Avoid using the element in any way.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `blink()`, the `<blink>` element itself is removed from modern browsers, and blinking text is frowned upon by several accessibility standards. Avoid using the element in any way.
 
 ## Syntax
 

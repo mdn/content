@@ -1,6 +1,6 @@
 ---
 title: CSS backgrounds and borders
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
@@ -23,7 +23,7 @@ This sample of borders, backgrounds, and box shadows consists of centered backgr
 
 The background images are defined with {{cssxref("background-image")}}. The images are centered with {{cssxref("background-position")}}. Different values of the {{cssxref("background-clip")}} property for the multiple background images are used to make the background images stay within the content box. The background color gets clipped to the padding box preventing the background from appearing through the transparent sections for the {{cssxref("border-image")}} and the {{cssxref("border-style", "dotted")}} {{cssxref("border")}}. The rounded corners in the element on the right are created using the {{cssxref("border-radius")}} property. A single {{cssxref("box-shadow")}} declaration is used to set all the shadows, both inset and outset.
 
-To see the code for this sample, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
+To see the code for this sample, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html).
 
 ## Reference
 
@@ -89,9 +89,9 @@ To see the code for this sample, [view the source on Github](https://github.com/
 
 - [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : Explains how to implement decorative images using CSS background images.
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Describes how to change the size and repeating behavior of background images.
 - [Learn CSS: the box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Explains how borders, along with other box model properties, impact the CSS box model.
@@ -136,8 +136,8 @@ To see the code for this sample, [view the source on Github](https://github.com/
 ## See also
 
 - Interactive tools that let you visually create borders images, rounded corners, and box shadows:
-  - [Border-image generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
-  - [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
-  - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color), including for borders.
+  - [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
+  - [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+  - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color), including for borders.
 - The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function that applies a drop shadow effect to the input image. The function is used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.

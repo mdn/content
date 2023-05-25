@@ -124,7 +124,7 @@ MyInterface implements MyMixin;
 
 Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with.
 
-```
+```webidl
 [Exposed=(Window,Worker)]
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]
