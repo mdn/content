@@ -44,7 +44,7 @@ Imported rules must come before all other types of rules, except {{CSSxRef("@cha
 So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 
 Similarly, user agents can use the `supports()` function in an `@import` at-rule to only fetch resources if a particular feature set is (or is not) supported.
-This allows authors to take advantage of the recently introduced CSS features, while providing graceful fallback for older browser versions.
+This allows authors to take advantage of recently introduced CSS features, while providing graceful fallbacks for older browser versions.
 Note that the conditions in the `supports()` function of an `@import` at-rule can be obtained in JavaScript using {{domxref("CSSImportRule.supportsText")}}.
 
 The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/CSS/@layer) by importing rules from a linked resource. Rules can also be imported into an existing cascade layer. The `layer` keyword or the `layer()` function is used with `@import` for this purpose. Declarations in style rules from imported stylesheets interact with the cascade as if they were written literally into the stylesheet at the point of the import.
