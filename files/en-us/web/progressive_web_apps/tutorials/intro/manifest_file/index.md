@@ -51,7 +51,7 @@ Write the first few lines of your manifest file. You can use the text below or m
 {
   "name": "Menstrual Cycle Tracker",
   "short_name": "CT",
-  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving the data to your browser." 
+  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving the data to your browser."
 }
 ```
 
@@ -60,6 +60,7 @@ Write the first few lines of your manifest file. You can use the text below or m
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest include the `start_url` and `display` keys, and keys which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
+
   - : The start page when a user launches the PWA.
 
 - [`display`](/en-US/docs/Web/Manifest/display)
@@ -89,7 +90,7 @@ In [our CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#C
 {
   "name": "...",
   "short_name": "...",
-  "description": "...", 
+  "description": "...",
   "start_url": "/",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
@@ -140,15 +141,20 @@ Playing with the words "cycle" and "period" of our period cycle tracker and the 
 
 ```html hidden
 <div>
-<img alt="a green circle" src="circle.svg" role="img">
-<img alt="a simple wheel" src="tire.svg" role="img">
-<img alt="a detailed wheel" src="wheel.svg" role="img">
+  <img alt="a green circle" src="circle.svg" role="img" />
+  <img alt="a simple wheel" src="tire.svg" role="img" />
+  <img alt="a detailed wheel" src="wheel.svg" role="img" />
 </div>
 ```
 
 ```css hidden
-div {display: flex; gap: 5px;}
-img {width: 33%;}
+div {
+  display: flex;
+  gap: 5px;
+}
+img {
+  width: 33%;
+}
 ```
 
 {{EmbedLiveSample("PWA iconography", 600, 250)}}
@@ -159,7 +165,7 @@ img {width: 33%;}
 {
   "name": "...",
   "short_name": "...",
-  "description": "...", 
+  "description": "...",
   "start_url": "...",
   "theme_color": "...",
   "background_color": "...",
@@ -195,13 +201,13 @@ The manifest file extension can be the specification suggestion `.webappmanifest
 PWAs require a manifest file. We have a fully functional app, but it's not yet a PWA. We have to add the manifest the app. The web manifest is an external JSON file. To include the external JSON resource, the `rel="manifest"` is used. The `href` attribute of the `<link>` points to the location of the resource.
 
 ```html
-<link rel="manifest" href="cycletracker.json">
+<link rel="manifest" href="cycletracker.json" />
 ```
 
 The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 ```html
-<link rel="shortcut icon" href="icons/circle.svg">
+<link rel="shortcut icon" href="icons/circle.svg" />
 ```
 
 When using the `.webmanifest` extension, set `type="application/manifest+json"` if your server doesn't support that MIME type.

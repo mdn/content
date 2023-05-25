@@ -15,7 +15,8 @@ The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />applicat
+    <meta charset="utf-8" />
+    applicat
     <meta name="viewport" content="width=device-width" />
     <title>Cycle Tracker</title>
     <link rel="stylesheet" href="style.css" />
@@ -56,24 +57,24 @@ The page contains a {{HTMLelement("form")}} with date pickers for selecting the 
 
 When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 
-1) Create a "`<h2>Past periods</h2>`" header
-2) Create an {{HTMLelement("ul")}}
-3) Populate the `<ul>` with a single {{HTMLelement("li")}} containing information about that cycle
-4) Save the data to local storage
+1. Create a "`<h2>Past periods</h2>`" header
+2. Create an {{HTMLelement("ul")}}
+3. Populate the `<ul>` with a single {{HTMLelement("li")}} containing information about that cycle
+4. Save the data to local storage
 
 For each subsequent form submission, we need to:
 
-1) Add the new cycle to the current list
-2) Sort the list in date order
-3) Repopulate the `<ul>` with the new list, one `<li>` per cycle
-4) Append the data to our saved local storage
+1. Add the new cycle to the current list
+2. Sort the list in date order
+3. Repopulate the `<ul>` with the new list, one `<li>` per cycle
+4. Append the data to our saved local storage
 
 Existing users will have existing data in local storage. When a user comes back to our webpage with the same browser on the same device, we need to:
 
-1) Retrieve the data from local storage
-2) Create a "`<h2>Past periods</h2>`" header
-3) Create an {{HTMLelement("ul")}}
-4) Populate the `<ul>` with an {{HTMLelement("li")}} for every menstrual cycle saved in local storage.
+1. Retrieve the data from local storage
+2. Create a "`<h2>Past periods</h2>`" header
+3. Create an {{HTMLelement("ul")}}
+4. Populate the `<ul>` with an {{HTMLelement("li")}} for every menstrual cycle saved in local storage.
 
 This is a beginner-level demonstration application. The goal is to teach the basics of converting a web application to a PWA. This application does not contain necessary features like form validation, error checking, edit or delete functionality, etc. You are welcome to expand on the features that are covered and tailor the lesson and applications to your learning goals and application needs.
 
@@ -96,8 +97,8 @@ newPeriodFormEl.addEventListener("submit", (event) => {
   const startDate = startDateInputEl.value;
   const endDate = endDateInputEl.value;
 
-  // Check if the dates are invalid 
-  if(checkDatesInvalid(startDate, endDate)) {
+  // Check if the dates are invalid
+  if (checkDatesInvalid(startDate, endDate)) {
     // If the dates are invalid, exit.
     return;
   }
@@ -126,17 +127,17 @@ We check if the dates are invalid. We do minimal error checking. We make sure ne
 
 ```javascript
 function checkDatesInvalid(startDate, endDate) {
-// Check that end date is after start date and neither is null.
-  if(!startDate || !endDate || startDate > endDate) {
-      // For now, we clear the dates if either 
-      // or both are invalid
-      newPeriodFormEl.reset();
-      // To make the validation more robust we could: 
-      // 1. add error messaging based on error type
-      // 2. Alert assistive technology users about the error
-      // 3. move focus to the error location
-      // instead, this function returns true
-      return true;
+  // Check that end date is after start date and neither is null.
+  if (!startDate || !endDate || startDate > endDate) {
+    // For now, we clear the dates if either
+    // or both are invalid
+    newPeriodFormEl.reset();
+    // To make the validation more robust we could:
+    // 1. add error messaging based on error type
+    // 2. Alert assistive technology users about the error
+    // 3. move focus to the error location
+    // instead, this function returns true
+    return true;
   }
 }
 ```
@@ -211,12 +212,11 @@ We retrieve the parsed string of past periods, or an empty array. If empty, we e
 
 ```javascript
 function renderPastPeriods() {
-
   // get the parsed string of periods, or an empty array.
   const periods = getAllStoredPeriods();
 
   // exit if there are no periods
-  if( periods.length === 0 ) {
+  if (periods.length === 0) {
     return;
   }
 
@@ -247,7 +247,7 @@ function formatDate(dateString) {
 
   // Format the date into a locale-specific string.
   // include your locale for better user experience
-  return date.toLocaleDateString('en-UK', {timeZone: 'UTC'});
+  return date.toLocaleDateString("en-UK", { timeZone: "UTC" });
 }
 ```
 
@@ -278,7 +278,7 @@ newPeriodFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const startDate = startDateInputEl.value;
   const endDate = endDateInputEl.value;
-  if(checkDatesInvalid(startDate, endDate)) {
+  if (checkDatesInvalid(startDate, endDate)) {
     return;
   }
   storeNewPeriod(startDate, endDate);
@@ -287,9 +287,9 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 });
 
 function checkDatesInvalid(startDate, endDate) {
-  if(!startDate || !endDate || startDate > endDate) {
-      newPeriodFormEl.reset();
-      return true;
+  if (!startDate || !endDate || startDate > endDate) {
+    newPeriodFormEl.reset();
+    return true;
   }
 }
 
@@ -314,7 +314,7 @@ function renderPastPeriods() {
   const pastPeriodHeader = document.createElement("h2");
   const pastPeriodList = document.createElement("ul");
   const periods = getAllStoredPeriods();
-  if(periods.length === 0) {
+  if (periods.length === 0) {
     return;
   }
   pastPeriodContainer.innerHTML = "";
@@ -333,7 +333,7 @@ function renderPastPeriods() {
 
 function formatDate(dateString) {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {timeZone: 'UTC'});
+  return date.toLocaleDateString("en-US", { timeZone: "UTC" });
 }
 
 renderPastPeriods();

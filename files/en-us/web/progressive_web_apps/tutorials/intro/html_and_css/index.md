@@ -66,10 +66,9 @@ The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the c
 
 The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
 
- ```html
+```html
 <!DOCTYPE html>
-<html lang="en-US">
-</html>
+<html lang="en-US"></html>
 ```
 
 ### Document head
@@ -79,10 +78,10 @@ The {{HTMLelement("head")}} contains machine-readable information about the web 
 The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML), including the character set definition which defines the [character encoding](/en-US/docs/Glossary/Character_encoding) and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+</head>
 ```
 
 We set the title of the page to "Cycle Tracker" with the {{HTMLelement("title")}} element. The title appears in the browser tab when the page is loaded, in search engine results, and is the default title used when a user bookmarks a web page. While this is a menstrual cycle tracking application, the shortened title is more discreet.
@@ -108,8 +107,7 @@ Within the `<body>`, we include the name of the app as a level-1 heading using [
 ```html
 <body>
   <h1>Period tracker</h1>
-  <form>
-  </form>
+  <form></form>
 </body>
 ```
 
@@ -192,7 +190,9 @@ body {
   margin: 1vh 1vw;
   background-color: #efe;
 }
-ul, fieldset, legend {
+ul,
+fieldset,
+legend {
   border: 1px solid;
   background-color: #fff;
 }
