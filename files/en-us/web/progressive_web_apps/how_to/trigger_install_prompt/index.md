@@ -19,13 +19,13 @@ First, add some UI to your app indicating that the user can install it. For exam
 <button id="install" hidden>Install</button>
 ```
 
-We're setting its [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, because if the user visits the site with a browser that can't install it, we don't want the install UI to be visible.
+We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, because if the user visits the app with a browser that can't install it, we don't want the install UI to be visible. Next, we'll see how to make then button visible only on browsers that support installing PWAs locally.
 
 ## Listening for beforeinstallprompt
 
-As soon as the browser has determined that it can install your site, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
+As soon as the browser has determined that it can install your app, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
 
-In our main app code, we will listen for this event:
+In your main app code, we will listen for this event:
 
 ```js
 // main.js
@@ -43,8 +43,8 @@ window.addEventListener("beforeinstallprompt", (event) => {
 The event handler here does three things:
 
 - Call {{domxref("Event.preventDefault()","preventDefault()")}} on the event. This prevents the browser from displaying its own install UI.
-- Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable us to prompt the user to install our app.
-- Reveal our in-app install UI.
+- Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable you to prompt the user to install your app.
+- Reveal our in-app install UI by removing the `hidden` attribute on the button.
 
 ## Triggering the install prompt
 
