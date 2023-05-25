@@ -7,13 +7,16 @@ slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
 
 > **Warning:** The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
 
-By default, if the user visits your website, and the browser determines that the site is [installable as a PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability), then the browser will display some built-in UI — an icon in the URL bar, for example — to install the site. If the user clicks the icon, then the browser shows an install prompt containing the app's [name](/en-US/docs/Web/Manifest/name) and [icon](/en-US/docs/Web/Manifest/icons). If the user agrees to install the app, then it will be installed.
+By default, if the user visits your website, and the browser determines that the site is [installable as a PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability), then the browser will display some built-in UI — an icon in the URL bar, for example — to install the site. If the user clicks the icon, then the browser shows an install prompt containing, at a minimum, the app's [name](/en-US/docs/Web/Manifest/name) and [icon](/en-US/docs/Web/Manifest/icons). If the user agrees to install the app, then it will be installed.
 
-However, you can implement your own in-app UI to ask the user if they want to install your app, which will trigger the install prompt. The benefit of this is that you can provide more context about your app, explaining to the user why they might want to install it as a PWA.
+However, you can implement your own in-app UI to ask the user if they want to install the app, which will trigger the install prompt. The benefits of this are:
+
+- You can provide more context about the app, explaining to the user why they might want to install it as a PWA.
+- An in-app install UI is likely to be easier for users to discover and understand than the browser's default UI.
 
 ## Adding an in-app install UI
 
-First, add some UI to your app indicating that the user can install it. For example:
+First, add some UI to the app indicating that the user can install it. For example:
 
 ```html
 <button id="install" hidden>Install</button>
@@ -23,9 +26,9 @@ We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hid
 
 ## Listening for beforeinstallprompt
 
-As soon as the browser has determined that it can install your app, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
+As soon as the browser has determined that it can install the app, it fires the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event in the global {{domxref("Window")}} scope.
 
-In your main app code, we will listen for this event:
+In our main app code, we will listen for this event:
 
 ```js
 // main.js
@@ -43,7 +46,7 @@ window.addEventListener("beforeinstallprompt", (event) => {
 The event handler here does three things:
 
 - Call {{domxref("Event.preventDefault()","preventDefault()")}} on the event. This prevents the browser from displaying its own install UI.
-- Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable you to prompt the user to install your app.
+- Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable us to prompt the user to install the app.
 - Reveal our in-app install UI by removing the `hidden` attribute on the button.
 
 ## Triggering the install prompt
@@ -72,7 +75,7 @@ The `installPrompt` variable was initialized with the `BeforeInstallPromptEvent`
 
 Otherwise we call its {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} method. This shows the install prompt, and returns a {{jsxref("Promise")}} which resolves with an object indicating whether the app was installed or not. In particular, its `outcome` property is `"accepted"` if the user chose to install the app, or `"dismissed"` if they dismissed the prompt.
 
-Either way, we must reset our state after calling `prompt()`, because you can only call it once for each `BeforeInstallPromptEvent` instance. So we reset our `installPrompt` variable and hide the install button again.
+Either way, we must reset our state after calling `prompt()`, because we can only call it once for each `BeforeInstallPromptEvent` instance. So we reset our `installPrompt` variable and hide the install button again.
 
 ## Responding to app install
 
