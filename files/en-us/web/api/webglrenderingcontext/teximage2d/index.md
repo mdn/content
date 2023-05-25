@@ -810,7 +810,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - {{domxref("HTMLVideoElement")}},
     - {{domxref("ImageBitmap")}}.
 
-  - : The following types can only be used as a pixel source when `width`, `height`, and `border` are specified:
+    The following types can only be used as a pixel source when `width`, `height`, and `border` are specified:
 
     - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
     - {{jsxref("Uint16Array")}} (must be used if `type` is either
