@@ -1,13 +1,13 @@
 ---
 title: Testing media queries programmatically
-slug: Web/CSS/Media_Queries/Testing_media_queries
+slug: Web/CSS/CSS_media_queries/Testing_media_queries
 page-type: guide
 browser-compat: api.MediaQueryList
 ---
 
 {{CSSRef}}
 
-The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/Media_Queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
+The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/CSS_media_queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
 
 ## Creating a media query list
 
@@ -81,7 +81,7 @@ mediaQueryList.removeEventListener("change", handleOrientationChange);
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}

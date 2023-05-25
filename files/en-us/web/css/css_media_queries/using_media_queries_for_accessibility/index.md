@@ -1,10 +1,10 @@
 ---
 title: Using media queries for accessibility
-slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
+slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 page-type: guide
 ---
 
-[**Media Queries**](/en-US/docs/Web/CSS/@media) can be used to help users with disabilities better experience your website.
+[**CSS media queries**](/en-US/docs/Web/CSS/CSS_media_queries) can be used to help users with disabilities better experience your website.
 
 ## Reduced Motion
 

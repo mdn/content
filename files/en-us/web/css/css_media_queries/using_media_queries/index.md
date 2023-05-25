@@ -1,6 +1,6 @@
 ---
 title: Using media queries
-slug: Web/CSS/Media_Queries/Using_media_queries
+slug: Web/CSS/CSS_media_queries/Using_media_queries
 page-type: guide
 ---
 
@@ -11,7 +11,7 @@ Media queries are used for the following:
 
 - To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/At-rule).
 - To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` attribute.
-- To [test and monitor media states](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
+- To [test and monitor media states](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
 
 > **Note:** The examples on this page use CSS's `@media` for illustrative purposes, but the basic syntax remains the same for all types of media queries.
 
@@ -295,7 +295,7 @@ For example, the following query tests for devices that have a monochrome displa
 
 - [@media](/en-US/docs/Web/CSS/@media)
 - [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
-- [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)

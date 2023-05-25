@@ -1,6 +1,6 @@
 ---
 title: CSS filter effects
-slug: Web/CSS/Filter_Effects
+slug: Web/CSS/CSS_filter_effects
 page-type: css-module
 spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
@@ -39,7 +39,7 @@ To see the code for this filter effects sample, [view the source on GitHub](http
 
 ## Guides
 
-- [Using CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects/Using_filter_effects)
+- [Using CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects/Using_filter_effects)
   - : Overview of the concepts surrounding CSS filter effects, including properties, filter functions, and SVG filters, with an explanation of filter values, source order, and value interactions.
 
 ## Related concepts
@@ -61,5 +61,5 @@ To see the code for this filter effects sample, [view the source on GitHub](http
 
 ## See also
 
-- Properties in the CSS [compositing and blending](/en-US/docs/Web/CSS/Compositing_and_Blending) module enable blending an element's background layers together and blending an element with its container.
-- The SVG {{SVGElement("filter")}} element and the SVG filter primitives, including {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, and {{SVGElement("feTurbulence")}}.
+- Properties in the [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module enable blending an element's background layers together and blending an element with its container
+- The SVG {{SVGElement("filter")}} element and the SVG filter primitives: {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}

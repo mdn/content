@@ -1,16 +1,16 @@
 ---
 title: Basic concepts of multi-column layout
-slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
+slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 page-type: guide
 ---
 
 {{CSSRef}}
 
-Multiple-column layout, usually referred to as multicol, is a specification for laying out content into a set of column boxes much like columns in a newspaper. This guide explains how the specification works with some common use case examples.
+Multi-column layout, usually referred to as multicol layout, is a specification for laying out content into a set of column boxes much like columns in a newspaper. This guide explains how the specification works with some common use case examples.
 
 ## Key concepts and terminology
 
-Multicol is unlike any of the other layout methods we have in CSS; it fragments the content, including all descendant elements, into columns. This happens in the same way that content is fragmented into pages when we work with [CSS Paged Media](/en-US/docs/Web/CSS/CSS_Pages) by creating a print stylesheet.
+Multicol is unlike any of the other layout methods we have in CSS; it fragments the content, including all descendant elements, into columns. This happens in the same way that content is fragmented into pages when we work with [CSS Paged Media](/en-US/docs/Web/CSS/CSS_paged_media) by creating a print stylesheet.
 
 The properties defined by the specification are:
 
@@ -91,4 +91,4 @@ This CSS would give the same result as example 3, with both `column-count` and `
 
 ## Next steps
 
-In this guide, we've learned the basic use of multi-column layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns).
+In this guide, we've learned the basic use of multi-column layout. In the next guide, we will look at how much we can [style the columns themselves](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns).

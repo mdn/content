@@ -1,13 +1,13 @@
 ---
-title: CSS Multi-column Layout
-slug: Web/CSS/CSS_Columns
+title: CSS multi-column layout
+slug: Web/CSS/CSS_multicol_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 
 {{CSSRef("CSS3 Multicol")}}
 
-**CSS Multi-column Layout** is a module of CSS that adds support for multi-column layouts. Support is included for establishing the number of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
+The **CSS multi-column layout** module provides support for multi-column layouts, including support for establishing the number of columns in a layout, how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
 
 ## Basic example
 
@@ -17,7 +17,7 @@ In the following example, the {{cssxref("column-count")}} property has been appl
 
 ## Relationship to fragmentation
 
-Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/CSS_Pages), in that each column box becomes a fragment, much like a printed page becomes a fragment of an overall document. Therefore, the properties now defined in the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) specification are required to control how content breaks between columns.
+Multi-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media), in that each column box becomes a fragment, much like a printed page becomes a fragment of an overall document. Therefore, the properties now defined in the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) specification are required to control how content breaks between columns.
 
 ## Reference
 
@@ -44,15 +44,15 @@ Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 
 ## Guides
 
-- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_Concepts_of_Multicol)
   - : An overview of the Multiple-column Layout specification
-- [Styling columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)
+- [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : How to use column rules and manage the spacing between columns.
-- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns)
+- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
   - : How to make elements span across all columns and controlling the way columns are filled.
-- [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+- [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
-- [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+- [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
   - : Introduction to the Fragmentation specification and how to control where column content breaks.
 
 ## Specifications
@@ -63,5 +63,5 @@ Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 
 Other CSS layout technologies include:
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (CSS flexbox)
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (CSS flexbox)
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)

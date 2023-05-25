@@ -1,6 +1,6 @@
 ---
 title: Using filter effects
-slug: Web/CSS/Filter_Effects/Using_filter_effects
+slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
 ---
 
@@ -10,7 +10,7 @@ Have you ever hovered over a black-and-white or sepia image and the full-color i
 
 ## Advantages of using CSS filter effects
 
-The [Filter effects](/en-US/docs/Web/CSS/Filter_Effects) module in CSS provides properties and functions that let you apply the visual effects described above without using Photoshop or sending extra HTTP requests. The only software required is the user's browser. Moreover, unlike pre-set image effects, CSS filter effects are responsive and animatable.
+The [Filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module in CSS provides properties and functions that let you apply the visual effects described above without using Photoshop or sending extra HTTP requests. The only software required is the user's browser. Moreover, unlike pre-set image effects, CSS filter effects are responsive and animatable.
 
 The CSS filter effects module provides the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties that you can use to impact the rendering of text, images, backgrounds, and borders, or any element on which you apply these properties. This module also defines the {{cssxref("&lt;filter-function&gt;")}} data type that lets you add graphical effects such as blurring or color shifting. Using the filter functions, you can not only alter the appearance of an element but also reference an SVG filter using a filter that you create.
 

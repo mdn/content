@@ -1,6 +1,6 @@
 ---
 title: Media queries
-slug: Web/CSS/Media_Queries
+slug: Web/CSS/CSS_media_queries
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/mediaqueries/

@@ -1,6 +1,6 @@
 ---
 title: Styling columns
-slug: Web/CSS/CSS_Columns/Styling_Columns
+slug: Web/CSS/CSS_multicol_layout/Styling_columns
 page-type: guide
 ---
 
@@ -14,7 +14,7 @@ Sadly, column boxes cannot be styled at present. The anonymous boxes that make u
 
 ## Column gaps
 
-The gap between columns is controlled using the `column-gap` property. This property was originally defined in the Multi-column Layout specification. However, it is now defined in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) in order to unify gaps between boxes in other specifications such as [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout).
+The gap between columns is controlled using the `column-gap` property. This property was originally defined in the Multi-column Layout specification. However, it is now defined in [Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment) in order to unify gaps between boxes in other specifications such as [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout).
 
 The initial value of `column-gap` in multicol is `1em`. This means your columns will not run into each other. In other layout methods, the initial value for `column-gap` is 0. If you use the keyword value "normal", the gap will be set to 1em.
 
@@ -42,4 +42,4 @@ The example below uses a very wide rule of 40px and a 10px gap. The rule display
 
 ## Next steps
 
-This article details all the current ways in which column boxes can be styled. In the next guide, we will take a look at making elements inside a container [span across all columns](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns).
+This article details all the current ways in which column boxes can be styled. In the next guide, we will take a look at making elements inside a container [span across all columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns).
