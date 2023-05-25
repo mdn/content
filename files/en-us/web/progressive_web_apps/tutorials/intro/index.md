@@ -3,7 +3,7 @@ title: Creating your first PWA
 slug: Web/Progressive_web_apps/Tutorials/Intro
 ---
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
 
 {{PWASidebar}}
 
@@ -46,13 +46,13 @@ The three main components of any PWA are the base web application, the manifest,
 
 The steps include:
 
-- [App HTML and CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML)
+- [App HTML and CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS)
   - : Line by line explanation of HTML for the static components head and body of the website along with the CSS to style it.
 
-- [JavaScript and LocalStorage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript)
+- [JavaScript and LocalStorage](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality)
   - : Full explanation of the JavaScript functionality to make a client-side period tracker web application so we have a functioning application that can be progressively enhanced into a PWA, using `localStorage` to store period information.
 
-- [Manifest: identity, appearance, and iconography](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest)
+- [Manifest: identity, appearance, and iconography](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file)
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
 
 - [Secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
@@ -79,4 +79,4 @@ Possible other introductory level tutorial topics:
 
 - [Splash page](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Splash)
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/html")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS")}}
