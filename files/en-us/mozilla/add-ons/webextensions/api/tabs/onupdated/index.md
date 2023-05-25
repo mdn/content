@@ -16,7 +16,10 @@ You can filter this event, making it only fire for tabs whose URLs match specifi
 ## Syntax
 
 ```js-nolint
-browser.tabs.onUpdated.addListener(listener, filter)
+browser.tabs.onUpdated.addListener(
+  listener,  // function
+  filter     // optional object
+)
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)
 ```
