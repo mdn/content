@@ -44,7 +44,7 @@ Multi-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_
 
 ## Guides
 
-- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_Concepts_of_Multicol)
+- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
   - : An overview of the Multiple-column Layout specification
 - [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : How to use column rules and manage the spacing between columns.

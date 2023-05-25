@@ -35,7 +35,7 @@ In [JavaScript](/en-US/docs/Web/JavaScript), you can use the {{domxref("Window.m
 You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of a query changes.
 With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
 
-You can learn more about programmatically using media queries in [Testing media queries](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries).
+You can learn more about programmatically using media queries in [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries).
 
 ## Reference
 
@@ -46,11 +46,11 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## Guides
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
-- [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
-- [Using media queries for accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [Using media queries for accessibility](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
   - : Learn how Media Queries can help users understand your website better.
 
 ## Specifications
@@ -59,5 +59,5 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

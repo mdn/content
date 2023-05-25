@@ -43,7 +43,7 @@ Using the value `inset()` wraps text around a rectangular shape however you are 
 
 We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these simple shapes do the trick you can create a `polygon()` and make the shape as complex as you want.
 
-In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) we explore each of the possible Basic Shapes and how to create them.
+In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) we explore each of the possible Basic Shapes and how to create them.
 
 ### Shapes from the box value
 
@@ -58,7 +58,7 @@ In the example below, you can change the value `border-box` to any of the other 
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-To explore the box values in more detail, see our guide covering [Shapes from box values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values).
+To explore the box values in more detail, see our guide covering [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values).
 
 ### Shapes from images
 
@@ -78,7 +78,7 @@ You can see the threshold in action if we use a gradient as the image on which t
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-We take a deeper look at creating shapes from images in the [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images) guide.
+We take a deeper look at creating shapes from images in the [Shapes from Images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images) guide.
 
 ## The `shape-margin` property
 

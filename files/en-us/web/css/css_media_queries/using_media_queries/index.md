@@ -294,7 +294,7 @@ For example, the following query tests for devices that have a monochrome displa
 ## See also
 
 - [@media](/en-US/docs/Web/CSS/@media)
-- [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)

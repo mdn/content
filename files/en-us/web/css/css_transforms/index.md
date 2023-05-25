@@ -30,7 +30,7 @@ The **CSS transforms** module defines how elements styled with CSS can be transf
 
 ## Guides
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 
 ## Specifications

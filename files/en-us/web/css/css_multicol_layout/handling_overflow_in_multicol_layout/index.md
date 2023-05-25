@@ -44,4 +44,4 @@ In the example below, we have used a `min-height` query to check the height befo
 
 ## Next steps
 
-In the final guide in this series, we will see [how multicol works with the Fragmentation spec](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol) to give us control over how content breaks between columns.
+In the final guide in this series, we will see [how multicol works with the Fragmentation spec](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout) to give us control over how content breaks between columns.
