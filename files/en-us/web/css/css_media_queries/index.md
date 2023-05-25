@@ -19,7 +19,7 @@ For example, you may have a smaller font size for devices with small screens, in
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query.
 To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 
-When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_Container_Queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
+When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
 ### Media queries in HTML
 
