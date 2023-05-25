@@ -9,8 +9,6 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-## PWA manifest file
-
 The manifest file contains information about the PWA's identity, presentation, and iconography. While the only requirement is to include a name using the `name` or `short_name` key, you should also include icon information, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
@@ -29,7 +27,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 
 Before saving the manifest file and linking to it from our HTML file, let's discuss we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more keys that enable manifest files to better define the appearance of our PWA.
 
-### PWA identity
+## App identity
 
 To identity your PWA the JSON must include a `name` or `short_name` key, or both, to define the PWA name. It can also include a `description`.
 
@@ -43,11 +41,11 @@ When both the `name` and `short_name` are present, the `name` is used in most in
 - [`description`](/en-US/docs/Web/Manifest/description)
   - : Explanation of what the application does. It provides an [accessible description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) of the application's purpose and function.
 
-#### Task
+### Task
 
 Write the first few lines of your manifest file. You can use the text below or more discreet values and a description of your choosing.
 
-#### Example solution
+### Example solution
 
 ```js
 {
@@ -57,7 +55,7 @@ Write the first few lines of your manifest file. You can use the text below or m
 }
 ```
 
-### PWA presentation
+## App presentation
 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest include the `start_url` and `display` keys, and keys which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
@@ -69,18 +67,18 @@ The appearance, or presentation, of a PWA's installed and offline experiences ar
 
 There is also an `orientation` key to define the PWA's default orientation as `portrait` or `landscape`. As our app works either way, we'll omit this key.
 
-#### Colors
+### Colors
 
 - [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
   - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
 - [`background_color`](/en-US/docs/Web/Manifest/background_color)
   - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
 
-#### Task
+### Task
 
 Add presentation definitions to the manifest file you began creating in the previous task.
 
-#### Example solution
+### Example solution
 
 As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display our period tracker without browser tools, setting the `display` to `standalone`.
 
@@ -99,7 +97,7 @@ In [our CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#C
 }
 ```
 
-### PWA iconography
+## App iconography
 
 PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, browser address bars, in app store search results: When users search for apps in the app store, the PWA icon will be displayed in the search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
@@ -134,13 +132,28 @@ The `purpose` keys should be set to `maskable` defining [icona as adaptive](http
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares. Include safe zones so that when the image is masked by the operating system, it renders okay as a circle.
 
-#### Task
+### Task
 
 Add the icons to the manifest file you have been constructing.
 
-Playing with the words "cycle" and "period" of our period cycle tracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `simple_wheel.svg`, and `detailed_wheel.svg`, adding more detail moving from a plain circle to a wheel as it gets larger, with our largest icons being a green unicycle wheel with spokes. That said, designing icons is beyond the scope of this tutorial.
+Playing with the words "cycle" and "period" of our period cycle tracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `tire.svg`, and `wheel.svg`, adding more detail moving from a plain circle to a tire as it gets larger, with our largest icons being a detailed wheel with spokes and shadows. That said, designing icons is beyond the scope of this tutorial.
 
-#### Example solution
+```html hidden
+<div>
+<img alt="a green circle" src="circle.svg" role="img">
+<img alt="a simple wheel" src="tire.svg" role="img">
+<img alt="a detailed wheel" src="wheel.svg" role="img">
+</div>
+```
+
+```css hidden
+div {display: flex; gap: 5px;}
+img {width: 33%;}
+```
+
+{{EmbedLiveSample("PWA iconography", 600, 250)}}
+
+### Example solution
 
 ```js
 {
@@ -162,18 +175,18 @@ Playing with the words "cycle" and "period" of our period cycle tracker and the 
       "purpose": "maskable"
     },
     {
-      "src": "icon/simple_wheel.svg",
+      "src": "icon/tire.svg",
       "sizes": "128x128 256x256"
     },
     {
-      "src": "icon/detailed_wheel.svg",
+      "src": "icon/wheel.svg",
       "sizes": "512x512"
     }
   ]
 }
 ```
 
-### Adding the manifest
+## Adding the manifest to the app
 
 You now have a fully usable manifest file. Time to save it and link to it from our HTML file.
 
