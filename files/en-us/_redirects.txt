@@ -11340,7 +11340,8 @@
 /en-US/docs/Web/CSS/CSS_Scroll_Snap/compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap
 /en-US/docs/Web/CSS/CSS_Scroll_Snap_Points	/en-US/docs/Web/CSS/CSS_Scroll_Snap
 /en-US/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/en-US/docs/Web/XPath/Comparison_with_CSS_selectors
-/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_Shapes/From_box_values
+/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes
+/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_shapes/From_box_values
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
