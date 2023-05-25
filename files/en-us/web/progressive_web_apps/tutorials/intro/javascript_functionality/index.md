@@ -52,7 +52,7 @@ At the end of this lesson, you will have a fully functional app. In future lesso
 
 ## Javascript task
 
-The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Attributes/id) of `start-date` and `start-date` respectively.
+The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `start-date` and `start-date` respectively.
 
 When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 

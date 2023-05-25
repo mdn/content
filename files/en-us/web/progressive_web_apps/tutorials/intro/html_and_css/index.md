@@ -14,7 +14,7 @@ In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressi
 ## Static web content
 
 Our project is to create a menstrual cycle tracker.
-The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
+The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/Tutorials/) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
 
 We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
@@ -56,7 +56,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](#Placeholder_text) and [`styles.css`](#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#placeholder_text) and [`styles.css`](en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -181,11 +181,11 @@ Before closing the `</body>`, we include a link to the `app.js` JavaScript file.
 
 The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
 
-The [HTML file for this step](step.html) is complete.
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css/index.html) is complete.
 
 ## CSS content
 
-Copy the following CSS in a new file and save the file as [`style.css`](style.css):
+Copy the following CSS in a new file and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css/style.css):
 
 ```css
 body {
@@ -231,7 +231,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 </section>
 ```
 
-You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/intro/html) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/intro/html) on GitHub.
+You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/intro/html_and_css) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css) on GitHub.
 
 ## Up next
 
