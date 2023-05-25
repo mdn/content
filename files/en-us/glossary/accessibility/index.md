@@ -9,9 +9,9 @@ _Web Accessibility_ (**A11Y**) refers to best practices for keeping a website us
 ## See also
 
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
-- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Learn accessibility on MDN](/en-US/docs/Learn/Accessibility)
-- [Web Accessibility In Mind](https://webaim.org/)
-- [The ARIA documentation on MDN](/en-US/docs/Web/Accessibility/ARIA)
-- [The Web Accessibility Initiative homepage](https://www.w3.org/WAI/)
+- [ARIA documentation on MDN](/en-US/docs/Web/Accessibility/ARIA)
 - [The WAI-ARIA recommendation](https://www.w3.org/TR/wai-aria/)
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [The W3C Web Accessibility Initiative](https://www.w3.org/WAI/)
