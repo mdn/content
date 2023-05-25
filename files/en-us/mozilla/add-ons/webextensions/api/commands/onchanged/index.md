@@ -35,7 +35,7 @@ Events have three functions:
 - `listener`
 
   - : Function that is called when a command's shortcut changes. The function is passed these arguments:
-  
+
     - `changeInfo`
 
       - : `object`. An object containing containing the name of the command, its new active shortcut, and its old shortcut.
