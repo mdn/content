@@ -343,8 +343,8 @@ You can try the fully functioning [period tracker web app](https://mdn.github.io
 
 ## Up next
 
-At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
+At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
-Up first, we create the [PWA's manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the PWA's identity, appearance, and iconography.
+Up first, we create the [PWA's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the PWA's identity, appearance, and iconography.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
