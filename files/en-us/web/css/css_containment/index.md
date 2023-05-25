@@ -1,6 +1,6 @@
 ---
-title: CSS Containment
-slug: Web/CSS/CSS_Containment
+title: CSS containment
+slug: Web/CSS/CSS_containment
 page-type: css-module
 browser-compat:
   - css.properties.contain
@@ -9,7 +9,7 @@ browser-compat:
 
 {{CSSRef}}
 
-The aim of the CSS Containment specification is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
+The aim of the **CSS containment** module is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
 If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
 
 In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
@@ -114,7 +114,7 @@ article {
 ```
 
 Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
-The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
@@ -145,18 +145,18 @@ Its possible values are:
 
 ### Relevant to the user
 
-The specification refers to the concept of [relevant to the user](https://w3c.github.io/csswg-drafts/css-contain/#relevant-to-the-user). An element that is relevant to the user should be rendered, as it is visible, and/or being interacted with by the user.
+The specification refers to the concept of [relevant to the user](https://drafts.csswg.org/css-contain/#relevant-to-the-user). An element that is relevant to the user should be rendered, as it is visible, and/or being interacted with by the user.
 
 To be precise, an element is relevant to the user if any of the following are true:
 
 - The element appears in the viewport, or a user-agent-defined margin around the viewport (50% of the viewport dimensions, to give the app time to prepare for when the element visibility changes).
 - The element or its contents receive focus.
 - The element or its contents are selected, for example by dragging over the text with the mouse cursor or by some other highlight operation.
-- The element or its contents are placed in the [top layer](https://w3c.github.io/csswg-drafts/css-position-4/#top-layer).
+- The element or its contents are placed in the [top layer](https://drafts.csswg.org/css-position-4/#top-layer).
 
 ### Skips its contents
 
-The specification refers to the concept of [skips its contents](https://w3c.github.io/csswg-drafts/css-contain/#skips-its-contents). This means that the element referred to is not relevant to the user and will not be rendered to improve performance.
+The specification refers to the concept of [skips its contents](https://drafts.csswg.org/css-contain/#skips-its-contents). This means that the element referred to is not relevant to the user and will not be rendered to improve performance.
 
 To be precise, when an element skips its contents:
 

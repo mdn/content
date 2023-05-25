@@ -1,15 +1,15 @@
 ---
 title: CSS animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 page-type: css-module
 spec-urls:
-  - https://w3c.github.io/csswg-drafts/css-animations-2/
-  - https://w3c.github.io/csswg-drafts/css-animations/
+  - https://drafts.csswg.org/css-animations-2/
+  - https://drafts.csswg.org/css-animations/
 ---
 
 {{CSSRef}}
 
-The animations CSS module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
+The **CSS animations** module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 
 ### Animations in action
 
@@ -19,7 +19,7 @@ To view the animation in the box below, click the checkbox 'Play the animation' 
 
 This sample animation uses {{cssxref("animation-iteration-count")}} to make the flakes fall repeatedly, {{cssxref("animation-direction")}} to make the cloud move back and forth, {{cssxref("animation-fill-mode")}} to raise the snow level in response to the cloud movement, and {{cssxref("animation-play-state")}} to pause the animation.
 
-To see the code for this animation, [view the source on Github](https://github.com/mdn/css-examples/blob/main/modules/animation.html).
+To see the code for this animation, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/animation.html).
 
 ## Reference
 
@@ -63,9 +63,9 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## Guides
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
-- [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_Animations/Tips)
+- [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations.
 
 ## Related concepts
