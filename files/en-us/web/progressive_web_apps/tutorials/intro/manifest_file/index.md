@@ -212,7 +212,7 @@ Save the manifest file that you have created in the steps above, then link to it
 
 #### Example solution
 
-View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/Intro/Manifest/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/Intro/Manifest) on GitHub.
+View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/Intro/Manifest_file/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/Intro/Manifest_file) on GitHub.
 
 ## Up next
 

@@ -339,7 +339,7 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 

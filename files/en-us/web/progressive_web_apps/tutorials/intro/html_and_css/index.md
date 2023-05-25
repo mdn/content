@@ -103,7 +103,7 @@ The HTML `<link>` element is used to specify a relationship between the current 
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using {{HTMLelement("h1")}} and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -117,7 +117,7 @@ Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLeleme
 
 The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidetally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an accessible name.
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an accessible name.
 
 ```html
 <label for="start-date">Start date</label>
