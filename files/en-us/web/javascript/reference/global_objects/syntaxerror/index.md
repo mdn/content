@@ -63,7 +63,7 @@ try {
   console.error(e.fileName); // someFile.js
   console.error(e.lineNumber); // 10
   console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  console.error(e.stack); // @debugger eval code:2:9
 }
 ```
 
