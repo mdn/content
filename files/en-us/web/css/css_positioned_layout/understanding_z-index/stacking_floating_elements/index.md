@@ -1,12 +1,12 @@
 ---
-title: Stacking with floated blocks
-slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
+title: Stacking floating elements
+slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 page-type: guide
 ---
 
 {{CSSRef}}
 
-For floated elements, the stacking order is a bit different. Floating elements are placed between non-positioned elements and positioned elements:
+For floating elements, the stacking order is a bit different. Floating elements are placed between non-positioned elements and positioned elements:
 
 1. The background and borders of the root element.
 2. Descendant non-positioned elements, in order of appearance in the HTML.
@@ -118,9 +118,9 @@ strong {
 
 ## See also
 
-- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
-- [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
-- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level
+- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): How to use `z-index` to change default stacking.
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level

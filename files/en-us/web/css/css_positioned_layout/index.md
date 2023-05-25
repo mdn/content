@@ -1,13 +1,13 @@
 ---
-title: CSS Positioned Layout
-slug: Web/CSS/CSS_Positioning
+title: CSS positioned layout
+slug: Web/CSS/CSS_positioned_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-position/
 ---
 
 {{CSSRef}}
 
-**CSS Positioned Layout** is a module of CSS that defines how to position elements on the page.
+The **CSS positioned layout** module defines how to position elements on a web page.
 
 ## Reference
 
@@ -32,7 +32,7 @@ spec-urls: https://drafts.csswg.org/css-position/
 
 ## Guides
 
-- [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Presents the notion of stacking context and explains how z-ordering works, with several examples.
 
 ## Specifications
