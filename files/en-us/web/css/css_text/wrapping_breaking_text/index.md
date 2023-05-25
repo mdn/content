@@ -1,6 +1,6 @@
 ---
 title: Wrapping and breaking text
-slug: Web/CSS/CSS_Text/Wrapping_Text
+slug: Web/CSS/CSS_text/Wrapping_breaking_text
 page-type: guide
 ---
 

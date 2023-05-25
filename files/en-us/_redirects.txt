@@ -480,7 +480,7 @@
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
-/en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+/en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/Cascade
@@ -546,8 +546,8 @@
 /en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/CSS/Tutorials/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /en-US/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/en-US/docs/CSS/Tutorials/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
-/en-US/docs/CSS/Tutorials/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+/en-US/docs/CSS/Tutorials/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
+/en-US/docs/CSS/Tutorials/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/CSS/Type_selectors	/en-US/docs/Web/CSS/Type_selectors
 /en-US/docs/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /en-US/docs/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
@@ -573,8 +573,8 @@
 /en-US/docs/CSS/Using_CSS_media_queries	/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 /en-US/docs/CSS/Using_CSS_multi-column_layouts	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /en-US/docs/CSS/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/en-US/docs/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
-/en-US/docs/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+/en-US/docs/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
+/en-US/docs/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/CSS/Using_CSS_variables	/en-US/docs/Web/CSS/Using_CSS_custom_properties
 /en-US/docs/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
@@ -11342,9 +11342,11 @@
 /en-US/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/en-US/docs/Web/XPath/Comparison_with_CSS_selectors
 /en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_shapes/From_box_values
+/en-US/docs/Web/CSS/CSS_Text/Wrapping_text	/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
 /en-US/docs/Web/CSS/CSS_Types/display-outside	/en-US/docs/Web/CSS/display-outside
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
+/en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
@@ -11904,8 +11906,8 @@
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /en-US/docs/Web/Guide/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /en-US/docs/Web/Guide/CSS/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
-/en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
-/en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+/en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
+/en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/Web/Guide/CSS/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/Guide/CSS/Using_multi-column_layouts	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /en-US/docs/Web/Guide/CSS/Using_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
