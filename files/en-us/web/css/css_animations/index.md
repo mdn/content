@@ -1,6 +1,6 @@
 ---
 title: CSS animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-animations-2/
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The animations CSS module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
+The **CSS animations** module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 
 ### Animations in action
 
@@ -63,9 +63,9 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## Guides
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Step-by-step tutorial on how to create animations using CSS. This article describes the animation-related CSS properties and at-rule and how they interact with each other.
-- [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_Animations/Tips)
+- [CSS animations tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations.
 
 ## Related concepts

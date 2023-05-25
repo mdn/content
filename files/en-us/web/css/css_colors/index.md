@@ -1,6 +1,6 @@
 ---
 title: CSS colors
-slug: Web/CSS/CSS_Colors
+slug: Web/CSS/CSS_colors
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS color** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+The **CSS colors** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 
 While this module has only two CSS properties, {{cssxref("color")}} and {{cssxref("opacity")}}, over 20 CSS and SVG properties, CSS images, at-rules, and @media rules depend on these two properties.
 
@@ -74,13 +74,13 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ## Guides
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
   - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : This tool makes it easy to create, adjust, and experiment with custom colors.
 
 ## Related concepts

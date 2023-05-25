@@ -1,6 +1,6 @@
 ---
 title: CSS compositing and blending
-slug: Web/CSS/Compositing_and_Blending
+slug: Web/CSS/CSS_compositing_and_blending
 page-type: css-module
 spec-urls:
   - https://drafts.fxtf.org/compositing/
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **compositing and blending** CSS module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+The **CSS compositing and blending** module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 The properties in this CSS module can be used to define the blending mode that should be used, if any, to blend an element's background images and colors into a single background image. This module provides 16 blending modes. You can also define how an element's borders, background, and content, including text, emojis, and images, should be blended with the background of its container.
 
