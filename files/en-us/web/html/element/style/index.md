@@ -27,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `title`
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
-- `blocking`
+- `blocking` {{Experimental_Inline}}
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
     - `render`: The rendering of content on the screen is blocked.
 

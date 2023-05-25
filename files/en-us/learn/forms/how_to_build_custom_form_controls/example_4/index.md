@@ -7,7 +7,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 
 ## Change states
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -32,7 +32,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -155,7 +155,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 // -------------------- //

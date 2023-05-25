@@ -337,13 +337,6 @@ function draw() {
 
 ## Controlling image scaling behavior
 
-As mentioned previously, scaling images can result in fuzzy or blocky artifacts due to the scaling process. You can use the drawing context's {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property to control the use of image smoothing algorithms when scaling images within your context. By default, this is `true`, meaning images will be smoothed when scaled. You can disable this feature like this:
-
-```js
-ctx.mozImageSmoothingEnabled = false;
-ctx.webkitImageSmoothingEnabled = false;
-ctx.msImageSmoothingEnabled = false;
-ctx.imageSmoothingEnabled = false;
-```
+As mentioned previously, scaling images can result in fuzzy or blocky artifacts due to the scaling process. You can use the drawing context's {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property to control the use of image smoothing algorithms when scaling images within your context. By default, this is `true`, meaning images will be smoothed when scaled.
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
