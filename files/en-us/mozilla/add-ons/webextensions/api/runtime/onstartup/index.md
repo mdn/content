@@ -36,7 +36,7 @@ All events have three functions:
 The only parameter is `listener`, used for any of the above functions.
 
 - `listener`
-  - : A function that is called when this event occurs.
+  - : The function called when this event occurs.
 
 ## Examples
 

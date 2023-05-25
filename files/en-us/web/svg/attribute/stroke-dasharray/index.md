@@ -13,7 +13,6 @@ The **`stroke-dasharray`** attribute is a presentation attribute defining the pa
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}

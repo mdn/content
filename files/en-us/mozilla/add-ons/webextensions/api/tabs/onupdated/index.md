@@ -34,7 +34,7 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
   - : The function called when this event occurs. The function is passed these arguments:
 

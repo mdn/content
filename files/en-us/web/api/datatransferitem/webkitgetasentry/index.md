@@ -35,7 +35,7 @@ In this example, a drop zone is created, which responds to the {{domxref("HTMLEl
 by scanning through the dropped files and directories, outputting a hierarchical
 directory listing.
 
-### HTML content
+### HTML
 
 The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} element with the ID `"dropzone"`, and an unordered list element with the ID `"listing"`.
 
@@ -51,7 +51,7 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <ul id="listing"></ul>
 ```
 
-### CSS content
+### CSS
 
 The styles used by the example are shown here.
 
@@ -81,7 +81,7 @@ body {
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 First, let's look at the recursive `scanFiles()` function.
 This function takes as input a {{domxref("FileSystemEntry")}} representing an entry in the file system to be scanned and processed (the `item` parameter), and an element into which to insert the list of contents (the `container` parameter).
