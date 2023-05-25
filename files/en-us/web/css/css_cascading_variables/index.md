@@ -1,5 +1,5 @@
 ---
-title: CSS Custom Properties for Cascading Variables
+title: CSS cascading variables
 slug: Web/CSS/CSS_cascading_variables
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-variables/
@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 {{CSSRef}}
 
-**CSS Custom Properties for Cascading Variables** is a [CSS](/en-US/docs/Web/CSS) module that allows for the creation of custom properties that can be used over and over.
+The **CSS cascading variables** module adds support for cascading variables in all CSS properties and also lets you create custom properties to define these variables.
 
 ## Reference
 

@@ -1,5 +1,5 @@
 ---
-title: Understanding CSS z-index
+title: Understanding z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 page-type: guide
 ---
