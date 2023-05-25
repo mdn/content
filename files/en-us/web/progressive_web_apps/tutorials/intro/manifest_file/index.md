@@ -83,7 +83,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display our period tracker without browser tools, setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#CSS_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 }
 
 ```js

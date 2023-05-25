@@ -14,11 +14,11 @@ In the next section, we [add JavaScript functionality](/en-US/docs/Web/Progressi
 ## Static web content
 
 Our project is to create a menstrual cycle tracker.
-The first step in this introductory [PWA tutorial](/en-US/docs/Web/Progressive_web_apps/Tutorials/) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
+The first step in this introductory [PWA tutorial](/en-US/docs/Web/Progressive_web_apps/Tutorials) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
 
 We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
-To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web/), an introduction to web development series.
+To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
 
 Our static site HTML, with placeholders for yet to be created external CSS and JavaScript files, is:
 
