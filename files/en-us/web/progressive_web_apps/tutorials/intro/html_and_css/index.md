@@ -11,7 +11,7 @@ To build a PWA, a progressive web application, we need to create a fully-functio
 
 In the next section, we [add JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content into a functional web application. Only then can we progressively enhance the application to make the app a PWA that is installable and works offline.
 
-## HTML static web content
+## Static web content
 
 Our project is to create a menstrual cycle tracker.
 The first step in this introductory [PWA tutorial](/en-US/Docs/Web/Progressive_web_apps/tutorials/) is to write the HTML and CSS. The top section of the page is a form for the user to enter the start and end dates of each period. The bottom is a list of previous menstrual cycles.
@@ -54,7 +54,7 @@ Our static site HTML, with placeholders for yet to be created external CSS and J
 
 Copy this HTML and save it in a file called `index.html`.
 
-### HTML content explained
+## HTML content
 
 Even if the HTML in `index.html` is familiar to you, we recommend reading the thru this section before adding the [placeholder data](#Placeholder_text) and [`styles.css`](#css-file), and creating `app.js`, the [application's JavaScript](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
 
@@ -183,7 +183,7 @@ The `app.js` file will include all the workings of our application, including th
 
 The [HTML file for this step](step.html) is complete.
 
-## CSS file
+## CSS content
 
 Copy the following CSS in a new file and save the file as [`style.css`](style.css):
 
@@ -233,7 +233,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 
 You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/intro/html) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/intro/html) on GitHub.
 
-### Up next
+## Up next
 
 Before converting a web app into a progressive web app — before adding the [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure),[manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
 

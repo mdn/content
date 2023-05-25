@@ -77,7 +77,7 @@ Existing users will have existing data in local storage. When a user comes back 
 
 This is a beginner-level demonstration application. The goal is to teach the basics of converting a web application to a PWA. This application does not contain necessary features like form validation, error checking, edit or delete functionality, etc. You are welcome to expand on the features that are covered and tailor the lesson and applications to your learning goals and application needs.
 
-### Form submission
+## Form submission
 
 The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this cycle along with previous ones, and then reset the form.
 
@@ -120,7 +120,7 @@ After preventing the form submission with [`preventDefault()`](/en-US/docs/Web/A
 3. [render the form data](#render-data-to-screen) along with the data of past menstrual cycles and a section header, and
 4. reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
 
-#### Validate user input
+### Validate user input
 
 We check if the dates are invalid. We do minimal error checking. We make sure neither date is null, which the `required` attribute should prevent from happening. We also check that the start date is not greater than the end date. If there is an error, we clear the form.
 
@@ -143,7 +143,7 @@ function checkDatesInvalid(startDate, endDate) {
 
 In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to alert assistive technology users to the error.
 
-### Local storage
+## Local storage
 
 We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
@@ -195,7 +195,7 @@ function getAllStoredPeriods() {
 }
 ```
 
-#### Render data
+### Render data
 
 The last step of our application is to render the list of past periods to the screen along with a heading.
 
@@ -251,7 +251,7 @@ function formatDate(dateString) {
 }
 ```
 
-### Render past periods on load
+## Render past periods on load
 
 When the deferred JavaScript runs on page load, we render past periods, if any.
 
@@ -260,7 +260,7 @@ When the deferred JavaScript runs on page load, we render past periods, if any.
 renderPastPeriods();
 ```
 
-### Complete JavaScript
+## Complete JavaScript
 
 Your `app.js` file should look similar to this JavaScript:
 
@@ -341,7 +341,7 @@ renderPastPeriods();
 
 You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript) on GitHub. Yes, it works, but it's not a yet PWA.
 
-### Up next
+## Up next
 
 At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
