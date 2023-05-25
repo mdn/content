@@ -9,7 +9,7 @@ browser-compat: webextensions.api.commands.onChanged
 
 Fired when the keyboard shortcut for a command is changed.
 
-The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+The listener is passed an object containing the name of the command, its new active shortcut, and its old shortcut.
 
 ## Syntax
 
@@ -34,14 +34,18 @@ Events have three functions:
 
 - `listener`
 
-  - : Function that is called when a command's shortcut changes. The function is passed these:
+  - : Function that is called when a command's shortcut changes. The function is passed these arguments:
 
-    - `name`
-      - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
-    - `newShortcut`
-      - : `string`. The new active shortcut for this command, or blank if no shortcut is active.
-    - `oldShortcut`
-      - : `string`. The shortcut that was active for this command, or blank if no shortcut was active.
+    - `changeInfo`
+
+      - : `object`. An object containing containing the name of the command, its new active shortcut, and its old shortcut.
+
+        - `name`
+          - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+        - `newShortcut`
+          - : `string`. The new active shortcut for this command, or blank if no shortcut is active.
+        - `oldShortcut`
+          - : `string`. The shortcut that was active for this command, or blank if no shortcut was active.
 
 ## Browser compatibility
 
@@ -52,15 +56,13 @@ Events have three functions:
 You could log changes to command shortcuts like this:
 
 ```js
-function handleChanged(name, newShortcut, oldShortcut) {
-  console.log(`Shortcut for: ${name} changed`);
-  console.log(`From: ${oldShortcut}`);
-  console.log(`To: ${newShortcut}`);
+function handleChanged(changeInfo) {
+  console.log(`Shortcut for: ${changeInfo.name} changed`);
+  console.log(`From: ${changeInfo.oldShortcut}`);
+  console.log(`To: ${changeInfo.newShortcut}`);
 }
 
-function handleClick() {
-  browser.commands.onChanged.addListener(handleChanged);
-}
+browser.commands.onChanged.addListener(handleChanged);
 ```
 
 {{WebExtExamples}}
