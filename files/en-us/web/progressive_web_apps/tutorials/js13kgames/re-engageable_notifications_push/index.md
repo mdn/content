@@ -17,7 +17,7 @@ They work outside of the browser window, just like service workers, so updates c
 
 ## Notifications
 
-Let's start with notifications — they can work without push, but are very useful when combined with them. Let's look at them in isolation to begin with.
+Let's start with notifications — they can work by themselves, but become more useful when combined with push. Let's look at notifications in isolation to begin with.
 
 ### Request permission
 

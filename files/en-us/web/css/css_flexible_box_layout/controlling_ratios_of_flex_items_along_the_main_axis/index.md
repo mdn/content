@@ -1,6 +1,6 @@
 ---
 title: Controlling ratios of flex items along the main axis
-slug: Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 page-type: guide
 ---
 
@@ -24,7 +24,7 @@ The properties are usually expressed as the shorthand {{CSSxRef("flex")}} proper
 }
 ```
 
-If you have read the article [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), then you will have already had an introduction to the properties. Here we will explore them in depth in order that you can fully understand what the browser is doing when you use them.
+If you have read the article [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), then you will have already had an introduction to the properties. Here we will explore them in depth in order that you can fully understand what the browser is doing when you use them.
 
 ## Important concepts when working on the main axis
 
