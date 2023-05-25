@@ -41,7 +41,7 @@ function name(param0, param1, /* … ,*/ paramN) {
 
 A `function` declaration creates a {{jsxref("Function")}} object. Each time when a function is called, it returns the value specified by the last executed {{jsxref("Statements/return", "return")}} statement, or `undefined` if the end of the function body is reached. See [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for detailed information on functions.
 
-`function` declarations behave like a mix of {{jsxref("Statements/var", "var")}} and {{jsxref("Statements/let", "let")}:
+`function` declarations behave like a mix of {{jsxref("Statements/var", "var")}} and {{jsxref("Statements/let", "let")}}:
 
 - Like `let`, in strict mode, [function declarations are scoped to the most closely containing block](#block-level_function_declaration).
 - Like `let`, function declarations at the top level of a module or within blocks in strict mode cannot be [redeclared](#redeclarations) by any other declaration.
