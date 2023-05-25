@@ -476,7 +476,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
       <td></td>
       <td>
         <p>Yes</p>
-        <p>Firefox support for AV1 is disabled on Android ([Firefox bug 1672276](https://bugzil.la/1672276)) and on Windows on ARM (enable by setting the preference <code>media.av1.enabled</code> to <code>true</code>).</p>
+        <p>Firefox support for AV1 is disabled on Windows on ARM (enable by setting the preference <code>media.av1.enabled</code> to <code>true</code>).</p>
       </td>
       <td></td>
     </tr>
