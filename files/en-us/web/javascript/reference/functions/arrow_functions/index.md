@@ -9,7 +9,7 @@ browser-compat: javascript.functions.arrow_functions
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
-- Arrow functions don't have their own bindings to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
+- Arrow functions don't have their own {{glossary("binding", "bindings")}} to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 

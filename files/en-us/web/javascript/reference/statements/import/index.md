@@ -7,7 +7,7 @@ browser-compat: javascript.statements.import
 
 {{jsSidebar("Statements")}}
 
-The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
+The static **`import`** declaration is used to import read-only live {{glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
 In order to use the `import` declaration in a source file, the file must be interpreted by the runtime as a [module](/en-US/docs/Web/JavaScript/Guide/Modules). In HTML, this is done by adding `type="module"` to the {{HTMLElement("script")}} tag. Modules are automatically interpreted in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 

@@ -57,7 +57,7 @@ You can also use the `try` statement to handle JavaScript exceptions. See the [J
 
 ### The exception variable
 
-When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this variable to get information about the exception that was thrown. This variable is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
+When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this variable to get information about the exception that was thrown. This {{glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
 It need not be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
 

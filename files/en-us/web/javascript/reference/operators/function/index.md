@@ -54,7 +54,7 @@ A `function` expression is very similar to, and has almost the same syntax as, a
 
 ### Function expression hoisting
 
-Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#function_declaration_hoisting). You can't use function expressions before you create them:
+Function expressions in JavaScript are not hoisted, unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#hoisting). You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted); // undefined
