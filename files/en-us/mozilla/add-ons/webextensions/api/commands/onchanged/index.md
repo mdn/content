@@ -9,7 +9,7 @@ browser-compat: webextensions.api.commands.onChanged
 
 Fired when the keyboard shortcut for a command is changed.
 
-The listener is passed an object containing three properties.
+The listener is passed an object containing the name of the command, its new active shortcut, and its old shortcut.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ Events have three functions:
   
     - `changeInfo`
 
-      - : `object`. An object containing three properties.
+      - : `object`. An object containing containing the name of the command, its new active shortcut, and its old shortcut.
 
         - `name`
           - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
@@ -62,9 +62,7 @@ function handleChanged(changeInfo) {
   console.log(`To: ${changeInfo.newShortcut}`);
 }
 
-function handleClick() {
-  browser.commands.onChanged.addListener(handleChanged);
-}
+browser.commands.onChanged.addListener(handleChanged);
 ```
 
 {{WebExtExamples}}
