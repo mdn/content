@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 
 In the previous section, we wrote the [CSS](style.css) and [HTML](step1.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functionalweb application.
 
-The [HTML for our menstrual cycle tracker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) is:
+The [HTML for our menstrual cycle tracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) is:
 
 ```html
 <!DOCTYPE html>
@@ -343,7 +343,7 @@ You can try the fully functioning [period tracker web app](https://mdn.github.io
 
 ## Up next
 
-At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
+At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
 
 Up first, we create the [PWA's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the PWA's identity, appearance, and iconography.
 

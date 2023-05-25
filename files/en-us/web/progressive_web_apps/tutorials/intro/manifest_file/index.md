@@ -83,7 +83,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display our period tracker without browser tools, setting the `display` to `standalone`.
 
-In [our CSS](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#CSS_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#CSS_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 }
 
 ```js
@@ -222,6 +222,6 @@ View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/Intro
 
 ## Up next
 
-Now that we have a PWA manifest file, let's [create a secure connection](/en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use X to create a secure connection; a PWA requirement.
+Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use X to create a secure connection; a PWA requirement.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
