@@ -612,30 +612,24 @@ console.log(d.hasOwnProperty);
 ### With classes
 
 ```js
-class Polygon {
+class Rectangle {
   constructor(height, width) {
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-
-  get area() {
-    return this.height * this.width;
-  }
-
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
+class FilledRectangle extends Rectangle {
+  constructor(height, width, color) {
+    super(height, width);
+    this.name = "Filled rectangle";
+    this.color = color;
   }
 }
 
-const square = new Square(2);
-// square ---> Square.prototype ---> Polygon.prototype ---> Object.prototype ---> null
+const filledRectangle = new FilledRectangle(5, 10, "blue");
+// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
 <table class="standard-table">
