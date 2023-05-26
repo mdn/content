@@ -122,6 +122,58 @@ Then you register any objects you want a cleanup callback for by calling the `re
 registry.register(theObject, "some value");
 ```
 
+### Callbacks never called synchronously
+
+No matter how much pressure you put on the garbage collector, the cleanup callback will never be called synchronously. The object may be reclaimed synchronously, but the callback will always be called sometime after the current job finishes:
+
+```js
+let counter = 0;
+const registry = new FinalizationRegistry(() => {
+  console.log(`Array gets garbage collected at ${counter}`);
+});
+
+registry.register(["foo"]);
+
+(function allocateMemory() {
+  // Allocate 50000 functions — a lot of memory!
+  Array.from({ length: 50000 }, () => () => {});
+  if (counter > 5000) return;
+  counter++;
+  allocateMemory();
+})();
+
+console.log("Main job ends");
+// Logs:
+// Main job ends
+// Array gets garbage collected at 5001
+```
+
+However, if you allow a little break between each allocation, the callback may be called sooner:
+
+```js
+let arrayCollected = false;
+let counter = 0;
+const registry = new FinalizationRegistry(() => {
+  console.log(`Array gets garbage collected at ${counter}`);
+  arrayCollected = true;
+});
+
+registry.register(["foo"]);
+
+(function allocateMemory() {
+  // Allocate 50000 functions — a lot of memory!
+  Array.from({ length: 50000 }, () => () => {});
+  if (counter > 5000 || arrayCollected) return;
+  counter++;
+  // Use setTimeout to make each allocateMemory a different job
+  setTimeout(allocateMemory);
+})();
+
+console.log("Main job ends");
+```
+
+There's no guarantee that the callback will be called sooner or if it will be called at all, but there's a possibility that the logged message has a counter value smaller than 5000.
+
 ## Specifications
 
 {{Specifications}}
