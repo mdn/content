@@ -49,10 +49,10 @@ SyntaxError(message, fileName, lineNumber)
 try {
   eval("hoo bar");
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message);
-  console.error(e.name); // "SyntaxError"
-  console.error(e.stack); // Stack of the error
+  console.log(e instanceof SyntaxError); // true
+  console.log(e.message);
+  console.log(e.name); // "SyntaxError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -62,10 +62,10 @@ try {
 try {
   throw new SyntaxError("Hello");
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // "Hello"
-  console.error(e.name); // "SyntaxError"
-  console.error(e.stack); // Stack of the error
+  console.log(e instanceof SyntaxError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "SyntaxError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
