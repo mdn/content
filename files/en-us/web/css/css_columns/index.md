@@ -1,5 +1,5 @@
 ---
-title: CSS Multi-column Layout
+title: CSS multi-column layout
 slug: Web/CSS/CSS_Columns
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-multicol/
@@ -7,40 +7,35 @@ spec-urls: https://drafts.csswg.org/css-multicol/
 
 {{CSSRef("CSS3 Multicol")}}
 
-**CSS Multi-column Layout** is a module of CSS that adds support for multi-column layouts. Support is included for establishing the number of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
+The **CSS multi-column layout** module lets you divide content across multiple columns, defining the preferred number and width of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and the visual appearance of optional column dividing lines (known as column rules).
 
-## Basic example
+## Columns in action
 
-In the following example, the {{cssxref("column-count")}} property has been applied to the `<div>` element with the class `container`. As the value of `column-count` is `3`, the content is arranged into three columns of the same size.
+In the following example, the {{cssxref("column-count")}} property has been applied to the {{HTMLElement("div")}} element with the class `container`. As the value of `column-count` is `3`, the content is arranged into three columns of the same size.
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-## Relationship to fragmentation
-
-Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/CSS_Pages), in that each column box becomes a fragment, much like a printed page becomes a fragment of an overall document. Therefore, the properties now defined in the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) specification are required to control how content breaks between columns.
+> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_Pages), as each column box is a fragment, much like each printed page is a fragment of a document. Properties defined in [CSS fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) control how content breaks between columns.
 
 ## Reference
 
-### Properties for multi-column layout
-
-- {{cssxref("column-count")}}
-- {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("column-rule")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("column-span")}}
-- {{cssxref("column-width")}}
-- {{cssxref("columns")}}
-
-### Properties related to CSS fragmentation
+### Properties
 
 - {{cssxref("break-after")}}
 - {{cssxref("break-before")}}
 - {{cssxref("break-inside")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxref("column-fill")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("column-span")}}
+- {{cssxref("column-rule")}} shorthand
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("column-rule-style")}}
+  - {{cssxref("column-rule-width")}}
+- {{cssxref("columns")}} shorthand
+  - {{cssxref("column-count")}}
+  - {{cssxref("column-width")}}
+
+> **Note:** Setting container height and line length can pose challenges for people with visual or cognitive disabilities. WCAG Success Criterion state that, even when the text size is doubled, content should not need to be scrolled.
 
 ## Guides
 
@@ -55,13 +50,24 @@ Multiple-column layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
   - : Introduction to the Fragmentation specification and how to control where column content breaks.
 
+## Related concepts
+
+- {{cssxref("orphans")}} CSS property
+- {{cssxref("widows")}} CSS property
+- {{cssxref("overflow")}} CSS property
+- {{cssxref("gap")}} CSS property
+- {{cssxref("height")}}, {{cssxref("max-height")}}, and {{cssxref("block-size")}} CSS properties
+- {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
+- {{cssxref("line-style")}} enumerated data type
+- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) guide
+
 ## Specifications
 
 {{Specifications}}
 
 ## See also
 
-Other CSS layout technologies include:
-
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_Pages) module
+- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) module
 - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (CSS flexbox)
 - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
