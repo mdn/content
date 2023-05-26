@@ -11,11 +11,14 @@ This happens within any block statement, when [`let`](/en-US/docs/Web/JavaScript
 
 ## Message
 
-```
-ReferenceError: Cannot access 'X' before initialization (V8-based)
-ReferenceError: can't access lexical declaration 'X' before initialization (Firefox)
-ReferenceError: Cannot access uninitialized variable. (Safari)
-```
+**V8-based**
+> ReferenceError: Cannot access 'X' before initialization
+
+**Firefox**
+> ReferenceError: can't access lexical declaration 'X' before initialization
+
+**Safari**
+> ReferenceError: Cannot access uninitialized variable.
 
 ## Error type
 
