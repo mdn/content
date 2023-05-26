@@ -29,7 +29,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
-    - `rowgroup`: The row group state means the header cell applies to all the remaining cells in the row group.
+    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells.
     - `colgroup`: The header belongs to a colgroup and relates to all of its cells.
 
     If the `scope` attribute is not specified, or its value is not `row`, `col`, or `rowgroup`, or `colgroup`, then browsers automatically select the set of cells to which the header cell applies.
