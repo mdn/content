@@ -15,7 +15,7 @@ The default behavior of selection lists, such as {{HTMLElement('select')}}, is t
 
 ### Used with `aria-selected`
 
-When the user does select one or more items, remember to set the selected descendants as selected with [`aria-selected="true"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and selectable descendants that are not selected have `aria-selected="false"` set. If an element is not selectable, omit the `aria-selected` attribute altogether as its presence informs the user the item is selectable.
+When the user does select one or more items, remember to set the selected descendants as selected with [`aria-selected="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected), and selectable descendants that are not selected have `aria-selected="false"` set. If an element is not selectable, omit the `aria-selected` attribute altogether as its presence informs the user the item is selectable.
 
 If a tree, grid, tab list, or list box supports selection of more than one node, the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), or [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) has `aria-multiselectable` set to `true`. Otherwise, `aria-multiselectable` is either set to `false` or the default value of false is implied.
 
