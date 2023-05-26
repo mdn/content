@@ -88,11 +88,42 @@ Most providers also offer a "basic" tier that is intended for small production s
 
 ## Getting your website ready to publish
 
-The main things to think about when publishing your website are web security and performance. At the bare minimum, you will want to remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
+The main things to think about when publishing your website are web security and performance.
+At the bare minimum, you will want to modify the database configuration so that you can use a different database for production and secure its credentials, remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.
 
 In the following subsections, we outline the most important changes that you should make to your app.
 
 > **Note:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+
+#### Database configuration
+
+So far in this tutorial, we've used a single development database, for which the address and credentials are hard-coded into **app.js**.
+Since the development database doesn't contain any information that we mind being exposed or corrupted, there is no particular risk in leaking these details.
+However if you're working with real data, in particular personal user information, then protecting your database credentials is very important.
+
+For this reason we want to use a different database for production than we use for development, and also keep the production database credentials separate from the source code so that they can be properly protected.
+
+If your hosting provider supports setting environment variables through a web interface (as many do), one way to do this is to have the server get the database URL from an environment variable.
+Below we modify the LocalLibrary website to get the database URI from an OS environment variable, if it has been defined, and otherwise use the development database URL.
+
+Open **app.js** and find the line that sets the MongoDB connection variable.
+It will look something like this:
+
+```js
+const mongoDB =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+```
+
+Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below).
+
+```js
+// Set up mongoose connection
+const dev_db_url =
+  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
+```
+
+> **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
 
 ### Set NODE_ENV to 'production'
 
@@ -434,27 +465,6 @@ Open **package.json**, and add this information as an **engines > node** section
 Note that there are other ways to provision the node version on Railway, but we're using **package.json** because this approach is widely supported by many services.
 Note also that Railway will not necessarily use the precise version of node that you specify.
 Where possible it will use a version that has the same major version number.
-
-#### Database configuration
-
-So far in this tutorial, we've used a single database that is hard-coded into **app.js**. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.
-
-Open **app.js** and find the line that sets the MongoDB connection variable.
-It will look something like this:
-
-```js
-const mongoDB =
-  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
-```
-
-Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
-
-```js
-// Set up mongoose connection
-const dev_db_url =
-  "mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-```
 
 #### Get dependencies and re-test
 
