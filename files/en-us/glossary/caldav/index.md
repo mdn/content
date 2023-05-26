@@ -4,6 +4,12 @@ slug: Glossary/CalDAV
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 CalDAV (Calendaring extensions to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remotely access calendar data from a {{glossary("server")}}.
 
 ## See also

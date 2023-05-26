@@ -4,6 +4,12 @@ slug: Glossary/Constructor
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **constructor** belongs to a particular class {{glossary("object")}} that is instantiated. The constructor initializes this object and can provide access to its private information. The concept of a constructor can be applied to most {{glossary("OOP","object-oriented programming")}} languages. Essentially, a constructor in {{glossary("JavaScript")}} is usually declared at the instance of a {{glossary("class")}}.
 
 ## Syntax

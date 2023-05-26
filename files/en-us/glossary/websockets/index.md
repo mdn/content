@@ -4,6 +4,12 @@ slug: Glossary/WebSockets
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 _WebSocket_ is a {{Glossary("protocol")}} that allows for a persistent {{Glossary("TCP")}} connection between {{Glossary("Server", "server")}} and client so they can exchange data at any time.
 
 Any client or server application can use WebSocket, but principally web {{Glossary("Browser", "browsers")}} and web servers. Through WebSocket, servers can pass data to a client without prior client request, allowing for dynamic content updates.

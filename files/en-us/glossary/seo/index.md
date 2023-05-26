@@ -4,6 +4,12 @@ slug: Glossary/SEO
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **SEO** (Search Engine Optimization) is the process of making a website more visible in search results, also termed improving search rankings.
 
 Search engines {{Glossary("Crawler", "crawl")}} the web, following links from page to page, and index the content found. When you search, the search engine displays the indexed content. Crawlers follow rules. If you follow those rules closely when doing SEO for a website, you give the site the best chances of showing up among the first results, increasing traffic and possibly revenue (for e-commerce and ads).

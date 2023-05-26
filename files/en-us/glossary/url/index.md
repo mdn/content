@@ -4,6 +4,12 @@ slug: Glossary/URL
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **Uniform Resource Locator** (**URL**) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.
 
 In the context of {{Glossary("HTTP")}}, URLs are called "Web address" or "link". Your {{glossary("browser")}} displays URLs in its address bar, for example: `https://developer.mozilla.org` Some browsers display only the part of a URL after the "//", that is, the {{Glossary("Domain name")}}.

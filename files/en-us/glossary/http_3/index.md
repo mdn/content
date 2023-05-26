@@ -4,6 +4,12 @@ slug: Glossary/HTTP_3
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **HTTP/3** is the upcoming major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP), succeeding {{glossary("HTTP 2", "HTTP/2")}}.
 
 The major point of HTTP/3 is that it uses a new {{glossary("UDP")}} protocol named QUIC, instead of {{glossary("TCP")}}.

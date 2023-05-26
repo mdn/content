@@ -4,6 +4,12 @@ slug: Glossary/Validator
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A validator is a program that checks for syntax errors in code. Validators can be created for any format or language, but in our context we speak of tools that check {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("XML")}}.
 
 ## See also

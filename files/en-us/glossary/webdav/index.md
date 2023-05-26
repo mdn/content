@@ -4,6 +4,12 @@ slug: Glossary/WebDAV
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **WebDAV** (_Web Distributed Authoring and Versioning_) is an {{Glossary("HTTP")}} Extension that lets web developers update their content remotely from a client.
 
 WebDAV is rarely used alone, but two extensions are very common: {{Glossary("CalDAV")}} (remote-access calendar) and {{Glossary("CardDAV")}} (remote-access address book).

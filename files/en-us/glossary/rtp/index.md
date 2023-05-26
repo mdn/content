@@ -4,6 +4,12 @@ slug: Glossary/RTP
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 The **Real-time Transport Protocol** (**RTP**) is a network protocol which described how to transmit various media (audio, video) from one endpoint to another in a real-time fashion. RTP is suitable for video-streaming application, telephony over {{glossary("IP")}} like Skype and conference technologies.
 
 The secure version of RTP, **SRTP**, is used by [WebRTC](/en-US/docs/Web/API/WebRTC_API), and uses encryption and authentication to minimize the risk of denial-of-service attacks and security breaches.

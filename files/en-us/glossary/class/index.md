@@ -4,6 +4,12 @@ slug: Glossary/Class
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In {{glossary("OOP","object-oriented programming")}}, a _class_ defines an {{glossary("object","object's")}} characteristics. Class is a template definition of an object's {{glossary("property","properties")}} and {{glossary("method","methods")}}, the "blueprint" from which other more specific instances of the object are drawn.
 
 ## See also

@@ -4,6 +4,12 @@ slug: Glossary/Metadata
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **Metadata** is — in its very simplest definition — data that describes data. For example, an {{glossary("HTML")}} document is data, but HTML can also contain metadata in its {{htmlelement("head")}} element that describes the document — for example who wrote it, and its summary.
 
 ## See also

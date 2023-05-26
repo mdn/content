@@ -4,6 +4,12 @@ slug: Glossary/Input_method_editor
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 An input method editor (IME) is a program that provides a specialized user interface for text input. Input method editors are used in many situations:
 
 - to enter Chinese, Japanese, or Korean text using a Latin keyboard

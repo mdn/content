@@ -4,6 +4,12 @@ slug: Glossary/Presto
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 Presto was the proprietary browser layout engine used to power the {{Glossary("Opera browser")}} until version 15. Since then, the Opera browser is based on Chromium, which uses the {{Glossary('Blink')}} layout engine.
 
 ## See also

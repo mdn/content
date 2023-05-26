@@ -4,6 +4,12 @@ slug: Glossary/Distributed_Denial_of_Service
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A Distributed Denial-of-Service (DDoS) is an attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.
 
 Normally many persons, using many bots, attack high-profile Web {{glossary("server","servers")}} like banks or credit-card payment gateways. DDoS concerns computer networks and CPU resource management.

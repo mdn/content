@@ -4,6 +4,12 @@ slug: Glossary/SVG
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 _Scalable Vector Graphics_ (**SVG**) is a 2D vector image format based on an {{Glossary("XML")}} syntax.
 
 The {{Glossary("W3C")}} began work on SVG in the late 1990s, but SVG only became popular when {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 came out with SVG support. All major {{Glossary("browser","browsers")}} now support SVG.

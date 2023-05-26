@@ -4,6 +4,12 @@ slug: Glossary/Decryption
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In {{glossary("cryptography")}}, **decryption** is the conversion of {{glossary("ciphertext")}} into {{glossary("Plaintext")}}.
 
 Decryption is a cryptographic primitive: it transforms a ciphertext message into plaintext using a cryptographic algorithm called a {{glossary("cipher")}}. Like encryption, decryption in modern ciphers is performed using a specific algorithm and a secret, called the {{glossary("key")}}. Since the algorithm is often public, the key must stay secret if the encryption stays secure.

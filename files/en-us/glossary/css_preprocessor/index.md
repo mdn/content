@@ -4,6 +4,12 @@ slug: Glossary/CSS_preprocessor
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **CSS preprocessor** is a program that lets you generate {{Glossary("CSS")}} from the preprocessor's own unique {{Glossary("syntax")}}.
 
 There are many CSS preprocessors to choose from, however most CSS preprocessors will add some features that don't exist in pure CSS, such as mixin, nesting selector, inheritance selector, and so on. These features make the CSS structure more readable and easier to maintain.

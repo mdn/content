@@ -4,6 +4,12 @@ slug: Glossary/Global_scope
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In a programming environment, the _global scope_ is the {{glossary("scope")}} that contains, and is visible in, all other scopes.
 
 In client-side JavaScript, the global scope is generally the web page inside which all the code is being executed.

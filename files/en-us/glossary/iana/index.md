@@ -4,6 +4,12 @@ slug: Glossary/IANA
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **IANA** (Internet Assigned Numbers Authority) is a subsidiary of {{glossary("ICANN")}} charged with recording and/or assigning {{glossary("domain name","domain names")}}, {{glossary("IP address","IP addresses")}}, and other names and numbers used by Internet {{glossary("protocol","protocols")}}.
 
 ## See also

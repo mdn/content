@@ -4,6 +4,12 @@ slug: Glossary/Media/CSS
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In the context of {{Glossary("CSS")}} (Cascading Style Sheets), the term **_media_** refers to the destination to which the document is to be drawn by the {{Glossary("rendering engine")}}.
 
 Typically, this is a screen—but it may also be a printer, Braille display, or another type of device.

@@ -4,6 +4,12 @@ slug: Glossary/Sticky_activation
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **Sticky activation** (or "sticky user activation") is a window state that indicates a user has pressed a button, moved a mouse, used a menu, or performed some other user interaction.
 
 A page is considered "user activated" if a user is currently interacting with the page or has completed a touch, pointer, or keyboard interaction since page load. With sticky user activation, if activation is set it is not reset for the duration of the session (unlike {{Glossary("Transient activation")}}).

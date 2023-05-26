@@ -4,6 +4,12 @@ slug: Glossary/HMAC
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **Hash-based message authentication code**(_HMAC_) is a protocol used for {{Glossary("cryptography", "cryptographically")}} authenticating messages.
 
 It can use any kind of {{Glossary("Cryptographic hash function", "cryptographic functions")}}, and its strength depends on the underlying function (SHA1 or MD5 for instance), and the chosen secret key. With such a combination, the HMAC verification {{Glossary("Algorithm", "algorithm")}} is then known with a compound name such as HMAC-SHA1.

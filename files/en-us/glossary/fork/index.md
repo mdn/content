@@ -4,6 +4,12 @@ slug: Glossary/Fork
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A fork is a copy of an existing software project at some point to add someone's own modifications to the project.
 
 Basically, if the license of the original software allows, you can copy the code to develop your own version of it, with your own additions, which will be a "fork".

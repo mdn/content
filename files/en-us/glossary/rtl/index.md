@@ -4,6 +4,12 @@ slug: Glossary/RTL
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **RTL** (**Right To Left**) is a {{Glossary("locale")}} property indicating that text is written from right to left.
 
 For example, the `he` locale (for Hebrew) specifies right-to-left. Arabic (`ar`) is another common language written RTL.

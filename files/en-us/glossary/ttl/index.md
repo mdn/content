@@ -4,6 +4,12 @@ slug: Glossary/TTL
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 Time To Live (TTL) can refer to either the lifetime of a packet in a network, or the expiry time of cached data.
 
 ## Networking

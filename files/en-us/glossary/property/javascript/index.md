@@ -4,6 +4,12 @@ slug: Glossary/Property/JavaScript
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **JavaScript property** is a member of an [object](/en-US/docs/Web/JavaScript/Data_structures#objects) that associates a key with a value. A JavaScript object is a data structure that stores a collection of properties.
 
 A property consists of the following parts:

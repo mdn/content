@@ -4,6 +4,12 @@ slug: Glossary/Response_header
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **response header** is an {{glossary("HTTP header")}} that can be used in an HTTP response and that doesn't relate to the content of the message. Response headers, like {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} or {{HTTPHeader("Server")}} are used to give a more detailed context of the response.
 
 Not all headers appearing in a response are categorized as _response headers_ by the specification. For example, the {{HTTPHeader("Content-Type")}} header is a {{glossary("representation header")}} indicating the original type of data in the body of the response message (prior to the encoding in the {{HTTPHeader("Content-Encoding")}} representation header being applied). However, "conversationally" all headers are usually referred to as response headers in a response message.

@@ -4,6 +4,12 @@ slug: Glossary/BigInt
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In {{Glossary("JavaScript")}}, **BigInt** is a numeric data type that can represent integers in the [arbitrary precision format](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). In other programming languages different numeric types can exist, for examples: Integers, Floats, Doubles, or Bignums.
 
 ## See also

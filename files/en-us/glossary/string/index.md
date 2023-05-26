@@ -4,6 +4,12 @@ slug: Glossary/String
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In any computer programming language, a string is a sequence of {{Glossary("character","characters")}} used to represent text.
 
 In {{Glossary("JavaScript")}}, a String is one of the {{Glossary("Primitive", "primitive values")}} and the {{jsxref("String")}} object is a {{Glossary("wrapper")}} around a String primitive.

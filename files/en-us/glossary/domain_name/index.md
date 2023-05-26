@@ -4,6 +4,12 @@ slug: Glossary/Domain_name
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify which server a specific webpage belongs to. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.
 
 ## See also

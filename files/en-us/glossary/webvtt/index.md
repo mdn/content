@@ -4,6 +4,12 @@ slug: Glossary/WebVTT
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 WebVTT (Web Video Text Tracks) is a {{Glossary("W3C")}} specification for a file format marking up text track resources in combination with the HTML {{HTMLElement("track")}} element.
 
 WebVTT files provide metadata that is time-aligned with audio or video content like captions or subtitles for video content, text video descriptions, chapters for content navigation, and more.

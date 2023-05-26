@@ -4,6 +4,12 @@ slug: Glossary/First_meaningful_paint
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **First Meaningful Paint** (FMP) is the paint after which the biggest above-the-fold layout change has happened and web fonts have loaded. It is when the answer to "Is it useful?" becomes "yes", upon first meaningful paint completion.
 
 FMP is very sensitive to small differences in the page load. This can lead to inconsistent (bimodal) results. The metric's definition relies on browser-specific implementation details, which means it can't be standardized and has not been implemented in all web browsers.

@@ -4,6 +4,12 @@ slug: Glossary/I18N
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 i18n (from "internationalization", a 20-letter word) is the best practice that enables products or services to be readily adapted to any target culture.
 
 > **Internationalization** is the design and development of a product, application or document content that **_enables_** easy localization for target audiences that vary in culture, region, or language. (The {{Glossary("W3C")}} definition)

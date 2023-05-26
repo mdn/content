@@ -4,6 +4,12 @@ slug: Glossary/Delta
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 The term **delta** refers to the difference between two values or states.
 
 The name originates from the Greek letter Δ (delta), which is equivalent to the letter _D_ in the Roman alphabet. _Delta_ refers to the use of the letter Δ as a shorthand for _difference_.

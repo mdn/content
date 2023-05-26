@@ -4,6 +4,12 @@ slug: Glossary/Syntax
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.
 
 Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in JavaScript and Python. This does not mean the two languages share similarities with syntax.

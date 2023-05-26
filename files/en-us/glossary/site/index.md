@@ -4,6 +4,12 @@ slug: Glossary/Site
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
 Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookies to the same site that set them.

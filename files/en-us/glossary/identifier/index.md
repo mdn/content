@@ -4,6 +4,12 @@ slug: Glossary/Identifier
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 An **identifier** is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}.
 
 In {{glossary("JavaScript")}}, identifiers are case-sensitive and can contain {{glossary("Unicode")}} letters, `$`, `_`, and digits (0-9), but may not start with a digit.

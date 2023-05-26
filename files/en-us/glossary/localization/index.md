@@ -4,6 +4,12 @@ slug: Glossary/Localization
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **Localization** (l10n) is the process of adapting a software user interface to a specific culture.
 
 The following are common factors to consider:

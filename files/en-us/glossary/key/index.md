@@ -4,6 +4,12 @@ slug: Glossary/Key
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A key is a piece of information used by a {{Glossary("cipher")}} for {{Glossary("encryption")}} and/or {{Glossary("decryption")}}.
 
 Encrypted messages should remain secure even if everything about the {{Glossary("cryptosystem")}}, except for the key, is public knowledge.

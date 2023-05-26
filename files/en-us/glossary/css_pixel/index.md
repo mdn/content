@@ -4,6 +4,12 @@ slug: Glossary/CSS_pixel
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 The term **CSS pixel** is synonymous with the CSS unit of absolute length _px_ — which is [normatively defined](https://drafts.csswg.org/css-values/#absolute-lengths) as being exactly 1/96th of 1 CSS inch (_in_).
 
 ## See also

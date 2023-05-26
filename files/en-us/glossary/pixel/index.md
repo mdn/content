@@ -4,6 +4,12 @@ slug: Glossary/Pixel
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A pixel is the smallest building block of a graphical display like a computer screen.
 
 Display resolution is expressed in the unit of pixels. For example, a "800 x 600" pixel resolution means that 800 pixels can be displayed in width and 600 pixels in height.

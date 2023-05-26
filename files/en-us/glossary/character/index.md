@@ -4,6 +4,12 @@ slug: Glossary/Character
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A _character_ is either a symbol (letters, numbers, punctuation) or non-printing "control" (e.g., carriage return or soft hyphen). {{glossary("UTF-8")}} is the most common character set and includes the graphemes of the most popular human languages.
 
 ## See also

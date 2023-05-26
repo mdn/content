@@ -4,6 +4,12 @@ slug: Glossary/Block/Scripting
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 In {{glossary("JavaScript")}}, a block is a collection of related {{glossary("statement","statements")}} enclosed in braces ("{}"). For example, you can put a block of statements after an {{jsxref("Statements/if...else","if (condition)")}} block, indicating that the interpreter should run the code inside the block if the condition is true, or skip the whole block if the condition is false.
 
 ## See also

@@ -4,6 +4,12 @@ slug: Glossary/eTLD
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 The term **eTLD** stands for "effective top-level domain" and is a domain under which domains can be registered by a single organization.
 
 A top level domain (TLD) is the part of the domain name following the final dot: so for example, the top-level domain in `crookedtimber.org` is `org`.

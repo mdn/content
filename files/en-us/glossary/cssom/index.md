@@ -4,6 +4,12 @@ slug: Glossary/CSSOM
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 The [**CSS Object Model (CSSOM)**](/en-US/docs/Web/API/CSS_Object_Model) is a set of APIs for reading and modifying a document's style-related (CSS) information. In other words, similar to the way in which the [DOM](/en-US/docs/Web/API/Document_Object_Model) enables a document's structure and content to be read and modified from JavaScript, the CSSOM allows the document's styling to be read and modified from JavaScript.
 
 ## See also

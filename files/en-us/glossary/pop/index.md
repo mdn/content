@@ -4,6 +4,12 @@ slug: Glossary/POP
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **POP3** (Post Office Protocol) is a very common {{glossary("protocol")}} for getting emails from a mail server over a {{glossary("TCP")}} connection. POP3 does not support folders, unlike the more recent {{Glossary("IMAP")}}, which is harder to implement because of its more complex structure.
 
 Clients usually retrieve all messages and then delete them from the server, but POP3 does allow retaining a copy on the server. Nearly all email servers and clients currently support POP3.

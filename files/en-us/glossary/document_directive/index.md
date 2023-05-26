@@ -4,6 +4,12 @@ slug: Glossary/Document_directive
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 **{{Glossary("CSP")}} document directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and govern the properties of a document or [worker](/en-US/docs/Web/API/Web_Workers_API) environment to which a policy applies.
 
 Document directives don't fall back to the {{CSP("default-src")}} directive.

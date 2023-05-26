@@ -4,6 +4,12 @@ slug: Glossary/Port
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 For a computer connected to a network with an {{Glossary("IP address")}}, a **port** is a communication endpoint. Ports are designated by numbers, and below 1024 each port is associated by default with a specific {{Glossary("protocol")}}.
 
 For example, the default port for the {{Glossary("HTTP")}} protocol is 80 and the default port for the HTTPS protocol is 443, so a {{Glossary("HTTP")}} server waits for requests on those ports. Each Internet protocol is associated with a default port: {{Glossary("SMTP")}} (25), {{Glossary("POP")}} (110), {{Glossary("IMAP")}} (143), {{Glossary("IRC")}} (194), and so on.

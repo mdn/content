@@ -3,6 +3,12 @@ title: Rsync
 slug: Glossary/Rsync
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 [Rsync](https://rsync.samba.org/) is an open-source file synchronizing tool that provides incremental file transfer. It can be used over insecure and secure transports (like SSH). It is available on most Unix-based systems (such as macOS and Linux) and Windows. There are also GUI-based tools that use rsync, for example, [Acrosync](https://acrosync.com/mac.html).
 
 A basic command looks like this:

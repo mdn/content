@@ -4,6 +4,12 @@ slug: Glossary/Boolean/JavaScript
 page-type: glossary-definition
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+  </ol>
+</section>
+
 A **Boolean** in Javascript is a {{Glossary("Primitive", "primitive value")}} that can be either `true` or `false`.
 
 A {{jsxref("Boolean")}} object is a {{Glossary("wrapper")}} around a Boolean primitive.
