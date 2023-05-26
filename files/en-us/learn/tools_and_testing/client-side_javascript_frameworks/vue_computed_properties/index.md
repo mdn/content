@@ -42,7 +42,7 @@ In this article we'll add a counter that displays the number of completed todo i
 
 The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5". While it might be tempting to do something like this:
 
-```vue
+```markup
 <h2>
   \{{ToDoItems.filter(item =&gt; item.done).length}} out of
   \{{ToDoItems.length}} items completed
@@ -72,7 +72,7 @@ Now we can add `\{{listSummary}}` directly to our template; we'll add this insid
 
 Add the described `<h2>` and update the `<ul>` inside your `App`'s template as follows:
 
-```vue
+```markup
 <h2 id="list-summary">\{{listSummary}}</h2>
 <ul aria-labelledby="list-summary" class="stack-large">
   <li v-for="item in ToDoItems" :key="item.id">
@@ -94,7 +94,7 @@ Since we're not relying on a button press to trigger the change, we can attach a
 
 Update the `<input>` element in `ToDoItem.vue` to look like this.
 
-```vue
+```markup
 <input
   type="checkbox"
   class="checkbox"
@@ -116,7 +116,7 @@ updateDoneStatus(toDoId) {
 
 We want to run this method whenever a `ToDoItem` emits a `checkbox-changed` event, and pass in its `item.id` as the parameter. Update your `<to-do-item></to-do-item>` call as follows:
 
-```vue
+```markup
 <to-do-item
   :label="item.label"
   :done="item.done"
