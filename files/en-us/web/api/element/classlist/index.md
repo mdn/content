@@ -24,7 +24,7 @@ the `length` property equal to `0`.
 
 Although the `classList` property itself is read-only, you can modify its associated `DOMTokenList` using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
-Also you can check the existence of the token in `DOMTokenList` using the {{domxref("DOMTokenList/contains", "contains()")}} method.
+You can test whether the element contains a given class using the {{domxref("DOMTokenList/contains", "contains()")}} method.
 
 ## Examples
 
