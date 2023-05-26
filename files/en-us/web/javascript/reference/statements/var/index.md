@@ -77,7 +77,7 @@ delete x; // SyntaxError in strict mode. Fails silently otherwise.
 
 In both NodeJS [CommonJS](https://www.commonjs.org/) modules and native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), top-level variable declarations are scoped to the module, and are not added as properties to the global object.
 
-The list that follows the `var` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
+The list that follows the `var` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
 
 ### Hoisting
 
@@ -138,7 +138,7 @@ function a() {}
 console.log(a); // 1
 ```
 
-`var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, or {{jsxref("Statements/class", "class")}} declaration.
+`var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, or {{jsxref("Statements/import", "import")}} declaration.
 
 ```js example-bad
 var a = 1;

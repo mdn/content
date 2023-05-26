@@ -32,7 +32,24 @@ The class body of a class declaration is executed in [strict mode](/en-US/docs/W
 - `class` declarations can only be accessed after the line of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `class` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting) (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 - `class` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 - `class` declarations cannot be [redeclared](/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations) by any other declaration in the same scope.
-- `class` declarations can be re-assigned like `let`, but you should avoid doing so.
+
+Outside the class body, `class` declarations can be re-assigned like `let`, but you should avoid doing so. Within the class body, the binding is constant like `const`.
+
+```js
+class Foo {
+  static {
+    Foo = 1; // TypeError: Assignment to constant variable.
+  }
+}
+
+class Foo2 {
+  bar = (Foo2 = 1); // TypeError: Assignment to constant variable.
+}
+
+class Foo3 {}
+Foo3 = 1;
+console.log(Foo3); // 1
+```
 
 ## Examples
 

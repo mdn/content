@@ -64,7 +64,7 @@ Note that `let` is allowed as an identifier name when declared with `var` or `fu
 
 Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
 
-The list that follows the `let` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator). Initializers of later variables can refer to earlier variables in the list.
+The list that follows the `let` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
 
 ### Temporal dead zone (TDZ)
 
@@ -113,7 +113,7 @@ console.log(typeof undeclaredVariable); // "undefined"
 
 ### Redeclarations
 
-`let` declarations cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, and `var` declaration.
+`let` declarations cannot be in the same scope as any other declaration, including `let`, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and {{jsxref("Statements/import", "import")}} declaration.
 
 ```js example-bad
 {
