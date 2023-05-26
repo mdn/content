@@ -96,7 +96,7 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
 
-> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct respond to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them).
+> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct response to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them.
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
