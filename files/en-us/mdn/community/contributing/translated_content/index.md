@@ -22,7 +22,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Chinese (zh-CN, zh-TW)
 
 - Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
-- Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
+- Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403)
 
 ### French (fr)
 
