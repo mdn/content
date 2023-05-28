@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.get
 {{WebAssemblySidebar}}
 
 The **`get()`** prototype method of
-the [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object retrieves a function reference stored at a
+the [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object retrieves the element stored at a
 given index.
 
 ## Syntax
@@ -19,16 +19,16 @@ get(index)
 ### Parameters
 
 - `index`
-  - : The index of the function reference you want to retrieve.
+  - : The index of the element you want to retrieve.
 
 ### Return value
 
-A function reference — this is an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a
-JavaScript wrapper for an underlying wasm function.
+Depending the element type of the Table, can be a function reference — this is an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a
+JavaScript wrapper for an underlying wasm function, or it can be a host reference.
 
 ### Exceptions
 
-If _index_ is greater than or equal
+If `index` is greater than or equal
 to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a
 {{jsxref("RangeError")}} is thrown.
 
