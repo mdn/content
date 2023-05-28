@@ -290,26 +290,26 @@ console.log(obj.a === window); // true
 
 ### this in function contexts
 
-The value of `this` depends on how the function is called, not how it's defined.
+The value of the `this` parameter depends on how the function is called, not on how it's defined.
 
 ```js
-// An object can be passed as the first argument to call
-// or apply and this will be bound to it.
+// An object can be passed as the first argument to 'call'
+// or 'apply' and 'this' will be bound to it.
 const obj = { a: "Custom" };
 
-// Variables declared with var become properties of the global object.
+// Variables declared with var become properties of 'globalThis'.
 var a = "Global";
 
 function whatsThis() {
-  return this.a; // The value of this is dependent on how the function is called
+  return this.a; // 'this' depends on how the function is called
 }
 
-whatsThis(); // 'Global'; this in the function isn't set, so it defaults to the global/window object in non–strict mode
+whatsThis(); // 'Global'; the 'this' parameter is bound to globalThis in non–strict mode
 obj.whatsThis = whatsThis;
-obj.whatsThis(); // 'Custom'; this in the function is set to obj
+obj.whatsThis(); // 'Custom'; the 'this' parameter is set to obj
 ```
 
-Using `call()` and `apply()`, you can pass the value of `this` as if it's an actual parameter.
+Using `call()` and `apply()`, you can bind a value to the `this` parameter as if it's an explicit parameter.
 
 ```js
 function add(c, d) {
@@ -318,12 +318,12 @@ function add(c, d) {
 
 const o = { a: 1, b: 3 };
 
-// The first parameter is the object to use as 'this'; subsequent
-// parameters are used as arguments in the function call
+// The first argument is bound to the implicit 'this' parameter; the remaining
+// arguments are bound to the explicit parameters.
 add.call(o, 5, 7); // 16
 
-// The first parameter is the object to use as 'this', the second is an
-// array whose members are used as arguments in the function call
+// The first argument is bound to the implicit 'this' parameter; the second
+// argument is an array whose members are bound to the explicit parameters.
 add.apply(o, [10, 20]); // 34
 ```
 
@@ -357,7 +357,7 @@ const h = g.bind({ a: "yoo" }); // bind only works once!
 console.log(h()); // azerty
 
 const o = { a: 37, f, g, h };
-console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
+console.log(o.a, o.f(), o.g(), o.h()); // 37 37 azerty azerty
 ```
 
 ### this in arrow functions
@@ -373,18 +373,18 @@ const obj = {
 };
 ```
 
-We can call `getThisGetter` as a method of `obj`, which sets `this` inside the body to `obj`. The returned function is assigned to a variable `fn`. Now, when calling `fn`, the value of `this` returned is still the one set by the call to `getThisGetter`, which is `obj`. If the returned function is not an arrow function, such calls would cause the `this` value to be `globalThis` or `undefined` in strict mode.
+We can call `getThisGetter` as a method of `obj`, which sets `this` inside the body to `obj`. The returned function is assigned to a variable `fn`. Now, when calling `fn`, the value of `this` returned is still the one set by the call to `getThisGetter`, which is `obj`. If the returned function is not an arrow function, such calls would cause the `this` value to be `globalThis` in non-strict mode and `undefined` in strict mode.
 
 ```js
 const fn = obj.getThisGetter();
 console.log(fn() === obj); // true
 ```
 
-But be careful if you unbind the method of `obj` without calling it, because `getThisGetter` is still a method that has a varying `this` value. Calling `fn2()()` in the following example returns `globalThis`, because it follows the `this` from `fn2`, which is `globalThis` since it's called without being attached to any object.
+But be careful if you unbind the method of `obj` without calling it, because `getThisGetter` is still a method that has a varying `this` value. Calling `fn2()()` in the following example returns `globalThis` in non-strict mode and `undefined` in strict mode, because it follows the `this` from `fn2()`, which is `globalThis` in non-strict mode and `undefined` in strict mode since it's called without being attached to any object.
 
 ```js
 const fn2 = obj.getThisGetter;
-console.log(fn2()() === globalThis); // true
+console.log(fn2()() === globalThis); // true in non-strict mode
 ```
 
 This behavior is very useful when defining callbacks. Usually, each function expression creates its own `this` binding, which shadows the `this` value of the upper scope. Now, you can define functions as arrow functions if you don't care about the `this` value, and only create `this` bindings where you do (e.g. in class methods). See [example with `setTimeout()`](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply).
@@ -413,12 +413,12 @@ Object.defineProperty(o, "sum", {
   configurable: true,
 });
 
-console.log(o.average, o.sum); // 2, 6
+console.log(o.average, o.sum); // 2 6
 ```
 
-### As a DOM event handler
+### this in DOM event handlers
 
-When a function is used as an event handler, its `this` is set to the element on which the listener is placed (some browsers do not follow this convention for listeners added dynamically with methods other than {{domxref("EventTarget/addEventListener", "addEventListener()")}}).
+When a function is used as an event handler, its `this` is bound to the DOM element on which the listener is placed (some browsers do not follow this convention for listeners added dynamically with methods other than {{domxref("EventTarget/addEventListener", "addEventListener()")}}).
 
 ```js
 // When called as a listener, turns the related element blue
@@ -442,13 +442,13 @@ for (const element of elements) {
 
 ### this in inline event handlers
 
-When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), its `this` is set to the DOM element on which the listener is placed:
+When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>
 ```
 
-The above alert shows `button`. Note, however, that only the outer code has its `this` set this way:
+The above alert shows `button`. Note, however, that only the outer scope has its `this` bound this way:
 
 ```html
 <button onclick="alert((function () { return this; })());">
@@ -456,7 +456,7 @@ The above alert shows `button`. Note, however, that only the outer code has its 
 </button>
 ```
 
-In this case, the inner function's `this` isn't set, so it returns the global/window object (i.e. the default object in non–strict mode where `this` isn't set by the call).
+In this case, the `this` paramter of the inner function is bound to `globalThis` in non-strict mode and `undefined` in strict mode.
 
 ### Bound methods in classes
 
@@ -468,12 +468,15 @@ class Car {
     // Bind sayBye but not sayHi to show the difference
     this.sayBye = this.sayBye.bind(this);
   }
+  
   sayHi() {
     console.log(`Hello from ${this.name}`);
   }
+  
   sayBye() {
     console.log(`Bye from ${this.name}`);
   }
+  
   get name() {
     return "Ferrari";
   }
