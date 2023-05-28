@@ -18,7 +18,7 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 ## Values
 
 - `<string>`
-  - The human-readable text alternative of the numeric [`aria-spanindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-spanindex)
+  - The human-readable text alternative of the numeric [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
 
 ## Associated roles
 
