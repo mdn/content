@@ -18,7 +18,7 @@ Both WebAssembly and JavaScript can create `Memory` objects. If you want to acce
 ## Instance properties
 
 - [`Memory.prototype.buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) {{ReadOnlyInline}}
-  - : An accessor property that returns the buffer contained in the memory.
+  - : Returns the buffer contained in the memory.
 
 ## Instance methods
 
