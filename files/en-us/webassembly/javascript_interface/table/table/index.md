@@ -13,6 +13,7 @@ The **`WebAssembly.Table()`** constructor creates a new
 
 ```js-nolint
 new WebAssembly.Table(tableDescriptor)
+new WebAssembly.Table(tableDescriptor, value)
 ```
 
 ### Parameters
@@ -28,13 +29,18 @@ new WebAssembly.Table(tableDescriptor)
     - `maximum` {{optional_inline}}
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
+- `value`
+
+  - : The element to fill the newly-allocated space with.
+
 ### Exceptions
 
-- If `tableDescriptor` is not of type object, a {{jsxref("TypeError")}} is
+- If `tableDescriptor` is not an object, a {{jsxref("TypeError")}} is
   thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
-  - If `tableDescriptor.element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
+- If `element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
+- If `value` is not a value of the type `element`, a {{jsxref("TypeError")}} is throw.
 
 ## Examples
 
@@ -110,6 +116,22 @@ instantiating.then((obj) => {
 ```
 
 While we are creating and accessing the `WebAssembly.Table` from JavaScript, the same `Table` is also visible and callable inside the WebAssembly instance.
+
+### Creating a new WebAssembly Table instance with a value
+
+The following example creates a new WebAssembly Table instance with 4 elements, full of the same object:
+
+```js
+const myObject = { hello: "world" };
+
+const table = new WebAssembly.Table({
+  element: "externref",
+  initial: 4,
+  maximum: 4,
+}, myObject);
+
+console.log(myObject === table.get(2)); // true
+```
 
 ## Specifications
 
