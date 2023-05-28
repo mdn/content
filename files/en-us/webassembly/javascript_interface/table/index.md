@@ -6,9 +6,9 @@ browser-compat: javascript.builtins.WebAssembly.Table
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array-like structure representing a WebAssembly Table, which stores function references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
+The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-like structure representing a WebAssembly Table, which stores homogeneous references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
 
-> **Note:** Tables can currently only store function references, but this will likely be expanded in the future.
+> **Note:** Tables can currently only store function references, or arbitrary external references, but this will likely be expanded in the future.
 
 ## Constructor
 
@@ -18,14 +18,14 @@ The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array
 ## Instance properties
 
 - [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length) {{ReadOnlyInline}}
-  - : Returns the length of the table, i.e. the number of elements.
+  - : Returns the length of the table, i.e. the number of elements in the table.
 
 ## Instance methods
 
 - [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get)
   - : Accessor function — gets the element stored at a given index.
 - [`Table.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/grow)
-  - : Increases the size of the Table instance by a specified number of elements.
+  - : Increases the size of the `Table` instance by a specified number of elements.
 - [`Table.prototype.set()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/set)
   - : Sets an element stored at a given index to a given value.
 
