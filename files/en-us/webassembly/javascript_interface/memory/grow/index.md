@@ -78,6 +78,8 @@ console.log(currentMemoryView); // Uint8Array(131072) [ 0, 0, 0, ... ]
 // 131072 = 64KiB * 2
 ```
 
+For a shared `Memory` instance, the initial `buffer` (which would be a `SharedArrayBuffer` in this case) will not become detached, but rather its length will not update. It will still be a view onto the same memory span. Accesses to the `buffer` property after growing will yield a larger `SharedArrayBuffer` which may access a larger span of memory than the buffer from before growing the `Memory`.
+
 ## Specifications
 
 {{Specifications}}
