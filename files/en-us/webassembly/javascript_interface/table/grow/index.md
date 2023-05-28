@@ -13,13 +13,15 @@ specified number of elements.
 ## Syntax
 
 ```js-nolint
-grow(number)
+grow(elementIncrease)
 ```
 
 ### Parameters
 
-- `number`
+- `elementIncrease`
   - : The number of elements you want to grow the table by.
+- `value`
+  - : The element to fill the newly-allocated space with.
 
 ### Return value
 
@@ -27,8 +29,9 @@ The previous length of the table.
 
 ### Exceptions
 
-If the `grow()` operation fails for whatever reason, a
-{{jsxref("RangeError")}} is thrown.
+- {{jsxref("RangeError")}}: If the current size added with `elementIncrease` exceeds the Table instance's maximum size capacity.
+- {{jsxref("TypeError")}}: If the `value` is not a value of the element type of the table.
+- {{jsxref("RangeError")}}: If there is insufficient memory.
 
 ## Examples
 
@@ -45,12 +48,32 @@ const table = new WebAssembly.Table({
 });
 ```
 
-Grow the table by 1 using `WebAssembly.grow()`:
+Grow the table by 1 unit using `WebAssembly.grow()`:
 
 ```js
 console.log(table.length); // 2
 table.grow(1);
 console.log(table.length); // 3
+```
+
+The following example creates a new WebAssembly Table instance with an initial size of
+0 and a maximum size of 4, filling it with an object:
+
+```js
+const myObject = { hello: "world" };
+
+const table = new WebAssembly.Table({
+  element: "externref",
+  initial: 0,
+  maximum: 4,
+});
+```
+
+Grow the table by 4 units and fill it with a value using `WebAssembly.grow()`:
+
+```js
+table.grow(4, myObject);
+console.log(myObject === table.get(2)); // true
 ```
 
 ## Specifications
