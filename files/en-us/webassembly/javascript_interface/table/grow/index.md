@@ -6,9 +6,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.grow
 
 {{WebAssemblySidebar}}
 
-The **`grow()`** prototype method of
-the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object increases the size of the Table instance by a
-specified number of elements.
+The **`grow()`** prototype method of the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object increases the size of the Table instance by a specified number of elements, filled with the provided value.
 
 ## Syntax
 
@@ -21,7 +19,7 @@ grow(elementIncrease, value)
 
 - `elementIncrease`
   - : The number of elements you want to grow the table by.
-- `value`
+- `value` {{optional_inline}}
   - : The element to fill the newly-allocated space with.
 
 ### Return value
