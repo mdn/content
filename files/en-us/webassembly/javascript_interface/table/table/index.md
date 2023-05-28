@@ -6,8 +6,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.Table
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Table()`** constructor creates a new
-`Table` object of the given size and element type.
+The **`WebAssembly.Table()`** constructor creates a new `Table` object of the given size and element type, filled with the provided value.
 
 ## Syntax
 
@@ -29,16 +28,14 @@ new WebAssembly.Table(tableDescriptor, value)
     - `maximum` {{optional_inline}}
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
-- `value`
+- `value` {{optional_inline}}
 
   - : The element to fill the newly-allocated space with.
 
 ### Exceptions
 
-- If `tableDescriptor` is not an object, a {{jsxref("TypeError")}} is
-  thrown.
-- If `maximum` is specified and is smaller than `initial`, a
-  {{jsxref("RangeError")}} is thrown.
+- If `tableDescriptor` is not an object, a {{jsxref("TypeError")}} is thrown.
+- If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
 - If `value` is not a value of the type `element`, a {{jsxref("TypeError")}} is throw.
 
@@ -46,8 +43,7 @@ new WebAssembly.Table(tableDescriptor, value)
 
 ### Creating a new WebAssembly Table instance
 
-The following example creates a `WebAssembly.Table` instance with an initial size of 2
-elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
+The following example creates a `WebAssembly.Table` instance with an initial size of 2 elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
 
 This example uses the following reference files:
 
