@@ -76,7 +76,8 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 ### Creating a shared memory
 
 By default, WebAssembly memories are unshared.
-You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories) from JavaScript by passing `shared: true` in the constructor's initialization object:
+You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories)
+from JavaScript by passing `shared: true` in the constructor's initialization object:
 
 ```js
 const memory = new WebAssembly.Memory({
