@@ -21,8 +21,7 @@ set(index, value)
 - `index`
   - : The index of the function reference you want to mutate.
 - `value`
-  - : The value you want to mutate the reference to. This must be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions),
-    a JavaScript wrapper for an underlying wasm function.
+  - : The value you want to mutate the reference to. This must be a value of the table's element type. Depending on the type, it may be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying wasm function, or a host reference.
 
 ### Return value
 
@@ -30,12 +29,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- If _index_ is greater than or equal
-  to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a
-  {{jsxref("RangeError")}} is thrown.
-- If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
-  a {{jsxref("TypeError")}} is thrown.
+- If `index` is greater than or equal to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a {{jsxref("RangeError")}} is thrown.
+- If `value` is not a value of the element type of the table., a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
