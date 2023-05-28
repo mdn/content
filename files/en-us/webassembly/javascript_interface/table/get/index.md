@@ -28,7 +28,7 @@ JavaScript wrapper for an underlying wasm function, or it can be a host referenc
 
 ### Exceptions
 
-If `index` is greater than or equal
+If _index_ is greater than or equal
 to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a
 {{jsxref("RangeError")}} is thrown.
 
