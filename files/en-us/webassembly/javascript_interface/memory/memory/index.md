@@ -45,7 +45,7 @@ new WebAssembly.Memory(memoryDescriptor)
 - If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.
 - If `initial` exceeds 65,536 (2^16), a {{jsxref("RangeError")}} is thrown. 2^16 * 64KiB = 4GiB, which is the maximum range that a 32-bit integer can address.
-- If allocation fails, a {{jsxref("RangeError")}} is thrown. This may occur due to attempting to allocate too much at once, or if the page is otherwise out of memory.
+- If allocation fails, a {{jsxref("RangeError")}} is thrown. This may occur due to attempting to allocate too much at once, or if the User Agent is otherwise out of memory.
 
 ## Examples
 
