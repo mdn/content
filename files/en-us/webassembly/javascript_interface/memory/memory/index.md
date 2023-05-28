@@ -44,6 +44,7 @@ new WebAssembly.Memory(memoryDescriptor)
 - If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
 - If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
 - If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.
+- If allocation fails, a {{jsxref("RangeError")}} is thrown. This may occur due to attempting to allocate too much at once, or if the page is otherwise out of memory.
 
 ## Examples
 
@@ -74,8 +75,7 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 ### Creating a shared memory
 
 By default, WebAssembly memories are unshared.
-You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories)
-from JavaScript by passing `shared: true` in the constructor's initialization object:
+You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories) from JavaScript by passing `shared: true` in the constructor's initialization object:
 
 ```js
 const memory = new WebAssembly.Memory({
