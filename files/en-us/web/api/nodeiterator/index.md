@@ -54,7 +54,7 @@ _This interface doesn't inherit any property._
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{ReadOnlyInline}} {{
   experimental_inline() }}
-  - : Returns a boolean indicating whether or not the {{domxref("NodeIterator")}} 
+  - : Returns a boolean indicating whether or not the {{domxref("NodeIterator")}}
   is anchored _before_ the {{domxref("NodeIterator.referenceNode")}}. If `false`,
   it indicates that the iterator is anchored _after_ the reference node.
 
@@ -67,7 +67,7 @@ _This interface doesn't inherit any method._
 - {{domxref("NodeIterator.nextNode()")}}
   - : Returns the next {{domxref("Node")}} in the document, or `null` if there are none.
 - {{domxref("NodeIterator.detach()")}} {{deprecated_inline}}
-  - : This is a legacy method, and no longer has any effect. Previously it served to mark a 
+  - : This is a legacy method, and no longer has any effect. Previously it served to mark a
 `NodeIterator` as disposed, so it could be reclaimed by garbage collection.
 
 ## Specifications
