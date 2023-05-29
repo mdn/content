@@ -8,10 +8,10 @@ Abstraction in {{Glossary("computer programming")}} is a way to reduce complexit
 
 ## Advantages of Data Abstraction
 
-- Helps the user to avoid writing low level code.
+- Helps the user to avoid writing low-level code.
 - Avoids code duplication and increases reusability.
-- Can change internal implementation of class independently without affecting the user.
-- Helps to increase security of an application or program as only important details are provided to the user.
+- Can change the internal implementation of a class independently without affecting the user.
+- Helps to increase the security of an application or program as only important details are provided to the user.
 
 ## Example
 

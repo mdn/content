@@ -55,4 +55,4 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
 
 ## See also
 
-- [CSS colors module](/en-US/docs/Web/CSS/CSS_Colors)
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
