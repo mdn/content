@@ -269,10 +269,10 @@ for (const cur of array) {
 
 As previously stated, the reason why people may want to use `reduce()` is to mimic functional programming practices of immutable data. Therefore, developers who uphold the immutability of the accumulator often copy the entire accumulator for each iteration, like this:
 
-```js
+```js example-bad
 const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 const countedNames = names.reduce((allNames, name) => {
-  const currCount = allNames[name] ?? 0;
+  const currCount = Object.hasOwn(allNames, name) ? allNames[name] : 0;
   return {
     ...allNames,
     [name]: currCount + 1,
@@ -291,12 +291,12 @@ const countedNames = names.reduce((allNames, name) => {
   allNames[names] = currCount + 1;
   // return allNames, otherwise the next iteration receives undefined
   return allNames;
-}, {});
+}, Object.create(null));
 ```
 
 ```js example-good
 const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
-const countedNames = {};
+const countedNames = Object.create(null);
 for (const name of names) {
   const currCount = countedNames[name] ?? 0;
   countedNames[names] = currCount + 1;
