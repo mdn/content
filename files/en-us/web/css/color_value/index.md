@@ -17,13 +17,11 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 A `<color>` value can be specified using one of the methods listed below:
 
 - By keyword: {{CSSXref("&lt;named-color&gt;")}}, {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
-
 - By paramters in a color space:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
-
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 
 ### currentcolor keyword
@@ -71,12 +69,10 @@ In this example we provide a `<div>` and a text input. Entering a valid color in
 <input type="text" id="color" />
 ```
 
-#### CSS
-
-```css
+```css hidden
 div {
-  width: 100%;
   height: 200px;
+  width: 200px;
 }
 ```
 
@@ -85,10 +81,7 @@ const inputElem = document.querySelector("input");
 const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (
-    stringToTest === "inherit" ||
-    stringToTest === "transparent"
-  ) {
+  if (stringToTest === "inherit" || stringToTest === "transparent") {
     return false;
   }
 
@@ -132,7 +125,9 @@ This example shows reds of different shades in the sRGB color space.
 ```css hidden
 div {
   display: inline-block;
+  height: 100px;
   margin: 10px;
+  width: 100px;
 }
 ```
 
@@ -181,8 +176,11 @@ This example shows reds of different saturations in the sRGB color space.
 ```css hidden
 div {
   display: inline-block;
+  height: 100px;
   margin: 10px;
+  width: 100px;
 }
+```
 ```
 
 ```css
@@ -223,5 +221,5 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}}: the property defining transparency at the element level
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)
