@@ -17,13 +17,11 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 A `<color>` value can be specified using one of the methods listed below:
 
 - By keyword: {{CSSXref("&lt;named-color&gt;")}}, {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
-
 - By paramters in a color space:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
-
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 
 ### currentcolor keyword
