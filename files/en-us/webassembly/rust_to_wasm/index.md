@@ -312,7 +312,6 @@ This imports the new module from the `node_modules` folder. This isn't considere
 
 Finally, we need to modify the HTML file, which was created under the `pkg` folder; open the `index.html` file and replace the current contents with the following:
 
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
