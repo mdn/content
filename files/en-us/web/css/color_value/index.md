@@ -92,7 +92,9 @@ function validTextColor(stringToTest) {
   return !!div.style.color;
 }
 
-inputElem.addEventListener("input", () => {
+inputElem.addEventListener(
+  "input",
+  () => {
     if (validTextColor(inputElem.value)) {
       divElem.style.backgroundColor = inputElem.value;
       divElem.textContent = "";
@@ -100,8 +102,7 @@ inputElem.addEventListener("input", () => {
       divElem.removeAttribute("style");
       divElem.textContent = "Invalid color value";
     }
-  }
-);
+  });
 ```
 
 #### Result
