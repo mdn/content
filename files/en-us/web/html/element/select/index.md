@@ -427,7 +427,7 @@ for (const select of selects) {
         } else {
             options[options.length - 1].focus();
         }
-    } else if (e.keyCode === "40) {
+    } else if (e.keyCode === 40) {
         const options = div.querySelectorAll('.option');
         const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
         if (focusedIndex < options.length - 1) {
