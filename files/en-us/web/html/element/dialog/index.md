@@ -77,7 +77,7 @@ This example opens a modal dialog when the "Show the dialog" button is activated
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="confirmBtn" value="default">Submit</button>
+      <button id="confirmBtn" value="default">Confirm</button>
     </div>
   </form>
 </dialog>
@@ -98,7 +98,7 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 
 // "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener('click', () => {
-    favDialog.showModal();
+  favDialog.showModal();
 });
 
 // "Favorite animal" input sets the value of the submit button
@@ -106,10 +106,12 @@ selectEl.addEventListener('change', (e) => {
   confirmBtn.value = selectEl.value;
 });
 
-// "Confirm" button triggers "close" on dialog because of [formmethod="dialog"]
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
 favDialog.addEventListener('close', (e) => {
   outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
 confirmBtn.addEventListener('click', (event) => {
   event.preventDefault(); // We don't want to submit this fake form
   favDialog.close(selectEl.value); // Have to send the select box value here.
@@ -120,7 +122,7 @@ confirmBtn.addEventListener('click', (event) => {
 
 {{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
-This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Submit" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
+This modal dialog can be closed three ways. For keyboard users, modal dialogs can be closed with the <kbd>Esc</kbd> key. In this example, the "Cancel" button closes the dialog via the `dialog` form method and the "Confirm" closes the dialog via the {{domxref("HTMLDialogElement.close()")}} method.
 The "Cancel" button includes a [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input/submit#formmethod), which overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} [`method`](/en-US/docs/Web/HTML/Element/form#method). When a form's method is [`dialog`](#usage_notes), the state of the form is saved, not submitted, and the dialog gets closed.
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload. We use JavaScript to prevent the submission and close the dialog with the {{domxref("event.preventDefault()")}} and {{domxref("HTMLDialogElement.close()")}} methods, respectively.
 

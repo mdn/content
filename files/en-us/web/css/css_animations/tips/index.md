@@ -1,6 +1,6 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 page-type: guide
 ---
 
@@ -10,7 +10,7 @@ CSS Animations make it possible to do incredible things with the elements that m
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) specification doesn't offer a way to run an animation again. There's no magic `resetAnimation()` method on elements, and you can't even just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use clever tricks to get a stopped animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. There's no magic `resetAnimation()` method on elements, and you can't even just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use clever tricks to get a stopped animation to replay.
 
 Here's one way to do it that we feel is stable and reliable enough to suggest to you.
 

@@ -59,7 +59,6 @@ You define the page action's properties using the [`page_action`](/en-US/docs/Mo
 
 ```json
 "page_action": {
-  "browser_style": true,
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
