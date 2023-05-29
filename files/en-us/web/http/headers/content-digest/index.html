@@ -1,0 +1,26 @@
+---
+title: Content-Digest
+slug: Web/HTTP/Headers/Content-Digest
+page-type: http-header
+browser-compat: http.headers.Content-Digest
+spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
+status:
+  - experimental
+---
+
+{{HTTPSidebar}}{{SeeCompatTable}}
+
+The **`Content-Digest`** response header provides the client with a {{Glossary("digest")}} of the requested _actual message content_, the preimage of computing the _selected representation_ (e.&hairsp;g. [Range Requests](/en-US/docs/Web/HTTP/Range_requests) or [Content Encoding](/en-US/docs/Web/HTTP/Content_negotiation)). Note that the selected representation is independent of wire transmission (e.&hairsp;g. HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}). Note furthermore that the actual message content is dependent on {{HTTPHeader("Accept")}}ed representations (else the digest would be of little use since there would not be an unambiguous correspondence between `Content-` and enough `Repr-`).  
+A client can request that a server emit a **`Content-Digest`** by issuing {{HTTPHeader("Want-Content-Digest")}}.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
