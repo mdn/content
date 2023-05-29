@@ -380,7 +380,7 @@ const fn = obj.getThisGetter();
 console.log(fn() === obj); // true
 ```
 
-But be careful if you unbind the method of `obj` without calling it, because `getThisGetter` is still a method that has a varying `this` value. Calling `fn2()()` in the following example returns `globalThis` in non-strict mode and `undefined` in strict mode, because it follows the `this` from `fn2()`, which is `globalThis` in non-strict mode and `undefined` in strict mode since it's called without being attached to any object.
+But be careful if you unbind the method of `obj` without calling it, because `getThisGetter` is still a method that has a varying `this` value. Calling `fn2()()` in the following example returns `globalThis` in non-strict mode and returns `undefined` in strict mode, because it follows the `this` from `fn2()`, which is `globalThis` in non-strict mode and is `undefined` in strict mode since it's called without being attached to any object.
 
 ```js
 const fn2 = obj.getThisGetter;
@@ -418,7 +418,7 @@ console.log(o.average, o.sum); // 2 6
 
 ### this in DOM event handlers
 
-When a function is used as an event handler, its `this` is bound to the DOM element on which the listener is placed (some browsers do not follow this convention for listeners added dynamically with methods other than {{domxref("EventTarget/addEventListener", "addEventListener()")}}).
+When a function is used as an event handler, its `this` parameter is bound to the DOM element on which the listener is placed (some browsers do not follow this convention for listeners added dynamically with methods other than {{domxref("EventTarget/addEventListener", "addEventListener()")}}).
 
 ```js
 // When called as a listener, turns the related element blue
@@ -456,7 +456,7 @@ The above alert shows `button`. Note, however, that only the outer scope has its
 </button>
 ```
 
-In this case, the `this` paramter of the inner function is bound to `globalThis` in non-strict mode and `undefined` in strict mode.
+In this case, the `this` parameter of the inner function is bound to `globalThis` in non-strict mode, and is bound to `undefined` in strict mode.
 
 ### Bound methods in classes
 
