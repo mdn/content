@@ -12,6 +12,36 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 
 > **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
+## Syntax
+
+A `<color>` value can be specified using one of the methods listed below:
+
+- By keyword: {{CSSXref("&lt;named-color&gt;")}}, {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
+
+- By paramters in a color space:
+  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
+  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
+  - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+
+- By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
+
+### currentcolor keyword
+
+The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
+
+If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
+
+```html
+<div style="color: blue; border: 1px dashed currentcolor;">
+  The color of this text is blue.
+  <div style="background: currentcolor; height:9px;"></div>
+  This block is surrounded by a blue border.
+</div>
+```
+
+{{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}
+
 ## Interpolation
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
