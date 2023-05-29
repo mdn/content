@@ -181,7 +181,6 @@ div {
   width: 100px;
 }
 ```
-```
 
 ```css
 div:nth-child(1) {
