@@ -11,7 +11,7 @@ browser-compat: http.headers.Want-Digest
 
 > **Warning:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08). Use {{HTTPHeader("Want-Repr-Digest")}} instead. For `id-*` digest algorithms, use {{HTTPHeader("Want-Content-Digest")}}.
 
-The **`Want-Digest`** HTTP header is sent in a request to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
+The **`Want-Digest`** request or response HTTP header requests the other side to provide a {{Glossary("digest")}} of the _selected representation_ or _content_ using the {{HTTPHeader("Digest")}} header.
 
 The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.
 The request may use {{Glossary("quality values")}} to indicate its preference/order for particular digest algorithms.
