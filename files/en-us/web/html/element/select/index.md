@@ -417,8 +417,24 @@ for (const select of selects) {
   function onkeyup(e) {
     e.preventDefault();
     e.stopPropagation();
-    if (e.keyCode === 13) {
+    if (e.key === "Enter") {
       this.click();
+    } else if (e.key === "ArrowUp") {
+        const options = div.querySelectorAll('.option');
+        const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
+        if (focusedIndex > 0) {
+            options[focusedIndex - 1].focus();
+        } else {
+            options[options.length - 1].focus();
+        }
+    } else if (e.key === "ArrowDown") {
+        const options = div.querySelectorAll('.option');
+        const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
+        if (focusedIndex < options.length - 1) {
+            options[focusedIndex + 1].focus();
+        } else {
+            options[0].focus();
+        }
     }
   }
 
@@ -506,7 +522,7 @@ for (const select of selects) {
 
   div.onkeyup = (event) => {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.key === "Enter") {
       div.click();
     }
   };
