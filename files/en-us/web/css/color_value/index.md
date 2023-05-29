@@ -124,10 +124,11 @@ This example shows reds of different shades in the sRGB color space.
 
 ```css hidden
 div {
+  box-sizing: border-box;
   display: inline-block;
-  height: 100px;
+  height: 80px;
   margin: 10px;
-  width: 100px;
+  width: 80px;
 }
 ```
 
@@ -149,6 +150,7 @@ div:nth-child(5) {
 }
 div:nth-child(6) {
   background-color: hsl(0 100% 100%);
+  border: solid;
 }
 ```
 
@@ -176,9 +178,9 @@ This example shows reds of different saturations in the sRGB color space.
 ```css hidden
 div {
   display: inline-block;
-  height: 100px;
+  height: 80px;
   margin: 10px;
-  width: 100px;
+  width: 80px;
 }
 ```
 
