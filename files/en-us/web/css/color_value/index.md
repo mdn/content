@@ -94,19 +94,6 @@ function validTextColor(stringToTest) {
   div.style.color = stringToTest;
   return !!div.style.color;
 }
-
-inputElem.addEventListener(
-  "input",
-  () => {
-    if (validTextColor(inputElem.value)) {
-      divElem.style.backgroundColor = inputElem.value;
-      divElem.textContent = "";
-    } else {
-      divElem.removeAttribute("style");
-      divElem.textContent = "Invalid color value";
-    }
-  }
-);
 ```
 
 #### Result
