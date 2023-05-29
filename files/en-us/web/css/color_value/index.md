@@ -28,60 +28,6 @@ Some people have difficulty distinguishing colors. The [WCAG 2.0](/en-US/docs/We
 
 ## Examples
 
-### Color value tester
-
-In this example we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
-
-#### HTML
-
-```html
-<div></div>
-<hr />
-<label for="color">Enter a valid color value:</label>
-<input type="text" id="color" />
-```
-
-#### CSS
-
-```css
-div {
-  width: 100%;
-  height: 200px;
-}
-```
-
-```js hidden
-const inputElem = document.querySelector("input");
-const divElem = document.querySelector("div");
-
-function validTextColor(stringToTest) {
-  if (
-    stringToTest === "inherit" ||
-    stringToTest === "transparent"
-  ) {
-    return false;
-  }
-
-  const div = document.createElement("div");
-  div.style.color = stringToTest;
-  return !!div.style.color;
-}
-
-inputElem.addEventListener("input", () => {
-  if (validTextColor(inputElem.value)) {
-    divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = "";
-  } else {
-    divElem.removeAttribute("style");
-    divElem.textContent = "Invalid color value";
-  }
-});
-```
-
-#### Result
-
-{{EmbedLiveSample("color_value_tester", "100%", 300)}}
-
 ### Reds of different shades
 
 This example shows reds of different shades in the sRGB color space.
