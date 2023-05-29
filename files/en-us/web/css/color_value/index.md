@@ -78,6 +78,21 @@ div {
 }
 ```
 
+```js hidden
+inputElem.addEventListener(
+  "input",
+  () => {
+    if (validTextColor(inputElem.value)) {
+      divElem.style.backgroundColor = inputElem.value;
+      divElem.textContent = "";
+    } else {
+      divElem.removeAttribute("style");
+      divElem.textContent = "Invalid color value";
+    }
+  }
+);
+```
+
 #### Result
 
 {{EmbedLiveSample("color_value_tester", "100%", 300)}}
