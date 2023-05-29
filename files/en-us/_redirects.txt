@@ -11360,6 +11360,7 @@
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding	/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing	/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Sizing
 /en-US/docs/Web/CSS/CSS_Masks	/en-US/docs/Web/CSS/CSS_masking
+/en-US/docs/Web/CSS/CSS_Pages	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/Web/CSS/CSS_Positioning	/en-US/docs/Web/CSS/CSS_positioned_layout
 /en-US/docs/Web/CSS/CSS_Positioning/Understanding_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /en-US/docs/Web/CSS/CSS_Positioning/Understanding_z-index/Stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
@@ -11380,7 +11381,6 @@
 /en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Using_z-index	/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
-/en-US/docs/Web/CSS/CSS_Pages	/en-US/docs/Web/CSS/CSS_paged_media
 /en-US/docs/Web/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/Reference#index
 /en-US/docs/Web/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
