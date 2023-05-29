@@ -18,7 +18,7 @@ Clients specify the formats that they prefer to be sent during [Content Negotiat
 Representation headers may be present in both HTTP request and response messages.
 If sent as a response to a `HEAD` request, they describe the body content representation that _would_ be selected if the resource was requested with a `GET` request.
 
-Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Repr-Digest")}}.
+Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Content-Range")}}, {{Deprecated_Inline}}{{HTTPHeader("Digest")}} and {{HTTPHeader("Repr-Digest")}}.
 
 ## See also
 
@@ -26,4 +26,5 @@ Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Co
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{Glossary("Payload header")}}
 - {{glossary("Entity header")}}
+- {{Deprecated_Inline}}{{HTTPHeader("Digest")}}, {{Deprecated_Inline}}{{HTTPHeader("Want-Digest")}}
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
