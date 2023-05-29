@@ -92,8 +92,7 @@ function validTextColor(stringToTest) {
   return !!div.style.color;
 }
 
-inputElem.addEventListener(
-  "input", () => {
+inputElem.addEventListener("input", () => {
     if (validTextColor(inputElem.value)) {
       divElem.style.backgroundColor = inputElem.value;
       divElem.textContent = "";
