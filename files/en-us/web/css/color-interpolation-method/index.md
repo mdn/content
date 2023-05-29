@@ -42,7 +42,7 @@ in <polar-color-space>[ <hue-interpolation method>]
 
   - : The algorithm for hue interpolation. It defaults to `shorter hue`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
