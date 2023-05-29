@@ -9,10 +9,10 @@ page-type: glossary-definition
 A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes the particular _representation_ of the target resource sent in an HTTP message body.
 
 Representations are different forms of a particular resource.  
-For example, the same data might be formatted as a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission. The underlying resource is the same in each case, but its representation is different.  
+For example, the same data might be formatted as a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission. The underlying resource is the same in each case, but its representation is different.
 
 Whilst representations are different forms of resources, representations can themselves also be transmitted in different forms.
-For example, HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}} does *not* affect the representation, whereas {{HTTPHeader("Content-Range")}} does.  
+For example, HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}} does *not* affect the representation, whereas {{HTTPHeader("Content-Range")}} does.
 
 Clients specify the formats that they prefer to be sent during [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) (using `Accept-*` headers), and the representation headers tell the client the format of the _selected representation_ they received.
 
