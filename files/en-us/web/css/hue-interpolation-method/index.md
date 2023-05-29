@@ -95,7 +95,7 @@ There are four algorithms to determine which arc is used:
     | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
     | ![decreasing with θ1 = 45deg and θ2 = 495deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
