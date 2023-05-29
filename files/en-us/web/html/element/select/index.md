@@ -417,9 +417,9 @@ for (const select of selects) {
   function onkeyup(e) {
     e.preventDefault();
     e.stopPropagation();
-    if (e.key === "Enter") {
+    if (e.keyCode === 13) {
       this.click();
-    } else if (e.key === "ArrowUp") {
+    } else if (e.keyCode === 38) {
         const options = div.querySelectorAll('.option');
         const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
         if (focusedIndex > 0) {
@@ -427,7 +427,7 @@ for (const select of selects) {
         } else {
             options[options.length - 1].focus();
         }
-    } else if (e.key === "ArrowDown") {
+    } else if (e.keyCode === "40) {
         const options = div.querySelectorAll('.option');
         const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
         if (focusedIndex < options.length - 1) {
@@ -522,7 +522,7 @@ for (const select of selects) {
 
   div.onkeyup = (event) => {
     event.preventDefault();
-    if (event.key === "Enter") {
+    if (event.keyCode === 13) {
       div.click();
     }
   };
