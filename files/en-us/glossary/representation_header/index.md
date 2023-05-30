@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes the particular _representation_ of a resource.
+A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes one particular _representation_ of a resource.
 
 Representations are different forms of a particular resource.  
 For example, the same data might be formatted as a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission. The underlying resource is the same in each case, but its representation is different.
