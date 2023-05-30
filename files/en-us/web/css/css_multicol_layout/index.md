@@ -70,5 +70,5 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
 
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_Pages) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) module
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (CSS flexbox)
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
