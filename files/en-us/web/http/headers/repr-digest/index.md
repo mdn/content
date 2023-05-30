@@ -14,7 +14,24 @@ The **`Repr-Digest`** response or request header is the `Repr-` analogue to {{HT
 
 **`Repr-Digest`** takes on an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) whose keys are digest algorithms and whose values for `sha-256` and `sha-512` are [byte sequences](https://www.rfc-editor.org/rfc/rfc8941#section-3.3.5) (colon-wrapped standard base64 with padding).
 
-## Digest algorithms
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Representation header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntax
+`Repr-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2).
+
+## Directives
+### Digest algorithms
 
 Only two digest algorithms are currently registered and not considered insecure: `sha-512` and `sha-256`.  
 The registered insecure digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`

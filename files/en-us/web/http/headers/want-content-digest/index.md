@@ -12,6 +12,26 @@ status:
 
 The **`Want-Content-Digest`** request or response header states the wish for a {{HTTPHeader("Content-Digest")}} header.
 
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Representation header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntax
+`Want-Content-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2).
+
+## Directives
+
+## Examples
+
 ## Specifications
 
 {{Specifications}}
