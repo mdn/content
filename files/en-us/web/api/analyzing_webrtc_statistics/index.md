@@ -43,18 +43,15 @@ function getConnectionStats() {
 ```
 
 When the promise returned by `getStats()` is fulfilled, the resolution handler receives as input an {{domxref("RTCStatsReport")}} object containing the statistics information.
-This object contains a {{jsxref("Map")}} of named dictionaries based on {{domxref("RTCStats")}} and its affiliated types.
+This object contains a read-only {{jsxref("Map")}} of dictionaries, each identified by a name string stored in its `type` property.
 
 This example specifically looks for the report that has a `type` of `inbound-rtp` and a `kind` of `video`.
 This way, we look only at the video-related statistics for the local {{domxref("RTCRtpReceiver")}} responsible for receiving the streamed media.
 
 ## Commonly used statistics
 
-## Reference
-
-The {{domxref("RTCStatsReport")}} object contains a map of named objects based one of the {{domxref("RTCStats")}} dictionary's subclasses.
-Upon looking up a statistic category by name, you get an object containing the corresponding data.
-The table below shows the statistic categories and the corresponding dictionaries; for each statistic category, the full hierarchy of `RTCStats`-based dictionaries are listed, so you can easily find all the available values.
+The {{domxref("RTCStatsReport")}} object contains a map of named dictionary objects.
+The table below shows the statistic names, as stored in the `type` property of each object, and the corresponding dictionaries.
 
 | type                  | Dictionary                                                               | Description                                                                                                                                                                                                |
 | --------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
