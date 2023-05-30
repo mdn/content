@@ -68,6 +68,7 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
 
 ## See also
 
+- [Learn: multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
