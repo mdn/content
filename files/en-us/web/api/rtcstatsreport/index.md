@@ -7,7 +7,7 @@ browser-compat: api.RTCStatsReport
 
 {{APIRef("WebRTC")}}
 
-The **`RTCStatsReport`** interface of the [WebRTC Statistics API](n-US/docs/Web/API/WebRTC_Statistics_API) provides a statistics report for a {{domxref("RTCPeerConnection")}}, {{domxref("RTCRtpSender")}}, or {{domxref("RTCRtpReceiver")}}.
+The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides a statistics report for a {{domxref("RTCPeerConnection")}}, {{domxref("RTCRtpSender")}}, or {{domxref("RTCRtpReceiver")}}.
 
 ## Instance properties
 
