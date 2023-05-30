@@ -89,3 +89,4 @@ This specification fires events with the following custom interface:
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
 - [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.
+- [GlueSQL](https://www.npmjs.com/package/gluesql) A SQL database that supports IndexedDB, localStorage, sessionStorage, and in-memory as storage options.
