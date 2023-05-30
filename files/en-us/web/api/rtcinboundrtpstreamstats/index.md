@@ -51,9 +51,11 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}} {{deprecated_inline}}
   - : A string which identifies the statistics object representing the receiving track; this object is one of two types: {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}}. This ID is stable across multiple calls to `getStats()`.
 
-### Synchronizing source statistics
+### Statistics measured at the receiver of an RTP stream
 
 <!-- RTCReceivedRtpStreamStats -->
+
+These statistics are measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
 
 - {{domxref("RTCInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
   - : The total number of RTP packets received for this synchronizing source, including retransmissions.
