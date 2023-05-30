@@ -59,6 +59,4 @@ In the example below, we are using the `orphans` property to control the number 
 
 ## When things don't work as expected
 
-If you have small amounts of content and are trying to control breaks in a number of ways or on several elements, your content needs to break somewhere, so you may not always get the result you intended. To some extent your use of fragmentation is always a suggestion to the browser, to control breaks in this way if it is possible.
-
-In addition to the above, browser support for these properties is a little patchy. The compatibility data charts on the individual property pages here on MDN can help you see which browsers support which features. In most cases, the fallback to breaks not being controlled is something you can live with, with suboptimal breaking being untidy rather than a disaster to your layout.
+If you have small amounts of content and are trying to control breaks on several elements, your content needs to break somewhere, so you may not always get the result you intended. To some extent, your use of fragmentation is always a suggestion to the browser, to control breaks in this way if it is possible. If the content doesn't break where you intended, the result may be untidy, but the content is still available for your users.
