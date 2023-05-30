@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-The manifest file contains information about the PWA's identity, presentation, and iconography. While the only requirement is to include a name using the `name` or `short_name` key, you should also include icon information, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed.
+While the only requirement is to include a name using the `name` or `short_name` key, you should also include icon information, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
@@ -25,11 +25,11 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 }
 ```
 
-Before saving the manifest file and linking to it from our HTML file, let's discuss we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more keys that enable manifest files to better define the appearance of our PWA.
+Before saving the manifest file and linking to it from our HTML file, we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more members that enable manifest files to better define the appearance of our PWA.
 
 ## App identity
 
-To identity your PWA the JSON must include a `name` or `short_name` key, or both, to define the PWA name. It can also include a `description`.
+To identity your PWA the JSON must include a `name` or `short_name` member, or both, to define the PWA name. It can also include a `description`.
 
 - [`name`](/en-US/docs/Web/Manifest/name)
   - : The name of the PWA. This is the name used when the operating system lists applications, as the label next to the application icon, etc.

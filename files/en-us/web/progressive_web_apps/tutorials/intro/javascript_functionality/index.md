@@ -78,7 +78,7 @@ This is a beginner-level demonstration application. The goal is to teach the bas
 
 ## Form submission
 
-The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `start-date` and `start-date` respectively.
+The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `start-date` and `end-date` respectively.
 
 The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this cycle along with previous ones, and then reset the form.
 
@@ -149,12 +149,12 @@ In a more robust version of this app, we would, at minimum, include error messag
 
 We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
-[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) and, discussed later, service workers, have better performance.
+[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
 
 Limitations of `localStorage` include:
 
 - Limited data storage: `localStorage` is limited to 5MB of data per origin. Our storage needs are much less than that.
-- Stores stings only: `localStorage` stores data as string key and string value pairs. Our start and end dates will be stored as a JSON object parsed as a string. For more complex data, a more robust storage mechanism like IDB would be required.
+- Stores strings only: `localStorage` stores data as string key and string value pairs. Our start and end dates will be stored as a JSON object parsed as a string. For more complex data, a more robust storage mechanism like IDB would be required.
 - Can cause poor performance: Getting and setting from and to local storage is done synchronously on the main thread. When the main thread is occupied, apps are not responsive and appear frozen. With the limited nature of this app, this blip of bad user experience is negligible.
 - Only available to the main thread: In addition to the performance issues of occupying the main thread, service workers do not have access to the main thread, meaning the service worker can't directly set or get the local storage data.
 
@@ -344,7 +344,7 @@ You can try the fully functioning [period tracker web app](https://mdn.github.io
 
 ## Up next
 
-At it's core, a PWA is a web application that is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert into a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we have to make this application work.
+At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert it to a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker).
 
 Up first, we create the [PWA's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the PWA's identity, appearance, and iconography.
 
