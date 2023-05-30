@@ -26,11 +26,15 @@ The **`Want-Repr-Digest`** request or response header states the wish for a {{HT
 </table>
 
 ## Syntax
-`Want-Repr-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2).
+`Want-Repr-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
 
 ## Directives
 
 ## Examples
+```http
+Want-Repr-Digest: sha-512=8, sha-256=6, adler=0, sha=1
+Want-Repr-Digest: sha-512=10, sha-256=1, md5=0
+```
 
 ## Specifications
 

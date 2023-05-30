@@ -10,11 +10,11 @@ status:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Content-Digest`** response or request header provides a {{Glossary("digest")}} of the actual message content, the preimage of computing the _selected representation_.
-For example, [Range Requests](/en-US/docs/Web/HTTP/Range_requests) or [Content Encoding](/en-US/docs/Web/HTTP/Content_negotiation).  
-Note that the selected representation is independent of wire transmission, such as HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}).
-Note furthermore that the actual message content is independent of [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation): this means that if a target resource is available in two different MIME types (say), their corresponding {{HTTPHeader("Repr-Digest")}}s without using [Range Requests](/en-US/docs/Web/HTTP/Range_requests) may *both* not match `Content-Digest`, since the "true" content source is never sent.  
-A client can request that a server emit a **`Content-Digest`** by issuing {{HTTPHeader("Want-Content-Digest")}}.
+The **`Content-Digest`** response or request header provides a {{Glossary("digest")}} of the actual message content, the stream of octets framed in an HTTP message. As such, `Content-Digest` is dependent on e.&hairsp;g. {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}} but not on HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}. `Content-Digest` may coincide with {{HTTPHeader("Repr-Digest")}}.
+
+"content" in this setting refers to a particular octet representation of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource.
+
+A client can request that a server emit a `Content-Digest` by issuing {{HTTPHeader("Want-Content-Digest")}}.
 
 <table class="properties">
   <tbody>
