@@ -55408,22 +55408,6 @@
       "teoli"
     ]
   },
-  "Web/API/RTCStats": {
-    "modified": "2020-10-15T22:09:08.133Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/id": {
-    "modified": "2020-10-15T22:09:13.396Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/timestamp": {
-    "modified": "2020-10-15T22:09:22.868Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/type": {
-    "modified": "2020-10-15T22:09:22.843Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T21:44:42.878Z",
     "contributors": ["Sheppy", "fscholz"]
