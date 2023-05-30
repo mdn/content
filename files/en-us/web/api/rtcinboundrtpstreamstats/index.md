@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp
 
 The **`RTCInboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics related to the receiving end of an RTP stream on the local end of the {{domxref("RTCPeerConnection")}}.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `inbound-rtp`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpReceiver.getStats()")}} until you find a report with the [`type`](#type) of `inbound-rtp`.
 
 ## Instance properties
 
@@ -64,7 +64,7 @@ The following properties are common to all WebRTC statistics objects.
 - {{domxref("RTCInboundRtpStreamStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCInboundRtpStreamStats.type", "type")}}
-  - : A string with the value `"local-candidate"`, indicating the type of statistics that the object contains.
+  - : A string with the value `"inbound-rtp"`, indicating the type of statistics that the object contains.
 
 ## Examples
 
