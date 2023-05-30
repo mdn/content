@@ -6,11 +6,11 @@ spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 
 {{CSSRef("CSS3 Multicol")}}
-The **CSS multi-column layout** module lets you divide content across multiple columns, defining the preferred number and width of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and the visual appearance of optional column dividing lines (known as column rules).
+The **CSS multi-column layout** module lets you divide content across multiple columns, defining the preferred number and width of columns, as well as how content should flow from column to column, the gap size between columns, and the visual appearance of optional column dividing lines (known as column rules). Additional properties define how to break content between columns, including how many lines should be kept together (known as orphans and widows) or whether breaking an element's content across columns should be avoided altogether.
 
-## Columns in action
+## Multi-column layout in action
 
-The 1967 speech from Canada's centennial, _A Lament for Confederation_, by Chief Dan George, is displayed across multiple columns, similar to the way articles are displayed in printed newspapers. If you have JavaScript enabled, the controls enable changing the preferred number and width of columns, the width of the gap between columns, whether the title and sample blockquote reside in a single column or span all columns, and whether breaking within the paragraphs should be avoided.
+In this example, the 1967 speech from Canada's centennial, _A Lament for Confederation_, by Chief Dan George, is displayed across multiple columns, similar to the way articles are displayed in printed newspapers. If you have JavaScript enabled, controls enable changing the preferred column number and width, the width of the gap between columns, whether the title and a sample blockquote should be contained in a single column or made to span all columns, and whether breaking within the paragraphs should be avoided.
 
 {{EmbedGHLiveSample("css-examples/modules/multicol.html", '100%', 650)}}
 
