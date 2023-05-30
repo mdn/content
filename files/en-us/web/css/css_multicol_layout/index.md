@@ -39,15 +39,15 @@ In the following example, the {{cssxref("column-count")}} property has been appl
 
 ## Guides
 
-- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
   - : An overview of the Multiple-column Layout specification
-- [Styling columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)
+- [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : How to use column rules and manage the spacing between columns.
-- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns)
+- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
   - : How to make elements span across all columns and controlling the way columns are filled.
-- [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+- [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
-- [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+- [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
   - : Introduction to the Fragmentation specification and how to control where column content breaks.
 
 ## Related concepts
