@@ -10,10 +10,10 @@ browser-compat: http.headers.Digest
 {{HTTPSidebar}}{{Deprecated_Header}}
 
 > **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
-> Use {{HTTPHeader("Repr-Digest")}} instead.
-> For `id-*` digest algorithms, use {{HTTPHeader("Content-Digest")}}.
+> Use {{HTTPHeader("Content-Digest")}} instead.
+> For `id-*` digest algorithms, use {{HTTPHeader("Repr-Digest")}}.
 
-The **`Digest`** response or request HTTP header provides the other side with a {{Glossary("digest")}} of the _selected representation_ or _content_. It can be requested by using the {{HTTPHeader("Want-Digest")}} header.
+The **`Digest`** response or request HTTP header provides the other side with a {{Glossary("digest")}} of the {{HTTPHeader("Content-Encoding")}}-encoded _selected representation_. It can be requested by using the {{HTTPHeader("Want-Digest")}} header.
 
 Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
 The _selected representation_ is the actual format of a resource that is returned following [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), and can be determined from the response's {{Glossary("Representation header","Representation headers")}}.
