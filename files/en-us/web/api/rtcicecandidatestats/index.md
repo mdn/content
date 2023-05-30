@@ -2,16 +2,16 @@
 title: RTCIceCandidateStats
 slug: Web/API/RTCIceCandidateStats
 page-type: web-api-interface
-browser-compat: api.RTCIceCandidateStats
+browser-compat: api.RTCStatsReport.type_local-candidate
 ---
 
 {{APIRef("WebRTC")}}
 
-The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics related to an {{domxref("RTCIceCandidate")}}.
+The **`RTCIceCandidateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics related to an {{domxref("RTCIceCandidate")}}.
+
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `local-candidate`.
 
 ## Instance properties
-
-`RTCIceCandidateStats` is based upon the {{domxref("RTCStats")}} dictionary, so it includes those properties in addition to the ones below.
 
 - {{domxref("RTCIceCandidateStats.address", "address")}} {{optional_inline}}
   - : A string containing the address of the candidate. This value may be an IPv4 address, an IPv6 address, or a fully-qualified domain name. This property was previously named `ip` and only accepted IP addresses.
@@ -26,11 +26,26 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.protocol", "protocol")}} {{optional_inline}}
   - : A string specifying the protocol (`tcp` or `udp`) used to transmit data on the `port`.
 - {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} {{optional_inline}}
-  - : A string identifying the protocol used by the endpoint for communicating with the {{Glossary("TURN")}} server; valid values are `tcp`, `udp`, and `tls`. Only present for local candidates.
+  - : A string identifying the protocol used by the endpoint for communicating with the {{Glossary("TURN")}} server; valid values are `tcp`, `udp`, and `tls`.
+    Only present for local candidates.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}} {{optional_inline}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 - {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
-  - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received. This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event that delivered the candidate to the local peer.
+  - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received.
+    This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event that delivered the candidate to the local peer.
+
+### Common instance properties
+
+The following properties are common to all WebRTC statistics objects.
+
+<!-- RTCStats -->
+
+- {{domxref("RTCIceCandidateStats.id", "id")}}
+  - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+- {{domxref("RTCIceCandidateStats.timestamp", "timestamp")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- {{domxref("RTCIceCandidateStats.type", "type")}}
+  - : A string with the value `"local-candidate"`, indicating the type of statistics that the object contains.
 
 ## Examples
 
