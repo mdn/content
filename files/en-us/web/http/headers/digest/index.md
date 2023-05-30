@@ -51,8 +51,8 @@ Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
     - Permitted insecure digest algorithm values are: `md5`, `sha`, `unixsum`, `unixcksum`, `adler32` and `crc32c`
     - Deprecated digest algorithm values include: `id-sha-256`, `id-sha-512`
 - `<digest-value>`
-  - : The result of applying the digest algorithm to the resource representation and encoding (for non-`id-*` digest algorithm values) the result.
-    The choice of digest algorithm also determines the encoding to use: for example SHA-256 uses base64 encoding whilst unixsum is represented by a decimal integer.
+  - : The result of applying the digest algorithm to the resource representation and encoding the result (for non-`id-*` digest algorithm values).
+    The choice of digest algorithm also determines the encoding to use: for example SHA-256 uses base64 encoding, whilst unixsum is represented by a decimal integer.
 
 ## Examples
 
