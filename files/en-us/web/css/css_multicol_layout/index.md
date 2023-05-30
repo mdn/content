@@ -9,13 +9,15 @@ spec-urls: https://drafts.csswg.org/css-multicol/
 
 The **CSS multi-column layout** module lets you divide content across multiple columns, defining the preferred number and width of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and the visual appearance of optional column dividing lines (known as column rules).
 
-## Columns in action
+## Multi-column layout in action
 
-In the following example, the {{cssxref("column-count")}} property has been applied to the {{HTMLElement("div")}} element with the class `container`. As the value of `column-count` is `3`, the content is arranged into three columns of the same size.
+The 1967 speech from Canada's centennial, _A Lament for Confederation_, by Chief Dan George, is displayed across multiple columns, similar to the way articles are displayed in printed newspapers. If you have JavaScript enabled, the controls enable changing the preferred number and width of columns, the width of the gap between columns, whether the title and sample blockquote reside in a single column or span all columns, and whether breaking within the paragraphs should be avoided.
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
+{{EmbedGHLiveSample("css-examples/modules/multicol.html", '100%', 650)}}
 
-> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_Pages), as each column box is a fragment, much like each printed page is a fragment of a document. Properties defined in [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) control how content breaks between columns.
+To see the code for this columned layout, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/multicol.html).
+
+> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_Pages), as each column box is a fragment, much like each printed page is a fragment of a document. Properties defined in [CSS fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) control how content breaks between columns.
 
 ## Reference
 
