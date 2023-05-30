@@ -9,7 +9,7 @@ browser-compat: http.headers.Want-Digest
 
 {{HTTPSidebar}}{{Deprecated_Header}}
 
-> **Warning:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08). Use {{HTTPHeader("Want-Repr-Digest")}} instead. For `id-*` digest algorithms, use {{HTTPHeader("Want-Content-Digest")}}.
+> **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08). Use {{HTTPHeader("Want-Repr-Digest")}} instead. For `id-*` digest algorithms, use {{HTTPHeader("Want-Content-Digest")}}.
 
 The **`Want-Digest`** request or response HTTP header requests the other side to provide a {{Glossary("digest")}} of the _selected representation_ or _content_ using the {{HTTPHeader("Digest")}} header.
 
