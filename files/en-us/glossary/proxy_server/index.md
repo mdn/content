@@ -4,14 +4,14 @@ slug: Glossary/Proxy_server
 page-type: glossary-definition
 ---
 
-A **proxy server** is an intermediate program or computer used when navigating through different networks of the Internet. They facilitate access to content on the World Wide Web. A proxy intercepts requests and serves back responses; it may forward the requests, or not (for example in the case of a cache), and it may modify it (for example changing its headers, at the boundary between two networks).
+Un **servidor proxy** es un programa intermediario o computadora que se usa cuando navegamos a través de diferentes redes de Internet. Estos facilitan el acceso en el World Wide Web. Un proxy intercepta peticiones y sirve de vuelta respuestas; puede reenviar las solicitudes, o no (por ejemplo en el caso de un caché), y puede modificarlo (por ejemplo, cambiando los headers, entre el límite de dos redes). 
 
-A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. In general there are two main types of proxy servers:
+Un proxy puede estar en la computadora local de un usuario, o en cualquier lugar entre la computadora del usuario y un servidor de destino de Internet. En general hay dos tipos de servidors proxy: 
 
-- A **forward proxy** that handles requests from and to anywhere on the Internet.
-- A **reverse proxy** taking requests from the Internet and forwarding them to servers in an internal network.
+- Un **Proxy de reenvío** que maneja las peticiones desde y hacia cualquier lugar de Internet. 
+- Un **proxy inverso** que toma peticiones de Internet y las reenvía a servidores en una red interna.
 
-## See also
+## Ver también
 
 - [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
 - [Proxy server](https://en.wikipedia.org/wiki/Proxy_server) on Wikipedia
