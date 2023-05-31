@@ -3,53 +3,17 @@ title: JavaScript web functionality
 slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 ---
 
+{{PWASidebar}}
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
-{{PWASidebar}}
-[period tracker web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality)
-In the previous section, we wrote the [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
+In the previous section, we wrote the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css), creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
-The [HTML for our menstrual cycle tracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) is:
+If you haven't already created the file, copy the [HTML for the menstrual cycle tracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) and save it in a file called `index.html`.
 
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    applicat
-    <meta name="viewport" content="width=device-width" />
-    <title>Cycle Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Period tracker</h1>
-    <form id="new-period">
-      <fieldset>
-        <legend>Enter your period start and end date</legend>
-        <p>
-          <label for="start-date">Start date</label>
-          <input type="date" id="start-date" required />
-        </p>
-        <p>
-          <label for="end-date">End date</label>
-          <input type="date" id="end-date" required />
-        </p>
-      </fieldset>
-      <p>
-        <button type="submit">Add Period</button>
-      </p>
-    </form>
-    <section id="past-periods"></section>
-    <script src="app.js" defer></script>
-  </body>
-</html>
-```
+Note the last line in the body links to the `app.js` script. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past-periods section.
 
-If you haven't already created the file, copy this HTML and save it in a file called `index.html`.
-
-Note the last line in the body links to the `app.js` script. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past periods section.
-
-At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create an fully installable PWA that works even when the user is offline.
+At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create a fully installable PWA that works even when the user is offline.
 
 ## Javascript task
 
@@ -140,6 +104,8 @@ function checkDatesInvalid(startDate, endDate) {
     // instead, this function returns true
     return true;
   }
+  // else
+  return false;
 }
 ```
 
@@ -149,7 +115,9 @@ In a more robust version of this app, we would, at minimum, include error messag
 
 We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
-[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
+[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. We're using localStorage to make this simple and client-side only. This means the data will only be stored on one browser on a single device. Clearing the browser data will also lose all locally stored periods. What may seem like a limitation for many applications may be an asset in the case of this application, as menstrual cycle data is personal, and the user of such an app may very rightly be concerned about privacy.
+
+For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
 
 Limitations of `localStorage` include:
 
@@ -292,6 +260,7 @@ function checkDatesInvalid(startDate, endDate) {
     newPeriodFormEl.reset();
     return true;
   }
+  return false;
 }
 
 function storeNewPeriod(startDate, endDate) {

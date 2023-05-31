@@ -185,7 +185,7 @@ The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cy
 
 ## CSS content
 
-With CSS, we use {{CSSXref("background-color")}} to set a light green (`#efe`) background color on the `<body>`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+With CSS, we use {{CSSXref("background-color")}} to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
 
 We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
 
@@ -208,7 +208,7 @@ li:nth-of-type(even) {
 }
 ```
 
-To make the unordered list and list items not look like a list, we remove the padding by setting {{CSSXref("padding", "padding: 0")}} on the `<ul>` and remove the list markers by setting {{CSSXref("list-style-type", "list-style-type: none")}} on the list items themselves.
+To make the unordered list and list items not look like a list, we remove the padding by setting {{CSSXref("padding", "padding: 0")}} on the `ul` and remove the list markers by setting {{CSSXref("list-style-type", "list-style-type: none")}} on the list items themselves.
 
 ```css
 ul {
@@ -219,7 +219,7 @@ li {
 }
 ```
 
-We add a little white space by setting the body's {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional the viewport's size. We also add a little padding to the list items and legend. Finally, to improve, but not fix, the alignment of the past periods data, we set the {{CSSXref("font-family")}} of the results to be `monospace`, making each glyph have the same fixed width.
+We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
 
 ```css
 body {
@@ -234,7 +234,7 @@ legend {
 }
 ```
 
-We can combine the above, putting multiple properties in each selector declaration block. We can even put the styles for the `<li>` and `<legend>` together; irrelevant styles, like the `list-style-type` declaration on `<legend>`, are ignored.
+We can combine the above, putting multiple properties in each selector declaration block. We can even put the styles for the `li` and `legend` together; irrelevant styles, like the `list-style-type` declaration on `legend`, are ignored.
 
 ```css
 body {
