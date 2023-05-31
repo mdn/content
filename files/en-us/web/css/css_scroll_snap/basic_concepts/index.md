@@ -1,12 +1,12 @@
 ---
-title: Basic concepts of CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
+title: Basic concepts of scroll snap
+slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 page-type: guide
 ---
 
 {{CSSRef}}
 
-The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
+The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
 
 The scroll snap feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
 
@@ -78,8 +78,8 @@ With this property definition, you can ensure that users see each section of the
 
 ## See also
 
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_Scroll_Snap/)
-- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
-- [Practical CSS scroll snapping/](https://css-tricks.com/practical-css-scroll-snapping/)
-- [CSS Scroll Snap](https://12daysofweb.dev/2022/css-scroll-snap/)
-- [Scroll snap examples on Codepen](https://codepen.io/collection/KpqBGW)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (August 13, 2021)
+- [Practical CSS scroll snapping](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (June 18, 2020)
+- [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (December 7, 2019)
+- [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen
