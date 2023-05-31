@@ -33,6 +33,8 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
   - : An ending offset of `100%`.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A percentage of the time through the animation sequence at which the specified keyframe should occur.
+- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}} {{experimental_inline}}
+  - : A percentage of the time through a specific named timeline range inside the overall timeline of the animation sequence, at which the specified keyframe should occur. See the {{cssxref("animation-range")}} property page for a detailed description of the available named timeline ranges, and [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations) for more information on the kinds of animations that use them.
 
 ## Description
 
@@ -143,7 +145,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ### CSS animation examples
 
-See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
+See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) and [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/) for examples.
 
 ## Specifications
 
@@ -156,4 +158,5 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 ## See also
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/)
 - {{domxref("AnimationEvent")}}

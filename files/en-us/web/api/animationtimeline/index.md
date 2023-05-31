@@ -11,8 +11,13 @@ The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/AP
 
 ## Instance properties
 
-- {{domxref("AnimationTimeline.currentTime")}} {{ReadOnlyInline}}
+- {{domxref("AnimationTimeline.currentTime", "currentTime")}} {{ReadOnlyInline}}
   - : Returns the time value in milliseconds for this timeline or `null` if this timeline is inactive.
+
+## Instance methods
+
+- {{domxref("AnimationTimeline.getCurrentTime", "getCurrentTime()")}} {{ReadOnlyInline}}
+  - : Returns a representation of how far an animation has progressed through its associated timeline.
 
 ## Specifications
 
@@ -25,5 +30,6 @@ The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/AP
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- {{domxref("DocumentTimeline")}}
+- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- {{domxref("AnimationTimeline")}}, {{domxref("DocumentTimeline")}}, {{domxref("ScrollTimeline")}}, {{domxref("ViewTimeline")}}
 - {{domxref("Document.timeline")}}

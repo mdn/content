@@ -33,10 +33,9 @@ animate(keyframes, options)
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
 
     - `id` {{optional_inline}}
-      - : A property unique to `animate()`: a string
-        with which to reference the animation.
+      - : A property unique to `animate()`: A string with which to reference the animation.
     - `timeline` {{optional_inline}}
-      - : A property unique to `animate()`: the {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}.
+      - : A property unique to `animate()`: The {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}.
 
 ### Return value
 

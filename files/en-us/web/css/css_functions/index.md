@@ -312,10 +312,12 @@ The following functions are used as a value in transition and animation properti
 
 ## Animation functions
 
-The following functions are used as a value of different {{CSSxRef("animation")}} properties.
+The following functions are used as a value of different `animation-timeline` properties. See {{CSSxRef("animation-timeline")}} for more details about these.
 
-- {{cssxref("animation-timeline/scroll", "scroll()")}} {{Experimental_Inline}}
-  - : Sets the {{cssxref("animation-timeline")}} of an element to depend on scrollbar on a particular axis of either the nearest parent (with that scrollbar), or the root container.
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
+- {{cssxref("animation-timeline/view", "view()")}}
+  - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
 
 ## See also
 

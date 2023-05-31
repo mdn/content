@@ -65,6 +65,8 @@ animation-fill-mode: unset;
 
 > **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
+> **Note:** `animation-fill-mode` has the same effect when creating [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations) as it does for regular time-based animations.
+
 ## Formal definition
 
 {{cssinfo}}
