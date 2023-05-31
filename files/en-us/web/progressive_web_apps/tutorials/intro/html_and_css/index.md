@@ -185,7 +185,56 @@ The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cy
 
 ## CSS content
 
-Copy the following CSS in a new file and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css):
+With CSS, we use {{CSSXref("background-color")}} to set a light green (`#efe`) background color on the `<body>`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+
+We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
+
+```css
+body {
+  background-color: #efe;
+}
+ul,
+fieldset,
+legend {
+  border: 1px solid;
+  background-color: #fff;
+}
+li,
+legend {
+  background-color: #cfc;
+}
+li:nth-of-type(even) {
+  background-color: inherit;
+}
+```
+
+To make the unordered list and list items not look like a list, we remove the padding by setting {{CSSXref("padding", "padding: 0")}} on the `<ul>` and remove the list markers by setting {{CSSXref("list-style-type", "list-style-type: none")}} on the list items themselves.
+
+```css
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+```
+
+We add a little white space by setting the body's {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional the viewport's size. We also add a little padding to the list items and legend. Finally, to improve, but not fix, the alignment of the past periods data, we set the {{CSSXref("font-family")}} of the results to be `monospace`, making each glyph have the same fixed width.
+
+```css
+body {
+  margin: 1vh 1vw;
+}
+ul {
+  font-family: monospace;
+}
+li,
+legend {
+  padding: 0.2em 0.5em;
+}
+```
+
+We can combine the above, putting multiple properties in each selector declaration block. We can even put the styles for the `<li>` and `<legend>` together; irrelevant styles, like the `list-style-type` declaration on `<legend>`, are ignored.
 
 ```css
 body {
@@ -213,7 +262,9 @@ li:nth-of-type(even) {
 }
 ```
 
-If any of the above CSS looks unfamiliar to you, look up the [CSS property](/en-US/docs/Glossary/Property/CSS), or the [type](/en-US/docs/Web/CSS/Type_selectors) or [`:nth-of-type()`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_Selectors).
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_Selectors), or work through [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
+
+You can write your own CSS, or you can copy the above CSS. Either way, create a CSS file with your styles for the app and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css).
 
 With the `index.html` updated, and the `style.css` housed in the same directory, viewing the page in a narrow browser window should look similar to this screenshot:
 
