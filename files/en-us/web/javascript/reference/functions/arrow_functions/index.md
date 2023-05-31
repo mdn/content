@@ -202,7 +202,7 @@ const obj = {
 Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
-    return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
+    return this.a + 10; // since 'this' equals undefined, addressing the property a of undefined will throw a TypeError
   },
 });
 ```
