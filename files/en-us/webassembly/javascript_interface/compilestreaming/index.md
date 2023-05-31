@@ -38,7 +38,7 @@ A `Promise` that resolves to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Ja
 
 ### Compile streaming
 
-The following example (see our [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a Wasm module from an underlying source then compiles it to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object. Because the `compileStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch) call, and it will pass the response into the function when it fulfills.
+The following example (see our [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a Wasm module from an underlying source then compiles it to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object. Because the `compileStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a `Promise` from calling [`fetch()`](/en-US/docs/Web/API/fetch), without waiting for the promise to fulfill.
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
