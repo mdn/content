@@ -159,19 +159,16 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ```html
 <p>
-  A large rose-tree stood near the entrance of the garden:
-  the roses growing on it were white, but there were three
-  gardeners at it, busily painting them red.
+  A large rose-tree stood near the entrance of the garden: the roses growing on
+  it were white, but there were three gardeners at it, busily painting them red.
 </p>
-<p class=example>
-  Alice thought this a very curious thing, and she went
-  nearer to watch them, and just as she came up to them she
-  heard one of them say, "Look out now, Five! Don't go
-  splashing paint over me like that!"
+<p class="example">
+  Alice thought this a very curious thing, and she went nearer to watch them,
+  and just as she came up to them she heard one of them say, "Look out now,
+  Five! Don't go splashing paint over me like that!"
 </p>
 <p>
-  "I couldn't help it," said Five, in a sulky tone;
-  "Seven jogged my elbow."
+  "I couldn't help it," said Five, in a sulky tone; "Seven jogged my elbow."
 </p>
 ```
 
