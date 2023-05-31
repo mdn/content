@@ -269,13 +269,13 @@ selectElem.addEventListener("change", () => {
 
 #### Result
 
-{{EmbedLiveSample('Comparing_the_easing_functions', '100%', 200)}}
+{{EmbedLiveSample("comparing_the_easing_functions", "100%", 200)}}
 
 ### Using the cubic-bezier() function
 
 These cubic Bézier curves are valid for use in CSS:
 
-```css
+```css example-good
 /* The canonical Bézier curve with four <number> in the [0,1] range */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
@@ -312,7 +312,7 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 
 These easing functions are valid:
 
-```css
+```css example-good
 /* There are 5 treads, the last one happens
    right before the end of the animation. */
 steps(5, end)
