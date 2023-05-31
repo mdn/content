@@ -11,7 +11,7 @@ The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Gl
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-Each embedded browsing context has its own [session history](/en-US/docs/Web/API/History) and [document](/en-US/docs/Web/API/Document). The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
+Each embedded browsing context has its own [document](/en-US/docs/Web/API/Document) and allows URL navigations. The navigations of each embedded browsing context are linearized into the [session history](/en-US/docs/Web/API/History) of the _topmost_ browsing context. The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
 
 > **Warning:** Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
 
