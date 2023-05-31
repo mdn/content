@@ -1,6 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
-slug: WebAssembly/existing_C_to_wasm
+slug: WebAssembly/existing_C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -9,7 +9,7 @@ A core use-case for WebAssembly is to take the existing ecosystem of C libraries
 
 These libraries often rely on C's standard library, an operating system, a file system and other things. Emscripten provides most of these features, although there are some [limitations](https://emscripten.org/docs/porting/guidelines/api_limitations.html).
 
-As an example, let's compile an encoder for WebP to wasm. The source for the WebP codec is written in C and [available on GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API documentation](https://developers.google.com/speed/webp/docs/api). That's a pretty good starting point.
+As an example, let's compile an encoder for WebP to Wasm. The source for the WebP codec is written in C and [available on GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API documentation](https://developers.google.com/speed/webp/docs/api). That's a pretty good starting point.
 
 ```bash
 git clone https://github.com/webmproject/libwebp
@@ -65,7 +65,7 @@ And you will see the correct version number in the [output](https://googlechrome
 
 Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
-The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you a {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
+The first question you need to answer is: how do I get the image into Wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you a {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
 
 ```js
 async function loadImage(src) {
@@ -83,7 +83,7 @@ async function loadImage(src) {
 }
 ```
 
-Now it's "only" a matter of copying the data from JavaScript into wasm. For that, you need to expose two additional functions — one that allocates memory for the image inside wasm and one that frees it up again:
+Now it's "only" a matter of copying the data from JavaScript into Wasm. For that, you need to expose two additional functions — one that allocates memory for the image inside Wasm and one that frees it up again:
 
 ```cpp
 #include <stdlib.h> // required for malloc definition
@@ -121,9 +121,9 @@ api.destroy_buffer(p);
 
 ### Encode the Image
 
-The image is now available in wasm. It is time to call the WebP encoder to do its job. Looking at the [WebP documentation](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that `WebPEncodeRGBA` seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using `WebPFree()` once we are done with the WebP image.
+The image is now available in Wasm. It is time to call the WebP encoder to do its job. Looking at the [WebP documentation](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that `WebPEncodeRGBA` seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using `WebPFree()` once we are done with the WebP image.
 
-The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
+The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on Wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
 ```cpp
 int result[2];
@@ -154,7 +154,7 @@ int get_result_size() {
 }
 ```
 
-Now with all of that in place, you can call the encoding function, grab the pointer and image size, put it in a JavaScript buffer of your own, and release all the wasm buffers allocated in the process:
+Now with all of that in place, you can call the encoding function, grab the pointer and image size, put it in a JavaScript buffer of your own, and release all the Wasm buffers allocated in the process:
 
 ```js
 api.encode(p, image.width, image.height, 100);
@@ -171,7 +171,7 @@ api.free_result(resultPointer);
 
 > **Note:** `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
 
-Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:
+Depending on the size of your image, you might run into an error where Wasm can't grow the memory enough to accommodate both the input and the output image:
 
 ![Screenshot of the DevTools console showing an error.](error.png)
 

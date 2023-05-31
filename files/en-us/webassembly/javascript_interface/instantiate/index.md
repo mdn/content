@@ -19,14 +19,14 @@ compile and instantiate WebAssembly code. This function has two overloads:
   been compiled.
 
 > **Warning:** This method is not the most efficient way of fetching and
-> instantiating wasm modules. If at all possible, you should use the newer
+> instantiating Wasm modules. If at all possible, you should use the newer
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method instead, which fetches,
 > compiles, and instantiates a module all in one step, directly from the raw bytecode,
 > so doesn't require conversion to an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-### Primary overload — taking wasm binary code
+### Primary overload — taking Wasm binary code
 
 ```js
 WebAssembly.instantiate(bufferSource, importObject);
@@ -36,7 +36,7 @@ WebAssembly.instantiate(bufferSource, importObject);
 
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
-    {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
+    {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
     compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
