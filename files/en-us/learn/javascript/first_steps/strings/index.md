@@ -57,7 +57,7 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 3. The following will work if you previously defined the variable `string` — try it now:
 
    ```js
-   const badString = string;
+   const badString = String;
    console.log(badString);
    ```
 
