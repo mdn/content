@@ -6,8 +6,8 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
 {{PWASidebar}}
-[period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript_functionality)
-In the previous section, we wrote the [CSS](https://github.com/mdn/pwa-examples/tree/master/intro/javascript_functionality/style.css) and [HTML](https://github.com/mdn/pwa-examples/tree/master/intro/javascript_functionality/index.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
+[period tracker web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality)
+In the previous section, we wrote the [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
 The [HTML for our menstrual cycle tracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) is:
 
@@ -340,7 +340,7 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/intro/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/intro/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 

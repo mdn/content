@@ -20,7 +20,7 @@ We create an HTML file, with meta data in the head and a static web page contain
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
 
-Our static site HTML, with placeholders for yet to be created external CSS and JavaScript files, is:
+Our static site HTML, with placeholders for yet-to-be-created external CSS and JavaScript files, is:
 
 ```html
 <!DOCTYPE html>
@@ -32,20 +32,22 @@ Our static site HTML, with placeholders for yet to be created external CSS and J
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <fieldset>
-      <legend>Enter your period start and end date</legend>
+    <form>
+      <fieldset>
+        <legend>Enter your period start and end date</legend>
+        <p>
+          <label for="start-date">Start date</label>
+          <input type="date" id="start-date" required />
+        </p>
+        <p>
+          <label for="end-date">End date</label>
+          <input type="date" id="end-date" required />
+        </p>
+      </fieldset>
       <p>
-        <label for="start-date">Start date</label>
-        <input type="date" id="start-date" required />
+        <button type="submit">Add Period</button>
       </p>
-      <p>
-        <label for="end-date">End date</label>
-        <input type="date" id="end-date" required />
-      </p>
-    </fieldset>
-    <p>
-      <button type="submit">Add Period</button>
-    </p>
+    </form>
     <section id="past-periods"></section>
     <script src="app.js" defer></script>
   </body>
@@ -179,11 +181,11 @@ Before closing the `</body>`, we include a link to the `app.js` JavaScript file.
 
 The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
 
-The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css/index.html) is complete.
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is complete.
 
 ## CSS content
 
-Copy the following CSS in a new file and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css/style.css):
+Copy the following CSS in a new file and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css):
 
 ```css
 body {
@@ -231,10 +233,10 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 </section>
 ```
 
-You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/intro/html_and_css) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/intro/html_and_css) on GitHub.
+You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) on GitHub.
 
 ## Up next
 
 Before converting a web app into a progressive web app — before adding the [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure),[manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
 
-Up next we will create the [basic JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality).
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
