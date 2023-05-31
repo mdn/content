@@ -1,6 +1,6 @@
 ---
 title: Using CSS counters
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
@@ -103,7 +103,7 @@ The {{cssxref("counters", "counters()")}} function also has two forms: `counters
 The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
-You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_Counter_Styles).
+You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_counter_styles).
 
 Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
 

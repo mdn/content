@@ -24,7 +24,7 @@ To change the indentation applied to the quoted text, use the {{Glossary("CSS")}
 
 To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
 
-## Example
+## Examples
 
 This example demonstrates the use of the `<blockquote>` element to quote a passage from {{RFC(1149)}}, _A Standard for the Transmission of IP Datagrams on Avian Carriers_.
 
@@ -42,9 +42,9 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
 </blockquote>
 ```
 
-The output from this HTML snippet looks like this:
+### Result
 
-{{EmbedLiveSample("Example", 640, 180)}}
+{{EmbedLiveSample("Examples", 640, 180)}}
 
 ## Technical summary
 

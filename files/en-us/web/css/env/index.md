@@ -155,7 +155,7 @@ p {
 padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px because UA properties are case sensitive */
-padding: env(safe-area-inset-bottom, 50px);
+padding: env(Safe-area-inset-bottom, 50px);
 
 /* as if padding: '50px 20px' were set because x is not a valid environment variable */
 padding: env(x, 50px 20px);

@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webNavigation.onReferenceFragmentUpdated
 
 {{AddonSidebar()}}
 
-Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed. For example, if a page implements a table of contents using fragments, and the user clicks an entry in the table of contents, this event will fire. All future events for this frame will use the updated URL.
+Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed. For example, if a page implements a table of contents using fragments, and the user clicks an entry in the table of contents, this event fires. All future events for this frame will use the updated URL.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -33,15 +33,15 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
 
 ## Additional objects
 
