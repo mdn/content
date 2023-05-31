@@ -21,10 +21,13 @@ new ViewTimeline(options)
 ### Parameters
 
 - `options`
+
   - : An object that can contain the following properties:
+
     - `subject`
       - : A reference to an {{domxref("Element")}} representing the subject element whose visibility within its nearest ancestor scrollable element (scroller) will drive the progress of the timeline.
     - `axis` {{optional_inline}}
+
       - : An enumerated value representing the scroll axis that will drive the progress of the timeline. Possible values are:
 
         - `"block"`: The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line. For horizontal writing modes, such as standard English, this is the same as `vertical`, while for vertical writing modes, it is the same as `horizontal`.
@@ -35,6 +38,7 @@ new ViewTimeline(options)
         If omitted, `axis` defaults to `"block"`.
 
     - `inset` {{optional_inline}}
+
       - : A value or array of values representing an adjustment to the position of the scrollport (see {{glossary("Scroll container")}} for more details) in which the subject is deemed to be visible. Possible values are:
 
         - `"auto"`: The default box position is used.

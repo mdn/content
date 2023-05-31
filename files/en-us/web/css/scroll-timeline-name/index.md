@@ -29,6 +29,7 @@ Allowed values for `scroll-timeline-name` are:
 - `none`
   - : The timeline has no name.
 - `<custom-ident>`
+
   - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property. See [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) for more details about permitted values.
 
     > **Note:** Custom timeline names must start with `--`.

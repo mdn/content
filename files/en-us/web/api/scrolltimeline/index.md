@@ -81,21 +81,21 @@ The CSS for the example looks like this:
 In the JavaScript, we grab references to the `box` and `output` `<div>`s, then create a new `ScrollTimeline`, specifying that the element that will drive the scroll timeline progress is the document ({{htmlelement("html")}}) element, and the scroll axis is the `block` axis. We then animate the `box` element with the Web Animations API. Last of all, we display the source element and axis in the `output` element.
 
 ```js
-const box = document.querySelector('.box');
-const output = document.querySelector('.output');
+const box = document.querySelector(".box");
+const output = document.querySelector(".output");
 
 const timeline = new ScrollTimeline({
   source: document.documentElement,
-  axis: 'block'
+  axis: "block",
 });
 
 box.animate(
   {
-    rotate: ['0deg', '720deg'],
-    left: ['0%', '100%']
+    rotate: ["0deg", "720deg"],
+    left: ["0%", "100%"],
   },
   {
-    timeline
+    timeline,
   }
 );
 

@@ -66,19 +66,40 @@ The HTML for the example is shown below.
 
 ```html
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
 
-  <p>Risus quis varius quam quisque id. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue.</p>
+  <p>
+    Risus quis varius quam quisque id. Et ligula ullamcorper malesuada proin
+    libero nunc consequat interdum varius. Elit ullamcorper dignissim cras
+    tincidunt lobortis feugiat vivamus at augue.
+  </p>
 
-  <p>Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate dignissim. Tortor aliquam nulla facilisi cras.</p>
+  <p>
+    Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
+    dignissim. Tortor aliquam nulla facilisi cras.
+  </p>
 
-  <p>A erat nam at lectus urna duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.</p>
+  <p>
+    A erat nam at lectus urna duis convallis convallis. Nibh ipsum consequat
+    nisl vel pretium lectus.
+  </p>
 
-  <p>Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit.</p>
+  <p>
+    Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
+    arcu vitae elementum curabitur vitae nunc sed velit.
+  </p>
 
   <div class="subject animation"></div>
 
-  <p>Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non tellus orci ac auctor augue mauris.</p>
+  <p>
+    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
+    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
+    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
+    tellus orci ac auctor augue mauris.
+  </p>
 </div>
 ```
 
