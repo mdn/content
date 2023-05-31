@@ -171,46 +171,41 @@ Like their public counterparts, private static fields:
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD = 42;
+  static #privateStaticField = 42;
 
   static publicStaticMethod() {
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
-
-  publicInstanceMethod() {
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+    return ClassWithPrivateStaticField.#privateStaticField;
   }
 }
 
 console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
-console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
 There is a restriction on private static fields: only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `SubClass` class (not the `ClassWithPrivateStaticField` class) when we try to call `SubClass.publicStaticMethod()`, and so causes a `TypeError`.
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD = 42;
+  static #privateStaticField = 42;
 
   static publicStaticMethod() {
-    return this.#PRIVATE_STATIC_FIELD;
+    return this.#privateStaticField;
   }
 }
 
 class SubClass extends ClassWithPrivateStaticField {}
 
-SubClass.publicStaticMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+SubClass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
 This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD = 42;
+  static #privateStaticField = 42;
 
   static publicStaticMethod() {
     // When invoked through super, `this` still refers to Subclass
-    return this.#PRIVATE_STATIC_FIELD;
+    return this.#privateStaticField;
   }
 }
 
@@ -220,7 +215,7 @@ class SubClass extends ClassWithPrivateStaticField {
   }
 }
 
-SubClass.callSuperMethod(); // TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it
+SubClass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
 You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
@@ -234,21 +229,21 @@ Private methods include private instance methods and private static methods. Pri
 Unlike their public counterparts, private instance methods:
 
 - Are installed immediately before the instance fields are installed, and
-- Are only available on instances of the class, not on `ClassWithPrivateMethod.prototype`.
+- Are only available on instances of the class, not on its prototype.
 
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return "hello world";
+    return 42;
   }
 
-  getPrivateMessage() {
+  publicMethod() {
     return this.#privateMethod();
   }
 }
 
 const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage()); // hello world
+console.log(instance.publicMethod()); // 42
 ```
 
 Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible, and follow the same syntax requirements as their public [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) counterparts.
@@ -273,7 +268,7 @@ class ClassWithPrivateAccessor {
 new ClassWithPrivateAccessor(); // 🎬hello world🛑
 ```
 
-Unlike public methods, private methods are not accessible on `Class.prototype`.
+Unlike public methods, private methods are not accessible on the prototype of their class.
 
 ```js
 class C {
