@@ -148,7 +148,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-Arrow functions create a [closure](/en-US/docs/Web/JavaScript/Closures) over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, `this` is set to what it was when the function was created (in the example above, the global object). The same applies to arrow functions created inside other functions: their `this` remains that of the enclosing lexical context. [See example below](#this_in_arrow_functions).
+Arrow functions create a [closure](/en-US/docs/Web/JavaScript/Closures) over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, `this` is bound to what it was when the function was created (in the example above, the global object). The same applies to arrow functions created inside other functions: their `this` remains that of the enclosing lexical context. [See example below](#this_in_arrow_functions).
 
 Furthermore, when invoking arrow functions using `call()`, `bind()`, or `apply()`, the `thisArg` parameter is ignored. You can still pass other arguments using these methods, though.
 
@@ -304,12 +304,12 @@ function whatsThis() {
   return this.a; // 'this' depends on how the function is called
 }
 
-whatsThis(); // 'Global'; the 'this' parameter is bound to globalThis in non–strict mode
+whatsThis(); // 'Global'; the 'this' parameter defaults to 'globalThis' in non–strict mode
 obj.whatsThis = whatsThis;
-obj.whatsThis(); // 'Custom'; the 'this' parameter is set to obj
+obj.whatsThis(); // 'Custom'; the 'this' parameter is bound to obj
 ```
 
-Using `call()` and `apply()`, you can bind a value to the `this` parameter as if it's an explicit parameter.
+Using `call()` and `apply()`, you can pass the value of `this` as if it's an explicit parameter.
 
 ```js
 function add(c, d) {
@@ -373,7 +373,7 @@ const obj = {
 };
 ```
 
-We can call `getThisGetter` as a method of `obj`, which sets `this` inside the body to `obj`. The returned function is assigned to a variable `fn`. Now, when calling `fn`, the value of `this` returned is still the one set by the call to `getThisGetter`, which is `obj`. If the returned function is not an arrow function, such calls would cause the `this` value to be `globalThis` in non-strict mode and `undefined` in strict mode.
+We can call `getThisGetter` as a method of `obj`, which binds `this` to `obj` inside its body. The returned function is assigned to a variable `fn`. Now, when calling `fn`, the value of `this` returned is still the one set by the call to `getThisGetter`, which is `obj`. If the returned function was not an arrow function, such calls would cause the `this` value to be `globalThis` in non-strict mode and `undefined` in strict mode.
 
 ```js
 const fn = obj.getThisGetter();
@@ -456,7 +456,7 @@ The above alert shows `button`. Note, however, that only the outer scope has its
 </button>
 ```
 
-In this case, the `this` parameter of the inner function is bound to `globalThis` in non-strict mode, and is bound to `undefined` in strict mode.
+In this case, the `this` parameter of the inner function is bound to `globalThis` (i.e. the default object in non–strict mode where `this` isn't passed in the call).
 
 ### Bound methods in classes
 
@@ -507,7 +507,7 @@ Note, however, that auto-bound methods suffer from the same problem as [using ar
 
 ### this in with statements
 
-Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is set to the scope object, as if the `obj1.` prefix exists.
+Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is bound to the scope object, as if the `obj1.` prefix exists.
 
 ```js
 const obj1 = {
