@@ -69,7 +69,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 - {{cssxref("will-change")}} CSS property
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function) data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
-- {{glossary("Bézier curve")}} glossary term
+- {{glossary("Bezier curve")}} glossary term
 
 ## Specifications
 
