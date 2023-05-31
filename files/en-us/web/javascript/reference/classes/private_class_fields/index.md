@@ -117,7 +117,7 @@ class ClassWithPrivateField {
   }
 }
 
-class SubClass extends ClassWithPrivateField {
+class Subclass extends ClassWithPrivateField {
   #subPrivateField;
 
   constructor() {
@@ -126,7 +126,7 @@ class SubClass extends ClassWithPrivateField {
   }
 }
 
-new SubClass(); // In some dev tools, it shows SubClass {#privateField: 42, #subPrivateField: 23}
+new Subclass(); // In some dev tools, it shows Subclass {#privateField: 42, #subPrivateField: 23}
 ```
 
 > **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
@@ -181,7 +181,7 @@ class ClassWithPrivateStaticField {
 console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
 ```
 
-There is a restriction on private static fields: only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `SubClass` class (not the `ClassWithPrivateStaticField` class) when we try to call `SubClass.publicStaticMethod()`, and so causes a `TypeError`.
+There is a restriction on private static fields: only the class which defines the private static field can access the field. This can lead to unexpected behavior when using [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this). In the following example, `this` refers to the `Subclass` class (not the `ClassWithPrivateStaticField` class) when we try to call `Subclass.publicStaticMethod()`, and so causes a `TypeError`.
 
 ```js
 class ClassWithPrivateStaticField {
@@ -192,9 +192,9 @@ class ClassWithPrivateStaticField {
   }
 }
 
-class SubClass extends ClassWithPrivateStaticField {}
+class Subclass extends ClassWithPrivateStaticField {}
 
-SubClass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
+Subclass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
 This is the same if you call the method with `super`, because [`super` methods are not called with the super class as `this`](/en-US/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super).
@@ -209,13 +209,13 @@ class ClassWithPrivateStaticField {
   }
 }
 
-class SubClass extends ClassWithPrivateStaticField {
+class Subclass extends ClassWithPrivateStaticField {
   static callSuperMethod() {
     return super.publicStaticMethod();
   }
 }
 
-SubClass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
+Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
 You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
