@@ -229,7 +229,7 @@ Private methods include private instance methods and private static methods. Pri
 Unlike their public counterparts, private instance methods:
 
 - Are installed immediately before the instance fields are installed, and
-- Are only available on instances of the class, not on its prototype.
+- Are only available on instances of the class, not on its `.prototype` property.
 
 ```js
 class ClassWithPrivateMethod {
@@ -268,7 +268,7 @@ class ClassWithPrivateAccessor {
 new ClassWithPrivateAccessor(); // 🎬hello world🛑
 ```
 
-Unlike public methods, private methods are not accessible on the prototype of their class.
+Unlike public methods, private methods are not accessible on the `.prototype` property of their class.
 
 ```js
 class C {
