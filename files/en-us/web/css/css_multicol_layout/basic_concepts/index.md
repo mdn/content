@@ -12,7 +12,7 @@ Multi-column layout, usually referred to as multicol layout, is a specification 
 
 Multicol is unlike any of the other layout methods we have in CSS; it fragments the content, including all descendant elements, into columns. This happens in the same way that content is fragmented into pages when we work with [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) by creating a print stylesheet.
 
-In this guide, we will be discussing several of the properties defined by the specification, including:
+In this guide, we will be discussing the properties defined by the specification, including:
 
 - {{cssxref("column-width")}}
 - {{cssxref("column-count")}}
@@ -24,6 +24,9 @@ In this guide, we will be discussing several of the properties defined by the sp
 - {{cssxref("column-span")}}
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
 
 ## Defining columns
 
