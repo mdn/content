@@ -355,7 +355,7 @@ Inside `updateNews()`, the service worker can fetch and cache the latest stories
 
 ### Unregistering a periodic sync
 
-When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
+When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generating periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
 
 ```js
 // main.js

@@ -5001,10 +5001,10 @@ markdownlint-rule-helpers@~0.19.0:
   dependencies:
     markdownlint-micromark "0.1.2"
 
-markdownlint-rule-search-replace@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.npmjs.org/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.10.tgz"
-  integrity sha512-G86L6hM4P5G21MyeMEZwIdotNfwiKPfDnf7tCwSZy2h8nb/Gzg4crql4OkcO0bw4rYsXs9WHMYe3njff/Me9qA==
+markdownlint-rule-search-replace@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.1.0.tgz#7913ccdebcc40ae5ac23f0236f05294e4cad9d94"
+  integrity sha512-RfJprlmeFu9gqHFODPlGf1OTOtA0ywiZdH5J2BmVvIVzsG+JHvWkH9PQ/7rDp7zssRAPvsUxxHGUhVaoRYtfEA==
   dependencies:
     markdownlint-rule-helpers "~0.19.0"
 
