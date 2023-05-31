@@ -1,5 +1,5 @@
 ---
-title: Box alignment in Flexbox
+title: Box alignment in flexbox
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 page-type: guide
 ---
