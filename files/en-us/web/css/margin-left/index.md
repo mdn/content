@@ -147,6 +147,8 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ## Examples
 
+Percentage values for `margin-left` are relative to the container's inline size.
+
 ### CSS
 
 ```css
