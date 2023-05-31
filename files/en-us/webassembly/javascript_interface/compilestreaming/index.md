@@ -37,7 +37,7 @@ representing the compiled module.
 - If compilation fails, the promise rejects with a
   [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError).
 - If the `source` is a `Promise` that rejects, the promise rejects with the error.
-- If the `source`'s `Result` has an error (e.g. bad MIME type), the promise rejects an error.
+- If the `source`'s `Result` has an error (e.g. bad MIME type), the promise rejects with an error.
 
 ## Examples
 
