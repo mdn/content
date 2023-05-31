@@ -105,8 +105,8 @@ Private fields include private instance fields and private static fields. Privat
 
 Like their public counterparts, private instance fields:
 
-- Are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass, and
-- Are only available on instances of the class.
+- are added before the constructor runs in a base class, or immediately after [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) is invoked in a subclass, and
+- are only available on instances of the class.
 
 ```js
 class ClassWithPrivateField {
@@ -166,8 +166,8 @@ console.log(obj instanceof Stamper); // false
 
 Like their public counterparts, private static fields:
 
-- Are added to the class constructor at class evaluation time, and
-- Are only available on the class itself.
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticField {
@@ -228,8 +228,8 @@ Private methods include private instance methods and private static methods. Pri
 
 Unlike their public counterparts, private instance methods:
 
-- Are installed immediately before the instance fields are installed, and
-- Are only available on instances of the class, not on its `.prototype` property.
+- are installed immediately before the instance fields are installed, and
+- are only available on instances of the class, not on its `.prototype` property.
 
 ```js
 class ClassWithPrivateMethod {
@@ -287,8 +287,8 @@ console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instanc
 
 Like their public counterparts, private static methods:
 
-- Are added to the class constructor at class evaluation time, and
-- Are only available on the class itself.
+- are added to the class constructor at class evaluation time, and
+- are only available on the class itself.
 
 ```js
 class ClassWithPrivateStaticMethod {
