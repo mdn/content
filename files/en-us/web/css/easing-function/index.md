@@ -351,6 +351,6 @@ steps(0, jump-none)
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [cubic-bezier](https://cubic-bezier.com/)
