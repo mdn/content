@@ -120,11 +120,14 @@ The following example creates a new WebAssembly Table instance with 4 elements, 
 ```js
 const myObject = { hello: "world" };
 
-const table = new WebAssembly.Table({
-  element: "externref",
-  initial: 4,
-  maximum: 4,
-}, myObject);
+const table = new WebAssembly.Table(
+  {
+    element: "externref",
+    initial: 4,
+    maximum: 4,
+  },
+  myObject
+);
 
 console.log(myObject === table.get(2)); // true
 ```
