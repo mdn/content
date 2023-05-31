@@ -1,5 +1,6 @@
 ---
-title: TextMetrics.hangingBaseline
+title: "TextMetrics: hangingBaseline property"
+short-title: hangingBaseline
 slug: Web/API/TextMetrics/hangingBaseline
 page-type: web-api-instance-property
 status:

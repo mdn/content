@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getContextAttributes()
+title: "WebGLRenderingContext: getContextAttributes() method"
+short-title: getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getContextAttributes

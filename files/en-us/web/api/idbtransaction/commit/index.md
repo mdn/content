@@ -1,5 +1,6 @@
 ---
-title: IDBTransaction.commit()
+title: "IDBTransaction: commit() method"
+short-title: commit()
 slug: Web/API/IDBTransaction/commit
 page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.commit

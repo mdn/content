@@ -1,5 +1,6 @@
 ---
-title: XMLHttpRequest.mozBackgroundRequest
+title: "XMLHttpRequest: mozBackgroundRequest property"
+short-title: mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
 page-type: web-api-instance-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: XRInputSourcesChangeEvent.session
+title: "XRInputSourcesChangeEvent: session property"
+short-title: session
 slug: Web/API/XRInputSourcesChangeEvent/session
 page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.session

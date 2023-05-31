@@ -245,8 +245,6 @@ The example includes the bare essentials needed to use an `<iframe>`:
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
-- Fallback content
-  - : In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing `<iframe></iframe>` tags that will appear if the browser doesn't support the `<iframe>`. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support `<iframe>`s these days.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
   - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
@@ -279,7 +277,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
 
-> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.
+> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.
 
 #### Always use the `sandbox` attribute
 
@@ -334,7 +332,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br />><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
          <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>

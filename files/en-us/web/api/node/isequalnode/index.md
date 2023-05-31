@@ -1,5 +1,6 @@
 ---
-title: Node.isEqualNode()
+title: "Node: isEqualNode() method"
+short-title: isEqualNode()
 slug: Web/API/Node/isEqualNode
 page-type: web-api-instance-method
 browser-compat: api.Node.isEqualNode

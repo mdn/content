@@ -60,7 +60,7 @@ Now let's examine how to easily publish your site via GitHub Pages.
 1. First of all, [sign up for GitHub](https://github.com/) and verify your email address.
 2. Next, you need to [create a repository](https://github.com/new) to store files.
 3. On this page, in the _Repository name_ box, enter _username_.github.io, where _username_ is your username. For example, our friend Bob Smith would enter _bobsmith.github.io_.
-   Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![A sample of a github repository page](github-create-repo.png)
+   Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![A sample of a GitHub repository page](github-create-repo.png)
 4. Drag and drop the content of your website folder into your repository. Then click _Commit changes_.
 
    > **Note:** Make sure your folder has an `index.html` file.

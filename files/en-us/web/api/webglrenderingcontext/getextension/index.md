@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getExtension()
+title: "WebGLRenderingContext: getExtension() method"
+short-title: getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getExtension

@@ -1,13 +1,13 @@
 ---
-title: CSS Container Queries
-slug: Web/CSS/CSS_Container_Queries
+title: CSS container queries
+slug: Web/CSS/CSS_container_queries
 page-type: guide
 ---
 
 {{CSSRef}}
 
 Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
-Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Media_Queries), which apply styles to elements based on viewport size or other device characteristics.
+Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
 ![A media query based on the viewport's width, which is the full width of the browser, and a container query based on the width of a container context, which is the width of the container element.](container-query.svg)
 
@@ -157,7 +157,7 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - CSS {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property

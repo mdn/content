@@ -23,7 +23,7 @@ The `locales` argument is used to determine the locale used in a given operation
 - A locale: A locale identifier or an [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) object that wraps a locale identifier.
 - A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.
 
-In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_identification_and_negotiation).
+In the latter two cases, the actual locale used is the best-supported locale determined by [locale negotiation](#locale_identification_and_negotiation). If a locale identifier is not a string or an object, a {{jsxref("TypeError")}} is thrown. If a locale identifier is a string that's syntactically invalid, a {{jsxref("RangeError")}} is thrown. If a locale identifier is well-formed but the implementation doesn't recognize it, it is ignored and the next locale in the list is considered, eventually falling back to the system's locale. However, you shouldn't rely on a particular locale name being ignored, because the implementation may add data for any locale in the future. For example, `new Intl.DateTimeFormat("default")` uses the implementation's default locale only because `"default"` is syntactically valid but not recognized as any locale.
 
 A locale identifier is a string that consists of:
 
@@ -70,26 +70,28 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
 
 ## Static properties
 
-- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+- {{jsxref("Intl.Collator")}}
   - : Constructor for collators, which are objects that enable language-sensitive string comparison.
-- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+- {{jsxref("Intl.DateTimeFormat")}}
   - : Constructor for objects that enable language-sensitive date and time formatting.
-- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+- {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+- {{jsxref("Intl.DurationFormat")}}
   - : Constructor for objects that enable locale-sensitive duration formatting.
-- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+- {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+- {{jsxref("Intl.Locale")}}
   - : Constructor for objects that represents a Unicode locale identifier.
-- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+- {{jsxref("Intl.NumberFormat")}}
   - : Constructor for objects that enable language-sensitive number formatting.
-- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+- {{jsxref("Intl.PluralRules")}}
   - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
-- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
-- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+- {{jsxref("Intl.Segmenter")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
+- `Intl[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: paymentrequest event"
+short-title: paymentrequest
 slug: Web/API/ServiceWorkerGlobalScope/paymentrequest_event
 page-type: web-api-event
 status:

@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.enableVertexAttribArray()
+title: "WebGLRenderingContext: enableVertexAttribArray() method"
+short-title: enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray

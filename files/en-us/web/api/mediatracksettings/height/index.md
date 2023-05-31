@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSettings.height
+title: "MediaTrackSettings: height property"
+short-title: height
 slug: Web/API/MediaTrackSettings/height
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSettings.height

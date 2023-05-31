@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.offsetTop
+title: "HTMLElement: offsetTop property"
+short-title: offsetTop
 slug: Web/API/HTMLElement/offsetTop
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.offsetTop

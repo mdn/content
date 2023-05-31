@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.rows
+title: "HTMLTableElement: rows property"
+short-title: rows
 slug: Web/API/HTMLTableElement/rows
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableElement.rows

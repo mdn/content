@@ -1,5 +1,6 @@
 ---
-title: ConvolverNode.buffer
+title: "ConvolverNode: buffer property"
+short-title: buffer
 slug: Web/API/ConvolverNode/buffer
 page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.buffer

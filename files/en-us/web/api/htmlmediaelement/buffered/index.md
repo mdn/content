@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.buffered
+title: "HTMLMediaElement: buffered property"
+short-title: buffered
 slug: Web/API/HTMLMediaElement/buffered
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.buffered

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.fenceSync()
+title: "WebGL2RenderingContext: fenceSync() method"
+short-title: fenceSync()
 slug: Web/API/WebGL2RenderingContext/fenceSync
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.fenceSync

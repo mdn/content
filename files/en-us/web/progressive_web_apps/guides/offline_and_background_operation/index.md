@@ -3,6 +3,8 @@ title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 ---
 
+{{PWASidebar}}
+
 Usually, websites are very dependent on both reliable network connectivity and on the user having their pages open in a browser. Without network connectivity, most websites are just unusable, and if the user does not have the site open in a browser tab, most websites are unable to do anything.
 
 However, consider the following scenarios:
@@ -353,7 +355,7 @@ Inside `updateNews()`, the service worker can fetch and cache the latest stories
 
 ### Unregistering a periodic sync
 
-When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generation periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
+When the PWA no longer needs periodic background updates, (for example, because the user has switched them off in the app's settings) then the PWA should ask the browser to stop generating periodic sync events, by calling the {{domxref("PeriodicSyncManager/unregister", "unregister()")}} method of {{domxref("serviceWorkerRegistration.periodicSync", "periodicSync")}}:
 
 ```js
 // main.js

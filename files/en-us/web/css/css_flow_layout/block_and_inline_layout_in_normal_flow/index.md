@@ -1,6 +1,6 @@
 ---
 title: Block and inline layout in normal flow
-slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 page-type: guide
 ---
 
@@ -12,8 +12,7 @@ Normal Flow is defined in the [CSS 2.1 specification](https://www.w3.org/TR/CSS2
 
 The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:
 
-> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
->
+> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.\
 > In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
 
 For elements with an inline formatting context:
@@ -54,7 +53,7 @@ In the example below, the paragraphs have a top margin of `20px` and a bottom ma
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 > **Note:** If you are not sure whether margins are collapsing, check the Box Model values in your browser DevTools. This will give you the actual size of the margin which can help you to identify what is happening.
 >
@@ -92,7 +91,7 @@ This concept of the outer and inner display type is important as this tells us t
 
 ### Changing the Formatting Context an element participates in
 
-Browsers display items as part of a block or inline formatting context in terms of what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to highlight a word and displays bold in browsers. It would not generally make sense for that `<strong>` element to be displayed as a block level element, breaking onto a new line. If you did want all `<strong>` elements to display as block elements, you could do so by setting `display: block` on `<strong>`. This means that you can always use most of the semantic HTML elements to markup your content, and then change the way it displays using CSS.
+Browsers display items in block or inline formatting contexts based on what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to strongly emphasize a span of content and is displayed in bold in browsers by default. It would not generally make sense for that `<strong>` element to be displayed as a block-level element, breaking onto a new line. If you did want all `<strong>` elements to display as block boxes, you could do so by setting `strong { display: block; }`. The ability to style content with CSS means you can always use the most appropriate semantic HTML elements to mark up your content and then change how they are displayed with CSS.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
 
@@ -102,7 +101,7 @@ In this guide, we have looked at how elements display in normal flow, as block a
 
 ## See also
 
-- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
+- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_box_model)
 - _[Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
-- [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
+- [Block-level elements](/en-US/docs/Glossary/Block-level_content)

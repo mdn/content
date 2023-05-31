@@ -1,5 +1,6 @@
 ---
-title: Document.dir
+title: "Document: dir property"
+short-title: dir
 slug: Web/API/Document/dir
 page-type: web-api-instance-property
 browser-compat: api.Document.dir

@@ -12,14 +12,10 @@ With interactive websites and modern web standards, Ajax is performed using func
 
 ## See also
 
-- [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-- [Glossary](/en-US/docs/Glossary):
-
-  - {{Glossary("XMLHttpRequest")}}
-
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
+- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (September 1, 2014)

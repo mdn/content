@@ -73,7 +73,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
   - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
-  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
+  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 > **Note:** The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
 
@@ -93,10 +93,12 @@ In addition to the basic HTML global attributes, the following global attributes
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
+  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e. a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
-  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:

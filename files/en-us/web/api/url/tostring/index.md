@@ -1,5 +1,6 @@
 ---
-title: URL.toString()
+title: "URL: toString() method"
+short-title: toString()
 slug: Web/API/URL/toString
 page-type: web-api-instance-method
 browser-compat: api.URL.toString

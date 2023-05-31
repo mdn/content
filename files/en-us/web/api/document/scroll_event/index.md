@@ -1,5 +1,6 @@
 ---
 title: "Document: scroll event"
+short-title: scroll
 slug: Web/API/Document/scroll_event
 page-type: web-api-event
 browser-compat: api.Document.scroll_event

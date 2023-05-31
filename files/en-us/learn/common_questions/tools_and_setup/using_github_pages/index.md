@@ -1,6 +1,6 @@
 ---
 title: How do I use GitHub Pages?
-slug: Learn/Common_questions/Tools_and_setup/Using_Github_pages
+slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -58,7 +58,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 3. Also fill in a description to say what your repository is going to contain. Your screen should look like this:
    ![New repository page opened in browser, repository owner input and the repository name are filled, same for the optional description input. The public check-box is selected, the private check-box is not, same goes for the initialize this repository with a readme.](create-new-repo.png)
 4. Click _Create repository_; this should bring you to the following page:
-   ![The repository page is opened in browser, below the github header composed of search bar and navigation links to the repository's pull request, issues and gist. Next to the navigation links, a bell notification and a link to your account. Below, the name of the owner's repository follow by a slash with the repository's name. Below a horizontal navigation bar composed of different tabs relating to your repository, the code tab selected displaying a documentation explaining how to create a repository or how to push from using command line.](github-repo.png)
+   ![The repository page is opened in browser, below the GitHub header composed of search bar and navigation links to the repository's pull request, issues and gist. Next to the navigation links, a bell notification and a link to your account. Below, the name of the owner's repository follow by a slash with the repository's name. Below a horizontal navigation bar composed of different tabs relating to your repository, the code tab selected displaying a documentation explaining how to create a repository or how to push from using command line.](github-repo.png)
 
 ### Uploading your files to GitHub
 

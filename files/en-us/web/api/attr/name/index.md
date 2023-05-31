@@ -1,5 +1,6 @@
 ---
-title: Attr.name
+title: "Attr: name property"
+short-title: name
 slug: Web/API/Attr/name
 page-type: web-api-instance-property
 browser-compat: api.Attr.name
@@ -19,7 +20,7 @@ A string representing the attribute's qualified name.
 
 The following example displays the qualified name of the first attribute of the two first elements, when we click on the appropriate button.
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -36,7 +37,7 @@ The following example displays the qualified name of the first attribute of the 
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.close()
+title: "WritableStreamDefaultWriter: close() method"
+short-title: close()
 slug: Web/API/WritableStreamDefaultWriter/close
 page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.close

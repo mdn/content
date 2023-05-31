@@ -1,5 +1,6 @@
 ---
-title: CSSLayerStatementRule.nameList
+title: "CSSLayerStatementRule: nameList property"
+short-title: nameList
 slug: Web/API/CSSLayerStatementRule/nameList
 page-type: web-api-instance-property
 browser-compat: api.CSSLayerStatementRule.nameList
@@ -26,10 +27,10 @@ A {{jsxref("Array")}} of strings, each representing a cascade layer represented 
 ```css
 @layer layerName, layerName2;
 
-@layer layerName3 { 
+@layer layerName3 {
   div {
     font-family: serif;
-    }
+  }
 }
 ```
 

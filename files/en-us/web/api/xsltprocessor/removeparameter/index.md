@@ -1,8 +1,9 @@
 ---
-title: XSLTProcessor.removeParameter()
+title: "XSLTProcessor: removeParameter() method"
+short-title: removeParameter()
 slug: Web/API/XSLTProcessor/removeParameter
 page-type: web-api-instance-method
-browser-compat: api.XSLTProcessor.removeParameter 
+browser-compat: api.XSLTProcessor.removeParameter
 ---
 
 {{APIRef("XSLT")}}

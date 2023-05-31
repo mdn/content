@@ -1,8 +1,7 @@
 ---
 title: Using CSS transitions
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 
 {{CSSRef}}
@@ -17,9 +16,7 @@ CSS transitions let you decide which properties to animate (by _listing them exp
 
 ## Which CSS properties can be transitioned?
 
-The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. As it doesn't make sense to animate some properties, the [list of animatable properties](/en-US/docs/Web/CSS/CSS_animated_properties) is limited to a finite set.
-
-> **Note:** The set of properties that can be animated is changing as the specification develops.
+The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. However, some properties are [not animatable](/en-US/docs/Web/CSS/CSS_animated_properties) as it doesn't make sense to animate them.
 
 > **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
 
@@ -77,7 +74,7 @@ This example performs a four-second font size transition with a two-second delay
 </body>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 .box {
@@ -263,4 +260,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## See also
 
 - The {{domxref("TransitionEvent")}} interface and the {{domxref("Element/transitionend_event", "transitionend")}} event
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)

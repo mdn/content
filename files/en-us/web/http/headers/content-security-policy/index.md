@@ -1,6 +1,7 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 
@@ -70,8 +71,7 @@ where `<policy-directive>` consists of:
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     > **Note:** Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
@@ -80,7 +80,7 @@ where `<policy-directive>` consists of:
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
   - : Specifies valid sources for JavaScript and WebAssembly resources.
@@ -121,8 +121,7 @@ for example.
     given context.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
-    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.
+    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can initiate navigation by any means,
     including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),

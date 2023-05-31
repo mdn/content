@@ -1,7 +1,6 @@
 ---
 title: onSelectionChanged
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
@@ -31,8 +30,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. The function will be passed no arguments.
+- `listener`
+  - : The function called when this event occurs. The function is passed no arguments.
 
 ## Browser compatibility
 

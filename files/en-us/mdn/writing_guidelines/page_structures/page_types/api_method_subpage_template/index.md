@@ -34,9 +34,14 @@ browser-compat: path.to.feature.NameOfTheMethod
 >     Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
 >     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheMethod`.
+>
+>     If the method is static, then the slug must have a `_static` suffix, like: `Web/API/NameOfTheParentInterface/NameOfTheMethod_static`. This enables us to support instance and static methods which have the same name.
+>
 >     Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
+>
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
 > - **status**

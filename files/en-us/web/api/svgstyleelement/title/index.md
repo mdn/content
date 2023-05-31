@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.title
+title: "SVGStyleElement: title property"
+short-title: title
 slug: Web/API/SVGStyleElement/title
 page-type: web-api-instance-property
 browser-compat: api.SVGStyleElement.title

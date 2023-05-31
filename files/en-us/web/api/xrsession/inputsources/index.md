@@ -1,5 +1,6 @@
 ---
-title: XRSession.inputSources
+title: "XRSession: inputSources property"
+short-title: inputSources
 slug: Web/API/XRSession/inputSources
 page-type: web-api-instance-property
 status:

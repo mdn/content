@@ -1,5 +1,6 @@
 ---
-title: Attr.ownerElement
+title: "Attr: ownerElement property"
+short-title: ownerElement
 slug: Web/API/Attr/ownerElement
 page-type: web-api-instance-property
 browser-compat: api.Attr.ownerElement
@@ -17,7 +18,7 @@ The {{domxref("Element")}} the attribute belongs to, or `null` if the attribute 
 
 The following example displays the qualified name of the element of the two first elements, when we click on the appropriate button.
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -34,7 +35,7 @@ The following example displays the qualified name of the element of the two firs
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

@@ -15,7 +15,7 @@ The **`URIError`** object represents an error when a global URI handling functio
 
 ## Constructor
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+- {{jsxref("URIError/URIError", "URIError()")}}
   - : Creates a new `URIError` object.
 
 ## Instance properties
@@ -44,10 +44,7 @@ try {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "malformed URI sequence"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -55,15 +52,12 @@ try {
 
 ```js
 try {
-  throw new URIError("Hello", "someFile.js", 10);
+  throw new URIError("Hello");
 } catch (e) {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // Stack of the error
 }
 ```
 

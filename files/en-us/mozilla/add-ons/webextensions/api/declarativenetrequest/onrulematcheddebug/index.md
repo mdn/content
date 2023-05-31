@@ -30,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed these arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `request`
 
@@ -65,7 +65,7 @@ Events have three functions:
     - `rule`
       - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule", "MatchedRule")}}. Details of a matched rule.
 
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.fastSeek()
+title: "HTMLMediaElement: fastSeek() method"
+short-title: fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
 page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.fastSeek

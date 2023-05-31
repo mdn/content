@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.WebAssembly.compileStreaming
 {{WebAssemblySidebar}}
 
 The **`WebAssembly.compileStreaming()`** function compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source.
-This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
+This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function should be used).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -23,7 +23,7 @@ WebAssembly.compileStreaming(source)
 - `source`
   - : A [`Response`](/en-US/docs/Web/API/Response)
     object or a promise that will fulfill with one, representing the underlying source of
-    a .wasm module you want to stream and compile.
+    a Wasm module you want to stream and compile.
 
 ### Return value
 
@@ -44,7 +44,7 @@ representing the compiled module.
 ### Compile streaming
 
 The following example (see our [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html)
-demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a .wasm module from an underlying source then
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a Wasm module from an underlying source then
 compiles it to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object. Because the
 `compileStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
 object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)

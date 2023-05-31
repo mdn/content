@@ -38,6 +38,10 @@ The various dictionaries that are used to define the contents of the objects tha
       - {{domxref("RTCOutboundRtpStreamStats")}} contains statistics about the local sending endpoint of an RTP stream.
       - {{domxref("RTCRemoteOutboundRtpStreamStats")}} holds statistics related to the remote sending end an RTP stream.
 
+  - {{domxref("RTCAudioSourceStats")}} contains statistics about audio media sources.
+  - {{domxref("RTCVideoSourceStats")}} contains statistics about video media sources.
+  - {{domxref("RTCPeerConnectionStats")}} adds to `RTCStats` information about the connection.
+
 ## Specifications
 
 {{Specifications}}

@@ -72,7 +72,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
+Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 Similarly, you can create longer prototype chains, and a property will be sought on all of them.
 
@@ -612,30 +612,24 @@ console.log(d.hasOwnProperty);
 ### With classes
 
 ```js
-class Polygon {
+class Rectangle {
   constructor(height, width) {
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-
-  get area() {
-    return this.height * this.width;
-  }
-
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
+class FilledRectangle extends Rectangle {
+  constructor(height, width, color) {
+    super(height, width);
+    this.name = "Filled rectangle";
+    this.color = color;
   }
 }
 
-const square = new Square(2);
-// square ---> Square.prototype ---> Polygon.prototype ---> Object.prototype ---> null
+const filledRectangle = new FilledRectangle(5, 10, "blue");
+// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
 <table class="standard-table">

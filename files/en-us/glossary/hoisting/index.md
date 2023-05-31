@@ -41,7 +41,7 @@ For more information on hoisting, see:
 
 - `var`/`let`/`const` hoisting — [Grammar and types guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
 - `function` hoisting — [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting)
-- `class` hoisting — [Classes guide](/en-US/docs/Web/JavaScript/Guide/Using_Classes#class_declaration_hoisting)
+- `class` hoisting — [Classes guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting)
 
 ## See also
 

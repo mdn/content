@@ -1,5 +1,6 @@
 ---
-title: Window.devicePixelRatio
+title: "Window: devicePixelRatio property"
+short-title: devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 page-type: web-api-instance-property
 browser-compat: api.Window.devicePixelRatio

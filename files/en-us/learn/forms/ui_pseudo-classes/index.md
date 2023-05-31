@@ -459,7 +459,12 @@ A fragment of the HTML is as follows — note the readonly attribute:
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-:is(input:read-only, input:-moz-read-only, textarea:-moz-read-only, textarea:read-only) {
+:is(
+    input:read-only,
+    input:-moz-read-only,
+    textarea:-moz-read-only,
+    textarea:read-only
+  ) {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -559,7 +564,7 @@ input:default ~ span::after {
 }
 ```
 
-This provides a little "Default" label on the one the was originally selected when the page loaded. Note here we are using the general sibling combinator (`~`) rather than the adjacent sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
+This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the general sibling combinator (`~`) rather than the adjacent sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
 
 See the live result below:
 

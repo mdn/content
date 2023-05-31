@@ -1,6 +1,7 @@
 ---
 title: "ARIA: input role"
 slug: Web/Accessibility/ARIA/Roles/input_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#input
 ---
 
@@ -30,7 +31,7 @@ Do not use.
 - [ARIA: `slider` role](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [HTML: the `input` element](/en-US/docs/Web/HTML/Element/input/)
+- [HTML: the `input` element](/en-US/docs/Web/HTML/Element/input)
 
 <section id="Quick_links">
 

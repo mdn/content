@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.item()
+title: "DOMTokenList: item() method"
+short-title: item()
 slug: Web/API/DOMTokenList/item
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.item

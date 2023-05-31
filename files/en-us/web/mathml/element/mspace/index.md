@@ -1,6 +1,7 @@
 ---
 title: <mspace>
 slug: Web/MathML/Element/mspace
+page-type: mathml-element
 browser-compat: mathml.elements.mspace
 ---
 

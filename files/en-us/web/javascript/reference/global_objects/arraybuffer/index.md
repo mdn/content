@@ -21,16 +21,16 @@ The [`ArrayBuffer()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayB
 
 `ArrayBuffer` objects can be made resizable by including the `maxByteLength` option when calling the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} constructor. You can query whether an `ArrayBuffer` is resizable and what its maximum size is by accessing its {{jsxref("ArrayBuffer/resizable", "resizable")}} and {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a resizable `ArrayBuffer` with a {{jsxref("ArrayBuffer/resize", "resize()")}} call. New bytes are initialized to 0.
 
-These features make resizing `ArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (WASM linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+These features make resizing `ArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
 
 ## Constructor
 
-- {{jsxref("ArrayBuffer.ArrayBuffer", "ArrayBuffer()")}}
+- {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}}
   - : Creates a new `ArrayBuffer` object.
 
 ## Static properties
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -44,21 +44,21 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and can only be changed using the {{jsxref("ArrayBuffer.prototype.resize()")}} method if the `ArrayBuffer` is resizable.
-- {{jsxref("ArrayBuffer.prototype.maxByteLength")}} {{experimental_inline}}
-  - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
-- {{jsxref("ArrayBuffer.prototype.resizable")}} {{experimental_inline}}
-  - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
 - {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
   - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
+- {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
+  - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
+- {{jsxref("ArrayBuffer.prototype.resizable")}}
+  - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
 - `ArrayBuffer.prototype[@@toStringTag]`
   - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
+- {{jsxref("ArrayBuffer.prototype.resize()")}}
+  - : Resizes the `ArrayBuffer` to the specified size, in bytes.
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
-- {{jsxref("ArrayBuffer.prototype.resize()")}} {{experimental_inline}}
-  - : Resizes the `ArrayBuffer` to the specified size, in bytes.
 
 ## Examples
 
@@ -82,6 +82,6 @@ const view = new Int32Array(buffer);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

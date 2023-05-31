@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: paste event"
+short-title: paste
 slug: Web/API/HTMLElement/paste_event
 page-type: web-api-event
 browser-compat: api.Element.paste_event

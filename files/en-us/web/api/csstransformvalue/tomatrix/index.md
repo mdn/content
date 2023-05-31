@@ -1,5 +1,6 @@
 ---
-title: CSSTransformValue.toMatrix()
+title: "CSSTransformValue: toMatrix() method"
+short-title: toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
 page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.toMatrix

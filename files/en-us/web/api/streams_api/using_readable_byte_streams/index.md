@@ -4,7 +4,7 @@ slug: Web/API/Streams_API/Using_readable_byte_streams
 page-type: guide
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 Readable _byte streams_ are [readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) that have an underlying byte source of `type: "bytes"`, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream's internal queues).
 They are intended for use cases where data might be supplied or requested in arbitrary sized and potentially very large chunks, and hence where avoiding making copies is likely to improve efficiency.

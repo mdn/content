@@ -1,8 +1,7 @@
 ---
 title: Mastering margin collapsing
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
-spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 
 {{CSSRef}}
@@ -82,8 +81,8 @@ p {
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - Values

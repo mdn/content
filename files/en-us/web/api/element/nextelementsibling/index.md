@@ -1,5 +1,6 @@
 ---
-title: Element.nextElementSibling
+title: "Element: nextElementSibling property"
+short-title: nextElementSibling
 slug: Web/API/Element/nextElementSibling
 page-type: web-api-instance-property
 browser-compat: api.Element.nextElementSibling

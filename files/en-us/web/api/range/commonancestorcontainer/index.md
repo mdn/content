@@ -1,5 +1,6 @@
 ---
-title: Range.commonAncestorContainer
+title: "Range: commonAncestorContainer property"
+short-title: commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 page-type: web-api-instance-property
 browser-compat: api.Range.commonAncestorContainer

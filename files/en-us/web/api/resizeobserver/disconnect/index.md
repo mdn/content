@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver.disconnect()
+title: "ResizeObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/ResizeObserver/disconnect
 page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.disconnect

@@ -57,6 +57,16 @@ The following properties are deprecated. This does not affect their use in [repl
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
+The following regex syntaxes are deprecated and only available in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode. In unicode mode, they are all syntax errors:
+
+- [Lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can have [quantifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
+- [Backreferences](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) that do not refer to an existing capturing group become [legacy octal escapes](#escape_sequences).
+- In [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), character ranges where one boundary is a character class makes the `-` become a literal character.
+- An escape sequence that's not recognized becomes an ["identity escape"](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
+- Escape sequences within [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) of the form `\cX` where `X` is a number or `_` are decoded in the same way as those with ASCII letters: `\c0` is the same as `\cP` when taken modulo 32. In addition, if the form `\cX` is encountered anywhere where `X` is not one of the recognized characters, then the backslash is treated as a literal character.
+- The sequence `\k` within a regex that doesn't have any [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) is treated as an identity escape.
+- The syntax characters `]`, `{`, and `}` may appear [literally](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) without escaping if they cannot be interpreted as the end of a character class or quantifier delimiters.
+
 ### Function
 
 - The {{jsxref("Global_Objects/Function/caller", "caller")}} property of functions and the [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property are deprecated and unavailable in strict mode.
@@ -88,6 +98,29 @@ The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
 Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. They are silently ignored in non-strict mode.
+
+Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
+
+```js
+var a = 2;
+try {
+  throw 42;
+} catch (a) {
+  var a = 1; // This 1 is assigned to the caught `a`, not the outer `a`.
+}
+console.log(a); // 2
+
+try {
+  throw 42;
+  // Note: identifier changed to `err` to avoid conflict with
+  // the inner declaration of `a`.
+} catch (err) {
+  var a = 1; // This 1 is assigned to the upper-scope `a`.
+}
+console.log(a); // 1
+```
+
+This is listed in Annex B of the spec and hence may not be implemented everywhere. Avoid any name conflicts between the `catch`-bound identifier and variables declared in the `catch` block.
 
 ## Obsolete features
 
@@ -138,7 +171,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Date
 
-- `Date.prototype.toLocaleFormat()` is obsolete. Use [`toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
+- `Date.prototype.toLocaleFormat()`, which used a format string in the same format expected by the `strftime()` function in C, is obsolete. Use [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
 
 ### Array
 
@@ -170,7 +203,7 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - `for each...in` is obsolete. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
-- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+- Expression closures (`function () 1` as a shorthand of `function () { return 1; }`) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
 
 ### Acquiring source text
 

@@ -1,5 +1,6 @@
 ---
 title: "RTCDtlsTransport: error event"
+short-title: error
 slug: Web/API/RTCDtlsTransport/error_event
 page-type: web-api-event
 browser-compat: api.RTCDtlsTransport.error_event

@@ -1,6 +1,7 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
+page-type: mathml-element
 browser-compat: mathml.elements.mover
 ---
 

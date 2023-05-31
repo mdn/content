@@ -1,6 +1,7 @@
 ---
 title: "CSP: manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.manifest-src
 ---
 

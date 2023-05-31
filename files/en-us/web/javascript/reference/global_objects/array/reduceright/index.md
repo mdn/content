@@ -27,7 +27,7 @@ reduceRight(callbackFn, initialValue)
 - `callbackFn`
   - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduceRight()`. The function is called with the following arguments:
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied. (See below.)
+      - : The value resulting from the previous call to `callbackFn`. On first call, `initialValue` if specified, otherwise the array's last element's value.
     - `currentValue`
       - : The current element being processed in the array.
     - `index`
@@ -47,7 +47,7 @@ The `reduceRight()` method is an [iterative method](/en-US/docs/Web/JavaScript/R
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduceRight()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
 
 `reduceRight()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
 
@@ -134,18 +134,6 @@ The value returned by `reduceRight` this time would be, of course, `20`.
 ```js
 const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum is 6
-```
-
-### Flatten an array of arrays
-
-```js
-const arrays = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
-];
-const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
-// flattened is [4, 5, 2, 3, 0, 1]
 ```
 
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
@@ -271,4 +259,12 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## See also
 
 - [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.groupToMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.reduceRight()")}}

@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.writeValue()
+title: "BluetoothRemoteGATTCharacteristic: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
 page-type: web-api-instance-method
 status:

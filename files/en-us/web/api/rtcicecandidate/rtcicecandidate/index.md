@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate()
+title: "RTCIceCandidate: RTCIceCandidate() constructor"
+short-title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
 page-type: web-api-constructor
 browser-compat: api.RTCIceCandidate.RTCIceCandidate

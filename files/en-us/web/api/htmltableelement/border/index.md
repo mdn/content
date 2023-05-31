@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.border
+title: "HTMLTableElement: border property"
+short-title: border
 slug: Web/API/HTMLTableElement/border
 page-type: web-api-instance-property
 status:

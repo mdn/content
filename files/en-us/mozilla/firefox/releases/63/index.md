@@ -64,7 +64,7 @@ _No changes._
 
 #### New APIs
 
-- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
+- The Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) and Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)) APIs have been enabled by default; See [Web components](/en-US/docs/Web/API/Web_components) for more details.
 - The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ([Firefox bug 1409664](https://bugzil.la/1409664)).
 - The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ([Firefox bug 1461465](https://bugzil.la/1461465)). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 - The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ([Firefox bug 1472661](https://bugzil.la/1472661)).
@@ -110,7 +110,7 @@ _No changes._
 
 - The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
 - The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
-- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties {{DOMxRef("AudioListener.dopplerFactor", "dopplerFactor")}} and {{DOMxRef("AudioListener.speedOfSound", "speedOfSound")}} have been removed, along with the `PannerNode` method {{DOMxRef("PannerNode.setVelocity", "setVelocity()")}} ([Firefox bug 1148354](https://bugzil.la/1148354)).
+- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
 ### CSSOM
 
@@ -192,7 +192,7 @@ _No changes._
 - {{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab without changing the focused tab ([Firefox bug 1486050](https://bugzil.la/1486050)) by including both `highlighted: true` and `active: false` in the `updateProperties` parameter.
 - {{WebExtAPIRef("tabs.query")}} now returns an array of {{WebExtAPIRef("tabs.Tab")}} objects if multiple tabs are selected ([Firefox bug 1465170](https://bugzil.la/1465170)).
 - The {{WebExtAPIRef("tabs.Tab")}} property now properly reflects which tabs in a browser window are selected (highlighted) and {{WebExtAPIRef("tabs.highlight")}} supports changing the highlighted status of multiple tabs ([Firefox bug 1464862](https://bugzil.la/1464862)).
-- The `isarticle` property in the `extraParameters` object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to `isArticle`. The old name is retained but deprecated. This change was uplifted to Firefox 62 ([Firefox bug 1461695](https://bugzil.la/1461695)).
+- The `isarticle` property in the `filter` object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to `isArticle`. The old name is retained but deprecated. This change was uplifted to Firefox 62 ([Firefox bug 1461695](https://bugzil.la/1461695)).
 - The {{WebExtAPIRef('tabs.onUpdated')}} event can be used to track when a tab is drawing the user's attention with `attention` property of the `changeInfo` object ([Firefox bug 1396684](https://bugzil.la/1396684)).
 
 #### Menus

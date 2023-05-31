@@ -1,5 +1,5 @@
 ---
-title: '<select>: The HTML Select element'
+title: "<select>: The HTML Select element"
 slug: Web/HTML/Element/select
 page-type: html-element
 browser-compat: html.elements.select
@@ -149,6 +149,8 @@ The following example creates a very simple dropdown menu, the second option of 
 </select>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_select", "", "100")}}
 
 ### Advanced select with multiple features
@@ -172,6 +174,8 @@ The follow example is more complex, showing off more features you can use on a `
 </label>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
 
 You'll see that:
@@ -187,7 +191,7 @@ This example shows how you could use some CSS and JavaScript to provide extensiv
 
 This example basically:
 
-- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
+- Clones the `<select>`'s context (the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
 - Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
 > **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.

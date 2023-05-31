@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.width
+title: "SVGMaskElement: width property"
+short-title: width
 slug: Web/API/SVGMaskElement/width
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.width

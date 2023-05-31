@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.digest()
+title: "SubtleCrypto: digest() method"
+short-title: digest()
 slug: Web/API/SubtleCrypto/digest
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.digest
@@ -15,6 +16,8 @@ inputs that have the same digest value.
 
 It takes as its arguments an identifier for the digest algorithm to use and the data to
 digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.
+
+Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.
 
 ## Syntax
 
@@ -103,6 +106,8 @@ cryptography.
 
 ## Examples
 
+For more examples of using the `digest()` API, see [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto).
+
 ### Basic example
 
 This example encodes a message, then calculates its SHA-256 digest and logs the digest
@@ -154,9 +159,6 @@ digestMessage(text).then((digestHex) => console.log(digestHex));
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** Chrome 60 added a feature that disables crypto.subtle for non-TLS
-> connections.
 
 ## See also
 

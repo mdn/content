@@ -89,9 +89,6 @@ The HTML DOM API provides access to various browser features such as tabs and wi
 ### SVG element interfaces
 
 - {{DOMxRef("SVGAElement")}}
-- {{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphDefElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphItemElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGAnimationElement")}}
 - {{DOMxRef("SVGAnimateElement")}}
 - {{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}

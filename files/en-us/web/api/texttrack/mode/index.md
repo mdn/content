@@ -1,5 +1,6 @@
 ---
-title: TextTrack.mode
+title: "TextTrack: mode property"
+short-title: mode
 slug: Web/API/TextTrack/mode
 page-type: web-api-instance-property
 browser-compat: api.TextTrack.mode

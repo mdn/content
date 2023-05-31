@@ -1,8 +1,9 @@
 ---
-title: OES_draw_buffers_indexed.blendFuncSeparateiOES()
+title: "OES_draw_buffers_indexed: blendFuncSeparateiOES() method"
+short-title: blendFuncSeparateiOES()
 slug: Web/API/OES_draw_buffers_indexed/blendFuncSeparateiOES
 page-type: web-api-instance-method
-browser-compat: api.OES_draw_buffers_indexed.blendFuncSeparateiOES 
+browser-compat: api.OES_draw_buffers_indexed.blendFuncSeparateiOES
 ---
 
 {{APIRef("WebGL")}}
@@ -50,7 +51,13 @@ The following sets the blend functions for the draw buffers `gl.DRAW_BUFFER0` (c
 const ext = gl.getExtension("OES_draw_buffers_indexed");
 
 ext.blendFuncSeparateiOES(0, gl.ONE, gl.ONE, gl.ZERO, gl.ZERO);
-ext.blendFuncSeparateiOES(1, gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ZERO, gl.ZERO);
+ext.blendFuncSeparateiOES(
+  1,
+  gl.SRC_ALPHA,
+  gl.ONE_MINUS_SRC_ALPHA,
+  gl.ZERO,
+  gl.ZERO
+);
 ```
 
 To get the blend functions for the `gl.DRAW_BUFFER0` and `gl.DRAW_BUFFER1` draw buffers, query the `BLEND_SRC_RGB`, `BLEND_SRC_ALPHA`, `BLEND_DST_RGB`, and `BLEND_DST_ALPHA` constants using {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}:

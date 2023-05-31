@@ -7,9 +7,9 @@ browser-compat: css.selectors.paused
 
 {{CSSRef}}
 
-The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "paused".
+The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when that element is "paused" (i.e. not "playing").
 
-A resource is paused if the user explicitly paused it, or if it is in a non-activated state.
+A resource is paused if the user explicitly paused it, or if it is in a non-activated or other non-playing state, like "loaded, hasn't been activated yet."
 
 ## Syntax
 

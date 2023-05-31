@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.getPose()
+title: "VRDisplay: getPose() method"
+short-title: getPose()
 slug: Web/API/VRDisplay/getPose
 page-type: web-api-instance-method
 status:

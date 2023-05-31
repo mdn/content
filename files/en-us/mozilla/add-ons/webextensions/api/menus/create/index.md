@@ -78,7 +78,7 @@ browser.menus.create(
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
-      - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
+      - : `function`. The function called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
       - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
     - `targetUrlPatterns` {{optional_inline}}

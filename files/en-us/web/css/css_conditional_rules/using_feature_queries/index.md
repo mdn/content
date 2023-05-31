@@ -1,6 +1,6 @@
 ---
 title: Using feature queries
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 page-type: guide
 ---
 
@@ -8,9 +8,12 @@ page-type: guide
 
 **Feature queries** are created using the CSS at-rule [@supports](/en-US/docs/Web/CSS/@supports), and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.
 
+> **Note:** The CSS at-rule [@import](/en-US/docs/Web/CSS/@import) can similarly use a `supports()` condition, if available, to ensure that stylesheets are not even loaded (and possibly not fetched) if they use features that are not supported.
+> The syntax is almost identical to that described here for `@supports`.
+
 ## Syntax
 
-CSS feature queries are part of the [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
 A feature query consists of the `@supports` rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as `display`; the rule requires a property name and a value:
 

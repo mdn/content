@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceArray.length
+title: "XRInputSourceArray: length property"
+short-title: length
 slug: Web/API/XRInputSourceArray/length
 page-type: web-api-instance-property
 status:
@@ -28,11 +29,13 @@ game.
 let sources = xrSession.inputSources;
 
 if (sources.length === 0) {
-  showAlertDialog("You need to have at least one controller to play Super Duper Shark Jump Fest 9000.",
-                  [
-                    { label: "Shop Now", url: "https://www.amazon.com/s?k=vr+controllers" },
-                    { label: "Quit", handler: quitGame }
-                  ]);
+  showAlertDialog(
+    "You need to have at least one controller to play Super Duper Shark Jump Fest 9000.",
+    [
+      { label: "Shop Now", url: "https://www.example.com/shop/controllers" },
+      { label: "Quit", handler: quitGame },
+    ]
+  );
 }
 ```
 

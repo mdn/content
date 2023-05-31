@@ -1,5 +1,6 @@
 ---
 title: "Window: unload event"
+short-title: unload
 slug: Web/API/Window/unload_event
 page-type: web-api-event
 browser-compat: api.Window.unload_event

@@ -1,5 +1,6 @@
 ---
-title: USBDevice.open()
+title: "USBDevice: open() method"
+short-title: open()
 slug: Web/API/USBDevice/open
 page-type: web-api-instance-method
 status:

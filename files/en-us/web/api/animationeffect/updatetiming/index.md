@@ -1,5 +1,6 @@
 ---
-title: AnimationEffect.updateTiming()
+title: "AnimationEffect: updateTiming() method"
+short-title: updateTiming()
 slug: Web/API/AnimationEffect/updateTiming
 page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.updateTiming

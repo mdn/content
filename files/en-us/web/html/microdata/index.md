@@ -52,7 +52,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) – The `itemscope` attribute (usually) works along with [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. The `itemscope` attribute creates the _`Item`_ and defines the scope of the itemtype associated with it. The `itemtype` attribute is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 
-[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype will be active.
+[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 
 ## Example
 

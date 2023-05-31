@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.userAgent
+title: "WorkerNavigator: userAgent property"
+short-title: userAgent
 slug: Web/API/WorkerNavigator/userAgent
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.userAgent

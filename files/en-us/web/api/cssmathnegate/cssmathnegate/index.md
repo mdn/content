@@ -1,5 +1,6 @@
 ---
-title: CSSMathNegate()
+title: "CSSMathNegate: CSSMathNegate() constructor"
+short-title: CSSMathNegate()
 slug: Web/API/CSSMathNegate/CSSMathNegate
 page-type: web-api-constructor
 browser-compat: api.CSSMathNegate.CSSMathNegate

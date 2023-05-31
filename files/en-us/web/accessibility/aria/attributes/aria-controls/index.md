@@ -1,6 +1,7 @@
 ---
 title: aria-controls
 slug: Web/Accessibility/ARIA/Attributes/aria-controls
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 

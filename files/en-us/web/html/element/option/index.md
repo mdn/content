@@ -1,5 +1,5 @@
 ---
-title: '<option>: The HTML Option element'
+title: "<option>: The HTML Option element"
 slug: Web/HTML/Element/option
 page-type: html-element
 browser-compat: html.elements.option
@@ -26,7 +26,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set however in Chrome or Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
+Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set, however in Safari it's not possible to set any properties. You can find more details about styling in [our guide to advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 ## Examples
 
@@ -93,4 +93,4 @@ See {{HTMLElement("select")}} for examples.
 
 ## See also
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -1,6 +1,7 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
+page-type: http-header
 browser-compat: http.headers.Clear-Site-Data
 ---
 
@@ -63,7 +64,7 @@ Clear-Site-Data: "*"
 
 ## Examples
 
-### Sign out of a web site
+### Sign out of a website
 
 If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 

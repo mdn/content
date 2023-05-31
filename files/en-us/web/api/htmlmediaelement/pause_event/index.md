@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: pause event"
+short-title: pause
 slug: Web/API/HTMLMediaElement/pause_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.pause_event

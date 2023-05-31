@@ -1,5 +1,6 @@
 ---
-title: FileReader.readAsDataURL()
+title: "FileReader: readAsDataURL() method"
+short-title: readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsDataURL
@@ -97,7 +98,7 @@ function previewFiles() {
           const image = new Image();
           image.height = 100;
           image.title = file.name;
-          image.src = this.result;
+          image.src = reader.result;
           preview.appendChild(image);
         },
         false

@@ -1,5 +1,6 @@
 ---
-title: XRWebGLBinding.createProjectionLayer()
+title: "XRWebGLBinding: createProjectionLayer() method"
+short-title: createProjectionLayer()
 slug: Web/API/XRWebGLBinding/createProjectionLayer
 page-type: web-api-instance-method
 status:
@@ -69,12 +70,12 @@ function onXRSessionStarted(xrSession) {
   const gl = glCanvas.getContext("webgl2", { xrCompatible: true });
   const xrGlBinding = new XRWebGLBinding(xrSession, gl);
   const projectionLayer = xrGlBinding.createProjectionLayer({
-    textureType: "texture-array"
+    textureType: "texture-array",
   });
   xrSession.updateRenderState({
-    layers: [projectionLayer]
+    layers: [projectionLayer],
   });
- }
+}
 ```
 
 ## Specifications
