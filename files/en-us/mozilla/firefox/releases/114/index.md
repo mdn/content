@@ -35,7 +35,7 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### SVG
 
-- The [`crossOrigin`](/en-US/docs/Web/SVG/Attribute/crossOrigin) attribute is now supported on [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
+- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported on [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 #### Removals
 
