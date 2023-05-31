@@ -175,7 +175,7 @@ The two CSS declarations `column-width: 8em` and `column-count: 12` can be repla
 
 {{EmbedLiveSample("Example_5", "100%")}}
 
-Assuming a default 1em gap between columns, if the container is wider than 103ems (12 columns * 8em width each + 7 1-em gaps), there will be 12 columns, each with a width of 8ems or more. If the container is less than 103ems wide, there will be fewer than 12 columns. If the container is less than 17ems (8em column + 8em column + 1em gap), the content will be displayed as a single column with no column gap.
+Assuming a default 1em gap between columns, if the container is wider than 103ems (12 columns \* 8em width each + 7 1-em gaps), there will be 12 columns, each with a width of 8ems or more. If the container is less than 103ems wide, there will be fewer than 12 columns. If the container is less than 17ems (8em column + 8em column + 1em gap), the content will be displayed as a single column with no column gap.
 
 ### Height Balancing
 
