@@ -23,7 +23,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Description
 
-### Return time precision
+### Reduced time precision
 
 To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `Date.now()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
@@ -55,7 +55,7 @@ doSomeLongRunningProcess();
 console.log(`Time elapsed: ${Date.now() - start} ms`);
 ```
 
-For more complex scenarios, you may want to use the [performance API](/en-US/docs/Web/API/Performance) instead.
+For more complex scenarios, you may want to use the [performance API](/en-US/docs/Web/API/Performance_API/High_precision_timing) instead.
 
 ## Specifications
 
