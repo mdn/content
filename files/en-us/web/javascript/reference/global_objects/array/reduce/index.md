@@ -288,7 +288,7 @@ A better alternative is to _mutate_ the `allNames` object on each iteration. How
 const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 const countedNames = names.reduce((allNames, name) => {
   const currCount = allNames[name] ?? 0;
-  allNames[names] = currCount + 1;
+  allNames[name] = currCount + 1;
   // return allNames, otherwise the next iteration receives undefined
   return allNames;
 }, Object.create(null));
@@ -299,7 +299,7 @@ const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
 const countedNames = Object.create(null);
 for (const name of names) {
   const currCount = countedNames[name] ?? 0;
-  countedNames[names] = currCount + 1;
+  countedNames[name] = currCount + 1;
 }
 ```
 
