@@ -12,7 +12,18 @@ The **container** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/e
 ## Syntax
 
 ```css
-container: <container-name> / <container-type>;
+/* <container-name> */
+container: my-layout;
+
+/* <container-name> / <container-type> */
+container: my-layout / size;
+
+/* Global Values */
+container: inherit;
+container: initial;
+container: revert;
+container: revert-layer;
+container: unset;
 ```
 
 ### Values
@@ -23,6 +34,14 @@ container: <container-name> / <container-type>;
 - `<container-type>`
   - : The type of containment context.
     More details on the syntax are covered in the {{cssxref("container-type")}} property page.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Example
 

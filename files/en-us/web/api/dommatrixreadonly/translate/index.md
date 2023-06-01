@@ -62,8 +62,7 @@ document
   .setAttribute("transform", matrix.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-19_at_11.20.40.png') }}
+{{EmbedLiveSample('Examples', '250', '250')}}
 
 ## Specifications
 
