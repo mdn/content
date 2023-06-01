@@ -30,22 +30,22 @@ We have not listed the exact set of additional features available to be used in 
 
 The following properties are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the below links are to the {{jsxref("Set")}} global object reference pages).
 
-- {{jsxref("Set.prototype.size", "size")}}
+- {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
 The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects (the below links are to the {{jsxref("Set")}} global object reference pages).
 
-- {{jsxref("Set.prototype.has()", "has()")}}
+- {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether an element is present with the given value in the set or not.
-- {{jsxref("Set.prototype.values()", "values()")}}
+- {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that yields the **values** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.keys()", "keys()")}}
+- {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
-- {{jsxref("Set.prototype.entries()", "entries()")}}
+- {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set, in insertion order.
-- {{jsxref("Set.prototype.forEach()", "forEach()")}}
+- {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
   - : Calls a provided callback function once for each value present in the set, in insertion order.
 
 ## Examples

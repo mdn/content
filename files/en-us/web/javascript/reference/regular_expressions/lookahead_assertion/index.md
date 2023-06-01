@@ -48,17 +48,17 @@ If the regex is able to backtrack into the lookahead and revise the choice made 
 Negative lookaheads can contain capturing groups as well, but backreferences only make sense within the `pattern`, because if matching continues, `pattern` would necessarily be unmatched (otherwise the assertion fails). This means outside of the `pattern`, backreferences to those capturing groups in negative lookaheads always succeed. For example:
 
 ```js
-/(.*?)a(?!(a+)b\1c)\1(.*)/.exec("baaabaac"); // ['baaabaac', 'ba', undefined, 'abaac']
+/(.*?)a(?!(a+)b\2c)\2(.*)/.exec("baaabaac"); // ['baaabaac', 'ba', undefined, 'abaac']
 ```
 
 The matching of the pattern above happens as follows:
 
 1. The `(.*?)` pattern is non-greedy, so it starts by matching nothing. However, the next character is `a`, which fails to match `"b"` in the input.
 2. The `(.*?)` pattern matches `"b"` so that the `a` in the pattern matches the first `"a"` in `"baaabaac"`.
-3. At this position, the lookahead succeeds to match, because if `(a+)` matches `"aa"`, then `(a+)b\1c` matches `"aabaac"`. This causes the assertion to fail, so the matcher backtracks.
+3. At this position, the lookahead succeeds to match, because if `(a+)` matches `"aa"`, then `(a+)b\2c` matches `"aabaac"`. This causes the assertion to fail, so the matcher backtracks.
 4. The `(.*?)` pattern matches the `"ba"` so that the `a` in the pattern matches the second `"a"` in `"baaabaac"`.
 5. At this position, the lookahead fails to match, because the remaining input does not follow the pattern "any number of `"a"`s, a `"b"`, the same number of `"a"`s, a `c`". This causes the assertion to succeed.
-6. However, because nothing was matched within the assertion, the `\1` backreference has no value, so it matches the empty string. This causes the rest of the input to be consumed by the `(.*)` at the end.
+6. However, because nothing was matched within the assertion, the `\2` backreference has no value, so it matches the empty string. This causes the rest of the input to be consumed by the `(.*)` at the end.
 
 Normally, assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). However, in non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, lookahead assertions can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 

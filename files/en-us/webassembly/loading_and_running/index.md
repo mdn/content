@@ -21,7 +21,7 @@ So how do we get those bytes into an array buffer and compiled? The following se
 
 [Fetch](/en-US/docs/Web/API/Fetch_API) is a convenient, modern API for fetching network resources.
 
-The quickest, most efficient way to fetch a wasm module is using the newer [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method, which can take a `fetch()` call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:
+The quickest, most efficient way to fetch a Wasm module is using the newer [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method, which can take a `fetch()` call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
