@@ -161,6 +161,8 @@ For example, consider an extension that wants to run a script in the current pag
 
 > **Note:** You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
 
+[Context menu](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items) opened inside a subframe gives permissions to inject content scripts or styles in this particular frame, not to the top page of the tab. Behavior of older Firefox versions, e.g. 102 ESR, is different however and either specific host permission or `<all_urls>` is necessary in addition to execute content scripts in the `frameId` passed to {{webextAPIref("menus/onClicked", "browser.menus.onClicked")}} event listener.
+
 Usually the tab that's granted `activeTab` is just the currently active tab, except in one case. The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).
 
 If the user clicks such an item, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
