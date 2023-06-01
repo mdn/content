@@ -31,7 +31,7 @@ Before saving the manifest file and linking to it from our HTML file, we can dev
 
 ## App identity
 
-To identity your PWA the JSON must include a `name` or `short_name` member, or both, to define the PWA name. It can also include a `description`.
+To identify your PWA, the JSON must include a `name` or `short_name` member, or both, to define the PWA name. It can also include a `description`.
 
 - [`name`](/en-US/docs/Web/Manifest/name)
   - : The name of the PWA. This is the name used when the operating system lists applications, as the label next to the application icon, etc.
@@ -51,9 +51,9 @@ Write the first few lines of your manifest file. You can use the text below or m
 
 ```js
 {
-  "name": "Menstrual Cycle Tracker",
+  "name": "cycleTracker: Period Tracking app",
   "short_name": "CT",
-  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving the data to your browser."
+  "description": "Securily and confidentially track your menstrual cycle. Enter the start and end dates of your periods, saving your private data to your browser on your device, without sharing it with the rest of the world."
 }
 ```
 
