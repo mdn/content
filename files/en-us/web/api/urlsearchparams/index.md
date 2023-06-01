@@ -138,6 +138,7 @@ const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' is replaced by spac
 
 console.log(atob(binQuery) === rawData); // false
 ```
+
 The notation `\xAB` used in `rawData` string defines a character by 2 hexadecimal numbers.
 Characters defined by this notation can be safely processed by `btoa()` function.
 Learn more about [Hexadecimal escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal_escape_sequences).
