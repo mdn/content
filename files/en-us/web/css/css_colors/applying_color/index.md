@@ -254,7 +254,7 @@ The HTML responsible for creating the above example is shown here:
 
 This is pretty simple, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
 
-The magic happens, as usual, in the CSS, where we'll apply colors define the layout for the HTML above.
+The magic happens, as usual, in the CSS, where we'll apply colors and define the layout for the HTML above.
 
 #### CSS
 
