@@ -218,7 +218,7 @@ class Subclass extends ClassWithPrivateStaticField {
 Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
-You are advised to always access static private fields through the class name, not through `this`, so inheritance doesn't break the method.
+You are advised to always access private static fields through the class name, not through `this`, so inheritance doesn't break the method.
 
 ### Private methods
 
