@@ -51,7 +51,7 @@ for (let value of iterable) {
 
 > **Note:** Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
 
-You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or an object property like `for (x.y of iterable)` as well.
+You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 

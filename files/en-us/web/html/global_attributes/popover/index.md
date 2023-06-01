@@ -15,6 +15,10 @@ Popover elements are hidden via `display: none` until opened via an invoking/con
 
 When open, popover elements will appear above all other elements in the {{glossary("top layer")}}, and won't be influenced by parent elements' {{cssxref('position')}} or {{cssxref('overflow')}} styling.
 
+A popover attribute can have values [`"auto"`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) (default) or [`"manual"`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state).
+Popovers that have the `auto` state can be "light dismissed" by selecting outside the popover area, and generally only allow one popover to be displayed on-screen at a time.
+By contrast, `manual` popovers must always be explicitly hidden, but allow for use cases such as nested popovers in menus.
+
 For detailed information on usage, see the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page.
 
 ## Examples
