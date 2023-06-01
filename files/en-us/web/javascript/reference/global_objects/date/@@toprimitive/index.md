@@ -26,9 +26,9 @@ date[Symbol.toPrimitive](hint)
 
 ### Return value
 
-If `hint` is `"string"` or `"default"`, returns a string by [coercing the `this` value to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) (first trying `toString()` then trying `valueOf()`).
+If `hint` is `"string"` or `"default"`, this method returns a string by [coercing the `this` value to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) (first trying `toString()` then trying `valueOf()`).
 
-If `hint` is `"number"`, returns a number by [coercing the `this` value to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) (first trying `valueOf()` then trying `toString()`).
+If `hint` is `"number"`, this method returns a number by [coercing the `this` value to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) (first trying `valueOf()` then trying `toString()`).
 
 ### Exceptions
 

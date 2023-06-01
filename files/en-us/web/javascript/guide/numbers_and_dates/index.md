@@ -331,7 +331,7 @@ Calling `Date` without the `new` keyword returns a string representing the curre
 The `parameters` in the preceding syntax can be any of the following:
 
 - Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date, in many different forms. The exact forms supported differ among browsers, but the following form is always supported: `YYYY-MM-DDTHH:mm:ss.sssZ`. For example, `xmas95 = new Date("1995-12-25")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+- A string representing a date, in many different forms. The exact forms supported differ among engines, but the following form is always supported: `YYYY-MM-DDTHH:mm:ss.sssZ`. For example, `xmas95 = new Date("1995-12-25")`. If you omit hours, minutes, or seconds, the value will be set to zero.
 - A set of integer values for year, month, and day. For example, `xmas95 = new Date(1995, 11, 25)`.
 - A set of integer values for year, month, day, hour, minute, and seconds. For example, `xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
