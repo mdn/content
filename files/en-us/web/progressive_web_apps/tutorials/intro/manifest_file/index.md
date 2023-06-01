@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While according to the spec, all of the manifest members, or keys, are optional, some are browsers, operating systems, and app distributors have requirements, with a manifest needing to include specific keys for a web app to be a PWA. By including a name using the `name` or `short_name` key, icons that meet the minimum requirements, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
+While according to the spec, all of the manifest members, or keys, are optional, some browsers, operating systems, and app distributors have requirements to include specific keys for a web app to be a PWA. By including a name using the `name` or `short_name` key, icons that meet the minimum requirements, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
@@ -83,10 +83,9 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 ### Example solution
 
-As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display cycleTracker without browser tools, setting the `display` to `standalone`.
+As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
-}
 
 ```js
 {
@@ -102,14 +101,14 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#c
 
 ## App iconography
 
-PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, browser address bars, in app store search results: When users search for apps in the app store, the PWA icon will be displayed in the search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
+PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, or app store search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
 Within the manifest JSON object, the `icons` key specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` key, and optional `type` and `purpose` keys. Each icon object's' `src` list the source of a single image file. The `sizes` key provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` key lists the image's MIME type.
 
 ```js
 {
   "name": "MyApp",
-  "icons: [
+  "icons": [
     {
       "src": "icon/tiny.webp",
       "sizes": "48x48"
@@ -200,7 +199,7 @@ You now have a fully usable manifest file. Time to save it and link to it from o
 
 The manifest file extension can be the specification suggestion `.webappmanifest`. However, being a JSON file, it is most commonly saved with the browser-supported `.json` extension.
 
-PWAs require a manifest file. We have a fully functional app, but it's not yet a PWA. We have to add the manifest the app. The web manifest is an external JSON file. To include the external JSON resource, the `rel="manifest"` is used. The `href` attribute of the `<link>` points to the location of the resource.
+PWAs require a manifest file to be linked from the app's HTML document. We have a fully functional app, but it's not yet a PWA because it doesn't link to our external manifest JSON file yet. To include the external JSON resource, we use the `<link>` element, with the `rel="manifest"` attribute, and setting the `href` attribute to the location of the resource.
 
 ```html
 <link rel="manifest" href="cycletracker.json" />
