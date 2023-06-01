@@ -9,23 +9,25 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While the only requirement is to include a name using the `name` or `short_name` key, you should also include icon information, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed.
+While according to the spec, all of the manifest members, or keys, are optional, some are browsers, operating systems, and app distributors have requirements, with a manifest needing to include specific keys for a web app to be a PWA. By including a name using the `name` or `short_name` key, icons that meet the minimum requirements, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
 ```js
 {
   "short_name": "CT",
+  "start_url" : "/",
   "icons": [
     {
       "src": "icon-512.png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "display": "browser"
 }
 ```
 
-Before saving the manifest file and linking to it from our HTML file, we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more members that enable manifest files to better define the appearance of our PWA.
+Before saving the manifest file and linking to it from our HTML file, we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more members that enable manifest files to better define the appearance of our CycleTracker PWA.
 
 ## App identity
 
@@ -81,7 +83,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 ### Example solution
 
-As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display our period tracker without browser tools, setting the `display` to `standalone`.
+As the example application is a single page, we can use `"/"`, or omit the key altogether. For that same reason, we can display cycleTracker without browser tools, setting the `display` to `standalone`.
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 }
@@ -137,7 +139,7 @@ All icons should have the same look and feel to ensure users recognize your PWA,
 
 Add the icons to the manifest file you have been constructing.
 
-Playing with the words "cycle" and "period" of our period cycle tracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `tire.svg`, and `wheel.svg`, adding more detail moving from a plain circle to a tire as it gets larger, with our largest icons being a detailed wheel with spokes and shadows. That said, designing icons is beyond the scope of this tutorial.
+Playing with the words "cycle" and "period" of cycleTracker and the green theme color we've chosen, our icon images could all be light green squares with a green circle. Our smallest size `circle.ico`, and icon file that is just a circle representing the period punctuation mark and app theme color, with our in-between images, `circle.svg`, `tire.svg`, and `wheel.svg`, adding more detail moving from a plain circle to a tire as it gets larger, with our largest icons being a detailed wheel with spokes and shadows. That said, designing icons is beyond the scope of this tutorial.
 
 ```html hidden
 <div>

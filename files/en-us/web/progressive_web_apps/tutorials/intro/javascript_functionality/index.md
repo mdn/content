@@ -7,11 +7,11 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
-In the previous section, we wrote the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css), creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
+In the previous section, we wrote the HTML and CSS for cycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
-If you haven't already created the file, copy the [HTML for the menstrual cycle tracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS) and save it in a file called `index.html`.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `styles.css`.
 
-Note the last line in the body links to the `app.js` script. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past-periods section.
+The last line in the HTML file calls the `app.js` JavaScript file. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past-periods section.
 
 At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create a fully installable PWA that works even when the user is offline.
 
@@ -26,7 +26,7 @@ When a user visits the page, we check if they have existing data stored in local
 
 For each subsequent form submission, we need to:
 
-1. Add the new cycle to the current list
+1. Add the new menstrual cycle to the current list
 2. Sort the list in date order
 3. Repopulate the `<ul>` with the new list, one `<li>` per cycle
 4. Append the data to our saved local storage
@@ -44,7 +44,7 @@ This is a beginner-level demonstration application. The goal is to teach the bas
 
 The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `start-date` and `end-date` respectively.
 
-The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this cycle along with previous ones, and then reset the form.
+The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this period along with previous ones, and then reset the form.
 
 ```js
 // create contstants for the form and the form controls
@@ -82,7 +82,7 @@ newPeriodFormEl.addEventListener("submit", (event) => {
 After preventing the form submission with [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), we:
 
 1. [Validate user input](#validate-user-input); exiting if invalid,
-2. store the new cycle by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage,
+2. store the new period by [retrieving, parsing, appending, sorting, stringifying, and re-storing](#retrieve-append-sort-and-re-store-data) data in localStorage,
 3. [render the form data](#render-data-to-screen) along with the data of past menstrual cycles and a section header, and
 4. reset the form using the HTMLFormElement [`reset()`](/en-US/docs/Web/API/HTMLFormElement/reset) method
 
@@ -309,12 +309,12 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [period tracker web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [period tracker web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [cycleTrack period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 
 At its core, a PWA is a web application that can be installed is progressively enhanced to work offline. Now that we have a fully functional web application, we add the features required to convert it to a PWA, including the [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker).
 
-Up first, we create the [PWA's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the PWA's identity, appearance, and iconography.
+Up first, we create the [cycleTracker's manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), including the identity, appearance, and iconography for our cycleTracker PWA.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/Manifest_file", "Web/Progressive_web_apps/Tutorials/Intro")}}

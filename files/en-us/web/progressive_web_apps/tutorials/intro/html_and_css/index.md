@@ -284,7 +284,7 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 </section>
 ```
 
-You can try the [static period tracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and view the [period tracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) on GitHub.
+You can try the [static cycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and view the [cycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) on GitHub.
 
 ## Up next
 
