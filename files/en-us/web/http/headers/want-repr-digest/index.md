@@ -27,9 +27,13 @@ The **`Want-Repr-Digest`** request or response header states the wish for a {{HT
 
 ## Syntax
 
-`Want-Repr-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
+`Want-Repr-Digest` describes an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
+
+> **Note:** In contrast to earlier drafts of the specifications, the weighting is *not* declared via [q-values](/en-US/docs/Glossary/Quality_values).
 
 ## Directives
+
+For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
 
 ## Examples
 

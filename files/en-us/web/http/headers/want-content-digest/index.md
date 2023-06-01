@@ -27,15 +27,19 @@ The **`Want-Content-Digest`** request or response header states the wish for a {
 
 ## Syntax
 
-`Want-Content-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
+`Want-Content-Digest` describes an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
+
+> **Note:** In contrast to earlier drafts of the specifications, the weighting is *not* declared via [q-values](/en-US/docs/Glossary/Quality_values).
 
 ## Directives
+
+For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
 
 ## Examples
 
 ```http
-Want-Content-Digest: sha-512=8, sha-256=6, adler=0, sha=1
-Want-Content-Digest: sha-512=10, sha-256=1, md5=0
+Want-Content-Digest: md5=1, sha-512=0, sha-256=4
+Want-Content-Digest: md5=0
 ```
 
 ## Specifications
