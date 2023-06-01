@@ -26,11 +26,13 @@ The **`Want-Content-Digest`** request or response header states the wish for a {
 </table>
 
 ## Syntax
+
 `Want-Content-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
 
 ## Directives
 
 ## Examples
+
 ```http
 Want-Content-Digest: sha-512=8, sha-256=6, adler=0, sha=1
 Want-Content-Digest: sha-512=10, sha-256=1, md5=0

@@ -30,6 +30,7 @@ A client can request that a server emit a `Content-Digest` by issuing {{HTTPHead
 </table>
 
 ## Syntax
+
 `Content-Digest` describes a [dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2).
 
 ```http
