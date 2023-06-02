@@ -47,8 +47,6 @@ There are four algorithms to determine which arc is used:
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
-    Examples:
-
     | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = -225deg`, `θ2 = 45deg`                                        |
     | ------------------------------------------------------------------ | ------------------------------------------------------------------- |
     | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = -225deg and θ2 = 45deg](shorter_decreasing.png) |
@@ -65,8 +63,6 @@ There are four algorithms to determine which arc is used:
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
-    Examples:
-
     | `θ1 = 45deg`, `θ2 = -225deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
     | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
     | ![longer with θ1 = 45deg and θ2 = -225deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
@@ -78,8 +74,6 @@ There are four algorithms to determine which arc is used:
     - If `θ1 < θ2`, the arc becomes the full circumference with a clockwise orientation.
     - If `θ1 ≥ θ2`, the arc degenerates to a single point.
 
-    Examples:
-
     | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 495deg`, `θ2 = 45deg`                                          |
     | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
     | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 495deg and θ2 = 45deg](longer_increasing.png) |
@@ -90,8 +84,6 @@ There are four algorithms to determine which arc is used:
 
     - If `θ1 ≤ θ2`, the arc degenerates to a single point.
     - If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
-
-    Examples:
 
     | `θ1 = 45deg`, `θ2 = 495deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
     | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
