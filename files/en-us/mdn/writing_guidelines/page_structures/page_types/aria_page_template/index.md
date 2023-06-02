@@ -122,7 +122,7 @@ Any additional benefits this feature has for non-typical screen reader users, li
 
 ## Specifications
 
-{{Specifications}}
+\\{{Specifications}}
 
 ## Precedence order
 
