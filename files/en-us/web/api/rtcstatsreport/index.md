@@ -34,14 +34,17 @@ The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Description
 
-An `RTCStatsReport` {{jsxref("Promise")}} is returned from the {{domxref("RTCRtpReceiver.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}} and {{domxref("RTCPeerConnection.getStats()")}} methods.
+A {{jsxref("Promise")}} that resolves to an `RTCStatsReport` is returned from the {{domxref("RTCRtpReceiver.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}} and {{domxref("RTCPeerConnection.getStats()")}} methods.
 Calling `getStats()` on an {{domxref("RTCPeerConnection")}} lets you specify whether you wish to obtain outbound statistics, inbound statistics, or statistics for the whole connection.
 The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of `getStats()` only return inbound and outbound statistics, respectively.
 
 The statistics report is a read-only [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-like object: an ordered dictionary, where the properties are `id` strings that uniquely identify the WebRTC object that was inspected to produce a particular set of statistics, and the value is a dictionary object containing those statistics.
 
 The different categories of statistics that are collected are reported using different dictionary objects, as listed [below](#the_statistic_types).
-All the dictionary types have an `id` property, a string that uniquely identifies the object that was inspected to produce the current dictionary, a `type` string that can be used to identify the particular category of statistic, and a high resolution `timestamp` that allows comparison over time (and averaging) of statistic values.
+All the dictionary types have:
+- An `id` property, a string that uniquely identifies the object that was inspected to produce the current dictionary.
+- A `type` string that can be used to identify the particular category of statistic.
+- A high resolution `timestamp` that allows comparison over time (and averaging) of statistic values.
 
 The `RTCStatsReport` can be iterated in the same ways as a `Map`.
 In order to find a particular set of statistics users can filter by inspecting the `type`.
@@ -94,7 +97,7 @@ stats.forEach((report) => {
 
 This example shows how you might iterate the outbound statistics from an {{domxref("RTCRtpSender")}}.
 
-The code follows a the same pattern as the previous example, but iterates using a `for`-loop on the {{domxref("RTCStatsReport.values()")}}, and filters on the `type` of `outbound-rtp`.
+The code follows a the same pattern as the previous example, but iterates using a `for...of`-loop on the {{domxref("RTCStatsReport.values()")}}, and filters on the `type` of `outbound-rtp`.
 It assumes you already have an `RTCRtpSender` object named "sender".
 
 ```js
