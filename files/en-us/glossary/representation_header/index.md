@@ -21,6 +21,40 @@ If sent as a response to a `HEAD` request, they describe the body content repres
 
 Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Repr-Digest")}}, and {{HTTPHeader("Digest")}} {{Deprecated_Inline}}.
 
+## Examples
+
+### Example: successful HTTP request-response employing {{HTTHeader("Want-Repr-Digest")}}, {{HTTHeader("Repr-Digest")}}, {{HTTHeader("Content-Digest")}}
+
+```http
+PUT /api/transact HTTP/1.1
+Want-Repr-Digest: sha-256=8
+Content-Type: text/json
+...
+```
+
+```http
+HTTP/1.1 201 Created
+Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
+Content-Encoding: br
+Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
+...
+```
+
+### Example: unsuccessful HTTP request-response employing {{HTTHeader("Repr-Digest")}}
+
+```http
+GET /api/last-transaction HTTP/1.1
+Accept: text/json
+Repr-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
+...
+```
+
+```http
+HTTP/1.1 406 Not Acceptable
+Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
+...
+```
+
 ## See also
 
 - [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
