@@ -15,7 +15,9 @@ spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
 
 {{CSSRef}}
 
-The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the algorithm used for interpolation between {{CSSXref("&lt;hue&gt;")}} values. It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
+The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the algorithm used for interpolation between {{CSSXref("&lt;hue&gt;")}} values.
+The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.
+It is used as a component of the {{CSSXref("&lt;color-interpolation-method&gt;")}} data type.
 
 When interpolating `<hue>` values, the hue interpolation algorithm defaults to [`shorter`](#values).
 
@@ -32,9 +34,9 @@ decreasing hue
 
 ### Values
 
-Any pair of hue angles `θ1` and `θ2` correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the fisrt radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
+Any pair of hue angles `θ1` and `θ2` correspond to two radii on the {{Glossary("color wheel")}}, which cut the circumference into two possible arcs for interpolation. Both arcs start at the first radius and end at the second radius, but one goes clockwise and the other goes counterclockwise.
 
-> **Note:** The following descriptions and illustrations are based on color wheels in which hue angles increase clockwise. Beware that there are also counterclockwise color wheels.
+> **Note:** The following descriptions and illustrations are based on color wheels in which hue angles increase in a clockwise direction. Be aware that there are color wheels where an increase in angles will be a counterclockwise operation.
 
 There are four algorithms to determine which arc is used:
 
@@ -182,7 +184,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 500)}}
+{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 400)}}
 
 ## Specifications
 

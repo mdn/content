@@ -21,7 +21,7 @@ When interpolating `<color>` values, the interpolation color space defaults to O
 
 ## Syntax
 
-The `<color-interpolation-method>` data type has two syntaxes:
+The `<color-interpolation-method>` specifies whether interpolation should use a rectangular color space or a polar color space with an optional hue interpolation method:
 
 ```
 in <rectangular-color-space>
@@ -32,11 +32,11 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 - `<rectangular-color-space>`
 
-  - : One of the keywords `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, and `xyz-d65`.
+  - : One of the keywords `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, or `xyz-d65`.
 
 - `<polar-color-space>`
 
-  - : One of the keywords `hsl`, `hwb`, `lch`, and `oklch`.
+  - : One of the keywords `hsl`, `hwb`, `lch`, or `oklch`.
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
 
@@ -69,7 +69,7 @@ The following example shows the effect of using different interpolation color sp
 
 ```css
 .gradient {
-  background-image: linear-gradient(var(--method) to right, #a37, #595);
+  background-image: linear-gradient(var(--method) to right, blue, red);
   height: 40px;
   width: 200px;
 }
