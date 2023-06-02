@@ -64,7 +64,7 @@ Here is a little example:
     </p>
     <p>
       <input type="radio" name="size" id="size_3" value="large" />
-      <label for="size_3" aria-required="true" />Large</label>[*]
+      <label for="size_3" aria-required="true">Large</label>
     </p>
   </fieldset>
 </form>
