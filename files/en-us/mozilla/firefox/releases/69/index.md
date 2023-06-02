@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Removals
 
-- The HTML {{HTMLElement("keygen")}} element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ([Firefox bug 1315460](https://bugzil.la/1315460)).
+- The HTML `<keygen>` element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ([Firefox bug 1315460](https://bugzil.la/1315460)).
 
 ### CSS
 
