@@ -4,11 +4,7 @@ slug: Glossary/Application_context
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An **application context** is a top-level [browsing context](/en-US/docs/Glossary/Browsing_context) that has a [manifest](/en-US/docs/Web/Manifest) applied to it.
 

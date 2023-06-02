@@ -4,11 +4,7 @@ slug: Glossary/Fetch_directive
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **{{Glossary("CSP")}} fetch directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and control locations from which certain resource types may be loaded. For instance, {{CSP("script-src")}} allows developers to allow trusted sources of script to execute on a page, while {{CSP("font-src")}} controls the sources of web fonts.
 

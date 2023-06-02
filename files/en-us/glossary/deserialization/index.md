@@ -4,11 +4,7 @@ slug: Glossary/Deserialization
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The process whereby a lower-level format (e.g. that has been transferred over a network, or stored in a data store) is translated into a readable object or other data structure.
 

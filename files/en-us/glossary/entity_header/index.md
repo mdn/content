@@ -4,11 +4,7 @@ slug: Glossary/Entity_header
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 > **Warning:** The current HTTP/1.1 specification no longer refers to entities, entity headers or entity-body. Some of the fields are now referred to as {{glossary("Representation header")}} fields.
 

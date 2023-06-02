@@ -4,11 +4,7 @@ slug: Glossary/Literal
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
 

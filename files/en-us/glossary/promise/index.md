@@ -4,11 +4,7 @@ slug: Glossary/Promise
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **{{jsxref("Promise")}}** is an {{Glossary("object")}} that's returned by a {{Glossary("function")}} that has not yet completed its work. The promise literally represents a promise made by the function that it will eventually return a result through the promise object.
 

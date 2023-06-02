@@ -4,11 +4,7 @@ slug: Glossary/Unicode
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 Unicode is a standard {{Glossary("Character set","character set")}} that numbers and defines {{Glossary("Character","characters")}} from the world's different languages, writing systems, and symbols.
 

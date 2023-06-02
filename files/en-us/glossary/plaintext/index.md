@@ -4,11 +4,7 @@ slug: Glossary/Plaintext
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 Plaintext refers to information that is being used as an input to an {{Glossary("encryption")}} {{Glossary("algorithm")}}, or to {{Glossary("ciphertext")}} that has been decrypted.
 

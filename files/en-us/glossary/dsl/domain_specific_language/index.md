@@ -4,11 +4,7 @@ slug: Glossary/DSL/Domain_specific_language
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **Domain-Specific Language (DSL)** is a type of computer language of limited scope, designed to address a particular problem within an application domain.
 

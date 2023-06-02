@@ -4,11 +4,7 @@ slug: Glossary/Flex_Item
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
 

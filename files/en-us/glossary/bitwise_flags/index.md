@@ -4,11 +4,7 @@ slug: Glossary/Bitwise_flags
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Bitwise flags** are sets of variables, usually simple number values, which can be used to enable or disable specific usages or features of a method or other code structure. They can do this quickly and efficiently because they operate at the bit level. Related flags in the same group are generally given complementary values representing different bit positions in a single value (e.g. hexadecimal), so that multiple flag settings can be represented by a single value.
 

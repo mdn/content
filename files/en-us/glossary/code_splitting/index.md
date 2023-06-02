@@ -4,11 +4,7 @@ slug: Glossary/Code_splitting
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Code splitting** is the splitting of code into various bundles or components which can then be loaded on demand or in parallel.
 

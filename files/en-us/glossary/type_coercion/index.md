@@ -4,11 +4,7 @@ slug: Glossary/Type_coercion
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). _{{Glossary("Type conversion")}}_ is similar to _type coercion_ because they both convert values from one data type to another with one key difference — _type coercion_ is implicit whereas _type conversion_ can be either implicit _or_ explicit.
 

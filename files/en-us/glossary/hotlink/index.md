@@ -4,11 +4,7 @@ slug: Glossary/Hotlink
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **hotlink** (also known as an **inline link**) is an object (typically an image) directly linked to from another site. For example, an image hosted on site1.com is shown directly on site2.com.
 

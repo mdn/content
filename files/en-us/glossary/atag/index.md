@@ -4,11 +4,7 @@ slug: Glossary/ATAG
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines) is a {{Glossary("W3C")}} recommendation for building accessible-authoring tools that produce accessible contents.
 

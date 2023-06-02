@@ -4,11 +4,7 @@ slug: Glossary/Value
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 In the context of data or an object **{{Glossary("Wrapper", "wrapper")}}** around that data, the value is the **{{Glossary("Primitive","primitive value")}}** that the object wrapper contains. In the context of a **{{Glossary("Variable","variable")}}** or **{{Glossary("Property","property")}}**, the value can be either a primitive or an **{{Glossary("Object reference","object reference")}}**.
 

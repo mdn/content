@@ -4,11 +4,7 @@ slug: Glossary/Idempotent
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An HTTP method is **idempotent** if the intended effect on the server of making a single request is the same as the effect of making several identical requests.
 

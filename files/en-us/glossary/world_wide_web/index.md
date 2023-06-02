@@ -4,11 +4,7 @@ slug: Glossary/World_Wide_Web
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The _World Wide Web_—commonly referred to as **WWW**, **W3**, or **the Web**—is a system of interconnected public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.
 

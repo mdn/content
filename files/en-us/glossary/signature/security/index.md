@@ -4,11 +4,7 @@ slug: Glossary/Signature/Security
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.
 

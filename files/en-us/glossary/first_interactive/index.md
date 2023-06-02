@@ -4,11 +4,7 @@ slug: Glossary/First_interactive
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **First Interactive,** also known as [first CPU idle](/en-US/docs/Glossary/First_CPU_idle), is a non-standard web performance metric that measures when the user's window is quiet enough to handle user input, or what is termed as minimally interactive.
 

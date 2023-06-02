@@ -4,11 +4,7 @@ slug: Glossary/IMAP
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 IMAP (Internet Message Access Protocol) is a {{Glossary("protocol")}} used to retrieve and store emails. More recent than {{Glossary("POP")}}, IMAP allows folders and rules on the server.
 

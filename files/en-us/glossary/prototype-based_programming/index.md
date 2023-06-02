@@ -4,11 +4,7 @@ slug: Glossary/Prototype-based_programming
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Prototype-based programming** is a style of {{Glossary("OOP", "object-oriented programming")}} in which {{Glossary('Class', 'classes')}} are not explicitly defined, but rather derived by adding properties and methods to an instance of another class or, less frequently, adding them to an empty object.
 

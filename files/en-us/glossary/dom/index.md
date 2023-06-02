@@ -4,11 +4,7 @@ slug: Glossary/DOM
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The **DOM** (Document Object Model) is an {{glossary("API")}} that represents and interacts with any {{glossary("HTML")}} or {{glossary("XML")}} document. The DOM is a document model loaded in the {{glossary("browser")}} and representing the document as a node tree, where each node represents part of the document (e.g. an {{Glossary("element")}}, text string, or comment).
 

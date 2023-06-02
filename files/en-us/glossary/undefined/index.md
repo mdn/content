@@ -4,11 +4,7 @@ slug: Glossary/Undefined
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **`undefined`** is a {{Glossary("primitive")}} value automatically assigned to {{glossary("variable", "variables")}} that have just been declared, or to formal {{Glossary("Argument","arguments")}} for which there are no actual arguments.
 

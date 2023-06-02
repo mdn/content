@@ -4,11 +4,7 @@ slug: Glossary/Port
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 For a computer connected to a network with an {{Glossary("IP address")}}, a **port** is a communication endpoint. Ports are designated by numbers, and below 1024 each port is associated by default with a specific {{Glossary("protocol")}}.
 

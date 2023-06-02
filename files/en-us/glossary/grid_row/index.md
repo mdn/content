@@ -4,11 +4,7 @@ slug: Glossary/Grid_Row
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **grid row** is a horizontal track in a [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), that is the space between two horizontal grid lines. It is defined by the {{cssxref("grid-template-rows")}} property or in the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties.
 

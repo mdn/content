@@ -4,11 +4,7 @@ slug: Glossary/Method
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **method** is a {{glossary("function")}} which is a {{glossary("property")}} of an {{glossary("object")}}. There are two kinds of methods: _instance methods_ which are built-in tasks performed by an object instance, or _{{Glossary("static method", "static methods")}}_ which are tasks that are called directly on an object constructor.
 

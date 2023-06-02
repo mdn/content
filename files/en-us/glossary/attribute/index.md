@@ -4,11 +4,7 @@ slug: Glossary/Attribute
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An **attribute** extends an HTML or XML {{Glossary("element")}}, changing its behavior or providing metadata.
 

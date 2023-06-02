@@ -4,11 +4,7 @@ slug: Glossary/Composite_operation
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 In CSS, the value of a property in a CSS rule is the _underlying value_ of that property, and the value of that same property in a [keyframe](/en-US/docs/Web/CSS/@keyframes) is its _effect value_.
 

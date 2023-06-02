@@ -4,11 +4,7 @@ slug: Glossary/Certificate_authority
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A certificate authority (CA) is an organization that {{Glossary("Signature/Security", "signs")}} {{Glossary("Digital certificate", "digital certificates")}} and their associated {{Glossary("Key", "public keys")}}, thereby asserting that the contained information and keys are correct.
 

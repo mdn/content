@@ -4,11 +4,7 @@ slug: Glossary/Safe/HTTP
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An HTTP method is **safe** if it doesn't alter the state of the server. In other words, a method is safe if it leads to a read-only operation. Several common HTTP methods are safe: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, or {{HTTPMethod("OPTIONS")}}. All safe methods are also {{glossary("idempotent")}}, but not all idempotent methods are safe. For example, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}} are both idempotent but unsafe.
 

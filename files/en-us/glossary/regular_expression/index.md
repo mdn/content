@@ -4,11 +4,7 @@ slug: Glossary/Regular_expression
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Regular expressions** (or _regex_) are rules that govern which sequences of characters come up in a search.
 

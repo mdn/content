@@ -4,11 +4,7 @@ slug: Glossary/NaN
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 NaN (Not a Number) is a numeric {{Glossary("Type", "data type")}} that means an undefined value or value that cannot be represented, especially results of floating-point calculations.
 

@@ -4,11 +4,7 @@ slug: Glossary/Gecko
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Gecko** is the layout engine developed by the Mozilla Project and used in many apps/devices, including {{glossary("Mozilla Firefox","Firefox")}} and {{glossary("Firefox OS")}}.
 

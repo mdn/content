@@ -4,11 +4,7 @@ slug: Glossary/Browser
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **Web browser** or **browser** is a program that retrieves and displays pages from the {{Glossary("World Wide Web","Web")}}, and lets users access further pages through {{Glossary("hyperlink","hyperlinks")}}. A browser is the most familiar type of {{Glossary("user agent")}}.
 

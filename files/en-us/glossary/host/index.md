@@ -4,11 +4,7 @@ slug: Glossary/Host
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A host is a device connected to the {{glossary("Internet")}} (or a local network). Some hosts called {{glossary("server","servers")}} offer additional services like serving webpages or storing files and emails.
 

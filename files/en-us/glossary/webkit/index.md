@@ -4,11 +4,7 @@ slug: Glossary/WebKit
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 _WebKit_ is a framework that displays properly-formatted webpages based on their markup. {{Glossary("Apple Safari")}} depends on WebKit, and so do many mobile browsers (since WebKit is highly portable and customizable).
 

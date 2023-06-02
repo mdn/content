@@ -4,11 +4,7 @@ slug: Glossary/Inheritance
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 Inheritance is a major feature of {{glossary("OOP","object-oriented programming")}}. Data abstraction can be carried up several levels, that is, {{glossary("class","classes")}} can have superclasses and subclasses.
 

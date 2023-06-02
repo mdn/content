@@ -4,11 +4,7 @@ slug: Glossary/FPS
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **frame rate** is the speed at which the browser is able to recalculate, layout and paint content to the display. The **frames per second**, or **fps**, is how many frames can be repainted in one second. The goal frame rate for in website computer graphics is 60fps.
 

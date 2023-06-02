@@ -4,11 +4,7 @@ slug: Glossary/Search_engine
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A search engine is a software system that collects information from the {{Glossary("World Wide Web")}} and presents it to users who are looking for specific information.
 

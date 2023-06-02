@@ -4,11 +4,7 @@ slug: Glossary/Boolean
 page-type: glossary-disambiguation
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.
 

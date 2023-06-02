@@ -4,11 +4,7 @@ slug: Glossary/WCAG
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 _Web Content Accessibility Guidelines_ (**WCAG**) are a recommendation published by the {{Glossary("WAI","Web Accessibility Initiative")}} group at the {{Glossary("W3C")}}. They outline a set of guidelines for making content accessible primarily for people with disabilities but also for limited-resource devices such as mobile phones.
 

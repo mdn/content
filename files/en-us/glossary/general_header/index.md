@@ -4,11 +4,7 @@ slug: Glossary/General_header
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **General header** is an outdated term used to refer to an {{glossary('HTTP_header', 'HTTP header')}} that can be used in both request and response messages, but which doesn't apply to the content itself (a header that applied to the content was called an {{glossary("entity header")}}). Depending on the context they are used in, general headers might either be {{glossary("Response header", "response")}} or {{glossary("request header", "request headers")}} (e.g. {{HTTPheader("Cache-Control")}}).
 

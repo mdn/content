@@ -4,11 +4,7 @@ slug: Glossary/Stringifier
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An {{Glossary("object", "object's")}} stringifier is any {{Glossary("attribute")}} or {{Glossary("method")}} that is defined to provide a textual representation of the object for use in situations where a {{Glossary("string")}} is expected.
 

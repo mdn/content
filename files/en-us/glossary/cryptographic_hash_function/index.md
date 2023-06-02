@@ -4,11 +4,7 @@ slug: Glossary/Cryptographic_hash_function
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A cryptographic hash function, also sometimes called a _digest function_, is a {{glossary("cryptography", "cryptographic")}} primitive transforming a message of arbitrary size into a message of fixed size, called a {{glossary("digest")}}. Cryptographic hash functions are used for authentication, {{Glossary("digital signature", "digital signatures")}}, and {{Glossary("HMAC", "message authentication codes")}}.
 

@@ -4,11 +4,7 @@ slug: Glossary/XInclude
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 XInclude is a W3C Recommendation defining inclusion tags that enable documents to include other documents or parts of other documents. Content can be included from other XML files or from text files.
 

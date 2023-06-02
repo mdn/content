@@ -4,11 +4,7 @@ slug: Glossary/Resource_Timing
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 Diagnosing performance issues requires performance data at the granularity of the resource. The [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) is a JavaScript API that is able to capture timing information for each individual resource that is fetched when a page is loaded.
 

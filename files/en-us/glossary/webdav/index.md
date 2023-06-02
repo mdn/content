@@ -4,11 +4,7 @@ slug: Glossary/WebDAV
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **WebDAV** (_Web Distributed Authoring and Versioning_) is an {{Glossary("HTTP")}} Extension that lets web developers update their content remotely from a client.
 

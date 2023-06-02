@@ -4,11 +4,7 @@ slug: Glossary/Layout_viewport
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The **layout viewport** is the viewport into which the browser draws a web page. Essentially, it represents what is available to be seen, while the {{Glossary("visual viewport")}} represents what is currently visible on the user's display device.
 

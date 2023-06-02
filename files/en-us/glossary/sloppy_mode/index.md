@@ -4,11 +4,7 @@ slug: Glossary/Sloppy_mode
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 {{Glossary("ECMAScript")}} 5 and later let scripts opt in to a new [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), which alters the semantics of JavaScript in several ways to improve its resiliency and which make it easier to understand what's going on when there are problems.
 

@@ -4,11 +4,7 @@ slug: Glossary/Page_prediction
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **Page Prediction** is a browser feature or script which, when enabled, tells the browser to download resources the user is likely to visit before the user requests the content. Page prediction improves performance by enabling almost instant loading of predicted content. However, page prediction may also download content a user does not seek.
 

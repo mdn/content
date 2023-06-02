@@ -4,11 +4,7 @@ slug: Glossary/IRC
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **IRC** (_Internet Relay Chat_) is a worldwide chat system requiring an Internet connection and an IRC client, which sends and receives messages via the IRC server.
 

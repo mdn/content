@@ -4,11 +4,7 @@ slug: Glossary/Digital_certificate
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A digital certificate is a data file that binds a publicly known {{Glossary("Key", "cryptographic key")}} to an organization.
 

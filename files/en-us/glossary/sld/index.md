@@ -4,11 +4,7 @@ slug: Glossary/SLD
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An SLD ([Second Level Domain](/en-US/docs/Glossary/Second-level_Domain)) is the part of the domain name that is located right before a _Top Level Domain_ ({{Glossary("TLD")}}). For example, in `mozilla.org` the SLD is `mozilla` and the TLD is `org`.
 

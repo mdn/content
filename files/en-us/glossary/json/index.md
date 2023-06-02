@@ -4,11 +4,7 @@ slug: Glossary/JSON
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 _JavaScript Object Notation_ (**JSON**) is a data-interchange format. Although not a strict subset, JSON closely resembles a subset of {{Glossary("JavaScript")}} syntax. Though many programming languages support JSON, it is especially useful for JavaScript-based apps, including websites and browser extensions.
 

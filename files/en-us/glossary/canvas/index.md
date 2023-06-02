@@ -4,11 +4,7 @@ slug: Glossary/Canvas
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The **canvas element** is part of [HTML5](https://en.wikipedia.org/wiki/HTML5) and allows for dynamic, [scriptable](https://en.wikipedia.org/wiki/Scripting_language) [rendering](<https://en.wikipedia.org/wiki/Rendering_(computer_graphics)>) of 2D and 3D shapes and [bitmap](https://en.wikipedia.org/wiki/Bitmap) images.
 

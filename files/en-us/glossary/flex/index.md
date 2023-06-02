@@ -4,11 +4,7 @@ slug: Glossary/Flex
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 `flex` is a new value added to the CSS {{cssxref("display")}} property. Along with `inline-flex` it causes the element that it applies to in order to become a {{glossary("flex container")}}, and the element's children to each become a {{glossary("flex item")}}. The items then participate in flex layout, and all of the properties defined in the CSS Flexible Box Layout Module may be applied.
 

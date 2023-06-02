@@ -4,11 +4,7 @@ slug: Glossary/JPEG
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **JPEG** (Joint Photographic Experts Group) is a commonly used method of lossy compression for digital images.
 

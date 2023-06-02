@@ -4,11 +4,7 @@ slug: Glossary/Caret
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 A **caret** (sometimes called a "text cursor") is an indicator displayed on the screen to indicate where text input will be inserted.
 

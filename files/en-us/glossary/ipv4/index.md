@@ -4,11 +4,7 @@ slug: Glossary/IPv4
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 IPv4 is the fourth version of the communication {{Glossary("protocol")}} underlying the {{glossary("Internet")}} and the first version to be widely deployed.
 

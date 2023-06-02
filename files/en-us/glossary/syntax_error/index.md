@@ -4,11 +4,7 @@ slug: Glossary/Syntax_error
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 An {{Glossary("exception")}} caused by the incorrect use of a pre-defined {{Glossary("syntax")}}. Syntax errors are detected while compiling or parsing source code.
 

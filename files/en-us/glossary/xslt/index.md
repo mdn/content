@@ -4,11 +4,7 @@ slug: Glossary/XSLT
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 _eXtensible Stylesheet Language Transformations_ (**XSLT**) is a declarative language used to convert {{Glossary("XML")}} documents into other XML documents, {{Glossary("HTML")}}, {{Glossary("PDF")}}, plain text, and so on.
 

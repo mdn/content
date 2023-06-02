@@ -4,11 +4,7 @@ slug: Glossary/Payload_body
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 The HTTP message **payload body** is the _information_ ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to {{HTTPHeader("Transfer-Encoding","transfer encoding")}} being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same!
 

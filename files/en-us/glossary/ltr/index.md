@@ -4,11 +4,7 @@ slug: Glossary/LTR
 page-type: glossary-definition
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
-  </ol>
-</section>
+{{GlossarySidebar}}
 
 **LTR** (**Left To Right**) is a {{Glossary("locale")}} property indicating that text is written from left to right. For example, the `en-US` locale (for US English) specifies left-to-right.
 
