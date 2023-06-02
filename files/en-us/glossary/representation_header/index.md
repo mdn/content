@@ -10,7 +10,7 @@ A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} tha
 
 Representations are different forms of a particular resource.
 
-For example, the same data might be formatted as a particular media type such as XML, JSON, HTML or markdown, or localized to a particular written language or geographical region.
+For example, the same data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
 The underlying resource is semantically the same in each case, but its representation is different.
 
 Whilst representations are different forms of resources, representations can themselves also be transmitted in different forms: an HTTP message frames (cf. e.&hairsp;g. HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}) a particular stream of octets (cf. e.&hairsp;g. {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
