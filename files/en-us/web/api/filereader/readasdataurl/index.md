@@ -98,7 +98,7 @@ function previewFiles() {
           const image = new Image();
           image.height = 100;
           image.title = file.name;
-          image.src = this.result;
+          image.src = reader.result;
           preview.appendChild(image);
         },
         false

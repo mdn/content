@@ -17,7 +17,7 @@ The typical use for this event is when a web app wants to provide its own in-app
 In this scenario, the handler for this event will:
 
 - Keep a reference to the {{domxref("BeforeInstallPromptEvent")}} object that's passed into it
-- Reveal its in-app installation UI (this should be hidden by default, because not all browsers will support intallation).
+- Reveal its in-app installation UI (this should be hidden by default, because not all browsers will support installation).
 
 When the user uses the in-app installation UI to install the app, the in-app installation UI calls the {{domxref("BeforeInstallPromptEvent.prompt()", "prompt()")}} method of the retained `BeforeInstallPromptEvent` object to show the installation prompt.
 
