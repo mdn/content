@@ -11,8 +11,8 @@ status:
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The **`Content-Digest`** response or request header provides a {{Glossary("digest")}} of the actual message content, the stream of octets framed in an HTTP message.
-As such, `Content-Digest` is dependent on the {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}} , but not dependent on, for example, HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}.
-`Content-Digest` would have the same value as {{HTTPHeader("Repr-Digest")}} if a representation was sent in a single message.
+As such, `Content-Digest` is dependent on among other things {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, but not dependent on, for example, HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}.
+`Content-Digest` may coincide with {{HTTPHeader("Repr-Digest")}} if a representation was sent in a single message.
 
 "content" in this setting refers to a particular octet representation of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource.
 
