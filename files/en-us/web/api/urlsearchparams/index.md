@@ -127,7 +127,7 @@ console.log(searchParams3.has("query")); // true
 
 ### Preserving plus signs
 
-The `URLSearchParams` constructor interprets plus signs (`+`) as spaces, which might cause problems.
+The `URLSearchParams` constructor interprets plus signs (`+`) as spaces, which might cause problems. In the example below, we use [hexadecimal escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal_escape_sequences) to mimic a string containing binary data (where every byte carries information) that needs to be stored in the URL search params. Note how the encoded string produced by `btoa()` contains `+` and isn't preserved by `URLSearchParams`.
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";
@@ -138,10 +138,6 @@ const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' is replaced by spac
 
 console.log(atob(binQuery) === rawData); // false
 ```
-
-The notation `\xAB` used in `rawData` string defines a character by 2 hexadecimal numbers.
-Characters defined by this notation can be safely processed by `btoa()` function.
-Learn more about [Hexadecimal escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal_escape_sequences).
 
 You can avoid this by encoding the data with the {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
 
