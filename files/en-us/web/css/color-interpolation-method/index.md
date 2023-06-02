@@ -67,42 +67,49 @@ The following example shows the effect of using different interpolation color sp
 
 ```css hidden
 .gradient {
-  background-image: linear-gradient(to right, var(--fallback));
   height: 40px;
   width: 200px;
 }
-.srgb {
-  --fallback:
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%);
-}
-.oklab {
-  --fallback:
-    oklab(0.452 -0.032 -0.312),
-    oklab(0.487 0.019 -0.224),
-    oklab(0.522 0.070 -0.137),
-    oklab(0.558 0.122 -0.049),
-    oklab(0.593 0.173 0.038),
-    oklab(0.628 0.225 0.126);
-}
-.oklch-longer {
-  --fallback:
-    oklch(0.452 0.313 264),
-    oklch(0.468 0.308 243),
-    oklch(0.484 0.303 221),
-    oklch(0.500 0.298 200),
-    oklch(0.516 0.293 179),
-    oklch(0.532 0.288 157),
-    oklch(0.548 0.283 136),
-    oklch(0.564 0.278 115),
-    oklch(0.580 0.273 93),
-    oklch(0.596 0.268 72),
-    oklch(0.612 0.263 51),
-    oklch(0.628 0.258 29);
+@supports not (background-image: linear-gradient(in oklab, blue, red)) {
+  .srgb {
+    background-image: linear-gradient(
+      to right,
+      rgb(0% 0% 100%),
+      rgb(20% 0% 80%),
+      rgb(40% 0% 60%),
+      rgb(60% 0% 40%),
+      rgb(80% 0% 20%),
+      rgb(100% 0% 0%)
+    );
+  }
+  .oklab {
+    background-image: linear-gradient(
+      to right,
+      oklab(0.452 -0.032 -0.312),
+      oklab(0.487 0.019 -0.224),
+      oklab(0.522 0.070 -0.137),
+      oklab(0.558 0.122 -0.049),
+      oklab(0.593 0.173 0.038),
+      oklab(0.628 0.225 0.126)
+    );
+  }
+  .oklch-longer {
+    background-image: linear-gradient(
+      to right,
+      oklch(0.452 0.313 264),
+      oklch(0.468 0.308 243),
+      oklch(0.484 0.303 221),
+      oklch(0.500 0.298 200),
+      oklch(0.516 0.293 179),
+      oklch(0.532 0.288 157),
+      oklch(0.548 0.283 136),
+      oklch(0.564 0.278 115),
+      oklch(0.580 0.273 93),
+      oklch(0.596 0.268 72),
+      oklch(0.612 0.263 51),
+      oklch(0.628 0.258 29)
+    );
+  }
 }
 ```
 
@@ -111,13 +118,13 @@ The following example shows the effect of using different interpolation color sp
   background-image: linear-gradient(var(--method) to right, blue, red);
 }
 .srgb {
-  --method: in srgb;
+  background-image: linear-gradient(in srgb to right, blue, red);
 }
 .oklab {
-  --method: in oklab;
+  background-image: linear-gradient(in oklab to right, blue, red);
 }
 .oklch-longer {
-  --method: in oklch longer hue;
+  background-image: linear-gradient(in oklch longer hue to right, blue, red);
 }
 ```
 
