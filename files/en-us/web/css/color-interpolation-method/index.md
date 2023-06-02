@@ -110,8 +110,8 @@ The following example shows the effect of using different interpolation color sp
 
 ```css
 .gradient {
-  height: 40px;
-  width: 200px;
+  height: 50px;
+  width: 100%;
 }
 .srgb {
   background-image: linear-gradient(in srgb to right, blue, red);
@@ -126,7 +126,7 @@ The following example shows the effect of using different interpolation color sp
 
 #### Result
 
-{{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 300)}}
+{{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
 
 ## Specifications
 
