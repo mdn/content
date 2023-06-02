@@ -14,7 +14,7 @@ The **`manifest`** attribute of the `<html>` element specifies a URL of an appli
 
 > **Note:** manifest-based caching mechanism has been deprecated. Use [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
 
-The `manifest` attribute only had an effect during early stages of page load, thus changing it via regular DOM interfaces had no effect. The deprecated {{domxref("Window.applicationCache")}} interface was used instead. The attribute functionality has been superceded by the [web app manifest](/en-US/docs/Web/Manifest), a JSON file deployed in from the {{CSSXref("head")}} of the HTML file with the {{CSSXref("link")}} with [`rel="manifest"`](/en-US/docs/Web/HTML/Attributes/rel) set.
+The `manifest` attribute only had an effect during early stages of page load, thus changing it via regular DOM interfaces had no effect. The deprecated {{domxref("Window.applicationCache")}} interface was used instead. The attribute functionality has been superceded by the [web app manifest](/en-US/docs/Web/Manifest), a JSON file deployed in from the {{HTMLElement("head")}} of the HTML file with the {{HTMLElement("link")}} with [`rel="manifest"`](/en-US/docs/Web/HTML/Attributes/rel) set.
 
 ## Browser compatibility
 
