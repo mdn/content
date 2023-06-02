@@ -19,6 +19,8 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
   - : One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app. In this guide we'll explore what "installable" means, what a PWA needs to provide for it to be installable, and how you can customize the install experience.
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
   - : In this guide, we'll introduce a set of technologies that enable a PWA to provide a good user experience even when the device has intermittent network connectivity and to perform operations in the background, even when the main app is not running.
+- [Best practices for PWAs](/en-US/docs/Web/Progressive_web_apps/Guides/Best_practices)
+  - : PWAs should adapt to different browsers and devices, be accessible, have good performance, and integrate well with the operating system. This guide provides a list of best practices to help you make sure your PWA is as good as it can be.
 
 ## How to
 
@@ -32,6 +34,8 @@ These guides give concrete detailed instructions for how to implement specific P
   - : Describes how to display a badge on the PWA's icon: for example to let the user know that they have received new messages.
 - [Share data between apps](/en-US/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)
   - : Describes how PWAs can share data with each other by using the operating system's app sharing mechanism.
+- [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
+  - : Describes how developers can provide their own UI to invite users to install their PWA.
 
 ## Reference
 
@@ -91,4 +95,5 @@ The following APIs can be used by a service worker to perform tasks in the backg
 ## See also
 
 - [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
+- [Learn PWA](https://web.dev/learn/pwa/) on web.dev
 - [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (January 24, 2023)
