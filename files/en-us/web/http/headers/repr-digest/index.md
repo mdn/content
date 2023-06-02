@@ -41,6 +41,8 @@ The registered insecure digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, 
 
 ## Examples
 
+### Example: HTTP response where `Repr-Digest` and `Content-Digest` coincide
+
 An HTTP server may send content octets equivalent to the selected representation's octets:
 
 ```http
@@ -54,6 +56,8 @@ Content-Length: 38054
 Content-Range: 0-38053/38054
 ...
 ```
+
+### Example: HTTP responses where {{HTTPHeader("Repr-Digest")}} and {{HTTPHeader("Content-Digest")}} diverge
 
 A static file server may however choose to compress an HTML page, resulting in differing {{HTTPHeader("Content-Digest")}} and `Repr-Digest` header values:
 
@@ -78,6 +82,38 @@ Content-Type: text/html; charset=utf-8
 Content-Encoding: deflate, deflate, deflate
 ...
 
+...
+```
+
+### Example: Successful HTTP request-response employing {{HTTHeader("Want-Repr-Digest")}}, {{HTTHeader("Repr-Digest")}}, {{HTTHeader("Content-Digest")}}
+
+```http
+PUT /api/transact HTTP/1.1
+Want-Repr-Digest: sha-256=8
+Content-Type: text/json
+...
+```
+
+```http
+HTTP/1.1 201 Created
+Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
+Content-Encoding: br
+Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
+...
+```
+
+### Example: Unsuccessful HTTP request-response employing {{HTTHeader("Repr-Digest")}}
+
+```http
+GET /api/last-transaction HTTP/1.1
+Accept: text/json
+Repr-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
+...
+```
+
+```http
+HTTP/1.1 406 Not Acceptable
+Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
 ...
 ```
 
