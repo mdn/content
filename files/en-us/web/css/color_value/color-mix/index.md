@@ -181,6 +181,6 @@ div {
 
 ## See also
 
-- {{cssxref("color_value")}}
+- {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
