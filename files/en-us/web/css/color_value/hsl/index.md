@@ -29,7 +29,7 @@ The function also accepts a legacy syntax in which all values are separated with
 Functional notation: `hsl(H S L[ / A])`
 
 - `H`
-  - : A {{CSSXref("&lt;hue&gt;")}} representing the hue angle.
+  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `S`
   - : A {{CSSXref("&lt;percentage&gt;")}} representing saturation, where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
 - `L`
@@ -74,7 +74,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("using_hsl_with_conic-gradient", "100%", "140px")}}
+{{EmbedLiveSample("using_hsl_with_conic-gradient", "100%", 140)}}
 
 ### Legacy syntax: comma-separated values
 
@@ -107,7 +107,7 @@ div.comma-separated {
 
 #### Result
 
-{{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", "150px")}}
+{{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
 
 ### Legacy syntax: hsla()
 
@@ -140,7 +140,7 @@ div.hsla {
 
 #### Result
 
-{{EmbedLiveSample("legacy_syntax_hsla", "100%", "150px")}}
+{{EmbedLiveSample("legacy_syntax_hsla", "100%", 150)}}
 
 ## Specifications
 
@@ -152,5 +152,5 @@ div.hsla {
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} type that represents any color.
+- {{CSSXref("&lt;color&gt;")}}: the data type that represents any color
 - [HSL Color Picker](https://hslpicker.com/)
