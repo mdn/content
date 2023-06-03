@@ -67,6 +67,17 @@ The following example shows the effect of using different interpolation color sp
 
 ```css hidden
 /* Fallback styles */
+.srgb {
+  background-image: linear-gradient(
+    to right,
+    rgb(0% 0% 100%),
+    rgb(20% 0% 80%),
+    rgb(40% 0% 60%),
+    rgb(60% 0% 40%),
+    rgb(80% 0% 20%),
+    rgb(100% 0% 0%)
+  );
+}
 ```
 
 ```css
