@@ -23,7 +23,7 @@ data.
 
 ```js-nolint
 // Promise-based syntax:
-promise = decodeAudioData(arrayBuffer)
+decodeAudioData(arrayBuffer)
 
 // Callback syntax:
 decodeAudioData(arrayBuffer, successCallback)
