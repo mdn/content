@@ -82,11 +82,11 @@ The following example shows the effect of using different interpolation color sp
   background-image: linear-gradient(
     to right,
     oklab(0.452 -0.032 -0.312),
-    oklab(0.487 0.019 -0.224),
-    oklab(0.522 0.070 -0.137),
-    oklab(0.558 0.122 -0.049),
-    oklab(0.593 0.173 0.038),
-    oklab(0.628 0.225 0.126)
+    oklab(0.487  0.019 -0.224),
+    oklab(0.522  0.070 -0.137),
+    oklab(0.558  0.122 -0.049),
+    oklab(0.593  0.173  0.038),
+    oklab(0.628  0.225  0.126)
   );
 }
 ```
