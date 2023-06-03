@@ -26,7 +26,7 @@ Functional notation: `lch(L C H[ / A])`
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}} or a {{CSSXref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
 - `H`
-  - : A {{CSSXref("&lt;hue&gt;")}} representing the hue angle.
+  - : A {{CSSXref("&lt;number&gt;")}} or an {{CSSXref("&lt;angle&gt;")}} representing the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
@@ -94,7 +94,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Adjusting_lightness,_chroma,_and_hue_with_lch')}}
+{{EmbedLiveSample("adjusting_lightness_chroma_and_hue_with_lch")}}
 
 ### Adjusting opacity with lch()
 
@@ -140,7 +140,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Adjusting_opacity_with_lch')}}
+{{EmbedLiveSample("adjusting_opacity_with_lch")}}
 
 ## Specifications
 
@@ -152,6 +152,6 @@ div {
 
 ## See also
 
-- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- {{CSSXref("&lt;color&gt;")}}: For a list of all color notations
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors
