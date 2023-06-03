@@ -115,6 +115,62 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
 
+### Using hue interpolation in color-mix()
+
+When using shorter hue interpolation, the resulting hue angle is halfway between the input angles when taking the shortest route around the color wheel.
+The longer hue interpolation method results in a hue angle which is the midpoint when taking the longer route around the color wheel.
+For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
+
+```html
+<div class="color-one">color one</div>
+<div class="color-two">color two</div>
+<div class="shorter">mixed shorter</div>
+<div class="longer">mixed longer</div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+div {
+  border: 1px solid;
+  font: bold 150% monospace;
+  height: 100px;
+  margin: 10px 5%;
+  width: 30%;
+}
+```
+
+```css
+.color-one {
+  background-color: hsl(10 100% 50%);
+}
+.color-two {
+  background-color: hsl(60 100% 50%);
+}
+.shorter {
+  background-color: color-mix(
+    in hsl shorter hue,
+    hsl(10 100% 50%),
+    hsl(60 100% 50%)
+  );
+}
+.longer {
+  background-color: color-mix(
+    in hsl longer hue,
+    hsl(10 100% 50%),
+    hsl(60 100% 50%)
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 250)}}
+
 ## Specifications
 
 {{Specifications}}
