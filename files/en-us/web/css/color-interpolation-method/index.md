@@ -113,12 +113,6 @@ The following example shows the effect of using different interpolation color sp
   height: 50px;
   width: 100%;
 }
-.srgb {
-  background-image: linear-gradient(in srgb to right, blue, red);
-}
-.oklab {
-  background-image: linear-gradient(in oklab to right, blue, red);
-}
 ```
 
 #### Result
