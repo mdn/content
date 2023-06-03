@@ -1252,7 +1252,6 @@
 /en-US/docs/DOM/DeviceOrientationEvent.alpha	/en-US/docs/Web/API/DeviceOrientationEvent/alpha
 /en-US/docs/DOM/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/DOM/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
-/en-US/docs/DOM/DeviceProximityEvent	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/DOM/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/DOM/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/DOM/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta
@@ -1721,7 +1720,6 @@
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
-/en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 /en-US/docs/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/DOM/Using_full-screen_mode	/en-US/docs/Web/API/Fullscreen_API
@@ -7903,7 +7901,6 @@
 /en-US/docs/Web/API/DeviceOrientationEvent.alpha	/en-US/docs/Web/API/DeviceOrientationEvent/alpha
 /en-US/docs/Web/API/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/Web/API/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
-/en-US/docs/Web/API/DeviceProximityEvent/max	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/Web/API/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/Web/API/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta
@@ -9366,7 +9363,6 @@
 /en-US/docs/Web/API/PromiseRejection/promise	/en-US/docs/Web/API/PromiseRejectionEvent/promise
 /en-US/docs/Web/API/PromiseRejection/reason	/en-US/docs/Web/API/PromiseRejectionEvent/reason
 /en-US/docs/Web/API/PromiseResolver	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-/en-US/docs/Web/API/Proximity	/en-US/docs/Web/API/Proximity_Events
 /en-US/docs/Web/API/PublicKeyCredential/PublicKeyCredential.rawId	/en-US/docs/Web/API/PublicKeyCredential/rawId
 /en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResult	/en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResults
 /en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
@@ -9882,7 +9878,6 @@
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/Web/API/Uint8ClampedArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/Web/API/UserProximityEvent/near	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
 /en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API	/en-US/docs/Web/API/Performance_API/User_timing
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
@@ -10113,7 +10108,6 @@
 /en-US/docs/Web/API/Window/ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/Window/ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Web/API/Window/ondeviceorientationabsolute	/en-US/docs/Web/API/Window/deviceorientationabsolute_event
-/en-US/docs/Web/API/Window/ondeviceproximity	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Window/ongamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Web/API/Window/ongamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
@@ -10139,7 +10133,6 @@
 /en-US/docs/Web/API/Window/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Window/onunhandledrejection	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/Window/onunload	/en-US/docs/Web/API/Window/unload_event
-/en-US/docs/Web/API/Window/onuserproximity	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/Window/onvrdisplayactivate	/en-US/docs/Web/API/Window/vrdisplayactivate_event
 /en-US/docs/Web/API/Window/onvrdisplayblur	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/onvrdisplayconnect	/en-US/docs/Web/API/Window/vrdisplayconnect_event
@@ -12978,7 +12971,6 @@
 /en-US/docs/WebAPI/Network_Information	/en-US/docs/Web/API/Network_Information_API
 /en-US/docs/WebAPI/Permissions	/en-US/docs/Web/API/Permissions_API
 /en-US/docs/WebAPI/Pointer_Lock	/en-US/docs/Web/API/Pointer_Lock_API
-/en-US/docs/WebAPI/Proximity	/en-US/docs/Web/API/Proximity_Events
 /en-US/docs/WebAPI/Using_Web_Notifications	/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /en-US/docs/WebAPI/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/WebAPI/Vibration	/en-US/docs/Web/API/Vibration_API
