@@ -81,29 +81,29 @@ The following example shows the effect of using different interpolation color sp
 .oklab {
   background-image: linear-gradient(
     to right,
-    oklab(0.452 -0.032 -0.312),
-    oklab(0.487 0.019 -0.224),
-    oklab(0.522 0.070 -0.137),
-    oklab(0.558 0.122 -0.049),
-    oklab(0.593 0.173 0.038),
-    oklab(0.628 0.225 0.126)
+    oklab(45.2% -0.032 -0.312),
+    oklab(48.7% 0.019 -0.224),
+    oklab(52.2% 0.070 -0.137),
+    oklab(55.8% 0.122 -0.049),
+    oklab(59.3% 0.173 0.038),
+    oklab(62.8% 0.225 0.126)
   );
 }
 .oklch-longer {
   background-image: linear-gradient(
     to right,
-    oklch(0.452 0.313 264),
-    oklch(0.468 0.308 243),
-    oklch(0.484 0.303 221),
-    oklch(0.500 0.298 200),
-    oklch(0.516 0.293 179),
-    oklch(0.532 0.288 157),
-    oklch(0.548 0.283 136),
-    oklch(0.564 0.278 115),
-    oklch(0.580 0.273 93),
-    oklch(0.596 0.268 72),
-    oklch(0.612 0.263 51),
-    oklch(0.628 0.258 29)
+    oklch(45.2% 0.313 264),
+    oklch(46.8% 0.308 243),
+    oklch(48.4% 0.303 221),
+    oklch(50.0% 0.298 200),
+    oklch(51.6% 0.293 179),
+    oklch(53.2% 0.288 157),
+    oklch(54.8% 0.283 136),
+    oklch(56.4% 0.278 115),
+    oklch(58.0% 0.273 93),
+    oklch(59.6% 0.268 72),
+    oklch(61.2% 0.263 51),
+    oklch(62.8% 0.258 29)
   );
 }
 ```
