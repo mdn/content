@@ -216,8 +216,7 @@ function changeTabs(e) {
   // Show the selected panel
   grandparent.parentNode
     .querySelector(`#${target.getAttribute("aria-controls")}`)
-    .removeAttribute("hidden");
-    
+    .removeAttribute("hidden"); 
     const tabPanels = grandparent.parentNode.querySelectorAll('[role="tabpanel"]');
     tabPanels.forEach(tabPanel => {
       const selectedTabs = tabPanel.querySelectorAll('[aria-selected="true"]');
