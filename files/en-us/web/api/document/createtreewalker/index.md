@@ -56,6 +56,24 @@ createTreeWalker(root, whatToShow, filter)
 
 A new {{domxref("TreeWalker")}} object.
 
+## Examples
+
+### Using whatToShow
+
+This example uses `whatToShow` to transform text contents into upper case. Note that the text nodes of the descendants of the `#root` element are also traversed despite of the fact that they are not child nodes of the `#root` element.
+
+#### HTML
+
+```html
+<div id="root">
+  This is a text node. <span>This is a <code>span</code> element.</span>
+<div>
+```
+
+#### Result
+
+{{EmbedLiveSample("using_whattoshow", "100%", 100)}}
+
 ## Specifications
 
 {{Specifications}}
