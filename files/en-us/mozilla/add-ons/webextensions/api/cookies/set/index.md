@@ -32,7 +32,7 @@ let setting = browser.cookies.set(
     - `expirationDate` {{optional_inline}}
       - : A `number` that represents the expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
     - `firstPartyDomain` {{optional_inline}}
-      - : A `string` representing the first-party domain with which the cookie to will be associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
+      - : A `string` representing the first-party domain with which the cookie will be associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `httpOnly` {{optional_inline}}
       - : A `boolean` that specifies whether the cookie should be marked as HttpOnly (`true`), or not (false). If omitted, it defaults to false.
     - `name` {{optional_inline}}
