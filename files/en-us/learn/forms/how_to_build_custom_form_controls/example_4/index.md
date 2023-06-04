@@ -277,6 +277,10 @@ window.addEventListener("load", () => {
       if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
+  
+      if (event.key === "Enter" || event.key === " ") {
+        toggleOptList(select);
+      }
 
       updateValue(select, index);
     });

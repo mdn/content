@@ -199,13 +199,6 @@ function highlightOption(select, option) {
 // ------------- //
 
 window.addEventListener("load", () => {
-  const form = document.querySelector("form");
-
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
-
-window.addEventListener("load", () => {
   const selectList = document.querySelectorAll(".select");
 
   selectList.forEach((select) => {
@@ -217,13 +210,9 @@ window.addEventListener("load", () => {
       });
     });
 
-    select.addEventListener(
-      "click",
-      (event) => {
-        toggleOptList(select);
-      },
-      false
-    );
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
 
     select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
@@ -234,7 +223,7 @@ window.addEventListener("load", () => {
     });
 
     select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });
