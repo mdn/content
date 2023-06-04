@@ -64,11 +64,25 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 
 #### HTML
 
-```html
+```html no-lint
 <div id="root">
   This is a text node.
   <span>This is a <code>span</code> element.</span>
 <div>
+```
+
+#### JavaScript
+
+```js
+const treeWalker = document.createTreeWalker(
+  document.querySelector("#root"),
+  NodeFilter.SHOW_TEXT
+);
+
+let currentNode;
+while ((currentNode = treeWalker.nextNode())) {
+  currentNode.data = currentNode.data.toUpperCase();
+}
 ```
 
 #### Result
