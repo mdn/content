@@ -155,7 +155,6 @@ while ((currentNode = nodeIterator.nextNode())) {
       node.nodeName === "#text" && !/^\s*$/.test(node.data)
         ? NodeFilter.FILTER_ACCEPT
         : NodeFilter.FILTER_REJECT
-    }
   );
 
   let currentTextNode;
