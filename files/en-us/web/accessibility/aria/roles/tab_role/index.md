@@ -217,6 +217,16 @@ function changeTabs(e) {
   grandparent.parentNode
     .querySelector(`#${target.getAttribute("aria-controls")}`)
     .removeAttribute("hidden");
+    
+    const tabPanels = grandparent.parentNode.querySelectorAll('[role="tabpanel"]');
+    tabPanels.forEach(tabPanel => {
+      const selectedTabs = tabPanel.querySelectorAll('[aria-selected="true"]');
+      selectedTabs.forEach(selectedTab => {
+        const selectedTabPanel = document.getElementById(selectedTab.getAttribute('aria-controls'));
+        selectedTabPanel.removeAttribute('hidden');
+      });
+    }
+  );
 }
 ```
 
