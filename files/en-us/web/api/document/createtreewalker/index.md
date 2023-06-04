@@ -58,7 +58,7 @@ A new {{domxref("TreeWalker")}} object.
 
 ## Examples
 
-### Using the whatToShow bitmask
+### Using whatToShow
 
 This example uses `whatToShow` to transform text contents into upper case. Note that the text nodes of the descendants of the `#root` element are also traversed despite of the fact that they are not child nodes of the `#root` element.
 
@@ -66,7 +66,7 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 
 ```html
 <div id="root">
-This is a text node. <span>This is a <code>span</code> element.</span>
+  This is a text node. <span>And this is a <code>span</code> element.</span>
 <div>
 ```
 
@@ -86,11 +86,11 @@ while ((currentNode = nodeIterator.nextNode())) {
 
 #### Result
 
-{{EmbedLiveSample("using_the_whattoshow_bitmask", "100%", 100)}}
+{{EmbedLiveSample("using_whattoshow", "100%", 100)}}
 
-### Comparing filter values
+### Using filter
 
-This example shows the effect of each `filter` value. For any `.escape` element, the text contents of all its descendants will be escaped using {{JSXref("encodeURI()")}}, unless a descendant is also a descendant of a `.no-escape` element. In the example, `.escape` and `.no-escape` elements have dashed and solid borders, respectively.
+This example uses `filter` to escape text contents. For any `.escape` element, the text contents of all its descendants will be escaped using {{JSXref("encodeURI()")}}, unless a descendant is also a descendant of a `.no-escape` element.
 
 #### HTML
 
@@ -116,6 +116,8 @@ This example shows the effect of each `filter` value. For any `.escape` element,
 </div>
 ```
 
+#### CSS
+
 ```css hidden
 div {
   margin: 0.25em 0;
@@ -124,6 +126,9 @@ div {
 span {
   display: inline-block;
 }
+```
+
+```css
 .escape {
   border: dashed;
 }
@@ -138,12 +143,11 @@ span {
 const nodeIterator = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  (node) =>
-    node.classList.contains("no-escape")
-      ? NodeFilter.FILTER_REJECT
-      : node.closest(".escape")
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_SKIP
+  (node) => node.classList.contains("no-escape") ?
+    NodeFilter.FILTER_REJECT :
+    node.closest(".escape") ?
+    NodeFilter.FILTER_ACCEPT :
+    NodeFilter.FILTER_SKIP
 );
 
 let currentNode;
@@ -151,10 +155,9 @@ while ((currentNode = nodeIterator.nextNode())) {
   const textNodeIterator = document.createTreeWalker(
     currentNode,
     NodeFilter.SHOW_ALL,
-    (node) =>
-      node.nodeName === "#text" && !/^\s*$/.test(node.data)
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_REJECT
+    (node) => node.nodeName === "#text" && !/^\s*$/.test(node.data) ?
+       NodeFilter.FILTER_ACCEPT :
+       NodeFilter.FILTER_REJECT
   );
 
   let currentTextNode;
@@ -168,7 +171,7 @@ while ((currentNode = nodeIterator.nextNode())) {
 
 #### Result
 
-{{EmbedLiveSample("comparing_filter_values", "100%", 400)}}
+{{EmbedLiveSample("using_filter", "100%", 400)}}
 
 ## Specifications
 
