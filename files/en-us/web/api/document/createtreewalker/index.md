@@ -66,20 +66,21 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 
 ```html
 <div id="root">
-  This is a text node. <span>And this is a <code>span</code> element.</span>
+  This is a text node.
+  <span>And this is a <code>span</code> element.</span>
 <div>
 ```
 
 #### JavaScript
 
 ```js
-const nodeIterator = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
   document.querySelector("#root"),
   NodeFilter.SHOW_TEXT
 );
 
 let currentNode;
-while ((currentNode = nodeIterator.nextNode())) {
+while ((currentNode = treeWalker.nextNode())) {
   currentNode.data = currentNode.data.toUpperCase();
 }
 ```
@@ -140,7 +141,7 @@ span {
 #### JavaScript
 
 ```js
-const nodeIterator = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   (node) => node.classList.contains("no-escape") ?
@@ -151,8 +152,8 @@ const nodeIterator = document.createTreeWalker(
 );
 
 let currentNode;
-while ((currentNode = nodeIterator.nextNode())) {
-  const textNodeIterator = document.createTreeWalker(
+while ((currentNode = treeWalker.nextNode())) {
+  const textTreeWalker = document.createTreeWalker(
     currentNode,
     NodeFilter.SHOW_ALL,
     (node) => node.nodeName === "#text" && !/^\s*$/.test(node.data) ?
@@ -161,7 +162,7 @@ while ((currentNode = nodeIterator.nextNode())) {
   );
 
   let currentTextNode;
-  while ((currentTextNode = textNodeIterator.nextNode())) {
+  while ((currentTextNode = textTreeWalker.nextNode())) {
     currentTextNode.data = encodeURI(
       currentTextNode.data.replace(/\s+/g, " ")
     );
