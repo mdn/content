@@ -659,6 +659,11 @@ window.addEventListener("load", () => {
       if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
+  
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
+      }
 
       updateValue(select, index);
     });
