@@ -195,6 +195,43 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll('[role="tab"]');
+  const tabList = document.querySelector('[role="tablist"]');
+
+  // Add a click event handler to each tab
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", changeTabs);
+  });
+
+  // Enable arrow navigation between tabs in the tab list
+  let tabFocus = 0;
+
+  tabList.addEventListener("keydown", (e) => {
+    // Move right
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+      tabs[tabFocus].setAttribute("tabindex", -1);
+      if (e.key === "ArrowRight") {
+        tabFocus++;
+        // If we're at the end, go to the start
+        if (tabFocus >= tabs.length) {
+          tabFocus = 0;
+        }
+        // Move left
+      } else if (e.key === "ArrowLeft") {
+        tabFocus--;
+        // If we're at the start, move to the end
+        if (tabFocus < 0) {
+          tabFocus = tabs.length - 1;
+        }
+      }
+
+      tabs[tabFocus].setAttribute("tabindex", 0);
+      tabs[tabFocus].focus();
+    }
+  });
+});
+
 function changeTabs(e) {
   const target = e.target;
   const parent = target.parentNode;
@@ -216,15 +253,16 @@ function changeTabs(e) {
   // Show the selected panel
   grandparent.parentNode
     .querySelector(`#${target.getAttribute("aria-controls")}`)
-    .removeAttribute("hidden"); 
-    const tabPanels = grandparent.parentNode.querySelectorAll('[role="tabpanel"]');
-    tabPanels.forEach(tabPanel => {
-      const selectedTabs = tabPanel.querySelectorAll('[aria-selected="true"]');
-      selectedTabs.forEach(selectedTab => {
-        const selectedTabPanel = document.getElementById(selectedTab.getAttribute('aria-controls'));
-        selectedTabPanel.removeAttribute('hidden');
-      });
-    }
+    .removeAttribute("hidden");
+
+  const tabPanels = grandparent.parentNode.querySelectorAll('[role="tabpanel"]');
+  tabPanels.forEach(tabPanel => {
+    const selectedTabs = tabPanel.querySelectorAll('[aria-selected="true"]');
+    selectedTabs.forEach(selectedTab => {
+      const selectedTabPanel = document.getElementById(selectedTab.getAttribute('aria-controls'));
+      selectedTabPanel.removeAttribute('hidden');
+    });
+  }
   );
 }
 ```
