@@ -8,8 +8,7 @@ browser-compat: api.Document.createTreeWalker
 
 {{ApiRef("Document")}}
 
-The **`Document.createTreeWalker()`** creator method returns a
-newly created {{domxref("TreeWalker")}} object.
+The **`Document.createTreeWalker()`** creator method returns a newly created {{domxref("TreeWalker")}} object.
 
 ## Syntax
 
@@ -22,15 +21,12 @@ createTreeWalker(root, whatToShow, filter)
 ### Parameters
 
 - `root`
-  - : A root {{domxref("Node")}} of this {{domxref("TreeWalker")}} traversal. Typically
-    this will be an element owned by the document.
+
+  - : A root {{domxref("Node")}} of this {{domxref("TreeWalker")}} traversal. Typically this will be an element owned by the document.
+
 - `whatToShow` {{optional_inline}}
 
-  - : A `unsigned long` representing a bitmask created by combining the
-    constant properties of
-    [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
-    It is a convenient way of filtering for certain types of node. It defaults to
-    `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+  - : An `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF`, representing the `SHOW_ALL` constant.
 
     | Constant                                                 | Numerical value                                         | Description                                                                                                                                                                                                                                                                                                                                                                               |
     | -------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,42 +45,16 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                          |
 
 - `filter` {{optional_inline}}
-  - : A {{domxref("NodeFilter")}}, that is an object with a method
-    `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine
-    whether or not to accept a node that has passed the `whatToShow` check.
+
+  - : A callback function or an object with an `acceptNode()` method, which returns `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. The function or method will be called for each node in the subtree based at `root` which is accepted as included by the `whatToShow` flag to determine whether or not to include it in the list of iterable nodes:
+
+    - If the return value is `NodeFilter.FILTER_ACCEPT`, this node is included.
+    - If the return value is `NodeFilter.FILTER_REJECT`, any node in the subtree based at this node is not included.
+    - If the return value is `NodeFilter.FILTER_SKIP`, this node is not included.
 
 ### Return value
 
 A new {{domxref("TreeWalker")}} object.
-
-## Examples
-
-The following example goes through all nodes in the body,
-filters out any non nodes that aren't elements (with the `NodeFilter.SHOW_ELEMENT` value),
-marks each remaining node as acceptable (The `acceptNode()` method could make
-a different decision.), and then makes use of tree walker iterator
-that is created to advance through the nodes (now all elements) and push them into an
-array.
-
-```js
-const treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
-  {
-    acceptNode(node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
-  }
-);
-
-const nodeList = [];
-let currentNode = treeWalker.currentNode;
-
-while (currentNode) {
-  nodeList.push(currentNode);
-  currentNode = treeWalker.nextNode();
-}
-```
 
 ## Specifications
 
@@ -96,4 +66,4 @@ while (currentNode) {
 
 ## See also
 
-- The interface of the object it creates: {{domxref("TreeWalker")}}.
+- {{domxref("TreeWalker")}}: Related interface
