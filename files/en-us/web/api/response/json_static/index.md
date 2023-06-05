@@ -30,7 +30,7 @@ A {{domxref("Response")}} object.
 ## Examples
 
 ```js
-Response.json({my: "data"});
+Response.json({ my: "data" });
 ```
 
 ## See also
