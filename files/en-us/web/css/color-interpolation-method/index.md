@@ -83,7 +83,7 @@ The following example shows the effect of using different interpolation color sp
     to right,
     oklab(45.2% -0.032 -0.312),
     oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.070 -0.137),
+    oklab(52.2% 0.07 -0.137),
     oklab(55.8% 0.122 -0.049),
     oklab(59.3% 0.173 0.038),
     oklab(62.8% 0.225 0.126)
@@ -95,12 +95,12 @@ The following example shows the effect of using different interpolation color sp
     oklch(45.2% 0.313 264),
     oklch(46.8% 0.308 243),
     oklch(48.4% 0.303 221),
-    oklch(50.0% 0.298 200),
+    oklch(50% 0.298 200),
     oklch(51.6% 0.293 179),
     oklch(53.2% 0.288 157),
     oklch(54.8% 0.283 136),
     oklch(56.4% 0.278 115),
-    oklch(58.0% 0.273 93),
+    oklch(58% 0.273 93),
     oklch(59.6% 0.268 72),
     oklch(61.2% 0.263 51),
     oklch(62.8% 0.258 29)
