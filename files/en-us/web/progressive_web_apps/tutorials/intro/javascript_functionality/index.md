@@ -94,14 +94,14 @@ We check if the dates are invalid. We do minimal error checking. We make sure ne
 function checkDatesInvalid(startDate, endDate) {
   // Check that end date is after start date and neither is null.
   if (!startDate || !endDate || startDate > endDate) {
-    // For now, we clear the dates if either
-    // or both are invalid
-    newPeriodFormEl.reset();
-    // To make the validation more robust we could:
+    // To make the validation robust we could:
     // 1. add error messaging based on error type
     // 2. Alert assistive technology users about the error
     // 3. move focus to the error location
-    // instead, this function returns true
+    // instead, for now, we clear the dates if either
+    // or both are invalid
+    newPeriodFormEl.reset();
+    // as dates are invalid, we return true
     return true;
   }
   // else

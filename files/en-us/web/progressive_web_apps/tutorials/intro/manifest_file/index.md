@@ -23,7 +23,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
       "sizes": "512x512"
     }
   ],
-  "display": "browser"
+  "display": "standalone"
 }
 ```
 
@@ -132,7 +132,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 
 The `purpose` members should be set to `maskable` defining [icona as adaptive](https://web.dev/maskable-icon/).
 
-All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares. Include safe zones so that when the image is masked by the operating system, it renders okay as a circle.
+All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares, but when an image is masked by the operating system, sections may be cut off. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icons is masked as a circle, is the inner 80% of the image file.
 
 ### Task
 
@@ -223,6 +223,6 @@ View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/cycle
 
 ## Up next
 
-Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use X to create a secure connection; a PWA requirement.
+Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use Node's `npx` to create a secure connection; a PWA requirement.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
