@@ -40,7 +40,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `nowrap`
   - : Text does not wrap across lines and will overflow its containing element rather than break onto a new line.
 - `balance`
-  - : Text is wrapped across lines in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because the underlying algorithm is computationally expensive, this only works with a limited number of lines (the Chromium implementation uses 4 wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
+  - : Text is wrapped across lines in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because the underlying algorithm is computationally expensive, this only works with a limited number of lines (the Chromium implementation uses four wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
 - `pretty`
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, the last line is expected to be a bit shorter than the average line, and the number of typographic orphans should be kept to a minimum).
 - `stable`
