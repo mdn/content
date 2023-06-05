@@ -14,7 +14,7 @@ While the dictionary has a base set of properties that are present in each of th
 `RTCRtpStreamStats` is the base class for all RTP-related statistics reports.
 
 > **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017.
-Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
+> Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
 ## Instance properties
 
