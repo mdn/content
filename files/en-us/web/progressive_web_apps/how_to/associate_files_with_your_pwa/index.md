@@ -14,6 +14,8 @@ There are two parts to adding support for file handling:
 - Declare support for certain file types using the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) web app manifest member.
 - Handling files using the {{domxref("LaunchQueue")}} interface.
 
+> **Note:** At present this feature is only available on Chromium-based browsers, and only on desktop operating systems.
+
 ## Declaring support for file types
 
 To declare support for particular file types, include the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) member in your [manifest file](/en-US/docs/Web/Manifest).
@@ -76,18 +78,18 @@ For example, the code below reads the files and assigns their contents to {{HTML
 ```js
 const imageContainer = document.querySelector("#container");
 
-launchQueue.setConsumer(async (launchParams) => {
-  for (const file of launchParams.files) {
-    const img = document.createElement("img");
-    img.src = URL.createObjectURL(await file.getFile());
-    imageContainer.appendChild(img);
-  }
-});
+if ("launchQueue" in window) {
+  launchQueue.setConsumer(async (launchParams) => {
+    for (const file of launchParams.files) {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(await file.getFile());
+      imageContainer.appendChild(img);
+    }
+  });
+}
 ```
 
-## Compatibility
-
-Note that at present this feature is only available on Chromium-based browsers, and only on desktop operating systems.
+Note that the code checks that `launchQueue` exists before using it, to ensure the app behaves gracefully in browsers that don't support the API.
 
 ## See also
 
