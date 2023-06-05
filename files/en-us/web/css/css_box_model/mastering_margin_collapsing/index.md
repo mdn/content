@@ -2,7 +2,6 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-box/#margins
 ---
 
 {{CSSRef}}
