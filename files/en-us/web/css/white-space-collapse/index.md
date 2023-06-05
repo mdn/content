@@ -54,7 +54,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Phase I: Collapsing and Transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+The [CSS text](/en-US/docs/Web/CSS/CSS_Text) specification contains a [phase I: collapsing and transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases, it means reducing them to no character (the empty string).
 
 Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-4/#line-break-transform) for information on how white space collapsing is handled in CSS.
 
