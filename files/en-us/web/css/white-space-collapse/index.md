@@ -117,3 +117,4 @@ h2 {
 ## See also
 
 - Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap")}}: The {{CSSxRef("white-space")}} property.
+- [CSS text module](/en-US/docs/Web/CSS/CSS_Text)
