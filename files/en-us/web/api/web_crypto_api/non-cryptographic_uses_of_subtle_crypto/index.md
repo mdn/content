@@ -4,7 +4,8 @@ slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 page-type: guide
 ---
 
-{{APIRef("Web Crypto API")}}
+{{DefaultAPISidebar("Web Crypto API")}}
+
 This article will focus on uses of the [`digest`](/en-US/docs/Web/API/SubtleCrypto/digest) method of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). A lot of other methods within the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) have very specific cryptographic use cases, creating hashes of content (which is what the digest method does) has lots of very useful purposes.
 
 This article does not discuss the cryptographic uses of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). An important thing to take away from this article is **don't use this API** for production cryptographic purposes because it is powerful and low level. To use it correctly you will need to take many context specific steps to accomplish cryptographic tasks correctly. If any of those steps are taken incorrectly at best your code won't run, at worse it _will_ run and you will unknowingly be putting your users at risk with an insecure product.
@@ -49,7 +50,7 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 
 Next we use the SubtleCrypto interface to process them. This works by:
 
-- Reading the files to an [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) using a [FileReader](/en-US/docs/Web/API/FileReader)
+- Reading the files to an {{jsxref("ArrayBuffer")}} using the {{domxref("File")}} object's {{domxref("Blob.arrayBuffer()", "arrayBuffer()")}} method.
 - Use `crypto.subtle.digest('SHA-256', arrayBuffer)` to digest the ArrayBuffer
 - Convert the resulting hash (another ArrayBuffer) into a string so it can be displayed
 
@@ -60,20 +61,23 @@ const file = document.getElementById("file");
 // Run the hashing function when the user selects one or more file
 file.addEventListener("change", hashTheseFiles);
 
-// The digest function is asynchronous, it returns a promise, we use the async/await syntax to
-// simplify the code.
+// The digest function is asynchronous, it returns a promise
+// We use the async/await syntax to simplify the code.
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
 
-  // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
-  // The resulting hash is stored in an array buffer
+  // Use the subtle crypto API to perform a SHA256 Sum of the file's
+  // Array Buffer. The resulting hash is stored in an array buffer
   const hashAsArrayBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
 
-  // To display it as a string we will get the hexadecimal value of each byte of the array buffer
-  // This gets us an array where each byte of the array buffer becomes one item in the array
+  // To display it as a string we will get the hexadecimal value of
+  // each byte of the array buffer. This gets us an array where each byte
+  // of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
-  // We then convert it to a regular array so we can convert each item to hexadecimal strings
-  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
+  // We then convert it to a regular array so we can convert each item
+  // to hexadecimal strings, where characters of 0-9 or a-f represent
+  // a number between 0 and 16, containing 4 bits of information,
+  // so 2 of them is 8 bits (1 byte).
   const hashAsString = Array.from(uint8ViewOfHash)
     .map((b) => b.toString(16).padStart(2, "0"))
     .join("");
@@ -84,7 +88,7 @@ async function hashTheseFiles(e) {
   let outHTML = "";
   // iterate over each file in file select input
   for (const file of this.files) {
-    // calculate it's hash and list it in the output element.
+    // calculate its hash and list it in the output element.
     outHTML += `${file.name}    ${await fileHash(file)}`;
   }
   output.innerHTML = outHTML;
@@ -151,17 +155,19 @@ file.addEventListener("change", hashTheseFiles);
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
 
-  // Git prepends the null terminated text 'blob 1234' where 1234 represents the file size
-  // before hashing so we are going to reproduce that
+  // Git prepends the null terminated text 'blob 1234' where 1234
+  // represents the file size before hashing so we are going to reproduce that
 
   // first we work out the Byte length of the file
   const uint8View = new Uint8Array(arrayBuffer);
   const length = uint8View.length;
 
-  // Git in the terminal uses UTF8 for it's strings; the Web uses UTF16. We need to use an encoder because
-  // different binary representations of the letters in our message will result in different hashes
+  // Git in the terminal uses UTF8 for its strings; the Web uses UTF16.
+  // We need to use an encoder because different binary representations
+  // of the letters in our message will result in different hashes
   const encoder = new TextEncoder();
-  // Null-terminated means the string ends in the null character which in JavaScript is '\0'
+  // Null-terminated means the string ends in the null character which
+  // in JavaScript is '\0'
   const view = encoder.encode(`blob ${length}\0`);
 
   // We then combine the 2 Array Buffers together into a new Array Buffer.

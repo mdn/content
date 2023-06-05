@@ -24,6 +24,8 @@ the `length` property equal to `0`.
 
 Although the `classList` property itself is read-only, you can modify its associated `DOMTokenList` using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
+You can test whether the element contains a given class using the {{domxref("DOMTokenList/contains", "classList.contains()")}} method.
+
 ## Examples
 
 ```js
@@ -46,6 +48,7 @@ div.classList.toggle("visible");
 // add/remove visible, depending on test conditional, i less than 10
 div.classList.toggle("visible", i < 10);
 
+// false
 console.log(div.classList.contains("foo"));
 
 // add or remove multiple classes

@@ -5,6 +5,8 @@ page-type: svg-attribute
 browser-compat: svg.attributes.presentation
 ---
 
+{{SVGRef}}
+
 SVG presentation attributes are CSS properties that can be used as attributes on SVG elements.
 
 - [alignment-baseline](#alignment-baseline)

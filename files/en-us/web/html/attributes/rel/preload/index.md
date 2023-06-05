@@ -65,7 +65,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 - `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
 - `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
 - `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly/WASM binary, or JSON file.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
 - `object`: A resource to be embedded inside an {{htmlelement("object")}} element.

@@ -1,13 +1,13 @@
 ---
-title: CSS Namespaces
-slug: Web/CSS/CSS_Namespaces
+title: CSS namespaces
+slug: Web/CSS/CSS_namespaces
 page-type: css-module
 browser-compat: css.at-rules.namespace
 ---
 
 {{CSSRef}}
 
-**CSS Namespaces** is a CSS module that allows authors to specify [XML namespaces](/en-US/docs/Web/SVG/Namespaces_Crash_Course) in CSS.
+The **CSS namespaces** allows authors to specify [XML namespaces](/en-US/docs/Web/SVG/Namespaces_Crash_Course) in CSS.
 
 ## Reference
 
