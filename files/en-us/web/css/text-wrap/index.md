@@ -59,11 +59,17 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 ### HTML
 
 ```html
-<h2 class="wrap">The default behavior; the text in the heading wraps fairly "normally"</h2>
+<h2 class="wrap">
+  The default behavior; the text in the heading wraps fairly "normally"
+</h2>
 
-<h2 class="no-wrap">In this case the text in the heading doesn't wrap, and overflows the container</h2>
+<h2 class="no-wrap">
+  In this case the text in the heading doesn't wrap, and overflows the container
+</h2>
 
-<h2 class="balance">In this case the text in the heading is nicely balanced across lines</h2>
+<h2 class="balance">
+  In this case the text in the heading is nicely balanced across lines
+</h2>
 ```
 
 ### CSS

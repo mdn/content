@@ -71,14 +71,17 @@ Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-
 ### HTML
 
 ```html
-<h2 class="collapse">The default behavior; all the whitespace is 
-    collapsed          in the          heading     .</h2>
+<h2 class="collapse">
+  The default behavior; all the whitespace is collapsed in the heading .
+</h2>
 
-<h2 class="preserve">In this case all the whitespace is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve">
+  In this case all the whitespace is preserved in the heading .
+</h2>
 
-<h2 class="preserve-breaks">In this case only the line break is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve-breaks">
+  In this case only the line break is preserved in the heading .
+</h2>
 ```
 
 ### CSS
