@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While according to the spec, all of the manifest members, or keys, are optional, some browsers, operating systems, and app distributors have requirements to include specific keys for a web app to be a PWA. By including a name using the `name` or `short_name` key, icons that meet the minimum requirements, the URL to be opened when the PWA is launched, and type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
+While according to the spec, all of the manifest keys, or members, are optional, some browsers, operating systems, and app distributors have [require specific members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
@@ -27,7 +27,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 }
 ```
 
-Before saving the manifest file and linking to it from our HTML file, we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss a few more members that enable manifest files to better define the appearance of our CycleTracker PWA.
+Before saving the manifest file and linking to it from our HTML file, we can develop a still brief but more informative JSON object to define the identity, presentation, and iconography of the PWA. Yes, the above would work, but let's discuss the members in this example and a few other members that enable manifest files to better define the appearance of our CycleTracker PWA.
 
 ## App identity
 
@@ -45,7 +45,7 @@ When both the `name` and `short_name` are present, the `name` is used in most in
 
 ### Task
 
-Write the first few lines of your manifest file. You can use the text below or more discreet values and a description of your choosing.
+Write the first few lines of your manifest file. You can use the text below, or more discreet or descriptive values, and a description of your choosing.
 
 ### Example solution
 
@@ -59,7 +59,7 @@ Write the first few lines of your manifest file. You can use the text below or m
 
 ## App presentation
 
-The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest include the `start_url` and `display` keys, and keys which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
+The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 
@@ -68,7 +68,7 @@ The appearance, or presentation, of a PWA's installed and offline experiences ar
 - [`display`](/en-US/docs/Web/Manifest/display)
   - : Controls the app's display mode including `fullscreen`, `standalone`, which displays the [PWA as a standalone application](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), `minimal-ui`, which is similar to a standalone view but with UI elements for controlling navigation, and `browser`, which opens the app in a regular browser view.
 
-There is also an `orientation` key to define the PWA's default orientation as `portrait` or `landscape`. As our app works either way, we'll omit this key.
+There is also an `orientation` member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
 
 ### Colors
 
@@ -103,7 +103,7 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#c
 
 PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, or app store search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
-Within the manifest JSON object, the `icons` key specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` key, and optional `type` and `purpose` keys. Each icon object's' `src` list the source of a single image file. The `sizes` key provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` key lists the image's MIME type.
+Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` member lists the image's MIME type.
 
 ```js
 {
@@ -130,7 +130,7 @@ Within the manifest JSON object, the `icons` key specifies an array of one or mo
 }
 ```
 
-The `purpose` keys should be set to `maskable` defining [icona as adaptive](https://web.dev/maskable-icon/).
+The `purpose` members should be set to `maskable` defining [icona as adaptive](https://web.dev/maskable-icon/).
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares. Include safe zones so that when the image is masked by the operating system, it renders okay as a circle.
 
