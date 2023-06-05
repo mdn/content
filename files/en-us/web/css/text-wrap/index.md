@@ -42,9 +42,9 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 - `balance`
   - : Text is wrapped across lines in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because the underlying algorithm is computationally expensive, this only works with a limited number of lines (the Chromium implementation uses four wrapped lines or less), meaning that it is useful for cases such as headings or pull quotes.
 - `pretty`
-  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, the last line is expected to be a bit shorter than the average line, and the number of typographic orphans should be kept to a minimum).
+  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of typographic orphans should be kept to a minimum).
 - `stable`
-  - : Results in the same behavior as `wrap`, except that subsequent lines are not considered by the algorithm when making break decisions, to keep the text layout as stable as possible when content changes on the fly. So for example, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc. This is intended for containers where the text is editable — you don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
+  - : Results in the same behavior as `wrap`, except that the algorithm does not consider subsequent lines when making break decisions. So, for example, line 1 breaking is not affected by changes on lines 2 and later, line 2 breaking is not affected by changes on lines 3 and later, etc. The intention is to keep the text layout as stable as possible and mitigate performance issues in containers where editable text is updated. You don't want the editing cursor jumping around as text is added or removed due to the algorithm recalculating the wrapping.
 
 ## Formal definition
 

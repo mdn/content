@@ -37,15 +37,15 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 ### Values
 
 - `collapse`
-  - : Sequences of white space are [collapsed](#collapsing_of_white_space).
+  - : White space sequences are [collapsed](#collapsing_of_white_space).
 - `discard`
-  - : All white space in the element is removed.
+  - : All white space in the element is discarded.
 - `preserve`
-  - : Sequences of white space and line break characters (such as line feeds) are preserved.
+  - : White space sequences and sgement break characters (characters that cause text to break onto new lines, such as line feeds) are preserved.
 - `preserve-breaks`
-  - : Sequences of white space are collapsed, while line break characters (such as line feeds) are preserved.
+  - : White space sequences are collapsed, while segment break characters (such as line feeds) are preserved.
 - `preserve-spaces`
-  - : Sequences of white space are preserved, while tabs and line break characters (such as line feeds) are converted to spaces.
+  - : White space sequences are preserved, while tabs and segment break characters (such as line feeds) are converted to spaces.
 - `break-spaces`
   - : The behavior is identical to that of `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
@@ -54,9 +54,18 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 ## Collapsing of white space
 
-The [CSS text](/en-US/docs/Web/CSS/CSS_Text) specification contains a [phase I: collapsing and transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases, it means reducing them to no character (the empty string).
+User agents handle white space collapsing as follows:
 
-Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-4/#line-break-transform) for information on how white space collapsing is handled in CSS.
+- Tabs are generally converted to spaces.
+- If segment breaks are to be collapsed:
+  - Sequences of segment breaks are collapsed down to a single segment break.
+  - They are converted to spaces in the case of languages that separate words with spaces (like English), or removed altogether in the case of languages that do not separate words with spaces (like Chinese).
+- If spaces are to be collapsed:
+  - Spaces or tabs before or after segment breaks are removed.
+  - Sequences of spaces are converted to a single space width.
+- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence. In the case of the `break-spaces` value, they will soft wrap after each space.
+
+See the [CSS text](/en-US/docs/Web/CSS/CSS_Text) specification [phase I: collapsing and transformation](https://drafts.csswg.org/css-text-4/#white-space-phase-1) section for the spec definition.
 
 ## Formal definition
 
@@ -70,19 +79,18 @@ Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-
 
 ### HTML
 
+<!-- prettier-ignore-start -->
 ```html
-<h2 class="collapse">
-  The default behavior; all the whitespace is collapsed in the heading .
-</h2>
+<h2 class="collapse">Default behavior; all whitespace is 
+    collapsed          in the          heading     .</h2>
 
-<h2 class="preserve">
-  In this case all the whitespace is preserved in the heading .
-</h2>
+<h2 class="preserve">In this case all whitespace is 
+    preserved          in the          heading     .</h2>
 
-<h2 class="preserve-breaks">
-  In this case only the line break is preserved in the heading .
-</h2>
+<h2 class="preserve-breaks">In this case only the line break is 
+    preserved          in the          heading     .</h2>
 ```
+<!-- prettier-ignore-end -->
 
 ### CSS
 
@@ -100,8 +108,8 @@ Also see [Segment Break Transformation Rules](https://drafts.csswg.org/css-text-
 }
 
 h2 {
-  font-size: 2rem;
-  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-family: monospace;
 }
 ```
 

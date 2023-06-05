@@ -139,7 +139,7 @@ The following table summarizes the behavior of the various `white-space` keyword
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text-3/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+See [`white-space-collapse` > Collapsing of white space](/en-US/docs/Web/CSS/white-space-collapse#collapsing_of_white_space).
 
 ## Formal definition
 
