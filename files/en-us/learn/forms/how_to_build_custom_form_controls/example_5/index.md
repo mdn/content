@@ -275,7 +275,7 @@ window.addEventListener("load", () => {
         index--;
         event.preventDefault(); 
       }
-  
+ 
       if (event.key === "Enter" || event.key === " ") {
         toggleOptList(select);
       }
