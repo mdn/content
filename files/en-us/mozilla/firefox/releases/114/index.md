@@ -11,6 +11,9 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### Developer Tools
 
+- Fixed an issue where the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) did not correctly show ARIA roles on elements which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
+  Roles which cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
+
 ### HTML
 
 #### Removals
@@ -34,6 +37,8 @@ This article provides information about the changes in Firefox 114 that affect d
 #### Removals
 
 ### SVG
+
+- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported on [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 #### Removals
 

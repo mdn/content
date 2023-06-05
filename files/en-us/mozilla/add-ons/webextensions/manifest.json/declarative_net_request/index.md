@@ -65,7 +65,7 @@ The `"declarative_net_request"` key is an object that must contain the `"rule_re
     <tr>
       <td><code>"path"</code></td>
       <td><code>String</code></td>
-      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the <code>declarativeNetRequest</code> API for information on the content of the ruleset JSON file.</td>
+      <td>The path of the JSON ruleset relative to the extension directory. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules">Rules</a> section of the <code>declarativeNetRequest</code> API for information on the content of the ruleset JSON file.</td>
     </tr>
   </tbody>
 </table>
