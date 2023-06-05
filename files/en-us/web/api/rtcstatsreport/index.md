@@ -19,7 +19,7 @@ The report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Glob
 ## Instance methods
 
 - {{domxref("RTCStatsReport.entries()")}}
-  - : Returns a new Iterator object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
 - {{domxref("RTCStatsReport.forEach()")}}
   - : Calls `callbackFn` once for each key-value pair present in the `RTCStatsReport` object, in insertion order.
     If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
@@ -28,11 +28,11 @@ The report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Glob
 - {{domxref("RTCStatsReport.has()")}}
   - : Returns a boolean indicating whether the `RTCStatsReport` contains a statistics dictionary associated with the specified `id`.
 - {{domxref("RTCStatsReport.keys()")}}
-  - : Returns a new Iterator object that contains the keys (IDs) for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the keys (IDs) for each element in the `RTCStatsReport` object, in insertion order.
 - {{domxref("RTCStatsReport.values()")}}
-  - : Returns a new Iterator object that contains the values (statistics object) for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the values (statistics object) for each element in the `RTCStatsReport` object, in insertion order.
 - [`RTCStatsReport.[@@iterator]()`](/en-US/docs/Web/API/RTCStatsReport/@@iterator)
-  - : Returns a new Iterator object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
 
 ## Description
 
@@ -41,17 +41,30 @@ Calling `getStats()` on an {{domxref("RTCPeerConnection")}} lets you specify whe
 The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of `getStats()` only return inbound and outbound statistics, respectively.
 
 The statistics report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object: an ordered dictionary, where the properties are `id` strings that uniquely identify the WebRTC object that was inspected to produce a particular set of statistics, and the value is a dictionary object containing those statistics.
+A `RTCStatsReport` can be iterated and used the same ways as a read-only `Map`.
 
-The different categories of statistics that are collected are reported using different dictionary objects, as listed [below](#the_statistic_types).
-All the dictionary types have:
+The report may contain many different categories of statistics, including inbound and outbound statistics for both the current and remote ends of the peer connection, information about codecs, certificates and media used, and so on.
+Each category of statistic is provided in a different type of statistics dictionary object, which can be identified from its [`type`](#type) property.
 
-- An `id` property, a string that uniquely identifies the object that was inspected to produce the current dictionary.
-- A `type` string that can be used to identify the particular category of statistic.
-- A high resolution `timestamp` that allows comparison over time (and averaging) of statistic values.
+### Common instance properties
 
-The `RTCStatsReport` can be iterated in the same ways as a `Map`.
-In order to find a particular set of statistics users can filter by inspecting the `type`.
-Media sources additionally have the property `kind`, which is used to differentiate between video and audio sources.
+All the dictionary types have the following properties:
+
+- `id`
+  - : A string that uniquely identifies the object was monitored to produce the set of statistics.
+    This value persists across reports for (at least) the lifetime of the connection.
+    Note however that for some statistics the ID may vary between browsers and for subsequent connections, even to the same peer.
+- `timestamp`
+  - : A high resolution timestamp object ({{domxref("DOMHighResTimeStamp")}}) object indicating the time at which the sample was taken.
+    Many reported statistics are cumulative values; the timestamp allows rates and averages to be calculated between any two reports, at any desired reporting rate.
+- `type`
+  - : A string with a value that indicates the type of statistics that the object contains, such as `candidate-pair`, `inbound-rtp`, `certificate`, and so on.
+    The [types of statistics and their corresponding objects](#the_statistic_types) are listed below.
+
+Users typically iterate a `RTCStatsReport`, using a {{domxref("RTCStatsReport.forEach()", "forEach()")}} or [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, selecting the statistics of interest using the `type` property.
+Once a particular statistic object has been identified using its `type`, the `id` property can subsequently be used with {{domxref("RTCStatsReport.get()", "get()")}} to obtain the same statistic report at a different time.
+
+The timestamp can be used to calculate average values for statistics that accumulate over the lifetime of a connection.
 
 ### The statistic types
 
@@ -93,7 +106,7 @@ stats.forEach((report) => {
 });
 ```
 
-### Iterate report from an RTCRtpSender using a for loop
+### Iterate report from an RTCRtpSender using a for...of loop
 
 This example shows how you might iterate the outbound statistics from an {{domxref("RTCRtpSender")}}.
 
