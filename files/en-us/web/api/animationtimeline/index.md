@@ -30,6 +30,6 @@ The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/AP
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - {{domxref("AnimationTimeline")}}, {{domxref("DocumentTimeline")}}, {{domxref("ScrollTimeline")}}, {{domxref("ViewTimeline")}}
 - {{domxref("Document.timeline")}}

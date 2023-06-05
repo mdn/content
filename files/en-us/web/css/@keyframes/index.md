@@ -34,7 +34,7 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
 - {{cssxref("&lt;percentage&gt;")}}
   - : A percentage of the time through the animation sequence at which the specified keyframe should occur.
 - `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}} {{experimental_inline}}
-  - : A percentage of the time through a specific named timeline range inside the overall timeline of the animation sequence, at which the specified keyframe should occur. See the {{cssxref("animation-range")}} property page for a detailed description of the available named timeline ranges, and [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations) for more information on the kinds of animations that use them.
+  - : A percentage of the time through a specific named timeline range inside the overall timeline of the animation sequence, at which the specified keyframe should occur. See the {{cssxref("animation-range")}} property page for a detailed description of the available named timeline ranges, and [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more information on the kinds of animations that use them.
 
 ## Description
 

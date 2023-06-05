@@ -13,7 +13,7 @@ The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to s
 
 The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
 
-> **Note:** {{cssxref("animation-range-start")}} is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
+> **Note:** {{cssxref("animation-range-start")}} is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-start` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-start` after declaring any `animation` shorthand for it to take effect.
 
 ## Syntax
 
@@ -169,7 +169,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [`animation-range`](/en-US/docs/Web/CSS/animation-range) and [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end) properties
 - [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis), and [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) properties
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

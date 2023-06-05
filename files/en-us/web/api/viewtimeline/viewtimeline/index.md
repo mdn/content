@@ -68,6 +68,6 @@ See the main {{domxref("ViewTimeline")}} page for an example.
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - {{domxref("ViewTimeline")}}
 - {{domxref("AnimationTimeline")}}, {{domxref("ScrollTimeline")}}

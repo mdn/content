@@ -11,7 +11,7 @@ The **`view-timeline-inset`** [CSS](/en-US/docs/Web/CSS) property is used to spe
 
 This can be combined with or used instead of {{cssxref("animation-range")}} and its longhand properties, which can be used to set the attachment range of an animation along its timeline.
 
-See [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations) for more details.
+See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details.
 
 ## Syntax
 
@@ -173,6 +173,6 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), and [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) properties
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

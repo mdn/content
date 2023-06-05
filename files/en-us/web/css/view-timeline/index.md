@@ -185,6 +185,6 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis) and [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) properties
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

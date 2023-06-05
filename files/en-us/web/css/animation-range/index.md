@@ -64,7 +64,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
   - : A specific named timeline range inside the overall timeline. Possible values are:
 
     - `cover`
-      - : Represents the full range of a _named view progress timeline_ (see [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
+      - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
     - `contain`
       - : Represents the range of a _named view progress timeline_ where the subject element is fully contained by, or fully contains, the scroll port's view progress visibility range.
         - If the subject element is smaller than the scrollport, it ranges from the point where the subject element is first completely contained by the scroll port (0% progress), to the point where it is no longer completely contained by the scroll port (100% progress).
@@ -224,7 +224,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [`animation-range-start`](/en-US/docs/Web/CSS/animation-range-start) and [`animation-range-end`](/en-US/docs/Web/CSS/animation-range-end) properties
 - [`scroll-timeline`](/en-US/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/en-US/docs/Web/CSS/scroll-timeline-axis), and [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name) properties
 - [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property

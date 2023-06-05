@@ -28,7 +28,7 @@ getCurrentTime(options)
 
 ### Return value
 
-A {{domxref("CSSNumericValue")}} representing how far an animation has progressed through its associated timeline. For time-based animations, this should be a {{domxref("CSSUnitValue")}} with `ms` units. For [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations), this should be a {{domxref("CSSUnitValue")}} with `percent` units.
+A {{domxref("CSSNumericValue")}} representing how far an animation has progressed through its associated timeline. For time-based animations, this should be a {{domxref("CSSUnitValue")}} with `ms` units. For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), this should be a {{domxref("CSSUnitValue")}} with `percent` units.
 
 ## Examples
 
@@ -163,5 +163,5 @@ Scroll to see the subject element being animated and the change in percentage pr
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Scroll-driven Animations](/en-US/docs/Web/CSS/CSS_Scroll-driven_Animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - {{domxref("AnimationTimeline")}}, {{domxref("DocumentTimeline")}}, {{domxref("ScrollTimeline")}}, {{domxref("ViewTimeline")}}
