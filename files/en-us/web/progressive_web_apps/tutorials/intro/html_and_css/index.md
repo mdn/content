@@ -9,7 +9,7 @@ slug: Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS
 
 To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
-In the next section, we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content into a functional web application. Only then can we progressively enhance the application to make the app a PWA that is installable and works offline.
+In the next section, we'll [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content created in this section into a functional web application. Once we have a functioning app will we have something that we can progressively enhance into a PWA that is installable and works offline.
 
 ## Static web content
 
@@ -20,7 +20,7 @@ We create an HTML file, with meta data in the head and a static web page contain
 
 To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
 
-Our static site HTML, with placeholders for yet-to-be-created external CSS and JavaScript files, is:
+Our static site HTML, with placeholder {{HTMLElement("link")}} and {{HTMLElement("script")}} elements for yet-to-be-created external CSS and JavaScript files, is:
 
 ```html
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading thru this section before adding the [placeholder data](en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#placeholder_text) and [`styles.css`](en-US/Docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS#css-file), and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading thru this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-placeholder-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -149,7 +149,7 @@ We encourage you to [learn more about making accessible web forms](/en-US/docs/L
 
 When creating an [offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
 
-### Placeholder and placeholder text
+### Temporary hard-coded results placeholder text
 
 We then include an empty {{HTMLElement("section")}}. This container will be populated using JavaScript.
 
@@ -159,7 +159,7 @@ We then include an empty {{HTMLElement("section")}}. This container will be popu
 
 When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for the section.
 
-For the time being, we temporarily hardcode some content within this `<section>` to have something to style as we write the page's CSS. Remove or comment out the temporary content once you are satisfied with the content's appearance.
+For the time being, we temporarily hardcode some content within this `<section>`, includibg a header and a few past periods, to have something to style as we write the page's CSS.
 
 ```html
 <section id="past-periods">
@@ -171,6 +171,8 @@ For the time being, we temporarily hardcode some content within this `<section>`
 </section>
 ```
 
+This content, other than the container `<section id="past-periods"></section>`, is temporary. We will remove or comment-out this temporary data once we [complete the CSS](#css-content) and are satisfied with the app's appearance.
+
 ### JavaScript placeholder
 
 Before closing the `</body>`, we include a link to the `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_and_defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
@@ -181,11 +183,43 @@ Before closing the `</body>`, we include a link to the `app.js` JavaScript file.
 
 The `app.js` file will include all the workings of our application, including the event handlers for the `<button>`, saving the data submitted to local storage, and displaying cycled within the content of the body.
 
-The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is complete.
+The [HTML file for this step](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) is now complete!
 
 ## CSS content
 
-With CSS, we use {{CSSXref("background-color")}} to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We can now style the static HTML using CSS. Our final CSS is:
+
+```css
+body {
+  margin: 1vh 1vw;
+  background-color: #efe;
+}
+ul,
+fieldset,
+legend {
+  border: 1px solid;
+  background-color: #fff;
+}
+ul {
+  padding: 0;
+  font-family: monospace;
+}
+li,
+legend {
+  list-style-type: none;
+  padding: 0.2em 0.5em;
+  background-color: #cfc;
+}
+li:nth-of-type(even) {
+  background-color: inherit;
+}
+```
+
+If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, the CSS is explained.
+
+### CSS explained
+
+We use the {{CSSXref("background-color")} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
 
 We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
 
@@ -264,11 +298,15 @@ li:nth-of-type(even) {
 
 If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_Selectors), or work through [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
 
-You can write your own CSS, or you can copy the above CSS. Either way, create a CSS file with your styles for the app and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css).
+Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
 With the `index.html` updated, and the `style.css` housed in the same directory, viewing the page in a narrow browser window should look similar to this screenshot:
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](html.jpg)
+
+To view what you have created, open the `index.html` file by navigating to it via your computer's file structure or from your browser using the "Open File" menu option. For now, we are viewing our progress using the `file://` protocol. PWAs require apps to run on a web server using either [`https` or `localhost`](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure), covered later.
+
+### Finishing the static HTML and CSS for our PWA
 
 Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the placeholder text:
 
