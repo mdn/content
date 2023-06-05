@@ -11,7 +11,7 @@ In the previous section, we wrote the HTML and CSS for cycleTracker, creating a 
 
 If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `styles.css`.
 
-The last line in the HTML file calls the `app.js` JavaScript file. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript to capture form submissions, locally store submitted data, and populate the past-periods section.
+The last line in the HTML file calls the `app.js` JavaScript file. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript code to capture form submissions, locally store submitted data, and populate the past-periods section.
 
 At the end of this lesson, you will have a fully functional app. In future lessons, we will progressively enhance the app to create a fully installable PWA that works even when the user is offline.
 
