@@ -24,6 +24,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
+
   - : A function to execute for each entry in the report.
     The function is called with the following arguments:
 
@@ -34,6 +35,7 @@ forEach(callbackFn, thisArg)
       - : A unique string identifying the monitored object from which the statistics are derived.
     - `map`
       - : The report being iterated.
+
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`.
 

@@ -1,14 +1,14 @@
 ---
-title: "RTCIceCandidateStats: timestamp property"
+title: "RTCInboundRtpStreamStats: timestamp property"
 short-title: timestamp
-slug: Web/API/RTCIceCandidateStats/timestamp
+slug: Web/API/RTCInboundRtpStreamStats/timestamp
 page-type: web-api-instance-property
 browser-compat: api.RTCStatsReport.type_inbound-rtp.timestamp
 ---
 
 {{APIRef("WebRTC")}}
 
-The **`timestamp`** property of the {{domxref("RTCIceCandidateStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object specifying the time at which the data in the object was sampled.
+The **`timestamp`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object specifying the time at which the data in the object was sampled.
 
 ## Value
 
