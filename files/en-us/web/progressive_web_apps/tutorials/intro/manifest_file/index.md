@@ -130,9 +130,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 }
 ```
 
-The `purpose` members should be set to `maskable` defining [icona as adaptive](https://web.dev/maskable-icon/).
-
-All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. All icon files are squares, but when an image is masked by the operating system, sections may be cut off. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icons is masked as a circle, is the inner 80% of the image file.
+All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/maskable-icon/).
 
 ### Task
 

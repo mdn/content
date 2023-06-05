@@ -147,8 +147,6 @@ We include a {{HTMLelement("button")}} element which submits the form and label 
 
 We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
 
-When creating an [offline experience](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/offline) we will add another `<button>` that will be programmed to provide an alternative to the default browser PWA installation UI.
-
 ### Temporary hard-coded results placeholder text
 
 We then include an empty {{HTMLElement("section")}}. This container will be populated using JavaScript.
