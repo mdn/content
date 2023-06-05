@@ -23,7 +23,7 @@ Defining shortcuts for your PWA can make users more productive by letting them a
 
 ## Define shortcuts in the web app manifest
 
-To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts) member of the web app manifest. This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
+To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts) member of the [web app manifest](/en-US/docs/Web/Manifest). This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
 
 ```json
 {

@@ -32,6 +32,8 @@ These guides give concrete detailed instructions for how to implement specific P
   - : Describes how to set background and theme colors for a PWA.
 - [Display badges](/en-US/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)
   - : Describes how to display a badge on the PWA's icon: for example to let the user know that they have received new messages.
+- [Expose common app actions as shortcuts](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)
+  - : Describes how to expose common actions for a PWA that can be launched from the operating system's app shortcut menu.
 - [Share data between apps](/en-US/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)
   - : Describes how PWAs can share data with each other by using the operating system's app sharing mechanism.
 - [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
