@@ -105,5 +105,6 @@ h2 {
 
 ## See also
 
-- [CSS text-wrap: balance](https://developer.chrome.com/blog/css-text-wrap-balance/) on developer.chrome.com
 - Shorthand for {{CSSxRef("white-space-collapse")}} and `text-wrap`: The {{CSSxRef("white-space")}} property.
+- [CSS text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS text-wrap: balance](https://developer.chrome.com/blog/css-text-wrap-balance/) on developer.chrome.com
