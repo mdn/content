@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
 
 {{PWASidebar}}
 
-Many operating systems support showing shortcut menus when the user right-clicks or long-presses an app icon. For example, on Windows, right-clicking on any pinned program in the taskbar shows a list of program-specific actions and recently opened files:
+Many operating systems support showing shortcut menus, or jump-list, when the user right-clicks or long-presses an app icon. For example, on Windows, right-clicking on any pinned program in the taskbar shows a list of program-specific actions and recently opened files:
 
 ![The task bar in Windows, showing several pinned apps. The Firefox app icon was right-clicked, and the jump list is displayed, showing frequent tabs and common tasks](./jump-list.png)
 
@@ -15,7 +15,7 @@ On Android, long-pressing an app icon also shows a list of common app actions:
 
 [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like platform-native apps and, like their native counterparts, they can also define app shortcut menus to let users access common actions.
 
-Shortcuts are only displayed by right-clicking or long-pressing the app icon, which means that they're only available once the PWA is installed on the user's device. To learn how to make your PWA installable, see [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
+Shortcuts are only displayed by right-clicking or long-pressing the app icon, meaning they're only available once the PWA is installed on the user's device. To learn how to make your PWA installable, see [making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 ## Why use shortcuts?
 
@@ -23,7 +23,7 @@ Defining shortcuts for your PWA can make users more productive by letting them a
 
 ## Define shortcuts in the web app manifest
 
-To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts) member of the web app manifest. This member is an array of objects, each of which defines the shortcut name, URL, and optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
+To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts) member of the web app manifest. This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
 
 ```json
 {
@@ -53,7 +53,7 @@ To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest
 The most important properties of each shortcut object are:
 
 - `name`
-  - : The name of the shortcut, which is displayed in the shortcut menu. MAke sure to keep it short but also descriptive enough to let users know what the shortcut does.
+  - : The name of the shortcut, which is displayed in the shortcut menu. Make sure to keep it short but also descriptive enough to let users know what the shortcut does.
 - `url`
   - : The URL to launch the PWA with when the user selects the shortcut. This URL can be absolute, in which case it should exist within the [scope](/en-US/docs/Web/Manifest/scope) of the web app manifest. The URL can also be relative, in which case it's resolved relative to the PWA's [start URL](/en-US/docs/Web/Manifest/start_url).
 
