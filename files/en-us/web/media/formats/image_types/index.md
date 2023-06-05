@@ -129,7 +129,7 @@ The following list includes image formats that appear on the web, but which shou
       <th scope="row">File format</th>
       <th scope="col">MIME type</th>
       <th scope="col">File extension(s)</th>
-      <th scope="col">Description</th>
+      <th scope="col">Supported browsers</th>
     </tr>
   </thead>
   <tbody>

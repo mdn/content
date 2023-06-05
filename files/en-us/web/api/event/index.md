@@ -35,7 +35,6 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("CustomEvent")}}
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("DragEvent")}}
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
@@ -68,7 +67,6 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("TrackEvent")}}
 - {{domxref("TransitionEvent")}}
 - {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WheelEvent")}}
 

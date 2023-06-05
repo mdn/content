@@ -1122,13 +1122,6 @@
       "properties": ["Window.scheduler"],
       "events": []
     },
-    "Proximity Events": {
-      "overview": ["Proximity Events"],
-      "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Push API": {
       "overview": ["Push API"],
       "guides": ["/docs/Web/API/Push_API/Best_Practices"],
