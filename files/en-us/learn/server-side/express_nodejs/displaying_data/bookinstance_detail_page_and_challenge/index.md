@@ -36,7 +36,7 @@ exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
 The implementation is very similar to that used for the other model detail pages.
 The route controller function calls `BookInstance.findById()` with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: `req.params.id`.
 It then calls `populate()` to get the details of the associated `Book`.
-If a matching `BookInstance` is not found and error is sent to the Express middleware.
+If a matching `BookInstance` is not found an error is sent to the Express middleware.
 Otherwise the returned data is rendered using the **bookinstance_detail.pug** view.
 
 ### View

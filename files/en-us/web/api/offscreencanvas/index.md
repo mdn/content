@@ -130,4 +130,3 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageBitmapRenderingContext")}}
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
-- {{domxref("WebGLRenderingContext.commit()")}}

@@ -9,13 +9,13 @@ browser-compat: css.types.easing-function
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes the rate at which a numerical value changes.
 
-This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
+This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
 
 ## Syntax
 
 ```css
 /* linear function and keyword */
-/* linear(<list-of-points>) */
+/* linear(<point-list>) */
 linear(1, -0.5, 0);
 linear;
 
@@ -36,11 +36,11 @@ step-end;
 
 ### Values
 
-- _list-of-points_
+- `<point-list>`
 
-  - : List of linear stops
+  - : List of linear stops.
 
-- _x1, y1, x2, y2_
+- `<x1>`, `<y1>`, `<x2>`, `<y2>`
 
   - : {{cssxref("&lt;number&gt;")}} values representing the abscissas and ordinates of the [P1 and P2 points](#cubic_bézier_functions) defining the cubic Bézier curve. x1 and x2 must be in the range `[0, 1]`, otherwise the value is invalid.
 
@@ -55,7 +55,7 @@ step-end;
 ![A 2D graph of 'Time ratio' to 'Output ratio' shows a shallow curved line from the origin that straightens out as it approaches X1 Y1.](cubic-bezier-ease-in.png)
 
 - `ease-in-out`
-  - : Indicates that the interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
+  - : Indicates that the interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) keyword; at the end, it is like the [`ease-out`](#ease-out) keyword.
 
 ![A 2D graph of 'Time ratio' to 'Output ratio' shows a symmetrical, 'S'-shaped line curving from the origin to X1 Y1.](cubic-bezier-ease-in-out.png)
 
@@ -64,11 +64,11 @@ step-end;
 
 ![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line that slightly curves as it gets close to X1 Y1.](cubic-bezier-ease-out.png)
 
-- _number-of-steps_
+- `<number-of-steps>`
 
   - : A strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 
-- _direction_
+- `<direction>`
 
   - : One of the following keywords that indicate when the jumps occur:
     - `jump-start` denotes that the first step or jump happens when the interpolation begins.
@@ -102,7 +102,7 @@ The `linear()` function defines a piecewise linear function that interpolates li
 
 When you define the `linear()` function, you specify the _linear easing points_ as a list, as in, `linear(0, 0.25, 1)`. This `linear()` function produces an easing function that moves linearly from `0`, to `0.25`, then to `1`.
 
-Consider another example of the function: `linear(0, 0.25 75%, 1)`. This produces a linear easing function that spends 75% of the time transitioning from `0` to `.25` and the last 25% transitioning from `.25` to `1`.
+Consider another example of the function: `linear(0, 0.25 75%, 1)`. This produces a linear easing function that spends 75% of the time transitioning from `0` to `0.25` and the last 25% transitioning from `0.25` to `1`.
 
 The `linear` keyword produces a `linear()` function with two points. This is equivalent to the easing function `cubic-bezier(0.0, 0.0, 1.0, 1.0)`.
 
@@ -114,11 +114,7 @@ The `cubic-bezier()` functional notation defines a cubic [Bézier curve](/en-US/
 
 ![A 2D graph of 'Time ratio' to 'Output ratio' shows an 'S'-shaped line curving from the origin to X1 Y1. The Bezier handle at X0 Y0 is labeled 'P₁ = (0.075, 0.75)' and at X1 Y1 is labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
-A cubic Bézier curve is defined by four points: P0, P1, P2, and P3.
-
-- The points P0 and P3 represent the start and the end of the curve. In CSS, these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range).
-- P0 is `(0, 0)` and represents the initial time or position and the initial state.
-- P3 is `(1, 1)` and represents the final time or position and the final state.
+A cubic Bézier curve is defined by four points: P0, P1, P2, and P3. The points P0 and P3 represent the start and the end of the curve. In CSS, these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is `(0, 0)` and represents the initial time or position and the initial state. P3 is `(1, 1)` and represents the final time or position and the final state.
 
 Not all cubic Bézier curves are suitable as easing functions because not all are [mathematical functions](https://en.wikipedia.org/wiki/Function_%28mathematics%29); i.e., curves that for a given abscissa have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P1 and P2 are both in the `[0, 1]` range.
 
@@ -126,11 +122,11 @@ Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range can c
 
 ![Graph of the easing function showing the output ratio going above 1, to 1.5, at the transition durations midpoint.](tf_with_output_gt_than_1.png)
 
-However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
+However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` in {{CSSXref("color_value/rgb", "rgb()")}} will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
 
 ![Graph of the easing function showing the output ratio reaching 1, and then staying at 1 for the rest of the time.](tf_with_output_gt_than_1_clipped.png)
 
-When you specify an invalid `cubic-bezier` curve, CSS ignores the whole property.
+When you specify an invalid cubic Bézier curve, CSS ignores the whole property.
 
 The `cubic-bezier()` function can also be specified using these keywords, each of which represent a specific `cubic-bezier()` notation: [`ease`](#ease), [`ease-in`](#ease-in), [`ease-out`](#ease-out), and [`ease-in-out`](#ease-in-out).
 
@@ -273,20 +269,20 @@ selectElem.addEventListener("change", () => {
 
 #### Result
 
-{{EmbedLiveSample('Comparing_the_easing_functions', '100%', 200)}}
+{{EmbedLiveSample("comparing_the_easing_functions", "100%", 200)}}
 
 ### Using the cubic-bezier() function
 
 These cubic Bézier curves are valid for use in CSS:
 
-```css
-/* The canonical Bézier curve with four <number> in the [0,1] range. */
+```css example-good
+/* The canonical Bézier curve with four <number> in the [0,1] range */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
 /* Using <integer> is valid because any <integer> is also a <number>. */
 cubic-bezier(0, 0, 1, 1)
 
-/* Negative values for ordinates are valid, leading to bouncing effects.*/
+/* Negative values for ordinates are valid, leading to bouncing effects. */
 cubic-bezier(0.1, -0.6, 0.2, 0)
 
 /* Values greater than 1.0 for ordinates are also valid. */
@@ -297,7 +293,7 @@ These cubic Bézier curves definitions are invalid:
 
 ```css example-bad
 /* Though the animated output type may be a color,
-   Bézier curves work with numerical ratios.*/
+   Bézier curves work with numerical ratios. */
 cubic-bezier(0.1, red, 1.0, green)
 
 /* Abscissas must be in the [0, 1] range or
@@ -316,7 +312,7 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 
 These easing functions are valid:
 
-```css
+```css example-good
 /* There are 5 treads, the last one happens
    right before the end of the animation. */
 steps(5, end)
@@ -341,7 +337,7 @@ steps(2.0, jump-end)
 /* The amount of steps must be non-negative. */
 steps(-3, start)
 
-/* There must be at least one step.*/
+/* There must be at least one step. */
 steps(0, jump-none)
 ```
 
@@ -355,6 +351,6 @@ steps(0, jump-none)
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [cubic-bezier](https://cubic-bezier.com/)
