@@ -71,10 +71,6 @@ p {
 
 {{EmbedLiveSample('Examples', 'auto', 350)}}
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
 - CSS key concepts:
