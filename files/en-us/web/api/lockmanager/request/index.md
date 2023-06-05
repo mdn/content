@@ -72,7 +72,7 @@ request(name, options, callback)
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves with `undefined` when the request is granted.
+A {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 ### Exceptions
 
