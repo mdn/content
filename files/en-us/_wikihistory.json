@@ -19624,10 +19624,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Analyzing_WebRTC_statistics": {
-    "modified": "2020-10-15T22:17:17.119Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/Animation": {
     "modified": "2020-10-15T21:31:38.261Z",
     "contributors": [
