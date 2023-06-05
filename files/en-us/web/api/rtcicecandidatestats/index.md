@@ -28,7 +28,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} {{optional_inline}}
   - : A string identifying the protocol used by the endpoint for communicating with the {{Glossary("TURN")}} server; valid values are `tcp`, `udp`, and `tls`.
     Only present for local candidates.
-- {{domxref("RTCIceCandidateStats.transportId", "transportId")}} {{optional_inline}}
+- {{domxref("RTCIceCandidateStats.transportId", "transportId")}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 - {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
   - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received.
