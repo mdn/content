@@ -29,7 +29,7 @@ The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
   - : Returns a new Iterator object that contains the keys (ids) for each element in the `RTCStatsReport` object, in insertion order.
 - {{domxref("RTCStatsReport.values()")}}
   - : Returns a new Iterator object that contains the values for each element in the `RTCStatsReport` object, in insertion order.
-- [`RTCStatsReport.[@@iterator]()`](/en-US/docs/Web/API/RTCStatsReport/@@iterator) {{ReadOnlyInline}}
+- [`RTCStatsReport.[@@iterator]()`](/en-US/docs/Web/API/RTCStatsReport/@@iterator)
   - : Returns a new Iterator object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
 
 ## Description
@@ -74,7 +74,7 @@ The statistics `type` values and their corresponding dictionaries are listed bel
 
 ### Iterate report from an RTCPeerConnection using forEach loop
 
-This example logs video-related statistics for the local {{domxref("RTCRtpReceiver")}} responsible for receiving streamed media.
+This example logs shows how you might log video-related statistics for the local {{domxref("RTCRtpReceiver")}} responsible for receiving streamed media.
 
 The code first creates an `RTCPeerConnection`, uses `await` to wait for the statistics report, and then iterates it using {{domxref("RTCStatsReport.forEach()")}}.
 It then filters the dictionaries for just those reports that have the `type` of `inbound-rtp` and `kind` of `video`.
@@ -85,10 +85,8 @@ const stats = await myPeerConnection.getStats();
 
 stats.forEach((report) => {
   if (report.type === "inbound-rtp" && report.kind === "video") {
-    // Log the report
-    Object.keys(report).forEach((statName) => {
-      console.log(`${statName}: ${report[statName]}`);
-    });
+    // Log the frame rate
+    console.log(report.framesPerSecond);
   }
 });
 ```
@@ -97,7 +95,7 @@ stats.forEach((report) => {
 
 This example shows how you might iterate the outbound statistics from an {{domxref("RTCRtpSender")}}.
 
-The code follows a the same pattern as the previous example, but iterates using a `for...of`-loop on the {{domxref("RTCStatsReport.values()")}}, and filters on the `type` of `outbound-rtp`.
+The code follows a similar pattern to the previous example, but iterates using a `for...of`-loop on the {{domxref("RTCStatsReport.values()")}}, and filters on the `type` of `outbound-rtp`.
 It assumes you already have an `RTCRtpSender` object named "sender".
 
 ```js

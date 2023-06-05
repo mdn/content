@@ -19,7 +19,7 @@ has(id)
 ### Parameters
 
 - `id`
-  - : A string containing the id of the statistics dictionary to test for in the `RTCStatsReport` object.
+  - : A string containing the ID of a statistics object that might be present in this `RTCStatsReport`.
 
 ### Return value
 
