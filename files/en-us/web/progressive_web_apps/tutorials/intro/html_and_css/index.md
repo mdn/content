@@ -159,7 +159,7 @@ We then include an empty {{HTMLElement("section")}}. This container will be popu
 
 When the user submits the form, we will use JavaScript to capture the data and present a list of past periods along with a header for the section.
 
-We temporarily hardcode placeholder content within the placeholder `<section>` to have something to style as we write the page's CSS. Remove or comment out the temporary content once you are satisfied with the content's appearance.
+For the time being, we temporarily hardcode some content within this `<section>` to have something to style as we write the page's CSS. Remove or comment out the temporary content once you are satisfied with the content's appearance.
 
 ```html
 <section id="past-periods">
