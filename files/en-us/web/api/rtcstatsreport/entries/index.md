@@ -12,6 +12,8 @@ The **`entries()`** method of the {{domxref("RTCStatsReport")}} interface return
 
 The keys are unique `id` values for monitored statistics objects from which the statistics are derived, and the associated values are [statistics dictionary objects](/en-US/docs/Web/API/RTCStatsReport#the_statistic_types).
 
+The method is otherwise the same as {{jsxref("Map.prototype.entries()")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -28,19 +30,17 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Examples
 
-This example shows how to iterate through a statistics report by calling `next()` on the iterator returned by `entries()`.
+This example shows how to iterate through a {{domxref("RTCStatsReport")}} using the iterator returned by `entries()`.
+
+Given a variable `myPeerConnection`, which is an instance of `RTCPeerConnection`, the code calls [`getStats()`](/en-US/docs/Web/API/RTCRtpReceiver/getStats) with `await` to wait for the statistics report.
+It then uses a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, with the iterator returned by `entries()`, to iterate through the entries.
+The properties of statistics objects with the `type` of `outbound-rtp` are logged to the console (other objects are discarded).
 
 ```js
-myPeerConnection = new RTCPeerConnection(pcOptions);
 const stats = await myPeerConnection.getStats();
 
-// Get an iterator for the RTCStatsReport
-const iterator = stats.entries();
-
-// Iterate through the report by calling next()
-while (iterator.hasNext()) {
-  const [id, statistics] = iterator.next();
-  if (statistics.type != "outbound-rtp") continue;
+for (const stat of stats.entries()) {
+  if (stat.type != "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
     console.log(`${statName}: ${report[statName]}`);
   });

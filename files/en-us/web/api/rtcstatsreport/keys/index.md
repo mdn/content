@@ -8,9 +8,11 @@ browser-compat: api.RTCStatsReport.keys
 
 {{APIRef("WebRTC")}}
 
-The **`keys()`** method of the {{domxref("RTCStatsReport")}} interface returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that can be used to iterate through the keys for each element in the `RTCStatsReport` object, in insertion order.
+The **`keys()`** method of the {{domxref("RTCStatsReport")}} interface returns a new _[iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that can be used to iterate through the keys for each element in the `RTCStatsReport` object, in insertion order.
 
 The keys in the `RTCStatsReport` are unique string `id` values, which represent the monitored statistics objects from which the statistics are derived.
+
+The method is otherwise the same as {{jsxref("Map.prototype.keys()")}}.
 
 ## Syntax
 
@@ -24,27 +26,29 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Examples
 
-### Using keys()
+This example shows how to iterate through a {{domxref("RTCStatsReport")}} using the iterator returned by `keys()`.
 
-This example shows how to iterate through a statistics report by calling `next()` on the iterator returned by `keys()`.
+Given a variable `myPeerConnection`, which is an instance of `RTCPeerConnection`, the code calls [`getStats()`](/en-US/docs/Web/API/RTCRtpReceiver/getStats) with `await` to wait for the statistics report.
+It then uses a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop, with the iterator returned by `keys()`, to iterate through the IDs.
+Each ID is used to get the corresponding statistics dictionary.
+The properties of statistics objects with the `type` of `outbound-rtp` are logged to the console (other objects are discarded).
 
 ```js
-myPeerConnection = new RTCPeerConnection(pcOptions);
 const stats = await myPeerConnection.getStats();
 
-// Get an iterator for the RTCStatsReport
-const iterator = stats.keys();
-
-// Iterate through the report by calling next()
-while (iterator.hasNext()) {
-  const id = iterator.next();
-  const statistics = stats.get(id);
-  if (statistics.type != "outbound-rtp") continue;
+for (const id of stats.keys()) {
+  // Get dictionary associated with key (id)
+  const stat = stats.get(id);
+  if (stat.type != "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
     console.log(`${statName}: ${report[statName]}`);
   });
 }
 ```
+
+Note that this examples is somewhat contrived.
+You could more easily iterate with {{domxref("RTCStatsReport.entries()","entries()")}} or {{domxref("RTCStatsReport.values()","values()")}} and not have to map the ID to a value.
+You can even iterate the {{domxref("RTCStatsReport")}} itself, as it has the [`@@iterator`](/en-US/docs/Web/API/RTCStatsReport/@@iterator) method!
 
 ## Specifications
 

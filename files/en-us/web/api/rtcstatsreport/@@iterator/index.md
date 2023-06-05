@@ -13,6 +13,8 @@ It returns an [iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obje
 
 The initial value of this property is the same function object as the initial value of the {{domxref("RTCStatsReport.entries()")}} method.
 
+The method is otherwise the same as [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator).
+
 ## Syntax
 
 ```js-nolint

@@ -8,7 +8,9 @@ browser-compat: api.RTCStatsReport.has
 
 {{APIRef("WebRTC")}}
 
-The **`has()`** method of the {{domxref("RTCStatsReport")}} interface returns a boolean indicating whether a statistics report with the specified id exists.
+The **`has()`** method of the {{domxref("RTCStatsReport")}} interface returns a boolean indicating whether a report contains a statistics dictionary with the specified id.
+
+The method is otherwise the same as {{jsxref("Map.prototype.has()")}}.
 
 ## Syntax
 

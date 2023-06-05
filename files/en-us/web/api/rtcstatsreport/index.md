@@ -9,10 +9,12 @@ browser-compat: api.RTCStatsReport
 
 The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides a statistics report for a {{domxref("RTCPeerConnection")}}, {{domxref("RTCRtpSender")}}, or {{domxref("RTCRtpReceiver")}}.
 
+The report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object, in which each key is an identifier for an object for which statistics are being reported, and the corresponding value is a dictionary object providing the statistics.
+
 ## Instance properties
 
 - {{domxref("RTCStatsReport.size")}}
-  - : Returns the number of `id`/statistics dictionaries (key/value) pairs in the `RTCStatsReport` object.
+  - : Returns the number of items in the `RTCStatsReport` object.
 
 ## Instance methods
 
@@ -24,11 +26,11 @@ The **`RTCStatsReport`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 - {{domxref("RTCStatsReport.get()")}}
   - : Returns the statistics dictionary associated with the passed `id`, or `undefined` if there is none.
 - {{domxref("RTCStatsReport.has()")}}
-  - : Returns a boolean indicating whether the `RTCStatsReport` has a statistics dictionary associated with the specified `id`.
+  - : Returns a boolean indicating whether the `RTCStatsReport` contains a statistics dictionary associated with the specified `id`.
 - {{domxref("RTCStatsReport.keys()")}}
-  - : Returns a new Iterator object that contains the keys (ids) for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new Iterator object that contains the keys (IDs) for each element in the `RTCStatsReport` object, in insertion order.
 - {{domxref("RTCStatsReport.values()")}}
-  - : Returns a new Iterator object that contains the values for each element in the `RTCStatsReport` object, in insertion order.
+  - : Returns a new Iterator object that contains the values (statistics object) for each element in the `RTCStatsReport` object, in insertion order.
 - [`RTCStatsReport.[@@iterator]()`](/en-US/docs/Web/API/RTCStatsReport/@@iterator)
   - : Returns a new Iterator object that contains a two-member array of `[id, statistic-dictionary]` for each element in the `RTCStatsReport` object, in insertion order.
 
@@ -38,10 +40,11 @@ A {{jsxref("Promise")}} that resolves to an `RTCStatsReport` is returned from th
 Calling `getStats()` on an {{domxref("RTCPeerConnection")}} lets you specify whether you wish to obtain outbound statistics, inbound statistics, or statistics for the whole connection.
 The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of `getStats()` only return inbound and outbound statistics, respectively.
 
-The statistics report is a read-only [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)-like object: an ordered dictionary, where the properties are `id` strings that uniquely identify the WebRTC object that was inspected to produce a particular set of statistics, and the value is a dictionary object containing those statistics.
+The statistics report is a read-only [`Map`-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object: an ordered dictionary, where the properties are `id` strings that uniquely identify the WebRTC object that was inspected to produce a particular set of statistics, and the value is a dictionary object containing those statistics.
 
 The different categories of statistics that are collected are reported using different dictionary objects, as listed [below](#the_statistic_types).
 All the dictionary types have:
+
 - An `id` property, a string that uniquely identifies the object that was inspected to produce the current dictionary.
 - A `type` string that can be used to identify the particular category of statistic.
 - A high resolution `timestamp` that allows comparison over time (and averaging) of statistic values.
@@ -76,11 +79,10 @@ The statistics `type` values and their corresponding dictionaries are listed bel
 
 This example logs shows how you might log video-related statistics for the local {{domxref("RTCRtpReceiver")}} responsible for receiving streamed media.
 
-The code first creates an `RTCPeerConnection`, uses `await` to wait for the statistics report, and then iterates it using {{domxref("RTCStatsReport.forEach()")}}.
+Given a variable `myPeerConnection`, which is an instance of `RTCPeerConnection`, the code uses `await` to wait for the statistics report, and then iterates it using {{domxref("RTCStatsReport.forEach()")}}.
 It then filters the dictionaries for just those reports that have the `type` of `inbound-rtp` and `kind` of `video`.
 
 ```js
-myPeerConnection = new RTCPeerConnection(pcOptions);
 const stats = await myPeerConnection.getStats();
 
 stats.forEach((report) => {

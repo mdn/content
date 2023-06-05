@@ -14,7 +14,7 @@ Elements in the `RTCStatsReport` are identified by unique `id` values, which rep
 The element returned will be an instance of one of the [statistics dictionary objects](/en-US/docs/Web/API/RTCStatsReport#the_statistic_types), and it will contain statistics for the object with the given `id`.
 The fetched value is a reference to the statistics dictionary, and any change made to that object will effectively modify it inside the `RTCStatsReport` object.
 
-Otherwise the method is the same as {{jsxref("Map.prototype.get()")}}.
+The method is otherwise the same as {{jsxref("Map.prototype.get()")}}.
 
 ## Syntax
 
