@@ -168,7 +168,7 @@ For example, [Open Graph Data](https://ogp.me/) is a metadata protocol that Face
 ```html
 <meta
   property="og:image"
-  content="https://developer.mozilla.org/static/img/opengraph-logo.png" />
+  content="https://developer.mozilla.org/mdn-social-share.png" />
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides
