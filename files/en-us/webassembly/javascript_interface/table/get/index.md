@@ -21,7 +21,7 @@ get(index)
 
 ### Return value
 
-Depending the element type of the Table, can be a function reference — this is an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying wasm function, or it can be a host reference.
+Depending the element type of the Table, can be a function reference — this is an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying Wasm function, or it can be a host reference.
 
 ### Exceptions
 
