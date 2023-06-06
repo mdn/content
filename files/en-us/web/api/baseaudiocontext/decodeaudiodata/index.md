@@ -10,8 +10,8 @@ browser-compat: api.BaseAudioContext.decodeAudioData
 
 The `decodeAudioData()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to asynchronously decode audio file data contained in an
-{{jsxref("ArrayBuffer")}}. In this case the `ArrayBuffer` is loaded from
-{{domxref("XMLHttpRequest")}} and {{domxref("FileReader")}}. The decoded
+{{jsxref("ArrayBuffer")}} that is loaded from {{domxref("fetch()")}},
+{{domxref("XMLHttpRequest")}}, or {{domxref("FileReader")}}. The decoded
 {{domxref("AudioBuffer")}} is resampled to the {{domxref("AudioContext")}}'s sampling
 rate, then passed to a callback or promise.
 
@@ -22,21 +22,20 @@ data.
 ## Syntax
 
 ```js-nolint
-// Older callback syntax:
+// Promise-based syntax:
+decodeAudioData(arrayBuffer)
+
+// Callback syntax:
 decodeAudioData(arrayBuffer, successCallback)
 decodeAudioData(arrayBuffer, successCallback, errorCallback)
-
-// Newer promise-based syntax:
-decodeAudioData(arrayBuffer)
 ```
 
 ### Parameters
 
 - `arrayBuffer`
   - : An ArrayBuffer containing the audio data to be decoded, usually grabbed from
-    {{domxref("XMLHttpRequest")}}, {{domxref("fetch()")}} or
-    {{domxref("FileReader")}}.
-- `successCallback`
+    {{domxref("fetch()")}}, {{domxref("XMLHttpRequest")}} or {{domxref("FileReader")}}.
+- `successCallback` {{optional_inline}}
   - : A callback function to be invoked when the decoding successfully finishes. The
     single argument to this callback is an {{domxref("AudioBuffer")}} representing the
     _decodedData_ (the decoded PCM audio data). Usually you'll want to put the
@@ -48,15 +47,42 @@ decodeAudioData(arrayBuffer)
 
 ### Return value
 
-None ({{jsxref("undefined")}}) or a {{jsxref("Promise") }} object that fulfills with the
-_decodedData_.
+If a callback is used, ({{jsxref("undefined")}}), else a {{jsxref("Promise") }} object that
+fulfills with the _decodedData_.
 
 ## Examples
 
-In this section we will first cover the older callback-based system and then the newer
-promise-based syntax.
+In this section we will first cover the promise-based syntax and then the callback syntax.
 
-### Older callback syntax
+### Promise-based syntax
+
+In this example the fetchData() function uses {{domxref("fetch()")}} to retrieve an audio
+file asynchronously. It then caches the buffer for later playback.
+
+> **Note:** This example is based on a fully functioning web page that you can [run live](https://mdn.github.io/webaudio-examples/decode-audio-promise/). The complete source code is [here](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-promise).
+
+```js
+let buffer, context, source;
+context = new AudioContext();
+fetchAudio("viper").then((buf) => {
+  // buf is the audio buffer returned by fetchAudio()
+});
+
+// fetch() an audio track, decode it, and stash it in buffer
+async function fetchAudio(name) {
+  try {
+    let rsvp = await fetch(`${name}.mp3`);
+    buffer = await context.decodeAudioData(await rsvp.arrayBuffer());
+    return buffer; // returns a Promise, buffer is arg for .then((arg) => {})
+  } catch (err) {
+    console.log(
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`
+    );
+  }
+}
+```
+
+### Callback syntax
 
 In this example, the `getData()` function uses XHR to load an audio track,
 setting the `responseType` of the request to `arraybuffer` so that
@@ -131,14 +157,6 @@ stop.onclick = () => {
 // dump script to pre element
 
 pre.innerHTML = myScript.innerHTML;
-```
-
-### New promise-based syntax
-
-```js
-ctx.decodeAudioData(audioData).then((decodedData) => {
-  // use the decoded data here
-});
 ```
 
 ## Specifications
