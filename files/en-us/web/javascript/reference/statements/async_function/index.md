@@ -330,6 +330,59 @@ In the two rewritten versions, notice there is no `await` statement after the
 async function is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
 it's not already a promise itself (as in the examples).
 
+#### Javascript's way of conserving memory
+
+Whenever you await a promise, the Javascript engine caches the resolved value of the promise. So next time when you await the same promise, it doesnt take time and the resolved value is directly returned.
+
+
+
+```js
+let p = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("Hello World!"); 
+    }, 1000)
+  })
+  
+  
+async function main(){
+  console.log(await p); //Takes 1 second to resolve
+  console.log(await p); //Takes no time at all
+  console.log(await p); //This too takes no time at all
+  }
+
+main();
+```
+
+In the above code snippet, Javascript engine caches the resolved value of 'Hello, World' so that when the promise is awaited for a second time, it gets resolved immediately.
+
+Note: This does not work if the promise is the return value of a regular or an async function.
+```js
+async function test() {
+  let p = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      resolve("Hello World!"); 
+      }, 1000)
+    })
+  return p;
+ }
+    
+  
+  
+async function main(){
+  console.log(await test()); //Takes 1 second to resolve
+  console.log(await test()); //Takes 1 second to resolve
+  console.log(await test()); //Takes 1 second to resolve
+  }
+
+main();
+```
+
+
+
+    
+
+
+
 ## Specifications
 
 {{Specifications}}
