@@ -82,7 +82,7 @@ This CSS would give the same result as [example 2](#specifying_the_width_of_colu
 }
 ```
 
-This CSS would give the same result as example 3, with both `column-count` and `column-width` set.
+This CSS would give the same result as [example 3](#specifying-both-number-and-width-of-columns), with both `column-count` and `column-width` set.
 
 ```css
 .container {
