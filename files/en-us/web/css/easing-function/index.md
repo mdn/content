@@ -37,34 +37,43 @@ step-end
 ### Values
 
 - `<point-list>`
+
   - : List of linear stops.
 
 - `linear`
+
   - : Indicates that the interpolation goes linearly. This keyword represents the easing function `linear(0, 1)`.
 
 ![Graph of "Input progress" to "Output progress" showing a line extending from the origin to (1, 1).](linear.svg)
 
 - `<x1>`, `<y1>`, `<x2>`, `<y2>`
+
   - : {{cssxref("&lt;number&gt;")}} values representing the abscissas and ordinates of the [P1 and P2 points](#cubic_bézier_functions) defining the cubic Bézier curve. `x1` and `x2` must be in the range `[0, 1]`, otherwise the value is invalid.
 
 - `ease`
+
   - : Indicates that the interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
 
 - `ease-in`
+
   - : Indicates that the interpolation starts slowly, then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
 
 - `ease-out`
+
   - : Indicates that the interpolation starts abruptly and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
 
 - `ease-in-out`
+
   - : Indicates that the interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) keyword; at the end, it is like the [`ease-out`](#ease-out) keyword.
 
 ![Graphs of "Input progress" to "Output progress", of which "ease" shows a curved line quickly rising from the origin to (1, 1); "ease-in" shows a shallow curved line from the origin that straightens out as it approaches (1, 1); "ease-out" shows a straight diagonal line that slightly curves as it gets close to (1, 1); and "ease-in-out" shows a symmetrical, "S"-shaped line curving from the origin to (1, 1).](ease.svg)
 
 - `<number-of-steps>`
+
   - : A strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 
 - `<direction>`
+
   - : One of the following keywords that indicate when the jumps occur:
     - `jump-start` denotes that the first step or jump happens when the interpolation begins.
     - `jump-end` denotes that the last step or jump happens when the interpolation ends.
@@ -74,9 +83,11 @@ step-end
     - `end` is the equivalent of `jump-end`. This is the default.
 
 - `step-start`
+
   - : Indicates that the interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
 
 - `step-end`
+
   - : Indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
 
 ![Graphs of "Input progress" to "Output progress", of which "step-start" shows a hollow origin and a horizontal line extending from (0, 1) to (1, 1); and "step-end" shows a horizontal line extending from the origin to (1, 0) (hollow) and a point at (1, 1).](step.svg)
