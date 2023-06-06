@@ -217,7 +217,7 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
 
 We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
 
