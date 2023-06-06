@@ -13,7 +13,7 @@ The **`width`** CSS property sets an element's width. By default, it sets the wi
 
 The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override `width`. If `width` is greater than {{cssxref("max-width")}} or less than {{cssxref("min-width")}}, it will not apply to the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) because of these override properties.
 
-However, `width` *will* apply and resize the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) if its value remains within the boundaries defined by {{cssxref("min-width")}} and/or {{cssxref("max-width")}}.
+However, `width` _will_ apply and resize the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area) if its value remains within the boundaries defined by {{cssxref("min-width")}} and/or {{cssxref("max-width")}}.
 
 ## Syntax
 
