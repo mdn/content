@@ -8,4 +8,15 @@ The **alignment container** is the rectangle that the [alignment subject](/en-US
 
 ## See also
 
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- CSS {{CSSXref("align-content")}} property
+- CSS {{CSSXref("align-items")}} property
+- CSS {{CSSXref("align-self")}} property
+- CSS {{CSSXref("align-tracks")}} property
+- CSS {{CSSXref("justify-content")}} property
+- CSS {{CSSXref("justify-items")}} property
+- CSS {{CSSXref("justify-self")}} property
+- CSS {{CSSXref("justify-tracks")}} property
+- CSS {{CSSXref("place-content")}} shorthand property
+- CSS {{CSSXref("place-self")}} shorthand property
+- CSS {{CSSXref("scroll-snap-align")}} property

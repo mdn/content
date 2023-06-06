@@ -9516,8 +9516,12 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCStats	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/id	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/timestamp	/en-US/docs/Web/API/RTCStatsReport
+/en-US/docs/Web/API/RTCStats/type	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCStatsIceCandidatePairState	/en-US/docs/Web/API/RTCIceCandidatePairStats/state
-/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStats/type
+/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStatsReport
 /en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent

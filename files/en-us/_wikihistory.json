@@ -55373,22 +55373,6 @@
       "teoli"
     ]
   },
-  "Web/API/RTCStats": {
-    "modified": "2020-10-15T22:09:08.133Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/id": {
-    "modified": "2020-10-15T22:09:13.396Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/timestamp": {
-    "modified": "2020-10-15T22:09:22.868Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/type": {
-    "modified": "2020-10-15T22:09:22.843Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T21:44:42.878Z",
     "contributors": ["Sheppy", "fscholz"]
@@ -65281,10 +65265,6 @@
   "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call": {
     "modified": "2020-12-10T13:59:26.911Z",
     "contributors": ["lolaodelola"]
-  },
-  "Web/API/WebRTC_Statistics_API": {
-    "modified": "2020-10-15T22:17:17.119Z",
-    "contributors": ["Sheppy"]
   },
   "Web/API/WebSocket": {
     "modified": "2020-12-07T20:03:00.345Z",
