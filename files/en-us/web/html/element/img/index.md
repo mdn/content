@@ -92,14 +92,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `decoding`
 
-  - : Provides an image decoding hint to the browser. Allowed values:
+  - : Provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content and then present it all together, or render and present the other DOM content first and then decode the image and present it later.
+
+    Allowed values:
 
     - `sync`
-      - : Decode the image synchronously, for atomic presentation with other content.
+      - : Decode the image synchronously along with rendering the other DOM content, and present everything together. This results in a single presentation step that looks more "correct" (i.e. no intermediate display steps, mitigates problems such as content jank as images are loaded in), but it can result in a performance hit, especially for users on slower networks.
     - `async`
-      - : Decode the image asynchronously, to reduce delay in presenting other content.
+      - : Decode the image asynchronously, after rendering and presenting the other DOM content. This may result in slightly inferior presentation, as different parts of the content are presented at different times, but it can improve performance, as the text content is available sooner.
     - `auto`
-      - : Default: no preference for the decoding mode. The browser decides what is best for the user.
+      - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
+
+    > **Note:** See the {{domxref("HTMLImageElement.decoding")}} page for more information.
 
 - `elementtiming`
 
