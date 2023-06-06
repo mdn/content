@@ -25,6 +25,7 @@ The `<color-interpolation-method>` specifies whether interpolation should use a 
 
 ```
 in <rectangular-color-space>
+// or
 in <polar-color-space>[ <hue-interpolation method>]
 ```
 
