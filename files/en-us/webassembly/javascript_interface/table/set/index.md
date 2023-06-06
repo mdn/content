@@ -19,7 +19,7 @@ set(index, value)
 - `index`
   - : The index of the function reference you want to mutate.
 - `value`
-  - : The value you want to mutate the reference to. This must be a value of the table's element type. Depending on the type, it may be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying wasm function, or a host reference.
+  - : The value you want to mutate the reference to. This must be a value of the table's element type. Depending on the type, it may be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying Wasm function, or a host reference.
 
 ### Return value
 
