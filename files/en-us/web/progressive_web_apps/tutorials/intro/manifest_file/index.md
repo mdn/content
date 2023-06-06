@@ -110,27 +110,27 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
   "name": "MyApp",
   "icons": [
     {
-      "src": "icon/tiny.webp",
+      "src": "icons/tiny.webp",
       "sizes": "48x48"
     },
     {
-      "src": "icon/small.png",
+      "src": "icons/small.png",
       "sizes": "72x72 96x96 128x128 256x256",
       "purpose": "maskable"
     },
     {
-      "src": "icon/large.png",
+      "src": "icons/large.png",
       "sizes": "512x512"
     },
     {
-      "src": "icon/scalable.svg",
+      "src": "icons/scalable.svg",
       "sizes": "any"
     }
   ]
 }
 ```
 
-All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/maskable-icon/).
+All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/maskable-icons/).
 
 ### Task
 
@@ -175,16 +175,16 @@ img {
       "sizes": "48x48"
     },
     {
-      "src": "icon/circle.svg",
+      "src": "icons/circle.svg",
       "sizes": "72x72 96x96",
       "purpose": "maskable"
     },
     {
-      "src": "icon/tire.svg",
+      "src": "icons/tire.svg",
       "sizes": "128x128 256x256"
     },
     {
-      "src": "icon/wheel.svg",
+      "src": "icons/wheel.svg",
       "sizes": "512x512"
     }
   ]
@@ -197,16 +197,16 @@ You now have a fully usable manifest file. Time to save it and link to it from o
 
 The manifest file extension can be the specification suggestion `.webappmanifest`. However, being a JSON file, it is most commonly saved with the browser-supported `.json` extension.
 
-PWAs require a manifest file to be linked from the app's HTML document. We have a fully functional app, but it's not yet a PWA because it doesn't link to our external manifest JSON file yet. To include the external JSON resource, we use the `<link>` element, with the `rel="manifest"` attribute, and setting the `href` attribute to the location of the resource.
+PWAs require a manifest file to be linked from the app's HTML document. We have a fully functional app, but it's not yet a PWA because it doesn't link to our external manifest JSON file yet. To include the external JSON resource, we use the `<link>` element, with the `rel="manifest"` attribute, and set the `href` attribute to the location of the resource.
 
 ```html
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 ```html
-<link rel="shortcut icon" href="icons/circle.svg" />
+<link rel="icon" href="icons/circle.svg" />
 ```
 
 When using the `.webmanifest` extension, set `type="application/manifest+json"` if your server doesn't support that MIME type.
@@ -227,6 +227,7 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
   <meta name="viewport" content="width=device-width" />
   <title>Cycle Tracker</title>
   <link rel="stylesheet" href="style.css" />
+  git
   <link rel="manifest" href="cycletracker.json" />
   <link rel="shortcut icon" href="icons/circle.svg" />
 </head>
