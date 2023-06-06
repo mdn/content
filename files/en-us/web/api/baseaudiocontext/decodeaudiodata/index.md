@@ -58,7 +58,7 @@ In this section we will first cover the promise-based syntax and then the callba
 
 In this example `fetchData()` uses {{domxref("fetch()")}} to retrieve an audio
 file asynchronously and decodes it into an `audioBuffer`. It then caches the
-`audioBuffer` in the global `buffer variable` for later playback.
+`audioBuffer` in the global `buffer` variable for later playback.
 
 > **Note:** This example is based on a fully functioning web page that you can [run live](https://mdn.github.io/webaudio-examples/decode-audio-promise/). The complete source code is [here](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-promise).
 
