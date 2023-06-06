@@ -9,7 +9,10 @@ browser-compat: api.HighlightRegistry
 
 {{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
 
-The **`HighlightRegistry`** interface, accessed via {{domxref("CSS.highlights")}}, is a {{jsxref("Map")}}-like object used to register {{domxref("Highlight")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+The **`HighlightRegistry`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to register {{domxref("Highlight")}} objects to be styled using the API.
+It is accessed via {{domxref("CSS.highlights")}}.
+
+`HighlightRegistry` is a [`Map`-like (or "maplike")](/en-US/docs/Glossary/Maplike_object) object, in which each key is the name string for a custom highlight, and the corresponding value is the associated {{domxref("Highlight")}} object.
 
 {{InheritanceDiagram}}
 
