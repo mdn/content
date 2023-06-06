@@ -28,7 +28,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - If `index` is greater than or equal to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a {{jsxref("RangeError")}} is thrown.
-- If `value` is not a value of the element type of the table., a {{jsxref("TypeError")}} is thrown.
+- If `value` is not of the element type of the table, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
