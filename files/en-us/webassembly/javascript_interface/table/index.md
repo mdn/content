@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.WebAssembly.Table
 
 {{WebAssemblySidebar}}
 
-The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-like structure representing a WebAssembly Table, which stores homogeneous references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
+The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-like structure representing a WebAssembly table, which stores homogeneous references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
 
 > **Note:** Tables can currently only store function references, or host references, but this will likely be expanded in the future.
 
