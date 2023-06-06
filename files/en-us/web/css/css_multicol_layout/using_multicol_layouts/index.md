@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The properties defined in the **CSS multi-column layout module** extends the _block layout mode_ , enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
+The properties defined in the **CSS multi-column layout module** extend the _block layout mode_ , enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
 
 ## Using columns
 
@@ -84,11 +84,11 @@ The `column-width` property sets the minimum desired column width. If `column-co
 
 {{EmbedLiveSample("Example_2", "100%")}}
 
-In a multi-column block, content is automatically flowed from one column into the next as needed. All HTML, CSS, and DOM functionality is supported within columns, as are editing and printing.
+In a multi-column block, content automatically flows from one column into the next as needed. All HTML, CSS, and DOM functionality is supported within columns, as are editing and printing.
 
 ### The columns shorthand
 
-Most of the time, a Web designer will use one of the two CSS properties: {{cssxref("column-count")}} or {{cssxref("column-width")}}. As values for these properties do not overlap, it is often convenient to use the shorthand {{cssxref("columns")}}.
+You can use either {{cssxref("column-count")}} or {{cssxref("column-width")}}. Because values for these properties do not overlap, it is often convenient to use the shorthand {{cssxref("columns")}}.
 
 ## Example 3
 
@@ -175,9 +175,9 @@ The two CSS declarations `column-width: 8em` and `column-count: 12` can be repla
 
 {{EmbedLiveSample("Example_5", "100%")}}
 
-Assuming a default 1em gap between columns, if the container is wider than 103ems (12 columns \* 8em width each + 7 1-em gaps), there will be 12 columns, each with a width of 8ems or more. If the container is less than 103ems wide, there will be fewer than 12 columns. If the container is less than 17ems (8em column + 8em column + 1em gap), the content will be displayed as a single column with no column gap.
+Assuming a default `1em` gap between columns, if the container is wider than `103ems` (12 columns \* `8em` width each + 7 `1em` gaps), there will be 12 columns, each with a width of `8ems` or more. If the container is less than `103ems` wide, there will be fewer than 12 columns. If the container is less than `17ems` wide (`8em` column + `8em` column + `1em` gap), the content will be displayed as a single column with no column gap.
 
-### Height Balancing
+### Height balancing
 
 CSS columns require that the column heights must be balanced: that is, the browser automatically sets the maximum column height so that the heights of the content in each column are approximately equal. Firefox does this.
 

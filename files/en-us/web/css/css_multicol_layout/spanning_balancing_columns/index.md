@@ -26,7 +26,7 @@ When a spanner is introduced, it breaks the flow of columns; columns restart aft
 
 ### Limitations of column-span
 
-The `column-span` only has two values. The initial value `none` means the item does not span and remains within a column. The value `all` means the item spans all of the columns. There are no values that enable partial spanning, such as having an item span two out of three columns.
+The `column-span` can have only two values. The initial value `none` means the item does not span and remains within a column. The value `all` means the item spans all of the columns. There are no values that enable partial spanning, such as having an item span two out of three columns.
 
 ### Things to watch out for
 
@@ -44,7 +44,7 @@ The initial value for {{cssxref("column-fill")}} is `balance`. The value of `bal
 
 The other balancing value, `balance-all`, balances all columns in fragmented contexts.
 
-In this example, we have columns containing an image and some text which are balanced. The image, which cannot break, is in the first column. The other columns are balanced, filling with equal amounts of text.
+The columns in this example contain an image and some text, which are balanced. The image, which cannot break, is in the first column. The other columns are balanced, filling with equal amounts of text.
 
 {{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}
 
@@ -54,4 +54,4 @@ The `auto` value for `column-fill` fills a column sequentially, filling the firs
 
 ## Next steps
 
-In the next guide, you will learn [how multicol handles overflow](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout), both within columns and where there are more columns than can fit in the container.
+In the next guide, you will learn [how multicol handles overflow](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout) within columns and when there are more columns than can fit in the container.

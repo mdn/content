@@ -34,7 +34,7 @@ The example below shows this overflow behavior. The multicol container has a set
 
 ## Using vertical media queries
 
-One issue with multicol on the web is that, if your columns are taller than the viewport, the reader will need to scroll up and down to read, which is not a good user experience. One way to avoid this is to only apply the column properties if you know you have enough vertical space.
+One issue with multicol on the web is that if the columns are taller than the viewport, the reader will need to scroll the page up and down to read, which is not a good user experience. One way to avoid this is to only apply the column properties if you know there is enough vertical space.
 
 In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
 
