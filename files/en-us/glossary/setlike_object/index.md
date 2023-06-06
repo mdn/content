@@ -19,7 +19,7 @@ The objects may be read-only, or read-writable:
 
 - `size`
   - : Returns the number of items in the `Set`-like object.
-      See {{jsxref("Set.prototype.size")}} for details.
+    See {{jsxref("Set.prototype.size")}} for details.
 
 ## Instance methods
 
@@ -86,7 +86,7 @@ interface GPUSupportedFeatures {
 
 ## See also
 
-- [`Map`-like object](/en-US/docs/Glossary/Maplike_object)
+- [`Map`-like objects](/en-US/docs/Glossary/Maplike_object)
 
 <section id="Quick_links">
  <ol>

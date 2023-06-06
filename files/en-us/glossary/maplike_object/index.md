@@ -21,7 +21,7 @@ The objects may be read-only, or read-writable:
 
 - `size`
   - : Returns the number of items in the `Map`-like object.
-      See {{jsxref("Map.prototype.size")}} for details.
+    See {{jsxref("Map.prototype.size")}} for details.
 
 ## Instance methods
 
@@ -87,7 +87,7 @@ interface RTCStatsReport {
 
 ## See also
 
-- [`Set`-like object](/en-US/docs/Glossary/Setlike_object)
+- [`Set`-like objects](/en-US/docs/Glossary/Setlike_object)
 
 <section id="Quick_links">
  <ol>
