@@ -51,7 +51,7 @@ const importObj = {
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), log the table length, and invoke the two referenced functions that are now stored in the table (the table2.wasm module (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)) adds two function references to the table, both of which print out a simple value):
+Finally, we load and instantiate a wasm module (table2.wasm) using [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), print the table length, and invoke the two referenced functions that are now stored in the table. The `table2.wasm` module adds two function references to the table, both of which print out a simple value (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat):
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
