@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 
 {{CSSRef("CSS3 Multicol")}}
-The **CSS multi-column layout** module lets you divide content across multiple columns, defining the preferred number and width of columns, as well as how content should flow from column to column, the gap size between columns, and the visual appearance of optional column dividing lines (known as column rules). Additional properties define how to break content between columns, including whether breaking an element's content across columns should be avoided.
+The **CSS multi-column layout** module lets you divide content across multiple columns. By using the properties in this module, you can define the number and width of columns, the gap size between columns, and the visual appearance of the optional column dividing lines (known as column rules). You can also define how content should flow from column to column and how to break content between columns.
 
 ## Multi-column layout in action
 
@@ -16,7 +16,7 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
 
 To see the code for this columned layout, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/multicol.html).
 
-> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media), as each column box is a fragment, much like each printed page is a fragment of a document. Properties defined in [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) control how content breaks between columns.
+> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media). Each column box is a fragment, much like each printed page is a fragment of a document. Using the properties defined in the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module, you can control how content breaks between columns.
 
 ## Reference
 
@@ -36,7 +36,7 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
   - {{cssxref("column-count")}}
   - {{cssxref("column-width")}}
 
-> **Note:** Setting container height and line length can pose challenges for people with visual or cognitive disabilities. WCAG Success Criterion state that, even when the text size is doubled, content should not need to be scrolled.
+> **Note:** Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. WCAG Success Criterion states that even when the text size is doubled, content should not need to be scrolled.
 
 ## Guides
 
@@ -69,7 +69,7 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
 ## See also
 
 - [Learn: multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
