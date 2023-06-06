@@ -60,13 +60,19 @@ This works because only one fingerprint value can exist for each algorithm.
 (There are many other ways to sort and compare the two arrays).
 
 ```js
-let clientFingerprintDict = Object.fromEntries(fingerprintsFromClient.map(x => [x.algorithm, x.value]));
-let serverFingerprintDict = Object.fromEntries(fingerprintsFromServer.map(x => [x.algorithm, x.value]));
+let clientFingerprintDict = Object.fromEntries(
+  fingerprintsFromClient.map((x) => [x.algorithm, x.value])
+);
+let serverFingerprintDict = Object.fromEntries(
+  fingerprintsFromServer.map((x) => [x.algorithm, x.value])
+);
 
 // Function to compare two objects and return true if there are common properties
 // and all common properties match.
 function compareObjects(obj1, obj2) {
-  const commonProperties = Object.keys(obj1).filter(prop => obj2.hasOwnProperty(prop));
+  const commonProperties = Object.keys(obj1).filter((prop) =>
+    obj2.hasOwnProperty(prop)
+  );
   // Return false if there are no common properties
   if (Object.keys(commonProperties).length === 0) return false;
 
@@ -80,7 +86,10 @@ function compareObjects(obj1, obj2) {
   return true;
 }
 
-const matchingFingerprints = compareObjects(clientFingerprintDict, serverFingerprintDict);
+const matchingFingerprints = compareObjects(
+  clientFingerprintDict,
+  serverFingerprintDict
+);
 console.log(matchingFingerprints);
 ```
 

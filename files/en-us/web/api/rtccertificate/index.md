@@ -7,7 +7,7 @@ browser-compat: api.RTCCertificate
 
 {{APIRef("WebRTC")}}
 
-The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
+The **`RTCCertificate`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
 
 `RTCCertificate` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
