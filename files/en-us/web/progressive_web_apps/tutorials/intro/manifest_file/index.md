@@ -3,7 +3,7 @@ title: PWA manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
 {{PWASidebar}}
 
@@ -215,12 +215,27 @@ When using the `.webmanifest` extension, set `type="application/manifest+json"` 
 
 Save the manifest file that you have created in the steps above, then link to it from the `index.html` file.
 
+Optionally, link to a shortcut icon from your HTML as well.
+
 #### Example solution
 
-View the [`cycletracker.manifest` file](https://mdn.github.io/pwa-examples/cycletracker/Manifest_file/cycletracker.manifest) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/Manifest_file) on GitHub.
+The {{HTMLelement("head")}} of `index.html` may now look similar to:
+
+```html
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Cycle Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="cycletracker.json" />
+  <link rel="shortcut icon" href="icons/circle.svg" />
+</head>
+```
+
+View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/Manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/Manifest_file) on GitHub.
 
 ## Up next
 
-Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure). While no frameworks are needed to create a PWA, we will use Node's `npx` to create a secure connection; a PWA requirement.
+Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection). While no frameworks are needed to create a PWA, we will use Node's `npx` to create a secure connection; a PWA requirement.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
