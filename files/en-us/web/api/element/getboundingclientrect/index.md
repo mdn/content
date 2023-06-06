@@ -12,6 +12,8 @@ The **`Element.getBoundingClientRect()`** method returns a
 {{domxref("DOMRect")}} object providing information about the size of an element and its
 position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 
+> **Note:** Calling this method will make the browser synchronously calculate style and layout. This is also called {{Glossary("reflow")}}, and can be a performance bottleneck.
+
 ## Syntax
 
 ```js-nolint
