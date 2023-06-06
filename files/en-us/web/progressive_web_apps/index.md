@@ -38,6 +38,8 @@ These guides give concrete detailed instructions for how to implement specific P
   - : Describes how PWAs can share data with each other by using the operating system's app sharing mechanism.
 - [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
   - : Describes how developers can provide their own UI to invite users to install their PWA.
+- [Associate files with your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA)
+  - : Describes how you can create an association between file types and your PWA, so that when the user clicks on the file, your PWA is launched to handle it.
 
 ## Reference
 
