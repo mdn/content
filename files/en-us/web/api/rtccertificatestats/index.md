@@ -14,10 +14,9 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
 ## Instance properties
 
 - {{domxref("RTCCertificateStats.fingerprint", "fingerprint")}}
-  - : A string containing the certificate fingerprint.
-    Only use the fingerprint value as defined in Section 5 of [RFC4572].
+  - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](#fingerprintalgorithm).
 - {{domxref("RTCCertificateStats.fingerprintAlgorithm", "fingerprintAlgorithm")}}
-  - : A string containing the hash function used to compute the certificate fingerprint.
+  - : A string containing the hash function used to compute the certificate [`fingerprint`](#fingerprint).
     For instance, "sha-256".
 - {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
   - : A string containing the DER-encoded base-64 representation of the certificate.
@@ -27,7 +26,7 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
 
 ### Common instance properties
 
-The following properties are common to all WebRTC statistics objects.
+The following properties are common to all WebRTC statistics objects (See [`RTCStatsReport`](/en-US/docs/Web/API/RTCStatsReport#common_instance_properties) for more information).
 
 <!-- RTCStats -->
 

@@ -3,7 +3,7 @@ title: "RTCCertificateStats: type property"
 short-title: type
 slug: Web/API/RTCCertificateStats/type
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.type
+browser-compat: api.RTCStatsReport.type_certificate.type
 ---
 
 {{APIRef("WebRTC")}}

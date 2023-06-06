@@ -3,7 +3,7 @@ title: "RTCCertificateStats: id property"
 short-title: id
 slug: Web/API/RTCCertificateStats/id
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.id
+browser-compat: api.RTCStatsReport.type_certificate.id
 ---
 
 {{APIRef("WebRTC")}}

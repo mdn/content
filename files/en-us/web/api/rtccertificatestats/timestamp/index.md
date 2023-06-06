@@ -3,7 +3,7 @@ title: "RTCCertificateStats: timestamp property"
 short-title: timestamp
 slug: Web/API/RTCCertificateStats/timestamp
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.timestamp
+browser-compat: api.RTCStatsReport.type_certificate.timestamp
 ---
 
 {{APIRef("WebRTC")}}
