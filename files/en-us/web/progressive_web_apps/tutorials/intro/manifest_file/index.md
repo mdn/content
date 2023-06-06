@@ -227,9 +227,8 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
   <meta name="viewport" content="width=device-width" />
   <title>Cycle Tracker</title>
   <link rel="stylesheet" href="style.css" />
-  git
   <link rel="manifest" href="cycletracker.json" />
-  <link rel="shortcut icon" href="icons/circle.svg" />
+  <link rel="icon" href="icons/circle.svg" />
 </head>
 ```
 
