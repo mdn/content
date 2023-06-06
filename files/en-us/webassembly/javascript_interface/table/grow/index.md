@@ -57,7 +57,7 @@ console.log(table.length); // 3
 
 ### Using grow with a value
 
-The following example creates a new WebAssembly Table instance with an initial size of
+The following example creates a new WebAssembly `Table` instance with an initial size of
 0 and a maximum size of 4, filling it with an object:
 
 ```js
