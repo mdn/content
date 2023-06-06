@@ -1,4 +1,7 @@
 ---
+./mach run --setpref "remote.log.level=Trace" --remote-debugging-port
+
+
 title: HTTP authentication
 slug: Web/HTTP/Authentication
 page-type: guide
