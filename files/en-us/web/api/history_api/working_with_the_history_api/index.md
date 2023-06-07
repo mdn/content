@@ -55,7 +55,7 @@ But `pushState()` has a few advantages:
 
 Note that `pushState()` never causes a `hashchange` event to be fired, even if the new URL differs from the old URL only in its hash.
 
-In other documents, it creates an element with a `null` namespace URI.
+In other documents, it creates an element with a `null` namespace URL.
 
 ### The replaceState() method
 
