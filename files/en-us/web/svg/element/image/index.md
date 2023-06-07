@@ -41,7 +41,7 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 - {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
 - {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
 - {{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.
-- {{SVGAttr("decoding")}}: Provides a hint to the browser as to whether it should perform image decoding along with rendering other content and then present it all together (`sync`), or render and present the other content first and then decode the image and present it later (`async`).
+- {{SVGAttr("decoding")}}: Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
 
 ## DOM Interface
 

@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
   - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Media_Queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
-  - : Provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content and then present it all together (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`).
+  - : Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
 - {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of the image relative to other images. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLImageElement.height")}}
