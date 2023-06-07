@@ -16,7 +16,7 @@ supplied values.
 ## Syntax
 
 ```js-nolint
-parseAll(property, value)
+CSSStyleValue.parseAll(property, value)
 ```
 
 ### Parameters

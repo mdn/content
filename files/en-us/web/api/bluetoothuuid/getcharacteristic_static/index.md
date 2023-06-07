@@ -15,7 +15,7 @@ The **`getCharacteristic()`** static method of the {{domxref("BluetoothUUID")}} 
 ## Syntax
 
 ```js-nolint
-getCharacteristic(name)
+BluetoothUUID.getCharacteristic(name)
 ```
 
 ### Parameters

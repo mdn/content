@@ -18,7 +18,7 @@ whether to grant the origin access to their idle state. Resolves with
 ## Syntax
 
 ```js-nolint
-requestPermission()
+IdleDetector.requestPermission()
 ```
 
 ### Parameters

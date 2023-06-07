@@ -15,7 +15,7 @@ The **`getDescriptor()`** static method of the {{domxref("BluetoothUUID")}} inte
 ## Syntax
 
 ```js-nolint
-getDescriptor(name)
+BluetoothUUID.getDescriptor(name)
 ```
 
 ### Parameters

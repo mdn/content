@@ -15,7 +15,7 @@ The **`canonicalUUID()`** static method of the {{domxref("BluetoothUUID")}} inte
 ## Syntax
 
 ```js-nolint
-canonicalUUID(alias)
+BluetoothUUID.canonicalUUID(alias)
 ```
 
 ### Parameters

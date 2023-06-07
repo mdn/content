@@ -15,7 +15,7 @@ The **`getService()`** static method of the {{domxref("BluetoothUUID")}} interfa
 ## Syntax
 
 ```js-nolint
-getService(name)
+BluetoothUUID.getService(name)
 ```
 
 ### Parameters
