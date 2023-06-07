@@ -23261,12 +23261,12 @@
     "modified": "2020-12-01T07:00:49.309Z",
     "contributors": ["Wuzzel", "jpmedley"]
   },
-  "Web/API/CSSStyleValue/parse": {
-    "modified": "2020-10-15T22:07:03.007Z",
+  "Web/API/CSSStyleValue/parseAll_static": {
+    "modified": "2020-10-15T22:07:02.186Z",
     "contributors": ["estelle", "Wuzzel", "jpmedley"]
   },
-  "Web/API/CSSStyleValue/parseAll": {
-    "modified": "2020-10-15T22:07:02.186Z",
+  "Web/API/CSSStyleValue/parse_static": {
+    "modified": "2020-10-15T22:07:03.007Z",
     "contributors": ["estelle", "Wuzzel", "jpmedley"]
   },
   "Web/API/CSSSupportsRule": {
@@ -53842,7 +53842,7 @@
       "teoli"
     ]
   },
-  "Web/API/PushManager/supportedContentEncodings": {
+  "Web/API/PushManager/supportedContentEncodings_static": {
     "modified": "2020-10-15T21:57:40.045Z",
     "contributors": ["fscholz", "jpmedley"]
   },
