@@ -15,4 +15,6 @@ page-type: glossary-definition
 
 ## See also
 
+- [Performance resource timing `nextHopProtocol`](/en-US/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) property
+- [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver)
 - [IANA registered ALPN identifiers](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)

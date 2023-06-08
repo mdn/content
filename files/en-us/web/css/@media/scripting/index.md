@@ -72,5 +72,5 @@ p {
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)

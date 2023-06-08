@@ -6,9 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The **CSS Multi-column Layout Module** extends the _block layout mode_ to allow the easy definition of multiple columns of text. People have trouble reading text if lines are too long; if it takes too long for the eyes to move from the end of the one line to the beginning of the next, they lose track of which line they were on. Therefore, to make maximum use of a large screen, authors should have limited-width columns of text placed side by side, just as newspapers do.
-
-Unfortunately this is impossible to do with CSS and HTML without forcing column breaks at fixed positions, or severely restricting the markup allowed in the text, or using heroic scripting. This limitation is solved by adding new CSS properties to extend the traditional block layout mode.
+The properties defined in the **CSS multi-column layout module** extend the _block layout mode_ , enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
 
 ## Using columns
 
@@ -53,7 +51,7 @@ The `column-count` property sets the number of columns to a particular number. E
 
 ### Result
 
-The content will be displayed in two columns (if you're using a multi-column compliant browser):
+The content will be displayed in two columns:
 
 {{EmbedLiveSample("Example_1", "100%")}}
 
@@ -86,17 +84,15 @@ The `column-width` property sets the minimum desired column width. If `column-co
 
 {{EmbedLiveSample("Example_2", "100%")}}
 
-The exact details are described in [CSS Multi-column Layout Module Level 1](https://www.w3.org/TR/css-multicol-1/).
-
-In a multi-column block, content is automatically flowed from one column into the next as needed. All HTML, CSS and DOM functionality is supported within columns, as are editing and printing.
+In a multi-column block, content automatically flows from one column into the next as needed. All HTML, CSS, and DOM functionality is supported within columns, as are editing and printing.
 
 ### The columns shorthand
 
-Most of the time, a Web designer will use one of the two CSS properties: {{cssxref("column-count")}} or {{cssxref("column-width")}}. As values for these properties do not overlap, it is often convenient to use the shorthand {{cssxref("columns")}}. E.g.
-
-The CSS declaration `column-width: 12em` can be replaced by `columns: 12em`.
+You can use either {{cssxref("column-count")}} or {{cssxref("column-width")}}. Because values for these properties do not overlap, it is often convenient to use the shorthand {{cssxref("columns")}}.
 
 ## Example 3
+
+In this example, the CSS declaration `column-width: 12em` is replaced by `columns: 12em`.
 
 ### HTML
 
@@ -121,9 +117,9 @@ The CSS declaration `column-width: 12em` can be replaced by `columns: 12em`.
 
 {{EmbedLiveSample("Example_3", "100%")}}
 
-The CSS declaration `column-count: 4` can be replaced by `columns: 4`.
-
 ## Example 4
+
+In this example, the CSS declaration `column-count: 4` is replaced by `columns: 4`.
 
 ### HTML
 
@@ -150,9 +146,9 @@ The CSS declaration `column-count: 4` can be replaced by `columns: 4`.
 
 {{EmbedLiveSample("Example_4", "100%")}}
 
-The two CSS declarations `column-width: 8em` and `column-count: 12` can be replaced by `columns: 12 8em`.
-
 ## Example 5
+
+The two CSS declarations `column-width: 8em` and `column-count: 12` can be replaced by `columns: 12 8em`. The `column-count` portion of the shorthand is the maximum number of columns that will be present. The `column-width` is the minimum width each column should be.
 
 ### HTML
 
@@ -179,7 +175,9 @@ The two CSS declarations `column-width: 8em` and `column-count: 12` can be repla
 
 {{EmbedLiveSample("Example_5", "100%")}}
 
-### Height Balancing
+Assuming a default `1em` gap between columns, if the container is wider than `103ems` (12 columns \* `8em` width each + 7 `1em` gaps), there will be 12 columns, each with a width of `8ems` or more. If the container is less than `103ems` wide, there will be fewer than 12 columns. If the container is less than `17ems` wide (`8em` column + `8em` column + `1em` gap), the content will be displayed as a single column with no column gap.
+
+### Height balancing
 
 CSS columns require that the column heights must be balanced: that is, the browser automatically sets the maximum column height so that the heights of the content in each column are approximately equal. Firefox does this.
 
@@ -217,10 +215,6 @@ There is a gap between columns. The recommended default is `1em`. This size can 
 
 {{EmbedLiveSample("Example_6", "100%")}}
 
-## Graceful Degradation
-
-The column properties will just be ignored by non-columns-supporting browsers. Therefore it's relatively easy to create a layout that will display in a single column in those browsers and use multiple columns in supporting browsers.
-
 ## Conclusion
 
-CSS columns are a layout primitive that will help Web developers make the best use of screen real estate. Imaginative developers may find many uses for them, especially with the automatic height balancing feature.
+CSS columns are a layout primitive that can help make large blocks of text easier to read when responsive content is viewed on wide viewports. Imaginative developers may find many uses for them, especially in conjunction with [container queries](/en-US/docs/Web/CSS/CSS_container_queries) and with the automatic height balancing feature.
