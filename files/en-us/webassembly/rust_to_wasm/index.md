@@ -206,24 +206,24 @@ Let's start by creating a file named `index.html` in the root of the project, an
 
 Project Structure
 
-```html
+```plain
 ├── Cargo.lock
 ├── Cargo.toml
 ├── index.html
 ├── pkg
-│   ├── hello_wasm.d.ts
-│   ├── hello_wasm.js
-│   ├── hello_wasm_bg.wasm
-│   ├── hello_wasm_bg.wasm.d.ts
-│   └── package.json
+│   ├── hello_wasm.d.ts
+│   ├── hello_wasm.js
+│   ├── hello_wasm_bg.wasm
+│   ├── hello_wasm_bg.wasm.d.ts
+│   └── package.json
 ├── src
-│   └── lib.rs
+│   └── lib.rs
 └── target
     ├── CACHEDIR.TAG
     ├── release
     └── wasm32-unknown-unknown
 ```
-   
+
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -330,11 +330,10 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 
 This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
-Finally, we need to modify the HTML file, which was created under the `pkg` folder; open the `index.html` file and replace the current contents with the following:
+Finally, we need to modify the HTML file, which was created under the `pkg` folder.
+Our project should look like this:
 
-Project Structure:
-
-```html
+```plain
 ├── index.html
 ├── index.js
 ├── node_modules
@@ -342,6 +341,8 @@ Project Structure:
 ├── package.json
 └── webpack.config.js
 ```
+
+Open the `index.html` file and replace the contents with the following:
 
 ```html
 <!DOCTYPE html>
