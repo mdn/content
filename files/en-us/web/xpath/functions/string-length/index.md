@@ -3,7 +3,7 @@ title: string-length
 slug: Web/XPath/Functions/string-length
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `string-length` function returns a number equal to the number of characters in a given string.
 
