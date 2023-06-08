@@ -10,7 +10,7 @@ status:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Repr-Digest`** response or request header provides a {{Glossary("digest"}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.&hairsp;g. {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}.
+The **`Repr-Digest`** response or request header provides a {{Glossary("digest"}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.&hairsp;g. {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}. Note furthermore that [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representation with respectively different representation digests.
 
 <table class="properties">
   <tbody>
