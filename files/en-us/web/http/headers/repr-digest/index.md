@@ -39,6 +39,8 @@ Only two digest algorithms are currently registered and not considered insecure:
 
 The registered insecure digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 
+Usage of digest algorithms which are considered insecure is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak. Unless when working with legacy systems (which is unlikely since most will expect the legacy {{HTTPHeader("Digest")}} header and not understand this specification), consider not emitting a `Repr-Digest` instead of emitting one using an insecure digest algorithm.
+
 ## Examples
 
 ### Example: HTTP response where `Repr-Digest` and `Content-Digest` coincide
