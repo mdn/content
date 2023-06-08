@@ -98,8 +98,8 @@ This property may take one of two forms:
 
 p {
   font-family: "MonteCarlo";
-  font-size: 2rem;
-  margin: 0.7rem 2rem;
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
@@ -110,7 +110,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Enabling swash glyphs")}}
+{{EmbedLiveSample("Enabling swash glyphs", 0, 230)}}
 
 ## Specifications
 
