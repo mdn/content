@@ -50,7 +50,7 @@ A new {{domxref("MutationObserver")}} object, configured to call the specified
 
 This example has buttons to add an {{htmlelement("li")}} element to a list, and to remove the first `<li>` element from the list.
 
-We use a `MutationObserver` to be notified about changes to the list. In the callback, we log additions, and as soon as the list is empty, we disconnect the observer.
+We use a `MutationObserver` to be notified about changes to the list. In the callback, we log additions and removals, and as soon as the list is empty, we disconnect the observer.
 
 The "Reset example" button resets the example to its original state.
 
