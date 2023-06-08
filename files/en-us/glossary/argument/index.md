@@ -4,6 +4,8 @@ slug: Glossary/Argument
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
 
 ## See also

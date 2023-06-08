@@ -4,6 +4,8 @@ slug: Glossary/eTLD
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 The term **eTLD** stands for "effective top-level domain" and is a domain under which domains can be registered by a single organization.
 
 A top level domain (TLD) is the part of the domain name following the final dot: so for example, the top-level domain in `crookedtimber.org` is `org`.

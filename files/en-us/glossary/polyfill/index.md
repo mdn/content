@@ -4,6 +4,8 @@ slug: Glossary/Polyfill
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
 
 For example, a polyfill could be used to mimic the functionality of a {{cssxref("text-shadow")}} in IE7 using proprietary IE filters, or mimic rem units or media queries by using JavaScript to dynamically adjust the styling as appropriate, or whatever else you require.
