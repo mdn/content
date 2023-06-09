@@ -4,6 +4,8 @@ slug: Glossary/Fingerprinting
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Fingerprinting** is a practice in which websites identify a particular browser (and by extension, a particular user) by collecting and combining distinguishing features of the browser and underlying operating system. Elements of a fingerprint might include, for example:
 
 - the browser version
