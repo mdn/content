@@ -12669,10 +12669,11 @@
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction#Advantages_of_web_applications
 /en-US/docs/Web/Progressive_web_apps/App_structure	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Installing
+/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Discoverable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable_PWAs	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/en-US/docs/Web/Progressive_web_apps/Installing	/en-US/docs/Web/Progressive_web_apps/Guides/Installing
 /en-US/docs/Web/Progressive_web_apps/Introduction	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /en-US/docs/Web/Progressive_web_apps/Linkable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Loading	/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
