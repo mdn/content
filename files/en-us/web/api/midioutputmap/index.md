@@ -9,7 +9,7 @@ browser-compat: api.MIDIOutputMap
 
 The **`MIDIOutputMap`** read-only interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) provides the set of MIDI output ports that are currently available.
 
-`MIDIOutputMap` is a read-only [`Map`-like object](/en-US/docs/Glossary/Maplike_object), in which each key is the ID string for MIDI output, and the associated value is the corresponding {{domxref("MIDIOutput")}} object.
+`MIDIOutputMap` is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_objects), in which each key is the ID string for MIDI output, and the associated value is the corresponding {{domxref("MIDIOutput")}} object.
 
 ## Specifications
 
