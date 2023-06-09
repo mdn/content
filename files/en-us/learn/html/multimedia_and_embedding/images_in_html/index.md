@@ -66,7 +66,7 @@ You could also embed the image using its absolute URL, for example:
 <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-But this is not recommended. In general, you should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
+Linking via absolute URLs is not recommended, however. You should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In addition, it is more efficient to use relative URLs than absolute URLs in terms of maintenance (when you move your site to a different domain, you won't need to update all your URLs to include the new domain). In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
 If you did not create the images, you should make sure you have the permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) below for more information).
 
@@ -333,13 +333,15 @@ For example, you might have to:
 - Not use the image in any commercial work.
 - Include a copy of the license along with any release that uses the image.
 
-> **Note:** You will come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works have to have their source code released under the same license as the original, to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
+> **Note:** You will come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works need to have their source code released under the same license as the original to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
 
-Explore the links to read about the licenses and see the kinds of conditions they specify.
+Explore the links provided earlier in this section to read about the different license types and the kinds of conditions they specify.
 
 #### Public domain/CC0
 
-Work that has been released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission or having to fulfill licensing conditions. Work can end up in the public domain by various means, for example expiration of copyright, or specific waiving of rights. One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
+Work released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission and without having to fulfill any licensing conditions. Work can end up in the public domain by various means such as expiration of copyright, or specific waiving of rights.
+
+One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
 
 When using public domain images, obtain proof that the image is in the public domain and keep the proof for your records. For example, take a screenshot of the original source with the licensing status clearly displayed, and consider adding a page to your website with a list of the images acquired along with their license requirements.
 
@@ -347,7 +349,7 @@ When using public domain images, obtain proof that the image is in the public do
 
 You can find permissive-licensed images for your projects using image search engine or directly from image repositories.
 
-Search for images using a description of the image you are seeking along with relevant licensing terms. For example, when searching for "yellow dinosaur" add "public domain images", "public domain image library", or "open licensed images" to the search query. 
+Search for images using a description of the image you are seeking along with relevant licensing terms. For example, when searching for "yellow dinosaur" add "public domain images", "public domain image library", or "open licensed images" to the search query.
 
 Some search engines have tools to help you find images with permissive licenses. For example, when using Google, go to the "Images" tab to search for images, then click "Tools". There is a "Usage Rights" dropdown in the resulting toolbar where you can choose to search specifically for images under creative commons licenses.
 
