@@ -311,7 +311,7 @@ Images (and other media asset types) you find on the web are released under vari
 
 ### License types
 
-Let's look at the common categories of license you are likely to meet on the web.
+Let's look at some common categories of licenses you are likely to find on the web.
 
 #### All rights reserved
 
