@@ -16,9 +16,10 @@ img ~ p {
   color: red;
 }
 ```
+
 Things get a little tricky when the combinator is used to join two compound selectors meant to ensure the matching elements are both in the same hierarchy.
 
-When there is a compound selector in the subsequent selector (right side of combinator), this entire subsequent selector must match UNDER the parent of the matching child in the preceding selector (left-side of combinator). 
+When there is a compound selector in the subsequent selector (right side of combinator), this entire subsequent selector must match UNDER the parent of the matching child in the preceding selector (left-side of combinator).
 
 ```css
 /* Will NOT match `span` as a sibling of `p` when both are decendants of `.foo` */
