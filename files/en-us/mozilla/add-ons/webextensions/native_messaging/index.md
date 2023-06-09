@@ -242,7 +242,7 @@ The maximum size of a single message from the application is 1 MB. The maximum s
 You can quickly get started sending and receiving messages with this NodeJS code, `nm_nodejs.mjs`:
 
 ```js
-#!/usr/bin/env -S ./node --max-old-space-size=6 --jitless --expose-gc --v8-pool-size=1
+#!/usr/bin/env -S /full/path/to/node --max-old-space-size=6 --jitless --expose-gc --v8-pool-size=1
 // Node.js Native Messaging host
 import {
   readSync
