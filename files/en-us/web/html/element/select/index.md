@@ -380,7 +380,7 @@ html body form fieldset#custom div.select div.header span {
 #### JavaScript
 
 ```js
-const selects = custom.querySelectorAll('elect');
+const selects = custom.querySelectorAll('select');
 for (const select of selects) {
   const div = document.createElement('div');
   const header = document.createElement('div');
