@@ -18,38 +18,22 @@ A boolean value, where `true` indicates that the key is pressed, and `false` ind
 
 ## Examples
 
-This example logs the `ctrlKey` property when you trigger a {{domxref("Element/mouseenter_event", "mouseenter")}} event.
+This example logs the `ctrlKey` property when you trigger a {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
 ```html
-<p id="target">
-  Move the mouse over this element to test the
-  <code>ctrlKey</code> property.
-</p>
-<p id="log"></p>
-```
-
-### CSS
-
-```css
-#target {
-  padding: 1rem;
-  border: 5px solid turquoise;
-  border-radius: 0.5rem;
-}
+<p id="log">The ctrl key was pressed while the cursor was moving: false</p>
 ```
 
 ### JavaScript
 
 ```js
-const target = document.querySelector("#target");
 const log = document.querySelector("#log");
-
-target.addEventListener("mouseenter", logKey);
+window.addEventListener("mousemove", logKey);
 
 function logKey(e) {
-  log.textContent = `The ctrl key is pressed: ${e.ctrlKey}`;
+  log.textContent = `The ctrl key was pressed while the cursor was moving: ${e.ctrlKey}`;
 }
 ```
 
