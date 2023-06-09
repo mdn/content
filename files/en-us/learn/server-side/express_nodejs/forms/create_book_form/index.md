@@ -207,8 +207,16 @@ The main differences are in how we implement the selection-type fields: `Author`
 
 - The set of genres are displayed as checkboxes, and use the `checked` value we set in the controller to determine whether or not the box should be selected.
 - The set of authors are displayed as a single-selection alphabetically ordered drop-down list. If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
+- The authors are ordered alphabetically before adding them as options in the drop-down list:
 
-  > **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
+  ```pug
+  - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+  ```
+
+  Note that the code starts with `-`.
+  In pug this is referred to as "unbuffered code", and doesn't add anything to the view (see [pug docs](https://pugjs.org/language/code.html) for more detail).
+
+> **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
 
 ## What does it look like?
 

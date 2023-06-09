@@ -47,7 +47,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCSessionDescription")}}
   - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description {{DOMxRef("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 - {{DOMxRef("RTCStatsReport")}}
-  - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}. Details about using WebRTC statistics can be found in [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API).
+  - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}.
 - {{DOMxRef("RTCIceCandidate")}}
   - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) server for establishing an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCIceTransport")}}
@@ -212,4 +212,3 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
 - [Web media technologies](/en-US/docs/Web/Media)
-- [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API)

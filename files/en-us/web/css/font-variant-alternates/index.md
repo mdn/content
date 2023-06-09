@@ -87,7 +87,7 @@ This property may take one of two forms:
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url(MonteCarlo-Regular.ttf);
+  src: url("MonteCarlo-Regular.woff2");
 }
 
 @font-feature-values "MonteCarlo" {
@@ -98,7 +98,8 @@ This property may take one of two forms:
 
 p {
   font-family: "MonteCarlo";
-  font-size: 1.5rem;
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
@@ -107,9 +108,9 @@ p {
 }
 ```
 
-> **Note:** For this example to work you need to load the MonteCarlo font which is licensed under the [SIL Open Font License Version 1.1](http://scripts.sil.org/OFL). Download at <https://github.com/googlefonts/monte-carlo>.
->
-> More fonts are available in the [Google Font corpus](https://github.com/google/fonts). However, note that fonts loaded from Google Fonts directly (for example, using `@import url("https://fonts.googleapis.com/css2?family=MonteCarlo");`) won't work. Google Fonts hosted fonts seem to strip the swash feature.
+#### Result
+
+{{EmbedLiveSample("Enabling swash glyphs", 0, 230)}}
 
 ## Specifications
 

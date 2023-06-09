@@ -23,7 +23,7 @@ WebAssembly.compileStreaming(source)
 - `source`
   - : A [`Response`](/en-US/docs/Web/API/Response)
     object or a promise that will fulfill with one, representing the underlying source of
-    a .wasm module you want to stream and compile.
+    a Wasm module you want to stream and compile.
 
 ### Return value
 
@@ -44,7 +44,7 @@ representing the compiled module.
 ### Compile streaming
 
 The following example (see our [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html)
-demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a .wasm module from an underlying source then
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a Wasm module from an underlying source then
 compiles it to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object. Because the
 `compileStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
 object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)

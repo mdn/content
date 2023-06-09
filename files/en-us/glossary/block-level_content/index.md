@@ -4,6 +4,8 @@ slug: Glossary/Block-level_content
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In CSS, content that participates in block layout is called **block-level content**.
 
 In a block layout, boxes are laid out one after the other, vertically, beginning at the top of a containing block. Each box's left outer edge touches the left edge of the containing block.\
