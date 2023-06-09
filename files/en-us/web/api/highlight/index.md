@@ -13,7 +13,7 @@ The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/
 
 To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `Range` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
 
-A single `Highlight` object is [`Set`-like object](/en-US/docs/Glossary/Setlike_object) that can hold one or more `Range` objects.
+A single `Highlight` object is [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that can hold one or more `Range` objects.
 
 {{InheritanceDiagram}}
 

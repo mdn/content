@@ -23,6 +23,42 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
+### Set-like objects
+
+**`Set`-like objects** (or "setlike objects") are browser-specific objects that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+
+Just like `Set` they are ordered, and entries are iterated in the same sequence that they were added to the object, using all of the same looping constructs.
+`Set`-like objects also share some of the same properties and methods.
+However unlike `Set` they only allow a specific predefined type for each entry.
+
+The allowed types are set in the specification IDL definition.
+For example, {{domxref("GPUSupportedFeatures")}} is a `Set`-like object that must use strings as the key/value.
+This is defined in the specification IDL below:
+
+```webidl
+interface GPUSupportedFeatures {
+    readonly setlike<DOMString>;
+};
+```
+
+`Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
+
+- Read-only `Set`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
+- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`add()`](#map.prototype.add).
+
+The methods and properties have the same behaviour as the equivalent entities in `Set`, except for the restriction on the types of the entry.
+
+The following interfaces are read-only `Set`-like objects:
+
+- {{domxref("GPUSupportedFeatures")}}
+- {{domxref("XRAnchorSet")}}
+
+The following interfaces are writable `Set`-like objects:
+
+- {{domxref("CustomStateSet")}}
+- {{domxref("FontFaceSet")}}
+- {{domxref("Highlight")}}
+
 ## Constructor
 
 - {{jsxref("Set/Set", "Set()")}}

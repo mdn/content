@@ -9,7 +9,7 @@ browser-compat: api.XRAnchorSet
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The **`XRAnchorSet`** interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a [`Set`-like object](/en-US/docs/Glossary/Setlike_object) object.
+The **`XRAnchorSet`** interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) object.
 
 ## Instance properties
 

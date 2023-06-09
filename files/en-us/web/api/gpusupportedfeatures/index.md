@@ -9,7 +9,7 @@ browser-compat: api.GPUSupportedFeatures
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Glossary/Setlike_object) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
+The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
 
 The `GPUSupportedFeatures` object for the current adapter is accessed via the {{domxref("GPUAdapter.features")}} property.
 
