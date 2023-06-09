@@ -212,6 +212,7 @@ The main differences are in how we implement the selection-type fields: `Author`
   ```pug
   - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
   ```
+
   Note that the code starts with `-`.
   In pug this is referred to as "unbuffered code", and doesn't add anything to the view (see [pug docs](https://pugjs.org/language/code.html) for more detail).
 
