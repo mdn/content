@@ -239,69 +239,76 @@ Each message is serialized using JSON, UTF-8 encoded and is preceded with an uns
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
-You can quickly get started sending and receiving messages with this NodeJS code:
+You can quickly get started sending and receiving messages with this NodeJS code, `nm_nodejs.mjs`:
 
 ```js
-#!/usr/local/bin/node
-
-(() => {
-
-    let payloadSize = null;
-
-    // A queue to store the chunks as we read them from stdin.
-    // This queue can be flushed when `payloadSize` data has been read
-    let chunks = [];
-
-    // Only read the size once for each payload
-    const sizeHasBeenRead = () => Boolean(payloadSize);
-
-    // All the data has been read, reset everything for the next message
-    const flushChunksQueue = () => {
-        payloadSize = null;
-        chunks.splice(0);
-    };
-
-    const processData = () => {
-        // Create one big buffer with all the chunks
-        const stringData = Buffer.concat(chunks);
-
-        // The browser will emit the size as a header of the payload,
-        // if it hasn't been read yet, do it.
-        // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (i.e. data.length >= payloadSize + 4)
-        if (!sizeHasBeenRead()) {
-            payloadSize = stringData.readUInt32LE(0);
-        }
-
-        // If the data we have read so far is >= to the size advertised in the header,
-        // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that hold the payloadSize
-        if (stringData.length >= (payloadSize + 4)) {
-            // Remove the header
-            const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
-
-            // Reset the read size and the queued chunks
-            flushChunksQueue();
-
-            const json = JSON.parse(contentWithoutSize);
-            // Do something with the data…
-         }
-    };
-
-    process.stdin.on('readable', () => {
-        // A temporary variable holding the nodejs.Buffer of each
-        // chunk of data read off stdin
-        let chunk = null;
-
-        // Read all of the available data
-        while ((chunk = process.stdin.read()) !== null) {
-            chunks.push(chunk);
-        }
-
-        processData();
-
+#!/usr/bin/env -S ./node --max-old-space-size=6 --jitless --expose-gc --v8-pool-size=1
+// Node.js Native Messaging host
+import {
+  readSync
+} from 'node:fs';
+const decoder = new TextDecoder();
+const encoder = new TextEncoder();
+// Node.js Native Messaging host constantly increases RSS during usage
+// https://github.com/nodejs/node/issues/43654
+process.env.UV_THREADPOOL_SIZE = 1;
+// Process greater than 65535 length input
+// https://github.com/nodejs/node/issues/6456
+// https://github.com/nodejs/node/issues/11568#issuecomment-282765300
+// https://github.com/nodejs/node/blob/main/doc/api/process.md#a-note-on-process-io
+if (process.stdout._handle) {
+  process.stdout._handle.setBlocking(true);
+}
+// https://github.com/denoland/deno/discussions/17236#discussioncomment-4566134
+function readFullSync(fd, buffer) {
+  let offset = 0;
+  while (offset < buffer.byteLength) {
+    offset += readSync(fd, buffer, {
+      offset
     });
-})();
+  }
+  return buffer;
+}
+
+function getMessage() {
+  const header = new Uint32Array(1);
+  readFullSync(0, header);
+  const content = new Uint8Array(header[0]);
+  readFullSync(0, content);
+  return content;
+}
+
+function sendMessage(json) {
+  let message = JSON.parse(decoder.decode(json));
+  if (message === 'ping') {
+    json = encoder.encode(JSON.stringify('pong'));
+  }
+  // Calculate message length
+  let header = Uint32Array.from({
+    length: 4,
+  }, (_, index) => (json.length >> (index * 8)) & 0xff);
+  let output = new Uint8Array(header.length + json.length);
+  output.set(header, 0);
+  output.set(json, 4);
+  process.stdout.write(output);
+  // Mitigate RSS increasing expotentially for multiple messages
+  // between client and host during same connectNative() connection
+  message = header = output = null;
+  global.gc();
+}
+
+function main() {
+  while (true) {
+    try {
+      const message = getMessage();
+      sendMessage(message);
+    } catch (e) {
+      process.exit();
+    }
+  }
+}
+
+main();
 ```
 
 Here's another example written in Python. It listens for messages from the extension. Note that the file has to be executable on Linux. If the message is `"ping"`, then it responds with a message `"pong"`.
