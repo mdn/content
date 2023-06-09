@@ -22,7 +22,8 @@ Things get a little tricky when the combinator is used to join two compound sele
 When there is a compound selector in the subsequent selector (right side of combinator), this entire subsequent selector must match UNDER the parent of the matching child in the preceding selector (left-side of combinator).
 
 ```css
-/* Will NOT match `span` as a sibling of `p` when both are decendants of `.foo` */
+/* Will NOT match `span` as a sibling of `p` when both are descendants of `.foo` */
+/* Will match  `span` descendant of `.foo` if that `.foo` is a sibling of `p` both nested in an ancestor `.foo` */
 .foo p ~ .foo span {  
   color: green;
 }
