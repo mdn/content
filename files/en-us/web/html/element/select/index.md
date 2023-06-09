@@ -419,22 +419,6 @@ for (const select of selects) {
     e.stopPropagation();
     if (e.keyCode === 13) {
       this.click();
-    } else if (e.keyCode === 38) {
-        const options = div.querySelectorAll('.option');
-        const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
-        if (focusedIndex > 0) {
-            options[focusedIndex - 1].focus();
-        } else {
-            options[options.length - 1].focus();
-        }
-    } else if (e.keyCode === 40) {
-        const options = div.querySelectorAll('.option');
-        const focusedIndex = Array.from(options).findIndex((opt) => opt === document.activeElement);
-        if (focusedIndex < options.length - 1) {
-            options[focusedIndex + 1].focus();
-        } else {
-            options[0].focus();
-        }
     }
   }
 
