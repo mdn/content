@@ -66,7 +66,7 @@ You could also embed the image using its absolute URL, for example:
 <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-But this is not recommended. In general you should host the images you want to use on your own site, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
+But this is not recommended. In general, you should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
 If you did not create the images, you should also make sure you have permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) for more information).
 
