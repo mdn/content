@@ -68,7 +68,7 @@ You could also embed the image using its absolute URL, for example:
 
 But this is not recommended. In general, you should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
-If you did not create the images, you should also make sure you have permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) for more information).
+If you did not create the images, you should make sure you have the permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) below for more information).
 
 > **Warning:** **Never** point your `src` attribute at an image hosted on someone else's website **without permission**. This is called "hotlinking". It is considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over whether the image is removed or replaced with something embarrassing.
 
