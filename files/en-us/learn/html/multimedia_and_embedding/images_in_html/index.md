@@ -309,7 +309,7 @@ textarea.onkeyup = function () {
 
 Images (and other media asset types) you find on the web are released under various license types. Before you use an image on a site you are building, ensure you own it, have permission to use it, or comply with the owner's licensing conditions.
 
-### License types
+### Understanding license types
 
 Let's look at some common categories of licenses you are likely to find on the web.
 
