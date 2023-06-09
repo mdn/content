@@ -37,15 +37,23 @@ p ~ span {
 
 ```html
 <article>
-    <span>This is not red because it appears before any paragraph.</span>
-    <p>Here is a paragraph.</p>
-    <code>Here is some code.</code>
-    <span>This span is red because it appears after the paragraph, even though there are other nodes in between</span>
-    <p>Whatever it may be, keep smiling.</p>
-    <h1>Dream big</h1>
-    <span>Doesn't matter how many or what kind of nodes are in between, all spans from the same parent after a paragraph are red.</span>
+  <span>This is not red because it appears before any paragraph.</span>
+  <p>Here is a paragraph.</p>
+  <code>Here is some code.</code>
+  <span>
+    This span is red because it appears after the paragraph, even though there
+    are other nodes in between
+  </span>
+  <p>Whatever it may be, keep smiling.</p>
+  <h1>Dream big</h1>
+  <span>
+    Doesn't matter how many or what kind of nodes are in between, all spans from
+    the same parent after a paragraph are red.
+  </span>
 </article>
-<span>This span is not red because it it doesn't share a parent with a paragraph</span>
+<span>
+  This span is not red because it it doesn't share a parent with a paragraph
+</span>
 ```
 
 ### Result
