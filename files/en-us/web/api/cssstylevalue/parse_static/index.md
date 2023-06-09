@@ -1,21 +1,21 @@
 ---
-title: "CSSStyleValue: parse() method"
+title: "CSSStyleValue: parse() static method"
 short-title: parse()
-slug: Web/API/CSSStyleValue/parse
-page-type: web-api-instance-method
+slug: Web/API/CSSStyleValue/parse_static
+page-type: web-api-static-method
 browser-compat: api.CSSStyleValue.parse
 ---
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`parse()`** method of the {{domxref("CSSStyleValue")}}
+The **`parse()`** static method of the {{domxref("CSSStyleValue")}}
 interface sets a specific CSS property to the specified values and returns the first
 value as a {{domxref('CSSStyleValue')}} object.
 
 ## Syntax
 
 ```js-nolint
-parse(property, cssText)
+CSSStyleValue.parse(property, cssText)
 ```
 
 ### Parameters
@@ -57,6 +57,7 @@ CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 
 ## See also
 
-- {{domxref("CSSStyleValue.parseAll()")}}
+- [`CSSStyleValue.parseAll()`](/en-us/docs/Web/API/CSSStyleValue/parseAll_static)
+
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

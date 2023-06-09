@@ -1,14 +1,14 @@
 ---
-title: "PushManager: supportedContentEncodings property"
+title: "PushManager: supportedContentEncodings static property"
 short-title: supportedContentEncodings
-slug: Web/API/PushManager/supportedContentEncodings
-page-type: web-api-instance-property
+slug: Web/API/PushManager/supportedContentEncodings_static
+page-type: web-api-static-property
 browser-compat: api.PushManager.supportedContentEncodings
 ---
 
 {{APIRef("Push API")}}
 
-The **`supportedContentEncodings`** read-only property of the
+The **`supportedContentEncodings`** read-only static property of the
 {{domxref("PushManager")}} interface returns an array of supported content codings that
 can be used to encrypt the payload of a push message.
 

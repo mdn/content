@@ -7639,6 +7639,10 @@
 /en-US/docs/Web/API/BluetoothGattService/uuid	/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService	/en-US/docs/Web/API/BluetoothRemoteGATTService
 /en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices	/en-US/docs/Web/API/BluetoothRemoteGATTService
+/en-US/docs/Web/API/BluetoothUUID/canonicalUUID	/en-US/docs/Web/API/BluetoothUUID/canonicalUUID_static
+/en-US/docs/Web/API/BluetoothUUID/getCharacteristic	/en-US/docs/Web/API/BluetoothUUID/getCharacteristic_static
+/en-US/docs/Web/API/BluetoothUUID/getDescriptor	/en-US/docs/Web/API/BluetoothUUID/getDescriptor_static
+/en-US/docs/Web/API/BluetoothUUID/getService	/en-US/docs/Web/API/BluetoothUUID/getService_static
 /en-US/docs/Web/API/Body/arrayBuffer	/en-US/docs/Web/API/Response/arrayBuffer
 /en-US/docs/Web/API/Body/blob	/en-US/docs/Web/API/Response/blob
 /en-US/docs/Web/API/Body/body	/en-US/docs/Web/API/Response/body
@@ -7679,6 +7683,8 @@
 /en-US/docs/Web/API/CSSStyleSheet.deleteRule	/en-US/docs/Web/API/CSSStyleSheet/deleteRule
 /en-US/docs/Web/API/CSSStyleSheet.insertRule	/en-US/docs/Web/API/CSSStyleSheet/insertRule
 /en-US/docs/Web/API/CSSStyleValue/CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
+/en-US/docs/Web/API/CSSStyleValue/parse	/en-US/docs/Web/API/CSSStyleValue/parse_static
+/en-US/docs/Web/API/CSSStyleValue/parseAll	/en-US/docs/Web/API/CSSStyleValue/parseAll_static
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue()	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue.CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSValueList/CSSValueList.length	/en-US/docs/Web/API/CSSValueList/length
@@ -8750,6 +8756,7 @@
 /en-US/docs/Web/API/IDBVersionChangeEvent/version	/en-US/docs/Web/API/IDBVersionChangeEvent
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
 /en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
+/en-US/docs/Web/API/IdleDetector/requestPermission	/en-US/docs/Web/API/IdleDetector/requestPermission_static
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
@@ -9386,6 +9393,7 @@
 /en-US/docs/Web/API/PushManager.register	/en-US/docs/Web/API/PushManager/register
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
+/en-US/docs/Web/API/PushManager/supportedContentEncodings	/en-US/docs/Web/API/PushManager/supportedContentEncodings_static
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
 /en-US/docs/Web/API/RTCAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection

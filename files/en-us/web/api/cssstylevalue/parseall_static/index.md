@@ -1,14 +1,14 @@
 ---
-title: "CSSStyleValue: parseAll() method"
+title: "CSSStyleValue: parseAll() static method"
 short-title: parseAll()
-slug: Web/API/CSSStyleValue/parseAll
-page-type: web-api-instance-method
+slug: Web/API/CSSStyleValue/parseAll_static
+page-type: web-api-static-method
 browser-compat: api.CSSStyleValue.parseAll
 ---
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`parseAll()`** method of the {{domxref("CSSStyleValue")}}
+The **`parseAll()`** static method of the {{domxref("CSSStyleValue")}}
 interface sets all occurrences of a specific CSS property to the specified value and
 returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the
 supplied values.
@@ -16,7 +16,7 @@ supplied values.
 ## Syntax
 
 ```js-nolint
-parseAll(property, value)
+CSSStyleValue.parseAll(property, value)
 ```
 
 ### Parameters
@@ -42,6 +42,6 @@ values.
 
 ## See also
 
-- {{domxref("CSSStyleValue.parse()")}}
+- [`CSSStyleValue.parse()`](/en-us/docs/Web/API/CSSStyleValue/parse_static)
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

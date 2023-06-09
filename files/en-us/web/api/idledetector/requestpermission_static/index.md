@@ -1,8 +1,8 @@
 ---
-title: "IdleDetector: requestPermission() method"
+title: "IdleDetector: requestPermission() static method"
 short-title: requestPermission()
-slug: Web/API/IdleDetector/requestPermission
-page-type: web-api-instance-method
+slug: Web/API/IdleDetector/requestPermission_static
+page-type: web-api-static-method
 status:
   - experimental
 browser-compat: api.IdleDetector.requestPermission
@@ -10,7 +10,7 @@ browser-compat: api.IdleDetector.requestPermission
 
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
-The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
+The **`requestPermission()`** static method of the {{domxref("IdleDetector")}}
 interface returns a {{jsxref('Promise')}} that resolves with a string when the user has chosen
 whether to grant the origin access to their idle state. Resolves with
 `"granted"` on acceptance and `"denied"` on refusal.
@@ -18,7 +18,7 @@ whether to grant the origin access to their idle state. Resolves with
 ## Syntax
 
 ```js-nolint
-requestPermission()
+IdleDetector.requestPermission()
 ```
 
 ### Parameters

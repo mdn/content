@@ -1,8 +1,8 @@
 ---
-title: "BluetoothUUID: getCharacteristic() method"
+title: "BluetoothUUID: getCharacteristic() static method"
 short-title: getCharacteristic()
-slug: Web/API/BluetoothUUID/getCharacteristic
-page-type: web-api-instance-method
+slug: Web/API/BluetoothUUID/getCharacteristic_static
+page-type: web-api-static-method
 status:
   - experimental
 browser-compat: api.BluetoothUUID.getCharacteristic
@@ -10,12 +10,12 @@ browser-compat: api.BluetoothUUID.getCharacteristic
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getCharacteristic()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
+The **`getCharacteristic()`** static method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js-nolint
-getCharacteristic(name)
+BluetoothUUID.getCharacteristic(name)
 ```
 
 ### Parameters

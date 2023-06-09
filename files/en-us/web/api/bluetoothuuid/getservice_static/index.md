@@ -1,8 +1,8 @@
 ---
-title: "BluetoothUUID: getService() method"
+title: "BluetoothUUID: getService() static method"
 short-title: getService()
-slug: Web/API/BluetoothUUID/getService
-page-type: web-api-instance-method
+slug: Web/API/BluetoothUUID/getService_static
+page-type: web-api-static-method
 status:
   - experimental
 browser-compat: api.BluetoothUUID.getService
@@ -10,12 +10,12 @@ browser-compat: api.BluetoothUUID.getService
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getService()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
+The **`getService()`** static method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js-nolint
-getService(name)
+BluetoothUUID.getService(name)
 ```
 
 ### Parameters

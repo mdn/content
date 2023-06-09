@@ -1,8 +1,8 @@
 ---
-title: "BluetoothUUID: getDescriptor() method"
+title: "BluetoothUUID: getDescriptor() static method"
 short-title: getDescriptor()
-slug: Web/API/BluetoothUUID/getDescriptor
-page-type: web-api-instance-method
+slug: Web/API/BluetoothUUID/getDescriptor_static
+page-type: web-api-static-method
 status:
   - experimental
 browser-compat: api.BluetoothUUID.getDescriptor
@@ -10,12 +10,12 @@ browser-compat: api.BluetoothUUID.getDescriptor
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getDescriptor()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
+The **`getDescriptor()`** static method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js-nolint
-getDescriptor(name)
+BluetoothUUID.getDescriptor(name)
 ```
 
 ### Parameters

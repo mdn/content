@@ -1,8 +1,8 @@
 ---
-title: "BluetoothUUID: canonicalUUID() method"
+title: "BluetoothUUID: canonicalUUID() static method"
 short-title: canonicalUUID()
-slug: Web/API/BluetoothUUID/canonicalUUID
-page-type: web-api-instance-method
+slug: Web/API/BluetoothUUID/canonicalUUID_static
+page-type: web-api-static-method
 status:
   - experimental
 browser-compat: api.BluetoothUUID.canonicalUUID
@@ -10,12 +10,12 @@ browser-compat: api.BluetoothUUID.canonicalUUID
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`canonicalUUID()`** method of the {{domxref("BluetoothUUID")}} interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
+The **`canonicalUUID()`** static method of the {{domxref("BluetoothUUID")}} interface returns the 128-bit UUID when passed a 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js-nolint
-canonicalUUID(alias)
+BluetoothUUID.canonicalUUID(alias)
 ```
 
 ### Parameters
