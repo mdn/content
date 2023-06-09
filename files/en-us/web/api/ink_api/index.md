@@ -60,7 +60,7 @@ function getRandomInt(min, max) {
 
 canvas.addEventListener("pointermove", (evt) => {
   const pointSize = 10;
-  ctx.fillStyle = "#000000";
+  ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
   if (move_cnt == 50) {
     let r = getRandomInt(0, 255);
