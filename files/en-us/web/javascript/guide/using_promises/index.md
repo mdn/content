@@ -159,10 +159,12 @@ Nesting is a control structure to limit the scope of `catch` statements. Specifi
 
 ```js
 doSomethingCritical()
-  .then((result) =>
+  .then((result) => {
     doSomethingOptional(result)
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {}),
+      .catch((e) => {});
+    return result;
+    }
   ) // Ignore if optional stuff fails; proceed.
   .then(() => moreCriticalStuff())
   .catch((e) => console.error(`Critical failure: ${e.message}`));
