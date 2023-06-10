@@ -26,4 +26,4 @@ A result tree fragment representing the highest valued node's numeric value as a
 
 ## Specifications
 
-[EXSLT - MATH:MAX](http://exslt.org/math/functions/max/index.html)
+[EXSLT - MATH:MAX](https://exslt.github.io/math/functions/max/index.html)
