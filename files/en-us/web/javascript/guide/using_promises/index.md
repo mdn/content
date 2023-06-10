@@ -162,9 +162,9 @@ doSomethingCritical()
   .then((result) =>
     doSomethingOptional(result)
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {}),
+      .catch((e) => result),
   ) // Ignore if optional stuff fails; proceed.
-  .then(() => moreCriticalStuff())
+  .then((result) => moreCriticalStuff(result))
   .catch((e) => console.error(`Critical failure: ${e.message}`));
 ```
 
