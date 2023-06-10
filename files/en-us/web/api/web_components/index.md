@@ -91,7 +91,6 @@ The basic approach for implementing a web component generally looks something li
     - {{cssxref("::part")}}
       - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
-
 ### Shadow DOM
 
 - {{domxref("ShadowRoot")}}
