@@ -492,7 +492,7 @@ for (const select of selects) {
   div.appendChild(datalist);
   datalist.style.top = `${header.offsetTop + header.offsetHeight}px`;
 
-  div.onclick = function(e) {
+  div.onclick = (e) => {
     if (!multiple) {
       const open = this.hasAttribute("data-open");
       e.stopPropagation();
@@ -504,7 +504,7 @@ for (const select of selects) {
     }
   };
 
-  div.onkeyup = function(event) {
+  div.onkeyup = (event) => {
     event.preventDefault();
     if (event.keyCode === 13) {
       div.click();
