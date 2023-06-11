@@ -11,9 +11,9 @@ The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) 
 
 This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.
 
-## Instance properties
+## Static properties
 
-- {{domxref("PushManager.supportedContentEncodings")}}
+- [`PushManager.supportedContentEncodings`](/en-us/docs/Web/API/PushManager/supportedContentEncodings_static)
   - : Returns an array of supported content codings that can be used to encrypt the payload of a push message.
 
 ## Instance methods
