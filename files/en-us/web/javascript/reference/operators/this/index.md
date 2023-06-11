@@ -319,11 +319,11 @@ function add(c, d) {
 const o = { a: 1, b: 3 };
 
 // The first argument is bound to the implicit 'this' parameter; the remaining
-// arguments are bound to the explicit parameters.
+// arguments are bound to the named parameters.
 add.call(o, 5, 7); // 16
 
 // The first argument is bound to the implicit 'this' parameter; the second
-// argument is an array whose members are bound to the explicit parameters.
+// argument is an array whose members are bound to the named parameters.
 add.apply(o, [10, 20]); // 34
 ```
 
