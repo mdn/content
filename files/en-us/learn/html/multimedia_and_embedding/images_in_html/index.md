@@ -333,7 +333,7 @@ For example, you might have to:
 - Not use the image in any commercial work.
 - Include a copy of the license along with any release that uses the image.
 
-> **Note:** You will come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works need to have their source code released under the same license as the original to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
+> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works need to have their source code released under the same license as the original to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
 
 Explore the links provided earlier in this section to read about the different license types and the kinds of conditions they specify.
 
