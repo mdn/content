@@ -347,7 +347,7 @@ When using public domain images, obtain proof that the image is in the public do
 
 ### Searching for permissively-licensed images
 
-You can find permissive-licensed images for your projects using image search engine or directly from image repositories.
+You can find permissive-licensed images for your projects using an image search engine or directly from image repositories.
 
 Search for images using a description of the image you are seeking along with relevant licensing terms. For example, when searching for "yellow dinosaur" add "public domain images", "public domain image library", or "open licensed images" to the search query.
 
