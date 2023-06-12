@@ -62,6 +62,8 @@ const matches = a.filter((v) => collator.compare(v, s) === 0);
 console.log(matches.join(", ")); // "Congrès, congres"
 ```
 
+> **Note:** The collation activated by the `search` value for the `usage` option should only be used to find matching strings, since this collation is not guaranteed to be in any particular order.
+
 ## Specifications
 
 {{Specifications}}
