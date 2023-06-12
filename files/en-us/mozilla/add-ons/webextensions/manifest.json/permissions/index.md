@@ -97,6 +97,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `declarativeNetRequest`
 - `declarativeNetRequestFeedback`
 - `declarativeNetRequestWithHostAccess`
+- `devtools`
 - `dns`
 - `downloads`
 - `downloads.open`

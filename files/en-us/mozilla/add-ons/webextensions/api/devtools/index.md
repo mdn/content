@@ -7,9 +7,9 @@ browser-compat: webextensions.api.devtools
 
 {{AddonSidebar}}
 
-Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You can use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
+Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
 
-To use this API you need to have the `"devtools"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) specified in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. This permission can not be optional.
+To use this API you must request `"devtools"` in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
 
 ## Properties
 

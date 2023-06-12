@@ -67,6 +67,7 @@ You can include any of the following here, but not in all browsers: check the co
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `devtools`
 - `declarativeNetRequestFeedback`
 - `downloads`
 - `downloads.open`
