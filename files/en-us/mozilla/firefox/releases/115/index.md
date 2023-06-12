@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Array.fromAsync()")}} static method is now supported.
+  The method asynchronously returns a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object ([Firefox bug 1795816](https://bugzil.la/1795816)).
+
 #### Removals
 
 ### SVG

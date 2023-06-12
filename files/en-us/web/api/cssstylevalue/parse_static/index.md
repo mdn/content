@@ -3,7 +3,7 @@ title: "CSSStyleValue: parse() static method"
 short-title: parse()
 slug: Web/API/CSSStyleValue/parse_static
 page-type: web-api-static-method
-browser-compat: api.CSSStyleValue.parse
+browser-compat: api.CSSStyleValue.parse_static
 ---
 
 {{APIRef("CSS Typed Object Model API")}}

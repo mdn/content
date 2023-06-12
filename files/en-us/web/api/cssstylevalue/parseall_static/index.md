@@ -3,7 +3,7 @@ title: "CSSStyleValue: parseAll() static method"
 short-title: parseAll()
 slug: Web/API/CSSStyleValue/parseAll_static
 page-type: web-api-static-method
-browser-compat: api.CSSStyleValue.parseAll
+browser-compat: api.CSSStyleValue.parseAll_static
 ---
 
 {{APIRef("CSS Typed Object Model API")}}

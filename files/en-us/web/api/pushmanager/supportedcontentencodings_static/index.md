@@ -3,7 +3,7 @@ title: "PushManager: supportedContentEncodings static property"
 short-title: supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings_static
 page-type: web-api-static-property
-browser-compat: api.PushManager.supportedContentEncodings
+browser-compat: api.PushManager.supportedContentEncodings_static
 ---
 
 {{APIRef("Push API")}}

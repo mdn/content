@@ -60,23 +60,19 @@ And so on.
 
 > **Note:** Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; `dinosaur.jpg` is better than `img835.png`.
 
-You could embed the image using its absolute URL, for example:
+You could also embed the image using its absolute URL, for example:
 
 ```html
 <img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-But this is not recommended. You should host your own images, which in simple setups means keeping the images for your website on the same server as your HTML. In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
+Linking via absolute URLs is not recommended, however. You should host the images you want to use on your site, which in simple setups means keeping the images for your website on the same server as your HTML. In addition, it is more efficient to use relative URLs than absolute URLs in terms of maintenance (when you move your site to a different domain, you won't need to update all your URLs to include the new domain). In more advanced setups, you might use a [CDN (Content Delivery Network)](/en-US/docs/Glossary/CDN) to deliver your images.
 
-> **Warning:** **Never** point your src attribute at an image hosted on someone else's website **without permission**. This is called "hotlinking". It is generally considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over whether the image is removed or replaced with something embarrassing.
->
-> In general, you should host the images you want to use on your site. Keep in mind that many images you may find on the web are copyrighted. Before you host an image, you should make sure that one of these applies:
->
-> - You own the image.
-> - You have received explicit, written permission from the image owner.
-> - You have ample proof that the image is, in fact, in the public domain.
+If you did not create the images, you should make sure you have the permission to use them under the conditions of the license they are published under (see [Media assets and licensing](#media_assets_and_licensing) below for more information).
 
-Our above code would give us the following result:
+> **Warning:** _Never_ point the `src` attribute at an image hosted on someone else's website _without permission_. This is called "hotlinking". It is considered unethical, since someone else would be paying the bandwidth costs for delivering the image when someone visits your page. It also leaves you with no control over the image being removed or replaced with something embarrassing.
+
+The previous code snippet, either with the absolute or the relative URL, will give us the following result:
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
@@ -308,6 +304,58 @@ textarea.onkeyup = function () {
 ```
 
 {{ EmbedLiveSample('Active_learning_embedding_an_image', 700, 350) }}
+
+## Media assets and licensing
+
+Images (and other media asset types) you find on the web are released under various license types. Before you use an image on a site you are building, ensure you own it, have permission to use it, or comply with the owner's licensing conditions.
+
+### Understanding license types
+
+Let's look at some common categories of licenses you are likely to find on the web.
+
+#### All rights reserved
+
+Creators of original work such as songs, books, or software often release their work under closed copyright protection. This means that, by default, they (or their publisher) have exclusive rights to use (for example, display or distribute) their work. If you want to use a copyrighted image with the _all rights reserved_ license, you need to:
+
+- Obtain explicit, written permission from the copyright holder.
+- Pay a license fee to use it. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
+
+#### Permissive
+
+If the image is released under a permissive license, such as [MIT](https://mit-license.org/), [BSD](https://opensource.org/license/BSD-3-clause/), or a suitable [Creative Commons (CC) license](https://creativecommons.org/choose/), you do not need to pay a license fee or seek permission to use it. Still, there are various licensing conditions you will have to fulfill, which vary by license.
+
+For example, you might have to:
+
+- Provide a link to the original source of the image and credit its creator.
+- Indicate whether any changes were made to it.
+- Share any derivative works created using the image under the same license as the original.
+- Not share any derivative works at all.
+- Not use the image in any commercial work.
+- Include a copy of the license along with any release that uses the image.
+
+> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft specifically refers to licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)) stipulating that derivative works need to have their source code released under the same license as the original to keep the source code open. They are designed specifically for open-source software releases. Hence, they are also sometimes called "open-source licenses". They are not suitable for licensing media assets.
+
+Explore the links provided earlier in this section to read about the different license types and the kinds of conditions they specify.
+
+#### Public domain/CC0
+
+Work released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission and without having to fulfill any licensing conditions. Work can end up in the public domain by various means such as expiration of copyright, or specific waiving of rights.
+
+One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
+
+When using public domain images, obtain proof that the image is in the public domain and keep the proof for your records. For example, take a screenshot of the original source with the licensing status clearly displayed, and consider adding a page to your website with a list of the images acquired along with their license requirements.
+
+### Searching for permissively-licensed images
+
+You can find permissive-licensed images for your projects using an image search engine or directly from image repositories.
+
+Search for images using a description of the image you are seeking along with relevant licensing terms. For example, when searching for "yellow dinosaur" add "public domain images", "public domain image library", "open licensed images", or similar terms to the search query.
+
+Some search engines have tools to help you find images with permissive licenses. For example, when using Google, go to the "Images" tab to search for images, then click "Tools". There is a "Usage Rights" dropdown in the resulting toolbar where you can choose to search specifically for images under creative commons licenses.
+
+Image repository sites, such as [Flickr](https://flickr.com/), [ShutterStock](https://www.shutterstock.com), and [Pixabay](https://pixabay.com/), have search options to allow you to search just for permissively-licensed images. Some sites exclusively distribute permissively-licensed images and icons, such as [Picryl](https://picryl.com) and [The Noun Project](https://thenounproject.com/).
+
+Complying with the license the image has been released under is a matter of finding the license details, reading the license or instruction page provided by the source, and then following those instructions. Reputable image repositories make their license conditions clear and easy to find.
 
 ## Annotating images with figures and figure captions
 
