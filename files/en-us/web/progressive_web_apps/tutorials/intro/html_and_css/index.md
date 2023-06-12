@@ -3,7 +3,7 @@ title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
 {{PWASidebar}}
 
@@ -215,6 +215,8 @@ li:nth-of-type(even) {
 
 If every line is familiar to you, you can copy the above CSS, or write your own CSS, and save the file as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), then [finish up the static HTML and CSS](#finishing-the-static-html-and-css-for-our-pwa). If anything in the above CSS is new to you, the CSS is explained.
 
+![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](html.jpg)
+
 ### CSS explained
 
 We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`, a white (`#fff`) background color and a thin solid {{CSSXref("border")}} on the unordered list, fieldset, and legend. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
@@ -298,12 +300,6 @@ If any of the above CSS still looks unfamiliar to you, you can look up the [CSS 
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
-With the `index.html` updated, and the `style.css` housed in the same directory, viewing the page in a narrow browser window should look similar to this screenshot:
-
-![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](html.jpg)
-
-To view what you have created, open the `index.html` file by navigating to it via your computer's file structure or from your browser using the "Open File" menu option. For now, we are viewing our progress using the `file://` protocol. PWAs require apps to run on a web server using either [`https` or `localhost`](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), covered later.
-
 ### Finishing the static HTML and CSS for our PWA
 
 Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the placeholder text:
@@ -320,10 +316,10 @@ Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_
 </section>
 ```
 
-You can try the [static cycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and view the [cycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) on GitHub.
-
 ## Up next
 
-Before converting a web app into a progressive web app — before adding the [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection),[manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file), and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker) that define a PWA — we have to make our application work. Up next, we write the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
+You can view the [static cycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) and download the [cycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css) from GitHub.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
+Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality) to convert this static content into web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection) to view our progress.
+
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
