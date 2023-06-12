@@ -32,6 +32,8 @@ sort(compareFn)
     - `b`
       - : The second element for comparison. Will never be `undefined`.
 
+    If omitted, the array elements are sorted according to numeric value.
+
 ### Return value
 
 The sorted typed array.
