@@ -51,3 +51,4 @@ audio:stalled {
 - {{cssxref(":playing")}}
 - {{cssxref(":seeking")}}
 - {{cssxref(":volume-locked")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)

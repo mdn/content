@@ -50,3 +50,4 @@ video:volume-locked {
 - {{cssxref(":playing")}}
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)

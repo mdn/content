@@ -45,3 +45,4 @@ A resource is paused if the user explicitly paused it, or if it is in a non-acti
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
