@@ -97,7 +97,7 @@ There are four algorithms to determine which arc is used:
 
 ### Comparing hue interpolation algorithms
 
-The following example shows the effect of using different hue interpolation algorithms for {{CSSXref("color_value/color-mix", "color-mix()")}}.
+The following example shows the effect of using different hue interpolation algorithms in a {{CSSXref("linear-gradient()")}}.
 
 #### HTML
 
