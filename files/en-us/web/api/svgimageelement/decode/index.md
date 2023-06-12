@@ -32,6 +32,19 @@ by appending it to the DOM, replacing an existing image, and so forth.
 
 None.
 
+## Examples
+
+Using `decode()` like this provides a way to asynchronously decode an image, pausing inserting it into the DOM until it is fully downloaded and decoded, thereby avoiding showing empty images. This is particularly useful if you're dynamically swapping an existing image for a new one.
+
+```js
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+const img = document.createElementNS(SVG_NS, "image");
+img.setAttribute("href", "img/logo.svg");
+await img.decode();
+// Add image to the DOM
+```
+
 ## Specifications
 
 {{Specifications}}

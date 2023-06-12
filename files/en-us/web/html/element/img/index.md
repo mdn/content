@@ -92,7 +92,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `decoding`
 
-  - : In theory, this attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode. It does not make decoding happen off the main thread, as modern browsers do this anyway.
+  - : In theory, this attribute provides a hint to the browser as to whether it should perform image decoding along with rendering the other DOM content in a single presentation step that looks more "correct" (`sync`), or render and present the other DOM content first and then decode the image and present it later (`async`). In practice, `async` means that the next paint does not wait for the image to decode. It does not make decoding happen off the main thread; modern browsers do this anyway.
 
     In reality, `decoding` is not very useful. The decode time will be so small for most images — and it's rare for the image paint to be ready in the exact same frame and therefore be waiting for the image decode — that in most situations you won't notice any difference. You might notice a difference if you have very large images embedded in a page — setting `decoding="async"` may stop text content rendering from being held up by image decoding, with a tradeoff that you might experience flashes of unpainted content. However, embedding very large images is not recommended, and would cause more problems than `decode` would solve.
 
@@ -104,8 +104,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Decode the image asynchronously, after rendering and presenting the other DOM content.
     - `auto`
       - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
-
-    > **Note:** The {{domxref("HTMLImageElement.decoding")}} attribute is more useful, as it provides a way to hint that you want to decode images without blocking your JavaScript execution.
 
 - `elementtiming`
 
