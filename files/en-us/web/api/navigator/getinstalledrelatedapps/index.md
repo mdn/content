@@ -61,9 +61,7 @@ The related app information must have been previously specified in the [`related
 
 ```js
 const relatedApps = await navigator.getInstalledRelatedApps();
-relatedApps.forEach((app) => {
-  console.log(app.id, app.platform, app.url);
-});
+console.table(relatedApps);
 ```
 
 ## Specifications
