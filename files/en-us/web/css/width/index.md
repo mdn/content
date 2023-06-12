@@ -12,6 +12,7 @@ The **`width`** CSS property sets an element's width. By default, it sets the wi
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
 The specified value of `width` applies to the content area so long as its value remains within the values defined by {{cssxref("min-width")}} and {{cssxref("max-width")}}.
+
 - If the value for `width` is less than the value for `min-width`, then `min-width` overrides `width`.
 - If the value for `width` is greater than the value for `max-width`, then `max-width` overrides `width`.
 
