@@ -4,6 +4,8 @@ slug: Glossary/HTML
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **HTML** (HyperText Markup Language) is a descriptive language that specifies webpage structure.
 
 ## Brief history

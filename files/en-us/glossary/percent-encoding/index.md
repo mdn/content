@@ -4,6 +4,8 @@ slug: Glossary/Percent-encoding
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Percent-encoding** is a mechanism to encode 8-bit characters that have specific meaning in the context of {{Glossary("URL", "URLs")}}. It is sometimes called URL encoding. The encoding consists of substitution: A '%' followed by the hexadecimal representation of the ASCII value of the replace character.
 
 Special characters needing encoding are: `':'`, `'/'`, `'?'`, `'#'`, `'['`, `']'`, `'@'`, `'!'`, `'$'`, `'&'`, `"'"`, `'('`, `')'`, `'*'`, `'+'`, `','`, `';'`, `'='`, as well as `'%'` itself. Other characters don't need to be encoded, though they could.

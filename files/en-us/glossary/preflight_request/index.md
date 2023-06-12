@@ -4,6 +4,8 @@ slug: Glossary/Preflight_request
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.
 
 It is an {{HTTPMethod("OPTIONS")}} request, using three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and the {{HTTPHeader("Origin")}} header.
