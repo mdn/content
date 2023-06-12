@@ -298,17 +298,12 @@ function createLink(testItem) {
   const name = testItem.input.name;
   anchor.textContent = `${name} field is empty: fill in your ${name}.`;
   anchor.href = `#${name}`;
-  anchor.onclick = () => {
-    testItem.input.focus();
-  };
   listItem.appendChild(anchor);
   errorList.appendChild(listItem);
 }
 ```
 
 Each link serves a dual purpose — it tells you what the error is, plus you can click on it/activate it to jump straight to the input element in question and correct your entry.
-
-> **Note:** The `focus()` part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the `onclick`/`focus()` block. Safari will only highlight the form element with the link on its own, so needs the `onclick`/`focus()` block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behavior parity with other browsers (see [Firefox bug 277178](https://bugzil.la/277178)).
 
 In addition, the `errorField` is placed at the top of the source order (although it is positioned differently in the UI using CSS), meaning that users can find out exactly what's wrong with their form submissions and get to the input elements in question by going back up to the start of the page.
 

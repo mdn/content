@@ -1,8 +1,7 @@
 ---
 title: Introduction to the CSS basic box model
-slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 
 {{CSSRef}}
@@ -35,13 +34,9 @@ The thickness of the borders are determined by the {{cssxref("border-width")}} a
 
 The **margin area**, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the _margin-box width_ and the _margin-box height_.
 
-The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}, and shorthand {{cssxref("margin")}} properties. When [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) occurs, the margin area is not clearly defined since margins are shared between boxes.
+The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}, and shorthand {{cssxref("margin")}} properties. When [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) occurs, the margin area is not clearly defined since margins are shared between boxes.
 
 Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the {{cssxref('line-height')}} property, even though the borders and padding are still displayed around the content.
-
-## Specifications
-
-{{Specifications}}
 
 ## See also
 
@@ -56,7 +51,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

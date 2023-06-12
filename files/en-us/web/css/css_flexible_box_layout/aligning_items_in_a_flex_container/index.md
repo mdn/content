@@ -1,6 +1,6 @@
 ---
 title: Aligning items in a flex container
-slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 page-type: guide
 ---
 
@@ -185,6 +185,6 @@ To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("colum
 
 ## See also
 
-- [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box Alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

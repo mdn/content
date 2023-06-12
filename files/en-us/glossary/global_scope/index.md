@@ -4,6 +4,8 @@ slug: Glossary/Global_scope
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In a programming environment, the _global scope_ is the {{glossary("scope")}} that contains, and is visible in, all other scopes.
 
 In client-side JavaScript, the global scope is generally the web page inside which all the code is being executed.

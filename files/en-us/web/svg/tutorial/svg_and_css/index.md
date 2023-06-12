@@ -25,7 +25,11 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
   viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <link rel="stylesheet" href="style8.css" type="text/css" />
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="style8.css"
+    type="text/css" />
 
   <title>SVG demonstration</title>
   <desc>Mozilla CSS Getting Started - SVG demonstration</desc>

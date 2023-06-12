@@ -107,7 +107,7 @@ npm install express-validator
 
 #### Using express-validator
 
-> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/schema-validation.html) and [creating custom validators](https://express-validator.github.io/docs/custom-validators-sanitizers.html)). Below we cover just a subset that is useful for the _LocalLibrary_.
+> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/guides/schema-validation) and [creating custom validators](https://express-validator.github.io/docs/guides/customizing#custom-validators-and-sanitizers)). Below we cover just a subset that is useful for the _LocalLibrary_.
 
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 
@@ -119,7 +119,7 @@ There are many functions available, allowing you to check and sanitize data from
 
 The functions are defined as below:
 
-- [`body([fields, message])`](https://express-validator.github.io/docs/check-api.html#bodyfields-message): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
+- [`body([fields, message])`](https://express-validator.github.io/docs/api/check#body): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
 
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method `trim()` to remove whitespace from the start and end of the string, and then `isLength()` to check the resulting string isn't empty. Finally, we call `escape()` to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
@@ -159,7 +159,7 @@ The functions are defined as below:
   ];
   ```
 
-- [`validationResult(req)`](https://express-validator.github.io/docs/validation-result-api.html#validationresultreq): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
+- [`validationResult(req)`](https://express-validator.github.io/docs/api/validation-result/#validationresult): Runs the validation, making errors available in the form of a `validation` result object. This is invoked in a separate callback, as shown below:
 
   ```js
   asyncHandler(async (req, res, next) => {

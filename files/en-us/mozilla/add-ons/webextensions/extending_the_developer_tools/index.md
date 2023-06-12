@@ -1,5 +1,5 @@
 ---
-title: Extending the developer tools
+title: Extend the developer tools
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 page-type: guide
 ---

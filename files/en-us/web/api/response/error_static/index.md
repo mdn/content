@@ -3,7 +3,7 @@ title: "Response: error() static method"
 short-title: error()
 slug: Web/API/Response/error_static
 page-type: web-api-static-method
-browser-compat: api.Response.error
+browser-compat: api.Response.error_static
 ---
 
 {{APIRef("Fetch API")}}

@@ -4,6 +4,8 @@ slug: Glossary/Request_header
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g. {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
 
 Not all headers that can appear in a request are referred to as _request headers_ by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.

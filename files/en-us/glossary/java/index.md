@@ -4,6 +4,8 @@ slug: Glossary/Java
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Java is a {{glossary("Compile", "compiled")}}, {{glossary("OOP", "object-oriented")}}, highly portable {{Glossary("computer programming", "programming")}} language.
 
 Java is statically typed and features a similar syntax to C. It comes with a large library of readily usable functions, the Java Software Development Kit (SDK).
