@@ -1,46 +1,97 @@
 ---
-title: Privacy, permissions, and information security
+title: Privacy on the web
 slug: Web/Privacy
 ---
 
 {{QuicklinksWithSubPages}}
 
-As users use the web for more and more of their daily tasks, more of their private or personally-identifying information they share, ideally only with sites they trust. Cooperation among web content, the web browser, and the web server is needed to achieve as much privacy and information security as possible. In this article, we examine how to create web content that minimizes the risk of users' personal information or imagery being obtained unexpectedly by third parties.
+People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with — if that information fell into the wrong hands it could be used to exploit users, for example by profiling them, targetting them with unwanted ads, or even stealing their identify or money.
 
-## Security and privacy defined
+Modern browsers already have a wealth of features to protect users' privacy on the web, but that's not enough. To create a trustworthy, privacy-respecting experience, developers need to educate their users in good practices (and enforce them) and create sites that collect as little data as possible, use it responsibly, and transport and store it securely.
 
-Before we go into any depth about the various security and privacy features available to users on the web, let's define some important terms.
+In this article, we define privacy and important related terms, examine browser features that automatically protect user privacy, and look at what users can do to create privacy-respecting web content that minimizes the risk of users' personal information/data being obtained unexpectedly by third parties.
 
-- Personally identifiable information
+## Privacy defined
 
-  - : Personally identifiable information (PII) is information which can be used, in whole or in part, to track down and/or identify a specific person. As such, PII extends beyond the web to all aspects of life. For example, if a site leaks a list of users' names and zip codes online, a bad actor could almost certainly track down at least some percentage of those users by using the corresponding phone books.
+Before we look at the various privacy and security features available to use on the web, let's define some important terms.
 
-    Personally identification can include information like usernames, real names, passwords, phone numbers or addresses (or even portions of them), information about medical history, Social Security Numbers, driver's licenses, or any other form of ID or ID number, credit card information, and so forth. It's a very broad range of information. Whenever working with data, always stop and think: is there any way this can be used to even through many steps identify a specific person?
+### What is privacy?
 
-- Privacy
+It is hard to talk about privacy without also talking about security — they are closely related, and you can't really create privacy-respecting websites without good security. Therefore, we shall provide a definition of both.
 
-  - : The concept of privacy is somewhat hard to define. Everyone has some idea of what it means to keep something private, but when talking about the privacy of data, it becomes murky. Fundamentally, the privacy of your data on the internet is about ensuring that information that has personal implications is kept out of the hands of unauthorized persons or organizations, regardless of how it's obtained.
+- **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, developers should make it very clear to users of their sites what data they are collecting, who else it will be shared with, and what they will use it for. Users must be given a chance to consent to your terms of data usage, and also be able to see what items of their data you have stored, and delete them if they no longer wish you to have them. You must also comply with your own terms — nothing erodes user trust like having their data used in ways — and shared with third parties — that they didn't agree to. And this isn't just ethically wrong — it could be against the law. Many parts of the world now have legislation that protect consumer privacy rights (for example the EU's [GDPR](https://gdpr.eu/)).
 
-    Privacy exceptions may be granted to specific sites or applications, but it may also be granted _conditionally_, such as by permitting only a select group of people to access it or only allowing the information to be accessed and used for a limited period of time.
+- **Security** is the act of keeping private data and systems protected against unauthorized access. This includes both company (internal) data, and user and partner (external) data. It is no use having a robust privacy policy that causes your users to trust you, if your security is weak and malicious parties can steal their data anyway.
 
-- Security
-  - : Security is about the active protection of data or a system against being accessed, downloaded, or operated by people or organizations that don't have permission to do so. Good security practices aim to prevent unauthorized access to systems or data, regardless of what the target is.
+### Personal and private information
 
-## Personal and private information
+**Personal information** is any information that describes a user. Examples include:
 
-<!--what kind of information is private or personal?-->
+- Physical attributes such as height, gender expression, weight, hair color, or age
+- Postal address, email address, phone number, or other contact information
+- Passport number, bank account, credit card, social security number, or other official identifiers
+- Health information such as medical history, allergies, or ongoing conditions
+- Usernames and passwords
+- Hobbies, interests, or other personal preferences
+- Biometic data such as fingerprints or facial recognition data
 
-## Privacy risks
+**Private information** is any information that users do not want shared publicly and must be kept private (i.e. accessible only by a certain group of authorized users). Some private data is private by law (for example medical data), and some is private more by personal preference.
 
-<!--what are ways personal information can be gotten by third parties?-->
+### Personally identifiable information
+
+Following on the above section, **Personally identifiable information** (PII) is information which can be used, in whole or in part, to track down and/or identify a specific person. For example, if a site leaks a list of users' names and zip codes online, a bad actor could almost certainly use this information to find their full address. Even if a full scale leak does not happen, it is still possible to identify users through less obvious means, such as what browser they are using, what device they are using, if they have certain fonts installed, etc.
+
+### Tracking
+
+**Tracking** refers to the process of a third party recording a user's activity across many different websites. This can be done in various ways, for example:
+
+- Looking at cookies that the user has set (for example, to persist a log in or personalization details across different sites) if the third party is embedded on the same domain.
+- Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
+
+Tracking data can be used to profile a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
+
+- It is used for targetted ads: Everyone has had the unnerving experience of researching some items to buy on one device, and then suddenly being bombarded by adverts for the same products on all their other devices.
+- Selling or sharing data: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targetted ads. This is obviously highly unethical, and may also be illegal depending on where in the world it happens.
+- Prejudice via data: In the worst cases, sharing data could result in the user being unfairly disadvantaged, for example imagine an insurance company finding out data points about a potential custom that they didn't consent to share, and using them as a justification for increasing insurance premiums.
+
+> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties/#what-can-third-party-resources-do) for a useful related scenario description, and additional information.
 
 ### Fingerprinting
 
-**Fingerprinting** is a technique used to gather a variety of information that's made available by a user's browser and collate it until it becomes possible to uniquely identify that user's browser. Even seemingly innocuous information can in principle be used in the fingerprinting process, though the more unique the information is to the particular device the better.
+The process of identifying users by building up a store of data points about them is known as **fingerprinting**. This usually has negative connotations, because it can be used to track user activity across different websites in a covert manner. Think about it — tracking is annoying enough even when you consent to it, but having it happen without consent feels really invasive and erodes trust very quickly.
 
 Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations that prevent it from being used for identification purposes.
 
-For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system.
+For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system. We'll look at other browser privacy-enhancing technologies in the section below.
+
+> **Note:** See also [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) over on web.dev for additional useful information.
+
+## What do browsers do automatically?
+
+Browser vendors are aware of the need to protect user privacy, and the negative effects of tracking, fingerprinting, etc., on user experience. To this end, they have implemented various features that enhance privacy protection and/or mitigate threats. In this section we look at different categories of privacy protection that browsers apply automatically.
+
+### HTTPS by default
+
+[Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security) provides security and privacy by encrypting data during transport over the network, and is the technology behind the [HTTPS](/en-US/docs/Glossary/HTTPS) protocol. This is good for privacy because it stops third parties from being able to intercept transmitted data and use it for tracking, etc.
+
+In addition, many "powerful" web API features that provide access to potentially sensitive data (such as video streams from a user's webcam) are available only in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), providing further privacy protection.
+
+Browsers are all moving towards requiring HTTPS by default; this is practically the case already, as you can't do much without it.
+
+GOT HERE
+
+1. Browsers tend to require HTTP by default these days, when doing anything risky. (also talk about secure context)
+2. Browsers have features that automatically block 3rd party tracking scripts:
+   Firefox
+   - Firefox tracking protection
+   - Enhanced tracking protection
+   - Redirect tracking protection
+   - State partitioning
+     Chrome
+   - Privacy sandbox project (note that browser would eventually like to phase out 3rd party cookies altogether, while providing alternative solutions for common uses)
+     - Themes include identity and tracking protection, more privacy-respecting ads solutions, preventing covert tracking, and safely sharing data across browsing contexts
+3. Browsers are stricter about sending cookies in cross-site requests (talk about SameSite and default values; see https://developer.chrome.com/docs/privacy-sandbox/overview/#will-samesite-become-irrelevant-after-third-party-cookies-are-deprecated)
+4. Browsers gate usage of several "powerful features" behind a system of user permissions, so users have to explicitly opt in to things like being shown notifications from a site, or the site using their web cam to get access to a media stream.
 
 ## New privacy technology
 
@@ -114,18 +165,6 @@ There are several web technologies and features at play to manage privacy and se
         Lets web servers selectively enable or disable features and APIs, both for a document and for subdocuments
         loaded in {{HTMLElement("iframe")}}s via the {{HTTPHeader("Permissions-Policy")}} HTTP header.
         The <a href="/en-US/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> attribute can be used to set Permissions Policies on individual {{HTMLElement("iframe")}}s.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/Security/Transport_Layer_Security">Transport Layer Security</a>
-        (TLS); formerly known as Secure Sockets Layer (SSL)
-      </td>
-      <td>
-        TLS provides security and privacy by encrypting data during transport
-        over the network. This is the technology behind the
-        <a href="/en-US/docs/Glossary/HTTPS">HTTPS</a> (HyperText Transport
-        Protocol Secured) protocol
       </td>
     </tr>
   </tbody>
