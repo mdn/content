@@ -3,7 +3,7 @@ title: PWA manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/Intro/Manifest_file
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Service_workers", "Web/Progressive_web_apps/Tutorials/Intro")}}
 
 {{PWASidebar}}
 
@@ -132,6 +132,8 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/maskable-icons/).
 
+In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
+
 ### Task
 
 Add the icons to the manifest file you have been constructing.
@@ -234,8 +236,36 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
 
 View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/Manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/Manifest_file) on GitHub.
 
+With a manifest file, Safari will recognize your site as a web app. For the web app to be a full PWA, we will still need to add a service worker.
+
+### Debugging the manifest file
+
+Some browser developer tools provide insight into the app manifest. In Edge, Firefox, and Chrome developer tools, the manifest members and their values are visible under the "Application" panel.
+
+![In the developer tools, the left panel includes links to the manifest. The right side reads App Manifest, with the file name as a link to the JSON file.](debugger_devtools.jpg)
+
+The Manifest App pane provides the name of the manifest file as a link, and identity, presentation, and icons sections.
+
+![The identity and presentation manifest members along with values, if present.](manifest_identity_and_presentation.jpg)
+
+Supported manifest members are displayed, along with all included values. Note that we did not include the `orientation` member, but it is listed. While we did not include the `id` member, the developer tools provide information "Note: `id`is not specified in the manifest, `start_url` is used instead. To specify an App Id that matches the current identity, set the `id` field to /".
+
+![Installability shows that because we don't have a service worker, our app is not an installable PWA. yet.](manifest_installability.jpg)
+
+Chrome and Edge also provide errors and warnings, protocol handlers, and information to improve the manifest and icons.
+
+Our web app doesn't have any protocol handlers; a topic not covered in this tutorial. Had we included some, they would be found under "Protocol Handlers". As that section is empty, the developer tools link to more information on the topic.
+
+![The four icons included in the Manifest file, with the background removed as "show only the minimum safe area for maskable icons is checked.](manifest_icons.jpg)
+
+The manifest panel also includes insight into the safe area for maskable icons and a link to a [PWA image generator](https://www.pwabuilder.com/imageGenerator). This tool creates over 100 six square PNG images for Android, Apple OSs, and Windows, as well as a JSON object listing all the images and their sizes. The images produced may not serve your needs, but the list of image sizes produced for each OS demonstrates the diversity of where and how PWAs can be served.
+
+The developer tools are useful in identifying which manifest members are supported. Note the Firefox developer tools have entries for `dir`, `lang`, `orientation`, `scope`, and `id`, even though our manifest file did not include these members. Firefox also includes the value of the `purpose` member for each icon, displaying `any` if no the purpose is not explicitly set.
+
+![The Manifest panel in Firefox developer tools, showing values for the not included dir, scope, and id members, and the lang and orientation members without associated values.](manifest_firefox.jpg)
+
 ## Up next
 
-Now that we have a PWA manifest file, let's [create a secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection). While no frameworks are needed to create a PWA, we will use Node's `npx` to create a secure connection; a PWA requirement.
+To get the PWA benefits from other browsers and all operating systems that support PWAs, we nee to [add a service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers), which we'll do without using a framework.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Secure_connection", "Web/Progressive_web_apps/Tutorials/Intro")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro/Service_workers", "Web/Progressive_web_apps/Tutorials/Intro")}}
