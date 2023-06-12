@@ -44,7 +44,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
 - `id` {{optional_inline}}
   - : A string representing the ID used to represent the application on the specified platform.
 - `platform`
-  - : A string representing the platform (ecosystem or operating system) the related app is associated with, for example `"webapp"` or `"windows"`.
+  - : A string representing the [platform](https://github.com/w3c/manifest/wiki/Platforms) (ecosystem or operating system) the related app is associated with, for example `"webapp"` or `"windows"`.
 - `url` {{optional_inline}}
   - : A string representing the URL that the related app can be found at.
 - `version` {{optional_inline}}
