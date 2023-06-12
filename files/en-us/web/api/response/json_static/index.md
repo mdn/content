@@ -3,6 +3,7 @@ title: "Response: json() static method"
 short-title: json()
 slug: Web/API/Response/json_static
 page-type: web-api-static-method
+browser-compat: api.Response.json_static
 ---
 
 {{APIRef("Fetch API")}}
@@ -32,6 +33,14 @@ A {{domxref("Response")}} object.
 ```js
 Response.json({ my: "data" });
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
