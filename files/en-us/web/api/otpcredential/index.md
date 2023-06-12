@@ -9,7 +9,7 @@ browser-compat: api.OTPCredential
 
 {{APIRef("WebOTP API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retrieved.
+The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} is returned when a WebOTP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call (i.e. invoked with an `otp` option) fulfills. It includes a `code` property that contains the retrieved one-time password (OTP).
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,11 @@ The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} con
 _This interface also inherits properties from {{domxref("Credential")}}._
 
 - {{domxref("OTPCredential.code")}} {{Experimental_Inline}}
-  - : The one-time password.
+  - : The OTP.
+- {{domxref("Credential.id", "OTPCredential.id")}}
+  - : Inherited from {{domxref("Credential")}}. The ID of the credential type.
+- {{domxref("Credential.type", "OTPCredential.type")}}
+  - : Inherited from {{domxref("Credential")}}. Always set to `otp` for `OTPCredential` instances.
 
 ### Event handlers
 
@@ -30,7 +34,7 @@ None.
 
 ## Examples
 
-The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an `OTPCredential` object. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
 
 ```js
 navigator.credentials
@@ -46,6 +50,8 @@ navigator.credentials
     console.error(err);
   });
 ```
+
+> **Note:** For a full code example explanation, see the {{domxref('WebOTP API','','',' ')}} landing page. Also [see this code as part of a full working demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ## Specifications
 

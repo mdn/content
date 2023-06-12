@@ -204,6 +204,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
       ],
@@ -2153,7 +2154,7 @@
     "WebOTP API": {
       "overview": ["WebOTP API"],
       "interfaces": ["OTPCredential"],
-      "methods": [],
+      "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
     },

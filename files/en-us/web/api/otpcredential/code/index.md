@@ -10,15 +10,15 @@ browser-compat: api.OTPCredential.code
 
 {{SecureContext_Header}}{{APIRef("WebOTP API")}}{{SeeCompatTable}}
 
-The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.
+The **`code`** property of the {{domxref("OTPCredential")}} interface contains the one-time password (OTP).
 
 ## Value
 
-A string containing the one-time password.
+A string containing the OTP.
 
 ## Examples
 
-The below code uses the value of `code` to complete an input form element. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
 
 ```js
 navigator.credentials
@@ -34,6 +34,8 @@ navigator.credentials
     console.error(err);
   });
 ```
+
+> **Note:** For a full code example with explanation, see the {{domxref('WebOTP API','','',' ')}} landing page. Also [see this code as part of a full working demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ## Specifications
 

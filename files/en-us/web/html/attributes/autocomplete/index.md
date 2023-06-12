@@ -59,7 +59,7 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
 - "`current-password`"
   - : The user's current password.
 - "`one-time-code`"
-  - : A one-time code used for verifying user identity.
+  - : A one-time password (OTP) used for verifying a user's phone number, for example as an additional factor in a sign-in flow. Used along with the [WebOTP API](/en-US/docs/Web/API/WebOTP_API).
 - "`organization-title`"
   - : A job title, or the title a person has within an organization, such as "Senior Technical Writer", "President", or "Assistant Troop Leader".
 - "`organization`"
