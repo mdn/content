@@ -65,7 +65,7 @@ activate another history entry associated with the current document.
 But `pushState()` has a few advantages:
 
 - The new URL can be any URL in the same origin as the current URL. In contrast,
-  setting {{domxref("window.location")}} keeps you at the same document only if you
+  setting {{domxref("window.location")}} keeps you at the same document if you
   modify only the hash.
 - Changing the page's URL is optional. In contrast,
   setting `window.location = "#foo";` only creates a new history entry if the
