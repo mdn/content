@@ -53,11 +53,11 @@ The steps include:
 
 - [App HTML and CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS)
 
-  - : Line by line explanation of HTML for the static content of the website along with the CSS to style that content.
+  - : Line by line explanation of HTML for the static content of the website, the CycleTracker static content, along with the CSS to style that content.
 
-- [Local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection)
+- [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection)
 
-  - : While all websites should be served over https, with PWAs, https is a requirement. We will link to options for creating a secure localhost connection so you can test your application and install it.
+  - : While all websites should be served over https, with PWAs, https is a requirement. Sevice workers, and therefore PWAs, are restricted to secure contexts including SSL contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress thru the tutorial steps. We also look at serving your PWA with Github pages.
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality)
 
@@ -65,7 +65,7 @@ The steps include:
 
 - [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file)
 
-  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
+  - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport. We also look at debuggin the manifest file with browser developer tools.
 
 - [Service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
 
@@ -80,7 +80,7 @@ The steps include:
 
 To complete this tutorial, it is helpful to have a basic level of understanding of HTML, CSS, and JavaScript. The tutorial provides instructions on creating the manifest file and initiating the service worker. The tutorial will cover checking for internet access, defining both an online and offline experience.
 
-You will be installing node.js, MAMP, or another local server to create a local secure connection. While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
+While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
 You can try the [live period tracker](https://mdn.github.io/pwa-examples/intro/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/intro) on GitHub.
 
