@@ -53,7 +53,11 @@ The steps include:
 
 - [App HTML and CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS)
 
-  - : Line by line explanation of HTML for the static components head and body of the website along with the CSS to style it.
+  - : Line by line explanation of HTML for the static content of the website along with the CSS to style that content.
+
+- [Local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection)
+
+  - : While all websites should be served over https, with PWAs, https is a requirement. We will link to options for creating a secure localhost connection so you can test your application and install it.
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality)
 
@@ -62,10 +66,6 @@ The steps include:
 - [Manifest: identity, appearance, and iconography](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file)
 
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport.
-
-- [Secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure)
-
-  - : While all websites should be served over https, with PWAs, https is a requirement. CreateWhile no frameworks are needed to create a PWA, we will link to options for creating a secure localhost connection so you can test your application and install it.
 
 - [Service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
 
