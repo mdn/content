@@ -10,7 +10,7 @@ browser-compat: api.Navigator.getInstalledRelatedApps
 
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related native apps or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed. For example, it can be used to check installation of UWP apps on Chrome and Edge for Windows, and Android apps and PWAs on Chrome for Android. This could be used for content personalization such as removing "install our app" banners from the web app if the native app is already installed.
 
-> **Note:** This method must be invoked in a top-level browsing context (for example, not embedded in an {{htmlelement("iframe")}}), which must also be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+> **Note:** This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
 
 `getInstalledRelatedApps()` can only be used to check the installation of apps related to the invoking web app. To relate the invoking web app to the native app or PWA, two things must be done:
 
