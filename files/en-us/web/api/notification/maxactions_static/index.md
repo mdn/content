@@ -5,7 +5,7 @@ slug: Web/API/Notification/maxActions_static
 page-type: web-api-static-property
 status:
   - experimental
-browser-compat: api.Notification.maxActions
+browser-compat: api.Notification.maxActions_static
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}

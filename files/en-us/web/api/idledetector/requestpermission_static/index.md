@@ -5,7 +5,7 @@ slug: Web/API/IdleDetector/requestPermission_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.IdleDetector.requestPermission
+browser-compat: api.IdleDetector.requestPermission_static
 ---
 
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
