@@ -3,7 +3,7 @@ title: "CSS: supports() static method"
 short-title: supports()
 slug: Web/API/CSS/supports_static
 page-type: web-api-static-method
-browser-compat: api.CSS.supports
+browser-compat: api.CSS.supports_static
 ---
 
 {{APIRef("CSSOM")}}

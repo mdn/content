@@ -2,6 +2,7 @@
 title: Using CSS transitions
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
+spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 
 {{CSSRef}}

@@ -3,6 +3,8 @@ title: Adobe Flash
 slug: Glossary/Adobe_Flash
 ---
 
+{{GlossarySidebar}}
+
 [Flash](https://en.wikipedia.org/wiki/Adobe_Flash) is an obsolete technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media.
 
 As of 2021, Flash is no longer supported by Adobe or any major web browsers.
