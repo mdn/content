@@ -19,7 +19,7 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol. However, manifest files and services workers require apps to run on a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. While we can add JS functionality without this, when viewed via the `file://` protocal, our [manifest file]() will be ignored and any [service workers]() we add will fail.
+We are viewing our page using the `file://` protocol. However, manifest files and services workers require apps to run on a web server over `https` or a local development environment, using `localhost`, `127.0.0.1`, with or without a port number. While we can add JS functionality without this, when viewed via the `file://` protocal, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers) we add will fail.
 
 We need a local development environment to work thru the tutorial. To enable others to access CycleTracker as a PWA, we will need a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
 
@@ -82,8 +82,6 @@ Note that you can [configure a custom domain for a GitHub pages site](https://do
 
 We are able to view a styled, working version of the CycleTracker application that can store and retrieve data by opening the `index.html` using the `file://` protocol on our local directory structure, PWAs must be served of `https://` or `localhost`.
 
-Now that we have a working application, a manifest file, and a [secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Secure_connection), all we have left to do is create the service worker.
-
-set up a secure development environment. Up next, we write the for `app.js` so we have a functioning application that can be progressively enhanced into a PWA.
+Now that we have a working application, a manifest file, and a secure connection, all we have left to do is create the service worker. Up next, we create `sw.js`, a service worker that progressively enhances our already fully functional web app into a PWA.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/Intro/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/Intro/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/Intro")}}
