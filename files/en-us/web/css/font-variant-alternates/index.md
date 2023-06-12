@@ -87,7 +87,7 @@ This property may take one of two forms:
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url("MonteCarlo-Regular.woff2");
+  src: url("montecarlo-regular.woff2");
 }
 
 @font-feature-values "MonteCarlo" {
