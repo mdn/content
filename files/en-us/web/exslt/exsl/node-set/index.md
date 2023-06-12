@@ -26,4 +26,4 @@ The node-set corresponding to the specified `object`.
 
 ## Specifications
 
-[EXSLT - EXSL:NODE-SET](http://exslt.org/exsl/functions/node-set/index.html)
+[EXSLT - EXSL:NODE-SET](https://exslt.github.io/exsl/functions/node-set/index.html)
