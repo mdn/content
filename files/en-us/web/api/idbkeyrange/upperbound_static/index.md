@@ -3,7 +3,7 @@ title: "IDBKeyRange: upperBound() static method"
 short-title: upperBound()
 slug: Web/API/IDBKeyRange/upperBound_static
 page-type: web-api-static-method
-browser-compat: api.IDBKeyRange.upperBound
+browser-compat: api.IDBKeyRange.upperBound_static
 ---
 
 {{ APIRef("IndexedDB") }}

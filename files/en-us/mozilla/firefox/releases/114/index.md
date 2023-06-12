@@ -5,27 +5,25 @@ slug: Mozilla/Firefox/Releases/114
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 06, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 was released on June 06, 2023.
 
 ## Changes for web developers
 
 ### Developer Tools
 
-- Fixed an issue where the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) did not correctly show ARIA roles on elements which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
-  Roles which cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
+- Fixed an issue where the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
+  Roles that cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
 
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 - The [`:lang()`](/en-US/docs/Web/CSS/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
   Additionally, comma-separated lists of languages are now supported for matching multiple languages ([Firefox bug 1121792](https://bugzil.la/1121792)).
-- The [-webkit-text-security](/en-US/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property. ([Firefox bug 1826629](https://bugzil.la/1826629)).
+- The [-webkit-text-security](/en-US/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
 - The `infinity` and `NaN` constants are now supported inside the [`calc()`](/en-US/docs/Web/CSS/calc) function ([Firefox bug 1830759](https://bugzil.la/1830759)).
-
-#### Removals
 
 ### JavaScript
 
@@ -34,21 +32,9 @@ This article provides information about the changes in Firefox 114 that affect d
   Worker scripts can also statically or dynamically import modules using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), respectively ([Firefox bug 1812591](https://bugzil.la/1812591)).
 - [Worklets](/en-US/docs/Web/API/Worklet) can now use [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) to statically import [ECMAscript/JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1812591](https://bugzil.la/1812591)).
 
-#### Removals
-
 ### SVG
 
-- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported on [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 ### APIs
 
@@ -60,16 +46,16 @@ This article provides information about the changes in Firefox 114 that affect d
 
 #### DOM
 
+No notable changes.
+
 #### Media, WebRTC, and Web Audio
+
+No notable changes.
 
 #### Removals
 
 - The deprecated and non-standard `mozImageSmoothingEnabled` property is permanently removed.
   See the [`imageSmoothingEnabled`](/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) property for smoothing in scaled images ([Firefox bug 1228850](https://bugzil.la/1228850)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -91,8 +77,6 @@ This article provides information about the changes in Firefox 114 that affect d
 ### Removals
 
 - Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) is deprecated for Manifest V3 extensions ([Firefox bug 1827910](https://bugzil.la/1827910)). See [Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
-
-### Other
 
 ## Older versions
 

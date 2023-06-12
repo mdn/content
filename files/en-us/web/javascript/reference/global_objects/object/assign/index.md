@@ -72,7 +72,7 @@ console.log(copy); // { a: 1 }
 
 ### Warning for Deep Clone
 
-For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
+For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like [`structuredClone()`](/en-US/docs/Web/API/structuredClone), because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -96,7 +96,7 @@ console.log(obj2); // { a: 2, b: { c: 3 } }
 
 // Deep Clone
 const obj3 = { a: 0, b: { c: 0 } };
-const obj4 = JSON.parse(JSON.stringify(obj3));
+const obj4 = structuredClone(obj3);
 obj3.a = 4;
 obj3.b.c = 4;
 console.log(obj4); // { a: 0, b: { c: 0 } }

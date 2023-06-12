@@ -28,4 +28,4 @@ A node-set containing the nodes from `nodeSet1` whose values follow the first no
 
 ## Specifications
 
-[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)
+[EXSLT - SET:TRAILING](https://exslt.github.io/set/functions/trailing/index.html)
