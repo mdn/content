@@ -15,6 +15,10 @@ A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Al
 ## Syntax
 
 ```css
+/* Named colors */
+rebeccapurple
+aliceblue
+
 /* RGB Hexadecimal */
 #f09
 #ff0099
