@@ -27,7 +27,7 @@ copyWithin(target, start, end)
     - If `target < -array.length`, `0` is used.
     - If `target >= array.length`, nothing is copied.
     - If `target` is positioned after `start` after normalization, copying only happens until the end of `array.length` (in other words, `copyWithin()` never extends the array).
-- `start` {{optional_inline}}
+- `start` 
   - : Zero-based index at which to start copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
     - If `start < -array.length` or `start` is omitted, `0` is used.
