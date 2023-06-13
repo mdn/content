@@ -50,6 +50,8 @@ This article provides information about the changes in Firefox 115 that affect d
 
 #### Removals
 
+- The deprecated `mozPreservesPitch` alias of [HTMLMediaElement.preservesPitch](/en-US/docs/Web/API/HTMLMediaElement/preservesPitch) has been disabled by default, and may be fully removed in a future release ([Firefox bug 1831205](https://bugzil.la/1831205)).
+
 ### WebAssembly
 
 #### Removals
