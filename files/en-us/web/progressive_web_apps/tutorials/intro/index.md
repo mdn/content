@@ -67,7 +67,7 @@ The steps include:
 
   - : A PWA requires a manifest, which is a JSON file that describes the name, icon, description, and other definitions of how the application works within the operating system on which the PWA is installed. We will create a manifest file that defines the appearance of the application when installed, including which icons should be used depending on the user's device, and parameters for the application viewport. We also look at debuggin the manifest file with browser developer tools.
 
-- [Service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_worker)
+- [Service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/Intro/Service_workers)
 
   - : The service worker enables the application to work offline. With the secure connection in the previous step, the initial visit to a page provides its baseline functionality while the service worker downloads. After a service worker is installed and activated, it controls the page to offer improved reliability and speed.
 
