@@ -60,7 +60,7 @@ You can also get and set the time value in JavaScript using the {{domxref("HTMLI
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
-timeControl.value = '15:30';
+timeControl.value = "15:30";
 ```
 
 ### Time value format
@@ -88,9 +88,13 @@ The JavaScript code adds code to the time input to watch for the {{domxref("HTML
 const startTime = document.getElementById("startTime");
 const valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", () => {
-  valueSpan.innerText = startTime.value;
-}, false);
+startTime.addEventListener(
+  "input",
+  () => {
+    valueSpan.innerText = startTime.value;
+  },
+  false
+);
 ```
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}
@@ -236,13 +240,13 @@ The result here is that:
 By setting a [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute greater than the [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
 
 ```js
-const input = document.createElement('input');
-input.type = 'time';
-input.min = '23:00';
-input.max = '01:00';
-input.value = '23:59';
+const input = document.createElement("input");
+input.type = "time";
+input.min = "23:00";
+input.max = "01:00";
+input.value = "23:59";
 
-if (input.validity.valid && input.type === 'time') {
+if (input.validity.valid && input.type === "time") {
   // <input type=time> reversed range supported
 } else {
   // <input type=time> reversed range unsupported
@@ -431,32 +435,32 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // Define variables
-const nativePicker = document.querySelector('.nativeTimePicker');
-const fallbackPicker = document.querySelector('.fallbackTimePicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeTimePicker");
+const fallbackPicker = document.querySelector(".fallbackTimePicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const hourSelect = document.querySelector('#hour');
-const minuteSelect = document.querySelector('#minute');
+const hourSelect = document.querySelector("#hour");
+const minuteSelect = document.querySelector("#minute");
 
 // Hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // Test whether a new time input falls back to a text input or not
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'time';
+  test.type = "time";
 } catch (e) {
   console.log(e.description);
 }
 
 // If it does, run the code inside the if () {} block
-if (test.type === 'text') {
+if (test.type === "text") {
   // Hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // Populate the hours and minutes dynamically
   populateHours();
@@ -466,7 +470,7 @@ if (test.type === 'text') {
 function populateHours() {
   // Populate the hours <select> with the 6 open hours of the day
   for (let i = 12; i <= 18; i++) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -475,22 +479,22 @@ function populateHours() {
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
   for (let i = 0; i <= 59; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // make it so that if the hour is 18, the minutes value is set to 00
 // — you can't select times past 18:00
- function setMinutesToZero() {
-   if (hourSelect.value === '18') {
-     minuteSelect.value = '00';
-   }
- }
+function setMinutesToZero() {
+  if (hourSelect.value === "18") {
+    minuteSelect.value = "00";
+  }
+}
 
- hourSelect.onchange = setMinutesToZero;
- minuteSelect.onchange = setMinutesToZero;
+hourSelect.onchange = setMinutesToZero;
+minuteSelect.onchange = setMinutesToZero;
 ```
 
 ## Technical Summary
