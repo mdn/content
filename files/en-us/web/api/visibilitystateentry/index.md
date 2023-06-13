@@ -77,3 +77,7 @@ function wasHiddenBeforeFirstContentfulPaint() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+[Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
