@@ -16,7 +16,9 @@ The **`getInstalledRelatedApps()`** method returns a promise that resolves with 
 
 ## Description
 
-`getInstalledRelatedApps()` can be used to check installation of Universal Windows Platform (UWP) apps on Chrome and Edge for Windows, and Android apps and PWAs on Chrome for Android. It can only be used to check the installation of apps related to the invoking web app. To relate the invoking web app to the native app or PWA, two things must be done:
+`getInstalledRelatedApps()` can be used to check for the installation of Universal Windows Platform (UWP) apps, Android apps and PWAs that are related to the web app calling this method.
+
+To associate the invoking web app to the native app or PWA, two things must be done:
 
 1. The invoking web app must be specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) member of its [manifest file](/en-US/docs/Web/Manifest).
 2. The native app or PWA must have its relationship with the invoking app defined.
