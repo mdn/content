@@ -5,7 +5,7 @@ slug: Web/API/BluetoothUUID/canonicalUUID_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.BluetoothUUID.canonicalUUID
+browser-compat: api.BluetoothUUID.canonicalUUID_static
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}

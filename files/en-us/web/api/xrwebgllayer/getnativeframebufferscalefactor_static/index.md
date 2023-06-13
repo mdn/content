@@ -5,7 +5,7 @@ slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
+browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor_static
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
