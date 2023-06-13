@@ -14,6 +14,8 @@ This is relevant to user agents that by default block access to unpartitioned co
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
+> **Note:** The [browser compatibility section](#browser_compatibility) provides an overview about the support staus of the Storage Access API.
+
 ## Syntax
 
 ```js-nolint
