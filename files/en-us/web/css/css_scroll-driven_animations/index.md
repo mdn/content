@@ -10,9 +10,9 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations JavaScript API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline rather than the default time-based document timeline — i.e. you can animate elements by scrolling an element rather than just by the passing of time.
+The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling through the element rather than just by the passing of time.
 
-There are two different types of scroll-based timeline:
+There are two types of scroll-based timelines:
 
 - A _scroll progress timeline_ is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
 - A _view progress timeline_ is progressed through based on the change in visibility of an element (known as the _subject_) inside a scroller. The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller, and 100% when it reaches the opposite edge.
