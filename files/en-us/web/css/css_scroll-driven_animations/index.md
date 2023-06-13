@@ -17,9 +17,9 @@ There are two types of scroll-based timelines:
 - A _scroll progress timeline_ is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
 - A _view progress timeline_ is progressed through based on the change in visibility of an element (known as the _subject_) inside a scroller. The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller, and 100% when it reaches the opposite edge.
 
-A defined timeline is then applied to an animated element to specify that the animation should be progressed along that timeline rather than the default.
+When one of these two timelines is applied to an animated element, the animation progresses along that timeline instead of following the default time-based timeline.
 
-It is also possible to adjust the effective placement of the animation along the timeline, i.e. the position at which it appears to start and end. This can be done in a couple of different ways:
+It is possible to adjust the effective placement of the animation along the scroll progress and view progress timelines, i.e., you can define the position at which the animation starts and ends. This can be done in a couple of different ways:
 
 - Start and end animation range values can be applied to the animation to adjust the position of the animation's starting and ending position along the timeline.
 - View progress timelines can have a start and/or end inset (or outset) applied to them to adjust the position of the scrollport (see {{glossary("Scroll container")}} for more details) in which the subject element is deemed to be visible. Put another way, this allows you to specify start and/or end inset (or outset) values that offset the position of the timeline itself.
