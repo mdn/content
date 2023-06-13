@@ -391,7 +391,7 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
@@ -413,13 +413,13 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   }
-}
+};
 ```
 
 The example looks like this:
