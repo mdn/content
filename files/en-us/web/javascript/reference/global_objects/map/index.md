@@ -274,7 +274,7 @@ console.log(contacts.size); // 1
 **Browser `Map`-like objects** (or "maplike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Map`.
 
 Just like `Map`, entries can be iterated in the same order that they were added to the object.
-`Map`-like objects also have properties and methods that share the same name and behavior.
+`Map`-like objects and `Map` also have properties and methods that share the same name and behavior.
 However unlike `Map` they only allow specific predefined types for the keys and values of each entry.
 
 The allowed types are set in the specification IDL definition.

@@ -28,7 +28,7 @@ The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method 
 Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 Just like `Set`, elements can be iterated in the same order that they were added to the object.
-`Set`-like objects also have properties and methods that share the same name and behavior.
+`Set`-like objects and `Set` also have properties and methods that share the same name and behavior.
 However unlike `Set` they only allow a specific predefined type for each entry.
 
 The allowed types are set in the specification IDL definition.
