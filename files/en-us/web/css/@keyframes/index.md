@@ -157,6 +157,8 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 
 ## See also
 
+- {{cssxref("animation-range")}}
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/)
 - {{domxref("AnimationEvent")}}
