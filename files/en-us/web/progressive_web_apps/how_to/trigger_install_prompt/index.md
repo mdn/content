@@ -96,6 +96,41 @@ function disableInAppInstallPrompt() {
 }
 ```
 
+## Responding to native app versions being installed
+
+One case not covered by the above examples is where you have a native version of the app as well as a web app, and you want to personalize the web app experience depending on whether the native app is already installed. You might not want to invite users to install the PWA if they already have the native app installed, and/or you might want to invite them to head over to the native app to view content.
+
+This can be handled with the {{domxref("Navigator.getInstalledRelatedApps()")}} method, which allows you to detect installed related native apps (or PWAs) and respond as appropriate.
+
+For example:
+
+```js
+const relatedApps = await navigator.getInstalledRelatedApps();
+
+// Search for a specific installed native app
+const nativeApp = relatedApps.find((app) => app.id === "com.example.myapp");
+
+if (nativeApp) {
+  // Update UI as appropriate
+}
+```
+
+This method could even be combined with `beforeinstallprompt` to suppress the browser's install UI based on the availability of a native app:
+
+```js
+window.addEventListener("beforeinstallprompt", (event) => {
+  const relatedApps = await navigator.getInstalledRelatedApps();
+
+  // Search for a specific installed native app
+  const nativeApp = relatedApps.find((app) => app.id === "com.example.myapp");
+
+  if (nativeApp) {
+    event.preventDefault();
+    // Update UI as appropriate
+  }
+});
+```
+
 ## See also
 
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
