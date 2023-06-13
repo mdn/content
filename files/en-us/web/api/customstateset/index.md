@@ -17,7 +17,7 @@ An HTML form element, such as a checkbox has different _states_, "checked" and "
 
 An instance of `CustomStateList` is returned by {{domxref("ElementInternals.states")}}.
 
-**`CustomStateList`** is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that can hold an ordered set of state values.
+A `CustomStateList` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that can hold an ordered set of state values.
 Each value stored in a `CustomStateList` is a `<dashed-ident>`, in the format `--mystate`.
 
 ### Interaction with CSS

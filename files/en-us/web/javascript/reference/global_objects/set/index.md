@@ -43,17 +43,17 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
-- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`add()`](#map.prototype.add).
+- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`@@iterator`](#set.prototypeiterator).
+- Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
 
-The methods and properties have the same behaviour as the equivalent entities in `Set`, except for the restriction on the types of the entry.
+The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
 
-The following interfaces are read-only `Set`-like objects:
+The following are examples of read-only `Set`-like browser objects:
 
 - {{domxref("GPUSupportedFeatures")}}
 - {{domxref("XRAnchorSet")}}
 
-The following interfaces are writable `Set`-like objects:
+The following are examples of writable `Set`-like browser objects:
 
 - {{domxref("CustomStateSet")}}
 - {{domxref("FontFaceSet")}}

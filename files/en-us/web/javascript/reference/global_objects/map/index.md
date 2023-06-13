@@ -292,9 +292,9 @@ interface RTCStatsReport {
 - Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
 - Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
 
-The methods and properties have the same behaviour as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
+The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
 
-The following items are examples of read-only `Map`-like objects:
+The following are examples of read-only `Map`-like browser objects:
 
 - {{domxref("AudioParamMap")}}
 - {{domxref("RTCStatsReport")}}
