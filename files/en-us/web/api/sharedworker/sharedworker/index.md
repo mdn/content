@@ -33,7 +33,7 @@ new SharedWorker(aURL, options)
 - `name` {{optional_inline}}
   - : A string specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
-    mainly useful for debugging purposes.
+    mainly useful for debugging purposes. The name allows multiple instances of a particular shared worker to be started.
 - `options` {{optional_inline}}
 
   - : An object containing option properties that can set when creating the object
@@ -52,7 +52,7 @@ new SharedWorker(aURL, options)
     - `name`
       - : A string specifying an
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
-        scope of the worker, which is mainly useful for debugging purposes.
+        scope of the worker, which is mainly useful for debugging purposes. The name allows multiple instances of a particular shared worker to be started.
 
 ### Exceptions
 
