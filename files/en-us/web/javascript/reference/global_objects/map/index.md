@@ -269,9 +269,9 @@ contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
-### Map-like objects
+### Map-like browser APIs
 
-**`Map`-like objects** (or "maplike objects") are browser-specific objects that behave in many ways like a `Map`.
+**Browser `Map`-like objects** (or "maplike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Map`.
 
 Just like `Map` they are ordered, and entries are iterated in the same sequence that they were added to the object, using all of the same looping constructs.
 `Map`-like objects also share some of the same properties and methods.

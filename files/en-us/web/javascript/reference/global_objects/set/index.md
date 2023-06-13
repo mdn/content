@@ -23,9 +23,9 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
-### Set-like objects
+### Set-like browser APIs
 
-**`Set`-like objects** (or "setlike objects") are browser-specific objects that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
+Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 Just like `Set` they are ordered, and entries are iterated in the same sequence that they were added to the object, using all of the same looping constructs.
 `Set`-like objects also share some of the same properties and methods.
