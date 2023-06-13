@@ -3,7 +3,7 @@ title: "URL: canParse() static method"
 short-title: canParse()
 slug: Web/API/URL/canParse_static
 page-type: web-api-static-method
-browser-compat: api.URL.canParse
+browser-compat: api.URL.canParse_static
 ---
 
 {{ApiRef("URL API")}}
