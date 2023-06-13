@@ -3,7 +3,7 @@ title: "PublicKeyCredential: isConditionalMediationAvailable() static method"
 short-title: isConditionalMediationAvailable()
 slug: Web/API/PublicKeyCredential/isConditionalMediationAvailable
 page-type: web-api-static-method
-browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable
+browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

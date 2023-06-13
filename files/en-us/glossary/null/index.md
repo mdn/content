@@ -4,6 +4,8 @@ slug: Glossary/Null
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In computer science, a **`null`** value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.
 
 In {{Glossary("JavaScript")}}, `null` is marked as one of the {{Glossary("Primitive", "primitive values")}}, because its behavior is seemingly primitive. However, when using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, it returns `"object"`.
